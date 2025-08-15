@@ -26,8 +26,8 @@ int32_t q_webengineurlrequestinterceptor_metacall(void* self, int64_t param1, in
     return QWebEngineUrlRequestInterceptor_Metacall((QWebEngineUrlRequestInterceptor*)self, param1, param2, param3);
 }
 
-void q_webengineurlrequestinterceptor_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QWebEngineUrlRequestInterceptor_OnMetacall((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QWebEngineUrlRequestInterceptor_OnMetacall((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineurlrequestinterceptor_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_webengineurlrequestinterceptor_intercept_request(void* self, void* info) 
     QWebEngineUrlRequestInterceptor_InterceptRequest((QWebEngineUrlRequestInterceptor*)self, (QWebEngineUrlRequestInfo*)info);
 }
 
-void q_webengineurlrequestinterceptor_on_intercept_request(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnInterceptRequest((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_intercept_request(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnInterceptRequest((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_qbase_intercept_request(void* self, void* info) {
@@ -171,12 +171,16 @@ const char** q_webengineurlrequestinterceptor_dynamic_property_names(void* self)
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineurlrequestinterceptor_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -194,8 +198,8 @@ void q_webengineurlrequestinterceptor_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_webengineurlrequestinterceptor_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_webengineurlrequestinterceptor_parent(void* self) {
@@ -230,8 +234,8 @@ void q_webengineurlrequestinterceptor_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_webengineurlrequestinterceptor_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_webengineurlrequestinterceptor_event(void* self, void* event) {
@@ -242,8 +246,8 @@ bool q_webengineurlrequestinterceptor_qbase_event(void* self, void* event) {
     return QWebEngineUrlRequestInterceptor_QBaseEvent((QWebEngineUrlRequestInterceptor*)self, (QEvent*)event);
 }
 
-void q_webengineurlrequestinterceptor_on_event(void* self, bool (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_event(void* self, bool (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 bool q_webengineurlrequestinterceptor_event_filter(void* self, void* watched, void* event) {
@@ -254,8 +258,8 @@ bool q_webengineurlrequestinterceptor_qbase_event_filter(void* self, void* watch
     return QWebEngineUrlRequestInterceptor_QBaseEventFilter((QWebEngineUrlRequestInterceptor*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_webengineurlrequestinterceptor_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnEventFilter((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnEventFilter((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_timer_event(void* self, void* event) {
@@ -266,8 +270,8 @@ void q_webengineurlrequestinterceptor_qbase_timer_event(void* self, void* event)
     QWebEngineUrlRequestInterceptor_QBaseTimerEvent((QWebEngineUrlRequestInterceptor*)self, (QTimerEvent*)event);
 }
 
-void q_webengineurlrequestinterceptor_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnTimerEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnTimerEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_child_event(void* self, void* event) {
@@ -278,8 +282,8 @@ void q_webengineurlrequestinterceptor_qbase_child_event(void* self, void* event)
     QWebEngineUrlRequestInterceptor_QBaseChildEvent((QWebEngineUrlRequestInterceptor*)self, (QChildEvent*)event);
 }
 
-void q_webengineurlrequestinterceptor_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnChildEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnChildEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_custom_event(void* self, void* event) {
@@ -290,8 +294,8 @@ void q_webengineurlrequestinterceptor_qbase_custom_event(void* self, void* event
     QWebEngineUrlRequestInterceptor_QBaseCustomEvent((QWebEngineUrlRequestInterceptor*)self, (QEvent*)event);
 }
 
-void q_webengineurlrequestinterceptor_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnCustomEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnCustomEvent((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_connect_notify(void* self, void* signal) {
@@ -302,8 +306,8 @@ void q_webengineurlrequestinterceptor_qbase_connect_notify(void* self, void* sig
     QWebEngineUrlRequestInterceptor_QBaseConnectNotify((QWebEngineUrlRequestInterceptor*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineurlrequestinterceptor_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnConnectNotify((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnConnectNotify((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_disconnect_notify(void* self, void* signal) {
@@ -314,8 +318,8 @@ void q_webengineurlrequestinterceptor_qbase_disconnect_notify(void* self, void* 
     QWebEngineUrlRequestInterceptor_QBaseDisconnectNotify((QWebEngineUrlRequestInterceptor*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineurlrequestinterceptor_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnDisconnectNotify((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnDisconnectNotify((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 QObject* q_webengineurlrequestinterceptor_sender(void* self) {
@@ -326,8 +330,8 @@ QObject* q_webengineurlrequestinterceptor_qbase_sender(void* self) {
     return QWebEngineUrlRequestInterceptor_QBaseSender((QWebEngineUrlRequestInterceptor*)self);
 }
 
-void q_webengineurlrequestinterceptor_on_sender(void* self, QObject* (*slot)()) {
-    QWebEngineUrlRequestInterceptor_OnSender((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_sender(void* self, QObject* (*callback)()) {
+    QWebEngineUrlRequestInterceptor_OnSender((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineurlrequestinterceptor_sender_signal_index(void* self) {
@@ -338,8 +342,8 @@ int32_t q_webengineurlrequestinterceptor_qbase_sender_signal_index(void* self) {
     return QWebEngineUrlRequestInterceptor_QBaseSenderSignalIndex((QWebEngineUrlRequestInterceptor*)self);
 }
 
-void q_webengineurlrequestinterceptor_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QWebEngineUrlRequestInterceptor_OnSenderSignalIndex((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QWebEngineUrlRequestInterceptor_OnSenderSignalIndex((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineurlrequestinterceptor_receivers(void* self, const char* signal) {
@@ -350,8 +354,8 @@ int32_t q_webengineurlrequestinterceptor_qbase_receivers(void* self, const char*
     return QWebEngineUrlRequestInterceptor_QBaseReceivers((QWebEngineUrlRequestInterceptor*)self, signal);
 }
 
-void q_webengineurlrequestinterceptor_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QWebEngineUrlRequestInterceptor_OnReceivers((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QWebEngineUrlRequestInterceptor_OnReceivers((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
 bool q_webengineurlrequestinterceptor_is_signal_connected(void* self, void* signal) {
@@ -362,12 +366,12 @@ bool q_webengineurlrequestinterceptor_qbase_is_signal_connected(void* self, void
     return QWebEngineUrlRequestInterceptor_QBaseIsSignalConnected((QWebEngineUrlRequestInterceptor*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineurlrequestinterceptor_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QWebEngineUrlRequestInterceptor_OnIsSignalConnected((QWebEngineUrlRequestInterceptor*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QWebEngineUrlRequestInterceptor_OnIsSignalConnected((QWebEngineUrlRequestInterceptor*)self, (intptr_t)callback);
 }
 
-void q_webengineurlrequestinterceptor_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_webengineurlrequestinterceptor_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_webengineurlrequestinterceptor_delete(void* self) {

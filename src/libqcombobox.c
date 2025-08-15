@@ -41,8 +41,8 @@ int32_t q_combobox_metacall(void* self, int64_t param1, int param2, void* param3
     return QComboBox_Metacall((QComboBox*)self, param1, param2, param3);
 }
 
-void q_combobox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QComboBox_OnMetacall((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QComboBox_OnMetacall((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_combobox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -191,8 +191,8 @@ void q_combobox_set_model(void* self, void* model) {
     QComboBox_SetModel((QComboBox*)self, (QAbstractItemModel*)model);
 }
 
-void q_combobox_on_set_model(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnSetModel((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_set_model(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnSetModel((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_set_model(void* self, void* model) {
@@ -255,12 +255,17 @@ void q_combobox_add_item2(void* self, void* icon, const char* text) {
 
 void q_combobox_add_items(void* self, const char* texts[]) {
     size_t texts_len = libqt_strv_length(texts);
-    libqt_string* texts_qstr = malloc(texts_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < texts_len; ++_i) {
-        texts_qstr[_i] = qstring(texts[_i]);
+    libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
+    if (texts_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_combobox_add_items");
+        abort();
+    }
+    for (size_t i = 0; i < texts_len; ++i) {
+        texts_qstr[i] = qstring(texts[i]);
     }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_AddItems((QComboBox*)self, texts_list);
+    free(texts_qstr);
 }
 
 void q_combobox_insert_item(void* self, int index, const char* text) {
@@ -273,12 +278,17 @@ void q_combobox_insert_item2(void* self, int index, void* icon, const char* text
 
 void q_combobox_insert_items(void* self, int index, const char* texts[]) {
     size_t texts_len = libqt_strv_length(texts);
-    libqt_string* texts_qstr = malloc(texts_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < texts_len; ++_i) {
-        texts_qstr[_i] = qstring(texts[_i]);
+    libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
+    if (texts_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_combobox_insert_items");
+        abort();
+    }
+    for (size_t i = 0; i < texts_len; ++i) {
+        texts_qstr[i] = qstring(texts[i]);
     }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_InsertItems((QComboBox*)self, index, texts_list);
+    free(texts_qstr);
 }
 
 void q_combobox_insert_separator(void* self, int index) {
@@ -313,8 +323,8 @@ QSize* q_combobox_size_hint(void* self) {
     return QComboBox_SizeHint((QComboBox*)self);
 }
 
-void q_combobox_on_size_hint(void* self, QSize* (*slot)()) {
-    QComboBox_OnSizeHint((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_size_hint(void* self, QSize* (*callback)()) {
+    QComboBox_OnSizeHint((QComboBox*)self, (intptr_t)callback);
 }
 
 QSize* q_combobox_qbase_size_hint(void* self) {
@@ -325,8 +335,8 @@ QSize* q_combobox_minimum_size_hint(void* self) {
     return QComboBox_MinimumSizeHint((QComboBox*)self);
 }
 
-void q_combobox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QComboBox_OnMinimumSizeHint((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QComboBox_OnMinimumSizeHint((QComboBox*)self, (intptr_t)callback);
 }
 
 QSize* q_combobox_qbase_minimum_size_hint(void* self) {
@@ -337,8 +347,8 @@ void q_combobox_show_popup(void* self) {
     QComboBox_ShowPopup((QComboBox*)self);
 }
 
-void q_combobox_on_show_popup(void* self, void (*slot)()) {
-    QComboBox_OnShowPopup((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_show_popup(void* self, void (*callback)()) {
+    QComboBox_OnShowPopup((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_show_popup(void* self) {
@@ -349,8 +359,8 @@ void q_combobox_hide_popup(void* self) {
     QComboBox_HidePopup((QComboBox*)self);
 }
 
-void q_combobox_on_hide_popup(void* self, void (*slot)()) {
-    QComboBox_OnHidePopup((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_hide_popup(void* self, void (*callback)()) {
+    QComboBox_OnHidePopup((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_hide_popup(void* self) {
@@ -361,8 +371,8 @@ bool q_combobox_event(void* self, void* event) {
     return QComboBox_Event((QComboBox*)self, (QEvent*)event);
 }
 
-void q_combobox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QComboBox_OnEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QComboBox_OnEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_qbase_event(void* self, void* event) {
@@ -373,8 +383,8 @@ QVariant* q_combobox_input_method_query(void* self, int64_t param1) {
     return QComboBox_InputMethodQuery((QComboBox*)self, param1);
 }
 
-void q_combobox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QComboBox_OnInputMethodQuery((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QComboBox_OnInputMethodQuery((QComboBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_combobox_qbase_input_method_query(void* self, int64_t param1) {
@@ -409,64 +419,64 @@ void q_combobox_edit_text_changed(void* self, const char* param1) {
     QComboBox_EditTextChanged((QComboBox*)self, qstring(param1));
 }
 
-void q_combobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_EditTextChanged((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_edit_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_EditTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_activated(void* self, int index) {
     QComboBox_Activated((QComboBox*)self, index);
 }
 
-void q_combobox_on_activated(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_Activated((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_activated(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_Activated((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_text_activated(void* self, const char* param1) {
     QComboBox_TextActivated((QComboBox*)self, qstring(param1));
 }
 
-void q_combobox_on_text_activated(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_TextActivated((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_text_activated(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_TextActivated((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_highlighted(void* self, int index) {
     QComboBox_Highlighted((QComboBox*)self, index);
 }
 
-void q_combobox_on_highlighted(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_Highlighted((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_highlighted(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_Highlighted((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_text_highlighted(void* self, const char* param1) {
     QComboBox_TextHighlighted((QComboBox*)self, qstring(param1));
 }
 
-void q_combobox_on_text_highlighted(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_TextHighlighted((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_text_highlighted(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_TextHighlighted((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_current_index_changed(void* self, int index) {
     QComboBox_CurrentIndexChanged((QComboBox*)self, index);
 }
 
-void q_combobox_on_current_index_changed(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_CurrentIndexChanged((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_current_index_changed(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_CurrentIndexChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_current_text_changed(void* self, const char* param1) {
     QComboBox_CurrentTextChanged((QComboBox*)self, qstring(param1));
 }
 
-void q_combobox_on_current_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_current_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_focus_in_event(void* self, void* e) {
     QComboBox_FocusInEvent((QComboBox*)self, (QFocusEvent*)e);
 }
 
-void q_combobox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnFocusInEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnFocusInEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_focus_in_event(void* self, void* e) {
@@ -477,8 +487,8 @@ void q_combobox_focus_out_event(void* self, void* e) {
     QComboBox_FocusOutEvent((QComboBox*)self, (QFocusEvent*)e);
 }
 
-void q_combobox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnFocusOutEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnFocusOutEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_focus_out_event(void* self, void* e) {
@@ -489,8 +499,8 @@ void q_combobox_change_event(void* self, void* e) {
     QComboBox_ChangeEvent((QComboBox*)self, (QEvent*)e);
 }
 
-void q_combobox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnChangeEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnChangeEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_change_event(void* self, void* e) {
@@ -501,8 +511,8 @@ void q_combobox_resize_event(void* self, void* e) {
     QComboBox_ResizeEvent((QComboBox*)self, (QResizeEvent*)e);
 }
 
-void q_combobox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnResizeEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnResizeEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_resize_event(void* self, void* e) {
@@ -513,8 +523,8 @@ void q_combobox_paint_event(void* self, void* e) {
     QComboBox_PaintEvent((QComboBox*)self, (QPaintEvent*)e);
 }
 
-void q_combobox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnPaintEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnPaintEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_paint_event(void* self, void* e) {
@@ -525,8 +535,8 @@ void q_combobox_show_event(void* self, void* e) {
     QComboBox_ShowEvent((QComboBox*)self, (QShowEvent*)e);
 }
 
-void q_combobox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnShowEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnShowEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_show_event(void* self, void* e) {
@@ -537,8 +547,8 @@ void q_combobox_hide_event(void* self, void* e) {
     QComboBox_HideEvent((QComboBox*)self, (QHideEvent*)e);
 }
 
-void q_combobox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnHideEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnHideEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_hide_event(void* self, void* e) {
@@ -549,8 +559,8 @@ void q_combobox_mouse_press_event(void* self, void* e) {
     QComboBox_MousePressEvent((QComboBox*)self, (QMouseEvent*)e);
 }
 
-void q_combobox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnMousePressEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnMousePressEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_mouse_press_event(void* self, void* e) {
@@ -561,8 +571,8 @@ void q_combobox_mouse_release_event(void* self, void* e) {
     QComboBox_MouseReleaseEvent((QComboBox*)self, (QMouseEvent*)e);
 }
 
-void q_combobox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnMouseReleaseEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnMouseReleaseEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_mouse_release_event(void* self, void* e) {
@@ -573,8 +583,8 @@ void q_combobox_key_press_event(void* self, void* e) {
     QComboBox_KeyPressEvent((QComboBox*)self, (QKeyEvent*)e);
 }
 
-void q_combobox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnKeyPressEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnKeyPressEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_key_press_event(void* self, void* e) {
@@ -585,8 +595,8 @@ void q_combobox_key_release_event(void* self, void* e) {
     QComboBox_KeyReleaseEvent((QComboBox*)self, (QKeyEvent*)e);
 }
 
-void q_combobox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnKeyReleaseEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnKeyReleaseEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_key_release_event(void* self, void* e) {
@@ -597,8 +607,8 @@ void q_combobox_wheel_event(void* self, void* e) {
     QComboBox_WheelEvent((QComboBox*)self, (QWheelEvent*)e);
 }
 
-void q_combobox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnWheelEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnWheelEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_wheel_event(void* self, void* e) {
@@ -609,8 +619,8 @@ void q_combobox_context_menu_event(void* self, void* e) {
     QComboBox_ContextMenuEvent((QComboBox*)self, (QContextMenuEvent*)e);
 }
 
-void q_combobox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnContextMenuEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnContextMenuEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_context_menu_event(void* self, void* e) {
@@ -621,8 +631,8 @@ void q_combobox_input_method_event(void* self, void* param1) {
     QComboBox_InputMethodEvent((QComboBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_combobox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnInputMethodEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnInputMethodEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_input_method_event(void* self, void* param1) {
@@ -633,8 +643,8 @@ void q_combobox_init_style_option(void* self, void* option) {
     QComboBox_InitStyleOption((QComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void q_combobox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnInitStyleOption((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnInitStyleOption((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_qbase_init_style_option(void* self, void* option) {
@@ -1721,32 +1731,32 @@ void q_combobox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_combobox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_combobox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_combobox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_combobox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_combobox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_combobox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_combobox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_combobox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_combobox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_combobox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_combobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_combobox_input_method_hints(void* self) {
@@ -1917,12 +1927,16 @@ const char** q_combobox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_combobox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1940,8 +1954,8 @@ void q_combobox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_combobox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_combobox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_combobox_parent(void* self) {
@@ -1976,8 +1990,8 @@ void q_combobox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_combobox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_combobox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_combobox_painting_active(void* self) {
@@ -2040,8 +2054,8 @@ int32_t q_combobox_qbase_dev_type(void* self) {
     return QComboBox_QBaseDevType((QComboBox*)self);
 }
 
-void q_combobox_on_dev_type(void* self, int32_t (*slot)()) {
-    QComboBox_OnDevType((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_dev_type(void* self, int32_t (*callback)()) {
+    QComboBox_OnDevType((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_set_visible(void* self, bool visible) {
@@ -2052,8 +2066,8 @@ void q_combobox_qbase_set_visible(void* self, bool visible) {
     QComboBox_QBaseSetVisible((QComboBox*)self, visible);
 }
 
-void q_combobox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QComboBox_OnSetVisible((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QComboBox_OnSetVisible((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_combobox_height_for_width(void* self, int param1) {
@@ -2064,8 +2078,8 @@ int32_t q_combobox_qbase_height_for_width(void* self, int param1) {
     return QComboBox_QBaseHeightForWidth((QComboBox*)self, param1);
 }
 
-void q_combobox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QComboBox_OnHeightForWidth((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QComboBox_OnHeightForWidth((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_has_height_for_width(void* self) {
@@ -2076,8 +2090,8 @@ bool q_combobox_qbase_has_height_for_width(void* self) {
     return QComboBox_QBaseHasHeightForWidth((QComboBox*)self);
 }
 
-void q_combobox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QComboBox_OnHasHeightForWidth((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QComboBox_OnHasHeightForWidth((QComboBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_combobox_paint_engine(void* self) {
@@ -2088,8 +2102,8 @@ QPaintEngine* q_combobox_qbase_paint_engine(void* self) {
     return QComboBox_QBasePaintEngine((QComboBox*)self);
 }
 
-void q_combobox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QComboBox_OnPaintEngine((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QComboBox_OnPaintEngine((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_mouse_double_click_event(void* self, void* event) {
@@ -2100,8 +2114,8 @@ void q_combobox_qbase_mouse_double_click_event(void* self, void* event) {
     QComboBox_QBaseMouseDoubleClickEvent((QComboBox*)self, (QMouseEvent*)event);
 }
 
-void q_combobox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnMouseDoubleClickEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnMouseDoubleClickEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_mouse_move_event(void* self, void* event) {
@@ -2112,8 +2126,8 @@ void q_combobox_qbase_mouse_move_event(void* self, void* event) {
     QComboBox_QBaseMouseMoveEvent((QComboBox*)self, (QMouseEvent*)event);
 }
 
-void q_combobox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnMouseMoveEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnMouseMoveEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_enter_event(void* self, void* event) {
@@ -2124,8 +2138,8 @@ void q_combobox_qbase_enter_event(void* self, void* event) {
     QComboBox_QBaseEnterEvent((QComboBox*)self, (QEnterEvent*)event);
 }
 
-void q_combobox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnEnterEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnEnterEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_leave_event(void* self, void* event) {
@@ -2136,8 +2150,8 @@ void q_combobox_qbase_leave_event(void* self, void* event) {
     QComboBox_QBaseLeaveEvent((QComboBox*)self, (QEvent*)event);
 }
 
-void q_combobox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnLeaveEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnLeaveEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_move_event(void* self, void* event) {
@@ -2148,8 +2162,8 @@ void q_combobox_qbase_move_event(void* self, void* event) {
     QComboBox_QBaseMoveEvent((QComboBox*)self, (QMoveEvent*)event);
 }
 
-void q_combobox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnMoveEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnMoveEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_close_event(void* self, void* event) {
@@ -2160,8 +2174,8 @@ void q_combobox_qbase_close_event(void* self, void* event) {
     QComboBox_QBaseCloseEvent((QComboBox*)self, (QCloseEvent*)event);
 }
 
-void q_combobox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnCloseEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnCloseEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_tablet_event(void* self, void* event) {
@@ -2172,8 +2186,8 @@ void q_combobox_qbase_tablet_event(void* self, void* event) {
     QComboBox_QBaseTabletEvent((QComboBox*)self, (QTabletEvent*)event);
 }
 
-void q_combobox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnTabletEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnTabletEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_action_event(void* self, void* event) {
@@ -2184,8 +2198,8 @@ void q_combobox_qbase_action_event(void* self, void* event) {
     QComboBox_QBaseActionEvent((QComboBox*)self, (QActionEvent*)event);
 }
 
-void q_combobox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnActionEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnActionEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_drag_enter_event(void* self, void* event) {
@@ -2196,8 +2210,8 @@ void q_combobox_qbase_drag_enter_event(void* self, void* event) {
     QComboBox_QBaseDragEnterEvent((QComboBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_combobox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnDragEnterEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnDragEnterEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_drag_move_event(void* self, void* event) {
@@ -2208,8 +2222,8 @@ void q_combobox_qbase_drag_move_event(void* self, void* event) {
     QComboBox_QBaseDragMoveEvent((QComboBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_combobox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnDragMoveEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnDragMoveEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_drag_leave_event(void* self, void* event) {
@@ -2220,8 +2234,8 @@ void q_combobox_qbase_drag_leave_event(void* self, void* event) {
     QComboBox_QBaseDragLeaveEvent((QComboBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_combobox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnDragLeaveEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnDragLeaveEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_drop_event(void* self, void* event) {
@@ -2232,8 +2246,8 @@ void q_combobox_qbase_drop_event(void* self, void* event) {
     QComboBox_QBaseDropEvent((QComboBox*)self, (QDropEvent*)event);
 }
 
-void q_combobox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnDropEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnDropEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2244,8 +2258,8 @@ bool q_combobox_qbase_native_event(void* self, const char* eventType, void* mess
     return QComboBox_QBaseNativeEvent((QComboBox*)self, qstring(eventType), message, result);
 }
 
-void q_combobox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QComboBox_OnNativeEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QComboBox_OnNativeEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_combobox_metric(void* self, int64_t param1) {
@@ -2256,8 +2270,8 @@ int32_t q_combobox_qbase_metric(void* self, int64_t param1) {
     return QComboBox_QBaseMetric((QComboBox*)self, param1);
 }
 
-void q_combobox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QComboBox_OnMetric((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QComboBox_OnMetric((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_init_painter(void* self, void* painter) {
@@ -2268,8 +2282,8 @@ void q_combobox_qbase_init_painter(void* self, void* painter) {
     QComboBox_QBaseInitPainter((QComboBox*)self, (QPainter*)painter);
 }
 
-void q_combobox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnInitPainter((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnInitPainter((QComboBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_combobox_redirected(void* self, void* offset) {
@@ -2280,8 +2294,8 @@ QPaintDevice* q_combobox_qbase_redirected(void* self, void* offset) {
     return QComboBox_QBaseRedirected((QComboBox*)self, (QPoint*)offset);
 }
 
-void q_combobox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QComboBox_OnRedirected((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QComboBox_OnRedirected((QComboBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_combobox_shared_painter(void* self) {
@@ -2292,8 +2306,8 @@ QPainter* q_combobox_qbase_shared_painter(void* self) {
     return QComboBox_QBaseSharedPainter((QComboBox*)self);
 }
 
-void q_combobox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QComboBox_OnSharedPainter((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QComboBox_OnSharedPainter((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_focus_next_prev_child(void* self, bool next) {
@@ -2304,8 +2318,8 @@ bool q_combobox_qbase_focus_next_prev_child(void* self, bool next) {
     return QComboBox_QBaseFocusNextPrevChild((QComboBox*)self, next);
 }
 
-void q_combobox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QComboBox_OnFocusNextPrevChild((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QComboBox_OnFocusNextPrevChild((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_event_filter(void* self, void* watched, void* event) {
@@ -2316,8 +2330,8 @@ bool q_combobox_qbase_event_filter(void* self, void* watched, void* event) {
     return QComboBox_QBaseEventFilter((QComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_combobox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QComboBox_OnEventFilter((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QComboBox_OnEventFilter((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_timer_event(void* self, void* event) {
@@ -2328,8 +2342,8 @@ void q_combobox_qbase_timer_event(void* self, void* event) {
     QComboBox_QBaseTimerEvent((QComboBox*)self, (QTimerEvent*)event);
 }
 
-void q_combobox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnTimerEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnTimerEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_child_event(void* self, void* event) {
@@ -2340,8 +2354,8 @@ void q_combobox_qbase_child_event(void* self, void* event) {
     QComboBox_QBaseChildEvent((QComboBox*)self, (QChildEvent*)event);
 }
 
-void q_combobox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnChildEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnChildEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_custom_event(void* self, void* event) {
@@ -2352,8 +2366,8 @@ void q_combobox_qbase_custom_event(void* self, void* event) {
     QComboBox_QBaseCustomEvent((QComboBox*)self, (QEvent*)event);
 }
 
-void q_combobox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnCustomEvent((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnCustomEvent((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_connect_notify(void* self, void* signal) {
@@ -2364,8 +2378,8 @@ void q_combobox_qbase_connect_notify(void* self, void* signal) {
     QComboBox_QBaseConnectNotify((QComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_combobox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnConnectNotify((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnConnectNotify((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_disconnect_notify(void* self, void* signal) {
@@ -2376,8 +2390,8 @@ void q_combobox_qbase_disconnect_notify(void* self, void* signal) {
     QComboBox_QBaseDisconnectNotify((QComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_combobox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QComboBox_OnDisconnectNotify((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QComboBox_OnDisconnectNotify((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_update_micro_focus(void* self) {
@@ -2388,8 +2402,8 @@ void q_combobox_qbase_update_micro_focus(void* self) {
     QComboBox_QBaseUpdateMicroFocus((QComboBox*)self);
 }
 
-void q_combobox_on_update_micro_focus(void* self, void (*slot)()) {
-    QComboBox_OnUpdateMicroFocus((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_update_micro_focus(void* self, void (*callback)()) {
+    QComboBox_OnUpdateMicroFocus((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_create(void* self) {
@@ -2400,8 +2414,8 @@ void q_combobox_qbase_create(void* self) {
     QComboBox_QBaseCreate((QComboBox*)self);
 }
 
-void q_combobox_on_create(void* self, void (*slot)()) {
-    QComboBox_OnCreate((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_create(void* self, void (*callback)()) {
+    QComboBox_OnCreate((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_combobox_destroy(void* self) {
@@ -2412,8 +2426,8 @@ void q_combobox_qbase_destroy(void* self) {
     QComboBox_QBaseDestroy((QComboBox*)self);
 }
 
-void q_combobox_on_destroy(void* self, void (*slot)()) {
-    QComboBox_OnDestroy((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_destroy(void* self, void (*callback)()) {
+    QComboBox_OnDestroy((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_focus_next_child(void* self) {
@@ -2424,8 +2438,8 @@ bool q_combobox_qbase_focus_next_child(void* self) {
     return QComboBox_QBaseFocusNextChild((QComboBox*)self);
 }
 
-void q_combobox_on_focus_next_child(void* self, bool (*slot)()) {
-    QComboBox_OnFocusNextChild((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_focus_next_child(void* self, bool (*callback)()) {
+    QComboBox_OnFocusNextChild((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_focus_previous_child(void* self) {
@@ -2436,8 +2450,8 @@ bool q_combobox_qbase_focus_previous_child(void* self) {
     return QComboBox_QBaseFocusPreviousChild((QComboBox*)self);
 }
 
-void q_combobox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QComboBox_OnFocusPreviousChild((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QComboBox_OnFocusPreviousChild((QComboBox*)self, (intptr_t)callback);
 }
 
 QObject* q_combobox_sender(void* self) {
@@ -2448,8 +2462,8 @@ QObject* q_combobox_qbase_sender(void* self) {
     return QComboBox_QBaseSender((QComboBox*)self);
 }
 
-void q_combobox_on_sender(void* self, QObject* (*slot)()) {
-    QComboBox_OnSender((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_sender(void* self, QObject* (*callback)()) {
+    QComboBox_OnSender((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_combobox_sender_signal_index(void* self) {
@@ -2460,8 +2474,8 @@ int32_t q_combobox_qbase_sender_signal_index(void* self) {
     return QComboBox_QBaseSenderSignalIndex((QComboBox*)self);
 }
 
-void q_combobox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QComboBox_OnSenderSignalIndex((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QComboBox_OnSenderSignalIndex((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_combobox_receivers(void* self, const char* signal) {
@@ -2472,8 +2486,8 @@ int32_t q_combobox_qbase_receivers(void* self, const char* signal) {
     return QComboBox_QBaseReceivers((QComboBox*)self, signal);
 }
 
-void q_combobox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QComboBox_OnReceivers((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QComboBox_OnReceivers((QComboBox*)self, (intptr_t)callback);
 }
 
 bool q_combobox_is_signal_connected(void* self, void* signal) {
@@ -2484,8 +2498,8 @@ bool q_combobox_qbase_is_signal_connected(void* self, void* signal) {
     return QComboBox_QBaseIsSignalConnected((QComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_combobox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QComboBox_OnIsSignalConnected((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QComboBox_OnIsSignalConnected((QComboBox*)self, (intptr_t)callback);
 }
 
 double q_combobox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2496,12 +2510,12 @@ double q_combobox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
     return QComboBox_QBaseGetDecodedMetricF((QComboBox*)self, metricA, metricB);
 }
 
-void q_combobox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QComboBox_OnGetDecodedMetricF((QComboBox*)self, (intptr_t)slot);
+void q_combobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QComboBox_OnGetDecodedMetricF((QComboBox*)self, (intptr_t)callback);
 }
 
-void q_combobox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_combobox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_combobox_delete(void* self) {

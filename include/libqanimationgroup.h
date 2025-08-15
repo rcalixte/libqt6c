@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,549 +15,633 @@
 
 /// q_animationgroup_new constructs a new QAnimationGroup object.
 ///
-///
 QAnimationGroup* q_animationgroup_new();
 
 /// q_animationgroup_new2 constructs a new QAnimationGroup object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QAnimationGroup* q_animationgroup_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 const QMetaObject* q_animationgroup_meta_object(void* self);
 
-/// ``` QAnimationGroup* self, const char* param1 ```
+/// @param self QAnimationGroup*
+/// @param param1 const char*
 void* q_animationgroup_metacast(void* self, const char* param1);
 
-/// ``` QAnimationGroup* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAnimationGroup*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_animationgroup_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationGroup* self, int32_t (*slot)(QAnimationGroup*, enum QMetaObject__Call, int, void*) ```
-void q_animationgroup_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QAnimationGroup*
+/// @param callback int32_t fn(QAnimationGroup*, enum QMetaObject__Call, int, void*)
+void q_animationgroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QAnimationGroup* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAnimationGroup*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_animationgroup_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_animationgroup_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#animationAt)
 ///
-/// ``` QAnimationGroup* self, int index ```
+/// @param self QAnimationGroup*
+/// @param index int
 QAbstractAnimation* q_animationgroup_animation_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#animationCount)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_animation_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#indexOfAnimation)
 ///
-/// ``` QAnimationGroup* self, QAbstractAnimation* animation ```
+/// @param self QAnimationGroup*
+/// @param animation QAbstractAnimation*
 int32_t q_animationgroup_index_of_animation(void* self, void* animation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#addAnimation)
 ///
-/// ``` QAnimationGroup* self, QAbstractAnimation* animation ```
+/// @param self QAnimationGroup*
+/// @param animation QAbstractAnimation*
 void q_animationgroup_add_animation(void* self, void* animation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#insertAnimation)
 ///
-/// ``` QAnimationGroup* self, int index, QAbstractAnimation* animation ```
+/// @param self QAnimationGroup*
+/// @param index int
+/// @param animation QAbstractAnimation*
 void q_animationgroup_insert_animation(void* self, int index, void* animation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#removeAnimation)
 ///
-/// ``` QAnimationGroup* self, QAbstractAnimation* animation ```
+/// @param self QAnimationGroup*
+/// @param animation QAbstractAnimation*
 void q_animationgroup_remove_animation(void* self, void* animation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#takeAnimation)
 ///
-/// ``` QAnimationGroup* self, int index ```
+/// @param self QAnimationGroup*
+/// @param index int
 QAbstractAnimation* q_animationgroup_take_animation(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#clear)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#event)
 ///
-/// ``` QAnimationGroup* self, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QEvent*
 bool q_animationgroup_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAnimationGroup* self, bool (*slot)(QAnimationGroup*, QEvent*) ```
-void q_animationgroup_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback bool fn(QAnimationGroup*, QEvent*)
+void q_animationgroup_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QAnimationGroup* self, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QEvent*
 bool q_animationgroup_qbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_animationgroup_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_animationgroup_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#state)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
+///
+/// @return enum QAbstractAnimation__State
 int64_t q_animationgroup_state(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#group)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QAnimationGroup* q_animationgroup_group(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#direction)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
+///
+/// @return enum QAbstractAnimation__Direction
 int64_t q_animationgroup_direction(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setDirection)
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAnimationGroup*
+/// @param direction enum QAbstractAnimation__Direction
 void q_animationgroup_set_direction(void* self, int64_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentTime)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_current_time(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopTime)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_current_loop_time(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#loopCount)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_loop_count(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setLoopCount)
 ///
-/// ``` QAnimationGroup* self, int loopCount ```
+/// @param self QAnimationGroup*
+/// @param loopCount int
 void q_animationgroup_set_loop_count(void* self, int loopCount);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoop)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_current_loop(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#totalDuration)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_total_duration(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_finished(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#finished)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*) ```
-void q_animationgroup_on_finished(void* self, void (*slot)(void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*)
+void q_animationgroup_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAnimationGroup*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_animationgroup_state_changed(void* self, int64_t newState, int64_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
-void q_animationgroup_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+void q_animationgroup_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QAnimationGroup* self, int currentLoop ```
+/// @param self QAnimationGroup*
+/// @param currentLoop int
 void q_animationgroup_current_loop_changed(void* self, int currentLoop);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, int) ```
-void q_animationgroup_on_current_loop_changed(void* self, void (*slot)(void*, int));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, int)
+void q_animationgroup_on_current_loop_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__Direction param1 ```
+/// @param self QAnimationGroup*
+/// @param param1 enum QAbstractAnimation__Direction
 void q_animationgroup_direction_changed(void* self, int64_t param1);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, enum QAbstractAnimation__Direction) ```
-void q_animationgroup_on_direction_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, enum QAbstractAnimation__Direction)
+void q_animationgroup_on_direction_changed(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#start)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_start(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#pause)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_pause(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#resume)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_resume(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setPaused)
 ///
-/// ``` QAnimationGroup* self, bool paused ```
+/// @param self QAnimationGroup*
+/// @param paused bool
 void q_animationgroup_set_paused(void* self, bool paused);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stop)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_stop(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setCurrentTime)
 ///
-/// ``` QAnimationGroup* self, int msecs ```
+/// @param self QAnimationGroup*
+/// @param msecs int
 void q_animationgroup_set_current_time(void* self, int msecs);
 
 /// Inherited from QAbstractAnimation
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#start)
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__DeletionPolicy policy ```
+/// @param self QAnimationGroup*
+/// @param policy enum QAbstractAnimation__DeletionPolicy
 void q_animationgroup_start1(void* self, int64_t policy);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAnimationGroup* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAnimationGroup*
 const char* q_animationgroup_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAnimationGroup* self, char* name ```
+/// @param self QAnimationGroup*
+/// @param name char*
 void q_animationgroup_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 bool q_animationgroup_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 bool q_animationgroup_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 bool q_animationgroup_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 bool q_animationgroup_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAnimationGroup* self, bool b ```
+/// @param self QAnimationGroup*
+/// @param b bool
 bool q_animationgroup_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QThread* q_animationgroup_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAnimationGroup* self, QThread* thread ```
+/// @param self QAnimationGroup*
+/// @param thread QThread*
 bool q_animationgroup_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAnimationGroup* self, int interval ```
+/// @param self QAnimationGroup*
+/// @param interval int
 int32_t q_animationgroup_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAnimationGroup* self, int id ```
+/// @param self QAnimationGroup*
+/// @param id int
 void q_animationgroup_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAnimationGroup* self, enum Qt__TimerId id ```
+/// @param self QAnimationGroup*
+/// @param id enum Qt__TimerId
 void q_animationgroup_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 libqt_list /* of QObject* */ q_animationgroup_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QAnimationGroup* self, QObject* parent ```
+/// @param self QAnimationGroup*
+/// @param parent QObject*
 void q_animationgroup_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAnimationGroup* self, QObject* filterObj ```
+/// @param self QAnimationGroup*
+/// @param filterObj QObject*
 void q_animationgroup_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAnimationGroup* self, QObject* obj ```
+/// @param self QAnimationGroup*
+/// @param obj QObject*
 void q_animationgroup_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_animationgroup_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAnimationGroup* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAnimationGroup*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_animationgroup_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_animationgroup_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_animationgroup_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAnimationGroup* self, const char* name, QVariant* value ```
+/// @param self QAnimationGroup*
+/// @param name const char*
+/// @param value QVariant*
 bool q_animationgroup_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAnimationGroup* self, const char* name ```
+/// @param self QAnimationGroup*
+/// @param name const char*
 QVariant* q_animationgroup_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAnimationGroup* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAnimationGroup*
 const char** q_animationgroup_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QBindingStorage* q_animationgroup_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 const QBindingStorage* q_animationgroup_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*) ```
-void q_animationgroup_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*)
+void q_animationgroup_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QObject* q_animationgroup_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAnimationGroup* self, const char* classname ```
+/// @param self QAnimationGroup*
+/// @param classname const char*
 bool q_animationgroup_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAnimationGroup* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAnimationGroup*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_animationgroup_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAnimationGroup* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAnimationGroup*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_animationgroup_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_animationgroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAnimationGroup* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAnimationGroup*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_animationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationGroup* self, QObject* param1 ```
+/// @param self QAnimationGroup*
+/// @param param1 QObject*
 void q_animationgroup_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QObject*) ```
-void q_animationgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QObject*)
+void q_animationgroup_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -566,7 +649,7 @@ void q_animationgroup_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_duration(void* self);
 
 /// Inherited from QAbstractAnimation
@@ -575,7 +658,7 @@ int32_t q_animationgroup_duration(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_qbase_duration(void* self);
 
 /// Inherited from QAbstractAnimation
@@ -584,8 +667,9 @@ int32_t q_animationgroup_qbase_duration(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, int32_t (*slot)() ```
-void q_animationgroup_on_duration(void* self, int32_t (*slot)());
+/// @param self QAnimationGroup*
+/// @param callback int32_t fn()
+void q_animationgroup_on_duration(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractAnimation
 ///
@@ -593,7 +677,8 @@ void q_animationgroup_on_duration(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, int currentTime ```
+/// @param self QAnimationGroup*
+/// @param currentTime int
 void q_animationgroup_update_current_time(void* self, int currentTime);
 
 /// Inherited from QAbstractAnimation
@@ -602,7 +687,8 @@ void q_animationgroup_update_current_time(void* self, int currentTime);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, int currentTime ```
+/// @param self QAnimationGroup*
+/// @param currentTime int
 void q_animationgroup_qbase_update_current_time(void* self, int currentTime);
 
 /// Inherited from QAbstractAnimation
@@ -611,8 +697,9 @@ void q_animationgroup_qbase_update_current_time(void* self, int currentTime);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, int) ```
-void q_animationgroup_on_update_current_time(void* self, void (*slot)(void*, int));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, int)
+void q_animationgroup_on_update_current_time(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -620,7 +707,9 @@ void q_animationgroup_on_update_current_time(void* self, void (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAnimationGroup*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_animationgroup_update_state(void* self, int64_t newState, int64_t oldState);
 
 /// Inherited from QAbstractAnimation
@@ -629,7 +718,9 @@ void q_animationgroup_update_state(void* self, int64_t newState, int64_t oldStat
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__State newState, enum QAbstractAnimation__State oldState ```
+/// @param self QAnimationGroup*
+/// @param newState enum QAbstractAnimation__State
+/// @param oldState enum QAbstractAnimation__State
 void q_animationgroup_qbase_update_state(void* self, int64_t newState, int64_t oldState);
 
 /// Inherited from QAbstractAnimation
@@ -638,8 +729,9 @@ void q_animationgroup_qbase_update_state(void* self, int64_t newState, int64_t o
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State) ```
-void q_animationgroup_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
+void q_animationgroup_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -647,7 +739,8 @@ void q_animationgroup_on_update_state(void* self, void (*slot)(void*, int64_t, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAnimationGroup*
+/// @param direction enum QAbstractAnimation__Direction
 void q_animationgroup_update_direction(void* self, int64_t direction);
 
 /// Inherited from QAbstractAnimation
@@ -656,7 +749,8 @@ void q_animationgroup_update_direction(void* self, int64_t direction);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, enum QAbstractAnimation__Direction direction ```
+/// @param self QAnimationGroup*
+/// @param direction enum QAbstractAnimation__Direction
 void q_animationgroup_qbase_update_direction(void* self, int64_t direction);
 
 /// Inherited from QAbstractAnimation
@@ -665,8 +759,9 @@ void q_animationgroup_qbase_update_direction(void* self, int64_t direction);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, enum QAbstractAnimation__Direction) ```
-void q_animationgroup_on_update_direction(void* self, void (*slot)(void*, int64_t));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, enum QAbstractAnimation__Direction)
+void q_animationgroup_on_update_direction(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///
@@ -674,7 +769,9 @@ void q_animationgroup_on_update_direction(void* self, void (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QObject* watched, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_animationgroup_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -683,7 +780,9 @@ bool q_animationgroup_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QObject* watched, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_animationgroup_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -692,8 +791,9 @@ bool q_animationgroup_qbase_event_filter(void* self, void* watched, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, bool (*slot)(QAnimationGroup*, QObject*, QEvent*) ```
-void q_animationgroup_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback bool fn(QAnimationGroup*, QObject*, QEvent*)
+void q_animationgroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -701,7 +801,8 @@ void q_animationgroup_on_event_filter(void* self, bool (*slot)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QTimerEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QTimerEvent*
 void q_animationgroup_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -710,7 +811,8 @@ void q_animationgroup_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QTimerEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QTimerEvent*
 void q_animationgroup_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -719,8 +821,9 @@ void q_animationgroup_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QTimerEvent*) ```
-void q_animationgroup_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QTimerEvent*)
+void q_animationgroup_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -728,7 +831,8 @@ void q_animationgroup_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QChildEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QChildEvent*
 void q_animationgroup_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -737,7 +841,8 @@ void q_animationgroup_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QChildEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QChildEvent*
 void q_animationgroup_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -746,8 +851,9 @@ void q_animationgroup_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QChildEvent*) ```
-void q_animationgroup_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QChildEvent*)
+void q_animationgroup_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -755,7 +861,8 @@ void q_animationgroup_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QEvent*
 void q_animationgroup_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -764,7 +871,8 @@ void q_animationgroup_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QEvent* event ```
+/// @param self QAnimationGroup*
+/// @param event QEvent*
 void q_animationgroup_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -773,8 +881,9 @@ void q_animationgroup_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QEvent*) ```
-void q_animationgroup_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QEvent*)
+void q_animationgroup_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -782,7 +891,8 @@ void q_animationgroup_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 void q_animationgroup_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -791,7 +901,8 @@ void q_animationgroup_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 void q_animationgroup_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -800,8 +911,9 @@ void q_animationgroup_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QMetaMethod*) ```
-void q_animationgroup_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QMetaMethod*)
+void q_animationgroup_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -809,7 +921,8 @@ void q_animationgroup_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 void q_animationgroup_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -818,7 +931,8 @@ void q_animationgroup_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 void q_animationgroup_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -827,8 +941,9 @@ void q_animationgroup_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, QMetaMethod*) ```
-void q_animationgroup_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, QMetaMethod*)
+void q_animationgroup_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -836,7 +951,7 @@ void q_animationgroup_on_disconnect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QObject* q_animationgroup_sender(void* self);
 
 /// Inherited from QObject
@@ -845,7 +960,7 @@ QObject* q_animationgroup_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 QObject* q_animationgroup_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -854,8 +969,9 @@ QObject* q_animationgroup_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QObject* (*slot)() ```
-void q_animationgroup_on_sender(void* self, QObject* (*slot)());
+/// @param self QAnimationGroup*
+/// @param callback QObject* fn()
+void q_animationgroup_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -863,7 +979,7 @@ void q_animationgroup_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -872,7 +988,7 @@ int32_t q_animationgroup_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 int32_t q_animationgroup_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -881,8 +997,9 @@ int32_t q_animationgroup_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, int32_t (*slot)() ```
-void q_animationgroup_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QAnimationGroup*
+/// @param callback int32_t fn()
+void q_animationgroup_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -890,7 +1007,8 @@ void q_animationgroup_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, const char* signal ```
+/// @param self QAnimationGroup*
+/// @param signal const char*
 int32_t q_animationgroup_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -899,7 +1017,8 @@ int32_t q_animationgroup_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, const char* signal ```
+/// @param self QAnimationGroup*
+/// @param signal const char*
 int32_t q_animationgroup_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -908,8 +1027,9 @@ int32_t q_animationgroup_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, int32_t (*slot)(QAnimationGroup*, const char*) ```
-void q_animationgroup_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QAnimationGroup*
+/// @param callback int32_t fn(QAnimationGroup*, const char*)
+void q_animationgroup_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -917,7 +1037,8 @@ void q_animationgroup_on_receivers(void* self, int32_t (*slot)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 bool q_animationgroup_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -926,7 +1047,8 @@ bool q_animationgroup_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, QMetaMethod* signal ```
+/// @param self QAnimationGroup*
+/// @param signal QMetaMethod*
 bool q_animationgroup_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -935,8 +1057,9 @@ bool q_animationgroup_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAnimationGroup* self, bool (*slot)(QAnimationGroup*, QMetaMethod*) ```
-void q_animationgroup_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QAnimationGroup*
+/// @param callback bool fn(QAnimationGroup*, QMetaMethod*)
+void q_animationgroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -944,14 +1067,15 @@ void q_animationgroup_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAnimationGroup* self, void (*slot)(QAnimationGroup*, const char*) ```
-void q_animationgroup_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAnimationGroup*
+/// @param callback void fn(QAnimationGroup*, const char*)
+void q_animationgroup_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanimationgroup.html#dtor.QAnimationGroup)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAnimationGroup* self ```
+/// @param self QAnimationGroup*
 void q_animationgroup_delete(void* self);
 
 #endif

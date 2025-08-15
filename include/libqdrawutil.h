@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,49 +15,51 @@
 
 /// q_tilerules_new constructs a new QTileRules object.
 ///
-/// ``` QTileRules* other ```
+/// @param other QTileRules*
 QTileRules* q_tilerules_new(void* other);
 
 /// q_tilerules_new2 constructs a new QTileRules object and invalidates the source QTileRules object.
 ///
-/// ``` QTileRules* other ```
+/// @param other QTileRules*
 QTileRules* q_tilerules_new2(void* other);
 
 /// q_tilerules_new3 constructs a new QTileRules object.
 ///
-/// ``` enum Qt__TileRule horizontalRule, enum Qt__TileRule verticalRule ```
+/// @param horizontalRule enum Qt__TileRule
+/// @param verticalRule enum Qt__TileRule
 QTileRules* q_tilerules_new3(int64_t horizontalRule, int64_t verticalRule);
 
 /// q_tilerules_new4 constructs a new QTileRules object.
-///
 ///
 QTileRules* q_tilerules_new4();
 
 /// q_tilerules_new5 constructs a new QTileRules object.
 ///
-/// ``` QTileRules* param1 ```
+/// @param param1 QTileRules*
 QTileRules* q_tilerules_new5(void* param1);
 
 /// q_tilerules_new6 constructs a new QTileRules object.
 ///
-/// ``` enum Qt__TileRule rule ```
+/// @param rule enum Qt__TileRule
 QTileRules* q_tilerules_new6(int64_t rule);
 
 /// q_tilerules_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTileRules* self, QTileRules* other ```
+/// @param self QTileRules*
+/// @param other QTileRules*
 void q_tilerules_copy_assign(void* self, void* other);
 
 /// q_tilerules_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTileRules* self, QTileRules* other ```
+/// @param self QTileRules*
+/// @param other QTileRules*
 void q_tilerules_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#dtor.QTileRules)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTileRules* self ```
+/// @param self QTileRules*
 void q_tilerules_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdrawutil.html#types

@@ -27,8 +27,8 @@ int32_t q_picture_dev_type(void* self) {
     return QPicture_DevType((QPicture*)self);
 }
 
-void q_picture_on_dev_type(void* self, int32_t (*slot)()) {
-    QPicture_OnDevType((QPicture*)self, (intptr_t)slot);
+void q_picture_on_dev_type(void* self, int32_t (*callback)()) {
+    QPicture_OnDevType((QPicture*)self, (intptr_t)callback);
 }
 
 int32_t q_picture_qbase_dev_type(void* self) {
@@ -47,8 +47,8 @@ void q_picture_set_data(void* self, const char* data, uint32_t size) {
     QPicture_SetData((QPicture*)self, data, size);
 }
 
-void q_picture_on_set_data(void* self, void (*slot)(void*, const char*, uint32_t)) {
-    QPicture_OnSetData((QPicture*)self, (intptr_t)slot);
+void q_picture_on_set_data(void* self, void (*callback)(void*, const char*, uint32_t)) {
+    QPicture_OnSetData((QPicture*)self, (intptr_t)callback);
 }
 
 void q_picture_qbase_set_data(void* self, const char* data, uint32_t size) {
@@ -103,8 +103,8 @@ QPaintEngine* q_picture_paint_engine(void* self) {
     return QPicture_PaintEngine((QPicture*)self);
 }
 
-void q_picture_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QPicture_OnPaintEngine((QPicture*)self, (intptr_t)slot);
+void q_picture_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QPicture_OnPaintEngine((QPicture*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_picture_qbase_paint_engine(void* self) {
@@ -115,8 +115,8 @@ int32_t q_picture_metric(void* self, int64_t m) {
     return QPicture_Metric((QPicture*)self, m);
 }
 
-void q_picture_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QPicture_OnMetric((QPicture*)self, (intptr_t)slot);
+void q_picture_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QPicture_OnMetric((QPicture*)self, (intptr_t)callback);
 }
 
 int32_t q_picture_qbase_metric(void* self, int64_t m) {
@@ -191,8 +191,8 @@ void q_picture_qbase_init_painter(void* self, void* painter) {
     QPicture_QBaseInitPainter((QPicture*)self, (QPainter*)painter);
 }
 
-void q_picture_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QPicture_OnInitPainter((QPicture*)self, (intptr_t)slot);
+void q_picture_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QPicture_OnInitPainter((QPicture*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_picture_redirected(void* self, void* offset) {
@@ -203,8 +203,8 @@ QPaintDevice* q_picture_qbase_redirected(void* self, void* offset) {
     return QPicture_QBaseRedirected((QPicture*)self, (QPoint*)offset);
 }
 
-void q_picture_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QPicture_OnRedirected((QPicture*)self, (intptr_t)slot);
+void q_picture_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QPicture_OnRedirected((QPicture*)self, (intptr_t)callback);
 }
 
 QPainter* q_picture_shared_painter(void* self) {
@@ -215,8 +215,8 @@ QPainter* q_picture_qbase_shared_painter(void* self) {
     return QPicture_QBaseSharedPainter((QPicture*)self);
 }
 
-void q_picture_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QPicture_OnSharedPainter((QPicture*)self, (intptr_t)slot);
+void q_picture_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QPicture_OnSharedPainter((QPicture*)self, (intptr_t)callback);
 }
 
 double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -227,8 +227,8 @@ double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t
     return QPicture_QBaseGetDecodedMetricF((QPicture*)self, metricA, metricB);
 }
 
-void q_picture_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QPicture_OnGetDecodedMetricF((QPicture*)self, (intptr_t)slot);
+void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QPicture_OnGetDecodedMetricF((QPicture*)self, (intptr_t)callback);
 }
 
 void q_picture_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,488 +15,568 @@
 
 /// q_timeline_new constructs a new QTimeLine object.
 ///
-///
 QTimeLine* q_timeline_new();
 
 /// q_timeline_new2 constructs a new QTimeLine object.
 ///
-/// ``` int duration ```
+/// @param duration int
 QTimeLine* q_timeline_new2(int duration);
 
 /// q_timeline_new3 constructs a new QTimeLine object.
 ///
-/// ``` int duration, QObject* parent ```
+/// @param duration int
+/// @param parent QObject*
 QTimeLine* q_timeline_new3(int duration, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 const QMetaObject* q_timeline_meta_object(void* self);
 
-/// ``` QTimeLine* self, const char* param1 ```
+/// @param self QTimeLine*
+/// @param param1 const char*
 void* q_timeline_metacast(void* self, const char* param1);
 
-/// ``` QTimeLine* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTimeLine*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_timeline_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTimeLine* self, int32_t (*slot)(QTimeLine*, enum QMetaObject__Call, int, void*) ```
-void q_timeline_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTimeLine*
+/// @param callback int32_t fn(QTimeLine*, enum QMetaObject__Call, int, void*)
+void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTimeLine* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTimeLine*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_timeline_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_timeline_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#state)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
+///
+/// @return enum QTimeLine__State
 int64_t q_timeline_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#loopCount)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_loop_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setLoopCount)
 ///
-/// ``` QTimeLine* self, int count ```
+/// @param self QTimeLine*
+/// @param count int
 void q_timeline_set_loop_count(void* self, int count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#direction)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
+///
+/// @return enum QTimeLine__Direction
 int64_t q_timeline_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setDirection)
 ///
-/// ``` QTimeLine* self, enum QTimeLine__Direction direction ```
+/// @param self QTimeLine*
+/// @param direction enum QTimeLine__Direction
 void q_timeline_set_direction(void* self, int64_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#duration)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_duration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setDuration)
 ///
-/// ``` QTimeLine* self, int duration ```
+/// @param self QTimeLine*
+/// @param duration int
 void q_timeline_set_duration(void* self, int duration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#startFrame)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_start_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setStartFrame)
 ///
-/// ``` QTimeLine* self, int frame ```
+/// @param self QTimeLine*
+/// @param frame int
 void q_timeline_set_start_frame(void* self, int frame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#endFrame)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_end_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setEndFrame)
 ///
-/// ``` QTimeLine* self, int frame ```
+/// @param self QTimeLine*
+/// @param frame int
 void q_timeline_set_end_frame(void* self, int frame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setFrameRange)
 ///
-/// ``` QTimeLine* self, int startFrame, int endFrame ```
+/// @param self QTimeLine*
+/// @param startFrame int
+/// @param endFrame int
 void q_timeline_set_frame_range(void* self, int startFrame, int endFrame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#updateInterval)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_update_interval(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setUpdateInterval)
 ///
-/// ``` QTimeLine* self, int interval ```
+/// @param self QTimeLine*
+/// @param interval int
 void q_timeline_set_update_interval(void* self, int interval);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#easingCurve)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QEasingCurve* q_timeline_easing_curve(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setEasingCurve)
 ///
-/// ``` QTimeLine* self, QEasingCurve* curve ```
+/// @param self QTimeLine*
+/// @param curve QEasingCurve*
 void q_timeline_set_easing_curve(void* self, void* curve);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#currentTime)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_current_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#currentFrame)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_current_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#currentValue)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 double q_timeline_current_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#frameForTime)
 ///
-/// ``` QTimeLine* self, int msec ```
+/// @param self QTimeLine*
+/// @param msec int
 int32_t q_timeline_frame_for_time(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueForTime)
 ///
-/// ``` QTimeLine* self, int msec ```
+/// @param self QTimeLine*
+/// @param msec int
 double q_timeline_value_for_time(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueForTime)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTimeLine* self, double (*slot)(QTimeLine*, int) ```
-void q_timeline_on_value_for_time(void* self, double (*slot)(void*, int));
+/// @param self QTimeLine*
+/// @param callback double fn(QTimeLine*, int)
+void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueForTime)
 ///
 /// Base class method implementation
 ///
-/// ``` QTimeLine* self, int msec ```
+/// @param self QTimeLine*
+/// @param msec int
 double q_timeline_qbase_value_for_time(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#start)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#resume)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_resume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#stop)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setPaused)
 ///
-/// ``` QTimeLine* self, bool paused ```
+/// @param self QTimeLine*
+/// @param paused bool
 void q_timeline_set_paused(void* self, bool paused);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setCurrentTime)
 ///
-/// ``` QTimeLine* self, int msec ```
+/// @param self QTimeLine*
+/// @param msec int
 void q_timeline_set_current_time(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#toggleDirection)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_toggle_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#timerEvent)
 ///
-/// ``` QTimeLine* self, QTimerEvent* event ```
+/// @param self QTimeLine*
+/// @param event QTimerEvent*
 void q_timeline_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QTimerEvent*) ```
-void q_timeline_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QTimerEvent*)
+void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTimeLine* self, QTimerEvent* event ```
+/// @param self QTimeLine*
+/// @param event QTimerEvent*
 void q_timeline_qbase_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_timeline_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_timeline_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTimeLine* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTimeLine*
 const char* q_timeline_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTimeLine* self, char* name ```
+/// @param self QTimeLine*
+/// @param name char*
 void q_timeline_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 bool q_timeline_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 bool q_timeline_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 bool q_timeline_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 bool q_timeline_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTimeLine* self, bool b ```
+/// @param self QTimeLine*
+/// @param b bool
 bool q_timeline_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QThread* q_timeline_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTimeLine* self, QThread* thread ```
+/// @param self QTimeLine*
+/// @param thread QThread*
 bool q_timeline_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTimeLine* self, int interval ```
+/// @param self QTimeLine*
+/// @param interval int
 int32_t q_timeline_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTimeLine* self, int id ```
+/// @param self QTimeLine*
+/// @param id int
 void q_timeline_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTimeLine* self, enum Qt__TimerId id ```
+/// @param self QTimeLine*
+/// @param id enum Qt__TimerId
 void q_timeline_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 libqt_list /* of QObject* */ q_timeline_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTimeLine* self, QObject* parent ```
+/// @param self QTimeLine*
+/// @param parent QObject*
 void q_timeline_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTimeLine* self, QObject* filterObj ```
+/// @param self QTimeLine*
+/// @param filterObj QObject*
 void q_timeline_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTimeLine* self, QObject* obj ```
+/// @param self QTimeLine*
+/// @param obj QObject*
 void q_timeline_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_timeline_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTimeLine* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTimeLine*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_timeline_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_timeline_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_timeline_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTimeLine* self, const char* name, QVariant* value ```
+/// @param self QTimeLine*
+/// @param name const char*
+/// @param value QVariant*
 bool q_timeline_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTimeLine* self, const char* name ```
+/// @param self QTimeLine*
+/// @param name const char*
 QVariant* q_timeline_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTimeLine* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTimeLine*
 const char** q_timeline_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QBindingStorage* q_timeline_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 const QBindingStorage* q_timeline_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*) ```
-void q_timeline_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*)
+void q_timeline_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QObject* q_timeline_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTimeLine* self, const char* classname ```
+/// @param self QTimeLine*
+/// @param classname const char*
 bool q_timeline_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTimeLine* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTimeLine*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_timeline_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTimeLine* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTimeLine*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_timeline_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_timeline_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTimeLine* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTimeLine*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_timeline_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeLine* self, QObject* param1 ```
+/// @param self QTimeLine*
+/// @param param1 QObject*
 void q_timeline_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QObject*) ```
-void q_timeline_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QObject*)
+void q_timeline_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -505,7 +584,8 @@ void q_timeline_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QEvent* event ```
+/// @param self QTimeLine*
+/// @param event QEvent*
 bool q_timeline_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -514,7 +594,8 @@ bool q_timeline_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QEvent* event ```
+/// @param self QTimeLine*
+/// @param event QEvent*
 bool q_timeline_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -523,8 +604,9 @@ bool q_timeline_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, bool (*slot)(QTimeLine*, QEvent*) ```
-void q_timeline_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback bool fn(QTimeLine*, QEvent*)
+void q_timeline_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -532,7 +614,9 @@ void q_timeline_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QObject* watched, QEvent* event ```
+/// @param self QTimeLine*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_timeline_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -541,7 +625,9 @@ bool q_timeline_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QObject* watched, QEvent* event ```
+/// @param self QTimeLine*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_timeline_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -550,8 +636,9 @@ bool q_timeline_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, bool (*slot)(QTimeLine*, QObject*, QEvent*) ```
-void q_timeline_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTimeLine*
+/// @param callback bool fn(QTimeLine*, QObject*, QEvent*)
+void q_timeline_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -559,7 +646,8 @@ void q_timeline_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QChildEvent* event ```
+/// @param self QTimeLine*
+/// @param event QChildEvent*
 void q_timeline_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -568,7 +656,8 @@ void q_timeline_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QChildEvent* event ```
+/// @param self QTimeLine*
+/// @param event QChildEvent*
 void q_timeline_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -577,8 +666,9 @@ void q_timeline_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QChildEvent*) ```
-void q_timeline_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QChildEvent*)
+void q_timeline_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -586,7 +676,8 @@ void q_timeline_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QEvent* event ```
+/// @param self QTimeLine*
+/// @param event QEvent*
 void q_timeline_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -595,7 +686,8 @@ void q_timeline_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QEvent* event ```
+/// @param self QTimeLine*
+/// @param event QEvent*
 void q_timeline_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -604,8 +696,9 @@ void q_timeline_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QEvent*) ```
-void q_timeline_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QEvent*)
+void q_timeline_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -613,7 +706,8 @@ void q_timeline_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 void q_timeline_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -622,7 +716,8 @@ void q_timeline_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 void q_timeline_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -631,8 +726,9 @@ void q_timeline_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QMetaMethod*) ```
-void q_timeline_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QMetaMethod*)
+void q_timeline_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -640,7 +736,8 @@ void q_timeline_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 void q_timeline_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -649,7 +746,8 @@ void q_timeline_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 void q_timeline_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -658,8 +756,9 @@ void q_timeline_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, QMetaMethod*) ```
-void q_timeline_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, QMetaMethod*)
+void q_timeline_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -667,7 +766,7 @@ void q_timeline_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QObject* q_timeline_sender(void* self);
 
 /// Inherited from QObject
@@ -676,7 +775,7 @@ QObject* q_timeline_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 QObject* q_timeline_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -685,8 +784,9 @@ QObject* q_timeline_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QObject* (*slot)() ```
-void q_timeline_on_sender(void* self, QObject* (*slot)());
+/// @param self QTimeLine*
+/// @param callback QObject* fn()
+void q_timeline_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -694,7 +794,7 @@ void q_timeline_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -703,7 +803,7 @@ int32_t q_timeline_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 int32_t q_timeline_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -712,8 +812,9 @@ int32_t q_timeline_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, int32_t (*slot)() ```
-void q_timeline_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTimeLine*
+/// @param callback int32_t fn()
+void q_timeline_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -721,7 +822,8 @@ void q_timeline_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, const char* signal ```
+/// @param self QTimeLine*
+/// @param signal const char*
 int32_t q_timeline_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -730,7 +832,8 @@ int32_t q_timeline_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, const char* signal ```
+/// @param self QTimeLine*
+/// @param signal const char*
 int32_t q_timeline_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -739,8 +842,9 @@ int32_t q_timeline_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, int32_t (*slot)(QTimeLine*, const char*) ```
-void q_timeline_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTimeLine*
+/// @param callback int32_t fn(QTimeLine*, const char*)
+void q_timeline_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -748,7 +852,8 @@ void q_timeline_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 bool q_timeline_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -757,7 +862,8 @@ bool q_timeline_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimeLine* self, QMetaMethod* signal ```
+/// @param self QTimeLine*
+/// @param signal QMetaMethod*
 bool q_timeline_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -766,36 +872,41 @@ bool q_timeline_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimeLine* self, bool (*slot)(QTimeLine*, QMetaMethod*) ```
-void q_timeline_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTimeLine*
+/// @param callback bool fn(QTimeLine*, QMetaMethod*)
+void q_timeline_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#valueChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, double) ```
-void q_timeline_on_value_changed(void* self, void (*slot)(void*, double));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, double)
+void q_timeline_on_value_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#frameChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, int) ```
-void q_timeline_on_frame_changed(void* self, void (*slot)(void*, int));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, int)
+void q_timeline_on_frame_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#stateChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, enum QTimeLine__State) ```
-void q_timeline_on_state_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, enum QTimeLine__State)
+void q_timeline_on_state_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#finished)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*) ```
-void q_timeline_on_finished(void* self, void (*slot)(void*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*)
+void q_timeline_on_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -803,14 +914,15 @@ void q_timeline_on_finished(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimeLine* self, void (*slot)(QTimeLine*, const char*) ```
-void q_timeline_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTimeLine*
+/// @param callback void fn(QTimeLine*, const char*)
+void q_timeline_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#dtor.QTimeLine)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTimeLine* self ```
+/// @param self QTimeLine*
 void q_timeline_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtimeline.html#types

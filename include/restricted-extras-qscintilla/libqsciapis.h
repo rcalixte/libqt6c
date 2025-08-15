@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,493 +15,586 @@
 
 /// q_sciapis_new constructs a new QsciAPIs object.
 ///
-/// ``` QsciLexer* lexer ```
+/// @param lexer QsciLexer*
 QsciAPIs* q_sciapis_new(void* lexer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 const QMetaObject* q_sciapis_meta_object(void* self);
 
-/// ``` QsciAPIs* self, const char* param1 ```
+/// @param self QsciAPIs*
+/// @param param1 const char*
 void* q_sciapis_metacast(void* self, const char* param1);
 
-/// ``` QsciAPIs* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciAPIs*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_sciapis_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QsciAPIs* self, int32_t (*slot)(QsciAPIs*, enum QMetaObject__Call, int, void*) ```
-void q_sciapis_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QsciAPIs*
+/// @param callback int32_t fn(QsciAPIs*, enum QMetaObject__Call, int, void*)
+void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QsciAPIs* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciAPIs*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_sciapis_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_sciapis_tr(const char* s);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* entry ```
+/// @param self QsciAPIs*
+/// @param entry const char*
 void q_sciapis_add(void* self, const char* entry);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_clear(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* filename ```
+/// @param self QsciAPIs*
+/// @param filename const char*
 bool q_sciapis_load(void* self, const char* filename);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* entry ```
+/// @param self QsciAPIs*
+/// @param entry const char*
 void q_sciapis_remove(void* self, const char* entry);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_prepare(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_cancel_preparation(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciAPIs*
 const char* q_sciapis_default_prepared_name(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_is_prepared(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_load_prepared(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_save_prepared(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* context[], const char* list[] ```
+/// @param self QsciAPIs*
+/// @param context const char**
+/// @param list const char**
 void q_sciapis_update_auto_completion_list(void* self, const char* context[], const char* list[]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, const char*[], const char*[]) ```
-void q_sciapis_on_update_auto_completion_list(void* self, void (*slot)(void*, const char*, const char*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, const char**, const char**)
+void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*, const char**, const char**));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciAPIs* self, const char* context[], const char* list[] ```
+/// @param self QsciAPIs*
+/// @param context const char**
+/// @param list const char**
 void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[], const char* list[]);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* sel ```
+/// @param self QsciAPIs*
+/// @param sel const char*
 void q_sciapis_auto_completion_selected(void* self, const char* sel);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, const char*) ```
-void q_sciapis_on_auto_completion_selected(void* self, void (*slot)(void*, const char*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, const char*)
+void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciAPIs* self, const char* sel ```
+/// @param self QsciAPIs*
+/// @param sel const char*
 void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* context[], int commas, enum QsciScintilla__CallTipsStyle style, libqt_list /* of int */ shifts ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciAPIs*
+/// @param context const char**
+/// @param commas int
+/// @param style enum QsciScintilla__CallTipsStyle
+/// @param shifts libqt_list /* of int */
 const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciAPIs* self, const char** (*slot)(QsciAPIs*, const char*[], int, enum QsciScintilla__CallTipsStyle, libqt_list /* of int */ shifts ) ```
-void q_sciapis_on_call_tips(void* self, const char** (*slot)(void*, const char*, int, int64_t, libqt_list));
+/// @param self QsciAPIs*
+/// @param callback const char** fn(QsciAPIs*, const char**, int, enum QsciScintilla__CallTipsStyle, libqt_list /* of int */)
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int64_t, libqt_list));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciAPIs* self, const char* context[], int commas, enum QsciScintilla__CallTipsStyle style, libqt_list /* of int */ shifts ```
+/// @param self QsciAPIs*
+/// @param context const char**
+/// @param commas int
+/// @param style enum QsciScintilla__CallTipsStyle
+/// @param shifts libqt_list /* of int */
 const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, QEvent* e ```
+/// @param self QsciAPIs*
+/// @param e QEvent*
 bool q_sciapis_event(void* self, void* e);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciAPIs* self, bool (*slot)(QsciAPIs*, QEvent*) ```
-void q_sciapis_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback bool fn(QsciAPIs*, QEvent*)
+void q_sciapis_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciAPIs* self, QEvent* e ```
+/// @param self QsciAPIs*
+/// @param e QEvent*
 bool q_sciapis_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciAPIs*
 const char** q_sciapis_installed_a_p_i_files(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_api_preparation_cancelled(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*) ```
-void q_sciapis_on_api_preparation_cancelled(void* self, void (*slot)(void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*)
+void q_sciapis_on_api_preparation_cancelled(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_api_preparation_started(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*) ```
-void q_sciapis_on_api_preparation_started(void* self, void (*slot)(void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*)
+void q_sciapis_on_api_preparation_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_api_preparation_finished(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*) ```
-void q_sciapis_on_api_preparation_finished(void* self, void (*slot)(void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*)
+void q_sciapis_on_api_preparation_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_sciapis_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_sciapis_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* filename ```
+/// @param self QsciAPIs*
+/// @param filename const char*
 bool q_sciapis_is_prepared1(void* self, const char* filename);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* filename ```
+/// @param self QsciAPIs*
+/// @param filename const char*
 bool q_sciapis_load_prepared1(void* self, const char* filename);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
-/// ``` QsciAPIs* self, const char* filename ```
+/// @param self QsciAPIs*
+/// @param filename const char*
 bool q_sciapis_save_prepared1(void* self, const char* filename);
 
 /// Inherited from QsciAbstractAPIs
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QsciLexer* q_sciapis_lexer(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QsciAPIs* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciAPIs*
 const char* q_sciapis_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciAPIs* self, char* name ```
+/// @param self QsciAPIs*
+/// @param name char*
 void q_sciapis_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 bool q_sciapis_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QsciAPIs* self, bool b ```
+/// @param self QsciAPIs*
+/// @param b bool
 bool q_sciapis_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QThread* q_sciapis_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciAPIs* self, QThread* thread ```
+/// @param self QsciAPIs*
+/// @param thread QThread*
 bool q_sciapis_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciAPIs* self, int interval ```
+/// @param self QsciAPIs*
+/// @param interval int
 int32_t q_sciapis_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciAPIs* self, int id ```
+/// @param self QsciAPIs*
+/// @param id int
 void q_sciapis_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciAPIs* self, enum Qt__TimerId id ```
+/// @param self QsciAPIs*
+/// @param id enum Qt__TimerId
 void q_sciapis_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 libqt_list /* of QObject* */ q_sciapis_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QsciAPIs* self, QObject* parent ```
+/// @param self QsciAPIs*
+/// @param parent QObject*
 void q_sciapis_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QsciAPIs* self, QObject* filterObj ```
+/// @param self QsciAPIs*
+/// @param filterObj QObject*
 void q_sciapis_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QsciAPIs* self, QObject* obj ```
+/// @param self QsciAPIs*
+/// @param obj QObject*
 void q_sciapis_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_sciapis_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciAPIs* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QsciAPIs*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_sciapis_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_sciapis_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_sciapis_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QsciAPIs* self, const char* name, QVariant* value ```
+/// @param self QsciAPIs*
+/// @param name const char*
+/// @param value QVariant*
 bool q_sciapis_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QsciAPIs* self, const char* name ```
+/// @param self QsciAPIs*
+/// @param name const char*
 QVariant* q_sciapis_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QsciAPIs* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciAPIs*
 const char** q_sciapis_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QBindingStorage* q_sciapis_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 const QBindingStorage* q_sciapis_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*) ```
-void q_sciapis_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*)
+void q_sciapis_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QObject* q_sciapis_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QsciAPIs* self, const char* classname ```
+/// @param self QsciAPIs*
+/// @param classname const char*
 bool q_sciapis_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciAPIs* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QsciAPIs*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_sciapis_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciAPIs* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QsciAPIs*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_sciapis_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciAPIs* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QsciAPIs*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self, QObject* param1 ```
+/// @param self QsciAPIs*
+/// @param param1 QObject*
 void q_sciapis_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QObject*) ```
-void q_sciapis_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QObject*)
+void q_sciapis_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -510,7 +602,9 @@ void q_sciapis_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QObject* watched, QEvent* event ```
+/// @param self QsciAPIs*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_sciapis_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -519,7 +613,9 @@ bool q_sciapis_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QObject* watched, QEvent* event ```
+/// @param self QsciAPIs*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_sciapis_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -528,8 +624,9 @@ bool q_sciapis_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, bool (*slot)(QsciAPIs*, QObject*, QEvent*) ```
-void q_sciapis_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QsciAPIs*
+/// @param callback bool fn(QsciAPIs*, QObject*, QEvent*)
+void q_sciapis_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -537,7 +634,8 @@ void q_sciapis_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QTimerEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QTimerEvent*
 void q_sciapis_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -546,7 +644,8 @@ void q_sciapis_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QTimerEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QTimerEvent*
 void q_sciapis_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -555,8 +654,9 @@ void q_sciapis_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QTimerEvent*) ```
-void q_sciapis_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QTimerEvent*)
+void q_sciapis_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -564,7 +664,8 @@ void q_sciapis_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QChildEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QChildEvent*
 void q_sciapis_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -573,7 +674,8 @@ void q_sciapis_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QChildEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QChildEvent*
 void q_sciapis_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -582,8 +684,9 @@ void q_sciapis_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QChildEvent*) ```
-void q_sciapis_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QChildEvent*)
+void q_sciapis_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -591,7 +694,8 @@ void q_sciapis_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QEvent*
 void q_sciapis_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -600,7 +704,8 @@ void q_sciapis_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QEvent* event ```
+/// @param self QsciAPIs*
+/// @param event QEvent*
 void q_sciapis_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -609,8 +714,9 @@ void q_sciapis_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QEvent*) ```
-void q_sciapis_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QEvent*)
+void q_sciapis_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -618,7 +724,8 @@ void q_sciapis_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 void q_sciapis_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -627,7 +734,8 @@ void q_sciapis_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 void q_sciapis_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -636,8 +744,9 @@ void q_sciapis_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QMetaMethod*) ```
-void q_sciapis_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QMetaMethod*)
+void q_sciapis_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -645,7 +754,8 @@ void q_sciapis_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 void q_sciapis_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -654,7 +764,8 @@ void q_sciapis_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 void q_sciapis_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -663,8 +774,9 @@ void q_sciapis_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, QMetaMethod*) ```
-void q_sciapis_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, QMetaMethod*)
+void q_sciapis_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -672,7 +784,7 @@ void q_sciapis_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QObject* q_sciapis_sender(void* self);
 
 /// Inherited from QObject
@@ -681,7 +793,7 @@ QObject* q_sciapis_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 QObject* q_sciapis_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -690,8 +802,9 @@ QObject* q_sciapis_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QObject* (*slot)() ```
-void q_sciapis_on_sender(void* self, QObject* (*slot)());
+/// @param self QsciAPIs*
+/// @param callback QObject* fn()
+void q_sciapis_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -699,7 +812,7 @@ void q_sciapis_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 int32_t q_sciapis_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -708,7 +821,7 @@ int32_t q_sciapis_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 int32_t q_sciapis_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -717,8 +830,9 @@ int32_t q_sciapis_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, int32_t (*slot)() ```
-void q_sciapis_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QsciAPIs*
+/// @param callback int32_t fn()
+void q_sciapis_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -726,7 +840,8 @@ void q_sciapis_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, const char* signal ```
+/// @param self QsciAPIs*
+/// @param signal const char*
 int32_t q_sciapis_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -735,7 +850,8 @@ int32_t q_sciapis_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, const char* signal ```
+/// @param self QsciAPIs*
+/// @param signal const char*
 int32_t q_sciapis_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -744,8 +860,9 @@ int32_t q_sciapis_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, int32_t (*slot)(QsciAPIs*, const char*) ```
-void q_sciapis_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QsciAPIs*
+/// @param callback int32_t fn(QsciAPIs*, const char*)
+void q_sciapis_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -753,7 +870,8 @@ void q_sciapis_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 bool q_sciapis_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -762,7 +880,8 @@ bool q_sciapis_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, QMetaMethod* signal ```
+/// @param self QsciAPIs*
+/// @param signal QMetaMethod*
 bool q_sciapis_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -771,8 +890,9 @@ bool q_sciapis_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciAPIs* self, bool (*slot)(QsciAPIs*, QMetaMethod*) ```
-void q_sciapis_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QsciAPIs*
+/// @param callback bool fn(QsciAPIs*, QMetaMethod*)
+void q_sciapis_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -780,14 +900,15 @@ void q_sciapis_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciAPIs* self, void (*slot)(QsciAPIs*, const char*) ```
-void q_sciapis_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QsciAPIs*
+/// @param callback void fn(QsciAPIs*, const char*)
+void q_sciapis_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QsciAPIs* self ```
+/// @param self QsciAPIs*
 void q_sciapis_delete(void* self);
 
 #endif

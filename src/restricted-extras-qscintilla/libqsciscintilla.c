@@ -50,8 +50,8 @@ int32_t q_sciscintilla_metacall(void* self, int64_t param1, int param2, void* pa
     return QsciScintilla_Metacall((QsciScintilla*)self, param1, param2, param3);
 }
 
-void q_sciscintilla_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QsciScintilla_OnMetacall((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QsciScintilla_OnMetacall((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -69,31 +69,39 @@ const char** q_sciscintilla_api_context(void* self, int pos, int* context_start,
     libqt_list _arr = QsciScintilla_ApiContext((QsciScintilla*)self, pos, context_start, last_word_start);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciscintilla_api_context");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_sciscintilla_on_api_context(void* self, const char** (*slot)(void*, int, int*, int*)) {
-    QsciScintilla_OnApiContext((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_api_context(void* self, const char** (*callback)(void*, int, int*, int*)) {
+    QsciScintilla_OnApiContext((QsciScintilla*)self, (intptr_t)callback);
 }
 
 const char** q_sciscintilla_qbase_api_context(void* self, int pos, int* context_start, int* last_word_start) {
     libqt_list _arr = QsciScintilla_QBaseApiContext((QsciScintilla*)self, pos, context_start, last_word_start);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciscintilla_api_context");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -278,8 +286,8 @@ bool q_sciscintilla_find_first(void* self, const char* expr, bool re, bool cs, b
     return QsciScintilla_FindFirst((QsciScintilla*)self, qstring(expr), re, cs, wo, wrap, forward, line, index, show, posix, cxx11);
 }
 
-void q_sciscintilla_on_find_first(void* self, bool (*slot)(void*, const char*, bool, bool, bool, bool, bool, int, int, bool, bool, bool)) {
-    QsciScintilla_OnFindFirst((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_find_first(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, int, int, bool, bool, bool)) {
+    QsciScintilla_OnFindFirst((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_qbase_find_first(void* self, const char* expr, bool re, bool cs, bool wo, bool wrap, bool forward, int line, int index, bool show, bool posix, bool cxx11) {
@@ -290,8 +298,8 @@ bool q_sciscintilla_find_first_in_selection(void* self, const char* expr, bool r
     return QsciScintilla_FindFirstInSelection((QsciScintilla*)self, qstring(expr), re, cs, wo, forward, show, posix, cxx11);
 }
 
-void q_sciscintilla_on_find_first_in_selection(void* self, bool (*slot)(void*, const char*, bool, bool, bool, bool, bool, bool, bool)) {
-    QsciScintilla_OnFindFirstInSelection((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_find_first_in_selection(void* self, bool (*callback)(void*, const char*, bool, bool, bool, bool, bool, bool, bool)) {
+    QsciScintilla_OnFindFirstInSelection((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_qbase_find_first_in_selection(void* self, const char* expr, bool re, bool cs, bool wo, bool forward, bool show, bool posix, bool cxx11) {
@@ -302,8 +310,8 @@ bool q_sciscintilla_find_next(void* self) {
     return QsciScintilla_FindNext((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_find_next(void* self, bool (*slot)()) {
-    QsciScintilla_OnFindNext((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_find_next(void* self, bool (*callback)()) {
+    QsciScintilla_OnFindNext((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_qbase_find_next(void* self) {
@@ -514,8 +522,8 @@ void q_sciscintilla_recolor(void* self, int start, int end) {
     QsciScintilla_Recolor((QsciScintilla*)self, start, end);
 }
 
-void q_sciscintilla_on_recolor(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnRecolor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_recolor(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnRecolor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_recolor(void* self, int start, int end) {
@@ -534,8 +542,8 @@ void q_sciscintilla_replace(void* self, const char* replaceStr) {
     QsciScintilla_Replace((QsciScintilla*)self, qstring(replaceStr));
 }
 
-void q_sciscintilla_on_replace(void* self, void (*slot)(void*, const char*)) {
-    QsciScintilla_OnReplace((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_replace(void* self, void (*callback)(void*, const char*)) {
+    QsciScintilla_OnReplace((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_replace(void* self, const char* replaceStr) {
@@ -580,12 +588,17 @@ void q_sciscintilla_set_auto_completion_fillups(void* self, const char* fillups)
 
 void q_sciscintilla_set_auto_completion_word_separators(void* self, const char* separators[]) {
     size_t separators_len = libqt_strv_length(separators);
-    libqt_string* separators_qstr = malloc(separators_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < separators_len; ++_i) {
-        separators_qstr[_i] = qstring(separators[_i]);
+    libqt_string* separators_qstr = (libqt_string*)malloc(separators_len * sizeof(libqt_string));
+    if (separators_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciscintilla_set_auto_completion_word_separators");
+        abort();
+    }
+    for (size_t i = 0; i < separators_len; ++i) {
+        separators_qstr[i] = qstring(separators[i]);
     }
     libqt_list separators_list = qlist(separators_qstr, separators_len);
     QsciScintilla_SetAutoCompletionWordSeparators((QsciScintilla*)self, separators_list);
+    free(separators_qstr);
 }
 
 void q_sciscintilla_set_call_tips_background_color(void* self, void* col) {
@@ -813,12 +826,17 @@ void q_sciscintilla_set_wrap_indent_mode(void* self, int64_t mode) {
 
 void q_sciscintilla_show_user_list(void* self, int id, const char* list[]) {
     size_t list_len = libqt_strv_length(list);
-    libqt_string* list_qstr = malloc(list_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < list_len; ++_i) {
-        list_qstr[_i] = qstring(list[_i]);
+    libqt_string* list_qstr = (libqt_string*)malloc(list_len * sizeof(libqt_string));
+    if (list_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciscintilla_show_user_list");
+        abort();
+    }
+    for (size_t i = 0; i < list_len; ++i) {
+        list_qstr[i] = qstring(list[i]);
     }
     libqt_list list_list = qlist(list_qstr, list_len);
     QsciScintilla_ShowUserList((QsciScintilla*)self, id, list_list);
+    free(list_qstr);
 }
 
 QsciCommandSet* q_sciscintilla_standard_commands(void* self) {
@@ -904,8 +922,8 @@ void q_sciscintilla_append(void* self, const char* text) {
     QsciScintilla_Append((QsciScintilla*)self, qstring(text));
 }
 
-void q_sciscintilla_on_append(void* self, void (*slot)(void*, const char*)) {
-    QsciScintilla_OnAppend((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_append(void* self, void (*callback)(void*, const char*)) {
+    QsciScintilla_OnAppend((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_append(void* self, const char* text) {
@@ -916,8 +934,8 @@ void q_sciscintilla_auto_complete_from_all(void* self) {
     QsciScintilla_AutoCompleteFromAll((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_auto_complete_from_all(void* self, void (*slot)()) {
-    QsciScintilla_OnAutoCompleteFromAll((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_auto_complete_from_all(void* self, void (*callback)()) {
+    QsciScintilla_OnAutoCompleteFromAll((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_auto_complete_from_all(void* self) {
@@ -928,8 +946,8 @@ void q_sciscintilla_auto_complete_from_a_p_is(void* self) {
     QsciScintilla_AutoCompleteFromAPIs((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_auto_complete_from_a_p_is(void* self, void (*slot)()) {
-    QsciScintilla_OnAutoCompleteFromAPIs((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_auto_complete_from_a_p_is(void* self, void (*callback)()) {
+    QsciScintilla_OnAutoCompleteFromAPIs((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_auto_complete_from_a_p_is(void* self) {
@@ -940,8 +958,8 @@ void q_sciscintilla_auto_complete_from_document(void* self) {
     QsciScintilla_AutoCompleteFromDocument((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_auto_complete_from_document(void* self, void (*slot)()) {
-    QsciScintilla_OnAutoCompleteFromDocument((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_auto_complete_from_document(void* self, void (*callback)()) {
+    QsciScintilla_OnAutoCompleteFromDocument((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_auto_complete_from_document(void* self) {
@@ -952,8 +970,8 @@ void q_sciscintilla_call_tip(void* self) {
     QsciScintilla_CallTip((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_call_tip(void* self, void (*slot)()) {
-    QsciScintilla_OnCallTip((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_call_tip(void* self, void (*callback)()) {
+    QsciScintilla_OnCallTip((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_call_tip(void* self) {
@@ -964,8 +982,8 @@ void q_sciscintilla_clear(void* self) {
     QsciScintilla_Clear((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_clear(void* self, void (*slot)()) {
-    QsciScintilla_OnClear((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_clear(void* self, void (*callback)()) {
+    QsciScintilla_OnClear((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_clear(void* self) {
@@ -976,8 +994,8 @@ void q_sciscintilla_copy(void* self) {
     QsciScintilla_Copy((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_copy(void* self, void (*slot)()) {
-    QsciScintilla_OnCopy((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_copy(void* self, void (*callback)()) {
+    QsciScintilla_OnCopy((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_copy(void* self) {
@@ -988,8 +1006,8 @@ void q_sciscintilla_cut(void* self) {
     QsciScintilla_Cut((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_cut(void* self, void (*slot)()) {
-    QsciScintilla_OnCut((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_cut(void* self, void (*callback)()) {
+    QsciScintilla_OnCut((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_cut(void* self) {
@@ -1000,8 +1018,8 @@ void q_sciscintilla_ensure_cursor_visible(void* self) {
     QsciScintilla_EnsureCursorVisible((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_ensure_cursor_visible(void* self, void (*slot)()) {
-    QsciScintilla_OnEnsureCursorVisible((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_ensure_cursor_visible(void* self, void (*callback)()) {
+    QsciScintilla_OnEnsureCursorVisible((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_ensure_cursor_visible(void* self) {
@@ -1012,8 +1030,8 @@ void q_sciscintilla_ensure_line_visible(void* self, int line) {
     QsciScintilla_EnsureLineVisible((QsciScintilla*)self, line);
 }
 
-void q_sciscintilla_on_ensure_line_visible(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnEnsureLineVisible((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_ensure_line_visible(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnEnsureLineVisible((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_ensure_line_visible(void* self, int line) {
@@ -1024,8 +1042,8 @@ void q_sciscintilla_fold_all(void* self, bool children) {
     QsciScintilla_FoldAll((QsciScintilla*)self, children);
 }
 
-void q_sciscintilla_on_fold_all(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnFoldAll((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_fold_all(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnFoldAll((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_fold_all(void* self, bool children) {
@@ -1036,8 +1054,8 @@ void q_sciscintilla_fold_line(void* self, int line) {
     QsciScintilla_FoldLine((QsciScintilla*)self, line);
 }
 
-void q_sciscintilla_on_fold_line(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnFoldLine((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_fold_line(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnFoldLine((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_fold_line(void* self, int line) {
@@ -1048,8 +1066,8 @@ void q_sciscintilla_indent(void* self, int line) {
     QsciScintilla_Indent((QsciScintilla*)self, line);
 }
 
-void q_sciscintilla_on_indent(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnIndent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_indent(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnIndent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_indent(void* self, int line) {
@@ -1060,8 +1078,8 @@ void q_sciscintilla_insert(void* self, const char* text) {
     QsciScintilla_Insert((QsciScintilla*)self, qstring(text));
 }
 
-void q_sciscintilla_on_insert(void* self, void (*slot)(void*, const char*)) {
-    QsciScintilla_OnInsert((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_insert(void* self, void (*callback)(void*, const char*)) {
+    QsciScintilla_OnInsert((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_insert(void* self, const char* text) {
@@ -1072,8 +1090,8 @@ void q_sciscintilla_insert_at(void* self, const char* text, int line, int index)
     QsciScintilla_InsertAt((QsciScintilla*)self, qstring(text), line, index);
 }
 
-void q_sciscintilla_on_insert_at(void* self, void (*slot)(void*, const char*, int, int)) {
-    QsciScintilla_OnInsertAt((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_insert_at(void* self, void (*callback)(void*, const char*, int, int)) {
+    QsciScintilla_OnInsertAt((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_insert_at(void* self, const char* text, int line, int index) {
@@ -1084,8 +1102,8 @@ void q_sciscintilla_move_to_matching_brace(void* self) {
     QsciScintilla_MoveToMatchingBrace((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_move_to_matching_brace(void* self, void (*slot)()) {
-    QsciScintilla_OnMoveToMatchingBrace((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_move_to_matching_brace(void* self, void (*callback)()) {
+    QsciScintilla_OnMoveToMatchingBrace((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_move_to_matching_brace(void* self) {
@@ -1096,8 +1114,8 @@ void q_sciscintilla_paste(void* self) {
     QsciScintilla_Paste((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_paste(void* self, void (*slot)()) {
-    QsciScintilla_OnPaste((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_paste(void* self, void (*callback)()) {
+    QsciScintilla_OnPaste((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_paste(void* self) {
@@ -1108,8 +1126,8 @@ void q_sciscintilla_redo(void* self) {
     QsciScintilla_Redo((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_redo(void* self, void (*slot)()) {
-    QsciScintilla_OnRedo((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_redo(void* self, void (*callback)()) {
+    QsciScintilla_OnRedo((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_redo(void* self) {
@@ -1120,8 +1138,8 @@ void q_sciscintilla_remove_selected_text(void* self) {
     QsciScintilla_RemoveSelectedText((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_remove_selected_text(void* self, void (*slot)()) {
-    QsciScintilla_OnRemoveSelectedText((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_remove_selected_text(void* self, void (*callback)()) {
+    QsciScintilla_OnRemoveSelectedText((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_remove_selected_text(void* self) {
@@ -1132,8 +1150,8 @@ void q_sciscintilla_replace_selected_text(void* self, const char* text) {
     QsciScintilla_ReplaceSelectedText((QsciScintilla*)self, qstring(text));
 }
 
-void q_sciscintilla_on_replace_selected_text(void* self, void (*slot)(void*, const char*)) {
-    QsciScintilla_OnReplaceSelectedText((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_replace_selected_text(void* self, void (*callback)(void*, const char*)) {
+    QsciScintilla_OnReplaceSelectedText((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_replace_selected_text(void* self, const char* text) {
@@ -1144,8 +1162,8 @@ void q_sciscintilla_reset_selection_background_color(void* self) {
     QsciScintilla_ResetSelectionBackgroundColor((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_reset_selection_background_color(void* self, void (*slot)()) {
-    QsciScintilla_OnResetSelectionBackgroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_reset_selection_background_color(void* self, void (*callback)()) {
+    QsciScintilla_OnResetSelectionBackgroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_reset_selection_background_color(void* self) {
@@ -1156,8 +1174,8 @@ void q_sciscintilla_reset_selection_foreground_color(void* self) {
     QsciScintilla_ResetSelectionForegroundColor((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_reset_selection_foreground_color(void* self, void (*slot)()) {
-    QsciScintilla_OnResetSelectionForegroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_reset_selection_foreground_color(void* self, void (*callback)()) {
+    QsciScintilla_OnResetSelectionForegroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_reset_selection_foreground_color(void* self) {
@@ -1168,8 +1186,8 @@ void q_sciscintilla_select_all(void* self, bool selectVal) {
     QsciScintilla_SelectAll((QsciScintilla*)self, selectVal);
 }
 
-void q_sciscintilla_on_select_all(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSelectAll((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_select_all(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSelectAll((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_select_all(void* self, bool selectVal) {
@@ -1180,8 +1198,8 @@ void q_sciscintilla_select_to_matching_brace(void* self) {
     QsciScintilla_SelectToMatchingBrace((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_select_to_matching_brace(void* self, void (*slot)()) {
-    QsciScintilla_OnSelectToMatchingBrace((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_select_to_matching_brace(void* self, void (*callback)()) {
+    QsciScintilla_OnSelectToMatchingBrace((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_select_to_matching_brace(void* self) {
@@ -1192,8 +1210,8 @@ void q_sciscintilla_set_auto_completion_case_sensitivity(void* self, bool cs) {
     QsciScintilla_SetAutoCompletionCaseSensitivity((QsciScintilla*)self, cs);
 }
 
-void q_sciscintilla_on_set_auto_completion_case_sensitivity(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetAutoCompletionCaseSensitivity((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_case_sensitivity(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetAutoCompletionCaseSensitivity((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_case_sensitivity(void* self, bool cs) {
@@ -1204,8 +1222,8 @@ void q_sciscintilla_set_auto_completion_replace_word(void* self, bool replace) {
     QsciScintilla_SetAutoCompletionReplaceWord((QsciScintilla*)self, replace);
 }
 
-void q_sciscintilla_on_set_auto_completion_replace_word(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetAutoCompletionReplaceWord((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_replace_word(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetAutoCompletionReplaceWord((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_replace_word(void* self, bool replace) {
@@ -1216,8 +1234,8 @@ void q_sciscintilla_set_auto_completion_show_single(void* self, bool single) {
     QsciScintilla_SetAutoCompletionShowSingle((QsciScintilla*)self, single);
 }
 
-void q_sciscintilla_on_set_auto_completion_show_single(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetAutoCompletionShowSingle((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_show_single(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetAutoCompletionShowSingle((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_show_single(void* self, bool single) {
@@ -1228,8 +1246,8 @@ void q_sciscintilla_set_auto_completion_source(void* self, int64_t source) {
     QsciScintilla_SetAutoCompletionSource((QsciScintilla*)self, source);
 }
 
-void q_sciscintilla_on_set_auto_completion_source(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetAutoCompletionSource((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_source(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetAutoCompletionSource((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_source(void* self, int64_t source) {
@@ -1240,8 +1258,8 @@ void q_sciscintilla_set_auto_completion_threshold(void* self, int thresh) {
     QsciScintilla_SetAutoCompletionThreshold((QsciScintilla*)self, thresh);
 }
 
-void q_sciscintilla_on_set_auto_completion_threshold(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnSetAutoCompletionThreshold((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_threshold(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnSetAutoCompletionThreshold((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_threshold(void* self, int thresh) {
@@ -1252,8 +1270,8 @@ void q_sciscintilla_set_auto_completion_use_single(void* self, int64_t single) {
     QsciScintilla_SetAutoCompletionUseSingle((QsciScintilla*)self, single);
 }
 
-void q_sciscintilla_on_set_auto_completion_use_single(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetAutoCompletionUseSingle((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_completion_use_single(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetAutoCompletionUseSingle((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_completion_use_single(void* self, int64_t single) {
@@ -1264,8 +1282,8 @@ void q_sciscintilla_set_auto_indent(void* self, bool autoindent) {
     QsciScintilla_SetAutoIndent((QsciScintilla*)self, autoindent);
 }
 
-void q_sciscintilla_on_set_auto_indent(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetAutoIndent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_auto_indent(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetAutoIndent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_auto_indent(void* self, bool autoindent) {
@@ -1276,8 +1294,8 @@ void q_sciscintilla_set_brace_matching(void* self, int64_t bm) {
     QsciScintilla_SetBraceMatching((QsciScintilla*)self, bm);
 }
 
-void q_sciscintilla_on_set_brace_matching(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetBraceMatching((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_brace_matching(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetBraceMatching((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_brace_matching(void* self, int64_t bm) {
@@ -1288,8 +1306,8 @@ void q_sciscintilla_set_backspace_unindents(void* self, bool unindent) {
     QsciScintilla_SetBackspaceUnindents((QsciScintilla*)self, unindent);
 }
 
-void q_sciscintilla_on_set_backspace_unindents(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetBackspaceUnindents((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_backspace_unindents(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetBackspaceUnindents((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_backspace_unindents(void* self, bool unindent) {
@@ -1300,8 +1318,8 @@ void q_sciscintilla_set_caret_foreground_color(void* self, void* col) {
     QsciScintilla_SetCaretForegroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_caret_foreground_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetCaretForegroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_caret_foreground_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetCaretForegroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_caret_foreground_color(void* self, void* col) {
@@ -1312,8 +1330,8 @@ void q_sciscintilla_set_caret_line_background_color(void* self, void* col) {
     QsciScintilla_SetCaretLineBackgroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_caret_line_background_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetCaretLineBackgroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_caret_line_background_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetCaretLineBackgroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_caret_line_background_color(void* self, void* col) {
@@ -1324,8 +1342,8 @@ void q_sciscintilla_set_caret_line_frame_width(void* self, int width) {
     QsciScintilla_SetCaretLineFrameWidth((QsciScintilla*)self, width);
 }
 
-void q_sciscintilla_on_set_caret_line_frame_width(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnSetCaretLineFrameWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_caret_line_frame_width(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnSetCaretLineFrameWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_caret_line_frame_width(void* self, int width) {
@@ -1336,8 +1354,8 @@ void q_sciscintilla_set_caret_line_visible(void* self, bool enable) {
     QsciScintilla_SetCaretLineVisible((QsciScintilla*)self, enable);
 }
 
-void q_sciscintilla_on_set_caret_line_visible(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetCaretLineVisible((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_caret_line_visible(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetCaretLineVisible((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_caret_line_visible(void* self, bool enable) {
@@ -1348,8 +1366,8 @@ void q_sciscintilla_set_caret_width(void* self, int width) {
     QsciScintilla_SetCaretWidth((QsciScintilla*)self, width);
 }
 
-void q_sciscintilla_on_set_caret_width(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnSetCaretWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_caret_width(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnSetCaretWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_caret_width(void* self, int width) {
@@ -1360,8 +1378,8 @@ void q_sciscintilla_set_color(void* self, void* c) {
     QsciScintilla_SetColor((QsciScintilla*)self, (QColor*)c);
 }
 
-void q_sciscintilla_on_set_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_color(void* self, void* c) {
@@ -1372,8 +1390,8 @@ void q_sciscintilla_set_cursor_position(void* self, int line, int index) {
     QsciScintilla_SetCursorPosition((QsciScintilla*)self, line, index);
 }
 
-void q_sciscintilla_on_set_cursor_position(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnSetCursorPosition((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_cursor_position(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnSetCursorPosition((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_cursor_position(void* self, int line, int index) {
@@ -1384,8 +1402,8 @@ void q_sciscintilla_set_eol_mode(void* self, int64_t mode) {
     QsciScintilla_SetEolMode((QsciScintilla*)self, mode);
 }
 
-void q_sciscintilla_on_set_eol_mode(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetEolMode((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_eol_mode(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetEolMode((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_eol_mode(void* self, int64_t mode) {
@@ -1396,8 +1414,8 @@ void q_sciscintilla_set_eol_visibility(void* self, bool visible) {
     QsciScintilla_SetEolVisibility((QsciScintilla*)self, visible);
 }
 
-void q_sciscintilla_on_set_eol_visibility(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetEolVisibility((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_eol_visibility(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetEolVisibility((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_eol_visibility(void* self, bool visible) {
@@ -1408,8 +1426,8 @@ void q_sciscintilla_set_folding(void* self, int64_t fold, int margin) {
     QsciScintilla_SetFolding((QsciScintilla*)self, fold, margin);
 }
 
-void q_sciscintilla_on_set_folding(void* self, void (*slot)(void*, int64_t, int)) {
-    QsciScintilla_OnSetFolding((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_folding(void* self, void (*callback)(void*, int64_t, int)) {
+    QsciScintilla_OnSetFolding((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_folding(void* self, int64_t fold, int margin) {
@@ -1420,8 +1438,8 @@ void q_sciscintilla_set_indentation(void* self, int line, int indentation) {
     QsciScintilla_SetIndentation((QsciScintilla*)self, line, indentation);
 }
 
-void q_sciscintilla_on_set_indentation(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnSetIndentation((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentation(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnSetIndentation((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentation(void* self, int line, int indentation) {
@@ -1432,8 +1450,8 @@ void q_sciscintilla_set_indentation_guides(void* self, bool enable) {
     QsciScintilla_SetIndentationGuides((QsciScintilla*)self, enable);
 }
 
-void q_sciscintilla_on_set_indentation_guides(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetIndentationGuides((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentation_guides(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetIndentationGuides((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentation_guides(void* self, bool enable) {
@@ -1444,8 +1462,8 @@ void q_sciscintilla_set_indentation_guides_background_color(void* self, void* co
     QsciScintilla_SetIndentationGuidesBackgroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_indentation_guides_background_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetIndentationGuidesBackgroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentation_guides_background_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetIndentationGuidesBackgroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentation_guides_background_color(void* self, void* col) {
@@ -1456,8 +1474,8 @@ void q_sciscintilla_set_indentation_guides_foreground_color(void* self, void* co
     QsciScintilla_SetIndentationGuidesForegroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_indentation_guides_foreground_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetIndentationGuidesForegroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentation_guides_foreground_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetIndentationGuidesForegroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentation_guides_foreground_color(void* self, void* col) {
@@ -1468,8 +1486,8 @@ void q_sciscintilla_set_indentations_use_tabs(void* self, bool tabs) {
     QsciScintilla_SetIndentationsUseTabs((QsciScintilla*)self, tabs);
 }
 
-void q_sciscintilla_on_set_indentations_use_tabs(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetIndentationsUseTabs((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentations_use_tabs(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetIndentationsUseTabs((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentations_use_tabs(void* self, bool tabs) {
@@ -1480,8 +1498,8 @@ void q_sciscintilla_set_indentation_width(void* self, int width) {
     QsciScintilla_SetIndentationWidth((QsciScintilla*)self, width);
 }
 
-void q_sciscintilla_on_set_indentation_width(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnSetIndentationWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_indentation_width(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnSetIndentationWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_indentation_width(void* self, int width) {
@@ -1492,8 +1510,8 @@ void q_sciscintilla_set_lexer(void* self, void* lexer) {
     QsciScintilla_SetLexer((QsciScintilla*)self, (QsciLexer*)lexer);
 }
 
-void q_sciscintilla_on_set_lexer(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetLexer((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_lexer(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetLexer((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_lexer(void* self, void* lexer) {
@@ -1504,8 +1522,8 @@ void q_sciscintilla_set_margins_background_color(void* self, void* col) {
     QsciScintilla_SetMarginsBackgroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_margins_background_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetMarginsBackgroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margins_background_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetMarginsBackgroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margins_background_color(void* self, void* col) {
@@ -1516,8 +1534,8 @@ void q_sciscintilla_set_margins_font(void* self, void* f) {
     QsciScintilla_SetMarginsFont((QsciScintilla*)self, (QFont*)f);
 }
 
-void q_sciscintilla_on_set_margins_font(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetMarginsFont((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margins_font(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetMarginsFont((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margins_font(void* self, void* f) {
@@ -1528,8 +1546,8 @@ void q_sciscintilla_set_margins_foreground_color(void* self, void* col) {
     QsciScintilla_SetMarginsForegroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_margins_foreground_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetMarginsForegroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margins_foreground_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetMarginsForegroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margins_foreground_color(void* self, void* col) {
@@ -1540,8 +1558,8 @@ void q_sciscintilla_set_margin_line_numbers(void* self, int margin, bool lnrs) {
     QsciScintilla_SetMarginLineNumbers((QsciScintilla*)self, margin, lnrs);
 }
 
-void q_sciscintilla_on_set_margin_line_numbers(void* self, void (*slot)(void*, int, bool)) {
-    QsciScintilla_OnSetMarginLineNumbers((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margin_line_numbers(void* self, void (*callback)(void*, int, bool)) {
+    QsciScintilla_OnSetMarginLineNumbers((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margin_line_numbers(void* self, int margin, bool lnrs) {
@@ -1552,8 +1570,8 @@ void q_sciscintilla_set_margin_marker_mask(void* self, int margin, int mask) {
     QsciScintilla_SetMarginMarkerMask((QsciScintilla*)self, margin, mask);
 }
 
-void q_sciscintilla_on_set_margin_marker_mask(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnSetMarginMarkerMask((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margin_marker_mask(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnSetMarginMarkerMask((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margin_marker_mask(void* self, int margin, int mask) {
@@ -1564,8 +1582,8 @@ void q_sciscintilla_set_margin_sensitivity(void* self, int margin, bool sens) {
     QsciScintilla_SetMarginSensitivity((QsciScintilla*)self, margin, sens);
 }
 
-void q_sciscintilla_on_set_margin_sensitivity(void* self, void (*slot)(void*, int, bool)) {
-    QsciScintilla_OnSetMarginSensitivity((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margin_sensitivity(void* self, void (*callback)(void*, int, bool)) {
+    QsciScintilla_OnSetMarginSensitivity((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margin_sensitivity(void* self, int margin, bool sens) {
@@ -1576,8 +1594,8 @@ void q_sciscintilla_set_margin_width(void* self, int margin, int width) {
     QsciScintilla_SetMarginWidth((QsciScintilla*)self, margin, width);
 }
 
-void q_sciscintilla_on_set_margin_width(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnSetMarginWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margin_width(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnSetMarginWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margin_width(void* self, int margin, int width) {
@@ -1588,8 +1606,8 @@ void q_sciscintilla_set_margin_width2(void* self, int margin, const char* s) {
     QsciScintilla_SetMarginWidth2((QsciScintilla*)self, margin, qstring(s));
 }
 
-void q_sciscintilla_on_set_margin_width2(void* self, void (*slot)(void*, int, const char*)) {
-    QsciScintilla_OnSetMarginWidth2((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_margin_width2(void* self, void (*callback)(void*, int, const char*)) {
+    QsciScintilla_OnSetMarginWidth2((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_margin_width2(void* self, int margin, const char* s) {
@@ -1600,8 +1618,8 @@ void q_sciscintilla_set_modified(void* self, bool m) {
     QsciScintilla_SetModified((QsciScintilla*)self, m);
 }
 
-void q_sciscintilla_on_set_modified(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetModified((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_modified(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetModified((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_modified(void* self, bool m) {
@@ -1612,8 +1630,8 @@ void q_sciscintilla_set_paper(void* self, void* c) {
     QsciScintilla_SetPaper((QsciScintilla*)self, (QColor*)c);
 }
 
-void q_sciscintilla_on_set_paper(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetPaper((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_paper(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetPaper((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_paper(void* self, void* c) {
@@ -1624,8 +1642,8 @@ void q_sciscintilla_set_read_only(void* self, bool ro) {
     QsciScintilla_SetReadOnly((QsciScintilla*)self, ro);
 }
 
-void q_sciscintilla_on_set_read_only(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetReadOnly((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_read_only(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetReadOnly((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_read_only(void* self, bool ro) {
@@ -1636,8 +1654,8 @@ void q_sciscintilla_set_selection(void* self, int lineFrom, int indexFrom, int l
     QsciScintilla_SetSelection((QsciScintilla*)self, lineFrom, indexFrom, lineTo, indexTo);
 }
 
-void q_sciscintilla_on_set_selection(void* self, void (*slot)(void*, int, int, int, int)) {
-    QsciScintilla_OnSetSelection((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_selection(void* self, void (*callback)(void*, int, int, int, int)) {
+    QsciScintilla_OnSetSelection((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_selection(void* self, int lineFrom, int indexFrom, int lineTo, int indexTo) {
@@ -1648,8 +1666,8 @@ void q_sciscintilla_set_selection_background_color(void* self, void* col) {
     QsciScintilla_SetSelectionBackgroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_selection_background_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetSelectionBackgroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_selection_background_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetSelectionBackgroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_selection_background_color(void* self, void* col) {
@@ -1660,8 +1678,8 @@ void q_sciscintilla_set_selection_foreground_color(void* self, void* col) {
     QsciScintilla_SetSelectionForegroundColor((QsciScintilla*)self, (QColor*)col);
 }
 
-void q_sciscintilla_on_set_selection_foreground_color(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetSelectionForegroundColor((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_selection_foreground_color(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetSelectionForegroundColor((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_selection_foreground_color(void* self, void* col) {
@@ -1672,8 +1690,8 @@ void q_sciscintilla_set_tab_indents(void* self, bool indent) {
     QsciScintilla_SetTabIndents((QsciScintilla*)self, indent);
 }
 
-void q_sciscintilla_on_set_tab_indents(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetTabIndents((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_tab_indents(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetTabIndents((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_tab_indents(void* self, bool indent) {
@@ -1684,8 +1702,8 @@ void q_sciscintilla_set_tab_width(void* self, int width) {
     QsciScintilla_SetTabWidth((QsciScintilla*)self, width);
 }
 
-void q_sciscintilla_on_set_tab_width(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnSetTabWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_tab_width(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnSetTabWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_tab_width(void* self, int width) {
@@ -1696,8 +1714,8 @@ void q_sciscintilla_set_text(void* self, const char* text) {
     QsciScintilla_SetText((QsciScintilla*)self, qstring(text));
 }
 
-void q_sciscintilla_on_set_text(void* self, void (*slot)(void*, const char*)) {
-    QsciScintilla_OnSetText((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_text(void* self, void (*callback)(void*, const char*)) {
+    QsciScintilla_OnSetText((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_text(void* self, const char* text) {
@@ -1708,8 +1726,8 @@ void q_sciscintilla_set_utf8(void* self, bool cp) {
     QsciScintilla_SetUtf8((QsciScintilla*)self, cp);
 }
 
-void q_sciscintilla_on_set_utf8(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetUtf8((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_utf8(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetUtf8((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_utf8(void* self, bool cp) {
@@ -1720,8 +1738,8 @@ void q_sciscintilla_set_whitespace_visibility(void* self, int64_t mode) {
     QsciScintilla_SetWhitespaceVisibility((QsciScintilla*)self, mode);
 }
 
-void q_sciscintilla_on_set_whitespace_visibility(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetWhitespaceVisibility((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_whitespace_visibility(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetWhitespaceVisibility((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_whitespace_visibility(void* self, int64_t mode) {
@@ -1732,8 +1750,8 @@ void q_sciscintilla_set_wrap_mode(void* self, int64_t mode) {
     QsciScintilla_SetWrapMode((QsciScintilla*)self, mode);
 }
 
-void q_sciscintilla_on_set_wrap_mode(void* self, void (*slot)(void*, int64_t)) {
-    QsciScintilla_OnSetWrapMode((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_wrap_mode(void* self, void (*callback)(void*, int64_t)) {
+    QsciScintilla_OnSetWrapMode((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_set_wrap_mode(void* self, int64_t mode) {
@@ -1744,8 +1762,8 @@ void q_sciscintilla_undo(void* self) {
     QsciScintilla_Undo((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_undo(void* self, void (*slot)()) {
-    QsciScintilla_OnUndo((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_undo(void* self, void (*callback)()) {
+    QsciScintilla_OnUndo((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_undo(void* self) {
@@ -1756,8 +1774,8 @@ void q_sciscintilla_unindent(void* self, int line) {
     QsciScintilla_Unindent((QsciScintilla*)self, line);
 }
 
-void q_sciscintilla_on_unindent(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnUnindent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_unindent(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnUnindent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_unindent(void* self, int line) {
@@ -1768,8 +1786,8 @@ void q_sciscintilla_zoom_in(void* self, int range) {
     QsciScintilla_ZoomIn((QsciScintilla*)self, range);
 }
 
-void q_sciscintilla_on_zoom_in(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnZoomIn((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_zoom_in(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnZoomIn((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_zoom_in(void* self, int range) {
@@ -1780,8 +1798,8 @@ void q_sciscintilla_zoom_in2(void* self) {
     QsciScintilla_ZoomIn2((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_zoom_in2(void* self, void (*slot)()) {
-    QsciScintilla_OnZoomIn2((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_zoom_in2(void* self, void (*callback)()) {
+    QsciScintilla_OnZoomIn2((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_zoom_in2(void* self) {
@@ -1792,8 +1810,8 @@ void q_sciscintilla_zoom_out(void* self, int range) {
     QsciScintilla_ZoomOut((QsciScintilla*)self, range);
 }
 
-void q_sciscintilla_on_zoom_out(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnZoomOut((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_zoom_out(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnZoomOut((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_zoom_out(void* self, int range) {
@@ -1804,8 +1822,8 @@ void q_sciscintilla_zoom_out2(void* self) {
     QsciScintilla_ZoomOut2((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_zoom_out2(void* self, void (*slot)()) {
-    QsciScintilla_OnZoomOut2((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_zoom_out2(void* self, void (*callback)()) {
+    QsciScintilla_OnZoomOut2((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_zoom_out2(void* self) {
@@ -1816,8 +1834,8 @@ void q_sciscintilla_zoom_to(void* self, int size) {
     QsciScintilla_ZoomTo((QsciScintilla*)self, size);
 }
 
-void q_sciscintilla_on_zoom_to(void* self, void (*slot)(void*, int)) {
-    QsciScintilla_OnZoomTo((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_zoom_to(void* self, void (*callback)(void*, int)) {
+    QsciScintilla_OnZoomTo((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_zoom_to(void* self, int size) {
@@ -1828,104 +1846,104 @@ void q_sciscintilla_cursor_position_changed(void* self, int line, int index) {
     QsciScintilla_CursorPositionChanged((QsciScintilla*)self, line, index);
 }
 
-void q_sciscintilla_on_cursor_position_changed(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_Connect_CursorPositionChanged((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_cursor_position_changed(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_Connect_CursorPositionChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_copy_available(void* self, bool yes) {
     QsciScintilla_CopyAvailable((QsciScintilla*)self, yes);
 }
 
-void q_sciscintilla_on_copy_available(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_Connect_CopyAvailable((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_copy_available(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_Connect_CopyAvailable((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_indicator_clicked(void* self, int line, int index, int64_t state) {
     QsciScintilla_IndicatorClicked((QsciScintilla*)self, line, index, state);
 }
 
-void q_sciscintilla_on_indicator_clicked(void* self, void (*slot)(void*, int, int, int64_t)) {
-    QsciScintilla_Connect_IndicatorClicked((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_indicator_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+    QsciScintilla_Connect_IndicatorClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_indicator_released(void* self, int line, int index, int64_t state) {
     QsciScintilla_IndicatorReleased((QsciScintilla*)self, line, index, state);
 }
 
-void q_sciscintilla_on_indicator_released(void* self, void (*slot)(void*, int, int, int64_t)) {
-    QsciScintilla_Connect_IndicatorReleased((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_indicator_released(void* self, void (*callback)(void*, int, int, int64_t)) {
+    QsciScintilla_Connect_IndicatorReleased((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_lines_changed(void* self) {
     QsciScintilla_LinesChanged((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_lines_changed(void* self, void (*slot)(void*)) {
-    QsciScintilla_Connect_LinesChanged((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_lines_changed(void* self, void (*callback)(void*)) {
+    QsciScintilla_Connect_LinesChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_margin_clicked(void* self, int margin, int line, int64_t state) {
     QsciScintilla_MarginClicked((QsciScintilla*)self, margin, line, state);
 }
 
-void q_sciscintilla_on_margin_clicked(void* self, void (*slot)(void*, int, int, int64_t)) {
-    QsciScintilla_Connect_MarginClicked((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_margin_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+    QsciScintilla_Connect_MarginClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_margin_right_clicked(void* self, int margin, int line, int64_t state) {
     QsciScintilla_MarginRightClicked((QsciScintilla*)self, margin, line, state);
 }
 
-void q_sciscintilla_on_margin_right_clicked(void* self, void (*slot)(void*, int, int, int64_t)) {
-    QsciScintilla_Connect_MarginRightClicked((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_margin_right_clicked(void* self, void (*callback)(void*, int, int, int64_t)) {
+    QsciScintilla_Connect_MarginRightClicked((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_modification_attempted(void* self) {
     QsciScintilla_ModificationAttempted((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_modification_attempted(void* self, void (*slot)(void*)) {
-    QsciScintilla_Connect_ModificationAttempted((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_modification_attempted(void* self, void (*callback)(void*)) {
+    QsciScintilla_Connect_ModificationAttempted((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_modification_changed(void* self, bool m) {
     QsciScintilla_ModificationChanged((QsciScintilla*)self, m);
 }
 
-void q_sciscintilla_on_modification_changed(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_Connect_ModificationChanged((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_modification_changed(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_Connect_ModificationChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_selection_changed(void* self) {
     QsciScintilla_SelectionChanged((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_selection_changed(void* self, void (*slot)(void*)) {
-    QsciScintilla_Connect_SelectionChanged((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_selection_changed(void* self, void (*callback)(void*)) {
+    QsciScintilla_Connect_SelectionChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_text_changed(void* self) {
     QsciScintilla_TextChanged((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_text_changed(void* self, void (*slot)(void*)) {
-    QsciScintilla_Connect_TextChanged((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_text_changed(void* self, void (*callback)(void*)) {
+    QsciScintilla_Connect_TextChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_user_list_activated(void* self, int id, const char* stringVal) {
     QsciScintilla_UserListActivated((QsciScintilla*)self, id, qstring(stringVal));
 }
 
-void q_sciscintilla_on_user_list_activated(void* self, void (*slot)(void*, int, const char*)) {
-    QsciScintilla_Connect_UserListActivated((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_user_list_activated(void* self, void (*callback)(void*, int, const char*)) {
+    QsciScintilla_Connect_UserListActivated((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_event(void* self, void* e) {
     return QsciScintilla_Event((QsciScintilla*)self, (QEvent*)e);
 }
 
-void q_sciscintilla_on_event(void* self, bool (*slot)(void*, void*)) {
-    QsciScintilla_OnEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_event(void* self, bool (*callback)(void*, void*)) {
+    QsciScintilla_OnEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_qbase_event(void* self, void* e) {
@@ -1936,8 +1954,8 @@ void q_sciscintilla_change_event(void* self, void* e) {
     QsciScintilla_ChangeEvent((QsciScintilla*)self, (QEvent*)e);
 }
 
-void q_sciscintilla_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnChangeEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnChangeEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_change_event(void* self, void* e) {
@@ -1948,8 +1966,8 @@ void q_sciscintilla_context_menu_event(void* self, void* e) {
     QsciScintilla_ContextMenuEvent((QsciScintilla*)self, (QContextMenuEvent*)e);
 }
 
-void q_sciscintilla_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnContextMenuEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnContextMenuEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_context_menu_event(void* self, void* e) {
@@ -1960,8 +1978,8 @@ void q_sciscintilla_wheel_event(void* self, void* e) {
     QsciScintilla_WheelEvent((QsciScintilla*)self, (QWheelEvent*)e);
 }
 
-void q_sciscintilla_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnWheelEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnWheelEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_qbase_wheel_event(void* self, void* e) {
@@ -3421,32 +3439,32 @@ void q_sciscintilla_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_sciscintilla_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_sciscintilla_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_sciscintilla_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_sciscintilla_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_sciscintilla_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_sciscintilla_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_sciscintilla_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_sciscintilla_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_sciscintilla_input_method_hints(void* self) {
@@ -3617,12 +3635,16 @@ const char** q_sciscintilla_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sciscintilla_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -3640,8 +3662,8 @@ void q_sciscintilla_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_sciscintilla_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_sciscintilla_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_sciscintilla_parent(void* self) {
@@ -3676,8 +3698,8 @@ void q_sciscintilla_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_sciscintilla_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_sciscintilla_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_painting_active(void* self) {
@@ -3740,8 +3762,8 @@ bool q_sciscintilla_qbase_can_insert_from_mime_data(void* self, void* source) {
     return QsciScintilla_QBaseCanInsertFromMimeData((QsciScintilla*)self, (QMimeData*)source);
 }
 
-void q_sciscintilla_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*)) {
-    QsciScintilla_OnCanInsertFromMimeData((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*)) {
+    QsciScintilla_OnCanInsertFromMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
 char* q_sciscintilla_from_mime_data(void* self, void* source, bool* rectangular) {
@@ -3758,8 +3780,8 @@ char* q_sciscintilla_qbase_from_mime_data(void* self, void* source, bool* rectan
     return _ret;
 }
 
-void q_sciscintilla_on_from_mime_data(void* self, char* (*slot)(void*, void*, bool*)) {
-    QsciScintilla_OnFromMimeData((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_from_mime_data(void* self, char* (*callback)(void*, void*, bool*)) {
+    QsciScintilla_OnFromMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QMimeData* q_sciscintilla_to_mime_data(void* self, const char* text, bool rectangular) {
@@ -3770,8 +3792,8 @@ QMimeData* q_sciscintilla_qbase_to_mime_data(void* self, const char* text, bool 
     return QsciScintilla_QBaseToMimeData((QsciScintilla*)self, qstring(text), rectangular);
 }
 
-void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*slot)(void*, const char*, bool)) {
-    QsciScintilla_OnToMimeData((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_to_mime_data(void* self, QMimeData* (*callback)(void*, const char*, bool)) {
+    QsciScintilla_OnToMimeData((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_drag_enter_event(void* self, void* e) {
@@ -3782,8 +3804,8 @@ void q_sciscintilla_qbase_drag_enter_event(void* self, void* e) {
     QsciScintilla_QBaseDragEnterEvent((QsciScintilla*)self, (QDragEnterEvent*)e);
 }
 
-void q_sciscintilla_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDragEnterEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDragEnterEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_drag_leave_event(void* self, void* e) {
@@ -3794,8 +3816,8 @@ void q_sciscintilla_qbase_drag_leave_event(void* self, void* e) {
     QsciScintilla_QBaseDragLeaveEvent((QsciScintilla*)self, (QDragLeaveEvent*)e);
 }
 
-void q_sciscintilla_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDragLeaveEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDragLeaveEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_drag_move_event(void* self, void* e) {
@@ -3806,8 +3828,8 @@ void q_sciscintilla_qbase_drag_move_event(void* self, void* e) {
     QsciScintilla_QBaseDragMoveEvent((QsciScintilla*)self, (QDragMoveEvent*)e);
 }
 
-void q_sciscintilla_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDragMoveEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDragMoveEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_drop_event(void* self, void* e) {
@@ -3818,8 +3840,8 @@ void q_sciscintilla_qbase_drop_event(void* self, void* e) {
     QsciScintilla_QBaseDropEvent((QsciScintilla*)self, (QDropEvent*)e);
 }
 
-void q_sciscintilla_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDropEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDropEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_focus_in_event(void* self, void* e) {
@@ -3830,8 +3852,8 @@ void q_sciscintilla_qbase_focus_in_event(void* self, void* e) {
     QsciScintilla_QBaseFocusInEvent((QsciScintilla*)self, (QFocusEvent*)e);
 }
 
-void q_sciscintilla_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnFocusInEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnFocusInEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_focus_out_event(void* self, void* e) {
@@ -3842,8 +3864,8 @@ void q_sciscintilla_qbase_focus_out_event(void* self, void* e) {
     QsciScintilla_QBaseFocusOutEvent((QsciScintilla*)self, (QFocusEvent*)e);
 }
 
-void q_sciscintilla_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnFocusOutEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnFocusOutEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_focus_next_prev_child(void* self, bool next) {
@@ -3854,8 +3876,8 @@ bool q_sciscintilla_qbase_focus_next_prev_child(void* self, bool next) {
     return QsciScintilla_QBaseFocusNextPrevChild((QsciScintilla*)self, next);
 }
 
-void q_sciscintilla_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QsciScintilla_OnFocusNextPrevChild((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QsciScintilla_OnFocusNextPrevChild((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_key_press_event(void* self, void* e) {
@@ -3866,8 +3888,8 @@ void q_sciscintilla_qbase_key_press_event(void* self, void* e) {
     QsciScintilla_QBaseKeyPressEvent((QsciScintilla*)self, (QKeyEvent*)e);
 }
 
-void q_sciscintilla_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnKeyPressEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnKeyPressEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_input_method_event(void* self, void* event) {
@@ -3878,8 +3900,8 @@ void q_sciscintilla_qbase_input_method_event(void* self, void* event) {
     QsciScintilla_QBaseInputMethodEvent((QsciScintilla*)self, (QInputMethodEvent*)event);
 }
 
-void q_sciscintilla_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnInputMethodEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnInputMethodEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_mouse_double_click_event(void* self, void* e) {
@@ -3890,8 +3912,8 @@ void q_sciscintilla_qbase_mouse_double_click_event(void* self, void* e) {
     QsciScintilla_QBaseMouseDoubleClickEvent((QsciScintilla*)self, (QMouseEvent*)e);
 }
 
-void q_sciscintilla_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnMouseDoubleClickEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnMouseDoubleClickEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_mouse_move_event(void* self, void* e) {
@@ -3902,8 +3924,8 @@ void q_sciscintilla_qbase_mouse_move_event(void* self, void* e) {
     QsciScintilla_QBaseMouseMoveEvent((QsciScintilla*)self, (QMouseEvent*)e);
 }
 
-void q_sciscintilla_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnMouseMoveEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnMouseMoveEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_mouse_press_event(void* self, void* e) {
@@ -3914,8 +3936,8 @@ void q_sciscintilla_qbase_mouse_press_event(void* self, void* e) {
     QsciScintilla_QBaseMousePressEvent((QsciScintilla*)self, (QMouseEvent*)e);
 }
 
-void q_sciscintilla_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnMousePressEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnMousePressEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_mouse_release_event(void* self, void* e) {
@@ -3926,8 +3948,8 @@ void q_sciscintilla_qbase_mouse_release_event(void* self, void* e) {
     QsciScintilla_QBaseMouseReleaseEvent((QsciScintilla*)self, (QMouseEvent*)e);
 }
 
-void q_sciscintilla_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnMouseReleaseEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnMouseReleaseEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_paint_event(void* self, void* e) {
@@ -3938,8 +3960,8 @@ void q_sciscintilla_qbase_paint_event(void* self, void* e) {
     QsciScintilla_QBasePaintEvent((QsciScintilla*)self, (QPaintEvent*)e);
 }
 
-void q_sciscintilla_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnPaintEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnPaintEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_resize_event(void* self, void* e) {
@@ -3950,8 +3972,8 @@ void q_sciscintilla_qbase_resize_event(void* self, void* e) {
     QsciScintilla_QBaseResizeEvent((QsciScintilla*)self, (QResizeEvent*)e);
 }
 
-void q_sciscintilla_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnResizeEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnResizeEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_scroll_contents_by(void* self, int dx, int dy) {
@@ -3962,8 +3984,8 @@ void q_sciscintilla_qbase_scroll_contents_by(void* self, int dx, int dy) {
     QsciScintilla_QBaseScrollContentsBy((QsciScintilla*)self, dx, dy);
 }
 
-void q_sciscintilla_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) {
-    QsciScintilla_OnScrollContentsBy((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
+    QsciScintilla_OnScrollContentsBy((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QSize* q_sciscintilla_minimum_size_hint(void* self) {
@@ -3974,8 +3996,8 @@ QSize* q_sciscintilla_qbase_minimum_size_hint(void* self) {
     return QsciScintilla_QBaseMinimumSizeHint((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QsciScintilla_OnMinimumSizeHint((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QsciScintilla_OnMinimumSizeHint((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QSize* q_sciscintilla_size_hint(void* self) {
@@ -3986,8 +4008,8 @@ QSize* q_sciscintilla_qbase_size_hint(void* self) {
     return QsciScintilla_QBaseSizeHint((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_size_hint(void* self, QSize* (*slot)()) {
-    QsciScintilla_OnSizeHint((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_size_hint(void* self, QSize* (*callback)()) {
+    QsciScintilla_OnSizeHint((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_setup_viewport(void* self, void* viewport) {
@@ -3998,8 +4020,8 @@ void q_sciscintilla_qbase_setup_viewport(void* self, void* viewport) {
     QsciScintilla_QBaseSetupViewport((QsciScintilla*)self, (QWidget*)viewport);
 }
 
-void q_sciscintilla_on_setup_viewport(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnSetupViewport((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnSetupViewport((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_event_filter(void* self, void* param1, void* param2) {
@@ -4010,8 +4032,8 @@ bool q_sciscintilla_qbase_event_filter(void* self, void* param1, void* param2) {
     return QsciScintilla_QBaseEventFilter((QsciScintilla*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_sciscintilla_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QsciScintilla_OnEventFilter((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QsciScintilla_OnEventFilter((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_viewport_event(void* self, void* param1) {
@@ -4022,8 +4044,8 @@ bool q_sciscintilla_qbase_viewport_event(void* self, void* param1) {
     return QsciScintilla_QBaseViewportEvent((QsciScintilla*)self, (QEvent*)param1);
 }
 
-void q_sciscintilla_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
-    QsciScintilla_OnViewportEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
+    QsciScintilla_OnViewportEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QSize* q_sciscintilla_viewport_size_hint(void* self) {
@@ -4034,8 +4056,8 @@ QSize* q_sciscintilla_qbase_viewport_size_hint(void* self) {
     return QsciScintilla_QBaseViewportSizeHint((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_viewport_size_hint(void* self, QSize* (*slot)()) {
-    QsciScintilla_OnViewportSizeHint((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_viewport_size_hint(void* self, QSize* (*callback)()) {
+    QsciScintilla_OnViewportSizeHint((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_init_style_option(void* self, void* option) {
@@ -4046,8 +4068,8 @@ void q_sciscintilla_qbase_init_style_option(void* self, void* option) {
     QsciScintilla_QBaseInitStyleOption((QsciScintilla*)self, (QStyleOptionFrame*)option);
 }
 
-void q_sciscintilla_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnInitStyleOption((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnInitStyleOption((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_dev_type(void* self) {
@@ -4058,8 +4080,8 @@ int32_t q_sciscintilla_qbase_dev_type(void* self) {
     return QsciScintilla_QBaseDevType((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_dev_type(void* self, int32_t (*slot)()) {
-    QsciScintilla_OnDevType((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_dev_type(void* self, int32_t (*callback)()) {
+    QsciScintilla_OnDevType((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_set_visible(void* self, bool visible) {
@@ -4070,8 +4092,8 @@ void q_sciscintilla_qbase_set_visible(void* self, bool visible) {
     QsciScintilla_QBaseSetVisible((QsciScintilla*)self, visible);
 }
 
-void q_sciscintilla_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QsciScintilla_OnSetVisible((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QsciScintilla_OnSetVisible((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_height_for_width(void* self, int param1) {
@@ -4082,8 +4104,8 @@ int32_t q_sciscintilla_qbase_height_for_width(void* self, int param1) {
     return QsciScintilla_QBaseHeightForWidth((QsciScintilla*)self, param1);
 }
 
-void q_sciscintilla_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QsciScintilla_OnHeightForWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QsciScintilla_OnHeightForWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_has_height_for_width(void* self) {
@@ -4094,8 +4116,8 @@ bool q_sciscintilla_qbase_has_height_for_width(void* self) {
     return QsciScintilla_QBaseHasHeightForWidth((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_has_height_for_width(void* self, bool (*slot)()) {
-    QsciScintilla_OnHasHeightForWidth((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_has_height_for_width(void* self, bool (*callback)()) {
+    QsciScintilla_OnHasHeightForWidth((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_sciscintilla_paint_engine(void* self) {
@@ -4106,8 +4128,8 @@ QPaintEngine* q_sciscintilla_qbase_paint_engine(void* self) {
     return QsciScintilla_QBasePaintEngine((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QsciScintilla_OnPaintEngine((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QsciScintilla_OnPaintEngine((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_key_release_event(void* self, void* event) {
@@ -4118,8 +4140,8 @@ void q_sciscintilla_qbase_key_release_event(void* self, void* event) {
     QsciScintilla_QBaseKeyReleaseEvent((QsciScintilla*)self, (QKeyEvent*)event);
 }
 
-void q_sciscintilla_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnKeyReleaseEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnKeyReleaseEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_enter_event(void* self, void* event) {
@@ -4130,8 +4152,8 @@ void q_sciscintilla_qbase_enter_event(void* self, void* event) {
     QsciScintilla_QBaseEnterEvent((QsciScintilla*)self, (QEnterEvent*)event);
 }
 
-void q_sciscintilla_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnEnterEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnEnterEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_leave_event(void* self, void* event) {
@@ -4142,8 +4164,8 @@ void q_sciscintilla_qbase_leave_event(void* self, void* event) {
     QsciScintilla_QBaseLeaveEvent((QsciScintilla*)self, (QEvent*)event);
 }
 
-void q_sciscintilla_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnLeaveEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnLeaveEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_move_event(void* self, void* event) {
@@ -4154,8 +4176,8 @@ void q_sciscintilla_qbase_move_event(void* self, void* event) {
     QsciScintilla_QBaseMoveEvent((QsciScintilla*)self, (QMoveEvent*)event);
 }
 
-void q_sciscintilla_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnMoveEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnMoveEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_close_event(void* self, void* event) {
@@ -4166,8 +4188,8 @@ void q_sciscintilla_qbase_close_event(void* self, void* event) {
     QsciScintilla_QBaseCloseEvent((QsciScintilla*)self, (QCloseEvent*)event);
 }
 
-void q_sciscintilla_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnCloseEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnCloseEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_tablet_event(void* self, void* event) {
@@ -4178,8 +4200,8 @@ void q_sciscintilla_qbase_tablet_event(void* self, void* event) {
     QsciScintilla_QBaseTabletEvent((QsciScintilla*)self, (QTabletEvent*)event);
 }
 
-void q_sciscintilla_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnTabletEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnTabletEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_action_event(void* self, void* event) {
@@ -4190,8 +4212,8 @@ void q_sciscintilla_qbase_action_event(void* self, void* event) {
     QsciScintilla_QBaseActionEvent((QsciScintilla*)self, (QActionEvent*)event);
 }
 
-void q_sciscintilla_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnActionEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnActionEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_show_event(void* self, void* event) {
@@ -4202,8 +4224,8 @@ void q_sciscintilla_qbase_show_event(void* self, void* event) {
     QsciScintilla_QBaseShowEvent((QsciScintilla*)self, (QShowEvent*)event);
 }
 
-void q_sciscintilla_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnShowEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnShowEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_hide_event(void* self, void* event) {
@@ -4214,8 +4236,8 @@ void q_sciscintilla_qbase_hide_event(void* self, void* event) {
     QsciScintilla_QBaseHideEvent((QsciScintilla*)self, (QHideEvent*)event);
 }
 
-void q_sciscintilla_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnHideEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnHideEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -4226,8 +4248,8 @@ bool q_sciscintilla_qbase_native_event(void* self, const char* eventType, void* 
     return QsciScintilla_QBaseNativeEvent((QsciScintilla*)self, qstring(eventType), message, result);
 }
 
-void q_sciscintilla_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QsciScintilla_OnNativeEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QsciScintilla_OnNativeEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_metric(void* self, int64_t param1) {
@@ -4238,8 +4260,8 @@ int32_t q_sciscintilla_qbase_metric(void* self, int64_t param1) {
     return QsciScintilla_QBaseMetric((QsciScintilla*)self, param1);
 }
 
-void q_sciscintilla_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QsciScintilla_OnMetric((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QsciScintilla_OnMetric((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_init_painter(void* self, void* painter) {
@@ -4250,8 +4272,8 @@ void q_sciscintilla_qbase_init_painter(void* self, void* painter) {
     QsciScintilla_QBaseInitPainter((QsciScintilla*)self, (QPainter*)painter);
 }
 
-void q_sciscintilla_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnInitPainter((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnInitPainter((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_sciscintilla_redirected(void* self, void* offset) {
@@ -4262,8 +4284,8 @@ QPaintDevice* q_sciscintilla_qbase_redirected(void* self, void* offset) {
     return QsciScintilla_QBaseRedirected((QsciScintilla*)self, (QPoint*)offset);
 }
 
-void q_sciscintilla_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QsciScintilla_OnRedirected((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QsciScintilla_OnRedirected((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QPainter* q_sciscintilla_shared_painter(void* self) {
@@ -4274,8 +4296,8 @@ QPainter* q_sciscintilla_qbase_shared_painter(void* self) {
     return QsciScintilla_QBaseSharedPainter((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QsciScintilla_OnSharedPainter((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QsciScintilla_OnSharedPainter((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QVariant* q_sciscintilla_input_method_query(void* self, int64_t param1) {
@@ -4286,8 +4308,8 @@ QVariant* q_sciscintilla_qbase_input_method_query(void* self, int64_t param1) {
     return QsciScintilla_QBaseInputMethodQuery((QsciScintilla*)self, param1);
 }
 
-void q_sciscintilla_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QsciScintilla_OnInputMethodQuery((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QsciScintilla_OnInputMethodQuery((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_timer_event(void* self, void* event) {
@@ -4298,8 +4320,8 @@ void q_sciscintilla_qbase_timer_event(void* self, void* event) {
     QsciScintilla_QBaseTimerEvent((QsciScintilla*)self, (QTimerEvent*)event);
 }
 
-void q_sciscintilla_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnTimerEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnTimerEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_child_event(void* self, void* event) {
@@ -4310,8 +4332,8 @@ void q_sciscintilla_qbase_child_event(void* self, void* event) {
     QsciScintilla_QBaseChildEvent((QsciScintilla*)self, (QChildEvent*)event);
 }
 
-void q_sciscintilla_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnChildEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnChildEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_custom_event(void* self, void* event) {
@@ -4322,8 +4344,8 @@ void q_sciscintilla_qbase_custom_event(void* self, void* event) {
     QsciScintilla_QBaseCustomEvent((QsciScintilla*)self, (QEvent*)event);
 }
 
-void q_sciscintilla_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnCustomEvent((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnCustomEvent((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_connect_notify(void* self, void* signal) {
@@ -4334,8 +4356,8 @@ void q_sciscintilla_qbase_connect_notify(void* self, void* signal) {
     QsciScintilla_QBaseConnectNotify((QsciScintilla*)self, (QMetaMethod*)signal);
 }
 
-void q_sciscintilla_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnConnectNotify((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnConnectNotify((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_disconnect_notify(void* self, void* signal) {
@@ -4346,8 +4368,8 @@ void q_sciscintilla_qbase_disconnect_notify(void* self, void* signal) {
     QsciScintilla_QBaseDisconnectNotify((QsciScintilla*)self, (QMetaMethod*)signal);
 }
 
-void q_sciscintilla_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDisconnectNotify((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDisconnectNotify((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_set_scroll_bars(void* self) {
@@ -4358,8 +4380,8 @@ void q_sciscintilla_qbase_set_scroll_bars(void* self) {
     QsciScintilla_QBaseSetScrollBars((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_set_scroll_bars(void* self, void (*slot)()) {
-    QsciScintilla_OnSetScrollBars((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_scroll_bars(void* self, void (*callback)()) {
+    QsciScintilla_OnSetScrollBars((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_context_menu_needed(void* self, int x, int y) {
@@ -4370,8 +4392,8 @@ bool q_sciscintilla_qbase_context_menu_needed(void* self, int x, int y) {
     return QsciScintilla_QBaseContextMenuNeeded((QsciScintilla*)self, x, y);
 }
 
-void q_sciscintilla_on_context_menu_needed(void* self, bool (*slot)(void*, int, int)) {
-    QsciScintilla_OnContextMenuNeeded((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_context_menu_needed(void* self, bool (*callback)(void*, int, int)) {
+    QsciScintilla_OnContextMenuNeeded((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
@@ -4382,8 +4404,8 @@ void q_sciscintilla_qbase_set_viewport_margins(void* self, int left, int top, in
     QsciScintilla_QBaseSetViewportMargins((QsciScintilla*)self, left, top, right, bottom);
 }
 
-void q_sciscintilla_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int)) {
-    QsciScintilla_OnSetViewportMargins((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
+    QsciScintilla_OnSetViewportMargins((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QMargins* q_sciscintilla_viewport_margins(void* self) {
@@ -4394,8 +4416,8 @@ QMargins* q_sciscintilla_qbase_viewport_margins(void* self) {
     return QsciScintilla_QBaseViewportMargins((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_viewport_margins(void* self, QMargins* (*slot)()) {
-    QsciScintilla_OnViewportMargins((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_viewport_margins(void* self, QMargins* (*callback)()) {
+    QsciScintilla_OnViewportMargins((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_draw_frame(void* self, void* param1) {
@@ -4406,8 +4428,8 @@ void q_sciscintilla_qbase_draw_frame(void* self, void* param1) {
     QsciScintilla_QBaseDrawFrame((QsciScintilla*)self, (QPainter*)param1);
 }
 
-void q_sciscintilla_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QsciScintilla_OnDrawFrame((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QsciScintilla_OnDrawFrame((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_update_micro_focus(void* self) {
@@ -4418,8 +4440,8 @@ void q_sciscintilla_qbase_update_micro_focus(void* self) {
     QsciScintilla_QBaseUpdateMicroFocus((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_update_micro_focus(void* self, void (*slot)()) {
-    QsciScintilla_OnUpdateMicroFocus((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_update_micro_focus(void* self, void (*callback)()) {
+    QsciScintilla_OnUpdateMicroFocus((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_create(void* self) {
@@ -4430,8 +4452,8 @@ void q_sciscintilla_qbase_create(void* self) {
     QsciScintilla_QBaseCreate((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_create(void* self, void (*slot)()) {
-    QsciScintilla_OnCreate((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_create(void* self, void (*callback)()) {
+    QsciScintilla_OnCreate((QsciScintilla*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_destroy(void* self) {
@@ -4442,8 +4464,8 @@ void q_sciscintilla_qbase_destroy(void* self) {
     QsciScintilla_QBaseDestroy((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_destroy(void* self, void (*slot)()) {
-    QsciScintilla_OnDestroy((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_destroy(void* self, void (*callback)()) {
+    QsciScintilla_OnDestroy((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_focus_next_child(void* self) {
@@ -4454,8 +4476,8 @@ bool q_sciscintilla_qbase_focus_next_child(void* self) {
     return QsciScintilla_QBaseFocusNextChild((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_focus_next_child(void* self, bool (*slot)()) {
-    QsciScintilla_OnFocusNextChild((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_focus_next_child(void* self, bool (*callback)()) {
+    QsciScintilla_OnFocusNextChild((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_focus_previous_child(void* self) {
@@ -4466,8 +4488,8 @@ bool q_sciscintilla_qbase_focus_previous_child(void* self) {
     return QsciScintilla_QBaseFocusPreviousChild((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_focus_previous_child(void* self, bool (*slot)()) {
-    QsciScintilla_OnFocusPreviousChild((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_focus_previous_child(void* self, bool (*callback)()) {
+    QsciScintilla_OnFocusPreviousChild((QsciScintilla*)self, (intptr_t)callback);
 }
 
 QObject* q_sciscintilla_sender(void* self) {
@@ -4478,8 +4500,8 @@ QObject* q_sciscintilla_qbase_sender(void* self) {
     return QsciScintilla_QBaseSender((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_sender(void* self, QObject* (*slot)()) {
-    QsciScintilla_OnSender((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_sender(void* self, QObject* (*callback)()) {
+    QsciScintilla_OnSender((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_sender_signal_index(void* self) {
@@ -4490,8 +4512,8 @@ int32_t q_sciscintilla_qbase_sender_signal_index(void* self) {
     return QsciScintilla_QBaseSenderSignalIndex((QsciScintilla*)self);
 }
 
-void q_sciscintilla_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QsciScintilla_OnSenderSignalIndex((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QsciScintilla_OnSenderSignalIndex((QsciScintilla*)self, (intptr_t)callback);
 }
 
 int32_t q_sciscintilla_receivers(void* self, const char* signal) {
@@ -4502,8 +4524,8 @@ int32_t q_sciscintilla_qbase_receivers(void* self, const char* signal) {
     return QsciScintilla_QBaseReceivers((QsciScintilla*)self, signal);
 }
 
-void q_sciscintilla_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QsciScintilla_OnReceivers((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QsciScintilla_OnReceivers((QsciScintilla*)self, (intptr_t)callback);
 }
 
 bool q_sciscintilla_is_signal_connected(void* self, void* signal) {
@@ -4514,8 +4536,8 @@ bool q_sciscintilla_qbase_is_signal_connected(void* self, void* signal) {
     return QsciScintilla_QBaseIsSignalConnected((QsciScintilla*)self, (QMetaMethod*)signal);
 }
 
-void q_sciscintilla_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QsciScintilla_OnIsSignalConnected((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QsciScintilla_OnIsSignalConnected((QsciScintilla*)self, (intptr_t)callback);
 }
 
 double q_sciscintilla_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -4526,12 +4548,12 @@ double q_sciscintilla_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
     return QsciScintilla_QBaseGetDecodedMetricF((QsciScintilla*)self, metricA, metricB);
 }
 
-void q_sciscintilla_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QsciScintilla_OnGetDecodedMetricF((QsciScintilla*)self, (intptr_t)slot);
+void q_sciscintilla_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QsciScintilla_OnGetDecodedMetricF((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_sciscintilla_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_sciscintilla_delete(void* self) {

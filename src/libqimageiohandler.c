@@ -40,8 +40,8 @@ bool q_imageiohandler_can_read(void* self) {
     return QImageIOHandler_CanRead((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_can_read(void* self, bool (*slot)()) {
-    QImageIOHandler_OnCanRead((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_can_read(void* self, bool (*callback)()) {
+    QImageIOHandler_OnCanRead((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_can_read(void* self) {
@@ -52,8 +52,8 @@ bool q_imageiohandler_read(void* self, void* image) {
     return QImageIOHandler_Read((QImageIOHandler*)self, (QImage*)image);
 }
 
-void q_imageiohandler_on_read(void* self, bool (*slot)(void*, void*)) {
-    QImageIOHandler_OnRead((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_read(void* self, bool (*callback)(void*, void*)) {
+    QImageIOHandler_OnRead((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_read(void* self, void* image) {
@@ -64,8 +64,8 @@ bool q_imageiohandler_write(void* self, void* image) {
     return QImageIOHandler_Write((QImageIOHandler*)self, (QImage*)image);
 }
 
-void q_imageiohandler_on_write(void* self, bool (*slot)(void*, void*)) {
-    QImageIOHandler_OnWrite((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_write(void* self, bool (*callback)(void*, void*)) {
+    QImageIOHandler_OnWrite((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_write(void* self, void* image) {
@@ -76,8 +76,8 @@ QVariant* q_imageiohandler_option(void* self, int64_t option) {
     return QImageIOHandler_Option((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_option(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QImageIOHandler_OnOption((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QImageIOHandler_OnOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 QVariant* q_imageiohandler_qbase_option(void* self, int64_t option) {
@@ -88,8 +88,8 @@ void q_imageiohandler_set_option(void* self, int64_t option, void* value) {
     QImageIOHandler_SetOption((QImageIOHandler*)self, option, (QVariant*)value);
 }
 
-void q_imageiohandler_on_set_option(void* self, void (*slot)(void*, int64_t, void*)) {
-    QImageIOHandler_OnSetOption((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_set_option(void* self, void (*callback)(void*, int64_t, void*)) {
+    QImageIOHandler_OnSetOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 void q_imageiohandler_qbase_set_option(void* self, int64_t option, void* value) {
@@ -100,8 +100,8 @@ bool q_imageiohandler_supports_option(void* self, int64_t option) {
     return QImageIOHandler_SupportsOption((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_supports_option(void* self, bool (*slot)(void*, int64_t)) {
-    QImageIOHandler_OnSupportsOption((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_supports_option(void* self, bool (*callback)(void*, int64_t)) {
+    QImageIOHandler_OnSupportsOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_supports_option(void* self, int64_t option) {
@@ -112,8 +112,8 @@ bool q_imageiohandler_jump_to_next_image(void* self) {
     return QImageIOHandler_JumpToNextImage((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_jump_to_next_image(void* self, bool (*slot)()) {
-    QImageIOHandler_OnJumpToNextImage((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_jump_to_next_image(void* self, bool (*callback)()) {
+    QImageIOHandler_OnJumpToNextImage((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_jump_to_next_image(void* self) {
@@ -124,8 +124,8 @@ bool q_imageiohandler_jump_to_image(void* self, int imageNumber) {
     return QImageIOHandler_JumpToImage((QImageIOHandler*)self, imageNumber);
 }
 
-void q_imageiohandler_on_jump_to_image(void* self, bool (*slot)(void*, int)) {
-    QImageIOHandler_OnJumpToImage((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_jump_to_image(void* self, bool (*callback)(void*, int)) {
+    QImageIOHandler_OnJumpToImage((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 bool q_imageiohandler_qbase_jump_to_image(void* self, int imageNumber) {
@@ -136,8 +136,8 @@ int32_t q_imageiohandler_loop_count(void* self) {
     return QImageIOHandler_LoopCount((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_loop_count(void* self, int32_t (*slot)()) {
-    QImageIOHandler_OnLoopCount((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_loop_count(void* self, int32_t (*callback)()) {
+    QImageIOHandler_OnLoopCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_imageiohandler_qbase_loop_count(void* self) {
@@ -148,8 +148,8 @@ int32_t q_imageiohandler_image_count(void* self) {
     return QImageIOHandler_ImageCount((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_image_count(void* self, int32_t (*slot)()) {
-    QImageIOHandler_OnImageCount((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_image_count(void* self, int32_t (*callback)()) {
+    QImageIOHandler_OnImageCount((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_imageiohandler_qbase_image_count(void* self) {
@@ -160,8 +160,8 @@ int32_t q_imageiohandler_next_image_delay(void* self) {
     return QImageIOHandler_NextImageDelay((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_next_image_delay(void* self, int32_t (*slot)()) {
-    QImageIOHandler_OnNextImageDelay((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_next_image_delay(void* self, int32_t (*callback)()) {
+    QImageIOHandler_OnNextImageDelay((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_imageiohandler_qbase_next_image_delay(void* self) {
@@ -172,8 +172,8 @@ int32_t q_imageiohandler_current_image_number(void* self) {
     return QImageIOHandler_CurrentImageNumber((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_current_image_number(void* self, int32_t (*slot)()) {
-    QImageIOHandler_OnCurrentImageNumber((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_current_image_number(void* self, int32_t (*callback)()) {
+    QImageIOHandler_OnCurrentImageNumber((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_imageiohandler_qbase_current_image_number(void* self) {
@@ -184,8 +184,8 @@ QRect* q_imageiohandler_current_image_rect(void* self) {
     return QImageIOHandler_CurrentImageRect((QImageIOHandler*)self);
 }
 
-void q_imageiohandler_on_current_image_rect(void* self, QRect* (*slot)()) {
-    QImageIOHandler_OnCurrentImageRect((QImageIOHandler*)self, (intptr_t)slot);
+void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)()) {
+    QImageIOHandler_OnCurrentImageRect((QImageIOHandler*)self, (intptr_t)callback);
 }
 
 QRect* q_imageiohandler_qbase_current_image_rect(void* self) {
@@ -353,12 +353,16 @@ const char** q_imageioplugin_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_imageioplugin_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -376,8 +380,8 @@ void q_imageioplugin_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_imageioplugin_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_imageioplugin_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_imageioplugin_parent(void* self) {
@@ -412,12 +416,12 @@ void q_imageioplugin_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_imageioplugin_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_imageioplugin_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_imageioplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_imageioplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_imageioplugin_delete(void* self) {

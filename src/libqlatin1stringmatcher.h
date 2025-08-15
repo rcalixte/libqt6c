@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,24 +15,26 @@
 
 /// q_latin1stringmatcher_new constructs a new QLatin1StringMatcher object.
 ///
-///
 QLatin1StringMatcher* q_latin1stringmatcher_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#setCaseSensitivity)
 ///
-/// ``` QLatin1StringMatcher* self, enum Qt__CaseSensitivity cs ```
+/// @param self QLatin1StringMatcher*
+/// @param cs enum Qt__CaseSensitivity
 void q_latin1stringmatcher_set_case_sensitivity(void* self, int64_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#caseSensitivity)
 ///
-/// ``` QLatin1StringMatcher* self ```
+/// @param self QLatin1StringMatcher*
+///
+/// @return enum Qt__CaseSensitivity
 int64_t q_latin1stringmatcher_case_sensitivity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1stringmatcher.html#dtor.QLatin1StringMatcher)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLatin1StringMatcher* self ```
+/// @param self QLatin1StringMatcher*
 void q_latin1stringmatcher_delete(void* self);
 
 #endif

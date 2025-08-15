@@ -43,8 +43,8 @@ int32_t q_keysequenceedit_metacall(void* self, int64_t param1, int param2, void*
     return QKeySequenceEdit_Metacall((QKeySequenceEdit*)self, param1, param2, param3);
 }
 
-void q_keysequenceedit_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QKeySequenceEdit_OnMetacall((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QKeySequenceEdit_OnMetacall((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_keysequenceedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -99,24 +99,24 @@ void q_keysequenceedit_editing_finished(void* self) {
     QKeySequenceEdit_EditingFinished((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_editing_finished(void* self, void (*slot)(void*)) {
-    QKeySequenceEdit_Connect_EditingFinished((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_editing_finished(void* self, void (*callback)(void*)) {
+    QKeySequenceEdit_Connect_EditingFinished((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_key_sequence_changed(void* self, void* keySequence) {
     QKeySequenceEdit_KeySequenceChanged((QKeySequenceEdit*)self, (QKeySequence*)keySequence);
 }
 
-void q_keysequenceedit_on_key_sequence_changed(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_Connect_KeySequenceChanged((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_key_sequence_changed(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_Connect_KeySequenceChanged((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_event(void* self, void* param1) {
     return QKeySequenceEdit_Event((QKeySequenceEdit*)self, (QEvent*)param1);
 }
 
-void q_keysequenceedit_on_event(void* self, bool (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_event(void* self, bool (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_qbase_event(void* self, void* param1) {
@@ -127,8 +127,8 @@ void q_keysequenceedit_key_press_event(void* self, void* param1) {
     QKeySequenceEdit_KeyPressEvent((QKeySequenceEdit*)self, (QKeyEvent*)param1);
 }
 
-void q_keysequenceedit_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnKeyPressEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnKeyPressEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_qbase_key_press_event(void* self, void* param1) {
@@ -139,8 +139,8 @@ void q_keysequenceedit_key_release_event(void* self, void* param1) {
     QKeySequenceEdit_KeyReleaseEvent((QKeySequenceEdit*)self, (QKeyEvent*)param1);
 }
 
-void q_keysequenceedit_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnKeyReleaseEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnKeyReleaseEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_qbase_key_release_event(void* self, void* param1) {
@@ -151,8 +151,8 @@ void q_keysequenceedit_timer_event(void* self, void* param1) {
     QKeySequenceEdit_TimerEvent((QKeySequenceEdit*)self, (QTimerEvent*)param1);
 }
 
-void q_keysequenceedit_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnTimerEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnTimerEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_qbase_timer_event(void* self, void* param1) {
@@ -163,8 +163,8 @@ void q_keysequenceedit_focus_out_event(void* self, void* param1) {
     QKeySequenceEdit_FocusOutEvent((QKeySequenceEdit*)self, (QFocusEvent*)param1);
 }
 
-void q_keysequenceedit_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnFocusOutEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnFocusOutEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_qbase_focus_out_event(void* self, void* param1) {
@@ -1211,32 +1211,32 @@ void q_keysequenceedit_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_keysequenceedit_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_keysequenceedit_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_keysequenceedit_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_keysequenceedit_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_keysequenceedit_input_method_hints(void* self) {
@@ -1407,12 +1407,16 @@ const char** q_keysequenceedit_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_keysequenceedit_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1430,8 +1434,8 @@ void q_keysequenceedit_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_keysequenceedit_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_keysequenceedit_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_keysequenceedit_parent(void* self) {
@@ -1466,8 +1470,8 @@ void q_keysequenceedit_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_keysequenceedit_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_keysequenceedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_painting_active(void* self) {
@@ -1530,8 +1534,8 @@ int32_t q_keysequenceedit_qbase_dev_type(void* self) {
     return QKeySequenceEdit_QBaseDevType((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_dev_type(void* self, int32_t (*slot)()) {
-    QKeySequenceEdit_OnDevType((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_dev_type(void* self, int32_t (*callback)()) {
+    QKeySequenceEdit_OnDevType((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_set_visible(void* self, bool visible) {
@@ -1542,8 +1546,8 @@ void q_keysequenceedit_qbase_set_visible(void* self, bool visible) {
     QKeySequenceEdit_QBaseSetVisible((QKeySequenceEdit*)self, visible);
 }
 
-void q_keysequenceedit_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QKeySequenceEdit_OnSetVisible((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QKeySequenceEdit_OnSetVisible((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_keysequenceedit_size_hint(void* self) {
@@ -1554,8 +1558,8 @@ QSize* q_keysequenceedit_qbase_size_hint(void* self) {
     return QKeySequenceEdit_QBaseSizeHint((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_size_hint(void* self, QSize* (*slot)()) {
-    QKeySequenceEdit_OnSizeHint((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_size_hint(void* self, QSize* (*callback)()) {
+    QKeySequenceEdit_OnSizeHint((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_keysequenceedit_minimum_size_hint(void* self) {
@@ -1566,8 +1570,8 @@ QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self) {
     return QKeySequenceEdit_QBaseMinimumSizeHint((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QKeySequenceEdit_OnMinimumSizeHint((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QKeySequenceEdit_OnMinimumSizeHint((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_keysequenceedit_height_for_width(void* self, int param1) {
@@ -1578,8 +1582,8 @@ int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1) {
     return QKeySequenceEdit_QBaseHeightForWidth((QKeySequenceEdit*)self, param1);
 }
 
-void q_keysequenceedit_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QKeySequenceEdit_OnHeightForWidth((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QKeySequenceEdit_OnHeightForWidth((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_has_height_for_width(void* self) {
@@ -1590,8 +1594,8 @@ bool q_keysequenceedit_qbase_has_height_for_width(void* self) {
     return QKeySequenceEdit_QBaseHasHeightForWidth((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_has_height_for_width(void* self, bool (*slot)()) {
-    QKeySequenceEdit_OnHasHeightForWidth((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_has_height_for_width(void* self, bool (*callback)()) {
+    QKeySequenceEdit_OnHasHeightForWidth((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_keysequenceedit_paint_engine(void* self) {
@@ -1602,8 +1606,8 @@ QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self) {
     return QKeySequenceEdit_QBasePaintEngine((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QKeySequenceEdit_OnPaintEngine((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QKeySequenceEdit_OnPaintEngine((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_mouse_press_event(void* self, void* event) {
@@ -1614,8 +1618,8 @@ void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event) {
     QKeySequenceEdit_QBaseMousePressEvent((QKeySequenceEdit*)self, (QMouseEvent*)event);
 }
 
-void q_keysequenceedit_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnMousePressEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnMousePressEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_mouse_release_event(void* self, void* event) {
@@ -1626,8 +1630,8 @@ void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event) {
     QKeySequenceEdit_QBaseMouseReleaseEvent((QKeySequenceEdit*)self, (QMouseEvent*)event);
 }
 
-void q_keysequenceedit_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnMouseReleaseEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnMouseReleaseEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_mouse_double_click_event(void* self, void* event) {
@@ -1638,8 +1642,8 @@ void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event) {
     QKeySequenceEdit_QBaseMouseDoubleClickEvent((QKeySequenceEdit*)self, (QMouseEvent*)event);
 }
 
-void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnMouseDoubleClickEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnMouseDoubleClickEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_mouse_move_event(void* self, void* event) {
@@ -1650,8 +1654,8 @@ void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event) {
     QKeySequenceEdit_QBaseMouseMoveEvent((QKeySequenceEdit*)self, (QMouseEvent*)event);
 }
 
-void q_keysequenceedit_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnMouseMoveEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnMouseMoveEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_wheel_event(void* self, void* event) {
@@ -1662,8 +1666,8 @@ void q_keysequenceedit_qbase_wheel_event(void* self, void* event) {
     QKeySequenceEdit_QBaseWheelEvent((QKeySequenceEdit*)self, (QWheelEvent*)event);
 }
 
-void q_keysequenceedit_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnWheelEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnWheelEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_focus_in_event(void* self, void* event) {
@@ -1674,8 +1678,8 @@ void q_keysequenceedit_qbase_focus_in_event(void* self, void* event) {
     QKeySequenceEdit_QBaseFocusInEvent((QKeySequenceEdit*)self, (QFocusEvent*)event);
 }
 
-void q_keysequenceedit_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnFocusInEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnFocusInEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_enter_event(void* self, void* event) {
@@ -1686,8 +1690,8 @@ void q_keysequenceedit_qbase_enter_event(void* self, void* event) {
     QKeySequenceEdit_QBaseEnterEvent((QKeySequenceEdit*)self, (QEnterEvent*)event);
 }
 
-void q_keysequenceedit_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnEnterEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnEnterEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_leave_event(void* self, void* event) {
@@ -1698,8 +1702,8 @@ void q_keysequenceedit_qbase_leave_event(void* self, void* event) {
     QKeySequenceEdit_QBaseLeaveEvent((QKeySequenceEdit*)self, (QEvent*)event);
 }
 
-void q_keysequenceedit_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnLeaveEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnLeaveEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_paint_event(void* self, void* event) {
@@ -1710,8 +1714,8 @@ void q_keysequenceedit_qbase_paint_event(void* self, void* event) {
     QKeySequenceEdit_QBasePaintEvent((QKeySequenceEdit*)self, (QPaintEvent*)event);
 }
 
-void q_keysequenceedit_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnPaintEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnPaintEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_move_event(void* self, void* event) {
@@ -1722,8 +1726,8 @@ void q_keysequenceedit_qbase_move_event(void* self, void* event) {
     QKeySequenceEdit_QBaseMoveEvent((QKeySequenceEdit*)self, (QMoveEvent*)event);
 }
 
-void q_keysequenceedit_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnMoveEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnMoveEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_resize_event(void* self, void* event) {
@@ -1734,8 +1738,8 @@ void q_keysequenceedit_qbase_resize_event(void* self, void* event) {
     QKeySequenceEdit_QBaseResizeEvent((QKeySequenceEdit*)self, (QResizeEvent*)event);
 }
 
-void q_keysequenceedit_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnResizeEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnResizeEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_close_event(void* self, void* event) {
@@ -1746,8 +1750,8 @@ void q_keysequenceedit_qbase_close_event(void* self, void* event) {
     QKeySequenceEdit_QBaseCloseEvent((QKeySequenceEdit*)self, (QCloseEvent*)event);
 }
 
-void q_keysequenceedit_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnCloseEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnCloseEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_context_menu_event(void* self, void* event) {
@@ -1758,8 +1762,8 @@ void q_keysequenceedit_qbase_context_menu_event(void* self, void* event) {
     QKeySequenceEdit_QBaseContextMenuEvent((QKeySequenceEdit*)self, (QContextMenuEvent*)event);
 }
 
-void q_keysequenceedit_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnContextMenuEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnContextMenuEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_tablet_event(void* self, void* event) {
@@ -1770,8 +1774,8 @@ void q_keysequenceedit_qbase_tablet_event(void* self, void* event) {
     QKeySequenceEdit_QBaseTabletEvent((QKeySequenceEdit*)self, (QTabletEvent*)event);
 }
 
-void q_keysequenceedit_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnTabletEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnTabletEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_action_event(void* self, void* event) {
@@ -1782,8 +1786,8 @@ void q_keysequenceedit_qbase_action_event(void* self, void* event) {
     QKeySequenceEdit_QBaseActionEvent((QKeySequenceEdit*)self, (QActionEvent*)event);
 }
 
-void q_keysequenceedit_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnActionEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnActionEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_drag_enter_event(void* self, void* event) {
@@ -1794,8 +1798,8 @@ void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event) {
     QKeySequenceEdit_QBaseDragEnterEvent((QKeySequenceEdit*)self, (QDragEnterEvent*)event);
 }
 
-void q_keysequenceedit_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnDragEnterEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnDragEnterEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_drag_move_event(void* self, void* event) {
@@ -1806,8 +1810,8 @@ void q_keysequenceedit_qbase_drag_move_event(void* self, void* event) {
     QKeySequenceEdit_QBaseDragMoveEvent((QKeySequenceEdit*)self, (QDragMoveEvent*)event);
 }
 
-void q_keysequenceedit_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnDragMoveEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnDragMoveEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_drag_leave_event(void* self, void* event) {
@@ -1818,8 +1822,8 @@ void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event) {
     QKeySequenceEdit_QBaseDragLeaveEvent((QKeySequenceEdit*)self, (QDragLeaveEvent*)event);
 }
 
-void q_keysequenceedit_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnDragLeaveEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnDragLeaveEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_drop_event(void* self, void* event) {
@@ -1830,8 +1834,8 @@ void q_keysequenceedit_qbase_drop_event(void* self, void* event) {
     QKeySequenceEdit_QBaseDropEvent((QKeySequenceEdit*)self, (QDropEvent*)event);
 }
 
-void q_keysequenceedit_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnDropEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnDropEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_show_event(void* self, void* event) {
@@ -1842,8 +1846,8 @@ void q_keysequenceedit_qbase_show_event(void* self, void* event) {
     QKeySequenceEdit_QBaseShowEvent((QKeySequenceEdit*)self, (QShowEvent*)event);
 }
 
-void q_keysequenceedit_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnShowEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnShowEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_hide_event(void* self, void* event) {
@@ -1854,8 +1858,8 @@ void q_keysequenceedit_qbase_hide_event(void* self, void* event) {
     QKeySequenceEdit_QBaseHideEvent((QKeySequenceEdit*)self, (QHideEvent*)event);
 }
 
-void q_keysequenceedit_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnHideEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnHideEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1866,8 +1870,8 @@ bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, voi
     return QKeySequenceEdit_QBaseNativeEvent((QKeySequenceEdit*)self, qstring(eventType), message, result);
 }
 
-void q_keysequenceedit_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QKeySequenceEdit_OnNativeEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QKeySequenceEdit_OnNativeEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_change_event(void* self, void* param1) {
@@ -1878,8 +1882,8 @@ void q_keysequenceedit_qbase_change_event(void* self, void* param1) {
     QKeySequenceEdit_QBaseChangeEvent((QKeySequenceEdit*)self, (QEvent*)param1);
 }
 
-void q_keysequenceedit_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnChangeEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnChangeEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_keysequenceedit_metric(void* self, int64_t param1) {
@@ -1890,8 +1894,8 @@ int32_t q_keysequenceedit_qbase_metric(void* self, int64_t param1) {
     return QKeySequenceEdit_QBaseMetric((QKeySequenceEdit*)self, param1);
 }
 
-void q_keysequenceedit_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QKeySequenceEdit_OnMetric((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QKeySequenceEdit_OnMetric((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_init_painter(void* self, void* painter) {
@@ -1902,8 +1906,8 @@ void q_keysequenceedit_qbase_init_painter(void* self, void* painter) {
     QKeySequenceEdit_QBaseInitPainter((QKeySequenceEdit*)self, (QPainter*)painter);
 }
 
-void q_keysequenceedit_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnInitPainter((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnInitPainter((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_keysequenceedit_redirected(void* self, void* offset) {
@@ -1914,8 +1918,8 @@ QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset) {
     return QKeySequenceEdit_QBaseRedirected((QKeySequenceEdit*)self, (QPoint*)offset);
 }
 
-void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnRedirected((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnRedirected((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_keysequenceedit_shared_painter(void* self) {
@@ -1926,8 +1930,8 @@ QPainter* q_keysequenceedit_qbase_shared_painter(void* self) {
     return QKeySequenceEdit_QBaseSharedPainter((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QKeySequenceEdit_OnSharedPainter((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QKeySequenceEdit_OnSharedPainter((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_input_method_event(void* self, void* param1) {
@@ -1938,8 +1942,8 @@ void q_keysequenceedit_qbase_input_method_event(void* self, void* param1) {
     QKeySequenceEdit_QBaseInputMethodEvent((QKeySequenceEdit*)self, (QInputMethodEvent*)param1);
 }
 
-void q_keysequenceedit_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnInputMethodEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnInputMethodEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_keysequenceedit_input_method_query(void* self, int64_t param1) {
@@ -1950,8 +1954,8 @@ QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1)
     return QKeySequenceEdit_QBaseInputMethodQuery((QKeySequenceEdit*)self, param1);
 }
 
-void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QKeySequenceEdit_OnInputMethodQuery((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QKeySequenceEdit_OnInputMethodQuery((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_focus_next_prev_child(void* self, bool next) {
@@ -1962,8 +1966,8 @@ bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next) {
     return QKeySequenceEdit_QBaseFocusNextPrevChild((QKeySequenceEdit*)self, next);
 }
 
-void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QKeySequenceEdit_OnFocusNextPrevChild((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QKeySequenceEdit_OnFocusNextPrevChild((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_event_filter(void* self, void* watched, void* event) {
@@ -1974,8 +1978,8 @@ bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event
     return QKeySequenceEdit_QBaseEventFilter((QKeySequenceEdit*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_keysequenceedit_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QKeySequenceEdit_OnEventFilter((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QKeySequenceEdit_OnEventFilter((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_child_event(void* self, void* event) {
@@ -1986,8 +1990,8 @@ void q_keysequenceedit_qbase_child_event(void* self, void* event) {
     QKeySequenceEdit_QBaseChildEvent((QKeySequenceEdit*)self, (QChildEvent*)event);
 }
 
-void q_keysequenceedit_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnChildEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnChildEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_custom_event(void* self, void* event) {
@@ -1998,8 +2002,8 @@ void q_keysequenceedit_qbase_custom_event(void* self, void* event) {
     QKeySequenceEdit_QBaseCustomEvent((QKeySequenceEdit*)self, (QEvent*)event);
 }
 
-void q_keysequenceedit_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnCustomEvent((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnCustomEvent((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_connect_notify(void* self, void* signal) {
@@ -2010,8 +2014,8 @@ void q_keysequenceedit_qbase_connect_notify(void* self, void* signal) {
     QKeySequenceEdit_QBaseConnectNotify((QKeySequenceEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_keysequenceedit_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnConnectNotify((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnConnectNotify((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_disconnect_notify(void* self, void* signal) {
@@ -2022,8 +2026,8 @@ void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal) {
     QKeySequenceEdit_QBaseDisconnectNotify((QKeySequenceEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_keysequenceedit_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnDisconnectNotify((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnDisconnectNotify((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_update_micro_focus(void* self) {
@@ -2034,8 +2038,8 @@ void q_keysequenceedit_qbase_update_micro_focus(void* self) {
     QKeySequenceEdit_QBaseUpdateMicroFocus((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_update_micro_focus(void* self, void (*slot)()) {
-    QKeySequenceEdit_OnUpdateMicroFocus((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_update_micro_focus(void* self, void (*callback)()) {
+    QKeySequenceEdit_OnUpdateMicroFocus((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_create(void* self) {
@@ -2046,8 +2050,8 @@ void q_keysequenceedit_qbase_create(void* self) {
     QKeySequenceEdit_QBaseCreate((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_create(void* self, void (*slot)()) {
-    QKeySequenceEdit_OnCreate((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_create(void* self, void (*callback)()) {
+    QKeySequenceEdit_OnCreate((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_destroy(void* self) {
@@ -2058,8 +2062,8 @@ void q_keysequenceedit_qbase_destroy(void* self) {
     QKeySequenceEdit_QBaseDestroy((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_destroy(void* self, void (*slot)()) {
-    QKeySequenceEdit_OnDestroy((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_destroy(void* self, void (*callback)()) {
+    QKeySequenceEdit_OnDestroy((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_focus_next_child(void* self) {
@@ -2070,8 +2074,8 @@ bool q_keysequenceedit_qbase_focus_next_child(void* self) {
     return QKeySequenceEdit_QBaseFocusNextChild((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_focus_next_child(void* self, bool (*slot)()) {
-    QKeySequenceEdit_OnFocusNextChild((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_focus_next_child(void* self, bool (*callback)()) {
+    QKeySequenceEdit_OnFocusNextChild((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_focus_previous_child(void* self) {
@@ -2082,8 +2086,8 @@ bool q_keysequenceedit_qbase_focus_previous_child(void* self) {
     return QKeySequenceEdit_QBaseFocusPreviousChild((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_focus_previous_child(void* self, bool (*slot)()) {
-    QKeySequenceEdit_OnFocusPreviousChild((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_focus_previous_child(void* self, bool (*callback)()) {
+    QKeySequenceEdit_OnFocusPreviousChild((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 QObject* q_keysequenceedit_sender(void* self) {
@@ -2094,8 +2098,8 @@ QObject* q_keysequenceedit_qbase_sender(void* self) {
     return QKeySequenceEdit_QBaseSender((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_sender(void* self, QObject* (*slot)()) {
-    QKeySequenceEdit_OnSender((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_sender(void* self, QObject* (*callback)()) {
+    QKeySequenceEdit_OnSender((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_keysequenceedit_sender_signal_index(void* self) {
@@ -2106,8 +2110,8 @@ int32_t q_keysequenceedit_qbase_sender_signal_index(void* self) {
     return QKeySequenceEdit_QBaseSenderSignalIndex((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QKeySequenceEdit_OnSenderSignalIndex((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QKeySequenceEdit_OnSenderSignalIndex((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_keysequenceedit_receivers(void* self, const char* signal) {
@@ -2118,8 +2122,8 @@ int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal) {
     return QKeySequenceEdit_QBaseReceivers((QKeySequenceEdit*)self, signal);
 }
 
-void q_keysequenceedit_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QKeySequenceEdit_OnReceivers((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QKeySequenceEdit_OnReceivers((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 bool q_keysequenceedit_is_signal_connected(void* self, void* signal) {
@@ -2130,8 +2134,8 @@ bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal) {
     return QKeySequenceEdit_QBaseIsSignalConnected((QKeySequenceEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_keysequenceedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QKeySequenceEdit_OnIsSignalConnected((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QKeySequenceEdit_OnIsSignalConnected((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
 double q_keysequenceedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2142,12 +2146,12 @@ double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int64_t metricA,
     return QKeySequenceEdit_QBaseGetDecodedMetricF((QKeySequenceEdit*)self, metricA, metricB);
 }
 
-void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QKeySequenceEdit_OnGetDecodedMetricF((QKeySequenceEdit*)self, (intptr_t)slot);
+void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QKeySequenceEdit_OnGetDecodedMetricF((QKeySequenceEdit*)self, (intptr_t)callback);
 }
 
-void q_keysequenceedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_keysequenceedit_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_keysequenceedit_delete(void* self) {

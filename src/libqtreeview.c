@@ -44,8 +44,8 @@ int32_t q_treeview_metacall(void* self, int64_t param1, int param2, void* param3
     return QTreeView_Metacall((QTreeView*)self, param1, param2, param3);
 }
 
-void q_treeview_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTreeView_OnMetacall((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTreeView_OnMetacall((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_treeview_set_model(void* self, void* model) {
     QTreeView_SetModel((QTreeView*)self, (QAbstractItemModel*)model);
 }
 
-void q_treeview_on_set_model(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnSetModel((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_model(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnSetModel((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_set_model(void* self, void* model) {
@@ -75,8 +75,8 @@ void q_treeview_set_root_index(void* self, void* index) {
     QTreeView_SetRootIndex((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_set_root_index(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnSetRootIndex((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnSetRootIndex((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_set_root_index(void* self, void* index) {
@@ -87,8 +87,8 @@ void q_treeview_set_selection_model(void* self, void* selectionModel) {
     QTreeView_SetSelectionModel((QTreeView*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void q_treeview_on_set_selection_model(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnSetSelectionModel((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_selection_model(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnSetSelectionModel((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_set_selection_model(void* self, void* selectionModel) {
@@ -255,8 +255,8 @@ void q_treeview_keyboard_search(void* self, const char* search) {
     QTreeView_KeyboardSearch((QTreeView*)self, qstring(search));
 }
 
-void q_treeview_on_keyboard_search(void* self, void (*slot)(void*, const char*)) {
-    QTreeView_OnKeyboardSearch((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
+    QTreeView_OnKeyboardSearch((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_keyboard_search(void* self, const char* search) {
@@ -267,8 +267,8 @@ QRect* q_treeview_visual_rect(void* self, void* index) {
     return QTreeView_VisualRect((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_visual_rect(void* self, QRect* (*slot)(void*, void*)) {
-    QTreeView_OnVisualRect((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
+    QTreeView_OnVisualRect((QTreeView*)self, (intptr_t)callback);
 }
 
 QRect* q_treeview_qbase_visual_rect(void* self, void* index) {
@@ -279,8 +279,8 @@ void q_treeview_scroll_to(void* self, void* index, int64_t hint) {
     QTreeView_ScrollTo((QTreeView*)self, (QModelIndex*)index, hint);
 }
 
-void q_treeview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTreeView_OnScrollTo((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTreeView_OnScrollTo((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_scroll_to(void* self, void* index, int64_t hint) {
@@ -291,8 +291,8 @@ QModelIndex* q_treeview_index_at(void* self, void* p) {
     return QTreeView_IndexAt((QTreeView*)self, (QPoint*)p);
 }
 
-void q_treeview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*)) {
-    QTreeView_OnIndexAt((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)) {
+    QTreeView_OnIndexAt((QTreeView*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_treeview_qbase_index_at(void* self, void* p) {
@@ -311,8 +311,8 @@ void q_treeview_do_items_layout(void* self) {
     QTreeView_DoItemsLayout((QTreeView*)self);
 }
 
-void q_treeview_on_do_items_layout(void* self, void (*slot)()) {
-    QTreeView_OnDoItemsLayout((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_do_items_layout(void* self, void (*callback)()) {
+    QTreeView_OnDoItemsLayout((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_do_items_layout(void* self) {
@@ -323,8 +323,8 @@ void q_treeview_reset(void* self) {
     QTreeView_Reset((QTreeView*)self);
 }
 
-void q_treeview_on_reset(void* self, void (*slot)()) {
-    QTreeView_OnReset((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_reset(void* self, void (*callback)()) {
+    QTreeView_OnReset((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_reset(void* self) {
@@ -335,8 +335,8 @@ void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
     QTreeView_DataChanged((QTreeView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_treeview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
-    QTreeView_OnDataChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+    QTreeView_OnDataChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
@@ -347,8 +347,8 @@ void q_treeview_select_all(void* self) {
     QTreeView_SelectAll((QTreeView*)self);
 }
 
-void q_treeview_on_select_all(void* self, void (*slot)()) {
-    QTreeView_OnSelectAll((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_select_all(void* self, void (*callback)()) {
+    QTreeView_OnSelectAll((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_select_all(void* self) {
@@ -359,16 +359,16 @@ void q_treeview_expanded(void* self, void* index) {
     QTreeView_Expanded((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_expanded(void* self, void (*slot)(void*, void*)) {
-    QTreeView_Connect_Expanded((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_expanded(void* self, void (*callback)(void*, void*)) {
+    QTreeView_Connect_Expanded((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_collapsed(void* self, void* index) {
     QTreeView_Collapsed((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_collapsed(void* self, void (*slot)(void*, void*)) {
-    QTreeView_Connect_Collapsed((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_collapsed(void* self, void (*callback)(void*, void*)) {
+    QTreeView_Connect_Collapsed((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_hide_column(void* self, int column) {
@@ -415,8 +415,8 @@ void q_treeview_column_resized(void* self, int column, int oldSize, int newSize)
     QTreeView_ColumnResized((QTreeView*)self, column, oldSize, newSize);
 }
 
-void q_treeview_on_column_resized(void* self, void (*slot)(void*, int, int, int)) {
-    QTreeView_OnColumnResized((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_column_resized(void* self, void (*callback)(void*, int, int, int)) {
+    QTreeView_OnColumnResized((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_column_resized(void* self, int column, int oldSize, int newSize) {
@@ -427,8 +427,8 @@ void q_treeview_column_count_changed(void* self, int oldCount, int newCount) {
     QTreeView_ColumnCountChanged((QTreeView*)self, oldCount, newCount);
 }
 
-void q_treeview_on_column_count_changed(void* self, void (*slot)(void*, int, int)) {
-    QTreeView_OnColumnCountChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_column_count_changed(void* self, void (*callback)(void*, int, int)) {
+    QTreeView_OnColumnCountChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_column_count_changed(void* self, int oldCount, int newCount) {
@@ -439,8 +439,8 @@ void q_treeview_column_moved(void* self) {
     QTreeView_ColumnMoved((QTreeView*)self);
 }
 
-void q_treeview_on_column_moved(void* self, void (*slot)()) {
-    QTreeView_OnColumnMoved((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_column_moved(void* self, void (*callback)()) {
+    QTreeView_OnColumnMoved((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_column_moved(void* self) {
@@ -451,8 +451,8 @@ void q_treeview_reexpand(void* self) {
     QTreeView_Reexpand((QTreeView*)self);
 }
 
-void q_treeview_on_reexpand(void* self, void (*slot)()) {
-    QTreeView_OnReexpand((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_reexpand(void* self, void (*callback)()) {
+    QTreeView_OnReexpand((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_reexpand(void* self) {
@@ -463,8 +463,8 @@ void q_treeview_rows_removed(void* self, void* parent, int first, int last) {
     QTreeView_RowsRemoved((QTreeView*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_treeview_on_rows_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QTreeView_OnRowsRemoved((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_rows_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QTreeView_OnRowsRemoved((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_rows_removed(void* self, void* parent, int first, int last) {
@@ -475,8 +475,8 @@ void q_treeview_vertical_scrollbar_value_changed(void* self, int value) {
     QTreeView_VerticalScrollbarValueChanged((QTreeView*)self, value);
 }
 
-void q_treeview_on_vertical_scrollbar_value_changed(void* self, void (*slot)(void*, int)) {
-    QTreeView_OnVerticalScrollbarValueChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
+    QTreeView_OnVerticalScrollbarValueChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
@@ -487,8 +487,8 @@ void q_treeview_scroll_contents_by(void* self, int dx, int dy) {
     QTreeView_ScrollContentsBy((QTreeView*)self, dx, dy);
 }
 
-void q_treeview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) {
-    QTreeView_OnScrollContentsBy((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
+    QTreeView_OnScrollContentsBy((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_scroll_contents_by(void* self, int dx, int dy) {
@@ -499,8 +499,8 @@ void q_treeview_rows_inserted(void* self, void* parent, int start, int end) {
     QTreeView_RowsInserted((QTreeView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_treeview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QTreeView_OnRowsInserted((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QTreeView_OnRowsInserted((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_rows_inserted(void* self, void* parent, int start, int end) {
@@ -511,8 +511,8 @@ void q_treeview_rows_about_to_be_removed(void* self, void* parent, int start, in
     QTreeView_RowsAboutToBeRemoved((QTreeView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_treeview_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QTreeView_OnRowsAboutToBeRemoved((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QTreeView_OnRowsAboutToBeRemoved((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
@@ -523,8 +523,8 @@ QModelIndex* q_treeview_move_cursor(void* self, int64_t cursorAction, int64_t mo
     return QTreeView_MoveCursor((QTreeView*)self, cursorAction, modifiers);
 }
 
-void q_treeview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, int64_t)) {
-    QTreeView_OnMoveCursor((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t)) {
+    QTreeView_OnMoveCursor((QTreeView*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_treeview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers) {
@@ -535,8 +535,8 @@ int32_t q_treeview_horizontal_offset(void* self) {
     return QTreeView_HorizontalOffset((QTreeView*)self);
 }
 
-void q_treeview_on_horizontal_offset(void* self, int32_t (*slot)()) {
-    QTreeView_OnHorizontalOffset((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_horizontal_offset(void* self, int32_t (*callback)()) {
+    QTreeView_OnHorizontalOffset((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_horizontal_offset(void* self) {
@@ -547,8 +547,8 @@ int32_t q_treeview_vertical_offset(void* self) {
     return QTreeView_VerticalOffset((QTreeView*)self);
 }
 
-void q_treeview_on_vertical_offset(void* self, int32_t (*slot)()) {
-    QTreeView_OnVerticalOffset((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_vertical_offset(void* self, int32_t (*callback)()) {
+    QTreeView_OnVerticalOffset((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_vertical_offset(void* self) {
@@ -559,8 +559,8 @@ void q_treeview_set_selection(void* self, void* rect, int64_t command) {
     QTreeView_SetSelection((QTreeView*)self, (QRect*)rect, command);
 }
 
-void q_treeview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTreeView_OnSetSelection((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTreeView_OnSetSelection((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_set_selection(void* self, void* rect, int64_t command) {
@@ -571,8 +571,8 @@ QRegion* q_treeview_visual_region_for_selection(void* self, void* selection) {
     return QTreeView_VisualRegionForSelection((QTreeView*)self, (QItemSelection*)selection);
 }
 
-void q_treeview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void*, void*)) {
-    QTreeView_OnVisualRegionForSelection((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*)) {
+    QTreeView_OnVisualRegionForSelection((QTreeView*)self, (intptr_t)callback);
 }
 
 QRegion* q_treeview_qbase_visual_region_for_selection(void* self, void* selection) {
@@ -584,8 +584,8 @@ libqt_list /* of QModelIndex* */ q_treeview_selected_indexes(void* self) {
     return _arr;
 }
 
-void q_treeview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*slot)()) {
-    QTreeView_OnSelectedIndexes((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+    QTreeView_OnSelectedIndexes((QTreeView*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_treeview_qbase_selected_indexes(void* self) {
@@ -597,8 +597,8 @@ void q_treeview_change_event(void* self, void* event) {
     QTreeView_ChangeEvent((QTreeView*)self, (QEvent*)event);
 }
 
-void q_treeview_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnChangeEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnChangeEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_change_event(void* self, void* event) {
@@ -609,8 +609,8 @@ void q_treeview_timer_event(void* self, void* event) {
     QTreeView_TimerEvent((QTreeView*)self, (QTimerEvent*)event);
 }
 
-void q_treeview_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnTimerEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnTimerEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_timer_event(void* self, void* event) {
@@ -621,8 +621,8 @@ void q_treeview_paint_event(void* self, void* event) {
     QTreeView_PaintEvent((QTreeView*)self, (QPaintEvent*)event);
 }
 
-void q_treeview_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnPaintEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnPaintEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_paint_event(void* self, void* event) {
@@ -633,8 +633,8 @@ void q_treeview_draw_tree(void* self, void* painter, void* region) {
     QTreeView_DrawTree((QTreeView*)self, (QPainter*)painter, (QRegion*)region);
 }
 
-void q_treeview_on_draw_tree(void* self, void (*slot)(void*, void*, void*)) {
-    QTreeView_OnDrawTree((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_draw_tree(void* self, void (*callback)(void*, void*, void*)) {
+    QTreeView_OnDrawTree((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_draw_tree(void* self, void* painter, void* region) {
@@ -645,8 +645,8 @@ void q_treeview_draw_row(void* self, void* painter, void* options, void* index) 
     QTreeView_DrawRow((QTreeView*)self, (QPainter*)painter, (QStyleOptionViewItem*)options, (QModelIndex*)index);
 }
 
-void q_treeview_on_draw_row(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QTreeView_OnDrawRow((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_draw_row(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QTreeView_OnDrawRow((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_draw_row(void* self, void* painter, void* options, void* index) {
@@ -657,8 +657,8 @@ void q_treeview_draw_branches(void* self, void* painter, void* rect, void* index
     QTreeView_DrawBranches((QTreeView*)self, (QPainter*)painter, (QRect*)rect, (QModelIndex*)index);
 }
 
-void q_treeview_on_draw_branches(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QTreeView_OnDrawBranches((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_draw_branches(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QTreeView_OnDrawBranches((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_draw_branches(void* self, void* painter, void* rect, void* index) {
@@ -669,8 +669,8 @@ void q_treeview_mouse_press_event(void* self, void* event) {
     QTreeView_MousePressEvent((QTreeView*)self, (QMouseEvent*)event);
 }
 
-void q_treeview_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnMousePressEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnMousePressEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_mouse_press_event(void* self, void* event) {
@@ -681,8 +681,8 @@ void q_treeview_mouse_release_event(void* self, void* event) {
     QTreeView_MouseReleaseEvent((QTreeView*)self, (QMouseEvent*)event);
 }
 
-void q_treeview_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnMouseReleaseEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnMouseReleaseEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_mouse_release_event(void* self, void* event) {
@@ -693,8 +693,8 @@ void q_treeview_mouse_double_click_event(void* self, void* event) {
     QTreeView_MouseDoubleClickEvent((QTreeView*)self, (QMouseEvent*)event);
 }
 
-void q_treeview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnMouseDoubleClickEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnMouseDoubleClickEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_mouse_double_click_event(void* self, void* event) {
@@ -705,8 +705,8 @@ void q_treeview_mouse_move_event(void* self, void* event) {
     QTreeView_MouseMoveEvent((QTreeView*)self, (QMouseEvent*)event);
 }
 
-void q_treeview_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnMouseMoveEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnMouseMoveEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_mouse_move_event(void* self, void* event) {
@@ -717,8 +717,8 @@ void q_treeview_key_press_event(void* self, void* event) {
     QTreeView_KeyPressEvent((QTreeView*)self, (QKeyEvent*)event);
 }
 
-void q_treeview_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnKeyPressEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnKeyPressEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_key_press_event(void* self, void* event) {
@@ -729,8 +729,8 @@ void q_treeview_drag_move_event(void* self, void* event) {
     QTreeView_DragMoveEvent((QTreeView*)self, (QDragMoveEvent*)event);
 }
 
-void q_treeview_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDragMoveEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDragMoveEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_drag_move_event(void* self, void* event) {
@@ -741,8 +741,8 @@ bool q_treeview_viewport_event(void* self, void* event) {
     return QTreeView_ViewportEvent((QTreeView*)self, (QEvent*)event);
 }
 
-void q_treeview_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
-    QTreeView_OnViewportEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
+    QTreeView_OnViewportEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_qbase_viewport_event(void* self, void* event) {
@@ -753,8 +753,8 @@ void q_treeview_update_geometries(void* self) {
     QTreeView_UpdateGeometries((QTreeView*)self);
 }
 
-void q_treeview_on_update_geometries(void* self, void (*slot)()) {
-    QTreeView_OnUpdateGeometries((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_update_geometries(void* self, void (*callback)()) {
+    QTreeView_OnUpdateGeometries((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_update_geometries(void* self) {
@@ -765,8 +765,8 @@ QSize* q_treeview_viewport_size_hint(void* self) {
     return QTreeView_ViewportSizeHint((QTreeView*)self);
 }
 
-void q_treeview_on_viewport_size_hint(void* self, QSize* (*slot)()) {
-    QTreeView_OnViewportSizeHint((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
+    QTreeView_OnViewportSizeHint((QTreeView*)self, (intptr_t)callback);
 }
 
 QSize* q_treeview_qbase_viewport_size_hint(void* self) {
@@ -777,8 +777,8 @@ int32_t q_treeview_size_hint_for_column(void* self, int column) {
     return QTreeView_SizeHintForColumn((QTreeView*)self, column);
 }
 
-void q_treeview_on_size_hint_for_column(void* self, int32_t (*slot)(void*, int)) {
-    QTreeView_OnSizeHintForColumn((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
+    QTreeView_OnSizeHintForColumn((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_size_hint_for_column(void* self, int column) {
@@ -789,8 +789,8 @@ int32_t q_treeview_index_row_size_hint(void* self, void* index) {
     return QTreeView_IndexRowSizeHint((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_index_row_size_hint(void* self, int32_t (*slot)(void*, void*)) {
-    QTreeView_OnIndexRowSizeHint((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_index_row_size_hint(void* self, int32_t (*callback)(void*, void*)) {
+    QTreeView_OnIndexRowSizeHint((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_index_row_size_hint(void* self, void* index) {
@@ -801,8 +801,8 @@ int32_t q_treeview_row_height(void* self, void* index) {
     return QTreeView_RowHeight((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_row_height(void* self, int32_t (*slot)(void*, void*)) {
-    QTreeView_OnRowHeight((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_row_height(void* self, int32_t (*callback)(void*, void*)) {
+    QTreeView_OnRowHeight((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_qbase_row_height(void* self, void* index) {
@@ -813,8 +813,8 @@ void q_treeview_horizontal_scrollbar_action(void* self, int action) {
     QTreeView_HorizontalScrollbarAction((QTreeView*)self, action);
 }
 
-void q_treeview_on_horizontal_scrollbar_action(void* self, void (*slot)(void*, int)) {
-    QTreeView_OnHorizontalScrollbarAction((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
+    QTreeView_OnHorizontalScrollbarAction((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_horizontal_scrollbar_action(void* self, int action) {
@@ -825,8 +825,8 @@ bool q_treeview_is_index_hidden(void* self, void* index) {
     return QTreeView_IsIndexHidden((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_is_index_hidden(void* self, bool (*slot)(void*, void*)) {
-    QTreeView_OnIsIndexHidden((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
+    QTreeView_OnIsIndexHidden((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_qbase_is_index_hidden(void* self, void* index) {
@@ -837,8 +837,8 @@ void q_treeview_selection_changed(void* self, void* selected, void* deselected) 
     QTreeView_SelectionChanged((QTreeView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void q_treeview_on_selection_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QTreeView_OnSelectionChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QTreeView_OnSelectionChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_selection_changed(void* self, void* selected, void* deselected) {
@@ -849,8 +849,8 @@ void q_treeview_current_changed(void* self, void* current, void* previous) {
     QTreeView_CurrentChanged((QTreeView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void q_treeview_on_current_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QTreeView_OnCurrentChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_current_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QTreeView_OnCurrentChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_qbase_current_changed(void* self, void* current, void* previous) {
@@ -1107,56 +1107,56 @@ void q_treeview_pressed(void* self, void* index) {
     QAbstractItemView_Pressed((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_pressed(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Pressed((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_pressed(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Pressed((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_clicked(void* self, void* index) {
     QAbstractItemView_Clicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Clicked((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Clicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_double_clicked(void* self, void* index) {
     QAbstractItemView_DoubleClicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_double_clicked(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_DoubleClicked((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_DoubleClicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_activated(void* self, void* index) {
     QAbstractItemView_Activated((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_activated(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Activated((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_activated(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Activated((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_entered(void* self, void* index) {
     QAbstractItemView_Entered((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_entered(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Entered((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_entered(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Entered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_viewport_entered(void* self) {
     QAbstractItemView_ViewportEntered((QAbstractItemView*)self);
 }
 
-void q_treeview_on_viewport_entered(void* self, void (*slot)(void*)) {
-    QAbstractItemView_Connect_ViewportEntered((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_viewport_entered(void* self, void (*callback)(void*)) {
+    QAbstractItemView_Connect_ViewportEntered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_treeview_icon_size_changed(void* self, void* size) {
     QAbstractItemView_IconSizeChanged((QAbstractItemView*)self, (QSize*)size);
 }
 
-void q_treeview_on_icon_size_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)slot);
+void q_treeview_on_icon_size_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 int64_t q_treeview_vertical_scroll_bar_policy(void* self) {
@@ -2302,32 +2302,32 @@ void q_treeview_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_treeview_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_treeview_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_treeview_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_treeview_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_treeview_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_treeview_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_treeview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_treeview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_treeview_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_treeview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_treeview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_treeview_input_method_hints(void* self) {
@@ -2498,12 +2498,16 @@ const char** q_treeview_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_treeview_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2521,8 +2525,8 @@ void q_treeview_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_treeview_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_treeview_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_treeview_parent(void* self) {
@@ -2557,8 +2561,8 @@ void q_treeview_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_treeview_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_treeview_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_treeview_painting_active(void* self) {
@@ -2621,8 +2625,8 @@ int32_t q_treeview_qbase_size_hint_for_row(void* self, int row) {
     return QTreeView_QBaseSizeHintForRow((QTreeView*)self, row);
 }
 
-void q_treeview_on_size_hint_for_row(void* self, int32_t (*slot)(void*, int)) {
-    QTreeView_OnSizeHintForRow((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
+    QTreeView_OnSizeHintForRow((QTreeView*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* q_treeview_item_delegate_for_index(void* self, void* index) {
@@ -2633,8 +2637,8 @@ QAbstractItemDelegate* q_treeview_qbase_item_delegate_for_index(void* self, void
     return QTreeView_QBaseItemDelegateForIndex((QTreeView*)self, (QModelIndex*)index);
 }
 
-void q_treeview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*slot)(void*, void*)) {
-    QTreeView_OnItemDelegateForIndex((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
+    QTreeView_OnItemDelegateForIndex((QTreeView*)self, (intptr_t)callback);
 }
 
 QVariant* q_treeview_input_method_query(void* self, int64_t query) {
@@ -2645,8 +2649,8 @@ QVariant* q_treeview_qbase_input_method_query(void* self, int64_t query) {
     return QTreeView_QBaseInputMethodQuery((QTreeView*)self, query);
 }
 
-void q_treeview_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QTreeView_OnInputMethodQuery((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QTreeView_OnInputMethodQuery((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_update_editor_data(void* self) {
@@ -2657,8 +2661,8 @@ void q_treeview_qbase_update_editor_data(void* self) {
     QTreeView_QBaseUpdateEditorData((QTreeView*)self);
 }
 
-void q_treeview_on_update_editor_data(void* self, void (*slot)()) {
-    QTreeView_OnUpdateEditorData((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_update_editor_data(void* self, void (*callback)()) {
+    QTreeView_OnUpdateEditorData((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_update_editor_geometries(void* self) {
@@ -2669,8 +2673,8 @@ void q_treeview_qbase_update_editor_geometries(void* self) {
     QTreeView_QBaseUpdateEditorGeometries((QTreeView*)self);
 }
 
-void q_treeview_on_update_editor_geometries(void* self, void (*slot)()) {
-    QTreeView_OnUpdateEditorGeometries((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_update_editor_geometries(void* self, void (*callback)()) {
+    QTreeView_OnUpdateEditorGeometries((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_vertical_scrollbar_action(void* self, int action) {
@@ -2681,8 +2685,8 @@ void q_treeview_qbase_vertical_scrollbar_action(void* self, int action) {
     QTreeView_QBaseVerticalScrollbarAction((QTreeView*)self, action);
 }
 
-void q_treeview_on_vertical_scrollbar_action(void* self, void (*slot)(void*, int)) {
-    QTreeView_OnVerticalScrollbarAction((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
+    QTreeView_OnVerticalScrollbarAction((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_horizontal_scrollbar_value_changed(void* self, int value) {
@@ -2693,8 +2697,8 @@ void q_treeview_qbase_horizontal_scrollbar_value_changed(void* self, int value) 
     QTreeView_QBaseHorizontalScrollbarValueChanged((QTreeView*)self, value);
 }
 
-void q_treeview_on_horizontal_scrollbar_value_changed(void* self, void (*slot)(void*, int)) {
-    QTreeView_OnHorizontalScrollbarValueChanged((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
+    QTreeView_OnHorizontalScrollbarValueChanged((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_close_editor(void* self, void* editor, int64_t hint) {
@@ -2705,8 +2709,8 @@ void q_treeview_qbase_close_editor(void* self, void* editor, int64_t hint) {
     QTreeView_QBaseCloseEditor((QTreeView*)self, (QWidget*)editor, hint);
 }
 
-void q_treeview_on_close_editor(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTreeView_OnCloseEditor((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTreeView_OnCloseEditor((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_commit_data(void* self, void* editor) {
@@ -2717,8 +2721,8 @@ void q_treeview_qbase_commit_data(void* self, void* editor) {
     QTreeView_QBaseCommitData((QTreeView*)self, (QWidget*)editor);
 }
 
-void q_treeview_on_commit_data(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnCommitData((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_commit_data(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnCommitData((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_editor_destroyed(void* self, void* editor) {
@@ -2729,8 +2733,8 @@ void q_treeview_qbase_editor_destroyed(void* self, void* editor) {
     QTreeView_QBaseEditorDestroyed((QTreeView*)self, (QObject*)editor);
 }
 
-void q_treeview_on_editor_destroyed(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnEditorDestroyed((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnEditorDestroyed((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_edit2(void* self, void* index, int64_t trigger, void* event) {
@@ -2741,8 +2745,8 @@ bool q_treeview_qbase_edit2(void* self, void* index, int64_t trigger, void* even
     return QTreeView_QBaseEdit2((QTreeView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-void q_treeview_on_edit2(void* self, bool (*slot)(void*, void*, int64_t, void*)) {
-    QTreeView_OnEdit2((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*)) {
+    QTreeView_OnEdit2((QTreeView*)self, (intptr_t)callback);
 }
 
 int64_t q_treeview_selection_command(void* self, void* index, void* event) {
@@ -2753,8 +2757,8 @@ int64_t q_treeview_qbase_selection_command(void* self, void* index, void* event)
     return QTreeView_QBaseSelectionCommand((QTreeView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_treeview_on_selection_command(void* self, int64_t (*slot)(void*, void*, void*)) {
-    QTreeView_OnSelectionCommand((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+    QTreeView_OnSelectionCommand((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_start_drag(void* self, int64_t supportedActions) {
@@ -2765,8 +2769,8 @@ void q_treeview_qbase_start_drag(void* self, int64_t supportedActions) {
     QTreeView_QBaseStartDrag((QTreeView*)self, supportedActions);
 }
 
-void q_treeview_on_start_drag(void* self, void (*slot)(void*, int64_t)) {
-    QTreeView_OnStartDrag((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+    QTreeView_OnStartDrag((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_init_view_item_option(void* self, void* option) {
@@ -2777,8 +2781,8 @@ void q_treeview_qbase_init_view_item_option(void* self, void* option) {
     QTreeView_QBaseInitViewItemOption((QTreeView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_treeview_on_init_view_item_option(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnInitViewItemOption((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnInitViewItemOption((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_focus_next_prev_child(void* self, bool next) {
@@ -2789,8 +2793,8 @@ bool q_treeview_qbase_focus_next_prev_child(void* self, bool next) {
     return QTreeView_QBaseFocusNextPrevChild((QTreeView*)self, next);
 }
 
-void q_treeview_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QTreeView_OnFocusNextPrevChild((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QTreeView_OnFocusNextPrevChild((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_event(void* self, void* event) {
@@ -2801,8 +2805,8 @@ bool q_treeview_qbase_event(void* self, void* event) {
     return QTreeView_QBaseEvent((QTreeView*)self, (QEvent*)event);
 }
 
-void q_treeview_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTreeView_OnEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTreeView_OnEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_drag_enter_event(void* self, void* event) {
@@ -2813,8 +2817,8 @@ void q_treeview_qbase_drag_enter_event(void* self, void* event) {
     QTreeView_QBaseDragEnterEvent((QTreeView*)self, (QDragEnterEvent*)event);
 }
 
-void q_treeview_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDragEnterEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDragEnterEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_drag_leave_event(void* self, void* event) {
@@ -2825,8 +2829,8 @@ void q_treeview_qbase_drag_leave_event(void* self, void* event) {
     QTreeView_QBaseDragLeaveEvent((QTreeView*)self, (QDragLeaveEvent*)event);
 }
 
-void q_treeview_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDragLeaveEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDragLeaveEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_drop_event(void* self, void* event) {
@@ -2837,8 +2841,8 @@ void q_treeview_qbase_drop_event(void* self, void* event) {
     QTreeView_QBaseDropEvent((QTreeView*)self, (QDropEvent*)event);
 }
 
-void q_treeview_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDropEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDropEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_focus_in_event(void* self, void* event) {
@@ -2849,8 +2853,8 @@ void q_treeview_qbase_focus_in_event(void* self, void* event) {
     QTreeView_QBaseFocusInEvent((QTreeView*)self, (QFocusEvent*)event);
 }
 
-void q_treeview_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnFocusInEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnFocusInEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_focus_out_event(void* self, void* event) {
@@ -2861,8 +2865,8 @@ void q_treeview_qbase_focus_out_event(void* self, void* event) {
     QTreeView_QBaseFocusOutEvent((QTreeView*)self, (QFocusEvent*)event);
 }
 
-void q_treeview_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnFocusOutEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnFocusOutEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_resize_event(void* self, void* event) {
@@ -2873,8 +2877,8 @@ void q_treeview_qbase_resize_event(void* self, void* event) {
     QTreeView_QBaseResizeEvent((QTreeView*)self, (QResizeEvent*)event);
 }
 
-void q_treeview_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnResizeEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnResizeEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_input_method_event(void* self, void* event) {
@@ -2885,8 +2889,8 @@ void q_treeview_qbase_input_method_event(void* self, void* event) {
     QTreeView_QBaseInputMethodEvent((QTreeView*)self, (QInputMethodEvent*)event);
 }
 
-void q_treeview_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnInputMethodEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnInputMethodEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_event_filter(void* self, void* object, void* event) {
@@ -2897,8 +2901,8 @@ bool q_treeview_qbase_event_filter(void* self, void* object, void* event) {
     return QTreeView_QBaseEventFilter((QTreeView*)self, (QObject*)object, (QEvent*)event);
 }
 
-void q_treeview_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTreeView_OnEventFilter((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTreeView_OnEventFilter((QTreeView*)self, (intptr_t)callback);
 }
 
 QSize* q_treeview_minimum_size_hint(void* self) {
@@ -2909,8 +2913,8 @@ QSize* q_treeview_qbase_minimum_size_hint(void* self) {
     return QTreeView_QBaseMinimumSizeHint((QTreeView*)self);
 }
 
-void q_treeview_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QTreeView_OnMinimumSizeHint((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QTreeView_OnMinimumSizeHint((QTreeView*)self, (intptr_t)callback);
 }
 
 QSize* q_treeview_size_hint(void* self) {
@@ -2921,8 +2925,8 @@ QSize* q_treeview_qbase_size_hint(void* self) {
     return QTreeView_QBaseSizeHint((QTreeView*)self);
 }
 
-void q_treeview_on_size_hint(void* self, QSize* (*slot)()) {
-    QTreeView_OnSizeHint((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_size_hint(void* self, QSize* (*callback)()) {
+    QTreeView_OnSizeHint((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_setup_viewport(void* self, void* viewport) {
@@ -2933,8 +2937,8 @@ void q_treeview_qbase_setup_viewport(void* self, void* viewport) {
     QTreeView_QBaseSetupViewport((QTreeView*)self, (QWidget*)viewport);
 }
 
-void q_treeview_on_setup_viewport(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnSetupViewport((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnSetupViewport((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_wheel_event(void* self, void* param1) {
@@ -2945,8 +2949,8 @@ void q_treeview_qbase_wheel_event(void* self, void* param1) {
     QTreeView_QBaseWheelEvent((QTreeView*)self, (QWheelEvent*)param1);
 }
 
-void q_treeview_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnWheelEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnWheelEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_context_menu_event(void* self, void* param1) {
@@ -2957,8 +2961,8 @@ void q_treeview_qbase_context_menu_event(void* self, void* param1) {
     QTreeView_QBaseContextMenuEvent((QTreeView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_treeview_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnContextMenuEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnContextMenuEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_init_style_option(void* self, void* option) {
@@ -2969,8 +2973,8 @@ void q_treeview_qbase_init_style_option(void* self, void* option) {
     QTreeView_QBaseInitStyleOption((QTreeView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_treeview_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnInitStyleOption((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnInitStyleOption((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_dev_type(void* self) {
@@ -2981,8 +2985,8 @@ int32_t q_treeview_qbase_dev_type(void* self) {
     return QTreeView_QBaseDevType((QTreeView*)self);
 }
 
-void q_treeview_on_dev_type(void* self, int32_t (*slot)()) {
-    QTreeView_OnDevType((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_dev_type(void* self, int32_t (*callback)()) {
+    QTreeView_OnDevType((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_set_visible(void* self, bool visible) {
@@ -2993,8 +2997,8 @@ void q_treeview_qbase_set_visible(void* self, bool visible) {
     QTreeView_QBaseSetVisible((QTreeView*)self, visible);
 }
 
-void q_treeview_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QTreeView_OnSetVisible((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QTreeView_OnSetVisible((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_height_for_width(void* self, int param1) {
@@ -3005,8 +3009,8 @@ int32_t q_treeview_qbase_height_for_width(void* self, int param1) {
     return QTreeView_QBaseHeightForWidth((QTreeView*)self, param1);
 }
 
-void q_treeview_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QTreeView_OnHeightForWidth((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QTreeView_OnHeightForWidth((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_has_height_for_width(void* self) {
@@ -3017,8 +3021,8 @@ bool q_treeview_qbase_has_height_for_width(void* self) {
     return QTreeView_QBaseHasHeightForWidth((QTreeView*)self);
 }
 
-void q_treeview_on_has_height_for_width(void* self, bool (*slot)()) {
-    QTreeView_OnHasHeightForWidth((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_has_height_for_width(void* self, bool (*callback)()) {
+    QTreeView_OnHasHeightForWidth((QTreeView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_treeview_paint_engine(void* self) {
@@ -3029,8 +3033,8 @@ QPaintEngine* q_treeview_qbase_paint_engine(void* self) {
     return QTreeView_QBasePaintEngine((QTreeView*)self);
 }
 
-void q_treeview_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QTreeView_OnPaintEngine((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QTreeView_OnPaintEngine((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_key_release_event(void* self, void* event) {
@@ -3041,8 +3045,8 @@ void q_treeview_qbase_key_release_event(void* self, void* event) {
     QTreeView_QBaseKeyReleaseEvent((QTreeView*)self, (QKeyEvent*)event);
 }
 
-void q_treeview_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnKeyReleaseEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnKeyReleaseEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_enter_event(void* self, void* event) {
@@ -3053,8 +3057,8 @@ void q_treeview_qbase_enter_event(void* self, void* event) {
     QTreeView_QBaseEnterEvent((QTreeView*)self, (QEnterEvent*)event);
 }
 
-void q_treeview_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnEnterEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnEnterEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_leave_event(void* self, void* event) {
@@ -3065,8 +3069,8 @@ void q_treeview_qbase_leave_event(void* self, void* event) {
     QTreeView_QBaseLeaveEvent((QTreeView*)self, (QEvent*)event);
 }
 
-void q_treeview_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnLeaveEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnLeaveEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_move_event(void* self, void* event) {
@@ -3077,8 +3081,8 @@ void q_treeview_qbase_move_event(void* self, void* event) {
     QTreeView_QBaseMoveEvent((QTreeView*)self, (QMoveEvent*)event);
 }
 
-void q_treeview_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnMoveEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnMoveEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_close_event(void* self, void* event) {
@@ -3089,8 +3093,8 @@ void q_treeview_qbase_close_event(void* self, void* event) {
     QTreeView_QBaseCloseEvent((QTreeView*)self, (QCloseEvent*)event);
 }
 
-void q_treeview_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnCloseEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnCloseEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_tablet_event(void* self, void* event) {
@@ -3101,8 +3105,8 @@ void q_treeview_qbase_tablet_event(void* self, void* event) {
     QTreeView_QBaseTabletEvent((QTreeView*)self, (QTabletEvent*)event);
 }
 
-void q_treeview_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnTabletEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnTabletEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_action_event(void* self, void* event) {
@@ -3113,8 +3117,8 @@ void q_treeview_qbase_action_event(void* self, void* event) {
     QTreeView_QBaseActionEvent((QTreeView*)self, (QActionEvent*)event);
 }
 
-void q_treeview_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnActionEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnActionEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_show_event(void* self, void* event) {
@@ -3125,8 +3129,8 @@ void q_treeview_qbase_show_event(void* self, void* event) {
     QTreeView_QBaseShowEvent((QTreeView*)self, (QShowEvent*)event);
 }
 
-void q_treeview_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnShowEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnShowEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_hide_event(void* self, void* event) {
@@ -3137,8 +3141,8 @@ void q_treeview_qbase_hide_event(void* self, void* event) {
     QTreeView_QBaseHideEvent((QTreeView*)self, (QHideEvent*)event);
 }
 
-void q_treeview_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnHideEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnHideEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -3149,8 +3153,8 @@ bool q_treeview_qbase_native_event(void* self, const char* eventType, void* mess
     return QTreeView_QBaseNativeEvent((QTreeView*)self, qstring(eventType), message, result);
 }
 
-void q_treeview_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QTreeView_OnNativeEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QTreeView_OnNativeEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_metric(void* self, int64_t param1) {
@@ -3161,8 +3165,8 @@ int32_t q_treeview_qbase_metric(void* self, int64_t param1) {
     return QTreeView_QBaseMetric((QTreeView*)self, param1);
 }
 
-void q_treeview_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QTreeView_OnMetric((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QTreeView_OnMetric((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_init_painter(void* self, void* painter) {
@@ -3173,8 +3177,8 @@ void q_treeview_qbase_init_painter(void* self, void* painter) {
     QTreeView_QBaseInitPainter((QTreeView*)self, (QPainter*)painter);
 }
 
-void q_treeview_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnInitPainter((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnInitPainter((QTreeView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_treeview_redirected(void* self, void* offset) {
@@ -3185,8 +3189,8 @@ QPaintDevice* q_treeview_qbase_redirected(void* self, void* offset) {
     return QTreeView_QBaseRedirected((QTreeView*)self, (QPoint*)offset);
 }
 
-void q_treeview_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QTreeView_OnRedirected((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QTreeView_OnRedirected((QTreeView*)self, (intptr_t)callback);
 }
 
 QPainter* q_treeview_shared_painter(void* self) {
@@ -3197,8 +3201,8 @@ QPainter* q_treeview_qbase_shared_painter(void* self) {
     return QTreeView_QBaseSharedPainter((QTreeView*)self);
 }
 
-void q_treeview_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QTreeView_OnSharedPainter((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QTreeView_OnSharedPainter((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_child_event(void* self, void* event) {
@@ -3209,8 +3213,8 @@ void q_treeview_qbase_child_event(void* self, void* event) {
     QTreeView_QBaseChildEvent((QTreeView*)self, (QChildEvent*)event);
 }
 
-void q_treeview_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnChildEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnChildEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_custom_event(void* self, void* event) {
@@ -3221,8 +3225,8 @@ void q_treeview_qbase_custom_event(void* self, void* event) {
     QTreeView_QBaseCustomEvent((QTreeView*)self, (QEvent*)event);
 }
 
-void q_treeview_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnCustomEvent((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnCustomEvent((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_connect_notify(void* self, void* signal) {
@@ -3233,8 +3237,8 @@ void q_treeview_qbase_connect_notify(void* self, void* signal) {
     QTreeView_QBaseConnectNotify((QTreeView*)self, (QMetaMethod*)signal);
 }
 
-void q_treeview_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnConnectNotify((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnConnectNotify((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_disconnect_notify(void* self, void* signal) {
@@ -3245,8 +3249,8 @@ void q_treeview_qbase_disconnect_notify(void* self, void* signal) {
     QTreeView_QBaseDisconnectNotify((QTreeView*)self, (QMetaMethod*)signal);
 }
 
-void q_treeview_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDisconnectNotify((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDisconnectNotify((QTreeView*)self, (intptr_t)callback);
 }
 
 int64_t q_treeview_state(void* self) {
@@ -3257,8 +3261,8 @@ int64_t q_treeview_qbase_state(void* self) {
     return QTreeView_QBaseState((QTreeView*)self);
 }
 
-void q_treeview_on_state(void* self, int64_t (*slot)()) {
-    QTreeView_OnState((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_state(void* self, int64_t (*callback)()) {
+    QTreeView_OnState((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_set_state(void* self, int64_t state) {
@@ -3269,8 +3273,8 @@ void q_treeview_qbase_set_state(void* self, int64_t state) {
     QTreeView_QBaseSetState((QTreeView*)self, state);
 }
 
-void q_treeview_on_set_state(void* self, void (*slot)(void*, int64_t)) {
-    QTreeView_OnSetState((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_state(void* self, void (*callback)(void*, int64_t)) {
+    QTreeView_OnSetState((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_schedule_delayed_items_layout(void* self) {
@@ -3281,8 +3285,8 @@ void q_treeview_qbase_schedule_delayed_items_layout(void* self) {
     QTreeView_QBaseScheduleDelayedItemsLayout((QTreeView*)self);
 }
 
-void q_treeview_on_schedule_delayed_items_layout(void* self, void (*slot)()) {
-    QTreeView_OnScheduleDelayedItemsLayout((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
+    QTreeView_OnScheduleDelayedItemsLayout((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_execute_delayed_items_layout(void* self) {
@@ -3293,8 +3297,8 @@ void q_treeview_qbase_execute_delayed_items_layout(void* self) {
     QTreeView_QBaseExecuteDelayedItemsLayout((QTreeView*)self);
 }
 
-void q_treeview_on_execute_delayed_items_layout(void* self, void (*slot)()) {
-    QTreeView_OnExecuteDelayedItemsLayout((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
+    QTreeView_OnExecuteDelayedItemsLayout((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_set_dirty_region(void* self, void* region) {
@@ -3305,8 +3309,8 @@ void q_treeview_qbase_set_dirty_region(void* self, void* region) {
     QTreeView_QBaseSetDirtyRegion((QTreeView*)self, (QRegion*)region);
 }
 
-void q_treeview_on_set_dirty_region(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnSetDirtyRegion((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnSetDirtyRegion((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_scroll_dirty_region(void* self, int dx, int dy) {
@@ -3317,8 +3321,8 @@ void q_treeview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
     QTreeView_QBaseScrollDirtyRegion((QTreeView*)self, dx, dy);
 }
 
-void q_treeview_on_scroll_dirty_region(void* self, void (*slot)(void*, int, int)) {
-    QTreeView_OnScrollDirtyRegion((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
+    QTreeView_OnScrollDirtyRegion((QTreeView*)self, (intptr_t)callback);
 }
 
 QPoint* q_treeview_dirty_region_offset(void* self) {
@@ -3329,8 +3333,8 @@ QPoint* q_treeview_qbase_dirty_region_offset(void* self) {
     return QTreeView_QBaseDirtyRegionOffset((QTreeView*)self);
 }
 
-void q_treeview_on_dirty_region_offset(void* self, QPoint* (*slot)()) {
-    QTreeView_OnDirtyRegionOffset((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
+    QTreeView_OnDirtyRegionOffset((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_start_auto_scroll(void* self) {
@@ -3341,8 +3345,8 @@ void q_treeview_qbase_start_auto_scroll(void* self) {
     QTreeView_QBaseStartAutoScroll((QTreeView*)self);
 }
 
-void q_treeview_on_start_auto_scroll(void* self, void (*slot)()) {
-    QTreeView_OnStartAutoScroll((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_start_auto_scroll(void* self, void (*callback)()) {
+    QTreeView_OnStartAutoScroll((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_stop_auto_scroll(void* self) {
@@ -3353,8 +3357,8 @@ void q_treeview_qbase_stop_auto_scroll(void* self) {
     QTreeView_QBaseStopAutoScroll((QTreeView*)self);
 }
 
-void q_treeview_on_stop_auto_scroll(void* self, void (*slot)()) {
-    QTreeView_OnStopAutoScroll((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_stop_auto_scroll(void* self, void (*callback)()) {
+    QTreeView_OnStopAutoScroll((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_do_auto_scroll(void* self) {
@@ -3365,8 +3369,8 @@ void q_treeview_qbase_do_auto_scroll(void* self) {
     QTreeView_QBaseDoAutoScroll((QTreeView*)self);
 }
 
-void q_treeview_on_do_auto_scroll(void* self, void (*slot)()) {
-    QTreeView_OnDoAutoScroll((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_do_auto_scroll(void* self, void (*callback)()) {
+    QTreeView_OnDoAutoScroll((QTreeView*)self, (intptr_t)callback);
 }
 
 int64_t q_treeview_drop_indicator_position(void* self) {
@@ -3377,8 +3381,8 @@ int64_t q_treeview_qbase_drop_indicator_position(void* self) {
     return QTreeView_QBaseDropIndicatorPosition((QTreeView*)self);
 }
 
-void q_treeview_on_drop_indicator_position(void* self, int64_t (*slot)()) {
-    QTreeView_OnDropIndicatorPosition((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_drop_indicator_position(void* self, int64_t (*callback)()) {
+    QTreeView_OnDropIndicatorPosition((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
@@ -3389,8 +3393,8 @@ void q_treeview_qbase_set_viewport_margins(void* self, int left, int top, int ri
     QTreeView_QBaseSetViewportMargins((QTreeView*)self, left, top, right, bottom);
 }
 
-void q_treeview_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int)) {
-    QTreeView_OnSetViewportMargins((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
+    QTreeView_OnSetViewportMargins((QTreeView*)self, (intptr_t)callback);
 }
 
 QMargins* q_treeview_viewport_margins(void* self) {
@@ -3401,8 +3405,8 @@ QMargins* q_treeview_qbase_viewport_margins(void* self) {
     return QTreeView_QBaseViewportMargins((QTreeView*)self);
 }
 
-void q_treeview_on_viewport_margins(void* self, QMargins* (*slot)()) {
-    QTreeView_OnViewportMargins((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_viewport_margins(void* self, QMargins* (*callback)()) {
+    QTreeView_OnViewportMargins((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_draw_frame(void* self, void* param1) {
@@ -3413,8 +3417,8 @@ void q_treeview_qbase_draw_frame(void* self, void* param1) {
     QTreeView_QBaseDrawFrame((QTreeView*)self, (QPainter*)param1);
 }
 
-void q_treeview_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QTreeView_OnDrawFrame((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QTreeView_OnDrawFrame((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_update_micro_focus(void* self) {
@@ -3425,8 +3429,8 @@ void q_treeview_qbase_update_micro_focus(void* self) {
     QTreeView_QBaseUpdateMicroFocus((QTreeView*)self);
 }
 
-void q_treeview_on_update_micro_focus(void* self, void (*slot)()) {
-    QTreeView_OnUpdateMicroFocus((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_update_micro_focus(void* self, void (*callback)()) {
+    QTreeView_OnUpdateMicroFocus((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_create(void* self) {
@@ -3437,8 +3441,8 @@ void q_treeview_qbase_create(void* self) {
     QTreeView_QBaseCreate((QTreeView*)self);
 }
 
-void q_treeview_on_create(void* self, void (*slot)()) {
-    QTreeView_OnCreate((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_create(void* self, void (*callback)()) {
+    QTreeView_OnCreate((QTreeView*)self, (intptr_t)callback);
 }
 
 void q_treeview_destroy(void* self) {
@@ -3449,8 +3453,8 @@ void q_treeview_qbase_destroy(void* self) {
     QTreeView_QBaseDestroy((QTreeView*)self);
 }
 
-void q_treeview_on_destroy(void* self, void (*slot)()) {
-    QTreeView_OnDestroy((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_destroy(void* self, void (*callback)()) {
+    QTreeView_OnDestroy((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_focus_next_child(void* self) {
@@ -3461,8 +3465,8 @@ bool q_treeview_qbase_focus_next_child(void* self) {
     return QTreeView_QBaseFocusNextChild((QTreeView*)self);
 }
 
-void q_treeview_on_focus_next_child(void* self, bool (*slot)()) {
-    QTreeView_OnFocusNextChild((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_focus_next_child(void* self, bool (*callback)()) {
+    QTreeView_OnFocusNextChild((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_focus_previous_child(void* self) {
@@ -3473,8 +3477,8 @@ bool q_treeview_qbase_focus_previous_child(void* self) {
     return QTreeView_QBaseFocusPreviousChild((QTreeView*)self);
 }
 
-void q_treeview_on_focus_previous_child(void* self, bool (*slot)()) {
-    QTreeView_OnFocusPreviousChild((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_focus_previous_child(void* self, bool (*callback)()) {
+    QTreeView_OnFocusPreviousChild((QTreeView*)self, (intptr_t)callback);
 }
 
 QObject* q_treeview_sender(void* self) {
@@ -3485,8 +3489,8 @@ QObject* q_treeview_qbase_sender(void* self) {
     return QTreeView_QBaseSender((QTreeView*)self);
 }
 
-void q_treeview_on_sender(void* self, QObject* (*slot)()) {
-    QTreeView_OnSender((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_sender(void* self, QObject* (*callback)()) {
+    QTreeView_OnSender((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_sender_signal_index(void* self) {
@@ -3497,8 +3501,8 @@ int32_t q_treeview_qbase_sender_signal_index(void* self) {
     return QTreeView_QBaseSenderSignalIndex((QTreeView*)self);
 }
 
-void q_treeview_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTreeView_OnSenderSignalIndex((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTreeView_OnSenderSignalIndex((QTreeView*)self, (intptr_t)callback);
 }
 
 int32_t q_treeview_receivers(void* self, const char* signal) {
@@ -3509,8 +3513,8 @@ int32_t q_treeview_qbase_receivers(void* self, const char* signal) {
     return QTreeView_QBaseReceivers((QTreeView*)self, signal);
 }
 
-void q_treeview_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTreeView_OnReceivers((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTreeView_OnReceivers((QTreeView*)self, (intptr_t)callback);
 }
 
 bool q_treeview_is_signal_connected(void* self, void* signal) {
@@ -3521,8 +3525,8 @@ bool q_treeview_qbase_is_signal_connected(void* self, void* signal) {
     return QTreeView_QBaseIsSignalConnected((QTreeView*)self, (QMetaMethod*)signal);
 }
 
-void q_treeview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTreeView_OnIsSignalConnected((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTreeView_OnIsSignalConnected((QTreeView*)self, (intptr_t)callback);
 }
 
 double q_treeview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -3533,12 +3537,12 @@ double q_treeview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
     return QTreeView_QBaseGetDecodedMetricF((QTreeView*)self, metricA, metricB);
 }
 
-void q_treeview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QTreeView_OnGetDecodedMetricF((QTreeView*)self, (intptr_t)slot);
+void q_treeview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QTreeView_OnGetDecodedMetricF((QTreeView*)self, (intptr_t)callback);
 }
 
-void q_treeview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_treeview_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_treeview_delete(void* self) {

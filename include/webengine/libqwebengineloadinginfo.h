@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,49 +15,56 @@
 
 /// q_webengineloadinginfo_new constructs a new QWebEngineLoadingInfo object.
 ///
-/// ``` QWebEngineLoadingInfo* other ```
+/// @param other QWebEngineLoadingInfo*
 QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#operator-eq)
 ///
-/// ``` QWebEngineLoadingInfo* self, QWebEngineLoadingInfo* other ```
+/// @param self QWebEngineLoadingInfo*
+/// @param other QWebEngineLoadingInfo*
 void q_webengineloadinginfo_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#url)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
 QUrl* q_webengineloadinginfo_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#isErrorPage)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
 bool q_webengineloadinginfo_is_error_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#status)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
+///
+/// @return enum QWebEngineLoadingInfo__LoadStatus
 int64_t q_webengineloadinginfo_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineLoadingInfo*
 const char* q_webengineloadinginfo_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorDomain)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
+///
+/// @return enum QWebEngineLoadingInfo__ErrorDomain
 int64_t q_webengineloadinginfo_error_domain(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorCode)
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
 int32_t q_webengineloadinginfo_error_code(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#dtor.QWebEngineLoadingInfo)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineLoadingInfo* self ```
+/// @param self QWebEngineLoadingInfo*
 void q_webengineloadinginfo_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebengineloadinginfo.html#types

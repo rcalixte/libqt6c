@@ -34,8 +34,8 @@ int32_t q_videowidget_metacall(void* self, int64_t param1, int param2, void* par
     return QVideoWidget_Metacall((QVideoWidget*)self, param1, param2, param3);
 }
 
-void q_videowidget_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QVideoWidget_OnMetacall((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QVideoWidget_OnMetacall((QVideoWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_videowidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ QSize* q_videowidget_size_hint(void* self) {
     return QVideoWidget_SizeHint((QVideoWidget*)self);
 }
 
-void q_videowidget_on_size_hint(void* self, QSize* (*slot)()) {
-    QVideoWidget_OnSizeHint((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_size_hint(void* self, QSize* (*callback)()) {
+    QVideoWidget_OnSizeHint((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_videowidget_qbase_size_hint(void* self) {
@@ -81,24 +81,24 @@ void q_videowidget_full_screen_changed(void* self, bool fullScreen) {
     QVideoWidget_FullScreenChanged((QVideoWidget*)self, fullScreen);
 }
 
-void q_videowidget_on_full_screen_changed(void* self, void (*slot)(void*, bool)) {
-    QVideoWidget_Connect_FullScreenChanged((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_full_screen_changed(void* self, void (*callback)(void*, bool)) {
+    QVideoWidget_Connect_FullScreenChanged((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_aspect_ratio_mode_changed(void* self, int64_t mode) {
     QVideoWidget_AspectRatioModeChanged((QVideoWidget*)self, mode);
 }
 
-void q_videowidget_on_aspect_ratio_mode_changed(void* self, void (*slot)(void*, int64_t)) {
-    QVideoWidget_Connect_AspectRatioModeChanged((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_aspect_ratio_mode_changed(void* self, void (*callback)(void*, int64_t)) {
+    QVideoWidget_Connect_AspectRatioModeChanged((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_event(void* self, void* event) {
     return QVideoWidget_Event((QVideoWidget*)self, (QEvent*)event);
 }
 
-void q_videowidget_on_event(void* self, bool (*slot)(void*, void*)) {
-    QVideoWidget_OnEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_event(void* self, bool (*callback)(void*, void*)) {
+    QVideoWidget_OnEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_qbase_event(void* self, void* event) {
@@ -109,8 +109,8 @@ void q_videowidget_show_event(void* self, void* event) {
     QVideoWidget_ShowEvent((QVideoWidget*)self, (QShowEvent*)event);
 }
 
-void q_videowidget_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnShowEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnShowEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_qbase_show_event(void* self, void* event) {
@@ -121,8 +121,8 @@ void q_videowidget_hide_event(void* self, void* event) {
     QVideoWidget_HideEvent((QVideoWidget*)self, (QHideEvent*)event);
 }
 
-void q_videowidget_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnHideEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnHideEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_qbase_hide_event(void* self, void* event) {
@@ -133,8 +133,8 @@ void q_videowidget_resize_event(void* self, void* event) {
     QVideoWidget_ResizeEvent((QVideoWidget*)self, (QResizeEvent*)event);
 }
 
-void q_videowidget_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnResizeEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnResizeEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_qbase_resize_event(void* self, void* event) {
@@ -145,8 +145,8 @@ void q_videowidget_move_event(void* self, void* event) {
     QVideoWidget_MoveEvent((QVideoWidget*)self, (QMoveEvent*)event);
 }
 
-void q_videowidget_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnMoveEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnMoveEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_qbase_move_event(void* self, void* event) {
@@ -1193,32 +1193,32 @@ void q_videowidget_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_videowidget_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_videowidget_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_videowidget_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_videowidget_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_videowidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_videowidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_videowidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_videowidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_videowidget_input_method_hints(void* self) {
@@ -1389,12 +1389,16 @@ const char** q_videowidget_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_videowidget_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1412,8 +1416,8 @@ void q_videowidget_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_videowidget_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_videowidget_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_videowidget_parent(void* self) {
@@ -1448,8 +1452,8 @@ void q_videowidget_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_videowidget_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_videowidget_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_painting_active(void* self) {
@@ -1512,8 +1516,8 @@ int32_t q_videowidget_qbase_dev_type(void* self) {
     return QVideoWidget_QBaseDevType((QVideoWidget*)self);
 }
 
-void q_videowidget_on_dev_type(void* self, int32_t (*slot)()) {
-    QVideoWidget_OnDevType((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_dev_type(void* self, int32_t (*callback)()) {
+    QVideoWidget_OnDevType((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_set_visible(void* self, bool visible) {
@@ -1524,8 +1528,8 @@ void q_videowidget_qbase_set_visible(void* self, bool visible) {
     QVideoWidget_QBaseSetVisible((QVideoWidget*)self, visible);
 }
 
-void q_videowidget_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QVideoWidget_OnSetVisible((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QVideoWidget_OnSetVisible((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QSize* q_videowidget_minimum_size_hint(void* self) {
@@ -1536,8 +1540,8 @@ QSize* q_videowidget_qbase_minimum_size_hint(void* self) {
     return QVideoWidget_QBaseMinimumSizeHint((QVideoWidget*)self);
 }
 
-void q_videowidget_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QVideoWidget_OnMinimumSizeHint((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QVideoWidget_OnMinimumSizeHint((QVideoWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_videowidget_height_for_width(void* self, int param1) {
@@ -1548,8 +1552,8 @@ int32_t q_videowidget_qbase_height_for_width(void* self, int param1) {
     return QVideoWidget_QBaseHeightForWidth((QVideoWidget*)self, param1);
 }
 
-void q_videowidget_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QVideoWidget_OnHeightForWidth((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QVideoWidget_OnHeightForWidth((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_has_height_for_width(void* self) {
@@ -1560,8 +1564,8 @@ bool q_videowidget_qbase_has_height_for_width(void* self) {
     return QVideoWidget_QBaseHasHeightForWidth((QVideoWidget*)self);
 }
 
-void q_videowidget_on_has_height_for_width(void* self, bool (*slot)()) {
-    QVideoWidget_OnHasHeightForWidth((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_has_height_for_width(void* self, bool (*callback)()) {
+    QVideoWidget_OnHasHeightForWidth((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_videowidget_paint_engine(void* self) {
@@ -1572,8 +1576,8 @@ QPaintEngine* q_videowidget_qbase_paint_engine(void* self) {
     return QVideoWidget_QBasePaintEngine((QVideoWidget*)self);
 }
 
-void q_videowidget_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QVideoWidget_OnPaintEngine((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QVideoWidget_OnPaintEngine((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_mouse_press_event(void* self, void* event) {
@@ -1584,8 +1588,8 @@ void q_videowidget_qbase_mouse_press_event(void* self, void* event) {
     QVideoWidget_QBaseMousePressEvent((QVideoWidget*)self, (QMouseEvent*)event);
 }
 
-void q_videowidget_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnMousePressEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnMousePressEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_mouse_release_event(void* self, void* event) {
@@ -1596,8 +1600,8 @@ void q_videowidget_qbase_mouse_release_event(void* self, void* event) {
     QVideoWidget_QBaseMouseReleaseEvent((QVideoWidget*)self, (QMouseEvent*)event);
 }
 
-void q_videowidget_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnMouseReleaseEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnMouseReleaseEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_mouse_double_click_event(void* self, void* event) {
@@ -1608,8 +1612,8 @@ void q_videowidget_qbase_mouse_double_click_event(void* self, void* event) {
     QVideoWidget_QBaseMouseDoubleClickEvent((QVideoWidget*)self, (QMouseEvent*)event);
 }
 
-void q_videowidget_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnMouseDoubleClickEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnMouseDoubleClickEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_mouse_move_event(void* self, void* event) {
@@ -1620,8 +1624,8 @@ void q_videowidget_qbase_mouse_move_event(void* self, void* event) {
     QVideoWidget_QBaseMouseMoveEvent((QVideoWidget*)self, (QMouseEvent*)event);
 }
 
-void q_videowidget_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnMouseMoveEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnMouseMoveEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_wheel_event(void* self, void* event) {
@@ -1632,8 +1636,8 @@ void q_videowidget_qbase_wheel_event(void* self, void* event) {
     QVideoWidget_QBaseWheelEvent((QVideoWidget*)self, (QWheelEvent*)event);
 }
 
-void q_videowidget_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnWheelEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnWheelEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_key_press_event(void* self, void* event) {
@@ -1644,8 +1648,8 @@ void q_videowidget_qbase_key_press_event(void* self, void* event) {
     QVideoWidget_QBaseKeyPressEvent((QVideoWidget*)self, (QKeyEvent*)event);
 }
 
-void q_videowidget_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnKeyPressEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnKeyPressEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_key_release_event(void* self, void* event) {
@@ -1656,8 +1660,8 @@ void q_videowidget_qbase_key_release_event(void* self, void* event) {
     QVideoWidget_QBaseKeyReleaseEvent((QVideoWidget*)self, (QKeyEvent*)event);
 }
 
-void q_videowidget_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnKeyReleaseEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnKeyReleaseEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_focus_in_event(void* self, void* event) {
@@ -1668,8 +1672,8 @@ void q_videowidget_qbase_focus_in_event(void* self, void* event) {
     QVideoWidget_QBaseFocusInEvent((QVideoWidget*)self, (QFocusEvent*)event);
 }
 
-void q_videowidget_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnFocusInEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnFocusInEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_focus_out_event(void* self, void* event) {
@@ -1680,8 +1684,8 @@ void q_videowidget_qbase_focus_out_event(void* self, void* event) {
     QVideoWidget_QBaseFocusOutEvent((QVideoWidget*)self, (QFocusEvent*)event);
 }
 
-void q_videowidget_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnFocusOutEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnFocusOutEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_enter_event(void* self, void* event) {
@@ -1692,8 +1696,8 @@ void q_videowidget_qbase_enter_event(void* self, void* event) {
     QVideoWidget_QBaseEnterEvent((QVideoWidget*)self, (QEnterEvent*)event);
 }
 
-void q_videowidget_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnEnterEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnEnterEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_leave_event(void* self, void* event) {
@@ -1704,8 +1708,8 @@ void q_videowidget_qbase_leave_event(void* self, void* event) {
     QVideoWidget_QBaseLeaveEvent((QVideoWidget*)self, (QEvent*)event);
 }
 
-void q_videowidget_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnLeaveEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnLeaveEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_paint_event(void* self, void* event) {
@@ -1716,8 +1720,8 @@ void q_videowidget_qbase_paint_event(void* self, void* event) {
     QVideoWidget_QBasePaintEvent((QVideoWidget*)self, (QPaintEvent*)event);
 }
 
-void q_videowidget_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnPaintEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnPaintEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_close_event(void* self, void* event) {
@@ -1728,8 +1732,8 @@ void q_videowidget_qbase_close_event(void* self, void* event) {
     QVideoWidget_QBaseCloseEvent((QVideoWidget*)self, (QCloseEvent*)event);
 }
 
-void q_videowidget_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnCloseEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnCloseEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_context_menu_event(void* self, void* event) {
@@ -1740,8 +1744,8 @@ void q_videowidget_qbase_context_menu_event(void* self, void* event) {
     QVideoWidget_QBaseContextMenuEvent((QVideoWidget*)self, (QContextMenuEvent*)event);
 }
 
-void q_videowidget_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnContextMenuEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnContextMenuEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_tablet_event(void* self, void* event) {
@@ -1752,8 +1756,8 @@ void q_videowidget_qbase_tablet_event(void* self, void* event) {
     QVideoWidget_QBaseTabletEvent((QVideoWidget*)self, (QTabletEvent*)event);
 }
 
-void q_videowidget_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnTabletEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnTabletEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_action_event(void* self, void* event) {
@@ -1764,8 +1768,8 @@ void q_videowidget_qbase_action_event(void* self, void* event) {
     QVideoWidget_QBaseActionEvent((QVideoWidget*)self, (QActionEvent*)event);
 }
 
-void q_videowidget_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnActionEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnActionEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_drag_enter_event(void* self, void* event) {
@@ -1776,8 +1780,8 @@ void q_videowidget_qbase_drag_enter_event(void* self, void* event) {
     QVideoWidget_QBaseDragEnterEvent((QVideoWidget*)self, (QDragEnterEvent*)event);
 }
 
-void q_videowidget_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnDragEnterEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnDragEnterEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_drag_move_event(void* self, void* event) {
@@ -1788,8 +1792,8 @@ void q_videowidget_qbase_drag_move_event(void* self, void* event) {
     QVideoWidget_QBaseDragMoveEvent((QVideoWidget*)self, (QDragMoveEvent*)event);
 }
 
-void q_videowidget_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnDragMoveEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnDragMoveEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_drag_leave_event(void* self, void* event) {
@@ -1800,8 +1804,8 @@ void q_videowidget_qbase_drag_leave_event(void* self, void* event) {
     QVideoWidget_QBaseDragLeaveEvent((QVideoWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void q_videowidget_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnDragLeaveEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnDragLeaveEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_drop_event(void* self, void* event) {
@@ -1812,8 +1816,8 @@ void q_videowidget_qbase_drop_event(void* self, void* event) {
     QVideoWidget_QBaseDropEvent((QVideoWidget*)self, (QDropEvent*)event);
 }
 
-void q_videowidget_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnDropEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnDropEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1824,8 +1828,8 @@ bool q_videowidget_qbase_native_event(void* self, const char* eventType, void* m
     return QVideoWidget_QBaseNativeEvent((QVideoWidget*)self, qstring(eventType), message, result);
 }
 
-void q_videowidget_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QVideoWidget_OnNativeEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QVideoWidget_OnNativeEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_change_event(void* self, void* param1) {
@@ -1836,8 +1840,8 @@ void q_videowidget_qbase_change_event(void* self, void* param1) {
     QVideoWidget_QBaseChangeEvent((QVideoWidget*)self, (QEvent*)param1);
 }
 
-void q_videowidget_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnChangeEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnChangeEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_videowidget_metric(void* self, int64_t param1) {
@@ -1848,8 +1852,8 @@ int32_t q_videowidget_qbase_metric(void* self, int64_t param1) {
     return QVideoWidget_QBaseMetric((QVideoWidget*)self, param1);
 }
 
-void q_videowidget_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QVideoWidget_OnMetric((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QVideoWidget_OnMetric((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_init_painter(void* self, void* painter) {
@@ -1860,8 +1864,8 @@ void q_videowidget_qbase_init_painter(void* self, void* painter) {
     QVideoWidget_QBaseInitPainter((QVideoWidget*)self, (QPainter*)painter);
 }
 
-void q_videowidget_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnInitPainter((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnInitPainter((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_videowidget_redirected(void* self, void* offset) {
@@ -1872,8 +1876,8 @@ QPaintDevice* q_videowidget_qbase_redirected(void* self, void* offset) {
     return QVideoWidget_QBaseRedirected((QVideoWidget*)self, (QPoint*)offset);
 }
 
-void q_videowidget_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QVideoWidget_OnRedirected((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QVideoWidget_OnRedirected((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QPainter* q_videowidget_shared_painter(void* self) {
@@ -1884,8 +1888,8 @@ QPainter* q_videowidget_qbase_shared_painter(void* self) {
     return QVideoWidget_QBaseSharedPainter((QVideoWidget*)self);
 }
 
-void q_videowidget_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QVideoWidget_OnSharedPainter((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QVideoWidget_OnSharedPainter((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_input_method_event(void* self, void* param1) {
@@ -1896,8 +1900,8 @@ void q_videowidget_qbase_input_method_event(void* self, void* param1) {
     QVideoWidget_QBaseInputMethodEvent((QVideoWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void q_videowidget_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnInputMethodEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnInputMethodEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QVariant* q_videowidget_input_method_query(void* self, int64_t param1) {
@@ -1908,8 +1912,8 @@ QVariant* q_videowidget_qbase_input_method_query(void* self, int64_t param1) {
     return QVideoWidget_QBaseInputMethodQuery((QVideoWidget*)self, param1);
 }
 
-void q_videowidget_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QVideoWidget_OnInputMethodQuery((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QVideoWidget_OnInputMethodQuery((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_focus_next_prev_child(void* self, bool next) {
@@ -1920,8 +1924,8 @@ bool q_videowidget_qbase_focus_next_prev_child(void* self, bool next) {
     return QVideoWidget_QBaseFocusNextPrevChild((QVideoWidget*)self, next);
 }
 
-void q_videowidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QVideoWidget_OnFocusNextPrevChild((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QVideoWidget_OnFocusNextPrevChild((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_event_filter(void* self, void* watched, void* event) {
@@ -1932,8 +1936,8 @@ bool q_videowidget_qbase_event_filter(void* self, void* watched, void* event) {
     return QVideoWidget_QBaseEventFilter((QVideoWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_videowidget_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QVideoWidget_OnEventFilter((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QVideoWidget_OnEventFilter((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_timer_event(void* self, void* event) {
@@ -1944,8 +1948,8 @@ void q_videowidget_qbase_timer_event(void* self, void* event) {
     QVideoWidget_QBaseTimerEvent((QVideoWidget*)self, (QTimerEvent*)event);
 }
 
-void q_videowidget_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnTimerEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnTimerEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_child_event(void* self, void* event) {
@@ -1956,8 +1960,8 @@ void q_videowidget_qbase_child_event(void* self, void* event) {
     QVideoWidget_QBaseChildEvent((QVideoWidget*)self, (QChildEvent*)event);
 }
 
-void q_videowidget_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnChildEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnChildEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_custom_event(void* self, void* event) {
@@ -1968,8 +1972,8 @@ void q_videowidget_qbase_custom_event(void* self, void* event) {
     QVideoWidget_QBaseCustomEvent((QVideoWidget*)self, (QEvent*)event);
 }
 
-void q_videowidget_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnCustomEvent((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnCustomEvent((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_connect_notify(void* self, void* signal) {
@@ -1980,8 +1984,8 @@ void q_videowidget_qbase_connect_notify(void* self, void* signal) {
     QVideoWidget_QBaseConnectNotify((QVideoWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_videowidget_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnConnectNotify((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnConnectNotify((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_disconnect_notify(void* self, void* signal) {
@@ -1992,8 +1996,8 @@ void q_videowidget_qbase_disconnect_notify(void* self, void* signal) {
     QVideoWidget_QBaseDisconnectNotify((QVideoWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_videowidget_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QVideoWidget_OnDisconnectNotify((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QVideoWidget_OnDisconnectNotify((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_update_micro_focus(void* self) {
@@ -2004,8 +2008,8 @@ void q_videowidget_qbase_update_micro_focus(void* self) {
     QVideoWidget_QBaseUpdateMicroFocus((QVideoWidget*)self);
 }
 
-void q_videowidget_on_update_micro_focus(void* self, void (*slot)()) {
-    QVideoWidget_OnUpdateMicroFocus((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_update_micro_focus(void* self, void (*callback)()) {
+    QVideoWidget_OnUpdateMicroFocus((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_create(void* self) {
@@ -2016,8 +2020,8 @@ void q_videowidget_qbase_create(void* self) {
     QVideoWidget_QBaseCreate((QVideoWidget*)self);
 }
 
-void q_videowidget_on_create(void* self, void (*slot)()) {
-    QVideoWidget_OnCreate((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_create(void* self, void (*callback)()) {
+    QVideoWidget_OnCreate((QVideoWidget*)self, (intptr_t)callback);
 }
 
 void q_videowidget_destroy(void* self) {
@@ -2028,8 +2032,8 @@ void q_videowidget_qbase_destroy(void* self) {
     QVideoWidget_QBaseDestroy((QVideoWidget*)self);
 }
 
-void q_videowidget_on_destroy(void* self, void (*slot)()) {
-    QVideoWidget_OnDestroy((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_destroy(void* self, void (*callback)()) {
+    QVideoWidget_OnDestroy((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_focus_next_child(void* self) {
@@ -2040,8 +2044,8 @@ bool q_videowidget_qbase_focus_next_child(void* self) {
     return QVideoWidget_QBaseFocusNextChild((QVideoWidget*)self);
 }
 
-void q_videowidget_on_focus_next_child(void* self, bool (*slot)()) {
-    QVideoWidget_OnFocusNextChild((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_focus_next_child(void* self, bool (*callback)()) {
+    QVideoWidget_OnFocusNextChild((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_focus_previous_child(void* self) {
@@ -2052,8 +2056,8 @@ bool q_videowidget_qbase_focus_previous_child(void* self) {
     return QVideoWidget_QBaseFocusPreviousChild((QVideoWidget*)self);
 }
 
-void q_videowidget_on_focus_previous_child(void* self, bool (*slot)()) {
-    QVideoWidget_OnFocusPreviousChild((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_focus_previous_child(void* self, bool (*callback)()) {
+    QVideoWidget_OnFocusPreviousChild((QVideoWidget*)self, (intptr_t)callback);
 }
 
 QObject* q_videowidget_sender(void* self) {
@@ -2064,8 +2068,8 @@ QObject* q_videowidget_qbase_sender(void* self) {
     return QVideoWidget_QBaseSender((QVideoWidget*)self);
 }
 
-void q_videowidget_on_sender(void* self, QObject* (*slot)()) {
-    QVideoWidget_OnSender((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_sender(void* self, QObject* (*callback)()) {
+    QVideoWidget_OnSender((QVideoWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_videowidget_sender_signal_index(void* self) {
@@ -2076,8 +2080,8 @@ int32_t q_videowidget_qbase_sender_signal_index(void* self) {
     return QVideoWidget_QBaseSenderSignalIndex((QVideoWidget*)self);
 }
 
-void q_videowidget_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QVideoWidget_OnSenderSignalIndex((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QVideoWidget_OnSenderSignalIndex((QVideoWidget*)self, (intptr_t)callback);
 }
 
 int32_t q_videowidget_receivers(void* self, const char* signal) {
@@ -2088,8 +2092,8 @@ int32_t q_videowidget_qbase_receivers(void* self, const char* signal) {
     return QVideoWidget_QBaseReceivers((QVideoWidget*)self, signal);
 }
 
-void q_videowidget_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QVideoWidget_OnReceivers((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QVideoWidget_OnReceivers((QVideoWidget*)self, (intptr_t)callback);
 }
 
 bool q_videowidget_is_signal_connected(void* self, void* signal) {
@@ -2100,8 +2104,8 @@ bool q_videowidget_qbase_is_signal_connected(void* self, void* signal) {
     return QVideoWidget_QBaseIsSignalConnected((QVideoWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_videowidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QVideoWidget_OnIsSignalConnected((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QVideoWidget_OnIsSignalConnected((QVideoWidget*)self, (intptr_t)callback);
 }
 
 double q_videowidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2112,12 +2116,12 @@ double q_videowidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int
     return QVideoWidget_QBaseGetDecodedMetricF((QVideoWidget*)self, metricA, metricB);
 }
 
-void q_videowidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QVideoWidget_OnGetDecodedMetricF((QVideoWidget*)self, (intptr_t)slot);
+void q_videowidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QVideoWidget_OnGetDecodedMetricF((QVideoWidget*)self, (intptr_t)callback);
 }
 
-void q_videowidget_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_videowidget_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_videowidget_delete(void* self) {

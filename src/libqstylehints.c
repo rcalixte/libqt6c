@@ -188,104 +188,104 @@ void q_stylehints_cursor_flash_time_changed(void* self, int cursorFlashTime) {
     QStyleHints_CursorFlashTimeChanged((QStyleHints*)self, cursorFlashTime);
 }
 
-void q_stylehints_on_cursor_flash_time_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_CursorFlashTimeChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_cursor_flash_time_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_CursorFlashTimeChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_keyboard_input_interval_changed(void* self, int keyboardInputInterval) {
     QStyleHints_KeyboardInputIntervalChanged((QStyleHints*)self, keyboardInputInterval);
 }
 
-void q_stylehints_on_keyboard_input_interval_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_KeyboardInputIntervalChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_keyboard_input_interval_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_KeyboardInputIntervalChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_mouse_double_click_interval_changed(void* self, int mouseDoubleClickInterval) {
     QStyleHints_MouseDoubleClickIntervalChanged((QStyleHints*)self, mouseDoubleClickInterval);
 }
 
-void q_stylehints_on_mouse_double_click_interval_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_MouseDoubleClickIntervalChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_mouse_double_click_interval_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_MouseDoubleClickIntervalChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_mouse_press_and_hold_interval_changed(void* self, int mousePressAndHoldInterval) {
     QStyleHints_MousePressAndHoldIntervalChanged((QStyleHints*)self, mousePressAndHoldInterval);
 }
 
-void q_stylehints_on_mouse_press_and_hold_interval_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_MousePressAndHoldIntervalChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_mouse_press_and_hold_interval_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_MousePressAndHoldIntervalChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_start_drag_distance_changed(void* self, int startDragDistance) {
     QStyleHints_StartDragDistanceChanged((QStyleHints*)self, startDragDistance);
 }
 
-void q_stylehints_on_start_drag_distance_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_StartDragDistanceChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_start_drag_distance_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_StartDragDistanceChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_start_drag_time_changed(void* self, int startDragTime) {
     QStyleHints_StartDragTimeChanged((QStyleHints*)self, startDragTime);
 }
 
-void q_stylehints_on_start_drag_time_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_StartDragTimeChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_start_drag_time_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_StartDragTimeChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_tab_focus_behavior_changed(void* self, int64_t tabFocusBehavior) {
     QStyleHints_TabFocusBehaviorChanged((QStyleHints*)self, tabFocusBehavior);
 }
 
-void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*slot)(void*, int64_t)) {
-    QStyleHints_Connect_TabFocusBehaviorChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int64_t)) {
+    QStyleHints_Connect_TabFocusBehaviorChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_use_hover_effects_changed(void* self, bool useHoverEffects) {
     QStyleHints_UseHoverEffectsChanged((QStyleHints*)self, useHoverEffects);
 }
 
-void q_stylehints_on_use_hover_effects_changed(void* self, void (*slot)(void*, bool)) {
-    QStyleHints_Connect_UseHoverEffectsChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_use_hover_effects_changed(void* self, void (*callback)(void*, bool)) {
+    QStyleHints_Connect_UseHoverEffectsChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_show_shortcuts_in_context_menus_changed(void* self, bool param1) {
     QStyleHints_ShowShortcutsInContextMenusChanged((QStyleHints*)self, param1);
 }
 
-void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*slot)(void*, bool)) {
-    QStyleHints_Connect_ShowShortcutsInContextMenusChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*callback)(void*, bool)) {
+    QStyleHints_Connect_ShowShortcutsInContextMenusChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_context_menu_trigger_changed(void* self, int64_t contextMenuTrigger) {
     QStyleHints_ContextMenuTriggerChanged((QStyleHints*)self, contextMenuTrigger);
 }
 
-void q_stylehints_on_context_menu_trigger_changed(void* self, void (*slot)(void*, int64_t)) {
-    QStyleHints_Connect_ContextMenuTriggerChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int64_t)) {
+    QStyleHints_Connect_ContextMenuTriggerChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_wheel_scroll_lines_changed(void* self, int scrollLines) {
     QStyleHints_WheelScrollLinesChanged((QStyleHints*)self, scrollLines);
 }
 
-void q_stylehints_on_wheel_scroll_lines_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_WheelScrollLinesChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_wheel_scroll_lines_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_WheelScrollLinesChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_mouse_quick_selection_threshold_changed(void* self, int threshold) {
     QStyleHints_MouseQuickSelectionThresholdChanged((QStyleHints*)self, threshold);
 }
 
-void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*slot)(void*, int)) {
-    QStyleHints_Connect_MouseQuickSelectionThresholdChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*callback)(void*, int)) {
+    QStyleHints_Connect_MouseQuickSelectionThresholdChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 void q_stylehints_color_scheme_changed(void* self, int64_t colorScheme) {
     QStyleHints_ColorSchemeChanged((QStyleHints*)self, colorScheme);
 }
 
-void q_stylehints_on_color_scheme_changed(void* self, void (*slot)(void*, int64_t)) {
-    QStyleHints_Connect_ColorSchemeChanged((QStyleHints*)self, (intptr_t)slot);
+void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int64_t)) {
+    QStyleHints_Connect_ColorSchemeChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
 const char* q_stylehints_tr2(const char* s, const char* c) {
@@ -414,12 +414,16 @@ const char** q_stylehints_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_stylehints_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -437,8 +441,8 @@ void q_stylehints_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_stylehints_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_stylehints_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_stylehints_parent(void* self) {
@@ -473,12 +477,12 @@ void q_stylehints_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_stylehints_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_stylehints_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_stylehints_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_stylehints_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_stylehints_delete(void* self) {

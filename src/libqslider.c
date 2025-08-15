@@ -43,8 +43,8 @@ int32_t q_slider_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QSlider_Metacall((QSlider*)self, param1, param2, param3);
 }
 
-void q_slider_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSlider_OnMetacall((QSlider*)self, (intptr_t)slot);
+void q_slider_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSlider_OnMetacall((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ QSize* q_slider_size_hint(void* self) {
     return QSlider_SizeHint((QSlider*)self);
 }
 
-void q_slider_on_size_hint(void* self, QSize* (*slot)()) {
-    QSlider_OnSizeHint((QSlider*)self, (intptr_t)slot);
+void q_slider_on_size_hint(void* self, QSize* (*callback)()) {
+    QSlider_OnSizeHint((QSlider*)self, (intptr_t)callback);
 }
 
 QSize* q_slider_qbase_size_hint(void* self) {
@@ -74,8 +74,8 @@ QSize* q_slider_minimum_size_hint(void* self) {
     return QSlider_MinimumSizeHint((QSlider*)self);
 }
 
-void q_slider_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QSlider_OnMinimumSizeHint((QSlider*)self, (intptr_t)slot);
+void q_slider_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QSlider_OnMinimumSizeHint((QSlider*)self, (intptr_t)callback);
 }
 
 QSize* q_slider_qbase_minimum_size_hint(void* self) {
@@ -102,8 +102,8 @@ bool q_slider_event(void* self, void* event) {
     return QSlider_Event((QSlider*)self, (QEvent*)event);
 }
 
-void q_slider_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSlider_OnEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSlider_OnEvent((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_qbase_event(void* self, void* event) {
@@ -114,8 +114,8 @@ void q_slider_paint_event(void* self, void* ev) {
     QSlider_PaintEvent((QSlider*)self, (QPaintEvent*)ev);
 }
 
-void q_slider_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnPaintEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnPaintEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_qbase_paint_event(void* self, void* ev) {
@@ -126,8 +126,8 @@ void q_slider_mouse_press_event(void* self, void* ev) {
     QSlider_MousePressEvent((QSlider*)self, (QMouseEvent*)ev);
 }
 
-void q_slider_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnMousePressEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnMousePressEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_qbase_mouse_press_event(void* self, void* ev) {
@@ -138,8 +138,8 @@ void q_slider_mouse_release_event(void* self, void* ev) {
     QSlider_MouseReleaseEvent((QSlider*)self, (QMouseEvent*)ev);
 }
 
-void q_slider_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnMouseReleaseEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnMouseReleaseEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_qbase_mouse_release_event(void* self, void* ev) {
@@ -150,8 +150,8 @@ void q_slider_mouse_move_event(void* self, void* ev) {
     QSlider_MouseMoveEvent((QSlider*)self, (QMouseEvent*)ev);
 }
 
-void q_slider_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnMouseMoveEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnMouseMoveEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_qbase_mouse_move_event(void* self, void* ev) {
@@ -162,8 +162,8 @@ void q_slider_init_style_option(void* self, void* option) {
     QSlider_InitStyleOption((QSlider*)self, (QStyleOptionSlider*)option);
 }
 
-void q_slider_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnInitStyleOption((QSlider*)self, (intptr_t)slot);
+void q_slider_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnInitStyleOption((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_qbase_init_style_option(void* self, void* option) {
@@ -284,48 +284,48 @@ void q_slider_value_changed(void* self, int value) {
     QAbstractSlider_ValueChanged((QAbstractSlider*)self, value);
 }
 
-void q_slider_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_slider_pressed(void* self) {
     QAbstractSlider_SliderPressed((QAbstractSlider*)self);
 }
 
-void q_slider_on_slider_pressed(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_slider_pressed(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_slider_moved(void* self, int position) {
     QAbstractSlider_SliderMoved((QAbstractSlider*)self, position);
 }
 
-void q_slider_on_slider_moved(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_slider_moved(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_slider_released(void* self) {
     QAbstractSlider_SliderReleased((QAbstractSlider*)self);
 }
 
-void q_slider_on_slider_released(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_slider_released(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_range_changed(void* self, int min, int max) {
     QAbstractSlider_RangeChanged((QAbstractSlider*)self, min, max);
 }
 
-void q_slider_on_range_changed(void* self, void (*slot)(void*, int, int)) {
-    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_range_changed(void* self, void (*callback)(void*, int, int)) {
+    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_action_triggered(void* self, int action) {
     QAbstractSlider_ActionTriggered((QAbstractSlider*)self, action);
 }
 
-void q_slider_on_action_triggered(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)slot);
+void q_slider_on_action_triggered(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 uintptr_t q_slider_win_id(void* self) {
@@ -1354,32 +1354,32 @@ void q_slider_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_slider_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_slider_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_slider_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_slider_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_slider_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_slider_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_slider_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_slider_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_slider_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_slider_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_slider_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_slider_input_method_hints(void* self) {
@@ -1550,12 +1550,16 @@ const char** q_slider_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_slider_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1573,8 +1577,8 @@ void q_slider_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_slider_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_slider_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_slider_parent(void* self) {
@@ -1609,8 +1613,8 @@ void q_slider_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_slider_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_slider_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_slider_painting_active(void* self) {
@@ -1673,8 +1677,8 @@ void q_slider_qbase_slider_change(void* self, int64_t change) {
     QSlider_QBaseSliderChange((QSlider*)self, change);
 }
 
-void q_slider_on_slider_change(void* self, void (*slot)(void*, int64_t)) {
-    QSlider_OnSliderChange((QSlider*)self, (intptr_t)slot);
+void q_slider_on_slider_change(void* self, void (*callback)(void*, int64_t)) {
+    QSlider_OnSliderChange((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_key_press_event(void* self, void* ev) {
@@ -1685,8 +1689,8 @@ void q_slider_qbase_key_press_event(void* self, void* ev) {
     QSlider_QBaseKeyPressEvent((QSlider*)self, (QKeyEvent*)ev);
 }
 
-void q_slider_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnKeyPressEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnKeyPressEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_timer_event(void* self, void* param1) {
@@ -1697,8 +1701,8 @@ void q_slider_qbase_timer_event(void* self, void* param1) {
     QSlider_QBaseTimerEvent((QSlider*)self, (QTimerEvent*)param1);
 }
 
-void q_slider_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnTimerEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnTimerEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_wheel_event(void* self, void* e) {
@@ -1709,8 +1713,8 @@ void q_slider_qbase_wheel_event(void* self, void* e) {
     QSlider_QBaseWheelEvent((QSlider*)self, (QWheelEvent*)e);
 }
 
-void q_slider_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnWheelEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnWheelEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_change_event(void* self, void* e) {
@@ -1721,8 +1725,8 @@ void q_slider_qbase_change_event(void* self, void* e) {
     QSlider_QBaseChangeEvent((QSlider*)self, (QEvent*)e);
 }
 
-void q_slider_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnChangeEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnChangeEvent((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_dev_type(void* self) {
@@ -1733,8 +1737,8 @@ int32_t q_slider_qbase_dev_type(void* self) {
     return QSlider_QBaseDevType((QSlider*)self);
 }
 
-void q_slider_on_dev_type(void* self, int32_t (*slot)()) {
-    QSlider_OnDevType((QSlider*)self, (intptr_t)slot);
+void q_slider_on_dev_type(void* self, int32_t (*callback)()) {
+    QSlider_OnDevType((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_set_visible(void* self, bool visible) {
@@ -1745,8 +1749,8 @@ void q_slider_qbase_set_visible(void* self, bool visible) {
     QSlider_QBaseSetVisible((QSlider*)self, visible);
 }
 
-void q_slider_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QSlider_OnSetVisible((QSlider*)self, (intptr_t)slot);
+void q_slider_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QSlider_OnSetVisible((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_height_for_width(void* self, int param1) {
@@ -1757,8 +1761,8 @@ int32_t q_slider_qbase_height_for_width(void* self, int param1) {
     return QSlider_QBaseHeightForWidth((QSlider*)self, param1);
 }
 
-void q_slider_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QSlider_OnHeightForWidth((QSlider*)self, (intptr_t)slot);
+void q_slider_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QSlider_OnHeightForWidth((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_has_height_for_width(void* self) {
@@ -1769,8 +1773,8 @@ bool q_slider_qbase_has_height_for_width(void* self) {
     return QSlider_QBaseHasHeightForWidth((QSlider*)self);
 }
 
-void q_slider_on_has_height_for_width(void* self, bool (*slot)()) {
-    QSlider_OnHasHeightForWidth((QSlider*)self, (intptr_t)slot);
+void q_slider_on_has_height_for_width(void* self, bool (*callback)()) {
+    QSlider_OnHasHeightForWidth((QSlider*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_slider_paint_engine(void* self) {
@@ -1781,8 +1785,8 @@ QPaintEngine* q_slider_qbase_paint_engine(void* self) {
     return QSlider_QBasePaintEngine((QSlider*)self);
 }
 
-void q_slider_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QSlider_OnPaintEngine((QSlider*)self, (intptr_t)slot);
+void q_slider_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QSlider_OnPaintEngine((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_mouse_double_click_event(void* self, void* event) {
@@ -1793,8 +1797,8 @@ void q_slider_qbase_mouse_double_click_event(void* self, void* event) {
     QSlider_QBaseMouseDoubleClickEvent((QSlider*)self, (QMouseEvent*)event);
 }
 
-void q_slider_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnMouseDoubleClickEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnMouseDoubleClickEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_key_release_event(void* self, void* event) {
@@ -1805,8 +1809,8 @@ void q_slider_qbase_key_release_event(void* self, void* event) {
     QSlider_QBaseKeyReleaseEvent((QSlider*)self, (QKeyEvent*)event);
 }
 
-void q_slider_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnKeyReleaseEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnKeyReleaseEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_focus_in_event(void* self, void* event) {
@@ -1817,8 +1821,8 @@ void q_slider_qbase_focus_in_event(void* self, void* event) {
     QSlider_QBaseFocusInEvent((QSlider*)self, (QFocusEvent*)event);
 }
 
-void q_slider_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnFocusInEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnFocusInEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_focus_out_event(void* self, void* event) {
@@ -1829,8 +1833,8 @@ void q_slider_qbase_focus_out_event(void* self, void* event) {
     QSlider_QBaseFocusOutEvent((QSlider*)self, (QFocusEvent*)event);
 }
 
-void q_slider_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnFocusOutEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnFocusOutEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_enter_event(void* self, void* event) {
@@ -1841,8 +1845,8 @@ void q_slider_qbase_enter_event(void* self, void* event) {
     QSlider_QBaseEnterEvent((QSlider*)self, (QEnterEvent*)event);
 }
 
-void q_slider_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnEnterEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnEnterEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_leave_event(void* self, void* event) {
@@ -1853,8 +1857,8 @@ void q_slider_qbase_leave_event(void* self, void* event) {
     QSlider_QBaseLeaveEvent((QSlider*)self, (QEvent*)event);
 }
 
-void q_slider_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnLeaveEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnLeaveEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_move_event(void* self, void* event) {
@@ -1865,8 +1869,8 @@ void q_slider_qbase_move_event(void* self, void* event) {
     QSlider_QBaseMoveEvent((QSlider*)self, (QMoveEvent*)event);
 }
 
-void q_slider_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnMoveEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnMoveEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_resize_event(void* self, void* event) {
@@ -1877,8 +1881,8 @@ void q_slider_qbase_resize_event(void* self, void* event) {
     QSlider_QBaseResizeEvent((QSlider*)self, (QResizeEvent*)event);
 }
 
-void q_slider_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnResizeEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnResizeEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_close_event(void* self, void* event) {
@@ -1889,8 +1893,8 @@ void q_slider_qbase_close_event(void* self, void* event) {
     QSlider_QBaseCloseEvent((QSlider*)self, (QCloseEvent*)event);
 }
 
-void q_slider_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnCloseEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnCloseEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_context_menu_event(void* self, void* event) {
@@ -1901,8 +1905,8 @@ void q_slider_qbase_context_menu_event(void* self, void* event) {
     QSlider_QBaseContextMenuEvent((QSlider*)self, (QContextMenuEvent*)event);
 }
 
-void q_slider_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnContextMenuEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnContextMenuEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_tablet_event(void* self, void* event) {
@@ -1913,8 +1917,8 @@ void q_slider_qbase_tablet_event(void* self, void* event) {
     QSlider_QBaseTabletEvent((QSlider*)self, (QTabletEvent*)event);
 }
 
-void q_slider_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnTabletEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnTabletEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_action_event(void* self, void* event) {
@@ -1925,8 +1929,8 @@ void q_slider_qbase_action_event(void* self, void* event) {
     QSlider_QBaseActionEvent((QSlider*)self, (QActionEvent*)event);
 }
 
-void q_slider_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnActionEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnActionEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_drag_enter_event(void* self, void* event) {
@@ -1937,8 +1941,8 @@ void q_slider_qbase_drag_enter_event(void* self, void* event) {
     QSlider_QBaseDragEnterEvent((QSlider*)self, (QDragEnterEvent*)event);
 }
 
-void q_slider_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnDragEnterEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnDragEnterEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_drag_move_event(void* self, void* event) {
@@ -1949,8 +1953,8 @@ void q_slider_qbase_drag_move_event(void* self, void* event) {
     QSlider_QBaseDragMoveEvent((QSlider*)self, (QDragMoveEvent*)event);
 }
 
-void q_slider_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnDragMoveEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnDragMoveEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_drag_leave_event(void* self, void* event) {
@@ -1961,8 +1965,8 @@ void q_slider_qbase_drag_leave_event(void* self, void* event) {
     QSlider_QBaseDragLeaveEvent((QSlider*)self, (QDragLeaveEvent*)event);
 }
 
-void q_slider_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnDragLeaveEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnDragLeaveEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_drop_event(void* self, void* event) {
@@ -1973,8 +1977,8 @@ void q_slider_qbase_drop_event(void* self, void* event) {
     QSlider_QBaseDropEvent((QSlider*)self, (QDropEvent*)event);
 }
 
-void q_slider_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnDropEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnDropEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_show_event(void* self, void* event) {
@@ -1985,8 +1989,8 @@ void q_slider_qbase_show_event(void* self, void* event) {
     QSlider_QBaseShowEvent((QSlider*)self, (QShowEvent*)event);
 }
 
-void q_slider_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnShowEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnShowEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_hide_event(void* self, void* event) {
@@ -1997,8 +2001,8 @@ void q_slider_qbase_hide_event(void* self, void* event) {
     QSlider_QBaseHideEvent((QSlider*)self, (QHideEvent*)event);
 }
 
-void q_slider_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnHideEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnHideEvent((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2009,8 +2013,8 @@ bool q_slider_qbase_native_event(void* self, const char* eventType, void* messag
     return QSlider_QBaseNativeEvent((QSlider*)self, qstring(eventType), message, result);
 }
 
-void q_slider_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QSlider_OnNativeEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QSlider_OnNativeEvent((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_metric(void* self, int64_t param1) {
@@ -2021,8 +2025,8 @@ int32_t q_slider_qbase_metric(void* self, int64_t param1) {
     return QSlider_QBaseMetric((QSlider*)self, param1);
 }
 
-void q_slider_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QSlider_OnMetric((QSlider*)self, (intptr_t)slot);
+void q_slider_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QSlider_OnMetric((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_init_painter(void* self, void* painter) {
@@ -2033,8 +2037,8 @@ void q_slider_qbase_init_painter(void* self, void* painter) {
     QSlider_QBaseInitPainter((QSlider*)self, (QPainter*)painter);
 }
 
-void q_slider_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnInitPainter((QSlider*)self, (intptr_t)slot);
+void q_slider_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnInitPainter((QSlider*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_slider_redirected(void* self, void* offset) {
@@ -2045,8 +2049,8 @@ QPaintDevice* q_slider_qbase_redirected(void* self, void* offset) {
     return QSlider_QBaseRedirected((QSlider*)self, (QPoint*)offset);
 }
 
-void q_slider_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QSlider_OnRedirected((QSlider*)self, (intptr_t)slot);
+void q_slider_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QSlider_OnRedirected((QSlider*)self, (intptr_t)callback);
 }
 
 QPainter* q_slider_shared_painter(void* self) {
@@ -2057,8 +2061,8 @@ QPainter* q_slider_qbase_shared_painter(void* self) {
     return QSlider_QBaseSharedPainter((QSlider*)self);
 }
 
-void q_slider_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QSlider_OnSharedPainter((QSlider*)self, (intptr_t)slot);
+void q_slider_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QSlider_OnSharedPainter((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_input_method_event(void* self, void* param1) {
@@ -2069,8 +2073,8 @@ void q_slider_qbase_input_method_event(void* self, void* param1) {
     QSlider_QBaseInputMethodEvent((QSlider*)self, (QInputMethodEvent*)param1);
 }
 
-void q_slider_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnInputMethodEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnInputMethodEvent((QSlider*)self, (intptr_t)callback);
 }
 
 QVariant* q_slider_input_method_query(void* self, int64_t param1) {
@@ -2081,8 +2085,8 @@ QVariant* q_slider_qbase_input_method_query(void* self, int64_t param1) {
     return QSlider_QBaseInputMethodQuery((QSlider*)self, param1);
 }
 
-void q_slider_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QSlider_OnInputMethodQuery((QSlider*)self, (intptr_t)slot);
+void q_slider_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QSlider_OnInputMethodQuery((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_focus_next_prev_child(void* self, bool next) {
@@ -2093,8 +2097,8 @@ bool q_slider_qbase_focus_next_prev_child(void* self, bool next) {
     return QSlider_QBaseFocusNextPrevChild((QSlider*)self, next);
 }
 
-void q_slider_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QSlider_OnFocusNextPrevChild((QSlider*)self, (intptr_t)slot);
+void q_slider_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QSlider_OnFocusNextPrevChild((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_event_filter(void* self, void* watched, void* event) {
@@ -2105,8 +2109,8 @@ bool q_slider_qbase_event_filter(void* self, void* watched, void* event) {
     return QSlider_QBaseEventFilter((QSlider*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_slider_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSlider_OnEventFilter((QSlider*)self, (intptr_t)slot);
+void q_slider_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSlider_OnEventFilter((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_child_event(void* self, void* event) {
@@ -2117,8 +2121,8 @@ void q_slider_qbase_child_event(void* self, void* event) {
     QSlider_QBaseChildEvent((QSlider*)self, (QChildEvent*)event);
 }
 
-void q_slider_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnChildEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnChildEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_custom_event(void* self, void* event) {
@@ -2129,8 +2133,8 @@ void q_slider_qbase_custom_event(void* self, void* event) {
     QSlider_QBaseCustomEvent((QSlider*)self, (QEvent*)event);
 }
 
-void q_slider_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnCustomEvent((QSlider*)self, (intptr_t)slot);
+void q_slider_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnCustomEvent((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_connect_notify(void* self, void* signal) {
@@ -2141,8 +2145,8 @@ void q_slider_qbase_connect_notify(void* self, void* signal) {
     QSlider_QBaseConnectNotify((QSlider*)self, (QMetaMethod*)signal);
 }
 
-void q_slider_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnConnectNotify((QSlider*)self, (intptr_t)slot);
+void q_slider_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnConnectNotify((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_disconnect_notify(void* self, void* signal) {
@@ -2153,8 +2157,8 @@ void q_slider_qbase_disconnect_notify(void* self, void* signal) {
     QSlider_QBaseDisconnectNotify((QSlider*)self, (QMetaMethod*)signal);
 }
 
-void q_slider_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSlider_OnDisconnectNotify((QSlider*)self, (intptr_t)slot);
+void q_slider_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSlider_OnDisconnectNotify((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_set_repeat_action(void* self, int64_t action) {
@@ -2165,8 +2169,8 @@ void q_slider_qbase_set_repeat_action(void* self, int64_t action) {
     QSlider_QBaseSetRepeatAction((QSlider*)self, action);
 }
 
-void q_slider_on_set_repeat_action(void* self, void (*slot)(void*, int64_t)) {
-    QSlider_OnSetRepeatAction((QSlider*)self, (intptr_t)slot);
+void q_slider_on_set_repeat_action(void* self, void (*callback)(void*, int64_t)) {
+    QSlider_OnSetRepeatAction((QSlider*)self, (intptr_t)callback);
 }
 
 int64_t q_slider_repeat_action(void* self) {
@@ -2177,8 +2181,8 @@ int64_t q_slider_qbase_repeat_action(void* self) {
     return QSlider_QBaseRepeatAction((QSlider*)self);
 }
 
-void q_slider_on_repeat_action(void* self, int64_t (*slot)()) {
-    QSlider_OnRepeatAction((QSlider*)self, (intptr_t)slot);
+void q_slider_on_repeat_action(void* self, int64_t (*callback)()) {
+    QSlider_OnRepeatAction((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_update_micro_focus(void* self) {
@@ -2189,8 +2193,8 @@ void q_slider_qbase_update_micro_focus(void* self) {
     QSlider_QBaseUpdateMicroFocus((QSlider*)self);
 }
 
-void q_slider_on_update_micro_focus(void* self, void (*slot)()) {
-    QSlider_OnUpdateMicroFocus((QSlider*)self, (intptr_t)slot);
+void q_slider_on_update_micro_focus(void* self, void (*callback)()) {
+    QSlider_OnUpdateMicroFocus((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_create(void* self) {
@@ -2201,8 +2205,8 @@ void q_slider_qbase_create(void* self) {
     QSlider_QBaseCreate((QSlider*)self);
 }
 
-void q_slider_on_create(void* self, void (*slot)()) {
-    QSlider_OnCreate((QSlider*)self, (intptr_t)slot);
+void q_slider_on_create(void* self, void (*callback)()) {
+    QSlider_OnCreate((QSlider*)self, (intptr_t)callback);
 }
 
 void q_slider_destroy(void* self) {
@@ -2213,8 +2217,8 @@ void q_slider_qbase_destroy(void* self) {
     QSlider_QBaseDestroy((QSlider*)self);
 }
 
-void q_slider_on_destroy(void* self, void (*slot)()) {
-    QSlider_OnDestroy((QSlider*)self, (intptr_t)slot);
+void q_slider_on_destroy(void* self, void (*callback)()) {
+    QSlider_OnDestroy((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_focus_next_child(void* self) {
@@ -2225,8 +2229,8 @@ bool q_slider_qbase_focus_next_child(void* self) {
     return QSlider_QBaseFocusNextChild((QSlider*)self);
 }
 
-void q_slider_on_focus_next_child(void* self, bool (*slot)()) {
-    QSlider_OnFocusNextChild((QSlider*)self, (intptr_t)slot);
+void q_slider_on_focus_next_child(void* self, bool (*callback)()) {
+    QSlider_OnFocusNextChild((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_focus_previous_child(void* self) {
@@ -2237,8 +2241,8 @@ bool q_slider_qbase_focus_previous_child(void* self) {
     return QSlider_QBaseFocusPreviousChild((QSlider*)self);
 }
 
-void q_slider_on_focus_previous_child(void* self, bool (*slot)()) {
-    QSlider_OnFocusPreviousChild((QSlider*)self, (intptr_t)slot);
+void q_slider_on_focus_previous_child(void* self, bool (*callback)()) {
+    QSlider_OnFocusPreviousChild((QSlider*)self, (intptr_t)callback);
 }
 
 QObject* q_slider_sender(void* self) {
@@ -2249,8 +2253,8 @@ QObject* q_slider_qbase_sender(void* self) {
     return QSlider_QBaseSender((QSlider*)self);
 }
 
-void q_slider_on_sender(void* self, QObject* (*slot)()) {
-    QSlider_OnSender((QSlider*)self, (intptr_t)slot);
+void q_slider_on_sender(void* self, QObject* (*callback)()) {
+    QSlider_OnSender((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_sender_signal_index(void* self) {
@@ -2261,8 +2265,8 @@ int32_t q_slider_qbase_sender_signal_index(void* self) {
     return QSlider_QBaseSenderSignalIndex((QSlider*)self);
 }
 
-void q_slider_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSlider_OnSenderSignalIndex((QSlider*)self, (intptr_t)slot);
+void q_slider_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSlider_OnSenderSignalIndex((QSlider*)self, (intptr_t)callback);
 }
 
 int32_t q_slider_receivers(void* self, const char* signal) {
@@ -2273,8 +2277,8 @@ int32_t q_slider_qbase_receivers(void* self, const char* signal) {
     return QSlider_QBaseReceivers((QSlider*)self, signal);
 }
 
-void q_slider_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSlider_OnReceivers((QSlider*)self, (intptr_t)slot);
+void q_slider_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSlider_OnReceivers((QSlider*)self, (intptr_t)callback);
 }
 
 bool q_slider_is_signal_connected(void* self, void* signal) {
@@ -2285,8 +2289,8 @@ bool q_slider_qbase_is_signal_connected(void* self, void* signal) {
     return QSlider_QBaseIsSignalConnected((QSlider*)self, (QMetaMethod*)signal);
 }
 
-void q_slider_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSlider_OnIsSignalConnected((QSlider*)self, (intptr_t)slot);
+void q_slider_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSlider_OnIsSignalConnected((QSlider*)self, (intptr_t)callback);
 }
 
 double q_slider_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2297,12 +2301,12 @@ double q_slider_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
     return QSlider_QBaseGetDecodedMetricF((QSlider*)self, metricA, metricB);
 }
 
-void q_slider_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QSlider_OnGetDecodedMetricF((QSlider*)self, (intptr_t)slot);
+void q_slider_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QSlider_OnGetDecodedMetricF((QSlider*)self, (intptr_t)callback);
 }
 
-void q_slider_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_slider_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_slider_delete(void* self) {

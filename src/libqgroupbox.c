@@ -42,8 +42,8 @@ int32_t q_groupbox_metacall(void* self, int64_t param1, int param2, void* param3
     return QGroupBox_Metacall((QGroupBox*)self, param1, param2, param3);
 }
 
-void q_groupbox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QGroupBox_OnMetacall((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QGroupBox_OnMetacall((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -80,8 +80,8 @@ QSize* q_groupbox_minimum_size_hint(void* self) {
     return QGroupBox_MinimumSizeHint((QGroupBox*)self);
 }
 
-void q_groupbox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QGroupBox_OnMinimumSizeHint((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QGroupBox_OnMinimumSizeHint((QGroupBox*)self, (intptr_t)callback);
 }
 
 QSize* q_groupbox_qbase_minimum_size_hint(void* self) {
@@ -116,24 +116,24 @@ void q_groupbox_clicked(void* self) {
     QGroupBox_Clicked((QGroupBox*)self);
 }
 
-void q_groupbox_on_clicked(void* self, void (*slot)(void*)) {
-    QGroupBox_Connect_Clicked((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_clicked(void* self, void (*callback)(void*)) {
+    QGroupBox_Connect_Clicked((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_toggled(void* self, bool param1) {
     QGroupBox_Toggled((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_toggled(void* self, void (*slot)(void*, bool)) {
-    QGroupBox_Connect_Toggled((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_toggled(void* self, void (*callback)(void*, bool)) {
+    QGroupBox_Connect_Toggled((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_event(void* self, void* event) {
     return QGroupBox_Event((QGroupBox*)self, (QEvent*)event);
 }
 
-void q_groupbox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QGroupBox_OnEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QGroupBox_OnEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_qbase_event(void* self, void* event) {
@@ -144,8 +144,8 @@ void q_groupbox_child_event(void* self, void* event) {
     QGroupBox_ChildEvent((QGroupBox*)self, (QChildEvent*)event);
 }
 
-void q_groupbox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnChildEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnChildEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_child_event(void* self, void* event) {
@@ -156,8 +156,8 @@ void q_groupbox_resize_event(void* self, void* event) {
     QGroupBox_ResizeEvent((QGroupBox*)self, (QResizeEvent*)event);
 }
 
-void q_groupbox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnResizeEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnResizeEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_resize_event(void* self, void* event) {
@@ -168,8 +168,8 @@ void q_groupbox_paint_event(void* self, void* event) {
     QGroupBox_PaintEvent((QGroupBox*)self, (QPaintEvent*)event);
 }
 
-void q_groupbox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnPaintEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnPaintEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_paint_event(void* self, void* event) {
@@ -180,8 +180,8 @@ void q_groupbox_focus_in_event(void* self, void* event) {
     QGroupBox_FocusInEvent((QGroupBox*)self, (QFocusEvent*)event);
 }
 
-void q_groupbox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnFocusInEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnFocusInEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_focus_in_event(void* self, void* event) {
@@ -192,8 +192,8 @@ void q_groupbox_change_event(void* self, void* event) {
     QGroupBox_ChangeEvent((QGroupBox*)self, (QEvent*)event);
 }
 
-void q_groupbox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnChangeEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnChangeEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_change_event(void* self, void* event) {
@@ -204,8 +204,8 @@ void q_groupbox_mouse_press_event(void* self, void* event) {
     QGroupBox_MousePressEvent((QGroupBox*)self, (QMouseEvent*)event);
 }
 
-void q_groupbox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnMousePressEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnMousePressEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_mouse_press_event(void* self, void* event) {
@@ -216,8 +216,8 @@ void q_groupbox_mouse_move_event(void* self, void* event) {
     QGroupBox_MouseMoveEvent((QGroupBox*)self, (QMouseEvent*)event);
 }
 
-void q_groupbox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnMouseMoveEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnMouseMoveEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_mouse_move_event(void* self, void* event) {
@@ -228,8 +228,8 @@ void q_groupbox_mouse_release_event(void* self, void* event) {
     QGroupBox_MouseReleaseEvent((QGroupBox*)self, (QMouseEvent*)event);
 }
 
-void q_groupbox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnMouseReleaseEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnMouseReleaseEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_mouse_release_event(void* self, void* event) {
@@ -240,8 +240,8 @@ void q_groupbox_init_style_option(void* self, void* option) {
     QGroupBox_InitStyleOption((QGroupBox*)self, (QStyleOptionGroupBox*)option);
 }
 
-void q_groupbox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnInitStyleOption((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnInitStyleOption((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_qbase_init_style_option(void* self, void* option) {
@@ -266,8 +266,8 @@ void q_groupbox_clicked1(void* self, bool checked) {
     QGroupBox_Clicked1((QGroupBox*)self, checked);
 }
 
-void q_groupbox_on_clicked1(void* self, void (*slot)(void*, bool)) {
-    QGroupBox_Connect_Clicked1((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_clicked1(void* self, void (*callback)(void*, bool)) {
+    QGroupBox_Connect_Clicked1((QGroupBox*)self, (intptr_t)callback);
 }
 
 uintptr_t q_groupbox_win_id(void* self) {
@@ -1296,32 +1296,32 @@ void q_groupbox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_groupbox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_groupbox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_groupbox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_groupbox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_groupbox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_groupbox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_groupbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_groupbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_groupbox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_groupbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_groupbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_groupbox_input_method_hints(void* self) {
@@ -1492,12 +1492,16 @@ const char** q_groupbox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_groupbox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1515,8 +1519,8 @@ void q_groupbox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_groupbox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_groupbox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_groupbox_parent(void* self) {
@@ -1551,8 +1555,8 @@ void q_groupbox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_groupbox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_groupbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_painting_active(void* self) {
@@ -1615,8 +1619,8 @@ int32_t q_groupbox_qbase_dev_type(void* self) {
     return QGroupBox_QBaseDevType((QGroupBox*)self);
 }
 
-void q_groupbox_on_dev_type(void* self, int32_t (*slot)()) {
-    QGroupBox_OnDevType((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_dev_type(void* self, int32_t (*callback)()) {
+    QGroupBox_OnDevType((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_set_visible(void* self, bool visible) {
@@ -1627,8 +1631,8 @@ void q_groupbox_qbase_set_visible(void* self, bool visible) {
     QGroupBox_QBaseSetVisible((QGroupBox*)self, visible);
 }
 
-void q_groupbox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QGroupBox_OnSetVisible((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QGroupBox_OnSetVisible((QGroupBox*)self, (intptr_t)callback);
 }
 
 QSize* q_groupbox_size_hint(void* self) {
@@ -1639,8 +1643,8 @@ QSize* q_groupbox_qbase_size_hint(void* self) {
     return QGroupBox_QBaseSizeHint((QGroupBox*)self);
 }
 
-void q_groupbox_on_size_hint(void* self, QSize* (*slot)()) {
-    QGroupBox_OnSizeHint((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_size_hint(void* self, QSize* (*callback)()) {
+    QGroupBox_OnSizeHint((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_height_for_width(void* self, int param1) {
@@ -1651,8 +1655,8 @@ int32_t q_groupbox_qbase_height_for_width(void* self, int param1) {
     return QGroupBox_QBaseHeightForWidth((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QGroupBox_OnHeightForWidth((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QGroupBox_OnHeightForWidth((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_has_height_for_width(void* self) {
@@ -1663,8 +1667,8 @@ bool q_groupbox_qbase_has_height_for_width(void* self) {
     return QGroupBox_QBaseHasHeightForWidth((QGroupBox*)self);
 }
 
-void q_groupbox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QGroupBox_OnHasHeightForWidth((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QGroupBox_OnHasHeightForWidth((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_groupbox_paint_engine(void* self) {
@@ -1675,8 +1679,8 @@ QPaintEngine* q_groupbox_qbase_paint_engine(void* self) {
     return QGroupBox_QBasePaintEngine((QGroupBox*)self);
 }
 
-void q_groupbox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QGroupBox_OnPaintEngine((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QGroupBox_OnPaintEngine((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_mouse_double_click_event(void* self, void* event) {
@@ -1687,8 +1691,8 @@ void q_groupbox_qbase_mouse_double_click_event(void* self, void* event) {
     QGroupBox_QBaseMouseDoubleClickEvent((QGroupBox*)self, (QMouseEvent*)event);
 }
 
-void q_groupbox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnMouseDoubleClickEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnMouseDoubleClickEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_wheel_event(void* self, void* event) {
@@ -1699,8 +1703,8 @@ void q_groupbox_qbase_wheel_event(void* self, void* event) {
     QGroupBox_QBaseWheelEvent((QGroupBox*)self, (QWheelEvent*)event);
 }
 
-void q_groupbox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnWheelEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnWheelEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_key_press_event(void* self, void* event) {
@@ -1711,8 +1715,8 @@ void q_groupbox_qbase_key_press_event(void* self, void* event) {
     QGroupBox_QBaseKeyPressEvent((QGroupBox*)self, (QKeyEvent*)event);
 }
 
-void q_groupbox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnKeyPressEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnKeyPressEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_key_release_event(void* self, void* event) {
@@ -1723,8 +1727,8 @@ void q_groupbox_qbase_key_release_event(void* self, void* event) {
     QGroupBox_QBaseKeyReleaseEvent((QGroupBox*)self, (QKeyEvent*)event);
 }
 
-void q_groupbox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnKeyReleaseEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnKeyReleaseEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_focus_out_event(void* self, void* event) {
@@ -1735,8 +1739,8 @@ void q_groupbox_qbase_focus_out_event(void* self, void* event) {
     QGroupBox_QBaseFocusOutEvent((QGroupBox*)self, (QFocusEvent*)event);
 }
 
-void q_groupbox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnFocusOutEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnFocusOutEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_enter_event(void* self, void* event) {
@@ -1747,8 +1751,8 @@ void q_groupbox_qbase_enter_event(void* self, void* event) {
     QGroupBox_QBaseEnterEvent((QGroupBox*)self, (QEnterEvent*)event);
 }
 
-void q_groupbox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnEnterEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnEnterEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_leave_event(void* self, void* event) {
@@ -1759,8 +1763,8 @@ void q_groupbox_qbase_leave_event(void* self, void* event) {
     QGroupBox_QBaseLeaveEvent((QGroupBox*)self, (QEvent*)event);
 }
 
-void q_groupbox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnLeaveEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnLeaveEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_move_event(void* self, void* event) {
@@ -1771,8 +1775,8 @@ void q_groupbox_qbase_move_event(void* self, void* event) {
     QGroupBox_QBaseMoveEvent((QGroupBox*)self, (QMoveEvent*)event);
 }
 
-void q_groupbox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnMoveEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnMoveEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_close_event(void* self, void* event) {
@@ -1783,8 +1787,8 @@ void q_groupbox_qbase_close_event(void* self, void* event) {
     QGroupBox_QBaseCloseEvent((QGroupBox*)self, (QCloseEvent*)event);
 }
 
-void q_groupbox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnCloseEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnCloseEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_context_menu_event(void* self, void* event) {
@@ -1795,8 +1799,8 @@ void q_groupbox_qbase_context_menu_event(void* self, void* event) {
     QGroupBox_QBaseContextMenuEvent((QGroupBox*)self, (QContextMenuEvent*)event);
 }
 
-void q_groupbox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnContextMenuEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnContextMenuEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_tablet_event(void* self, void* event) {
@@ -1807,8 +1811,8 @@ void q_groupbox_qbase_tablet_event(void* self, void* event) {
     QGroupBox_QBaseTabletEvent((QGroupBox*)self, (QTabletEvent*)event);
 }
 
-void q_groupbox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnTabletEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnTabletEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_action_event(void* self, void* event) {
@@ -1819,8 +1823,8 @@ void q_groupbox_qbase_action_event(void* self, void* event) {
     QGroupBox_QBaseActionEvent((QGroupBox*)self, (QActionEvent*)event);
 }
 
-void q_groupbox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnActionEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnActionEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_drag_enter_event(void* self, void* event) {
@@ -1831,8 +1835,8 @@ void q_groupbox_qbase_drag_enter_event(void* self, void* event) {
     QGroupBox_QBaseDragEnterEvent((QGroupBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_groupbox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnDragEnterEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnDragEnterEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_drag_move_event(void* self, void* event) {
@@ -1843,8 +1847,8 @@ void q_groupbox_qbase_drag_move_event(void* self, void* event) {
     QGroupBox_QBaseDragMoveEvent((QGroupBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_groupbox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnDragMoveEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnDragMoveEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_drag_leave_event(void* self, void* event) {
@@ -1855,8 +1859,8 @@ void q_groupbox_qbase_drag_leave_event(void* self, void* event) {
     QGroupBox_QBaseDragLeaveEvent((QGroupBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_groupbox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnDragLeaveEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnDragLeaveEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_drop_event(void* self, void* event) {
@@ -1867,8 +1871,8 @@ void q_groupbox_qbase_drop_event(void* self, void* event) {
     QGroupBox_QBaseDropEvent((QGroupBox*)self, (QDropEvent*)event);
 }
 
-void q_groupbox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnDropEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnDropEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_show_event(void* self, void* event) {
@@ -1879,8 +1883,8 @@ void q_groupbox_qbase_show_event(void* self, void* event) {
     QGroupBox_QBaseShowEvent((QGroupBox*)self, (QShowEvent*)event);
 }
 
-void q_groupbox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnShowEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnShowEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_hide_event(void* self, void* event) {
@@ -1891,8 +1895,8 @@ void q_groupbox_qbase_hide_event(void* self, void* event) {
     QGroupBox_QBaseHideEvent((QGroupBox*)self, (QHideEvent*)event);
 }
 
-void q_groupbox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnHideEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnHideEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1903,8 +1907,8 @@ bool q_groupbox_qbase_native_event(void* self, const char* eventType, void* mess
     return QGroupBox_QBaseNativeEvent((QGroupBox*)self, qstring(eventType), message, result);
 }
 
-void q_groupbox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QGroupBox_OnNativeEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QGroupBox_OnNativeEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_metric(void* self, int64_t param1) {
@@ -1915,8 +1919,8 @@ int32_t q_groupbox_qbase_metric(void* self, int64_t param1) {
     return QGroupBox_QBaseMetric((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QGroupBox_OnMetric((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QGroupBox_OnMetric((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_init_painter(void* self, void* painter) {
@@ -1927,8 +1931,8 @@ void q_groupbox_qbase_init_painter(void* self, void* painter) {
     QGroupBox_QBaseInitPainter((QGroupBox*)self, (QPainter*)painter);
 }
 
-void q_groupbox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnInitPainter((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnInitPainter((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_groupbox_redirected(void* self, void* offset) {
@@ -1939,8 +1943,8 @@ QPaintDevice* q_groupbox_qbase_redirected(void* self, void* offset) {
     return QGroupBox_QBaseRedirected((QGroupBox*)self, (QPoint*)offset);
 }
 
-void q_groupbox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QGroupBox_OnRedirected((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QGroupBox_OnRedirected((QGroupBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_groupbox_shared_painter(void* self) {
@@ -1951,8 +1955,8 @@ QPainter* q_groupbox_qbase_shared_painter(void* self) {
     return QGroupBox_QBaseSharedPainter((QGroupBox*)self);
 }
 
-void q_groupbox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QGroupBox_OnSharedPainter((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QGroupBox_OnSharedPainter((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_input_method_event(void* self, void* param1) {
@@ -1963,8 +1967,8 @@ void q_groupbox_qbase_input_method_event(void* self, void* param1) {
     QGroupBox_QBaseInputMethodEvent((QGroupBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_groupbox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnInputMethodEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnInputMethodEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_groupbox_input_method_query(void* self, int64_t param1) {
@@ -1975,8 +1979,8 @@ QVariant* q_groupbox_qbase_input_method_query(void* self, int64_t param1) {
     return QGroupBox_QBaseInputMethodQuery((QGroupBox*)self, param1);
 }
 
-void q_groupbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QGroupBox_OnInputMethodQuery((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QGroupBox_OnInputMethodQuery((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_focus_next_prev_child(void* self, bool next) {
@@ -1987,8 +1991,8 @@ bool q_groupbox_qbase_focus_next_prev_child(void* self, bool next) {
     return QGroupBox_QBaseFocusNextPrevChild((QGroupBox*)self, next);
 }
 
-void q_groupbox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QGroupBox_OnFocusNextPrevChild((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QGroupBox_OnFocusNextPrevChild((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_event_filter(void* self, void* watched, void* event) {
@@ -1999,8 +2003,8 @@ bool q_groupbox_qbase_event_filter(void* self, void* watched, void* event) {
     return QGroupBox_QBaseEventFilter((QGroupBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_groupbox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QGroupBox_OnEventFilter((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QGroupBox_OnEventFilter((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_timer_event(void* self, void* event) {
@@ -2011,8 +2015,8 @@ void q_groupbox_qbase_timer_event(void* self, void* event) {
     QGroupBox_QBaseTimerEvent((QGroupBox*)self, (QTimerEvent*)event);
 }
 
-void q_groupbox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnTimerEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnTimerEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_custom_event(void* self, void* event) {
@@ -2023,8 +2027,8 @@ void q_groupbox_qbase_custom_event(void* self, void* event) {
     QGroupBox_QBaseCustomEvent((QGroupBox*)self, (QEvent*)event);
 }
 
-void q_groupbox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnCustomEvent((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnCustomEvent((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_connect_notify(void* self, void* signal) {
@@ -2035,8 +2039,8 @@ void q_groupbox_qbase_connect_notify(void* self, void* signal) {
     QGroupBox_QBaseConnectNotify((QGroupBox*)self, (QMetaMethod*)signal);
 }
 
-void q_groupbox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnConnectNotify((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnConnectNotify((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_disconnect_notify(void* self, void* signal) {
@@ -2047,8 +2051,8 @@ void q_groupbox_qbase_disconnect_notify(void* self, void* signal) {
     QGroupBox_QBaseDisconnectNotify((QGroupBox*)self, (QMetaMethod*)signal);
 }
 
-void q_groupbox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QGroupBox_OnDisconnectNotify((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QGroupBox_OnDisconnectNotify((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_update_micro_focus(void* self) {
@@ -2059,8 +2063,8 @@ void q_groupbox_qbase_update_micro_focus(void* self) {
     QGroupBox_QBaseUpdateMicroFocus((QGroupBox*)self);
 }
 
-void q_groupbox_on_update_micro_focus(void* self, void (*slot)()) {
-    QGroupBox_OnUpdateMicroFocus((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_update_micro_focus(void* self, void (*callback)()) {
+    QGroupBox_OnUpdateMicroFocus((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_create(void* self) {
@@ -2071,8 +2075,8 @@ void q_groupbox_qbase_create(void* self) {
     QGroupBox_QBaseCreate((QGroupBox*)self);
 }
 
-void q_groupbox_on_create(void* self, void (*slot)()) {
-    QGroupBox_OnCreate((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_create(void* self, void (*callback)()) {
+    QGroupBox_OnCreate((QGroupBox*)self, (intptr_t)callback);
 }
 
 void q_groupbox_destroy(void* self) {
@@ -2083,8 +2087,8 @@ void q_groupbox_qbase_destroy(void* self) {
     QGroupBox_QBaseDestroy((QGroupBox*)self);
 }
 
-void q_groupbox_on_destroy(void* self, void (*slot)()) {
-    QGroupBox_OnDestroy((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_destroy(void* self, void (*callback)()) {
+    QGroupBox_OnDestroy((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_focus_next_child(void* self) {
@@ -2095,8 +2099,8 @@ bool q_groupbox_qbase_focus_next_child(void* self) {
     return QGroupBox_QBaseFocusNextChild((QGroupBox*)self);
 }
 
-void q_groupbox_on_focus_next_child(void* self, bool (*slot)()) {
-    QGroupBox_OnFocusNextChild((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_focus_next_child(void* self, bool (*callback)()) {
+    QGroupBox_OnFocusNextChild((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_focus_previous_child(void* self) {
@@ -2107,8 +2111,8 @@ bool q_groupbox_qbase_focus_previous_child(void* self) {
     return QGroupBox_QBaseFocusPreviousChild((QGroupBox*)self);
 }
 
-void q_groupbox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QGroupBox_OnFocusPreviousChild((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QGroupBox_OnFocusPreviousChild((QGroupBox*)self, (intptr_t)callback);
 }
 
 QObject* q_groupbox_sender(void* self) {
@@ -2119,8 +2123,8 @@ QObject* q_groupbox_qbase_sender(void* self) {
     return QGroupBox_QBaseSender((QGroupBox*)self);
 }
 
-void q_groupbox_on_sender(void* self, QObject* (*slot)()) {
-    QGroupBox_OnSender((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_sender(void* self, QObject* (*callback)()) {
+    QGroupBox_OnSender((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_sender_signal_index(void* self) {
@@ -2131,8 +2135,8 @@ int32_t q_groupbox_qbase_sender_signal_index(void* self) {
     return QGroupBox_QBaseSenderSignalIndex((QGroupBox*)self);
 }
 
-void q_groupbox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QGroupBox_OnSenderSignalIndex((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QGroupBox_OnSenderSignalIndex((QGroupBox*)self, (intptr_t)callback);
 }
 
 int32_t q_groupbox_receivers(void* self, const char* signal) {
@@ -2143,8 +2147,8 @@ int32_t q_groupbox_qbase_receivers(void* self, const char* signal) {
     return QGroupBox_QBaseReceivers((QGroupBox*)self, signal);
 }
 
-void q_groupbox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QGroupBox_OnReceivers((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QGroupBox_OnReceivers((QGroupBox*)self, (intptr_t)callback);
 }
 
 bool q_groupbox_is_signal_connected(void* self, void* signal) {
@@ -2155,8 +2159,8 @@ bool q_groupbox_qbase_is_signal_connected(void* self, void* signal) {
     return QGroupBox_QBaseIsSignalConnected((QGroupBox*)self, (QMetaMethod*)signal);
 }
 
-void q_groupbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QGroupBox_OnIsSignalConnected((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QGroupBox_OnIsSignalConnected((QGroupBox*)self, (intptr_t)callback);
 }
 
 double q_groupbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2167,12 +2171,12 @@ double q_groupbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
     return QGroupBox_QBaseGetDecodedMetricF((QGroupBox*)self, metricA, metricB);
 }
 
-void q_groupbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QGroupBox_OnGetDecodedMetricF((QGroupBox*)self, (intptr_t)slot);
+void q_groupbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QGroupBox_OnGetDecodedMetricF((QGroupBox*)self, (intptr_t)callback);
 }
 
-void q_groupbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_groupbox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_groupbox_delete(void* self) {

@@ -37,8 +37,8 @@ int32_t q_temporaryfile_metacall(void* self, int64_t param1, int param2, void* p
     return QTemporaryFile_Metacall((QTemporaryFile*)self, param1, param2, param3);
 }
 
-void q_temporaryfile_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTemporaryFile_OnMetacall((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTemporaryFile_OnMetacall((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int32_t q_temporaryfile_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -71,8 +71,8 @@ const char* q_temporaryfile_file_name(void* self) {
     return _ret;
 }
 
-void q_temporaryfile_on_file_name(void* self, const char* (*slot)()) {
-    QTemporaryFile_OnFileName((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_file_name(void* self, const char* (*callback)()) {
+    QTemporaryFile_OnFileName((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 const char* q_temporaryfile_qbase_file_name(void* self) {
@@ -109,8 +109,8 @@ bool q_temporaryfile_open2(void* self, int64_t flags) {
     return QTemporaryFile_Open2((QTemporaryFile*)self, flags);
 }
 
-void q_temporaryfile_on_open2(void* self, bool (*slot)(void*, int64_t)) {
-    QTemporaryFile_OnOpen2((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int64_t)) {
+    QTemporaryFile_OnOpen2((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_qbase_open2(void* self, int64_t flags) {
@@ -413,48 +413,48 @@ void q_temporaryfile_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_temporaryfile_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_temporaryfile_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_temporaryfile_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_temporaryfile_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_temporaryfile_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_temporaryfile_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_temporaryfile_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_temporaryfile_read_line1(void* self, long long maxlen) {
@@ -568,12 +568,16 @@ const char** q_temporaryfile_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_temporaryfile_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -591,8 +595,8 @@ void q_temporaryfile_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_temporaryfile_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_temporaryfile_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_temporaryfile_parent(void* self) {
@@ -627,8 +631,8 @@ void q_temporaryfile_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_temporaryfile_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_temporaryfile_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_size(void* self) {
@@ -639,8 +643,8 @@ long long q_temporaryfile_qbase_size(void* self) {
     return QTemporaryFile_QBaseSize((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_size(void* self, long long (*slot)()) {
-    QTemporaryFile_OnSize((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_size(void* self, long long (*callback)()) {
+    QTemporaryFile_OnSize((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_resize(void* self, long long sz) {
@@ -651,8 +655,8 @@ bool q_temporaryfile_qbase_resize(void* self, long long sz) {
     return QTemporaryFile_QBaseResize((QTemporaryFile*)self, sz);
 }
 
-void q_temporaryfile_on_resize(void* self, bool (*slot)(void*, long long)) {
-    QTemporaryFile_OnResize((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long)) {
+    QTemporaryFile_OnResize((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int64_t q_temporaryfile_permissions(void* self) {
@@ -663,8 +667,8 @@ int64_t q_temporaryfile_qbase_permissions(void* self) {
     return QTemporaryFile_QBasePermissions((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_permissions(void* self, int64_t (*slot)()) {
-    QTemporaryFile_OnPermissions((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_permissions(void* self, int64_t (*callback)()) {
+    QTemporaryFile_OnPermissions((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_set_permissions(void* self, int64_t permissionSpec) {
@@ -675,8 +679,8 @@ bool q_temporaryfile_qbase_set_permissions(void* self, int64_t permissionSpec) {
     return QTemporaryFile_QBaseSetPermissions((QTemporaryFile*)self, permissionSpec);
 }
 
-void q_temporaryfile_on_set_permissions(void* self, bool (*slot)(void*, int64_t)) {
-    QTemporaryFile_OnSetPermissions((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int64_t)) {
+    QTemporaryFile_OnSetPermissions((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_close(void* self) {
@@ -687,8 +691,8 @@ void q_temporaryfile_qbase_close(void* self) {
     QTemporaryFile_QBaseClose((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_close(void* self, void (*slot)()) {
-    QTemporaryFile_OnClose((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_close(void* self, void (*callback)()) {
+    QTemporaryFile_OnClose((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_is_sequential(void* self) {
@@ -699,8 +703,8 @@ bool q_temporaryfile_qbase_is_sequential(void* self) {
     return QTemporaryFile_QBaseIsSequential((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_is_sequential(void* self, bool (*slot)()) {
-    QTemporaryFile_OnIsSequential((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_is_sequential(void* self, bool (*callback)()) {
+    QTemporaryFile_OnIsSequential((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_pos(void* self) {
@@ -711,8 +715,8 @@ long long q_temporaryfile_qbase_pos(void* self) {
     return QTemporaryFile_QBasePos((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_pos(void* self, long long (*slot)()) {
-    QTemporaryFile_OnPos((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_pos(void* self, long long (*callback)()) {
+    QTemporaryFile_OnPos((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_seek(void* self, long long offset) {
@@ -723,8 +727,8 @@ bool q_temporaryfile_qbase_seek(void* self, long long offset) {
     return QTemporaryFile_QBaseSeek((QTemporaryFile*)self, offset);
 }
 
-void q_temporaryfile_on_seek(void* self, bool (*slot)(void*, long long)) {
-    QTemporaryFile_OnSeek((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, long long)) {
+    QTemporaryFile_OnSeek((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_at_end(void* self) {
@@ -735,8 +739,8 @@ bool q_temporaryfile_qbase_at_end(void* self) {
     return QTemporaryFile_QBaseAtEnd((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_at_end(void* self, bool (*slot)()) {
-    QTemporaryFile_OnAtEnd((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_at_end(void* self, bool (*callback)()) {
+    QTemporaryFile_OnAtEnd((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_read_data(void* self, char* data, long long maxlen) {
@@ -747,8 +751,8 @@ long long q_temporaryfile_qbase_read_data(void* self, char* data, long long maxl
     return QTemporaryFile_QBaseReadData((QTemporaryFile*)self, data, maxlen);
 }
 
-void q_temporaryfile_on_read_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QTemporaryFile_OnReadData((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QTemporaryFile_OnReadData((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_write_data(void* self, const char* data, long long lenVal) {
@@ -759,8 +763,8 @@ long long q_temporaryfile_qbase_write_data(void* self, const char* data, long lo
     return QTemporaryFile_QBaseWriteData((QTemporaryFile*)self, data, lenVal);
 }
 
-void q_temporaryfile_on_write_data(void* self, long long (*slot)(void*, const char*, long long)) {
-    QTemporaryFile_OnWriteData((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+    QTemporaryFile_OnWriteData((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_read_line_data(void* self, char* data, long long maxlen) {
@@ -771,8 +775,8 @@ long long q_temporaryfile_qbase_read_line_data(void* self, char* data, long long
     return QTemporaryFile_QBaseReadLineData((QTemporaryFile*)self, data, maxlen);
 }
 
-void q_temporaryfile_on_read_line_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QTemporaryFile_OnReadLineData((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QTemporaryFile_OnReadLineData((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_reset(void* self) {
@@ -783,8 +787,8 @@ bool q_temporaryfile_qbase_reset(void* self) {
     return QTemporaryFile_QBaseReset((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_reset(void* self, bool (*slot)()) {
-    QTemporaryFile_OnReset((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_reset(void* self, bool (*callback)()) {
+    QTemporaryFile_OnReset((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_bytes_available(void* self) {
@@ -795,8 +799,8 @@ long long q_temporaryfile_qbase_bytes_available(void* self) {
     return QTemporaryFile_QBaseBytesAvailable((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_bytes_available(void* self, long long (*slot)()) {
-    QTemporaryFile_OnBytesAvailable((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_bytes_available(void* self, long long (*callback)()) {
+    QTemporaryFile_OnBytesAvailable((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_bytes_to_write(void* self) {
@@ -807,8 +811,8 @@ long long q_temporaryfile_qbase_bytes_to_write(void* self) {
     return QTemporaryFile_QBaseBytesToWrite((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_bytes_to_write(void* self, long long (*slot)()) {
-    QTemporaryFile_OnBytesToWrite((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_bytes_to_write(void* self, long long (*callback)()) {
+    QTemporaryFile_OnBytesToWrite((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_can_read_line(void* self) {
@@ -819,8 +823,8 @@ bool q_temporaryfile_qbase_can_read_line(void* self) {
     return QTemporaryFile_QBaseCanReadLine((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_can_read_line(void* self, bool (*slot)()) {
-    QTemporaryFile_OnCanReadLine((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_can_read_line(void* self, bool (*callback)()) {
+    QTemporaryFile_OnCanReadLine((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_wait_for_ready_read(void* self, int msecs) {
@@ -831,8 +835,8 @@ bool q_temporaryfile_qbase_wait_for_ready_read(void* self, int msecs) {
     return QTemporaryFile_QBaseWaitForReadyRead((QTemporaryFile*)self, msecs);
 }
 
-void q_temporaryfile_on_wait_for_ready_read(void* self, bool (*slot)(void*, int)) {
-    QTemporaryFile_OnWaitForReadyRead((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
+    QTemporaryFile_OnWaitForReadyRead((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_wait_for_bytes_written(void* self, int msecs) {
@@ -843,8 +847,8 @@ bool q_temporaryfile_qbase_wait_for_bytes_written(void* self, int msecs) {
     return QTemporaryFile_QBaseWaitForBytesWritten((QTemporaryFile*)self, msecs);
 }
 
-void q_temporaryfile_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int)) {
-    QTemporaryFile_OnWaitForBytesWritten((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
+    QTemporaryFile_OnWaitForBytesWritten((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 long long q_temporaryfile_skip_data(void* self, long long maxSize) {
@@ -855,8 +859,8 @@ long long q_temporaryfile_qbase_skip_data(void* self, long long maxSize) {
     return QTemporaryFile_QBaseSkipData((QTemporaryFile*)self, maxSize);
 }
 
-void q_temporaryfile_on_skip_data(void* self, long long (*slot)(void*, long long)) {
-    QTemporaryFile_OnSkipData((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+    QTemporaryFile_OnSkipData((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_event(void* self, void* event) {
@@ -867,8 +871,8 @@ bool q_temporaryfile_qbase_event(void* self, void* event) {
     return QTemporaryFile_QBaseEvent((QTemporaryFile*)self, (QEvent*)event);
 }
 
-void q_temporaryfile_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTemporaryFile_OnEvent((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTemporaryFile_OnEvent((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_event_filter(void* self, void* watched, void* event) {
@@ -879,8 +883,8 @@ bool q_temporaryfile_qbase_event_filter(void* self, void* watched, void* event) 
     return QTemporaryFile_QBaseEventFilter((QTemporaryFile*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_temporaryfile_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTemporaryFile_OnEventFilter((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTemporaryFile_OnEventFilter((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_timer_event(void* self, void* event) {
@@ -891,8 +895,8 @@ void q_temporaryfile_qbase_timer_event(void* self, void* event) {
     QTemporaryFile_QBaseTimerEvent((QTemporaryFile*)self, (QTimerEvent*)event);
 }
 
-void q_temporaryfile_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTemporaryFile_OnTimerEvent((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTemporaryFile_OnTimerEvent((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_child_event(void* self, void* event) {
@@ -903,8 +907,8 @@ void q_temporaryfile_qbase_child_event(void* self, void* event) {
     QTemporaryFile_QBaseChildEvent((QTemporaryFile*)self, (QChildEvent*)event);
 }
 
-void q_temporaryfile_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTemporaryFile_OnChildEvent((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTemporaryFile_OnChildEvent((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_custom_event(void* self, void* event) {
@@ -915,8 +919,8 @@ void q_temporaryfile_qbase_custom_event(void* self, void* event) {
     QTemporaryFile_QBaseCustomEvent((QTemporaryFile*)self, (QEvent*)event);
 }
 
-void q_temporaryfile_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTemporaryFile_OnCustomEvent((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTemporaryFile_OnCustomEvent((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_connect_notify(void* self, void* signal) {
@@ -927,8 +931,8 @@ void q_temporaryfile_qbase_connect_notify(void* self, void* signal) {
     QTemporaryFile_QBaseConnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-void q_temporaryfile_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTemporaryFile_OnConnectNotify((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTemporaryFile_OnConnectNotify((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_disconnect_notify(void* self, void* signal) {
@@ -939,8 +943,8 @@ void q_temporaryfile_qbase_disconnect_notify(void* self, void* signal) {
     QTemporaryFile_QBaseDisconnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-void q_temporaryfile_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTemporaryFile_OnDisconnectNotify((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTemporaryFile_OnDisconnectNotify((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_set_open_mode(void* self, int64_t openMode) {
@@ -951,8 +955,8 @@ void q_temporaryfile_qbase_set_open_mode(void* self, int64_t openMode) {
     QTemporaryFile_QBaseSetOpenMode((QTemporaryFile*)self, openMode);
 }
 
-void q_temporaryfile_on_set_open_mode(void* self, void (*slot)(void*, int64_t)) {
-    QTemporaryFile_OnSetOpenMode((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+    QTemporaryFile_OnSetOpenMode((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_set_error_string(void* self, const char* errorString) {
@@ -963,8 +967,8 @@ void q_temporaryfile_qbase_set_error_string(void* self, const char* errorString)
     QTemporaryFile_QBaseSetErrorString((QTemporaryFile*)self, qstring(errorString));
 }
 
-void q_temporaryfile_on_set_error_string(void* self, void (*slot)(void*, const char*)) {
-    QTemporaryFile_OnSetErrorString((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
+    QTemporaryFile_OnSetErrorString((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 QObject* q_temporaryfile_sender(void* self) {
@@ -975,8 +979,8 @@ QObject* q_temporaryfile_qbase_sender(void* self) {
     return QTemporaryFile_QBaseSender((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_sender(void* self, QObject* (*slot)()) {
-    QTemporaryFile_OnSender((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_sender(void* self, QObject* (*callback)()) {
+    QTemporaryFile_OnSender((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int32_t q_temporaryfile_sender_signal_index(void* self) {
@@ -987,8 +991,8 @@ int32_t q_temporaryfile_qbase_sender_signal_index(void* self) {
     return QTemporaryFile_QBaseSenderSignalIndex((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTemporaryFile_OnSenderSignalIndex((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTemporaryFile_OnSenderSignalIndex((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 int32_t q_temporaryfile_receivers(void* self, const char* signal) {
@@ -999,8 +1003,8 @@ int32_t q_temporaryfile_qbase_receivers(void* self, const char* signal) {
     return QTemporaryFile_QBaseReceivers((QTemporaryFile*)self, signal);
 }
 
-void q_temporaryfile_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTemporaryFile_OnReceivers((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTemporaryFile_OnReceivers((QTemporaryFile*)self, (intptr_t)callback);
 }
 
 bool q_temporaryfile_is_signal_connected(void* self, void* signal) {
@@ -1011,12 +1015,12 @@ bool q_temporaryfile_qbase_is_signal_connected(void* self, void* signal) {
     return QTemporaryFile_QBaseIsSignalConnected((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-void q_temporaryfile_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTemporaryFile_OnIsSignalConnected((QTemporaryFile*)self, (intptr_t)slot);
+void q_temporaryfile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTemporaryFile_OnIsSignalConnected((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-void q_temporaryfile_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_temporaryfile_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_temporaryfile_delete(void* self) {

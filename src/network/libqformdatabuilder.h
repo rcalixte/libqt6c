@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,83 +15,97 @@
 
 /// q_formdatapartbuilder_new constructs a new QFormDataPartBuilder object.
 ///
-///
 QFormDataPartBuilder* q_formdatapartbuilder_new();
 
 /// q_formdatapartbuilder_new2 constructs a new QFormDataPartBuilder object.
 ///
-/// ``` QFormDataPartBuilder* param1 ```
+/// @param param1 QFormDataPartBuilder*
 QFormDataPartBuilder* q_formdatapartbuilder_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#swap)
 ///
-/// ``` QFormDataPartBuilder* self, QFormDataPartBuilder* other ```
+/// @param self QFormDataPartBuilder*
+/// @param other QFormDataPartBuilder*
 void q_formdatapartbuilder_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
-/// ``` QFormDataPartBuilder* self, const char* data ```
+/// @param self QFormDataPartBuilder*
+/// @param data const char*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body(void* self, const char* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
-/// ``` QFormDataPartBuilder* self, QIODevice* body ```
+/// @param self QFormDataPartBuilder*
+/// @param body QIODevice*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body_device(void* self, void* body);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setHeaders)
 ///
-/// ``` QFormDataPartBuilder* self, QHttpHeaders* headers ```
+/// @param self QFormDataPartBuilder*
+/// @param headers QHttpHeaders*
 QFormDataPartBuilder* q_formdatapartbuilder_set_headers(void* self, void* headers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
-/// ``` QFormDataPartBuilder* self, const char* data, char* fileName ```
+/// @param self QFormDataPartBuilder*
+/// @param data const char*
+/// @param fileName char*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body2(void* self, const char* data, char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBody)
 ///
-/// ``` QFormDataPartBuilder* self, const char* data, char* fileName, char* mimeType ```
+/// @param self QFormDataPartBuilder*
+/// @param data const char*
+/// @param fileName char*
+/// @param mimeType char*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body3(void* self, const char* data, char* fileName, char* mimeType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
-/// ``` QFormDataPartBuilder* self, QIODevice* body, char* fileName ```
+/// @param self QFormDataPartBuilder*
+/// @param body QIODevice*
+/// @param fileName char*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body_device2(void* self, void* body, char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#setBodyDevice)
 ///
-/// ``` QFormDataPartBuilder* self, QIODevice* body, char* fileName, char* mimeType ```
+/// @param self QFormDataPartBuilder*
+/// @param body QIODevice*
+/// @param fileName char*
+/// @param mimeType char*
 QFormDataPartBuilder* q_formdatapartbuilder_set_body_device3(void* self, void* body, char* fileName, char* mimeType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatapartbuilder.html#dtor.QFormDataPartBuilder)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFormDataPartBuilder* self ```
+/// @param self QFormDataPartBuilder*
 void q_formdatapartbuilder_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qformdatabuilder.html
 
 /// q_formdatabuilder_new constructs a new QFormDataBuilder object.
 ///
-///
 QFormDataBuilder* q_formdatabuilder_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatabuilder.html#swap)
 ///
-/// ``` QFormDataBuilder* self, QFormDataBuilder* other ```
+/// @param self QFormDataBuilder*
+/// @param other QFormDataBuilder*
 void q_formdatabuilder_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatabuilder.html#part)
 ///
-/// ``` QFormDataBuilder* self, char* name ```
+/// @param self QFormDataBuilder*
+/// @param name char*
 QFormDataPartBuilder* q_formdatabuilder_part(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qformdatabuilder.html#dtor.QFormDataBuilder)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFormDataBuilder* self ```
+/// @param self QFormDataBuilder*
 void q_formdatabuilder_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qformdatabuilder.html#types

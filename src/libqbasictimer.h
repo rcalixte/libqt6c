@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,49 +15,56 @@
 
 /// q_basictimer_new constructs a new QBasicTimer object.
 ///
-///
 QBasicTimer* q_basictimer_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#swap)
 ///
-/// ``` QBasicTimer* self, QBasicTimer* other ```
+/// @param self QBasicTimer*
+/// @param other QBasicTimer*
 void q_basictimer_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#isActive)
 ///
-/// ``` QBasicTimer* self ```
+/// @param self QBasicTimer*
 bool q_basictimer_is_active(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#timerId)
 ///
-/// ``` QBasicTimer* self ```
+/// @param self QBasicTimer*
 int32_t q_basictimer_timer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#id)
 ///
-/// ``` QBasicTimer* self ```
+/// @param self QBasicTimer*
+///
+/// @return enum Qt__TimerId
 int64_t q_basictimer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#start)
 ///
-/// ``` QBasicTimer* self, int msec, QObject* obj ```
+/// @param self QBasicTimer*
+/// @param msec int
+/// @param obj QObject*
 void q_basictimer_start(void* self, int msec, void* obj);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#start)
 ///
-/// ``` QBasicTimer* self, int msec, enum Qt__TimerType timerType, QObject* obj ```
+/// @param self QBasicTimer*
+/// @param msec int
+/// @param timerType enum Qt__TimerType
+/// @param obj QObject*
 void q_basictimer_start2(void* self, int msec, int64_t timerType, void* obj);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#stop)
 ///
-/// ``` QBasicTimer* self ```
+/// @param self QBasicTimer*
 void q_basictimer_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#dtor.QBasicTimer)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QBasicTimer* self ```
+/// @param self QBasicTimer*
 void q_basictimer_delete(void* self);
 
 #endif

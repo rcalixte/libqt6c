@@ -55,8 +55,8 @@ int32_t q_filedialog_metacall(void* self, int64_t param1, int param2, void* para
     return QFileDialog_Metacall((QFileDialog*)self, param1, param2, param3);
 }
 
-void q_filedialog_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QFileDialog_OnMetacall((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QFileDialog_OnMetacall((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -98,12 +98,16 @@ const char** q_filedialog_selected_files(void* self) {
     libqt_list _arr = QFileDialog_SelectedFiles((QFileDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_selected_files");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -124,24 +128,33 @@ void q_filedialog_set_name_filter(void* self, const char* filter) {
 
 void q_filedialog_set_name_filters(void* self, const char* filters[]) {
     size_t filters_len = libqt_strv_length(filters);
-    libqt_string* filters_qstr = malloc(filters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < filters_len; ++_i) {
-        filters_qstr[_i] = qstring(filters[_i]);
+    libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
+    if (filters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_set_name_filters");
+        abort();
+    }
+    for (size_t i = 0; i < filters_len; ++i) {
+        filters_qstr[i] = qstring(filters[i]);
     }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetNameFilters((QFileDialog*)self, filters_list);
+    free(filters_qstr);
 }
 
 const char** q_filedialog_name_filters(void* self) {
     libqt_list _arr = QFileDialog_NameFilters((QFileDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_name_filters");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -167,24 +180,33 @@ const char* q_filedialog_selected_name_filter(void* self) {
 
 void q_filedialog_set_mime_type_filters(void* self, const char* filters[]) {
     size_t filters_len = libqt_strv_length(filters);
-    libqt_string* filters_qstr = malloc(filters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < filters_len; ++_i) {
-        filters_qstr[_i] = qstring(filters[_i]);
+    libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
+    if (filters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_set_mime_type_filters");
+        abort();
+    }
+    for (size_t i = 0; i < filters_len; ++i) {
+        filters_qstr[i] = qstring(filters[i]);
     }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
     QFileDialog_SetMimeTypeFilters((QFileDialog*)self, filters_list);
+    free(filters_qstr);
 }
 
 const char** q_filedialog_mime_type_filters(void* self) {
     libqt_list _arr = QFileDialog_MimeTypeFilters((QFileDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_mime_type_filters");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -259,24 +281,33 @@ const char* q_filedialog_default_suffix(void* self) {
 
 void q_filedialog_set_history(void* self, const char* paths[]) {
     size_t paths_len = libqt_strv_length(paths);
-    libqt_string* paths_qstr = malloc(paths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < paths_len; ++_i) {
-        paths_qstr[_i] = qstring(paths[_i]);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_set_history");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     QFileDialog_SetHistory((QFileDialog*)self, paths_list);
+    free(paths_qstr);
 }
 
 const char** q_filedialog_history(void* self) {
     libqt_list _arr = QFileDialog_History((QFileDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_history");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -311,24 +342,33 @@ const char* q_filedialog_label_text(void* self, int64_t label) {
 
 void q_filedialog_set_supported_schemes(void* self, const char* schemes[]) {
     size_t schemes_len = libqt_strv_length(schemes);
-    libqt_string* schemes_qstr = malloc(schemes_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < schemes_len; ++_i) {
-        schemes_qstr[_i] = qstring(schemes[_i]);
+    libqt_string* schemes_qstr = (libqt_string*)malloc(schemes_len * sizeof(libqt_string));
+    if (schemes_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_set_supported_schemes");
+        abort();
+    }
+    for (size_t i = 0; i < schemes_len; ++i) {
+        schemes_qstr[i] = qstring(schemes[i]);
     }
     libqt_list schemes_list = qlist(schemes_qstr, schemes_len);
     QFileDialog_SetSupportedSchemes((QFileDialog*)self, schemes_list);
+    free(schemes_qstr);
 }
 
 const char** q_filedialog_supported_schemes(void* self) {
     libqt_list _arr = QFileDialog_SupportedSchemes((QFileDialog*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_supported_schemes");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -362,8 +402,8 @@ void q_filedialog_set_visible(void* self, bool visible) {
     QFileDialog_SetVisible((QFileDialog*)self, visible);
 }
 
-void q_filedialog_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QFileDialog_OnSetVisible((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QFileDialog_OnSetVisible((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_qbase_set_visible(void* self, bool visible) {
@@ -374,78 +414,83 @@ void q_filedialog_file_selected(void* self, const char* file) {
     QFileDialog_FileSelected((QFileDialog*)self, qstring(file));
 }
 
-void q_filedialog_on_file_selected(void* self, void (*slot)(void*, const char*)) {
-    QFileDialog_Connect_FileSelected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_file_selected(void* self, void (*callback)(void*, const char*)) {
+    QFileDialog_Connect_FileSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_files_selected(void* self, const char* files[]) {
     size_t files_len = libqt_strv_length(files);
-    libqt_string* files_qstr = malloc(files_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < files_len; ++_i) {
-        files_qstr[_i] = qstring(files[_i]);
+    libqt_string* files_qstr = (libqt_string*)malloc(files_len * sizeof(libqt_string));
+    if (files_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_files_selected");
+        abort();
+    }
+    for (size_t i = 0; i < files_len; ++i) {
+        files_qstr[i] = qstring(files[i]);
     }
     libqt_list files_list = qlist(files_qstr, files_len);
     QFileDialog_FilesSelected((QFileDialog*)self, files_list);
+    free(files_qstr);
 }
 
-void q_filedialog_on_files_selected(void* self, void (*slot)(void*, const char*)) {
-    QFileDialog_Connect_FilesSelected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_files_selected(void* self, void (*callback)(void*, const char**)) {
+    QFileDialog_Connect_FilesSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_current_changed(void* self, const char* path) {
     QFileDialog_CurrentChanged((QFileDialog*)self, qstring(path));
 }
 
-void q_filedialog_on_current_changed(void* self, void (*slot)(void*, const char*)) {
-    QFileDialog_Connect_CurrentChanged((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_current_changed(void* self, void (*callback)(void*, const char*)) {
+    QFileDialog_Connect_CurrentChanged((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_directory_entered(void* self, const char* directory) {
     QFileDialog_DirectoryEntered((QFileDialog*)self, qstring(directory));
 }
 
-void q_filedialog_on_directory_entered(void* self, void (*slot)(void*, const char*)) {
-    QFileDialog_Connect_DirectoryEntered((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_directory_entered(void* self, void (*callback)(void*, const char*)) {
+    QFileDialog_Connect_DirectoryEntered((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_url_selected(void* self, void* url) {
     QFileDialog_UrlSelected((QFileDialog*)self, (QUrl*)url);
 }
 
-void q_filedialog_on_url_selected(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_Connect_UrlSelected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_url_selected(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_Connect_UrlSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_urls_selected(void* self, libqt_list urls) {
     QFileDialog_UrlsSelected((QFileDialog*)self, urls);
 }
 
-void q_filedialog_on_urls_selected(void* self, void (*slot)(void*, libqt_list)) {
-    QFileDialog_Connect_UrlsSelected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_urls_selected(void* self, void (*callback)(void*, libqt_list)) {
+    QFileDialog_Connect_UrlsSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_current_url_changed(void* self, void* url) {
     QFileDialog_CurrentUrlChanged((QFileDialog*)self, (QUrl*)url);
 }
 
-void q_filedialog_on_current_url_changed(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_Connect_CurrentUrlChanged((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_current_url_changed(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_Connect_CurrentUrlChanged((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_directory_url_entered(void* self, void* directory) {
     QFileDialog_DirectoryUrlEntered((QFileDialog*)self, (QUrl*)directory);
 }
 
-void q_filedialog_on_directory_url_entered(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_Connect_DirectoryUrlEntered((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_directory_url_entered(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_Connect_DirectoryUrlEntered((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_filter_selected(void* self, const char* filter) {
     QFileDialog_FilterSelected((QFileDialog*)self, qstring(filter));
 }
 
-void q_filedialog_on_filter_selected(void* self, void (*slot)(void*, const char*)) {
-    QFileDialog_Connect_FilterSelected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_filter_selected(void* self, void (*callback)(void*, const char*)) {
+    QFileDialog_Connect_FilterSelected((QFileDialog*)self, (intptr_t)callback);
 }
 
 const char* q_filedialog_get_open_file_name() {
@@ -485,12 +530,16 @@ const char** q_filedialog_get_open_file_names() {
     libqt_list _arr = QFileDialog_GetOpenFileNames();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -509,8 +558,8 @@ void q_filedialog_done(void* self, int result) {
     QFileDialog_Done((QFileDialog*)self, result);
 }
 
-void q_filedialog_on_done(void* self, void (*slot)(void*, int)) {
-    QFileDialog_OnDone((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_done(void* self, void (*callback)(void*, int)) {
+    QFileDialog_OnDone((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_qbase_done(void* self, int result) {
@@ -521,8 +570,8 @@ void q_filedialog_accept(void* self) {
     QFileDialog_Accept((QFileDialog*)self);
 }
 
-void q_filedialog_on_accept(void* self, void (*slot)()) {
-    QFileDialog_OnAccept((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_accept(void* self, void (*callback)()) {
+    QFileDialog_OnAccept((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_qbase_accept(void* self) {
@@ -533,8 +582,8 @@ void q_filedialog_change_event(void* self, void* e) {
     QFileDialog_ChangeEvent((QFileDialog*)self, (QEvent*)e);
 }
 
-void q_filedialog_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnChangeEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnChangeEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_qbase_change_event(void* self, void* e) {
@@ -693,24 +742,34 @@ QUrl* q_filedialog_get_existing_directory_url4(void* parent, const char* caption
 
 QUrl* q_filedialog_get_existing_directory_url5(void* parent, const char* caption, void* dir, int64_t options, const char* supportedSchemes[]) {
     size_t supportedSchemes_len = libqt_strv_length(supportedSchemes);
-    libqt_string* supportedSchemes_qstr = malloc(supportedSchemes_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < supportedSchemes_len; ++_i) {
-        supportedSchemes_qstr[_i] = qstring(supportedSchemes[_i]);
+    libqt_string* supportedSchemes_qstr = (libqt_string*)malloc(supportedSchemes_len * sizeof(libqt_string));
+    if (supportedSchemes_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_existing_directory_url5");
+        abort();
+    }
+    for (size_t i = 0; i < supportedSchemes_len; ++i) {
+        supportedSchemes_qstr[i] = qstring(supportedSchemes[i]);
     }
     libqt_list supportedSchemes_list = qlist(supportedSchemes_qstr, supportedSchemes_len);
-    return QFileDialog_GetExistingDirectoryUrl5((QWidget*)parent, qstring(caption), (QUrl*)dir, options, supportedSchemes_list);
+    QUrl* _out = QFileDialog_GetExistingDirectoryUrl5((QWidget*)parent, qstring(caption), (QUrl*)dir, options, supportedSchemes_list);
+    free(supportedSchemes_qstr);
+    return _out;
 }
 
 const char** q_filedialog_get_open_file_names1(void* parent) {
     libqt_list _arr = QFileDialog_GetOpenFileNames1((QWidget*)parent);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names1");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -720,12 +779,16 @@ const char** q_filedialog_get_open_file_names2(void* parent, const char* caption
     libqt_list _arr = QFileDialog_GetOpenFileNames2((QWidget*)parent, qstring(caption));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names2");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -735,12 +798,16 @@ const char** q_filedialog_get_open_file_names3(void* parent, const char* caption
     libqt_list _arr = QFileDialog_GetOpenFileNames3((QWidget*)parent, qstring(caption), qstring(dir));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names3");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -750,12 +817,16 @@ const char** q_filedialog_get_open_file_names4(void* parent, const char* caption
     libqt_list _arr = QFileDialog_GetOpenFileNames4((QWidget*)parent, qstring(caption), qstring(dir), qstring(filter));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_get_open_file_names4");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -809,24 +880,24 @@ void q_filedialog_finished(void* self, int result) {
     QDialog_Finished((QDialog*)self, result);
 }
 
-void q_filedialog_on_finished(void* self, void (*slot)(void*, int)) {
-    QDialog_Connect_Finished((QDialog*)self, (intptr_t)slot);
+void q_filedialog_on_finished(void* self, void (*callback)(void*, int)) {
+    QDialog_Connect_Finished((QDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_accepted(void* self) {
     QDialog_Accepted((QDialog*)self);
 }
 
-void q_filedialog_on_accepted(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)slot);
+void q_filedialog_on_accepted(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_rejected(void* self) {
     QDialog_Rejected((QDialog*)self);
 }
 
-void q_filedialog_on_rejected(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)slot);
+void q_filedialog_on_rejected(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
 uintptr_t q_filedialog_win_id(void* self) {
@@ -1855,32 +1926,32 @@ void q_filedialog_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_filedialog_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_filedialog_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_filedialog_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_filedialog_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_filedialog_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_filedialog_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_filedialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_filedialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_filedialog_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_filedialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_filedialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_filedialog_input_method_hints(void* self) {
@@ -2051,12 +2122,16 @@ const char** q_filedialog_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_filedialog_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2074,8 +2149,8 @@ void q_filedialog_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_filedialog_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_filedialog_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_filedialog_parent(void* self) {
@@ -2110,8 +2185,8 @@ void q_filedialog_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_filedialog_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_filedialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_painting_active(void* self) {
@@ -2174,8 +2249,8 @@ QSize* q_filedialog_qbase_size_hint(void* self) {
     return QFileDialog_QBaseSizeHint((QFileDialog*)self);
 }
 
-void q_filedialog_on_size_hint(void* self, QSize* (*slot)()) {
-    QFileDialog_OnSizeHint((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_size_hint(void* self, QSize* (*callback)()) {
+    QFileDialog_OnSizeHint((QFileDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_filedialog_minimum_size_hint(void* self) {
@@ -2186,8 +2261,8 @@ QSize* q_filedialog_qbase_minimum_size_hint(void* self) {
     return QFileDialog_QBaseMinimumSizeHint((QFileDialog*)self);
 }
 
-void q_filedialog_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QFileDialog_OnMinimumSizeHint((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QFileDialog_OnMinimumSizeHint((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_open(void* self) {
@@ -2198,8 +2273,8 @@ void q_filedialog_qbase_open(void* self) {
     QFileDialog_QBaseOpen((QFileDialog*)self);
 }
 
-void q_filedialog_on_open(void* self, void (*slot)()) {
-    QFileDialog_OnOpen((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_open(void* self, void (*callback)()) {
+    QFileDialog_OnOpen((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_exec(void* self) {
@@ -2210,8 +2285,8 @@ int32_t q_filedialog_qbase_exec(void* self) {
     return QFileDialog_QBaseExec((QFileDialog*)self);
 }
 
-void q_filedialog_on_exec(void* self, int32_t (*slot)()) {
-    QFileDialog_OnExec((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_exec(void* self, int32_t (*callback)()) {
+    QFileDialog_OnExec((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_reject(void* self) {
@@ -2222,8 +2297,8 @@ void q_filedialog_qbase_reject(void* self) {
     QFileDialog_QBaseReject((QFileDialog*)self);
 }
 
-void q_filedialog_on_reject(void* self, void (*slot)()) {
-    QFileDialog_OnReject((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_reject(void* self, void (*callback)()) {
+    QFileDialog_OnReject((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_key_press_event(void* self, void* param1) {
@@ -2234,8 +2309,8 @@ void q_filedialog_qbase_key_press_event(void* self, void* param1) {
     QFileDialog_QBaseKeyPressEvent((QFileDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_filedialog_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnKeyPressEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnKeyPressEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_close_event(void* self, void* param1) {
@@ -2246,8 +2321,8 @@ void q_filedialog_qbase_close_event(void* self, void* param1) {
     QFileDialog_QBaseCloseEvent((QFileDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_filedialog_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnCloseEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnCloseEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_show_event(void* self, void* param1) {
@@ -2258,8 +2333,8 @@ void q_filedialog_qbase_show_event(void* self, void* param1) {
     QFileDialog_QBaseShowEvent((QFileDialog*)self, (QShowEvent*)param1);
 }
 
-void q_filedialog_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnShowEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnShowEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_resize_event(void* self, void* param1) {
@@ -2270,8 +2345,8 @@ void q_filedialog_qbase_resize_event(void* self, void* param1) {
     QFileDialog_QBaseResizeEvent((QFileDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_filedialog_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnResizeEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnResizeEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_context_menu_event(void* self, void* param1) {
@@ -2282,8 +2357,8 @@ void q_filedialog_qbase_context_menu_event(void* self, void* param1) {
     QFileDialog_QBaseContextMenuEvent((QFileDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_filedialog_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnContextMenuEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnContextMenuEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_event_filter(void* self, void* param1, void* param2) {
@@ -2294,8 +2369,8 @@ bool q_filedialog_qbase_event_filter(void* self, void* param1, void* param2) {
     return QFileDialog_QBaseEventFilter((QFileDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_filedialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QFileDialog_OnEventFilter((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QFileDialog_OnEventFilter((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_dev_type(void* self) {
@@ -2306,8 +2381,8 @@ int32_t q_filedialog_qbase_dev_type(void* self) {
     return QFileDialog_QBaseDevType((QFileDialog*)self);
 }
 
-void q_filedialog_on_dev_type(void* self, int32_t (*slot)()) {
-    QFileDialog_OnDevType((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_dev_type(void* self, int32_t (*callback)()) {
+    QFileDialog_OnDevType((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_height_for_width(void* self, int param1) {
@@ -2318,8 +2393,8 @@ int32_t q_filedialog_qbase_height_for_width(void* self, int param1) {
     return QFileDialog_QBaseHeightForWidth((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QFileDialog_OnHeightForWidth((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QFileDialog_OnHeightForWidth((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_has_height_for_width(void* self) {
@@ -2330,8 +2405,8 @@ bool q_filedialog_qbase_has_height_for_width(void* self) {
     return QFileDialog_QBaseHasHeightForWidth((QFileDialog*)self);
 }
 
-void q_filedialog_on_has_height_for_width(void* self, bool (*slot)()) {
-    QFileDialog_OnHasHeightForWidth((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_has_height_for_width(void* self, bool (*callback)()) {
+    QFileDialog_OnHasHeightForWidth((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_filedialog_paint_engine(void* self) {
@@ -2342,8 +2417,8 @@ QPaintEngine* q_filedialog_qbase_paint_engine(void* self) {
     return QFileDialog_QBasePaintEngine((QFileDialog*)self);
 }
 
-void q_filedialog_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QFileDialog_OnPaintEngine((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QFileDialog_OnPaintEngine((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_event(void* self, void* event) {
@@ -2354,8 +2429,8 @@ bool q_filedialog_qbase_event(void* self, void* event) {
     return QFileDialog_QBaseEvent((QFileDialog*)self, (QEvent*)event);
 }
 
-void q_filedialog_on_event(void* self, bool (*slot)(void*, void*)) {
-    QFileDialog_OnEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_event(void* self, bool (*callback)(void*, void*)) {
+    QFileDialog_OnEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_mouse_press_event(void* self, void* event) {
@@ -2366,8 +2441,8 @@ void q_filedialog_qbase_mouse_press_event(void* self, void* event) {
     QFileDialog_QBaseMousePressEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnMousePressEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnMousePressEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_mouse_release_event(void* self, void* event) {
@@ -2378,8 +2453,8 @@ void q_filedialog_qbase_mouse_release_event(void* self, void* event) {
     QFileDialog_QBaseMouseReleaseEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnMouseReleaseEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnMouseReleaseEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_mouse_double_click_event(void* self, void* event) {
@@ -2390,8 +2465,8 @@ void q_filedialog_qbase_mouse_double_click_event(void* self, void* event) {
     QFileDialog_QBaseMouseDoubleClickEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnMouseDoubleClickEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnMouseDoubleClickEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_mouse_move_event(void* self, void* event) {
@@ -2402,8 +2477,8 @@ void q_filedialog_qbase_mouse_move_event(void* self, void* event) {
     QFileDialog_QBaseMouseMoveEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnMouseMoveEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnMouseMoveEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_wheel_event(void* self, void* event) {
@@ -2414,8 +2489,8 @@ void q_filedialog_qbase_wheel_event(void* self, void* event) {
     QFileDialog_QBaseWheelEvent((QFileDialog*)self, (QWheelEvent*)event);
 }
 
-void q_filedialog_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnWheelEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnWheelEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_key_release_event(void* self, void* event) {
@@ -2426,8 +2501,8 @@ void q_filedialog_qbase_key_release_event(void* self, void* event) {
     QFileDialog_QBaseKeyReleaseEvent((QFileDialog*)self, (QKeyEvent*)event);
 }
 
-void q_filedialog_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnKeyReleaseEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnKeyReleaseEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_focus_in_event(void* self, void* event) {
@@ -2438,8 +2513,8 @@ void q_filedialog_qbase_focus_in_event(void* self, void* event) {
     QFileDialog_QBaseFocusInEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
-void q_filedialog_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnFocusInEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnFocusInEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_focus_out_event(void* self, void* event) {
@@ -2450,8 +2525,8 @@ void q_filedialog_qbase_focus_out_event(void* self, void* event) {
     QFileDialog_QBaseFocusOutEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
-void q_filedialog_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnFocusOutEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnFocusOutEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_enter_event(void* self, void* event) {
@@ -2462,8 +2537,8 @@ void q_filedialog_qbase_enter_event(void* self, void* event) {
     QFileDialog_QBaseEnterEvent((QFileDialog*)self, (QEnterEvent*)event);
 }
 
-void q_filedialog_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnEnterEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnEnterEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_leave_event(void* self, void* event) {
@@ -2474,8 +2549,8 @@ void q_filedialog_qbase_leave_event(void* self, void* event) {
     QFileDialog_QBaseLeaveEvent((QFileDialog*)self, (QEvent*)event);
 }
 
-void q_filedialog_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnLeaveEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnLeaveEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_paint_event(void* self, void* event) {
@@ -2486,8 +2561,8 @@ void q_filedialog_qbase_paint_event(void* self, void* event) {
     QFileDialog_QBasePaintEvent((QFileDialog*)self, (QPaintEvent*)event);
 }
 
-void q_filedialog_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnPaintEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnPaintEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_move_event(void* self, void* event) {
@@ -2498,8 +2573,8 @@ void q_filedialog_qbase_move_event(void* self, void* event) {
     QFileDialog_QBaseMoveEvent((QFileDialog*)self, (QMoveEvent*)event);
 }
 
-void q_filedialog_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnMoveEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnMoveEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_tablet_event(void* self, void* event) {
@@ -2510,8 +2585,8 @@ void q_filedialog_qbase_tablet_event(void* self, void* event) {
     QFileDialog_QBaseTabletEvent((QFileDialog*)self, (QTabletEvent*)event);
 }
 
-void q_filedialog_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnTabletEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnTabletEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_action_event(void* self, void* event) {
@@ -2522,8 +2597,8 @@ void q_filedialog_qbase_action_event(void* self, void* event) {
     QFileDialog_QBaseActionEvent((QFileDialog*)self, (QActionEvent*)event);
 }
 
-void q_filedialog_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnActionEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnActionEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_drag_enter_event(void* self, void* event) {
@@ -2534,8 +2609,8 @@ void q_filedialog_qbase_drag_enter_event(void* self, void* event) {
     QFileDialog_QBaseDragEnterEvent((QFileDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_filedialog_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnDragEnterEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnDragEnterEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_drag_move_event(void* self, void* event) {
@@ -2546,8 +2621,8 @@ void q_filedialog_qbase_drag_move_event(void* self, void* event) {
     QFileDialog_QBaseDragMoveEvent((QFileDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_filedialog_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnDragMoveEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnDragMoveEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_drag_leave_event(void* self, void* event) {
@@ -2558,8 +2633,8 @@ void q_filedialog_qbase_drag_leave_event(void* self, void* event) {
     QFileDialog_QBaseDragLeaveEvent((QFileDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_filedialog_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnDragLeaveEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnDragLeaveEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_drop_event(void* self, void* event) {
@@ -2570,8 +2645,8 @@ void q_filedialog_qbase_drop_event(void* self, void* event) {
     QFileDialog_QBaseDropEvent((QFileDialog*)self, (QDropEvent*)event);
 }
 
-void q_filedialog_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnDropEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnDropEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_hide_event(void* self, void* event) {
@@ -2582,8 +2657,8 @@ void q_filedialog_qbase_hide_event(void* self, void* event) {
     QFileDialog_QBaseHideEvent((QFileDialog*)self, (QHideEvent*)event);
 }
 
-void q_filedialog_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnHideEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnHideEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2594,8 +2669,8 @@ bool q_filedialog_qbase_native_event(void* self, const char* eventType, void* me
     return QFileDialog_QBaseNativeEvent((QFileDialog*)self, qstring(eventType), message, result);
 }
 
-void q_filedialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QFileDialog_OnNativeEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QFileDialog_OnNativeEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_metric(void* self, int64_t param1) {
@@ -2606,8 +2681,8 @@ int32_t q_filedialog_qbase_metric(void* self, int64_t param1) {
     return QFileDialog_QBaseMetric((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QFileDialog_OnMetric((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QFileDialog_OnMetric((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_init_painter(void* self, void* painter) {
@@ -2618,8 +2693,8 @@ void q_filedialog_qbase_init_painter(void* self, void* painter) {
     QFileDialog_QBaseInitPainter((QFileDialog*)self, (QPainter*)painter);
 }
 
-void q_filedialog_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnInitPainter((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnInitPainter((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_filedialog_redirected(void* self, void* offset) {
@@ -2630,8 +2705,8 @@ QPaintDevice* q_filedialog_qbase_redirected(void* self, void* offset) {
     return QFileDialog_QBaseRedirected((QFileDialog*)self, (QPoint*)offset);
 }
 
-void q_filedialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QFileDialog_OnRedirected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QFileDialog_OnRedirected((QFileDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_filedialog_shared_painter(void* self) {
@@ -2642,8 +2717,8 @@ QPainter* q_filedialog_qbase_shared_painter(void* self) {
     return QFileDialog_QBaseSharedPainter((QFileDialog*)self);
 }
 
-void q_filedialog_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QFileDialog_OnSharedPainter((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QFileDialog_OnSharedPainter((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_input_method_event(void* self, void* param1) {
@@ -2654,8 +2729,8 @@ void q_filedialog_qbase_input_method_event(void* self, void* param1) {
     QFileDialog_QBaseInputMethodEvent((QFileDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_filedialog_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnInputMethodEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnInputMethodEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 QVariant* q_filedialog_input_method_query(void* self, int64_t param1) {
@@ -2666,8 +2741,8 @@ QVariant* q_filedialog_qbase_input_method_query(void* self, int64_t param1) {
     return QFileDialog_QBaseInputMethodQuery((QFileDialog*)self, param1);
 }
 
-void q_filedialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QFileDialog_OnInputMethodQuery((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QFileDialog_OnInputMethodQuery((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_focus_next_prev_child(void* self, bool next) {
@@ -2678,8 +2753,8 @@ bool q_filedialog_qbase_focus_next_prev_child(void* self, bool next) {
     return QFileDialog_QBaseFocusNextPrevChild((QFileDialog*)self, next);
 }
 
-void q_filedialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QFileDialog_OnFocusNextPrevChild((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QFileDialog_OnFocusNextPrevChild((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_timer_event(void* self, void* event) {
@@ -2690,8 +2765,8 @@ void q_filedialog_qbase_timer_event(void* self, void* event) {
     QFileDialog_QBaseTimerEvent((QFileDialog*)self, (QTimerEvent*)event);
 }
 
-void q_filedialog_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnTimerEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnTimerEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_child_event(void* self, void* event) {
@@ -2702,8 +2777,8 @@ void q_filedialog_qbase_child_event(void* self, void* event) {
     QFileDialog_QBaseChildEvent((QFileDialog*)self, (QChildEvent*)event);
 }
 
-void q_filedialog_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnChildEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnChildEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_custom_event(void* self, void* event) {
@@ -2714,8 +2789,8 @@ void q_filedialog_qbase_custom_event(void* self, void* event) {
     QFileDialog_QBaseCustomEvent((QFileDialog*)self, (QEvent*)event);
 }
 
-void q_filedialog_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnCustomEvent((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnCustomEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_connect_notify(void* self, void* signal) {
@@ -2726,8 +2801,8 @@ void q_filedialog_qbase_connect_notify(void* self, void* signal) {
     QFileDialog_QBaseConnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_filedialog_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnConnectNotify((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnConnectNotify((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_disconnect_notify(void* self, void* signal) {
@@ -2738,8 +2813,8 @@ void q_filedialog_qbase_disconnect_notify(void* self, void* signal) {
     QFileDialog_QBaseDisconnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_filedialog_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnDisconnectNotify((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnDisconnectNotify((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_adjust_position(void* self, void* param1) {
@@ -2750,8 +2825,8 @@ void q_filedialog_qbase_adjust_position(void* self, void* param1) {
     QFileDialog_QBaseAdjustPosition((QFileDialog*)self, (QWidget*)param1);
 }
 
-void q_filedialog_on_adjust_position(void* self, void (*slot)(void*, void*)) {
-    QFileDialog_OnAdjustPosition((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
+    QFileDialog_OnAdjustPosition((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_update_micro_focus(void* self) {
@@ -2762,8 +2837,8 @@ void q_filedialog_qbase_update_micro_focus(void* self) {
     QFileDialog_QBaseUpdateMicroFocus((QFileDialog*)self);
 }
 
-void q_filedialog_on_update_micro_focus(void* self, void (*slot)()) {
-    QFileDialog_OnUpdateMicroFocus((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_update_micro_focus(void* self, void (*callback)()) {
+    QFileDialog_OnUpdateMicroFocus((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_create(void* self) {
@@ -2774,8 +2849,8 @@ void q_filedialog_qbase_create(void* self) {
     QFileDialog_QBaseCreate((QFileDialog*)self);
 }
 
-void q_filedialog_on_create(void* self, void (*slot)()) {
-    QFileDialog_OnCreate((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_create(void* self, void (*callback)()) {
+    QFileDialog_OnCreate((QFileDialog*)self, (intptr_t)callback);
 }
 
 void q_filedialog_destroy(void* self) {
@@ -2786,8 +2861,8 @@ void q_filedialog_qbase_destroy(void* self) {
     QFileDialog_QBaseDestroy((QFileDialog*)self);
 }
 
-void q_filedialog_on_destroy(void* self, void (*slot)()) {
-    QFileDialog_OnDestroy((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_destroy(void* self, void (*callback)()) {
+    QFileDialog_OnDestroy((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_focus_next_child(void* self) {
@@ -2798,8 +2873,8 @@ bool q_filedialog_qbase_focus_next_child(void* self) {
     return QFileDialog_QBaseFocusNextChild((QFileDialog*)self);
 }
 
-void q_filedialog_on_focus_next_child(void* self, bool (*slot)()) {
-    QFileDialog_OnFocusNextChild((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_focus_next_child(void* self, bool (*callback)()) {
+    QFileDialog_OnFocusNextChild((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_focus_previous_child(void* self) {
@@ -2810,8 +2885,8 @@ bool q_filedialog_qbase_focus_previous_child(void* self) {
     return QFileDialog_QBaseFocusPreviousChild((QFileDialog*)self);
 }
 
-void q_filedialog_on_focus_previous_child(void* self, bool (*slot)()) {
-    QFileDialog_OnFocusPreviousChild((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_focus_previous_child(void* self, bool (*callback)()) {
+    QFileDialog_OnFocusPreviousChild((QFileDialog*)self, (intptr_t)callback);
 }
 
 QObject* q_filedialog_sender(void* self) {
@@ -2822,8 +2897,8 @@ QObject* q_filedialog_qbase_sender(void* self) {
     return QFileDialog_QBaseSender((QFileDialog*)self);
 }
 
-void q_filedialog_on_sender(void* self, QObject* (*slot)()) {
-    QFileDialog_OnSender((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_sender(void* self, QObject* (*callback)()) {
+    QFileDialog_OnSender((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_sender_signal_index(void* self) {
@@ -2834,8 +2909,8 @@ int32_t q_filedialog_qbase_sender_signal_index(void* self) {
     return QFileDialog_QBaseSenderSignalIndex((QFileDialog*)self);
 }
 
-void q_filedialog_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QFileDialog_OnSenderSignalIndex((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QFileDialog_OnSenderSignalIndex((QFileDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_filedialog_receivers(void* self, const char* signal) {
@@ -2846,8 +2921,8 @@ int32_t q_filedialog_qbase_receivers(void* self, const char* signal) {
     return QFileDialog_QBaseReceivers((QFileDialog*)self, signal);
 }
 
-void q_filedialog_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QFileDialog_OnReceivers((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QFileDialog_OnReceivers((QFileDialog*)self, (intptr_t)callback);
 }
 
 bool q_filedialog_is_signal_connected(void* self, void* signal) {
@@ -2858,8 +2933,8 @@ bool q_filedialog_qbase_is_signal_connected(void* self, void* signal) {
     return QFileDialog_QBaseIsSignalConnected((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_filedialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QFileDialog_OnIsSignalConnected((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QFileDialog_OnIsSignalConnected((QFileDialog*)self, (intptr_t)callback);
 }
 
 double q_filedialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2870,12 +2945,12 @@ double q_filedialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
     return QFileDialog_QBaseGetDecodedMetricF((QFileDialog*)self, metricA, metricB);
 }
 
-void q_filedialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QFileDialog_OnGetDecodedMetricF((QFileDialog*)self, (intptr_t)slot);
+void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QFileDialog_OnGetDecodedMetricF((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_filedialog_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_filedialog_delete(void* self) {

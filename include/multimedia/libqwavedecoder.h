@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,806 +15,924 @@
 
 /// q_wavedecoder_new constructs a new QWaveDecoder object.
 ///
-/// ``` QIODevice* device ```
+/// @param device QIODevice*
 QWaveDecoder* q_wavedecoder_new(void* device);
 
 /// q_wavedecoder_new2 constructs a new QWaveDecoder object.
 ///
-/// ``` QIODevice* device, QAudioFormat* format ```
+/// @param device QIODevice*
+/// @param format QAudioFormat*
 QWaveDecoder* q_wavedecoder_new2(void* device, void* format);
 
 /// q_wavedecoder_new3 constructs a new QWaveDecoder object.
 ///
-/// ``` QIODevice* device, QObject* parent ```
+/// @param device QIODevice*
+/// @param parent QObject*
 QWaveDecoder* q_wavedecoder_new3(void* device, void* parent);
 
 /// q_wavedecoder_new4 constructs a new QWaveDecoder object.
 ///
-/// ``` QIODevice* device, QAudioFormat* format, QObject* parent ```
+/// @param device QIODevice*
+/// @param format QAudioFormat*
+/// @param parent QObject*
 QWaveDecoder* q_wavedecoder_new4(void* device, void* format, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 const QMetaObject* q_wavedecoder_meta_object(void* self);
 
-/// ``` QWaveDecoder* self, const char* param1 ```
+/// @param self QWaveDecoder*
+/// @param param1 const char*
 void* q_wavedecoder_metacast(void* self, const char* param1);
 
-/// ``` QWaveDecoder* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWaveDecoder*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_wavedecoder_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, int32_t (*slot)(QWaveDecoder*, enum QMetaObject__Call, int, void*) ```
-void q_wavedecoder_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QWaveDecoder*
+/// @param callback int32_t fn(QWaveDecoder*, enum QMetaObject__Call, int, void*)
+void q_wavedecoder_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWaveDecoder*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_wavedecoder_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_wavedecoder_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#audioFormat)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QAudioFormat* q_wavedecoder_audio_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#getDevice)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QIODevice* q_wavedecoder_get_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#duration)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_duration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#headerLength)
-///
 ///
 long long q_wavedecoder_header_length();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
-/// ``` QWaveDecoder* self, int mode ```
+/// @param self QWaveDecoder*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
 bool q_wavedecoder_open(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, int) ```
-void q_wavedecoder_on_open(void* self, bool (*slot)(void*, int64_t));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, flag of enum QIODeviceBase__OpenModeFlag)
+void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self, int mode ```
+/// @param self QWaveDecoder*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
 bool q_wavedecoder_qbase_open(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#close)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#close)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, void (*slot)() ```
-void q_wavedecoder_on_close(void* self, void (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback void fn()
+void q_wavedecoder_on_close(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#close)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_qbase_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
-/// ``` QWaveDecoder* self, long long pos ```
+/// @param self QWaveDecoder*
+/// @param pos long long
 bool q_wavedecoder_seek(void* self, long long pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, long long) ```
-void q_wavedecoder_on_seek(void* self, bool (*slot)(void*, long long));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, long long)
+void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, long long));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self, long long pos ```
+/// @param self QWaveDecoder*
+/// @param pos long long
 bool q_wavedecoder_qbase_seek(void* self, long long pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)() ```
-void q_wavedecoder_on_pos(void* self, long long (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback long long fn()
+void q_wavedecoder_on_pos(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_qbase_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)() ```
-void q_wavedecoder_on_size(void* self, long long (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback long long fn()
+void q_wavedecoder_on_size(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_qbase_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_sequential(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)() ```
-void q_wavedecoder_on_is_sequential(void* self, bool (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback bool fn()
+void q_wavedecoder_on_is_sequential(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_qbase_is_sequential(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_bytes_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)() ```
-void q_wavedecoder_on_bytes_available(void* self, long long (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback long long fn()
+void q_wavedecoder_on_bytes_available(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
 /// Base class method implementation
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_qbase_bytes_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#formatKnown)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_format_known(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#formatKnown)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_format_known(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_format_known(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#parsingError)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_parsing_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#parsingError)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_parsing_error(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_parsing_error(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_wavedecoder_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_wavedecoder_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#openMode)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
+///
+/// @return flag of enum QIODeviceBase__OpenModeFlag
 int64_t q_wavedecoder_open_mode(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setTextModeEnabled)
 ///
-/// ``` QWaveDecoder* self, bool enabled ```
+/// @param self QWaveDecoder*
+/// @param enabled bool
 void q_wavedecoder_set_text_mode_enabled(void* self, bool enabled);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTextModeEnabled)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_text_mode_enabled(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isOpen)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_open(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isReadable)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_readable(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isWritable)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_writable(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_read_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#writeChannelCount)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_write_channel_count(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentReadChannel)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_current_read_channel(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentReadChannel)
 ///
-/// ``` QWaveDecoder* self, int channel ```
+/// @param self QWaveDecoder*
+/// @param channel int
 void q_wavedecoder_set_current_read_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#currentWriteChannel)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_current_write_channel(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#setCurrentWriteChannel)
 ///
-/// ``` QWaveDecoder* self, int channel ```
+/// @param self QWaveDecoder*
+/// @param channel int
 void q_wavedecoder_set_current_write_channel(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// ``` QWaveDecoder* self, char* data, long long maxlen ```
+/// @param self QWaveDecoder*
+/// @param data char*
+/// @param maxlen long long
 long long q_wavedecoder_read(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
-/// ``` QWaveDecoder* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
+/// @param maxlen long long
 char* q_wavedecoder_read2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
-/// ``` QWaveDecoder* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
 char* q_wavedecoder_read_all(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QWaveDecoder* self, char* data, long long maxlen ```
+/// @param self QWaveDecoder*
+/// @param data char*
+/// @param maxlen long long
 long long q_wavedecoder_read_line(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QWaveDecoder* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
 char* q_wavedecoder_read_line2(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_start_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#commitTransaction)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_commit_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#rollbackTransaction)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_rollback_transaction(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#isTransactionStarted)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_transaction_started(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QWaveDecoder* self, const char* data, long long lenVal ```
+/// @param self QWaveDecoder*
+/// @param data const char*
+/// @param lenVal long long
 long long q_wavedecoder_write(void* self, const char* data, long long lenVal);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QWaveDecoder* self, const char* data ```
+/// @param self QWaveDecoder*
+/// @param data const char*
 long long q_wavedecoder_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
-/// ``` QWaveDecoder* self, const char* data ```
+/// @param self QWaveDecoder*
+/// @param data const char*
 long long q_wavedecoder_write3(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// ``` QWaveDecoder* self, char* data, long long maxlen ```
+/// @param self QWaveDecoder*
+/// @param data char*
+/// @param maxlen long long
 long long q_wavedecoder_peek(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
-/// ``` QWaveDecoder* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
+/// @param maxlen long long
 char* q_wavedecoder_peek2(void* self, long long maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
-/// ``` QWaveDecoder* self, long long maxSize ```
+/// @param self QWaveDecoder*
+/// @param maxSize long long
 long long q_wavedecoder_skip(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#ungetChar)
 ///
-/// ``` QWaveDecoder* self, char c ```
+/// @param self QWaveDecoder*
+/// @param c char
 void q_wavedecoder_unget_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#putChar)
 ///
-/// ``` QWaveDecoder* self, char c ```
+/// @param self QWaveDecoder*
+/// @param c char
 bool q_wavedecoder_put_char(void* self, char c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#getChar)
 ///
-/// ``` QWaveDecoder* self, char* c ```
+/// @param self QWaveDecoder*
+/// @param c char*
 bool q_wavedecoder_get_char(void* self, char* c);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#errorString)
 ///
-/// ``` QWaveDecoder* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
 const char* q_wavedecoder_error_string(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_ready_read(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readyRead)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_ready_read(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_ready_read(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QWaveDecoder* self, int channel ```
+/// @param self QWaveDecoder*
+/// @param channel int
 void q_wavedecoder_channel_ready_read(void* self, int channel);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelReadyRead)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, int) ```
-void q_wavedecoder_on_channel_ready_read(void* self, void (*slot)(void*, int));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, int)
+void q_wavedecoder_on_channel_ready_read(void* self, void (*callback)(void*, int));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QWaveDecoder* self, long long bytes ```
+/// @param self QWaveDecoder*
+/// @param bytes long long
 void q_wavedecoder_bytes_written(void* self, long long bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, long long) ```
-void q_wavedecoder_on_bytes_written(void* self, void (*slot)(void*, long long));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, long long)
+void q_wavedecoder_on_bytes_written(void* self, void (*callback)(void*, long long));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QWaveDecoder* self, int channel, long long bytes ```
+/// @param self QWaveDecoder*
+/// @param channel int
+/// @param bytes long long
 void q_wavedecoder_channel_bytes_written(void* self, int channel, long long bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, int, long long) ```
-void q_wavedecoder_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, int, long long)
+void q_wavedecoder_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_about_to_close(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_about_to_close(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_about_to_close(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_read_channel_finished(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readChannelFinished)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_read_channel_finished(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_read_channel_finished(void* self, void (*callback)(void*));
 
 /// Inherited from QIODevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
-/// ``` QWaveDecoder* self, long long maxlen ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
+/// @param maxlen long long
 char* q_wavedecoder_read_line1(void* self, long long maxlen);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QWaveDecoder* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
 const char* q_wavedecoder_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWaveDecoder* self, char* name ```
+/// @param self QWaveDecoder*
+/// @param name char*
 void q_wavedecoder_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QWaveDecoder* self, bool b ```
+/// @param self QWaveDecoder*
+/// @param b bool
 bool q_wavedecoder_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QThread* q_wavedecoder_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWaveDecoder* self, QThread* thread ```
+/// @param self QWaveDecoder*
+/// @param thread QThread*
 bool q_wavedecoder_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWaveDecoder* self, int interval ```
+/// @param self QWaveDecoder*
+/// @param interval int
 int32_t q_wavedecoder_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWaveDecoder* self, int id ```
+/// @param self QWaveDecoder*
+/// @param id int
 void q_wavedecoder_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWaveDecoder* self, enum Qt__TimerId id ```
+/// @param self QWaveDecoder*
+/// @param id enum Qt__TimerId
 void q_wavedecoder_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 libqt_list /* of QObject* */ q_wavedecoder_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QWaveDecoder* self, QObject* parent ```
+/// @param self QWaveDecoder*
+/// @param parent QObject*
 void q_wavedecoder_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QWaveDecoder* self, QObject* filterObj ```
+/// @param self QWaveDecoder*
+/// @param filterObj QObject*
 void q_wavedecoder_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QWaveDecoder* self, QObject* obj ```
+/// @param self QWaveDecoder*
+/// @param obj QObject*
 void q_wavedecoder_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_wavedecoder_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWaveDecoder* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QWaveDecoder*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_wavedecoder_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_wavedecoder_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_wavedecoder_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QWaveDecoder* self, const char* name, QVariant* value ```
+/// @param self QWaveDecoder*
+/// @param name const char*
+/// @param value QVariant*
 bool q_wavedecoder_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QWaveDecoder* self, const char* name ```
+/// @param self QWaveDecoder*
+/// @param name const char*
 QVariant* q_wavedecoder_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QWaveDecoder* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWaveDecoder*
 const char** q_wavedecoder_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QBindingStorage* q_wavedecoder_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 const QBindingStorage* q_wavedecoder_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*) ```
-void q_wavedecoder_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*)
+void q_wavedecoder_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QObject* q_wavedecoder_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QWaveDecoder* self, const char* classname ```
+/// @param self QWaveDecoder*
+/// @param classname const char*
 bool q_wavedecoder_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWaveDecoder* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QWaveDecoder*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_wavedecoder_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWaveDecoder* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QWaveDecoder*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_wavedecoder_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_wavedecoder_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWaveDecoder* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QWaveDecoder*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_wavedecoder_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self, QObject* param1 ```
+/// @param self QWaveDecoder*
+/// @param param1 QObject*
 void q_wavedecoder_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QObject*) ```
-void q_wavedecoder_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QObject*)
+void q_wavedecoder_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
 ///
@@ -823,7 +940,7 @@ void q_wavedecoder_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_at_end(void* self);
 
 /// Inherited from QIODevice
@@ -832,7 +949,7 @@ bool q_wavedecoder_at_end(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_qbase_at_end(void* self);
 
 /// Inherited from QIODevice
@@ -841,8 +958,9 @@ bool q_wavedecoder_qbase_at_end(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)() ```
-void q_wavedecoder_on_at_end(void* self, bool (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback bool fn()
+void q_wavedecoder_on_at_end(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -850,7 +968,7 @@ void q_wavedecoder_on_at_end(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_reset(void* self);
 
 /// Inherited from QIODevice
@@ -859,7 +977,7 @@ bool q_wavedecoder_reset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_qbase_reset(void* self);
 
 /// Inherited from QIODevice
@@ -868,8 +986,9 @@ bool q_wavedecoder_qbase_reset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)() ```
-void q_wavedecoder_on_reset(void* self, bool (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback bool fn()
+void q_wavedecoder_on_reset(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -877,7 +996,7 @@ void q_wavedecoder_on_reset(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
@@ -886,7 +1005,7 @@ long long q_wavedecoder_bytes_to_write(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 long long q_wavedecoder_qbase_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
@@ -895,8 +1014,9 @@ long long q_wavedecoder_qbase_bytes_to_write(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)() ```
-void q_wavedecoder_on_bytes_to_write(void* self, long long (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback long long fn()
+void q_wavedecoder_on_bytes_to_write(void* self, long long (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -904,7 +1024,7 @@ void q_wavedecoder_on_bytes_to_write(void* self, long long (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_can_read_line(void* self);
 
 /// Inherited from QIODevice
@@ -913,7 +1033,7 @@ bool q_wavedecoder_can_read_line(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 bool q_wavedecoder_qbase_can_read_line(void* self);
 
 /// Inherited from QIODevice
@@ -922,8 +1042,9 @@ bool q_wavedecoder_qbase_can_read_line(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)() ```
-void q_wavedecoder_on_can_read_line(void* self, bool (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback bool fn()
+void q_wavedecoder_on_can_read_line(void* self, bool (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -931,7 +1052,8 @@ void q_wavedecoder_on_can_read_line(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int msecs ```
+/// @param self QWaveDecoder*
+/// @param msecs int
 bool q_wavedecoder_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
@@ -940,7 +1062,8 @@ bool q_wavedecoder_wait_for_ready_read(void* self, int msecs);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int msecs ```
+/// @param self QWaveDecoder*
+/// @param msecs int
 bool q_wavedecoder_qbase_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
@@ -949,8 +1072,9 @@ bool q_wavedecoder_qbase_wait_for_ready_read(void* self, int msecs);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, int) ```
-void q_wavedecoder_on_wait_for_ready_read(void* self, bool (*slot)(void*, int));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, int)
+void q_wavedecoder_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
 ///
@@ -958,7 +1082,8 @@ void q_wavedecoder_on_wait_for_ready_read(void* self, bool (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int msecs ```
+/// @param self QWaveDecoder*
+/// @param msecs int
 bool q_wavedecoder_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
@@ -967,7 +1092,8 @@ bool q_wavedecoder_wait_for_bytes_written(void* self, int msecs);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int msecs ```
+/// @param self QWaveDecoder*
+/// @param msecs int
 bool q_wavedecoder_qbase_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
@@ -976,8 +1102,9 @@ bool q_wavedecoder_qbase_wait_for_bytes_written(void* self, int msecs);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, int) ```
-void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, int)
+void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QIODevice
 ///
@@ -985,7 +1112,9 @@ void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, char* data, long long maxlen ```
+/// @param self QWaveDecoder*
+/// @param data char*
+/// @param maxlen long long
 long long q_wavedecoder_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
@@ -994,7 +1123,9 @@ long long q_wavedecoder_read_line_data(void* self, char* data, long long maxlen)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, char* data, long long maxlen ```
+/// @param self QWaveDecoder*
+/// @param data char*
+/// @param maxlen long long
 long long q_wavedecoder_qbase_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
@@ -1003,8 +1134,9 @@ long long q_wavedecoder_qbase_read_line_data(void* self, char* data, long long m
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)(QWaveDecoder*, char*, long long) ```
-void q_wavedecoder_on_read_line_data(void* self, long long (*slot)(void*, char*, long long));
+/// @param self QWaveDecoder*
+/// @param callback long long fn(QWaveDecoder*, char*, long long)
+void q_wavedecoder_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
 /// Inherited from QIODevice
 ///
@@ -1012,7 +1144,8 @@ void q_wavedecoder_on_read_line_data(void* self, long long (*slot)(void*, char*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, long long maxSize ```
+/// @param self QWaveDecoder*
+/// @param maxSize long long
 long long q_wavedecoder_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
@@ -1021,7 +1154,8 @@ long long q_wavedecoder_skip_data(void* self, long long maxSize);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, long long maxSize ```
+/// @param self QWaveDecoder*
+/// @param maxSize long long
 long long q_wavedecoder_qbase_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
@@ -1030,8 +1164,9 @@ long long q_wavedecoder_qbase_skip_data(void* self, long long maxSize);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, long long (*slot)(QWaveDecoder*, long long) ```
-void q_wavedecoder_on_skip_data(void* self, long long (*slot)(void*, long long));
+/// @param self QWaveDecoder*
+/// @param callback long long fn(QWaveDecoder*, long long)
+void q_wavedecoder_on_skip_data(void* self, long long (*callback)(void*, long long));
 
 /// Inherited from QObject
 ///
@@ -1039,7 +1174,8 @@ void q_wavedecoder_on_skip_data(void* self, long long (*slot)(void*, long long))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QEvent*
 bool q_wavedecoder_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1048,7 +1184,8 @@ bool q_wavedecoder_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QEvent*
 bool q_wavedecoder_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1057,8 +1194,9 @@ bool q_wavedecoder_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, QEvent*) ```
-void q_wavedecoder_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, QEvent*)
+void q_wavedecoder_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1066,7 +1204,9 @@ void q_wavedecoder_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QObject* watched, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_wavedecoder_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1075,7 +1215,9 @@ bool q_wavedecoder_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QObject* watched, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_wavedecoder_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1084,8 +1226,9 @@ bool q_wavedecoder_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, QObject*, QEvent*) ```
-void q_wavedecoder_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, QObject*, QEvent*)
+void q_wavedecoder_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1093,7 +1236,8 @@ void q_wavedecoder_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QTimerEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QTimerEvent*
 void q_wavedecoder_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1102,7 +1246,8 @@ void q_wavedecoder_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QTimerEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QTimerEvent*
 void q_wavedecoder_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1111,8 +1256,9 @@ void q_wavedecoder_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QTimerEvent*) ```
-void q_wavedecoder_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QTimerEvent*)
+void q_wavedecoder_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1120,7 +1266,8 @@ void q_wavedecoder_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QChildEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QChildEvent*
 void q_wavedecoder_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1129,7 +1276,8 @@ void q_wavedecoder_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QChildEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QChildEvent*
 void q_wavedecoder_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1138,8 +1286,9 @@ void q_wavedecoder_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QChildEvent*) ```
-void q_wavedecoder_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QChildEvent*)
+void q_wavedecoder_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1147,7 +1296,8 @@ void q_wavedecoder_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QEvent*
 void q_wavedecoder_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1156,7 +1306,8 @@ void q_wavedecoder_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QEvent* event ```
+/// @param self QWaveDecoder*
+/// @param event QEvent*
 void q_wavedecoder_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1165,8 +1316,9 @@ void q_wavedecoder_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QEvent*) ```
-void q_wavedecoder_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QEvent*)
+void q_wavedecoder_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1174,7 +1326,8 @@ void q_wavedecoder_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 void q_wavedecoder_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1183,7 +1336,8 @@ void q_wavedecoder_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 void q_wavedecoder_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1192,8 +1346,9 @@ void q_wavedecoder_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QMetaMethod*) ```
-void q_wavedecoder_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QMetaMethod*)
+void q_wavedecoder_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1201,7 +1356,8 @@ void q_wavedecoder_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 void q_wavedecoder_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1210,7 +1366,8 @@ void q_wavedecoder_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 void q_wavedecoder_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1219,8 +1376,9 @@ void q_wavedecoder_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, QMetaMethod*) ```
-void q_wavedecoder_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, QMetaMethod*)
+void q_wavedecoder_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QIODevice
 ///
@@ -1228,7 +1386,8 @@ void q_wavedecoder_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int openMode ```
+/// @param self QWaveDecoder*
+/// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 void q_wavedecoder_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
@@ -1237,7 +1396,8 @@ void q_wavedecoder_set_open_mode(void* self, int64_t openMode);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int openMode ```
+/// @param self QWaveDecoder*
+/// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 void q_wavedecoder_qbase_set_open_mode(void* self, int64_t openMode);
 
 /// Inherited from QIODevice
@@ -1246,8 +1406,9 @@ void q_wavedecoder_qbase_set_open_mode(void* self, int64_t openMode);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, int) ```
-void q_wavedecoder_on_set_open_mode(void* self, void (*slot)(void*, int64_t));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, flag of enum QIODeviceBase__OpenModeFlag)
+void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1255,7 +1416,8 @@ void q_wavedecoder_on_set_open_mode(void* self, void (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, const char* errorString ```
+/// @param self QWaveDecoder*
+/// @param errorString const char*
 void q_wavedecoder_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
@@ -1264,7 +1426,8 @@ void q_wavedecoder_set_error_string(void* self, const char* errorString);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, const char* errorString ```
+/// @param self QWaveDecoder*
+/// @param errorString const char*
 void q_wavedecoder_qbase_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
@@ -1273,8 +1436,9 @@ void q_wavedecoder_qbase_set_error_string(void* self, const char* errorString);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, const char*) ```
-void q_wavedecoder_on_set_error_string(void* self, void (*slot)(void*, const char*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, const char*)
+void q_wavedecoder_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1282,7 +1446,7 @@ void q_wavedecoder_on_set_error_string(void* self, void (*slot)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QObject* q_wavedecoder_sender(void* self);
 
 /// Inherited from QObject
@@ -1291,7 +1455,7 @@ QObject* q_wavedecoder_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 QObject* q_wavedecoder_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1300,8 +1464,9 @@ QObject* q_wavedecoder_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QObject* (*slot)() ```
-void q_wavedecoder_on_sender(void* self, QObject* (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback QObject* fn()
+void q_wavedecoder_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1309,7 +1474,7 @@ void q_wavedecoder_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1318,7 +1483,7 @@ int32_t q_wavedecoder_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 int32_t q_wavedecoder_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1327,8 +1492,9 @@ int32_t q_wavedecoder_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int32_t (*slot)() ```
-void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QWaveDecoder*
+/// @param callback int32_t fn()
+void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1336,7 +1502,8 @@ void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, const char* signal ```
+/// @param self QWaveDecoder*
+/// @param signal const char*
 int32_t q_wavedecoder_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1345,7 +1512,8 @@ int32_t q_wavedecoder_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, const char* signal ```
+/// @param self QWaveDecoder*
+/// @param signal const char*
 int32_t q_wavedecoder_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1354,8 +1522,9 @@ int32_t q_wavedecoder_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, int32_t (*slot)(QWaveDecoder*, const char*) ```
-void q_wavedecoder_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QWaveDecoder*
+/// @param callback int32_t fn(QWaveDecoder*, const char*)
+void q_wavedecoder_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1363,7 +1532,8 @@ void q_wavedecoder_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 bool q_wavedecoder_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1372,7 +1542,8 @@ bool q_wavedecoder_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, QMetaMethod* signal ```
+/// @param self QWaveDecoder*
+/// @param signal QMetaMethod*
 bool q_wavedecoder_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1381,8 +1552,9 @@ bool q_wavedecoder_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWaveDecoder* self, bool (*slot)(QWaveDecoder*, QMetaMethod*) ```
-void q_wavedecoder_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QWaveDecoder*
+/// @param callback bool fn(QWaveDecoder*, QMetaMethod*)
+void q_wavedecoder_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1390,14 +1562,15 @@ void q_wavedecoder_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWaveDecoder* self, void (*slot)(QWaveDecoder*, const char*) ```
-void q_wavedecoder_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QWaveDecoder*
+/// @param callback void fn(QWaveDecoder*, const char*)
+void q_wavedecoder_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwavedecoder.html#dtor.QWaveDecoder)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWaveDecoder* self ```
+/// @param self QWaveDecoder*
 void q_wavedecoder_delete(void* self);
 
 #endif

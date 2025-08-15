@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,79 +15,88 @@
 
 /// q_pdfdocumentrenderoptions_new constructs a new QPdfDocumentRenderOptions object.
 ///
-/// ``` QPdfDocumentRenderOptions* other ```
+/// @param other QPdfDocumentRenderOptions*
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(void* other);
 
 /// q_pdfdocumentrenderoptions_new2 constructs a new QPdfDocumentRenderOptions object and invalidates the source QPdfDocumentRenderOptions object.
 ///
-/// ``` QPdfDocumentRenderOptions* other ```
+/// @param other QPdfDocumentRenderOptions*
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new2(void* other);
 
 /// q_pdfdocumentrenderoptions_new3 constructs a new QPdfDocumentRenderOptions object.
-///
 ///
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new3();
 
 /// q_pdfdocumentrenderoptions_new4 constructs a new QPdfDocumentRenderOptions object.
 ///
-/// ``` QPdfDocumentRenderOptions* param1 ```
+/// @param param1 QPdfDocumentRenderOptions*
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(void* param1);
 
 /// q_pdfdocumentrenderoptions_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QPdfDocumentRenderOptions* self, QPdfDocumentRenderOptions* other ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param other QPdfDocumentRenderOptions*
 void q_pdfdocumentrenderoptions_copy_assign(void* self, void* other);
 
 /// q_pdfdocumentrenderoptions_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QPdfDocumentRenderOptions* self, QPdfDocumentRenderOptions* other ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param other QPdfDocumentRenderOptions*
 void q_pdfdocumentrenderoptions_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#rotation)
 ///
-/// ``` QPdfDocumentRenderOptions* self ```
+/// @param self QPdfDocumentRenderOptions*
+///
+/// @return enum QPdfDocumentRenderOptions__Rotation
 int64_t q_pdfdocumentrenderoptions_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRotation)
 ///
-/// ``` QPdfDocumentRenderOptions* self, enum QPdfDocumentRenderOptions__Rotation r ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param r enum QPdfDocumentRenderOptions__Rotation
 void q_pdfdocumentrenderoptions_set_rotation(void* self, int64_t r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#renderFlags)
 ///
-/// ``` QPdfDocumentRenderOptions* self ```
+/// @param self QPdfDocumentRenderOptions*
+///
+/// @return flag of enum QPdfDocumentRenderOptions__RenderFlag
 int64_t q_pdfdocumentrenderoptions_render_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRenderFlags)
 ///
-/// ``` QPdfDocumentRenderOptions* self, int r ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param r flag of enum QPdfDocumentRenderOptions__RenderFlag
 void q_pdfdocumentrenderoptions_set_render_flags(void* self, int64_t r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledClipRect)
 ///
-/// ``` QPdfDocumentRenderOptions* self ```
+/// @param self QPdfDocumentRenderOptions*
 QRect* q_pdfdocumentrenderoptions_scaled_clip_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledClipRect)
 ///
-/// ``` QPdfDocumentRenderOptions* self, QRect* r ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param r QRect*
 void q_pdfdocumentrenderoptions_set_scaled_clip_rect(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#scaledSize)
 ///
-/// ``` QPdfDocumentRenderOptions* self ```
+/// @param self QPdfDocumentRenderOptions*
 QSize* q_pdfdocumentrenderoptions_scaled_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setScaledSize)
 ///
-/// ``` QPdfDocumentRenderOptions* self, QSize* s ```
+/// @param self QPdfDocumentRenderOptions*
+/// @param s QSize*
 void q_pdfdocumentrenderoptions_set_scaled_size(void* self, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#dtor.QPdfDocumentRenderOptions)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPdfDocumentRenderOptions* self ```
+/// @param self QPdfDocumentRenderOptions*
 void q_pdfdocumentrenderoptions_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#types

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,31 +15,36 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#isValid)
 ///
-/// ``` QStringConverter* self ```
+/// @param self QStringConverter*
 bool q_stringconverter_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#resetState)
 ///
-/// ``` QStringConverter* self ```
+/// @param self QStringConverter*
 void q_stringconverter_reset_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#hasError)
 ///
-/// ``` QStringConverter* self ```
+/// @param self QStringConverter*
 bool q_stringconverter_has_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#name)
 ///
-/// ``` QStringConverter* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStringConverter*
 const char* q_stringconverter_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
-/// ``` enum QStringConverter__Encoding e ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param e enum QStringConverter__Encoding
 const char* q_stringconverter_name_for_encoding(int64_t e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_stringconverter_available_codecs();
 
@@ -48,29 +52,28 @@ const char** q_stringconverter_available_codecs();
 
 /// q_stringconverterbase__state_new constructs a new QStringConverterBase::State object.
 ///
-///
 QStringConverterBase__State* q_stringconverterbase__state_new();
 
 /// q_stringconverterbase__state_new2 constructs a new QStringConverterBase::State object.
 ///
-/// ``` int f ```
+/// @param f flag of enum QStringConverterBase__Flag
 QStringConverterBase__State* q_stringconverterbase__state_new2(int64_t f);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase__state.html#clear)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#clear)
 ///
-/// ``` QStringConverterBase__State* self ```
+/// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_clear(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase__state.html#reset)
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#reset)
 ///
-/// ``` QStringConverterBase__State* self ```
+/// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_reset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase::state.html#dtor.QStringConverterBase::State)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStringConverterBase__State* self ```
+/// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstringconverter_base.html#types

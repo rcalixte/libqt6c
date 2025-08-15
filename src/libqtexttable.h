@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,614 +15,705 @@
 
 /// q_texttablecell_new constructs a new QTextTableCell object.
 ///
-///
 QTextTableCell* q_texttablecell_new();
 
 /// q_texttablecell_new2 constructs a new QTextTableCell object.
 ///
-/// ``` QTextTableCell* o ```
+/// @param o QTextTableCell*
 QTextTableCell* q_texttablecell_new2(void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq)
 ///
-/// ``` QTextTableCell* self, QTextTableCell* o ```
+/// @param self QTextTableCell*
+/// @param o QTextTableCell*
 void q_texttablecell_operator_assign(void* self, void* o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#setFormat)
 ///
-/// ``` QTextTableCell* self, QTextCharFormat* format ```
+/// @param self QTextTableCell*
+/// @param format QTextCharFormat*
 void q_texttablecell_set_format(void* self, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#format)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 QTextCharFormat* q_texttablecell_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#row)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_row(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#column)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_column(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#rowSpan)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_row_span(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#columnSpan)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_column_span(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#isValid)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 bool q_texttablecell_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#firstCursorPosition)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 QTextCursor* q_texttablecell_first_cursor_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#lastCursorPosition)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 QTextCursor* q_texttablecell_last_cursor_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#firstPosition)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_first_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#lastPosition)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_last_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-eq-eq)
 ///
-/// ``` QTextTableCell* self, QTextTableCell* other ```
+/// @param self QTextTableCell*
+/// @param other QTextTableCell*
 bool q_texttablecell_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#operator-not-eq)
 ///
-/// ``` QTextTableCell* self, QTextTableCell* other ```
+/// @param self QTextTableCell*
+/// @param other QTextTableCell*
 bool q_texttablecell_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#begin)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 QTextFrame__iterator* q_texttablecell_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#end)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 QTextFrame__iterator* q_texttablecell_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#tableCellFormatIndex)
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 int32_t q_texttablecell_table_cell_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecell.html#dtor.QTextTableCell)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextTableCell* self ```
+/// @param self QTextTableCell*
 void q_texttablecell_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtexttable.html
 
 /// q_texttable_new constructs a new QTextTable object.
 ///
-/// ``` QTextDocument* doc ```
+/// @param doc QTextDocument*
 QTextTable* q_texttable_new(void* doc);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 const QMetaObject* q_texttable_meta_object(void* self);
 
-/// ``` QTextTable* self, const char* param1 ```
+/// @param self QTextTable*
+/// @param param1 const char*
 void* q_texttable_metacast(void* self, const char* param1);
 
-/// ``` QTextTable* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextTable*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_texttable_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTextTable* self, int32_t (*slot)(QTextTable*, enum QMetaObject__Call, int, void*) ```
-void q_texttable_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTextTable*
+/// @param callback int32_t fn(QTextTable*, enum QMetaObject__Call, int, void*)
+void q_texttable_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTextTable* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextTable*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_texttable_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_texttable_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#resize)
 ///
-/// ``` QTextTable* self, int rows, int cols ```
+/// @param self QTextTable*
+/// @param rows int
+/// @param cols int
 void q_texttable_resize(void* self, int rows, int cols);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#insertRows)
 ///
-/// ``` QTextTable* self, int pos, int num ```
+/// @param self QTextTable*
+/// @param pos int
+/// @param num int
 void q_texttable_insert_rows(void* self, int pos, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#insertColumns)
 ///
-/// ``` QTextTable* self, int pos, int num ```
+/// @param self QTextTable*
+/// @param pos int
+/// @param num int
 void q_texttable_insert_columns(void* self, int pos, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#appendRows)
 ///
-/// ``` QTextTable* self, int count ```
+/// @param self QTextTable*
+/// @param count int
 void q_texttable_append_rows(void* self, int count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#appendColumns)
 ///
-/// ``` QTextTable* self, int count ```
+/// @param self QTextTable*
+/// @param count int
 void q_texttable_append_columns(void* self, int count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#removeRows)
 ///
-/// ``` QTextTable* self, int pos, int num ```
+/// @param self QTextTable*
+/// @param pos int
+/// @param num int
 void q_texttable_remove_rows(void* self, int pos, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#removeColumns)
 ///
-/// ``` QTextTable* self, int pos, int num ```
+/// @param self QTextTable*
+/// @param pos int
+/// @param num int
 void q_texttable_remove_columns(void* self, int pos, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#mergeCells)
 ///
-/// ``` QTextTable* self, int row, int col, int numRows, int numCols ```
+/// @param self QTextTable*
+/// @param row int
+/// @param col int
+/// @param numRows int
+/// @param numCols int
 void q_texttable_merge_cells(void* self, int row, int col, int numRows, int numCols);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#mergeCells)
 ///
-/// ``` QTextTable* self, QTextCursor* cursor ```
+/// @param self QTextTable*
+/// @param cursor QTextCursor*
 void q_texttable_merge_cells2(void* self, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#splitCell)
 ///
-/// ``` QTextTable* self, int row, int col, int numRows, int numCols ```
+/// @param self QTextTable*
+/// @param row int
+/// @param col int
+/// @param numRows int
+/// @param numCols int
 void q_texttable_split_cell(void* self, int row, int col, int numRows, int numCols);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#rows)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_rows(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#columns)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_columns(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// ``` QTextTable* self, int row, int col ```
+/// @param self QTextTable*
+/// @param row int
+/// @param col int
 QTextTableCell* q_texttable_cell_at(void* self, int row, int col);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// ``` QTextTable* self, int position ```
+/// @param self QTextTable*
+/// @param position int
 QTextTableCell* q_texttable_cell_at2(void* self, int position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#cellAt)
 ///
-/// ``` QTextTable* self, QTextCursor* c ```
+/// @param self QTextTable*
+/// @param c QTextCursor*
 QTextTableCell* q_texttable_cell_at3(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#rowStart)
 ///
-/// ``` QTextTable* self, QTextCursor* c ```
+/// @param self QTextTable*
+/// @param c QTextCursor*
 QTextCursor* q_texttable_row_start(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#rowEnd)
 ///
-/// ``` QTextTable* self, QTextCursor* c ```
+/// @param self QTextTable*
+/// @param c QTextCursor*
 QTextCursor* q_texttable_row_end(void* self, void* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#setFormat)
 ///
-/// ``` QTextTable* self, QTextTableFormat* format ```
+/// @param self QTextTable*
+/// @param format QTextTableFormat*
 void q_texttable_set_format(void* self, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#format)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextTableFormat* q_texttable_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_texttable_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_texttable_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#setFrameFormat)
 ///
-/// ``` QTextTable* self, QTextFrameFormat* format ```
+/// @param self QTextTable*
+/// @param format QTextFrameFormat*
 void q_texttable_set_frame_format(void* self, void* format);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#frameFormat)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextFrameFormat* q_texttable_frame_format(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#firstCursorPosition)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextCursor* q_texttable_first_cursor_position(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#lastCursorPosition)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextCursor* q_texttable_last_cursor_position(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#firstPosition)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_first_position(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#lastPosition)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_last_position(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#layoutData)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextFrameLayoutData* q_texttable_layout_data(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#setLayoutData)
 ///
-/// ``` QTextTable* self, QTextFrameLayoutData* data ```
+/// @param self QTextTable*
+/// @param data QTextFrameLayoutData*
 void q_texttable_set_layout_data(void* self, void* data);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#childFrames)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 libqt_list /* of QTextFrame* */ q_texttable_child_frames(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#parentFrame)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextFrame* q_texttable_parent_frame(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#begin)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextFrame__iterator* q_texttable_begin(void* self);
 
 /// Inherited from QTextFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframe.html#end)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextFrame__iterator* q_texttable_end(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#formatIndex)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_format_index(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#document)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QTextDocument* q_texttable_document(void* self);
 
 /// Inherited from QTextObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextobject.html#objectIndex)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_object_index(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextTable* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextTable*
 const char* q_texttable_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextTable* self, char* name ```
+/// @param self QTextTable*
+/// @param name char*
 void q_texttable_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 bool q_texttable_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 bool q_texttable_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 bool q_texttable_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 bool q_texttable_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextTable* self, bool b ```
+/// @param self QTextTable*
+/// @param b bool
 bool q_texttable_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QThread* q_texttable_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextTable* self, QThread* thread ```
+/// @param self QTextTable*
+/// @param thread QThread*
 bool q_texttable_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextTable* self, int interval ```
+/// @param self QTextTable*
+/// @param interval int
 int32_t q_texttable_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextTable* self, int id ```
+/// @param self QTextTable*
+/// @param id int
 void q_texttable_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextTable* self, enum Qt__TimerId id ```
+/// @param self QTextTable*
+/// @param id enum Qt__TimerId
 void q_texttable_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 libqt_list /* of QObject* */ q_texttable_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTextTable* self, QObject* parent ```
+/// @param self QTextTable*
+/// @param parent QObject*
 void q_texttable_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextTable* self, QObject* filterObj ```
+/// @param self QTextTable*
+/// @param filterObj QObject*
 void q_texttable_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextTable* self, QObject* obj ```
+/// @param self QTextTable*
+/// @param obj QObject*
 void q_texttable_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_texttable_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextTable* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextTable*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_texttable_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_texttable_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_texttable_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 void q_texttable_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 void q_texttable_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextTable* self, const char* name, QVariant* value ```
+/// @param self QTextTable*
+/// @param name const char*
+/// @param value QVariant*
 bool q_texttable_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextTable* self, const char* name ```
+/// @param self QTextTable*
+/// @param name const char*
 QVariant* q_texttable_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextTable* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextTable*
 const char** q_texttable_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QBindingStorage* q_texttable_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 const QBindingStorage* q_texttable_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 void q_texttable_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*) ```
-void q_texttable_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*)
+void q_texttable_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QObject* q_texttable_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextTable* self, const char* classname ```
+/// @param self QTextTable*
+/// @param classname const char*
 bool q_texttable_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 void q_texttable_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextTable* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextTable*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_texttable_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextTable* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextTable*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_texttable_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_texttable_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextTable* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextTable*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_texttable_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self, QObject* param1 ```
+/// @param self QTextTable*
+/// @param param1 QObject*
 void q_texttable_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QObject*) ```
-void q_texttable_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QObject*)
+void q_texttable_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -631,7 +721,8 @@ void q_texttable_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QEvent* event ```
+/// @param self QTextTable*
+/// @param event QEvent*
 bool q_texttable_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -640,7 +731,8 @@ bool q_texttable_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QEvent* event ```
+/// @param self QTextTable*
+/// @param event QEvent*
 bool q_texttable_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -649,8 +741,9 @@ bool q_texttable_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, bool (*slot)(QTextTable*, QEvent*) ```
-void q_texttable_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback bool fn(QTextTable*, QEvent*)
+void q_texttable_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -658,7 +751,9 @@ void q_texttable_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QObject* watched, QEvent* event ```
+/// @param self QTextTable*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_texttable_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -667,7 +762,9 @@ bool q_texttable_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QObject* watched, QEvent* event ```
+/// @param self QTextTable*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_texttable_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -676,8 +773,9 @@ bool q_texttable_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, bool (*slot)(QTextTable*, QObject*, QEvent*) ```
-void q_texttable_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTextTable*
+/// @param callback bool fn(QTextTable*, QObject*, QEvent*)
+void q_texttable_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -685,7 +783,8 @@ void q_texttable_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QTimerEvent* event ```
+/// @param self QTextTable*
+/// @param event QTimerEvent*
 void q_texttable_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -694,7 +793,8 @@ void q_texttable_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QTimerEvent* event ```
+/// @param self QTextTable*
+/// @param event QTimerEvent*
 void q_texttable_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -703,8 +803,9 @@ void q_texttable_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QTimerEvent*) ```
-void q_texttable_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QTimerEvent*)
+void q_texttable_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -712,7 +813,8 @@ void q_texttable_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QChildEvent* event ```
+/// @param self QTextTable*
+/// @param event QChildEvent*
 void q_texttable_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -721,7 +823,8 @@ void q_texttable_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QChildEvent* event ```
+/// @param self QTextTable*
+/// @param event QChildEvent*
 void q_texttable_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -730,8 +833,9 @@ void q_texttable_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QChildEvent*) ```
-void q_texttable_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QChildEvent*)
+void q_texttable_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -739,7 +843,8 @@ void q_texttable_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QEvent* event ```
+/// @param self QTextTable*
+/// @param event QEvent*
 void q_texttable_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -748,7 +853,8 @@ void q_texttable_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QEvent* event ```
+/// @param self QTextTable*
+/// @param event QEvent*
 void q_texttable_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -757,8 +863,9 @@ void q_texttable_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QEvent*) ```
-void q_texttable_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QEvent*)
+void q_texttable_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -766,7 +873,8 @@ void q_texttable_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 void q_texttable_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -775,7 +883,8 @@ void q_texttable_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 void q_texttable_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -784,8 +893,9 @@ void q_texttable_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QMetaMethod*) ```
-void q_texttable_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QMetaMethod*)
+void q_texttable_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -793,7 +903,8 @@ void q_texttable_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 void q_texttable_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -802,7 +913,8 @@ void q_texttable_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 void q_texttable_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -811,8 +923,9 @@ void q_texttable_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, QMetaMethod*) ```
-void q_texttable_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, QMetaMethod*)
+void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -820,7 +933,7 @@ void q_texttable_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QObject* q_texttable_sender(void* self);
 
 /// Inherited from QObject
@@ -829,7 +942,7 @@ QObject* q_texttable_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 QObject* q_texttable_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -838,8 +951,9 @@ QObject* q_texttable_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, QObject* (*slot)() ```
-void q_texttable_on_sender(void* self, QObject* (*slot)());
+/// @param self QTextTable*
+/// @param callback QObject* fn()
+void q_texttable_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -847,7 +961,7 @@ void q_texttable_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -856,7 +970,7 @@ int32_t q_texttable_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 int32_t q_texttable_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -865,8 +979,9 @@ int32_t q_texttable_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, int32_t (*slot)() ```
-void q_texttable_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTextTable*
+/// @param callback int32_t fn()
+void q_texttable_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -874,7 +989,8 @@ void q_texttable_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, const char* signal ```
+/// @param self QTextTable*
+/// @param signal const char*
 int32_t q_texttable_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -883,7 +999,8 @@ int32_t q_texttable_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, const char* signal ```
+/// @param self QTextTable*
+/// @param signal const char*
 int32_t q_texttable_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -892,8 +1009,9 @@ int32_t q_texttable_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, int32_t (*slot)(QTextTable*, const char*) ```
-void q_texttable_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTextTable*
+/// @param callback int32_t fn(QTextTable*, const char*)
+void q_texttable_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -901,7 +1019,8 @@ void q_texttable_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 bool q_texttable_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -910,7 +1029,8 @@ bool q_texttable_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextTable* self, QMetaMethod* signal ```
+/// @param self QTextTable*
+/// @param signal QMetaMethod*
 bool q_texttable_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -919,8 +1039,9 @@ bool q_texttable_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextTable* self, bool (*slot)(QTextTable*, QMetaMethod*) ```
-void q_texttable_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTextTable*
+/// @param callback bool fn(QTextTable*, QMetaMethod*)
+void q_texttable_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -928,14 +1049,15 @@ void q_texttable_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextTable* self, void (*slot)(QTextTable*, const char*) ```
-void q_texttable_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextTable*
+/// @param callback void fn(QTextTable*, const char*)
+void q_texttable_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttable.html#dtor.QTextTable)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextTable* self ```
+/// @param self QTextTable*
 void q_texttable_delete(void* self);
 
 #endif

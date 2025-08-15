@@ -33,8 +33,8 @@ QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* paren
     return QItemEditorFactory_CreateEditor((QItemEditorFactory*)self, userType, (QWidget*)parent);
 }
 
-void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*slot)(void*, int, void*)) {
-    QItemEditorFactory_OnCreateEditor((QItemEditorFactory*)self, (intptr_t)slot);
+void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(void*, int, void*)) {
+    QItemEditorFactory_OnCreateEditor((QItemEditorFactory*)self, (intptr_t)callback);
 }
 
 QWidget* q_itemeditorfactory_qbase_create_editor(void* self, int userType, void* parent) {
@@ -48,8 +48,8 @@ char* q_itemeditorfactory_value_property_name(void* self, int userType) {
     return _ret;
 }
 
-void q_itemeditorfactory_on_value_property_name(void* self, char* (*slot)(void*, int)) {
-    QItemEditorFactory_OnValuePropertyName((QItemEditorFactory*)self, (intptr_t)slot);
+void q_itemeditorfactory_on_value_property_name(void* self, char* (*callback)(void*, int)) {
+    QItemEditorFactory_OnValuePropertyName((QItemEditorFactory*)self, (intptr_t)callback);
 }
 
 char* q_itemeditorfactory_qbase_value_property_name(void* self, int userType) {

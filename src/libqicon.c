@@ -148,12 +148,16 @@ const char** q_icon_theme_search_paths() {
     libqt_list _arr = QIcon_ThemeSearchPaths();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_icon_theme_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -161,24 +165,33 @@ const char** q_icon_theme_search_paths() {
 
 void q_icon_set_theme_search_paths(const char* searchpath[]) {
     size_t searchpath_len = libqt_strv_length(searchpath);
-    libqt_string* searchpath_qstr = malloc(searchpath_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < searchpath_len; ++_i) {
-        searchpath_qstr[_i] = qstring(searchpath[_i]);
+    libqt_string* searchpath_qstr = (libqt_string*)malloc(searchpath_len * sizeof(libqt_string));
+    if (searchpath_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_icon_set_theme_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < searchpath_len; ++i) {
+        searchpath_qstr[i] = qstring(searchpath[i]);
     }
     libqt_list searchpath_list = qlist(searchpath_qstr, searchpath_len);
     QIcon_SetThemeSearchPaths(searchpath_list);
+    free(searchpath_qstr);
 }
 
 const char** q_icon_fallback_search_paths() {
     libqt_list _arr = QIcon_FallbackSearchPaths();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_icon_fallback_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -186,12 +199,17 @@ const char** q_icon_fallback_search_paths() {
 
 void q_icon_set_fallback_search_paths(const char* paths[]) {
     size_t paths_len = libqt_strv_length(paths);
-    libqt_string* paths_qstr = malloc(paths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < paths_len; ++_i) {
-        paths_qstr[_i] = qstring(paths[_i]);
+    libqt_string* paths_qstr = (libqt_string*)malloc(paths_len * sizeof(libqt_string));
+    if (paths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_icon_set_fallback_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < paths_len; ++i) {
+        paths_qstr[i] = qstring(paths[i]);
     }
     libqt_list paths_list = qlist(paths_qstr, paths_len);
     QIcon_SetFallbackSearchPaths(paths_list);
+    free(paths_qstr);
 }
 
 const char* q_icon_theme_name() {

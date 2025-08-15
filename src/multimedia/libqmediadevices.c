@@ -27,8 +27,8 @@ int32_t q_mediadevices_metacall(void* self, int64_t param1, int param2, void* pa
     return QMediaDevices_Metacall((QMediaDevices*)self, param1, param2, param3);
 }
 
-void q_mediadevices_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QMediaDevices_OnMetacall((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QMediaDevices_OnMetacall((QMediaDevices*)self, (intptr_t)callback);
 }
 
 int32_t q_mediadevices_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -73,32 +73,32 @@ void q_mediadevices_audio_inputs_changed(void* self) {
     QMediaDevices_AudioInputsChanged((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_audio_inputs_changed(void* self, void (*slot)(void*)) {
-    QMediaDevices_Connect_AudioInputsChanged((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_audio_inputs_changed(void* self, void (*callback)(void*)) {
+    QMediaDevices_Connect_AudioInputsChanged((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_audio_outputs_changed(void* self) {
     QMediaDevices_AudioOutputsChanged((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_audio_outputs_changed(void* self, void (*slot)(void*)) {
-    QMediaDevices_Connect_AudioOutputsChanged((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_audio_outputs_changed(void* self, void (*callback)(void*)) {
+    QMediaDevices_Connect_AudioOutputsChanged((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_video_inputs_changed(void* self) {
     QMediaDevices_VideoInputsChanged((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_video_inputs_changed(void* self, void (*slot)(void*)) {
-    QMediaDevices_Connect_VideoInputsChanged((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_video_inputs_changed(void* self, void (*callback)(void*)) {
+    QMediaDevices_Connect_VideoInputsChanged((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_connect_notify(void* self, void* signal) {
     QMediaDevices_ConnectNotify((QMediaDevices*)self, (QMetaMethod*)signal);
 }
 
-void q_mediadevices_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QMediaDevices_OnConnectNotify((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QMediaDevices_OnConnectNotify((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_qbase_connect_notify(void* self, void* signal) {
@@ -223,12 +223,16 @@ const char** q_mediadevices_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_mediadevices_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -246,8 +250,8 @@ void q_mediadevices_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_mediadevices_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_mediadevices_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_mediadevices_parent(void* self) {
@@ -282,8 +286,8 @@ void q_mediadevices_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_mediadevices_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_mediadevices_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_mediadevices_event(void* self, void* event) {
@@ -294,8 +298,8 @@ bool q_mediadevices_qbase_event(void* self, void* event) {
     return QMediaDevices_QBaseEvent((QMediaDevices*)self, (QEvent*)event);
 }
 
-void q_mediadevices_on_event(void* self, bool (*slot)(void*, void*)) {
-    QMediaDevices_OnEvent((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_event(void* self, bool (*callback)(void*, void*)) {
+    QMediaDevices_OnEvent((QMediaDevices*)self, (intptr_t)callback);
 }
 
 bool q_mediadevices_event_filter(void* self, void* watched, void* event) {
@@ -306,8 +310,8 @@ bool q_mediadevices_qbase_event_filter(void* self, void* watched, void* event) {
     return QMediaDevices_QBaseEventFilter((QMediaDevices*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_mediadevices_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QMediaDevices_OnEventFilter((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QMediaDevices_OnEventFilter((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_timer_event(void* self, void* event) {
@@ -318,8 +322,8 @@ void q_mediadevices_qbase_timer_event(void* self, void* event) {
     QMediaDevices_QBaseTimerEvent((QMediaDevices*)self, (QTimerEvent*)event);
 }
 
-void q_mediadevices_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QMediaDevices_OnTimerEvent((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QMediaDevices_OnTimerEvent((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_child_event(void* self, void* event) {
@@ -330,8 +334,8 @@ void q_mediadevices_qbase_child_event(void* self, void* event) {
     QMediaDevices_QBaseChildEvent((QMediaDevices*)self, (QChildEvent*)event);
 }
 
-void q_mediadevices_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QMediaDevices_OnChildEvent((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QMediaDevices_OnChildEvent((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_custom_event(void* self, void* event) {
@@ -342,8 +346,8 @@ void q_mediadevices_qbase_custom_event(void* self, void* event) {
     QMediaDevices_QBaseCustomEvent((QMediaDevices*)self, (QEvent*)event);
 }
 
-void q_mediadevices_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QMediaDevices_OnCustomEvent((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QMediaDevices_OnCustomEvent((QMediaDevices*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_disconnect_notify(void* self, void* signal) {
@@ -354,8 +358,8 @@ void q_mediadevices_qbase_disconnect_notify(void* self, void* signal) {
     QMediaDevices_QBaseDisconnectNotify((QMediaDevices*)self, (QMetaMethod*)signal);
 }
 
-void q_mediadevices_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QMediaDevices_OnDisconnectNotify((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QMediaDevices_OnDisconnectNotify((QMediaDevices*)self, (intptr_t)callback);
 }
 
 QObject* q_mediadevices_sender(void* self) {
@@ -366,8 +370,8 @@ QObject* q_mediadevices_qbase_sender(void* self) {
     return QMediaDevices_QBaseSender((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_sender(void* self, QObject* (*slot)()) {
-    QMediaDevices_OnSender((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_sender(void* self, QObject* (*callback)()) {
+    QMediaDevices_OnSender((QMediaDevices*)self, (intptr_t)callback);
 }
 
 int32_t q_mediadevices_sender_signal_index(void* self) {
@@ -378,8 +382,8 @@ int32_t q_mediadevices_qbase_sender_signal_index(void* self) {
     return QMediaDevices_QBaseSenderSignalIndex((QMediaDevices*)self);
 }
 
-void q_mediadevices_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QMediaDevices_OnSenderSignalIndex((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QMediaDevices_OnSenderSignalIndex((QMediaDevices*)self, (intptr_t)callback);
 }
 
 int32_t q_mediadevices_receivers(void* self, const char* signal) {
@@ -390,8 +394,8 @@ int32_t q_mediadevices_qbase_receivers(void* self, const char* signal) {
     return QMediaDevices_QBaseReceivers((QMediaDevices*)self, signal);
 }
 
-void q_mediadevices_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QMediaDevices_OnReceivers((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QMediaDevices_OnReceivers((QMediaDevices*)self, (intptr_t)callback);
 }
 
 bool q_mediadevices_is_signal_connected(void* self, void* signal) {
@@ -402,12 +406,12 @@ bool q_mediadevices_qbase_is_signal_connected(void* self, void* signal) {
     return QMediaDevices_QBaseIsSignalConnected((QMediaDevices*)self, (QMetaMethod*)signal);
 }
 
-void q_mediadevices_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QMediaDevices_OnIsSignalConnected((QMediaDevices*)self, (intptr_t)slot);
+void q_mediadevices_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QMediaDevices_OnIsSignalConnected((QMediaDevices*)self, (intptr_t)callback);
 }
 
-void q_mediadevices_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_mediadevices_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_mediadevices_delete(void* self) {

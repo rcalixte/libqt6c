@@ -259,12 +259,16 @@ const char** q_networkproxy_raw_header_list(void* self) {
     libqt_list _arr = QNetworkProxy_RawHeaderList((QNetworkProxy*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_networkproxy_raw_header_list");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -294,8 +298,8 @@ libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self,
     return _arr;
 }
 
-void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*slot)(void*, void*)) {
-    QNetworkProxyFactory_OnQueryProxy((QNetworkProxyFactory*)self, (intptr_t)slot);
+void q_networkproxyfactory_on_query_proxy(void* self, libqt_list /* of QNetworkProxy* */ (*callback)(void*, void*)) {
+    QNetworkProxyFactory_OnQueryProxy((QNetworkProxyFactory*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_qbase_query_proxy(void* self, void* query) {

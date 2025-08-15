@@ -59,8 +59,8 @@ int32_t q_dialogbuttonbox_metacall(void* self, int64_t param1, int param2, void*
     return QDialogButtonBox_Metacall((QDialogButtonBox*)self, param1, param2, param3);
 }
 
-void q_dialogbuttonbox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QDialogButtonBox_OnMetacall((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QDialogButtonBox_OnMetacall((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 int32_t q_dialogbuttonbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -139,40 +139,40 @@ void q_dialogbuttonbox_clicked(void* self, void* button) {
     QDialogButtonBox_Clicked((QDialogButtonBox*)self, (QAbstractButton*)button);
 }
 
-void q_dialogbuttonbox_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_Connect_Clicked((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_Connect_Clicked((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_accepted(void* self) {
     QDialogButtonBox_Accepted((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_accepted(void* self, void (*slot)(void*)) {
-    QDialogButtonBox_Connect_Accepted((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_accepted(void* self, void (*callback)(void*)) {
+    QDialogButtonBox_Connect_Accepted((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_help_requested(void* self) {
     QDialogButtonBox_HelpRequested((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_help_requested(void* self, void (*slot)(void*)) {
-    QDialogButtonBox_Connect_HelpRequested((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_help_requested(void* self, void (*callback)(void*)) {
+    QDialogButtonBox_Connect_HelpRequested((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_rejected(void* self) {
     QDialogButtonBox_Rejected((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_rejected(void* self, void (*slot)(void*)) {
-    QDialogButtonBox_Connect_Rejected((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_rejected(void* self, void (*callback)(void*)) {
+    QDialogButtonBox_Connect_Rejected((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_change_event(void* self, void* event) {
     QDialogButtonBox_ChangeEvent((QDialogButtonBox*)self, (QEvent*)event);
 }
 
-void q_dialogbuttonbox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnChangeEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnChangeEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_qbase_change_event(void* self, void* event) {
@@ -183,8 +183,8 @@ bool q_dialogbuttonbox_event(void* self, void* event) {
     return QDialogButtonBox_Event((QDialogButtonBox*)self, (QEvent*)event);
 }
 
-void q_dialogbuttonbox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QDialogButtonBox_OnEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QDialogButtonBox_OnEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_qbase_event(void* self, void* event) {
@@ -1231,32 +1231,32 @@ void q_dialogbuttonbox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_dialogbuttonbox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_dialogbuttonbox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_dialogbuttonbox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_dialogbuttonbox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_dialogbuttonbox_input_method_hints(void* self) {
@@ -1427,12 +1427,16 @@ const char** q_dialogbuttonbox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dialogbuttonbox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1450,8 +1454,8 @@ void q_dialogbuttonbox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_dialogbuttonbox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_dialogbuttonbox_parent(void* self) {
@@ -1486,8 +1490,8 @@ void q_dialogbuttonbox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_dialogbuttonbox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_painting_active(void* self) {
@@ -1550,8 +1554,8 @@ int32_t q_dialogbuttonbox_qbase_dev_type(void* self) {
     return QDialogButtonBox_QBaseDevType((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_dev_type(void* self, int32_t (*slot)()) {
-    QDialogButtonBox_OnDevType((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_dev_type(void* self, int32_t (*callback)()) {
+    QDialogButtonBox_OnDevType((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_set_visible(void* self, bool visible) {
@@ -1562,8 +1566,8 @@ void q_dialogbuttonbox_qbase_set_visible(void* self, bool visible) {
     QDialogButtonBox_QBaseSetVisible((QDialogButtonBox*)self, visible);
 }
 
-void q_dialogbuttonbox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QDialogButtonBox_OnSetVisible((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QDialogButtonBox_OnSetVisible((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QSize* q_dialogbuttonbox_size_hint(void* self) {
@@ -1574,8 +1578,8 @@ QSize* q_dialogbuttonbox_qbase_size_hint(void* self) {
     return QDialogButtonBox_QBaseSizeHint((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_size_hint(void* self, QSize* (*slot)()) {
-    QDialogButtonBox_OnSizeHint((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_size_hint(void* self, QSize* (*callback)()) {
+    QDialogButtonBox_OnSizeHint((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QSize* q_dialogbuttonbox_minimum_size_hint(void* self) {
@@ -1586,8 +1590,8 @@ QSize* q_dialogbuttonbox_qbase_minimum_size_hint(void* self) {
     return QDialogButtonBox_QBaseMinimumSizeHint((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QDialogButtonBox_OnMinimumSizeHint((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QDialogButtonBox_OnMinimumSizeHint((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 int32_t q_dialogbuttonbox_height_for_width(void* self, int param1) {
@@ -1598,8 +1602,8 @@ int32_t q_dialogbuttonbox_qbase_height_for_width(void* self, int param1) {
     return QDialogButtonBox_QBaseHeightForWidth((QDialogButtonBox*)self, param1);
 }
 
-void q_dialogbuttonbox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QDialogButtonBox_OnHeightForWidth((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QDialogButtonBox_OnHeightForWidth((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_has_height_for_width(void* self) {
@@ -1610,8 +1614,8 @@ bool q_dialogbuttonbox_qbase_has_height_for_width(void* self) {
     return QDialogButtonBox_QBaseHasHeightForWidth((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QDialogButtonBox_OnHasHeightForWidth((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QDialogButtonBox_OnHasHeightForWidth((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dialogbuttonbox_paint_engine(void* self) {
@@ -1622,8 +1626,8 @@ QPaintEngine* q_dialogbuttonbox_qbase_paint_engine(void* self) {
     return QDialogButtonBox_QBasePaintEngine((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QDialogButtonBox_OnPaintEngine((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QDialogButtonBox_OnPaintEngine((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_mouse_press_event(void* self, void* event) {
@@ -1634,8 +1638,8 @@ void q_dialogbuttonbox_qbase_mouse_press_event(void* self, void* event) {
     QDialogButtonBox_QBaseMousePressEvent((QDialogButtonBox*)self, (QMouseEvent*)event);
 }
 
-void q_dialogbuttonbox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnMousePressEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnMousePressEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_mouse_release_event(void* self, void* event) {
@@ -1646,8 +1650,8 @@ void q_dialogbuttonbox_qbase_mouse_release_event(void* self, void* event) {
     QDialogButtonBox_QBaseMouseReleaseEvent((QDialogButtonBox*)self, (QMouseEvent*)event);
 }
 
-void q_dialogbuttonbox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnMouseReleaseEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnMouseReleaseEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_mouse_double_click_event(void* self, void* event) {
@@ -1658,8 +1662,8 @@ void q_dialogbuttonbox_qbase_mouse_double_click_event(void* self, void* event) {
     QDialogButtonBox_QBaseMouseDoubleClickEvent((QDialogButtonBox*)self, (QMouseEvent*)event);
 }
 
-void q_dialogbuttonbox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnMouseDoubleClickEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnMouseDoubleClickEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_mouse_move_event(void* self, void* event) {
@@ -1670,8 +1674,8 @@ void q_dialogbuttonbox_qbase_mouse_move_event(void* self, void* event) {
     QDialogButtonBox_QBaseMouseMoveEvent((QDialogButtonBox*)self, (QMouseEvent*)event);
 }
 
-void q_dialogbuttonbox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnMouseMoveEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnMouseMoveEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_wheel_event(void* self, void* event) {
@@ -1682,8 +1686,8 @@ void q_dialogbuttonbox_qbase_wheel_event(void* self, void* event) {
     QDialogButtonBox_QBaseWheelEvent((QDialogButtonBox*)self, (QWheelEvent*)event);
 }
 
-void q_dialogbuttonbox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnWheelEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnWheelEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_key_press_event(void* self, void* event) {
@@ -1694,8 +1698,8 @@ void q_dialogbuttonbox_qbase_key_press_event(void* self, void* event) {
     QDialogButtonBox_QBaseKeyPressEvent((QDialogButtonBox*)self, (QKeyEvent*)event);
 }
 
-void q_dialogbuttonbox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnKeyPressEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnKeyPressEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_key_release_event(void* self, void* event) {
@@ -1706,8 +1710,8 @@ void q_dialogbuttonbox_qbase_key_release_event(void* self, void* event) {
     QDialogButtonBox_QBaseKeyReleaseEvent((QDialogButtonBox*)self, (QKeyEvent*)event);
 }
 
-void q_dialogbuttonbox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnKeyReleaseEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnKeyReleaseEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_focus_in_event(void* self, void* event) {
@@ -1718,8 +1722,8 @@ void q_dialogbuttonbox_qbase_focus_in_event(void* self, void* event) {
     QDialogButtonBox_QBaseFocusInEvent((QDialogButtonBox*)self, (QFocusEvent*)event);
 }
 
-void q_dialogbuttonbox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnFocusInEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnFocusInEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_focus_out_event(void* self, void* event) {
@@ -1730,8 +1734,8 @@ void q_dialogbuttonbox_qbase_focus_out_event(void* self, void* event) {
     QDialogButtonBox_QBaseFocusOutEvent((QDialogButtonBox*)self, (QFocusEvent*)event);
 }
 
-void q_dialogbuttonbox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnFocusOutEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnFocusOutEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_enter_event(void* self, void* event) {
@@ -1742,8 +1746,8 @@ void q_dialogbuttonbox_qbase_enter_event(void* self, void* event) {
     QDialogButtonBox_QBaseEnterEvent((QDialogButtonBox*)self, (QEnterEvent*)event);
 }
 
-void q_dialogbuttonbox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnEnterEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnEnterEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_leave_event(void* self, void* event) {
@@ -1754,8 +1758,8 @@ void q_dialogbuttonbox_qbase_leave_event(void* self, void* event) {
     QDialogButtonBox_QBaseLeaveEvent((QDialogButtonBox*)self, (QEvent*)event);
 }
 
-void q_dialogbuttonbox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnLeaveEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnLeaveEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_paint_event(void* self, void* event) {
@@ -1766,8 +1770,8 @@ void q_dialogbuttonbox_qbase_paint_event(void* self, void* event) {
     QDialogButtonBox_QBasePaintEvent((QDialogButtonBox*)self, (QPaintEvent*)event);
 }
 
-void q_dialogbuttonbox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnPaintEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnPaintEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_move_event(void* self, void* event) {
@@ -1778,8 +1782,8 @@ void q_dialogbuttonbox_qbase_move_event(void* self, void* event) {
     QDialogButtonBox_QBaseMoveEvent((QDialogButtonBox*)self, (QMoveEvent*)event);
 }
 
-void q_dialogbuttonbox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnMoveEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnMoveEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_resize_event(void* self, void* event) {
@@ -1790,8 +1794,8 @@ void q_dialogbuttonbox_qbase_resize_event(void* self, void* event) {
     QDialogButtonBox_QBaseResizeEvent((QDialogButtonBox*)self, (QResizeEvent*)event);
 }
 
-void q_dialogbuttonbox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnResizeEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnResizeEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_close_event(void* self, void* event) {
@@ -1802,8 +1806,8 @@ void q_dialogbuttonbox_qbase_close_event(void* self, void* event) {
     QDialogButtonBox_QBaseCloseEvent((QDialogButtonBox*)self, (QCloseEvent*)event);
 }
 
-void q_dialogbuttonbox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnCloseEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnCloseEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_context_menu_event(void* self, void* event) {
@@ -1814,8 +1818,8 @@ void q_dialogbuttonbox_qbase_context_menu_event(void* self, void* event) {
     QDialogButtonBox_QBaseContextMenuEvent((QDialogButtonBox*)self, (QContextMenuEvent*)event);
 }
 
-void q_dialogbuttonbox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnContextMenuEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnContextMenuEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_tablet_event(void* self, void* event) {
@@ -1826,8 +1830,8 @@ void q_dialogbuttonbox_qbase_tablet_event(void* self, void* event) {
     QDialogButtonBox_QBaseTabletEvent((QDialogButtonBox*)self, (QTabletEvent*)event);
 }
 
-void q_dialogbuttonbox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnTabletEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnTabletEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_action_event(void* self, void* event) {
@@ -1838,8 +1842,8 @@ void q_dialogbuttonbox_qbase_action_event(void* self, void* event) {
     QDialogButtonBox_QBaseActionEvent((QDialogButtonBox*)self, (QActionEvent*)event);
 }
 
-void q_dialogbuttonbox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnActionEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnActionEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_drag_enter_event(void* self, void* event) {
@@ -1850,8 +1854,8 @@ void q_dialogbuttonbox_qbase_drag_enter_event(void* self, void* event) {
     QDialogButtonBox_QBaseDragEnterEvent((QDialogButtonBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_dialogbuttonbox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnDragEnterEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnDragEnterEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_drag_move_event(void* self, void* event) {
@@ -1862,8 +1866,8 @@ void q_dialogbuttonbox_qbase_drag_move_event(void* self, void* event) {
     QDialogButtonBox_QBaseDragMoveEvent((QDialogButtonBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_dialogbuttonbox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnDragMoveEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnDragMoveEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_drag_leave_event(void* self, void* event) {
@@ -1874,8 +1878,8 @@ void q_dialogbuttonbox_qbase_drag_leave_event(void* self, void* event) {
     QDialogButtonBox_QBaseDragLeaveEvent((QDialogButtonBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_dialogbuttonbox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnDragLeaveEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnDragLeaveEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_drop_event(void* self, void* event) {
@@ -1886,8 +1890,8 @@ void q_dialogbuttonbox_qbase_drop_event(void* self, void* event) {
     QDialogButtonBox_QBaseDropEvent((QDialogButtonBox*)self, (QDropEvent*)event);
 }
 
-void q_dialogbuttonbox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnDropEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnDropEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_show_event(void* self, void* event) {
@@ -1898,8 +1902,8 @@ void q_dialogbuttonbox_qbase_show_event(void* self, void* event) {
     QDialogButtonBox_QBaseShowEvent((QDialogButtonBox*)self, (QShowEvent*)event);
 }
 
-void q_dialogbuttonbox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnShowEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnShowEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_hide_event(void* self, void* event) {
@@ -1910,8 +1914,8 @@ void q_dialogbuttonbox_qbase_hide_event(void* self, void* event) {
     QDialogButtonBox_QBaseHideEvent((QDialogButtonBox*)self, (QHideEvent*)event);
 }
 
-void q_dialogbuttonbox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnHideEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnHideEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1922,8 +1926,8 @@ bool q_dialogbuttonbox_qbase_native_event(void* self, const char* eventType, voi
     return QDialogButtonBox_QBaseNativeEvent((QDialogButtonBox*)self, qstring(eventType), message, result);
 }
 
-void q_dialogbuttonbox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QDialogButtonBox_OnNativeEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QDialogButtonBox_OnNativeEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 int32_t q_dialogbuttonbox_metric(void* self, int64_t param1) {
@@ -1934,8 +1938,8 @@ int32_t q_dialogbuttonbox_qbase_metric(void* self, int64_t param1) {
     return QDialogButtonBox_QBaseMetric((QDialogButtonBox*)self, param1);
 }
 
-void q_dialogbuttonbox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QDialogButtonBox_OnMetric((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QDialogButtonBox_OnMetric((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_init_painter(void* self, void* painter) {
@@ -1946,8 +1950,8 @@ void q_dialogbuttonbox_qbase_init_painter(void* self, void* painter) {
     QDialogButtonBox_QBaseInitPainter((QDialogButtonBox*)self, (QPainter*)painter);
 }
 
-void q_dialogbuttonbox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnInitPainter((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnInitPainter((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dialogbuttonbox_redirected(void* self, void* offset) {
@@ -1958,8 +1962,8 @@ QPaintDevice* q_dialogbuttonbox_qbase_redirected(void* self, void* offset) {
     return QDialogButtonBox_QBaseRedirected((QDialogButtonBox*)self, (QPoint*)offset);
 }
 
-void q_dialogbuttonbox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QDialogButtonBox_OnRedirected((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QDialogButtonBox_OnRedirected((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_dialogbuttonbox_shared_painter(void* self) {
@@ -1970,8 +1974,8 @@ QPainter* q_dialogbuttonbox_qbase_shared_painter(void* self) {
     return QDialogButtonBox_QBaseSharedPainter((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QDialogButtonBox_OnSharedPainter((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QDialogButtonBox_OnSharedPainter((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_input_method_event(void* self, void* param1) {
@@ -1982,8 +1986,8 @@ void q_dialogbuttonbox_qbase_input_method_event(void* self, void* param1) {
     QDialogButtonBox_QBaseInputMethodEvent((QDialogButtonBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_dialogbuttonbox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnInputMethodEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnInputMethodEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_dialogbuttonbox_input_method_query(void* self, int64_t param1) {
@@ -1994,8 +1998,8 @@ QVariant* q_dialogbuttonbox_qbase_input_method_query(void* self, int64_t param1)
     return QDialogButtonBox_QBaseInputMethodQuery((QDialogButtonBox*)self, param1);
 }
 
-void q_dialogbuttonbox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QDialogButtonBox_OnInputMethodQuery((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QDialogButtonBox_OnInputMethodQuery((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_focus_next_prev_child(void* self, bool next) {
@@ -2006,8 +2010,8 @@ bool q_dialogbuttonbox_qbase_focus_next_prev_child(void* self, bool next) {
     return QDialogButtonBox_QBaseFocusNextPrevChild((QDialogButtonBox*)self, next);
 }
 
-void q_dialogbuttonbox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QDialogButtonBox_OnFocusNextPrevChild((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QDialogButtonBox_OnFocusNextPrevChild((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_event_filter(void* self, void* watched, void* event) {
@@ -2018,8 +2022,8 @@ bool q_dialogbuttonbox_qbase_event_filter(void* self, void* watched, void* event
     return QDialogButtonBox_QBaseEventFilter((QDialogButtonBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_dialogbuttonbox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QDialogButtonBox_OnEventFilter((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QDialogButtonBox_OnEventFilter((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_timer_event(void* self, void* event) {
@@ -2030,8 +2034,8 @@ void q_dialogbuttonbox_qbase_timer_event(void* self, void* event) {
     QDialogButtonBox_QBaseTimerEvent((QDialogButtonBox*)self, (QTimerEvent*)event);
 }
 
-void q_dialogbuttonbox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnTimerEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnTimerEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_child_event(void* self, void* event) {
@@ -2042,8 +2046,8 @@ void q_dialogbuttonbox_qbase_child_event(void* self, void* event) {
     QDialogButtonBox_QBaseChildEvent((QDialogButtonBox*)self, (QChildEvent*)event);
 }
 
-void q_dialogbuttonbox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnChildEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnChildEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_custom_event(void* self, void* event) {
@@ -2054,8 +2058,8 @@ void q_dialogbuttonbox_qbase_custom_event(void* self, void* event) {
     QDialogButtonBox_QBaseCustomEvent((QDialogButtonBox*)self, (QEvent*)event);
 }
 
-void q_dialogbuttonbox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnCustomEvent((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnCustomEvent((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_connect_notify(void* self, void* signal) {
@@ -2066,8 +2070,8 @@ void q_dialogbuttonbox_qbase_connect_notify(void* self, void* signal) {
     QDialogButtonBox_QBaseConnectNotify((QDialogButtonBox*)self, (QMetaMethod*)signal);
 }
 
-void q_dialogbuttonbox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnConnectNotify((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnConnectNotify((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_disconnect_notify(void* self, void* signal) {
@@ -2078,8 +2082,8 @@ void q_dialogbuttonbox_qbase_disconnect_notify(void* self, void* signal) {
     QDialogButtonBox_QBaseDisconnectNotify((QDialogButtonBox*)self, (QMetaMethod*)signal);
 }
 
-void q_dialogbuttonbox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QDialogButtonBox_OnDisconnectNotify((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QDialogButtonBox_OnDisconnectNotify((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_update_micro_focus(void* self) {
@@ -2090,8 +2094,8 @@ void q_dialogbuttonbox_qbase_update_micro_focus(void* self) {
     QDialogButtonBox_QBaseUpdateMicroFocus((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_update_micro_focus(void* self, void (*slot)()) {
-    QDialogButtonBox_OnUpdateMicroFocus((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_update_micro_focus(void* self, void (*callback)()) {
+    QDialogButtonBox_OnUpdateMicroFocus((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_create(void* self) {
@@ -2102,8 +2106,8 @@ void q_dialogbuttonbox_qbase_create(void* self) {
     QDialogButtonBox_QBaseCreate((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_create(void* self, void (*slot)()) {
-    QDialogButtonBox_OnCreate((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_create(void* self, void (*callback)()) {
+    QDialogButtonBox_OnCreate((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_destroy(void* self) {
@@ -2114,8 +2118,8 @@ void q_dialogbuttonbox_qbase_destroy(void* self) {
     QDialogButtonBox_QBaseDestroy((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_destroy(void* self, void (*slot)()) {
-    QDialogButtonBox_OnDestroy((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_destroy(void* self, void (*callback)()) {
+    QDialogButtonBox_OnDestroy((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_focus_next_child(void* self) {
@@ -2126,8 +2130,8 @@ bool q_dialogbuttonbox_qbase_focus_next_child(void* self) {
     return QDialogButtonBox_QBaseFocusNextChild((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_focus_next_child(void* self, bool (*slot)()) {
-    QDialogButtonBox_OnFocusNextChild((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_focus_next_child(void* self, bool (*callback)()) {
+    QDialogButtonBox_OnFocusNextChild((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_focus_previous_child(void* self) {
@@ -2138,8 +2142,8 @@ bool q_dialogbuttonbox_qbase_focus_previous_child(void* self) {
     return QDialogButtonBox_QBaseFocusPreviousChild((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QDialogButtonBox_OnFocusPreviousChild((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QDialogButtonBox_OnFocusPreviousChild((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 QObject* q_dialogbuttonbox_sender(void* self) {
@@ -2150,8 +2154,8 @@ QObject* q_dialogbuttonbox_qbase_sender(void* self) {
     return QDialogButtonBox_QBaseSender((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_sender(void* self, QObject* (*slot)()) {
-    QDialogButtonBox_OnSender((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_sender(void* self, QObject* (*callback)()) {
+    QDialogButtonBox_OnSender((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 int32_t q_dialogbuttonbox_sender_signal_index(void* self) {
@@ -2162,8 +2166,8 @@ int32_t q_dialogbuttonbox_qbase_sender_signal_index(void* self) {
     return QDialogButtonBox_QBaseSenderSignalIndex((QDialogButtonBox*)self);
 }
 
-void q_dialogbuttonbox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QDialogButtonBox_OnSenderSignalIndex((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QDialogButtonBox_OnSenderSignalIndex((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 int32_t q_dialogbuttonbox_receivers(void* self, const char* signal) {
@@ -2174,8 +2178,8 @@ int32_t q_dialogbuttonbox_qbase_receivers(void* self, const char* signal) {
     return QDialogButtonBox_QBaseReceivers((QDialogButtonBox*)self, signal);
 }
 
-void q_dialogbuttonbox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QDialogButtonBox_OnReceivers((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QDialogButtonBox_OnReceivers((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 bool q_dialogbuttonbox_is_signal_connected(void* self, void* signal) {
@@ -2186,8 +2190,8 @@ bool q_dialogbuttonbox_qbase_is_signal_connected(void* self, void* signal) {
     return QDialogButtonBox_QBaseIsSignalConnected((QDialogButtonBox*)self, (QMetaMethod*)signal);
 }
 
-void q_dialogbuttonbox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QDialogButtonBox_OnIsSignalConnected((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QDialogButtonBox_OnIsSignalConnected((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
 double q_dialogbuttonbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2198,12 +2202,12 @@ double q_dialogbuttonbox_qbase_get_decoded_metric_f(void* self, int64_t metricA,
     return QDialogButtonBox_QBaseGetDecodedMetricF((QDialogButtonBox*)self, metricA, metricB);
 }
 
-void q_dialogbuttonbox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QDialogButtonBox_OnGetDecodedMetricF((QDialogButtonBox*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QDialogButtonBox_OnGetDecodedMetricF((QDialogButtonBox*)self, (intptr_t)callback);
 }
 
-void q_dialogbuttonbox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_dialogbuttonbox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_dialogbuttonbox_delete(void* self) {

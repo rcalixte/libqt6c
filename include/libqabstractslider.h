@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1502 +15,1696 @@
 
 /// q_abstractslider_new constructs a new QAbstractSlider object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QAbstractSlider* q_abstractslider_new(void* parent);
 
 /// q_abstractslider_new2 constructs a new QAbstractSlider object.
-///
 ///
 QAbstractSlider* q_abstractslider_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 const QMetaObject* q_abstractslider_meta_object(void* self);
 
-/// ``` QAbstractSlider* self, const char* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 const char*
 void* q_abstractslider_metacast(void* self, const char* param1);
 
-/// ``` QAbstractSlider* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_abstractslider_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)(QAbstractSlider*, enum QMetaObject__Call, int, void*) ```
-void q_abstractslider_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn(QAbstractSlider*, enum QMetaObject__Call, int, void*)
+void q_abstractslider_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_abstractslider_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_abstractslider_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#orientation)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__Orientation
 int64_t q_abstractslider_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setMinimum)
 ///
-/// ``` QAbstractSlider* self, int minimum ```
+/// @param self QAbstractSlider*
+/// @param minimum int
 void q_abstractslider_set_minimum(void* self, int minimum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#minimum)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_minimum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setMaximum)
 ///
-/// ``` QAbstractSlider* self, int maximum ```
+/// @param self QAbstractSlider*
+/// @param maximum int
 void q_abstractslider_set_maximum(void* self, int maximum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#maximum)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_maximum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSingleStep)
 ///
-/// ``` QAbstractSlider* self, int singleStep ```
+/// @param self QAbstractSlider*
+/// @param singleStep int
 void q_abstractslider_set_single_step(void* self, int singleStep);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#singleStep)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_single_step(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setPageStep)
 ///
-/// ``` QAbstractSlider* self, int pageStep ```
+/// @param self QAbstractSlider*
+/// @param pageStep int
 void q_abstractslider_set_page_step(void* self, int pageStep);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#pageStep)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_page_step(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setTracking)
 ///
-/// ``` QAbstractSlider* self, bool enable ```
+/// @param self QAbstractSlider*
+/// @param enable bool
 void q_abstractslider_set_tracking(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#hasTracking)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_has_tracking(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSliderDown)
 ///
-/// ``` QAbstractSlider* self, bool sliderDown ```
+/// @param self QAbstractSlider*
+/// @param sliderDown bool
 void q_abstractslider_set_slider_down(void* self, bool sliderDown);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#isSliderDown)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_slider_down(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSliderPosition)
 ///
-/// ``` QAbstractSlider* self, int sliderPosition ```
+/// @param self QAbstractSlider*
+/// @param sliderPosition int
 void q_abstractslider_set_slider_position(void* self, int sliderPosition);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPosition)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_slider_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setInvertedAppearance)
 ///
-/// ``` QAbstractSlider* self, bool invertedAppearance ```
+/// @param self QAbstractSlider*
+/// @param invertedAppearance bool
 void q_abstractslider_set_inverted_appearance(void* self, bool invertedAppearance);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#invertedAppearance)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_inverted_appearance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setInvertedControls)
 ///
-/// ``` QAbstractSlider* self, bool invertedControls ```
+/// @param self QAbstractSlider*
+/// @param invertedControls bool
 void q_abstractslider_set_inverted_controls(void* self, bool invertedControls);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#invertedControls)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_inverted_controls(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#value)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#triggerAction)
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
 void q_abstractslider_trigger_action(void* self, int64_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setValue)
 ///
-/// ``` QAbstractSlider* self, int value ```
+/// @param self QAbstractSlider*
+/// @param value int
 void q_abstractslider_set_value(void* self, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setOrientation)
 ///
-/// ``` QAbstractSlider* self, enum Qt__Orientation orientation ```
+/// @param self QAbstractSlider*
+/// @param orientation enum Qt__Orientation
 void q_abstractslider_set_orientation(void* self, int64_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRange)
 ///
-/// ``` QAbstractSlider* self, int min, int max ```
+/// @param self QAbstractSlider*
+/// @param min int
+/// @param max int
 void q_abstractslider_set_range(void* self, int min, int max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
-/// ``` QAbstractSlider* self, int value ```
+/// @param self QAbstractSlider*
+/// @param value int
 void q_abstractslider_value_changed(void* self, int value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, int) ```
-void q_abstractslider_on_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, int)
+void q_abstractslider_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_slider_pressed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*) ```
-void q_abstractslider_on_slider_pressed(void* self, void (*slot)(void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*)
+void q_abstractslider_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
-/// ``` QAbstractSlider* self, int position ```
+/// @param self QAbstractSlider*
+/// @param position int
 void q_abstractslider_slider_moved(void* self, int position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, int) ```
-void q_abstractslider_on_slider_moved(void* self, void (*slot)(void*, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, int)
+void q_abstractslider_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_slider_released(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*) ```
-void q_abstractslider_on_slider_released(void* self, void (*slot)(void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*)
+void q_abstractslider_on_slider_released(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
-/// ``` QAbstractSlider* self, int min, int max ```
+/// @param self QAbstractSlider*
+/// @param min int
+/// @param max int
 void q_abstractslider_range_changed(void* self, int min, int max);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, int, int) ```
-void q_abstractslider_on_range_changed(void* self, void (*slot)(void*, int, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, int, int)
+void q_abstractslider_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
-/// ``` QAbstractSlider* self, int action ```
+/// @param self QAbstractSlider*
+/// @param action int
 void q_abstractslider_action_triggered(void* self, int action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, int) ```
-void q_abstractslider_on_action_triggered(void* self, void (*slot)(void*, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, int)
+void q_abstractslider_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#event)
 ///
-/// ``` QAbstractSlider* self, QEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QEvent*
 bool q_abstractslider_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)(QAbstractSlider*, QEvent*) ```
-void q_abstractslider_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback bool fn(QAbstractSlider*, QEvent*)
+void q_abstractslider_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, QEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QEvent*
 bool q_abstractslider_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
 void q_abstractslider_set_repeat_action(void* self, int64_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, enum QAbstractSlider__SliderAction) ```
-void q_abstractslider_on_set_repeat_action(void* self, void (*slot)(void*, int64_t));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction)
+void q_abstractslider_on_set_repeat_action(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
 void q_abstractslider_qbase_set_repeat_action(void* self, int64_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum QAbstractSlider__SliderAction
 int64_t q_abstractslider_repeat_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, int64_t (*slot)() ```
-void q_abstractslider_on_repeat_action(void* self, int64_t (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback int64_t fn()
+void q_abstractslider_on_repeat_action(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#repeatAction)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum QAbstractSlider__SliderAction
 int64_t q_abstractslider_qbase_repeat_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderChange change ```
+/// @param self QAbstractSlider*
+/// @param change enum QAbstractSlider__SliderChange
 void q_abstractslider_slider_change(void* self, int64_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, enum QAbstractSlider__SliderChange) ```
-void q_abstractslider_on_slider_change(void* self, void (*slot)(void*, int64_t));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderChange)
+void q_abstractslider_on_slider_change(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderChange)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderChange change ```
+/// @param self QAbstractSlider*
+/// @param change enum QAbstractSlider__SliderChange
 void q_abstractslider_qbase_slider_change(void* self, int64_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
 ///
-/// ``` QAbstractSlider* self, QKeyEvent* ev ```
+/// @param self QAbstractSlider*
+/// @param ev QKeyEvent*
 void q_abstractslider_key_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QKeyEvent*) ```
-void q_abstractslider_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QKeyEvent*)
+void q_abstractslider_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, QKeyEvent* ev ```
+/// @param self QAbstractSlider*
+/// @param ev QKeyEvent*
 void q_abstractslider_qbase_key_press_event(void* self, void* ev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
 ///
-/// ``` QAbstractSlider* self, QTimerEvent* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QTimerEvent*
 void q_abstractslider_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QTimerEvent*) ```
-void q_abstractslider_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QTimerEvent*)
+void q_abstractslider_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, QTimerEvent* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QTimerEvent*
 void q_abstractslider_qbase_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
 ///
-/// ``` QAbstractSlider* self, QWheelEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QWheelEvent*
 void q_abstractslider_wheel_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QWheelEvent*) ```
-void q_abstractslider_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QWheelEvent*)
+void q_abstractslider_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, QWheelEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QWheelEvent*
 void q_abstractslider_qbase_wheel_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
 ///
-/// ``` QAbstractSlider* self, QEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QEvent*
 void q_abstractslider_change_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QEvent*) ```
-void q_abstractslider_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QEvent*)
+void q_abstractslider_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#changeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, QEvent* e ```
+/// @param self QAbstractSlider*
+/// @param e QEvent*
 void q_abstractslider_qbase_change_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_abstractslider_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_abstractslider_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
+/// @param thresholdTime int
 void q_abstractslider_set_repeat_action2(void* self, int64_t action, int thresholdTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, enum QAbstractSlider__SliderAction, int) ```
-void q_abstractslider_on_set_repeat_action2(void* self, void (*slot)(void*, int64_t, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction, int)
+void q_abstractslider_on_set_repeat_action2(void* self, void (*callback)(void*, int64_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
+/// @param thresholdTime int
 void q_abstractslider_qbase_set_repeat_action2(void* self, int64_t action, int thresholdTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime, int repeatTime ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
+/// @param thresholdTime int
+/// @param repeatTime int
 void q_abstractslider_set_repeat_action3(void* self, int64_t action, int thresholdTime, int repeatTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, enum QAbstractSlider__SliderAction, int, int) ```
-void q_abstractslider_on_set_repeat_action3(void* self, void (*slot)(void*, int64_t, int, int));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, enum QAbstractSlider__SliderAction, int, int)
+void q_abstractslider_on_set_repeat_action3(void* self, void (*callback)(void*, int64_t, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRepeatAction)
 ///
 /// Base class method implementation
 ///
-/// ``` QAbstractSlider* self, enum QAbstractSlider__SliderAction action, int thresholdTime, int repeatTime ```
+/// @param self QAbstractSlider*
+/// @param action enum QAbstractSlider__SliderAction
+/// @param thresholdTime int
+/// @param repeatTime int
 void q_abstractslider_qbase_set_repeat_action3(void* self, int64_t action, int thresholdTime, int repeatTime);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 uintptr_t q_abstractslider_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 uintptr_t q_abstractslider_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 uintptr_t q_abstractslider_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QStyle* q_abstractslider_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QAbstractSlider* self, QStyle* style ```
+/// @param self QAbstractSlider*
+/// @param style QStyle*
 void q_abstractslider_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__WindowModality
 int64_t q_abstractslider_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WindowModality windowModality ```
+/// @param self QAbstractSlider*
+/// @param windowModality enum Qt__WindowModality
 void q_abstractslider_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
 bool q_abstractslider_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QAbstractSlider* self, bool enabled ```
+/// @param self QAbstractSlider*
+/// @param enabled bool
 void q_abstractslider_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QAbstractSlider* self, bool disabled ```
+/// @param self QAbstractSlider*
+/// @param disabled bool
 void q_abstractslider_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QAbstractSlider* self, bool windowModified ```
+/// @param self QAbstractSlider*
+/// @param windowModified bool
 void q_abstractslider_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRect* q_abstractslider_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 const QRect* q_abstractslider_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRect* q_abstractslider_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPoint* q_abstractslider_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRect* q_abstractslider_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRect* q_abstractslider_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRegion* q_abstractslider_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QAbstractSlider* self, QSize* minimumSize ```
+/// @param self QAbstractSlider*
+/// @param minimumSize QSize*
 void q_abstractslider_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QAbstractSlider* self, int minw, int minh ```
+/// @param self QAbstractSlider*
+/// @param minw int
+/// @param minh int
 void q_abstractslider_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QAbstractSlider* self, QSize* maximumSize ```
+/// @param self QAbstractSlider*
+/// @param maximumSize QSize*
 void q_abstractslider_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QAbstractSlider* self, int maxw, int maxh ```
+/// @param self QAbstractSlider*
+/// @param maxw int
+/// @param maxh int
 void q_abstractslider_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QAbstractSlider* self, int minw ```
+/// @param self QAbstractSlider*
+/// @param minw int
 void q_abstractslider_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QAbstractSlider* self, int minh ```
+/// @param self QAbstractSlider*
+/// @param minh int
 void q_abstractslider_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QAbstractSlider* self, int maxw ```
+/// @param self QAbstractSlider*
+/// @param maxw int
 void q_abstractslider_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QAbstractSlider* self, int maxh ```
+/// @param self QAbstractSlider*
+/// @param maxh int
 void q_abstractslider_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QAbstractSlider* self, QSize* sizeIncrement ```
+/// @param self QAbstractSlider*
+/// @param sizeIncrement QSize*
 void q_abstractslider_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QAbstractSlider* self, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param w int
+/// @param h int
 void q_abstractslider_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QAbstractSlider* self, QSize* baseSize ```
+/// @param self QAbstractSlider*
+/// @param baseSize QSize*
 void q_abstractslider_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QAbstractSlider* self, int basew, int baseh ```
+/// @param self QAbstractSlider*
+/// @param basew int
+/// @param baseh int
 void q_abstractslider_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QAbstractSlider* self, QSize* fixedSize ```
+/// @param self QAbstractSlider*
+/// @param fixedSize QSize*
 void q_abstractslider_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QAbstractSlider* self, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param w int
+/// @param h int
 void q_abstractslider_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QAbstractSlider* self, int w ```
+/// @param self QAbstractSlider*
+/// @param w int
 void q_abstractslider_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QAbstractSlider* self, int h ```
+/// @param self QAbstractSlider*
+/// @param h int
 void q_abstractslider_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QAbstractSlider* self, QPointF* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPointF*
 QPointF* q_abstractslider_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QAbstractSlider* self, QPoint* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPoint*
 QPoint* q_abstractslider_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QAbstractSlider* self, QPointF* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPointF*
 QPointF* q_abstractslider_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QAbstractSlider* self, QPoint* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPoint*
 QPoint* q_abstractslider_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QAbstractSlider* self, QPointF* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPointF*
 QPointF* q_abstractslider_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QAbstractSlider* self, QPoint* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPoint*
 QPoint* q_abstractslider_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QAbstractSlider* self, QPointF* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPointF*
 QPointF* q_abstractslider_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QAbstractSlider* self, QPoint* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPoint*
 QPoint* q_abstractslider_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1, QPointF* param2 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_abstractslider_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1, QPoint* param2 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_abstractslider_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1, QPointF* param2 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_abstractslider_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1, QPoint* param2 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_abstractslider_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 const QPalette* q_abstractslider_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QAbstractSlider* self, QPalette* palette ```
+/// @param self QAbstractSlider*
+/// @param palette QPalette*
 void q_abstractslider_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QAbstractSlider* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QAbstractSlider*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_abstractslider_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_abstractslider_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QAbstractSlider* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QAbstractSlider*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_abstractslider_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_abstractslider_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 const QFont* q_abstractslider_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QAbstractSlider* self, QFont* font ```
+/// @param self QAbstractSlider*
+/// @param font QFont*
 void q_abstractslider_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QFontMetrics* q_abstractslider_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QFontInfo* q_abstractslider_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QCursor* q_abstractslider_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QAbstractSlider* self, QCursor* cursor ```
+/// @param self QAbstractSlider*
+/// @param cursor QCursor*
 void q_abstractslider_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QAbstractSlider* self, bool enable ```
+/// @param self QAbstractSlider*
+/// @param enable bool
 void q_abstractslider_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QAbstractSlider* self, bool enable ```
+/// @param self QAbstractSlider*
+/// @param enable bool
 void q_abstractslider_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QAbstractSlider* self, QBitmap* mask ```
+/// @param self QAbstractSlider*
+/// @param mask QBitmap*
 void q_abstractslider_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QAbstractSlider* self, QRegion* mask ```
+/// @param self QAbstractSlider*
+/// @param mask QRegion*
 void q_abstractslider_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRegion* q_abstractslider_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPaintDevice* target ```
+/// @param self QAbstractSlider*
+/// @param target QPaintDevice*
 void q_abstractslider_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPainter* painter ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
 void q_abstractslider_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPixmap* q_abstractslider_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QGraphicsEffect* q_abstractslider_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QAbstractSlider* self, QGraphicsEffect* effect ```
+/// @param self QAbstractSlider*
+/// @param effect QGraphicsEffect*
 void q_abstractslider_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QAbstractSlider* self, enum Qt__GestureType typeVal ```
+/// @param self QAbstractSlider*
+/// @param typeVal enum Qt__GestureType
 void q_abstractslider_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QAbstractSlider* self, enum Qt__GestureType typeVal ```
+/// @param self QAbstractSlider*
+/// @param typeVal enum Qt__GestureType
 void q_abstractslider_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QAbstractSlider* self, const char* windowTitle ```
+/// @param self QAbstractSlider*
+/// @param windowTitle const char*
 void q_abstractslider_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QAbstractSlider* self, const char* styleSheet ```
+/// @param self QAbstractSlider*
+/// @param styleSheet const char*
 void q_abstractslider_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QAbstractSlider* self, QIcon* icon ```
+/// @param self QAbstractSlider*
+/// @param icon QIcon*
 void q_abstractslider_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QIcon* q_abstractslider_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QAbstractSlider* self, const char* windowIconText ```
+/// @param self QAbstractSlider*
+/// @param windowIconText const char*
 void q_abstractslider_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QAbstractSlider* self, const char* windowRole ```
+/// @param self QAbstractSlider*
+/// @param windowRole const char*
 void q_abstractslider_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QAbstractSlider* self, const char* filePath ```
+/// @param self QAbstractSlider*
+/// @param filePath const char*
 void q_abstractslider_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QAbstractSlider* self, double level ```
+/// @param self QAbstractSlider*
+/// @param level double
 void q_abstractslider_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 double q_abstractslider_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QAbstractSlider* self, const char* toolTip ```
+/// @param self QAbstractSlider*
+/// @param toolTip const char*
 void q_abstractslider_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QAbstractSlider* self, int msec ```
+/// @param self QAbstractSlider*
+/// @param msec int
 void q_abstractslider_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QAbstractSlider* self, const char* statusTip ```
+/// @param self QAbstractSlider*
+/// @param statusTip const char*
 void q_abstractslider_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QAbstractSlider* self, const char* whatsThis ```
+/// @param self QAbstractSlider*
+/// @param whatsThis const char*
 void q_abstractslider_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QAbstractSlider* self, const char* name ```
+/// @param self QAbstractSlider*
+/// @param name const char*
 void q_abstractslider_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QAbstractSlider* self, const char* description ```
+/// @param self QAbstractSlider*
+/// @param description const char*
 void q_abstractslider_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QAbstractSlider* self, enum Qt__LayoutDirection direction ```
+/// @param self QAbstractSlider*
+/// @param direction enum Qt__LayoutDirection
 void q_abstractslider_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_abstractslider_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QAbstractSlider* self, QLocale* locale ```
+/// @param self QAbstractSlider*
+/// @param locale QLocale*
 void q_abstractslider_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QLocale* q_abstractslider_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QAbstractSlider* self, enum Qt__FocusReason reason ```
+/// @param self QAbstractSlider*
+/// @param reason enum Qt__FocusReason
 void q_abstractslider_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_abstractslider_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QAbstractSlider* self, enum Qt__FocusPolicy policy ```
+/// @param self QAbstractSlider*
+/// @param policy enum Qt__FocusPolicy
 void q_abstractslider_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_abstractslider_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QAbstractSlider* self, QWidget* focusProxy ```
+/// @param self QAbstractSlider*
+/// @param focusProxy QWidget*
 void q_abstractslider_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_abstractslider_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QAbstractSlider* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QAbstractSlider*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_abstractslider_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QAbstractSlider* self, QCursor* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QCursor*
 void q_abstractslider_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QAbstractSlider* self, QKeySequence* key ```
+/// @param self QAbstractSlider*
+/// @param key QKeySequence*
 int32_t q_abstractslider_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QAbstractSlider* self, int id ```
+/// @param self QAbstractSlider*
+/// @param id int
 void q_abstractslider_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QAbstractSlider* self, int id ```
+/// @param self QAbstractSlider*
+/// @param id int
 void q_abstractslider_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QAbstractSlider* self, int id ```
+/// @param self QAbstractSlider*
+/// @param id int
 void q_abstractslider_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_abstractslider_mouse_grabber();
 
@@ -1519,1161 +1712,1327 @@ QWidget* q_abstractslider_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_abstractslider_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QAbstractSlider* self, bool enable ```
+/// @param self QAbstractSlider*
+/// @param enable bool
 void q_abstractslider_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QGraphicsProxyWidget* q_abstractslider_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QAbstractSlider* self, int x, int y, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_abstractslider_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QAbstractSlider* self, QRect* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QRect*
 void q_abstractslider_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QAbstractSlider* self, QRegion* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QRegion*
 void q_abstractslider_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QAbstractSlider* self, int x, int y, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_abstractslider_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QAbstractSlider* self, QRect* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QRect*
 void q_abstractslider_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QAbstractSlider* self, QRegion* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QRegion*
 void q_abstractslider_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QAbstractSlider* self, bool hidden ```
+/// @param self QAbstractSlider*
+/// @param hidden bool
 void q_abstractslider_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
 void q_abstractslider_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QAbstractSlider* self, int x, int y ```
+/// @param self QAbstractSlider*
+/// @param x int
+/// @param y int
 void q_abstractslider_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QAbstractSlider* self, QPoint* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QPoint*
 void q_abstractslider_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QAbstractSlider* self, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param w int
+/// @param h int
 void q_abstractslider_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QAbstractSlider* self, QSize* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QSize*
 void q_abstractslider_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QAbstractSlider* self, int x, int y, int w, int h ```
+/// @param self QAbstractSlider*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_abstractslider_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QAbstractSlider* self, QRect* geometry ```
+/// @param self QAbstractSlider*
+/// @param geometry QRect*
 void q_abstractslider_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 char* q_abstractslider_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QAbstractSlider* self, const char* geometry ```
+/// @param self QAbstractSlider*
+/// @param geometry const char*
 bool q_abstractslider_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QAbstractSlider* self, QWidget* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QWidget*
 bool q_abstractslider_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_abstractslider_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QAbstractSlider* self, int state ```
+/// @param self QAbstractSlider*
+/// @param state flag of enum Qt__WindowState
 void q_abstractslider_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QAbstractSlider* self, int state ```
+/// @param self QAbstractSlider*
+/// @param state flag of enum Qt__WindowState
 void q_abstractslider_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSizePolicy* q_abstractslider_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QAbstractSlider* self, QSizePolicy* sizePolicy ```
+/// @param self QAbstractSlider*
+/// @param sizePolicy QSizePolicy*
 void q_abstractslider_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QAbstractSlider* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QAbstractSlider*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_abstractslider_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRegion* q_abstractslider_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QAbstractSlider* self, int left, int top, int right, int bottom ```
+/// @param self QAbstractSlider*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_abstractslider_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QAbstractSlider* self, QMargins* margins ```
+/// @param self QAbstractSlider*
+/// @param margins QMargins*
 void q_abstractslider_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QMargins* q_abstractslider_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QRect* q_abstractslider_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QLayout* q_abstractslider_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QAbstractSlider* self, QLayout* layout ```
+/// @param self QAbstractSlider*
+/// @param layout QLayout*
 void q_abstractslider_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QAbstractSlider* self, QWidget* parent ```
+/// @param self QAbstractSlider*
+/// @param parent QWidget*
 void q_abstractslider_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QAbstractSlider* self, QWidget* parent, int f ```
+/// @param self QAbstractSlider*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_abstractslider_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QAbstractSlider* self, int dx, int dy ```
+/// @param self QAbstractSlider*
+/// @param dx int
+/// @param dy int
 void q_abstractslider_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QAbstractSlider* self, int dx, int dy, QRect* param3 ```
+/// @param self QAbstractSlider*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_abstractslider_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QAbstractSlider* self, bool on ```
+/// @param self QAbstractSlider*
+/// @param on bool
 void q_abstractslider_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QAbstractSlider* self, QAction* action ```
+/// @param self QAbstractSlider*
+/// @param action QAction*
 void q_abstractslider_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QAbstractSlider* self, libqt_list /* of QAction* */ actions ```
+/// @param self QAbstractSlider*
+/// @param actions libqt_list /* of QAction* */
 void q_abstractslider_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QAbstractSlider* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QAbstractSlider*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_abstractslider_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QAbstractSlider* self, QAction* before, QAction* action ```
+/// @param self QAbstractSlider*
+/// @param before QAction*
+/// @param action QAction*
 void q_abstractslider_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QAbstractSlider* self, QAction* action ```
+/// @param self QAbstractSlider*
+/// @param action QAction*
 void q_abstractslider_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 libqt_list /* of QAction* */ q_abstractslider_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QAbstractSlider* self, const char* text ```
+/// @param self QAbstractSlider*
+/// @param text const char*
 QAction* q_abstractslider_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QAbstractSlider* self, QIcon* icon, const char* text ```
+/// @param self QAbstractSlider*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_abstractslider_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QAbstractSlider* self, const char* text, QKeySequence* shortcut ```
+/// @param self QAbstractSlider*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_abstractslider_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QAbstractSlider* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QAbstractSlider*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_abstractslider_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWidget* q_abstractslider_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QAbstractSlider* self, int typeVal ```
+/// @param self QAbstractSlider*
+/// @param typeVal flag of enum Qt__WindowType
 void q_abstractslider_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_abstractslider_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WindowType param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__WindowType
 void q_abstractslider_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QAbstractSlider* self, int typeVal ```
+/// @param self QAbstractSlider*
+/// @param typeVal flag of enum Qt__WindowType
 void q_abstractslider_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return enum Qt__WindowType
 int64_t q_abstractslider_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_abstractslider_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QAbstractSlider* self, int x, int y ```
+/// @param self QAbstractSlider*
+/// @param x int
+/// @param y int
 QWidget* q_abstractslider_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QAbstractSlider* self, QPoint* p ```
+/// @param self QAbstractSlider*
+/// @param p QPoint*
 QWidget* q_abstractslider_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QAbstractSlider* self, QPointF* p ```
+/// @param self QAbstractSlider*
+/// @param p QPointF*
 QWidget* q_abstractslider_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__WidgetAttribute
 void q_abstractslider_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_abstractslider_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QAbstractSlider* self, QWidget* child ```
+/// @param self QAbstractSlider*
+/// @param child QWidget*
 bool q_abstractslider_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QAbstractSlider* self, bool enabled ```
+/// @param self QAbstractSlider*
+/// @param enabled bool
 void q_abstractslider_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QBackingStore* q_abstractslider_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QWindow* q_abstractslider_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QScreen* q_abstractslider_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QAbstractSlider* self, QScreen* screen ```
+/// @param self QAbstractSlider*
+/// @param screen QScreen*
 void q_abstractslider_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_abstractslider_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QAbstractSlider* self, const char* title ```
+/// @param self QAbstractSlider*
+/// @param title const char*
 void q_abstractslider_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, const char*) ```
-void q_abstractslider_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, const char*)
+void q_abstractslider_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QAbstractSlider* self, QIcon* icon ```
+/// @param self QAbstractSlider*
+/// @param icon QIcon*
 void q_abstractslider_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QIcon*) ```
-void q_abstractslider_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QIcon*)
+void q_abstractslider_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QAbstractSlider* self, const char* iconText ```
+/// @param self QAbstractSlider*
+/// @param iconText const char*
 void q_abstractslider_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, const char*) ```
-void q_abstractslider_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, const char*)
+void q_abstractslider_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QAbstractSlider* self, QPoint* pos ```
+/// @param self QAbstractSlider*
+/// @param pos QPoint*
 void q_abstractslider_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QPoint*) ```
-void q_abstractslider_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QPoint*)
+void q_abstractslider_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_abstractslider_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QAbstractSlider* self, int hints ```
+/// @param self QAbstractSlider*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_abstractslider_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QAbstractSlider*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_abstractslider_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QAbstractSlider*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_abstractslider_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QAbstractSlider*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_abstractslider_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_abstractslider_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_abstractslider_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QAbstractSlider* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_abstractslider_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QAbstractSlider* self, QRect* rectangle ```
+/// @param self QAbstractSlider*
+/// @param rectangle QRect*
 QPixmap* q_abstractslider_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QAbstractSlider* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QAbstractSlider*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_abstractslider_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QAbstractSlider* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QAbstractSlider*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_abstractslider_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QAbstractSlider* self, int id, bool enable ```
+/// @param self QAbstractSlider*
+/// @param id int
+/// @param enable bool
 void q_abstractslider_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QAbstractSlider* self, int id, bool enable ```
+/// @param self QAbstractSlider*
+/// @param id int
+/// @param enable bool
 void q_abstractslider_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WindowType param1, bool on ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_abstractslider_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QAbstractSlider* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_abstractslider_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_abstractslider_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_abstractslider_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char* q_abstractslider_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAbstractSlider* self, char* name ```
+/// @param self QAbstractSlider*
+/// @param name char*
 void q_abstractslider_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAbstractSlider* self, bool b ```
+/// @param self QAbstractSlider*
+/// @param b bool
 bool q_abstractslider_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QThread* q_abstractslider_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractSlider* self, QThread* thread ```
+/// @param self QAbstractSlider*
+/// @param thread QThread*
 bool q_abstractslider_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractSlider* self, int interval ```
+/// @param self QAbstractSlider*
+/// @param interval int
 int32_t q_abstractslider_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractSlider* self, int id ```
+/// @param self QAbstractSlider*
+/// @param id int
 void q_abstractslider_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAbstractSlider* self, enum Qt__TimerId id ```
+/// @param self QAbstractSlider*
+/// @param id enum Qt__TimerId
 void q_abstractslider_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 libqt_list /* of QObject* */ q_abstractslider_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAbstractSlider* self, QObject* filterObj ```
+/// @param self QAbstractSlider*
+/// @param filterObj QObject*
 void q_abstractslider_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAbstractSlider* self, QObject* obj ```
+/// @param self QAbstractSlider*
+/// @param obj QObject*
 void q_abstractslider_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_abstractslider_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractSlider* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAbstractSlider*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_abstractslider_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_abstractslider_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_abstractslider_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAbstractSlider* self, const char* name, QVariant* value ```
+/// @param self QAbstractSlider*
+/// @param name const char*
+/// @param value QVariant*
 bool q_abstractslider_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAbstractSlider* self, const char* name ```
+/// @param self QAbstractSlider*
+/// @param name const char*
 QVariant* q_abstractslider_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAbstractSlider* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAbstractSlider*
 const char** q_abstractslider_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QBindingStorage* q_abstractslider_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 const QBindingStorage* q_abstractslider_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*) ```
-void q_abstractslider_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*)
+void q_abstractslider_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QObject* q_abstractslider_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAbstractSlider* self, const char* classname ```
+/// @param self QAbstractSlider*
+/// @param classname const char*
 bool q_abstractslider_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAbstractSlider* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAbstractSlider*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_abstractslider_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAbstractSlider* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAbstractSlider*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_abstractslider_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractslider_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAbstractSlider* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAbstractSlider*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_abstractslider_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSlider* self, QObject* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QObject*
 void q_abstractslider_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QObject*) ```
-void q_abstractslider_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QObject*)
+void q_abstractslider_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 double q_abstractslider_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 double q_abstractslider_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_abstractslider_device_pixel_ratio_f_scale();
 
@@ -2681,7 +3040,8 @@ double q_abstractslider_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_abstractslider_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2690,7 +3050,7 @@ int32_t q_abstractslider_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2699,7 +3059,7 @@ int32_t q_abstractslider_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2708,8 +3068,9 @@ int32_t q_abstractslider_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)() ```
-void q_abstractslider_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn()
+void q_abstractslider_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2717,7 +3078,8 @@ void q_abstractslider_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool visible ```
+/// @param self QAbstractSlider*
+/// @param visible bool
 void q_abstractslider_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2726,7 +3088,8 @@ void q_abstractslider_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool visible ```
+/// @param self QAbstractSlider*
+/// @param visible bool
 void q_abstractslider_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2735,8 +3098,9 @@ void q_abstractslider_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, bool) ```
-void q_abstractslider_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, bool)
+void q_abstractslider_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2744,7 +3108,7 @@ void q_abstractslider_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2753,7 +3117,7 @@ QSize* q_abstractslider_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2762,8 +3126,9 @@ QSize* q_abstractslider_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QSize* (*slot)() ```
-void q_abstractslider_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback QSize* fn()
+void q_abstractslider_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2771,7 +3136,7 @@ void q_abstractslider_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2780,7 +3145,7 @@ QSize* q_abstractslider_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QSize* q_abstractslider_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2789,8 +3154,9 @@ QSize* q_abstractslider_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QSize* (*slot)() ```
-void q_abstractslider_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback QSize* fn()
+void q_abstractslider_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2798,7 +3164,8 @@ void q_abstractslider_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 int
 int32_t q_abstractslider_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2807,7 +3174,8 @@ int32_t q_abstractslider_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 int
 int32_t q_abstractslider_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2816,8 +3184,9 @@ int32_t q_abstractslider_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)(QAbstractSlider*, int) ```
-void q_abstractslider_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn(QAbstractSlider*, int)
+void q_abstractslider_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2825,7 +3194,7 @@ void q_abstractslider_on_height_for_width(void* self, int32_t (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2834,7 +3203,7 @@ bool q_abstractslider_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2843,8 +3212,9 @@ bool q_abstractslider_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)() ```
-void q_abstractslider_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback bool fn()
+void q_abstractslider_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2852,7 +3222,7 @@ void q_abstractslider_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPaintEngine* q_abstractslider_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2861,7 +3231,7 @@ QPaintEngine* q_abstractslider_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPaintEngine* q_abstractslider_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2870,8 +3240,9 @@ QPaintEngine* q_abstractslider_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPaintEngine* (*slot)() ```
-void q_abstractslider_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback QPaintEngine* fn()
+void q_abstractslider_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2879,7 +3250,8 @@ void q_abstractslider_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2888,7 +3260,8 @@ void q_abstractslider_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2897,8 +3270,9 @@ void q_abstractslider_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMouseEvent*) ```
-void q_abstractslider_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+void q_abstractslider_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2906,7 +3280,8 @@ void q_abstractslider_on_mouse_press_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2915,7 +3290,8 @@ void q_abstractslider_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2924,8 +3300,9 @@ void q_abstractslider_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMouseEvent*) ```
-void q_abstractslider_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+void q_abstractslider_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2933,7 +3310,8 @@ void q_abstractslider_on_mouse_release_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2942,7 +3320,8 @@ void q_abstractslider_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2951,8 +3330,9 @@ void q_abstractslider_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMouseEvent*) ```
-void q_abstractslider_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+void q_abstractslider_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2960,7 +3340,8 @@ void q_abstractslider_on_mouse_double_click_event(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2969,7 +3350,8 @@ void q_abstractslider_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMouseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMouseEvent*
 void q_abstractslider_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2978,8 +3360,9 @@ void q_abstractslider_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMouseEvent*) ```
-void q_abstractslider_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMouseEvent*)
+void q_abstractslider_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2987,7 +3370,8 @@ void q_abstractslider_on_mouse_move_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QKeyEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QKeyEvent*
 void q_abstractslider_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2996,7 +3380,8 @@ void q_abstractslider_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QKeyEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QKeyEvent*
 void q_abstractslider_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3005,8 +3390,9 @@ void q_abstractslider_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QKeyEvent*) ```
-void q_abstractslider_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QKeyEvent*)
+void q_abstractslider_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3014,7 +3400,8 @@ void q_abstractslider_on_key_release_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QFocusEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QFocusEvent*
 void q_abstractslider_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3023,7 +3410,8 @@ void q_abstractslider_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QFocusEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QFocusEvent*
 void q_abstractslider_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3032,8 +3420,9 @@ void q_abstractslider_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QFocusEvent*) ```
-void q_abstractslider_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QFocusEvent*)
+void q_abstractslider_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3041,7 +3430,8 @@ void q_abstractslider_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QFocusEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QFocusEvent*
 void q_abstractslider_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3050,7 +3440,8 @@ void q_abstractslider_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QFocusEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QFocusEvent*
 void q_abstractslider_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3059,8 +3450,9 @@ void q_abstractslider_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QFocusEvent*) ```
-void q_abstractslider_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QFocusEvent*)
+void q_abstractslider_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3068,7 +3460,8 @@ void q_abstractslider_on_focus_out_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEnterEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEnterEvent*
 void q_abstractslider_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3077,7 +3470,8 @@ void q_abstractslider_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEnterEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEnterEvent*
 void q_abstractslider_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3086,8 +3480,9 @@ void q_abstractslider_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QEnterEvent*) ```
-void q_abstractslider_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QEnterEvent*)
+void q_abstractslider_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3095,7 +3490,8 @@ void q_abstractslider_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEvent*
 void q_abstractslider_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3104,7 +3500,8 @@ void q_abstractslider_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEvent*
 void q_abstractslider_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3113,8 +3510,9 @@ void q_abstractslider_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QEvent*) ```
-void q_abstractslider_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QEvent*)
+void q_abstractslider_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3122,7 +3520,8 @@ void q_abstractslider_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPaintEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QPaintEvent*
 void q_abstractslider_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3131,7 +3530,8 @@ void q_abstractslider_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPaintEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QPaintEvent*
 void q_abstractslider_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3140,8 +3540,9 @@ void q_abstractslider_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QPaintEvent*) ```
-void q_abstractslider_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QPaintEvent*)
+void q_abstractslider_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3149,7 +3550,8 @@ void q_abstractslider_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMoveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMoveEvent*
 void q_abstractslider_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3158,7 +3560,8 @@ void q_abstractslider_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMoveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QMoveEvent*
 void q_abstractslider_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3167,8 +3570,9 @@ void q_abstractslider_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMoveEvent*) ```
-void q_abstractslider_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMoveEvent*)
+void q_abstractslider_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3176,7 +3580,8 @@ void q_abstractslider_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QResizeEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QResizeEvent*
 void q_abstractslider_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3185,7 +3590,8 @@ void q_abstractslider_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QResizeEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QResizeEvent*
 void q_abstractslider_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3194,8 +3600,9 @@ void q_abstractslider_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QResizeEvent*) ```
-void q_abstractslider_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QResizeEvent*)
+void q_abstractslider_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3203,7 +3610,8 @@ void q_abstractslider_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QCloseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QCloseEvent*
 void q_abstractslider_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3212,7 +3620,8 @@ void q_abstractslider_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QCloseEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QCloseEvent*
 void q_abstractslider_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3221,8 +3630,9 @@ void q_abstractslider_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QCloseEvent*) ```
-void q_abstractslider_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QCloseEvent*)
+void q_abstractslider_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3230,7 +3640,8 @@ void q_abstractslider_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QContextMenuEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QContextMenuEvent*
 void q_abstractslider_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3239,7 +3650,8 @@ void q_abstractslider_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QContextMenuEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QContextMenuEvent*
 void q_abstractslider_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3248,8 +3660,9 @@ void q_abstractslider_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QContextMenuEvent*) ```
-void q_abstractslider_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QContextMenuEvent*)
+void q_abstractslider_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3257,7 +3670,8 @@ void q_abstractslider_on_context_menu_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QTabletEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QTabletEvent*
 void q_abstractslider_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3266,7 +3680,8 @@ void q_abstractslider_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QTabletEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QTabletEvent*
 void q_abstractslider_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3275,8 +3690,9 @@ void q_abstractslider_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QTabletEvent*) ```
-void q_abstractslider_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QTabletEvent*)
+void q_abstractslider_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3284,7 +3700,8 @@ void q_abstractslider_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QActionEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QActionEvent*
 void q_abstractslider_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3293,7 +3710,8 @@ void q_abstractslider_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QActionEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QActionEvent*
 void q_abstractslider_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3302,8 +3720,9 @@ void q_abstractslider_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QActionEvent*) ```
-void q_abstractslider_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QActionEvent*)
+void q_abstractslider_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3311,7 +3730,8 @@ void q_abstractslider_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragEnterEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragEnterEvent*
 void q_abstractslider_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3320,7 +3740,8 @@ void q_abstractslider_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragEnterEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragEnterEvent*
 void q_abstractslider_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3329,8 +3750,9 @@ void q_abstractslider_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QDragEnterEvent*) ```
-void q_abstractslider_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QDragEnterEvent*)
+void q_abstractslider_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3338,7 +3760,8 @@ void q_abstractslider_on_drag_enter_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragMoveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragMoveEvent*
 void q_abstractslider_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3347,7 +3770,8 @@ void q_abstractslider_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragMoveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragMoveEvent*
 void q_abstractslider_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3356,8 +3780,9 @@ void q_abstractslider_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QDragMoveEvent*) ```
-void q_abstractslider_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QDragMoveEvent*)
+void q_abstractslider_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3365,7 +3790,8 @@ void q_abstractslider_on_drag_move_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragLeaveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragLeaveEvent*
 void q_abstractslider_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3374,7 +3800,8 @@ void q_abstractslider_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDragLeaveEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDragLeaveEvent*
 void q_abstractslider_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3383,8 +3810,9 @@ void q_abstractslider_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QDragLeaveEvent*) ```
-void q_abstractslider_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QDragLeaveEvent*)
+void q_abstractslider_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3392,7 +3820,8 @@ void q_abstractslider_on_drag_leave_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDropEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDropEvent*
 void q_abstractslider_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3401,7 +3830,8 @@ void q_abstractslider_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QDropEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QDropEvent*
 void q_abstractslider_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3410,8 +3840,9 @@ void q_abstractslider_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QDropEvent*) ```
-void q_abstractslider_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QDropEvent*)
+void q_abstractslider_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3419,7 +3850,8 @@ void q_abstractslider_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QShowEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QShowEvent*
 void q_abstractslider_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3428,7 +3860,8 @@ void q_abstractslider_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QShowEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QShowEvent*
 void q_abstractslider_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3437,8 +3870,9 @@ void q_abstractslider_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QShowEvent*) ```
-void q_abstractslider_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QShowEvent*)
+void q_abstractslider_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3446,7 +3880,8 @@ void q_abstractslider_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QHideEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QHideEvent*
 void q_abstractslider_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3455,7 +3890,8 @@ void q_abstractslider_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QHideEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QHideEvent*
 void q_abstractslider_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3464,8 +3900,9 @@ void q_abstractslider_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QHideEvent*) ```
-void q_abstractslider_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QHideEvent*)
+void q_abstractslider_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3473,7 +3910,10 @@ void q_abstractslider_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QAbstractSlider*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_abstractslider_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3482,7 +3922,10 @@ bool q_abstractslider_native_event(void* self, const char* eventType, void* mess
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QAbstractSlider*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_abstractslider_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3491,8 +3934,9 @@ bool q_abstractslider_qbase_native_event(void* self, const char* eventType, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)(QAbstractSlider*, const char*, void*, intptr_t*) ```
-void q_abstractslider_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QAbstractSlider*
+/// @param callback bool fn(QAbstractSlider*, const char*, void*, intptr_t*)
+void q_abstractslider_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3500,7 +3944,8 @@ void q_abstractslider_on_native_event(void* self, bool (*slot)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_abstractslider_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3509,7 +3954,8 @@ int32_t q_abstractslider_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_abstractslider_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3518,8 +3964,9 @@ int32_t q_abstractslider_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_abstractslider_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric)
+void q_abstractslider_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3527,7 +3974,8 @@ void q_abstractslider_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPainter* painter ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
 void q_abstractslider_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3536,7 +3984,8 @@ void q_abstractslider_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPainter* painter ```
+/// @param self QAbstractSlider*
+/// @param painter QPainter*
 void q_abstractslider_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3545,8 +3994,9 @@ void q_abstractslider_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QPainter*) ```
-void q_abstractslider_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QPainter*)
+void q_abstractslider_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3554,7 +4004,8 @@ void q_abstractslider_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPoint* offset ```
+/// @param self QAbstractSlider*
+/// @param offset QPoint*
 QPaintDevice* q_abstractslider_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3563,7 +4014,8 @@ QPaintDevice* q_abstractslider_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPoint* offset ```
+/// @param self QAbstractSlider*
+/// @param offset QPoint*
 QPaintDevice* q_abstractslider_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3572,8 +4024,9 @@ QPaintDevice* q_abstractslider_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPaintDevice* (*slot)(QAbstractSlider*, QPoint*) ```
-void q_abstractslider_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback QPaintDevice* fn(QAbstractSlider*, QPoint*)
+void q_abstractslider_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3581,7 +4034,7 @@ void q_abstractslider_on_redirected(void* self, QPaintDevice* (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPainter* q_abstractslider_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3590,7 +4043,7 @@ QPainter* q_abstractslider_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QPainter* q_abstractslider_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3599,8 +4052,9 @@ QPainter* q_abstractslider_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QPainter* (*slot)() ```
-void q_abstractslider_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback QPainter* fn()
+void q_abstractslider_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3608,7 +4062,8 @@ void q_abstractslider_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QInputMethodEvent* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QInputMethodEvent*
 void q_abstractslider_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3617,7 +4072,8 @@ void q_abstractslider_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QInputMethodEvent* param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 QInputMethodEvent*
 void q_abstractslider_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3626,8 +4082,9 @@ void q_abstractslider_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QInputMethodEvent*) ```
-void q_abstractslider_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QInputMethodEvent*)
+void q_abstractslider_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3635,7 +4092,8 @@ void q_abstractslider_on_input_method_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_abstractslider_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3644,7 +4102,8 @@ QVariant* q_abstractslider_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QAbstractSlider*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_abstractslider_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3653,8 +4112,9 @@ QVariant* q_abstractslider_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QVariant* (*slot)(QAbstractSlider*, enum Qt__InputMethodQuery) ```
-void q_abstractslider_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QAbstractSlider*
+/// @param callback QVariant* fn(QAbstractSlider*, enum Qt__InputMethodQuery)
+void q_abstractslider_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3662,7 +4122,8 @@ void q_abstractslider_on_input_method_query(void* self, QVariant* (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool next ```
+/// @param self QAbstractSlider*
+/// @param next bool
 bool q_abstractslider_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3671,7 +4132,8 @@ bool q_abstractslider_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool next ```
+/// @param self QAbstractSlider*
+/// @param next bool
 bool q_abstractslider_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3680,8 +4142,9 @@ bool q_abstractslider_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)(QAbstractSlider*, bool) ```
-void q_abstractslider_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QAbstractSlider*
+/// @param callback bool fn(QAbstractSlider*, bool)
+void q_abstractslider_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3689,7 +4152,9 @@ void q_abstractslider_on_focus_next_prev_child(void* self, bool (*slot)(void*, b
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QObject* watched, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_abstractslider_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3698,7 +4163,9 @@ bool q_abstractslider_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QObject* watched, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_abstractslider_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3707,8 +4174,9 @@ bool q_abstractslider_qbase_event_filter(void* self, void* watched, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)(QAbstractSlider*, QObject*, QEvent*) ```
-void q_abstractslider_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback bool fn(QAbstractSlider*, QObject*, QEvent*)
+void q_abstractslider_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3716,7 +4184,8 @@ void q_abstractslider_on_event_filter(void* self, bool (*slot)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QChildEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QChildEvent*
 void q_abstractslider_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3725,7 +4194,8 @@ void q_abstractslider_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QChildEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QChildEvent*
 void q_abstractslider_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3734,8 +4204,9 @@ void q_abstractslider_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QChildEvent*) ```
-void q_abstractslider_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QChildEvent*)
+void q_abstractslider_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3743,7 +4214,8 @@ void q_abstractslider_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEvent*
 void q_abstractslider_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3752,7 +4224,8 @@ void q_abstractslider_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QEvent* event ```
+/// @param self QAbstractSlider*
+/// @param event QEvent*
 void q_abstractslider_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3761,8 +4234,9 @@ void q_abstractslider_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QEvent*) ```
-void q_abstractslider_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QEvent*)
+void q_abstractslider_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3770,7 +4244,8 @@ void q_abstractslider_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 void q_abstractslider_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3779,7 +4254,8 @@ void q_abstractslider_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 void q_abstractslider_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3788,8 +4264,9 @@ void q_abstractslider_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMetaMethod*) ```
-void q_abstractslider_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMetaMethod*)
+void q_abstractslider_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3797,7 +4274,8 @@ void q_abstractslider_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 void q_abstractslider_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3806,7 +4284,8 @@ void q_abstractslider_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 void q_abstractslider_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3815,8 +4294,9 @@ void q_abstractslider_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, QMetaMethod*) ```
-void q_abstractslider_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, QMetaMethod*)
+void q_abstractslider_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3824,7 +4304,7 @@ void q_abstractslider_on_disconnect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3833,7 +4313,7 @@ void q_abstractslider_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3842,8 +4322,9 @@ void q_abstractslider_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)() ```
-void q_abstractslider_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback void fn()
+void q_abstractslider_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3851,7 +4332,7 @@ void q_abstractslider_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_create(void* self);
 
 /// Inherited from QWidget
@@ -3860,7 +4341,7 @@ void q_abstractslider_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3869,8 +4350,9 @@ void q_abstractslider_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)() ```
-void q_abstractslider_on_create(void* self, void (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback void fn()
+void q_abstractslider_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3878,7 +4360,7 @@ void q_abstractslider_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3887,7 +4369,7 @@ void q_abstractslider_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3896,8 +4378,9 @@ void q_abstractslider_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, void (*slot)() ```
-void q_abstractslider_on_destroy(void* self, void (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback void fn()
+void q_abstractslider_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3905,7 +4388,7 @@ void q_abstractslider_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3914,7 +4397,7 @@ bool q_abstractslider_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3923,8 +4406,9 @@ bool q_abstractslider_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)() ```
-void q_abstractslider_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback bool fn()
+void q_abstractslider_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3932,7 +4416,7 @@ void q_abstractslider_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3941,7 +4425,7 @@ bool q_abstractslider_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 bool q_abstractslider_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3950,8 +4434,9 @@ bool q_abstractslider_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)() ```
-void q_abstractslider_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback bool fn()
+void q_abstractslider_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3959,7 +4444,7 @@ void q_abstractslider_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QObject* q_abstractslider_sender(void* self);
 
 /// Inherited from QObject
@@ -3968,7 +4453,7 @@ QObject* q_abstractslider_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 QObject* q_abstractslider_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3977,8 +4462,9 @@ QObject* q_abstractslider_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QObject* (*slot)() ```
-void q_abstractslider_on_sender(void* self, QObject* (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback QObject* fn()
+void q_abstractslider_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3986,7 +4472,7 @@ void q_abstractslider_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3995,7 +4481,7 @@ int32_t q_abstractslider_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 int32_t q_abstractslider_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4004,8 +4490,9 @@ int32_t q_abstractslider_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)() ```
-void q_abstractslider_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn()
+void q_abstractslider_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4013,7 +4500,8 @@ void q_abstractslider_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, const char* signal ```
+/// @param self QAbstractSlider*
+/// @param signal const char*
 int32_t q_abstractslider_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4022,7 +4510,8 @@ int32_t q_abstractslider_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, const char* signal ```
+/// @param self QAbstractSlider*
+/// @param signal const char*
 int32_t q_abstractslider_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4031,8 +4520,9 @@ int32_t q_abstractslider_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, int32_t (*slot)(QAbstractSlider*, const char*) ```
-void q_abstractslider_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QAbstractSlider*
+/// @param callback int32_t fn(QAbstractSlider*, const char*)
+void q_abstractslider_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4040,7 +4530,8 @@ void q_abstractslider_on_receivers(void* self, int32_t (*slot)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 bool q_abstractslider_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4049,7 +4540,8 @@ bool q_abstractslider_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, QMetaMethod* signal ```
+/// @param self QAbstractSlider*
+/// @param signal QMetaMethod*
 bool q_abstractslider_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4058,8 +4550,9 @@ bool q_abstractslider_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, bool (*slot)(QAbstractSlider*, QMetaMethod*) ```
-void q_abstractslider_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QAbstractSlider*
+/// @param callback bool fn(QAbstractSlider*, QMetaMethod*)
+void q_abstractslider_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4067,7 +4560,9 @@ void q_abstractslider_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QAbstractSlider*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_abstractslider_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4076,7 +4571,9 @@ double q_abstractslider_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QAbstractSlider*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_abstractslider_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4085,8 +4582,9 @@ double q_abstractslider_qbase_get_decoded_metric_f(void* self, int64_t metricA, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAbstractSlider* self, double (*slot)(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_abstractslider_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QAbstractSlider*
+/// @param callback double fn(QAbstractSlider*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_abstractslider_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4094,14 +4592,15 @@ void q_abstractslider_on_get_decoded_metric_f(void* self, double (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAbstractSlider* self, void (*slot)(QAbstractSlider*, const char*) ```
-void q_abstractslider_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAbstractSlider*
+/// @param callback void fn(QAbstractSlider*, const char*)
+void q_abstractslider_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#dtor.QAbstractSlider)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAbstractSlider* self ```
+/// @param self QAbstractSlider*
 void q_abstractslider_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qabstractslider.html#types

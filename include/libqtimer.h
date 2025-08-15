@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,399 +15,467 @@
 
 /// q_timer_new constructs a new QTimer object.
 ///
-///
 QTimer* q_timer_new();
 
 /// q_timer_new2 constructs a new QTimer object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QTimer* q_timer_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 const QMetaObject* q_timer_meta_object(void* self);
 
-/// ``` QTimer* self, const char* param1 ```
+/// @param self QTimer*
+/// @param param1 const char*
 void* q_timer_metacast(void* self, const char* param1);
 
-/// ``` QTimer* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTimer*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_timer_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTimer* self, int32_t (*slot)(QTimer*, enum QMetaObject__Call, int, void*) ```
-void q_timer_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTimer*
+/// @param callback int32_t fn(QTimer*, enum QMetaObject__Call, int, void*)
+void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTimer* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTimer*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_timer_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_timer_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#isActive)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_is_active(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerId)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 int32_t q_timer_timer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#id)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
+///
+/// @return enum Qt__TimerId
 int64_t q_timer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#setInterval)
 ///
-/// ``` QTimer* self, int msec ```
+/// @param self QTimer*
+/// @param msec int
 void q_timer_set_interval(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#interval)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 int32_t q_timer_interval(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#remainingTime)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 int32_t q_timer_remaining_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#setTimerType)
 ///
-/// ``` QTimer* self, enum Qt__TimerType atype ```
+/// @param self QTimer*
+/// @param atype enum Qt__TimerType
 void q_timer_set_timer_type(void* self, int64_t atype);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerType)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
+///
+/// @return enum Qt__TimerType
 int64_t q_timer_timer_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#setSingleShot)
 ///
-/// ``` QTimer* self, bool singleShot ```
+/// @param self QTimer*
+/// @param singleShot bool
 void q_timer_set_single_shot(void* self, bool singleShot);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#isSingleShot)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_is_single_shot(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#start)
 ///
-/// ``` QTimer* self, int msec ```
+/// @param self QTimer*
+/// @param msec int
 void q_timer_start(void* self, int msec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#start)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_start2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#stop)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
 ///
-/// ``` QTimer* self, QTimerEvent* param1 ```
+/// @param self QTimer*
+/// @param param1 QTimerEvent*
 void q_timer_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QTimerEvent*) ```
-void q_timer_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QTimerEvent*)
+void q_timer_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTimer* self, QTimerEvent* param1 ```
+/// @param self QTimer*
+/// @param param1 QTimerEvent*
 void q_timer_qbase_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_timer_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_timer_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTimer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTimer*
 const char* q_timer_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTimer* self, char* name ```
+/// @param self QTimer*
+/// @param name char*
 void q_timer_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 bool q_timer_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTimer* self, bool b ```
+/// @param self QTimer*
+/// @param b bool
 bool q_timer_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 QThread* q_timer_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTimer* self, QThread* thread ```
+/// @param self QTimer*
+/// @param thread QThread*
 bool q_timer_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTimer* self, int interval ```
+/// @param self QTimer*
+/// @param interval int
 int32_t q_timer_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTimer* self, int id ```
+/// @param self QTimer*
+/// @param id int
 void q_timer_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTimer* self, enum Qt__TimerId id ```
+/// @param self QTimer*
+/// @param id enum Qt__TimerId
 void q_timer_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 libqt_list /* of QObject* */ q_timer_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTimer* self, QObject* parent ```
+/// @param self QTimer*
+/// @param parent QObject*
 void q_timer_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTimer* self, QObject* filterObj ```
+/// @param self QTimer*
+/// @param filterObj QObject*
 void q_timer_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTimer* self, QObject* obj ```
+/// @param self QTimer*
+/// @param obj QObject*
 void q_timer_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_timer_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTimer* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTimer*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_timer_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_timer_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_timer_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTimer* self, const char* name, QVariant* value ```
+/// @param self QTimer*
+/// @param name const char*
+/// @param value QVariant*
 bool q_timer_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTimer* self, const char* name ```
+/// @param self QTimer*
+/// @param name const char*
 QVariant* q_timer_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTimer* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTimer*
 const char** q_timer_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 QBindingStorage* q_timer_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 const QBindingStorage* q_timer_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*) ```
-void q_timer_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*)
+void q_timer_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 QObject* q_timer_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTimer* self, const char* classname ```
+/// @param self QTimer*
+/// @param classname const char*
 bool q_timer_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTimer* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTimer*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_timer_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTimer* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTimer*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_timer_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_timer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTimer* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTimer*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_timer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimer* self, QObject* param1 ```
+/// @param self QTimer*
+/// @param param1 QObject*
 void q_timer_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QObject*) ```
-void q_timer_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QObject*)
+void q_timer_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -416,7 +483,8 @@ void q_timer_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QEvent* event ```
+/// @param self QTimer*
+/// @param event QEvent*
 bool q_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -425,7 +493,8 @@ bool q_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QEvent* event ```
+/// @param self QTimer*
+/// @param event QEvent*
 bool q_timer_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -434,8 +503,9 @@ bool q_timer_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, bool (*slot)(QTimer*, QEvent*) ```
-void q_timer_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback bool fn(QTimer*, QEvent*)
+void q_timer_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -443,7 +513,9 @@ void q_timer_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QObject* watched, QEvent* event ```
+/// @param self QTimer*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_timer_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -452,7 +524,9 @@ bool q_timer_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QObject* watched, QEvent* event ```
+/// @param self QTimer*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_timer_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -461,8 +535,9 @@ bool q_timer_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, bool (*slot)(QTimer*, QObject*, QEvent*) ```
-void q_timer_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTimer*
+/// @param callback bool fn(QTimer*, QObject*, QEvent*)
+void q_timer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -470,7 +545,8 @@ void q_timer_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QChildEvent* event ```
+/// @param self QTimer*
+/// @param event QChildEvent*
 void q_timer_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -479,7 +555,8 @@ void q_timer_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QChildEvent* event ```
+/// @param self QTimer*
+/// @param event QChildEvent*
 void q_timer_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -488,8 +565,9 @@ void q_timer_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QChildEvent*) ```
-void q_timer_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QChildEvent*)
+void q_timer_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -497,7 +575,8 @@ void q_timer_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QEvent* event ```
+/// @param self QTimer*
+/// @param event QEvent*
 void q_timer_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -506,7 +585,8 @@ void q_timer_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QEvent* event ```
+/// @param self QTimer*
+/// @param event QEvent*
 void q_timer_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -515,8 +595,9 @@ void q_timer_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QEvent*) ```
-void q_timer_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QEvent*)
+void q_timer_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -524,7 +605,8 @@ void q_timer_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 void q_timer_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -533,7 +615,8 @@ void q_timer_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 void q_timer_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -542,8 +625,9 @@ void q_timer_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QMetaMethod*) ```
-void q_timer_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QMetaMethod*)
+void q_timer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -551,7 +635,8 @@ void q_timer_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 void q_timer_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -560,7 +645,8 @@ void q_timer_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 void q_timer_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -569,8 +655,9 @@ void q_timer_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, QMetaMethod*) ```
-void q_timer_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, QMetaMethod*)
+void q_timer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -578,7 +665,7 @@ void q_timer_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 QObject* q_timer_sender(void* self);
 
 /// Inherited from QObject
@@ -587,7 +674,7 @@ QObject* q_timer_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 QObject* q_timer_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -596,8 +683,9 @@ QObject* q_timer_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, QObject* (*slot)() ```
-void q_timer_on_sender(void* self, QObject* (*slot)());
+/// @param self QTimer*
+/// @param callback QObject* fn()
+void q_timer_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -605,7 +693,7 @@ void q_timer_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 int32_t q_timer_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -614,7 +702,7 @@ int32_t q_timer_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 int32_t q_timer_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -623,8 +711,9 @@ int32_t q_timer_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, int32_t (*slot)() ```
-void q_timer_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTimer*
+/// @param callback int32_t fn()
+void q_timer_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -632,7 +721,8 @@ void q_timer_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, const char* signal ```
+/// @param self QTimer*
+/// @param signal const char*
 int32_t q_timer_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -641,7 +731,8 @@ int32_t q_timer_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, const char* signal ```
+/// @param self QTimer*
+/// @param signal const char*
 int32_t q_timer_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -650,8 +741,9 @@ int32_t q_timer_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, int32_t (*slot)(QTimer*, const char*) ```
-void q_timer_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTimer*
+/// @param callback int32_t fn(QTimer*, const char*)
+void q_timer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -659,7 +751,8 @@ void q_timer_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 bool q_timer_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -668,7 +761,8 @@ bool q_timer_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTimer* self, QMetaMethod* signal ```
+/// @param self QTimer*
+/// @param signal QMetaMethod*
 bool q_timer_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -677,15 +771,17 @@ bool q_timer_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTimer* self, bool (*slot)(QTimer*, QMetaMethod*) ```
-void q_timer_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTimer*
+/// @param callback bool fn(QTimer*, QMetaMethod*)
+void q_timer_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timeout)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*) ```
-void q_timer_on_timeout(void* self, void (*slot)(void*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*)
+void q_timer_on_timeout(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
@@ -693,14 +789,15 @@ void q_timer_on_timeout(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTimer* self, void (*slot)(QTimer*, const char*) ```
-void q_timer_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTimer*
+/// @param callback void fn(QTimer*, const char*)
+void q_timer_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#dtor.QTimer)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTimer* self ```
+/// @param self QTimer*
 void q_timer_delete(void* self);
 
 #endif

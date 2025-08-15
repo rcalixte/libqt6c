@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,525 +15,615 @@
 
 /// q_candlestickset_new constructs a new QCandlestickSet object.
 ///
-///
 QCandlestickSet* q_candlestickset_new();
 
 /// q_candlestickset_new2 constructs a new QCandlestickSet object.
 ///
-/// ``` double open, double high, double low, double close ```
+/// @param open double
+/// @param high double
+/// @param low double
+/// @param close double
 QCandlestickSet* q_candlestickset_new2(double open, double high, double low, double close);
 
 /// q_candlestickset_new3 constructs a new QCandlestickSet object.
 ///
-/// ``` double timestamp ```
+/// @param timestamp double
 QCandlestickSet* q_candlestickset_new3(double timestamp);
 
 /// q_candlestickset_new4 constructs a new QCandlestickSet object.
 ///
-/// ``` double timestamp, QObject* parent ```
+/// @param timestamp double
+/// @param parent QObject*
 QCandlestickSet* q_candlestickset_new4(double timestamp, void* parent);
 
 /// q_candlestickset_new5 constructs a new QCandlestickSet object.
 ///
-/// ``` double open, double high, double low, double close, double timestamp ```
+/// @param open double
+/// @param high double
+/// @param low double
+/// @param close double
+/// @param timestamp double
 QCandlestickSet* q_candlestickset_new5(double open, double high, double low, double close, double timestamp);
 
 /// q_candlestickset_new6 constructs a new QCandlestickSet object.
 ///
-/// ``` double open, double high, double low, double close, double timestamp, QObject* parent ```
+/// @param open double
+/// @param high double
+/// @param low double
+/// @param close double
+/// @param timestamp double
+/// @param parent QObject*
 QCandlestickSet* q_candlestickset_new6(double open, double high, double low, double close, double timestamp, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 const QMetaObject* q_candlestickset_meta_object(void* self);
 
-/// ``` QCandlestickSet* self, const char* param1 ```
+/// @param self QCandlestickSet*
+/// @param param1 const char*
 void* q_candlestickset_metacast(void* self, const char* param1);
 
-/// ``` QCandlestickSet* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QCandlestickSet*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_candlestickset_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QCandlestickSet* self, int32_t (*slot)(QCandlestickSet*, enum QMetaObject__Call, int, void*) ```
-void q_candlestickset_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QCandlestickSet*
+/// @param callback int32_t fn(QCandlestickSet*, enum QMetaObject__Call, int, void*)
+void q_candlestickset_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QCandlestickSet* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QCandlestickSet*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_candlestickset_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_candlestickset_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setTimestamp)
 ///
-/// ``` QCandlestickSet* self, double timestamp ```
+/// @param self QCandlestickSet*
+/// @param timestamp double
 void q_candlestickset_set_timestamp(void* self, double timestamp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestamp)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 double q_candlestickset_timestamp(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setOpen)
 ///
-/// ``` QCandlestickSet* self, double open ```
+/// @param self QCandlestickSet*
+/// @param open double
 void q_candlestickset_set_open(void* self, double open);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#open)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 double q_candlestickset_open(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setHigh)
 ///
-/// ``` QCandlestickSet* self, double high ```
+/// @param self QCandlestickSet*
+/// @param high double
 void q_candlestickset_set_high(void* self, double high);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#high)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 double q_candlestickset_high(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setLow)
 ///
-/// ``` QCandlestickSet* self, double low ```
+/// @param self QCandlestickSet*
+/// @param low double
 void q_candlestickset_set_low(void* self, double low);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#low)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 double q_candlestickset_low(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setClose)
 ///
-/// ``` QCandlestickSet* self, double close ```
+/// @param self QCandlestickSet*
+/// @param close double
 void q_candlestickset_set_close(void* self, double close);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#close)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 double q_candlestickset_close(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setBrush)
 ///
-/// ``` QCandlestickSet* self, QBrush* brush ```
+/// @param self QCandlestickSet*
+/// @param brush QBrush*
 void q_candlestickset_set_brush(void* self, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brush)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QBrush* q_candlestickset_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#setPen)
 ///
-/// ``` QCandlestickSet* self, QPen* pen ```
+/// @param self QCandlestickSet*
+/// @param pen QPen*
 void q_candlestickset_set_pen(void* self, void* pen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pen)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QPen* q_candlestickset_pen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#clicked)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_clicked(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#clicked)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_clicked(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#hovered)
 ///
-/// ``` QCandlestickSet* self, bool status ```
+/// @param self QCandlestickSet*
+/// @param status bool
 void q_candlestickset_hovered(void* self, bool status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#hovered)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, bool) ```
-void q_candlestickset_on_hovered(void* self, void (*slot)(void*, bool));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, bool)
+void q_candlestickset_on_hovered(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pressed)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_pressed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#pressed)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_pressed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_pressed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#released)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_released(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#released)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_released(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_released(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#doubleClicked)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_double_clicked(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#doubleClicked)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_double_clicked(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_double_clicked(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestampChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_timestamp_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#timestampChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_timestamp_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_timestamp_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#openChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_open_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#openChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_open_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_open_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#highChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_high_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#highChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_high_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_high_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#lowChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_low_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#lowChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_low_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_low_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#closeChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_close_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#closeChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_close_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_close_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brushChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_brush_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#brushChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_brush_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_brush_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#penChanged)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_pen_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#penChanged)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_pen_changed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_pen_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_candlestickset_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_candlestickset_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QCandlestickSet* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCandlestickSet*
 const char* q_candlestickset_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCandlestickSet* self, char* name ```
+/// @param self QCandlestickSet*
+/// @param name char*
 void q_candlestickset_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 bool q_candlestickset_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 bool q_candlestickset_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 bool q_candlestickset_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 bool q_candlestickset_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QCandlestickSet* self, bool b ```
+/// @param self QCandlestickSet*
+/// @param b bool
 bool q_candlestickset_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QThread* q_candlestickset_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QCandlestickSet* self, QThread* thread ```
+/// @param self QCandlestickSet*
+/// @param thread QThread*
 bool q_candlestickset_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QCandlestickSet* self, int interval ```
+/// @param self QCandlestickSet*
+/// @param interval int
 int32_t q_candlestickset_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QCandlestickSet* self, int id ```
+/// @param self QCandlestickSet*
+/// @param id int
 void q_candlestickset_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QCandlestickSet* self, enum Qt__TimerId id ```
+/// @param self QCandlestickSet*
+/// @param id enum Qt__TimerId
 void q_candlestickset_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 libqt_list /* of QObject* */ q_candlestickset_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QCandlestickSet* self, QObject* parent ```
+/// @param self QCandlestickSet*
+/// @param parent QObject*
 void q_candlestickset_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QCandlestickSet* self, QObject* filterObj ```
+/// @param self QCandlestickSet*
+/// @param filterObj QObject*
 void q_candlestickset_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QCandlestickSet* self, QObject* obj ```
+/// @param self QCandlestickSet*
+/// @param obj QObject*
 void q_candlestickset_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_candlestickset_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QCandlestickSet* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QCandlestickSet*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_candlestickset_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_candlestickset_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_candlestickset_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QCandlestickSet* self, const char* name, QVariant* value ```
+/// @param self QCandlestickSet*
+/// @param name const char*
+/// @param value QVariant*
 bool q_candlestickset_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QCandlestickSet* self, const char* name ```
+/// @param self QCandlestickSet*
+/// @param name const char*
 QVariant* q_candlestickset_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QCandlestickSet* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCandlestickSet*
 const char** q_candlestickset_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QBindingStorage* q_candlestickset_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 const QBindingStorage* q_candlestickset_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*) ```
-void q_candlestickset_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*)
+void q_candlestickset_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QObject* q_candlestickset_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QCandlestickSet* self, const char* classname ```
+/// @param self QCandlestickSet*
+/// @param classname const char*
 bool q_candlestickset_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QCandlestickSet* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QCandlestickSet*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_candlestickset_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QCandlestickSet* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QCandlestickSet*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_candlestickset_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_candlestickset_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QCandlestickSet* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QCandlestickSet*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_candlestickset_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCandlestickSet* self, QObject* param1 ```
+/// @param self QCandlestickSet*
+/// @param param1 QObject*
 void q_candlestickset_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QObject*) ```
-void q_candlestickset_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QObject*)
+void q_candlestickset_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -542,7 +631,8 @@ void q_candlestickset_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QEvent*
 bool q_candlestickset_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -551,7 +641,8 @@ bool q_candlestickset_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QEvent*
 bool q_candlestickset_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -560,8 +651,9 @@ bool q_candlestickset_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, bool (*slot)(QCandlestickSet*, QEvent*) ```
-void q_candlestickset_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback bool fn(QCandlestickSet*, QEvent*)
+void q_candlestickset_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -569,7 +661,9 @@ void q_candlestickset_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QObject* watched, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_candlestickset_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -578,7 +672,9 @@ bool q_candlestickset_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QObject* watched, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_candlestickset_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -587,8 +683,9 @@ bool q_candlestickset_qbase_event_filter(void* self, void* watched, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, bool (*slot)(QCandlestickSet*, QObject*, QEvent*) ```
-void q_candlestickset_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback bool fn(QCandlestickSet*, QObject*, QEvent*)
+void q_candlestickset_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -596,7 +693,8 @@ void q_candlestickset_on_event_filter(void* self, bool (*slot)(void*, void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QTimerEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QTimerEvent*
 void q_candlestickset_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -605,7 +703,8 @@ void q_candlestickset_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QTimerEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QTimerEvent*
 void q_candlestickset_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -614,8 +713,9 @@ void q_candlestickset_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QTimerEvent*) ```
-void q_candlestickset_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QTimerEvent*)
+void q_candlestickset_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -623,7 +723,8 @@ void q_candlestickset_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QChildEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QChildEvent*
 void q_candlestickset_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -632,7 +733,8 @@ void q_candlestickset_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QChildEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QChildEvent*
 void q_candlestickset_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -641,8 +743,9 @@ void q_candlestickset_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QChildEvent*) ```
-void q_candlestickset_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QChildEvent*)
+void q_candlestickset_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -650,7 +753,8 @@ void q_candlestickset_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QEvent*
 void q_candlestickset_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -659,7 +763,8 @@ void q_candlestickset_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QEvent* event ```
+/// @param self QCandlestickSet*
+/// @param event QEvent*
 void q_candlestickset_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -668,8 +773,9 @@ void q_candlestickset_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QEvent*) ```
-void q_candlestickset_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QEvent*)
+void q_candlestickset_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -677,7 +783,8 @@ void q_candlestickset_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 void q_candlestickset_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -686,7 +793,8 @@ void q_candlestickset_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 void q_candlestickset_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -695,8 +803,9 @@ void q_candlestickset_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QMetaMethod*) ```
-void q_candlestickset_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QMetaMethod*)
+void q_candlestickset_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -704,7 +813,8 @@ void q_candlestickset_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 void q_candlestickset_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -713,7 +823,8 @@ void q_candlestickset_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 void q_candlestickset_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -722,8 +833,9 @@ void q_candlestickset_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, QMetaMethod*) ```
-void q_candlestickset_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, QMetaMethod*)
+void q_candlestickset_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -731,7 +843,7 @@ void q_candlestickset_on_disconnect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QObject* q_candlestickset_sender(void* self);
 
 /// Inherited from QObject
@@ -740,7 +852,7 @@ QObject* q_candlestickset_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 QObject* q_candlestickset_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -749,8 +861,9 @@ QObject* q_candlestickset_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QObject* (*slot)() ```
-void q_candlestickset_on_sender(void* self, QObject* (*slot)());
+/// @param self QCandlestickSet*
+/// @param callback QObject* fn()
+void q_candlestickset_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -758,7 +871,7 @@ void q_candlestickset_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 int32_t q_candlestickset_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -767,7 +880,7 @@ int32_t q_candlestickset_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 int32_t q_candlestickset_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -776,8 +889,9 @@ int32_t q_candlestickset_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, int32_t (*slot)() ```
-void q_candlestickset_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QCandlestickSet*
+/// @param callback int32_t fn()
+void q_candlestickset_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -785,7 +899,8 @@ void q_candlestickset_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, const char* signal ```
+/// @param self QCandlestickSet*
+/// @param signal const char*
 int32_t q_candlestickset_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -794,7 +909,8 @@ int32_t q_candlestickset_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, const char* signal ```
+/// @param self QCandlestickSet*
+/// @param signal const char*
 int32_t q_candlestickset_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -803,8 +919,9 @@ int32_t q_candlestickset_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, int32_t (*slot)(QCandlestickSet*, const char*) ```
-void q_candlestickset_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QCandlestickSet*
+/// @param callback int32_t fn(QCandlestickSet*, const char*)
+void q_candlestickset_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -812,7 +929,8 @@ void q_candlestickset_on_receivers(void* self, int32_t (*slot)(void*, const char
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 bool q_candlestickset_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -821,7 +939,8 @@ bool q_candlestickset_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, QMetaMethod* signal ```
+/// @param self QCandlestickSet*
+/// @param signal QMetaMethod*
 bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -830,8 +949,9 @@ bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCandlestickSet* self, bool (*slot)(QCandlestickSet*, QMetaMethod*) ```
-void q_candlestickset_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QCandlestickSet*
+/// @param callback bool fn(QCandlestickSet*, QMetaMethod*)
+void q_candlestickset_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -839,14 +959,15 @@ void q_candlestickset_on_is_signal_connected(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCandlestickSet* self, void (*slot)(QCandlestickSet*, const char*) ```
-void q_candlestickset_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QCandlestickSet*
+/// @param callback void fn(QCandlestickSet*, const char*)
+void q_candlestickset_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcandlestickset-qtcharts.html#dtor.QCandlestickSet)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCandlestickSet* self ```
+/// @param self QCandlestickSet*
 void q_candlestickset_delete(void* self);
 
 #endif

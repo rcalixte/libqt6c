@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,600 +15,723 @@
 
 /// q_scilexerruby_new constructs a new QsciLexerRuby object.
 ///
-///
 QsciLexerRuby* q_scilexerruby_new();
 
 /// q_scilexerruby_new2 constructs a new QsciLexerRuby object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QsciLexerRuby* q_scilexerruby_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const QMetaObject* q_scilexerruby_meta_object(void* self);
 
-/// ``` QsciLexerRuby* self, const char* param1 ```
+/// @param self QsciLexerRuby*
+/// @param param1 const char*
 void* q_scilexerruby_metacast(void* self, const char* param1);
 
-/// ``` QsciLexerRuby* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciLexerRuby*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scilexerruby_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)(QsciLexerRuby*, enum QMetaObject__Call, int, void*) ```
-void q_scilexerruby_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn(QsciLexerRuby*, enum QMetaObject__Call, int, void*)
+void q_scilexerruby_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QsciLexerRuby* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciLexerRuby*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scilexerruby_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_scilexerruby_tr(const char* s);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_language(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_lexer(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_block_end(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_block_start(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_block_start_keyword(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_brace_style(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_default_color(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 bool q_scilexerruby_default_eol_fill(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QFont* q_scilexerruby_default_font(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_default_paper(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int set ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
+/// @param set int
 const char* q_scilexerruby_keywords(void* self, int set);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
+/// @param style int
 const char* q_scilexerruby_description(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_refresh_properties(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, bool fold ```
+/// @param self QsciLexerRuby*
+/// @param fold bool
 void q_scilexerruby_set_fold_comments(void* self, bool fold);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_fold_comments(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, bool fold ```
+/// @param self QsciLexerRuby*
+/// @param fold bool
 void q_scilexerruby_set_fold_compact(void* self, bool fold);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_fold_compact(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_read_properties(void* self, void* qs, const char* prefix);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, QSettings*, const char*) ```
-void q_scilexerruby_on_read_properties(void* self, bool (*slot)(void*, void*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, QSettings*, const char*)
+void q_scilexerruby_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_qbase_read_properties(void* self, void* qs, const char* prefix);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_write_properties(void* self, void* qs, const char* prefix);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, QSettings*, const char*) ```
-void q_scilexerruby_on_write_properties(void* self, bool (*slot)(void*, void*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, QSettings*, const char*)
+void q_scilexerruby_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
 /// Base class method implementation
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_qbase_write_properties(void* self, void* qs, const char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_scilexerruby_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_scilexerruby_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int* style ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
+/// @param style int*
 const char* q_scilexerruby_block_end1(void* self, int* style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int* style ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
+/// @param style int*
 const char* q_scilexerruby_block_start1(void* self, int* style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
-/// ``` QsciLexerRuby* self, int* style ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
+/// @param style int*
 const char* q_scilexerruby_block_start_keyword1(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QsciAbstractAPIs* q_scilexerruby_apis(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_auto_indent_style(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QsciScintilla* q_scilexerruby_editor(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QsciAbstractAPIs* apis ```
+/// @param self QsciLexerRuby*
+/// @param apis QsciAbstractAPIs*
 void q_scilexerruby_set_a_p_is(void* self, void* apis);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QColor* c ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
 void q_scilexerruby_set_default_color(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QFont* f ```
+/// @param self QsciLexerRuby*
+/// @param f QFont*
 void q_scilexerruby_set_default_font(void* self, void* f);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QColor* c ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
 void q_scilexerruby_set_default_paper(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
 bool q_scilexerruby_read_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
 bool q_scilexerruby_write_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_color_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
-void q_scilexerruby_on_color_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QColor*, int)
+void q_scilexerruby_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, bool eolfilled, int style ```
+/// @param self QsciLexerRuby*
+/// @param eolfilled bool
+/// @param style int
 void q_scilexerruby_eol_fill_changed(void* self, bool eolfilled, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, bool, int) ```
-void q_scilexerruby_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, bool, int)
+void q_scilexerruby_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QFont* f, int style ```
+/// @param self QsciLexerRuby*
+/// @param f QFont*
+/// @param style int
 void q_scilexerruby_font_changed(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QFont*, int) ```
-void q_scilexerruby_on_font_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QFont*, int)
+void q_scilexerruby_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_paper_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
-void q_scilexerruby_on_paper_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QColor*, int)
+void q_scilexerruby_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, const char* prop, const char* val ```
+/// @param self QsciLexerRuby*
+/// @param prop const char*
+/// @param val const char*
 void q_scilexerruby_property_changed(void* self, const char* prop, const char* val);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, const char*, const char*) ```
-void q_scilexerruby_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, const char*, const char*)
+void q_scilexerruby_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_read_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerRuby* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerRuby*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexerruby_write_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerRuby* self, char* name ```
+/// @param self QsciLexerRuby*
+/// @param name char*
 void q_scilexerruby_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QsciLexerRuby* self, bool b ```
+/// @param self QsciLexerRuby*
+/// @param b bool
 bool q_scilexerruby_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QThread* q_scilexerruby_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciLexerRuby* self, QThread* thread ```
+/// @param self QsciLexerRuby*
+/// @param thread QThread*
 bool q_scilexerruby_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciLexerRuby* self, int interval ```
+/// @param self QsciLexerRuby*
+/// @param interval int
 int32_t q_scilexerruby_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciLexerRuby* self, int id ```
+/// @param self QsciLexerRuby*
+/// @param id int
 void q_scilexerruby_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciLexerRuby* self, enum Qt__TimerId id ```
+/// @param self QsciLexerRuby*
+/// @param id enum Qt__TimerId
 void q_scilexerruby_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 libqt_list /* of QObject* */ q_scilexerruby_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QsciLexerRuby* self, QObject* parent ```
+/// @param self QsciLexerRuby*
+/// @param parent QObject*
 void q_scilexerruby_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QsciLexerRuby* self, QObject* filterObj ```
+/// @param self QsciLexerRuby*
+/// @param filterObj QObject*
 void q_scilexerruby_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QsciLexerRuby* self, QObject* obj ```
+/// @param self QsciLexerRuby*
+/// @param obj QObject*
 void q_scilexerruby_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_scilexerruby_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciLexerRuby* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QsciLexerRuby*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_scilexerruby_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_scilexerruby_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_scilexerruby_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QsciLexerRuby* self, const char* name, QVariant* value ```
+/// @param self QsciLexerRuby*
+/// @param name const char*
+/// @param value QVariant*
 bool q_scilexerruby_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QsciLexerRuby* self, const char* name ```
+/// @param self QsciLexerRuby*
+/// @param name const char*
 QVariant* q_scilexerruby_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QsciLexerRuby* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerRuby*
 const char** q_scilexerruby_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QBindingStorage* q_scilexerruby_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const QBindingStorage* q_scilexerruby_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*) ```
-void q_scilexerruby_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*)
+void q_scilexerruby_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QObject* q_scilexerruby_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QsciLexerRuby* self, const char* classname ```
+/// @param self QsciLexerRuby*
+/// @param classname const char*
 bool q_scilexerruby_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciLexerRuby* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QsciLexerRuby*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_scilexerruby_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciLexerRuby* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QsciLexerRuby*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_scilexerruby_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scilexerruby_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciLexerRuby* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QsciLexerRuby*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scilexerruby_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self, QObject* param1 ```
+/// @param self QsciLexerRuby*
+/// @param param1 QObject*
 void q_scilexerruby_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QObject*) ```
-void q_scilexerruby_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QObject*)
+void q_scilexerruby_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
@@ -617,7 +739,7 @@ void q_scilexerruby_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -626,7 +748,7 @@ int32_t q_scilexerruby_lexer_id(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -635,25 +757,30 @@ int32_t q_scilexerruby_qbase_lexer_id(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_lexer_id(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_qbase_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
@@ -662,25 +789,30 @@ const char* q_scilexerruby_qbase_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* (*slot)() ```
-void q_scilexerruby_on_auto_completion_fillups(void* self, const char* (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback const char* fn()
+void q_scilexerruby_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char** q_scilexerruby_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char** q_scilexerruby_qbase_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
@@ -689,8 +821,9 @@ const char** q_scilexerruby_qbase_auto_completion_word_separators(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char** (*slot)() ```
-void q_scilexerruby_on_auto_completion_word_separators(void* self, const char** (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback const char** fn()
+void q_scilexerruby_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -698,7 +831,7 @@ void q_scilexerruby_on_auto_completion_word_separators(void* self, const char** 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -707,7 +840,7 @@ int32_t q_scilexerruby_block_lookback(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -716,8 +849,9 @@ int32_t q_scilexerruby_qbase_block_lookback(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_block_lookback(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -725,7 +859,7 @@ void q_scilexerruby_on_block_lookback(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -734,7 +868,7 @@ bool q_scilexerruby_case_sensitive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 bool q_scilexerruby_qbase_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -743,8 +877,9 @@ bool q_scilexerruby_qbase_case_sensitive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)() ```
-void q_scilexerruby_on_case_sensitive(void* self, bool (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback bool fn()
+void q_scilexerruby_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -752,7 +887,8 @@ void q_scilexerruby_on_case_sensitive(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -761,7 +897,8 @@ QColor* q_scilexerruby_color(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_qbase_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -770,8 +907,9 @@ QColor* q_scilexerruby_qbase_color(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_color(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QColor* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -779,7 +917,8 @@ void q_scilexerruby_on_color(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 bool q_scilexerruby_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -788,7 +927,8 @@ bool q_scilexerruby_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 bool q_scilexerruby_qbase_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -797,8 +937,9 @@ bool q_scilexerruby_qbase_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_eol_fill(void* self, bool (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -806,7 +947,8 @@ void q_scilexerruby_on_eol_fill(void* self, bool (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QFont* q_scilexerruby_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -815,7 +957,8 @@ QFont* q_scilexerruby_font(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QFont* q_scilexerruby_qbase_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -824,8 +967,9 @@ QFont* q_scilexerruby_qbase_font(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QFont* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_font(void* self, QFont* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QFont* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -833,7 +977,7 @@ void q_scilexerruby_on_font(void* self, QFont* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -842,7 +986,7 @@ int32_t q_scilexerruby_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -851,8 +995,9 @@ int32_t q_scilexerruby_qbase_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_indentation_guide_view(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -860,7 +1005,7 @@ void q_scilexerruby_on_indentation_guide_view(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -869,7 +1014,7 @@ int32_t q_scilexerruby_default_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -878,8 +1023,9 @@ int32_t q_scilexerruby_qbase_default_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_default_style(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -887,7 +1033,8 @@ void q_scilexerruby_on_default_style(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -896,7 +1043,8 @@ QColor* q_scilexerruby_paper(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_qbase_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -905,8 +1053,9 @@ QColor* q_scilexerruby_qbase_paper(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_paper(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QColor* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -914,7 +1063,8 @@ void q_scilexerruby_on_paper(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -923,7 +1073,8 @@ QColor* q_scilexerruby_default_color2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -932,8 +1083,9 @@ QColor* q_scilexerruby_qbase_default_color2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_default_color2(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QColor* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -941,7 +1093,8 @@ void q_scilexerruby_on_default_color2(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QFont* q_scilexerruby_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -950,7 +1103,8 @@ QFont* q_scilexerruby_default_font2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QFont* q_scilexerruby_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -959,8 +1113,9 @@ QFont* q_scilexerruby_qbase_default_font2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QFont* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_default_font2(void* self, QFont* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QFont* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -968,7 +1123,8 @@ void q_scilexerruby_on_default_font2(void* self, QFont* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -977,7 +1133,8 @@ QColor* q_scilexerruby_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int style ```
+/// @param self QsciLexerRuby*
+/// @param style int
 QColor* q_scilexerruby_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -986,8 +1143,9 @@ QColor* q_scilexerruby_qbase_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_default_paper2(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback QColor* fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -995,7 +1153,8 @@ void q_scilexerruby_on_default_paper2(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QsciScintilla* editor ```
+/// @param self QsciLexerRuby*
+/// @param editor QsciScintilla*
 void q_scilexerruby_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1004,7 +1163,8 @@ void q_scilexerruby_set_editor(void* self, void* editor);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QsciScintilla* editor ```
+/// @param self QsciLexerRuby*
+/// @param editor QsciScintilla*
 void q_scilexerruby_qbase_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1013,8 +1173,9 @@ void q_scilexerruby_qbase_set_editor(void* self, void* editor);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QsciScintilla*) ```
-void q_scilexerruby_on_set_editor(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QsciScintilla*)
+void q_scilexerruby_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1022,7 +1183,7 @@ void q_scilexerruby_on_set_editor(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1031,7 +1192,7 @@ int32_t q_scilexerruby_style_bits_needed(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1040,25 +1201,30 @@ int32_t q_scilexerruby_qbase_style_bits_needed(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_style_bits_needed(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_word_characters(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 const char* q_scilexerruby_qbase_word_characters(void* self);
 
 /// Inherited from QsciLexer
@@ -1067,8 +1233,9 @@ const char* q_scilexerruby_qbase_word_characters(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* (*slot)() ```
-void q_scilexerruby_on_word_characters(void* self, const char* (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback const char* fn()
+void q_scilexerruby_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -1076,7 +1243,8 @@ void q_scilexerruby_on_word_characters(void* self, const char* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int autoindentstyle ```
+/// @param self QsciLexerRuby*
+/// @param autoindentstyle int
 void q_scilexerruby_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1085,7 +1253,8 @@ void q_scilexerruby_set_auto_indent_style(void* self, int autoindentstyle);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int autoindentstyle ```
+/// @param self QsciLexerRuby*
+/// @param autoindentstyle int
 void q_scilexerruby_qbase_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1094,8 +1263,9 @@ void q_scilexerruby_qbase_set_auto_indent_style(void* self, int autoindentstyle)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, int) ```
-void q_scilexerruby_on_set_auto_indent_style(void* self, void (*slot)(void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, int)
+void q_scilexerruby_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1103,7 +1273,9 @@ void q_scilexerruby_on_set_auto_indent_style(void* self, void (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1112,7 +1284,9 @@ void q_scilexerruby_set_color(void* self, void* c, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_qbase_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1121,8 +1295,9 @@ void q_scilexerruby_qbase_set_color(void* self, void* c, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
-void q_scilexerruby_on_set_color(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QColor*, int)
+void q_scilexerruby_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1130,7 +1305,9 @@ void q_scilexerruby_on_set_color(void* self, void (*slot)(void*, void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool eoffill, int style ```
+/// @param self QsciLexerRuby*
+/// @param eoffill bool
+/// @param style int
 void q_scilexerruby_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1139,7 +1316,9 @@ void q_scilexerruby_set_eol_fill(void* self, bool eoffill, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool eoffill, int style ```
+/// @param self QsciLexerRuby*
+/// @param eoffill bool
+/// @param style int
 void q_scilexerruby_qbase_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1148,8 +1327,9 @@ void q_scilexerruby_qbase_set_eol_fill(void* self, bool eoffill, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, bool, int) ```
-void q_scilexerruby_on_set_eol_fill(void* self, void (*slot)(void*, bool, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, bool, int)
+void q_scilexerruby_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1157,7 +1337,9 @@ void q_scilexerruby_on_set_eol_fill(void* self, void (*slot)(void*, bool, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QFont* f, int style ```
+/// @param self QsciLexerRuby*
+/// @param f QFont*
+/// @param style int
 void q_scilexerruby_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1166,7 +1348,9 @@ void q_scilexerruby_set_font(void* self, void* f, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QFont* f, int style ```
+/// @param self QsciLexerRuby*
+/// @param f QFont*
+/// @param style int
 void q_scilexerruby_qbase_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1175,8 +1359,9 @@ void q_scilexerruby_qbase_set_font(void* self, void* f, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QFont*, int) ```
-void q_scilexerruby_on_set_font(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QFont*, int)
+void q_scilexerruby_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1184,7 +1369,9 @@ void q_scilexerruby_on_set_font(void* self, void (*slot)(void*, void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1193,7 +1380,9 @@ void q_scilexerruby_set_paper(void* self, void* c, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QColor* c, int style ```
+/// @param self QsciLexerRuby*
+/// @param c QColor*
+/// @param style int
 void q_scilexerruby_qbase_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1202,8 +1391,9 @@ void q_scilexerruby_qbase_set_paper(void* self, void* c, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QColor*, int) ```
-void q_scilexerruby_on_set_paper(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QColor*, int)
+void q_scilexerruby_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QObject
 ///
@@ -1211,7 +1401,8 @@ void q_scilexerruby_on_set_paper(void* self, void (*slot)(void*, void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QEvent*
 bool q_scilexerruby_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1220,7 +1411,8 @@ bool q_scilexerruby_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QEvent*
 bool q_scilexerruby_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1229,8 +1421,9 @@ bool q_scilexerruby_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, QEvent*) ```
-void q_scilexerruby_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, QEvent*)
+void q_scilexerruby_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1238,7 +1431,9 @@ void q_scilexerruby_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QObject* watched, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scilexerruby_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1247,7 +1442,9 @@ bool q_scilexerruby_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QObject* watched, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scilexerruby_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1256,8 +1453,9 @@ bool q_scilexerruby_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, QObject*, QEvent*) ```
-void q_scilexerruby_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, QObject*, QEvent*)
+void q_scilexerruby_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1265,7 +1463,8 @@ void q_scilexerruby_on_event_filter(void* self, bool (*slot)(void*, void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QTimerEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QTimerEvent*
 void q_scilexerruby_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1274,7 +1473,8 @@ void q_scilexerruby_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QTimerEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QTimerEvent*
 void q_scilexerruby_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1283,8 +1483,9 @@ void q_scilexerruby_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QTimerEvent*) ```
-void q_scilexerruby_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QTimerEvent*)
+void q_scilexerruby_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1292,7 +1493,8 @@ void q_scilexerruby_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QChildEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QChildEvent*
 void q_scilexerruby_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1301,7 +1503,8 @@ void q_scilexerruby_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QChildEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QChildEvent*
 void q_scilexerruby_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1310,8 +1513,9 @@ void q_scilexerruby_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QChildEvent*) ```
-void q_scilexerruby_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QChildEvent*)
+void q_scilexerruby_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1319,7 +1523,8 @@ void q_scilexerruby_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QEvent*
 void q_scilexerruby_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1328,7 +1533,8 @@ void q_scilexerruby_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QEvent* event ```
+/// @param self QsciLexerRuby*
+/// @param event QEvent*
 void q_scilexerruby_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1337,8 +1543,9 @@ void q_scilexerruby_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QEvent*) ```
-void q_scilexerruby_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QEvent*)
+void q_scilexerruby_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1346,7 +1553,8 @@ void q_scilexerruby_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 void q_scilexerruby_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1355,7 +1563,8 @@ void q_scilexerruby_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 void q_scilexerruby_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1364,8 +1573,9 @@ void q_scilexerruby_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QMetaMethod*) ```
-void q_scilexerruby_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QMetaMethod*)
+void q_scilexerruby_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1373,7 +1583,8 @@ void q_scilexerruby_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 void q_scilexerruby_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1382,7 +1593,8 @@ void q_scilexerruby_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 void q_scilexerruby_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1391,25 +1603,32 @@ void q_scilexerruby_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, QMetaMethod*) ```
-void q_scilexerruby_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, QMetaMethod*)
+void q_scilexerruby_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* text ```
+/// @param self QsciLexerRuby*
+/// @param text const char*
 char* q_scilexerruby_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* text ```
+/// @param self QsciLexerRuby*
+/// @param text const char*
 char* q_scilexerruby_qbase_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
@@ -1418,25 +1637,34 @@ char* q_scilexerruby_qbase_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, char* (*slot)(QsciLexerRuby*, const char*) ```
-void q_scilexerruby_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback char* fn(QsciLexerRuby*, const char*)
+void q_scilexerruby_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* bytes, int size ```
+/// @param self QsciLexerRuby*
+/// @param bytes const char*
+/// @param size int
 const char* q_scilexerruby_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* bytes, int size ```
+/// @param self QsciLexerRuby*
+/// @param bytes const char*
+/// @param size int
 const char* q_scilexerruby_qbase_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
@@ -1445,8 +1673,9 @@ const char* q_scilexerruby_qbase_bytes_as_text(void* self, const char* bytes, in
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* (*slot)(QsciLexerRuby*, const char*, int) ```
-void q_scilexerruby_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
+/// @param self QsciLexerRuby*
+/// @param callback const char* fn(QsciLexerRuby*, const char*, int)
+void q_scilexerruby_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -1454,7 +1683,7 @@ void q_scilexerruby_on_bytes_as_text(void* self, const char* (*slot)(void*, cons
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QObject* q_scilexerruby_sender(void* self);
 
 /// Inherited from QObject
@@ -1463,7 +1692,7 @@ QObject* q_scilexerruby_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 QObject* q_scilexerruby_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1472,8 +1701,9 @@ QObject* q_scilexerruby_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QObject* (*slot)() ```
-void q_scilexerruby_on_sender(void* self, QObject* (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback QObject* fn()
+void q_scilexerruby_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1481,7 +1711,7 @@ void q_scilexerruby_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1490,7 +1720,7 @@ int32_t q_scilexerruby_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 int32_t q_scilexerruby_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1499,8 +1729,9 @@ int32_t q_scilexerruby_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)() ```
-void q_scilexerruby_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn()
+void q_scilexerruby_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1508,7 +1739,8 @@ void q_scilexerruby_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal const char*
 int32_t q_scilexerruby_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1517,7 +1749,8 @@ int32_t q_scilexerruby_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, const char* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal const char*
 int32_t q_scilexerruby_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1526,8 +1759,9 @@ int32_t q_scilexerruby_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, int32_t (*slot)(QsciLexerRuby*, const char*) ```
-void q_scilexerruby_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback int32_t fn(QsciLexerRuby*, const char*)
+void q_scilexerruby_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1535,7 +1769,8 @@ void q_scilexerruby_on_receivers(void* self, int32_t (*slot)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 bool q_scilexerruby_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1544,7 +1779,8 @@ bool q_scilexerruby_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, QMetaMethod* signal ```
+/// @param self QsciLexerRuby*
+/// @param signal QMetaMethod*
 bool q_scilexerruby_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1553,8 +1789,9 @@ bool q_scilexerruby_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerRuby* self, bool (*slot)(QsciLexerRuby*, QMetaMethod*) ```
-void q_scilexerruby_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QsciLexerRuby*
+/// @param callback bool fn(QsciLexerRuby*, QMetaMethod*)
+void q_scilexerruby_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1562,14 +1799,15 @@ void q_scilexerruby_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerRuby* self, void (*slot)(QsciLexerRuby*, const char*) ```
-void q_scilexerruby_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QsciLexerRuby*
+/// @param callback void fn(QsciLexerRuby*, const char*)
+void q_scilexerruby_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerRuby.html)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QsciLexerRuby* self ```
+/// @param self QsciLexerRuby*
 void q_scilexerruby_delete(void* self);
 
 typedef enum {

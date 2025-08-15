@@ -337,208 +337,208 @@ void q_xyseries_clicked(void* self, void* point) {
     QXYSeries_Clicked((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_xyseries_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_Clicked((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_Clicked((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_hovered(void* self, void* point, bool state) {
     QXYSeries_Hovered((QXYSeries*)self, (QPointF*)point, state);
 }
 
-void q_xyseries_on_hovered(void* self, void (*slot)(void*, void*, bool)) {
-    QXYSeries_Connect_Hovered((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_hovered(void* self, void (*callback)(void*, void*, bool)) {
+    QXYSeries_Connect_Hovered((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_pressed(void* self, void* point) {
     QXYSeries_Pressed((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_xyseries_on_pressed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_Pressed((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_pressed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_Pressed((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_released(void* self, void* point) {
     QXYSeries_Released((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_xyseries_on_released(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_Released((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_released(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_Released((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_double_clicked(void* self, void* point) {
     QXYSeries_DoubleClicked((QXYSeries*)self, (QPointF*)point);
 }
 
-void q_xyseries_on_double_clicked(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_DoubleClicked((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_DoubleClicked((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_replaced(void* self, int index) {
     QXYSeries_PointReplaced((QXYSeries*)self, index);
 }
 
-void q_xyseries_on_point_replaced(void* self, void (*slot)(void*, int)) {
-    QXYSeries_Connect_PointReplaced((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_replaced(void* self, void (*callback)(void*, int)) {
+    QXYSeries_Connect_PointReplaced((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_removed(void* self, int index) {
     QXYSeries_PointRemoved((QXYSeries*)self, index);
 }
 
-void q_xyseries_on_point_removed(void* self, void (*slot)(void*, int)) {
-    QXYSeries_Connect_PointRemoved((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_removed(void* self, void (*callback)(void*, int)) {
+    QXYSeries_Connect_PointRemoved((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_added(void* self, int index) {
     QXYSeries_PointAdded((QXYSeries*)self, index);
 }
 
-void q_xyseries_on_point_added(void* self, void (*slot)(void*, int)) {
-    QXYSeries_Connect_PointAdded((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_added(void* self, void (*callback)(void*, int)) {
+    QXYSeries_Connect_PointAdded((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_color_changed(void* self, void* color) {
     QXYSeries_ColorChanged((QXYSeries*)self, (QColor*)color);
 }
 
-void q_xyseries_on_color_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_ColorChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_color_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_ColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_selected_color_changed(void* self, void* color) {
     QXYSeries_SelectedColorChanged((QXYSeries*)self, (QColor*)color);
 }
 
-void q_xyseries_on_selected_color_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_SelectedColorChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_selected_color_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_SelectedColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_points_replaced(void* self) {
     QXYSeries_PointsReplaced((QXYSeries*)self);
 }
 
-void q_xyseries_on_points_replaced(void* self, void (*slot)(void*)) {
-    QXYSeries_Connect_PointsReplaced((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_points_replaced(void* self, void (*callback)(void*)) {
+    QXYSeries_Connect_PointsReplaced((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_labels_format_changed(void* self, const char* format) {
     QXYSeries_PointLabelsFormatChanged((QXYSeries*)self, qstring(format));
 }
 
-void q_xyseries_on_point_labels_format_changed(void* self, void (*slot)(void*, const char*)) {
-    QXYSeries_Connect_PointLabelsFormatChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_labels_format_changed(void* self, void (*callback)(void*, const char*)) {
+    QXYSeries_Connect_PointLabelsFormatChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_labels_visibility_changed(void* self, bool visible) {
     QXYSeries_PointLabelsVisibilityChanged((QXYSeries*)self, visible);
 }
 
-void q_xyseries_on_point_labels_visibility_changed(void* self, void (*slot)(void*, bool)) {
-    QXYSeries_Connect_PointLabelsVisibilityChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_labels_visibility_changed(void* self, void (*callback)(void*, bool)) {
+    QXYSeries_Connect_PointLabelsVisibilityChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_labels_font_changed(void* self, void* font) {
     QXYSeries_PointLabelsFontChanged((QXYSeries*)self, (QFont*)font);
 }
 
-void q_xyseries_on_point_labels_font_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_PointLabelsFontChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_PointLabelsFontChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_labels_color_changed(void* self, void* color) {
     QXYSeries_PointLabelsColorChanged((QXYSeries*)self, (QColor*)color);
 }
 
-void q_xyseries_on_point_labels_color_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_PointLabelsColorChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_PointLabelsColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_point_labels_clipping_changed(void* self, bool clipping) {
     QXYSeries_PointLabelsClippingChanged((QXYSeries*)self, clipping);
 }
 
-void q_xyseries_on_point_labels_clipping_changed(void* self, void (*slot)(void*, bool)) {
-    QXYSeries_Connect_PointLabelsClippingChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_point_labels_clipping_changed(void* self, void (*callback)(void*, bool)) {
+    QXYSeries_Connect_PointLabelsClippingChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_points_removed(void* self, int index, int count) {
     QXYSeries_PointsRemoved((QXYSeries*)self, index, count);
 }
 
-void q_xyseries_on_points_removed(void* self, void (*slot)(void*, int, int)) {
-    QXYSeries_Connect_PointsRemoved((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_points_removed(void* self, void (*callback)(void*, int, int)) {
+    QXYSeries_Connect_PointsRemoved((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_pen_changed(void* self, void* pen) {
     QXYSeries_PenChanged((QXYSeries*)self, (QPen*)pen);
 }
 
-void q_xyseries_on_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_PenChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_PenChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_selected_points_changed(void* self) {
     QXYSeries_SelectedPointsChanged((QXYSeries*)self);
 }
 
-void q_xyseries_on_selected_points_changed(void* self, void (*slot)(void*)) {
-    QXYSeries_Connect_SelectedPointsChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_selected_points_changed(void* self, void (*callback)(void*)) {
+    QXYSeries_Connect_SelectedPointsChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_light_marker_changed(void* self, void* lightMarker) {
     QXYSeries_LightMarkerChanged((QXYSeries*)self, (QImage*)lightMarker);
 }
 
-void q_xyseries_on_light_marker_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_LightMarkerChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_light_marker_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_LightMarkerChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_selected_light_marker_changed(void* self, void* selectedLightMarker) {
     QXYSeries_SelectedLightMarkerChanged((QXYSeries*)self, (QImage*)selectedLightMarker);
 }
 
-void q_xyseries_on_selected_light_marker_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_SelectedLightMarkerChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_SelectedLightMarkerChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_best_fit_line_visibility_changed(void* self, bool visible) {
     QXYSeries_BestFitLineVisibilityChanged((QXYSeries*)self, visible);
 }
 
-void q_xyseries_on_best_fit_line_visibility_changed(void* self, void (*slot)(void*, bool)) {
-    QXYSeries_Connect_BestFitLineVisibilityChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_best_fit_line_visibility_changed(void* self, void (*callback)(void*, bool)) {
+    QXYSeries_Connect_BestFitLineVisibilityChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_best_fit_line_pen_changed(void* self, void* pen) {
     QXYSeries_BestFitLinePenChanged((QXYSeries*)self, (QPen*)pen);
 }
 
-void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_BestFitLinePenChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_BestFitLinePenChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_best_fit_line_color_changed(void* self, void* color) {
     QXYSeries_BestFitLineColorChanged((QXYSeries*)self, (QColor*)color);
 }
 
-void q_xyseries_on_best_fit_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QXYSeries_Connect_BestFitLineColorChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QXYSeries_Connect_BestFitLineColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration) {
     QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration);
 }
 
-void q_xyseries_on_points_configuration_changed(void* self, void (*slot)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */)) {
-    QXYSeries_Connect_PointsConfigurationChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */)) {
+    QXYSeries_Connect_PointsConfigurationChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_marker_size_changed(void* self, double size) {
     QXYSeries_MarkerSizeChanged((QXYSeries*)self, size);
 }
 
-void q_xyseries_on_marker_size_changed(void* self, void (*slot)(void*, double)) {
-    QXYSeries_Connect_MarkerSizeChanged((QXYSeries*)self, (intptr_t)slot);
+void q_xyseries_on_marker_size_changed(void* self, void (*callback)(void*, double)) {
+    QXYSeries_Connect_MarkerSizeChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
 const char* q_xyseries_tr2(const char* s, const char* c) {
@@ -643,32 +643,32 @@ void q_xyseries_name_changed(void* self) {
     QAbstractSeries_NameChanged((QAbstractSeries*)self);
 }
 
-void q_xyseries_on_name_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_xyseries_on_name_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_NameChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_visible_changed(void* self) {
     QAbstractSeries_VisibleChanged((QAbstractSeries*)self);
 }
 
-void q_xyseries_on_visible_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_xyseries_on_visible_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_VisibleChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_opacity_changed(void* self) {
     QAbstractSeries_OpacityChanged((QAbstractSeries*)self);
 }
 
-void q_xyseries_on_opacity_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_xyseries_on_opacity_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_OpacityChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_use_open_g_l_changed(void* self) {
     QAbstractSeries_UseOpenGLChanged((QAbstractSeries*)self);
 }
 
-void q_xyseries_on_use_open_g_l_changed(void* self, void (*slot)(void*)) {
-    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)slot);
+void q_xyseries_on_use_open_g_l_changed(void* self, void (*callback)(void*)) {
+    QAbstractSeries_Connect_UseOpenGLChanged((QAbstractSeries*)self, (intptr_t)callback);
 }
 
 void q_xyseries_set_visible1(void* self, bool visible) {
@@ -791,12 +791,16 @@ const char** q_xyseries_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_xyseries_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -814,8 +818,8 @@ void q_xyseries_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_xyseries_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_xyseries_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_xyseries_parent(void* self) {
@@ -850,12 +854,12 @@ void q_xyseries_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_xyseries_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_xyseries_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_xyseries_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_xyseries_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_xyseries_delete(void* self) {

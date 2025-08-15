@@ -28,8 +28,8 @@ int32_t q_hpiemodelmapper_metacall(void* self, int64_t param1, int param2, void*
     return QHPieModelMapper_Metacall((QHPieModelMapper*)self, param1, param2, param3);
 }
 
-void q_hpiemodelmapper_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QHPieModelMapper_OnMetacall((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QHPieModelMapper_OnMetacall((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -95,48 +95,48 @@ void q_hpiemodelmapper_series_replaced(void* self) {
     QHPieModelMapper_SeriesReplaced((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_series_replaced(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_SeriesReplaced((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_series_replaced(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_SeriesReplaced((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_model_replaced(void* self) {
     QHPieModelMapper_ModelReplaced((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_model_replaced(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_ModelReplaced((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_model_replaced(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_ModelReplaced((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_values_row_changed(void* self) {
     QHPieModelMapper_ValuesRowChanged((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_values_row_changed(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_ValuesRowChanged((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_values_row_changed(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_ValuesRowChanged((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_labels_row_changed(void* self) {
     QHPieModelMapper_LabelsRowChanged((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_labels_row_changed(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_LabelsRowChanged((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_labels_row_changed(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_LabelsRowChanged((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_first_column_changed(void* self) {
     QHPieModelMapper_FirstColumnChanged((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_first_column_changed(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_FirstColumnChanged((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_first_column_changed(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_FirstColumnChanged((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_column_count_changed(void* self) {
     QHPieModelMapper_ColumnCountChanged((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_column_count_changed(void* self, void (*slot)(void*)) {
-    QHPieModelMapper_Connect_ColumnCountChanged((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_column_count_changed(void* self, void (*callback)(void*)) {
+    QHPieModelMapper_Connect_ColumnCountChanged((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 const char* q_hpiemodelmapper_tr2(const char* s, const char* c) {
@@ -257,12 +257,16 @@ const char** q_hpiemodelmapper_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_hpiemodelmapper_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -280,8 +284,8 @@ void q_hpiemodelmapper_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_hpiemodelmapper_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_hpiemodelmapper_parent(void* self) {
@@ -316,8 +320,8 @@ void q_hpiemodelmapper_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_hpiemodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_hpiemodelmapper_event(void* self, void* event) {
@@ -328,8 +332,8 @@ bool q_hpiemodelmapper_qbase_event(void* self, void* event) {
     return QHPieModelMapper_QBaseEvent((QHPieModelMapper*)self, (QEvent*)event);
 }
 
-void q_hpiemodelmapper_on_event(void* self, bool (*slot)(void*, void*)) {
-    QHPieModelMapper_OnEvent((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
+    QHPieModelMapper_OnEvent((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hpiemodelmapper_event_filter(void* self, void* watched, void* event) {
@@ -340,8 +344,8 @@ bool q_hpiemodelmapper_qbase_event_filter(void* self, void* watched, void* event
     return QHPieModelMapper_QBaseEventFilter((QHPieModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_hpiemodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QHPieModelMapper_OnEventFilter((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QHPieModelMapper_OnEventFilter((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_timer_event(void* self, void* event) {
@@ -352,8 +356,8 @@ void q_hpiemodelmapper_qbase_timer_event(void* self, void* event) {
     QHPieModelMapper_QBaseTimerEvent((QHPieModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_hpiemodelmapper_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QHPieModelMapper_OnTimerEvent((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QHPieModelMapper_OnTimerEvent((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_child_event(void* self, void* event) {
@@ -364,8 +368,8 @@ void q_hpiemodelmapper_qbase_child_event(void* self, void* event) {
     QHPieModelMapper_QBaseChildEvent((QHPieModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_hpiemodelmapper_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QHPieModelMapper_OnChildEvent((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QHPieModelMapper_OnChildEvent((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_custom_event(void* self, void* event) {
@@ -376,8 +380,8 @@ void q_hpiemodelmapper_qbase_custom_event(void* self, void* event) {
     QHPieModelMapper_QBaseCustomEvent((QHPieModelMapper*)self, (QEvent*)event);
 }
 
-void q_hpiemodelmapper_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QHPieModelMapper_OnCustomEvent((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QHPieModelMapper_OnCustomEvent((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_connect_notify(void* self, void* signal) {
@@ -388,8 +392,8 @@ void q_hpiemodelmapper_qbase_connect_notify(void* self, void* signal) {
     QHPieModelMapper_QBaseConnectNotify((QHPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hpiemodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QHPieModelMapper_OnConnectNotify((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QHPieModelMapper_OnConnectNotify((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_disconnect_notify(void* self, void* signal) {
@@ -400,8 +404,8 @@ void q_hpiemodelmapper_qbase_disconnect_notify(void* self, void* signal) {
     QHPieModelMapper_QBaseDisconnectNotify((QHPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hpiemodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QHPieModelMapper_OnDisconnectNotify((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QHPieModelMapper_OnDisconnectNotify((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_first(void* self) {
@@ -412,8 +416,8 @@ int32_t q_hpiemodelmapper_qbase_first(void* self) {
     return QHPieModelMapper_QBaseFirst((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_first(void* self, int32_t (*slot)()) {
-    QHPieModelMapper_OnFirst((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_first(void* self, int32_t (*callback)()) {
+    QHPieModelMapper_OnFirst((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_set_first(void* self, int first) {
@@ -424,8 +428,8 @@ void q_hpiemodelmapper_qbase_set_first(void* self, int first) {
     QHPieModelMapper_QBaseSetFirst((QHPieModelMapper*)self, first);
 }
 
-void q_hpiemodelmapper_on_set_first(void* self, void (*slot)(void*, int)) {
-    QHPieModelMapper_OnSetFirst((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
+    QHPieModelMapper_OnSetFirst((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_count(void* self) {
@@ -436,8 +440,8 @@ int32_t q_hpiemodelmapper_qbase_count(void* self) {
     return QHPieModelMapper_QBaseCount((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_count(void* self, int32_t (*slot)()) {
-    QHPieModelMapper_OnCount((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_count(void* self, int32_t (*callback)()) {
+    QHPieModelMapper_OnCount((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_set_count(void* self, int count) {
@@ -448,8 +452,8 @@ void q_hpiemodelmapper_qbase_set_count(void* self, int count) {
     QHPieModelMapper_QBaseSetCount((QHPieModelMapper*)self, count);
 }
 
-void q_hpiemodelmapper_on_set_count(void* self, void (*slot)(void*, int)) {
-    QHPieModelMapper_OnSetCount((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
+    QHPieModelMapper_OnSetCount((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_values_section(void* self) {
@@ -460,8 +464,8 @@ int32_t q_hpiemodelmapper_qbase_values_section(void* self) {
     return QHPieModelMapper_QBaseValuesSection((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_values_section(void* self, int32_t (*slot)()) {
-    QHPieModelMapper_OnValuesSection((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_values_section(void* self, int32_t (*callback)()) {
+    QHPieModelMapper_OnValuesSection((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_set_values_section(void* self, int valuesSection) {
@@ -472,8 +476,8 @@ void q_hpiemodelmapper_qbase_set_values_section(void* self, int valuesSection) {
     QHPieModelMapper_QBaseSetValuesSection((QHPieModelMapper*)self, valuesSection);
 }
 
-void q_hpiemodelmapper_on_set_values_section(void* self, void (*slot)(void*, int)) {
-    QHPieModelMapper_OnSetValuesSection((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_set_values_section(void* self, void (*callback)(void*, int)) {
+    QHPieModelMapper_OnSetValuesSection((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_labels_section(void* self) {
@@ -484,8 +488,8 @@ int32_t q_hpiemodelmapper_qbase_labels_section(void* self) {
     return QHPieModelMapper_QBaseLabelsSection((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_labels_section(void* self, int32_t (*slot)()) {
-    QHPieModelMapper_OnLabelsSection((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_labels_section(void* self, int32_t (*callback)()) {
+    QHPieModelMapper_OnLabelsSection((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_set_labels_section(void* self, int labelsSection) {
@@ -496,8 +500,8 @@ void q_hpiemodelmapper_qbase_set_labels_section(void* self, int labelsSection) {
     QHPieModelMapper_QBaseSetLabelsSection((QHPieModelMapper*)self, labelsSection);
 }
 
-void q_hpiemodelmapper_on_set_labels_section(void* self, void (*slot)(void*, int)) {
-    QHPieModelMapper_OnSetLabelsSection((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_set_labels_section(void* self, void (*callback)(void*, int)) {
+    QHPieModelMapper_OnSetLabelsSection((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int64_t q_hpiemodelmapper_orientation(void* self) {
@@ -508,8 +512,8 @@ int64_t q_hpiemodelmapper_qbase_orientation(void* self) {
     return QHPieModelMapper_QBaseOrientation((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_orientation(void* self, int64_t (*slot)()) {
-    QHPieModelMapper_OnOrientation((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_orientation(void* self, int64_t (*callback)()) {
+    QHPieModelMapper_OnOrientation((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_set_orientation(void* self, int64_t orientation) {
@@ -520,8 +524,8 @@ void q_hpiemodelmapper_qbase_set_orientation(void* self, int64_t orientation) {
     QHPieModelMapper_QBaseSetOrientation((QHPieModelMapper*)self, orientation);
 }
 
-void q_hpiemodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t)) {
-    QHPieModelMapper_OnSetOrientation((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t)) {
+    QHPieModelMapper_OnSetOrientation((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 QObject* q_hpiemodelmapper_sender(void* self) {
@@ -532,8 +536,8 @@ QObject* q_hpiemodelmapper_qbase_sender(void* self) {
     return QHPieModelMapper_QBaseSender((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_sender(void* self, QObject* (*slot)()) {
-    QHPieModelMapper_OnSender((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_sender(void* self, QObject* (*callback)()) {
+    QHPieModelMapper_OnSender((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_sender_signal_index(void* self) {
@@ -544,8 +548,8 @@ int32_t q_hpiemodelmapper_qbase_sender_signal_index(void* self) {
     return QHPieModelMapper_QBaseSenderSignalIndex((QHPieModelMapper*)self);
 }
 
-void q_hpiemodelmapper_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QHPieModelMapper_OnSenderSignalIndex((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QHPieModelMapper_OnSenderSignalIndex((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_hpiemodelmapper_receivers(void* self, const char* signal) {
@@ -556,8 +560,8 @@ int32_t q_hpiemodelmapper_qbase_receivers(void* self, const char* signal) {
     return QHPieModelMapper_QBaseReceivers((QHPieModelMapper*)self, signal);
 }
 
-void q_hpiemodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QHPieModelMapper_OnReceivers((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QHPieModelMapper_OnReceivers((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_hpiemodelmapper_is_signal_connected(void* self, void* signal) {
@@ -568,12 +572,12 @@ bool q_hpiemodelmapper_qbase_is_signal_connected(void* self, void* signal) {
     return QHPieModelMapper_QBaseIsSignalConnected((QHPieModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_hpiemodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QHPieModelMapper_OnIsSignalConnected((QHPieModelMapper*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QHPieModelMapper_OnIsSignalConnected((QHPieModelMapper*)self, (intptr_t)callback);
 }
 
-void q_hpiemodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_hpiemodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_hpiemodelmapper_delete(void* self) {

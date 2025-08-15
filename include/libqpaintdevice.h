@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,94 +15,94 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_dev_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 bool q_paintdevice_painting_active(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintEngine)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 QPaintEngine* q_paintdevice_paint_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_height(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_width_m_m(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_height_m_m(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_logical_dpi_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_logical_dpi_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_physical_dpi_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_physical_dpi_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 double q_paintdevice_device_pixel_ratio(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 double q_paintdevice_device_pixel_ratio_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_color_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 int32_t q_paintdevice_depth(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_paintdevice_device_pixel_ratio_f_scale();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_paintdevice_encode_metric_f(int64_t metric, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#dtor.QPaintDevice)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPaintDevice* self ```
+/// @param self QPaintDevice*
 void q_paintdevice_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpaintdevice.html#types

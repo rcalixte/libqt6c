@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,1803 +15,2072 @@
 
 /// q_graphicsvideoitem_new constructs a new QGraphicsVideoItem object.
 ///
-///
 QGraphicsVideoItem* q_graphicsvideoitem_new();
 
 /// q_graphicsvideoitem_new2 constructs a new QGraphicsVideoItem object.
 ///
-/// ``` QGraphicsItem* parent ```
+/// @param parent QGraphicsItem*
 QGraphicsVideoItem* q_graphicsvideoitem_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 const QMetaObject* q_graphicsvideoitem_meta_object(void* self);
 
-/// ``` QGraphicsVideoItem* self, const char* param1 ```
+/// @param self QGraphicsVideoItem*
+/// @param param1 const char*
 void* q_graphicsvideoitem_metacast(void* self, const char* param1);
 
-/// ``` QGraphicsVideoItem* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QGraphicsVideoItem*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_graphicsvideoitem_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, int32_t (*slot)(QGraphicsVideoItem*, enum QMetaObject__Call, int, void*) ```
-void q_graphicsvideoitem_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback int32_t fn(QGraphicsVideoItem*, enum QMetaObject__Call, int, void*)
+void q_graphicsvideoitem_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QGraphicsVideoItem*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_graphicsvideoitem_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_graphicsvideoitem_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#videoSink)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QVideoSink* q_graphicsvideoitem_video_sink(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#aspectRatioMode)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return enum Qt__AspectRatioMode
 int64_t q_graphicsvideoitem_aspect_ratio_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#setAspectRatioMode)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__AspectRatioMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param mode enum Qt__AspectRatioMode
 void q_graphicsvideoitem_set_aspect_ratio_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#offset)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPointF* q_graphicsvideoitem_offset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#setOffset)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* offset ```
+/// @param self QGraphicsVideoItem*
+/// @param offset QPointF*
 void q_graphicsvideoitem_set_offset(void* self, void* offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#size)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QSizeF* q_graphicsvideoitem_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#setSize)
 ///
-/// ``` QGraphicsVideoItem* self, QSizeF* size ```
+/// @param self QGraphicsVideoItem*
+/// @param size QSizeF*
 void q_graphicsvideoitem_set_size(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#nativeSize)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QSizeF* q_graphicsvideoitem_native_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#boundingRect)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QRectF* q_graphicsvideoitem_bounding_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#boundingRect)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* (*slot)() ```
-void q_graphicsvideoitem_on_bounding_rect(void* self, QRectF* (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback QRectF* fn()
+void q_graphicsvideoitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#boundingRect)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QRectF* q_graphicsvideoitem_qbase_bounding_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#paint)
 ///
-/// ``` QGraphicsVideoItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsVideoItem*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsvideoitem_paint(void* self, void* painter, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QPainter*, QStyleOptionGraphicsItem*, QWidget*) ```
-void q_graphicsvideoitem_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+void q_graphicsvideoitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#paint)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsVideoItem*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsvideoitem_qbase_paint(void* self, void* painter, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#type)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 int32_t q_graphicsvideoitem_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, int32_t (*slot)() ```
-void q_graphicsvideoitem_on_type(void* self, int32_t (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback int32_t fn()
+void q_graphicsvideoitem_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#type)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 int32_t q_graphicsvideoitem_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#nativeSizeChanged)
 ///
-/// ``` QGraphicsVideoItem* self, QSizeF* size ```
+/// @param self QGraphicsVideoItem*
+/// @param size QSizeF*
 void q_graphicsvideoitem_native_size_changed(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#nativeSizeChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QSizeF*) ```
-void q_graphicsvideoitem_on_native_size_changed(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QSizeF*)
+void q_graphicsvideoitem_on_native_size_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#timerEvent)
 ///
-/// ``` QGraphicsVideoItem* self, QTimerEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QTimerEvent*
 void q_graphicsvideoitem_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QTimerEvent*) ```
-void q_graphicsvideoitem_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QTimerEvent*)
+void q_graphicsvideoitem_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self, QTimerEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QTimerEvent*
 void q_graphicsvideoitem_qbase_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#itemChange)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
+/// @param self QGraphicsVideoItem*
+/// @param change enum QGraphicsItem__GraphicsItemChange
+/// @param value QVariant*
 QVariant* q_graphicsvideoitem_item_change(void* self, int64_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#itemChange)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsVideoItem* self, QVariant* (*slot)(QGraphicsVideoItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*) ```
-void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback QVariant* fn(QGraphicsVideoItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
+void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#itemChange)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
+/// @param self QGraphicsVideoItem*
+/// @param change enum QGraphicsItem__GraphicsItemChange
+/// @param value QVariant*
 QVariant* q_graphicsvideoitem_qbase_item_change(void* self, int64_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_graphicsvideoitem_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_graphicsvideoitem_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__GestureType typeVal ```
+/// @param self QGraphicsVideoItem*
+/// @param typeVal enum Qt__GestureType
 void q_graphicsvideoitem_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#ungrabGesture)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__GestureType typeVal ```
+/// @param self QGraphicsVideoItem*
+/// @param typeVal enum Qt__GestureType
 void q_graphicsvideoitem_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_parent_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_opacity_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_visible_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_enabled_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_x_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_y_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_z_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_rotation_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_scale_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_children_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_width_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_height_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QGraphicsVideoItem*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_graphicsvideoitem_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsVideoItem*
 const char* q_graphicsvideoitem_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsVideoItem* self, char* name ```
+/// @param self QGraphicsVideoItem*
+/// @param name char*
 void q_graphicsvideoitem_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QGraphicsVideoItem* self, bool b ```
+/// @param self QGraphicsVideoItem*
+/// @param b bool
 bool q_graphicsvideoitem_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QThread* q_graphicsvideoitem_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsVideoItem* self, QThread* thread ```
+/// @param self QGraphicsVideoItem*
+/// @param thread QThread*
 bool q_graphicsvideoitem_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsVideoItem* self, int interval ```
+/// @param self QGraphicsVideoItem*
+/// @param interval int
 int32_t q_graphicsvideoitem_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsVideoItem* self, int id ```
+/// @param self QGraphicsVideoItem*
+/// @param id int
 void q_graphicsvideoitem_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__TimerId id ```
+/// @param self QGraphicsVideoItem*
+/// @param id enum Qt__TimerId
 void q_graphicsvideoitem_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 libqt_list /* of QObject* */ q_graphicsvideoitem_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* parent ```
+/// @param self QGraphicsVideoItem*
+/// @param parent QObject*
 void q_graphicsvideoitem_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* filterObj ```
+/// @param self QGraphicsVideoItem*
+/// @param filterObj QObject*
 void q_graphicsvideoitem_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* obj ```
+/// @param self QGraphicsVideoItem*
+/// @param obj QObject*
 void q_graphicsvideoitem_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_graphicsvideoitem_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QGraphicsVideoItem*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_graphicsvideoitem_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_graphicsvideoitem_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_graphicsvideoitem_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QGraphicsVideoItem* self, const char* name, QVariant* value ```
+/// @param self QGraphicsVideoItem*
+/// @param name const char*
+/// @param value QVariant*
 bool q_graphicsvideoitem_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QGraphicsVideoItem* self, const char* name ```
+/// @param self QGraphicsVideoItem*
+/// @param name const char*
 QVariant* q_graphicsvideoitem_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsVideoItem*
 const char** q_graphicsvideoitem_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QBindingStorage* q_graphicsvideoitem_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 const QBindingStorage* q_graphicsvideoitem_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*) ```
-void q_graphicsvideoitem_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*)
+void q_graphicsvideoitem_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QObject* q_graphicsvideoitem_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QGraphicsVideoItem* self, const char* classname ```
+/// @param self QGraphicsVideoItem*
+/// @param classname const char*
 bool q_graphicsvideoitem_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsVideoItem* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QGraphicsVideoItem*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_graphicsvideoitem_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsVideoItem* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QGraphicsVideoItem*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_graphicsvideoitem_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsvideoitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QGraphicsVideoItem*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsvideoitem_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsVideoItem* self, QObject* param1 ```
+/// @param self QGraphicsVideoItem*
+/// @param param1 QObject*
 void q_graphicsvideoitem_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QObject*) ```
-void q_graphicsvideoitem_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QObject*)
+void q_graphicsvideoitem_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsScene* q_graphicsvideoitem_scene(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_parent_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_top_level_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsObject* q_graphicsvideoitem_parent_object(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsWidget* q_graphicsvideoitem_parent_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsWidget* q_graphicsvideoitem_top_level_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsWidget* q_graphicsvideoitem_window(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setParentItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* parent ```
+/// @param self QGraphicsVideoItem*
+/// @param parent QGraphicsItem*
 void q_graphicsvideoitem_set_parent_item(void* self, void* parent);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 libqt_list /* of QGraphicsItem* */ q_graphicsvideoitem_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_window(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsObject* q_graphicsvideoitem_to_graphics_object(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 const QGraphicsObject* q_graphicsvideoitem_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItemGroup* q_graphicsvideoitem_group(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setGroup)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItemGroup* group ```
+/// @param self QGraphicsVideoItem*
+/// @param group QGraphicsItemGroup*
 void q_graphicsvideoitem_set_group(void* self, void* group);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return flag of enum QGraphicsItem__GraphicsItemFlag
 int64_t q_graphicsvideoitem_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__GraphicsItemFlag flag ```
+/// @param self QGraphicsVideoItem*
+/// @param flag enum QGraphicsItem__GraphicsItemFlag
 void q_graphicsvideoitem_set_flag(void* self, int64_t flag);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlags)
 ///
-/// ``` QGraphicsVideoItem* self, int flags ```
+/// @param self QGraphicsVideoItem*
+/// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
 void q_graphicsvideoitem_set_flags(void* self, int64_t flags);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return enum QGraphicsItem__CacheMode
 int64_t q_graphicsvideoitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__CacheMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param mode enum QGraphicsItem__CacheMode
 void q_graphicsvideoitem_set_cache_mode(void* self, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return enum QGraphicsItem__PanelModality
 int64_t q_graphicsvideoitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPanelModality)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__PanelModality panelModality ```
+/// @param self QGraphicsVideoItem*
+/// @param panelModality enum QGraphicsItem__PanelModality
 void q_graphicsvideoitem_set_panel_modality(void* self, int64_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_blocked_by_modal_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsVideoItem*
 const char* q_graphicsvideoitem_tool_tip(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setToolTip)
 ///
-/// ``` QGraphicsVideoItem* self, const char* toolTip ```
+/// @param self QGraphicsVideoItem*
+/// @param toolTip const char*
 void q_graphicsvideoitem_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QCursor* q_graphicsvideoitem_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCursor)
 ///
-/// ``` QGraphicsVideoItem* self, QCursor* cursor ```
+/// @param self QGraphicsVideoItem*
+/// @param cursor QCursor*
 void q_graphicsvideoitem_set_cursor(void* self, void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_has_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#unsetCursor)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_unset_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_visible(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* parent ```
+/// @param self QGraphicsVideoItem*
+/// @param parent QGraphicsItem*
 bool q_graphicsvideoitem_is_visible_to(void* self, void* parent);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setVisible)
 ///
-/// ``` QGraphicsVideoItem* self, bool visible ```
+/// @param self QGraphicsVideoItem*
+/// @param visible bool
 void q_graphicsvideoitem_set_visible(void* self, bool visible);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hide)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_hide(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#show)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_show(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_enabled(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setEnabled)
 ///
-/// ``` QGraphicsVideoItem* self, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param enabled bool
 void q_graphicsvideoitem_set_enabled(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_selected(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setSelected)
 ///
-/// ``` QGraphicsVideoItem* self, bool selected ```
+/// @param self QGraphicsVideoItem*
+/// @param selected bool
 void q_graphicsvideoitem_set_selected(void* self, bool selected);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_accept_drops(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptDrops)
 ///
-/// ``` QGraphicsVideoItem* self, bool on ```
+/// @param self QGraphicsVideoItem*
+/// @param on bool
 void q_graphicsvideoitem_set_accept_drops(void* self, bool on);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_opacity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_effective_opacity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setOpacity)
 ///
-/// ``` QGraphicsVideoItem* self, double opacity ```
+/// @param self QGraphicsVideoItem*
+/// @param opacity double
 void q_graphicsvideoitem_set_opacity(void* self, double opacity);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsEffect* q_graphicsvideoitem_graphics_effect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setGraphicsEffect)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsEffect* effect ```
+/// @param self QGraphicsVideoItem*
+/// @param effect QGraphicsEffect*
 void q_graphicsvideoitem_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_graphicsvideoitem_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptedMouseButtons)
 ///
-/// ``` QGraphicsVideoItem* self, int buttons ```
+/// @param self QGraphicsVideoItem*
+/// @param buttons flag of enum Qt__MouseButton
 void q_graphicsvideoitem_set_accepted_mouse_buttons(void* self, int64_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_accept_hover_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptHoverEvents)
 ///
-/// ``` QGraphicsVideoItem* self, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param enabled bool
 void q_graphicsvideoitem_set_accept_hover_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_accept_touch_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptTouchEvents)
 ///
-/// ``` QGraphicsVideoItem* self, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param enabled bool
 void q_graphicsvideoitem_set_accept_touch_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_filters_child_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFiltersChildEvents)
 ///
-/// ``` QGraphicsVideoItem* self, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param enabled bool
 void q_graphicsvideoitem_set_filters_child_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_handles_child_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setHandlesChildEvents)
 ///
-/// ``` QGraphicsVideoItem* self, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param enabled bool
 void q_graphicsvideoitem_set_handles_child_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_active(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setActive)
 ///
-/// ``` QGraphicsVideoItem* self, bool active ```
+/// @param self QGraphicsVideoItem*
+/// @param active bool
 void q_graphicsvideoitem_set_active(void* self, bool active);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_has_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_set_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#clearFocus)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_clear_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_focus_proxy(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocusProxy)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
 void q_graphicsvideoitem_set_focus_proxy(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_focus_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QGraphicsItem* q_graphicsvideoitem_focus_scope_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#grabMouse)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_grab_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ungrabMouse)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_ungrab_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#grabKeyboard)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_grab_keyboard(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ungrabKeyboard)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_ungrab_keyboard(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPointF* q_graphicsvideoitem_pos(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_x(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setX)
 ///
-/// ``` QGraphicsVideoItem* self, double x ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
 void q_graphicsvideoitem_set_x(void* self, double x);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_y(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setY)
 ///
-/// ``` QGraphicsVideoItem* self, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param y double
 void q_graphicsvideoitem_set_y(void* self, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPointF* q_graphicsvideoitem_scene_pos(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* pos ```
+/// @param self QGraphicsVideoItem*
+/// @param pos QPointF*
 void q_graphicsvideoitem_set_pos(void* self, void* pos);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
 void q_graphicsvideoitem_set_pos2(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#moveBy)
 ///
-/// ``` QGraphicsVideoItem* self, double dx, double dy ```
+/// @param self QGraphicsVideoItem*
+/// @param dx double
+/// @param dy double
 void q_graphicsvideoitem_move_by(void* self, double dx, double dy);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_ensure_visible(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 void q_graphicsvideoitem_ensure_visible2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QTransform* q_graphicsvideoitem_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QTransform* q_graphicsvideoitem_scene_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// ``` QGraphicsVideoItem* self, QTransform* viewportTransform ```
+/// @param self QGraphicsVideoItem*
+/// @param viewportTransform QTransform*
 QTransform* q_graphicsvideoitem_device_transform(void* self, void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* other ```
+/// @param self QGraphicsVideoItem*
+/// @param other QGraphicsItem*
 QTransform* q_graphicsvideoitem_item_transform(void* self, void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
-/// ``` QGraphicsVideoItem* self, QTransform* matrix ```
+/// @param self QGraphicsVideoItem*
+/// @param matrix QTransform*
 void q_graphicsvideoitem_set_transform(void* self, void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#resetTransform)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_reset_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setRotation)
 ///
-/// ``` QGraphicsVideoItem* self, double angle ```
+/// @param self QGraphicsVideoItem*
+/// @param angle double
 void q_graphicsvideoitem_set_rotation(void* self, double angle);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_rotation(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setScale)
 ///
-/// ``` QGraphicsVideoItem* self, double scale ```
+/// @param self QGraphicsVideoItem*
+/// @param scale double
 void q_graphicsvideoitem_set_scale(void* self, double scale);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_scale(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 libqt_list /* of QGraphicsTransform* */ q_graphicsvideoitem_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QGraphicsVideoItem* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+/// @param self QGraphicsVideoItem*
+/// @param transformations libqt_list /* of QGraphicsTransform* */
 void q_graphicsvideoitem_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPointF* q_graphicsvideoitem_transform_origin_point(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* origin ```
+/// @param self QGraphicsVideoItem*
+/// @param origin QPointF*
 void q_graphicsvideoitem_set_transform_origin_point(void* self, void* origin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
-/// ``` QGraphicsVideoItem* self, double ax, double ay ```
+/// @param self QGraphicsVideoItem*
+/// @param ax double
+/// @param ay double
 void q_graphicsvideoitem_set_transform_origin_point2(void* self, double ax, double ay);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_z_value(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setZValue)
 ///
-/// ``` QGraphicsVideoItem* self, double z ```
+/// @param self QGraphicsVideoItem*
+/// @param z double
 void q_graphicsvideoitem_set_z_value(void* self, double z);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#stackBefore)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* sibling ```
+/// @param self QGraphicsVideoItem*
+/// @param sibling QGraphicsItem*
 void q_graphicsvideoitem_stack_before(void* self, void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QRectF* q_graphicsvideoitem_children_bounding_rect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QRectF* q_graphicsvideoitem_scene_bounding_rect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_clipped(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPainterPath* q_graphicsvideoitem_clip_path(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 libqt_list /* of QGraphicsItem* */ q_graphicsvideoitem_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_obscured(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 bool q_graphicsvideoitem_is_obscured2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// ``` QGraphicsVideoItem* self, QTransform* itemToDeviceTransform ```
+/// @param self QGraphicsVideoItem*
+/// @param itemToDeviceTransform QTransform*
 QRegion* q_graphicsvideoitem_bounding_region(void* self, void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 double q_graphicsvideoitem_bounding_region_granularity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setBoundingRegionGranularity)
 ///
-/// ``` QGraphicsVideoItem* self, double granularity ```
+/// @param self QGraphicsVideoItem*
+/// @param granularity double
 void q_graphicsvideoitem_set_bounding_region_granularity(void* self, double granularity);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_update(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double width, double height ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param width double
+/// @param height double
 void q_graphicsvideoitem_update2(void* self, double x, double y, double width, double height);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scroll)
 ///
-/// ``` QGraphicsVideoItem* self, double dx, double dy ```
+/// @param self QGraphicsVideoItem*
+/// @param dx double
+/// @param dy double
 void q_graphicsvideoitem_scroll(void* self, double dx, double dy);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_to_item(void* self, void* item, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_to_parent(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_to_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_to_item(void* self, void* item, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_to_parent(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_to_scene(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_to_item4(void* self, void* item, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_from_item(void* self, void* item, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_from_parent(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 QPointF* q_graphicsvideoitem_map_from_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_from_item(void* self, void* item, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_from_parent(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 QRectF* q_graphicsvideoitem_map_rect_from_scene(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_from_item4(void* self, void* item, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsvideoitem_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_to_item5(void* self, void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_to_parent2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_to_scene2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_from_item5(void* self, void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsvideoitem_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_from_parent2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsvideoitem_map_rect_from_scene2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* child ```
+/// @param self QGraphicsVideoItem*
+/// @param child QGraphicsItem*
 bool q_graphicsvideoitem_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* other ```
+/// @param self QGraphicsVideoItem*
+/// @param other QGraphicsItem*
 QGraphicsItem* q_graphicsvideoitem_common_ancestor_item(void* self, void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 bool q_graphicsvideoitem_is_under_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// ``` QGraphicsVideoItem* self, int key ```
+/// @param self QGraphicsVideoItem*
+/// @param key int
 QVariant* q_graphicsvideoitem_data(void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setData)
 ///
-/// ``` QGraphicsVideoItem* self, int key, QVariant* value ```
+/// @param self QGraphicsVideoItem*
+/// @param key int
+/// @param value QVariant*
 void q_graphicsvideoitem_set_data(void* self, int key, void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_graphicsvideoitem_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setInputMethodHints)
 ///
-/// ``` QGraphicsVideoItem* self, int hints ```
+/// @param self QGraphicsVideoItem*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_graphicsvideoitem_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#installSceneEventFilter)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* filterItem ```
+/// @param self QGraphicsVideoItem*
+/// @param filterItem QGraphicsItem*
 void q_graphicsvideoitem_install_scene_event_filter(void* self, void* filterItem);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeSceneEventFilter)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* filterItem ```
+/// @param self QGraphicsVideoItem*
+/// @param filterItem QGraphicsItem*
 void q_graphicsvideoitem_remove_scene_event_filter(void* self, void* filterItem);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__GraphicsItemFlag flag, bool enabled ```
+/// @param self QGraphicsVideoItem*
+/// @param flag enum QGraphicsItem__GraphicsItemFlag
+/// @param enabled bool
 void q_graphicsvideoitem_set_flag2(void* self, int64_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__CacheMode mode, QSize* cacheSize ```
+/// @param self QGraphicsVideoItem*
+/// @param mode enum QGraphicsItem__CacheMode
+/// @param cacheSize QSize*
 void q_graphicsvideoitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__FocusReason focusReason ```
+/// @param self QGraphicsVideoItem*
+/// @param focusReason enum Qt__FocusReason
 void q_graphicsvideoitem_set_focus1(void* self, int64_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 void q_graphicsvideoitem_ensure_visible1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect, int xmargin ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
+/// @param xmargin int
 void q_graphicsvideoitem_ensure_visible22(void* self, void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect, int xmargin, int ymargin ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
+/// @param xmargin int
+/// @param ymargin int
 void q_graphicsvideoitem_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h, int xmargin ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+/// @param xmargin int
 void q_graphicsvideoitem_ensure_visible5(void* self, double x, double y, double w, double h, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsVideoItem* self, double x, double y, double w, double h, int xmargin, int ymargin ```
+/// @param self QGraphicsVideoItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+/// @param xmargin int
+/// @param ymargin int
 void q_graphicsvideoitem_ensure_visible6(void* self, double x, double y, double w, double h, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* other, bool* ok ```
+/// @param self QGraphicsVideoItem*
+/// @param other QGraphicsItem*
+/// @param ok bool*
 QTransform* q_graphicsvideoitem_item_transform2(void* self, void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
-/// ``` QGraphicsVideoItem* self, QTransform* matrix, bool combine ```
+/// @param self QGraphicsVideoItem*
+/// @param matrix QTransform*
+/// @param combine bool
 void q_graphicsvideoitem_set_transform2(void* self, void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param mode enum Qt__ItemSelectionMode
 libqt_list /* of QGraphicsItem* */ q_graphicsvideoitem_colliding_items1(void* self, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 bool q_graphicsvideoitem_is_obscured1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsVideoItem* self, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param rect QRectF*
 void q_graphicsvideoitem_update1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scroll)
 ///
-/// ``` QGraphicsVideoItem* self, double dx, double dy, QRectF* rect ```
+/// @param self QGraphicsVideoItem*
+/// @param dx double
+/// @param dy double
+/// @param rect QRectF*
 void q_graphicsvideoitem_scroll3(void* self, double dx, double dy, void* rect);
 
 /// Inherited from QGraphicsObject
@@ -1821,7 +2089,8 @@ void q_graphicsvideoitem_scroll3(void* self, double dx, double dy, void* rect);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* ev ```
+/// @param self QGraphicsVideoItem*
+/// @param ev QEvent*
 bool q_graphicsvideoitem_event(void* self, void* ev);
 
 /// Inherited from QGraphicsObject
@@ -1830,7 +2099,8 @@ bool q_graphicsvideoitem_event(void* self, void* ev);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* ev ```
+/// @param self QGraphicsVideoItem*
+/// @param ev QEvent*
 bool q_graphicsvideoitem_qbase_event(void* self, void* ev);
 
 /// Inherited from QGraphicsObject
@@ -1839,8 +2109,9 @@ bool q_graphicsvideoitem_qbase_event(void* self, void* ev);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QEvent*) ```
-void q_graphicsvideoitem_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QEvent*)
+void q_graphicsvideoitem_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1848,7 +2119,9 @@ void q_graphicsvideoitem_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QObject* watched, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_graphicsvideoitem_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1857,7 +2130,9 @@ bool q_graphicsvideoitem_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QObject* watched, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_graphicsvideoitem_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1866,8 +2141,9 @@ bool q_graphicsvideoitem_qbase_event_filter(void* self, void* watched, void* eve
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QObject*, QEvent*) ```
-void q_graphicsvideoitem_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QObject*, QEvent*)
+void q_graphicsvideoitem_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1875,7 +2151,8 @@ void q_graphicsvideoitem_on_event_filter(void* self, bool (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QChildEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QChildEvent*
 void q_graphicsvideoitem_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1884,7 +2161,8 @@ void q_graphicsvideoitem_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QChildEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QChildEvent*
 void q_graphicsvideoitem_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1893,8 +2171,9 @@ void q_graphicsvideoitem_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QChildEvent*) ```
-void q_graphicsvideoitem_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QChildEvent*)
+void q_graphicsvideoitem_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1902,7 +2181,8 @@ void q_graphicsvideoitem_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QEvent*
 void q_graphicsvideoitem_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1911,7 +2191,8 @@ void q_graphicsvideoitem_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QEvent*
 void q_graphicsvideoitem_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1920,8 +2201,9 @@ void q_graphicsvideoitem_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QEvent*) ```
-void q_graphicsvideoitem_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QEvent*)
+void q_graphicsvideoitem_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1929,7 +2211,8 @@ void q_graphicsvideoitem_on_custom_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 void q_graphicsvideoitem_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1938,7 +2221,8 @@ void q_graphicsvideoitem_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 void q_graphicsvideoitem_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1947,8 +2231,9 @@ void q_graphicsvideoitem_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QMetaMethod*) ```
-void q_graphicsvideoitem_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QMetaMethod*)
+void q_graphicsvideoitem_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1956,7 +2241,8 @@ void q_graphicsvideoitem_on_connect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 void q_graphicsvideoitem_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1965,7 +2251,8 @@ void q_graphicsvideoitem_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 void q_graphicsvideoitem_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1974,8 +2261,9 @@ void q_graphicsvideoitem_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QMetaMethod*) ```
-void q_graphicsvideoitem_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QMetaMethod*)
+void q_graphicsvideoitem_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -1983,7 +2271,8 @@ void q_graphicsvideoitem_on_disconnect_notify(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, int phase ```
+/// @param self QGraphicsVideoItem*
+/// @param phase int
 void q_graphicsvideoitem_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
@@ -1992,7 +2281,8 @@ void q_graphicsvideoitem_advance(void* self, int phase);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, int phase ```
+/// @param self QGraphicsVideoItem*
+/// @param phase int
 void q_graphicsvideoitem_qbase_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
@@ -2001,8 +2291,9 @@ void q_graphicsvideoitem_qbase_advance(void* self, int phase);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, int) ```
-void q_graphicsvideoitem_on_advance(void* self, void (*slot)(void*, int));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, int)
+void q_graphicsvideoitem_on_advance(void* self, void (*callback)(void*, int));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2010,7 +2301,7 @@ void q_graphicsvideoitem_on_advance(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPainterPath* q_graphicsvideoitem_shape(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2019,7 +2310,7 @@ QPainterPath* q_graphicsvideoitem_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPainterPath* q_graphicsvideoitem_qbase_shape(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2028,8 +2319,9 @@ QPainterPath* q_graphicsvideoitem_qbase_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* (*slot)() ```
-void q_graphicsvideoitem_on_shape(void* self, QPainterPath* (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback QPainterPath* fn()
+void q_graphicsvideoitem_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -2037,7 +2329,8 @@ void q_graphicsvideoitem_on_shape(void* self, QPainterPath* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 bool q_graphicsvideoitem_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
@@ -2046,7 +2339,8 @@ bool q_graphicsvideoitem_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPointF* point ```
+/// @param self QGraphicsVideoItem*
+/// @param point QPointF*
 bool q_graphicsvideoitem_qbase_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
@@ -2055,8 +2349,9 @@ bool q_graphicsvideoitem_qbase_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QPointF*) ```
-void q_graphicsvideoitem_on_contains(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QPointF*)
+void q_graphicsvideoitem_on_contains(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2064,7 +2359,9 @@ void q_graphicsvideoitem_on_contains(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param other QGraphicsItem*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsvideoitem_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -2073,7 +2370,9 @@ bool q_graphicsvideoitem_collides_with_item(void* self, void* other, int64_t mod
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param other QGraphicsItem*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsvideoitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -2082,8 +2381,9 @@ bool q_graphicsvideoitem_qbase_collides_with_item(void* self, void* other, int64
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QGraphicsItem*, enum Qt__ItemSelectionMode) ```
-void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*slot)(void*, void*, int64_t));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
+void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2091,7 +2391,9 @@ void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsvideoitem_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -2100,7 +2402,9 @@ bool q_graphicsvideoitem_collides_with_path(void* self, void* path, int64_t mode
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsVideoItem*
+/// @param path QPainterPath*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsvideoitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -2109,8 +2413,9 @@ bool q_graphicsvideoitem_qbase_collides_with_path(void* self, void* path, int64_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QPainterPath*, enum Qt__ItemSelectionMode) ```
-void q_graphicsvideoitem_on_collides_with_path(void* self, bool (*slot)(void*, void*, int64_t));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QPainterPath*, enum Qt__ItemSelectionMode)
+void q_graphicsvideoitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2118,7 +2423,8 @@ void q_graphicsvideoitem_on_collides_with_path(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
 bool q_graphicsvideoitem_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
@@ -2127,7 +2433,8 @@ bool q_graphicsvideoitem_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* item ```
+/// @param self QGraphicsVideoItem*
+/// @param item QGraphicsItem*
 bool q_graphicsvideoitem_qbase_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
@@ -2136,8 +2443,9 @@ bool q_graphicsvideoitem_qbase_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QGraphicsItem*) ```
-void q_graphicsvideoitem_on_is_obscured_by(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QGraphicsItem*)
+void q_graphicsvideoitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2145,7 +2453,7 @@ void q_graphicsvideoitem_on_is_obscured_by(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPainterPath* q_graphicsvideoitem_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2154,7 +2462,7 @@ QPainterPath* q_graphicsvideoitem_opaque_area(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QPainterPath* q_graphicsvideoitem_qbase_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2163,8 +2471,9 @@ QPainterPath* q_graphicsvideoitem_qbase_opaque_area(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QPainterPath* (*slot)() ```
-void q_graphicsvideoitem_on_opaque_area(void* self, QPainterPath* (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback QPainterPath* fn()
+void q_graphicsvideoitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -2172,7 +2481,9 @@ void q_graphicsvideoitem_on_opaque_area(void* self, QPainterPath* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* watched, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param watched QGraphicsItem*
+/// @param event QEvent*
 bool q_graphicsvideoitem_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2181,7 +2492,9 @@ bool q_graphicsvideoitem_scene_event_filter(void* self, void* watched, void* eve
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsItem* watched, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param watched QGraphicsItem*
+/// @param event QEvent*
 bool q_graphicsvideoitem_qbase_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2190,8 +2503,9 @@ bool q_graphicsvideoitem_qbase_scene_event_filter(void* self, void* watched, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QGraphicsItem*, QEvent*) ```
-void q_graphicsvideoitem_on_scene_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QGraphicsItem*, QEvent*)
+void q_graphicsvideoitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2199,7 +2513,8 @@ void q_graphicsvideoitem_on_scene_event_filter(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QEvent*
 bool q_graphicsvideoitem_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2208,7 +2523,8 @@ bool q_graphicsvideoitem_scene_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QEvent*
 bool q_graphicsvideoitem_qbase_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2217,8 +2533,9 @@ bool q_graphicsvideoitem_qbase_scene_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QEvent*) ```
-void q_graphicsvideoitem_on_scene_event(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QEvent*)
+void q_graphicsvideoitem_on_scene_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2226,7 +2543,8 @@ void q_graphicsvideoitem_on_scene_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneContextMenuEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneContextMenuEvent*
 void q_graphicsvideoitem_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2235,7 +2553,8 @@ void q_graphicsvideoitem_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneContextMenuEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneContextMenuEvent*
 void q_graphicsvideoitem_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2244,8 +2563,9 @@ void q_graphicsvideoitem_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneContextMenuEvent*) ```
-void q_graphicsvideoitem_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneContextMenuEvent*)
+void q_graphicsvideoitem_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2253,7 +2573,8 @@ void q_graphicsvideoitem_on_context_menu_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2262,7 +2583,8 @@ void q_graphicsvideoitem_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2271,8 +2593,9 @@ void q_graphicsvideoitem_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsvideoitem_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*)
+void q_graphicsvideoitem_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2280,7 +2603,8 @@ void q_graphicsvideoitem_on_drag_enter_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2289,7 +2613,8 @@ void q_graphicsvideoitem_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2298,8 +2623,9 @@ void q_graphicsvideoitem_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsvideoitem_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*)
+void q_graphicsvideoitem_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2307,7 +2633,8 @@ void q_graphicsvideoitem_on_drag_leave_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2316,7 +2643,8 @@ void q_graphicsvideoitem_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2325,8 +2653,9 @@ void q_graphicsvideoitem_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsvideoitem_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*)
+void q_graphicsvideoitem_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2334,7 +2663,8 @@ void q_graphicsvideoitem_on_drag_move_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2343,7 +2673,8 @@ void q_graphicsvideoitem_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsvideoitem_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2352,8 +2683,9 @@ void q_graphicsvideoitem_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsvideoitem_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneDragDropEvent*)
+void q_graphicsvideoitem_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2361,7 +2693,8 @@ void q_graphicsvideoitem_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QFocusEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QFocusEvent*
 void q_graphicsvideoitem_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2370,7 +2703,8 @@ void q_graphicsvideoitem_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QFocusEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QFocusEvent*
 void q_graphicsvideoitem_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2379,8 +2713,9 @@ void q_graphicsvideoitem_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QFocusEvent*) ```
-void q_graphicsvideoitem_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QFocusEvent*)
+void q_graphicsvideoitem_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2388,7 +2723,8 @@ void q_graphicsvideoitem_on_focus_in_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QFocusEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QFocusEvent*
 void q_graphicsvideoitem_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2397,7 +2733,8 @@ void q_graphicsvideoitem_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QFocusEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QFocusEvent*
 void q_graphicsvideoitem_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2406,8 +2743,9 @@ void q_graphicsvideoitem_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QFocusEvent*) ```
-void q_graphicsvideoitem_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QFocusEvent*)
+void q_graphicsvideoitem_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2415,7 +2753,8 @@ void q_graphicsvideoitem_on_focus_out_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2424,7 +2763,8 @@ void q_graphicsvideoitem_hover_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_qbase_hover_enter_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2433,8 +2773,9 @@ void q_graphicsvideoitem_qbase_hover_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsvideoitem_on_hover_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*)
+void q_graphicsvideoitem_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2442,7 +2783,8 @@ void q_graphicsvideoitem_on_hover_enter_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2451,7 +2793,8 @@ void q_graphicsvideoitem_hover_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_qbase_hover_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2460,8 +2803,9 @@ void q_graphicsvideoitem_qbase_hover_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsvideoitem_on_hover_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*)
+void q_graphicsvideoitem_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2469,7 +2813,8 @@ void q_graphicsvideoitem_on_hover_move_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2478,7 +2823,8 @@ void q_graphicsvideoitem_hover_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsvideoitem_qbase_hover_leave_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2487,8 +2833,9 @@ void q_graphicsvideoitem_qbase_hover_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsvideoitem_on_hover_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneHoverEvent*)
+void q_graphicsvideoitem_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2496,7 +2843,8 @@ void q_graphicsvideoitem_on_hover_leave_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QKeyEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QKeyEvent*
 void q_graphicsvideoitem_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2505,7 +2853,8 @@ void q_graphicsvideoitem_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QKeyEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QKeyEvent*
 void q_graphicsvideoitem_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2514,8 +2863,9 @@ void q_graphicsvideoitem_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QKeyEvent*) ```
-void q_graphicsvideoitem_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QKeyEvent*)
+void q_graphicsvideoitem_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2523,7 +2873,8 @@ void q_graphicsvideoitem_on_key_press_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QKeyEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QKeyEvent*
 void q_graphicsvideoitem_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2532,7 +2883,8 @@ void q_graphicsvideoitem_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QKeyEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QKeyEvent*
 void q_graphicsvideoitem_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2541,8 +2893,9 @@ void q_graphicsvideoitem_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QKeyEvent*) ```
-void q_graphicsvideoitem_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QKeyEvent*)
+void q_graphicsvideoitem_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2550,7 +2903,8 @@ void q_graphicsvideoitem_on_key_release_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2559,7 +2913,8 @@ void q_graphicsvideoitem_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2568,8 +2923,9 @@ void q_graphicsvideoitem_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsvideoitem_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*)
+void q_graphicsvideoitem_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2577,7 +2933,8 @@ void q_graphicsvideoitem_on_mouse_press_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2586,7 +2943,8 @@ void q_graphicsvideoitem_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2595,8 +2953,9 @@ void q_graphicsvideoitem_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsvideoitem_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*)
+void q_graphicsvideoitem_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2604,7 +2963,8 @@ void q_graphicsvideoitem_on_mouse_move_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2613,7 +2973,8 @@ void q_graphicsvideoitem_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2622,8 +2983,9 @@ void q_graphicsvideoitem_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsvideoitem_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*)
+void q_graphicsvideoitem_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2631,7 +2993,8 @@ void q_graphicsvideoitem_on_mouse_release_event(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2640,7 +3003,8 @@ void q_graphicsvideoitem_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsvideoitem_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2649,8 +3013,9 @@ void q_graphicsvideoitem_qbase_mouse_double_click_event(void* self, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsvideoitem_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneMouseEvent*)
+void q_graphicsvideoitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2658,7 +3023,8 @@ void q_graphicsvideoitem_on_mouse_double_click_event(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneWheelEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneWheelEvent*
 void q_graphicsvideoitem_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2667,7 +3033,8 @@ void q_graphicsvideoitem_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QGraphicsSceneWheelEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QGraphicsSceneWheelEvent*
 void q_graphicsvideoitem_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2676,8 +3043,9 @@ void q_graphicsvideoitem_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QGraphicsSceneWheelEvent*) ```
-void q_graphicsvideoitem_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QGraphicsSceneWheelEvent*)
+void q_graphicsvideoitem_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2685,7 +3053,8 @@ void q_graphicsvideoitem_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QInputMethodEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QInputMethodEvent*
 void q_graphicsvideoitem_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2694,7 +3063,8 @@ void q_graphicsvideoitem_input_method_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QInputMethodEvent* event ```
+/// @param self QGraphicsVideoItem*
+/// @param event QInputMethodEvent*
 void q_graphicsvideoitem_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QGraphicsItem
@@ -2703,8 +3073,9 @@ void q_graphicsvideoitem_qbase_input_method_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, QInputMethodEvent*) ```
-void q_graphicsvideoitem_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, QInputMethodEvent*)
+void q_graphicsvideoitem_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2712,7 +3083,8 @@ void q_graphicsvideoitem_on_input_method_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__InputMethodQuery query ```
+/// @param self QGraphicsVideoItem*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_graphicsvideoitem_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
@@ -2721,7 +3093,8 @@ QVariant* q_graphicsvideoitem_input_method_query(void* self, int64_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum Qt__InputMethodQuery query ```
+/// @param self QGraphicsVideoItem*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_graphicsvideoitem_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QGraphicsItem
@@ -2730,8 +3103,9 @@ QVariant* q_graphicsvideoitem_qbase_input_method_query(void* self, int64_t query
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QVariant* (*slot)(QGraphicsVideoItem*, enum Qt__InputMethodQuery) ```
-void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QGraphicsVideoItem*
+/// @param callback QVariant* fn(QGraphicsVideoItem*, enum Qt__InputMethodQuery)
+void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2739,7 +3113,8 @@ void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__Extension extension ```
+/// @param self QGraphicsVideoItem*
+/// @param extension enum QGraphicsItem__Extension
 bool q_graphicsvideoitem_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
@@ -2748,7 +3123,8 @@ bool q_graphicsvideoitem_supports_extension(void* self, int64_t extension);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__Extension extension ```
+/// @param self QGraphicsVideoItem*
+/// @param extension enum QGraphicsItem__Extension
 bool q_graphicsvideoitem_qbase_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
@@ -2757,8 +3133,9 @@ bool q_graphicsvideoitem_qbase_supports_extension(void* self, int64_t extension)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, enum QGraphicsItem__Extension) ```
-void q_graphicsvideoitem_on_supports_extension(void* self, bool (*slot)(void*, int64_t));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, enum QGraphicsItem__Extension)
+void q_graphicsvideoitem_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2766,7 +3143,9 @@ void q_graphicsvideoitem_on_supports_extension(void* self, bool (*slot)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
+/// @param self QGraphicsVideoItem*
+/// @param extension enum QGraphicsItem__Extension
+/// @param variant QVariant*
 void q_graphicsvideoitem_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -2775,7 +3154,9 @@ void q_graphicsvideoitem_set_extension(void* self, int64_t extension, void* vari
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
+/// @param self QGraphicsVideoItem*
+/// @param extension enum QGraphicsItem__Extension
+/// @param variant QVariant*
 void q_graphicsvideoitem_qbase_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -2784,8 +3165,9 @@ void q_graphicsvideoitem_qbase_set_extension(void* self, int64_t extension, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, enum QGraphicsItem__Extension, QVariant*) ```
-void q_graphicsvideoitem_on_set_extension(void* self, void (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, enum QGraphicsItem__Extension, QVariant*)
+void q_graphicsvideoitem_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2793,7 +3175,8 @@ void q_graphicsvideoitem_on_set_extension(void* self, void (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QVariant* variant ```
+/// @param self QGraphicsVideoItem*
+/// @param variant QVariant*
 QVariant* q_graphicsvideoitem_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -2802,7 +3185,8 @@ QVariant* q_graphicsvideoitem_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QVariant* variant ```
+/// @param self QGraphicsVideoItem*
+/// @param variant QVariant*
 QVariant* q_graphicsvideoitem_qbase_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -2811,8 +3195,9 @@ QVariant* q_graphicsvideoitem_qbase_extension(void* self, void* variant);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QVariant* (*slot)(QGraphicsVideoItem*, QVariant*) ```
-void q_graphicsvideoitem_on_extension(void* self, QVariant* (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback QVariant* fn(QGraphicsVideoItem*, QVariant*)
+void q_graphicsvideoitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsObject
 ///
@@ -2820,7 +3205,7 @@ void q_graphicsvideoitem_on_extension(void* self, QVariant* (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
@@ -2829,7 +3214,7 @@ void q_graphicsvideoitem_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_qbase_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
@@ -2838,8 +3223,9 @@ void q_graphicsvideoitem_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)() ```
-void q_graphicsvideoitem_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn()
+void q_graphicsvideoitem_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2847,7 +3233,7 @@ void q_graphicsvideoitem_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QObject* q_graphicsvideoitem_sender(void* self);
 
 /// Inherited from QObject
@@ -2856,7 +3242,7 @@ QObject* q_graphicsvideoitem_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 QObject* q_graphicsvideoitem_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2865,8 +3251,9 @@ QObject* q_graphicsvideoitem_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QObject* (*slot)() ```
-void q_graphicsvideoitem_on_sender(void* self, QObject* (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback QObject* fn()
+void q_graphicsvideoitem_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2874,7 +3261,7 @@ void q_graphicsvideoitem_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 int32_t q_graphicsvideoitem_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2883,7 +3270,7 @@ int32_t q_graphicsvideoitem_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 int32_t q_graphicsvideoitem_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2892,8 +3279,9 @@ int32_t q_graphicsvideoitem_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, int32_t (*slot)() ```
-void q_graphicsvideoitem_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback int32_t fn()
+void q_graphicsvideoitem_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2901,7 +3289,8 @@ void q_graphicsvideoitem_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, const char* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal const char*
 int32_t q_graphicsvideoitem_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2910,7 +3299,8 @@ int32_t q_graphicsvideoitem_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, const char* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal const char*
 int32_t q_graphicsvideoitem_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2919,8 +3309,9 @@ int32_t q_graphicsvideoitem_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, int32_t (*slot)(QGraphicsVideoItem*, const char*) ```
-void q_graphicsvideoitem_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QGraphicsVideoItem*
+/// @param callback int32_t fn(QGraphicsVideoItem*, const char*)
+void q_graphicsvideoitem_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2928,7 +3319,8 @@ void q_graphicsvideoitem_on_receivers(void* self, int32_t (*slot)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 bool q_graphicsvideoitem_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2937,7 +3329,8 @@ bool q_graphicsvideoitem_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, QMetaMethod* signal ```
+/// @param self QGraphicsVideoItem*
+/// @param signal QMetaMethod*
 bool q_graphicsvideoitem_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2946,8 +3339,9 @@ bool q_graphicsvideoitem_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, bool (*slot)(QGraphicsVideoItem*, QMetaMethod*) ```
-void q_graphicsvideoitem_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsVideoItem*
+/// @param callback bool fn(QGraphicsVideoItem*, QMetaMethod*)
+void q_graphicsvideoitem_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2955,7 +3349,7 @@ void q_graphicsvideoitem_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2964,7 +3358,7 @@ void q_graphicsvideoitem_add_to_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_qbase_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2973,8 +3367,9 @@ void q_graphicsvideoitem_qbase_add_to_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)() ```
-void q_graphicsvideoitem_on_add_to_index(void* self, void (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn()
+void q_graphicsvideoitem_on_add_to_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -2982,7 +3377,7 @@ void q_graphicsvideoitem_on_add_to_index(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -2991,7 +3386,7 @@ void q_graphicsvideoitem_remove_from_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_qbase_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3000,8 +3395,9 @@ void q_graphicsvideoitem_qbase_remove_from_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)() ```
-void q_graphicsvideoitem_on_remove_from_index(void* self, void (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn()
+void q_graphicsvideoitem_on_remove_from_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -3009,7 +3405,7 @@ void q_graphicsvideoitem_on_remove_from_index(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3018,7 +3414,7 @@ void q_graphicsvideoitem_prepare_geometry_change(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_qbase_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3027,8 +3423,9 @@ void q_graphicsvideoitem_qbase_prepare_geometry_change(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)() ```
-void q_graphicsvideoitem_on_prepare_geometry_change(void* self, void (*slot)());
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn()
+void q_graphicsvideoitem_on_prepare_geometry_change(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3036,14 +3433,15 @@ void q_graphicsvideoitem_on_prepare_geometry_change(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsVideoItem* self, void (*slot)(QGraphicsVideoItem*, const char*) ```
-void q_graphicsvideoitem_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QGraphicsVideoItem*
+/// @param callback void fn(QGraphicsVideoItem*, const char*)
+void q_graphicsvideoitem_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#dtor.QGraphicsVideoItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QGraphicsVideoItem* self ```
+/// @param self QGraphicsVideoItem*
 void q_graphicsvideoitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qgraphicsvideoitem.html#types

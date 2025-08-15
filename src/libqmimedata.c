@@ -24,8 +24,8 @@ int32_t q_mimedata_metacall(void* self, int64_t param1, int param2, void* param3
     return QMimeData_Metacall((QMimeData*)self, param1, param2, param3);
 }
 
-void q_mimedata_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QMimeData_OnMetacall((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QMimeData_OnMetacall((QMimeData*)self, (intptr_t)callback);
 }
 
 int32_t q_mimedata_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -125,8 +125,8 @@ bool q_mimedata_has_format(void* self, const char* mimetype) {
     return QMimeData_HasFormat((QMimeData*)self, qstring(mimetype));
 }
 
-void q_mimedata_on_has_format(void* self, bool (*slot)(void*, const char*)) {
-    QMimeData_OnHasFormat((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_has_format(void* self, bool (*callback)(void*, const char*)) {
+    QMimeData_OnHasFormat((QMimeData*)self, (intptr_t)callback);
 }
 
 bool q_mimedata_qbase_has_format(void* self, const char* mimetype) {
@@ -137,31 +137,39 @@ const char** q_mimedata_formats(void* self) {
     libqt_list _arr = QMimeData_Formats((QMimeData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_mimedata_formats");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_mimedata_on_formats(void* self, const char** (*slot)()) {
-    QMimeData_OnFormats((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_formats(void* self, const char** (*callback)()) {
+    QMimeData_OnFormats((QMimeData*)self, (intptr_t)callback);
 }
 
 const char** q_mimedata_qbase_formats(void* self) {
     libqt_list _arr = QMimeData_QBaseFormats((QMimeData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_mimedata_formats");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -175,8 +183,8 @@ QVariant* q_mimedata_retrieve_data(void* self, const char* mimetype, void* prefe
     return QMimeData_RetrieveData((QMimeData*)self, qstring(mimetype), (QMetaType*)preferredType);
 }
 
-void q_mimedata_on_retrieve_data(void* self, QVariant* (*slot)(void*, const char*, void*)) {
-    QMimeData_OnRetrieveData((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const char*, void*)) {
+    QMimeData_OnRetrieveData((QMimeData*)self, (intptr_t)callback);
 }
 
 QVariant* q_mimedata_qbase_retrieve_data(void* self, const char* mimetype, void* preferredType) {
@@ -301,12 +309,16 @@ const char** q_mimedata_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_mimedata_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -324,8 +336,8 @@ void q_mimedata_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_mimedata_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_mimedata_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_mimedata_parent(void* self) {
@@ -360,8 +372,8 @@ void q_mimedata_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_mimedata_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_mimedata_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_mimedata_event(void* self, void* event) {
@@ -372,8 +384,8 @@ bool q_mimedata_qbase_event(void* self, void* event) {
     return QMimeData_QBaseEvent((QMimeData*)self, (QEvent*)event);
 }
 
-void q_mimedata_on_event(void* self, bool (*slot)(void*, void*)) {
-    QMimeData_OnEvent((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_event(void* self, bool (*callback)(void*, void*)) {
+    QMimeData_OnEvent((QMimeData*)self, (intptr_t)callback);
 }
 
 bool q_mimedata_event_filter(void* self, void* watched, void* event) {
@@ -384,8 +396,8 @@ bool q_mimedata_qbase_event_filter(void* self, void* watched, void* event) {
     return QMimeData_QBaseEventFilter((QMimeData*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_mimedata_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QMimeData_OnEventFilter((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QMimeData_OnEventFilter((QMimeData*)self, (intptr_t)callback);
 }
 
 void q_mimedata_timer_event(void* self, void* event) {
@@ -396,8 +408,8 @@ void q_mimedata_qbase_timer_event(void* self, void* event) {
     QMimeData_QBaseTimerEvent((QMimeData*)self, (QTimerEvent*)event);
 }
 
-void q_mimedata_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QMimeData_OnTimerEvent((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QMimeData_OnTimerEvent((QMimeData*)self, (intptr_t)callback);
 }
 
 void q_mimedata_child_event(void* self, void* event) {
@@ -408,8 +420,8 @@ void q_mimedata_qbase_child_event(void* self, void* event) {
     QMimeData_QBaseChildEvent((QMimeData*)self, (QChildEvent*)event);
 }
 
-void q_mimedata_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QMimeData_OnChildEvent((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QMimeData_OnChildEvent((QMimeData*)self, (intptr_t)callback);
 }
 
 void q_mimedata_custom_event(void* self, void* event) {
@@ -420,8 +432,8 @@ void q_mimedata_qbase_custom_event(void* self, void* event) {
     QMimeData_QBaseCustomEvent((QMimeData*)self, (QEvent*)event);
 }
 
-void q_mimedata_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QMimeData_OnCustomEvent((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QMimeData_OnCustomEvent((QMimeData*)self, (intptr_t)callback);
 }
 
 void q_mimedata_connect_notify(void* self, void* signal) {
@@ -432,8 +444,8 @@ void q_mimedata_qbase_connect_notify(void* self, void* signal) {
     QMimeData_QBaseConnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-void q_mimedata_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QMimeData_OnConnectNotify((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QMimeData_OnConnectNotify((QMimeData*)self, (intptr_t)callback);
 }
 
 void q_mimedata_disconnect_notify(void* self, void* signal) {
@@ -444,8 +456,8 @@ void q_mimedata_qbase_disconnect_notify(void* self, void* signal) {
     QMimeData_QBaseDisconnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-void q_mimedata_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QMimeData_OnDisconnectNotify((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QMimeData_OnDisconnectNotify((QMimeData*)self, (intptr_t)callback);
 }
 
 QObject* q_mimedata_sender(void* self) {
@@ -456,8 +468,8 @@ QObject* q_mimedata_qbase_sender(void* self) {
     return QMimeData_QBaseSender((QMimeData*)self);
 }
 
-void q_mimedata_on_sender(void* self, QObject* (*slot)()) {
-    QMimeData_OnSender((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_sender(void* self, QObject* (*callback)()) {
+    QMimeData_OnSender((QMimeData*)self, (intptr_t)callback);
 }
 
 int32_t q_mimedata_sender_signal_index(void* self) {
@@ -468,8 +480,8 @@ int32_t q_mimedata_qbase_sender_signal_index(void* self) {
     return QMimeData_QBaseSenderSignalIndex((QMimeData*)self);
 }
 
-void q_mimedata_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QMimeData_OnSenderSignalIndex((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QMimeData_OnSenderSignalIndex((QMimeData*)self, (intptr_t)callback);
 }
 
 int32_t q_mimedata_receivers(void* self, const char* signal) {
@@ -480,8 +492,8 @@ int32_t q_mimedata_qbase_receivers(void* self, const char* signal) {
     return QMimeData_QBaseReceivers((QMimeData*)self, signal);
 }
 
-void q_mimedata_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QMimeData_OnReceivers((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QMimeData_OnReceivers((QMimeData*)self, (intptr_t)callback);
 }
 
 bool q_mimedata_is_signal_connected(void* self, void* signal) {
@@ -492,12 +504,12 @@ bool q_mimedata_qbase_is_signal_connected(void* self, void* signal) {
     return QMimeData_QBaseIsSignalConnected((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-void q_mimedata_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QMimeData_OnIsSignalConnected((QMimeData*)self, (intptr_t)slot);
+void q_mimedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QMimeData_OnIsSignalConnected((QMimeData*)self, (intptr_t)callback);
 }
 
-void q_mimedata_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_mimedata_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_mimedata_delete(void* self) {

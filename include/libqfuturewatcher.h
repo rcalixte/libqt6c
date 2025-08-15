@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,532 +15,613 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 const QMetaObject* q_futurewatcherbase_meta_object(void* self);
 
-/// ``` QFutureWatcherBase* self, const char* param1 ```
+/// @param self QFutureWatcherBase*
+/// @param param1 const char*
 void* q_futurewatcherbase_metacast(void* self, const char* param1);
 
-/// ``` QFutureWatcherBase* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QFutureWatcherBase*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_futurewatcherbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_futurewatcherbase_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValue)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 int32_t q_futurewatcherbase_progress_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressMinimum)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 int32_t q_futurewatcherbase_progress_minimum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressMaximum)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 int32_t q_futurewatcherbase_progress_maximum(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressText)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFutureWatcherBase*
 const char* q_futurewatcherbase_progress_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isStarted)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_started(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isFinished)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isRunning)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_running(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isCanceled)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_canceled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isPaused)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_paused(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isSuspending)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_suspending(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#isSuspended)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_suspended(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#waitForFinished)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_wait_for_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#setPendingResultsLimit)
 ///
-/// ``` QFutureWatcherBase* self, int limit ```
+/// @param self QFutureWatcherBase*
+/// @param limit int
 void q_futurewatcherbase_set_pending_results_limit(void* self, int limit);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#event)
 ///
-/// ``` QFutureWatcherBase* self, QEvent* event ```
+/// @param self QFutureWatcherBase*
+/// @param event QEvent*
 bool q_futurewatcherbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#started)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_started(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#started)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_started(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#finished)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#finished)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_finished(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#canceled)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_canceled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#canceled)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_canceled(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_canceled(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#paused)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_paused(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#paused)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_paused(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_paused(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspending)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_suspending(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspending)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_suspending(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_suspending(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspended)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_suspended(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspended)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_suspended(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_suspended(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resumed)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_resumed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resumed)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_resumed(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_resumed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultReadyAt)
 ///
-/// ``` QFutureWatcherBase* self, int resultIndex ```
+/// @param self QFutureWatcherBase*
+/// @param resultIndex int
 void q_futurewatcherbase_result_ready_at(void* self, int resultIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultReadyAt)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int) ```
-void q_futurewatcherbase_on_result_ready_at(void* self, void (*slot)(void*, int));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, int)
+void q_futurewatcherbase_on_result_ready_at(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultsReadyAt)
 ///
-/// ``` QFutureWatcherBase* self, int beginIndex, int endIndex ```
+/// @param self QFutureWatcherBase*
+/// @param beginIndex int
+/// @param endIndex int
 void q_futurewatcherbase_results_ready_at(void* self, int beginIndex, int endIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resultsReadyAt)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int, int) ```
-void q_futurewatcherbase_on_results_ready_at(void* self, void (*slot)(void*, int, int));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, int, int)
+void q_futurewatcherbase_on_results_ready_at(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressRangeChanged)
 ///
-/// ``` QFutureWatcherBase* self, int minimum, int maximum ```
+/// @param self QFutureWatcherBase*
+/// @param minimum int
+/// @param maximum int
 void q_futurewatcherbase_progress_range_changed(void* self, int minimum, int maximum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressRangeChanged)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int, int) ```
-void q_futurewatcherbase_on_progress_range_changed(void* self, void (*slot)(void*, int, int));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, int, int)
+void q_futurewatcherbase_on_progress_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValueChanged)
 ///
-/// ``` QFutureWatcherBase* self, int progressValue ```
+/// @param self QFutureWatcherBase*
+/// @param progressValue int
 void q_futurewatcherbase_progress_value_changed(void* self, int progressValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressValueChanged)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, int) ```
-void q_futurewatcherbase_on_progress_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, int)
+void q_futurewatcherbase_on_progress_value_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressTextChanged)
 ///
-/// ``` QFutureWatcherBase* self, const char* progressText ```
+/// @param self QFutureWatcherBase*
+/// @param progressText const char*
 void q_futurewatcherbase_progress_text_changed(void* self, const char* progressText);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#progressTextChanged)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, const char*) ```
-void q_futurewatcherbase_on_progress_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, const char*)
+void q_futurewatcherbase_on_progress_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#cancel)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_cancel(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#setSuspended)
 ///
-/// ``` QFutureWatcherBase* self, bool suspendVal ```
+/// @param self QFutureWatcherBase*
+/// @param suspendVal bool
 void q_futurewatcherbase_set_suspended(void* self, bool suspendVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#suspend)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_suspend(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#resume)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_resume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#toggleSuspended)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_toggle_suspended(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#setPaused)
 ///
-/// ``` QFutureWatcherBase* self, bool paused ```
+/// @param self QFutureWatcherBase*
+/// @param paused bool
 void q_futurewatcherbase_set_paused(void* self, bool paused);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#pause)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_pause(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#togglePaused)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_toggle_paused(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_futurewatcherbase_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_futurewatcherbase_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QFutureWatcherBase* self, QObject* watched, QEvent* event ```
+/// @param self QFutureWatcherBase*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_futurewatcherbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFutureWatcherBase*
 const char* q_futurewatcherbase_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QFutureWatcherBase* self, char* name ```
+/// @param self QFutureWatcherBase*
+/// @param name char*
 void q_futurewatcherbase_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 bool q_futurewatcherbase_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QFutureWatcherBase* self, bool b ```
+/// @param self QFutureWatcherBase*
+/// @param b bool
 bool q_futurewatcherbase_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 QThread* q_futurewatcherbase_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFutureWatcherBase* self, QThread* thread ```
+/// @param self QFutureWatcherBase*
+/// @param thread QThread*
 bool q_futurewatcherbase_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFutureWatcherBase* self, int interval ```
+/// @param self QFutureWatcherBase*
+/// @param interval int
 int32_t q_futurewatcherbase_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFutureWatcherBase* self, int id ```
+/// @param self QFutureWatcherBase*
+/// @param id int
 void q_futurewatcherbase_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QFutureWatcherBase* self, enum Qt__TimerId id ```
+/// @param self QFutureWatcherBase*
+/// @param id enum Qt__TimerId
 void q_futurewatcherbase_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 libqt_list /* of QObject* */ q_futurewatcherbase_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QFutureWatcherBase* self, QObject* parent ```
+/// @param self QFutureWatcherBase*
+/// @param parent QObject*
 void q_futurewatcherbase_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QFutureWatcherBase* self, QObject* filterObj ```
+/// @param self QFutureWatcherBase*
+/// @param filterObj QObject*
 void q_futurewatcherbase_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QFutureWatcherBase* self, QObject* obj ```
+/// @param self QFutureWatcherBase*
+/// @param obj QObject*
 void q_futurewatcherbase_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_futurewatcherbase_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFutureWatcherBase* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QFutureWatcherBase*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_futurewatcherbase_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_futurewatcherbase_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_futurewatcherbase_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QFutureWatcherBase* self, const char* name, QVariant* value ```
+/// @param self QFutureWatcherBase*
+/// @param name const char*
+/// @param value QVariant*
 bool q_futurewatcherbase_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QFutureWatcherBase* self, const char* name ```
+/// @param self QFutureWatcherBase*
+/// @param name const char*
 QVariant* q_futurewatcherbase_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFutureWatcherBase*
 const char** q_futurewatcherbase_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 QBindingStorage* q_futurewatcherbase_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 const QBindingStorage* q_futurewatcherbase_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*) ```
-void q_futurewatcherbase_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*)
+void q_futurewatcherbase_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 QObject* q_futurewatcherbase_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QFutureWatcherBase* self, const char* classname ```
+/// @param self QFutureWatcherBase*
+/// @param classname const char*
 bool q_futurewatcherbase_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QFutureWatcherBase* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QFutureWatcherBase*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_futurewatcherbase_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QFutureWatcherBase* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QFutureWatcherBase*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_futurewatcherbase_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_futurewatcherbase_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QFutureWatcherBase* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QFutureWatcherBase*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_futurewatcherbase_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self, QObject* param1 ```
+/// @param self QFutureWatcherBase*
+/// @param param1 QObject*
 void q_futurewatcherbase_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, QObject*) ```
-void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, QObject*)
+void q_futurewatcherbase_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -549,14 +629,15 @@ void q_futurewatcherbase_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QFutureWatcherBase* self, void (*slot)(QFutureWatcherBase*, const char*) ```
-void q_futurewatcherbase_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QFutureWatcherBase*
+/// @param callback void fn(QFutureWatcherBase*, const char*)
+void q_futurewatcherbase_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfuturewatcherbase.html#dtor.QFutureWatcherBase)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFutureWatcherBase* self ```
+/// @param self QFutureWatcherBase*
 void q_futurewatcherbase_delete(void* self);
 
 #endif

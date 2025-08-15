@@ -26,8 +26,8 @@ int32_t q_barcategoryaxis_metacall(void* self, int64_t param1, int param2, void*
     return QBarCategoryAxis_Metacall((QBarCategoryAxis*)self, param1, param2, param3);
 }
 
-void q_barcategoryaxis_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QBarCategoryAxis_OnMetacall((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QBarCategoryAxis_OnMetacall((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_barcategoryaxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ int64_t q_barcategoryaxis_type(void* self) {
     return QBarCategoryAxis_Type((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_on_type(void* self, int64_t (*slot)()) {
-    QBarCategoryAxis_OnType((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_type(void* self, int64_t (*callback)()) {
+    QBarCategoryAxis_OnType((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 int64_t q_barcategoryaxis_qbase_type(void* self) {
@@ -55,12 +55,17 @@ int64_t q_barcategoryaxis_qbase_type(void* self) {
 
 void q_barcategoryaxis_append(void* self, const char* categories[]) {
     size_t categories_len = libqt_strv_length(categories);
-    libqt_string* categories_qstr = malloc(categories_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < categories_len; ++_i) {
-        categories_qstr[_i] = qstring(categories[_i]);
+    libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
+    if (categories_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_append");
+        abort();
+    }
+    for (size_t i = 0; i < categories_len; ++i) {
+        categories_qstr[i] = qstring(categories[i]);
     }
     libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_Append((QBarCategoryAxis*)self, categories_list);
+    free(categories_qstr);
 }
 
 void q_barcategoryaxis_append2(void* self, const char* category) {
@@ -85,24 +90,33 @@ void q_barcategoryaxis_clear(void* self) {
 
 void q_barcategoryaxis_set_categories(void* self, const char* categories[]) {
     size_t categories_len = libqt_strv_length(categories);
-    libqt_string* categories_qstr = malloc(categories_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < categories_len; ++_i) {
-        categories_qstr[_i] = qstring(categories[_i]);
+    libqt_string* categories_qstr = (libqt_string*)malloc(categories_len * sizeof(libqt_string));
+    if (categories_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_set_categories");
+        abort();
+    }
+    for (size_t i = 0; i < categories_len; ++i) {
+        categories_qstr[i] = qstring(categories[i]);
     }
     libqt_list categories_list = qlist(categories_qstr, categories_len);
     QBarCategoryAxis_SetCategories((QBarCategoryAxis*)self, categories_list);
+    free(categories_qstr);
 }
 
 const char** q_barcategoryaxis_categories(void* self) {
     libqt_list _arr = QBarCategoryAxis_Categories((QBarCategoryAxis*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_categories");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -149,40 +163,40 @@ void q_barcategoryaxis_categories_changed(void* self) {
     QBarCategoryAxis_CategoriesChanged((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_on_categories_changed(void* self, void (*slot)(void*)) {
-    QBarCategoryAxis_Connect_CategoriesChanged((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_categories_changed(void* self, void (*callback)(void*)) {
+    QBarCategoryAxis_Connect_CategoriesChanged((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_min_changed(void* self, const char* min) {
     QBarCategoryAxis_MinChanged((QBarCategoryAxis*)self, qstring(min));
 }
 
-void q_barcategoryaxis_on_min_changed(void* self, void (*slot)(void*, const char*)) {
-    QBarCategoryAxis_Connect_MinChanged((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_min_changed(void* self, void (*callback)(void*, const char*)) {
+    QBarCategoryAxis_Connect_MinChanged((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_max_changed(void* self, const char* max) {
     QBarCategoryAxis_MaxChanged((QBarCategoryAxis*)self, qstring(max));
 }
 
-void q_barcategoryaxis_on_max_changed(void* self, void (*slot)(void*, const char*)) {
-    QBarCategoryAxis_Connect_MaxChanged((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_max_changed(void* self, void (*callback)(void*, const char*)) {
+    QBarCategoryAxis_Connect_MaxChanged((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_range_changed(void* self, const char* min, const char* max) {
     QBarCategoryAxis_RangeChanged((QBarCategoryAxis*)self, qstring(min), qstring(max));
 }
 
-void q_barcategoryaxis_on_range_changed(void* self, void (*slot)(void*, const char*, const char*)) {
-    QBarCategoryAxis_Connect_RangeChanged((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_range_changed(void* self, void (*callback)(void*, const char*, const char*)) {
+    QBarCategoryAxis_Connect_RangeChanged((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_count_changed(void* self) {
     QBarCategoryAxis_CountChanged((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_on_count_changed(void* self, void (*slot)(void*)) {
-    QBarCategoryAxis_Connect_CountChanged((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_count_changed(void* self, void (*callback)(void*)) {
+    QBarCategoryAxis_Connect_CountChanged((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 const char* q_barcategoryaxis_tr2(const char* s, const char* c) {
@@ -442,224 +456,224 @@ void q_barcategoryaxis_visible_changed(void* self, bool visible) {
     QAbstractAxis_VisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_LinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_barcategoryaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_line_visible_changed(void* self, bool visible) {
     QAbstractAxis_LineVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_visible_changed(void* self, bool visible) {
     QAbstractAxis_LabelsVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_brush_changed(void* self, void* brush) {
     QAbstractAxis_LabelsBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_barcategoryaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_font_changed(void* self, void* pen) {
     QAbstractAxis_LabelsFontChanged((QAbstractAxis*)self, (QFont*)pen);
 }
 
-void q_barcategoryaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_angle_changed(void* self, int angle) {
     QAbstractAxis_LabelsAngleChanged((QAbstractAxis*)self, angle);
 }
 
-void q_barcategoryaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_GridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_barcategoryaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_GridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_minor_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_MinorGridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_minor_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_MinorGridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_barcategoryaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_GridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_minor_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_MinorGridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_color_changed(void* self, void* color) {
     QAbstractAxis_ColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_color_changed(void* self, void* color) {
     QAbstractAxis_LabelsColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_title_text_changed(void* self, const char* title) {
     QAbstractAxis_TitleTextChanged((QAbstractAxis*)self, qstring(title));
 }
 
-void q_barcategoryaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_title_brush_changed(void* self, void* brush) {
     QAbstractAxis_TitleBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_barcategoryaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_title_visible_changed(void* self, bool visible) {
     QAbstractAxis_TitleVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_title_font_changed(void* self, void* font) {
     QAbstractAxis_TitleFontChanged((QAbstractAxis*)self, (QFont*)font);
 }
 
-void q_barcategoryaxis_on_title_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_title_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_shades_visible_changed(void* self, bool visible) {
     QAbstractAxis_ShadesVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_barcategoryaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_shades_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_shades_border_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesBorderColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_barcategoryaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_shades_pen_changed(void* self, void* pen) {
     QAbstractAxis_ShadesPenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_barcategoryaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_shades_brush_changed(void* self, void* brush) {
     QAbstractAxis_ShadesBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_barcategoryaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_reverse_changed(void* self, bool reverse) {
     QAbstractAxis_ReverseChanged((QAbstractAxis*)self, reverse);
 }
 
-void q_barcategoryaxis_on_reverse_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_reverse_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_editable_changed(void* self, bool editable) {
     QAbstractAxis_LabelsEditableChanged((QAbstractAxis*)self, editable);
 }
 
-void q_barcategoryaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_labels_truncated_changed(void* self, bool labelsTruncated) {
     QAbstractAxis_LabelsTruncatedChanged((QAbstractAxis*)self, labelsTruncated);
 }
 
-void q_barcategoryaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_truncate_labels_changed(void* self, bool truncateLabels) {
     QAbstractAxis_TruncateLabelsChanged((QAbstractAxis*)self, truncateLabels);
 }
 
-void q_barcategoryaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_set_visible1(void* self, bool visible) {
@@ -806,12 +820,16 @@ const char** q_barcategoryaxis_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_barcategoryaxis_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -829,8 +847,8 @@ void q_barcategoryaxis_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_barcategoryaxis_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_barcategoryaxis_parent(void* self) {
@@ -865,8 +883,8 @@ void q_barcategoryaxis_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_barcategoryaxis_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_barcategoryaxis_event(void* self, void* event) {
@@ -877,8 +895,8 @@ bool q_barcategoryaxis_qbase_event(void* self, void* event) {
     return QBarCategoryAxis_QBaseEvent((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
-void q_barcategoryaxis_on_event(void* self, bool (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnEvent((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_event(void* self, bool (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnEvent((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 bool q_barcategoryaxis_event_filter(void* self, void* watched, void* event) {
@@ -889,8 +907,8 @@ bool q_barcategoryaxis_qbase_event_filter(void* self, void* watched, void* event
     return QBarCategoryAxis_QBaseEventFilter((QBarCategoryAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_barcategoryaxis_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QBarCategoryAxis_OnEventFilter((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QBarCategoryAxis_OnEventFilter((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_timer_event(void* self, void* event) {
@@ -901,8 +919,8 @@ void q_barcategoryaxis_qbase_timer_event(void* self, void* event) {
     QBarCategoryAxis_QBaseTimerEvent((QBarCategoryAxis*)self, (QTimerEvent*)event);
 }
 
-void q_barcategoryaxis_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnTimerEvent((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnTimerEvent((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_child_event(void* self, void* event) {
@@ -913,8 +931,8 @@ void q_barcategoryaxis_qbase_child_event(void* self, void* event) {
     QBarCategoryAxis_QBaseChildEvent((QBarCategoryAxis*)self, (QChildEvent*)event);
 }
 
-void q_barcategoryaxis_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnChildEvent((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnChildEvent((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_custom_event(void* self, void* event) {
@@ -925,8 +943,8 @@ void q_barcategoryaxis_qbase_custom_event(void* self, void* event) {
     QBarCategoryAxis_QBaseCustomEvent((QBarCategoryAxis*)self, (QEvent*)event);
 }
 
-void q_barcategoryaxis_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnCustomEvent((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnCustomEvent((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_connect_notify(void* self, void* signal) {
@@ -937,8 +955,8 @@ void q_barcategoryaxis_qbase_connect_notify(void* self, void* signal) {
     QBarCategoryAxis_QBaseConnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_barcategoryaxis_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnConnectNotify((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnConnectNotify((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_disconnect_notify(void* self, void* signal) {
@@ -949,8 +967,8 @@ void q_barcategoryaxis_qbase_disconnect_notify(void* self, void* signal) {
     QBarCategoryAxis_QBaseDisconnectNotify((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_barcategoryaxis_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnDisconnectNotify((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnDisconnectNotify((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 QObject* q_barcategoryaxis_sender(void* self) {
@@ -961,8 +979,8 @@ QObject* q_barcategoryaxis_qbase_sender(void* self) {
     return QBarCategoryAxis_QBaseSender((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_on_sender(void* self, QObject* (*slot)()) {
-    QBarCategoryAxis_OnSender((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_sender(void* self, QObject* (*callback)()) {
+    QBarCategoryAxis_OnSender((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_barcategoryaxis_sender_signal_index(void* self) {
@@ -973,8 +991,8 @@ int32_t q_barcategoryaxis_qbase_sender_signal_index(void* self) {
     return QBarCategoryAxis_QBaseSenderSignalIndex((QBarCategoryAxis*)self);
 }
 
-void q_barcategoryaxis_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QBarCategoryAxis_OnSenderSignalIndex((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QBarCategoryAxis_OnSenderSignalIndex((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_barcategoryaxis_receivers(void* self, const char* signal) {
@@ -985,8 +1003,8 @@ int32_t q_barcategoryaxis_qbase_receivers(void* self, const char* signal) {
     return QBarCategoryAxis_QBaseReceivers((QBarCategoryAxis*)self, signal);
 }
 
-void q_barcategoryaxis_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QBarCategoryAxis_OnReceivers((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QBarCategoryAxis_OnReceivers((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
 bool q_barcategoryaxis_is_signal_connected(void* self, void* signal) {
@@ -997,12 +1015,12 @@ bool q_barcategoryaxis_qbase_is_signal_connected(void* self, void* signal) {
     return QBarCategoryAxis_QBaseIsSignalConnected((QBarCategoryAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QBarCategoryAxis_OnIsSignalConnected((QBarCategoryAxis*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QBarCategoryAxis_OnIsSignalConnected((QBarCategoryAxis*)self, (intptr_t)callback);
 }
 
-void q_barcategoryaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_barcategoryaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_barcategoryaxis_delete(void* self) {

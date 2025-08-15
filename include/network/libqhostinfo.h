@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,96 +15,110 @@
 
 /// q_hostinfo_new constructs a new QHostInfo object.
 ///
-///
 QHostInfo* q_hostinfo_new();
 
 /// q_hostinfo_new2 constructs a new QHostInfo object.
 ///
-/// ``` QHostInfo* d ```
+/// @param d QHostInfo*
 QHostInfo* q_hostinfo_new2(void* d);
 
 /// q_hostinfo_new3 constructs a new QHostInfo object.
 ///
-/// ``` int lookupId ```
+/// @param lookupId int
 QHostInfo* q_hostinfo_new3(int lookupId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#operator-eq)
 ///
-/// ``` QHostInfo* self, QHostInfo* d ```
+/// @param self QHostInfo*
+/// @param d QHostInfo*
 void q_hostinfo_operator_assign(void* self, void* d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#swap)
 ///
-/// ``` QHostInfo* self, QHostInfo* other ```
+/// @param self QHostInfo*
+/// @param other QHostInfo*
 void q_hostinfo_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#hostName)
 ///
-/// ``` QHostInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHostInfo*
 const char* q_hostinfo_host_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setHostName)
 ///
-/// ``` QHostInfo* self, const char* name ```
+/// @param self QHostInfo*
+/// @param name const char*
 void q_hostinfo_set_host_name(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#addresses)
 ///
-/// ``` QHostInfo* self ```
+/// @param self QHostInfo*
 libqt_list /* of QHostAddress* */ q_hostinfo_addresses(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setAddresses)
 ///
-/// ``` QHostInfo* self, libqt_list /* of QHostAddress* */ addresses ```
+/// @param self QHostInfo*
+/// @param addresses libqt_list /* of QHostAddress* */
 void q_hostinfo_set_addresses(void* self, libqt_list addresses);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#error)
 ///
-/// ``` QHostInfo* self ```
+/// @param self QHostInfo*
+///
+/// @return enum QHostInfo__HostInfoError
 int64_t q_hostinfo_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setError)
 ///
-/// ``` QHostInfo* self, enum QHostInfo__HostInfoError errorVal ```
+/// @param self QHostInfo*
+/// @param errorVal enum QHostInfo__HostInfoError
 void q_hostinfo_set_error(void* self, int64_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#errorString)
 ///
-/// ``` QHostInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHostInfo*
 const char* q_hostinfo_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setErrorString)
 ///
-/// ``` QHostInfo* self, const char* errorString ```
+/// @param self QHostInfo*
+/// @param errorString const char*
 void q_hostinfo_set_error_string(void* self, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setLookupId)
 ///
-/// ``` QHostInfo* self, int id ```
+/// @param self QHostInfo*
+/// @param id int
 void q_hostinfo_set_lookup_id(void* self, int id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#lookupId)
 ///
-/// ``` QHostInfo* self ```
+/// @param self QHostInfo*
 int32_t q_hostinfo_lookup_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#abortHostLookup)
 ///
-/// ``` int lookupId ```
+/// @param lookupId int
 void q_hostinfo_abort_host_lookup(int lookupId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#fromName)
 ///
-/// ``` const char* name ```
+/// @param name const char*
 QHostInfo* q_hostinfo_from_name(const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#localHostName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_hostinfo_local_host_name();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#localDomainName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_hostinfo_local_domain_name();
 
@@ -113,7 +126,7 @@ const char* q_hostinfo_local_domain_name();
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHostInfo* self ```
+/// @param self QHostInfo*
 void q_hostinfo_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhostinfo.html#types

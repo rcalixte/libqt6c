@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1395 +15,1556 @@
 
 /// q_lcdnumber_new constructs a new QLCDNumber object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QLCDNumber* q_lcdnumber_new(void* parent);
 
 /// q_lcdnumber_new2 constructs a new QLCDNumber object.
-///
 ///
 QLCDNumber* q_lcdnumber_new2();
 
 /// q_lcdnumber_new3 constructs a new QLCDNumber object.
 ///
-/// ``` uint32_t numDigits ```
+/// @param numDigits uint32_t
 QLCDNumber* q_lcdnumber_new3(uint32_t numDigits);
 
 /// q_lcdnumber_new4 constructs a new QLCDNumber object.
 ///
-/// ``` uint32_t numDigits, QWidget* parent ```
+/// @param numDigits uint32_t
+/// @param parent QWidget*
 QLCDNumber* q_lcdnumber_new4(uint32_t numDigits, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 const QMetaObject* q_lcdnumber_meta_object(void* self);
 
-/// ``` QLCDNumber* self, const char* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 const char*
 void* q_lcdnumber_metacast(void* self, const char* param1);
 
-/// ``` QLCDNumber* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLCDNumber*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_lcdnumber_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)(QLCDNumber*, enum QMetaObject__Call, int, void*) ```
-void q_lcdnumber_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QLCDNumber*
+/// @param callback int32_t fn(QLCDNumber*, enum QMetaObject__Call, int, void*)
+void q_lcdnumber_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QLCDNumber* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QLCDNumber*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_lcdnumber_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_lcdnumber_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#smallDecimalPoint)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_small_decimal_point(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#digitCount)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_digit_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setDigitCount)
 ///
-/// ``` QLCDNumber* self, int nDigits ```
+/// @param self QLCDNumber*
+/// @param nDigits int
 void q_lcdnumber_set_digit_count(void* self, int nDigits);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#checkOverflow)
 ///
-/// ``` QLCDNumber* self, double num ```
+/// @param self QLCDNumber*
+/// @param num double
 bool q_lcdnumber_check_overflow(void* self, double num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#checkOverflow)
 ///
-/// ``` QLCDNumber* self, int num ```
+/// @param self QLCDNumber*
+/// @param num int
 bool q_lcdnumber_check_overflow2(void* self, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#mode)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QLCDNumber__Mode
 int64_t q_lcdnumber_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setMode)
 ///
-/// ``` QLCDNumber* self, enum QLCDNumber__Mode mode ```
+/// @param self QLCDNumber*
+/// @param mode enum QLCDNumber__Mode
 void q_lcdnumber_set_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#segmentStyle)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QLCDNumber__SegmentStyle
 int64_t q_lcdnumber_segment_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setSegmentStyle)
 ///
-/// ``` QLCDNumber* self, enum QLCDNumber__SegmentStyle segmentStyle ```
+/// @param self QLCDNumber*
+/// @param segmentStyle enum QLCDNumber__SegmentStyle
 void q_lcdnumber_set_segment_style(void* self, int64_t segmentStyle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#value)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 double q_lcdnumber_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#intValue)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_int_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#sizeHint)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLCDNumber* self, QSize* (*slot)() ```
-void q_lcdnumber_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QLCDNumber*
+/// @param callback QSize* fn()
+void q_lcdnumber_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#display)
 ///
-/// ``` QLCDNumber* self, const char* str ```
+/// @param self QLCDNumber*
+/// @param str const char*
 void q_lcdnumber_display(void* self, const char* str);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#display)
 ///
-/// ``` QLCDNumber* self, int num ```
+/// @param self QLCDNumber*
+/// @param num int
 void q_lcdnumber_display2(void* self, int num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#display)
 ///
-/// ``` QLCDNumber* self, double num ```
+/// @param self QLCDNumber*
+/// @param num double
 void q_lcdnumber_display3(void* self, double num);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setHexMode)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_set_hex_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setDecMode)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_set_dec_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setOctMode)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_set_oct_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setBinMode)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_set_bin_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setSmallDecimalPoint)
 ///
-/// ``` QLCDNumber* self, bool smallDecimalPoint ```
+/// @param self QLCDNumber*
+/// @param smallDecimalPoint bool
 void q_lcdnumber_set_small_decimal_point(void* self, bool smallDecimalPoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#overflow)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_overflow(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#overflow)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*) ```
-void q_lcdnumber_on_overflow(void* self, void (*slot)(void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*)
+void q_lcdnumber_on_overflow(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#event)
 ///
-/// ``` QLCDNumber* self, QEvent* e ```
+/// @param self QLCDNumber*
+/// @param e QEvent*
 bool q_lcdnumber_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, QEvent*) ```
-void q_lcdnumber_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback bool fn(QLCDNumber*, QEvent*)
+void q_lcdnumber_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QLCDNumber* self, QEvent* e ```
+/// @param self QLCDNumber*
+/// @param e QEvent*
 bool q_lcdnumber_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#paintEvent)
 ///
-/// ``` QLCDNumber* self, QPaintEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPaintEvent*
 void q_lcdnumber_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPaintEvent*) ```
-void q_lcdnumber_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QPaintEvent*)
+void q_lcdnumber_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QLCDNumber* self, QPaintEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPaintEvent*
 void q_lcdnumber_qbase_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_lcdnumber_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_lcdnumber_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_frame_style(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameStyle)
 ///
-/// ``` QLCDNumber* self, int frameStyle ```
+/// @param self QLCDNumber*
+/// @param frameStyle int
 void q_lcdnumber_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_frame_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QFrame__Shape
 int64_t q_lcdnumber_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShape)
 ///
-/// ``` QLCDNumber* self, enum QFrame__Shape frameShape ```
+/// @param self QLCDNumber*
+/// @param frameShape enum QFrame__Shape
 void q_lcdnumber_set_frame_shape(void* self, int64_t frameShape);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QFrame__Shadow
 int64_t q_lcdnumber_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShadow)
 ///
-/// ``` QLCDNumber* self, enum QFrame__Shadow frameShadow ```
+/// @param self QLCDNumber*
+/// @param frameShadow enum QFrame__Shadow
 void q_lcdnumber_set_frame_shadow(void* self, int64_t frameShadow);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setLineWidth)
 ///
-/// ``` QLCDNumber* self, int lineWidth ```
+/// @param self QLCDNumber*
+/// @param lineWidth int
 void q_lcdnumber_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_mid_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setMidLineWidth)
 ///
-/// ``` QLCDNumber* self, int midLineWidth ```
+/// @param self QLCDNumber*
+/// @param midLineWidth int
 void q_lcdnumber_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_frame_rect(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameRect)
 ///
-/// ``` QLCDNumber* self, QRect* frameRect ```
+/// @param self QLCDNumber*
+/// @param frameRect QRect*
 void q_lcdnumber_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 uintptr_t q_lcdnumber_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 uintptr_t q_lcdnumber_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 uintptr_t q_lcdnumber_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QStyle* q_lcdnumber_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QLCDNumber* self, QStyle* style ```
+/// @param self QLCDNumber*
+/// @param style QStyle*
 void q_lcdnumber_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum Qt__WindowModality
 int64_t q_lcdnumber_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QLCDNumber* self, enum Qt__WindowModality windowModality ```
+/// @param self QLCDNumber*
+/// @param windowModality enum Qt__WindowModality
 void q_lcdnumber_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QLCDNumber* self, QWidget* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
 bool q_lcdnumber_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QLCDNumber* self, bool enabled ```
+/// @param self QLCDNumber*
+/// @param enabled bool
 void q_lcdnumber_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QLCDNumber* self, bool disabled ```
+/// @param self QLCDNumber*
+/// @param disabled bool
 void q_lcdnumber_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QLCDNumber* self, bool windowModified ```
+/// @param self QLCDNumber*
+/// @param windowModified bool
 void q_lcdnumber_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 const QRect* q_lcdnumber_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPoint* q_lcdnumber_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRegion* q_lcdnumber_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QLCDNumber* self, QSize* minimumSize ```
+/// @param self QLCDNumber*
+/// @param minimumSize QSize*
 void q_lcdnumber_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QLCDNumber* self, int minw, int minh ```
+/// @param self QLCDNumber*
+/// @param minw int
+/// @param minh int
 void q_lcdnumber_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QLCDNumber* self, QSize* maximumSize ```
+/// @param self QLCDNumber*
+/// @param maximumSize QSize*
 void q_lcdnumber_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QLCDNumber* self, int maxw, int maxh ```
+/// @param self QLCDNumber*
+/// @param maxw int
+/// @param maxh int
 void q_lcdnumber_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QLCDNumber* self, int minw ```
+/// @param self QLCDNumber*
+/// @param minw int
 void q_lcdnumber_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QLCDNumber* self, int minh ```
+/// @param self QLCDNumber*
+/// @param minh int
 void q_lcdnumber_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QLCDNumber* self, int maxw ```
+/// @param self QLCDNumber*
+/// @param maxw int
 void q_lcdnumber_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QLCDNumber* self, int maxh ```
+/// @param self QLCDNumber*
+/// @param maxh int
 void q_lcdnumber_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QLCDNumber* self, QSize* sizeIncrement ```
+/// @param self QLCDNumber*
+/// @param sizeIncrement QSize*
 void q_lcdnumber_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QLCDNumber* self, int w, int h ```
+/// @param self QLCDNumber*
+/// @param w int
+/// @param h int
 void q_lcdnumber_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QLCDNumber* self, QSize* baseSize ```
+/// @param self QLCDNumber*
+/// @param baseSize QSize*
 void q_lcdnumber_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QLCDNumber* self, int basew, int baseh ```
+/// @param self QLCDNumber*
+/// @param basew int
+/// @param baseh int
 void q_lcdnumber_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QLCDNumber* self, QSize* fixedSize ```
+/// @param self QLCDNumber*
+/// @param fixedSize QSize*
 void q_lcdnumber_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QLCDNumber* self, int w, int h ```
+/// @param self QLCDNumber*
+/// @param w int
+/// @param h int
 void q_lcdnumber_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QLCDNumber* self, int w ```
+/// @param self QLCDNumber*
+/// @param w int
 void q_lcdnumber_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QLCDNumber* self, int h ```
+/// @param self QLCDNumber*
+/// @param h int
 void q_lcdnumber_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QLCDNumber* self, QPointF* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPointF*
 QPointF* q_lcdnumber_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QLCDNumber* self, QPoint* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPoint*
 QPoint* q_lcdnumber_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QLCDNumber* self, QPointF* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPointF*
 QPointF* q_lcdnumber_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QLCDNumber* self, QPoint* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPoint*
 QPoint* q_lcdnumber_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QLCDNumber* self, QPointF* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPointF*
 QPointF* q_lcdnumber_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QLCDNumber* self, QPoint* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPoint*
 QPoint* q_lcdnumber_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QLCDNumber* self, QPointF* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPointF*
 QPointF* q_lcdnumber_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QLCDNumber* self, QPoint* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPoint*
 QPoint* q_lcdnumber_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QLCDNumber* self, QWidget* param1, QPointF* param2 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_lcdnumber_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QLCDNumber* self, QWidget* param1, QPoint* param2 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_lcdnumber_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QLCDNumber* self, QWidget* param1, QPointF* param2 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_lcdnumber_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QLCDNumber* self, QWidget* param1, QPoint* param2 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_lcdnumber_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 const QPalette* q_lcdnumber_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QLCDNumber* self, QPalette* palette ```
+/// @param self QLCDNumber*
+/// @param palette QPalette*
 void q_lcdnumber_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QLCDNumber* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QLCDNumber*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_lcdnumber_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_lcdnumber_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QLCDNumber* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QLCDNumber*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_lcdnumber_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_lcdnumber_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 const QFont* q_lcdnumber_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QLCDNumber* self, QFont* font ```
+/// @param self QLCDNumber*
+/// @param font QFont*
 void q_lcdnumber_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QFontMetrics* q_lcdnumber_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QFontInfo* q_lcdnumber_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QCursor* q_lcdnumber_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QLCDNumber* self, QCursor* cursor ```
+/// @param self QLCDNumber*
+/// @param cursor QCursor*
 void q_lcdnumber_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QLCDNumber* self, bool enable ```
+/// @param self QLCDNumber*
+/// @param enable bool
 void q_lcdnumber_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QLCDNumber* self, bool enable ```
+/// @param self QLCDNumber*
+/// @param enable bool
 void q_lcdnumber_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QLCDNumber* self, QBitmap* mask ```
+/// @param self QLCDNumber*
+/// @param mask QBitmap*
 void q_lcdnumber_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QLCDNumber* self, QRegion* mask ```
+/// @param self QLCDNumber*
+/// @param mask QRegion*
 void q_lcdnumber_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRegion* q_lcdnumber_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPaintDevice* target ```
+/// @param self QLCDNumber*
+/// @param target QPaintDevice*
 void q_lcdnumber_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPainter* painter ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
 void q_lcdnumber_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPixmap* q_lcdnumber_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QGraphicsEffect* q_lcdnumber_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QLCDNumber* self, QGraphicsEffect* effect ```
+/// @param self QLCDNumber*
+/// @param effect QGraphicsEffect*
 void q_lcdnumber_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QLCDNumber* self, enum Qt__GestureType typeVal ```
+/// @param self QLCDNumber*
+/// @param typeVal enum Qt__GestureType
 void q_lcdnumber_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QLCDNumber* self, enum Qt__GestureType typeVal ```
+/// @param self QLCDNumber*
+/// @param typeVal enum Qt__GestureType
 void q_lcdnumber_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QLCDNumber* self, const char* windowTitle ```
+/// @param self QLCDNumber*
+/// @param windowTitle const char*
 void q_lcdnumber_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QLCDNumber* self, const char* styleSheet ```
+/// @param self QLCDNumber*
+/// @param styleSheet const char*
 void q_lcdnumber_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QLCDNumber* self, QIcon* icon ```
+/// @param self QLCDNumber*
+/// @param icon QIcon*
 void q_lcdnumber_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QIcon* q_lcdnumber_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QLCDNumber* self, const char* windowIconText ```
+/// @param self QLCDNumber*
+/// @param windowIconText const char*
 void q_lcdnumber_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QLCDNumber* self, const char* windowRole ```
+/// @param self QLCDNumber*
+/// @param windowRole const char*
 void q_lcdnumber_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QLCDNumber* self, const char* filePath ```
+/// @param self QLCDNumber*
+/// @param filePath const char*
 void q_lcdnumber_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QLCDNumber* self, double level ```
+/// @param self QLCDNumber*
+/// @param level double
 void q_lcdnumber_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 double q_lcdnumber_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QLCDNumber* self, const char* toolTip ```
+/// @param self QLCDNumber*
+/// @param toolTip const char*
 void q_lcdnumber_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QLCDNumber* self, int msec ```
+/// @param self QLCDNumber*
+/// @param msec int
 void q_lcdnumber_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QLCDNumber* self, const char* statusTip ```
+/// @param self QLCDNumber*
+/// @param statusTip const char*
 void q_lcdnumber_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QLCDNumber* self, const char* whatsThis ```
+/// @param self QLCDNumber*
+/// @param whatsThis const char*
 void q_lcdnumber_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QLCDNumber* self, const char* name ```
+/// @param self QLCDNumber*
+/// @param name const char*
 void q_lcdnumber_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QLCDNumber* self, const char* description ```
+/// @param self QLCDNumber*
+/// @param description const char*
 void q_lcdnumber_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QLCDNumber* self, enum Qt__LayoutDirection direction ```
+/// @param self QLCDNumber*
+/// @param direction enum Qt__LayoutDirection
 void q_lcdnumber_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_lcdnumber_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QLCDNumber* self, QLocale* locale ```
+/// @param self QLCDNumber*
+/// @param locale QLocale*
 void q_lcdnumber_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QLocale* q_lcdnumber_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QLCDNumber* self, enum Qt__FocusReason reason ```
+/// @param self QLCDNumber*
+/// @param reason enum Qt__FocusReason
 void q_lcdnumber_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_lcdnumber_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QLCDNumber* self, enum Qt__FocusPolicy policy ```
+/// @param self QLCDNumber*
+/// @param policy enum Qt__FocusPolicy
 void q_lcdnumber_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_lcdnumber_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QLCDNumber* self, QWidget* focusProxy ```
+/// @param self QLCDNumber*
+/// @param focusProxy QWidget*
 void q_lcdnumber_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_lcdnumber_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QLCDNumber* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QLCDNumber*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_lcdnumber_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QLCDNumber* self, QCursor* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QCursor*
 void q_lcdnumber_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QLCDNumber* self, QKeySequence* key ```
+/// @param self QLCDNumber*
+/// @param key QKeySequence*
 int32_t q_lcdnumber_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QLCDNumber* self, int id ```
+/// @param self QLCDNumber*
+/// @param id int
 void q_lcdnumber_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QLCDNumber* self, int id ```
+/// @param self QLCDNumber*
+/// @param id int
 void q_lcdnumber_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QLCDNumber* self, int id ```
+/// @param self QLCDNumber*
+/// @param id int
 void q_lcdnumber_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_lcdnumber_mouse_grabber();
 
@@ -1412,1161 +1572,1327 @@ QWidget* q_lcdnumber_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_lcdnumber_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QLCDNumber* self, bool enable ```
+/// @param self QLCDNumber*
+/// @param enable bool
 void q_lcdnumber_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QGraphicsProxyWidget* q_lcdnumber_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QLCDNumber* self, int x, int y, int w, int h ```
+/// @param self QLCDNumber*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_lcdnumber_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QLCDNumber* self, QRect* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QRect*
 void q_lcdnumber_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QLCDNumber* self, QRegion* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QRegion*
 void q_lcdnumber_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QLCDNumber* self, int x, int y, int w, int h ```
+/// @param self QLCDNumber*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_lcdnumber_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QLCDNumber* self, QRect* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QRect*
 void q_lcdnumber_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QLCDNumber* self, QRegion* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QRegion*
 void q_lcdnumber_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QLCDNumber* self, bool hidden ```
+/// @param self QLCDNumber*
+/// @param hidden bool
 void q_lcdnumber_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QLCDNumber* self, QWidget* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
 void q_lcdnumber_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QLCDNumber* self, int x, int y ```
+/// @param self QLCDNumber*
+/// @param x int
+/// @param y int
 void q_lcdnumber_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QLCDNumber* self, QPoint* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPoint*
 void q_lcdnumber_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QLCDNumber* self, int w, int h ```
+/// @param self QLCDNumber*
+/// @param w int
+/// @param h int
 void q_lcdnumber_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QLCDNumber* self, QSize* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QSize*
 void q_lcdnumber_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QLCDNumber* self, int x, int y, int w, int h ```
+/// @param self QLCDNumber*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_lcdnumber_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QLCDNumber* self, QRect* geometry ```
+/// @param self QLCDNumber*
+/// @param geometry QRect*
 void q_lcdnumber_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 char* q_lcdnumber_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QLCDNumber* self, const char* geometry ```
+/// @param self QLCDNumber*
+/// @param geometry const char*
 bool q_lcdnumber_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QLCDNumber* self, QWidget* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QWidget*
 bool q_lcdnumber_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_lcdnumber_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QLCDNumber* self, int state ```
+/// @param self QLCDNumber*
+/// @param state flag of enum Qt__WindowState
 void q_lcdnumber_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QLCDNumber* self, int state ```
+/// @param self QLCDNumber*
+/// @param state flag of enum Qt__WindowState
 void q_lcdnumber_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSizePolicy* q_lcdnumber_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QLCDNumber* self, QSizePolicy* sizePolicy ```
+/// @param self QLCDNumber*
+/// @param sizePolicy QSizePolicy*
 void q_lcdnumber_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QLCDNumber* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QLCDNumber*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_lcdnumber_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRegion* q_lcdnumber_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QLCDNumber* self, int left, int top, int right, int bottom ```
+/// @param self QLCDNumber*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_lcdnumber_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QLCDNumber* self, QMargins* margins ```
+/// @param self QLCDNumber*
+/// @param margins QMargins*
 void q_lcdnumber_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QMargins* q_lcdnumber_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QRect* q_lcdnumber_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QLayout* q_lcdnumber_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QLCDNumber* self, QLayout* layout ```
+/// @param self QLCDNumber*
+/// @param layout QLayout*
 void q_lcdnumber_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QLCDNumber* self, QWidget* parent ```
+/// @param self QLCDNumber*
+/// @param parent QWidget*
 void q_lcdnumber_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QLCDNumber* self, QWidget* parent, int f ```
+/// @param self QLCDNumber*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_lcdnumber_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QLCDNumber* self, int dx, int dy ```
+/// @param self QLCDNumber*
+/// @param dx int
+/// @param dy int
 void q_lcdnumber_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QLCDNumber* self, int dx, int dy, QRect* param3 ```
+/// @param self QLCDNumber*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_lcdnumber_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QLCDNumber* self, bool on ```
+/// @param self QLCDNumber*
+/// @param on bool
 void q_lcdnumber_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLCDNumber* self, QAction* action ```
+/// @param self QLCDNumber*
+/// @param action QAction*
 void q_lcdnumber_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QLCDNumber* self, libqt_list /* of QAction* */ actions ```
+/// @param self QLCDNumber*
+/// @param actions libqt_list /* of QAction* */
 void q_lcdnumber_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QLCDNumber* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QLCDNumber*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_lcdnumber_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QLCDNumber* self, QAction* before, QAction* action ```
+/// @param self QLCDNumber*
+/// @param before QAction*
+/// @param action QAction*
 void q_lcdnumber_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QLCDNumber* self, QAction* action ```
+/// @param self QLCDNumber*
+/// @param action QAction*
 void q_lcdnumber_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 libqt_list /* of QAction* */ q_lcdnumber_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLCDNumber* self, const char* text ```
+/// @param self QLCDNumber*
+/// @param text const char*
 QAction* q_lcdnumber_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLCDNumber* self, QIcon* icon, const char* text ```
+/// @param self QLCDNumber*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_lcdnumber_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLCDNumber* self, const char* text, QKeySequence* shortcut ```
+/// @param self QLCDNumber*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_lcdnumber_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QLCDNumber* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QLCDNumber*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_lcdnumber_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWidget* q_lcdnumber_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QLCDNumber* self, int typeVal ```
+/// @param self QLCDNumber*
+/// @param typeVal flag of enum Qt__WindowType
 void q_lcdnumber_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_lcdnumber_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QLCDNumber* self, enum Qt__WindowType param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__WindowType
 void q_lcdnumber_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QLCDNumber* self, int typeVal ```
+/// @param self QLCDNumber*
+/// @param typeVal flag of enum Qt__WindowType
 void q_lcdnumber_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return enum Qt__WindowType
 int64_t q_lcdnumber_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_lcdnumber_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QLCDNumber* self, int x, int y ```
+/// @param self QLCDNumber*
+/// @param x int
+/// @param y int
 QWidget* q_lcdnumber_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QLCDNumber* self, QPoint* p ```
+/// @param self QLCDNumber*
+/// @param p QPoint*
 QWidget* q_lcdnumber_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QLCDNumber* self, QPointF* p ```
+/// @param self QLCDNumber*
+/// @param p QPointF*
 QWidget* q_lcdnumber_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QLCDNumber* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__WidgetAttribute
 void q_lcdnumber_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QLCDNumber* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_lcdnumber_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QLCDNumber* self, QWidget* child ```
+/// @param self QLCDNumber*
+/// @param child QWidget*
 bool q_lcdnumber_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QLCDNumber* self, bool enabled ```
+/// @param self QLCDNumber*
+/// @param enabled bool
 void q_lcdnumber_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QBackingStore* q_lcdnumber_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QWindow* q_lcdnumber_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QScreen* q_lcdnumber_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QLCDNumber* self, QScreen* screen ```
+/// @param self QLCDNumber*
+/// @param screen QScreen*
 void q_lcdnumber_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_lcdnumber_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QLCDNumber* self, const char* title ```
+/// @param self QLCDNumber*
+/// @param title const char*
 void q_lcdnumber_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
-void q_lcdnumber_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, const char*)
+void q_lcdnumber_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QLCDNumber* self, QIcon* icon ```
+/// @param self QLCDNumber*
+/// @param icon QIcon*
 void q_lcdnumber_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QIcon*) ```
-void q_lcdnumber_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QIcon*)
+void q_lcdnumber_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QLCDNumber* self, const char* iconText ```
+/// @param self QLCDNumber*
+/// @param iconText const char*
 void q_lcdnumber_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
-void q_lcdnumber_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, const char*)
+void q_lcdnumber_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QLCDNumber* self, QPoint* pos ```
+/// @param self QLCDNumber*
+/// @param pos QPoint*
 void q_lcdnumber_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPoint*) ```
-void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QPoint*)
+void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_lcdnumber_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QLCDNumber* self, int hints ```
+/// @param self QLCDNumber*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_lcdnumber_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QLCDNumber*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_lcdnumber_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QLCDNumber*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_lcdnumber_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QLCDNumber*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_lcdnumber_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_lcdnumber_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_lcdnumber_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QLCDNumber* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_lcdnumber_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QLCDNumber* self, QRect* rectangle ```
+/// @param self QLCDNumber*
+/// @param rectangle QRect*
 QPixmap* q_lcdnumber_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QLCDNumber* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QLCDNumber*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_lcdnumber_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QLCDNumber* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QLCDNumber*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_lcdnumber_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QLCDNumber* self, int id, bool enable ```
+/// @param self QLCDNumber*
+/// @param id int
+/// @param enable bool
 void q_lcdnumber_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QLCDNumber* self, int id, bool enable ```
+/// @param self QLCDNumber*
+/// @param id int
+/// @param enable bool
 void q_lcdnumber_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QLCDNumber* self, enum Qt__WindowType param1, bool on ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_lcdnumber_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QLCDNumber* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_lcdnumber_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_lcdnumber_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_lcdnumber_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char* q_lcdnumber_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QLCDNumber* self, char* name ```
+/// @param self QLCDNumber*
+/// @param name char*
 void q_lcdnumber_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QLCDNumber* self, bool b ```
+/// @param self QLCDNumber*
+/// @param b bool
 bool q_lcdnumber_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QThread* q_lcdnumber_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLCDNumber* self, QThread* thread ```
+/// @param self QLCDNumber*
+/// @param thread QThread*
 bool q_lcdnumber_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLCDNumber* self, int interval ```
+/// @param self QLCDNumber*
+/// @param interval int
 int32_t q_lcdnumber_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLCDNumber* self, int id ```
+/// @param self QLCDNumber*
+/// @param id int
 void q_lcdnumber_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QLCDNumber* self, enum Qt__TimerId id ```
+/// @param self QLCDNumber*
+/// @param id enum Qt__TimerId
 void q_lcdnumber_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 libqt_list /* of QObject* */ q_lcdnumber_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QLCDNumber* self, QObject* filterObj ```
+/// @param self QLCDNumber*
+/// @param filterObj QObject*
 void q_lcdnumber_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QLCDNumber* self, QObject* obj ```
+/// @param self QLCDNumber*
+/// @param obj QObject*
 void q_lcdnumber_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_lcdnumber_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLCDNumber* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QLCDNumber*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_lcdnumber_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_lcdnumber_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_lcdnumber_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QLCDNumber* self, const char* name, QVariant* value ```
+/// @param self QLCDNumber*
+/// @param name const char*
+/// @param value QVariant*
 bool q_lcdnumber_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QLCDNumber* self, const char* name ```
+/// @param self QLCDNumber*
+/// @param name const char*
 QVariant* q_lcdnumber_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QLCDNumber* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLCDNumber*
 const char** q_lcdnumber_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QBindingStorage* q_lcdnumber_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 const QBindingStorage* q_lcdnumber_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*) ```
-void q_lcdnumber_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*)
+void q_lcdnumber_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QObject* q_lcdnumber_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QLCDNumber* self, const char* classname ```
+/// @param self QLCDNumber*
+/// @param classname const char*
 bool q_lcdnumber_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QLCDNumber* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QLCDNumber*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_lcdnumber_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QLCDNumber* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QLCDNumber*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_lcdnumber_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_lcdnumber_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QLCDNumber* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QLCDNumber*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_lcdnumber_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self, QObject* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QObject*
 void q_lcdnumber_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QObject*) ```
-void q_lcdnumber_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QObject*)
+void q_lcdnumber_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 double q_lcdnumber_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 double q_lcdnumber_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_lcdnumber_device_pixel_ratio_f_scale();
 
@@ -2574,7 +2900,8 @@ double q_lcdnumber_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_lcdnumber_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QFrame
@@ -2583,7 +2910,8 @@ int32_t q_lcdnumber_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QEvent*
 void q_lcdnumber_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2592,7 +2920,8 @@ void q_lcdnumber_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QEvent*
 void q_lcdnumber_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2601,8 +2930,9 @@ void q_lcdnumber_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QEvent*) ```
-void q_lcdnumber_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QEvent*)
+void q_lcdnumber_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -2610,7 +2940,8 @@ void q_lcdnumber_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QStyleOptionFrame* option ```
+/// @param self QLCDNumber*
+/// @param option QStyleOptionFrame*
 void q_lcdnumber_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -2619,7 +2950,8 @@ void q_lcdnumber_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QStyleOptionFrame* option ```
+/// @param self QLCDNumber*
+/// @param option QStyleOptionFrame*
 void q_lcdnumber_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -2628,8 +2960,9 @@ void q_lcdnumber_qbase_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QStyleOptionFrame*) ```
-void q_lcdnumber_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QStyleOptionFrame*)
+void q_lcdnumber_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2637,7 +2970,7 @@ void q_lcdnumber_on_init_style_option(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2646,7 +2979,7 @@ int32_t q_lcdnumber_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2655,8 +2988,9 @@ int32_t q_lcdnumber_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)() ```
-void q_lcdnumber_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QLCDNumber*
+/// @param callback int32_t fn()
+void q_lcdnumber_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2664,7 +2998,8 @@ void q_lcdnumber_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool visible ```
+/// @param self QLCDNumber*
+/// @param visible bool
 void q_lcdnumber_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2673,7 +3008,8 @@ void q_lcdnumber_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool visible ```
+/// @param self QLCDNumber*
+/// @param visible bool
 void q_lcdnumber_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2682,8 +3018,9 @@ void q_lcdnumber_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, bool) ```
-void q_lcdnumber_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, bool)
+void q_lcdnumber_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2691,7 +3028,7 @@ void q_lcdnumber_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2700,7 +3037,7 @@ QSize* q_lcdnumber_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QSize* q_lcdnumber_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2709,8 +3046,9 @@ QSize* q_lcdnumber_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QSize* (*slot)() ```
-void q_lcdnumber_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QLCDNumber*
+/// @param callback QSize* fn()
+void q_lcdnumber_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2718,7 +3056,8 @@ void q_lcdnumber_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, int param1 ```
+/// @param self QLCDNumber*
+/// @param param1 int
 int32_t q_lcdnumber_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2727,7 +3066,8 @@ int32_t q_lcdnumber_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int param1 ```
+/// @param self QLCDNumber*
+/// @param param1 int
 int32_t q_lcdnumber_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2736,8 +3076,9 @@ int32_t q_lcdnumber_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)(QLCDNumber*, int) ```
-void q_lcdnumber_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QLCDNumber*
+/// @param callback int32_t fn(QLCDNumber*, int)
+void q_lcdnumber_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2745,7 +3086,7 @@ void q_lcdnumber_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2754,7 +3095,7 @@ bool q_lcdnumber_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2763,8 +3104,9 @@ bool q_lcdnumber_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)() ```
-void q_lcdnumber_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QLCDNumber*
+/// @param callback bool fn()
+void q_lcdnumber_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2772,7 +3114,7 @@ void q_lcdnumber_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPaintEngine* q_lcdnumber_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2781,7 +3123,7 @@ QPaintEngine* q_lcdnumber_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPaintEngine* q_lcdnumber_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2790,8 +3132,9 @@ QPaintEngine* q_lcdnumber_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPaintEngine* (*slot)() ```
-void q_lcdnumber_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QLCDNumber*
+/// @param callback QPaintEngine* fn()
+void q_lcdnumber_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2799,7 +3142,8 @@ void q_lcdnumber_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2808,7 +3152,8 @@ void q_lcdnumber_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2817,8 +3162,9 @@ void q_lcdnumber_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMouseEvent*) ```
-void q_lcdnumber_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMouseEvent*)
+void q_lcdnumber_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2826,7 +3172,8 @@ void q_lcdnumber_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2835,7 +3182,8 @@ void q_lcdnumber_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2844,8 +3192,9 @@ void q_lcdnumber_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMouseEvent*) ```
-void q_lcdnumber_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMouseEvent*)
+void q_lcdnumber_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2853,7 +3202,8 @@ void q_lcdnumber_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2862,7 +3212,8 @@ void q_lcdnumber_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2871,8 +3222,9 @@ void q_lcdnumber_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMouseEvent*) ```
-void q_lcdnumber_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMouseEvent*)
+void q_lcdnumber_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2880,7 +3232,8 @@ void q_lcdnumber_on_mouse_double_click_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2889,7 +3242,8 @@ void q_lcdnumber_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMouseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMouseEvent*
 void q_lcdnumber_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2898,8 +3252,9 @@ void q_lcdnumber_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMouseEvent*) ```
-void q_lcdnumber_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMouseEvent*)
+void q_lcdnumber_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2907,7 +3262,8 @@ void q_lcdnumber_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QWheelEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QWheelEvent*
 void q_lcdnumber_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2916,7 +3272,8 @@ void q_lcdnumber_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QWheelEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QWheelEvent*
 void q_lcdnumber_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2925,8 +3282,9 @@ void q_lcdnumber_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QWheelEvent*) ```
-void q_lcdnumber_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QWheelEvent*)
+void q_lcdnumber_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2934,7 +3292,8 @@ void q_lcdnumber_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QKeyEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QKeyEvent*
 void q_lcdnumber_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2943,7 +3302,8 @@ void q_lcdnumber_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QKeyEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QKeyEvent*
 void q_lcdnumber_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2952,8 +3312,9 @@ void q_lcdnumber_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QKeyEvent*) ```
-void q_lcdnumber_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QKeyEvent*)
+void q_lcdnumber_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2961,7 +3322,8 @@ void q_lcdnumber_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QKeyEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QKeyEvent*
 void q_lcdnumber_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2970,7 +3332,8 @@ void q_lcdnumber_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QKeyEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QKeyEvent*
 void q_lcdnumber_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2979,8 +3342,9 @@ void q_lcdnumber_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QKeyEvent*) ```
-void q_lcdnumber_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QKeyEvent*)
+void q_lcdnumber_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2988,7 +3352,8 @@ void q_lcdnumber_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QFocusEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QFocusEvent*
 void q_lcdnumber_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2997,7 +3362,8 @@ void q_lcdnumber_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QFocusEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QFocusEvent*
 void q_lcdnumber_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3006,8 +3372,9 @@ void q_lcdnumber_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QFocusEvent*) ```
-void q_lcdnumber_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QFocusEvent*)
+void q_lcdnumber_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3015,7 +3382,8 @@ void q_lcdnumber_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QFocusEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QFocusEvent*
 void q_lcdnumber_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3024,7 +3392,8 @@ void q_lcdnumber_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QFocusEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QFocusEvent*
 void q_lcdnumber_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3033,8 +3402,9 @@ void q_lcdnumber_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QFocusEvent*) ```
-void q_lcdnumber_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QFocusEvent*)
+void q_lcdnumber_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3042,7 +3412,8 @@ void q_lcdnumber_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEnterEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEnterEvent*
 void q_lcdnumber_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3051,7 +3422,8 @@ void q_lcdnumber_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEnterEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEnterEvent*
 void q_lcdnumber_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3060,8 +3432,9 @@ void q_lcdnumber_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QEnterEvent*) ```
-void q_lcdnumber_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QEnterEvent*)
+void q_lcdnumber_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3069,7 +3442,8 @@ void q_lcdnumber_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEvent*
 void q_lcdnumber_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3078,7 +3452,8 @@ void q_lcdnumber_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEvent*
 void q_lcdnumber_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3087,8 +3462,9 @@ void q_lcdnumber_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QEvent*) ```
-void q_lcdnumber_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QEvent*)
+void q_lcdnumber_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3096,7 +3472,8 @@ void q_lcdnumber_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMoveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMoveEvent*
 void q_lcdnumber_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3105,7 +3482,8 @@ void q_lcdnumber_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMoveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QMoveEvent*
 void q_lcdnumber_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3114,8 +3492,9 @@ void q_lcdnumber_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMoveEvent*) ```
-void q_lcdnumber_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMoveEvent*)
+void q_lcdnumber_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3123,7 +3502,8 @@ void q_lcdnumber_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QResizeEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QResizeEvent*
 void q_lcdnumber_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3132,7 +3512,8 @@ void q_lcdnumber_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QResizeEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QResizeEvent*
 void q_lcdnumber_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3141,8 +3522,9 @@ void q_lcdnumber_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QResizeEvent*) ```
-void q_lcdnumber_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QResizeEvent*)
+void q_lcdnumber_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3150,7 +3532,8 @@ void q_lcdnumber_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QCloseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QCloseEvent*
 void q_lcdnumber_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3159,7 +3542,8 @@ void q_lcdnumber_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QCloseEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QCloseEvent*
 void q_lcdnumber_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3168,8 +3552,9 @@ void q_lcdnumber_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QCloseEvent*) ```
-void q_lcdnumber_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QCloseEvent*)
+void q_lcdnumber_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3177,7 +3562,8 @@ void q_lcdnumber_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QContextMenuEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QContextMenuEvent*
 void q_lcdnumber_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3186,7 +3572,8 @@ void q_lcdnumber_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QContextMenuEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QContextMenuEvent*
 void q_lcdnumber_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3195,8 +3582,9 @@ void q_lcdnumber_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QContextMenuEvent*) ```
-void q_lcdnumber_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QContextMenuEvent*)
+void q_lcdnumber_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3204,7 +3592,8 @@ void q_lcdnumber_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QTabletEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QTabletEvent*
 void q_lcdnumber_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3213,7 +3602,8 @@ void q_lcdnumber_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QTabletEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QTabletEvent*
 void q_lcdnumber_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3222,8 +3612,9 @@ void q_lcdnumber_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QTabletEvent*) ```
-void q_lcdnumber_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QTabletEvent*)
+void q_lcdnumber_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3231,7 +3622,8 @@ void q_lcdnumber_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QActionEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QActionEvent*
 void q_lcdnumber_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3240,7 +3632,8 @@ void q_lcdnumber_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QActionEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QActionEvent*
 void q_lcdnumber_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3249,8 +3642,9 @@ void q_lcdnumber_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QActionEvent*) ```
-void q_lcdnumber_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QActionEvent*)
+void q_lcdnumber_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3258,7 +3652,8 @@ void q_lcdnumber_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragEnterEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragEnterEvent*
 void q_lcdnumber_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3267,7 +3662,8 @@ void q_lcdnumber_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragEnterEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragEnterEvent*
 void q_lcdnumber_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3276,8 +3672,9 @@ void q_lcdnumber_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QDragEnterEvent*) ```
-void q_lcdnumber_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QDragEnterEvent*)
+void q_lcdnumber_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3285,7 +3682,8 @@ void q_lcdnumber_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragMoveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragMoveEvent*
 void q_lcdnumber_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3294,7 +3692,8 @@ void q_lcdnumber_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragMoveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragMoveEvent*
 void q_lcdnumber_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3303,8 +3702,9 @@ void q_lcdnumber_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QDragMoveEvent*) ```
-void q_lcdnumber_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QDragMoveEvent*)
+void q_lcdnumber_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3312,7 +3712,8 @@ void q_lcdnumber_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragLeaveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragLeaveEvent*
 void q_lcdnumber_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3321,7 +3722,8 @@ void q_lcdnumber_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDragLeaveEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDragLeaveEvent*
 void q_lcdnumber_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3330,8 +3732,9 @@ void q_lcdnumber_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QDragLeaveEvent*) ```
-void q_lcdnumber_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QDragLeaveEvent*)
+void q_lcdnumber_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3339,7 +3742,8 @@ void q_lcdnumber_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDropEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDropEvent*
 void q_lcdnumber_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3348,7 +3752,8 @@ void q_lcdnumber_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QDropEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QDropEvent*
 void q_lcdnumber_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3357,8 +3762,9 @@ void q_lcdnumber_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QDropEvent*) ```
-void q_lcdnumber_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QDropEvent*)
+void q_lcdnumber_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3366,7 +3772,8 @@ void q_lcdnumber_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QShowEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QShowEvent*
 void q_lcdnumber_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3375,7 +3782,8 @@ void q_lcdnumber_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QShowEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QShowEvent*
 void q_lcdnumber_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3384,8 +3792,9 @@ void q_lcdnumber_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QShowEvent*) ```
-void q_lcdnumber_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QShowEvent*)
+void q_lcdnumber_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3393,7 +3802,8 @@ void q_lcdnumber_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QHideEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QHideEvent*
 void q_lcdnumber_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3402,7 +3812,8 @@ void q_lcdnumber_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QHideEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QHideEvent*
 void q_lcdnumber_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3411,8 +3822,9 @@ void q_lcdnumber_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QHideEvent*) ```
-void q_lcdnumber_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QHideEvent*)
+void q_lcdnumber_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3420,7 +3832,10 @@ void q_lcdnumber_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QLCDNumber*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_lcdnumber_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3429,7 +3844,10 @@ bool q_lcdnumber_native_event(void* self, const char* eventType, void* message, 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QLCDNumber*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_lcdnumber_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3438,8 +3856,9 @@ bool q_lcdnumber_qbase_native_event(void* self, const char* eventType, void* mes
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, const char*, void*, intptr_t*) ```
-void q_lcdnumber_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QLCDNumber*
+/// @param callback bool fn(QLCDNumber*, const char*, void*, intptr_t*)
+void q_lcdnumber_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3447,7 +3866,8 @@ void q_lcdnumber_on_native_event(void* self, bool (*slot)(void*, const char*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_lcdnumber_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3456,7 +3876,8 @@ int32_t q_lcdnumber_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3465,8 +3886,9 @@ int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_lcdnumber_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QLCDNumber*
+/// @param callback int32_t fn(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric)
+void q_lcdnumber_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3474,7 +3896,8 @@ void q_lcdnumber_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPainter* painter ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
 void q_lcdnumber_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3483,7 +3906,8 @@ void q_lcdnumber_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPainter* painter ```
+/// @param self QLCDNumber*
+/// @param painter QPainter*
 void q_lcdnumber_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3492,8 +3916,9 @@ void q_lcdnumber_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPainter*) ```
-void q_lcdnumber_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QPainter*)
+void q_lcdnumber_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3501,7 +3926,8 @@ void q_lcdnumber_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPoint* offset ```
+/// @param self QLCDNumber*
+/// @param offset QPoint*
 QPaintDevice* q_lcdnumber_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3510,7 +3936,8 @@ QPaintDevice* q_lcdnumber_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPoint* offset ```
+/// @param self QLCDNumber*
+/// @param offset QPoint*
 QPaintDevice* q_lcdnumber_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3519,8 +3946,9 @@ QPaintDevice* q_lcdnumber_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPaintDevice* (*slot)(QLCDNumber*, QPoint*) ```
-void q_lcdnumber_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback QPaintDevice* fn(QLCDNumber*, QPoint*)
+void q_lcdnumber_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3528,7 +3956,7 @@ void q_lcdnumber_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPainter* q_lcdnumber_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3537,7 +3965,7 @@ QPainter* q_lcdnumber_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QPainter* q_lcdnumber_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3546,8 +3974,9 @@ QPainter* q_lcdnumber_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPainter* (*slot)() ```
-void q_lcdnumber_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QLCDNumber*
+/// @param callback QPainter* fn()
+void q_lcdnumber_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3555,7 +3984,8 @@ void q_lcdnumber_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QInputMethodEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QInputMethodEvent*
 void q_lcdnumber_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3564,7 +3994,8 @@ void q_lcdnumber_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QInputMethodEvent* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QInputMethodEvent*
 void q_lcdnumber_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3573,8 +4004,9 @@ void q_lcdnumber_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QInputMethodEvent*) ```
-void q_lcdnumber_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QInputMethodEvent*)
+void q_lcdnumber_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3582,7 +4014,8 @@ void q_lcdnumber_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_lcdnumber_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3591,7 +4024,8 @@ QVariant* q_lcdnumber_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QLCDNumber*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_lcdnumber_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3600,8 +4034,9 @@ QVariant* q_lcdnumber_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QVariant* (*slot)(QLCDNumber*, enum Qt__InputMethodQuery) ```
-void q_lcdnumber_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QLCDNumber*
+/// @param callback QVariant* fn(QLCDNumber*, enum Qt__InputMethodQuery)
+void q_lcdnumber_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3609,7 +4044,8 @@ void q_lcdnumber_on_input_method_query(void* self, QVariant* (*slot)(void*, int6
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool next ```
+/// @param self QLCDNumber*
+/// @param next bool
 bool q_lcdnumber_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3618,7 +4054,8 @@ bool q_lcdnumber_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool next ```
+/// @param self QLCDNumber*
+/// @param next bool
 bool q_lcdnumber_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3627,8 +4064,9 @@ bool q_lcdnumber_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, bool) ```
-void q_lcdnumber_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QLCDNumber*
+/// @param callback bool fn(QLCDNumber*, bool)
+void q_lcdnumber_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3636,7 +4074,9 @@ void q_lcdnumber_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QObject* watched, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_lcdnumber_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3645,7 +4085,9 @@ bool q_lcdnumber_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QObject* watched, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_lcdnumber_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3654,8 +4096,9 @@ bool q_lcdnumber_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, QObject*, QEvent*) ```
-void q_lcdnumber_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QLCDNumber*
+/// @param callback bool fn(QLCDNumber*, QObject*, QEvent*)
+void q_lcdnumber_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3663,7 +4106,8 @@ void q_lcdnumber_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QTimerEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QTimerEvent*
 void q_lcdnumber_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3672,7 +4116,8 @@ void q_lcdnumber_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QTimerEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QTimerEvent*
 void q_lcdnumber_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3681,8 +4126,9 @@ void q_lcdnumber_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QTimerEvent*) ```
-void q_lcdnumber_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QTimerEvent*)
+void q_lcdnumber_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3690,7 +4136,8 @@ void q_lcdnumber_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QChildEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QChildEvent*
 void q_lcdnumber_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3699,7 +4146,8 @@ void q_lcdnumber_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QChildEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QChildEvent*
 void q_lcdnumber_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3708,8 +4156,9 @@ void q_lcdnumber_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QChildEvent*) ```
-void q_lcdnumber_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QChildEvent*)
+void q_lcdnumber_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3717,7 +4166,8 @@ void q_lcdnumber_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEvent*
 void q_lcdnumber_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3726,7 +4176,8 @@ void q_lcdnumber_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QEvent* event ```
+/// @param self QLCDNumber*
+/// @param event QEvent*
 void q_lcdnumber_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3735,8 +4186,9 @@ void q_lcdnumber_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QEvent*) ```
-void q_lcdnumber_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QEvent*)
+void q_lcdnumber_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3744,7 +4196,8 @@ void q_lcdnumber_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 void q_lcdnumber_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3753,7 +4206,8 @@ void q_lcdnumber_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 void q_lcdnumber_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3762,8 +4216,9 @@ void q_lcdnumber_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMetaMethod*) ```
-void q_lcdnumber_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMetaMethod*)
+void q_lcdnumber_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3771,7 +4226,8 @@ void q_lcdnumber_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 void q_lcdnumber_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3780,7 +4236,8 @@ void q_lcdnumber_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 void q_lcdnumber_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3789,8 +4246,9 @@ void q_lcdnumber_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QMetaMethod*) ```
-void q_lcdnumber_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QMetaMethod*)
+void q_lcdnumber_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -3798,7 +4256,8 @@ void q_lcdnumber_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPainter* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPainter*
 void q_lcdnumber_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3807,7 +4266,8 @@ void q_lcdnumber_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QPainter* param1 ```
+/// @param self QLCDNumber*
+/// @param param1 QPainter*
 void q_lcdnumber_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3816,8 +4276,9 @@ void q_lcdnumber_qbase_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, QPainter*) ```
-void q_lcdnumber_on_draw_frame(void* self, void (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, QPainter*)
+void q_lcdnumber_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3825,7 +4286,7 @@ void q_lcdnumber_on_draw_frame(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3834,7 +4295,7 @@ void q_lcdnumber_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3843,8 +4304,9 @@ void q_lcdnumber_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)() ```
-void q_lcdnumber_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QLCDNumber*
+/// @param callback void fn()
+void q_lcdnumber_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3852,7 +4314,7 @@ void q_lcdnumber_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_create(void* self);
 
 /// Inherited from QWidget
@@ -3861,7 +4323,7 @@ void q_lcdnumber_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3870,8 +4332,9 @@ void q_lcdnumber_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)() ```
-void q_lcdnumber_on_create(void* self, void (*slot)());
+/// @param self QLCDNumber*
+/// @param callback void fn()
+void q_lcdnumber_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3879,7 +4342,7 @@ void q_lcdnumber_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3888,7 +4351,7 @@ void q_lcdnumber_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3897,8 +4360,9 @@ void q_lcdnumber_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, void (*slot)() ```
-void q_lcdnumber_on_destroy(void* self, void (*slot)());
+/// @param self QLCDNumber*
+/// @param callback void fn()
+void q_lcdnumber_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3906,7 +4370,7 @@ void q_lcdnumber_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3915,7 +4379,7 @@ bool q_lcdnumber_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3924,8 +4388,9 @@ bool q_lcdnumber_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)() ```
-void q_lcdnumber_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QLCDNumber*
+/// @param callback bool fn()
+void q_lcdnumber_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3933,7 +4398,7 @@ void q_lcdnumber_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3942,7 +4407,7 @@ bool q_lcdnumber_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 bool q_lcdnumber_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3951,8 +4416,9 @@ bool q_lcdnumber_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)() ```
-void q_lcdnumber_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QLCDNumber*
+/// @param callback bool fn()
+void q_lcdnumber_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3960,7 +4426,7 @@ void q_lcdnumber_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QObject* q_lcdnumber_sender(void* self);
 
 /// Inherited from QObject
@@ -3969,7 +4435,7 @@ QObject* q_lcdnumber_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 QObject* q_lcdnumber_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3978,8 +4444,9 @@ QObject* q_lcdnumber_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QObject* (*slot)() ```
-void q_lcdnumber_on_sender(void* self, QObject* (*slot)());
+/// @param self QLCDNumber*
+/// @param callback QObject* fn()
+void q_lcdnumber_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3987,7 +4454,7 @@ void q_lcdnumber_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3996,7 +4463,7 @@ int32_t q_lcdnumber_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 int32_t q_lcdnumber_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4005,8 +4472,9 @@ int32_t q_lcdnumber_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)() ```
-void q_lcdnumber_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QLCDNumber*
+/// @param callback int32_t fn()
+void q_lcdnumber_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4014,7 +4482,8 @@ void q_lcdnumber_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, const char* signal ```
+/// @param self QLCDNumber*
+/// @param signal const char*
 int32_t q_lcdnumber_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4023,7 +4492,8 @@ int32_t q_lcdnumber_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, const char* signal ```
+/// @param self QLCDNumber*
+/// @param signal const char*
 int32_t q_lcdnumber_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4032,8 +4502,9 @@ int32_t q_lcdnumber_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, int32_t (*slot)(QLCDNumber*, const char*) ```
-void q_lcdnumber_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QLCDNumber*
+/// @param callback int32_t fn(QLCDNumber*, const char*)
+void q_lcdnumber_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4041,7 +4512,8 @@ void q_lcdnumber_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 bool q_lcdnumber_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4050,7 +4522,8 @@ bool q_lcdnumber_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, QMetaMethod* signal ```
+/// @param self QLCDNumber*
+/// @param signal QMetaMethod*
 bool q_lcdnumber_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4059,8 +4532,9 @@ bool q_lcdnumber_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, bool (*slot)(QLCDNumber*, QMetaMethod*) ```
-void q_lcdnumber_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QLCDNumber*
+/// @param callback bool fn(QLCDNumber*, QMetaMethod*)
+void q_lcdnumber_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4068,7 +4542,9 @@ void q_lcdnumber_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QLCDNumber*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_lcdnumber_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4077,7 +4553,9 @@ double q_lcdnumber_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QLCDNumber*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4086,8 +4564,9 @@ double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QLCDNumber* self, double (*slot)(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QLCDNumber*
+/// @param callback double fn(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4095,14 +4574,15 @@ void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QLCDNumber* self, void (*slot)(QLCDNumber*, const char*) ```
-void q_lcdnumber_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QLCDNumber*
+/// @param callback void fn(QLCDNumber*, const char*)
+void q_lcdnumber_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#dtor.QLCDNumber)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLCDNumber* self ```
+/// @param self QLCDNumber*
 void q_lcdnumber_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlcdnumber.html#types

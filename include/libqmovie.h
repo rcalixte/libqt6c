@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,570 +15,667 @@
 
 /// q_movie_new constructs a new QMovie object.
 ///
-///
 QMovie* q_movie_new();
 
 /// q_movie_new2 constructs a new QMovie object.
 ///
-/// ``` QIODevice* device ```
+/// @param device QIODevice*
 QMovie* q_movie_new2(void* device);
 
 /// q_movie_new3 constructs a new QMovie object.
 ///
-/// ``` const char* fileName ```
+/// @param fileName const char*
 QMovie* q_movie_new3(const char* fileName);
 
 /// q_movie_new4 constructs a new QMovie object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QMovie* q_movie_new4(void* parent);
 
 /// q_movie_new5 constructs a new QMovie object.
 ///
-/// ``` QIODevice* device, const char* format ```
+/// @param device QIODevice*
+/// @param format const char*
 QMovie* q_movie_new5(void* device, const char* format);
 
 /// q_movie_new6 constructs a new QMovie object.
 ///
-/// ``` QIODevice* device, const char* format, QObject* parent ```
+/// @param device QIODevice*
+/// @param format const char*
+/// @param parent QObject*
 QMovie* q_movie_new6(void* device, const char* format, void* parent);
 
 /// q_movie_new7 constructs a new QMovie object.
 ///
-/// ``` const char* fileName, const char* format ```
+/// @param fileName const char*
+/// @param format const char*
 QMovie* q_movie_new7(const char* fileName, const char* format);
 
 /// q_movie_new8 constructs a new QMovie object.
 ///
-/// ``` const char* fileName, const char* format, QObject* parent ```
+/// @param fileName const char*
+/// @param format const char*
+/// @param parent QObject*
 QMovie* q_movie_new8(const char* fileName, const char* format, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 const QMetaObject* q_movie_meta_object(void* self);
 
-/// ``` QMovie* self, const char* param1 ```
+/// @param self QMovie*
+/// @param param1 const char*
 void* q_movie_metacast(void* self, const char* param1);
 
-/// ``` QMovie* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QMovie*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_movie_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QMovie* self, int32_t (*slot)(QMovie*, enum QMetaObject__Call, int, void*) ```
-void q_movie_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QMovie*
+/// @param callback int32_t fn(QMovie*, enum QMetaObject__Call, int, void*)
+void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QMovie* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QMovie*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_movie_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_movie_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#supportedFormats)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_movie_supported_formats();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setDevice)
 ///
-/// ``` QMovie* self, QIODevice* device ```
+/// @param self QMovie*
+/// @param device QIODevice*
 void q_movie_set_device(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#device)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QIODevice* q_movie_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setFileName)
 ///
-/// ``` QMovie* self, const char* fileName ```
+/// @param self QMovie*
+/// @param fileName const char*
 void q_movie_set_file_name(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#fileName)
 ///
-/// ``` QMovie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMovie*
 const char* q_movie_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setFormat)
 ///
-/// ``` QMovie* self, const char* format ```
+/// @param self QMovie*
+/// @param format const char*
 void q_movie_set_format(void* self, const char* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#format)
 ///
-/// ``` QMovie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMovie*
 char* q_movie_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setBackgroundColor)
 ///
-/// ``` QMovie* self, QColor* color ```
+/// @param self QMovie*
+/// @param color QColor*
 void q_movie_set_background_color(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#backgroundColor)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QColor* q_movie_background_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#state)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
+///
+/// @return enum QMovie__MovieState
 int64_t q_movie_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameRect)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QRect* q_movie_frame_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#currentImage)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QImage* q_movie_current_image(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#currentPixmap)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QPixmap* q_movie_current_pixmap(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#isValid)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#lastError)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
+///
+/// @return enum QImageReader__ImageReaderError
 int64_t q_movie_last_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#lastErrorString)
 ///
-/// ``` QMovie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMovie*
 const char* q_movie_last_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#jumpToFrame)
 ///
-/// ``` QMovie* self, int frameNumber ```
+/// @param self QMovie*
+/// @param frameNumber int
 bool q_movie_jump_to_frame(void* self, int frameNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#loopCount)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_loop_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameCount)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_frame_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#nextFrameDelay)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_next_frame_delay(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#currentFrameNumber)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_current_frame_number(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#speed)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_speed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#scaledSize)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QSize* q_movie_scaled_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setScaledSize)
 ///
-/// ``` QMovie* self, QSize* size ```
+/// @param self QMovie*
+/// @param size QSize*
 void q_movie_set_scaled_size(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#cacheMode)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
+///
+/// @return enum QMovie__CacheMode
 int64_t q_movie_cache_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setCacheMode)
 ///
-/// ``` QMovie* self, enum QMovie__CacheMode mode ```
+/// @param self QMovie*
+/// @param mode enum QMovie__CacheMode
 void q_movie_set_cache_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#started)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_started(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#started)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*) ```
-void q_movie_on_started(void* self, void (*slot)(void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*)
+void q_movie_on_started(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#resized)
 ///
-/// ``` QMovie* self, QSize* size ```
+/// @param self QMovie*
+/// @param size QSize*
 void q_movie_resized(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#resized)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QSize*) ```
-void q_movie_on_resized(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QSize*)
+void q_movie_on_resized(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#updated)
 ///
-/// ``` QMovie* self, QRect* rect ```
+/// @param self QMovie*
+/// @param rect QRect*
 void q_movie_updated(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#updated)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QRect*) ```
-void q_movie_on_updated(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QRect*)
+void q_movie_on_updated(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stateChanged)
 ///
-/// ``` QMovie* self, enum QMovie__MovieState state ```
+/// @param self QMovie*
+/// @param state enum QMovie__MovieState
 void q_movie_state_changed(void* self, int64_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stateChanged)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, enum QMovie__MovieState) ```
-void q_movie_on_state_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, enum QMovie__MovieState)
+void q_movie_on_state_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
-/// ``` QMovie* self, enum QImageReader__ImageReaderError errorVal ```
+/// @param self QMovie*
+/// @param errorVal enum QImageReader__ImageReaderError
 void q_movie_error(void* self, int64_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, enum QImageReader__ImageReaderError) ```
-void q_movie_on_error(void* self, void (*slot)(void*, int64_t));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, enum QImageReader__ImageReaderError)
+void q_movie_on_error(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*) ```
-void q_movie_on_finished(void* self, void (*slot)(void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*)
+void q_movie_on_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameChanged)
 ///
-/// ``` QMovie* self, int frameNumber ```
+/// @param self QMovie*
+/// @param frameNumber int
 void q_movie_frame_changed(void* self, int frameNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameChanged)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, int) ```
-void q_movie_on_frame_changed(void* self, void (*slot)(void*, int));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, int)
+void q_movie_on_frame_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#start)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#jumpToNextFrame)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_jump_to_next_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setPaused)
 ///
-/// ``` QMovie* self, bool paused ```
+/// @param self QMovie*
+/// @param paused bool
 void q_movie_set_paused(void* self, bool paused);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stop)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setSpeed)
 ///
-/// ``` QMovie* self, int percentSpeed ```
+/// @param self QMovie*
+/// @param percentSpeed int
 void q_movie_set_speed(void* self, int percentSpeed);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_movie_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_movie_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QMovie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMovie*
 const char* q_movie_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QMovie* self, char* name ```
+/// @param self QMovie*
+/// @param name char*
 void q_movie_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 bool q_movie_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QMovie* self, bool b ```
+/// @param self QMovie*
+/// @param b bool
 bool q_movie_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QThread* q_movie_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QMovie* self, QThread* thread ```
+/// @param self QMovie*
+/// @param thread QThread*
 bool q_movie_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QMovie* self, int interval ```
+/// @param self QMovie*
+/// @param interval int
 int32_t q_movie_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QMovie* self, int id ```
+/// @param self QMovie*
+/// @param id int
 void q_movie_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QMovie* self, enum Qt__TimerId id ```
+/// @param self QMovie*
+/// @param id enum Qt__TimerId
 void q_movie_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 libqt_list /* of QObject* */ q_movie_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QMovie* self, QObject* parent ```
+/// @param self QMovie*
+/// @param parent QObject*
 void q_movie_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QMovie* self, QObject* filterObj ```
+/// @param self QMovie*
+/// @param filterObj QObject*
 void q_movie_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QMovie* self, QObject* obj ```
+/// @param self QMovie*
+/// @param obj QObject*
 void q_movie_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_movie_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QMovie* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QMovie*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_movie_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_movie_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_movie_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QMovie* self, const char* name, QVariant* value ```
+/// @param self QMovie*
+/// @param name const char*
+/// @param value QVariant*
 bool q_movie_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QMovie* self, const char* name ```
+/// @param self QMovie*
+/// @param name const char*
 QVariant* q_movie_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QMovie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMovie*
 const char** q_movie_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QBindingStorage* q_movie_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 const QBindingStorage* q_movie_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*) ```
-void q_movie_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*)
+void q_movie_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QObject* q_movie_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QMovie* self, const char* classname ```
+/// @param self QMovie*
+/// @param classname const char*
 bool q_movie_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QMovie* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QMovie*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_movie_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QMovie* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QMovie*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_movie_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QMovie* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QMovie*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMovie* self, QObject* param1 ```
+/// @param self QMovie*
+/// @param param1 QObject*
 void q_movie_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QObject*) ```
-void q_movie_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QObject*)
+void q_movie_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -587,7 +683,8 @@ void q_movie_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QEvent* event ```
+/// @param self QMovie*
+/// @param event QEvent*
 bool q_movie_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -596,7 +693,8 @@ bool q_movie_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QEvent* event ```
+/// @param self QMovie*
+/// @param event QEvent*
 bool q_movie_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -605,8 +703,9 @@ bool q_movie_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, bool (*slot)(QMovie*, QEvent*) ```
-void q_movie_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback bool fn(QMovie*, QEvent*)
+void q_movie_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -614,7 +713,9 @@ void q_movie_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QObject* watched, QEvent* event ```
+/// @param self QMovie*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_movie_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -623,7 +724,9 @@ bool q_movie_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QObject* watched, QEvent* event ```
+/// @param self QMovie*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_movie_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -632,8 +735,9 @@ bool q_movie_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, bool (*slot)(QMovie*, QObject*, QEvent*) ```
-void q_movie_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QMovie*
+/// @param callback bool fn(QMovie*, QObject*, QEvent*)
+void q_movie_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -641,7 +745,8 @@ void q_movie_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QTimerEvent* event ```
+/// @param self QMovie*
+/// @param event QTimerEvent*
 void q_movie_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -650,7 +755,8 @@ void q_movie_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QTimerEvent* event ```
+/// @param self QMovie*
+/// @param event QTimerEvent*
 void q_movie_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -659,8 +765,9 @@ void q_movie_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QTimerEvent*) ```
-void q_movie_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QTimerEvent*)
+void q_movie_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -668,7 +775,8 @@ void q_movie_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QChildEvent* event ```
+/// @param self QMovie*
+/// @param event QChildEvent*
 void q_movie_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -677,7 +785,8 @@ void q_movie_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QChildEvent* event ```
+/// @param self QMovie*
+/// @param event QChildEvent*
 void q_movie_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -686,8 +795,9 @@ void q_movie_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QChildEvent*) ```
-void q_movie_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QChildEvent*)
+void q_movie_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -695,7 +805,8 @@ void q_movie_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QEvent* event ```
+/// @param self QMovie*
+/// @param event QEvent*
 void q_movie_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -704,7 +815,8 @@ void q_movie_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QEvent* event ```
+/// @param self QMovie*
+/// @param event QEvent*
 void q_movie_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -713,8 +825,9 @@ void q_movie_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QEvent*) ```
-void q_movie_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QEvent*)
+void q_movie_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -722,7 +835,8 @@ void q_movie_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 void q_movie_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -731,7 +845,8 @@ void q_movie_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 void q_movie_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -740,8 +855,9 @@ void q_movie_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QMetaMethod*) ```
-void q_movie_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QMetaMethod*)
+void q_movie_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -749,7 +865,8 @@ void q_movie_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 void q_movie_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -758,7 +875,8 @@ void q_movie_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 void q_movie_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -767,8 +885,9 @@ void q_movie_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, QMetaMethod*) ```
-void q_movie_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, QMetaMethod*)
+void q_movie_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -776,7 +895,7 @@ void q_movie_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QObject* q_movie_sender(void* self);
 
 /// Inherited from QObject
@@ -785,7 +904,7 @@ QObject* q_movie_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 QObject* q_movie_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -794,8 +913,9 @@ QObject* q_movie_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, QObject* (*slot)() ```
-void q_movie_on_sender(void* self, QObject* (*slot)());
+/// @param self QMovie*
+/// @param callback QObject* fn()
+void q_movie_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -803,7 +923,7 @@ void q_movie_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -812,7 +932,7 @@ int32_t q_movie_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 int32_t q_movie_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -821,8 +941,9 @@ int32_t q_movie_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, int32_t (*slot)() ```
-void q_movie_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QMovie*
+/// @param callback int32_t fn()
+void q_movie_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -830,7 +951,8 @@ void q_movie_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, const char* signal ```
+/// @param self QMovie*
+/// @param signal const char*
 int32_t q_movie_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -839,7 +961,8 @@ int32_t q_movie_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, const char* signal ```
+/// @param self QMovie*
+/// @param signal const char*
 int32_t q_movie_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -848,8 +971,9 @@ int32_t q_movie_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, int32_t (*slot)(QMovie*, const char*) ```
-void q_movie_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QMovie*
+/// @param callback int32_t fn(QMovie*, const char*)
+void q_movie_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -857,7 +981,8 @@ void q_movie_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 bool q_movie_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -866,7 +991,8 @@ bool q_movie_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMovie* self, QMetaMethod* signal ```
+/// @param self QMovie*
+/// @param signal QMetaMethod*
 bool q_movie_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -875,8 +1001,9 @@ bool q_movie_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMovie* self, bool (*slot)(QMovie*, QMetaMethod*) ```
-void q_movie_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QMovie*
+/// @param callback bool fn(QMovie*, QMetaMethod*)
+void q_movie_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -884,14 +1011,15 @@ void q_movie_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QMovie* self, void (*slot)(QMovie*, const char*) ```
-void q_movie_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QMovie*
+/// @param callback void fn(QMovie*, const char*)
+void q_movie_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#dtor.QMovie)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMovie* self ```
+/// @param self QMovie*
 void q_movie_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qmovie.html#types

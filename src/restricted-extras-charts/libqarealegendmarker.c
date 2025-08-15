@@ -28,8 +28,8 @@ int32_t q_arealegendmarker_metacall(void* self, int64_t param1, int param2, void
     return QAreaLegendMarker_Metacall((QAreaLegendMarker*)self, param1, param2, param3);
 }
 
-void q_arealegendmarker_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QAreaLegendMarker_OnMetacall((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QAreaLegendMarker_OnMetacall((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 int32_t q_arealegendmarker_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ int64_t q_arealegendmarker_type(void* self) {
     return QAreaLegendMarker_Type((QAreaLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_type(void* self, int64_t (*slot)()) {
-    QAreaLegendMarker_OnType((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_type(void* self, int64_t (*callback)()) {
+    QAreaLegendMarker_OnType((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 int64_t q_arealegendmarker_qbase_type(void* self) {
@@ -59,8 +59,8 @@ QAreaSeries* q_arealegendmarker_series(void* self) {
     return QAreaLegendMarker_Series((QAreaLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_series(void* self, QAreaSeries* (*slot)()) {
-    QAreaLegendMarker_OnSeries((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_series(void* self, QAreaSeries* (*callback)()) {
+    QAreaLegendMarker_OnSeries((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 QAreaSeries* q_arealegendmarker_qbase_series(void* self) {
@@ -144,72 +144,72 @@ void q_arealegendmarker_clicked(void* self) {
     QLegendMarker_Clicked((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_clicked(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_Clicked((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_clicked(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_Clicked((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_hovered(void* self, bool status) {
     QLegendMarker_Hovered((QLegendMarker*)self, status);
 }
 
-void q_arealegendmarker_on_hovered(void* self, void (*slot)(void*, bool)) {
-    QLegendMarker_Connect_Hovered((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_hovered(void* self, void (*callback)(void*, bool)) {
+    QLegendMarker_Connect_Hovered((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_label_changed(void* self) {
     QLegendMarker_LabelChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_label_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_LabelChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_label_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_LabelChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_label_brush_changed(void* self) {
     QLegendMarker_LabelBrushChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_label_brush_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_LabelBrushChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_label_brush_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_LabelBrushChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_font_changed(void* self) {
     QLegendMarker_FontChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_font_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_FontChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_font_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_FontChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_pen_changed(void* self) {
     QLegendMarker_PenChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_pen_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_PenChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_pen_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_PenChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_brush_changed(void* self) {
     QLegendMarker_BrushChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_brush_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_BrushChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_brush_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_BrushChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_visible_changed(void* self) {
     QLegendMarker_VisibleChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_visible_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_VisibleChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_visible_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_VisibleChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_shape_changed(void* self) {
     QLegendMarker_ShapeChanged((QLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_shape_changed(void* self, void (*slot)(void*)) {
-    QLegendMarker_Connect_ShapeChanged((QLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_shape_changed(void* self, void (*callback)(void*)) {
+    QLegendMarker_Connect_ShapeChanged((QLegendMarker*)self, (intptr_t)callback);
 }
 
 const char* q_arealegendmarker_object_name(void* self) {
@@ -316,12 +316,16 @@ const char** q_arealegendmarker_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_arealegendmarker_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -339,8 +343,8 @@ void q_arealegendmarker_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_arealegendmarker_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_arealegendmarker_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_arealegendmarker_parent(void* self) {
@@ -375,8 +379,8 @@ void q_arealegendmarker_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_arealegendmarker_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_arealegendmarker_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_arealegendmarker_event(void* self, void* event) {
@@ -387,8 +391,8 @@ bool q_arealegendmarker_qbase_event(void* self, void* event) {
     return QAreaLegendMarker_QBaseEvent((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
-void q_arealegendmarker_on_event(void* self, bool (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnEvent((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnEvent((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 bool q_arealegendmarker_event_filter(void* self, void* watched, void* event) {
@@ -399,8 +403,8 @@ bool q_arealegendmarker_qbase_event_filter(void* self, void* watched, void* even
     return QAreaLegendMarker_QBaseEventFilter((QAreaLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_arealegendmarker_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QAreaLegendMarker_OnEventFilter((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QAreaLegendMarker_OnEventFilter((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_timer_event(void* self, void* event) {
@@ -411,8 +415,8 @@ void q_arealegendmarker_qbase_timer_event(void* self, void* event) {
     QAreaLegendMarker_QBaseTimerEvent((QAreaLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_arealegendmarker_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnTimerEvent((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnTimerEvent((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_child_event(void* self, void* event) {
@@ -423,8 +427,8 @@ void q_arealegendmarker_qbase_child_event(void* self, void* event) {
     QAreaLegendMarker_QBaseChildEvent((QAreaLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_arealegendmarker_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnChildEvent((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnChildEvent((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_custom_event(void* self, void* event) {
@@ -435,8 +439,8 @@ void q_arealegendmarker_qbase_custom_event(void* self, void* event) {
     QAreaLegendMarker_QBaseCustomEvent((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
-void q_arealegendmarker_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnCustomEvent((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnCustomEvent((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_connect_notify(void* self, void* signal) {
@@ -447,8 +451,8 @@ void q_arealegendmarker_qbase_connect_notify(void* self, void* signal) {
     QAreaLegendMarker_QBaseConnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_arealegendmarker_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnConnectNotify((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnConnectNotify((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_disconnect_notify(void* self, void* signal) {
@@ -459,8 +463,8 @@ void q_arealegendmarker_qbase_disconnect_notify(void* self, void* signal) {
     QAreaLegendMarker_QBaseDisconnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_arealegendmarker_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnDisconnectNotify((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnDisconnectNotify((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 QObject* q_arealegendmarker_sender(void* self) {
@@ -471,8 +475,8 @@ QObject* q_arealegendmarker_qbase_sender(void* self) {
     return QAreaLegendMarker_QBaseSender((QAreaLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_sender(void* self, QObject* (*slot)()) {
-    QAreaLegendMarker_OnSender((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_sender(void* self, QObject* (*callback)()) {
+    QAreaLegendMarker_OnSender((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 int32_t q_arealegendmarker_sender_signal_index(void* self) {
@@ -483,8 +487,8 @@ int32_t q_arealegendmarker_qbase_sender_signal_index(void* self) {
     return QAreaLegendMarker_QBaseSenderSignalIndex((QAreaLegendMarker*)self);
 }
 
-void q_arealegendmarker_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QAreaLegendMarker_OnSenderSignalIndex((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QAreaLegendMarker_OnSenderSignalIndex((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 int32_t q_arealegendmarker_receivers(void* self, const char* signal) {
@@ -495,8 +499,8 @@ int32_t q_arealegendmarker_qbase_receivers(void* self, const char* signal) {
     return QAreaLegendMarker_QBaseReceivers((QAreaLegendMarker*)self, signal);
 }
 
-void q_arealegendmarker_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QAreaLegendMarker_OnReceivers((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QAreaLegendMarker_OnReceivers((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
 bool q_arealegendmarker_is_signal_connected(void* self, void* signal) {
@@ -507,12 +511,12 @@ bool q_arealegendmarker_qbase_is_signal_connected(void* self, void* signal) {
     return QAreaLegendMarker_QBaseIsSignalConnected((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_arealegendmarker_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QAreaLegendMarker_OnIsSignalConnected((QAreaLegendMarker*)self, (intptr_t)slot);
+void q_arealegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QAreaLegendMarker_OnIsSignalConnected((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-void q_arealegendmarker_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_arealegendmarker_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_arealegendmarker_delete(void* self) {

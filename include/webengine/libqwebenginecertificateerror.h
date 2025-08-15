@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,64 +15,69 @@
 
 /// q_webenginecertificateerror_new constructs a new QWebEngineCertificateError object.
 ///
-/// ``` QWebEngineCertificateError* other ```
+/// @param other QWebEngineCertificateError*
 QWebEngineCertificateError* q_webenginecertificateerror_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#operator-eq)
 ///
-/// ``` QWebEngineCertificateError* self, QWebEngineCertificateError* other ```
+/// @param self QWebEngineCertificateError*
+/// @param other QWebEngineCertificateError*
 void q_webenginecertificateerror_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#type)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
+///
+/// @return enum QWebEngineCertificateError__Type
 int64_t q_webenginecertificateerror_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#url)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 QUrl* q_webenginecertificateerror_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isOverridable)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 bool q_webenginecertificateerror_is_overridable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#description)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineCertificateError*
 const char* q_webenginecertificateerror_description(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#isMainFrame)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 bool q_webenginecertificateerror_is_main_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#defer)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 void q_webenginecertificateerror_defer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#rejectCertificate)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 void q_webenginecertificateerror_reject_certificate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#acceptCertificate)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 void q_webenginecertificateerror_accept_certificate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#certificateChain)
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 libqt_list /* of QSslCertificate* */ q_webenginecertificateerror_certificate_chain(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#dtor.QWebEngineCertificateError)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineCertificateError* self ```
+/// @param self QWebEngineCertificateError*
 void q_webenginecertificateerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginecertificateerror.html#types

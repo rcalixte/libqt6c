@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1609 +15,1794 @@
 
 /// q_dial_new constructs a new QDial object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QDial* q_dial_new(void* parent);
 
 /// q_dial_new2 constructs a new QDial object.
-///
 ///
 QDial* q_dial_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 const QMetaObject* q_dial_meta_object(void* self);
 
-/// ``` QDial* self, const char* param1 ```
+/// @param self QDial*
+/// @param param1 const char*
 void* q_dial_metacast(void* self, const char* param1);
 
-/// ``` QDial* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDial*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_dial_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, int32_t (*slot)(QDial*, enum QMetaObject__Call, int, void*) ```
-void q_dial_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QDial*
+/// @param callback int32_t fn(QDial*, enum QMetaObject__Call, int, void*)
+void q_dial_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QDial* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDial*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_dial_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_dial_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#wrapping)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_wrapping(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#notchSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_notch_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#setNotchTarget)
 ///
-/// ``` QDial* self, double target ```
+/// @param self QDial*
+/// @param target double
 void q_dial_set_notch_target(void* self, double target);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#notchTarget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 double q_dial_notch_target(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#notchesVisible)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_notches_visible(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sizeHint)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, QSize* (*slot)() ```
-void q_dial_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QDial*
+/// @param callback QSize* fn()
+void q_dial_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#minimumSizeHint)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, QSize* (*slot)() ```
-void q_dial_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QDial*
+/// @param callback QSize* fn()
+void q_dial_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_qbase_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#setNotchesVisible)
 ///
-/// ``` QDial* self, bool visible ```
+/// @param self QDial*
+/// @param visible bool
 void q_dial_set_notches_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#setWrapping)
 ///
-/// ``` QDial* self, bool on ```
+/// @param self QDial*
+/// @param on bool
 void q_dial_set_wrapping(void* self, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#event)
 ///
-/// ``` QDial* self, QEvent* e ```
+/// @param self QDial*
+/// @param e QEvent*
 bool q_dial_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, bool (*slot)(QDial*, QEvent*) ```
-void q_dial_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback bool fn(QDial*, QEvent*)
+void q_dial_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QEvent* e ```
+/// @param self QDial*
+/// @param e QEvent*
 bool q_dial_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#resizeEvent)
 ///
-/// ``` QDial* self, QResizeEvent* re ```
+/// @param self QDial*
+/// @param re QResizeEvent*
 void q_dial_resize_event(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QResizeEvent*) ```
-void q_dial_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QResizeEvent*)
+void q_dial_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QResizeEvent* re ```
+/// @param self QDial*
+/// @param re QResizeEvent*
 void q_dial_qbase_resize_event(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#paintEvent)
 ///
-/// ``` QDial* self, QPaintEvent* pe ```
+/// @param self QDial*
+/// @param pe QPaintEvent*
 void q_dial_paint_event(void* self, void* pe);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QPaintEvent*) ```
-void q_dial_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QPaintEvent*)
+void q_dial_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QPaintEvent* pe ```
+/// @param self QDial*
+/// @param pe QPaintEvent*
 void q_dial_qbase_paint_event(void* self, void* pe);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mousePressEvent)
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_mouse_press_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
-void q_dial_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMouseEvent*)
+void q_dial_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_qbase_mouse_press_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseReleaseEvent)
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_mouse_release_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
-void q_dial_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMouseEvent*)
+void q_dial_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_qbase_mouse_release_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseMoveEvent)
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_mouse_move_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
-void q_dial_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMouseEvent*)
+void q_dial_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QMouseEvent* me ```
+/// @param self QDial*
+/// @param me QMouseEvent*
 void q_dial_qbase_mouse_move_event(void* self, void* me);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sliderChange)
 ///
-/// ``` QDial* self, enum QAbstractSlider__SliderChange change ```
+/// @param self QDial*
+/// @param change enum QAbstractSlider__SliderChange
 void q_dial_slider_change(void* self, int64_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sliderChange)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, enum QAbstractSlider__SliderChange) ```
-void q_dial_on_slider_change(void* self, void (*slot)(void*, int64_t));
+/// @param self QDial*
+/// @param callback void fn(QDial*, enum QAbstractSlider__SliderChange)
+void q_dial_on_slider_change(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#sliderChange)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, enum QAbstractSlider__SliderChange change ```
+/// @param self QDial*
+/// @param change enum QAbstractSlider__SliderChange
 void q_dial_qbase_slider_change(void* self, int64_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#initStyleOption)
 ///
-/// ``` QDial* self, QStyleOptionSlider* option ```
+/// @param self QDial*
+/// @param option QStyleOptionSlider*
 void q_dial_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QStyleOptionSlider*) ```
-void q_dial_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QStyleOptionSlider*)
+void q_dial_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// ``` QDial* self, QStyleOptionSlider* option ```
+/// @param self QDial*
+/// @param option QStyleOptionSlider*
 void q_dial_qbase_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_dial_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_dial_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#orientation)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__Orientation
 int64_t q_dial_orientation(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setMinimum)
 ///
-/// ``` QDial* self, int minimum ```
+/// @param self QDial*
+/// @param minimum int
 void q_dial_set_minimum(void* self, int minimum);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#minimum)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_minimum(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setMaximum)
 ///
-/// ``` QDial* self, int maximum ```
+/// @param self QDial*
+/// @param maximum int
 void q_dial_set_maximum(void* self, int maximum);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#maximum)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_maximum(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSingleStep)
 ///
-/// ``` QDial* self, int singleStep ```
+/// @param self QDial*
+/// @param singleStep int
 void q_dial_set_single_step(void* self, int singleStep);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#singleStep)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_single_step(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setPageStep)
 ///
-/// ``` QDial* self, int pageStep ```
+/// @param self QDial*
+/// @param pageStep int
 void q_dial_set_page_step(void* self, int pageStep);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#pageStep)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_page_step(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setTracking)
 ///
-/// ``` QDial* self, bool enable ```
+/// @param self QDial*
+/// @param enable bool
 void q_dial_set_tracking(void* self, bool enable);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#hasTracking)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_has_tracking(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSliderDown)
 ///
-/// ``` QDial* self, bool sliderDown ```
+/// @param self QDial*
+/// @param sliderDown bool
 void q_dial_set_slider_down(void* self, bool sliderDown);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#isSliderDown)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_slider_down(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setSliderPosition)
 ///
-/// ``` QDial* self, int sliderPosition ```
+/// @param self QDial*
+/// @param sliderPosition int
 void q_dial_set_slider_position(void* self, int sliderPosition);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPosition)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_slider_position(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setInvertedAppearance)
 ///
-/// ``` QDial* self, bool invertedAppearance ```
+/// @param self QDial*
+/// @param invertedAppearance bool
 void q_dial_set_inverted_appearance(void* self, bool invertedAppearance);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#invertedAppearance)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_inverted_appearance(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setInvertedControls)
 ///
-/// ``` QDial* self, bool invertedControls ```
+/// @param self QDial*
+/// @param invertedControls bool
 void q_dial_set_inverted_controls(void* self, bool invertedControls);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#invertedControls)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_inverted_controls(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#value)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_value(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#triggerAction)
 ///
-/// ``` QDial* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QDial*
+/// @param action enum QAbstractSlider__SliderAction
 void q_dial_trigger_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setValue)
 ///
-/// ``` QDial* self, int value ```
+/// @param self QDial*
+/// @param value int
 void q_dial_set_value(void* self, int value);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setOrientation)
 ///
-/// ``` QDial* self, enum Qt__Orientation orientation ```
+/// @param self QDial*
+/// @param orientation enum Qt__Orientation
 void q_dial_set_orientation(void* self, int64_t orientation);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#setRange)
 ///
-/// ``` QDial* self, int min, int max ```
+/// @param self QDial*
+/// @param min int
+/// @param max int
 void q_dial_set_range(void* self, int min, int max);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
-/// ``` QDial* self, int value ```
+/// @param self QDial*
+/// @param value int
 void q_dial_value_changed(void* self, int value);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#valueChanged)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, int) ```
-void q_dial_on_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QDial*
+/// @param callback void fn(QDial*, int)
+void q_dial_on_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_slider_pressed(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderPressed)
 ///
-/// ``` QDial* self, void (*slot)(QDial*) ```
-void q_dial_on_slider_pressed(void* self, void (*slot)(void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*)
+void q_dial_on_slider_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
-/// ``` QDial* self, int position ```
+/// @param self QDial*
+/// @param position int
 void q_dial_slider_moved(void* self, int position);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderMoved)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, int) ```
-void q_dial_on_slider_moved(void* self, void (*slot)(void*, int));
+/// @param self QDial*
+/// @param callback void fn(QDial*, int)
+void q_dial_on_slider_moved(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_slider_released(void* self);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#sliderReleased)
 ///
-/// ``` QDial* self, void (*slot)(QDial*) ```
-void q_dial_on_slider_released(void* self, void (*slot)(void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*)
+void q_dial_on_slider_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
-/// ``` QDial* self, int min, int max ```
+/// @param self QDial*
+/// @param min int
+/// @param max int
 void q_dial_range_changed(void* self, int min, int max);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#rangeChanged)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, int, int) ```
-void q_dial_on_range_changed(void* self, void (*slot)(void*, int, int));
+/// @param self QDial*
+/// @param callback void fn(QDial*, int, int)
+void q_dial_on_range_changed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
-/// ``` QDial* self, int action ```
+/// @param self QDial*
+/// @param action int
 void q_dial_action_triggered(void* self, int action);
 
 /// Inherited from QAbstractSlider
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractslider.html#actionTriggered)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, int) ```
-void q_dial_on_action_triggered(void* self, void (*slot)(void*, int));
+/// @param self QDial*
+/// @param callback void fn(QDial*, int)
+void q_dial_on_action_triggered(void* self, void (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 uintptr_t q_dial_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 uintptr_t q_dial_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 uintptr_t q_dial_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QStyle* q_dial_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QDial* self, QStyle* style ```
+/// @param self QDial*
+/// @param style QStyle*
 void q_dial_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__WindowModality
 int64_t q_dial_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QDial* self, enum Qt__WindowModality windowModality ```
+/// @param self QDial*
+/// @param windowModality enum Qt__WindowModality
 void q_dial_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QDial* self, QWidget* param1 ```
+/// @param self QDial*
+/// @param param1 QWidget*
 bool q_dial_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QDial* self, bool enabled ```
+/// @param self QDial*
+/// @param enabled bool
 void q_dial_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QDial* self, bool disabled ```
+/// @param self QDial*
+/// @param disabled bool
 void q_dial_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QDial* self, bool windowModified ```
+/// @param self QDial*
+/// @param windowModified bool
 void q_dial_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRect* q_dial_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 const QRect* q_dial_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRect* q_dial_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPoint* q_dial_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRect* q_dial_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRect* q_dial_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRegion* q_dial_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QDial* self, QSize* minimumSize ```
+/// @param self QDial*
+/// @param minimumSize QSize*
 void q_dial_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QDial* self, int minw, int minh ```
+/// @param self QDial*
+/// @param minw int
+/// @param minh int
 void q_dial_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QDial* self, QSize* maximumSize ```
+/// @param self QDial*
+/// @param maximumSize QSize*
 void q_dial_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QDial* self, int maxw, int maxh ```
+/// @param self QDial*
+/// @param maxw int
+/// @param maxh int
 void q_dial_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QDial* self, int minw ```
+/// @param self QDial*
+/// @param minw int
 void q_dial_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QDial* self, int minh ```
+/// @param self QDial*
+/// @param minh int
 void q_dial_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QDial* self, int maxw ```
+/// @param self QDial*
+/// @param maxw int
 void q_dial_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QDial* self, int maxh ```
+/// @param self QDial*
+/// @param maxh int
 void q_dial_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QDial* self, QSize* sizeIncrement ```
+/// @param self QDial*
+/// @param sizeIncrement QSize*
 void q_dial_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QDial* self, int w, int h ```
+/// @param self QDial*
+/// @param w int
+/// @param h int
 void q_dial_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSize* q_dial_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QDial* self, QSize* baseSize ```
+/// @param self QDial*
+/// @param baseSize QSize*
 void q_dial_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QDial* self, int basew, int baseh ```
+/// @param self QDial*
+/// @param basew int
+/// @param baseh int
 void q_dial_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QDial* self, QSize* fixedSize ```
+/// @param self QDial*
+/// @param fixedSize QSize*
 void q_dial_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QDial* self, int w, int h ```
+/// @param self QDial*
+/// @param w int
+/// @param h int
 void q_dial_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QDial* self, int w ```
+/// @param self QDial*
+/// @param w int
 void q_dial_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QDial* self, int h ```
+/// @param self QDial*
+/// @param h int
 void q_dial_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QDial* self, QPointF* param1 ```
+/// @param self QDial*
+/// @param param1 QPointF*
 QPointF* q_dial_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QDial* self, QPoint* param1 ```
+/// @param self QDial*
+/// @param param1 QPoint*
 QPoint* q_dial_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QDial* self, QPointF* param1 ```
+/// @param self QDial*
+/// @param param1 QPointF*
 QPointF* q_dial_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QDial* self, QPoint* param1 ```
+/// @param self QDial*
+/// @param param1 QPoint*
 QPoint* q_dial_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QDial* self, QPointF* param1 ```
+/// @param self QDial*
+/// @param param1 QPointF*
 QPointF* q_dial_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QDial* self, QPoint* param1 ```
+/// @param self QDial*
+/// @param param1 QPoint*
 QPoint* q_dial_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QDial* self, QPointF* param1 ```
+/// @param self QDial*
+/// @param param1 QPointF*
 QPointF* q_dial_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QDial* self, QPoint* param1 ```
+/// @param self QDial*
+/// @param param1 QPoint*
 QPoint* q_dial_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QDial* self, QWidget* param1, QPointF* param2 ```
+/// @param self QDial*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_dial_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QDial* self, QWidget* param1, QPoint* param2 ```
+/// @param self QDial*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_dial_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QDial* self, QWidget* param1, QPointF* param2 ```
+/// @param self QDial*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_dial_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QDial* self, QWidget* param1, QPoint* param2 ```
+/// @param self QDial*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_dial_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 const QPalette* q_dial_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QDial* self, QPalette* palette ```
+/// @param self QDial*
+/// @param palette QPalette*
 void q_dial_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QDial* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QDial*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_dial_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_dial_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QDial* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QDial*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_dial_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_dial_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 const QFont* q_dial_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QDial* self, QFont* font ```
+/// @param self QDial*
+/// @param font QFont*
 void q_dial_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QFontMetrics* q_dial_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QFontInfo* q_dial_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QCursor* q_dial_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QDial* self, QCursor* cursor ```
+/// @param self QDial*
+/// @param cursor QCursor*
 void q_dial_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QDial* self, bool enable ```
+/// @param self QDial*
+/// @param enable bool
 void q_dial_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QDial* self, bool enable ```
+/// @param self QDial*
+/// @param enable bool
 void q_dial_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QDial* self, QBitmap* mask ```
+/// @param self QDial*
+/// @param mask QBitmap*
 void q_dial_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QDial* self, QRegion* mask ```
+/// @param self QDial*
+/// @param mask QRegion*
 void q_dial_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRegion* q_dial_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPaintDevice* target ```
+/// @param self QDial*
+/// @param target QPaintDevice*
 void q_dial_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPainter* painter ```
+/// @param self QDial*
+/// @param painter QPainter*
 void q_dial_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPixmap* q_dial_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QGraphicsEffect* q_dial_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QDial* self, QGraphicsEffect* effect ```
+/// @param self QDial*
+/// @param effect QGraphicsEffect*
 void q_dial_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QDial* self, enum Qt__GestureType typeVal ```
+/// @param self QDial*
+/// @param typeVal enum Qt__GestureType
 void q_dial_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QDial* self, enum Qt__GestureType typeVal ```
+/// @param self QDial*
+/// @param typeVal enum Qt__GestureType
 void q_dial_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QDial* self, const char* windowTitle ```
+/// @param self QDial*
+/// @param windowTitle const char*
 void q_dial_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QDial* self, const char* styleSheet ```
+/// @param self QDial*
+/// @param styleSheet const char*
 void q_dial_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QDial* self, QIcon* icon ```
+/// @param self QDial*
+/// @param icon QIcon*
 void q_dial_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QIcon* q_dial_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QDial* self, const char* windowIconText ```
+/// @param self QDial*
+/// @param windowIconText const char*
 void q_dial_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QDial* self, const char* windowRole ```
+/// @param self QDial*
+/// @param windowRole const char*
 void q_dial_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QDial* self, const char* filePath ```
+/// @param self QDial*
+/// @param filePath const char*
 void q_dial_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QDial* self, double level ```
+/// @param self QDial*
+/// @param level double
 void q_dial_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 double q_dial_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QDial* self, const char* toolTip ```
+/// @param self QDial*
+/// @param toolTip const char*
 void q_dial_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QDial* self, int msec ```
+/// @param self QDial*
+/// @param msec int
 void q_dial_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QDial* self, const char* statusTip ```
+/// @param self QDial*
+/// @param statusTip const char*
 void q_dial_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QDial* self, const char* whatsThis ```
+/// @param self QDial*
+/// @param whatsThis const char*
 void q_dial_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QDial* self, const char* name ```
+/// @param self QDial*
+/// @param name const char*
 void q_dial_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QDial* self, const char* description ```
+/// @param self QDial*
+/// @param description const char*
 void q_dial_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QDial* self, enum Qt__LayoutDirection direction ```
+/// @param self QDial*
+/// @param direction enum Qt__LayoutDirection
 void q_dial_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_dial_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QDial* self, QLocale* locale ```
+/// @param self QDial*
+/// @param locale QLocale*
 void q_dial_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QLocale* q_dial_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QDial* self, enum Qt__FocusReason reason ```
+/// @param self QDial*
+/// @param reason enum Qt__FocusReason
 void q_dial_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_dial_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QDial* self, enum Qt__FocusPolicy policy ```
+/// @param self QDial*
+/// @param policy enum Qt__FocusPolicy
 void q_dial_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_dial_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QDial* self, QWidget* focusProxy ```
+/// @param self QDial*
+/// @param focusProxy QWidget*
 void q_dial_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_dial_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QDial* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QDial*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_dial_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QDial* self, QCursor* param1 ```
+/// @param self QDial*
+/// @param param1 QCursor*
 void q_dial_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QDial* self, QKeySequence* key ```
+/// @param self QDial*
+/// @param key QKeySequence*
 int32_t q_dial_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QDial* self, int id ```
+/// @param self QDial*
+/// @param id int
 void q_dial_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QDial* self, int id ```
+/// @param self QDial*
+/// @param id int
 void q_dial_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QDial* self, int id ```
+/// @param self QDial*
+/// @param id int
 void q_dial_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_dial_mouse_grabber();
 
@@ -1626,1161 +1810,1327 @@ QWidget* q_dial_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_dial_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QDial* self, bool enable ```
+/// @param self QDial*
+/// @param enable bool
 void q_dial_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QGraphicsProxyWidget* q_dial_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDial* self, int x, int y, int w, int h ```
+/// @param self QDial*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dial_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDial* self, QRect* param1 ```
+/// @param self QDial*
+/// @param param1 QRect*
 void q_dial_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDial* self, QRegion* param1 ```
+/// @param self QDial*
+/// @param param1 QRegion*
 void q_dial_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDial* self, int x, int y, int w, int h ```
+/// @param self QDial*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dial_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDial* self, QRect* param1 ```
+/// @param self QDial*
+/// @param param1 QRect*
 void q_dial_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDial* self, QRegion* param1 ```
+/// @param self QDial*
+/// @param param1 QRegion*
 void q_dial_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QDial* self, bool hidden ```
+/// @param self QDial*
+/// @param hidden bool
 void q_dial_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QDial* self, QWidget* param1 ```
+/// @param self QDial*
+/// @param param1 QWidget*
 void q_dial_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QDial* self, int x, int y ```
+/// @param self QDial*
+/// @param x int
+/// @param y int
 void q_dial_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QDial* self, QPoint* param1 ```
+/// @param self QDial*
+/// @param param1 QPoint*
 void q_dial_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QDial* self, int w, int h ```
+/// @param self QDial*
+/// @param w int
+/// @param h int
 void q_dial_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QDial* self, QSize* param1 ```
+/// @param self QDial*
+/// @param param1 QSize*
 void q_dial_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QDial* self, int x, int y, int w, int h ```
+/// @param self QDial*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dial_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QDial* self, QRect* geometry ```
+/// @param self QDial*
+/// @param geometry QRect*
 void q_dial_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 char* q_dial_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QDial* self, const char* geometry ```
+/// @param self QDial*
+/// @param geometry const char*
 bool q_dial_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QDial* self, QWidget* param1 ```
+/// @param self QDial*
+/// @param param1 QWidget*
 bool q_dial_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_dial_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QDial* self, int state ```
+/// @param self QDial*
+/// @param state flag of enum Qt__WindowState
 void q_dial_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QDial* self, int state ```
+/// @param self QDial*
+/// @param state flag of enum Qt__WindowState
 void q_dial_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QSizePolicy* q_dial_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QDial* self, QSizePolicy* sizePolicy ```
+/// @param self QDial*
+/// @param sizePolicy QSizePolicy*
 void q_dial_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QDial* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QDial*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_dial_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRegion* q_dial_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QDial* self, int left, int top, int right, int bottom ```
+/// @param self QDial*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_dial_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QDial* self, QMargins* margins ```
+/// @param self QDial*
+/// @param margins QMargins*
 void q_dial_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QMargins* q_dial_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QRect* q_dial_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QLayout* q_dial_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QDial* self, QLayout* layout ```
+/// @param self QDial*
+/// @param layout QLayout*
 void q_dial_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QDial* self, QWidget* parent ```
+/// @param self QDial*
+/// @param parent QWidget*
 void q_dial_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QDial* self, QWidget* parent, int f ```
+/// @param self QDial*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_dial_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QDial* self, int dx, int dy ```
+/// @param self QDial*
+/// @param dx int
+/// @param dy int
 void q_dial_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QDial* self, int dx, int dy, QRect* param3 ```
+/// @param self QDial*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_dial_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QDial* self, bool on ```
+/// @param self QDial*
+/// @param on bool
 void q_dial_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDial* self, QAction* action ```
+/// @param self QDial*
+/// @param action QAction*
 void q_dial_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDial* self, libqt_list /* of QAction* */ actions ```
+/// @param self QDial*
+/// @param actions libqt_list /* of QAction* */
 void q_dial_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDial* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QDial*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_dial_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QDial* self, QAction* before, QAction* action ```
+/// @param self QDial*
+/// @param before QAction*
+/// @param action QAction*
 void q_dial_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QDial* self, QAction* action ```
+/// @param self QDial*
+/// @param action QAction*
 void q_dial_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 libqt_list /* of QAction* */ q_dial_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDial* self, const char* text ```
+/// @param self QDial*
+/// @param text const char*
 QAction* q_dial_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDial* self, QIcon* icon, const char* text ```
+/// @param self QDial*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_dial_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDial* self, const char* text, QKeySequence* shortcut ```
+/// @param self QDial*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_dial_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDial* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QDial*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_dial_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWidget* q_dial_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QDial* self, int typeVal ```
+/// @param self QDial*
+/// @param typeVal flag of enum Qt__WindowType
 void q_dial_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_dial_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QDial* self, enum Qt__WindowType param1 ```
+/// @param self QDial*
+/// @param param1 enum Qt__WindowType
 void q_dial_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QDial* self, int typeVal ```
+/// @param self QDial*
+/// @param typeVal flag of enum Qt__WindowType
 void q_dial_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum Qt__WindowType
 int64_t q_dial_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_dial_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDial* self, int x, int y ```
+/// @param self QDial*
+/// @param x int
+/// @param y int
 QWidget* q_dial_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDial* self, QPoint* p ```
+/// @param self QDial*
+/// @param p QPoint*
 QWidget* q_dial_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDial* self, QPointF* p ```
+/// @param self QDial*
+/// @param p QPointF*
 QWidget* q_dial_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QDial* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QDial*
+/// @param param1 enum Qt__WidgetAttribute
 void q_dial_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QDial* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QDial*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_dial_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QDial* self, QWidget* child ```
+/// @param self QDial*
+/// @param child QWidget*
 bool q_dial_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QDial* self, bool enabled ```
+/// @param self QDial*
+/// @param enabled bool
 void q_dial_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QBackingStore* q_dial_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QWindow* q_dial_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QScreen* q_dial_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QDial* self, QScreen* screen ```
+/// @param self QDial*
+/// @param screen QScreen*
 void q_dial_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_dial_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDial* self, const char* title ```
+/// @param self QDial*
+/// @param title const char*
 void q_dial_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, const char*) ```
-void q_dial_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, const char*)
+void q_dial_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDial* self, QIcon* icon ```
+/// @param self QDial*
+/// @param icon QIcon*
 void q_dial_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QIcon*) ```
-void q_dial_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QIcon*)
+void q_dial_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDial* self, const char* iconText ```
+/// @param self QDial*
+/// @param iconText const char*
 void q_dial_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, const char*) ```
-void q_dial_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, const char*)
+void q_dial_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDial* self, QPoint* pos ```
+/// @param self QDial*
+/// @param pos QPoint*
 void q_dial_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QPoint*) ```
-void q_dial_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QPoint*)
+void q_dial_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_dial_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QDial* self, int hints ```
+/// @param self QDial*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_dial_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QDial*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_dial_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QDial*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_dial_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QDial*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_dial_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QDial*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_dial_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QDial*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_dial_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDial* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QDial*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_dial_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QDial* self, QRect* rectangle ```
+/// @param self QDial*
+/// @param rectangle QRect*
 QPixmap* q_dial_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QDial* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QDial*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_dial_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QDial* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QDial*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_dial_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QDial* self, int id, bool enable ```
+/// @param self QDial*
+/// @param id int
+/// @param enable bool
 void q_dial_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QDial* self, int id, bool enable ```
+/// @param self QDial*
+/// @param id int
+/// @param enable bool
 void q_dial_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QDial* self, enum Qt__WindowType param1, bool on ```
+/// @param self QDial*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_dial_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QDial* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QDial*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_dial_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_dial_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_dial_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char* q_dial_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDial* self, char* name ```
+/// @param self QDial*
+/// @param name char*
 void q_dial_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QDial* self, bool b ```
+/// @param self QDial*
+/// @param b bool
 bool q_dial_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QThread* q_dial_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDial* self, QThread* thread ```
+/// @param self QDial*
+/// @param thread QThread*
 bool q_dial_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDial* self, int interval ```
+/// @param self QDial*
+/// @param interval int
 int32_t q_dial_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDial* self, int id ```
+/// @param self QDial*
+/// @param id int
 void q_dial_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDial* self, enum Qt__TimerId id ```
+/// @param self QDial*
+/// @param id enum Qt__TimerId
 void q_dial_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 libqt_list /* of QObject* */ q_dial_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QDial* self, QObject* filterObj ```
+/// @param self QDial*
+/// @param filterObj QObject*
 void q_dial_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QDial* self, QObject* obj ```
+/// @param self QDial*
+/// @param obj QObject*
 void q_dial_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_dial_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDial* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QDial*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_dial_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_dial_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_dial_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QDial* self, const char* name, QVariant* value ```
+/// @param self QDial*
+/// @param name const char*
+/// @param value QVariant*
 bool q_dial_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QDial* self, const char* name ```
+/// @param self QDial*
+/// @param name const char*
 QVariant* q_dial_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QDial* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDial*
 const char** q_dial_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QBindingStorage* q_dial_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 const QBindingStorage* q_dial_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDial* self, void (*slot)(QDial*) ```
-void q_dial_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*)
+void q_dial_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QObject* q_dial_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QDial* self, const char* classname ```
+/// @param self QDial*
+/// @param classname const char*
 bool q_dial_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDial* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QDial*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_dial_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDial* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QDial*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_dial_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_dial_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDial* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QDial*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_dial_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDial* self, QObject* param1 ```
+/// @param self QDial*
+/// @param param1 QObject*
 void q_dial_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QObject*) ```
-void q_dial_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QObject*)
+void q_dial_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 double q_dial_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 double q_dial_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_dial_device_pixel_ratio_f_scale();
 
@@ -2788,7 +3138,8 @@ double q_dial_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_dial_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QAbstractSlider
@@ -2797,7 +3148,8 @@ int32_t q_dial_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QKeyEvent* ev ```
+/// @param self QDial*
+/// @param ev QKeyEvent*
 void q_dial_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
@@ -2806,7 +3158,8 @@ void q_dial_key_press_event(void* self, void* ev);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QKeyEvent* ev ```
+/// @param self QDial*
+/// @param ev QKeyEvent*
 void q_dial_qbase_key_press_event(void* self, void* ev);
 
 /// Inherited from QAbstractSlider
@@ -2815,8 +3168,9 @@ void q_dial_qbase_key_press_event(void* self, void* ev);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QKeyEvent*) ```
-void q_dial_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QKeyEvent*)
+void q_dial_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
 ///
@@ -2824,7 +3178,8 @@ void q_dial_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QTimerEvent* param1 ```
+/// @param self QDial*
+/// @param param1 QTimerEvent*
 void q_dial_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
@@ -2833,7 +3188,8 @@ void q_dial_timer_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QTimerEvent* param1 ```
+/// @param self QDial*
+/// @param param1 QTimerEvent*
 void q_dial_qbase_timer_event(void* self, void* param1);
 
 /// Inherited from QAbstractSlider
@@ -2842,8 +3198,9 @@ void q_dial_qbase_timer_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QTimerEvent*) ```
-void q_dial_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QTimerEvent*)
+void q_dial_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
 ///
@@ -2851,7 +3208,8 @@ void q_dial_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QWheelEvent* e ```
+/// @param self QDial*
+/// @param e QWheelEvent*
 void q_dial_wheel_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
@@ -2860,7 +3218,8 @@ void q_dial_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QWheelEvent* e ```
+/// @param self QDial*
+/// @param e QWheelEvent*
 void q_dial_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
@@ -2869,8 +3228,9 @@ void q_dial_qbase_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QWheelEvent*) ```
-void q_dial_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QWheelEvent*)
+void q_dial_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
 ///
@@ -2878,7 +3238,8 @@ void q_dial_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QEvent* e ```
+/// @param self QDial*
+/// @param e QEvent*
 void q_dial_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
@@ -2887,7 +3248,8 @@ void q_dial_change_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QEvent* e ```
+/// @param self QDial*
+/// @param e QEvent*
 void q_dial_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractSlider
@@ -2896,8 +3258,9 @@ void q_dial_qbase_change_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QEvent*) ```
-void q_dial_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QEvent*)
+void q_dial_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2905,7 +3268,7 @@ void q_dial_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2914,7 +3277,7 @@ int32_t q_dial_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2923,8 +3286,9 @@ int32_t q_dial_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int32_t (*slot)() ```
-void q_dial_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QDial*
+/// @param callback int32_t fn()
+void q_dial_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2932,7 +3296,8 @@ void q_dial_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, bool visible ```
+/// @param self QDial*
+/// @param visible bool
 void q_dial_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2941,7 +3306,8 @@ void q_dial_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, bool visible ```
+/// @param self QDial*
+/// @param visible bool
 void q_dial_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2950,8 +3316,9 @@ void q_dial_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, bool) ```
-void q_dial_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QDial*
+/// @param callback void fn(QDial*, bool)
+void q_dial_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2959,7 +3326,8 @@ void q_dial_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, int param1 ```
+/// @param self QDial*
+/// @param param1 int
 int32_t q_dial_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2968,7 +3336,8 @@ int32_t q_dial_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, int param1 ```
+/// @param self QDial*
+/// @param param1 int
 int32_t q_dial_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2977,8 +3346,9 @@ int32_t q_dial_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int32_t (*slot)(QDial*, int) ```
-void q_dial_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QDial*
+/// @param callback int32_t fn(QDial*, int)
+void q_dial_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2986,7 +3356,7 @@ void q_dial_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2995,7 +3365,7 @@ bool q_dial_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3004,8 +3374,9 @@ bool q_dial_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)() ```
-void q_dial_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QDial*
+/// @param callback bool fn()
+void q_dial_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3013,7 +3384,7 @@ void q_dial_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPaintEngine* q_dial_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3022,7 +3393,7 @@ QPaintEngine* q_dial_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPaintEngine* q_dial_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3031,8 +3402,9 @@ QPaintEngine* q_dial_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, QPaintEngine* (*slot)() ```
-void q_dial_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QDial*
+/// @param callback QPaintEngine* fn()
+void q_dial_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3040,7 +3412,8 @@ void q_dial_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QMouseEvent* event ```
+/// @param self QDial*
+/// @param event QMouseEvent*
 void q_dial_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3049,7 +3422,8 @@ void q_dial_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QMouseEvent* event ```
+/// @param self QDial*
+/// @param event QMouseEvent*
 void q_dial_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3058,8 +3432,9 @@ void q_dial_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMouseEvent*) ```
-void q_dial_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMouseEvent*)
+void q_dial_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3067,7 +3442,8 @@ void q_dial_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QKeyEvent* event ```
+/// @param self QDial*
+/// @param event QKeyEvent*
 void q_dial_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3076,7 +3452,8 @@ void q_dial_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QKeyEvent* event ```
+/// @param self QDial*
+/// @param event QKeyEvent*
 void q_dial_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3085,8 +3462,9 @@ void q_dial_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QKeyEvent*) ```
-void q_dial_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QKeyEvent*)
+void q_dial_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3094,7 +3472,8 @@ void q_dial_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QFocusEvent* event ```
+/// @param self QDial*
+/// @param event QFocusEvent*
 void q_dial_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3103,7 +3482,8 @@ void q_dial_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QFocusEvent* event ```
+/// @param self QDial*
+/// @param event QFocusEvent*
 void q_dial_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3112,8 +3492,9 @@ void q_dial_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QFocusEvent*) ```
-void q_dial_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QFocusEvent*)
+void q_dial_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3121,7 +3502,8 @@ void q_dial_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QFocusEvent* event ```
+/// @param self QDial*
+/// @param event QFocusEvent*
 void q_dial_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3130,7 +3512,8 @@ void q_dial_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QFocusEvent* event ```
+/// @param self QDial*
+/// @param event QFocusEvent*
 void q_dial_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3139,8 +3522,9 @@ void q_dial_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QFocusEvent*) ```
-void q_dial_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QFocusEvent*)
+void q_dial_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3148,7 +3532,8 @@ void q_dial_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QEnterEvent* event ```
+/// @param self QDial*
+/// @param event QEnterEvent*
 void q_dial_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3157,7 +3542,8 @@ void q_dial_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QEnterEvent* event ```
+/// @param self QDial*
+/// @param event QEnterEvent*
 void q_dial_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3166,8 +3552,9 @@ void q_dial_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QEnterEvent*) ```
-void q_dial_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QEnterEvent*)
+void q_dial_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3175,7 +3562,8 @@ void q_dial_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QEvent* event ```
+/// @param self QDial*
+/// @param event QEvent*
 void q_dial_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3184,7 +3572,8 @@ void q_dial_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QEvent* event ```
+/// @param self QDial*
+/// @param event QEvent*
 void q_dial_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3193,8 +3582,9 @@ void q_dial_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QEvent*) ```
-void q_dial_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QEvent*)
+void q_dial_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3202,7 +3592,8 @@ void q_dial_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QMoveEvent* event ```
+/// @param self QDial*
+/// @param event QMoveEvent*
 void q_dial_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3211,7 +3602,8 @@ void q_dial_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QMoveEvent* event ```
+/// @param self QDial*
+/// @param event QMoveEvent*
 void q_dial_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3220,8 +3612,9 @@ void q_dial_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMoveEvent*) ```
-void q_dial_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMoveEvent*)
+void q_dial_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3229,7 +3622,8 @@ void q_dial_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QCloseEvent* event ```
+/// @param self QDial*
+/// @param event QCloseEvent*
 void q_dial_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3238,7 +3632,8 @@ void q_dial_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QCloseEvent* event ```
+/// @param self QDial*
+/// @param event QCloseEvent*
 void q_dial_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3247,8 +3642,9 @@ void q_dial_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QCloseEvent*) ```
-void q_dial_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QCloseEvent*)
+void q_dial_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3256,7 +3652,8 @@ void q_dial_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QContextMenuEvent* event ```
+/// @param self QDial*
+/// @param event QContextMenuEvent*
 void q_dial_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3265,7 +3662,8 @@ void q_dial_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QContextMenuEvent* event ```
+/// @param self QDial*
+/// @param event QContextMenuEvent*
 void q_dial_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3274,8 +3672,9 @@ void q_dial_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QContextMenuEvent*) ```
-void q_dial_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QContextMenuEvent*)
+void q_dial_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3283,7 +3682,8 @@ void q_dial_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QTabletEvent* event ```
+/// @param self QDial*
+/// @param event QTabletEvent*
 void q_dial_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3292,7 +3692,8 @@ void q_dial_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QTabletEvent* event ```
+/// @param self QDial*
+/// @param event QTabletEvent*
 void q_dial_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3301,8 +3702,9 @@ void q_dial_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QTabletEvent*) ```
-void q_dial_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QTabletEvent*)
+void q_dial_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3310,7 +3712,8 @@ void q_dial_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QActionEvent* event ```
+/// @param self QDial*
+/// @param event QActionEvent*
 void q_dial_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3319,7 +3722,8 @@ void q_dial_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QActionEvent* event ```
+/// @param self QDial*
+/// @param event QActionEvent*
 void q_dial_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3328,8 +3732,9 @@ void q_dial_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QActionEvent*) ```
-void q_dial_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QActionEvent*)
+void q_dial_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3337,7 +3742,8 @@ void q_dial_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QDragEnterEvent* event ```
+/// @param self QDial*
+/// @param event QDragEnterEvent*
 void q_dial_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3346,7 +3752,8 @@ void q_dial_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QDragEnterEvent* event ```
+/// @param self QDial*
+/// @param event QDragEnterEvent*
 void q_dial_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3355,8 +3762,9 @@ void q_dial_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QDragEnterEvent*) ```
-void q_dial_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QDragEnterEvent*)
+void q_dial_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3364,7 +3772,8 @@ void q_dial_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QDragMoveEvent* event ```
+/// @param self QDial*
+/// @param event QDragMoveEvent*
 void q_dial_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3373,7 +3782,8 @@ void q_dial_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QDragMoveEvent* event ```
+/// @param self QDial*
+/// @param event QDragMoveEvent*
 void q_dial_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3382,8 +3792,9 @@ void q_dial_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QDragMoveEvent*) ```
-void q_dial_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QDragMoveEvent*)
+void q_dial_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3391,7 +3802,8 @@ void q_dial_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QDragLeaveEvent* event ```
+/// @param self QDial*
+/// @param event QDragLeaveEvent*
 void q_dial_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3400,7 +3812,8 @@ void q_dial_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QDragLeaveEvent* event ```
+/// @param self QDial*
+/// @param event QDragLeaveEvent*
 void q_dial_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3409,8 +3822,9 @@ void q_dial_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QDragLeaveEvent*) ```
-void q_dial_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QDragLeaveEvent*)
+void q_dial_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3418,7 +3832,8 @@ void q_dial_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QDropEvent* event ```
+/// @param self QDial*
+/// @param event QDropEvent*
 void q_dial_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3427,7 +3842,8 @@ void q_dial_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QDropEvent* event ```
+/// @param self QDial*
+/// @param event QDropEvent*
 void q_dial_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3436,8 +3852,9 @@ void q_dial_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QDropEvent*) ```
-void q_dial_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QDropEvent*)
+void q_dial_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3445,7 +3862,8 @@ void q_dial_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QShowEvent* event ```
+/// @param self QDial*
+/// @param event QShowEvent*
 void q_dial_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3454,7 +3872,8 @@ void q_dial_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QShowEvent* event ```
+/// @param self QDial*
+/// @param event QShowEvent*
 void q_dial_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3463,8 +3882,9 @@ void q_dial_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QShowEvent*) ```
-void q_dial_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QShowEvent*)
+void q_dial_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3472,7 +3892,8 @@ void q_dial_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QHideEvent* event ```
+/// @param self QDial*
+/// @param event QHideEvent*
 void q_dial_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3481,7 +3902,8 @@ void q_dial_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QHideEvent* event ```
+/// @param self QDial*
+/// @param event QHideEvent*
 void q_dial_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3490,8 +3912,9 @@ void q_dial_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QHideEvent*) ```
-void q_dial_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QHideEvent*)
+void q_dial_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3499,7 +3922,10 @@ void q_dial_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QDial*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_dial_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3508,7 +3934,10 @@ bool q_dial_native_event(void* self, const char* eventType, void* message, intpt
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QDial*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_dial_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3517,8 +3946,9 @@ bool q_dial_qbase_native_event(void* self, const char* eventType, void* message,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)(QDial*, const char*, void*, intptr_t*) ```
-void q_dial_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QDial*
+/// @param callback bool fn(QDial*, const char*, void*, intptr_t*)
+void q_dial_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3526,7 +3956,8 @@ void q_dial_on_native_event(void* self, bool (*slot)(void*, const char*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QDial*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_dial_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3535,7 +3966,8 @@ int32_t q_dial_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QDial*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_dial_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3544,8 +3976,9 @@ int32_t q_dial_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int32_t (*slot)(QDial*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_dial_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QDial*
+/// @param callback int32_t fn(QDial*, enum QPaintDevice__PaintDeviceMetric)
+void q_dial_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3553,7 +3986,8 @@ void q_dial_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QPainter* painter ```
+/// @param self QDial*
+/// @param painter QPainter*
 void q_dial_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3562,7 +3996,8 @@ void q_dial_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QPainter* painter ```
+/// @param self QDial*
+/// @param painter QPainter*
 void q_dial_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3571,8 +4006,9 @@ void q_dial_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QPainter*) ```
-void q_dial_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QPainter*)
+void q_dial_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3580,7 +4016,8 @@ void q_dial_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QPoint* offset ```
+/// @param self QDial*
+/// @param offset QPoint*
 QPaintDevice* q_dial_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3589,7 +4026,8 @@ QPaintDevice* q_dial_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QPoint* offset ```
+/// @param self QDial*
+/// @param offset QPoint*
 QPaintDevice* q_dial_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3598,8 +4036,9 @@ QPaintDevice* q_dial_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, QPaintDevice* (*slot)(QDial*, QPoint*) ```
-void q_dial_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback QPaintDevice* fn(QDial*, QPoint*)
+void q_dial_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3607,7 +4046,7 @@ void q_dial_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPainter* q_dial_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3616,7 +4055,7 @@ QPainter* q_dial_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QPainter* q_dial_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3625,8 +4064,9 @@ QPainter* q_dial_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, QPainter* (*slot)() ```
-void q_dial_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QDial*
+/// @param callback QPainter* fn()
+void q_dial_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3634,7 +4074,8 @@ void q_dial_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QInputMethodEvent* param1 ```
+/// @param self QDial*
+/// @param param1 QInputMethodEvent*
 void q_dial_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3643,7 +4084,8 @@ void q_dial_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QInputMethodEvent* param1 ```
+/// @param self QDial*
+/// @param param1 QInputMethodEvent*
 void q_dial_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3652,8 +4094,9 @@ void q_dial_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QInputMethodEvent*) ```
-void q_dial_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QInputMethodEvent*)
+void q_dial_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3661,7 +4104,8 @@ void q_dial_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QDial*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_dial_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3670,7 +4114,8 @@ QVariant* q_dial_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QDial*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_dial_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3679,8 +4124,9 @@ QVariant* q_dial_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, QVariant* (*slot)(QDial*, enum Qt__InputMethodQuery) ```
-void q_dial_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QDial*
+/// @param callback QVariant* fn(QDial*, enum Qt__InputMethodQuery)
+void q_dial_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3688,7 +4134,8 @@ void q_dial_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, bool next ```
+/// @param self QDial*
+/// @param next bool
 bool q_dial_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3697,7 +4144,8 @@ bool q_dial_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, bool next ```
+/// @param self QDial*
+/// @param next bool
 bool q_dial_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3706,8 +4154,9 @@ bool q_dial_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)(QDial*, bool) ```
-void q_dial_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QDial*
+/// @param callback bool fn(QDial*, bool)
+void q_dial_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3715,7 +4164,9 @@ void q_dial_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QObject* watched, QEvent* event ```
+/// @param self QDial*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_dial_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3724,7 +4175,9 @@ bool q_dial_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QObject* watched, QEvent* event ```
+/// @param self QDial*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_dial_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3733,8 +4186,9 @@ bool q_dial_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)(QDial*, QObject*, QEvent*) ```
-void q_dial_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QDial*
+/// @param callback bool fn(QDial*, QObject*, QEvent*)
+void q_dial_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3742,7 +4196,8 @@ void q_dial_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QChildEvent* event ```
+/// @param self QDial*
+/// @param event QChildEvent*
 void q_dial_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3751,7 +4206,8 @@ void q_dial_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QChildEvent* event ```
+/// @param self QDial*
+/// @param event QChildEvent*
 void q_dial_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3760,8 +4216,9 @@ void q_dial_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QChildEvent*) ```
-void q_dial_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QChildEvent*)
+void q_dial_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3769,7 +4226,8 @@ void q_dial_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QEvent* event ```
+/// @param self QDial*
+/// @param event QEvent*
 void q_dial_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3778,7 +4236,8 @@ void q_dial_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QEvent* event ```
+/// @param self QDial*
+/// @param event QEvent*
 void q_dial_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3787,8 +4246,9 @@ void q_dial_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QEvent*) ```
-void q_dial_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QEvent*)
+void q_dial_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3796,7 +4256,8 @@ void q_dial_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 void q_dial_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3805,7 +4266,8 @@ void q_dial_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 void q_dial_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3814,8 +4276,9 @@ void q_dial_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMetaMethod*) ```
-void q_dial_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMetaMethod*)
+void q_dial_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3823,7 +4286,8 @@ void q_dial_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 void q_dial_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3832,7 +4296,8 @@ void q_dial_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 void q_dial_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3841,8 +4306,9 @@ void q_dial_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, QMetaMethod*) ```
-void q_dial_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, QMetaMethod*)
+void q_dial_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractSlider
 ///
@@ -3850,7 +4316,8 @@ void q_dial_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QDial*
+/// @param action enum QAbstractSlider__SliderAction
 void q_dial_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
@@ -3859,7 +4326,8 @@ void q_dial_set_repeat_action(void* self, int64_t action);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, enum QAbstractSlider__SliderAction action ```
+/// @param self QDial*
+/// @param action enum QAbstractSlider__SliderAction
 void q_dial_qbase_set_repeat_action(void* self, int64_t action);
 
 /// Inherited from QAbstractSlider
@@ -3868,8 +4336,9 @@ void q_dial_qbase_set_repeat_action(void* self, int64_t action);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)(QDial*, enum QAbstractSlider__SliderAction) ```
-void q_dial_on_set_repeat_action(void* self, void (*slot)(void*, int64_t));
+/// @param self QDial*
+/// @param callback void fn(QDial*, enum QAbstractSlider__SliderAction)
+void q_dial_on_set_repeat_action(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSlider
 ///
@@ -3877,7 +4346,9 @@ void q_dial_on_set_repeat_action(void* self, void (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum QAbstractSlider__SliderAction
 int64_t q_dial_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
@@ -3886,7 +4357,9 @@ int64_t q_dial_repeat_action(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
+///
+/// @return enum QAbstractSlider__SliderAction
 int64_t q_dial_qbase_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
@@ -3895,8 +4368,9 @@ int64_t q_dial_qbase_repeat_action(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int64_t (*slot)() ```
-void q_dial_on_repeat_action(void* self, int64_t (*slot)());
+/// @param self QDial*
+/// @param callback int64_t fn()
+void q_dial_on_repeat_action(void* self, int64_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3904,7 +4378,7 @@ void q_dial_on_repeat_action(void* self, int64_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3913,7 +4387,7 @@ void q_dial_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3922,8 +4396,9 @@ void q_dial_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)() ```
-void q_dial_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QDial*
+/// @param callback void fn()
+void q_dial_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3931,7 +4406,7 @@ void q_dial_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_create(void* self);
 
 /// Inherited from QWidget
@@ -3940,7 +4415,7 @@ void q_dial_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3949,8 +4424,9 @@ void q_dial_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)() ```
-void q_dial_on_create(void* self, void (*slot)());
+/// @param self QDial*
+/// @param callback void fn()
+void q_dial_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3958,7 +4434,7 @@ void q_dial_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3967,7 +4443,7 @@ void q_dial_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3976,8 +4452,9 @@ void q_dial_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, void (*slot)() ```
-void q_dial_on_destroy(void* self, void (*slot)());
+/// @param self QDial*
+/// @param callback void fn()
+void q_dial_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3985,7 +4462,7 @@ void q_dial_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3994,7 +4471,7 @@ bool q_dial_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4003,8 +4480,9 @@ bool q_dial_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)() ```
-void q_dial_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QDial*
+/// @param callback bool fn()
+void q_dial_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4012,7 +4490,7 @@ void q_dial_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4021,7 +4499,7 @@ bool q_dial_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 bool q_dial_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4030,8 +4508,9 @@ bool q_dial_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)() ```
-void q_dial_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QDial*
+/// @param callback bool fn()
+void q_dial_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4039,7 +4518,7 @@ void q_dial_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QObject* q_dial_sender(void* self);
 
 /// Inherited from QObject
@@ -4048,7 +4527,7 @@ QObject* q_dial_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 QObject* q_dial_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4057,8 +4536,9 @@ QObject* q_dial_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, QObject* (*slot)() ```
-void q_dial_on_sender(void* self, QObject* (*slot)());
+/// @param self QDial*
+/// @param callback QObject* fn()
+void q_dial_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4066,7 +4546,7 @@ void q_dial_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4075,7 +4555,7 @@ int32_t q_dial_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 int32_t q_dial_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4084,8 +4564,9 @@ int32_t q_dial_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int32_t (*slot)() ```
-void q_dial_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QDial*
+/// @param callback int32_t fn()
+void q_dial_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4093,7 +4574,8 @@ void q_dial_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, const char* signal ```
+/// @param self QDial*
+/// @param signal const char*
 int32_t q_dial_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4102,7 +4584,8 @@ int32_t q_dial_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, const char* signal ```
+/// @param self QDial*
+/// @param signal const char*
 int32_t q_dial_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4111,8 +4594,9 @@ int32_t q_dial_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, int32_t (*slot)(QDial*, const char*) ```
-void q_dial_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QDial*
+/// @param callback int32_t fn(QDial*, const char*)
+void q_dial_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4120,7 +4604,8 @@ void q_dial_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 bool q_dial_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4129,7 +4614,8 @@ bool q_dial_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, QMetaMethod* signal ```
+/// @param self QDial*
+/// @param signal QMetaMethod*
 bool q_dial_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4138,8 +4624,9 @@ bool q_dial_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, bool (*slot)(QDial*, QMetaMethod*) ```
-void q_dial_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QDial*
+/// @param callback bool fn(QDial*, QMetaMethod*)
+void q_dial_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4147,7 +4634,9 @@ void q_dial_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDial* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QDial*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_dial_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4156,7 +4645,9 @@ double q_dial_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDial* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QDial*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_dial_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4165,8 +4656,9 @@ double q_dial_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDial* self, double (*slot)(QDial*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_dial_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QDial*
+/// @param callback double fn(QDial*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_dial_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4174,14 +4666,15 @@ void q_dial_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDial* self, void (*slot)(QDial*, const char*) ```
-void q_dial_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDial*
+/// @param callback void fn(QDial*, const char*)
+void q_dial_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdial.html#dtor.QDial)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDial* self ```
+/// @param self QDial*
 void q_dial_delete(void* self);
 
 #endif

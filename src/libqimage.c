@@ -71,8 +71,8 @@ int32_t q_image_dev_type(void* self) {
     return QImage_DevType((QImage*)self);
 }
 
-void q_image_on_dev_type(void* self, int32_t (*slot)()) {
-    QImage_OnDevType((QImage*)self, (intptr_t)slot);
+void q_image_on_dev_type(void* self, int32_t (*callback)()) {
+    QImage_OnDevType((QImage*)self, (intptr_t)callback);
 }
 
 int32_t q_image_qbase_dev_type(void* self) {
@@ -446,8 +446,8 @@ QPaintEngine* q_image_paint_engine(void* self) {
     return QImage_PaintEngine((QImage*)self);
 }
 
-void q_image_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QImage_OnPaintEngine((QImage*)self, (intptr_t)slot);
+void q_image_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QImage_OnPaintEngine((QImage*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_image_qbase_paint_engine(void* self) {
@@ -482,12 +482,16 @@ const char** q_image_text_keys(void* self) {
     libqt_list _arr = QImage_TextKeys((QImage*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_image_text_keys");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -520,8 +524,8 @@ int32_t q_image_metric(void* self, int64_t metric) {
     return QImage_Metric((QImage*)self, metric);
 }
 
-void q_image_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QImage_OnMetric((QImage*)self, (intptr_t)slot);
+void q_image_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QImage_OnMetric((QImage*)self, (intptr_t)callback);
 }
 
 int32_t q_image_qbase_metric(void* self, int64_t metric) {
@@ -532,8 +536,8 @@ QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical) {
     return QImage_MirroredHelper((QImage*)self, horizontal, vertical);
 }
 
-void q_image_on_mirrored_helper(void* self, QImage* (*slot)(void*, bool, bool)) {
-    QImage_OnMirroredHelper((QImage*)self, (intptr_t)slot);
+void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, bool)) {
+    QImage_OnMirroredHelper((QImage*)self, (intptr_t)callback);
 }
 
 QImage* q_image_qbase_mirrored_helper(void* self, bool horizontal, bool vertical) {
@@ -544,8 +548,8 @@ QImage* q_image_rgb_swapped_helper(void* self) {
     return QImage_RgbSwappedHelper((QImage*)self);
 }
 
-void q_image_on_rgb_swapped_helper(void* self, QImage* (*slot)()) {
-    QImage_OnRgbSwappedHelper((QImage*)self, (intptr_t)slot);
+void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)()) {
+    QImage_OnRgbSwappedHelper((QImage*)self, (intptr_t)callback);
 }
 
 QImage* q_image_qbase_rgb_swapped_helper(void* self) {
@@ -556,8 +560,8 @@ void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical) {
     QImage_MirroredInplace((QImage*)self, horizontal, vertical);
 }
 
-void q_image_on_mirrored_inplace(void* self, void (*slot)(void*, bool, bool)) {
-    QImage_OnMirroredInplace((QImage*)self, (intptr_t)slot);
+void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool)) {
+    QImage_OnMirroredInplace((QImage*)self, (intptr_t)callback);
 }
 
 void q_image_qbase_mirrored_inplace(void* self, bool horizontal, bool vertical) {
@@ -568,8 +572,8 @@ void q_image_rgb_swapped_inplace(void* self) {
     QImage_RgbSwappedInplace((QImage*)self);
 }
 
-void q_image_on_rgb_swapped_inplace(void* self, void (*slot)()) {
-    QImage_OnRgbSwappedInplace((QImage*)self, (intptr_t)slot);
+void q_image_on_rgb_swapped_inplace(void* self, void (*callback)()) {
+    QImage_OnRgbSwappedInplace((QImage*)self, (intptr_t)callback);
 }
 
 void q_image_qbase_rgb_swapped_inplace(void* self) {
@@ -580,8 +584,8 @@ QImage* q_image_convert_to_format_helper(void* self, int64_t format, int64_t fla
     return QImage_ConvertToFormatHelper((QImage*)self, format, flags);
 }
 
-void q_image_on_convert_to_format_helper(void* self, QImage* (*slot)(void*, int64_t, int64_t)) {
-    QImage_OnConvertToFormatHelper((QImage*)self, (intptr_t)slot);
+void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int64_t, int64_t)) {
+    QImage_OnConvertToFormatHelper((QImage*)self, (intptr_t)callback);
 }
 
 QImage* q_image_qbase_convert_to_format_helper(void* self, int64_t format, int64_t flags) {
@@ -592,8 +596,8 @@ bool q_image_convert_to_format_inplace(void* self, int64_t format, int64_t flags
     return QImage_ConvertToFormatInplace((QImage*)self, format, flags);
 }
 
-void q_image_on_convert_to_format_inplace(void* self, bool (*slot)(void*, int64_t, int64_t)) {
-    QImage_OnConvertToFormatInplace((QImage*)self, (intptr_t)slot);
+void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int64_t, int64_t)) {
+    QImage_OnConvertToFormatInplace((QImage*)self, (intptr_t)callback);
 }
 
 bool q_image_qbase_convert_to_format_inplace(void* self, int64_t format, int64_t flags) {
@@ -604,8 +608,8 @@ QImage* q_image_smooth_scaled(void* self, int w, int h) {
     return QImage_SmoothScaled((QImage*)self, w, h);
 }
 
-void q_image_on_smooth_scaled(void* self, QImage* (*slot)(void*, int, int)) {
-    QImage_OnSmoothScaled((QImage*)self, (intptr_t)slot);
+void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int)) {
+    QImage_OnSmoothScaled((QImage*)self, (intptr_t)callback);
 }
 
 QImage* q_image_qbase_smooth_scaled(void* self, int w, int h) {
@@ -616,8 +620,8 @@ void q_image_detach_metadata(void* self) {
     QImage_DetachMetadata((QImage*)self);
 }
 
-void q_image_on_detach_metadata(void* self, void (*slot)()) {
-    QImage_OnDetachMetadata((QImage*)self, (intptr_t)slot);
+void q_image_on_detach_metadata(void* self, void (*callback)()) {
+    QImage_OnDetachMetadata((QImage*)self, (intptr_t)callback);
 }
 
 void q_image_qbase_detach_metadata(void* self) {
@@ -777,8 +781,8 @@ void q_image_detach_metadata1(void* self, bool invalidateCache) {
     QImage_DetachMetadata1((QImage*)self, invalidateCache);
 }
 
-void q_image_on_detach_metadata1(void* self, void (*slot)(void*, bool)) {
-    QImage_OnDetachMetadata1((QImage*)self, (intptr_t)slot);
+void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool)) {
+    QImage_OnDetachMetadata1((QImage*)self, (intptr_t)callback);
 }
 
 void q_image_qbase_detach_metadata1(void* self, bool invalidateCache) {
@@ -833,8 +837,8 @@ void q_image_qbase_init_painter(void* self, void* painter) {
     QImage_QBaseInitPainter((QImage*)self, (QPainter*)painter);
 }
 
-void q_image_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QImage_OnInitPainter((QImage*)self, (intptr_t)slot);
+void q_image_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QImage_OnInitPainter((QImage*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_image_redirected(void* self, void* offset) {
@@ -845,8 +849,8 @@ QPaintDevice* q_image_qbase_redirected(void* self, void* offset) {
     return QImage_QBaseRedirected((QImage*)self, (QPoint*)offset);
 }
 
-void q_image_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QImage_OnRedirected((QImage*)self, (intptr_t)slot);
+void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QImage_OnRedirected((QImage*)self, (intptr_t)callback);
 }
 
 QPainter* q_image_shared_painter(void* self) {
@@ -857,8 +861,8 @@ QPainter* q_image_qbase_shared_painter(void* self) {
     return QImage_QBaseSharedPainter((QImage*)self);
 }
 
-void q_image_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QImage_OnSharedPainter((QImage*)self, (intptr_t)slot);
+void q_image_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QImage_OnSharedPainter((QImage*)self, (intptr_t)callback);
 }
 
 double q_image_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -869,8 +873,8 @@ double q_image_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t m
     return QImage_QBaseGetDecodedMetricF((QImage*)self, metricA, metricB);
 }
 
-void q_image_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QImage_OnGetDecodedMetricF((QImage*)self, (intptr_t)slot);
+void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QImage_OnGetDecodedMetricF((QImage*)self, (intptr_t)callback);
 }
 
 void q_image_delete(void* self) {

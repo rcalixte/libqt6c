@@ -287,224 +287,224 @@ void q_abstractaxis_visible_changed(void* self, bool visible) {
     QAbstractAxis_VisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_LinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_abstractaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_line_visible_changed(void* self, bool visible) {
     QAbstractAxis_LineVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_visible_changed(void* self, bool visible) {
     QAbstractAxis_LabelsVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_brush_changed(void* self, void* brush) {
     QAbstractAxis_LabelsBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_abstractaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_font_changed(void* self, void* pen) {
     QAbstractAxis_LabelsFontChanged((QAbstractAxis*)self, (QFont*)pen);
 }
 
-void q_abstractaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_angle_changed(void* self, int angle) {
     QAbstractAxis_LabelsAngleChanged((QAbstractAxis*)self, angle);
 }
 
-void q_abstractaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_GridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_abstractaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_GridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_minor_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_MinorGridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_minor_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_MinorGridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_abstractaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_GridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_minor_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_MinorGridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_color_changed(void* self, void* color) {
     QAbstractAxis_ColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_color_changed(void* self, void* color) {
     QAbstractAxis_LabelsColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_title_text_changed(void* self, const char* title) {
     QAbstractAxis_TitleTextChanged((QAbstractAxis*)self, qstring(title));
 }
 
-void q_abstractaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_title_brush_changed(void* self, void* brush) {
     QAbstractAxis_TitleBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_abstractaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_title_visible_changed(void* self, bool visible) {
     QAbstractAxis_TitleVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_title_font_changed(void* self, void* font) {
     QAbstractAxis_TitleFontChanged((QAbstractAxis*)self, (QFont*)font);
 }
 
-void q_abstractaxis_on_title_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_title_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_shades_visible_changed(void* self, bool visible) {
     QAbstractAxis_ShadesVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_abstractaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_shades_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_shades_border_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesBorderColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_abstractaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_shades_pen_changed(void* self, void* pen) {
     QAbstractAxis_ShadesPenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_abstractaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_shades_brush_changed(void* self, void* brush) {
     QAbstractAxis_ShadesBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_abstractaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_reverse_changed(void* self, bool reverse) {
     QAbstractAxis_ReverseChanged((QAbstractAxis*)self, reverse);
 }
 
-void q_abstractaxis_on_reverse_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_reverse_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_editable_changed(void* self, bool editable) {
     QAbstractAxis_LabelsEditableChanged((QAbstractAxis*)self, editable);
 }
 
-void q_abstractaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_labels_truncated_changed(void* self, bool labelsTruncated) {
     QAbstractAxis_LabelsTruncatedChanged((QAbstractAxis*)self, labelsTruncated);
 }
 
-void q_abstractaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_truncate_labels_changed(void* self, bool truncateLabels) {
     QAbstractAxis_TruncateLabelsChanged((QAbstractAxis*)self, truncateLabels);
 }
 
-void q_abstractaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_abstractaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 const char* q_abstractaxis_tr2(const char* s, const char* c) {
@@ -673,12 +673,16 @@ const char** q_abstractaxis_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_abstractaxis_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -696,8 +700,8 @@ void q_abstractaxis_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_abstractaxis_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_abstractaxis_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_abstractaxis_parent(void* self) {
@@ -732,12 +736,12 @@ void q_abstractaxis_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_abstractaxis_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_abstractaxis_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_abstractaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_abstractaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_abstractaxis_delete(void* self) {

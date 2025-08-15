@@ -263,24 +263,33 @@ bool q_sslconfiguration_ocsp_stapling_enabled(void* self) {
 
 void q_sslconfiguration_set_allowed_next_protocols(void* self, const char* protocols[]) {
     size_t protocols_len = libqt_strv_length(protocols);
-    libqt_string* protocols_qstr = malloc(protocols_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < protocols_len; ++_i) {
-        protocols_qstr[_i] = qstring(protocols[_i]);
+    libqt_string* protocols_qstr = (libqt_string*)malloc(protocols_len * sizeof(libqt_string));
+    if (protocols_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_set_allowed_next_protocols");
+        abort();
+    }
+    for (size_t i = 0; i < protocols_len; ++i) {
+        protocols_qstr[i] = qstring(protocols[i]);
     }
     libqt_list protocols_list = qlist(protocols_qstr, protocols_len);
     QSslConfiguration_SetAllowedNextProtocols((QSslConfiguration*)self, protocols_list);
+    free(protocols_qstr);
 }
 
 const char** q_sslconfiguration_allowed_next_protocols(void* self) {
     libqt_list _arr = QSslConfiguration_AllowedNextProtocols((QSslConfiguration*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_sslconfiguration_allowed_next_protocols");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

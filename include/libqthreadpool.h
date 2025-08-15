@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,425 +15,496 @@
 
 /// q_threadpool_new constructs a new QThreadPool object.
 ///
-///
 QThreadPool* q_threadpool_new();
 
 /// q_threadpool_new2 constructs a new QThreadPool object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QThreadPool* q_threadpool_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 const QMetaObject* q_threadpool_meta_object(void* self);
 
-/// ``` QThreadPool* self, const char* param1 ```
+/// @param self QThreadPool*
+/// @param param1 const char*
 void* q_threadpool_metacast(void* self, const char* param1);
 
-/// ``` QThreadPool* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QThreadPool*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_threadpool_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QThreadPool* self, int32_t (*slot)(QThreadPool*, enum QMetaObject__Call, int, void*) ```
-void q_threadpool_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QThreadPool*
+/// @param callback int32_t fn(QThreadPool*, enum QMetaObject__Call, int, void*)
+void q_threadpool_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QThreadPool* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QThreadPool*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_threadpool_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_threadpool_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#globalInstance)
-///
 ///
 QThreadPool* q_threadpool_global_instance();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#start)
 ///
-/// ``` QThreadPool* self, QRunnable* runnable ```
+/// @param self QThreadPool*
+/// @param runnable QRunnable*
 void q_threadpool_start(void* self, void* runnable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#tryStart)
 ///
-/// ``` QThreadPool* self, QRunnable* runnable ```
+/// @param self QThreadPool*
+/// @param runnable QRunnable*
 bool q_threadpool_try_start(void* self, void* runnable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#startOnReservedThread)
 ///
-/// ``` QThreadPool* self, QRunnable* runnable ```
+/// @param self QThreadPool*
+/// @param runnable QRunnable*
 void q_threadpool_start_on_reserved_thread(void* self, void* runnable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#expiryTimeout)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 int32_t q_threadpool_expiry_timeout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#setExpiryTimeout)
 ///
-/// ``` QThreadPool* self, int expiryTimeout ```
+/// @param self QThreadPool*
+/// @param expiryTimeout int
 void q_threadpool_set_expiry_timeout(void* self, int expiryTimeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#maxThreadCount)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 int32_t q_threadpool_max_thread_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#setMaxThreadCount)
 ///
-/// ``` QThreadPool* self, int maxThreadCount ```
+/// @param self QThreadPool*
+/// @param maxThreadCount int
 void q_threadpool_set_max_thread_count(void* self, int maxThreadCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#activeThreadCount)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 int32_t q_threadpool_active_thread_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#setStackSize)
 ///
-/// ``` QThreadPool* self, uint32_t stackSize ```
+/// @param self QThreadPool*
+/// @param stackSize uint32_t
 void q_threadpool_set_stack_size(void* self, uint32_t stackSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#stackSize)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 uint32_t q_threadpool_stack_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#setThreadPriority)
 ///
-/// ``` QThreadPool* self, enum QThread__Priority priority ```
+/// @param self QThreadPool*
+/// @param priority enum QThread__Priority
 void q_threadpool_set_thread_priority(void* self, int64_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#threadPriority)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
+///
+/// @return enum QThread__Priority
 int64_t q_threadpool_thread_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#reserveThread)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_reserve_thread(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#releaseThread)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_release_thread(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
 ///
-/// ``` QThreadPool* self, int msecs ```
+/// @param self QThreadPool*
+/// @param msecs int
 bool q_threadpool_wait_for_done(void* self, int msecs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 bool q_threadpool_wait_for_done2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#clear)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#contains)
 ///
-/// ``` QThreadPool* self, QThread* thread ```
+/// @param self QThreadPool*
+/// @param thread QThread*
 bool q_threadpool_contains(void* self, void* thread);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#tryTake)
 ///
-/// ``` QThreadPool* self, QRunnable* runnable ```
+/// @param self QThreadPool*
+/// @param runnable QRunnable*
 bool q_threadpool_try_take(void* self, void* runnable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_threadpool_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_threadpool_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#start)
 ///
-/// ``` QThreadPool* self, QRunnable* runnable, int priority ```
+/// @param self QThreadPool*
+/// @param runnable QRunnable*
+/// @param priority int
 void q_threadpool_start2(void* self, void* runnable, int priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#waitForDone)
 ///
-/// ``` QThreadPool* self, QDeadlineTimer* deadline ```
+/// @param self QThreadPool*
+/// @param deadline QDeadlineTimer*
 bool q_threadpool_wait_for_done1(void* self, void* deadline);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QThreadPool* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QThreadPool*
 const char* q_threadpool_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QThreadPool* self, char* name ```
+/// @param self QThreadPool*
+/// @param name char*
 void q_threadpool_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 bool q_threadpool_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 bool q_threadpool_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 bool q_threadpool_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 bool q_threadpool_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QThreadPool* self, bool b ```
+/// @param self QThreadPool*
+/// @param b bool
 bool q_threadpool_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 QThread* q_threadpool_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QThreadPool* self, QThread* thread ```
+/// @param self QThreadPool*
+/// @param thread QThread*
 bool q_threadpool_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QThreadPool* self, int interval ```
+/// @param self QThreadPool*
+/// @param interval int
 int32_t q_threadpool_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QThreadPool* self, int id ```
+/// @param self QThreadPool*
+/// @param id int
 void q_threadpool_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QThreadPool* self, enum Qt__TimerId id ```
+/// @param self QThreadPool*
+/// @param id enum Qt__TimerId
 void q_threadpool_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 libqt_list /* of QObject* */ q_threadpool_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QThreadPool* self, QObject* parent ```
+/// @param self QThreadPool*
+/// @param parent QObject*
 void q_threadpool_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QThreadPool* self, QObject* filterObj ```
+/// @param self QThreadPool*
+/// @param filterObj QObject*
 void q_threadpool_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QThreadPool* self, QObject* obj ```
+/// @param self QThreadPool*
+/// @param obj QObject*
 void q_threadpool_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_threadpool_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QThreadPool* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QThreadPool*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_threadpool_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_threadpool_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_threadpool_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QThreadPool* self, const char* name, QVariant* value ```
+/// @param self QThreadPool*
+/// @param name const char*
+/// @param value QVariant*
 bool q_threadpool_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QThreadPool* self, const char* name ```
+/// @param self QThreadPool*
+/// @param name const char*
 QVariant* q_threadpool_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QThreadPool* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QThreadPool*
 const char** q_threadpool_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 QBindingStorage* q_threadpool_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 const QBindingStorage* q_threadpool_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*) ```
-void q_threadpool_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*)
+void q_threadpool_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 QObject* q_threadpool_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QThreadPool* self, const char* classname ```
+/// @param self QThreadPool*
+/// @param classname const char*
 bool q_threadpool_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QThreadPool* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QThreadPool*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_threadpool_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QThreadPool* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QThreadPool*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_threadpool_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_threadpool_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QThreadPool* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QThreadPool*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_threadpool_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThreadPool* self, QObject* param1 ```
+/// @param self QThreadPool*
+/// @param param1 QObject*
 void q_threadpool_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QObject*) ```
-void q_threadpool_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QObject*)
+void q_threadpool_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -442,7 +512,8 @@ void q_threadpool_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QEvent* event ```
+/// @param self QThreadPool*
+/// @param event QEvent*
 bool q_threadpool_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -451,7 +522,8 @@ bool q_threadpool_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QEvent* event ```
+/// @param self QThreadPool*
+/// @param event QEvent*
 bool q_threadpool_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -460,8 +532,9 @@ bool q_threadpool_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, bool (*slot)(QThreadPool*, QEvent*) ```
-void q_threadpool_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback bool fn(QThreadPool*, QEvent*)
+void q_threadpool_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -469,7 +542,9 @@ void q_threadpool_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QObject* watched, QEvent* event ```
+/// @param self QThreadPool*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_threadpool_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -478,7 +553,9 @@ bool q_threadpool_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QObject* watched, QEvent* event ```
+/// @param self QThreadPool*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_threadpool_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -487,8 +564,9 @@ bool q_threadpool_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, bool (*slot)(QThreadPool*, QObject*, QEvent*) ```
-void q_threadpool_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QThreadPool*
+/// @param callback bool fn(QThreadPool*, QObject*, QEvent*)
+void q_threadpool_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -496,7 +574,8 @@ void q_threadpool_on_event_filter(void* self, bool (*slot)(void*, void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QTimerEvent* event ```
+/// @param self QThreadPool*
+/// @param event QTimerEvent*
 void q_threadpool_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -505,7 +584,8 @@ void q_threadpool_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QTimerEvent* event ```
+/// @param self QThreadPool*
+/// @param event QTimerEvent*
 void q_threadpool_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -514,8 +594,9 @@ void q_threadpool_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QTimerEvent*) ```
-void q_threadpool_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QTimerEvent*)
+void q_threadpool_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -523,7 +604,8 @@ void q_threadpool_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QChildEvent* event ```
+/// @param self QThreadPool*
+/// @param event QChildEvent*
 void q_threadpool_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -532,7 +614,8 @@ void q_threadpool_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QChildEvent* event ```
+/// @param self QThreadPool*
+/// @param event QChildEvent*
 void q_threadpool_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -541,8 +624,9 @@ void q_threadpool_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QChildEvent*) ```
-void q_threadpool_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QChildEvent*)
+void q_threadpool_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -550,7 +634,8 @@ void q_threadpool_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QEvent* event ```
+/// @param self QThreadPool*
+/// @param event QEvent*
 void q_threadpool_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -559,7 +644,8 @@ void q_threadpool_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QEvent* event ```
+/// @param self QThreadPool*
+/// @param event QEvent*
 void q_threadpool_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -568,8 +654,9 @@ void q_threadpool_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QEvent*) ```
-void q_threadpool_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QEvent*)
+void q_threadpool_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -577,7 +664,8 @@ void q_threadpool_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 void q_threadpool_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -586,7 +674,8 @@ void q_threadpool_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 void q_threadpool_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -595,8 +684,9 @@ void q_threadpool_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QMetaMethod*) ```
-void q_threadpool_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QMetaMethod*)
+void q_threadpool_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -604,7 +694,8 @@ void q_threadpool_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 void q_threadpool_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -613,7 +704,8 @@ void q_threadpool_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 void q_threadpool_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -622,8 +714,9 @@ void q_threadpool_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, QMetaMethod*) ```
-void q_threadpool_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, QMetaMethod*)
+void q_threadpool_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -631,7 +724,7 @@ void q_threadpool_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 QObject* q_threadpool_sender(void* self);
 
 /// Inherited from QObject
@@ -640,7 +733,7 @@ QObject* q_threadpool_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 QObject* q_threadpool_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -649,8 +742,9 @@ QObject* q_threadpool_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QObject* (*slot)() ```
-void q_threadpool_on_sender(void* self, QObject* (*slot)());
+/// @param self QThreadPool*
+/// @param callback QObject* fn()
+void q_threadpool_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -658,7 +752,7 @@ void q_threadpool_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 int32_t q_threadpool_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -667,7 +761,7 @@ int32_t q_threadpool_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 int32_t q_threadpool_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -676,8 +770,9 @@ int32_t q_threadpool_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, int32_t (*slot)() ```
-void q_threadpool_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QThreadPool*
+/// @param callback int32_t fn()
+void q_threadpool_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -685,7 +780,8 @@ void q_threadpool_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, const char* signal ```
+/// @param self QThreadPool*
+/// @param signal const char*
 int32_t q_threadpool_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -694,7 +790,8 @@ int32_t q_threadpool_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, const char* signal ```
+/// @param self QThreadPool*
+/// @param signal const char*
 int32_t q_threadpool_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -703,8 +800,9 @@ int32_t q_threadpool_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, int32_t (*slot)(QThreadPool*, const char*) ```
-void q_threadpool_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QThreadPool*
+/// @param callback int32_t fn(QThreadPool*, const char*)
+void q_threadpool_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -712,7 +810,8 @@ void q_threadpool_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 bool q_threadpool_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -721,7 +820,8 @@ bool q_threadpool_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QThreadPool* self, QMetaMethod* signal ```
+/// @param self QThreadPool*
+/// @param signal QMetaMethod*
 bool q_threadpool_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -730,8 +830,9 @@ bool q_threadpool_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QThreadPool* self, bool (*slot)(QThreadPool*, QMetaMethod*) ```
-void q_threadpool_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QThreadPool*
+/// @param callback bool fn(QThreadPool*, QMetaMethod*)
+void q_threadpool_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -739,14 +840,15 @@ void q_threadpool_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QThreadPool* self, void (*slot)(QThreadPool*, const char*) ```
-void q_threadpool_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QThreadPool*
+/// @param callback void fn(QThreadPool*, const char*)
+void q_threadpool_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthreadpool.html#dtor.QThreadPool)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QThreadPool* self ```
+/// @param self QThreadPool*
 void q_threadpool_delete(void* self);
 
 #endif

@@ -54,8 +54,8 @@ int32_t q_shortcut_metacall(void* self, int64_t param1, int param2, void* param3
     return QShortcut_Metacall((QShortcut*)self, param1, param2, param3);
 }
 
-void q_shortcut_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QShortcut_OnMetacall((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QShortcut_OnMetacall((QShortcut*)self, (intptr_t)callback);
 }
 
 int32_t q_shortcut_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -133,24 +133,24 @@ void q_shortcut_activated(void* self) {
     QShortcut_Activated((QShortcut*)self);
 }
 
-void q_shortcut_on_activated(void* self, void (*slot)(void*)) {
-    QShortcut_Connect_Activated((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_activated(void* self, void (*callback)(void*)) {
+    QShortcut_Connect_Activated((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_activated_ambiguously(void* self) {
     QShortcut_ActivatedAmbiguously((QShortcut*)self);
 }
 
-void q_shortcut_on_activated_ambiguously(void* self, void (*slot)(void*)) {
-    QShortcut_Connect_ActivatedAmbiguously((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_activated_ambiguously(void* self, void (*callback)(void*)) {
+    QShortcut_Connect_ActivatedAmbiguously((QShortcut*)self, (intptr_t)callback);
 }
 
 bool q_shortcut_event(void* self, void* e) {
     return QShortcut_Event((QShortcut*)self, (QEvent*)e);
 }
 
-void q_shortcut_on_event(void* self, bool (*slot)(void*, void*)) {
-    QShortcut_OnEvent((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_event(void* self, bool (*callback)(void*, void*)) {
+    QShortcut_OnEvent((QShortcut*)self, (intptr_t)callback);
 }
 
 bool q_shortcut_qbase_event(void* self, void* e) {
@@ -275,12 +275,16 @@ const char** q_shortcut_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_shortcut_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -298,8 +302,8 @@ void q_shortcut_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_shortcut_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_shortcut_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_shortcut_parent(void* self) {
@@ -334,8 +338,8 @@ void q_shortcut_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_shortcut_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_shortcut_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_shortcut_event_filter(void* self, void* watched, void* event) {
@@ -346,8 +350,8 @@ bool q_shortcut_qbase_event_filter(void* self, void* watched, void* event) {
     return QShortcut_QBaseEventFilter((QShortcut*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_shortcut_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QShortcut_OnEventFilter((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QShortcut_OnEventFilter((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_timer_event(void* self, void* event) {
@@ -358,8 +362,8 @@ void q_shortcut_qbase_timer_event(void* self, void* event) {
     QShortcut_QBaseTimerEvent((QShortcut*)self, (QTimerEvent*)event);
 }
 
-void q_shortcut_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QShortcut_OnTimerEvent((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QShortcut_OnTimerEvent((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_child_event(void* self, void* event) {
@@ -370,8 +374,8 @@ void q_shortcut_qbase_child_event(void* self, void* event) {
     QShortcut_QBaseChildEvent((QShortcut*)self, (QChildEvent*)event);
 }
 
-void q_shortcut_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QShortcut_OnChildEvent((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QShortcut_OnChildEvent((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_custom_event(void* self, void* event) {
@@ -382,8 +386,8 @@ void q_shortcut_qbase_custom_event(void* self, void* event) {
     QShortcut_QBaseCustomEvent((QShortcut*)self, (QEvent*)event);
 }
 
-void q_shortcut_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QShortcut_OnCustomEvent((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QShortcut_OnCustomEvent((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_connect_notify(void* self, void* signal) {
@@ -394,8 +398,8 @@ void q_shortcut_qbase_connect_notify(void* self, void* signal) {
     QShortcut_QBaseConnectNotify((QShortcut*)self, (QMetaMethod*)signal);
 }
 
-void q_shortcut_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QShortcut_OnConnectNotify((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QShortcut_OnConnectNotify((QShortcut*)self, (intptr_t)callback);
 }
 
 void q_shortcut_disconnect_notify(void* self, void* signal) {
@@ -406,8 +410,8 @@ void q_shortcut_qbase_disconnect_notify(void* self, void* signal) {
     QShortcut_QBaseDisconnectNotify((QShortcut*)self, (QMetaMethod*)signal);
 }
 
-void q_shortcut_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QShortcut_OnDisconnectNotify((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QShortcut_OnDisconnectNotify((QShortcut*)self, (intptr_t)callback);
 }
 
 QObject* q_shortcut_sender(void* self) {
@@ -418,8 +422,8 @@ QObject* q_shortcut_qbase_sender(void* self) {
     return QShortcut_QBaseSender((QShortcut*)self);
 }
 
-void q_shortcut_on_sender(void* self, QObject* (*slot)()) {
-    QShortcut_OnSender((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_sender(void* self, QObject* (*callback)()) {
+    QShortcut_OnSender((QShortcut*)self, (intptr_t)callback);
 }
 
 int32_t q_shortcut_sender_signal_index(void* self) {
@@ -430,8 +434,8 @@ int32_t q_shortcut_qbase_sender_signal_index(void* self) {
     return QShortcut_QBaseSenderSignalIndex((QShortcut*)self);
 }
 
-void q_shortcut_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QShortcut_OnSenderSignalIndex((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QShortcut_OnSenderSignalIndex((QShortcut*)self, (intptr_t)callback);
 }
 
 int32_t q_shortcut_receivers(void* self, const char* signal) {
@@ -442,8 +446,8 @@ int32_t q_shortcut_qbase_receivers(void* self, const char* signal) {
     return QShortcut_QBaseReceivers((QShortcut*)self, signal);
 }
 
-void q_shortcut_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QShortcut_OnReceivers((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QShortcut_OnReceivers((QShortcut*)self, (intptr_t)callback);
 }
 
 bool q_shortcut_is_signal_connected(void* self, void* signal) {
@@ -454,12 +458,12 @@ bool q_shortcut_qbase_is_signal_connected(void* self, void* signal) {
     return QShortcut_QBaseIsSignalConnected((QShortcut*)self, (QMetaMethod*)signal);
 }
 
-void q_shortcut_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QShortcut_OnIsSignalConnected((QShortcut*)self, (intptr_t)slot);
+void q_shortcut_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QShortcut_OnIsSignalConnected((QShortcut*)self, (intptr_t)callback);
 }
 
-void q_shortcut_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_shortcut_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_shortcut_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1477 +15,1649 @@
 
 /// q_dialog_new constructs a new QDialog object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QDialog* q_dialog_new(void* parent);
 
 /// q_dialog_new2 constructs a new QDialog object.
-///
 ///
 QDialog* q_dialog_new2();
 
 /// q_dialog_new3 constructs a new QDialog object.
 ///
-/// ``` QWidget* parent, int f ```
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 QDialog* q_dialog_new3(void* parent, int64_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 const QMetaObject* q_dialog_meta_object(void* self);
 
-/// ``` QDialog* self, const char* param1 ```
+/// @param self QDialog*
+/// @param param1 const char*
 void* q_dialog_metacast(void* self, const char* param1);
 
-/// ``` QDialog* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDialog*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_dialog_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, int32_t (*slot)(QDialog*, enum QMetaObject__Call, int, void*) ```
-void q_dialog_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QDialog*
+/// @param callback int32_t fn(QDialog*, enum QMetaObject__Call, int, void*)
+void q_dialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QDialog* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDialog*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_dialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_dialog_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#result)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_result(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
-/// ``` QDialog* self, bool visible ```
+/// @param self QDialog*
+/// @param visible bool
 void q_dialog_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, bool) ```
-void q_dialog_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, bool)
+void q_dialog_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setVisible)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, bool visible ```
+/// @param self QDialog*
+/// @param visible bool
 void q_dialog_qbase_set_visible(void* self, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, QSize* (*slot)() ```
-void q_dialog_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QDialog*
+/// @param callback QSize* fn()
+void q_dialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, QSize* (*slot)() ```
-void q_dialog_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QDialog*
+/// @param callback QSize* fn()
+void q_dialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_qbase_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setSizeGripEnabled)
 ///
-/// ``` QDialog* self, bool sizeGripEnabled ```
+/// @param self QDialog*
+/// @param sizeGripEnabled bool
 void q_dialog_set_size_grip_enabled(void* self, bool sizeGripEnabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#isSizeGripEnabled)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_size_grip_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setModal)
 ///
-/// ``` QDialog* self, bool modal ```
+/// @param self QDialog*
+/// @param modal bool
 void q_dialog_set_modal(void* self, bool modal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#setResult)
 ///
-/// ``` QDialog* self, int r ```
+/// @param self QDialog*
+/// @param r int
 void q_dialog_set_result(void* self, int r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QDialog* self, int result ```
+/// @param self QDialog*
+/// @param result int
 void q_dialog_finished(void* self, int result);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#finished)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, int) ```
-void q_dialog_on_finished(void* self, void (*slot)(void*, int));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, int)
+void q_dialog_on_finished(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_accepted(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accepted)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*) ```
-void q_dialog_on_accepted(void* self, void (*slot)(void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*)
+void q_dialog_on_accepted(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_rejected(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#rejected)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*) ```
-void q_dialog_on_rejected(void* self, void (*slot)(void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*)
+void q_dialog_on_rejected(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_open(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_open(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_open(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#open)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_open(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_exec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, int32_t (*slot)() ```
-void q_dialog_on_exec(void* self, int32_t (*slot)());
+/// @param self QDialog*
+/// @param callback int32_t fn()
+void q_dialog_on_exec(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#exec)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_qbase_exec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
-/// ``` QDialog* self, int param1 ```
+/// @param self QDialog*
+/// @param param1 int
 void q_dialog_done(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, int) ```
-void q_dialog_on_done(void* self, void (*slot)(void*, int));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, int)
+void q_dialog_on_done(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#done)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, int param1 ```
+/// @param self QDialog*
+/// @param param1 int
 void q_dialog_qbase_done(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_accept(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_accept(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_accept(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#accept)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_accept(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_reject(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_reject(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_reject(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#reject)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_reject(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
-/// ``` QDialog* self, QKeyEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QKeyEvent*
 void q_dialog_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QKeyEvent*) ```
-void q_dialog_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QKeyEvent*)
+void q_dialog_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QKeyEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QKeyEvent*
 void q_dialog_qbase_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
-/// ``` QDialog* self, QCloseEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QCloseEvent*
 void q_dialog_close_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QCloseEvent*) ```
-void q_dialog_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QCloseEvent*)
+void q_dialog_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QCloseEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QCloseEvent*
 void q_dialog_qbase_close_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
-/// ``` QDialog* self, QShowEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QShowEvent*
 void q_dialog_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QShowEvent*) ```
-void q_dialog_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QShowEvent*)
+void q_dialog_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#showEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QShowEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QShowEvent*
 void q_dialog_qbase_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
-/// ``` QDialog* self, QResizeEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QResizeEvent*
 void q_dialog_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QResizeEvent*) ```
-void q_dialog_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QResizeEvent*)
+void q_dialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QResizeEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QResizeEvent*
 void q_dialog_qbase_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
-/// ``` QDialog* self, QContextMenuEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QContextMenuEvent*
 void q_dialog_context_menu_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QContextMenuEvent*) ```
-void q_dialog_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QContextMenuEvent*)
+void q_dialog_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QContextMenuEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QContextMenuEvent*
 void q_dialog_qbase_context_menu_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
-/// ``` QDialog* self, QObject* param1, QEvent* param2 ```
+/// @param self QDialog*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_dialog_event_filter(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, bool (*slot)(QDialog*, QObject*, QEvent*) ```
-void q_dialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QDialog*
+/// @param callback bool fn(QDialog*, QObject*, QEvent*)
+void q_dialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QObject* param1, QEvent* param2 ```
+/// @param self QDialog*
+/// @param param1 QObject*
+/// @param param2 QEvent*
 bool q_dialog_qbase_event_filter(void* self, void* param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
-/// ``` QDialog* self, QWidget* param1 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
 void q_dialog_adjust_position(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QWidget*) ```
-void q_dialog_on_adjust_position(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QWidget*)
+void q_dialog_on_adjust_position(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
 ///
 /// Base class method implementation
 ///
-/// ``` QDialog* self, QWidget* param1 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
 void q_dialog_qbase_adjust_position(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_dialog_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_dialog_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 uintptr_t q_dialog_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 uintptr_t q_dialog_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 uintptr_t q_dialog_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QStyle* q_dialog_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QDialog* self, QStyle* style ```
+/// @param self QDialog*
+/// @param style QStyle*
 void q_dialog_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum Qt__WindowModality
 int64_t q_dialog_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QDialog* self, enum Qt__WindowModality windowModality ```
+/// @param self QDialog*
+/// @param windowModality enum Qt__WindowModality
 void q_dialog_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QDialog* self, QWidget* param1 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
 bool q_dialog_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QDialog* self, bool enabled ```
+/// @param self QDialog*
+/// @param enabled bool
 void q_dialog_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QDialog* self, bool disabled ```
+/// @param self QDialog*
+/// @param disabled bool
 void q_dialog_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QDialog* self, bool windowModified ```
+/// @param self QDialog*
+/// @param windowModified bool
 void q_dialog_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRect* q_dialog_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 const QRect* q_dialog_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRect* q_dialog_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPoint* q_dialog_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRect* q_dialog_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRect* q_dialog_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRegion* q_dialog_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QDialog* self, QSize* minimumSize ```
+/// @param self QDialog*
+/// @param minimumSize QSize*
 void q_dialog_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QDialog* self, int minw, int minh ```
+/// @param self QDialog*
+/// @param minw int
+/// @param minh int
 void q_dialog_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QDialog* self, QSize* maximumSize ```
+/// @param self QDialog*
+/// @param maximumSize QSize*
 void q_dialog_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QDialog* self, int maxw, int maxh ```
+/// @param self QDialog*
+/// @param maxw int
+/// @param maxh int
 void q_dialog_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QDialog* self, int minw ```
+/// @param self QDialog*
+/// @param minw int
 void q_dialog_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QDialog* self, int minh ```
+/// @param self QDialog*
+/// @param minh int
 void q_dialog_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QDialog* self, int maxw ```
+/// @param self QDialog*
+/// @param maxw int
 void q_dialog_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QDialog* self, int maxh ```
+/// @param self QDialog*
+/// @param maxh int
 void q_dialog_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QDialog* self, QSize* sizeIncrement ```
+/// @param self QDialog*
+/// @param sizeIncrement QSize*
 void q_dialog_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QDialog* self, int w, int h ```
+/// @param self QDialog*
+/// @param w int
+/// @param h int
 void q_dialog_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSize* q_dialog_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QDialog* self, QSize* baseSize ```
+/// @param self QDialog*
+/// @param baseSize QSize*
 void q_dialog_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QDialog* self, int basew, int baseh ```
+/// @param self QDialog*
+/// @param basew int
+/// @param baseh int
 void q_dialog_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QDialog* self, QSize* fixedSize ```
+/// @param self QDialog*
+/// @param fixedSize QSize*
 void q_dialog_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QDialog* self, int w, int h ```
+/// @param self QDialog*
+/// @param w int
+/// @param h int
 void q_dialog_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QDialog* self, int w ```
+/// @param self QDialog*
+/// @param w int
 void q_dialog_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QDialog* self, int h ```
+/// @param self QDialog*
+/// @param h int
 void q_dialog_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QDialog* self, QPointF* param1 ```
+/// @param self QDialog*
+/// @param param1 QPointF*
 QPointF* q_dialog_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QDialog* self, QPoint* param1 ```
+/// @param self QDialog*
+/// @param param1 QPoint*
 QPoint* q_dialog_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QDialog* self, QPointF* param1 ```
+/// @param self QDialog*
+/// @param param1 QPointF*
 QPointF* q_dialog_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QDialog* self, QPoint* param1 ```
+/// @param self QDialog*
+/// @param param1 QPoint*
 QPoint* q_dialog_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QDialog* self, QPointF* param1 ```
+/// @param self QDialog*
+/// @param param1 QPointF*
 QPointF* q_dialog_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QDialog* self, QPoint* param1 ```
+/// @param self QDialog*
+/// @param param1 QPoint*
 QPoint* q_dialog_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QDialog* self, QPointF* param1 ```
+/// @param self QDialog*
+/// @param param1 QPointF*
 QPointF* q_dialog_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QDialog* self, QPoint* param1 ```
+/// @param self QDialog*
+/// @param param1 QPoint*
 QPoint* q_dialog_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QDialog* self, QWidget* param1, QPointF* param2 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_dialog_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QDialog* self, QWidget* param1, QPoint* param2 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_dialog_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QDialog* self, QWidget* param1, QPointF* param2 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_dialog_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QDialog* self, QWidget* param1, QPoint* param2 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_dialog_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 const QPalette* q_dialog_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QDialog* self, QPalette* palette ```
+/// @param self QDialog*
+/// @param palette QPalette*
 void q_dialog_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QDialog* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QDialog*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_dialog_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_dialog_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QDialog* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QDialog*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_dialog_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_dialog_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 const QFont* q_dialog_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QDialog* self, QFont* font ```
+/// @param self QDialog*
+/// @param font QFont*
 void q_dialog_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QFontMetrics* q_dialog_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QFontInfo* q_dialog_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QCursor* q_dialog_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QDialog* self, QCursor* cursor ```
+/// @param self QDialog*
+/// @param cursor QCursor*
 void q_dialog_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QDialog* self, bool enable ```
+/// @param self QDialog*
+/// @param enable bool
 void q_dialog_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QDialog* self, bool enable ```
+/// @param self QDialog*
+/// @param enable bool
 void q_dialog_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QDialog* self, QBitmap* mask ```
+/// @param self QDialog*
+/// @param mask QBitmap*
 void q_dialog_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QDialog* self, QRegion* mask ```
+/// @param self QDialog*
+/// @param mask QRegion*
 void q_dialog_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRegion* q_dialog_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPaintDevice* target ```
+/// @param self QDialog*
+/// @param target QPaintDevice*
 void q_dialog_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPainter* painter ```
+/// @param self QDialog*
+/// @param painter QPainter*
 void q_dialog_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPixmap* q_dialog_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QGraphicsEffect* q_dialog_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QDialog* self, QGraphicsEffect* effect ```
+/// @param self QDialog*
+/// @param effect QGraphicsEffect*
 void q_dialog_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QDialog* self, enum Qt__GestureType typeVal ```
+/// @param self QDialog*
+/// @param typeVal enum Qt__GestureType
 void q_dialog_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QDialog* self, enum Qt__GestureType typeVal ```
+/// @param self QDialog*
+/// @param typeVal enum Qt__GestureType
 void q_dialog_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QDialog* self, const char* windowTitle ```
+/// @param self QDialog*
+/// @param windowTitle const char*
 void q_dialog_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QDialog* self, const char* styleSheet ```
+/// @param self QDialog*
+/// @param styleSheet const char*
 void q_dialog_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QDialog* self, QIcon* icon ```
+/// @param self QDialog*
+/// @param icon QIcon*
 void q_dialog_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QIcon* q_dialog_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QDialog* self, const char* windowIconText ```
+/// @param self QDialog*
+/// @param windowIconText const char*
 void q_dialog_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QDialog* self, const char* windowRole ```
+/// @param self QDialog*
+/// @param windowRole const char*
 void q_dialog_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QDialog* self, const char* filePath ```
+/// @param self QDialog*
+/// @param filePath const char*
 void q_dialog_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QDialog* self, double level ```
+/// @param self QDialog*
+/// @param level double
 void q_dialog_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 double q_dialog_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QDialog* self, const char* toolTip ```
+/// @param self QDialog*
+/// @param toolTip const char*
 void q_dialog_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QDialog* self, int msec ```
+/// @param self QDialog*
+/// @param msec int
 void q_dialog_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QDialog* self, const char* statusTip ```
+/// @param self QDialog*
+/// @param statusTip const char*
 void q_dialog_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QDialog* self, const char* whatsThis ```
+/// @param self QDialog*
+/// @param whatsThis const char*
 void q_dialog_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QDialog* self, const char* name ```
+/// @param self QDialog*
+/// @param name const char*
 void q_dialog_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QDialog* self, const char* description ```
+/// @param self QDialog*
+/// @param description const char*
 void q_dialog_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QDialog* self, enum Qt__LayoutDirection direction ```
+/// @param self QDialog*
+/// @param direction enum Qt__LayoutDirection
 void q_dialog_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_dialog_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QDialog* self, QLocale* locale ```
+/// @param self QDialog*
+/// @param locale QLocale*
 void q_dialog_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QLocale* q_dialog_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QDialog* self, enum Qt__FocusReason reason ```
+/// @param self QDialog*
+/// @param reason enum Qt__FocusReason
 void q_dialog_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_dialog_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QDialog* self, enum Qt__FocusPolicy policy ```
+/// @param self QDialog*
+/// @param policy enum Qt__FocusPolicy
 void q_dialog_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_dialog_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QDialog* self, QWidget* focusProxy ```
+/// @param self QDialog*
+/// @param focusProxy QWidget*
 void q_dialog_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_dialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QDialog* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QDialog*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_dialog_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QDialog* self, QCursor* param1 ```
+/// @param self QDialog*
+/// @param param1 QCursor*
 void q_dialog_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QDialog* self, QKeySequence* key ```
+/// @param self QDialog*
+/// @param key QKeySequence*
 int32_t q_dialog_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QDialog* self, int id ```
+/// @param self QDialog*
+/// @param id int
 void q_dialog_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QDialog* self, int id ```
+/// @param self QDialog*
+/// @param id int
 void q_dialog_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QDialog* self, int id ```
+/// @param self QDialog*
+/// @param id int
 void q_dialog_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_dialog_mouse_grabber();
 
@@ -1494,1161 +1665,1327 @@ QWidget* q_dialog_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_dialog_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QDialog* self, bool enable ```
+/// @param self QDialog*
+/// @param enable bool
 void q_dialog_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QGraphicsProxyWidget* q_dialog_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDialog* self, int x, int y, int w, int h ```
+/// @param self QDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dialog_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDialog* self, QRect* param1 ```
+/// @param self QDialog*
+/// @param param1 QRect*
 void q_dialog_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QDialog* self, QRegion* param1 ```
+/// @param self QDialog*
+/// @param param1 QRegion*
 void q_dialog_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDialog* self, int x, int y, int w, int h ```
+/// @param self QDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dialog_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDialog* self, QRect* param1 ```
+/// @param self QDialog*
+/// @param param1 QRect*
 void q_dialog_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QDialog* self, QRegion* param1 ```
+/// @param self QDialog*
+/// @param param1 QRegion*
 void q_dialog_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QDialog* self, bool hidden ```
+/// @param self QDialog*
+/// @param hidden bool
 void q_dialog_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QDialog* self, QWidget* param1 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
 void q_dialog_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QDialog* self, int x, int y ```
+/// @param self QDialog*
+/// @param x int
+/// @param y int
 void q_dialog_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QDialog* self, QPoint* param1 ```
+/// @param self QDialog*
+/// @param param1 QPoint*
 void q_dialog_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QDialog* self, int w, int h ```
+/// @param self QDialog*
+/// @param w int
+/// @param h int
 void q_dialog_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QDialog* self, QSize* param1 ```
+/// @param self QDialog*
+/// @param param1 QSize*
 void q_dialog_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QDialog* self, int x, int y, int w, int h ```
+/// @param self QDialog*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_dialog_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QDialog* self, QRect* geometry ```
+/// @param self QDialog*
+/// @param geometry QRect*
 void q_dialog_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 char* q_dialog_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QDialog* self, const char* geometry ```
+/// @param self QDialog*
+/// @param geometry const char*
 bool q_dialog_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QDialog* self, QWidget* param1 ```
+/// @param self QDialog*
+/// @param param1 QWidget*
 bool q_dialog_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_dialog_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QDialog* self, int state ```
+/// @param self QDialog*
+/// @param state flag of enum Qt__WindowState
 void q_dialog_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QDialog* self, int state ```
+/// @param self QDialog*
+/// @param state flag of enum Qt__WindowState
 void q_dialog_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QSizePolicy* q_dialog_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QDialog* self, QSizePolicy* sizePolicy ```
+/// @param self QDialog*
+/// @param sizePolicy QSizePolicy*
 void q_dialog_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QDialog* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QDialog*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_dialog_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRegion* q_dialog_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QDialog* self, int left, int top, int right, int bottom ```
+/// @param self QDialog*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_dialog_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QDialog* self, QMargins* margins ```
+/// @param self QDialog*
+/// @param margins QMargins*
 void q_dialog_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QMargins* q_dialog_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QRect* q_dialog_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QLayout* q_dialog_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QDialog* self, QLayout* layout ```
+/// @param self QDialog*
+/// @param layout QLayout*
 void q_dialog_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QDialog* self, QWidget* parent ```
+/// @param self QDialog*
+/// @param parent QWidget*
 void q_dialog_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QDialog* self, QWidget* parent, int f ```
+/// @param self QDialog*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_dialog_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QDialog* self, int dx, int dy ```
+/// @param self QDialog*
+/// @param dx int
+/// @param dy int
 void q_dialog_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QDialog* self, int dx, int dy, QRect* param3 ```
+/// @param self QDialog*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_dialog_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QDialog* self, bool on ```
+/// @param self QDialog*
+/// @param on bool
 void q_dialog_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDialog* self, QAction* action ```
+/// @param self QDialog*
+/// @param action QAction*
 void q_dialog_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QDialog* self, libqt_list /* of QAction* */ actions ```
+/// @param self QDialog*
+/// @param actions libqt_list /* of QAction* */
 void q_dialog_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QDialog* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QDialog*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_dialog_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QDialog* self, QAction* before, QAction* action ```
+/// @param self QDialog*
+/// @param before QAction*
+/// @param action QAction*
 void q_dialog_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QDialog* self, QAction* action ```
+/// @param self QDialog*
+/// @param action QAction*
 void q_dialog_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 libqt_list /* of QAction* */ q_dialog_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDialog* self, const char* text ```
+/// @param self QDialog*
+/// @param text const char*
 QAction* q_dialog_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDialog* self, QIcon* icon, const char* text ```
+/// @param self QDialog*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_dialog_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDialog* self, const char* text, QKeySequence* shortcut ```
+/// @param self QDialog*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_dialog_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QDialog* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QDialog*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_dialog_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWidget* q_dialog_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QDialog* self, int typeVal ```
+/// @param self QDialog*
+/// @param typeVal flag of enum Qt__WindowType
 void q_dialog_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_dialog_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QDialog* self, enum Qt__WindowType param1 ```
+/// @param self QDialog*
+/// @param param1 enum Qt__WindowType
 void q_dialog_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QDialog* self, int typeVal ```
+/// @param self QDialog*
+/// @param typeVal flag of enum Qt__WindowType
 void q_dialog_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return enum Qt__WindowType
 int64_t q_dialog_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_dialog_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDialog* self, int x, int y ```
+/// @param self QDialog*
+/// @param x int
+/// @param y int
 QWidget* q_dialog_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDialog* self, QPoint* p ```
+/// @param self QDialog*
+/// @param p QPoint*
 QWidget* q_dialog_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QDialog* self, QPointF* p ```
+/// @param self QDialog*
+/// @param p QPointF*
 QWidget* q_dialog_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QDialog* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QDialog*
+/// @param param1 enum Qt__WidgetAttribute
 void q_dialog_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QDialog* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QDialog*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_dialog_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QDialog* self, QWidget* child ```
+/// @param self QDialog*
+/// @param child QWidget*
 bool q_dialog_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QDialog* self, bool enabled ```
+/// @param self QDialog*
+/// @param enabled bool
 void q_dialog_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QBackingStore* q_dialog_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QWindow* q_dialog_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QScreen* q_dialog_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QDialog* self, QScreen* screen ```
+/// @param self QDialog*
+/// @param screen QScreen*
 void q_dialog_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_dialog_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDialog* self, const char* title ```
+/// @param self QDialog*
+/// @param title const char*
 void q_dialog_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, const char*) ```
-void q_dialog_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, const char*)
+void q_dialog_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDialog* self, QIcon* icon ```
+/// @param self QDialog*
+/// @param icon QIcon*
 void q_dialog_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QIcon*) ```
-void q_dialog_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QIcon*)
+void q_dialog_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDialog* self, const char* iconText ```
+/// @param self QDialog*
+/// @param iconText const char*
 void q_dialog_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, const char*) ```
-void q_dialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, const char*)
+void q_dialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDialog* self, QPoint* pos ```
+/// @param self QDialog*
+/// @param pos QPoint*
 void q_dialog_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QPoint*) ```
-void q_dialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QPoint*)
+void q_dialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_dialog_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QDialog* self, int hints ```
+/// @param self QDialog*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_dialog_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_dialog_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_dialog_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QDialog*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_dialog_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_dialog_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_dialog_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QDialog* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QDialog*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_dialog_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QDialog* self, QRect* rectangle ```
+/// @param self QDialog*
+/// @param rectangle QRect*
 QPixmap* q_dialog_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QDialog* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QDialog*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_dialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QDialog* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QDialog*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_dialog_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QDialog* self, int id, bool enable ```
+/// @param self QDialog*
+/// @param id int
+/// @param enable bool
 void q_dialog_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QDialog* self, int id, bool enable ```
+/// @param self QDialog*
+/// @param id int
+/// @param enable bool
 void q_dialog_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QDialog* self, enum Qt__WindowType param1, bool on ```
+/// @param self QDialog*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_dialog_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QDialog* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QDialog*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_dialog_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_dialog_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_dialog_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char* q_dialog_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDialog* self, char* name ```
+/// @param self QDialog*
+/// @param name char*
 void q_dialog_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QDialog* self, bool b ```
+/// @param self QDialog*
+/// @param b bool
 bool q_dialog_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QThread* q_dialog_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDialog* self, QThread* thread ```
+/// @param self QDialog*
+/// @param thread QThread*
 bool q_dialog_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDialog* self, int interval ```
+/// @param self QDialog*
+/// @param interval int
 int32_t q_dialog_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDialog* self, int id ```
+/// @param self QDialog*
+/// @param id int
 void q_dialog_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDialog* self, enum Qt__TimerId id ```
+/// @param self QDialog*
+/// @param id enum Qt__TimerId
 void q_dialog_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 libqt_list /* of QObject* */ q_dialog_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QDialog* self, QObject* filterObj ```
+/// @param self QDialog*
+/// @param filterObj QObject*
 void q_dialog_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QDialog* self, QObject* obj ```
+/// @param self QDialog*
+/// @param obj QObject*
 void q_dialog_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_dialog_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDialog* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QDialog*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_dialog_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_dialog_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_dialog_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QDialog* self, const char* name, QVariant* value ```
+/// @param self QDialog*
+/// @param name const char*
+/// @param value QVariant*
 bool q_dialog_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QDialog* self, const char* name ```
+/// @param self QDialog*
+/// @param name const char*
 QVariant* q_dialog_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QDialog* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDialog*
 const char** q_dialog_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QBindingStorage* q_dialog_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 const QBindingStorage* q_dialog_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*) ```
-void q_dialog_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*)
+void q_dialog_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QObject* q_dialog_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QDialog* self, const char* classname ```
+/// @param self QDialog*
+/// @param classname const char*
 bool q_dialog_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDialog* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QDialog*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_dialog_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDialog* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QDialog*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_dialog_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_dialog_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDialog* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QDialog*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_dialog_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDialog* self, QObject* param1 ```
+/// @param self QDialog*
+/// @param param1 QObject*
 void q_dialog_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QObject*) ```
-void q_dialog_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QObject*)
+void q_dialog_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 double q_dialog_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 double q_dialog_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_dialog_device_pixel_ratio_f_scale();
 
@@ -2656,7 +2993,8 @@ double q_dialog_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_dialog_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2665,7 +3003,7 @@ int32_t q_dialog_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2674,7 +3012,7 @@ int32_t q_dialog_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2683,8 +3021,9 @@ int32_t q_dialog_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, int32_t (*slot)() ```
-void q_dialog_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QDialog*
+/// @param callback int32_t fn()
+void q_dialog_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2692,7 +3031,8 @@ void q_dialog_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, int param1 ```
+/// @param self QDialog*
+/// @param param1 int
 int32_t q_dialog_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2701,7 +3041,8 @@ int32_t q_dialog_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, int param1 ```
+/// @param self QDialog*
+/// @param param1 int
 int32_t q_dialog_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2710,8 +3051,9 @@ int32_t q_dialog_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, int32_t (*slot)(QDialog*, int) ```
-void q_dialog_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QDialog*
+/// @param callback int32_t fn(QDialog*, int)
+void q_dialog_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2719,7 +3061,7 @@ void q_dialog_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2728,7 +3070,7 @@ bool q_dialog_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2737,8 +3079,9 @@ bool q_dialog_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)() ```
-void q_dialog_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QDialog*
+/// @param callback bool fn()
+void q_dialog_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2746,7 +3089,7 @@ void q_dialog_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPaintEngine* q_dialog_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2755,7 +3098,7 @@ QPaintEngine* q_dialog_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPaintEngine* q_dialog_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2764,8 +3107,9 @@ QPaintEngine* q_dialog_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, QPaintEngine* (*slot)() ```
-void q_dialog_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QDialog*
+/// @param callback QPaintEngine* fn()
+void q_dialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2773,7 +3117,8 @@ void q_dialog_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 bool q_dialog_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2782,7 +3127,8 @@ bool q_dialog_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 bool q_dialog_qbase_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2791,8 +3137,9 @@ bool q_dialog_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)(QDialog*, QEvent*) ```
-void q_dialog_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback bool fn(QDialog*, QEvent*)
+void q_dialog_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2800,7 +3147,8 @@ void q_dialog_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2809,7 +3157,8 @@ void q_dialog_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2818,8 +3167,9 @@ void q_dialog_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMouseEvent*) ```
-void q_dialog_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMouseEvent*)
+void q_dialog_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2827,7 +3177,8 @@ void q_dialog_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2836,7 +3187,8 @@ void q_dialog_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2845,8 +3197,9 @@ void q_dialog_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMouseEvent*) ```
-void q_dialog_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMouseEvent*)
+void q_dialog_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2854,7 +3207,8 @@ void q_dialog_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2863,7 +3217,8 @@ void q_dialog_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2872,8 +3227,9 @@ void q_dialog_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMouseEvent*) ```
-void q_dialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMouseEvent*)
+void q_dialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2881,7 +3237,8 @@ void q_dialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2890,7 +3247,8 @@ void q_dialog_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMouseEvent* event ```
+/// @param self QDialog*
+/// @param event QMouseEvent*
 void q_dialog_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2899,8 +3257,9 @@ void q_dialog_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMouseEvent*) ```
-void q_dialog_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMouseEvent*)
+void q_dialog_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2908,7 +3267,8 @@ void q_dialog_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QWheelEvent* event ```
+/// @param self QDialog*
+/// @param event QWheelEvent*
 void q_dialog_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2917,7 +3277,8 @@ void q_dialog_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QWheelEvent* event ```
+/// @param self QDialog*
+/// @param event QWheelEvent*
 void q_dialog_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2926,8 +3287,9 @@ void q_dialog_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QWheelEvent*) ```
-void q_dialog_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QWheelEvent*)
+void q_dialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2935,7 +3297,8 @@ void q_dialog_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QKeyEvent* event ```
+/// @param self QDialog*
+/// @param event QKeyEvent*
 void q_dialog_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2944,7 +3307,8 @@ void q_dialog_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QKeyEvent* event ```
+/// @param self QDialog*
+/// @param event QKeyEvent*
 void q_dialog_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2953,8 +3317,9 @@ void q_dialog_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QKeyEvent*) ```
-void q_dialog_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QKeyEvent*)
+void q_dialog_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2962,7 +3327,8 @@ void q_dialog_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QFocusEvent* event ```
+/// @param self QDialog*
+/// @param event QFocusEvent*
 void q_dialog_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2971,7 +3337,8 @@ void q_dialog_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QFocusEvent* event ```
+/// @param self QDialog*
+/// @param event QFocusEvent*
 void q_dialog_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2980,8 +3347,9 @@ void q_dialog_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QFocusEvent*) ```
-void q_dialog_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QFocusEvent*)
+void q_dialog_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2989,7 +3357,8 @@ void q_dialog_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QFocusEvent* event ```
+/// @param self QDialog*
+/// @param event QFocusEvent*
 void q_dialog_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2998,7 +3367,8 @@ void q_dialog_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QFocusEvent* event ```
+/// @param self QDialog*
+/// @param event QFocusEvent*
 void q_dialog_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3007,8 +3377,9 @@ void q_dialog_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QFocusEvent*) ```
-void q_dialog_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QFocusEvent*)
+void q_dialog_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3016,7 +3387,8 @@ void q_dialog_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QEnterEvent* event ```
+/// @param self QDialog*
+/// @param event QEnterEvent*
 void q_dialog_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3025,7 +3397,8 @@ void q_dialog_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QEnterEvent* event ```
+/// @param self QDialog*
+/// @param event QEnterEvent*
 void q_dialog_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3034,8 +3407,9 @@ void q_dialog_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QEnterEvent*) ```
-void q_dialog_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QEnterEvent*)
+void q_dialog_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3043,7 +3417,8 @@ void q_dialog_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 void q_dialog_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3052,7 +3427,8 @@ void q_dialog_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 void q_dialog_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3061,8 +3437,9 @@ void q_dialog_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QEvent*) ```
-void q_dialog_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QEvent*)
+void q_dialog_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3070,7 +3447,8 @@ void q_dialog_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QPaintEvent* event ```
+/// @param self QDialog*
+/// @param event QPaintEvent*
 void q_dialog_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3079,7 +3457,8 @@ void q_dialog_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QPaintEvent* event ```
+/// @param self QDialog*
+/// @param event QPaintEvent*
 void q_dialog_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3088,8 +3467,9 @@ void q_dialog_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QPaintEvent*) ```
-void q_dialog_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QPaintEvent*)
+void q_dialog_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3097,7 +3477,8 @@ void q_dialog_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMoveEvent* event ```
+/// @param self QDialog*
+/// @param event QMoveEvent*
 void q_dialog_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3106,7 +3487,8 @@ void q_dialog_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMoveEvent* event ```
+/// @param self QDialog*
+/// @param event QMoveEvent*
 void q_dialog_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3115,8 +3497,9 @@ void q_dialog_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMoveEvent*) ```
-void q_dialog_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMoveEvent*)
+void q_dialog_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3124,7 +3507,8 @@ void q_dialog_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QTabletEvent* event ```
+/// @param self QDialog*
+/// @param event QTabletEvent*
 void q_dialog_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3133,7 +3517,8 @@ void q_dialog_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QTabletEvent* event ```
+/// @param self QDialog*
+/// @param event QTabletEvent*
 void q_dialog_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3142,8 +3527,9 @@ void q_dialog_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QTabletEvent*) ```
-void q_dialog_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QTabletEvent*)
+void q_dialog_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3151,7 +3537,8 @@ void q_dialog_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QActionEvent* event ```
+/// @param self QDialog*
+/// @param event QActionEvent*
 void q_dialog_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3160,7 +3547,8 @@ void q_dialog_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QActionEvent* event ```
+/// @param self QDialog*
+/// @param event QActionEvent*
 void q_dialog_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3169,8 +3557,9 @@ void q_dialog_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QActionEvent*) ```
-void q_dialog_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QActionEvent*)
+void q_dialog_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3178,7 +3567,8 @@ void q_dialog_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QDragEnterEvent* event ```
+/// @param self QDialog*
+/// @param event QDragEnterEvent*
 void q_dialog_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3187,7 +3577,8 @@ void q_dialog_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QDragEnterEvent* event ```
+/// @param self QDialog*
+/// @param event QDragEnterEvent*
 void q_dialog_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3196,8 +3587,9 @@ void q_dialog_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QDragEnterEvent*) ```
-void q_dialog_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QDragEnterEvent*)
+void q_dialog_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3205,7 +3597,8 @@ void q_dialog_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QDragMoveEvent* event ```
+/// @param self QDialog*
+/// @param event QDragMoveEvent*
 void q_dialog_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3214,7 +3607,8 @@ void q_dialog_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QDragMoveEvent* event ```
+/// @param self QDialog*
+/// @param event QDragMoveEvent*
 void q_dialog_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3223,8 +3617,9 @@ void q_dialog_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QDragMoveEvent*) ```
-void q_dialog_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QDragMoveEvent*)
+void q_dialog_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3232,7 +3627,8 @@ void q_dialog_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QDragLeaveEvent* event ```
+/// @param self QDialog*
+/// @param event QDragLeaveEvent*
 void q_dialog_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3241,7 +3637,8 @@ void q_dialog_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QDragLeaveEvent* event ```
+/// @param self QDialog*
+/// @param event QDragLeaveEvent*
 void q_dialog_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3250,8 +3647,9 @@ void q_dialog_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QDragLeaveEvent*) ```
-void q_dialog_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QDragLeaveEvent*)
+void q_dialog_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3259,7 +3657,8 @@ void q_dialog_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QDropEvent* event ```
+/// @param self QDialog*
+/// @param event QDropEvent*
 void q_dialog_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3268,7 +3667,8 @@ void q_dialog_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QDropEvent* event ```
+/// @param self QDialog*
+/// @param event QDropEvent*
 void q_dialog_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3277,8 +3677,9 @@ void q_dialog_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QDropEvent*) ```
-void q_dialog_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QDropEvent*)
+void q_dialog_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3286,7 +3687,8 @@ void q_dialog_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QHideEvent* event ```
+/// @param self QDialog*
+/// @param event QHideEvent*
 void q_dialog_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3295,7 +3697,8 @@ void q_dialog_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QHideEvent* event ```
+/// @param self QDialog*
+/// @param event QHideEvent*
 void q_dialog_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3304,8 +3707,9 @@ void q_dialog_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QHideEvent*) ```
-void q_dialog_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QHideEvent*)
+void q_dialog_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3313,7 +3717,10 @@ void q_dialog_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QDialog*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_dialog_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3322,7 +3729,10 @@ bool q_dialog_native_event(void* self, const char* eventType, void* message, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QDialog*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_dialog_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3331,8 +3741,9 @@ bool q_dialog_qbase_native_event(void* self, const char* eventType, void* messag
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)(QDialog*, const char*, void*, intptr_t*) ```
-void q_dialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QDialog*
+/// @param callback bool fn(QDialog*, const char*, void*, intptr_t*)
+void q_dialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3340,7 +3751,8 @@ void q_dialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QEvent*
 void q_dialog_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3349,7 +3761,8 @@ void q_dialog_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QEvent*
 void q_dialog_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3358,8 +3771,9 @@ void q_dialog_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QEvent*) ```
-void q_dialog_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QEvent*)
+void q_dialog_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3367,7 +3781,8 @@ void q_dialog_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QDialog*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_dialog_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3376,7 +3791,8 @@ int32_t q_dialog_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QDialog*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_dialog_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3385,8 +3801,9 @@ int32_t q_dialog_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, int32_t (*slot)(QDialog*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_dialog_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QDialog*
+/// @param callback int32_t fn(QDialog*, enum QPaintDevice__PaintDeviceMetric)
+void q_dialog_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3394,7 +3811,8 @@ void q_dialog_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QPainter* painter ```
+/// @param self QDialog*
+/// @param painter QPainter*
 void q_dialog_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3403,7 +3821,8 @@ void q_dialog_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QPainter* painter ```
+/// @param self QDialog*
+/// @param painter QPainter*
 void q_dialog_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3412,8 +3831,9 @@ void q_dialog_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QPainter*) ```
-void q_dialog_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QPainter*)
+void q_dialog_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3421,7 +3841,8 @@ void q_dialog_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QPoint* offset ```
+/// @param self QDialog*
+/// @param offset QPoint*
 QPaintDevice* q_dialog_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3430,7 +3851,8 @@ QPaintDevice* q_dialog_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QPoint* offset ```
+/// @param self QDialog*
+/// @param offset QPoint*
 QPaintDevice* q_dialog_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3439,8 +3861,9 @@ QPaintDevice* q_dialog_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, QPaintDevice* (*slot)(QDialog*, QPoint*) ```
-void q_dialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback QPaintDevice* fn(QDialog*, QPoint*)
+void q_dialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3448,7 +3871,7 @@ void q_dialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPainter* q_dialog_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3457,7 +3880,7 @@ QPainter* q_dialog_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QPainter* q_dialog_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3466,8 +3889,9 @@ QPainter* q_dialog_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, QPainter* (*slot)() ```
-void q_dialog_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QDialog*
+/// @param callback QPainter* fn()
+void q_dialog_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3475,7 +3899,8 @@ void q_dialog_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QInputMethodEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QInputMethodEvent*
 void q_dialog_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3484,7 +3909,8 @@ void q_dialog_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QInputMethodEvent* param1 ```
+/// @param self QDialog*
+/// @param param1 QInputMethodEvent*
 void q_dialog_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3493,8 +3919,9 @@ void q_dialog_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QInputMethodEvent*) ```
-void q_dialog_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QInputMethodEvent*)
+void q_dialog_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3502,7 +3929,8 @@ void q_dialog_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QDialog*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_dialog_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3511,7 +3939,8 @@ QVariant* q_dialog_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QDialog*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_dialog_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3520,8 +3949,9 @@ QVariant* q_dialog_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, QVariant* (*slot)(QDialog*, enum Qt__InputMethodQuery) ```
-void q_dialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QDialog*
+/// @param callback QVariant* fn(QDialog*, enum Qt__InputMethodQuery)
+void q_dialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3529,7 +3959,8 @@ void q_dialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, bool next ```
+/// @param self QDialog*
+/// @param next bool
 bool q_dialog_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3538,7 +3969,8 @@ bool q_dialog_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, bool next ```
+/// @param self QDialog*
+/// @param next bool
 bool q_dialog_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3547,8 +3979,9 @@ bool q_dialog_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)(QDialog*, bool) ```
-void q_dialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QDialog*
+/// @param callback bool fn(QDialog*, bool)
+void q_dialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3556,7 +3989,8 @@ void q_dialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QTimerEvent* event ```
+/// @param self QDialog*
+/// @param event QTimerEvent*
 void q_dialog_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3565,7 +3999,8 @@ void q_dialog_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QTimerEvent* event ```
+/// @param self QDialog*
+/// @param event QTimerEvent*
 void q_dialog_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3574,8 +4009,9 @@ void q_dialog_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QTimerEvent*) ```
-void q_dialog_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QTimerEvent*)
+void q_dialog_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3583,7 +4019,8 @@ void q_dialog_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QChildEvent* event ```
+/// @param self QDialog*
+/// @param event QChildEvent*
 void q_dialog_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3592,7 +4029,8 @@ void q_dialog_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QChildEvent* event ```
+/// @param self QDialog*
+/// @param event QChildEvent*
 void q_dialog_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3601,8 +4039,9 @@ void q_dialog_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QChildEvent*) ```
-void q_dialog_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QChildEvent*)
+void q_dialog_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3610,7 +4049,8 @@ void q_dialog_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 void q_dialog_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3619,7 +4059,8 @@ void q_dialog_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QEvent* event ```
+/// @param self QDialog*
+/// @param event QEvent*
 void q_dialog_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3628,8 +4069,9 @@ void q_dialog_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QEvent*) ```
-void q_dialog_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QEvent*)
+void q_dialog_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3637,7 +4079,8 @@ void q_dialog_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 void q_dialog_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3646,7 +4089,8 @@ void q_dialog_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 void q_dialog_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3655,8 +4099,9 @@ void q_dialog_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMetaMethod*) ```
-void q_dialog_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMetaMethod*)
+void q_dialog_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3664,7 +4109,8 @@ void q_dialog_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 void q_dialog_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3673,7 +4119,8 @@ void q_dialog_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 void q_dialog_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3682,8 +4129,9 @@ void q_dialog_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, QMetaMethod*) ```
-void q_dialog_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, QMetaMethod*)
+void q_dialog_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3691,7 +4139,7 @@ void q_dialog_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3700,7 +4148,7 @@ void q_dialog_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3709,8 +4157,9 @@ void q_dialog_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3718,7 +4167,7 @@ void q_dialog_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_create(void* self);
 
 /// Inherited from QWidget
@@ -3727,7 +4176,7 @@ void q_dialog_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3736,8 +4185,9 @@ void q_dialog_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_create(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3745,7 +4195,7 @@ void q_dialog_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3754,7 +4204,7 @@ void q_dialog_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3763,8 +4213,9 @@ void q_dialog_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, void (*slot)() ```
-void q_dialog_on_destroy(void* self, void (*slot)());
+/// @param self QDialog*
+/// @param callback void fn()
+void q_dialog_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3772,7 +4223,7 @@ void q_dialog_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3781,7 +4232,7 @@ bool q_dialog_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3790,8 +4241,9 @@ bool q_dialog_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)() ```
-void q_dialog_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QDialog*
+/// @param callback bool fn()
+void q_dialog_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3799,7 +4251,7 @@ void q_dialog_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3808,7 +4260,7 @@ bool q_dialog_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 bool q_dialog_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3817,8 +4269,9 @@ bool q_dialog_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)() ```
-void q_dialog_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QDialog*
+/// @param callback bool fn()
+void q_dialog_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3826,7 +4279,7 @@ void q_dialog_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QObject* q_dialog_sender(void* self);
 
 /// Inherited from QObject
@@ -3835,7 +4288,7 @@ QObject* q_dialog_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 QObject* q_dialog_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3844,8 +4297,9 @@ QObject* q_dialog_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, QObject* (*slot)() ```
-void q_dialog_on_sender(void* self, QObject* (*slot)());
+/// @param self QDialog*
+/// @param callback QObject* fn()
+void q_dialog_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3853,7 +4307,7 @@ void q_dialog_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3862,7 +4316,7 @@ int32_t q_dialog_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 int32_t q_dialog_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3871,8 +4325,9 @@ int32_t q_dialog_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, int32_t (*slot)() ```
-void q_dialog_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QDialog*
+/// @param callback int32_t fn()
+void q_dialog_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3880,7 +4335,8 @@ void q_dialog_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, const char* signal ```
+/// @param self QDialog*
+/// @param signal const char*
 int32_t q_dialog_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3889,7 +4345,8 @@ int32_t q_dialog_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, const char* signal ```
+/// @param self QDialog*
+/// @param signal const char*
 int32_t q_dialog_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3898,8 +4355,9 @@ int32_t q_dialog_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, int32_t (*slot)(QDialog*, const char*) ```
-void q_dialog_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QDialog*
+/// @param callback int32_t fn(QDialog*, const char*)
+void q_dialog_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3907,7 +4365,8 @@ void q_dialog_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 bool q_dialog_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3916,7 +4375,8 @@ bool q_dialog_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, QMetaMethod* signal ```
+/// @param self QDialog*
+/// @param signal QMetaMethod*
 bool q_dialog_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3925,8 +4385,9 @@ bool q_dialog_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, bool (*slot)(QDialog*, QMetaMethod*) ```
-void q_dialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QDialog*
+/// @param callback bool fn(QDialog*, QMetaMethod*)
+void q_dialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3934,7 +4395,9 @@ void q_dialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QDialog*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_dialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3943,7 +4406,9 @@ double q_dialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metric
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDialog* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QDialog*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_dialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3952,8 +4417,9 @@ double q_dialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDialog* self, double (*slot)(QDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_dialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QDialog*
+/// @param callback double fn(QDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_dialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -3961,14 +4427,15 @@ void q_dialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDialog* self, void (*slot)(QDialog*, const char*) ```
-void q_dialog_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDialog*
+/// @param callback void fn(QDialog*, const char*)
+void q_dialog_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialog.html#dtor.QDialog)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDialog* self ```
+/// @param self QDialog*
 void q_dialog_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdialog.html#types

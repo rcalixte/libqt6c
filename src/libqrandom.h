@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,379 +15,423 @@
 
 /// q_randomgenerator_new constructs a new QRandomGenerator object.
 ///
-///
 QRandomGenerator* q_randomgenerator_new();
 
 /// q_randomgenerator_new2 constructs a new QRandomGenerator object.
 ///
-/// ``` uint32_t* seedBuffer, int64_t lenVal ```
+/// @param seedBuffer uint32_t*
+/// @param lenVal int64_t
 QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, int64_t lenVal);
 
 /// q_randomgenerator_new3 constructs a new QRandomGenerator object.
 ///
-/// ``` uint32_t* begin, uint32_t* end ```
+/// @param begin uint32_t*
+/// @param end uint32_t*
 QRandomGenerator* q_randomgenerator_new3(uint32_t* begin, uint32_t* end);
 
 /// q_randomgenerator_new4 constructs a new QRandomGenerator object.
 ///
-/// ``` QRandomGenerator* other ```
+/// @param other QRandomGenerator*
 QRandomGenerator* q_randomgenerator_new4(void* other);
 
 /// q_randomgenerator_new5 constructs a new QRandomGenerator object.
 ///
-/// ``` uint32_t seedValue ```
+/// @param seedValue uint32_t
 QRandomGenerator* q_randomgenerator_new5(uint32_t seedValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#operator-eq)
 ///
-/// ``` QRandomGenerator* self, QRandomGenerator* other ```
+/// @param self QRandomGenerator*
+/// @param other QRandomGenerator*
 void q_randomgenerator_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generate)
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 uint32_t q_randomgenerator_generate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generate64)
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 uint64_t q_randomgenerator_generate64(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generateDouble)
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 double q_randomgenerator_generate_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, double highest ```
+/// @param self QRandomGenerator*
+/// @param highest double
 double q_randomgenerator_bounded(void* self, double highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint32_t highest ```
+/// @param self QRandomGenerator*
+/// @param highest uint32_t
 uint32_t q_randomgenerator_bounded2(void* self, uint32_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint32_t lowest, uint32_t highest ```
+/// @param self QRandomGenerator*
+/// @param lowest uint32_t
+/// @param highest uint32_t
 uint32_t q_randomgenerator_bounded3(void* self, uint32_t lowest, uint32_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, int highest ```
+/// @param self QRandomGenerator*
+/// @param highest int
 int32_t q_randomgenerator_bounded4(void* self, int highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, int lowest, int highest ```
+/// @param self QRandomGenerator*
+/// @param lowest int
+/// @param highest int
 int32_t q_randomgenerator_bounded5(void* self, int lowest, int highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint64_t highest ```
+/// @param self QRandomGenerator*
+/// @param highest uint64_t
 uint64_t q_randomgenerator_bounded6(void* self, uint64_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint64_t lowest, uint64_t highest ```
+/// @param self QRandomGenerator*
+/// @param lowest uint64_t
+/// @param highest uint64_t
 uint64_t q_randomgenerator_bounded7(void* self, uint64_t lowest, uint64_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, long long highest ```
+/// @param self QRandomGenerator*
+/// @param highest long long
 long long q_randomgenerator_bounded8(void* self, long long highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, long long lowest, long long highest ```
+/// @param self QRandomGenerator*
+/// @param lowest long long
+/// @param highest long long
 long long q_randomgenerator_bounded9(void* self, long long lowest, long long highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, int lowest, long long highest ```
+/// @param self QRandomGenerator*
+/// @param lowest int
+/// @param highest long long
 long long q_randomgenerator_bounded10(void* self, int lowest, long long highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, long long lowest, int highest ```
+/// @param self QRandomGenerator*
+/// @param lowest long long
+/// @param highest int
 long long q_randomgenerator_bounded11(void* self, long long lowest, int highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint32_t lowest, uint64_t highest ```
+/// @param self QRandomGenerator*
+/// @param lowest uint32_t
+/// @param highest uint64_t
 uint64_t q_randomgenerator_bounded12(void* self, uint32_t lowest, uint64_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator* self, uint64_t lowest, uint32_t highest ```
+/// @param self QRandomGenerator*
+/// @param lowest uint64_t
+/// @param highest uint32_t
 uint64_t q_randomgenerator_bounded13(void* self, uint64_t lowest, uint32_t highest);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generate)
 ///
-/// ``` QRandomGenerator* self, uint32_t* begin, uint32_t* end ```
+/// @param self QRandomGenerator*
+/// @param begin uint32_t*
+/// @param end uint32_t*
 void q_randomgenerator_generate2(void* self, uint32_t* begin, uint32_t* end);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#operator-28-29)
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 uint32_t q_randomgenerator_operator_call(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#seed)
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 void q_randomgenerator_seed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#discard)
 ///
-/// ``` QRandomGenerator* self, uint64_t z ```
+/// @param self QRandomGenerator*
+/// @param z uint64_t
 void q_randomgenerator_discard(void* self, uint64_t z);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#min)
-///
 ///
 uint32_t q_randomgenerator_min();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#max)
 ///
-///
 uint32_t q_randomgenerator_max();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#system)
-///
 ///
 QRandomGenerator* q_randomgenerator_system();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#global)
 ///
-///
 QRandomGenerator* q_randomgenerator_global();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#securelySeeded)
-///
 ///
 QRandomGenerator* q_randomgenerator_securely_seeded();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#seed)
 ///
-/// ``` QRandomGenerator* self, uint32_t s ```
+/// @param self QRandomGenerator*
+/// @param s uint32_t
 void q_randomgenerator_seed1(void* self, uint32_t s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#dtor.QRandomGenerator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QRandomGenerator* self ```
+/// @param self QRandomGenerator*
 void q_randomgenerator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qrandomgenerator64.html
 
 /// q_randomgenerator64_new constructs a new QRandomGenerator64 object.
 ///
-///
 QRandomGenerator64* q_randomgenerator64_new();
 
 /// q_randomgenerator64_new2 constructs a new QRandomGenerator64 object.
 ///
-/// ``` uint32_t* seedBuffer, int64_t lenVal ```
+/// @param seedBuffer uint32_t*
+/// @param lenVal int64_t
 QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, int64_t lenVal);
 
 /// q_randomgenerator64_new3 constructs a new QRandomGenerator64 object.
 ///
-/// ``` uint32_t* begin, uint32_t* end ```
+/// @param begin uint32_t*
+/// @param end uint32_t*
 QRandomGenerator64* q_randomgenerator64_new3(uint32_t* begin, uint32_t* end);
 
 /// q_randomgenerator64_new4 constructs a new QRandomGenerator64 object.
 ///
-/// ``` QRandomGenerator* other ```
+/// @param other QRandomGenerator*
 QRandomGenerator64* q_randomgenerator64_new4(void* other);
 
 /// q_randomgenerator64_new5 constructs a new QRandomGenerator64 object.
 ///
-/// ``` QRandomGenerator64* param1 ```
+/// @param param1 QRandomGenerator64*
 QRandomGenerator64* q_randomgenerator64_new5(void* param1);
 
 /// q_randomgenerator64_new6 constructs a new QRandomGenerator64 object.
 ///
-/// ``` uint32_t seedValue ```
+/// @param seedValue uint32_t
 QRandomGenerator64* q_randomgenerator64_new6(uint32_t seedValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#generate)
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 uint64_t q_randomgenerator64_generate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#operator-28-29)
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 uint64_t q_randomgenerator64_operator_call(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#discard)
 ///
-/// ``` QRandomGenerator64* self, uint64_t z ```
+/// @param self QRandomGenerator64*
+/// @param z uint64_t
 void q_randomgenerator64_discard(void* self, uint64_t z);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#min)
-///
 ///
 uint64_t q_randomgenerator64_min();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#max)
 ///
-///
 uint64_t q_randomgenerator64_max();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#system)
-///
 ///
 QRandomGenerator64* q_randomgenerator64_system();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#global)
 ///
-///
 QRandomGenerator64* q_randomgenerator64_global();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#securelySeeded)
-///
 ///
 QRandomGenerator64* q_randomgenerator64_securely_seeded();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#operator-eq)
 ///
-/// ``` QRandomGenerator64* self, QRandomGenerator64* param1 ```
+/// @param self QRandomGenerator64*
+/// @param param1 QRandomGenerator64*
 void q_randomgenerator64_operator_assign(void* self, void* param1);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generate64)
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 uint64_t q_randomgenerator64_generate64(void* self);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generateDouble)
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 double q_randomgenerator64_generate_double(void* self);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, double highest ```
+/// @param self QRandomGenerator64*
+/// @param highest double
 double q_randomgenerator64_bounded(void* self, double highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint32_t highest ```
+/// @param self QRandomGenerator64*
+/// @param highest uint32_t
 uint32_t q_randomgenerator64_bounded2(void* self, uint32_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint32_t lowest, uint32_t highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest uint32_t
+/// @param highest uint32_t
 uint32_t q_randomgenerator64_bounded3(void* self, uint32_t lowest, uint32_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, int highest ```
+/// @param self QRandomGenerator64*
+/// @param highest int
 int32_t q_randomgenerator64_bounded4(void* self, int highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, int lowest, int highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest int
+/// @param highest int
 int32_t q_randomgenerator64_bounded5(void* self, int lowest, int highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint64_t highest ```
+/// @param self QRandomGenerator64*
+/// @param highest uint64_t
 uint64_t q_randomgenerator64_bounded6(void* self, uint64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint64_t lowest, uint64_t highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest uint64_t
+/// @param highest uint64_t
 uint64_t q_randomgenerator64_bounded7(void* self, uint64_t lowest, uint64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, long long highest ```
+/// @param self QRandomGenerator64*
+/// @param highest long long
 long long q_randomgenerator64_bounded8(void* self, long long highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, long long lowest, long long highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest long long
+/// @param highest long long
 long long q_randomgenerator64_bounded9(void* self, long long lowest, long long highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, int lowest, long long highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest int
+/// @param highest long long
 long long q_randomgenerator64_bounded10(void* self, int lowest, long long highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, long long lowest, int highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest long long
+/// @param highest int
 long long q_randomgenerator64_bounded11(void* self, long long lowest, int highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint32_t lowest, uint64_t highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest uint32_t
+/// @param highest uint64_t
 uint64_t q_randomgenerator64_bounded12(void* self, uint32_t lowest, uint64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
-/// ``` QRandomGenerator64* self, uint64_t lowest, uint32_t highest ```
+/// @param self QRandomGenerator64*
+/// @param lowest uint64_t
+/// @param highest uint32_t
 uint64_t q_randomgenerator64_bounded13(void* self, uint64_t lowest, uint32_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#generate)
 ///
-/// ``` QRandomGenerator64* self, uint32_t* begin, uint32_t* end ```
+/// @param self QRandomGenerator64*
+/// @param begin uint32_t*
+/// @param end uint32_t*
 void q_randomgenerator64_generate2(void* self, uint32_t* begin, uint32_t* end);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#seed)
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 void q_randomgenerator64_seed(void* self);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator.html#seed)
 ///
-/// ``` QRandomGenerator64* self, uint32_t s ```
+/// @param self QRandomGenerator64*
+/// @param s uint32_t
 void q_randomgenerator64_seed1(void* self, uint32_t s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrandomgenerator64.html#dtor.QRandomGenerator64)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QRandomGenerator64* self ```
+/// @param self QRandomGenerator64*
 void q_randomgenerator64_delete(void* self);
 
 #endif

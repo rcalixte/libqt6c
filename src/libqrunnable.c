@@ -9,8 +9,8 @@ void q_runnable_run(void* self) {
     QRunnable_Run((QRunnable*)self);
 }
 
-void q_runnable_on_run(void* self, void (*slot)()) {
-    QRunnable_OnRun((QRunnable*)self, (intptr_t)slot);
+void q_runnable_on_run(void* self, void (*callback)()) {
+    QRunnable_OnRun((QRunnable*)self, (intptr_t)callback);
 }
 
 void q_runnable_qbase_run(void* self) {

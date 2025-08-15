@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,159 +15,188 @@
 
 /// q_networkcookie_new constructs a new QNetworkCookie object.
 ///
-///
 QNetworkCookie* q_networkcookie_new();
 
 /// q_networkcookie_new2 constructs a new QNetworkCookie object.
 ///
-/// ``` QNetworkCookie* other ```
+/// @param other QNetworkCookie*
 QNetworkCookie* q_networkcookie_new2(void* other);
 
 /// q_networkcookie_new3 constructs a new QNetworkCookie object.
 ///
-/// ``` const char* name ```
+/// @param name const char*
 QNetworkCookie* q_networkcookie_new3(const char* name);
 
 /// q_networkcookie_new4 constructs a new QNetworkCookie object.
 ///
-/// ``` const char* name, const char* value ```
+/// @param name const char*
+/// @param value const char*
 QNetworkCookie* q_networkcookie_new4(const char* name, const char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq)
 ///
-/// ``` QNetworkCookie* self, QNetworkCookie* other ```
+/// @param self QNetworkCookie*
+/// @param other QNetworkCookie*
 void q_networkcookie_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#swap)
 ///
-/// ``` QNetworkCookie* self, QNetworkCookie* other ```
+/// @param self QNetworkCookie*
+/// @param other QNetworkCookie*
 void q_networkcookie_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-eq-eq)
 ///
-/// ``` QNetworkCookie* self, QNetworkCookie* other ```
+/// @param self QNetworkCookie*
+/// @param other QNetworkCookie*
 bool q_networkcookie_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#operator-not-eq)
 ///
-/// ``` QNetworkCookie* self, QNetworkCookie* other ```
+/// @param self QNetworkCookie*
+/// @param other QNetworkCookie*
 bool q_networkcookie_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#isSecure)
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
 bool q_networkcookie_is_secure(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setSecure)
 ///
-/// ``` QNetworkCookie* self, bool enable ```
+/// @param self QNetworkCookie*
+/// @param enable bool
 void q_networkcookie_set_secure(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#isHttpOnly)
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
 bool q_networkcookie_is_http_only(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setHttpOnly)
 ///
-/// ``` QNetworkCookie* self, bool enable ```
+/// @param self QNetworkCookie*
+/// @param enable bool
 void q_networkcookie_set_http_only(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#sameSitePolicy)
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
+///
+/// @return enum QNetworkCookie__SameSite
 int64_t q_networkcookie_same_site_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setSameSitePolicy)
 ///
-/// ``` QNetworkCookie* self, enum QNetworkCookie__SameSite sameSite ```
+/// @param self QNetworkCookie*
+/// @param sameSite enum QNetworkCookie__SameSite
 void q_networkcookie_set_same_site_policy(void* self, int64_t sameSite);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#isSessionCookie)
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
 bool q_networkcookie_is_session_cookie(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#expirationDate)
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
 QDateTime* q_networkcookie_expiration_date(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setExpirationDate)
 ///
-/// ``` QNetworkCookie* self, QDateTime* date ```
+/// @param self QNetworkCookie*
+/// @param date QDateTime*
 void q_networkcookie_set_expiration_date(void* self, void* date);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#domain)
 ///
-/// ``` QNetworkCookie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
 const char* q_networkcookie_domain(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setDomain)
 ///
-/// ``` QNetworkCookie* self, const char* domain ```
+/// @param self QNetworkCookie*
+/// @param domain const char*
 void q_networkcookie_set_domain(void* self, const char* domain);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#path)
 ///
-/// ``` QNetworkCookie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
 const char* q_networkcookie_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setPath)
 ///
-/// ``` QNetworkCookie* self, const char* path ```
+/// @param self QNetworkCookie*
+/// @param path const char*
 void q_networkcookie_set_path(void* self, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#name)
 ///
-/// ``` QNetworkCookie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
 char* q_networkcookie_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setName)
 ///
-/// ``` QNetworkCookie* self, const char* cookieName ```
+/// @param self QNetworkCookie*
+/// @param cookieName const char*
 void q_networkcookie_set_name(void* self, const char* cookieName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#value)
 ///
-/// ``` QNetworkCookie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
 char* q_networkcookie_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setValue)
 ///
-/// ``` QNetworkCookie* self, const char* value ```
+/// @param self QNetworkCookie*
+/// @param value const char*
 void q_networkcookie_set_value(void* self, const char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// ``` QNetworkCookie* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
 char* q_networkcookie_to_raw_form(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#hasSameIdentifier)
 ///
-/// ``` QNetworkCookie* self, QNetworkCookie* other ```
+/// @param self QNetworkCookie*
+/// @param other QNetworkCookie*
 bool q_networkcookie_has_same_identifier(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#normalize)
 ///
-/// ``` QNetworkCookie* self, QUrl* url ```
+/// @param self QNetworkCookie*
+/// @param url QUrl*
 void q_networkcookie_normalize(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#parseCookies)
 ///
-/// ``` const char* cookieString ```
+/// @param cookieString const char*
 libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* cookieString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#toRawForm)
 ///
-/// ``` QNetworkCookie* self, enum QNetworkCookie__RawForm form ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkCookie*
+/// @param form enum QNetworkCookie__RawForm
 char* q_networkcookie_to_raw_form1(void* self, int64_t form);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#dtor.QNetworkCookie)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QNetworkCookie* self ```
+/// @param self QNetworkCookie*
 void q_networkcookie_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qnetworkcookie.html#types

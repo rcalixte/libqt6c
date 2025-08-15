@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,568 +15,649 @@
 
 /// q_textinlineobject_new constructs a new QTextInlineObject object.
 ///
-/// ``` QTextInlineObject* other ```
+/// @param other QTextInlineObject*
 QTextInlineObject* q_textinlineobject_new(void* other);
 
 /// q_textinlineobject_new2 constructs a new QTextInlineObject object and invalidates the source QTextInlineObject object.
 ///
-/// ``` QTextInlineObject* other ```
+/// @param other QTextInlineObject*
 QTextInlineObject* q_textinlineobject_new2(void* other);
 
 /// q_textinlineobject_new3 constructs a new QTextInlineObject object.
-///
 ///
 QTextInlineObject* q_textinlineobject_new3();
 
 /// q_textinlineobject_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTextInlineObject* self, QTextInlineObject* other ```
+/// @param self QTextInlineObject*
+/// @param other QTextInlineObject*
 void q_textinlineobject_copy_assign(void* self, void* other);
 
 /// q_textinlineobject_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTextInlineObject* self, QTextInlineObject* other ```
+/// @param self QTextInlineObject*
+/// @param other QTextInlineObject*
 void q_textinlineobject_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#isValid)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 bool q_textinlineobject_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#rect)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 QRectF* q_textinlineobject_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#width)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 double q_textinlineobject_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#ascent)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 double q_textinlineobject_ascent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#descent)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 double q_textinlineobject_descent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#height)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 double q_textinlineobject_height(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#textDirection)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_textinlineobject_text_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#setWidth)
 ///
-/// ``` QTextInlineObject* self, double w ```
+/// @param self QTextInlineObject*
+/// @param w double
 void q_textinlineobject_set_width(void* self, double w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#setAscent)
 ///
-/// ``` QTextInlineObject* self, double a ```
+/// @param self QTextInlineObject*
+/// @param a double
 void q_textinlineobject_set_ascent(void* self, double a);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#setDescent)
 ///
-/// ``` QTextInlineObject* self, double d ```
+/// @param self QTextInlineObject*
+/// @param d double
 void q_textinlineobject_set_descent(void* self, double d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#textPosition)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 int32_t q_textinlineobject_text_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#formatIndex)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 int32_t q_textinlineobject_format_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#format)
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 QTextFormat* q_textinlineobject_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#dtor.QTextInlineObject)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextInlineObject* self ```
+/// @param self QTextInlineObject*
 void q_textinlineobject_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextlayout.html
 
 /// q_textlayout_new constructs a new QTextLayout object.
 ///
-///
 QTextLayout* q_textlayout_new();
 
 /// q_textlayout_new2 constructs a new QTextLayout object.
 ///
-/// ``` const char* text ```
+/// @param text const char*
 QTextLayout* q_textlayout_new2(const char* text);
 
 /// q_textlayout_new3 constructs a new QTextLayout object.
 ///
-/// ``` const char* text, QFont* font ```
+/// @param text const char*
+/// @param font QFont*
 QTextLayout* q_textlayout_new3(const char* text, void* font);
 
 /// q_textlayout_new4 constructs a new QTextLayout object.
 ///
-/// ``` QTextBlock* b ```
+/// @param b QTextBlock*
 QTextLayout* q_textlayout_new4(void* b);
 
 /// q_textlayout_new5 constructs a new QTextLayout object.
 ///
-/// ``` const char* text, QFont* font, QPaintDevice* paintdevice ```
+/// @param text const char*
+/// @param font QFont*
+/// @param paintdevice QPaintDevice*
 QTextLayout* q_textlayout_new5(const char* text, void* font, void* paintdevice);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setFont)
 ///
-/// ``` QTextLayout* self, QFont* f ```
+/// @param self QTextLayout*
+/// @param f QFont*
 void q_textlayout_set_font(void* self, void* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#font)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 QFont* q_textlayout_font(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setRawFont)
 ///
-/// ``` QTextLayout* self, QRawFont* rawFont ```
+/// @param self QTextLayout*
+/// @param rawFont QRawFont*
 void q_textlayout_set_raw_font(void* self, void* rawFont);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setText)
 ///
-/// ``` QTextLayout* self, const char* stringVal ```
+/// @param self QTextLayout*
+/// @param stringVal const char*
 void q_textlayout_set_text(void* self, const char* stringVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#text)
 ///
-/// ``` QTextLayout* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextLayout*
 const char* q_textlayout_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setTextOption)
 ///
-/// ``` QTextLayout* self, QTextOption* option ```
+/// @param self QTextLayout*
+/// @param option QTextOption*
 void q_textlayout_set_text_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#textOption)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 const QTextOption* q_textlayout_text_option(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setPreeditArea)
 ///
-/// ``` QTextLayout* self, int position, const char* text ```
+/// @param self QTextLayout*
+/// @param position int
+/// @param text const char*
 void q_textlayout_set_preedit_area(void* self, int position, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#preeditAreaPosition)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 int32_t q_textlayout_preedit_area_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#preeditAreaText)
 ///
-/// ``` QTextLayout* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextLayout*
 const char* q_textlayout_preedit_area_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setFormats)
 ///
-/// ``` QTextLayout* self, libqt_list /* of QTextLayout__FormatRange* */ overrides ```
+/// @param self QTextLayout*
+/// @param overrides libqt_list /* of QTextLayout__FormatRange* */
 void q_textlayout_set_formats(void* self, libqt_list overrides);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#formats)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 libqt_list /* of QTextLayout__FormatRange* */ q_textlayout_formats(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#clearFormats)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 void q_textlayout_clear_formats(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setCacheEnabled)
 ///
-/// ``` QTextLayout* self, bool enable ```
+/// @param self QTextLayout*
+/// @param enable bool
 void q_textlayout_set_cache_enabled(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#cacheEnabled)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 bool q_textlayout_cache_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setCursorMoveStyle)
 ///
-/// ``` QTextLayout* self, enum Qt__CursorMoveStyle style ```
+/// @param self QTextLayout*
+/// @param style enum Qt__CursorMoveStyle
 void q_textlayout_set_cursor_move_style(void* self, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#cursorMoveStyle)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
+///
+/// @return enum Qt__CursorMoveStyle
 int64_t q_textlayout_cursor_move_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#beginLayout)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 void q_textlayout_begin_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#endLayout)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 void q_textlayout_end_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#clearLayout)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 void q_textlayout_clear_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#createLine)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 QTextLine* q_textlayout_create_line(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#lineCount)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 int32_t q_textlayout_line_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#lineAt)
 ///
-/// ``` QTextLayout* self, int i ```
+/// @param self QTextLayout*
+/// @param i int
 QTextLine* q_textlayout_line_at(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#lineForTextPosition)
 ///
-/// ``` QTextLayout* self, int pos ```
+/// @param self QTextLayout*
+/// @param pos int
 QTextLine* q_textlayout_line_for_text_position(void* self, int pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#isValidCursorPosition)
 ///
-/// ``` QTextLayout* self, int pos ```
+/// @param self QTextLayout*
+/// @param pos int
 bool q_textlayout_is_valid_cursor_position(void* self, int pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#nextCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos ```
+/// @param self QTextLayout*
+/// @param oldPos int
 int32_t q_textlayout_next_cursor_position(void* self, int oldPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#previousCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos ```
+/// @param self QTextLayout*
+/// @param oldPos int
 int32_t q_textlayout_previous_cursor_position(void* self, int oldPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#leftCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos ```
+/// @param self QTextLayout*
+/// @param oldPos int
 int32_t q_textlayout_left_cursor_position(void* self, int oldPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#rightCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos ```
+/// @param self QTextLayout*
+/// @param oldPos int
 int32_t q_textlayout_right_cursor_position(void* self, int oldPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos ```
+/// @param self QTextLayout*
+/// @param p QPainter*
+/// @param pos QPointF*
 void q_textlayout_draw(void* self, void* p, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#drawCursor)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, int cursorPosition ```
+/// @param self QTextLayout*
+/// @param p QPainter*
+/// @param pos QPointF*
+/// @param cursorPosition int
 void q_textlayout_draw_cursor(void* self, void* p, void* pos, int cursorPosition);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#drawCursor)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, int cursorPosition, int width ```
+/// @param self QTextLayout*
+/// @param p QPainter*
+/// @param pos QPointF*
+/// @param cursorPosition int
+/// @param width int
 void q_textlayout_draw_cursor2(void* self, void* p, void* pos, int cursorPosition, int width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#position)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 QPointF* q_textlayout_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setPosition)
 ///
-/// ``` QTextLayout* self, QPointF* p ```
+/// @param self QTextLayout*
+/// @param p QPointF*
 void q_textlayout_set_position(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#boundingRect)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 QRectF* q_textlayout_bounding_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#minimumWidth)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 double q_textlayout_minimum_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#maximumWidth)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 double q_textlayout_maximum_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
-/// ``` QTextLayout* self, int from, int length, quint16 flags ```
+/// @param self QTextLayout*
+/// @param from int
+/// @param length int
+/// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs(void* self, int from, int length, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#setFlags)
 ///
-/// ``` QTextLayout* self, int flags ```
+/// @param self QTextLayout*
+/// @param flags int
 void q_textlayout_set_flags(void* self, int flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#nextCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos, enum QTextLayout__CursorMode mode ```
+/// @param self QTextLayout*
+/// @param oldPos int
+/// @param mode enum QTextLayout__CursorMode
 int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#previousCursorPosition)
 ///
-/// ``` QTextLayout* self, int oldPos, enum QTextLayout__CursorMode mode ```
+/// @param self QTextLayout*
+/// @param oldPos int
+/// @param mode enum QTextLayout__CursorMode
 int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, libqt_list /* of QTextLayout__FormatRange* */ selections ```
+/// @param self QTextLayout*
+/// @param p QPainter*
+/// @param pos QPointF*
+/// @param selections libqt_list /* of QTextLayout__FormatRange* */
 void q_textlayout_draw3(void* self, void* p, void* pos, libqt_list selections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
-/// ``` QTextLayout* self, QPainter* p, QPointF* pos, libqt_list /* of QTextLayout__FormatRange* */ selections, QRectF* clip ```
+/// @param self QTextLayout*
+/// @param p QPainter*
+/// @param pos QPointF*
+/// @param selections libqt_list /* of QTextLayout__FormatRange* */
+/// @param clip QRectF*
 void q_textlayout_draw4(void* self, void* p, void* pos, libqt_list selections, void* clip);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
-/// ``` QTextLayout* self, int from ```
+/// @param self QTextLayout*
+/// @param from int
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs1(void* self, int from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#glyphRuns)
 ///
-/// ``` QTextLayout* self, int from, int length ```
+/// @param self QTextLayout*
+/// @param from int
+/// @param length int
 libqt_list /* of QGlyphRun* */ q_textlayout_glyph_runs22(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#dtor.QTextLayout)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextLayout* self ```
+/// @param self QTextLayout*
 void q_textlayout_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextline.html
 
 /// q_textline_new constructs a new QTextLine object.
 ///
-/// ``` QTextLine* other ```
+/// @param other QTextLine*
 QTextLine* q_textline_new(void* other);
 
 /// q_textline_new2 constructs a new QTextLine object and invalidates the source QTextLine object.
 ///
-/// ``` QTextLine* other ```
+/// @param other QTextLine*
 QTextLine* q_textline_new2(void* other);
 
 /// q_textline_new3 constructs a new QTextLine object.
-///
 ///
 QTextLine* q_textline_new3();
 
 /// q_textline_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTextLine* self, QTextLine* other ```
+/// @param self QTextLine*
+/// @param other QTextLine*
 void q_textline_copy_assign(void* self, void* other);
 
 /// q_textline_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTextLine* self, QTextLine* other ```
+/// @param self QTextLine*
+/// @param other QTextLine*
 void q_textline_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#isValid)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 bool q_textline_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#rect)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 QRectF* q_textline_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#x)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#y)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#width)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#ascent)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_ascent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#descent)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_descent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#height)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_height(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#leading)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_leading(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#setLeadingIncluded)
 ///
-/// ``` QTextLine* self, bool included ```
+/// @param self QTextLine*
+/// @param included bool
 void q_textline_set_leading_included(void* self, bool included);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#leadingIncluded)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 bool q_textline_leading_included(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#naturalTextWidth)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_natural_text_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#horizontalAdvance)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 double q_textline_horizontal_advance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#naturalTextRect)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 QRectF* q_textline_natural_text_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
-/// ``` QTextLine* self, int* cursorPos ```
+/// @param self QTextLine*
+/// @param cursorPos int*
 double q_textline_cursor_to_x(void* self, int* cursorPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
-/// ``` QTextLine* self, int cursorPos ```
+/// @param self QTextLine*
+/// @param cursorPos int
 double q_textline_cursor_to_x2(void* self, int cursorPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#xToCursor)
 ///
-/// ``` QTextLine* self, double x ```
+/// @param self QTextLine*
+/// @param x double
 int32_t q_textline_x_to_cursor(void* self, double x);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#setLineWidth)
 ///
-/// ``` QTextLine* self, double width ```
+/// @param self QTextLine*
+/// @param width double
 void q_textline_set_line_width(void* self, double width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#setNumColumns)
 ///
-/// ``` QTextLine* self, int columns ```
+/// @param self QTextLine*
+/// @param columns int
 void q_textline_set_num_columns(void* self, int columns);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#setNumColumns)
 ///
-/// ``` QTextLine* self, int columns, double alignmentWidth ```
+/// @param self QTextLine*
+/// @param columns int
+/// @param alignmentWidth double
 void q_textline_set_num_columns2(void* self, int columns, double alignmentWidth);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#setPosition)
 ///
-/// ``` QTextLine* self, QPointF* pos ```
+/// @param self QTextLine*
+/// @param pos QPointF*
 void q_textline_set_position(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#position)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 QPointF* q_textline_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#textStart)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 int32_t q_textline_text_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#textLength)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 int32_t q_textline_text_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#lineNumber)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 int32_t q_textline_line_number(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#draw)
 ///
-/// ``` QTextLine* self, QPainter* painter, QPointF* position ```
+/// @param self QTextLine*
+/// @param painter QPainter*
+/// @param position QPointF*
 void q_textline_draw(void* self, void* painter, void* position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
-/// ``` QTextLine* self, int from, int length, quint16 flags ```
+/// @param self QTextLine*
+/// @param from int
+/// @param length int
+/// @param flags flag of enum QTextLayout__GlyphRunRetrievalFlag
 libqt_list /* of QGlyphRun* */ q_textline_glyph_runs(void* self, int from, int length, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
-/// ``` QTextLine* self, int* cursorPos, enum QTextLine__Edge edge ```
+/// @param self QTextLine*
+/// @param cursorPos int*
+/// @param edge enum QTextLine__Edge
 double q_textline_cursor_to_x22(void* self, int* cursorPos, int64_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
-/// ``` QTextLine* self, int cursorPos, enum QTextLine__Edge edge ```
+/// @param self QTextLine*
+/// @param cursorPos int
+/// @param edge enum QTextLine__Edge
 double q_textline_cursor_to_x23(void* self, int cursorPos, int64_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#xToCursor)
 ///
-/// ``` QTextLine* self, double x, enum QTextLine__CursorPosition param2 ```
+/// @param self QTextLine*
+/// @param x double
+/// @param param2 enum QTextLine__CursorPosition
 int32_t q_textline_x_to_cursor2(void* self, double x, int64_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
-/// ``` QTextLine* self, int from ```
+/// @param self QTextLine*
+/// @param from int
 libqt_list /* of QGlyphRun* */ q_textline_glyph_runs1(void* self, int from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
-/// ``` QTextLine* self, int from, int length ```
+/// @param self QTextLine*
+/// @param from int
+/// @param length int
 libqt_list /* of QGlyphRun* */ q_textline_glyph_runs22(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#dtor.QTextLine)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextLine* self ```
+/// @param self QTextLine*
 void q_textline_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextlayout-formatrange.html
 
 /// q_textlayout__formatrange_new constructs a new QTextLayout::FormatRange object.
-///
 ///
 QTextLayout__FormatRange* q_textlayout__formatrange_new();
 
@@ -585,7 +665,7 @@ QTextLayout__FormatRange* q_textlayout__formatrange_new();
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextLayout__FormatRange* self ```
+/// @param self QTextLayout__FormatRange*
 void q_textlayout__formatrange_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextlayout.html#types

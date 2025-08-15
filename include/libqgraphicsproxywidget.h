@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,2954 +15,3399 @@
 
 /// q_graphicsproxywidget_new constructs a new QGraphicsProxyWidget object.
 ///
-///
 QGraphicsProxyWidget* q_graphicsproxywidget_new();
 
 /// q_graphicsproxywidget_new2 constructs a new QGraphicsProxyWidget object.
 ///
-/// ``` QGraphicsItem* parent ```
+/// @param parent QGraphicsItem*
 QGraphicsProxyWidget* q_graphicsproxywidget_new2(void* parent);
 
 /// q_graphicsproxywidget_new3 constructs a new QGraphicsProxyWidget object.
 ///
-/// ``` QGraphicsItem* parent, int wFlags ```
+/// @param parent QGraphicsItem*
+/// @param wFlags flag of enum Qt__WindowType
 QGraphicsProxyWidget* q_graphicsproxywidget_new3(void* parent, int64_t wFlags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 const QMetaObject* q_graphicsproxywidget_meta_object(void* self);
 
-/// ``` QGraphicsProxyWidget* self, const char* param1 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 const char*
 void* q_graphicsproxywidget_metacast(void* self, const char* param1);
 
-/// ``` QGraphicsProxyWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_graphicsproxywidget_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, int32_t (*slot)(QGraphicsProxyWidget*, enum QMetaObject__Call, int, void*) ```
-void q_graphicsproxywidget_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback int32_t fn(QGraphicsProxyWidget*, enum QMetaObject__Call, int, void*)
+void q_graphicsproxywidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_graphicsproxywidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_graphicsproxywidget_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#setWidget)
 ///
-/// ``` QGraphicsProxyWidget* self, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param widget QWidget*
 void q_graphicsproxywidget_set_widget(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#widget)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QWidget* q_graphicsproxywidget_widget(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#subWidgetRect)
 ///
-/// ``` QGraphicsProxyWidget* self, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param widget QWidget*
 QRectF* q_graphicsproxywidget_sub_widget_rect(void* self, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#setGeometry)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 void q_graphicsproxywidget_set_geometry(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#setGeometry)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QRectF*) ```
-void q_graphicsproxywidget_on_set_geometry(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QRectF*)
+void q_graphicsproxywidget_on_set_geometry(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#setGeometry)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 void q_graphicsproxywidget_qbase_set_geometry(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#paint)
 ///
-/// ``` QGraphicsProxyWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsproxywidget_paint(void* self, void* painter, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#paint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*) ```
-void q_graphicsproxywidget_on_paint(void* self, void (*slot)(void*, void*, void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+void q_graphicsproxywidget_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#paint)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsproxywidget_qbase_paint(void* self, void* painter, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#type)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 int32_t q_graphicsproxywidget_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, int32_t (*slot)() ```
-void q_graphicsproxywidget_on_type(void* self, int32_t (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback int32_t fn()
+void q_graphicsproxywidget_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#type)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 int32_t q_graphicsproxywidget_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#createProxyForChildWidget)
 ///
-/// ``` QGraphicsProxyWidget* self, QWidget* child ```
+/// @param self QGraphicsProxyWidget*
+/// @param child QWidget*
 QGraphicsProxyWidget* q_graphicsproxywidget_create_proxy_for_child_widget(void* self, void* child);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#itemChange)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param change enum QGraphicsItem__GraphicsItemChange
+/// @param value QVariant*
 QVariant* q_graphicsproxywidget_item_change(void* self, int64_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#itemChange)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* (*slot)(QGraphicsProxyWidget*, enum QGraphicsItem__GraphicsItemChange, QVariant*) ```
-void q_graphicsproxywidget_on_item_change(void* self, QVariant* (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QVariant* fn(QGraphicsProxyWidget*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
+void q_graphicsproxywidget_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#itemChange)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param change enum QGraphicsItem__GraphicsItemChange
+/// @param value QVariant*
 QVariant* q_graphicsproxywidget_qbase_item_change(void* self, int64_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#event)
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 bool q_graphicsproxywidget_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 bool q_graphicsproxywidget_qbase_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#eventFilter)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* object, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param object QObject*
+/// @param event QEvent*
 bool q_graphicsproxywidget_event_filter(void* self, void* object, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#eventFilter)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QObject*, QEvent*) ```
-void q_graphicsproxywidget_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QObject*, QEvent*)
+void q_graphicsproxywidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#eventFilter)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* object, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param object QObject*
+/// @param event QEvent*
 bool q_graphicsproxywidget_qbase_event_filter(void* self, void* object, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#showEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QShowEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QShowEvent*
 void q_graphicsproxywidget_show_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QShowEvent*) ```
-void q_graphicsproxywidget_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QShowEvent*)
+void q_graphicsproxywidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#showEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QShowEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QShowEvent*
 void q_graphicsproxywidget_qbase_show_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hideEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QHideEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QHideEvent*
 void q_graphicsproxywidget_hide_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QHideEvent*) ```
-void q_graphicsproxywidget_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QHideEvent*)
+void q_graphicsproxywidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hideEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QHideEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QHideEvent*
 void q_graphicsproxywidget_qbase_hide_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#contextMenuEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneContextMenuEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneContextMenuEvent*
 void q_graphicsproxywidget_context_menu_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#contextMenuEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneContextMenuEvent*) ```
-void q_graphicsproxywidget_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneContextMenuEvent*)
+void q_graphicsproxywidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#contextMenuEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneContextMenuEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneContextMenuEvent*
 void q_graphicsproxywidget_qbase_context_menu_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragEnterEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_drag_enter_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragEnterEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsproxywidget_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*)
+void q_graphicsproxywidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragEnterEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_qbase_drag_enter_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragLeaveEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_drag_leave_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragLeaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsproxywidget_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*)
+void q_graphicsproxywidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragLeaveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_qbase_drag_leave_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragMoveEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_drag_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsproxywidget_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*)
+void q_graphicsproxywidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dragMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_qbase_drag_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dropEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_drop_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dropEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*) ```
-void q_graphicsproxywidget_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneDragDropEvent*)
+void q_graphicsproxywidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dropEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneDragDropEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneDragDropEvent*
 void q_graphicsproxywidget_qbase_drop_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverEnterEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_hover_enter_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverEnterEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsproxywidget_on_hover_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*)
+void q_graphicsproxywidget_on_hover_enter_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverEnterEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_qbase_hover_enter_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverLeaveEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_hover_leave_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverLeaveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsproxywidget_on_hover_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*)
+void q_graphicsproxywidget_on_hover_leave_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverLeaveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_qbase_hover_leave_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverMoveEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_hover_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*) ```
-void q_graphicsproxywidget_on_hover_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneHoverEvent*)
+void q_graphicsproxywidget_on_hover_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#hoverMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneHoverEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneHoverEvent*
 void q_graphicsproxywidget_qbase_hover_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#grabMouseEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_grab_mouse_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#grabMouseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_grab_mouse_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_grab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#grabMouseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_grab_mouse_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#ungrabMouseEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_ungrab_mouse_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#ungrabMouseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_ungrab_mouse_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_ungrab_mouse_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#ungrabMouseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_ungrab_mouse_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseMoveEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_mouse_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsproxywidget_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*)
+void q_graphicsproxywidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_qbase_mouse_move_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mousePressEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_mouse_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsproxywidget_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*)
+void q_graphicsproxywidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_qbase_mouse_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseReleaseEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_mouse_release_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsproxywidget_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*)
+void q_graphicsproxywidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_qbase_mouse_release_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseDoubleClickEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_mouse_double_click_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseDoubleClickEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*) ```
-void q_graphicsproxywidget_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneMouseEvent*)
+void q_graphicsproxywidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMouseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMouseEvent*
 void q_graphicsproxywidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#wheelEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneWheelEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneWheelEvent*
 void q_graphicsproxywidget_wheel_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneWheelEvent*) ```
-void q_graphicsproxywidget_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneWheelEvent*)
+void q_graphicsproxywidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneWheelEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneWheelEvent*
 void q_graphicsproxywidget_qbase_wheel_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyPressEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QKeyEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QKeyEvent*
 void q_graphicsproxywidget_key_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QKeyEvent*) ```
-void q_graphicsproxywidget_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QKeyEvent*)
+void q_graphicsproxywidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QKeyEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QKeyEvent*
 void q_graphicsproxywidget_qbase_key_press_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyReleaseEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QKeyEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QKeyEvent*
 void q_graphicsproxywidget_key_release_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QKeyEvent*) ```
-void q_graphicsproxywidget_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QKeyEvent*)
+void q_graphicsproxywidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#keyReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QKeyEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QKeyEvent*
 void q_graphicsproxywidget_qbase_key_release_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusInEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QFocusEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QFocusEvent*
 void q_graphicsproxywidget_focus_in_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusInEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QFocusEvent*) ```
-void q_graphicsproxywidget_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QFocusEvent*)
+void q_graphicsproxywidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusInEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QFocusEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QFocusEvent*
 void q_graphicsproxywidget_qbase_focus_in_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusOutEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QFocusEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QFocusEvent*
 void q_graphicsproxywidget_focus_out_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QFocusEvent*) ```
-void q_graphicsproxywidget_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QFocusEvent*)
+void q_graphicsproxywidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QFocusEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QFocusEvent*
 void q_graphicsproxywidget_qbase_focus_out_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusNextPrevChild)
 ///
-/// ``` QGraphicsProxyWidget* self, bool next ```
+/// @param self QGraphicsProxyWidget*
+/// @param next bool
 bool q_graphicsproxywidget_focus_next_prev_child(void* self, bool next);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusNextPrevChild)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, bool) ```
-void q_graphicsproxywidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, bool)
+void q_graphicsproxywidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#focusNextPrevChild)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, bool next ```
+/// @param self QGraphicsProxyWidget*
+/// @param next bool
 bool q_graphicsproxywidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodQuery)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__InputMethodQuery query ```
+/// @param self QGraphicsProxyWidget*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_graphicsproxywidget_input_method_query(void* self, int64_t query);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodQuery)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* (*slot)(QGraphicsProxyWidget*, enum Qt__InputMethodQuery) ```
-void q_graphicsproxywidget_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QVariant* fn(QGraphicsProxyWidget*, enum Qt__InputMethodQuery)
+void q_graphicsproxywidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodQuery)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__InputMethodQuery query ```
+/// @param self QGraphicsProxyWidget*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_graphicsproxywidget_qbase_input_method_query(void* self, int64_t query);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QInputMethodEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QInputMethodEvent*
 void q_graphicsproxywidget_input_method_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QInputMethodEvent*) ```
-void q_graphicsproxywidget_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QInputMethodEvent*)
+void q_graphicsproxywidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#inputMethodEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QInputMethodEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QInputMethodEvent*
 void q_graphicsproxywidget_qbase_input_method_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#sizeHint)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsProxyWidget*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsproxywidget_size_hint(void* self, int64_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, QSizeF* (*slot)(QGraphicsProxyWidget*, enum Qt__SizeHint, QSizeF*) ```
-void q_graphicsproxywidget_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QSizeF* fn(QGraphicsProxyWidget*, enum Qt__SizeHint, QSizeF*)
+void q_graphicsproxywidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsProxyWidget*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsproxywidget_qbase_size_hint(void* self, int64_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#resizeEvent)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneResizeEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneResizeEvent*
 void q_graphicsproxywidget_resize_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneResizeEvent*) ```
-void q_graphicsproxywidget_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneResizeEvent*)
+void q_graphicsproxywidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneResizeEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneResizeEvent*
 void q_graphicsproxywidget_qbase_resize_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#newProxyWidget)
 ///
-/// ``` QGraphicsProxyWidget* self, QWidget* param1 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 QWidget*
 QGraphicsProxyWidget* q_graphicsproxywidget_new_proxy_widget(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#newProxyWidget)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsProxyWidget* (*slot)(QGraphicsProxyWidget*, QWidget*) ```
-void q_graphicsproxywidget_on_new_proxy_widget(void* self, QGraphicsProxyWidget* (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QGraphicsProxyWidget* fn(QGraphicsProxyWidget*, QWidget*)
+void q_graphicsproxywidget_on_new_proxy_widget(void* self, QGraphicsProxyWidget* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#newProxyWidget)
 ///
 /// Base class method implementation
 ///
-/// ``` QGraphicsProxyWidget* self, QWidget* param1 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 QWidget*
 QGraphicsProxyWidget* q_graphicsproxywidget_qbase_new_proxy_widget(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_graphicsproxywidget_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_graphicsproxywidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layout)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsLayout* q_graphicsproxywidget_layout(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setLayout)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsLayout* layout ```
+/// @param self QGraphicsProxyWidget*
+/// @param layout QGraphicsLayout*
 void q_graphicsproxywidget_set_layout(void* self, void* layout);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#adjustSize)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_adjust_size(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutDirection)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_graphicsproxywidget_layout_direction(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setLayoutDirection)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__LayoutDirection direction ```
+/// @param self QGraphicsProxyWidget*
+/// @param direction enum Qt__LayoutDirection
 void q_graphicsproxywidget_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#unsetLayoutDirection)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_unset_layout_direction(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#style)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QStyle* q_graphicsproxywidget_style(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setStyle)
 ///
-/// ``` QGraphicsProxyWidget* self, QStyle* style ```
+/// @param self QGraphicsProxyWidget*
+/// @param style QStyle*
 void q_graphicsproxywidget_set_style(void* self, void* style);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#font)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QFont* q_graphicsproxywidget_font(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setFont)
 ///
-/// ``` QGraphicsProxyWidget* self, QFont* font ```
+/// @param self QGraphicsProxyWidget*
+/// @param font QFont*
 void q_graphicsproxywidget_set_font(void* self, void* font);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#palette)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPalette* q_graphicsproxywidget_palette(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setPalette)
 ///
-/// ``` QGraphicsProxyWidget* self, QPalette* palette ```
+/// @param self QGraphicsProxyWidget*
+/// @param palette QPalette*
 void q_graphicsproxywidget_set_palette(void* self, void* palette);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#autoFillBackground)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_auto_fill_background(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setAutoFillBackground)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resize)
 ///
-/// ``` QGraphicsProxyWidget* self, QSizeF* size ```
+/// @param self QGraphicsProxyWidget*
+/// @param size QSizeF*
 void q_graphicsproxywidget_resize(void* self, void* size);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#resize)
 ///
-/// ``` QGraphicsProxyWidget* self, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_resize2(void* self, double w, double h);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#size)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QSizeF* q_graphicsproxywidget_size(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setGeometry)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_set_geometry2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#rect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_rect(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setContentsMargins)
 ///
-/// ``` QGraphicsProxyWidget* self, double left, double top, double right, double bottom ```
+/// @param self QGraphicsProxyWidget*
+/// @param left double
+/// @param top double
+/// @param right double
+/// @param bottom double
 void q_graphicsproxywidget_set_contents_margins(void* self, double left, double top, double right, double bottom);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setContentsMargins)
 ///
-/// ``` QGraphicsProxyWidget* self, QMarginsF* margins ```
+/// @param self QGraphicsProxyWidget*
+/// @param margins QMarginsF*
 void q_graphicsproxywidget_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFrameMargins)
 ///
-/// ``` QGraphicsProxyWidget* self, double left, double top, double right, double bottom ```
+/// @param self QGraphicsProxyWidget*
+/// @param left double
+/// @param top double
+/// @param right double
+/// @param bottom double
 void q_graphicsproxywidget_set_window_frame_margins(void* self, double left, double top, double right, double bottom);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFrameMargins)
 ///
-/// ``` QGraphicsProxyWidget* self, QMarginsF* margins ```
+/// @param self QGraphicsProxyWidget*
+/// @param margins QMarginsF*
 void q_graphicsproxywidget_set_window_frame_margins2(void* self, void* margins);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#getWindowFrameMargins)
 ///
-/// ``` QGraphicsProxyWidget* self, double* left, double* top, double* right, double* bottom ```
+/// @param self QGraphicsProxyWidget*
+/// @param left double*
+/// @param top double*
+/// @param right double*
+/// @param bottom double*
 void q_graphicsproxywidget_get_window_frame_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#unsetWindowFrameMargins)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_unset_window_frame_margins(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameGeometry)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_window_frame_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameRect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_window_frame_rect(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFlags)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_graphicsproxywidget_window_flags(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowType)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return enum Qt__WindowType
 int64_t q_graphicsproxywidget_window_type(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowFlags)
 ///
-/// ``` QGraphicsProxyWidget* self, int wFlags ```
+/// @param self QGraphicsProxyWidget*
+/// @param wFlags flag of enum Qt__WindowType
 void q_graphicsproxywidget_set_window_flags(void* self, int64_t wFlags);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#isActiveWindow)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_active_window(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setWindowTitle)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* title ```
+/// @param self QGraphicsProxyWidget*
+/// @param title const char*
 void q_graphicsproxywidget_set_window_title(void* self, const char* title);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowTitle)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsProxyWidget*
 const char* q_graphicsproxywidget_window_title(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusPolicy)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_graphicsproxywidget_focus_policy(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setFocusPolicy)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__FocusPolicy policy ```
+/// @param self QGraphicsProxyWidget*
+/// @param policy enum Qt__FocusPolicy
 void q_graphicsproxywidget_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setTabOrder)
 ///
-/// ``` QGraphicsWidget* first, QGraphicsWidget* second ```
+/// @param first QGraphicsWidget*
+/// @param second QGraphicsWidget*
 void q_graphicsproxywidget_set_tab_order(void* first, void* second);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#focusWidget)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsWidget* q_graphicsproxywidget_focus_widget(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabShortcut)
 ///
-/// ``` QGraphicsProxyWidget* self, QKeySequence* sequence ```
+/// @param self QGraphicsProxyWidget*
+/// @param sequence QKeySequence*
 int32_t q_graphicsproxywidget_grab_shortcut(void* self, void* sequence);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#releaseShortcut)
 ///
-/// ``` QGraphicsProxyWidget* self, int id ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
 void q_graphicsproxywidget_release_shortcut(void* self, int id);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setShortcutEnabled)
 ///
-/// ``` QGraphicsProxyWidget* self, int id ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
 void q_graphicsproxywidget_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QGraphicsProxyWidget* self, int id ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
 void q_graphicsproxywidget_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addAction)
 ///
-/// ``` QGraphicsProxyWidget* self, QAction* action ```
+/// @param self QGraphicsProxyWidget*
+/// @param action QAction*
 void q_graphicsproxywidget_add_action(void* self, void* action);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#addActions)
 ///
-/// ``` QGraphicsProxyWidget* self, libqt_list /* of QAction* */ actions ```
+/// @param self QGraphicsProxyWidget*
+/// @param actions libqt_list /* of QAction* */
 void q_graphicsproxywidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertActions)
 ///
-/// ``` QGraphicsProxyWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QGraphicsProxyWidget*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_graphicsproxywidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#insertAction)
 ///
-/// ``` QGraphicsProxyWidget* self, QAction* before, QAction* action ```
+/// @param self QGraphicsProxyWidget*
+/// @param before QAction*
+/// @param action QAction*
 void q_graphicsproxywidget_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#removeAction)
 ///
-/// ``` QGraphicsProxyWidget* self, QAction* action ```
+/// @param self QGraphicsProxyWidget*
+/// @param action QAction*
 void q_graphicsproxywidget_remove_action(void* self, void* action);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#actions)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 libqt_list /* of QAction* */ q_graphicsproxywidget_actions(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setAttribute)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__WidgetAttribute attribute ```
+/// @param self QGraphicsProxyWidget*
+/// @param attribute enum Qt__WidgetAttribute
 void q_graphicsproxywidget_set_attribute(void* self, int64_t attribute);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#testAttribute)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__WidgetAttribute attribute ```
+/// @param self QGraphicsProxyWidget*
+/// @param attribute enum Qt__WidgetAttribute
 bool q_graphicsproxywidget_test_attribute(void* self, int64_t attribute);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_geometry_changed(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#geometryChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_geometry_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_geometry_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_layout_changed(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#layoutChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_layout_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#close)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_close(void* self);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#grabShortcut)
 ///
-/// ``` QGraphicsProxyWidget* self, QKeySequence* sequence, enum Qt__ShortcutContext context ```
+/// @param self QGraphicsProxyWidget*
+/// @param sequence QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_graphicsproxywidget_grab_shortcut2(void* self, void* sequence, int64_t context);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setShortcutEnabled)
 ///
-/// ``` QGraphicsProxyWidget* self, int id, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
+/// @param enabled bool
 void q_graphicsproxywidget_set_shortcut_enabled2(void* self, int id, bool enabled);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QGraphicsProxyWidget* self, int id, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
+/// @param enabled bool
 void q_graphicsproxywidget_set_shortcut_auto_repeat2(void* self, int id, bool enabled);
 
 /// Inherited from QGraphicsWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setAttribute)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__WidgetAttribute attribute, bool on ```
+/// @param self QGraphicsProxyWidget*
+/// @param attribute enum Qt__WidgetAttribute
+/// @param on bool
 void q_graphicsproxywidget_set_attribute2(void* self, int64_t attribute, bool on);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QGraphicsProxyWidget*
+/// @param typeVal enum Qt__GestureType
 void q_graphicsproxywidget_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#ungrabGesture)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QGraphicsProxyWidget*
+/// @param typeVal enum Qt__GestureType
 void q_graphicsproxywidget_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_parent_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#parentChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_parent_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_parent_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_opacity_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#opacityChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_opacity_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_visible_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#visibleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_visible_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_enabled_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#enabledChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_enabled_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_enabled_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_x_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#xChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_x_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_x_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_y_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#yChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_y_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_y_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_z_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#zChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_z_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_z_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_rotation_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#rotationChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_rotation_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_rotation_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_scale_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#scaleChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_scale_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_scale_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_children_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#childrenChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_children_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_children_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_width_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#widthChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_width_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_width_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_height_changed(void* self);
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#heightChanged)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_height_changed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_height_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QGraphicsObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsobject.html#grabGesture)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QGraphicsProxyWidget*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_graphicsproxywidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsProxyWidget*
 const char* q_graphicsproxywidget_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QGraphicsProxyWidget* self, char* name ```
+/// @param self QGraphicsProxyWidget*
+/// @param name char*
 void q_graphicsproxywidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QGraphicsProxyWidget* self, bool b ```
+/// @param self QGraphicsProxyWidget*
+/// @param b bool
 bool q_graphicsproxywidget_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QThread* q_graphicsproxywidget_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsProxyWidget* self, QThread* thread ```
+/// @param self QGraphicsProxyWidget*
+/// @param thread QThread*
 bool q_graphicsproxywidget_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsProxyWidget* self, int interval ```
+/// @param self QGraphicsProxyWidget*
+/// @param interval int
 int32_t q_graphicsproxywidget_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsProxyWidget* self, int id ```
+/// @param self QGraphicsProxyWidget*
+/// @param id int
 void q_graphicsproxywidget_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__TimerId id ```
+/// @param self QGraphicsProxyWidget*
+/// @param id enum Qt__TimerId
 void q_graphicsproxywidget_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 libqt_list /* of QObject* */ q_graphicsproxywidget_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* parent ```
+/// @param self QGraphicsProxyWidget*
+/// @param parent QObject*
 void q_graphicsproxywidget_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* filterObj ```
+/// @param self QGraphicsProxyWidget*
+/// @param filterObj QObject*
 void q_graphicsproxywidget_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* obj ```
+/// @param self QGraphicsProxyWidget*
+/// @param obj QObject*
 void q_graphicsproxywidget_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_graphicsproxywidget_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QGraphicsProxyWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_graphicsproxywidget_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_graphicsproxywidget_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_graphicsproxywidget_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* name, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param name const char*
+/// @param value QVariant*
 bool q_graphicsproxywidget_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* name ```
+/// @param self QGraphicsProxyWidget*
+/// @param name const char*
 QVariant* q_graphicsproxywidget_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsProxyWidget*
 const char** q_graphicsproxywidget_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QBindingStorage* q_graphicsproxywidget_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 const QBindingStorage* q_graphicsproxywidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*) ```
-void q_graphicsproxywidget_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*)
+void q_graphicsproxywidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QObject* q_graphicsproxywidget_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* classname ```
+/// @param self QGraphicsProxyWidget*
+/// @param classname const char*
 bool q_graphicsproxywidget_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QGraphicsProxyWidget* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QGraphicsProxyWidget*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_graphicsproxywidget_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QGraphicsProxyWidget* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QGraphicsProxyWidget*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_graphicsproxywidget_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsproxywidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QGraphicsProxyWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_graphicsproxywidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* param1 ```
+/// @param self QGraphicsProxyWidget*
+/// @param param1 QObject*
 void q_graphicsproxywidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QObject*) ```
-void q_graphicsproxywidget_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QObject*)
+void q_graphicsproxywidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scene)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsScene* q_graphicsproxywidget_scene(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_parent_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_top_level_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentObject)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsObject* q_graphicsproxywidget_parent_object(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#parentWidget)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsWidget* q_graphicsproxywidget_parent_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#topLevelWidget)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsWidget* q_graphicsproxywidget_top_level_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#window)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsWidget* q_graphicsproxywidget_window(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#panel)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setParentItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* parent ```
+/// @param self QGraphicsProxyWidget*
+/// @param parent QGraphicsItem*
 void q_graphicsproxywidget_set_parent_item(void* self, void* parent);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#childItems)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 libqt_list /* of QGraphicsItem* */ q_graphicsproxywidget_child_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isWidget)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_widget(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isWindow)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_window(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isPanel)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsObject* q_graphicsproxywidget_to_graphics_object(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toGraphicsObject)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 const QGraphicsObject* q_graphicsproxywidget_to_graphics_object2(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#group)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItemGroup* q_graphicsproxywidget_group(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setGroup)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItemGroup* group ```
+/// @param self QGraphicsProxyWidget*
+/// @param group QGraphicsItemGroup*
 void q_graphicsproxywidget_set_group(void* self, void* group);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#flags)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return flag of enum QGraphicsItem__GraphicsItemFlag
 int64_t q_graphicsproxywidget_flags(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__GraphicsItemFlag flag ```
+/// @param self QGraphicsProxyWidget*
+/// @param flag enum QGraphicsItem__GraphicsItemFlag
 void q_graphicsproxywidget_set_flag(void* self, int64_t flag);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlags)
 ///
-/// ``` QGraphicsProxyWidget* self, int flags ```
+/// @param self QGraphicsProxyWidget*
+/// @param flags flag of enum QGraphicsItem__GraphicsItemFlag
 void q_graphicsproxywidget_set_flags(void* self, int64_t flags);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#cacheMode)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return enum QGraphicsItem__CacheMode
 int64_t q_graphicsproxywidget_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__CacheMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param mode enum QGraphicsItem__CacheMode
 void q_graphicsproxywidget_set_cache_mode(void* self, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return enum QGraphicsItem__PanelModality
 int64_t q_graphicsproxywidget_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPanelModality)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__PanelModality panelModality ```
+/// @param self QGraphicsProxyWidget*
+/// @param panelModality enum QGraphicsItem__PanelModality
 void q_graphicsproxywidget_set_panel_modality(void* self, int64_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_blocked_by_modal_panel(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#toolTip)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QGraphicsProxyWidget*
 const char* q_graphicsproxywidget_tool_tip(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setToolTip)
 ///
-/// ``` QGraphicsProxyWidget* self, const char* toolTip ```
+/// @param self QGraphicsProxyWidget*
+/// @param toolTip const char*
 void q_graphicsproxywidget_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#cursor)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QCursor* q_graphicsproxywidget_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCursor)
 ///
-/// ``` QGraphicsProxyWidget* self, QCursor* cursor ```
+/// @param self QGraphicsProxyWidget*
+/// @param cursor QCursor*
 void q_graphicsproxywidget_set_cursor(void* self, void* cursor);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hasCursor)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_has_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#unsetCursor)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_unset_cursor(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisible)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_visible(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isVisibleTo)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* parent ```
+/// @param self QGraphicsProxyWidget*
+/// @param parent QGraphicsItem*
 bool q_graphicsproxywidget_is_visible_to(void* self, void* parent);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, bool visible ```
+/// @param self QGraphicsProxyWidget*
+/// @param visible bool
 void q_graphicsproxywidget_set_visible(void* self, bool visible);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hide)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_hide(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#show)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_show(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isEnabled)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_enabled(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setEnabled)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_enabled(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isSelected)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_selected(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setSelected)
 ///
-/// ``` QGraphicsProxyWidget* self, bool selected ```
+/// @param self QGraphicsProxyWidget*
+/// @param selected bool
 void q_graphicsproxywidget_set_selected(void* self, bool selected);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptDrops)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_accept_drops(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptDrops)
 ///
-/// ``` QGraphicsProxyWidget* self, bool on ```
+/// @param self QGraphicsProxyWidget*
+/// @param on bool
 void q_graphicsproxywidget_set_accept_drops(void* self, bool on);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#opacity)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_opacity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#effectiveOpacity)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_effective_opacity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setOpacity)
 ///
-/// ``` QGraphicsProxyWidget* self, double opacity ```
+/// @param self QGraphicsProxyWidget*
+/// @param opacity double
 void q_graphicsproxywidget_set_opacity(void* self, double opacity);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#graphicsEffect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsEffect* q_graphicsproxywidget_graphics_effect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setGraphicsEffect)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsEffect* effect ```
+/// @param self QGraphicsProxyWidget*
+/// @param effect QGraphicsEffect*
 void q_graphicsproxywidget_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptedMouseButtons)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_graphicsproxywidget_accepted_mouse_buttons(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptedMouseButtons)
 ///
-/// ``` QGraphicsProxyWidget* self, int buttons ```
+/// @param self QGraphicsProxyWidget*
+/// @param buttons flag of enum Qt__MouseButton
 void q_graphicsproxywidget_set_accepted_mouse_buttons(void* self, int64_t buttons);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptHoverEvents)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_accept_hover_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptHoverEvents)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_accept_hover_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#acceptTouchEvents)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_accept_touch_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setAcceptTouchEvents)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_accept_touch_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#filtersChildEvents)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_filters_child_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFiltersChildEvents)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_filters_child_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#handlesChildEvents)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_handles_child_events(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setHandlesChildEvents)
 ///
-/// ``` QGraphicsProxyWidget* self, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param enabled bool
 void q_graphicsproxywidget_set_handles_child_events(void* self, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isActive)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_active(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setActive)
 ///
-/// ``` QGraphicsProxyWidget* self, bool active ```
+/// @param self QGraphicsProxyWidget*
+/// @param active bool
 void q_graphicsproxywidget_set_active(void* self, bool active);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#hasFocus)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_has_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_set_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#clearFocus)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_clear_focus(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusProxy)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_focus_proxy(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocusProxy)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
 void q_graphicsproxywidget_set_focus_proxy(void* self, void* item);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_focus_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#focusScopeItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_focus_scope_item(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#grabMouse)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_grab_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ungrabMouse)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_ungrab_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#grabKeyboard)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_grab_keyboard(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ungrabKeyboard)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_ungrab_keyboard(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#pos)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPointF* q_graphicsproxywidget_pos(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#x)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_x(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setX)
 ///
-/// ``` QGraphicsProxyWidget* self, double x ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
 void q_graphicsproxywidget_set_x(void* self, double x);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#y)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_y(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setY)
 ///
-/// ``` QGraphicsProxyWidget* self, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param y double
 void q_graphicsproxywidget_set_y(void* self, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scenePos)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPointF* q_graphicsproxywidget_scene_pos(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* pos ```
+/// @param self QGraphicsProxyWidget*
+/// @param pos QPointF*
 void q_graphicsproxywidget_set_pos(void* self, void* pos);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPos)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
 void q_graphicsproxywidget_set_pos2(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#moveBy)
 ///
-/// ``` QGraphicsProxyWidget* self, double dx, double dy ```
+/// @param self QGraphicsProxyWidget*
+/// @param dx double
+/// @param dy double
 void q_graphicsproxywidget_move_by(void* self, double dx, double dy);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_ensure_visible(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_ensure_visible2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transform)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QTransform* q_graphicsproxywidget_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneTransform)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QTransform* q_graphicsproxywidget_scene_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#deviceTransform)
 ///
-/// ``` QGraphicsProxyWidget* self, QTransform* viewportTransform ```
+/// @param self QGraphicsProxyWidget*
+/// @param viewportTransform QTransform*
 QTransform* q_graphicsproxywidget_device_transform(void* self, void* viewportTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* other ```
+/// @param self QGraphicsProxyWidget*
+/// @param other QGraphicsItem*
 QTransform* q_graphicsproxywidget_item_transform(void* self, void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
-/// ``` QGraphicsProxyWidget* self, QTransform* matrix ```
+/// @param self QGraphicsProxyWidget*
+/// @param matrix QTransform*
 void q_graphicsproxywidget_set_transform(void* self, void* matrix);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#resetTransform)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_reset_transform(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setRotation)
 ///
-/// ``` QGraphicsProxyWidget* self, double angle ```
+/// @param self QGraphicsProxyWidget*
+/// @param angle double
 void q_graphicsproxywidget_set_rotation(void* self, double angle);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#rotation)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_rotation(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setScale)
 ///
-/// ``` QGraphicsProxyWidget* self, double scale ```
+/// @param self QGraphicsProxyWidget*
+/// @param scale double
 void q_graphicsproxywidget_set_scale(void* self, double scale);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scale)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_scale(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transformations)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 libqt_list /* of QGraphicsTransform* */ q_graphicsproxywidget_transformations(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformations)
 ///
-/// ``` QGraphicsProxyWidget* self, libqt_list /* of QGraphicsTransform* */ transformations ```
+/// @param self QGraphicsProxyWidget*
+/// @param transformations libqt_list /* of QGraphicsTransform* */
 void q_graphicsproxywidget_set_transformations(void* self, libqt_list transformations);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#transformOriginPoint)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPointF* q_graphicsproxywidget_transform_origin_point(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* origin ```
+/// @param self QGraphicsProxyWidget*
+/// @param origin QPointF*
 void q_graphicsproxywidget_set_transform_origin_point(void* self, void* origin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransformOriginPoint)
 ///
-/// ``` QGraphicsProxyWidget* self, double ax, double ay ```
+/// @param self QGraphicsProxyWidget*
+/// @param ax double
+/// @param ay double
 void q_graphicsproxywidget_set_transform_origin_point2(void* self, double ax, double ay);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#zValue)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_z_value(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setZValue)
 ///
-/// ``` QGraphicsProxyWidget* self, double z ```
+/// @param self QGraphicsProxyWidget*
+/// @param z double
 void q_graphicsproxywidget_set_z_value(void* self, double z);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#stackBefore)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* sibling ```
+/// @param self QGraphicsProxyWidget*
+/// @param sibling QGraphicsItem*
 void q_graphicsproxywidget_stack_before(void* self, void* sibling);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#childrenBoundingRect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_children_bounding_rect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#sceneBoundingRect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_scene_bounding_rect(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isClipped)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_clipped(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#clipPath)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPainterPath* q_graphicsproxywidget_clip_path(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 libqt_list /* of QGraphicsItem* */ q_graphicsproxywidget_colliding_items(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_obscured(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 bool q_graphicsproxywidget_is_obscured2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegion)
 ///
-/// ``` QGraphicsProxyWidget* self, QTransform* itemToDeviceTransform ```
+/// @param self QGraphicsProxyWidget*
+/// @param itemToDeviceTransform QTransform*
 QRegion* q_graphicsproxywidget_bounding_region(void* self, void* itemToDeviceTransform);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#boundingRegionGranularity)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_bounding_region_granularity(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setBoundingRegionGranularity)
 ///
-/// ``` QGraphicsProxyWidget* self, double granularity ```
+/// @param self QGraphicsProxyWidget*
+/// @param granularity double
 void q_graphicsproxywidget_set_bounding_region_granularity(void* self, double granularity);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_update(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double width, double height ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param width double
+/// @param height double
 void q_graphicsproxywidget_update2(void* self, double x, double y, double width, double height);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scroll)
 ///
-/// ``` QGraphicsProxyWidget* self, double dx, double dy ```
+/// @param self QGraphicsProxyWidget*
+/// @param dx double
+/// @param dy double
 void q_graphicsproxywidget_scroll(void* self, double dx, double dy);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_to_item(void* self, void* item, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_to_parent(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_to_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_to_item(void* self, void* item, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_to_parent(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_to_scene(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_to_item4(void* self, void* item, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_to_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_to_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_from_item(void* self, void* item, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_from_parent(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 QPointF* q_graphicsproxywidget_map_from_scene(void* self, void* point);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_from_item(void* self, void* item, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_from_parent(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 QRectF* q_graphicsproxywidget_map_rect_from_scene(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_from_item4(void* self, void* item, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_from_parent4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
 QPainterPath* q_graphicsproxywidget_map_from_scene4(void* self, void* path);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_to_item5(void* self, void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToParent)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_to_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapToScene)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_to_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_to_item2(void* self, void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToParent)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_to_parent2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectToScene)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_to_scene2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_from_item5(void* self, void* item, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromParent)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_from_parent5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapFromScene)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
 QPointF* q_graphicsproxywidget_map_from_scene5(void* self, double x, double y);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_from_item2(void* self, void* item, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromParent)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_from_parent2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#mapRectFromScene)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
 QRectF* q_graphicsproxywidget_map_rect_from_scene2(void* self, double x, double y, double w, double h);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isAncestorOf)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* child ```
+/// @param self QGraphicsProxyWidget*
+/// @param child QGraphicsItem*
 bool q_graphicsproxywidget_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#commonAncestorItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* other ```
+/// @param self QGraphicsProxyWidget*
+/// @param other QGraphicsItem*
 QGraphicsItem* q_graphicsproxywidget_common_ancestor_item(void* self, void* other);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isUnderMouse)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_under_mouse(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#data)
 ///
-/// ``` QGraphicsProxyWidget* self, int key ```
+/// @param self QGraphicsProxyWidget*
+/// @param key int
 QVariant* q_graphicsproxywidget_data(void* self, int key);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setData)
 ///
-/// ``` QGraphicsProxyWidget* self, int key, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param key int
+/// @param value QVariant*
 void q_graphicsproxywidget_set_data(void* self, int key, void* value);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#inputMethodHints)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_graphicsproxywidget_input_method_hints(void* self);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setInputMethodHints)
 ///
-/// ``` QGraphicsProxyWidget* self, int hints ```
+/// @param self QGraphicsProxyWidget*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_graphicsproxywidget_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#installSceneEventFilter)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* filterItem ```
+/// @param self QGraphicsProxyWidget*
+/// @param filterItem QGraphicsItem*
 void q_graphicsproxywidget_install_scene_event_filter(void* self, void* filterItem);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#removeSceneEventFilter)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* filterItem ```
+/// @param self QGraphicsProxyWidget*
+/// @param filterItem QGraphicsItem*
 void q_graphicsproxywidget_remove_scene_event_filter(void* self, void* filterItem);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlag)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__GraphicsItemFlag flag, bool enabled ```
+/// @param self QGraphicsProxyWidget*
+/// @param flag enum QGraphicsItem__GraphicsItemFlag
+/// @param enabled bool
 void q_graphicsproxywidget_set_flag2(void* self, int64_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__CacheMode mode, QSize* cacheSize ```
+/// @param self QGraphicsProxyWidget*
+/// @param mode enum QGraphicsItem__CacheMode
+/// @param cacheSize QSize*
 void q_graphicsproxywidget_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__FocusReason focusReason ```
+/// @param self QGraphicsProxyWidget*
+/// @param focusReason enum Qt__FocusReason
 void q_graphicsproxywidget_set_focus1(void* self, int64_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 void q_graphicsproxywidget_ensure_visible1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect, int xmargin ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+/// @param xmargin int
 void q_graphicsproxywidget_ensure_visible22(void* self, void* rect, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect, int xmargin, int ymargin ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
+/// @param xmargin int
+/// @param ymargin int
 void q_graphicsproxywidget_ensure_visible3(void* self, void* rect, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h, int xmargin ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+/// @param xmargin int
 void q_graphicsproxywidget_ensure_visible5(void* self, double x, double y, double w, double h, int xmargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
-/// ``` QGraphicsProxyWidget* self, double x, double y, double w, double h, int xmargin, int ymargin ```
+/// @param self QGraphicsProxyWidget*
+/// @param x double
+/// @param y double
+/// @param w double
+/// @param h double
+/// @param xmargin int
+/// @param ymargin int
 void q_graphicsproxywidget_ensure_visible6(void* self, double x, double y, double w, double h, int xmargin, int ymargin);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemTransform)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* other, bool* ok ```
+/// @param self QGraphicsProxyWidget*
+/// @param other QGraphicsItem*
+/// @param ok bool*
 QTransform* q_graphicsproxywidget_item_transform2(void* self, void* other, bool* ok);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setTransform)
 ///
-/// ``` QGraphicsProxyWidget* self, QTransform* matrix, bool combine ```
+/// @param self QGraphicsProxyWidget*
+/// @param matrix QTransform*
+/// @param combine bool
 void q_graphicsproxywidget_set_transform2(void* self, void* matrix, bool combine);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param mode enum Qt__ItemSelectionMode
 libqt_list /* of QGraphicsItem* */ q_graphicsproxywidget_colliding_items1(void* self, int64_t mode);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 bool q_graphicsproxywidget_is_obscured1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#update)
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param rect QRectF*
 void q_graphicsproxywidget_update1(void* self, void* rect);
 
 /// Inherited from QGraphicsItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#scroll)
 ///
-/// ``` QGraphicsProxyWidget* self, double dx, double dy, QRectF* rect ```
+/// @param self QGraphicsProxyWidget*
+/// @param dx double
+/// @param dy double
+/// @param rect QRectF*
 void q_graphicsproxywidget_scroll3(void* self, double dx, double dy, void* rect);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsProxyWidget* self, QSizePolicy* policy ```
+/// @param self QGraphicsProxyWidget*
+/// @param policy QSizePolicy*
 void q_graphicsproxywidget_set_size_policy(void* self, void* policy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QSizePolicy__Policy hPolicy, enum QSizePolicy__Policy vPolicy ```
+/// @param self QGraphicsProxyWidget*
+/// @param hPolicy enum QSizePolicy__Policy
+/// @param vPolicy enum QSizePolicy__Policy
 void q_graphicsproxywidget_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QSizePolicy* q_graphicsproxywidget_size_policy(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
-/// ``` QGraphicsProxyWidget* self, QSizeF* size ```
+/// @param self QGraphicsProxyWidget*
+/// @param size QSizeF*
 void q_graphicsproxywidget_set_minimum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumSize)
 ///
-/// ``` QGraphicsProxyWidget* self, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_set_minimum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumSize)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QSizeF* q_graphicsproxywidget_minimum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumWidth)
 ///
-/// ``` QGraphicsProxyWidget* self, double width ```
+/// @param self QGraphicsProxyWidget*
+/// @param width double
 void q_graphicsproxywidget_set_minimum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumWidth)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_minimum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMinimumHeight)
 ///
-/// ``` QGraphicsProxyWidget* self, double height ```
+/// @param self QGraphicsProxyWidget*
+/// @param height double
 void q_graphicsproxywidget_set_minimum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#minimumHeight)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_minimum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
-/// ``` QGraphicsProxyWidget* self, QSizeF* size ```
+/// @param self QGraphicsProxyWidget*
+/// @param size QSizeF*
 void q_graphicsproxywidget_set_preferred_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredSize)
 ///
-/// ``` QGraphicsProxyWidget* self, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_set_preferred_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredSize)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QSizeF* q_graphicsproxywidget_preferred_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredWidth)
 ///
-/// ``` QGraphicsProxyWidget* self, double width ```
+/// @param self QGraphicsProxyWidget*
+/// @param width double
 void q_graphicsproxywidget_set_preferred_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredWidth)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_preferred_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setPreferredHeight)
 ///
-/// ``` QGraphicsProxyWidget* self, double height ```
+/// @param self QGraphicsProxyWidget*
+/// @param height double
 void q_graphicsproxywidget_set_preferred_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#preferredHeight)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_preferred_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
-/// ``` QGraphicsProxyWidget* self, QSizeF* size ```
+/// @param self QGraphicsProxyWidget*
+/// @param size QSizeF*
 void q_graphicsproxywidget_set_maximum_size(void* self, void* size);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumSize)
 ///
-/// ``` QGraphicsProxyWidget* self, double w, double h ```
+/// @param self QGraphicsProxyWidget*
+/// @param w double
+/// @param h double
 void q_graphicsproxywidget_set_maximum_size2(void* self, double w, double h);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumSize)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QSizeF* q_graphicsproxywidget_maximum_size(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumWidth)
 ///
-/// ``` QGraphicsProxyWidget* self, double width ```
+/// @param self QGraphicsProxyWidget*
+/// @param width double
 void q_graphicsproxywidget_set_maximum_width(void* self, double width);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumWidth)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_maximum_width(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setMaximumHeight)
 ///
-/// ``` QGraphicsProxyWidget* self, double height ```
+/// @param self QGraphicsProxyWidget*
+/// @param height double
 void q_graphicsproxywidget_set_maximum_height(void* self, double height);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#maximumHeight)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 double q_graphicsproxywidget_maximum_height(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_geometry(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_contents_rect(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__SizeHint which ```
+/// @param self QGraphicsProxyWidget*
+/// @param which enum Qt__SizeHint
 QSizeF* q_graphicsproxywidget_effective_size_hint(void* self, int64_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsLayoutItem* q_graphicsproxywidget_parent_layout_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setParentLayoutItem)
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsLayoutItem* parent ```
+/// @param self QGraphicsProxyWidget*
+/// @param parent QGraphicsLayoutItem*
 void q_graphicsproxywidget_set_parent_layout_item(void* self, void* parent);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isLayout)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#graphicsItem)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QGraphicsItem* q_graphicsproxywidget_graphics_item(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#ownedByLayout)
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_owned_by_layout(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
-/// ``` QGraphicsProxyWidget* self, enum QSizePolicy__Policy hPolicy, enum QSizePolicy__Policy vPolicy, enum QSizePolicy__ControlType controlType ```
+/// @param self QGraphicsProxyWidget*
+/// @param hPolicy enum QSizePolicy__Policy
+/// @param vPolicy enum QSizePolicy__Policy
+/// @param controlType enum QSizePolicy__ControlType
 void q_graphicsproxywidget_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
 
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
-/// ``` QGraphicsProxyWidget* self, enum Qt__SizeHint which, QSizeF* constraint ```
+/// @param self QGraphicsProxyWidget*
+/// @param which enum Qt__SizeHint
+/// @param constraint QSizeF*
 QSizeF* q_graphicsproxywidget_effective_size_hint2(void* self, int64_t which, void* constraint);
 
 /// Inherited from QGraphicsWidget
@@ -2972,7 +3416,11 @@ QSizeF* q_graphicsproxywidget_effective_size_hint2(void* self, int64_t which, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, double* left, double* top, double* right, double* bottom ```
+/// @param self QGraphicsProxyWidget*
+/// @param left double*
+/// @param top double*
+/// @param right double*
+/// @param bottom double*
 void q_graphicsproxywidget_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
@@ -2981,7 +3429,11 @@ void q_graphicsproxywidget_get_contents_margins(void* self, double* left, double
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, double* left, double* top, double* right, double* bottom ```
+/// @param self QGraphicsProxyWidget*
+/// @param left double*
+/// @param top double*
+/// @param right double*
+/// @param bottom double*
 void q_graphicsproxywidget_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsWidget
@@ -2990,8 +3442,9 @@ void q_graphicsproxywidget_qbase_get_contents_margins(void* self, double* left, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, double*, double*, double*, double*) ```
-void q_graphicsproxywidget_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, double*, double*, double*, double*)
+void q_graphicsproxywidget_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -2999,7 +3452,10 @@ void q_graphicsproxywidget_on_get_contents_margins(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsproxywidget_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
@@ -3008,7 +3464,10 @@ void q_graphicsproxywidget_paint_window_frame(void* self, void* painter, void* o
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainter* painter, QStyleOptionGraphicsItem* option, QWidget* widget ```
+/// @param self QGraphicsProxyWidget*
+/// @param painter QPainter*
+/// @param option QStyleOptionGraphicsItem*
+/// @param widget QWidget*
 void q_graphicsproxywidget_qbase_paint_window_frame(void* self, void* painter, void* option, void* widget);
 
 /// Inherited from QGraphicsWidget
@@ -3017,8 +3476,9 @@ void q_graphicsproxywidget_qbase_paint_window_frame(void* self, void* painter, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*) ```
-void q_graphicsproxywidget_on_paint_window_frame(void* self, void (*slot)(void*, void*, void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QPainter*, QStyleOptionGraphicsItem*, QWidget*)
+void q_graphicsproxywidget_on_paint_window_frame(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3026,7 +3486,7 @@ void q_graphicsproxywidget_on_paint_window_frame(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3035,7 +3495,7 @@ QRectF* q_graphicsproxywidget_bounding_rect(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QRectF* q_graphicsproxywidget_qbase_bounding_rect(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3044,8 +3504,9 @@ QRectF* q_graphicsproxywidget_qbase_bounding_rect(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QRectF* (*slot)() ```
-void q_graphicsproxywidget_on_bounding_rect(void* self, QRectF* (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback QRectF* fn()
+void q_graphicsproxywidget_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3053,7 +3514,7 @@ void q_graphicsproxywidget_on_bounding_rect(void* self, QRectF* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPainterPath* q_graphicsproxywidget_shape(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3062,7 +3523,7 @@ QPainterPath* q_graphicsproxywidget_shape(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPainterPath* q_graphicsproxywidget_qbase_shape(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3071,8 +3532,9 @@ QPainterPath* q_graphicsproxywidget_qbase_shape(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* (*slot)() ```
-void q_graphicsproxywidget_on_shape(void* self, QPainterPath* (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback QPainterPath* fn()
+void q_graphicsproxywidget_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3080,7 +3542,8 @@ void q_graphicsproxywidget_on_shape(void* self, QPainterPath* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QStyleOption* option ```
+/// @param self QGraphicsProxyWidget*
+/// @param option QStyleOption*
 void q_graphicsproxywidget_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
@@ -3089,7 +3552,8 @@ void q_graphicsproxywidget_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QStyleOption* option ```
+/// @param self QGraphicsProxyWidget*
+/// @param option QStyleOption*
 void q_graphicsproxywidget_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QGraphicsWidget
@@ -3098,8 +3562,9 @@ void q_graphicsproxywidget_qbase_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QStyleOption*) ```
-void q_graphicsproxywidget_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QStyleOption*)
+void q_graphicsproxywidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3107,7 +3572,7 @@ void q_graphicsproxywidget_on_init_style_option(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3116,7 +3581,7 @@ void q_graphicsproxywidget_update_geometry(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_update_geometry(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3125,8 +3590,9 @@ void q_graphicsproxywidget_qbase_update_geometry(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_update_geometry(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_update_geometry(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3134,7 +3600,9 @@ void q_graphicsproxywidget_on_update_geometry(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, const char* propertyName, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param propertyName const char*
+/// @param value QVariant*
 QVariant* q_graphicsproxywidget_property_change(void* self, const char* propertyName, void* value);
 
 /// Inherited from QGraphicsWidget
@@ -3143,7 +3611,9 @@ QVariant* q_graphicsproxywidget_property_change(void* self, const char* property
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, const char* propertyName, QVariant* value ```
+/// @param self QGraphicsProxyWidget*
+/// @param propertyName const char*
+/// @param value QVariant*
 QVariant* q_graphicsproxywidget_qbase_property_change(void* self, const char* propertyName, void* value);
 
 /// Inherited from QGraphicsWidget
@@ -3152,8 +3622,9 @@ QVariant* q_graphicsproxywidget_qbase_property_change(void* self, const char* pr
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* (*slot)(QGraphicsProxyWidget*, const char*, QVariant*) ```
-void q_graphicsproxywidget_on_property_change(void* self, QVariant* (*slot)(void*, const char*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QVariant* fn(QGraphicsProxyWidget*, const char*, QVariant*)
+void q_graphicsproxywidget_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3161,7 +3632,8 @@ void q_graphicsproxywidget_on_property_change(void* self, QVariant* (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 bool q_graphicsproxywidget_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3170,7 +3642,8 @@ bool q_graphicsproxywidget_scene_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 bool q_graphicsproxywidget_qbase_scene_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3179,8 +3652,9 @@ bool q_graphicsproxywidget_qbase_scene_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_scene_event(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_scene_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3188,7 +3662,8 @@ void q_graphicsproxywidget_on_scene_event(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* e ```
+/// @param self QGraphicsProxyWidget*
+/// @param e QEvent*
 bool q_graphicsproxywidget_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
@@ -3197,7 +3672,8 @@ bool q_graphicsproxywidget_window_frame_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* e ```
+/// @param self QGraphicsProxyWidget*
+/// @param e QEvent*
 bool q_graphicsproxywidget_qbase_window_frame_event(void* self, void* e);
 
 /// Inherited from QGraphicsWidget
@@ -3206,8 +3682,9 @@ bool q_graphicsproxywidget_qbase_window_frame_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_window_frame_event(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_window_frame_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3215,7 +3692,10 @@ void q_graphicsproxywidget_on_window_frame_event(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* pos ```
+/// @param self QGraphicsProxyWidget*
+/// @param pos QPointF*
+///
+/// @return enum Qt__WindowFrameSection
 int64_t q_graphicsproxywidget_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
@@ -3224,7 +3704,10 @@ int64_t q_graphicsproxywidget_window_frame_section_at(void* self, void* pos);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* pos ```
+/// @param self QGraphicsProxyWidget*
+/// @param pos QPointF*
+///
+/// @return enum Qt__WindowFrameSection
 int64_t q_graphicsproxywidget_qbase_window_frame_section_at(void* self, void* pos);
 
 /// Inherited from QGraphicsWidget
@@ -3233,8 +3716,9 @@ int64_t q_graphicsproxywidget_qbase_window_frame_section_at(void* self, void* po
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, int64_t (*slot)(QGraphicsProxyWidget*, QPointF*) ```
-void q_graphicsproxywidget_on_window_frame_section_at(void* self, int64_t (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback int64_t fn(QGraphicsProxyWidget*, QPointF*)
+void q_graphicsproxywidget_on_window_frame_section_at(void* self, int64_t (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3242,7 +3726,8 @@ void q_graphicsproxywidget_on_window_frame_section_at(void* self, int64_t (*slot
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3251,7 +3736,8 @@ void q_graphicsproxywidget_change_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_change_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3260,8 +3746,9 @@ void q_graphicsproxywidget_qbase_change_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3269,7 +3756,8 @@ void q_graphicsproxywidget_on_change_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QCloseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QCloseEvent*
 void q_graphicsproxywidget_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3278,7 +3766,8 @@ void q_graphicsproxywidget_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QCloseEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QCloseEvent*
 void q_graphicsproxywidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3287,8 +3776,9 @@ void q_graphicsproxywidget_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QCloseEvent*) ```
-void q_graphicsproxywidget_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QCloseEvent*)
+void q_graphicsproxywidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3296,7 +3786,8 @@ void q_graphicsproxywidget_on_close_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMoveEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMoveEvent*
 void q_graphicsproxywidget_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3305,7 +3796,8 @@ void q_graphicsproxywidget_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsSceneMoveEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QGraphicsSceneMoveEvent*
 void q_graphicsproxywidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3314,8 +3806,9 @@ void q_graphicsproxywidget_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsSceneMoveEvent*) ```
-void q_graphicsproxywidget_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsSceneMoveEvent*)
+void q_graphicsproxywidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3323,7 +3816,7 @@ void q_graphicsproxywidget_on_move_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3332,7 +3825,7 @@ void q_graphicsproxywidget_polish_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_polish_event(void* self);
 
 /// Inherited from QGraphicsWidget
@@ -3341,8 +3834,9 @@ void q_graphicsproxywidget_qbase_polish_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_polish_event(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_polish_event(void* self, void (*callback)());
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3350,7 +3844,8 @@ void q_graphicsproxywidget_on_polish_event(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3359,7 +3854,8 @@ void q_graphicsproxywidget_grab_keyboard_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_grab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3368,8 +3864,9 @@ void q_graphicsproxywidget_qbase_grab_keyboard_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_grab_keyboard_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_grab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsWidget
 ///
@@ -3377,7 +3874,8 @@ void q_graphicsproxywidget_on_grab_keyboard_event(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3386,7 +3884,8 @@ void q_graphicsproxywidget_ungrab_keyboard_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_ungrab_keyboard_event(void* self, void* event);
 
 /// Inherited from QGraphicsWidget
@@ -3395,8 +3894,9 @@ void q_graphicsproxywidget_qbase_ungrab_keyboard_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_ungrab_keyboard_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_ungrab_keyboard_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3404,7 +3904,8 @@ void q_graphicsproxywidget_on_ungrab_keyboard_event(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QTimerEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QTimerEvent*
 void q_graphicsproxywidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3413,7 +3914,8 @@ void q_graphicsproxywidget_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QTimerEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QTimerEvent*
 void q_graphicsproxywidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3422,8 +3924,9 @@ void q_graphicsproxywidget_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QTimerEvent*) ```
-void q_graphicsproxywidget_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QTimerEvent*)
+void q_graphicsproxywidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3431,7 +3934,8 @@ void q_graphicsproxywidget_on_timer_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QChildEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QChildEvent*
 void q_graphicsproxywidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3440,7 +3944,8 @@ void q_graphicsproxywidget_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QChildEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QChildEvent*
 void q_graphicsproxywidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3449,8 +3954,9 @@ void q_graphicsproxywidget_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QChildEvent*) ```
-void q_graphicsproxywidget_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QChildEvent*)
+void q_graphicsproxywidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3458,7 +3964,8 @@ void q_graphicsproxywidget_on_child_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3467,7 +3974,8 @@ void q_graphicsproxywidget_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param event QEvent*
 void q_graphicsproxywidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3476,8 +3984,9 @@ void q_graphicsproxywidget_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QEvent*) ```
-void q_graphicsproxywidget_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QEvent*)
+void q_graphicsproxywidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3485,7 +3994,8 @@ void q_graphicsproxywidget_on_custom_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 void q_graphicsproxywidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3494,7 +4004,8 @@ void q_graphicsproxywidget_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 void q_graphicsproxywidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3503,8 +4014,9 @@ void q_graphicsproxywidget_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QMetaMethod*) ```
-void q_graphicsproxywidget_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QMetaMethod*)
+void q_graphicsproxywidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3512,7 +4024,8 @@ void q_graphicsproxywidget_on_connect_notify(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 void q_graphicsproxywidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3521,7 +4034,8 @@ void q_graphicsproxywidget_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 void q_graphicsproxywidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3530,8 +4044,9 @@ void q_graphicsproxywidget_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QMetaMethod*) ```
-void q_graphicsproxywidget_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QMetaMethod*)
+void q_graphicsproxywidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3539,7 +4054,8 @@ void q_graphicsproxywidget_on_disconnect_notify(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, int phase ```
+/// @param self QGraphicsProxyWidget*
+/// @param phase int
 void q_graphicsproxywidget_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
@@ -3548,7 +4064,8 @@ void q_graphicsproxywidget_advance(void* self, int phase);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, int phase ```
+/// @param self QGraphicsProxyWidget*
+/// @param phase int
 void q_graphicsproxywidget_qbase_advance(void* self, int phase);
 
 /// Inherited from QGraphicsItem
@@ -3557,8 +4074,9 @@ void q_graphicsproxywidget_qbase_advance(void* self, int phase);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, int) ```
-void q_graphicsproxywidget_on_advance(void* self, void (*slot)(void*, int));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, int)
+void q_graphicsproxywidget_on_advance(void* self, void (*callback)(void*, int));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3566,7 +4084,8 @@ void q_graphicsproxywidget_on_advance(void* self, void (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 bool q_graphicsproxywidget_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
@@ -3575,7 +4094,8 @@ bool q_graphicsproxywidget_contains(void* self, void* point);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPointF* point ```
+/// @param self QGraphicsProxyWidget*
+/// @param point QPointF*
 bool q_graphicsproxywidget_qbase_contains(void* self, void* point);
 
 /// Inherited from QGraphicsItem
@@ -3584,8 +4104,9 @@ bool q_graphicsproxywidget_qbase_contains(void* self, void* point);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QPointF*) ```
-void q_graphicsproxywidget_on_contains(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QPointF*)
+void q_graphicsproxywidget_on_contains(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3593,7 +4114,9 @@ void q_graphicsproxywidget_on_contains(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param other QGraphicsItem*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsproxywidget_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -3602,7 +4125,9 @@ bool q_graphicsproxywidget_collides_with_item(void* self, void* other, int64_t m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* other, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param other QGraphicsItem*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsproxywidget_qbase_collides_with_item(void* self, void* other, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -3611,8 +4136,9 @@ bool q_graphicsproxywidget_qbase_collides_with_item(void* self, void* other, int
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QGraphicsItem*, enum Qt__ItemSelectionMode) ```
-void q_graphicsproxywidget_on_collides_with_item(void* self, bool (*slot)(void*, void*, int64_t));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QGraphicsItem*, enum Qt__ItemSelectionMode)
+void q_graphicsproxywidget_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3620,7 +4146,9 @@ void q_graphicsproxywidget_on_collides_with_item(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsproxywidget_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -3629,7 +4157,9 @@ bool q_graphicsproxywidget_collides_with_path(void* self, void* path, int64_t mo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* path, enum Qt__ItemSelectionMode mode ```
+/// @param self QGraphicsProxyWidget*
+/// @param path QPainterPath*
+/// @param mode enum Qt__ItemSelectionMode
 bool q_graphicsproxywidget_qbase_collides_with_path(void* self, void* path, int64_t mode);
 
 /// Inherited from QGraphicsItem
@@ -3638,8 +4168,9 @@ bool q_graphicsproxywidget_qbase_collides_with_path(void* self, void* path, int6
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QPainterPath*, enum Qt__ItemSelectionMode) ```
-void q_graphicsproxywidget_on_collides_with_path(void* self, bool (*slot)(void*, void*, int64_t));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QPainterPath*, enum Qt__ItemSelectionMode)
+void q_graphicsproxywidget_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3647,7 +4178,8 @@ void q_graphicsproxywidget_on_collides_with_path(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
 bool q_graphicsproxywidget_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
@@ -3656,7 +4188,8 @@ bool q_graphicsproxywidget_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
 bool q_graphicsproxywidget_qbase_is_obscured_by(void* self, void* item);
 
 /// Inherited from QGraphicsItem
@@ -3665,8 +4198,9 @@ bool q_graphicsproxywidget_qbase_is_obscured_by(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QGraphicsItem*) ```
-void q_graphicsproxywidget_on_is_obscured_by(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QGraphicsItem*)
+void q_graphicsproxywidget_on_is_obscured_by(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3674,7 +4208,7 @@ void q_graphicsproxywidget_on_is_obscured_by(void* self, bool (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPainterPath* q_graphicsproxywidget_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3683,7 +4217,7 @@ QPainterPath* q_graphicsproxywidget_opaque_area(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QPainterPath* q_graphicsproxywidget_qbase_opaque_area(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3692,8 +4226,9 @@ QPainterPath* q_graphicsproxywidget_qbase_opaque_area(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QPainterPath* (*slot)() ```
-void q_graphicsproxywidget_on_opaque_area(void* self, QPainterPath* (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback QPainterPath* fn()
+void q_graphicsproxywidget_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -3701,7 +4236,9 @@ void q_graphicsproxywidget_on_opaque_area(void* self, QPainterPath* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param watched QGraphicsItem*
+/// @param event QEvent*
 bool q_graphicsproxywidget_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
@@ -3710,7 +4247,9 @@ bool q_graphicsproxywidget_scene_event_filter(void* self, void* watched, void* e
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* watched, QEvent* event ```
+/// @param self QGraphicsProxyWidget*
+/// @param watched QGraphicsItem*
+/// @param event QEvent*
 bool q_graphicsproxywidget_qbase_scene_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QGraphicsItem
@@ -3719,8 +4258,9 @@ bool q_graphicsproxywidget_qbase_scene_event_filter(void* self, void* watched, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QGraphicsItem*, QEvent*) ```
-void q_graphicsproxywidget_on_scene_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QGraphicsItem*, QEvent*)
+void q_graphicsproxywidget_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3728,7 +4268,8 @@ void q_graphicsproxywidget_on_scene_event_filter(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__Extension extension ```
+/// @param self QGraphicsProxyWidget*
+/// @param extension enum QGraphicsItem__Extension
 bool q_graphicsproxywidget_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
@@ -3737,7 +4278,8 @@ bool q_graphicsproxywidget_supports_extension(void* self, int64_t extension);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__Extension extension ```
+/// @param self QGraphicsProxyWidget*
+/// @param extension enum QGraphicsItem__Extension
 bool q_graphicsproxywidget_qbase_supports_extension(void* self, int64_t extension);
 
 /// Inherited from QGraphicsItem
@@ -3746,8 +4288,9 @@ bool q_graphicsproxywidget_qbase_supports_extension(void* self, int64_t extensio
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, enum QGraphicsItem__Extension) ```
-void q_graphicsproxywidget_on_supports_extension(void* self, bool (*slot)(void*, int64_t));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, enum QGraphicsItem__Extension)
+void q_graphicsproxywidget_on_supports_extension(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3755,7 +4298,9 @@ void q_graphicsproxywidget_on_supports_extension(void* self, bool (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
+/// @param self QGraphicsProxyWidget*
+/// @param extension enum QGraphicsItem__Extension
+/// @param variant QVariant*
 void q_graphicsproxywidget_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -3764,7 +4309,9 @@ void q_graphicsproxywidget_set_extension(void* self, int64_t extension, void* va
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, enum QGraphicsItem__Extension extension, QVariant* variant ```
+/// @param self QGraphicsProxyWidget*
+/// @param extension enum QGraphicsItem__Extension
+/// @param variant QVariant*
 void q_graphicsproxywidget_qbase_set_extension(void* self, int64_t extension, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -3773,8 +4320,9 @@ void q_graphicsproxywidget_qbase_set_extension(void* self, int64_t extension, vo
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, enum QGraphicsItem__Extension, QVariant*) ```
-void q_graphicsproxywidget_on_set_extension(void* self, void (*slot)(void*, int64_t, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, enum QGraphicsItem__Extension, QVariant*)
+void q_graphicsproxywidget_on_set_extension(void* self, void (*callback)(void*, int64_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3782,7 +4330,8 @@ void q_graphicsproxywidget_on_set_extension(void* self, void (*slot)(void*, int6
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* variant ```
+/// @param self QGraphicsProxyWidget*
+/// @param variant QVariant*
 QVariant* q_graphicsproxywidget_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -3791,7 +4340,8 @@ QVariant* q_graphicsproxywidget_extension(void* self, void* variant);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* variant ```
+/// @param self QGraphicsProxyWidget*
+/// @param variant QVariant*
 QVariant* q_graphicsproxywidget_qbase_extension(void* self, void* variant);
 
 /// Inherited from QGraphicsItem
@@ -3800,8 +4350,9 @@ QVariant* q_graphicsproxywidget_qbase_extension(void* self, void* variant);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QVariant* (*slot)(QGraphicsProxyWidget*, QVariant*) ```
-void q_graphicsproxywidget_on_extension(void* self, QVariant* (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback QVariant* fn(QGraphicsProxyWidget*, QVariant*)
+void q_graphicsproxywidget_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3809,7 +4360,7 @@ void q_graphicsproxywidget_on_extension(void* self, QVariant* (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
@@ -3818,7 +4369,7 @@ bool q_graphicsproxywidget_is_empty(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 bool q_graphicsproxywidget_qbase_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
@@ -3827,8 +4378,9 @@ bool q_graphicsproxywidget_qbase_is_empty(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)() ```
-void q_graphicsproxywidget_on_is_empty(void* self, bool (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn()
+void q_graphicsproxywidget_on_is_empty(void* self, bool (*callback)());
 
 /// Inherited from QGraphicsObject
 ///
@@ -3836,7 +4388,7 @@ void q_graphicsproxywidget_on_is_empty(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
@@ -3845,7 +4397,7 @@ void q_graphicsproxywidget_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QGraphicsObject
@@ -3854,8 +4406,9 @@ void q_graphicsproxywidget_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3863,7 +4416,7 @@ void q_graphicsproxywidget_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QObject* q_graphicsproxywidget_sender(void* self);
 
 /// Inherited from QObject
@@ -3872,7 +4425,7 @@ QObject* q_graphicsproxywidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 QObject* q_graphicsproxywidget_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3881,8 +4434,9 @@ QObject* q_graphicsproxywidget_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QObject* (*slot)() ```
-void q_graphicsproxywidget_on_sender(void* self, QObject* (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback QObject* fn()
+void q_graphicsproxywidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3890,7 +4444,7 @@ void q_graphicsproxywidget_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 int32_t q_graphicsproxywidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3899,7 +4453,7 @@ int32_t q_graphicsproxywidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 int32_t q_graphicsproxywidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3908,8 +4462,9 @@ int32_t q_graphicsproxywidget_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, int32_t (*slot)() ```
-void q_graphicsproxywidget_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback int32_t fn()
+void q_graphicsproxywidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3917,7 +4472,8 @@ void q_graphicsproxywidget_on_sender_signal_index(void* self, int32_t (*slot)())
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, const char* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal const char*
 int32_t q_graphicsproxywidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3926,7 +4482,8 @@ int32_t q_graphicsproxywidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, const char* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal const char*
 int32_t q_graphicsproxywidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3935,8 +4492,9 @@ int32_t q_graphicsproxywidget_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, int32_t (*slot)(QGraphicsProxyWidget*, const char*) ```
-void q_graphicsproxywidget_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback int32_t fn(QGraphicsProxyWidget*, const char*)
+void q_graphicsproxywidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3944,7 +4502,8 @@ void q_graphicsproxywidget_on_receivers(void* self, int32_t (*slot)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 bool q_graphicsproxywidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3953,7 +4512,8 @@ bool q_graphicsproxywidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QMetaMethod* signal ```
+/// @param self QGraphicsProxyWidget*
+/// @param signal QMetaMethod*
 bool q_graphicsproxywidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3962,8 +4522,9 @@ bool q_graphicsproxywidget_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool (*slot)(QGraphicsProxyWidget*, QMetaMethod*) ```
-void q_graphicsproxywidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback bool fn(QGraphicsProxyWidget*, QMetaMethod*)
+void q_graphicsproxywidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3971,7 +4532,7 @@ void q_graphicsproxywidget_on_is_signal_connected(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3980,7 +4541,7 @@ void q_graphicsproxywidget_add_to_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_add_to_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -3989,8 +4550,9 @@ void q_graphicsproxywidget_qbase_add_to_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_add_to_index(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_add_to_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -3998,7 +4560,7 @@ void q_graphicsproxywidget_on_add_to_index(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -4007,7 +4569,7 @@ void q_graphicsproxywidget_remove_from_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_remove_from_index(void* self);
 
 /// Inherited from QGraphicsItem
@@ -4016,8 +4578,9 @@ void q_graphicsproxywidget_qbase_remove_from_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_remove_from_index(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_remove_from_index(void* self, void (*callback)());
 
 /// Inherited from QGraphicsItem
 ///
@@ -4025,7 +4588,7 @@ void q_graphicsproxywidget_on_remove_from_index(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
@@ -4034,7 +4597,7 @@ void q_graphicsproxywidget_prepare_geometry_change(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_qbase_prepare_geometry_change(void* self);
 
 /// Inherited from QGraphicsItem
@@ -4043,8 +4606,9 @@ void q_graphicsproxywidget_qbase_prepare_geometry_change(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)() ```
-void q_graphicsproxywidget_on_prepare_geometry_change(void* self, void (*slot)());
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn()
+void q_graphicsproxywidget_on_prepare_geometry_change(void* self, void (*callback)());
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -4052,7 +4616,8 @@ void q_graphicsproxywidget_on_prepare_geometry_change(void* self, void (*slot)()
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
 void q_graphicsproxywidget_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
@@ -4061,7 +4626,8 @@ void q_graphicsproxywidget_set_graphics_item(void* self, void* item);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, QGraphicsItem* item ```
+/// @param self QGraphicsProxyWidget*
+/// @param item QGraphicsItem*
 void q_graphicsproxywidget_qbase_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
@@ -4070,8 +4636,9 @@ void q_graphicsproxywidget_qbase_set_graphics_item(void* self, void* item);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, QGraphicsItem*) ```
-void q_graphicsproxywidget_on_set_graphics_item(void* self, void (*slot)(void*, void*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, QGraphicsItem*)
+void q_graphicsproxywidget_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -4079,7 +4646,8 @@ void q_graphicsproxywidget_on_set_graphics_item(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool ownedByLayout ```
+/// @param self QGraphicsProxyWidget*
+/// @param ownedByLayout bool
 void q_graphicsproxywidget_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
@@ -4088,7 +4656,8 @@ void q_graphicsproxywidget_set_owned_by_layout(void* self, bool ownedByLayout);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, bool ownedByLayout ```
+/// @param self QGraphicsProxyWidget*
+/// @param ownedByLayout bool
 void q_graphicsproxywidget_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
@@ -4097,8 +4666,9 @@ void q_graphicsproxywidget_qbase_set_owned_by_layout(void* self, bool ownedByLay
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, bool) ```
-void q_graphicsproxywidget_on_set_owned_by_layout(void* self, void (*slot)(void*, bool));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, bool)
+void q_graphicsproxywidget_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -4106,14 +4676,15 @@ void q_graphicsproxywidget_on_set_owned_by_layout(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QGraphicsProxyWidget* self, void (*slot)(QGraphicsProxyWidget*, const char*) ```
-void q_graphicsproxywidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QGraphicsProxyWidget*
+/// @param callback void fn(QGraphicsProxyWidget*, const char*)
+void q_graphicsproxywidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsproxywidget.html#dtor.QGraphicsProxyWidget)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QGraphicsProxyWidget* self ```
+/// @param self QGraphicsProxyWidget*
 void q_graphicsproxywidget_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qgraphicsproxywidget.html#types

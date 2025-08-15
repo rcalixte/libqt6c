@@ -104,8 +104,8 @@ const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* pub
     return _ret;
 }
 
-void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*slot)(void*, const char*, const char*)) {
-    QXmlStreamEntityResolver_OnResolveEntity((QXmlStreamEntityResolver*)self, (intptr_t)slot);
+void q_xmlstreamentityresolver_on_resolve_entity(void* self, const char* (*callback)(void*, const char*, const char*)) {
+    QXmlStreamEntityResolver_OnResolveEntity((QXmlStreamEntityResolver*)self, (intptr_t)callback);
 }
 
 const char* q_xmlstreamentityresolver_qbase_resolve_entity(void* self, const char* publicId, const char* systemId) {
@@ -122,8 +122,8 @@ const char* q_xmlstreamentityresolver_resolve_undeclared_entity(void* self, cons
     return _ret;
 }
 
-void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*slot)(void*, const char*)) {
-    QXmlStreamEntityResolver_OnResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, (intptr_t)slot);
+void q_xmlstreamentityresolver_on_resolve_undeclared_entity(void* self, const char* (*callback)(void*, const char*)) {
+    QXmlStreamEntityResolver_OnResolveUndeclaredEntity((QXmlStreamEntityResolver*)self, (intptr_t)callback);
 }
 
 const char* q_xmlstreamentityresolver_qbase_resolve_undeclared_entity(void* self, const char* name) {

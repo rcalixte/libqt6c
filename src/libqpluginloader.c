@@ -35,8 +35,8 @@ int32_t q_pluginloader_metacall(void* self, int64_t param1, int param2, void* pa
     return QPluginLoader_Metacall((QPluginLoader*)self, param1, param2, param3);
 }
 
-void q_pluginloader_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPluginLoader_OnMetacall((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPluginLoader_OnMetacall((QPluginLoader*)self, (intptr_t)callback);
 }
 
 int32_t q_pluginloader_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -224,12 +224,16 @@ const char** q_pluginloader_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pluginloader_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -247,8 +251,8 @@ void q_pluginloader_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pluginloader_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pluginloader_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pluginloader_parent(void* self) {
@@ -283,8 +287,8 @@ void q_pluginloader_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pluginloader_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pluginloader_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pluginloader_event(void* self, void* event) {
@@ -295,8 +299,8 @@ bool q_pluginloader_qbase_event(void* self, void* event) {
     return QPluginLoader_QBaseEvent((QPluginLoader*)self, (QEvent*)event);
 }
 
-void q_pluginloader_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPluginLoader_OnEvent((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPluginLoader_OnEvent((QPluginLoader*)self, (intptr_t)callback);
 }
 
 bool q_pluginloader_event_filter(void* self, void* watched, void* event) {
@@ -307,8 +311,8 @@ bool q_pluginloader_qbase_event_filter(void* self, void* watched, void* event) {
     return QPluginLoader_QBaseEventFilter((QPluginLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pluginloader_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPluginLoader_OnEventFilter((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPluginLoader_OnEventFilter((QPluginLoader*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_timer_event(void* self, void* event) {
@@ -319,8 +323,8 @@ void q_pluginloader_qbase_timer_event(void* self, void* event) {
     QPluginLoader_QBaseTimerEvent((QPluginLoader*)self, (QTimerEvent*)event);
 }
 
-void q_pluginloader_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPluginLoader_OnTimerEvent((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPluginLoader_OnTimerEvent((QPluginLoader*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_child_event(void* self, void* event) {
@@ -331,8 +335,8 @@ void q_pluginloader_qbase_child_event(void* self, void* event) {
     QPluginLoader_QBaseChildEvent((QPluginLoader*)self, (QChildEvent*)event);
 }
 
-void q_pluginloader_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPluginLoader_OnChildEvent((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPluginLoader_OnChildEvent((QPluginLoader*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_custom_event(void* self, void* event) {
@@ -343,8 +347,8 @@ void q_pluginloader_qbase_custom_event(void* self, void* event) {
     QPluginLoader_QBaseCustomEvent((QPluginLoader*)self, (QEvent*)event);
 }
 
-void q_pluginloader_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPluginLoader_OnCustomEvent((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPluginLoader_OnCustomEvent((QPluginLoader*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_connect_notify(void* self, void* signal) {
@@ -355,8 +359,8 @@ void q_pluginloader_qbase_connect_notify(void* self, void* signal) {
     QPluginLoader_QBaseConnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_pluginloader_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPluginLoader_OnConnectNotify((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPluginLoader_OnConnectNotify((QPluginLoader*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_disconnect_notify(void* self, void* signal) {
@@ -367,8 +371,8 @@ void q_pluginloader_qbase_disconnect_notify(void* self, void* signal) {
     QPluginLoader_QBaseDisconnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_pluginloader_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPluginLoader_OnDisconnectNotify((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPluginLoader_OnDisconnectNotify((QPluginLoader*)self, (intptr_t)callback);
 }
 
 QObject* q_pluginloader_sender(void* self) {
@@ -379,8 +383,8 @@ QObject* q_pluginloader_qbase_sender(void* self) {
     return QPluginLoader_QBaseSender((QPluginLoader*)self);
 }
 
-void q_pluginloader_on_sender(void* self, QObject* (*slot)()) {
-    QPluginLoader_OnSender((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_sender(void* self, QObject* (*callback)()) {
+    QPluginLoader_OnSender((QPluginLoader*)self, (intptr_t)callback);
 }
 
 int32_t q_pluginloader_sender_signal_index(void* self) {
@@ -391,8 +395,8 @@ int32_t q_pluginloader_qbase_sender_signal_index(void* self) {
     return QPluginLoader_QBaseSenderSignalIndex((QPluginLoader*)self);
 }
 
-void q_pluginloader_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPluginLoader_OnSenderSignalIndex((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPluginLoader_OnSenderSignalIndex((QPluginLoader*)self, (intptr_t)callback);
 }
 
 int32_t q_pluginloader_receivers(void* self, const char* signal) {
@@ -403,8 +407,8 @@ int32_t q_pluginloader_qbase_receivers(void* self, const char* signal) {
     return QPluginLoader_QBaseReceivers((QPluginLoader*)self, signal);
 }
 
-void q_pluginloader_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPluginLoader_OnReceivers((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPluginLoader_OnReceivers((QPluginLoader*)self, (intptr_t)callback);
 }
 
 bool q_pluginloader_is_signal_connected(void* self, void* signal) {
@@ -415,12 +419,12 @@ bool q_pluginloader_qbase_is_signal_connected(void* self, void* signal) {
     return QPluginLoader_QBaseIsSignalConnected((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_pluginloader_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPluginLoader_OnIsSignalConnected((QPluginLoader*)self, (intptr_t)slot);
+void q_pluginloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPluginLoader_OnIsSignalConnected((QPluginLoader*)self, (intptr_t)callback);
 }
 
-void q_pluginloader_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pluginloader_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pluginloader_delete(void* self) {

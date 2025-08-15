@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,64 +15,70 @@
 
 /// q_lockfile_new constructs a new QLockFile object.
 ///
-/// ``` const char* fileName ```
+/// @param fileName const char*
 QLockFile* q_lockfile_new(const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#fileName)
 ///
-/// ``` QLockFile* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QLockFile*
 const char* q_lockfile_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#lock)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 bool q_lockfile_lock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#tryLock)
 ///
-/// ``` QLockFile* self, int timeout ```
+/// @param self QLockFile*
+/// @param timeout int
 bool q_lockfile_try_lock(void* self, int timeout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#unlock)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 void q_lockfile_unlock(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#setStaleLockTime)
 ///
-/// ``` QLockFile* self, int staleLockTime ```
+/// @param self QLockFile*
+/// @param staleLockTime int
 void q_lockfile_set_stale_lock_time(void* self, int staleLockTime);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#staleLockTime)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 int32_t q_lockfile_stale_lock_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#tryLock)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 bool q_lockfile_try_lock2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#isLocked)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 bool q_lockfile_is_locked(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#removeStaleLockFile)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 bool q_lockfile_remove_stale_lock_file(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#error)
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
+///
+/// @return enum QLockFile__LockError
 int64_t q_lockfile_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#dtor.QLockFile)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLockFile* self ```
+/// @param self QLockFile*
 void q_lockfile_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlockfile.html#types

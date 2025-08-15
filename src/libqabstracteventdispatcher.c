@@ -109,16 +109,16 @@ void q_abstracteventdispatcher_about_to_block(void* self) {
     QAbstractEventDispatcher_AboutToBlock((QAbstractEventDispatcher*)self);
 }
 
-void q_abstracteventdispatcher_on_about_to_block(void* self, void (*slot)(void*)) {
-    QAbstractEventDispatcher_Connect_AboutToBlock((QAbstractEventDispatcher*)self, (intptr_t)slot);
+void q_abstracteventdispatcher_on_about_to_block(void* self, void (*callback)(void*)) {
+    QAbstractEventDispatcher_Connect_AboutToBlock((QAbstractEventDispatcher*)self, (intptr_t)callback);
 }
 
 void q_abstracteventdispatcher_awake(void* self) {
     QAbstractEventDispatcher_Awake((QAbstractEventDispatcher*)self);
 }
 
-void q_abstracteventdispatcher_on_awake(void* self, void (*slot)(void*)) {
-    QAbstractEventDispatcher_Connect_Awake((QAbstractEventDispatcher*)self, (intptr_t)slot);
+void q_abstracteventdispatcher_on_awake(void* self, void (*callback)(void*)) {
+    QAbstractEventDispatcher_Connect_Awake((QAbstractEventDispatcher*)self, (intptr_t)callback);
 }
 
 const char* q_abstracteventdispatcher_tr2(const char* s, const char* c) {
@@ -251,12 +251,16 @@ const char** q_abstracteventdispatcher_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_abstracteventdispatcher_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -274,8 +278,8 @@ void q_abstracteventdispatcher_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_abstracteventdispatcher_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcher_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_abstracteventdispatcher_parent(void* self) {
@@ -310,12 +314,12 @@ void q_abstracteventdispatcher_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_abstracteventdispatcher_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcher_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_abstracteventdispatcher_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcher_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_abstracteventdispatcher_delete(void* self) {
@@ -441,16 +445,16 @@ void q_abstracteventdispatcherv2_about_to_block(void* self) {
     QAbstractEventDispatcher_AboutToBlock((QAbstractEventDispatcher*)self);
 }
 
-void q_abstracteventdispatcherv2_on_about_to_block(void* self, void (*slot)(void*)) {
-    QAbstractEventDispatcher_Connect_AboutToBlock((QAbstractEventDispatcher*)self, (intptr_t)slot);
+void q_abstracteventdispatcherv2_on_about_to_block(void* self, void (*callback)(void*)) {
+    QAbstractEventDispatcher_Connect_AboutToBlock((QAbstractEventDispatcher*)self, (intptr_t)callback);
 }
 
 void q_abstracteventdispatcherv2_awake(void* self) {
     QAbstractEventDispatcher_Awake((QAbstractEventDispatcher*)self);
 }
 
-void q_abstracteventdispatcherv2_on_awake(void* self, void (*slot)(void*)) {
-    QAbstractEventDispatcher_Connect_Awake((QAbstractEventDispatcher*)self, (intptr_t)slot);
+void q_abstracteventdispatcherv2_on_awake(void* self, void (*callback)(void*)) {
+    QAbstractEventDispatcher_Connect_Awake((QAbstractEventDispatcher*)self, (intptr_t)callback);
 }
 
 QAbstractEventDispatcher* q_abstracteventdispatcherv2_instance1(void* thread) {
@@ -569,12 +573,16 @@ const char** q_abstracteventdispatcherv2_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_abstracteventdispatcherv2_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -592,8 +600,8 @@ void q_abstracteventdispatcherv2_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_abstracteventdispatcherv2_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcherv2_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_abstracteventdispatcherv2_parent(void* self) {
@@ -628,12 +636,12 @@ void q_abstracteventdispatcherv2_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcherv2_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_abstracteventdispatcherv2_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_abstracteventdispatcherv2_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_abstracteventdispatcherv2_delete(void* self) {

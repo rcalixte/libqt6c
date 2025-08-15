@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,108 +15,112 @@
 
 /// q_flag_new constructs a new QFlag object.
 ///
-/// ``` QFlag* other ```
+/// @param other QFlag*
 QFlag* q_flag_new(void* other);
 
 /// q_flag_new2 constructs a new QFlag object and invalidates the source QFlag object.
 ///
-/// ``` QFlag* other ```
+/// @param other QFlag*
 QFlag* q_flag_new2(void* other);
 
 /// q_flag_new3 constructs a new QFlag object.
 ///
-/// ``` int value ```
+/// @param value int
 QFlag* q_flag_new3(int value);
 
 /// q_flag_new4 constructs a new QFlag object.
 ///
-/// ``` uint32_t value ```
+/// @param value uint32_t
 QFlag* q_flag_new4(uint32_t value);
 
 /// q_flag_new5 constructs a new QFlag object.
 ///
-/// ``` short value ```
+/// @param value short
 QFlag* q_flag_new5(short value);
 
 /// q_flag_new6 constructs a new QFlag object.
 ///
-/// ``` unsigned short value ```
+/// @param value unsigned short
 QFlag* q_flag_new6(unsigned short value);
 
 /// q_flag_new7 constructs a new QFlag object.
 ///
-/// ``` QFlag* param1 ```
+/// @param param1 QFlag*
 QFlag* q_flag_new7(void* param1);
 
 /// q_flag_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QFlag* self, QFlag* other ```
+/// @param self QFlag*
+/// @param other QFlag*
 void q_flag_copy_assign(void* self, void* other);
 
 /// q_flag_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QFlag* self, QFlag* other ```
+/// @param self QFlag*
+/// @param other QFlag*
 void q_flag_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
-/// ``` QFlag* self ```
+/// @param self QFlag*
 int32_t q_flag_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#operator)
 ///
-/// ``` QFlag* self ```
+/// @param self QFlag*
 uint32_t q_flag_to_unsigned_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qflag.html#dtor.QFlag)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFlag* self ```
+/// @param self QFlag*
 void q_flag_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qincompatibleflag.html
 
 /// q_incompatibleflag_new constructs a new QIncompatibleFlag object.
 ///
-/// ``` QIncompatibleFlag* other ```
+/// @param other QIncompatibleFlag*
 QIncompatibleFlag* q_incompatibleflag_new(void* other);
 
 /// q_incompatibleflag_new2 constructs a new QIncompatibleFlag object and invalidates the source QIncompatibleFlag object.
 ///
-/// ``` QIncompatibleFlag* other ```
+/// @param other QIncompatibleFlag*
 QIncompatibleFlag* q_incompatibleflag_new2(void* other);
 
 /// q_incompatibleflag_new3 constructs a new QIncompatibleFlag object.
 ///
-/// ``` int i ```
+/// @param i int
 QIncompatibleFlag* q_incompatibleflag_new3(int i);
 
 /// q_incompatibleflag_new4 constructs a new QIncompatibleFlag object.
 ///
-/// ``` QIncompatibleFlag* param1 ```
+/// @param param1 QIncompatibleFlag*
 QIncompatibleFlag* q_incompatibleflag_new4(void* param1);
 
 /// q_incompatibleflag_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QIncompatibleFlag* self, QIncompatibleFlag* other ```
+/// @param self QIncompatibleFlag*
+/// @param other QIncompatibleFlag*
 void q_incompatibleflag_copy_assign(void* self, void* other);
 
 /// q_incompatibleflag_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QIncompatibleFlag* self, QIncompatibleFlag* other ```
+/// @param self QIncompatibleFlag*
+/// @param other QIncompatibleFlag*
 void q_incompatibleflag_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#operator)
 ///
-/// ``` QIncompatibleFlag* self ```
+/// @param self QIncompatibleFlag*
 int32_t q_incompatibleflag_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qincompatibleflag.html#dtor.QIncompatibleFlag)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QIncompatibleFlag* self ```
+/// @param self QIncompatibleFlag*
 void q_incompatibleflag_delete(void* self);
 
 #endif

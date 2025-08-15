@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,344 +15,395 @@
 
 /// q_fileinfo_new constructs a new QFileInfo object.
 ///
-///
 QFileInfo* q_fileinfo_new();
 
 /// q_fileinfo_new2 constructs a new QFileInfo object.
 ///
-/// ``` const char* file ```
+/// @param file const char*
 QFileInfo* q_fileinfo_new2(const char* file);
 
 /// q_fileinfo_new3 constructs a new QFileInfo object.
 ///
-/// ``` QFileDevice* file ```
+/// @param file QFileDevice*
 QFileInfo* q_fileinfo_new3(void* file);
 
 /// q_fileinfo_new4 constructs a new QFileInfo object.
 ///
-/// ``` QDir* dir, const char* file ```
+/// @param dir QDir*
+/// @param file const char*
 QFileInfo* q_fileinfo_new4(void* dir, const char* file);
 
 /// q_fileinfo_new5 constructs a new QFileInfo object.
 ///
-/// ``` QFileInfo* fileinfo ```
+/// @param fileinfo QFileInfo*
 QFileInfo* q_fileinfo_new5(void* fileinfo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#operator-eq)
 ///
-/// ``` QFileInfo* self, QFileInfo* fileinfo ```
+/// @param self QFileInfo*
+/// @param fileinfo QFileInfo*
 void q_fileinfo_operator_assign(void* self, void* fileinfo);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#swap)
 ///
-/// ``` QFileInfo* self, QFileInfo* other ```
+/// @param self QFileInfo*
+/// @param other QFileInfo*
 void q_fileinfo_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
-/// ``` QFileInfo* self, const char* file ```
+/// @param self QFileInfo*
+/// @param file const char*
 void q_fileinfo_set_file(void* self, const char* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
-/// ``` QFileInfo* self, QFileDevice* file ```
+/// @param self QFileInfo*
+/// @param file QFileDevice*
 void q_fileinfo_set_file2(void* self, void* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setFile)
 ///
-/// ``` QFileInfo* self, QDir* dir, const char* file ```
+/// @param self QFileInfo*
+/// @param dir QDir*
+/// @param file const char*
 void q_fileinfo_set_file3(void* self, void* dir, const char* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_exists(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#exists)
 ///
-/// ``` const char* file ```
+/// @param file const char*
 bool q_fileinfo_exists2(const char* file);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#refresh)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 void q_fileinfo_refresh(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#filePath)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_file_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#absoluteFilePath)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_absolute_file_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#canonicalFilePath)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_canonical_file_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#fileName)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#baseName)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_base_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#completeBaseName)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_complete_base_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#suffix)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_suffix(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#bundleName)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_bundle_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#completeSuffix)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_complete_suffix(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#path)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#absolutePath)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_absolute_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#canonicalPath)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_canonical_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#dir)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDir* q_fileinfo_dir(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#absoluteDir)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDir* q_fileinfo_absolute_dir(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isReadable)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_readable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isWritable)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_writable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isExecutable)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_executable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isHidden)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_hidden(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isNativePath)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_native_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isRelative)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_relative(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isAbsolute)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_absolute(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#makeAbsolute)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_make_absolute(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isFile)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_file(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isDir)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_dir(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isSymLink)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_sym_link(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isSymbolicLink)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_symbolic_link(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isShortcut)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_shortcut(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isAlias)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_alias(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isJunction)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_junction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isRoot)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_root(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#isBundle)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_is_bundle(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#symLinkTarget)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_sym_link_target(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#readSymLink)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_read_sym_link(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#junctionTarget)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_junction_target(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#owner)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_owner(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#ownerId)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 uint32_t q_fileinfo_owner_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#group)
 ///
-/// ``` QFileInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileInfo*
 const char* q_fileinfo_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#groupId)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 uint32_t q_fileinfo_group_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#permission)
 ///
-/// ``` QFileInfo* self, int permissions ```
+/// @param self QFileInfo*
+/// @param permissions flag of enum QFileDevice__Permission
 bool q_fileinfo_permission(void* self, int64_t permissions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#permissions)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
+///
+/// @return flag of enum QFileDevice__Permission
 int64_t q_fileinfo_permissions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#size)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 long long q_fileinfo_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDateTime* q_fileinfo_birth_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDateTime* q_fileinfo_metadata_change_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDateTime* q_fileinfo_last_modified(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 QDateTime* q_fileinfo_last_read(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
 ///
-/// ``` QFileInfo* self, enum QFileDevice__FileTime time ```
+/// @param self QFileInfo*
+/// @param time enum QFileDevice__FileTime
 QDateTime* q_fileinfo_file_time(void* self, int64_t time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
-/// ``` QFileInfo* self, QTimeZone* tz ```
+/// @param self QFileInfo*
+/// @param tz QTimeZone*
 QDateTime* q_fileinfo_birth_time2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#metadataChangeTime)
 ///
-/// ``` QFileInfo* self, QTimeZone* tz ```
+/// @param self QFileInfo*
+/// @param tz QTimeZone*
 QDateTime* q_fileinfo_metadata_change_time2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastModified)
 ///
-/// ``` QFileInfo* self, QTimeZone* tz ```
+/// @param self QFileInfo*
+/// @param tz QTimeZone*
 QDateTime* q_fileinfo_last_modified2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#lastRead)
 ///
-/// ``` QFileInfo* self, QTimeZone* tz ```
+/// @param self QFileInfo*
+/// @param tz QTimeZone*
 QDateTime* q_fileinfo_last_read2(void* self, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#fileTime)
 ///
-/// ``` QFileInfo* self, enum QFileDevice__FileTime time, QTimeZone* tz ```
+/// @param self QFileInfo*
+/// @param time enum QFileDevice__FileTime
+/// @param tz QTimeZone*
 QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#caching)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 bool q_fileinfo_caching(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#setCaching)
 ///
-/// ``` QFileInfo* self, bool on ```
+/// @param self QFileInfo*
+/// @param on bool
 void q_fileinfo_set_caching(void* self, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#stat)
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 void q_fileinfo_stat(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#dtor.QFileInfo)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFileInfo* self ```
+/// @param self QFileInfo*
 void q_fileinfo_delete(void* self);
 
 #endif

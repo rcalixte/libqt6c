@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,59 +15,64 @@
 
 /// q_pdfselection_new constructs a new QPdfSelection object.
 ///
-/// ``` QPdfSelection* other ```
+/// @param other QPdfSelection*
 QPdfSelection* q_pdfselection_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#operator-eq)
 ///
-/// ``` QPdfSelection* self, QPdfSelection* other ```
+/// @param self QPdfSelection*
+/// @param other QPdfSelection*
 void q_pdfselection_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#swap)
 ///
-/// ``` QPdfSelection* self, QPdfSelection* other ```
+/// @param self QPdfSelection*
+/// @param other QPdfSelection*
 void q_pdfselection_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#isValid)
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 bool q_pdfselection_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#text)
 ///
-/// ``` QPdfSelection* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPdfSelection*
 const char* q_pdfselection_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#boundingRectangle)
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 QRectF* q_pdfselection_bounding_rectangle(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#startIndex)
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 int32_t q_pdfselection_start_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#endIndex)
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 int32_t q_pdfselection_end_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#copyToClipboard)
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 void q_pdfselection_copy_to_clipboard(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#copyToClipboard)
 ///
-/// ``` QPdfSelection* self, enum QClipboard__Mode mode ```
+/// @param self QPdfSelection*
+/// @param mode enum QClipboard__Mode
 void q_pdfselection_copy_to_clipboard1(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#dtor.QPdfSelection)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPdfSelection* self ```
+/// @param self QPdfSelection*
 void q_pdfselection_delete(void* self);
 
 #endif

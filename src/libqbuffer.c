@@ -27,8 +27,8 @@ int32_t q_buffer_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QBuffer_Metacall((QBuffer*)self, param1, param2, param3);
 }
 
-void q_buffer_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QBuffer_OnMetacall((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QBuffer_OnMetacall((QBuffer*)self, (intptr_t)callback);
 }
 
 int32_t q_buffer_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -75,8 +75,8 @@ bool q_buffer_open(void* self, int64_t openMode) {
     return QBuffer_Open((QBuffer*)self, openMode);
 }
 
-void q_buffer_on_open(void* self, bool (*slot)(void*, int64_t)) {
-    QBuffer_OnOpen((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_open(void* self, bool (*callback)(void*, int64_t)) {
+    QBuffer_OnOpen((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_qbase_open(void* self, int64_t openMode) {
@@ -87,8 +87,8 @@ void q_buffer_close(void* self) {
     QBuffer_Close((QBuffer*)self);
 }
 
-void q_buffer_on_close(void* self, void (*slot)()) {
-    QBuffer_OnClose((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_close(void* self, void (*callback)()) {
+    QBuffer_OnClose((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_qbase_close(void* self) {
@@ -99,8 +99,8 @@ long long q_buffer_size(void* self) {
     return QBuffer_Size((QBuffer*)self);
 }
 
-void q_buffer_on_size(void* self, long long (*slot)()) {
-    QBuffer_OnSize((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_size(void* self, long long (*callback)()) {
+    QBuffer_OnSize((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_qbase_size(void* self) {
@@ -111,8 +111,8 @@ long long q_buffer_pos(void* self) {
     return QBuffer_Pos((QBuffer*)self);
 }
 
-void q_buffer_on_pos(void* self, long long (*slot)()) {
-    QBuffer_OnPos((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_pos(void* self, long long (*callback)()) {
+    QBuffer_OnPos((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_qbase_pos(void* self) {
@@ -123,8 +123,8 @@ bool q_buffer_seek(void* self, long long off) {
     return QBuffer_Seek((QBuffer*)self, off);
 }
 
-void q_buffer_on_seek(void* self, bool (*slot)(void*, long long)) {
-    QBuffer_OnSeek((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_seek(void* self, bool (*callback)(void*, long long)) {
+    QBuffer_OnSeek((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_qbase_seek(void* self, long long off) {
@@ -135,8 +135,8 @@ bool q_buffer_at_end(void* self) {
     return QBuffer_AtEnd((QBuffer*)self);
 }
 
-void q_buffer_on_at_end(void* self, bool (*slot)()) {
-    QBuffer_OnAtEnd((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_at_end(void* self, bool (*callback)()) {
+    QBuffer_OnAtEnd((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_qbase_at_end(void* self) {
@@ -147,8 +147,8 @@ bool q_buffer_can_read_line(void* self) {
     return QBuffer_CanReadLine((QBuffer*)self);
 }
 
-void q_buffer_on_can_read_line(void* self, bool (*slot)()) {
-    QBuffer_OnCanReadLine((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_can_read_line(void* self, bool (*callback)()) {
+    QBuffer_OnCanReadLine((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_qbase_can_read_line(void* self) {
@@ -159,8 +159,8 @@ void q_buffer_connect_notify(void* self, void* param1) {
     QBuffer_ConnectNotify((QBuffer*)self, (QMetaMethod*)param1);
 }
 
-void q_buffer_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QBuffer_OnConnectNotify((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QBuffer_OnConnectNotify((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_qbase_connect_notify(void* self, void* param1) {
@@ -171,8 +171,8 @@ void q_buffer_disconnect_notify(void* self, void* param1) {
     QBuffer_DisconnectNotify((QBuffer*)self, (QMetaMethod*)param1);
 }
 
-void q_buffer_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QBuffer_OnDisconnectNotify((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QBuffer_OnDisconnectNotify((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_qbase_disconnect_notify(void* self, void* param1) {
@@ -183,8 +183,8 @@ long long q_buffer_read_data(void* self, char* data, long long maxlen) {
     return QBuffer_ReadData((QBuffer*)self, data, maxlen);
 }
 
-void q_buffer_on_read_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QBuffer_OnReadData((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QBuffer_OnReadData((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_qbase_read_data(void* self, char* data, long long maxlen) {
@@ -195,8 +195,8 @@ long long q_buffer_write_data(void* self, const char* data, long long lenVal) {
     return QBuffer_WriteData((QBuffer*)self, data, lenVal);
 }
 
-void q_buffer_on_write_data(void* self, long long (*slot)(void*, const char*, long long)) {
-    QBuffer_OnWriteData((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+    QBuffer_OnWriteData((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_qbase_write_data(void* self, const char* data, long long lenVal) {
@@ -360,48 +360,48 @@ void q_buffer_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_buffer_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_buffer_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_buffer_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_buffer_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_buffer_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_buffer_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_buffer_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_buffer_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_buffer_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_buffer_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_buffer_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_buffer_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_buffer_read_line1(void* self, long long maxlen) {
@@ -515,12 +515,16 @@ const char** q_buffer_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_buffer_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -538,8 +542,8 @@ void q_buffer_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_buffer_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_buffer_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_buffer_parent(void* self) {
@@ -574,8 +578,8 @@ void q_buffer_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_buffer_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_buffer_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_buffer_is_sequential(void* self) {
@@ -586,8 +590,8 @@ bool q_buffer_qbase_is_sequential(void* self) {
     return QBuffer_QBaseIsSequential((QBuffer*)self);
 }
 
-void q_buffer_on_is_sequential(void* self, bool (*slot)()) {
-    QBuffer_OnIsSequential((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_is_sequential(void* self, bool (*callback)()) {
+    QBuffer_OnIsSequential((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_reset(void* self) {
@@ -598,8 +602,8 @@ bool q_buffer_qbase_reset(void* self) {
     return QBuffer_QBaseReset((QBuffer*)self);
 }
 
-void q_buffer_on_reset(void* self, bool (*slot)()) {
-    QBuffer_OnReset((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_reset(void* self, bool (*callback)()) {
+    QBuffer_OnReset((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_bytes_available(void* self) {
@@ -610,8 +614,8 @@ long long q_buffer_qbase_bytes_available(void* self) {
     return QBuffer_QBaseBytesAvailable((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_available(void* self, long long (*slot)()) {
-    QBuffer_OnBytesAvailable((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_bytes_available(void* self, long long (*callback)()) {
+    QBuffer_OnBytesAvailable((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_bytes_to_write(void* self) {
@@ -622,8 +626,8 @@ long long q_buffer_qbase_bytes_to_write(void* self) {
     return QBuffer_QBaseBytesToWrite((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_to_write(void* self, long long (*slot)()) {
-    QBuffer_OnBytesToWrite((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_bytes_to_write(void* self, long long (*callback)()) {
+    QBuffer_OnBytesToWrite((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_wait_for_ready_read(void* self, int msecs) {
@@ -634,8 +638,8 @@ bool q_buffer_qbase_wait_for_ready_read(void* self, int msecs) {
     return QBuffer_QBaseWaitForReadyRead((QBuffer*)self, msecs);
 }
 
-void q_buffer_on_wait_for_ready_read(void* self, bool (*slot)(void*, int)) {
-    QBuffer_OnWaitForReadyRead((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
+    QBuffer_OnWaitForReadyRead((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_wait_for_bytes_written(void* self, int msecs) {
@@ -646,8 +650,8 @@ bool q_buffer_qbase_wait_for_bytes_written(void* self, int msecs) {
     return QBuffer_QBaseWaitForBytesWritten((QBuffer*)self, msecs);
 }
 
-void q_buffer_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int)) {
-    QBuffer_OnWaitForBytesWritten((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
+    QBuffer_OnWaitForBytesWritten((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_read_line_data(void* self, char* data, long long maxlen) {
@@ -658,8 +662,8 @@ long long q_buffer_qbase_read_line_data(void* self, char* data, long long maxlen
     return QBuffer_QBaseReadLineData((QBuffer*)self, data, maxlen);
 }
 
-void q_buffer_on_read_line_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QBuffer_OnReadLineData((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QBuffer_OnReadLineData((QBuffer*)self, (intptr_t)callback);
 }
 
 long long q_buffer_skip_data(void* self, long long maxSize) {
@@ -670,8 +674,8 @@ long long q_buffer_qbase_skip_data(void* self, long long maxSize) {
     return QBuffer_QBaseSkipData((QBuffer*)self, maxSize);
 }
 
-void q_buffer_on_skip_data(void* self, long long (*slot)(void*, long long)) {
-    QBuffer_OnSkipData((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+    QBuffer_OnSkipData((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_event(void* self, void* event) {
@@ -682,8 +686,8 @@ bool q_buffer_qbase_event(void* self, void* event) {
     return QBuffer_QBaseEvent((QBuffer*)self, (QEvent*)event);
 }
 
-void q_buffer_on_event(void* self, bool (*slot)(void*, void*)) {
-    QBuffer_OnEvent((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_event(void* self, bool (*callback)(void*, void*)) {
+    QBuffer_OnEvent((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_event_filter(void* self, void* watched, void* event) {
@@ -694,8 +698,8 @@ bool q_buffer_qbase_event_filter(void* self, void* watched, void* event) {
     return QBuffer_QBaseEventFilter((QBuffer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_buffer_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QBuffer_OnEventFilter((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QBuffer_OnEventFilter((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_timer_event(void* self, void* event) {
@@ -706,8 +710,8 @@ void q_buffer_qbase_timer_event(void* self, void* event) {
     QBuffer_QBaseTimerEvent((QBuffer*)self, (QTimerEvent*)event);
 }
 
-void q_buffer_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QBuffer_OnTimerEvent((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QBuffer_OnTimerEvent((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_child_event(void* self, void* event) {
@@ -718,8 +722,8 @@ void q_buffer_qbase_child_event(void* self, void* event) {
     QBuffer_QBaseChildEvent((QBuffer*)self, (QChildEvent*)event);
 }
 
-void q_buffer_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QBuffer_OnChildEvent((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QBuffer_OnChildEvent((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_custom_event(void* self, void* event) {
@@ -730,8 +734,8 @@ void q_buffer_qbase_custom_event(void* self, void* event) {
     QBuffer_QBaseCustomEvent((QBuffer*)self, (QEvent*)event);
 }
 
-void q_buffer_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QBuffer_OnCustomEvent((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QBuffer_OnCustomEvent((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_set_open_mode(void* self, int64_t openMode) {
@@ -742,8 +746,8 @@ void q_buffer_qbase_set_open_mode(void* self, int64_t openMode) {
     QBuffer_QBaseSetOpenMode((QBuffer*)self, openMode);
 }
 
-void q_buffer_on_set_open_mode(void* self, void (*slot)(void*, int64_t)) {
-    QBuffer_OnSetOpenMode((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+    QBuffer_OnSetOpenMode((QBuffer*)self, (intptr_t)callback);
 }
 
 void q_buffer_set_error_string(void* self, const char* errorString) {
@@ -754,8 +758,8 @@ void q_buffer_qbase_set_error_string(void* self, const char* errorString) {
     QBuffer_QBaseSetErrorString((QBuffer*)self, qstring(errorString));
 }
 
-void q_buffer_on_set_error_string(void* self, void (*slot)(void*, const char*)) {
-    QBuffer_OnSetErrorString((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
+    QBuffer_OnSetErrorString((QBuffer*)self, (intptr_t)callback);
 }
 
 QObject* q_buffer_sender(void* self) {
@@ -766,8 +770,8 @@ QObject* q_buffer_qbase_sender(void* self) {
     return QBuffer_QBaseSender((QBuffer*)self);
 }
 
-void q_buffer_on_sender(void* self, QObject* (*slot)()) {
-    QBuffer_OnSender((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_sender(void* self, QObject* (*callback)()) {
+    QBuffer_OnSender((QBuffer*)self, (intptr_t)callback);
 }
 
 int32_t q_buffer_sender_signal_index(void* self) {
@@ -778,8 +782,8 @@ int32_t q_buffer_qbase_sender_signal_index(void* self) {
     return QBuffer_QBaseSenderSignalIndex((QBuffer*)self);
 }
 
-void q_buffer_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QBuffer_OnSenderSignalIndex((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QBuffer_OnSenderSignalIndex((QBuffer*)self, (intptr_t)callback);
 }
 
 int32_t q_buffer_receivers(void* self, const char* signal) {
@@ -790,8 +794,8 @@ int32_t q_buffer_qbase_receivers(void* self, const char* signal) {
     return QBuffer_QBaseReceivers((QBuffer*)self, signal);
 }
 
-void q_buffer_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QBuffer_OnReceivers((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QBuffer_OnReceivers((QBuffer*)self, (intptr_t)callback);
 }
 
 bool q_buffer_is_signal_connected(void* self, void* signal) {
@@ -802,12 +806,12 @@ bool q_buffer_qbase_is_signal_connected(void* self, void* signal) {
     return QBuffer_QBaseIsSignalConnected((QBuffer*)self, (QMetaMethod*)signal);
 }
 
-void q_buffer_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QBuffer_OnIsSignalConnected((QBuffer*)self, (intptr_t)slot);
+void q_buffer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QBuffer_OnIsSignalConnected((QBuffer*)self, (intptr_t)callback);
 }
 
-void q_buffer_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_buffer_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_buffer_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,1493 +15,1705 @@
 
 /// q_scatterseries_new constructs a new QScatterSeries object.
 ///
-///
 QScatterSeries* q_scatterseries_new();
 
 /// q_scatterseries_new2 constructs a new QScatterSeries object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QScatterSeries* q_scatterseries_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 const QMetaObject* q_scatterseries_meta_object(void* self);
 
-/// ``` QScatterSeries* self, const char* param1 ```
+/// @param self QScatterSeries*
+/// @param param1 const char*
 void* q_scatterseries_metacast(void* self, const char* param1);
 
-/// ``` QScatterSeries* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QScatterSeries*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scatterseries_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, int32_t (*slot)(QScatterSeries*, enum QMetaObject__Call, int, void*) ```
-void q_scatterseries_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QScatterSeries*
+/// @param callback int32_t fn(QScatterSeries*, enum QMetaObject__Call, int, void*)
+void q_scatterseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QScatterSeries*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scatterseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_scatterseries_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
+///
+/// @return enum QAbstractSeries__SeriesType
 int64_t q_scatterseries_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, int64_t (*slot)() ```
-void q_scatterseries_on_type(void* self, int64_t (*slot)());
+/// @param self QScatterSeries*
+/// @param callback int64_t fn()
+void q_scatterseries_on_type(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#type)
 ///
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
+///
+/// @return enum QAbstractSeries__SeriesType
 int64_t q_scatterseries_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
-/// ``` QScatterSeries* self, QPen* pen ```
+/// @param self QScatterSeries*
+/// @param pen QPen*
 void q_scatterseries_set_pen(void* self, void* pen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPen*) ```
-void q_scatterseries_on_set_pen(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPen*)
+void q_scatterseries_on_set_pen(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setPen)
 ///
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self, QPen* pen ```
+/// @param self QScatterSeries*
+/// @param pen QPen*
 void q_scatterseries_qbase_set_pen(void* self, void* pen);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
-/// ``` QScatterSeries* self, QBrush* brush ```
+/// @param self QScatterSeries*
+/// @param brush QBrush*
 void q_scatterseries_set_brush(void* self, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QBrush*) ```
-void q_scatterseries_on_set_brush(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QBrush*)
+void q_scatterseries_on_set_brush(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBrush)
 ///
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self, QBrush* brush ```
+/// @param self QScatterSeries*
+/// @param brush QBrush*
 void q_scatterseries_qbase_set_brush(void* self, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#brush)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QBrush* q_scatterseries_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_set_color(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_set_color(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_set_color(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setColor)
 ///
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_qbase_set_color(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScatterSeries* self, QColor* (*slot)() ```
-void q_scatterseries_on_color(void* self, QColor* (*slot)());
+/// @param self QScatterSeries*
+/// @param callback QColor* fn()
+void q_scatterseries_on_color(void* self, QColor* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#color)
 ///
 /// Base class method implementation
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_qbase_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setBorderColor)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_set_border_color(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#borderColor)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_border_color(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerShape)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
+///
+/// @return enum QScatterSeries__MarkerShape
 int64_t q_scatterseries_marker_shape(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setMarkerShape)
 ///
-/// ``` QScatterSeries* self, enum QScatterSeries__MarkerShape shape ```
+/// @param self QScatterSeries*
+/// @param shape enum QScatterSeries__MarkerShape
 void q_scatterseries_set_marker_shape(void* self, int64_t shape);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerSize)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 double q_scatterseries_marker_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#setMarkerSize)
 ///
-/// ``` QScatterSeries* self, double size ```
+/// @param self QScatterSeries*
+/// @param size double
 void q_scatterseries_set_marker_size(void* self, double size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#colorChanged)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_color_changed(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#colorChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_color_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#borderColorChanged)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_border_color_changed(void* self, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#borderColorChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_border_color_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_border_color_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerShapeChanged)
 ///
-/// ``` QScatterSeries* self, enum QScatterSeries__MarkerShape shape ```
+/// @param self QScatterSeries*
+/// @param shape enum QScatterSeries__MarkerShape
 void q_scatterseries_marker_shape_changed(void* self, int64_t shape);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerShapeChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, enum QScatterSeries__MarkerShape) ```
-void q_scatterseries_on_marker_shape_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, enum QScatterSeries__MarkerShape)
+void q_scatterseries_on_marker_shape_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerSizeChanged)
 ///
-/// ``` QScatterSeries* self, double size ```
+/// @param self QScatterSeries*
+/// @param size double
 void q_scatterseries_marker_size_changed(void* self, double size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#markerSizeChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, double) ```
-void q_scatterseries_on_marker_size_changed(void* self, void (*slot)(void*, double));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, double)
+void q_scatterseries_on_marker_size_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_scatterseries_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_scatterseries_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
-/// ``` QScatterSeries* self, double x, double y ```
+/// @param self QScatterSeries*
+/// @param x double
+/// @param y double
 void q_scatterseries_append(void* self, double x, double y);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_append2(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#append)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of QPointF* */ points ```
+/// @param self QScatterSeries*
+/// @param points libqt_list /* of QPointF* */
 void q_scatterseries_append3(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QScatterSeries* self, double oldX, double oldY, double newX, double newY ```
+/// @param self QScatterSeries*
+/// @param oldX double
+/// @param oldY double
+/// @param newX double
+/// @param newY double
 void q_scatterseries_replace(void* self, double oldX, double oldY, double newX, double newY);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QScatterSeries* self, QPointF* oldPoint, QPointF* newPoint ```
+/// @param self QScatterSeries*
+/// @param oldPoint QPointF*
+/// @param newPoint QPointF*
 void q_scatterseries_replace2(void* self, void* oldPoint, void* newPoint);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QScatterSeries* self, int index, double newX, double newY ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param newX double
+/// @param newY double
 void q_scatterseries_replace3(void* self, int index, double newX, double newY);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QScatterSeries* self, int index, QPointF* newPoint ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param newPoint QPointF*
 void q_scatterseries_replace4(void* self, int index, void* newPoint);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
 ///
-/// ``` QScatterSeries* self, double x, double y ```
+/// @param self QScatterSeries*
+/// @param x double
+/// @param y double
 void q_scatterseries_remove(void* self, double x, double y);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_remove2(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#remove)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_remove3(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#removePoints)
 ///
-/// ``` QScatterSeries* self, int index, int count ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param count int
 void q_scatterseries_remove_points(void* self, int index, int count);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#insert)
 ///
-/// ``` QScatterSeries* self, int index, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param point QPointF*
 void q_scatterseries_insert(void* self, int index, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clear)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_clear(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#count)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 int32_t q_scatterseries_count(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#points)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_list /* of QPointF* */ q_scatterseries_points(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsVector)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_list /* of QPointF* */ q_scatterseries_points_vector(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#at)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 const QPointF* q_scatterseries_at(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator-lt-lt)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 QXYSeries* q_scatterseries_operator_shift_left(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#operator-lt-lt)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of QPointF* */ points ```
+/// @param self QScatterSeries*
+/// @param points libqt_list /* of QPointF* */
 QXYSeries* q_scatterseries_operator_shift_left2(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pen)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QPen* q_scatterseries_pen(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setSelectedColor)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_set_selected_color(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColor)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_selected_color(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_points_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_points_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsFormat)
 ///
-/// ``` QScatterSeries* self, const char* format ```
+/// @param self QScatterSeries*
+/// @param format const char*
 void q_scatterseries_set_point_labels_format(void* self, const char* format);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormat)
 ///
-/// ``` QScatterSeries* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScatterSeries*
 const char* q_scatterseries_point_labels_format(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_point_labels_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_point_labels_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsFont)
 ///
-/// ``` QScatterSeries* self, QFont* font ```
+/// @param self QScatterSeries*
+/// @param font QFont*
 void q_scatterseries_set_point_labels_font(void* self, void* font);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFont)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QFont* q_scatterseries_point_labels_font(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsColor)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_set_point_labels_color(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColor)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_point_labels_color(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsClipping)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_point_labels_clipping(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClipping)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_point_labels_clipping(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#replace)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of QPointF* */ points ```
+/// @param self QScatterSeries*
+/// @param points libqt_list /* of QPointF* */
 void q_scatterseries_replace5(void* self, libqt_list points);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#isPointSelected)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 bool q_scatterseries_is_point_selected(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectPoint)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_select_point(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectPoint)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_deselect_point(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointSelected)
 ///
-/// ``` QScatterSeries* self, int index, bool selected ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param selected bool
 void q_scatterseries_set_point_selected(void* self, int index, bool selected);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectAllPoints)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_select_all_points(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectAllPoints)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_deselect_all_points(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectPoints)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of int */ indexes ```
+/// @param self QScatterSeries*
+/// @param indexes libqt_list /* of int */
 void q_scatterseries_select_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#deselectPoints)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of int */ indexes ```
+/// @param self QScatterSeries*
+/// @param indexes libqt_list /* of int */
 void q_scatterseries_deselect_points(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#toggleSelection)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of int */ indexes ```
+/// @param self QScatterSeries*
+/// @param indexes libqt_list /* of int */
 void q_scatterseries_toggle_selection(void* self, libqt_list indexes);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPoints)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_list /* of int */ q_scatterseries_selected_points(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setLightMarker)
 ///
-/// ``` QScatterSeries* self, QImage* lightMarker ```
+/// @param self QScatterSeries*
+/// @param lightMarker QImage*
 void q_scatterseries_set_light_marker(void* self, void* lightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarker)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 const QImage* q_scatterseries_light_marker(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setSelectedLightMarker)
 ///
-/// ``` QScatterSeries* self, QImage* selectedLightMarker ```
+/// @param self QScatterSeries*
+/// @param selectedLightMarker QImage*
 void q_scatterseries_set_selected_light_marker(void* self, void* selectedLightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarker)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 const QImage* q_scatterseries_selected_light_marker(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_best_fit_line_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_best_fit_line_visible(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineEquation)
 ///
-/// ``` QScatterSeries* self, bool* ok ```
+/// @param self QScatterSeries*
+/// @param ok bool*
 libqt_pair /* tuple of double and double */ q_scatterseries_best_fit_line_equation(void* self, bool* ok);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLinePen)
 ///
-/// ``` QScatterSeries* self, QPen* pen ```
+/// @param self QScatterSeries*
+/// @param pen QPen*
 void q_scatterseries_set_best_fit_line_pen(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePen)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QPen* q_scatterseries_best_fit_line_pen(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineColor)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_set_best_fit_line_color(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColor)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QColor* q_scatterseries_best_fit_line_color(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointConfiguration)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_clear_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointConfiguration)
 ///
-/// ``` QScatterSeries* self, int index, enum QXYSeries__PointConfiguration key ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param key enum QXYSeries__PointConfiguration
 void q_scatterseries_clear_point_configuration2(void* self, int index, int64_t key);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointsConfiguration)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_clear_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clearPointsConfiguration)
 ///
-/// ``` QScatterSeries* self, enum QXYSeries__PointConfiguration key ```
+/// @param self QScatterSeries*
+/// @param key enum QXYSeries__PointConfiguration
 void q_scatterseries_clear_points_configuration2(void* self, int64_t key);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointConfiguration)
 ///
-/// ``` QScatterSeries* self, int index, libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */ configuration ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
 void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointConfiguration)
 ///
-/// ``` QScatterSeries* self, int index, enum QXYSeries__PointConfiguration key, QVariant* value ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param key enum QXYSeries__PointConfiguration
+/// @param value QVariant*
 void q_scatterseries_set_point_configuration2(void* self, int index, int64_t key, void* value);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsConfiguration)
 ///
-/// ``` QScatterSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ pointsConfiguration ```
+/// @param self QScatterSeries*
+/// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
 void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointConfiguration)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 libqt_map /* of int64_t to QVariant* */ q_scatterseries_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfiguration)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_scatterseries_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#sizeBy)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of double */ sourceData, double minSize, double maxSize ```
+/// @param self QScatterSeries*
+/// @param sourceData libqt_list /* of double */
+/// @param minSize double
+/// @param maxSize double
 void q_scatterseries_size_by(void* self, libqt_list sourceData, double minSize, double maxSize);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of double */ sourceData ```
+/// @param self QScatterSeries*
+/// @param sourceData libqt_list /* of double */
 void q_scatterseries_color_by(void* self, libqt_list sourceData);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clicked)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_clicked(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#clicked)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPointF*) ```
-void q_scatterseries_on_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPointF*)
+void q_scatterseries_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#hovered)
 ///
-/// ``` QScatterSeries* self, QPointF* point, bool state ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
+/// @param state bool
 void q_scatterseries_hovered(void* self, void* point, bool state);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#hovered)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPointF*, bool) ```
-void q_scatterseries_on_hovered(void* self, void (*slot)(void*, void*, bool));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPointF*, bool)
+void q_scatterseries_on_hovered(void* self, void (*callback)(void*, void*, bool));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pressed)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_pressed(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pressed)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPointF*) ```
-void q_scatterseries_on_pressed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPointF*)
+void q_scatterseries_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#released)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_released(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#released)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPointF*) ```
-void q_scatterseries_on_released(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPointF*)
+void q_scatterseries_on_released(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#doubleClicked)
 ///
-/// ``` QScatterSeries* self, QPointF* point ```
+/// @param self QScatterSeries*
+/// @param point QPointF*
 void q_scatterseries_double_clicked(void* self, void* point);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#doubleClicked)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPointF*) ```
-void q_scatterseries_on_double_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPointF*)
+void q_scatterseries_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointReplaced)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_point_replaced(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointReplaced)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, int) ```
-void q_scatterseries_on_point_replaced(void* self, void (*slot)(void*, int));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, int)
+void q_scatterseries_on_point_replaced(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointRemoved)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_point_removed(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointRemoved)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, int) ```
-void q_scatterseries_on_point_removed(void* self, void (*slot)(void*, int));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, int)
+void q_scatterseries_on_point_removed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointAdded)
 ///
-/// ``` QScatterSeries* self, int index ```
+/// @param self QScatterSeries*
+/// @param index int
 void q_scatterseries_point_added(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointAdded)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, int) ```
-void q_scatterseries_on_point_added(void* self, void (*slot)(void*, int));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, int)
+void q_scatterseries_on_point_added(void* self, void (*callback)(void*, int));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColorChanged)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_selected_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedColorChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_selected_color_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_selected_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsReplaced)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_points_replaced(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsReplaced)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_points_replaced(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_points_replaced(void* self, void (*callback)(void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormatChanged)
 ///
-/// ``` QScatterSeries* self, const char* format ```
+/// @param self QScatterSeries*
+/// @param format const char*
 void q_scatterseries_point_labels_format_changed(void* self, const char* format);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFormatChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, const char*) ```
-void q_scatterseries_on_point_labels_format_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, const char*)
+void q_scatterseries_on_point_labels_format_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisibilityChanged)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_point_labels_visibility_changed(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsVisibilityChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, bool) ```
-void q_scatterseries_on_point_labels_visibility_changed(void* self, void (*slot)(void*, bool));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, bool)
+void q_scatterseries_on_point_labels_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFontChanged)
 ///
-/// ``` QScatterSeries* self, QFont* font ```
+/// @param self QScatterSeries*
+/// @param font QFont*
 void q_scatterseries_point_labels_font_changed(void* self, void* font);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsFontChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QFont*) ```
-void q_scatterseries_on_point_labels_font_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QFont*)
+void q_scatterseries_on_point_labels_font_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColorChanged)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_point_labels_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsColorChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_point_labels_color_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_point_labels_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClippingChanged)
 ///
-/// ``` QScatterSeries* self, bool clipping ```
+/// @param self QScatterSeries*
+/// @param clipping bool
 void q_scatterseries_point_labels_clipping_changed(void* self, bool clipping);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointLabelsClippingChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, bool) ```
-void q_scatterseries_on_point_labels_clipping_changed(void* self, void (*slot)(void*, bool));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, bool)
+void q_scatterseries_on_point_labels_clipping_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsRemoved)
 ///
-/// ``` QScatterSeries* self, int index, int count ```
+/// @param self QScatterSeries*
+/// @param index int
+/// @param count int
 void q_scatterseries_points_removed(void* self, int index, int count);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsRemoved)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, int, int) ```
-void q_scatterseries_on_points_removed(void* self, void (*slot)(void*, int, int));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, int, int)
+void q_scatterseries_on_points_removed(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#penChanged)
 ///
-/// ``` QScatterSeries* self, QPen* pen ```
+/// @param self QScatterSeries*
+/// @param pen QPen*
 void q_scatterseries_pen_changed(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#penChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPen*) ```
-void q_scatterseries_on_pen_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPen*)
+void q_scatterseries_on_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPointsChanged)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_selected_points_changed(void* self);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedPointsChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_selected_points_changed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_selected_points_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarkerChanged)
 ///
-/// ``` QScatterSeries* self, QImage* lightMarker ```
+/// @param self QScatterSeries*
+/// @param lightMarker QImage*
 void q_scatterseries_light_marker_changed(void* self, void* lightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#lightMarkerChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QImage*) ```
-void q_scatterseries_on_light_marker_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QImage*)
+void q_scatterseries_on_light_marker_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarkerChanged)
 ///
-/// ``` QScatterSeries* self, QImage* selectedLightMarker ```
+/// @param self QScatterSeries*
+/// @param selectedLightMarker QImage*
 void q_scatterseries_selected_light_marker_changed(void* self, void* selectedLightMarker);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#selectedLightMarkerChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QImage*) ```
-void q_scatterseries_on_selected_light_marker_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QImage*)
+void q_scatterseries_on_selected_light_marker_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisibilityChanged)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_best_fit_line_visibility_changed(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineVisibilityChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, bool) ```
-void q_scatterseries_on_best_fit_line_visibility_changed(void* self, void (*slot)(void*, bool));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, bool)
+void q_scatterseries_on_best_fit_line_visibility_changed(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePenChanged)
 ///
-/// ``` QScatterSeries* self, QPen* pen ```
+/// @param self QScatterSeries*
+/// @param pen QPen*
 void q_scatterseries_best_fit_line_pen_changed(void* self, void* pen);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLinePenChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QPen*) ```
-void q_scatterseries_on_best_fit_line_pen_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QPen*)
+void q_scatterseries_on_best_fit_line_pen_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColorChanged)
 ///
-/// ``` QScatterSeries* self, QColor* color ```
+/// @param self QScatterSeries*
+/// @param color QColor*
 void q_scatterseries_best_fit_line_color_changed(void* self, void* color);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#bestFitLineColorChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QColor*) ```
-void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QColor*)
+void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
-/// ``` QScatterSeries* self, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */ configuration ```
+/// @param self QScatterSeries*
+/// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
 void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfigurationChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */) ```
-void q_scatterseries_on_points_configuration_changed(void* self, void (*slot)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
+void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointsVisible)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_set_points_visible1(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsVisible)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_set_point_labels_visible1(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setPointLabelsClipping)
 ///
-/// ``` QScatterSeries* self, bool enabled ```
+/// @param self QScatterSeries*
+/// @param enabled bool
 void q_scatterseries_set_point_labels_clipping1(void* self, bool enabled);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#setBestFitLineVisible)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_set_best_fit_line_visible1(void* self, bool visible);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#colorBy)
 ///
-/// ``` QScatterSeries* self, libqt_list /* of double */ sourceData, QLinearGradient* gradient ```
+/// @param self QScatterSeries*
+/// @param sourceData libqt_list /* of double */
+/// @param gradient QLinearGradient*
 void q_scatterseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setName)
 ///
-/// ``` QScatterSeries* self, const char* name ```
+/// @param self QScatterSeries*
+/// @param name const char*
 void q_scatterseries_set_name(void* self, const char* name);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#name)
 ///
-/// ``` QScatterSeries* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScatterSeries*
 const char* q_scatterseries_name(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#isVisible)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_is_visible(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacity)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 double q_scatterseries_opacity(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setOpacity)
 ///
-/// ``` QScatterSeries* self, double opacity ```
+/// @param self QScatterSeries*
+/// @param opacity double
 void q_scatterseries_set_opacity(void* self, double opacity);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_set_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGL)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_use_open_g_l(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#chart)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QChart* q_scatterseries_chart(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachAxis)
 ///
-/// ``` QScatterSeries* self, QAbstractAxis* axis ```
+/// @param self QScatterSeries*
+/// @param axis QAbstractAxis*
 bool q_scatterseries_attach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#detachAxis)
 ///
-/// ``` QScatterSeries* self, QAbstractAxis* axis ```
+/// @param self QScatterSeries*
+/// @param axis QAbstractAxis*
 bool q_scatterseries_detach_axis(void* self, void* axis);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#attachedAxes)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_list /* of QAbstractAxis* */ q_scatterseries_attached_axes(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#show)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_show(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#hide)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_hide(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_name_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#nameChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_name_changed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_name_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_visible_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#visibleChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_visible_changed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_visible_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_opacity_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#opacityChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_opacity_changed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_opacity_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_use_open_g_l_changed(void* self);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#useOpenGLChanged)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_use_open_g_l_changed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_use_open_g_l_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setVisible)
 ///
-/// ``` QScatterSeries* self, bool visible ```
+/// @param self QScatterSeries*
+/// @param visible bool
 void q_scatterseries_set_visible1(void* self, bool visible);
 
 /// Inherited from QAbstractSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractseries.html#setUseOpenGL)
 ///
-/// ``` QScatterSeries* self, bool enable ```
+/// @param self QScatterSeries*
+/// @param enable bool
 void q_scatterseries_set_use_open_g_l1(void* self, bool enable);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QScatterSeries* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScatterSeries*
 const char* q_scatterseries_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QScatterSeries* self, char* name ```
+/// @param self QScatterSeries*
+/// @param name char*
 void q_scatterseries_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 bool q_scatterseries_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QScatterSeries* self, bool b ```
+/// @param self QScatterSeries*
+/// @param b bool
 bool q_scatterseries_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QThread* q_scatterseries_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QScatterSeries* self, QThread* thread ```
+/// @param self QScatterSeries*
+/// @param thread QThread*
 bool q_scatterseries_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QScatterSeries* self, int interval ```
+/// @param self QScatterSeries*
+/// @param interval int
 int32_t q_scatterseries_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QScatterSeries* self, int id ```
+/// @param self QScatterSeries*
+/// @param id int
 void q_scatterseries_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QScatterSeries* self, enum Qt__TimerId id ```
+/// @param self QScatterSeries*
+/// @param id enum Qt__TimerId
 void q_scatterseries_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 libqt_list /* of QObject* */ q_scatterseries_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QScatterSeries* self, QObject* parent ```
+/// @param self QScatterSeries*
+/// @param parent QObject*
 void q_scatterseries_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QScatterSeries* self, QObject* filterObj ```
+/// @param self QScatterSeries*
+/// @param filterObj QObject*
 void q_scatterseries_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QScatterSeries* self, QObject* obj ```
+/// @param self QScatterSeries*
+/// @param obj QObject*
 void q_scatterseries_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_scatterseries_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QScatterSeries* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QScatterSeries*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_scatterseries_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_scatterseries_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_scatterseries_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QScatterSeries* self, const char* name, QVariant* value ```
+/// @param self QScatterSeries*
+/// @param name const char*
+/// @param value QVariant*
 bool q_scatterseries_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QScatterSeries* self, const char* name ```
+/// @param self QScatterSeries*
+/// @param name const char*
 QVariant* q_scatterseries_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QScatterSeries* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QScatterSeries*
 const char** q_scatterseries_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QBindingStorage* q_scatterseries_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 const QBindingStorage* q_scatterseries_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*) ```
-void q_scatterseries_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*)
+void q_scatterseries_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QObject* q_scatterseries_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QScatterSeries* self, const char* classname ```
+/// @param self QScatterSeries*
+/// @param classname const char*
 bool q_scatterseries_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QScatterSeries* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QScatterSeries*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_scatterseries_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QScatterSeries* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QScatterSeries*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_scatterseries_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scatterseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QScatterSeries* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QScatterSeries*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scatterseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScatterSeries* self, QObject* param1 ```
+/// @param self QScatterSeries*
+/// @param param1 QObject*
 void q_scatterseries_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QObject*) ```
-void q_scatterseries_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QObject*)
+void q_scatterseries_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1510,7 +1721,8 @@ void q_scatterseries_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QEvent*
 bool q_scatterseries_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1519,7 +1731,8 @@ bool q_scatterseries_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QEvent*
 bool q_scatterseries_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1528,8 +1741,9 @@ bool q_scatterseries_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, bool (*slot)(QScatterSeries*, QEvent*) ```
-void q_scatterseries_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback bool fn(QScatterSeries*, QEvent*)
+void q_scatterseries_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1537,7 +1751,9 @@ void q_scatterseries_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QObject* watched, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scatterseries_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1546,7 +1762,9 @@ bool q_scatterseries_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QObject* watched, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scatterseries_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1555,8 +1773,9 @@ bool q_scatterseries_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, bool (*slot)(QScatterSeries*, QObject*, QEvent*) ```
-void q_scatterseries_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QScatterSeries*
+/// @param callback bool fn(QScatterSeries*, QObject*, QEvent*)
+void q_scatterseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1564,7 +1783,8 @@ void q_scatterseries_on_event_filter(void* self, bool (*slot)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QTimerEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QTimerEvent*
 void q_scatterseries_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1573,7 +1793,8 @@ void q_scatterseries_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QTimerEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QTimerEvent*
 void q_scatterseries_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1582,8 +1803,9 @@ void q_scatterseries_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QTimerEvent*) ```
-void q_scatterseries_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QTimerEvent*)
+void q_scatterseries_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1591,7 +1813,8 @@ void q_scatterseries_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QChildEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QChildEvent*
 void q_scatterseries_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1600,7 +1823,8 @@ void q_scatterseries_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QChildEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QChildEvent*
 void q_scatterseries_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1609,8 +1833,9 @@ void q_scatterseries_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QChildEvent*) ```
-void q_scatterseries_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QChildEvent*)
+void q_scatterseries_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1618,7 +1843,8 @@ void q_scatterseries_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QEvent*
 void q_scatterseries_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1627,7 +1853,8 @@ void q_scatterseries_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QEvent* event ```
+/// @param self QScatterSeries*
+/// @param event QEvent*
 void q_scatterseries_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1636,8 +1863,9 @@ void q_scatterseries_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QEvent*) ```
-void q_scatterseries_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QEvent*)
+void q_scatterseries_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1645,7 +1873,8 @@ void q_scatterseries_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 void q_scatterseries_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1654,7 +1883,8 @@ void q_scatterseries_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 void q_scatterseries_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1663,8 +1893,9 @@ void q_scatterseries_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QMetaMethod*) ```
-void q_scatterseries_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QMetaMethod*)
+void q_scatterseries_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1672,7 +1903,8 @@ void q_scatterseries_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 void q_scatterseries_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1681,7 +1913,8 @@ void q_scatterseries_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 void q_scatterseries_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1690,8 +1923,9 @@ void q_scatterseries_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, QMetaMethod*) ```
-void q_scatterseries_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, QMetaMethod*)
+void q_scatterseries_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1699,7 +1933,7 @@ void q_scatterseries_on_disconnect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QObject* q_scatterseries_sender(void* self);
 
 /// Inherited from QObject
@@ -1708,7 +1942,7 @@ QObject* q_scatterseries_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 QObject* q_scatterseries_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1717,8 +1951,9 @@ QObject* q_scatterseries_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QObject* (*slot)() ```
-void q_scatterseries_on_sender(void* self, QObject* (*slot)());
+/// @param self QScatterSeries*
+/// @param callback QObject* fn()
+void q_scatterseries_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1726,7 +1961,7 @@ void q_scatterseries_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 int32_t q_scatterseries_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1735,7 +1970,7 @@ int32_t q_scatterseries_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 int32_t q_scatterseries_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1744,8 +1979,9 @@ int32_t q_scatterseries_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, int32_t (*slot)() ```
-void q_scatterseries_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QScatterSeries*
+/// @param callback int32_t fn()
+void q_scatterseries_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1753,7 +1989,8 @@ void q_scatterseries_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, const char* signal ```
+/// @param self QScatterSeries*
+/// @param signal const char*
 int32_t q_scatterseries_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1762,7 +1999,8 @@ int32_t q_scatterseries_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, const char* signal ```
+/// @param self QScatterSeries*
+/// @param signal const char*
 int32_t q_scatterseries_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1771,8 +2009,9 @@ int32_t q_scatterseries_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, int32_t (*slot)(QScatterSeries*, const char*) ```
-void q_scatterseries_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QScatterSeries*
+/// @param callback int32_t fn(QScatterSeries*, const char*)
+void q_scatterseries_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1780,7 +2019,8 @@ void q_scatterseries_on_receivers(void* self, int32_t (*slot)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 bool q_scatterseries_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1789,7 +2029,8 @@ bool q_scatterseries_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, QMetaMethod* signal ```
+/// @param self QScatterSeries*
+/// @param signal QMetaMethod*
 bool q_scatterseries_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1798,8 +2039,9 @@ bool q_scatterseries_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScatterSeries* self, bool (*slot)(QScatterSeries*, QMetaMethod*) ```
-void q_scatterseries_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QScatterSeries*
+/// @param callback bool fn(QScatterSeries*, QMetaMethod*)
+void q_scatterseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1807,14 +2049,15 @@ void q_scatterseries_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QScatterSeries* self, void (*slot)(QScatterSeries*, const char*) ```
-void q_scatterseries_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QScatterSeries*
+/// @param callback void fn(QScatterSeries*, const char*)
+void q_scatterseries_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#dtor.QScatterSeries)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScatterSeries* self ```
+/// @param self QScatterSeries*
 void q_scatterseries_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscatterseries-qtcharts.html#types

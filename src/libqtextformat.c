@@ -315,12 +315,17 @@ const char* q_textcharformat_font_family(void* self) {
 
 void q_textcharformat_set_font_families(void* self, const char* families[]) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textcharformat_set_font_families");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
+    free(families_qstr);
 }
 
 QVariant* q_textcharformat_font_families(void* self) {
@@ -551,24 +556,33 @@ const char* q_textcharformat_anchor_href(void* self) {
 
 void q_textcharformat_set_anchor_names(void* self, const char* names[]) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textcharformat_set_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
+    free(names_qstr);
 }
 
 const char** q_textcharformat_anchor_names(void* self) {
     libqt_list _arr = QTextCharFormat_AnchorNames((QTextCharFormat*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textcharformat_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1473,12 +1487,17 @@ const char* q_textimageformat_font_family(void* self) {
 
 void q_textimageformat_set_font_families(void* self, const char* families[]) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textimageformat_set_font_families");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
+    free(families_qstr);
 }
 
 QVariant* q_textimageformat_font_families(void* self) {
@@ -1709,24 +1728,33 @@ const char* q_textimageformat_anchor_href(void* self) {
 
 void q_textimageformat_set_anchor_names(void* self, const char* names[]) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textimageformat_set_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
+    free(names_qstr);
 }
 
 const char** q_textimageformat_anchor_names(void* self) {
     libqt_list _arr = QTextCharFormat_AnchorNames((QTextCharFormat*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textimageformat_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2854,12 +2882,17 @@ const char* q_texttablecellformat_font_family(void* self) {
 
 void q_texttablecellformat_set_font_families(void* self, const char* families[]) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_texttablecellformat_set_font_families");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
     QTextCharFormat_SetFontFamilies((QTextCharFormat*)self, families_list);
+    free(families_qstr);
 }
 
 QVariant* q_texttablecellformat_font_families(void* self) {
@@ -3090,24 +3123,33 @@ const char* q_texttablecellformat_anchor_href(void* self) {
 
 void q_texttablecellformat_set_anchor_names(void* self, const char* names[]) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_texttablecellformat_set_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
     QTextCharFormat_SetAnchorNames((QTextCharFormat*)self, names_list);
+    free(names_qstr);
 }
 
 const char** q_texttablecellformat_anchor_names(void* self) {
     libqt_list _arr = QTextCharFormat_AnchorNames((QTextCharFormat*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_texttablecellformat_anchor_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

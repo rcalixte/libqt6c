@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,400 +15,477 @@
 
 /// q_inputdevice_new constructs a new QInputDevice object.
 ///
-///
 QInputDevice* q_inputdevice_new();
 
 /// q_inputdevice_new2 constructs a new QInputDevice object.
 ///
-/// ``` const char* name, long long systemId, enum QInputDevice__DeviceType typeVal ```
+/// @param name const char*
+/// @param systemId long long
+/// @param typeVal enum QInputDevice__DeviceType
 QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int64_t typeVal);
 
 /// q_inputdevice_new3 constructs a new QInputDevice object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QInputDevice* q_inputdevice_new3(void* parent);
 
 /// q_inputdevice_new4 constructs a new QInputDevice object.
 ///
-/// ``` const char* name, long long systemId, enum QInputDevice__DeviceType typeVal, const char* seatName ```
+/// @param name const char*
+/// @param systemId long long
+/// @param typeVal enum QInputDevice__DeviceType
+/// @param seatName const char*
 QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int64_t typeVal, const char* seatName);
 
 /// q_inputdevice_new5 constructs a new QInputDevice object.
 ///
-/// ``` const char* name, long long systemId, enum QInputDevice__DeviceType typeVal, const char* seatName, QObject* parent ```
+/// @param name const char*
+/// @param systemId long long
+/// @param typeVal enum QInputDevice__DeviceType
+/// @param seatName const char*
+/// @param parent QObject*
 QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int64_t typeVal, const char* seatName, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 const QMetaObject* q_inputdevice_meta_object(void* self);
 
-/// ``` QInputDevice* self, const char* param1 ```
+/// @param self QInputDevice*
+/// @param param1 const char*
 void* q_inputdevice_metacast(void* self, const char* param1);
 
-/// ``` QInputDevice* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QInputDevice*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_inputdevice_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QInputDevice* self, int32_t (*slot)(QInputDevice*, enum QMetaObject__Call, int, void*) ```
-void q_inputdevice_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QInputDevice*
+/// @param callback int32_t fn(QInputDevice*, enum QMetaObject__Call, int, void*)
+void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QInputDevice* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QInputDevice*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_inputdevice_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_inputdevice_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#name)
 ///
-/// ``` QInputDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDevice*
 const char* q_inputdevice_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#type)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_inputdevice_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#capabilities)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
+///
+/// @return flag of enum QInputDevice__Capability
 int64_t q_inputdevice_capabilities(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#hasCapability)
 ///
-/// ``` QInputDevice* self, enum QInputDevice__Capability cap ```
+/// @param self QInputDevice*
+/// @param cap enum QInputDevice__Capability
 bool q_inputdevice_has_capability(void* self, int64_t cap);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#systemId)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 long long q_inputdevice_system_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#seatName)
 ///
-/// ``` QInputDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDevice*
 const char* q_inputdevice_seat_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#availableVirtualGeometry)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QRect* q_inputdevice_available_virtual_geometry(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#seatNames)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_inputdevice_seat_names();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#devices)
 ///
-///
 libqt_list /* of QInputDevice* */ q_inputdevice_devices();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#primaryKeyboard)
-///
 ///
 const QInputDevice* q_inputdevice_primary_keyboard();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#operator-eq-eq)
 ///
-/// ``` QInputDevice* self, QInputDevice* other ```
+/// @param self QInputDevice*
+/// @param other QInputDevice*
 bool q_inputdevice_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#availableVirtualGeometryChanged)
 ///
-/// ``` QInputDevice* self, QRect* area ```
+/// @param self QInputDevice*
+/// @param area QRect*
 void q_inputdevice_available_virtual_geometry_changed(void* self, void* area);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#availableVirtualGeometryChanged)
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QRect*) ```
-void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QRect*)
+void q_inputdevice_on_available_virtual_geometry_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_inputdevice_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_inputdevice_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#primaryKeyboard)
 ///
-/// ``` const char* seatName ```
+/// @param seatName const char*
 const QInputDevice* q_inputdevice_primary_keyboard1(const char* seatName);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QInputDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDevice*
 const char* q_inputdevice_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QInputDevice* self, char* name ```
+/// @param self QInputDevice*
+/// @param name char*
 void q_inputdevice_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 bool q_inputdevice_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 bool q_inputdevice_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 bool q_inputdevice_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 bool q_inputdevice_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QInputDevice* self, bool b ```
+/// @param self QInputDevice*
+/// @param b bool
 bool q_inputdevice_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QThread* q_inputdevice_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QInputDevice* self, QThread* thread ```
+/// @param self QInputDevice*
+/// @param thread QThread*
 bool q_inputdevice_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QInputDevice* self, int interval ```
+/// @param self QInputDevice*
+/// @param interval int
 int32_t q_inputdevice_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QInputDevice* self, int id ```
+/// @param self QInputDevice*
+/// @param id int
 void q_inputdevice_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QInputDevice* self, enum Qt__TimerId id ```
+/// @param self QInputDevice*
+/// @param id enum Qt__TimerId
 void q_inputdevice_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 libqt_list /* of QObject* */ q_inputdevice_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QInputDevice* self, QObject* parent ```
+/// @param self QInputDevice*
+/// @param parent QObject*
 void q_inputdevice_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QInputDevice* self, QObject* filterObj ```
+/// @param self QInputDevice*
+/// @param filterObj QObject*
 void q_inputdevice_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QInputDevice* self, QObject* obj ```
+/// @param self QInputDevice*
+/// @param obj QObject*
 void q_inputdevice_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_inputdevice_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QInputDevice* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QInputDevice*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_inputdevice_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_inputdevice_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_inputdevice_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 void q_inputdevice_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 void q_inputdevice_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QInputDevice* self, const char* name, QVariant* value ```
+/// @param self QInputDevice*
+/// @param name const char*
+/// @param value QVariant*
 bool q_inputdevice_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QInputDevice* self, const char* name ```
+/// @param self QInputDevice*
+/// @param name const char*
 QVariant* q_inputdevice_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QInputDevice* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputDevice*
 const char** q_inputdevice_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QBindingStorage* q_inputdevice_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 const QBindingStorage* q_inputdevice_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 void q_inputdevice_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*) ```
-void q_inputdevice_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*)
+void q_inputdevice_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QObject* q_inputdevice_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QInputDevice* self, const char* classname ```
+/// @param self QInputDevice*
+/// @param classname const char*
 bool q_inputdevice_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 void q_inputdevice_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QInputDevice* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QInputDevice*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_inputdevice_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QInputDevice* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QInputDevice*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_inputdevice_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QInputDevice* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QInputDevice*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDevice* self, QObject* param1 ```
+/// @param self QInputDevice*
+/// @param param1 QObject*
 void q_inputdevice_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QObject*) ```
-void q_inputdevice_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QObject*)
+void q_inputdevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -417,7 +493,8 @@ void q_inputdevice_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QEvent* event ```
+/// @param self QInputDevice*
+/// @param event QEvent*
 bool q_inputdevice_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -426,7 +503,8 @@ bool q_inputdevice_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QEvent* event ```
+/// @param self QInputDevice*
+/// @param event QEvent*
 bool q_inputdevice_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -435,8 +513,9 @@ bool q_inputdevice_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, bool (*slot)(QInputDevice*, QEvent*) ```
-void q_inputdevice_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback bool fn(QInputDevice*, QEvent*)
+void q_inputdevice_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -444,7 +523,9 @@ void q_inputdevice_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QObject* watched, QEvent* event ```
+/// @param self QInputDevice*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_inputdevice_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -453,7 +534,9 @@ bool q_inputdevice_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QObject* watched, QEvent* event ```
+/// @param self QInputDevice*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_inputdevice_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -462,8 +545,9 @@ bool q_inputdevice_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, bool (*slot)(QInputDevice*, QObject*, QEvent*) ```
-void q_inputdevice_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QInputDevice*
+/// @param callback bool fn(QInputDevice*, QObject*, QEvent*)
+void q_inputdevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -471,7 +555,8 @@ void q_inputdevice_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QTimerEvent* event ```
+/// @param self QInputDevice*
+/// @param event QTimerEvent*
 void q_inputdevice_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -480,7 +565,8 @@ void q_inputdevice_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QTimerEvent* event ```
+/// @param self QInputDevice*
+/// @param event QTimerEvent*
 void q_inputdevice_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -489,8 +575,9 @@ void q_inputdevice_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QTimerEvent*) ```
-void q_inputdevice_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QTimerEvent*)
+void q_inputdevice_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -498,7 +585,8 @@ void q_inputdevice_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QChildEvent* event ```
+/// @param self QInputDevice*
+/// @param event QChildEvent*
 void q_inputdevice_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -507,7 +595,8 @@ void q_inputdevice_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QChildEvent* event ```
+/// @param self QInputDevice*
+/// @param event QChildEvent*
 void q_inputdevice_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -516,8 +605,9 @@ void q_inputdevice_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QChildEvent*) ```
-void q_inputdevice_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QChildEvent*)
+void q_inputdevice_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -525,7 +615,8 @@ void q_inputdevice_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QEvent* event ```
+/// @param self QInputDevice*
+/// @param event QEvent*
 void q_inputdevice_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -534,7 +625,8 @@ void q_inputdevice_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QEvent* event ```
+/// @param self QInputDevice*
+/// @param event QEvent*
 void q_inputdevice_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -543,8 +635,9 @@ void q_inputdevice_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QEvent*) ```
-void q_inputdevice_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QEvent*)
+void q_inputdevice_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -552,7 +645,8 @@ void q_inputdevice_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 void q_inputdevice_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -561,7 +655,8 @@ void q_inputdevice_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 void q_inputdevice_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -570,8 +665,9 @@ void q_inputdevice_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QMetaMethod*) ```
-void q_inputdevice_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QMetaMethod*)
+void q_inputdevice_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -579,7 +675,8 @@ void q_inputdevice_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 void q_inputdevice_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -588,7 +685,8 @@ void q_inputdevice_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 void q_inputdevice_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -597,8 +695,9 @@ void q_inputdevice_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, QMetaMethod*) ```
-void q_inputdevice_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, QMetaMethod*)
+void q_inputdevice_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -606,7 +705,7 @@ void q_inputdevice_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QObject* q_inputdevice_sender(void* self);
 
 /// Inherited from QObject
@@ -615,7 +714,7 @@ QObject* q_inputdevice_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 QObject* q_inputdevice_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -624,8 +723,9 @@ QObject* q_inputdevice_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QObject* (*slot)() ```
-void q_inputdevice_on_sender(void* self, QObject* (*slot)());
+/// @param self QInputDevice*
+/// @param callback QObject* fn()
+void q_inputdevice_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -633,7 +733,7 @@ void q_inputdevice_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 int32_t q_inputdevice_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -642,7 +742,7 @@ int32_t q_inputdevice_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 int32_t q_inputdevice_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -651,8 +751,9 @@ int32_t q_inputdevice_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, int32_t (*slot)() ```
-void q_inputdevice_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QInputDevice*
+/// @param callback int32_t fn()
+void q_inputdevice_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -660,7 +761,8 @@ void q_inputdevice_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, const char* signal ```
+/// @param self QInputDevice*
+/// @param signal const char*
 int32_t q_inputdevice_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -669,7 +771,8 @@ int32_t q_inputdevice_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, const char* signal ```
+/// @param self QInputDevice*
+/// @param signal const char*
 int32_t q_inputdevice_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -678,8 +781,9 @@ int32_t q_inputdevice_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, int32_t (*slot)(QInputDevice*, const char*) ```
-void q_inputdevice_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QInputDevice*
+/// @param callback int32_t fn(QInputDevice*, const char*)
+void q_inputdevice_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -687,7 +791,8 @@ void q_inputdevice_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 bool q_inputdevice_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -696,7 +801,8 @@ bool q_inputdevice_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputDevice* self, QMetaMethod* signal ```
+/// @param self QInputDevice*
+/// @param signal QMetaMethod*
 bool q_inputdevice_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -705,8 +811,9 @@ bool q_inputdevice_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputDevice* self, bool (*slot)(QInputDevice*, QMetaMethod*) ```
-void q_inputdevice_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QInputDevice*
+/// @param callback bool fn(QInputDevice*, QMetaMethod*)
+void q_inputdevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -714,14 +821,15 @@ void q_inputdevice_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QInputDevice* self, void (*slot)(QInputDevice*, const char*) ```
-void q_inputdevice_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QInputDevice*
+/// @param callback void fn(QInputDevice*, const char*)
+void q_inputdevice_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#dtor.QInputDevice)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputDevice* self ```
+/// @param self QInputDevice*
 void q_inputdevice_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qinputdevice.html#types

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,321 +15,363 @@
 
 /// q_dirlisting_new constructs a new QDirListing object.
 ///
-/// ``` const char* path ```
+/// @param path const char*
 QDirListing* q_dirlisting_new(const char* path);
 
 /// q_dirlisting_new2 constructs a new QDirListing object.
 ///
-/// ``` const char* path, const char* nameFilters[] ```
+/// @param path const char*
+/// @param nameFilters const char**
 QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[]);
 
 /// q_dirlisting_new3 constructs a new QDirListing object.
 ///
-/// ``` const char* path, int flags ```
+/// @param path const char*
+/// @param flags flag of enum QDirListing__IteratorFlag
 QDirListing* q_dirlisting_new3(const char* path, int64_t flags);
 
 /// q_dirlisting_new4 constructs a new QDirListing object.
 ///
-/// ``` const char* path, const char* nameFilters[], int flags ```
+/// @param path const char*
+/// @param nameFilters const char**
+/// @param flags flag of enum QDirListing__IteratorFlag
 QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#swap)
 ///
-/// ``` QDirListing* self, QDirListing* other ```
+/// @param self QDirListing*
+/// @param other QDirListing*
 void q_dirlisting_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#iteratorPath)
 ///
-/// ``` QDirListing* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing*
 const char* q_dirlisting_iterator_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#iteratorFlags)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
+///
+/// @return flag of enum QDirListing__IteratorFlag
 int64_t q_dirlisting_iterator_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#nameFilters)
 ///
-/// ``` QDirListing* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing*
 const char** q_dirlisting_name_filters(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#begin)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__const_iterator* q_dirlisting_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#cbegin)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__const_iterator* q_dirlisting_cbegin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#end)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__sentinel* q_dirlisting_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#cend)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__sentinel* q_dirlisting_cend(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#constBegin)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__const_iterator* q_dirlisting_const_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#constEnd)
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 QDirListing__sentinel* q_dirlisting_const_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting.html#dtor.QDirListing)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDirListing* self ```
+/// @param self QDirListing*
 void q_dirlisting_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdirlisting-direntry.html
 
 /// q_dirlisting__direntry_new constructs a new QDirListing::DirEntry object.
 ///
-/// ``` QDirListing__DirEntry* other ```
+/// @param other QDirListing__DirEntry*
 QDirListing__DirEntry* q_dirlisting__direntry_new(void* other);
 
 /// q_dirlisting__direntry_new2 constructs a new QDirListing::DirEntry object and invalidates the source QDirListing::DirEntry object.
 ///
-/// ``` QDirListing__DirEntry* other ```
+/// @param other QDirListing__DirEntry*
 QDirListing__DirEntry* q_dirlisting__direntry_new2(void* other);
 
 /// q_dirlisting__direntry_new3 constructs a new QDirListing::DirEntry object.
 ///
-/// ``` QDirListing__DirEntry* param1 ```
+/// @param param1 QDirListing__DirEntry*
 QDirListing__DirEntry* q_dirlisting__direntry_new3(void* param1);
 
 /// q_dirlisting__direntry_new4 constructs a new QDirListing::DirEntry object.
-///
 ///
 QDirListing__DirEntry* q_dirlisting__direntry_new4();
 
 /// q_dirlisting__direntry_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QDirListing__DirEntry* self, QDirListing__DirEntry* other ```
+/// @param self QDirListing__DirEntry*
+/// @param other QDirListing__DirEntry*
 void q_dirlisting__direntry_copy_assign(void* self, void* other);
 
 /// q_dirlisting__direntry_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QDirListing__DirEntry* self, QDirListing__DirEntry* other ```
+/// @param self QDirListing__DirEntry*
+/// @param other QDirListing__DirEntry*
 void q_dirlisting__direntry_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#fileName)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileName)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_file_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#baseName)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#baseName)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_base_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#completeBaseName)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeBaseName)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_complete_base_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#suffix)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#suffix)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_suffix(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#bundleName)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#bundleName)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_bundle_name(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#completeSuffix)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#completeSuffix)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_complete_suffix(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#filePath)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#filePath)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isDir)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isDir)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_dir(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isFile)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isFile)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_file(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isSymLink)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isSymLink)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_sym_link(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#exists)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#exists)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_exists(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isHidden)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isHidden)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_hidden(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isReadable)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isReadable)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_readable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isWritable)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isWritable)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_writable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#isExecutable)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#isExecutable)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 bool q_dirlisting__direntry_is_executable(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#fileInfo)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileInfo)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 QFileInfo* q_dirlisting__direntry_file_info(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#canonicalFilePath)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#canonicalFilePath)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_canonical_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#absoluteFilePath)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absoluteFilePath)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_absolute_file_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#absolutePath)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#absolutePath)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirListing__DirEntry*
 const char* q_dirlisting__direntry_absolute_path(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#size)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#size)
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 long long q_dirlisting__direntry_size(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#birthTime)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#birthTime)
 ///
-/// ``` QDirListing__DirEntry* self, QTimeZone* tz ```
+/// @param self QDirListing__DirEntry*
+/// @param tz QTimeZone*
 QDateTime* q_dirlisting__direntry_birth_time(void* self, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#metadataChangeTime)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#metadataChangeTime)
 ///
-/// ``` QDirListing__DirEntry* self, QTimeZone* tz ```
+/// @param self QDirListing__DirEntry*
+/// @param tz QTimeZone*
 QDateTime* q_dirlisting__direntry_metadata_change_time(void* self, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#lastModified)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#lastModified)
 ///
-/// ``` QDirListing__DirEntry* self, QTimeZone* tz ```
+/// @param self QDirListing__DirEntry*
+/// @param tz QTimeZone*
 QDateTime* q_dirlisting__direntry_last_modified(void* self, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#lastRead)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#lastRead)
 ///
-/// ``` QDirListing__DirEntry* self, QTimeZone* tz ```
+/// @param self QDirListing__DirEntry*
+/// @param tz QTimeZone*
 QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#fileTime)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#fileTime)
 ///
-/// ``` QDirListing__DirEntry* self, enum QFileDevice__FileTime typeVal, QTimeZone* tz ```
+/// @param self QDirListing__DirEntry*
+/// @param typeVal enum QFileDevice__FileTime
+/// @param tz QTimeZone*
 QDateTime* q_dirlisting__direntry_file_time(void* self, int64_t typeVal, void* tz);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__direntry.html#operator-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#operator-eq)
 ///
-/// ``` QDirListing__DirEntry* self, QDirListing__DirEntry* param1 ```
+/// @param self QDirListing__DirEntry*
+/// @param param1 QDirListing__DirEntry*
 void q_dirlisting__direntry_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::direntry.html#dtor.QDirListing::DirEntry)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDirListing__DirEntry* self ```
+/// @param self QDirListing__DirEntry*
 void q_dirlisting__direntry_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdirlisting-sentinel.html
 
 /// q_dirlisting__sentinel_new constructs a new QDirListing::sentinel object.
 ///
-/// ``` QDirListing__sentinel* other ```
+/// @param other QDirListing__sentinel*
 QDirListing__sentinel* q_dirlisting__sentinel_new(void* other);
 
 /// q_dirlisting__sentinel_new2 constructs a new QDirListing::sentinel object and invalidates the source QDirListing::sentinel object.
 ///
-/// ``` QDirListing__sentinel* other ```
+/// @param other QDirListing__sentinel*
 QDirListing__sentinel* q_dirlisting__sentinel_new2(void* other);
 
 /// q_dirlisting__sentinel_new3 constructs a new QDirListing::sentinel object.
-///
 ///
 QDirListing__sentinel* q_dirlisting__sentinel_new3();
 
 /// q_dirlisting__sentinel_new4 constructs a new QDirListing::sentinel object.
 ///
-/// ``` QDirListing__sentinel* param1 ```
+/// @param param1 QDirListing__sentinel*
 QDirListing__sentinel* q_dirlisting__sentinel_new4(void* param1);
 
 /// q_dirlisting__sentinel_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QDirListing__sentinel* self, QDirListing__sentinel* other ```
+/// @param self QDirListing__sentinel*
+/// @param other QDirListing__sentinel*
 void q_dirlisting__sentinel_copy_assign(void* self, void* other);
 
 /// q_dirlisting__sentinel_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QDirListing__sentinel* self, QDirListing__sentinel* other ```
+/// @param self QDirListing__sentinel*
+/// @param other QDirListing__sentinel*
 void q_dirlisting__sentinel_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::sentinel.html#dtor.QDirListing::sentinel)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDirListing__sentinel* self ```
+/// @param self QDirListing__sentinel*
 void q_dirlisting__sentinel_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdirlisting-const_iterator.html
 
 /// q_dirlisting__const_iterator_new2 constructs a new QDirListing::const_iterator object and invalidates the source QDirListing::const_iterator object.
 ///
-/// ``` QDirListing__const_iterator* other ```
+/// @param other QDirListing__const_iterator*
 QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other);
 
 /// q_dirlisting__const_iterator_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QDirListing__const_iterator* self, QDirListing__const_iterator* other ```
+/// @param self QDirListing__const_iterator*
+/// @param other QDirListing__const_iterator*
 void q_dirlisting__const_iterator_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2a)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2a)
 ///
-/// ``` QDirListing__const_iterator* self ```
+/// @param self QDirListing__const_iterator*
 const QDirListing__DirEntry* q_dirlisting__const_iterator_operator_multiply(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2b-2b)
 ///
-/// ``` QDirListing__const_iterator* self ```
+/// @param self QDirListing__const_iterator*
 QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting__const_iterator.html#operator-2b-2b)
+/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-const_iterator.html#operator-2b-2b)
 ///
-/// ``` QDirListing__const_iterator* self, int param1 ```
+/// @param self QDirListing__const_iterator*
+/// @param param1 int
 void q_dirlisting__const_iterator_operator_plus_plus2(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::const_iterator.html#dtor.QDirListing::const_iterator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDirListing__const_iterator* self ```
+/// @param self QDirListing__const_iterator*
 void q_dirlisting__const_iterator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdirlisting.html#types

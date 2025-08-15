@@ -91,12 +91,16 @@ const char** q_networkreply_raw_header_list(void* self) {
     libqt_list _arr = QNetworkReply_RawHeaderList((QNetworkReply*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_networkreply_raw_header_list");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -146,96 +150,96 @@ void q_networkreply_socket_started_connecting(void* self) {
     QNetworkReply_SocketStartedConnecting((QNetworkReply*)self);
 }
 
-void q_networkreply_on_socket_started_connecting(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_SocketStartedConnecting((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_socket_started_connecting(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_SocketStartedConnecting((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_request_sent(void* self) {
     QNetworkReply_RequestSent((QNetworkReply*)self);
 }
 
-void q_networkreply_on_request_sent(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_RequestSent((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_request_sent(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_RequestSent((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_meta_data_changed(void* self) {
     QNetworkReply_MetaDataChanged((QNetworkReply*)self);
 }
 
-void q_networkreply_on_meta_data_changed(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_MetaDataChanged((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_meta_data_changed(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_MetaDataChanged((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_finished(void* self) {
     QNetworkReply_Finished((QNetworkReply*)self);
 }
 
-void q_networkreply_on_finished(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_Finished((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_finished(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_Finished((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_error_occurred(void* self, int64_t param1) {
     QNetworkReply_ErrorOccurred((QNetworkReply*)self, param1);
 }
 
-void q_networkreply_on_error_occurred(void* self, void (*slot)(void*, int64_t)) {
-    QNetworkReply_Connect_ErrorOccurred((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_error_occurred(void* self, void (*callback)(void*, int64_t)) {
+    QNetworkReply_Connect_ErrorOccurred((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_encrypted(void* self) {
     QNetworkReply_Encrypted((QNetworkReply*)self);
 }
 
-void q_networkreply_on_encrypted(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_Encrypted((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_encrypted(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_Encrypted((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_ssl_errors(void* self, libqt_list errors) {
     QNetworkReply_SslErrors((QNetworkReply*)self, errors);
 }
 
-void q_networkreply_on_ssl_errors(void* self, void (*slot)(void*, libqt_list)) {
-    QNetworkReply_Connect_SslErrors((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_ssl_errors(void* self, void (*callback)(void*, libqt_list)) {
+    QNetworkReply_Connect_SslErrors((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_pre_shared_key_authentication_required(void* self, void* authenticator) {
     QNetworkReply_PreSharedKeyAuthenticationRequired((QNetworkReply*)self, (QSslPreSharedKeyAuthenticator*)authenticator);
 }
 
-void q_networkreply_on_pre_shared_key_authentication_required(void* self, void (*slot)(void*, void*)) {
-    QNetworkReply_Connect_PreSharedKeyAuthenticationRequired((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_pre_shared_key_authentication_required(void* self, void (*callback)(void*, void*)) {
+    QNetworkReply_Connect_PreSharedKeyAuthenticationRequired((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_redirected(void* self, void* url) {
     QNetworkReply_Redirected((QNetworkReply*)self, (QUrl*)url);
 }
 
-void q_networkreply_on_redirected(void* self, void (*slot)(void*, void*)) {
-    QNetworkReply_Connect_Redirected((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_redirected(void* self, void (*callback)(void*, void*)) {
+    QNetworkReply_Connect_Redirected((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_redirect_allowed(void* self) {
     QNetworkReply_RedirectAllowed((QNetworkReply*)self);
 }
 
-void q_networkreply_on_redirect_allowed(void* self, void (*slot)(void*)) {
-    QNetworkReply_Connect_RedirectAllowed((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_redirect_allowed(void* self, void (*callback)(void*)) {
+    QNetworkReply_Connect_RedirectAllowed((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_upload_progress(void* self, long long bytesSent, long long bytesTotal) {
     QNetworkReply_UploadProgress((QNetworkReply*)self, bytesSent, bytesTotal);
 }
 
-void q_networkreply_on_upload_progress(void* self, void (*slot)(void*, long long, long long)) {
-    QNetworkReply_Connect_UploadProgress((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_upload_progress(void* self, void (*callback)(void*, long long, long long)) {
+    QNetworkReply_Connect_UploadProgress((QNetworkReply*)self, (intptr_t)callback);
 }
 
 void q_networkreply_download_progress(void* self, long long bytesReceived, long long bytesTotal) {
     QNetworkReply_DownloadProgress((QNetworkReply*)self, bytesReceived, bytesTotal);
 }
 
-void q_networkreply_on_download_progress(void* self, void (*slot)(void*, long long, long long)) {
-    QNetworkReply_Connect_DownloadProgress((QNetworkReply*)self, (intptr_t)slot);
+void q_networkreply_on_download_progress(void* self, void (*callback)(void*, long long, long long)) {
+    QNetworkReply_Connect_DownloadProgress((QNetworkReply*)self, (intptr_t)callback);
 }
 
 const char* q_networkreply_tr2(const char* s, const char* c) {
@@ -439,48 +443,48 @@ void q_networkreply_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_networkreply_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_networkreply_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_networkreply_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_networkreply_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_networkreply_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_networkreply_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_networkreply_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_networkreply_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_networkreply_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_networkreply_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_networkreply_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_networkreply_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_networkreply_read_line1(void* self, long long maxlen) {
@@ -602,12 +606,16 @@ const char** q_networkreply_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_networkreply_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -625,8 +633,8 @@ void q_networkreply_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_networkreply_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_networkreply_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_networkreply_parent(void* self) {
@@ -661,12 +669,12 @@ void q_networkreply_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_networkreply_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_networkreply_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_networkreply_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_networkreply_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_networkreply_delete(void* self) {

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,54 +15,58 @@
 
 /// q_scrollerproperties_new constructs a new QScrollerProperties object.
 ///
-///
 QScrollerProperties* q_scrollerproperties_new();
 
 /// q_scrollerproperties_new2 constructs a new QScrollerProperties object.
 ///
-/// ``` QScrollerProperties* sp ```
+/// @param sp QScrollerProperties*
 QScrollerProperties* q_scrollerproperties_new2(void* sp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq)
 ///
-/// ``` QScrollerProperties* self, QScrollerProperties* sp ```
+/// @param self QScrollerProperties*
+/// @param sp QScrollerProperties*
 void q_scrollerproperties_operator_assign(void* self, void* sp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-eq-eq)
 ///
-/// ``` QScrollerProperties* self, QScrollerProperties* sp ```
+/// @param self QScrollerProperties*
+/// @param sp QScrollerProperties*
 bool q_scrollerproperties_operator_equal(void* self, void* sp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#operator-not-eq)
 ///
-/// ``` QScrollerProperties* self, QScrollerProperties* sp ```
+/// @param self QScrollerProperties*
+/// @param sp QScrollerProperties*
 bool q_scrollerproperties_operator_not_equal(void* self, void* sp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#setDefaultScrollerProperties)
 ///
-/// ``` QScrollerProperties* sp ```
+/// @param sp QScrollerProperties*
 void q_scrollerproperties_set_default_scroller_properties(void* sp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#unsetDefaultScrollerProperties)
-///
 ///
 void q_scrollerproperties_unset_default_scroller_properties();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#scrollMetric)
 ///
-/// ``` QScrollerProperties* self, enum QScrollerProperties__ScrollMetric metric ```
+/// @param self QScrollerProperties*
+/// @param metric enum QScrollerProperties__ScrollMetric
 QVariant* q_scrollerproperties_scroll_metric(void* self, int64_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#setScrollMetric)
 ///
-/// ``` QScrollerProperties* self, enum QScrollerProperties__ScrollMetric metric, QVariant* value ```
+/// @param self QScrollerProperties*
+/// @param metric enum QScrollerProperties__ScrollMetric
+/// @param value QVariant*
 void q_scrollerproperties_set_scroll_metric(void* self, int64_t metric, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScrollerProperties* self ```
+/// @param self QScrollerProperties*
 void q_scrollerproperties_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscrollerproperties.html#types

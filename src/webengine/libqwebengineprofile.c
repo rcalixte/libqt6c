@@ -43,8 +43,8 @@ int32_t q_webengineprofile_metacall(void* self, int64_t param1, int param2, void
     return QWebEngineProfile_Metacall((QWebEngineProfile*)self, param1, param2, param3);
 }
 
-void q_webengineprofile_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QWebEngineProfile_OnMetacall((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QWebEngineProfile_OnMetacall((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineprofile_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -203,24 +203,33 @@ void q_webengineprofile_clear_http_cache(void* self) {
 
 void q_webengineprofile_set_spell_check_languages(void* self, const char* languages[]) {
     size_t languages_len = libqt_strv_length(languages);
-    libqt_string* languages_qstr = malloc(languages_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < languages_len; ++_i) {
-        languages_qstr[_i] = qstring(languages[_i]);
+    libqt_string* languages_qstr = (libqt_string*)malloc(languages_len * sizeof(libqt_string));
+    if (languages_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineprofile_set_spell_check_languages");
+        abort();
+    }
+    for (size_t i = 0; i < languages_len; ++i) {
+        languages_qstr[i] = qstring(languages[i]);
     }
     libqt_list languages_list = qlist(languages_qstr, languages_len);
     QWebEngineProfile_SetSpellCheckLanguages((QWebEngineProfile*)self, languages_list);
+    free(languages_qstr);
 }
 
 const char** q_webengineprofile_spell_check_languages(void* self) {
     libqt_list _arr = QWebEngineProfile_SpellCheckLanguages((QWebEngineProfile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineprofile_spell_check_languages");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -284,16 +293,16 @@ void q_webengineprofile_download_requested(void* self, void* download) {
     QWebEngineProfile_DownloadRequested((QWebEngineProfile*)self, (QWebEngineDownloadRequest*)download);
 }
 
-void q_webengineprofile_on_download_requested(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_Connect_DownloadRequested((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_download_requested(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_Connect_DownloadRequested((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_clear_http_cache_completed(void* self) {
     QWebEngineProfile_ClearHttpCacheCompleted((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_on_clear_http_cache_completed(void* self, void (*slot)(void*)) {
-    QWebEngineProfile_Connect_ClearHttpCacheCompleted((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_clear_http_cache_completed(void* self, void (*callback)(void*)) {
+    QWebEngineProfile_Connect_ClearHttpCacheCompleted((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 const char* q_webengineprofile_tr2(const char* s, const char* c) {
@@ -414,12 +423,16 @@ const char** q_webengineprofile_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_webengineprofile_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -437,8 +450,8 @@ void q_webengineprofile_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_webengineprofile_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_webengineprofile_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_webengineprofile_parent(void* self) {
@@ -473,8 +486,8 @@ void q_webengineprofile_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_webengineprofile_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_webengineprofile_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_webengineprofile_event(void* self, void* event) {
@@ -485,8 +498,8 @@ bool q_webengineprofile_qbase_event(void* self, void* event) {
     return QWebEngineProfile_QBaseEvent((QWebEngineProfile*)self, (QEvent*)event);
 }
 
-void q_webengineprofile_on_event(void* self, bool (*slot)(void*, void*)) {
-    QWebEngineProfile_OnEvent((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_event(void* self, bool (*callback)(void*, void*)) {
+    QWebEngineProfile_OnEvent((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 bool q_webengineprofile_event_filter(void* self, void* watched, void* event) {
@@ -497,8 +510,8 @@ bool q_webengineprofile_qbase_event_filter(void* self, void* watched, void* even
     return QWebEngineProfile_QBaseEventFilter((QWebEngineProfile*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_webengineprofile_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QWebEngineProfile_OnEventFilter((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QWebEngineProfile_OnEventFilter((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_timer_event(void* self, void* event) {
@@ -509,8 +522,8 @@ void q_webengineprofile_qbase_timer_event(void* self, void* event) {
     QWebEngineProfile_QBaseTimerEvent((QWebEngineProfile*)self, (QTimerEvent*)event);
 }
 
-void q_webengineprofile_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_OnTimerEvent((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_OnTimerEvent((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_child_event(void* self, void* event) {
@@ -521,8 +534,8 @@ void q_webengineprofile_qbase_child_event(void* self, void* event) {
     QWebEngineProfile_QBaseChildEvent((QWebEngineProfile*)self, (QChildEvent*)event);
 }
 
-void q_webengineprofile_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_OnChildEvent((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_OnChildEvent((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_custom_event(void* self, void* event) {
@@ -533,8 +546,8 @@ void q_webengineprofile_qbase_custom_event(void* self, void* event) {
     QWebEngineProfile_QBaseCustomEvent((QWebEngineProfile*)self, (QEvent*)event);
 }
 
-void q_webengineprofile_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_OnCustomEvent((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_OnCustomEvent((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_connect_notify(void* self, void* signal) {
@@ -545,8 +558,8 @@ void q_webengineprofile_qbase_connect_notify(void* self, void* signal) {
     QWebEngineProfile_QBaseConnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineprofile_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_OnConnectNotify((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_OnConnectNotify((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_disconnect_notify(void* self, void* signal) {
@@ -557,8 +570,8 @@ void q_webengineprofile_qbase_disconnect_notify(void* self, void* signal) {
     QWebEngineProfile_QBaseDisconnectNotify((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineprofile_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QWebEngineProfile_OnDisconnectNotify((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QWebEngineProfile_OnDisconnectNotify((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 QObject* q_webengineprofile_sender(void* self) {
@@ -569,8 +582,8 @@ QObject* q_webengineprofile_qbase_sender(void* self) {
     return QWebEngineProfile_QBaseSender((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_on_sender(void* self, QObject* (*slot)()) {
-    QWebEngineProfile_OnSender((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_sender(void* self, QObject* (*callback)()) {
+    QWebEngineProfile_OnSender((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineprofile_sender_signal_index(void* self) {
@@ -581,8 +594,8 @@ int32_t q_webengineprofile_qbase_sender_signal_index(void* self) {
     return QWebEngineProfile_QBaseSenderSignalIndex((QWebEngineProfile*)self);
 }
 
-void q_webengineprofile_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QWebEngineProfile_OnSenderSignalIndex((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QWebEngineProfile_OnSenderSignalIndex((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 int32_t q_webengineprofile_receivers(void* self, const char* signal) {
@@ -593,8 +606,8 @@ int32_t q_webengineprofile_qbase_receivers(void* self, const char* signal) {
     return QWebEngineProfile_QBaseReceivers((QWebEngineProfile*)self, signal);
 }
 
-void q_webengineprofile_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QWebEngineProfile_OnReceivers((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QWebEngineProfile_OnReceivers((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
 bool q_webengineprofile_is_signal_connected(void* self, void* signal) {
@@ -605,12 +618,12 @@ bool q_webengineprofile_qbase_is_signal_connected(void* self, void* signal) {
     return QWebEngineProfile_QBaseIsSignalConnected((QWebEngineProfile*)self, (QMetaMethod*)signal);
 }
 
-void q_webengineprofile_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QWebEngineProfile_OnIsSignalConnected((QWebEngineProfile*)self, (intptr_t)slot);
+void q_webengineprofile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QWebEngineProfile_OnIsSignalConnected((QWebEngineProfile*)self, (intptr_t)callback);
 }
 
-void q_webengineprofile_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_webengineprofile_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_webengineprofile_delete(void* self) {

@@ -55,8 +55,8 @@ void q_graphicslinearlayout_remove_at(void* self, int index) {
     QGraphicsLinearLayout_RemoveAt((QGraphicsLinearLayout*)self, index);
 }
 
-void q_graphicslinearlayout_on_remove_at(void* self, void (*slot)(void*, int)) {
-    QGraphicsLinearLayout_OnRemoveAt((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_remove_at(void* self, void (*callback)(void*, int)) {
+    QGraphicsLinearLayout_OnRemoveAt((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_qbase_remove_at(void* self, int index) {
@@ -99,8 +99,8 @@ void q_graphicslinearlayout_set_geometry(void* self, void* rect) {
     QGraphicsLinearLayout_SetGeometry((QGraphicsLinearLayout*)self, (QRectF*)rect);
 }
 
-void q_graphicslinearlayout_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QGraphicsLinearLayout_OnSetGeometry((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QGraphicsLinearLayout_OnSetGeometry((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_qbase_set_geometry(void* self, void* rect) {
@@ -111,8 +111,8 @@ int32_t q_graphicslinearlayout_count(void* self) {
     return QGraphicsLinearLayout_Count((QGraphicsLinearLayout*)self);
 }
 
-void q_graphicslinearlayout_on_count(void* self, int32_t (*slot)()) {
-    QGraphicsLinearLayout_OnCount((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_count(void* self, int32_t (*callback)()) {
+    QGraphicsLinearLayout_OnCount((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicslinearlayout_qbase_count(void* self) {
@@ -123,8 +123,8 @@ QGraphicsLayoutItem* q_graphicslinearlayout_item_at(void* self, int index) {
     return QGraphicsLinearLayout_ItemAt((QGraphicsLinearLayout*)self, index);
 }
 
-void q_graphicslinearlayout_on_item_at(void* self, QGraphicsLayoutItem* (*slot)(void*, int)) {
-    QGraphicsLinearLayout_OnItemAt((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int)) {
+    QGraphicsLinearLayout_OnItemAt((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 QGraphicsLayoutItem* q_graphicslinearlayout_qbase_item_at(void* self, int index) {
@@ -135,8 +135,8 @@ void q_graphicslinearlayout_invalidate(void* self) {
     QGraphicsLinearLayout_Invalidate((QGraphicsLinearLayout*)self);
 }
 
-void q_graphicslinearlayout_on_invalidate(void* self, void (*slot)()) {
-    QGraphicsLinearLayout_OnInvalidate((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_invalidate(void* self, void (*callback)()) {
+    QGraphicsLinearLayout_OnInvalidate((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_qbase_invalidate(void* self) {
@@ -147,8 +147,8 @@ QSizeF* q_graphicslinearlayout_size_hint(void* self, int64_t which, void* constr
     return QGraphicsLinearLayout_SizeHint((QGraphicsLinearLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*)) {
-    QGraphicsLinearLayout_OnSizeHint((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+    QGraphicsLinearLayout_OnSizeHint((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 QSizeF* q_graphicslinearlayout_qbase_size_hint(void* self, int64_t which, void* constraint) {
@@ -335,8 +335,8 @@ void q_graphicslinearlayout_qbase_get_contents_margins(void* self, double* left,
     QGraphicsLinearLayout_QBaseGetContentsMargins((QGraphicsLinearLayout*)self, left, top, right, bottom);
 }
 
-void q_graphicslinearlayout_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*)) {
-    QGraphicsLinearLayout_OnGetContentsMargins((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*)) {
+    QGraphicsLinearLayout_OnGetContentsMargins((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_update_geometry(void* self) {
@@ -347,8 +347,8 @@ void q_graphicslinearlayout_qbase_update_geometry(void* self) {
     QGraphicsLinearLayout_QBaseUpdateGeometry((QGraphicsLinearLayout*)self);
 }
 
-void q_graphicslinearlayout_on_update_geometry(void* self, void (*slot)()) {
-    QGraphicsLinearLayout_OnUpdateGeometry((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_update_geometry(void* self, void (*callback)()) {
+    QGraphicsLinearLayout_OnUpdateGeometry((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_widget_event(void* self, void* e) {
@@ -359,8 +359,8 @@ void q_graphicslinearlayout_qbase_widget_event(void* self, void* e) {
     QGraphicsLinearLayout_QBaseWidgetEvent((QGraphicsLinearLayout*)self, (QEvent*)e);
 }
 
-void q_graphicslinearlayout_on_widget_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsLinearLayout_OnWidgetEvent((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsLinearLayout_OnWidgetEvent((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 bool q_graphicslinearlayout_is_empty(void* self) {
@@ -371,8 +371,8 @@ bool q_graphicslinearlayout_qbase_is_empty(void* self) {
     return QGraphicsLinearLayout_QBaseIsEmpty((QGraphicsLinearLayout*)self);
 }
 
-void q_graphicslinearlayout_on_is_empty(void* self, bool (*slot)()) {
-    QGraphicsLinearLayout_OnIsEmpty((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_is_empty(void* self, bool (*callback)()) {
+    QGraphicsLinearLayout_OnIsEmpty((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_add_child_layout_item(void* self, void* layoutItem) {
@@ -383,8 +383,8 @@ void q_graphicslinearlayout_qbase_add_child_layout_item(void* self, void* layout
     QGraphicsLinearLayout_QBaseAddChildLayoutItem((QGraphicsLinearLayout*)self, (QGraphicsLayoutItem*)layoutItem);
 }
 
-void q_graphicslinearlayout_on_add_child_layout_item(void* self, void (*slot)(void*, void*)) {
-    QGraphicsLinearLayout_OnAddChildLayoutItem((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*)) {
+    QGraphicsLinearLayout_OnAddChildLayoutItem((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_set_graphics_item(void* self, void* item) {
@@ -395,8 +395,8 @@ void q_graphicslinearlayout_qbase_set_graphics_item(void* self, void* item) {
     QGraphicsLinearLayout_QBaseSetGraphicsItem((QGraphicsLinearLayout*)self, (QGraphicsItem*)item);
 }
 
-void q_graphicslinearlayout_on_set_graphics_item(void* self, void (*slot)(void*, void*)) {
-    QGraphicsLinearLayout_OnSetGraphicsItem((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*)) {
+    QGraphicsLinearLayout_OnSetGraphicsItem((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_set_owned_by_layout(void* self, bool ownedByLayout) {
@@ -407,8 +407,8 @@ void q_graphicslinearlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
     QGraphicsLinearLayout_QBaseSetOwnedByLayout((QGraphicsLinearLayout*)self, ownedByLayout);
 }
 
-void q_graphicslinearlayout_on_set_owned_by_layout(void* self, void (*slot)(void*, bool)) {
-    QGraphicsLinearLayout_OnSetOwnedByLayout((QGraphicsLinearLayout*)self, (intptr_t)slot);
+void q_graphicslinearlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool)) {
+    QGraphicsLinearLayout_OnSetOwnedByLayout((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicslinearlayout_delete(void* self) {

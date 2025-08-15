@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,831 +15,1024 @@
 
 /// q_webenginehistoryitem_new constructs a new QWebEngineHistoryItem object.
 ///
-/// ``` QWebEngineHistoryItem* other ```
+/// @param other QWebEngineHistoryItem*
 QWebEngineHistoryItem* q_webenginehistoryitem_new(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#operator-eq)
 ///
-/// ``` QWebEngineHistoryItem* self, QWebEngineHistoryItem* other ```
+/// @param self QWebEngineHistoryItem*
+/// @param other QWebEngineHistoryItem*
 void q_webenginehistoryitem_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#originalUrl)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 QUrl* q_webenginehistoryitem_original_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#url)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 QUrl* q_webenginehistoryitem_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#title)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistoryItem*
 const char* q_webenginehistoryitem_title(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#lastVisited)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 QDateTime* q_webenginehistoryitem_last_visited(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#iconUrl)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 QUrl* q_webenginehistoryitem_icon_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#isValid)
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 bool q_webenginehistoryitem_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#swap)
 ///
-/// ``` QWebEngineHistoryItem* self, QWebEngineHistoryItem* other ```
+/// @param self QWebEngineHistoryItem*
+/// @param other QWebEngineHistoryItem*
 void q_webenginehistoryitem_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistoryitem.html#dtor.QWebEngineHistoryItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineHistoryItem* self ```
+/// @param self QWebEngineHistoryItem*
 void q_webenginehistoryitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginehistorymodel.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 const QMetaObject* q_webenginehistorymodel_meta_object(void* self);
 
-/// ``` QWebEngineHistoryModel* self, const char* param1 ```
+/// @param self QWebEngineHistoryModel*
+/// @param param1 const char*
 void* q_webenginehistorymodel_metacast(void* self, const char* param1);
 
-/// ``` QWebEngineHistoryModel* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWebEngineHistoryModel*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_webenginehistorymodel_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_webenginehistorymodel_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistorymodel.html#rowCount)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QModelIndex*
 int32_t q_webenginehistorymodel_row_count(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistorymodel.html#data)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index, int role ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+/// @param role int
 QVariant* q_webenginehistorymodel_data(void* self, void* index, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistorymodel.html#roleNames)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 libqt_map /* of int to char* */ q_webenginehistorymodel_role_names(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistorymodel.html#reset)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_reset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_webenginehistorymodel_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_webenginehistorymodel_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#index)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 QModelIndex* q_webenginehistorymodel_index(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#sibling)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int column, QModelIndex* idx ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param column int
+/// @param idx QModelIndex*
 QModelIndex* q_webenginehistorymodel_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#dropMimeData)
 ///
-/// ``` QWebEngineHistoryModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractlistmodel.html#flags)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+///
+/// @return flag of enum Qt__ItemFlag
 int64_t q_webenginehistorymodel_flags(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int column ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param column int
 bool q_webenginehistorymodel_has_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#parent)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* child ```
+/// @param self QWebEngineHistoryModel*
+/// @param child QModelIndex*
 QModelIndex* q_webenginehistorymodel_parent(void* self, void* child);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#columnCount)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QModelIndex*
 int32_t q_webenginehistorymodel_column_count(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index, QVariant* value, int role ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+/// @param value QVariant*
+/// @param role int
 bool q_webenginehistorymodel_set_data(void* self, void* index, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerData)
 ///
-/// ``` QWebEngineHistoryModel* self, int section, enum Qt__Orientation orientation, int role ```
+/// @param self QWebEngineHistoryModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param role int
 QVariant* q_webenginehistorymodel_header_data(void* self, int section, int64_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
 ///
-/// ``` QWebEngineHistoryModel* self, int section, enum Qt__Orientation orientation, QVariant* value, int role ```
+/// @param self QWebEngineHistoryModel*
+/// @param section int
+/// @param orientation enum Qt__Orientation
+/// @param value QVariant*
+/// @param role int
 bool q_webenginehistorymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
 libqt_map /* of int to QVariant* */ q_webenginehistorymodel_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index, libqt_map /* of int to QVariant* */ roles ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+/// @param roles libqt_map /* of int to QVariant* */
 bool q_webenginehistorymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
 bool q_webenginehistorymodel_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeTypes)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistoryModel*
 const char** q_webenginehistorymodel_mime_types(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#mimeData)
 ///
-/// ``` QWebEngineHistoryModel* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QWebEngineHistoryModel*
+/// @param indexes libqt_list /* of QModelIndex* */
 QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list indexes);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
 ///
-/// ``` QWebEngineHistoryModel* self, QMimeData* data, enum Qt__DropAction action, int row, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param data QMimeData*
+/// @param action enum Qt__DropAction
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_webenginehistorymodel_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_webenginehistorymodel_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
 ///
-/// ``` QWebEngineHistoryModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int count, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
 ///
-/// ``` QWebEngineHistoryModel* self, int column, int count, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
+/// @param count int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceRow, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QWebEngineHistoryModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_webenginehistorymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceColumn, int count, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QWebEngineHistoryModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param count int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_webenginehistorymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QWebEngineHistoryModel* self, int row ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
 bool q_webenginehistorymodel_insert_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QWebEngineHistoryModel* self, int column ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
 bool q_webenginehistorymodel_insert_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QWebEngineHistoryModel* self, int row ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
 bool q_webenginehistorymodel_remove_row(void* self, int row);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QWebEngineHistoryModel* self, int column ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
 bool q_webenginehistorymodel_remove_column(void* self, int column);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRow)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceRow, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QWebEngineHistoryModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceRow int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_webenginehistorymodel_move_row(void* self, void* sourceParent, int sourceRow, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumn)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* sourceParent, int sourceColumn, QModelIndex* destinationParent, int destinationChild ```
+/// @param self QWebEngineHistoryModel*
+/// @param sourceParent QModelIndex*
+/// @param sourceColumn int
+/// @param destinationParent QModelIndex*
+/// @param destinationChild int
 bool q_webenginehistorymodel_move_column(void* self, void* sourceParent, int sourceColumn, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QModelIndex*
 void q_webenginehistorymodel_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
 ///
-/// ``` QWebEngineHistoryModel* self, int column, enum Qt__SortOrder order ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
+/// @param order enum Qt__SortOrder
 void q_webenginehistorymodel_sort(void* self, int column, int64_t order);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
 QModelIndex* q_webenginehistorymodel_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* start, int role, QVariant* value, int hits, int flags ```
+/// @param self QWebEngineHistoryModel*
+/// @param start QModelIndex*
+/// @param role int
+/// @param value QVariant*
+/// @param hits int
+/// @param flags flag of enum Qt__MatchFlag
 libqt_list /* of QModelIndex* */ q_webenginehistorymodel_match(void* self, void* start, int role, void* value, int hits, int64_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
 QSize* q_webenginehistorymodel_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
 bool q_webenginehistorymodel_check_index(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index, QModelRoleDataSpan* roleDataSpan ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+/// @param roleDataSpan QModelRoleDataSpan*
 void q_webenginehistorymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight ```
+/// @param self QWebEngineHistoryModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
 void q_webenginehistorymodel_data_changed(void* self, void* topLeft, void* bottomRight);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*) ```
-void q_webenginehistorymodel_on_data_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*)
+void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, enum Qt__Orientation orientation, int first, int last ```
+/// @param self QWebEngineHistoryModel*
+/// @param orientation enum Qt__Orientation
+/// @param first int
+/// @param last int
 void q_webenginehistorymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#headerDataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, enum Qt__Orientation, int, int) ```
-void q_webenginehistorymodel_on_header_data_changed(void* self, void (*slot)(void*, int64_t, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, enum Qt__Orientation, int, int)
+void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_layout_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*) ```
-void q_webenginehistorymodel_on_layout_changed(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*)
+void q_webenginehistorymodel_on_layout_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_layout_about_to_be_changed(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*) ```
-void q_webenginehistorymodel_on_layout_about_to_be_changed(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*)
+void q_webenginehistorymodel_on_layout_about_to_be_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 bool q_webenginehistorymodel_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasIndex)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param column int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_has_index3(void* self, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRow)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_insert_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumn)
 ///
-/// ``` QWebEngineHistoryModel* self, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_insert_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRow)
 ///
-/// ``` QWebEngineHistoryModel* self, int row, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param row int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_remove_row2(void* self, int row, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumn)
 ///
-/// ``` QWebEngineHistoryModel* self, int column, QModelIndex* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param column int
+/// @param parent QModelIndex*
 bool q_webenginehistorymodel_remove_column2(void* self, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#checkIndex)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* index, int options ```
+/// @param self QWebEngineHistoryModel*
+/// @param index QModelIndex*
+/// @param options flag of enum QAbstractItemModel__CheckIndexOption
 bool q_webenginehistorymodel_check_index2(void* self, void* index, int64_t options);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+/// @param self QWebEngineHistoryModel*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+/// @param roles libqt_list /* of int */
 void q_webenginehistorymodel_data_changed3(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
-void q_webenginehistorymodel_on_data_changed3(void* self, void (*slot)(void*, void*, void*, libqt_list));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
+void q_webenginehistorymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QWebEngineHistoryModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_webenginehistorymodel_layout_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_webenginehistorymodel_on_layout_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QWebEngineHistoryModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents ```
+/// @param self QWebEngineHistoryModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
 void q_webenginehistorymodel_layout_about_to_be_changed1(void* self, libqt_list parents);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */ parents ) ```
-void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*slot)(void*, libqt_list));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */)
+void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, libqt_list /* of QPersistentModelIndex* */ parents, enum QAbstractItemModel__LayoutChangeHint hint ```
+/// @param self QWebEngineHistoryModel*
+/// @param parents libqt_list /* of QPersistentModelIndex* */
+/// @param hint enum QAbstractItemModel__LayoutChangeHint
 void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutAboutToBeChanged)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */ parents , enum QAbstractItemModel__LayoutChangeHint) ```
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*slot)(void*, libqt_list, int64_t));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QWebEngineHistoryModel* self, QEvent* event ```
+/// @param self QWebEngineHistoryModel*
+/// @param event QEvent*
 bool q_webenginehistorymodel_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* watched, QEvent* event ```
+/// @param self QWebEngineHistoryModel*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_webenginehistorymodel_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistoryModel*
 const char* q_webenginehistorymodel_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineHistoryModel* self, char* name ```
+/// @param self QWebEngineHistoryModel*
+/// @param name char*
 void q_webenginehistorymodel_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 bool q_webenginehistorymodel_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 bool q_webenginehistorymodel_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 bool q_webenginehistorymodel_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 bool q_webenginehistorymodel_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QWebEngineHistoryModel* self, bool b ```
+/// @param self QWebEngineHistoryModel*
+/// @param b bool
 bool q_webenginehistorymodel_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 QThread* q_webenginehistorymodel_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineHistoryModel* self, QThread* thread ```
+/// @param self QWebEngineHistoryModel*
+/// @param thread QThread*
 bool q_webenginehistorymodel_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineHistoryModel* self, int interval ```
+/// @param self QWebEngineHistoryModel*
+/// @param interval int
 int32_t q_webenginehistorymodel_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineHistoryModel* self, int id ```
+/// @param self QWebEngineHistoryModel*
+/// @param id int
 void q_webenginehistorymodel_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineHistoryModel* self, enum Qt__TimerId id ```
+/// @param self QWebEngineHistoryModel*
+/// @param id enum Qt__TimerId
 void q_webenginehistorymodel_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 libqt_list /* of QObject* */ q_webenginehistorymodel_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* parent ```
+/// @param self QWebEngineHistoryModel*
+/// @param parent QObject*
 void q_webenginehistorymodel_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* filterObj ```
+/// @param self QWebEngineHistoryModel*
+/// @param filterObj QObject*
 void q_webenginehistorymodel_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* obj ```
+/// @param self QWebEngineHistoryModel*
+/// @param obj QObject*
 void q_webenginehistorymodel_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_webenginehistorymodel_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QWebEngineHistoryModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_webenginehistorymodel_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_webenginehistorymodel_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_webenginehistorymodel_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QWebEngineHistoryModel* self, const char* name, QVariant* value ```
+/// @param self QWebEngineHistoryModel*
+/// @param name const char*
+/// @param value QVariant*
 bool q_webenginehistorymodel_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QWebEngineHistoryModel* self, const char* name ```
+/// @param self QWebEngineHistoryModel*
+/// @param name const char*
 QVariant* q_webenginehistorymodel_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistoryModel*
 const char** q_webenginehistorymodel_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 QBindingStorage* q_webenginehistorymodel_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 const QBindingStorage* q_webenginehistorymodel_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*) ```
-void q_webenginehistorymodel_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*)
+void q_webenginehistorymodel_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QWebEngineHistoryModel* self, const char* classname ```
+/// @param self QWebEngineHistoryModel*
+/// @param classname const char*
 bool q_webenginehistorymodel_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QWebEngineHistoryModel* self ```
+/// @param self QWebEngineHistoryModel*
 void q_webenginehistorymodel_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineHistoryModel* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QWebEngineHistoryModel*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_webenginehistorymodel_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineHistoryModel* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QWebEngineHistoryModel*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QWebEngineHistoryModel*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistoryModel* self, QObject* param1 ```
+/// @param self QWebEngineHistoryModel*
+/// @param param1 QObject*
 void q_webenginehistorymodel_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QObject*) ```
-void q_webenginehistorymodel_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QObject*)
+void q_webenginehistorymodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -848,8 +1040,9 @@ void q_webenginehistorymodel_on_destroyed1(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -857,8 +1050,9 @@ void q_webenginehistorymodel_on_rows_about_to_be_inserted(void* self, void (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -866,8 +1060,9 @@ void q_webenginehistorymodel_on_rows_inserted(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -875,8 +1070,9 @@ void q_webenginehistorymodel_on_rows_about_to_be_removed(void* self, void (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_rows_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_rows_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -884,8 +1080,9 @@ void q_webenginehistorymodel_on_rows_removed(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -893,8 +1090,9 @@ void q_webenginehistorymodel_on_columns_about_to_be_inserted(void* self, void (*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_columns_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_columns_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -902,8 +1100,9 @@ void q_webenginehistorymodel_on_columns_inserted(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -911,8 +1110,9 @@ void q_webenginehistorymodel_on_columns_about_to_be_removed(void* self, void (*s
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int) ```
-void q_webenginehistorymodel_on_columns_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int)
+void q_webenginehistorymodel_on_columns_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -920,8 +1120,9 @@ void q_webenginehistorymodel_on_columns_removed(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*) ```
-void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*)
+void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -929,8 +1130,9 @@ void q_webenginehistorymodel_on_model_about_to_be_reset(void* self, void (*slot)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*) ```
-void q_webenginehistorymodel_on_model_reset(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*)
+void q_webenginehistorymodel_on_model_reset(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -938,8 +1140,9 @@ void q_webenginehistorymodel_on_model_reset(void* self, void (*slot)(void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -947,8 +1150,9 @@ void q_webenginehistorymodel_on_rows_about_to_be_moved(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_webenginehistorymodel_on_rows_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_webenginehistorymodel_on_rows_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -956,8 +1160,9 @@ void q_webenginehistorymodel_on_rows_moved(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -965,8 +1170,9 @@ void q_webenginehistorymodel_on_columns_about_to_be_moved(void* self, void (*slo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int) ```
-void q_webenginehistorymodel_on_columns_moved(void* self, void (*slot)(void*, void*, int, int, void*, int));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, QModelIndex*, int, int, QModelIndex*, int)
+void q_webenginehistorymodel_on_columns_moved(void* self, void (*callback)(void*, void*, int, int, void*, int));
 
 /// Inherited from QObject
 ///
@@ -974,406 +1180,468 @@ void q_webenginehistorymodel_on_columns_moved(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistoryModel* self, void (*slot)(QWebEngineHistoryModel*, const char*) ```
-void q_webenginehistorymodel_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QWebEngineHistoryModel*
+/// @param callback void fn(QWebEngineHistoryModel*, const char*)
+void q_webenginehistorymodel_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 const QMetaObject* q_webenginehistory_meta_object(void* self);
 
-/// ``` QWebEngineHistory* self, const char* param1 ```
+/// @param self QWebEngineHistory*
+/// @param param1 const char*
 void* q_webenginehistory_metacast(void* self, const char* param1);
 
-/// ``` QWebEngineHistory* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QWebEngineHistory*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_webenginehistory_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_webenginehistory_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#clear)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#items)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_items(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#backItems)
 ///
-/// ``` QWebEngineHistory* self, int maxItems ```
+/// @param self QWebEngineHistory*
+/// @param maxItems int
 libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_back_items(void* self, int maxItems);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#forwardItems)
 ///
-/// ``` QWebEngineHistory* self, int maxItems ```
+/// @param self QWebEngineHistory*
+/// @param maxItems int
 libqt_list /* of QWebEngineHistoryItem* */ q_webenginehistory_forward_items(void* self, int maxItems);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#canGoBack)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_can_go_back(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#canGoForward)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_can_go_forward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#back)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_back(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#forward)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_forward(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#goToItem)
 ///
-/// ``` QWebEngineHistory* self, QWebEngineHistoryItem* item ```
+/// @param self QWebEngineHistory*
+/// @param item QWebEngineHistoryItem*
 void q_webenginehistory_go_to_item(void* self, void* item);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#backItem)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryItem* q_webenginehistory_back_item(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#currentItem)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryItem* q_webenginehistory_current_item(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#forwardItem)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryItem* q_webenginehistory_forward_item(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#itemAt)
 ///
-/// ``` QWebEngineHistory* self, int i ```
+/// @param self QWebEngineHistory*
+/// @param i int
 QWebEngineHistoryItem* q_webenginehistory_item_at(void* self, int i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#currentItemIndex)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 int32_t q_webenginehistory_current_item_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#count)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 int32_t q_webenginehistory_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#itemsModel)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryModel* q_webenginehistory_items_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#backItemsModel)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryModel* q_webenginehistory_back_items_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehistory.html#forwardItemsModel)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QWebEngineHistoryModel* q_webenginehistory_forward_items_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_webenginehistory_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_webenginehistory_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QWebEngineHistory* self, QEvent* event ```
+/// @param self QWebEngineHistory*
+/// @param event QEvent*
 bool q_webenginehistory_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QWebEngineHistory* self, QObject* watched, QEvent* event ```
+/// @param self QWebEngineHistory*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_webenginehistory_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QWebEngineHistory* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistory*
 const char* q_webenginehistory_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QWebEngineHistory* self, char* name ```
+/// @param self QWebEngineHistory*
+/// @param name char*
 void q_webenginehistory_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 bool q_webenginehistory_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QWebEngineHistory* self, bool b ```
+/// @param self QWebEngineHistory*
+/// @param b bool
 bool q_webenginehistory_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QThread* q_webenginehistory_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineHistory* self, QThread* thread ```
+/// @param self QWebEngineHistory*
+/// @param thread QThread*
 bool q_webenginehistory_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineHistory* self, int interval ```
+/// @param self QWebEngineHistory*
+/// @param interval int
 int32_t q_webenginehistory_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineHistory* self, int id ```
+/// @param self QWebEngineHistory*
+/// @param id int
 void q_webenginehistory_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QWebEngineHistory* self, enum Qt__TimerId id ```
+/// @param self QWebEngineHistory*
+/// @param id enum Qt__TimerId
 void q_webenginehistory_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 libqt_list /* of QObject* */ q_webenginehistory_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QWebEngineHistory* self, QObject* parent ```
+/// @param self QWebEngineHistory*
+/// @param parent QObject*
 void q_webenginehistory_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QWebEngineHistory* self, QObject* filterObj ```
+/// @param self QWebEngineHistory*
+/// @param filterObj QObject*
 void q_webenginehistory_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QWebEngineHistory* self, QObject* obj ```
+/// @param self QWebEngineHistory*
+/// @param obj QObject*
 void q_webenginehistory_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_webenginehistory_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineHistory* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QWebEngineHistory*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_webenginehistory_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_webenginehistory_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_webenginehistory_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QWebEngineHistory* self, const char* name, QVariant* value ```
+/// @param self QWebEngineHistory*
+/// @param name const char*
+/// @param value QVariant*
 bool q_webenginehistory_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QWebEngineHistory* self, const char* name ```
+/// @param self QWebEngineHistory*
+/// @param name const char*
 QVariant* q_webenginehistory_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QWebEngineHistory* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWebEngineHistory*
 const char** q_webenginehistory_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QBindingStorage* q_webenginehistory_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 const QBindingStorage* q_webenginehistory_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistory* self, void (*slot)(QWebEngineHistory*) ```
-void q_webenginehistory_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QWebEngineHistory*
+/// @param callback void fn(QWebEngineHistory*)
+void q_webenginehistory_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 QObject* q_webenginehistory_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QWebEngineHistory* self, const char* classname ```
+/// @param self QWebEngineHistory*
+/// @param classname const char*
 bool q_webenginehistory_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QWebEngineHistory* self ```
+/// @param self QWebEngineHistory*
 void q_webenginehistory_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QWebEngineHistory* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QWebEngineHistory*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_webenginehistory_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QWebEngineHistory* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QWebEngineHistory*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_webenginehistory_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QWebEngineHistory* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QWebEngineHistory*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistory* self, QObject* param1 ```
+/// @param self QWebEngineHistory*
+/// @param param1 QObject*
 void q_webenginehistory_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QWebEngineHistory* self, void (*slot)(QWebEngineHistory*, QObject*) ```
-void q_webenginehistory_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QWebEngineHistory*
+/// @param callback void fn(QWebEngineHistory*, QObject*)
+void q_webenginehistory_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1381,8 +1649,9 @@ void q_webenginehistory_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QWebEngineHistory* self, void (*slot)(QWebEngineHistory*, const char*) ```
-void q_webenginehistory_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QWebEngineHistory*
+/// @param callback void fn(QWebEngineHistory*, const char*)
+void q_webenginehistory_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// https://doc.qt.io/qt-6/qwebenginehistory.html#types
 

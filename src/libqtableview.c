@@ -44,8 +44,8 @@ int32_t q_tableview_metacall(void* self, int64_t param1, int param2, void* param
     return QTableView_Metacall((QTableView*)self, param1, param2, param3);
 }
 
-void q_tableview_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTableView_OnMetacall((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTableView_OnMetacall((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_tableview_set_model(void* self, void* model) {
     QTableView_SetModel((QTableView*)self, (QAbstractItemModel*)model);
 }
 
-void q_tableview_on_set_model(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnSetModel((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_model(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnSetModel((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_set_model(void* self, void* model) {
@@ -75,8 +75,8 @@ void q_tableview_set_root_index(void* self, void* index) {
     QTableView_SetRootIndex((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_set_root_index(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnSetRootIndex((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnSetRootIndex((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_set_root_index(void* self, void* index) {
@@ -87,8 +87,8 @@ void q_tableview_set_selection_model(void* self, void* selectionModel) {
     QTableView_SetSelectionModel((QTableView*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void q_tableview_on_set_selection_model(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnSetSelectionModel((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_selection_model(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnSetSelectionModel((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_set_selection_model(void* self, void* selectionModel) {
@@ -99,8 +99,8 @@ void q_tableview_do_items_layout(void* self) {
     QTableView_DoItemsLayout((QTableView*)self);
 }
 
-void q_tableview_on_do_items_layout(void* self, void (*slot)()) {
-    QTableView_OnDoItemsLayout((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_do_items_layout(void* self, void (*callback)()) {
+    QTableView_OnDoItemsLayout((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_do_items_layout(void* self) {
@@ -211,8 +211,8 @@ QRect* q_tableview_visual_rect(void* self, void* index) {
     return QTableView_VisualRect((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_visual_rect(void* self, QRect* (*slot)(void*, void*)) {
-    QTableView_OnVisualRect((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
+    QTableView_OnVisualRect((QTableView*)self, (intptr_t)callback);
 }
 
 QRect* q_tableview_qbase_visual_rect(void* self, void* index) {
@@ -223,8 +223,8 @@ void q_tableview_scroll_to(void* self, void* index, int64_t hint) {
     QTableView_ScrollTo((QTableView*)self, (QModelIndex*)index, hint);
 }
 
-void q_tableview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTableView_OnScrollTo((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTableView_OnScrollTo((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_scroll_to(void* self, void* index, int64_t hint) {
@@ -235,8 +235,8 @@ QModelIndex* q_tableview_index_at(void* self, void* p) {
     return QTableView_IndexAt((QTableView*)self, (QPoint*)p);
 }
 
-void q_tableview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*)) {
-    QTableView_OnIndexAt((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)) {
+    QTableView_OnIndexAt((QTableView*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_tableview_qbase_index_at(void* self, void* p) {
@@ -311,8 +311,8 @@ void q_tableview_row_moved(void* self, int row, int oldIndex, int newIndex) {
     QTableView_RowMoved((QTableView*)self, row, oldIndex, newIndex);
 }
 
-void q_tableview_on_row_moved(void* self, void (*slot)(void*, int, int, int)) {
-    QTableView_OnRowMoved((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_row_moved(void* self, void (*callback)(void*, int, int, int)) {
+    QTableView_OnRowMoved((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_row_moved(void* self, int row, int oldIndex, int newIndex) {
@@ -323,8 +323,8 @@ void q_tableview_column_moved(void* self, int column, int oldIndex, int newIndex
     QTableView_ColumnMoved((QTableView*)self, column, oldIndex, newIndex);
 }
 
-void q_tableview_on_column_moved(void* self, void (*slot)(void*, int, int, int)) {
-    QTableView_OnColumnMoved((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_column_moved(void* self, void (*callback)(void*, int, int, int)) {
+    QTableView_OnColumnMoved((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_column_moved(void* self, int column, int oldIndex, int newIndex) {
@@ -335,8 +335,8 @@ void q_tableview_row_resized(void* self, int row, int oldHeight, int newHeight) 
     QTableView_RowResized((QTableView*)self, row, oldHeight, newHeight);
 }
 
-void q_tableview_on_row_resized(void* self, void (*slot)(void*, int, int, int)) {
-    QTableView_OnRowResized((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_row_resized(void* self, void (*callback)(void*, int, int, int)) {
+    QTableView_OnRowResized((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_row_resized(void* self, int row, int oldHeight, int newHeight) {
@@ -347,8 +347,8 @@ void q_tableview_column_resized(void* self, int column, int oldWidth, int newWid
     QTableView_ColumnResized((QTableView*)self, column, oldWidth, newWidth);
 }
 
-void q_tableview_on_column_resized(void* self, void (*slot)(void*, int, int, int)) {
-    QTableView_OnColumnResized((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_column_resized(void* self, void (*callback)(void*, int, int, int)) {
+    QTableView_OnColumnResized((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_column_resized(void* self, int column, int oldWidth, int newWidth) {
@@ -359,8 +359,8 @@ void q_tableview_row_count_changed(void* self, int oldCount, int newCount) {
     QTableView_RowCountChanged((QTableView*)self, oldCount, newCount);
 }
 
-void q_tableview_on_row_count_changed(void* self, void (*slot)(void*, int, int)) {
-    QTableView_OnRowCountChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_row_count_changed(void* self, void (*callback)(void*, int, int)) {
+    QTableView_OnRowCountChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_row_count_changed(void* self, int oldCount, int newCount) {
@@ -371,8 +371,8 @@ void q_tableview_column_count_changed(void* self, int oldCount, int newCount) {
     QTableView_ColumnCountChanged((QTableView*)self, oldCount, newCount);
 }
 
-void q_tableview_on_column_count_changed(void* self, void (*slot)(void*, int, int)) {
-    QTableView_OnColumnCountChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_column_count_changed(void* self, void (*callback)(void*, int, int)) {
+    QTableView_OnColumnCountChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_column_count_changed(void* self, int oldCount, int newCount) {
@@ -383,8 +383,8 @@ void q_tableview_scroll_contents_by(void* self, int dx, int dy) {
     QTableView_ScrollContentsBy((QTableView*)self, dx, dy);
 }
 
-void q_tableview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) {
-    QTableView_OnScrollContentsBy((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
+    QTableView_OnScrollContentsBy((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_scroll_contents_by(void* self, int dx, int dy) {
@@ -395,8 +395,8 @@ void q_tableview_init_view_item_option(void* self, void* option) {
     QTableView_InitViewItemOption((QTableView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_tableview_on_init_view_item_option(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnInitViewItemOption((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnInitViewItemOption((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_init_view_item_option(void* self, void* option) {
@@ -407,8 +407,8 @@ void q_tableview_paint_event(void* self, void* e) {
     QTableView_PaintEvent((QTableView*)self, (QPaintEvent*)e);
 }
 
-void q_tableview_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnPaintEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnPaintEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_paint_event(void* self, void* e) {
@@ -419,8 +419,8 @@ void q_tableview_timer_event(void* self, void* event) {
     QTableView_TimerEvent((QTableView*)self, (QTimerEvent*)event);
 }
 
-void q_tableview_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnTimerEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnTimerEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_timer_event(void* self, void* event) {
@@ -431,8 +431,8 @@ void q_tableview_drop_event(void* self, void* event) {
     QTableView_DropEvent((QTableView*)self, (QDropEvent*)event);
 }
 
-void q_tableview_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDropEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDropEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_drop_event(void* self, void* event) {
@@ -443,8 +443,8 @@ int32_t q_tableview_horizontal_offset(void* self) {
     return QTableView_HorizontalOffset((QTableView*)self);
 }
 
-void q_tableview_on_horizontal_offset(void* self, int32_t (*slot)()) {
-    QTableView_OnHorizontalOffset((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_horizontal_offset(void* self, int32_t (*callback)()) {
+    QTableView_OnHorizontalOffset((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_qbase_horizontal_offset(void* self) {
@@ -455,8 +455,8 @@ int32_t q_tableview_vertical_offset(void* self) {
     return QTableView_VerticalOffset((QTableView*)self);
 }
 
-void q_tableview_on_vertical_offset(void* self, int32_t (*slot)()) {
-    QTableView_OnVerticalOffset((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_vertical_offset(void* self, int32_t (*callback)()) {
+    QTableView_OnVerticalOffset((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_qbase_vertical_offset(void* self) {
@@ -467,8 +467,8 @@ QModelIndex* q_tableview_move_cursor(void* self, int64_t cursorAction, int64_t m
     return QTableView_MoveCursor((QTableView*)self, cursorAction, modifiers);
 }
 
-void q_tableview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, int64_t)) {
-    QTableView_OnMoveCursor((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t)) {
+    QTableView_OnMoveCursor((QTableView*)self, (intptr_t)callback);
 }
 
 QModelIndex* q_tableview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers) {
@@ -479,8 +479,8 @@ void q_tableview_set_selection(void* self, void* rect, int64_t command) {
     QTableView_SetSelection((QTableView*)self, (QRect*)rect, command);
 }
 
-void q_tableview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTableView_OnSetSelection((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTableView_OnSetSelection((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_set_selection(void* self, void* rect, int64_t command) {
@@ -491,8 +491,8 @@ QRegion* q_tableview_visual_region_for_selection(void* self, void* selection) {
     return QTableView_VisualRegionForSelection((QTableView*)self, (QItemSelection*)selection);
 }
 
-void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void*, void*)) {
-    QTableView_OnVisualRegionForSelection((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*)) {
+    QTableView_OnVisualRegionForSelection((QTableView*)self, (intptr_t)callback);
 }
 
 QRegion* q_tableview_qbase_visual_region_for_selection(void* self, void* selection) {
@@ -504,8 +504,8 @@ libqt_list /* of QModelIndex* */ q_tableview_selected_indexes(void* self) {
     return _arr;
 }
 
-void q_tableview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*slot)()) {
-    QTableView_OnSelectedIndexes((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)()) {
+    QTableView_OnSelectedIndexes((QTableView*)self, (intptr_t)callback);
 }
 
 libqt_list /* of QModelIndex* */ q_tableview_qbase_selected_indexes(void* self) {
@@ -517,8 +517,8 @@ void q_tableview_update_geometries(void* self) {
     QTableView_UpdateGeometries((QTableView*)self);
 }
 
-void q_tableview_on_update_geometries(void* self, void (*slot)()) {
-    QTableView_OnUpdateGeometries((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_update_geometries(void* self, void (*callback)()) {
+    QTableView_OnUpdateGeometries((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_update_geometries(void* self) {
@@ -529,8 +529,8 @@ QSize* q_tableview_viewport_size_hint(void* self) {
     return QTableView_ViewportSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_viewport_size_hint(void* self, QSize* (*slot)()) {
-    QTableView_OnViewportSizeHint((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
+    QTableView_OnViewportSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
 QSize* q_tableview_qbase_viewport_size_hint(void* self) {
@@ -541,8 +541,8 @@ int32_t q_tableview_size_hint_for_row(void* self, int row) {
     return QTableView_SizeHintForRow((QTableView*)self, row);
 }
 
-void q_tableview_on_size_hint_for_row(void* self, int32_t (*slot)(void*, int)) {
-    QTableView_OnSizeHintForRow((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
+    QTableView_OnSizeHintForRow((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_qbase_size_hint_for_row(void* self, int row) {
@@ -553,8 +553,8 @@ int32_t q_tableview_size_hint_for_column(void* self, int column) {
     return QTableView_SizeHintForColumn((QTableView*)self, column);
 }
 
-void q_tableview_on_size_hint_for_column(void* self, int32_t (*slot)(void*, int)) {
-    QTableView_OnSizeHintForColumn((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
+    QTableView_OnSizeHintForColumn((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_qbase_size_hint_for_column(void* self, int column) {
@@ -565,8 +565,8 @@ void q_tableview_vertical_scrollbar_action(void* self, int action) {
     QTableView_VerticalScrollbarAction((QTableView*)self, action);
 }
 
-void q_tableview_on_vertical_scrollbar_action(void* self, void (*slot)(void*, int)) {
-    QTableView_OnVerticalScrollbarAction((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
+    QTableView_OnVerticalScrollbarAction((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_vertical_scrollbar_action(void* self, int action) {
@@ -577,8 +577,8 @@ void q_tableview_horizontal_scrollbar_action(void* self, int action) {
     QTableView_HorizontalScrollbarAction((QTableView*)self, action);
 }
 
-void q_tableview_on_horizontal_scrollbar_action(void* self, void (*slot)(void*, int)) {
-    QTableView_OnHorizontalScrollbarAction((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
+    QTableView_OnHorizontalScrollbarAction((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_horizontal_scrollbar_action(void* self, int action) {
@@ -589,8 +589,8 @@ bool q_tableview_is_index_hidden(void* self, void* index) {
     return QTableView_IsIndexHidden((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_is_index_hidden(void* self, bool (*slot)(void*, void*)) {
-    QTableView_OnIsIndexHidden((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
+    QTableView_OnIsIndexHidden((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_qbase_is_index_hidden(void* self, void* index) {
@@ -601,8 +601,8 @@ void q_tableview_selection_changed(void* self, void* selected, void* deselected)
     QTableView_SelectionChanged((QTableView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void q_tableview_on_selection_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QTableView_OnSelectionChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QTableView_OnSelectionChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_selection_changed(void* self, void* selected, void* deselected) {
@@ -613,8 +613,8 @@ void q_tableview_current_changed(void* self, void* current, void* previous) {
     QTableView_CurrentChanged((QTableView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void q_tableview_on_current_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QTableView_OnCurrentChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_current_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QTableView_OnCurrentChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_qbase_current_changed(void* self, void* current, void* previous) {
@@ -867,56 +867,56 @@ void q_tableview_pressed(void* self, void* index) {
     QAbstractItemView_Pressed((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_pressed(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Pressed((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_pressed(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Pressed((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_clicked(void* self, void* index) {
     QAbstractItemView_Clicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_clicked(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Clicked((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_clicked(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Clicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_double_clicked(void* self, void* index) {
     QAbstractItemView_DoubleClicked((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_double_clicked(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_DoubleClicked((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_double_clicked(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_DoubleClicked((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_activated(void* self, void* index) {
     QAbstractItemView_Activated((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_activated(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Activated((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_activated(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Activated((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_entered(void* self, void* index) {
     QAbstractItemView_Entered((QAbstractItemView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_entered(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_Entered((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_entered(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_Entered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_viewport_entered(void* self) {
     QAbstractItemView_ViewportEntered((QAbstractItemView*)self);
 }
 
-void q_tableview_on_viewport_entered(void* self, void (*slot)(void*)) {
-    QAbstractItemView_Connect_ViewportEntered((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_viewport_entered(void* self, void (*callback)(void*)) {
+    QAbstractItemView_Connect_ViewportEntered((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 void q_tableview_icon_size_changed(void* self, void* size) {
     QAbstractItemView_IconSizeChanged((QAbstractItemView*)self, (QSize*)size);
 }
 
-void q_tableview_on_icon_size_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)slot);
+void q_tableview_on_icon_size_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)callback);
 }
 
 int64_t q_tableview_vertical_scroll_bar_policy(void* self) {
@@ -2062,32 +2062,32 @@ void q_tableview_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_tableview_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_tableview_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_tableview_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_tableview_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_tableview_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_tableview_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_tableview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_tableview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_tableview_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_tableview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_tableview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_tableview_input_method_hints(void* self) {
@@ -2258,12 +2258,16 @@ const char** q_tableview_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_tableview_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2281,8 +2285,8 @@ void q_tableview_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_tableview_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_tableview_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_tableview_parent(void* self) {
@@ -2317,8 +2321,8 @@ void q_tableview_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_tableview_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_tableview_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_tableview_painting_active(void* self) {
@@ -2381,8 +2385,8 @@ void q_tableview_qbase_keyboard_search(void* self, const char* search) {
     QTableView_QBaseKeyboardSearch((QTableView*)self, qstring(search));
 }
 
-void q_tableview_on_keyboard_search(void* self, void (*slot)(void*, const char*)) {
-    QTableView_OnKeyboardSearch((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
+    QTableView_OnKeyboardSearch((QTableView*)self, (intptr_t)callback);
 }
 
 QAbstractItemDelegate* q_tableview_item_delegate_for_index(void* self, void* index) {
@@ -2393,8 +2397,8 @@ QAbstractItemDelegate* q_tableview_qbase_item_delegate_for_index(void* self, voi
     return QTableView_QBaseItemDelegateForIndex((QTableView*)self, (QModelIndex*)index);
 }
 
-void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*slot)(void*, void*)) {
-    QTableView_OnItemDelegateForIndex((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
+    QTableView_OnItemDelegateForIndex((QTableView*)self, (intptr_t)callback);
 }
 
 QVariant* q_tableview_input_method_query(void* self, int64_t query) {
@@ -2405,8 +2409,8 @@ QVariant* q_tableview_qbase_input_method_query(void* self, int64_t query) {
     return QTableView_QBaseInputMethodQuery((QTableView*)self, query);
 }
 
-void q_tableview_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QTableView_OnInputMethodQuery((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QTableView_OnInputMethodQuery((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_reset(void* self) {
@@ -2417,8 +2421,8 @@ void q_tableview_qbase_reset(void* self) {
     QTableView_QBaseReset((QTableView*)self);
 }
 
-void q_tableview_on_reset(void* self, void (*slot)()) {
-    QTableView_OnReset((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_reset(void* self, void (*callback)()) {
+    QTableView_OnReset((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_select_all(void* self) {
@@ -2429,8 +2433,8 @@ void q_tableview_qbase_select_all(void* self) {
     QTableView_QBaseSelectAll((QTableView*)self);
 }
 
-void q_tableview_on_select_all(void* self, void (*slot)()) {
-    QTableView_OnSelectAll((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_select_all(void* self, void (*callback)()) {
+    QTableView_OnSelectAll((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles) {
@@ -2441,8 +2445,8 @@ void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight
     QTableView_QBaseDataChanged((QTableView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_tableview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list)) {
-    QTableView_OnDataChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+    QTableView_OnDataChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_rows_inserted(void* self, void* parent, int start, int end) {
@@ -2453,8 +2457,8 @@ void q_tableview_qbase_rows_inserted(void* self, void* parent, int start, int en
     QTableView_QBaseRowsInserted((QTableView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_tableview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int)) {
-    QTableView_OnRowsInserted((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
+    QTableView_OnRowsInserted((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
@@ -2465,8 +2469,8 @@ void q_tableview_qbase_rows_about_to_be_removed(void* self, void* parent, int st
     QTableView_QBaseRowsAboutToBeRemoved((QTableView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_tableview_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int)) {
-    QTableView_OnRowsAboutToBeRemoved((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
+    QTableView_OnRowsAboutToBeRemoved((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_update_editor_data(void* self) {
@@ -2477,8 +2481,8 @@ void q_tableview_qbase_update_editor_data(void* self) {
     QTableView_QBaseUpdateEditorData((QTableView*)self);
 }
 
-void q_tableview_on_update_editor_data(void* self, void (*slot)()) {
-    QTableView_OnUpdateEditorData((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_update_editor_data(void* self, void (*callback)()) {
+    QTableView_OnUpdateEditorData((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_update_editor_geometries(void* self) {
@@ -2489,8 +2493,8 @@ void q_tableview_qbase_update_editor_geometries(void* self) {
     QTableView_QBaseUpdateEditorGeometries((QTableView*)self);
 }
 
-void q_tableview_on_update_editor_geometries(void* self, void (*slot)()) {
-    QTableView_OnUpdateEditorGeometries((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_update_editor_geometries(void* self, void (*callback)()) {
+    QTableView_OnUpdateEditorGeometries((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_vertical_scrollbar_value_changed(void* self, int value) {
@@ -2501,8 +2505,8 @@ void q_tableview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
     QTableView_QBaseVerticalScrollbarValueChanged((QTableView*)self, value);
 }
 
-void q_tableview_on_vertical_scrollbar_value_changed(void* self, void (*slot)(void*, int)) {
-    QTableView_OnVerticalScrollbarValueChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
+    QTableView_OnVerticalScrollbarValueChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_horizontal_scrollbar_value_changed(void* self, int value) {
@@ -2513,8 +2517,8 @@ void q_tableview_qbase_horizontal_scrollbar_value_changed(void* self, int value)
     QTableView_QBaseHorizontalScrollbarValueChanged((QTableView*)self, value);
 }
 
-void q_tableview_on_horizontal_scrollbar_value_changed(void* self, void (*slot)(void*, int)) {
-    QTableView_OnHorizontalScrollbarValueChanged((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
+    QTableView_OnHorizontalScrollbarValueChanged((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_close_editor(void* self, void* editor, int64_t hint) {
@@ -2525,8 +2529,8 @@ void q_tableview_qbase_close_editor(void* self, void* editor, int64_t hint) {
     QTableView_QBaseCloseEditor((QTableView*)self, (QWidget*)editor, hint);
 }
 
-void q_tableview_on_close_editor(void* self, void (*slot)(void*, void*, int64_t)) {
-    QTableView_OnCloseEditor((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t)) {
+    QTableView_OnCloseEditor((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_commit_data(void* self, void* editor) {
@@ -2537,8 +2541,8 @@ void q_tableview_qbase_commit_data(void* self, void* editor) {
     QTableView_QBaseCommitData((QTableView*)self, (QWidget*)editor);
 }
 
-void q_tableview_on_commit_data(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnCommitData((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_commit_data(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnCommitData((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_editor_destroyed(void* self, void* editor) {
@@ -2549,8 +2553,8 @@ void q_tableview_qbase_editor_destroyed(void* self, void* editor) {
     QTableView_QBaseEditorDestroyed((QTableView*)self, (QObject*)editor);
 }
 
-void q_tableview_on_editor_destroyed(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnEditorDestroyed((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnEditorDestroyed((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_edit2(void* self, void* index, int64_t trigger, void* event) {
@@ -2561,8 +2565,8 @@ bool q_tableview_qbase_edit2(void* self, void* index, int64_t trigger, void* eve
     return QTableView_QBaseEdit2((QTableView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-void q_tableview_on_edit2(void* self, bool (*slot)(void*, void*, int64_t, void*)) {
-    QTableView_OnEdit2((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*)) {
+    QTableView_OnEdit2((QTableView*)self, (intptr_t)callback);
 }
 
 int64_t q_tableview_selection_command(void* self, void* index, void* event) {
@@ -2573,8 +2577,8 @@ int64_t q_tableview_qbase_selection_command(void* self, void* index, void* event
     return QTableView_QBaseSelectionCommand((QTableView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-void q_tableview_on_selection_command(void* self, int64_t (*slot)(void*, void*, void*)) {
-    QTableView_OnSelectionCommand((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*)) {
+    QTableView_OnSelectionCommand((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_start_drag(void* self, int64_t supportedActions) {
@@ -2585,8 +2589,8 @@ void q_tableview_qbase_start_drag(void* self, int64_t supportedActions) {
     QTableView_QBaseStartDrag((QTableView*)self, supportedActions);
 }
 
-void q_tableview_on_start_drag(void* self, void (*slot)(void*, int64_t)) {
-    QTableView_OnStartDrag((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_start_drag(void* self, void (*callback)(void*, int64_t)) {
+    QTableView_OnStartDrag((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_focus_next_prev_child(void* self, bool next) {
@@ -2597,8 +2601,8 @@ bool q_tableview_qbase_focus_next_prev_child(void* self, bool next) {
     return QTableView_QBaseFocusNextPrevChild((QTableView*)self, next);
 }
 
-void q_tableview_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QTableView_OnFocusNextPrevChild((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QTableView_OnFocusNextPrevChild((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_event(void* self, void* event) {
@@ -2609,8 +2613,8 @@ bool q_tableview_qbase_event(void* self, void* event) {
     return QTableView_QBaseEvent((QTableView*)self, (QEvent*)event);
 }
 
-void q_tableview_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTableView_OnEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTableView_OnEvent((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_viewport_event(void* self, void* event) {
@@ -2621,8 +2625,8 @@ bool q_tableview_qbase_viewport_event(void* self, void* event) {
     return QTableView_QBaseViewportEvent((QTableView*)self, (QEvent*)event);
 }
 
-void q_tableview_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
-    QTableView_OnViewportEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
+    QTableView_OnViewportEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_mouse_press_event(void* self, void* event) {
@@ -2633,8 +2637,8 @@ void q_tableview_qbase_mouse_press_event(void* self, void* event) {
     QTableView_QBaseMousePressEvent((QTableView*)self, (QMouseEvent*)event);
 }
 
-void q_tableview_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnMousePressEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnMousePressEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_mouse_move_event(void* self, void* event) {
@@ -2645,8 +2649,8 @@ void q_tableview_qbase_mouse_move_event(void* self, void* event) {
     QTableView_QBaseMouseMoveEvent((QTableView*)self, (QMouseEvent*)event);
 }
 
-void q_tableview_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnMouseMoveEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnMouseMoveEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_mouse_release_event(void* self, void* event) {
@@ -2657,8 +2661,8 @@ void q_tableview_qbase_mouse_release_event(void* self, void* event) {
     QTableView_QBaseMouseReleaseEvent((QTableView*)self, (QMouseEvent*)event);
 }
 
-void q_tableview_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnMouseReleaseEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnMouseReleaseEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_mouse_double_click_event(void* self, void* event) {
@@ -2669,8 +2673,8 @@ void q_tableview_qbase_mouse_double_click_event(void* self, void* event) {
     QTableView_QBaseMouseDoubleClickEvent((QTableView*)self, (QMouseEvent*)event);
 }
 
-void q_tableview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnMouseDoubleClickEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnMouseDoubleClickEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_drag_enter_event(void* self, void* event) {
@@ -2681,8 +2685,8 @@ void q_tableview_qbase_drag_enter_event(void* self, void* event) {
     QTableView_QBaseDragEnterEvent((QTableView*)self, (QDragEnterEvent*)event);
 }
 
-void q_tableview_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDragEnterEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDragEnterEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_drag_move_event(void* self, void* event) {
@@ -2693,8 +2697,8 @@ void q_tableview_qbase_drag_move_event(void* self, void* event) {
     QTableView_QBaseDragMoveEvent((QTableView*)self, (QDragMoveEvent*)event);
 }
 
-void q_tableview_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDragMoveEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDragMoveEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_drag_leave_event(void* self, void* event) {
@@ -2705,8 +2709,8 @@ void q_tableview_qbase_drag_leave_event(void* self, void* event) {
     QTableView_QBaseDragLeaveEvent((QTableView*)self, (QDragLeaveEvent*)event);
 }
 
-void q_tableview_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDragLeaveEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDragLeaveEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_focus_in_event(void* self, void* event) {
@@ -2717,8 +2721,8 @@ void q_tableview_qbase_focus_in_event(void* self, void* event) {
     QTableView_QBaseFocusInEvent((QTableView*)self, (QFocusEvent*)event);
 }
 
-void q_tableview_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnFocusInEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnFocusInEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_focus_out_event(void* self, void* event) {
@@ -2729,8 +2733,8 @@ void q_tableview_qbase_focus_out_event(void* self, void* event) {
     QTableView_QBaseFocusOutEvent((QTableView*)self, (QFocusEvent*)event);
 }
 
-void q_tableview_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnFocusOutEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnFocusOutEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_key_press_event(void* self, void* event) {
@@ -2741,8 +2745,8 @@ void q_tableview_qbase_key_press_event(void* self, void* event) {
     QTableView_QBaseKeyPressEvent((QTableView*)self, (QKeyEvent*)event);
 }
 
-void q_tableview_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnKeyPressEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnKeyPressEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_resize_event(void* self, void* event) {
@@ -2753,8 +2757,8 @@ void q_tableview_qbase_resize_event(void* self, void* event) {
     QTableView_QBaseResizeEvent((QTableView*)self, (QResizeEvent*)event);
 }
 
-void q_tableview_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnResizeEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnResizeEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_input_method_event(void* self, void* event) {
@@ -2765,8 +2769,8 @@ void q_tableview_qbase_input_method_event(void* self, void* event) {
     QTableView_QBaseInputMethodEvent((QTableView*)self, (QInputMethodEvent*)event);
 }
 
-void q_tableview_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnInputMethodEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnInputMethodEvent((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_event_filter(void* self, void* object, void* event) {
@@ -2777,8 +2781,8 @@ bool q_tableview_qbase_event_filter(void* self, void* object, void* event) {
     return QTableView_QBaseEventFilter((QTableView*)self, (QObject*)object, (QEvent*)event);
 }
 
-void q_tableview_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTableView_OnEventFilter((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTableView_OnEventFilter((QTableView*)self, (intptr_t)callback);
 }
 
 QSize* q_tableview_minimum_size_hint(void* self) {
@@ -2789,8 +2793,8 @@ QSize* q_tableview_qbase_minimum_size_hint(void* self) {
     return QTableView_QBaseMinimumSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QTableView_OnMinimumSizeHint((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QTableView_OnMinimumSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
 QSize* q_tableview_size_hint(void* self) {
@@ -2801,8 +2805,8 @@ QSize* q_tableview_qbase_size_hint(void* self) {
     return QTableView_QBaseSizeHint((QTableView*)self);
 }
 
-void q_tableview_on_size_hint(void* self, QSize* (*slot)()) {
-    QTableView_OnSizeHint((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_size_hint(void* self, QSize* (*callback)()) {
+    QTableView_OnSizeHint((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_setup_viewport(void* self, void* viewport) {
@@ -2813,8 +2817,8 @@ void q_tableview_qbase_setup_viewport(void* self, void* viewport) {
     QTableView_QBaseSetupViewport((QTableView*)self, (QWidget*)viewport);
 }
 
-void q_tableview_on_setup_viewport(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnSetupViewport((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnSetupViewport((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_wheel_event(void* self, void* param1) {
@@ -2825,8 +2829,8 @@ void q_tableview_qbase_wheel_event(void* self, void* param1) {
     QTableView_QBaseWheelEvent((QTableView*)self, (QWheelEvent*)param1);
 }
 
-void q_tableview_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnWheelEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnWheelEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_context_menu_event(void* self, void* param1) {
@@ -2837,8 +2841,8 @@ void q_tableview_qbase_context_menu_event(void* self, void* param1) {
     QTableView_QBaseContextMenuEvent((QTableView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_tableview_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnContextMenuEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnContextMenuEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_change_event(void* self, void* param1) {
@@ -2849,8 +2853,8 @@ void q_tableview_qbase_change_event(void* self, void* param1) {
     QTableView_QBaseChangeEvent((QTableView*)self, (QEvent*)param1);
 }
 
-void q_tableview_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnChangeEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnChangeEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_init_style_option(void* self, void* option) {
@@ -2861,8 +2865,8 @@ void q_tableview_qbase_init_style_option(void* self, void* option) {
     QTableView_QBaseInitStyleOption((QTableView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_tableview_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnInitStyleOption((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnInitStyleOption((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_dev_type(void* self) {
@@ -2873,8 +2877,8 @@ int32_t q_tableview_qbase_dev_type(void* self) {
     return QTableView_QBaseDevType((QTableView*)self);
 }
 
-void q_tableview_on_dev_type(void* self, int32_t (*slot)()) {
-    QTableView_OnDevType((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_dev_type(void* self, int32_t (*callback)()) {
+    QTableView_OnDevType((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_set_visible(void* self, bool visible) {
@@ -2885,8 +2889,8 @@ void q_tableview_qbase_set_visible(void* self, bool visible) {
     QTableView_QBaseSetVisible((QTableView*)self, visible);
 }
 
-void q_tableview_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QTableView_OnSetVisible((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QTableView_OnSetVisible((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_height_for_width(void* self, int param1) {
@@ -2897,8 +2901,8 @@ int32_t q_tableview_qbase_height_for_width(void* self, int param1) {
     return QTableView_QBaseHeightForWidth((QTableView*)self, param1);
 }
 
-void q_tableview_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QTableView_OnHeightForWidth((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QTableView_OnHeightForWidth((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_has_height_for_width(void* self) {
@@ -2909,8 +2913,8 @@ bool q_tableview_qbase_has_height_for_width(void* self) {
     return QTableView_QBaseHasHeightForWidth((QTableView*)self);
 }
 
-void q_tableview_on_has_height_for_width(void* self, bool (*slot)()) {
-    QTableView_OnHasHeightForWidth((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_has_height_for_width(void* self, bool (*callback)()) {
+    QTableView_OnHasHeightForWidth((QTableView*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_tableview_paint_engine(void* self) {
@@ -2921,8 +2925,8 @@ QPaintEngine* q_tableview_qbase_paint_engine(void* self) {
     return QTableView_QBasePaintEngine((QTableView*)self);
 }
 
-void q_tableview_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QTableView_OnPaintEngine((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QTableView_OnPaintEngine((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_key_release_event(void* self, void* event) {
@@ -2933,8 +2937,8 @@ void q_tableview_qbase_key_release_event(void* self, void* event) {
     QTableView_QBaseKeyReleaseEvent((QTableView*)self, (QKeyEvent*)event);
 }
 
-void q_tableview_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnKeyReleaseEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnKeyReleaseEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_enter_event(void* self, void* event) {
@@ -2945,8 +2949,8 @@ void q_tableview_qbase_enter_event(void* self, void* event) {
     QTableView_QBaseEnterEvent((QTableView*)self, (QEnterEvent*)event);
 }
 
-void q_tableview_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnEnterEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnEnterEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_leave_event(void* self, void* event) {
@@ -2957,8 +2961,8 @@ void q_tableview_qbase_leave_event(void* self, void* event) {
     QTableView_QBaseLeaveEvent((QTableView*)self, (QEvent*)event);
 }
 
-void q_tableview_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnLeaveEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnLeaveEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_move_event(void* self, void* event) {
@@ -2969,8 +2973,8 @@ void q_tableview_qbase_move_event(void* self, void* event) {
     QTableView_QBaseMoveEvent((QTableView*)self, (QMoveEvent*)event);
 }
 
-void q_tableview_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnMoveEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnMoveEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_close_event(void* self, void* event) {
@@ -2981,8 +2985,8 @@ void q_tableview_qbase_close_event(void* self, void* event) {
     QTableView_QBaseCloseEvent((QTableView*)self, (QCloseEvent*)event);
 }
 
-void q_tableview_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnCloseEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnCloseEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_tablet_event(void* self, void* event) {
@@ -2993,8 +2997,8 @@ void q_tableview_qbase_tablet_event(void* self, void* event) {
     QTableView_QBaseTabletEvent((QTableView*)self, (QTabletEvent*)event);
 }
 
-void q_tableview_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnTabletEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnTabletEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_action_event(void* self, void* event) {
@@ -3005,8 +3009,8 @@ void q_tableview_qbase_action_event(void* self, void* event) {
     QTableView_QBaseActionEvent((QTableView*)self, (QActionEvent*)event);
 }
 
-void q_tableview_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnActionEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnActionEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_show_event(void* self, void* event) {
@@ -3017,8 +3021,8 @@ void q_tableview_qbase_show_event(void* self, void* event) {
     QTableView_QBaseShowEvent((QTableView*)self, (QShowEvent*)event);
 }
 
-void q_tableview_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnShowEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnShowEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_hide_event(void* self, void* event) {
@@ -3029,8 +3033,8 @@ void q_tableview_qbase_hide_event(void* self, void* event) {
     QTableView_QBaseHideEvent((QTableView*)self, (QHideEvent*)event);
 }
 
-void q_tableview_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnHideEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnHideEvent((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -3041,8 +3045,8 @@ bool q_tableview_qbase_native_event(void* self, const char* eventType, void* mes
     return QTableView_QBaseNativeEvent((QTableView*)self, qstring(eventType), message, result);
 }
 
-void q_tableview_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QTableView_OnNativeEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QTableView_OnNativeEvent((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_metric(void* self, int64_t param1) {
@@ -3053,8 +3057,8 @@ int32_t q_tableview_qbase_metric(void* self, int64_t param1) {
     return QTableView_QBaseMetric((QTableView*)self, param1);
 }
 
-void q_tableview_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QTableView_OnMetric((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QTableView_OnMetric((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_init_painter(void* self, void* painter) {
@@ -3065,8 +3069,8 @@ void q_tableview_qbase_init_painter(void* self, void* painter) {
     QTableView_QBaseInitPainter((QTableView*)self, (QPainter*)painter);
 }
 
-void q_tableview_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnInitPainter((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnInitPainter((QTableView*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_tableview_redirected(void* self, void* offset) {
@@ -3077,8 +3081,8 @@ QPaintDevice* q_tableview_qbase_redirected(void* self, void* offset) {
     return QTableView_QBaseRedirected((QTableView*)self, (QPoint*)offset);
 }
 
-void q_tableview_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QTableView_OnRedirected((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QTableView_OnRedirected((QTableView*)self, (intptr_t)callback);
 }
 
 QPainter* q_tableview_shared_painter(void* self) {
@@ -3089,8 +3093,8 @@ QPainter* q_tableview_qbase_shared_painter(void* self) {
     return QTableView_QBaseSharedPainter((QTableView*)self);
 }
 
-void q_tableview_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QTableView_OnSharedPainter((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QTableView_OnSharedPainter((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_child_event(void* self, void* event) {
@@ -3101,8 +3105,8 @@ void q_tableview_qbase_child_event(void* self, void* event) {
     QTableView_QBaseChildEvent((QTableView*)self, (QChildEvent*)event);
 }
 
-void q_tableview_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnChildEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnChildEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_custom_event(void* self, void* event) {
@@ -3113,8 +3117,8 @@ void q_tableview_qbase_custom_event(void* self, void* event) {
     QTableView_QBaseCustomEvent((QTableView*)self, (QEvent*)event);
 }
 
-void q_tableview_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnCustomEvent((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnCustomEvent((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_connect_notify(void* self, void* signal) {
@@ -3125,8 +3129,8 @@ void q_tableview_qbase_connect_notify(void* self, void* signal) {
     QTableView_QBaseConnectNotify((QTableView*)self, (QMetaMethod*)signal);
 }
 
-void q_tableview_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnConnectNotify((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnConnectNotify((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_disconnect_notify(void* self, void* signal) {
@@ -3137,8 +3141,8 @@ void q_tableview_qbase_disconnect_notify(void* self, void* signal) {
     QTableView_QBaseDisconnectNotify((QTableView*)self, (QMetaMethod*)signal);
 }
 
-void q_tableview_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDisconnectNotify((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDisconnectNotify((QTableView*)self, (intptr_t)callback);
 }
 
 int64_t q_tableview_state(void* self) {
@@ -3149,8 +3153,8 @@ int64_t q_tableview_qbase_state(void* self) {
     return QTableView_QBaseState((QTableView*)self);
 }
 
-void q_tableview_on_state(void* self, int64_t (*slot)()) {
-    QTableView_OnState((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_state(void* self, int64_t (*callback)()) {
+    QTableView_OnState((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_set_state(void* self, int64_t state) {
@@ -3161,8 +3165,8 @@ void q_tableview_qbase_set_state(void* self, int64_t state) {
     QTableView_QBaseSetState((QTableView*)self, state);
 }
 
-void q_tableview_on_set_state(void* self, void (*slot)(void*, int64_t)) {
-    QTableView_OnSetState((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_state(void* self, void (*callback)(void*, int64_t)) {
+    QTableView_OnSetState((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_schedule_delayed_items_layout(void* self) {
@@ -3173,8 +3177,8 @@ void q_tableview_qbase_schedule_delayed_items_layout(void* self) {
     QTableView_QBaseScheduleDelayedItemsLayout((QTableView*)self);
 }
 
-void q_tableview_on_schedule_delayed_items_layout(void* self, void (*slot)()) {
-    QTableView_OnScheduleDelayedItemsLayout((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
+    QTableView_OnScheduleDelayedItemsLayout((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_execute_delayed_items_layout(void* self) {
@@ -3185,8 +3189,8 @@ void q_tableview_qbase_execute_delayed_items_layout(void* self) {
     QTableView_QBaseExecuteDelayedItemsLayout((QTableView*)self);
 }
 
-void q_tableview_on_execute_delayed_items_layout(void* self, void (*slot)()) {
-    QTableView_OnExecuteDelayedItemsLayout((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
+    QTableView_OnExecuteDelayedItemsLayout((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_set_dirty_region(void* self, void* region) {
@@ -3197,8 +3201,8 @@ void q_tableview_qbase_set_dirty_region(void* self, void* region) {
     QTableView_QBaseSetDirtyRegion((QTableView*)self, (QRegion*)region);
 }
 
-void q_tableview_on_set_dirty_region(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnSetDirtyRegion((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnSetDirtyRegion((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_scroll_dirty_region(void* self, int dx, int dy) {
@@ -3209,8 +3213,8 @@ void q_tableview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
     QTableView_QBaseScrollDirtyRegion((QTableView*)self, dx, dy);
 }
 
-void q_tableview_on_scroll_dirty_region(void* self, void (*slot)(void*, int, int)) {
-    QTableView_OnScrollDirtyRegion((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
+    QTableView_OnScrollDirtyRegion((QTableView*)self, (intptr_t)callback);
 }
 
 QPoint* q_tableview_dirty_region_offset(void* self) {
@@ -3221,8 +3225,8 @@ QPoint* q_tableview_qbase_dirty_region_offset(void* self) {
     return QTableView_QBaseDirtyRegionOffset((QTableView*)self);
 }
 
-void q_tableview_on_dirty_region_offset(void* self, QPoint* (*slot)()) {
-    QTableView_OnDirtyRegionOffset((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
+    QTableView_OnDirtyRegionOffset((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_start_auto_scroll(void* self) {
@@ -3233,8 +3237,8 @@ void q_tableview_qbase_start_auto_scroll(void* self) {
     QTableView_QBaseStartAutoScroll((QTableView*)self);
 }
 
-void q_tableview_on_start_auto_scroll(void* self, void (*slot)()) {
-    QTableView_OnStartAutoScroll((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_start_auto_scroll(void* self, void (*callback)()) {
+    QTableView_OnStartAutoScroll((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_stop_auto_scroll(void* self) {
@@ -3245,8 +3249,8 @@ void q_tableview_qbase_stop_auto_scroll(void* self) {
     QTableView_QBaseStopAutoScroll((QTableView*)self);
 }
 
-void q_tableview_on_stop_auto_scroll(void* self, void (*slot)()) {
-    QTableView_OnStopAutoScroll((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_stop_auto_scroll(void* self, void (*callback)()) {
+    QTableView_OnStopAutoScroll((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_do_auto_scroll(void* self) {
@@ -3257,8 +3261,8 @@ void q_tableview_qbase_do_auto_scroll(void* self) {
     QTableView_QBaseDoAutoScroll((QTableView*)self);
 }
 
-void q_tableview_on_do_auto_scroll(void* self, void (*slot)()) {
-    QTableView_OnDoAutoScroll((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_do_auto_scroll(void* self, void (*callback)()) {
+    QTableView_OnDoAutoScroll((QTableView*)self, (intptr_t)callback);
 }
 
 int64_t q_tableview_drop_indicator_position(void* self) {
@@ -3269,8 +3273,8 @@ int64_t q_tableview_qbase_drop_indicator_position(void* self) {
     return QTableView_QBaseDropIndicatorPosition((QTableView*)self);
 }
 
-void q_tableview_on_drop_indicator_position(void* self, int64_t (*slot)()) {
-    QTableView_OnDropIndicatorPosition((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_drop_indicator_position(void* self, int64_t (*callback)()) {
+    QTableView_OnDropIndicatorPosition((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
@@ -3281,8 +3285,8 @@ void q_tableview_qbase_set_viewport_margins(void* self, int left, int top, int r
     QTableView_QBaseSetViewportMargins((QTableView*)self, left, top, right, bottom);
 }
 
-void q_tableview_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int)) {
-    QTableView_OnSetViewportMargins((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
+    QTableView_OnSetViewportMargins((QTableView*)self, (intptr_t)callback);
 }
 
 QMargins* q_tableview_viewport_margins(void* self) {
@@ -3293,8 +3297,8 @@ QMargins* q_tableview_qbase_viewport_margins(void* self) {
     return QTableView_QBaseViewportMargins((QTableView*)self);
 }
 
-void q_tableview_on_viewport_margins(void* self, QMargins* (*slot)()) {
-    QTableView_OnViewportMargins((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_viewport_margins(void* self, QMargins* (*callback)()) {
+    QTableView_OnViewportMargins((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_draw_frame(void* self, void* param1) {
@@ -3305,8 +3309,8 @@ void q_tableview_qbase_draw_frame(void* self, void* param1) {
     QTableView_QBaseDrawFrame((QTableView*)self, (QPainter*)param1);
 }
 
-void q_tableview_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QTableView_OnDrawFrame((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QTableView_OnDrawFrame((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_update_micro_focus(void* self) {
@@ -3317,8 +3321,8 @@ void q_tableview_qbase_update_micro_focus(void* self) {
     QTableView_QBaseUpdateMicroFocus((QTableView*)self);
 }
 
-void q_tableview_on_update_micro_focus(void* self, void (*slot)()) {
-    QTableView_OnUpdateMicroFocus((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_update_micro_focus(void* self, void (*callback)()) {
+    QTableView_OnUpdateMicroFocus((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_create(void* self) {
@@ -3329,8 +3333,8 @@ void q_tableview_qbase_create(void* self) {
     QTableView_QBaseCreate((QTableView*)self);
 }
 
-void q_tableview_on_create(void* self, void (*slot)()) {
-    QTableView_OnCreate((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_create(void* self, void (*callback)()) {
+    QTableView_OnCreate((QTableView*)self, (intptr_t)callback);
 }
 
 void q_tableview_destroy(void* self) {
@@ -3341,8 +3345,8 @@ void q_tableview_qbase_destroy(void* self) {
     QTableView_QBaseDestroy((QTableView*)self);
 }
 
-void q_tableview_on_destroy(void* self, void (*slot)()) {
-    QTableView_OnDestroy((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_destroy(void* self, void (*callback)()) {
+    QTableView_OnDestroy((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_focus_next_child(void* self) {
@@ -3353,8 +3357,8 @@ bool q_tableview_qbase_focus_next_child(void* self) {
     return QTableView_QBaseFocusNextChild((QTableView*)self);
 }
 
-void q_tableview_on_focus_next_child(void* self, bool (*slot)()) {
-    QTableView_OnFocusNextChild((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_focus_next_child(void* self, bool (*callback)()) {
+    QTableView_OnFocusNextChild((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_focus_previous_child(void* self) {
@@ -3365,8 +3369,8 @@ bool q_tableview_qbase_focus_previous_child(void* self) {
     return QTableView_QBaseFocusPreviousChild((QTableView*)self);
 }
 
-void q_tableview_on_focus_previous_child(void* self, bool (*slot)()) {
-    QTableView_OnFocusPreviousChild((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_focus_previous_child(void* self, bool (*callback)()) {
+    QTableView_OnFocusPreviousChild((QTableView*)self, (intptr_t)callback);
 }
 
 QObject* q_tableview_sender(void* self) {
@@ -3377,8 +3381,8 @@ QObject* q_tableview_qbase_sender(void* self) {
     return QTableView_QBaseSender((QTableView*)self);
 }
 
-void q_tableview_on_sender(void* self, QObject* (*slot)()) {
-    QTableView_OnSender((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_sender(void* self, QObject* (*callback)()) {
+    QTableView_OnSender((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_sender_signal_index(void* self) {
@@ -3389,8 +3393,8 @@ int32_t q_tableview_qbase_sender_signal_index(void* self) {
     return QTableView_QBaseSenderSignalIndex((QTableView*)self);
 }
 
-void q_tableview_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTableView_OnSenderSignalIndex((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTableView_OnSenderSignalIndex((QTableView*)self, (intptr_t)callback);
 }
 
 int32_t q_tableview_receivers(void* self, const char* signal) {
@@ -3401,8 +3405,8 @@ int32_t q_tableview_qbase_receivers(void* self, const char* signal) {
     return QTableView_QBaseReceivers((QTableView*)self, signal);
 }
 
-void q_tableview_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTableView_OnReceivers((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTableView_OnReceivers((QTableView*)self, (intptr_t)callback);
 }
 
 bool q_tableview_is_signal_connected(void* self, void* signal) {
@@ -3413,8 +3417,8 @@ bool q_tableview_qbase_is_signal_connected(void* self, void* signal) {
     return QTableView_QBaseIsSignalConnected((QTableView*)self, (QMetaMethod*)signal);
 }
 
-void q_tableview_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTableView_OnIsSignalConnected((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTableView_OnIsSignalConnected((QTableView*)self, (intptr_t)callback);
 }
 
 double q_tableview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -3425,12 +3429,12 @@ double q_tableview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
     return QTableView_QBaseGetDecodedMetricF((QTableView*)self, metricA, metricB);
 }
 
-void q_tableview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QTableView_OnGetDecodedMetricF((QTableView*)self, (intptr_t)slot);
+void q_tableview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QTableView_OnGetDecodedMetricF((QTableView*)self, (intptr_t)callback);
 }
 
-void q_tableview_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_tableview_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_tableview_delete(void* self) {

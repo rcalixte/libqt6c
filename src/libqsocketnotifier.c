@@ -2,7 +2,6 @@
 #include "libqmetaobject.hpp"
 #include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
-#include <stdio.h>
 #include "libqsocketnotifier.hpp"
 #include "libqsocketnotifier.h"
 
@@ -34,8 +33,8 @@ int32_t q_socketnotifier_metacall(void* self, int64_t param1, int param2, void* 
     return QSocketNotifier_Metacall((QSocketNotifier*)self, param1, param2, param3);
 }
 
-void q_socketnotifier_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QSocketNotifier_OnMetacall((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QSocketNotifier_OnMetacall((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 int32_t q_socketnotifier_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -77,8 +76,8 @@ bool q_socketnotifier_event(void* self, void* param1) {
     return QSocketNotifier_Event((QSocketNotifier*)self, (QEvent*)param1);
 }
 
-void q_socketnotifier_on_event(void* self, bool (*slot)(void*, void*)) {
-    QSocketNotifier_OnEvent((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_event(void* self, bool (*callback)(void*, void*)) {
+    QSocketNotifier_OnEvent((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 bool q_socketnotifier_qbase_event(void* self, void* param1) {
@@ -203,12 +202,16 @@ const char** q_socketnotifier_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_socketnotifier_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -226,8 +229,8 @@ void q_socketnotifier_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_socketnotifier_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_socketnotifier_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_socketnotifier_parent(void* self) {
@@ -262,8 +265,8 @@ void q_socketnotifier_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_socketnotifier_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_socketnotifier_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_socketnotifier_event_filter(void* self, void* watched, void* event) {
@@ -274,8 +277,8 @@ bool q_socketnotifier_qbase_event_filter(void* self, void* watched, void* event)
     return QSocketNotifier_QBaseEventFilter((QSocketNotifier*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_socketnotifier_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QSocketNotifier_OnEventFilter((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QSocketNotifier_OnEventFilter((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_timer_event(void* self, void* event) {
@@ -286,8 +289,8 @@ void q_socketnotifier_qbase_timer_event(void* self, void* event) {
     QSocketNotifier_QBaseTimerEvent((QSocketNotifier*)self, (QTimerEvent*)event);
 }
 
-void q_socketnotifier_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QSocketNotifier_OnTimerEvent((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QSocketNotifier_OnTimerEvent((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_child_event(void* self, void* event) {
@@ -298,8 +301,8 @@ void q_socketnotifier_qbase_child_event(void* self, void* event) {
     QSocketNotifier_QBaseChildEvent((QSocketNotifier*)self, (QChildEvent*)event);
 }
 
-void q_socketnotifier_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QSocketNotifier_OnChildEvent((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QSocketNotifier_OnChildEvent((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_custom_event(void* self, void* event) {
@@ -310,8 +313,8 @@ void q_socketnotifier_qbase_custom_event(void* self, void* event) {
     QSocketNotifier_QBaseCustomEvent((QSocketNotifier*)self, (QEvent*)event);
 }
 
-void q_socketnotifier_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QSocketNotifier_OnCustomEvent((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QSocketNotifier_OnCustomEvent((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_connect_notify(void* self, void* signal) {
@@ -322,8 +325,8 @@ void q_socketnotifier_qbase_connect_notify(void* self, void* signal) {
     QSocketNotifier_QBaseConnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-void q_socketnotifier_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QSocketNotifier_OnConnectNotify((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QSocketNotifier_OnConnectNotify((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_disconnect_notify(void* self, void* signal) {
@@ -334,8 +337,8 @@ void q_socketnotifier_qbase_disconnect_notify(void* self, void* signal) {
     QSocketNotifier_QBaseDisconnectNotify((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-void q_socketnotifier_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QSocketNotifier_OnDisconnectNotify((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QSocketNotifier_OnDisconnectNotify((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 QObject* q_socketnotifier_sender(void* self) {
@@ -346,8 +349,8 @@ QObject* q_socketnotifier_qbase_sender(void* self) {
     return QSocketNotifier_QBaseSender((QSocketNotifier*)self);
 }
 
-void q_socketnotifier_on_sender(void* self, QObject* (*slot)()) {
-    QSocketNotifier_OnSender((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_sender(void* self, QObject* (*callback)()) {
+    QSocketNotifier_OnSender((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 int32_t q_socketnotifier_sender_signal_index(void* self) {
@@ -358,8 +361,8 @@ int32_t q_socketnotifier_qbase_sender_signal_index(void* self) {
     return QSocketNotifier_QBaseSenderSignalIndex((QSocketNotifier*)self);
 }
 
-void q_socketnotifier_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QSocketNotifier_OnSenderSignalIndex((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QSocketNotifier_OnSenderSignalIndex((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 int32_t q_socketnotifier_receivers(void* self, const char* signal) {
@@ -370,8 +373,8 @@ int32_t q_socketnotifier_qbase_receivers(void* self, const char* signal) {
     return QSocketNotifier_QBaseReceivers((QSocketNotifier*)self, signal);
 }
 
-void q_socketnotifier_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QSocketNotifier_OnReceivers((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QSocketNotifier_OnReceivers((QSocketNotifier*)self, (intptr_t)callback);
 }
 
 bool q_socketnotifier_is_signal_connected(void* self, void* signal) {
@@ -382,16 +385,16 @@ bool q_socketnotifier_qbase_is_signal_connected(void* self, void* signal) {
     return QSocketNotifier_QBaseIsSignalConnected((QSocketNotifier*)self, (QMetaMethod*)signal);
 }
 
-void q_socketnotifier_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QSocketNotifier_OnIsSignalConnected((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QSocketNotifier_OnIsSignalConnected((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-void q_socketnotifier_on_activated(void* self, void (*slot)(void*, void*, int64_t)) {
-    QSocketNotifier_Connect_Activated((QSocketNotifier*)self, (intptr_t)slot);
+void q_socketnotifier_on_activated(void* self, void (*callback)(void*, void*, int64_t)) {
+    QSocketNotifier_Connect_Activated((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-void q_socketnotifier_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_socketnotifier_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_socketnotifier_delete(void* self) {

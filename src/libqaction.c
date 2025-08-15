@@ -46,8 +46,8 @@ int32_t q_action_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QAction_Metacall((QAction*)self, param1, param2, param3);
 }
 
-void q_action_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QAction_OnMetacall((QAction*)self, (intptr_t)slot);
+void q_action_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QAction_OnMetacall((QAction*)self, (intptr_t)callback);
 }
 
 int32_t q_action_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -262,8 +262,8 @@ bool q_action_event(void* self, void* param1) {
     return QAction_Event((QAction*)self, (QEvent*)param1);
 }
 
-void q_action_on_event(void* self, bool (*slot)(void*, void*)) {
-    QAction_OnEvent((QAction*)self, (intptr_t)slot);
+void q_action_on_event(void* self, bool (*callback)(void*, void*)) {
+    QAction_OnEvent((QAction*)self, (intptr_t)callback);
 }
 
 bool q_action_qbase_event(void* self, void* param1) {
@@ -306,56 +306,56 @@ void q_action_changed(void* self) {
     QAction_Changed((QAction*)self);
 }
 
-void q_action_on_changed(void* self, void (*slot)(void*)) {
-    QAction_Connect_Changed((QAction*)self, (intptr_t)slot);
+void q_action_on_changed(void* self, void (*callback)(void*)) {
+    QAction_Connect_Changed((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_enabled_changed(void* self, bool enabled) {
     QAction_EnabledChanged((QAction*)self, enabled);
 }
 
-void q_action_on_enabled_changed(void* self, void (*slot)(void*, bool)) {
-    QAction_Connect_EnabledChanged((QAction*)self, (intptr_t)slot);
+void q_action_on_enabled_changed(void* self, void (*callback)(void*, bool)) {
+    QAction_Connect_EnabledChanged((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_checkable_changed(void* self, bool checkable) {
     QAction_CheckableChanged((QAction*)self, checkable);
 }
 
-void q_action_on_checkable_changed(void* self, void (*slot)(void*, bool)) {
-    QAction_Connect_CheckableChanged((QAction*)self, (intptr_t)slot);
+void q_action_on_checkable_changed(void* self, void (*callback)(void*, bool)) {
+    QAction_Connect_CheckableChanged((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_visible_changed(void* self) {
     QAction_VisibleChanged((QAction*)self);
 }
 
-void q_action_on_visible_changed(void* self, void (*slot)(void*)) {
-    QAction_Connect_VisibleChanged((QAction*)self, (intptr_t)slot);
+void q_action_on_visible_changed(void* self, void (*callback)(void*)) {
+    QAction_Connect_VisibleChanged((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_triggered(void* self) {
     QAction_Triggered((QAction*)self);
 }
 
-void q_action_on_triggered(void* self, void (*slot)(void*)) {
-    QAction_Connect_Triggered((QAction*)self, (intptr_t)slot);
+void q_action_on_triggered(void* self, void (*callback)(void*)) {
+    QAction_Connect_Triggered((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_hovered(void* self) {
     QAction_Hovered((QAction*)self);
 }
 
-void q_action_on_hovered(void* self, void (*slot)(void*)) {
-    QAction_Connect_Hovered((QAction*)self, (intptr_t)slot);
+void q_action_on_hovered(void* self, void (*callback)(void*)) {
+    QAction_Connect_Hovered((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_toggled(void* self, bool param1) {
     QAction_Toggled((QAction*)self, param1);
 }
 
-void q_action_on_toggled(void* self, void (*slot)(void*, bool)) {
-    QAction_Connect_Toggled((QAction*)self, (intptr_t)slot);
+void q_action_on_toggled(void* self, void (*callback)(void*, bool)) {
+    QAction_Connect_Toggled((QAction*)self, (intptr_t)callback);
 }
 
 const char* q_action_tr2(const char* s, const char* c) {
@@ -380,8 +380,8 @@ void q_action_triggered1(void* self, bool checked) {
     QAction_Triggered1((QAction*)self, checked);
 }
 
-void q_action_on_triggered1(void* self, void (*slot)(void*, bool)) {
-    QAction_Connect_Triggered1((QAction*)self, (intptr_t)slot);
+void q_action_on_triggered1(void* self, void (*callback)(void*, bool)) {
+    QAction_Connect_Triggered1((QAction*)self, (intptr_t)callback);
 }
 
 const char* q_action_object_name(void* self) {
@@ -488,12 +488,16 @@ const char** q_action_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_action_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -511,8 +515,8 @@ void q_action_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_action_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_action_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_action_parent(void* self) {
@@ -547,8 +551,8 @@ void q_action_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_action_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_action_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_action_event_filter(void* self, void* watched, void* event) {
@@ -559,8 +563,8 @@ bool q_action_qbase_event_filter(void* self, void* watched, void* event) {
     return QAction_QBaseEventFilter((QAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_action_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QAction_OnEventFilter((QAction*)self, (intptr_t)slot);
+void q_action_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QAction_OnEventFilter((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_timer_event(void* self, void* event) {
@@ -571,8 +575,8 @@ void q_action_qbase_timer_event(void* self, void* event) {
     QAction_QBaseTimerEvent((QAction*)self, (QTimerEvent*)event);
 }
 
-void q_action_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QAction_OnTimerEvent((QAction*)self, (intptr_t)slot);
+void q_action_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QAction_OnTimerEvent((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_child_event(void* self, void* event) {
@@ -583,8 +587,8 @@ void q_action_qbase_child_event(void* self, void* event) {
     QAction_QBaseChildEvent((QAction*)self, (QChildEvent*)event);
 }
 
-void q_action_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QAction_OnChildEvent((QAction*)self, (intptr_t)slot);
+void q_action_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QAction_OnChildEvent((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_custom_event(void* self, void* event) {
@@ -595,8 +599,8 @@ void q_action_qbase_custom_event(void* self, void* event) {
     QAction_QBaseCustomEvent((QAction*)self, (QEvent*)event);
 }
 
-void q_action_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QAction_OnCustomEvent((QAction*)self, (intptr_t)slot);
+void q_action_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QAction_OnCustomEvent((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_connect_notify(void* self, void* signal) {
@@ -607,8 +611,8 @@ void q_action_qbase_connect_notify(void* self, void* signal) {
     QAction_QBaseConnectNotify((QAction*)self, (QMetaMethod*)signal);
 }
 
-void q_action_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QAction_OnConnectNotify((QAction*)self, (intptr_t)slot);
+void q_action_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QAction_OnConnectNotify((QAction*)self, (intptr_t)callback);
 }
 
 void q_action_disconnect_notify(void* self, void* signal) {
@@ -619,8 +623,8 @@ void q_action_qbase_disconnect_notify(void* self, void* signal) {
     QAction_QBaseDisconnectNotify((QAction*)self, (QMetaMethod*)signal);
 }
 
-void q_action_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QAction_OnDisconnectNotify((QAction*)self, (intptr_t)slot);
+void q_action_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QAction_OnDisconnectNotify((QAction*)self, (intptr_t)callback);
 }
 
 QObject* q_action_sender(void* self) {
@@ -631,8 +635,8 @@ QObject* q_action_qbase_sender(void* self) {
     return QAction_QBaseSender((QAction*)self);
 }
 
-void q_action_on_sender(void* self, QObject* (*slot)()) {
-    QAction_OnSender((QAction*)self, (intptr_t)slot);
+void q_action_on_sender(void* self, QObject* (*callback)()) {
+    QAction_OnSender((QAction*)self, (intptr_t)callback);
 }
 
 int32_t q_action_sender_signal_index(void* self) {
@@ -643,8 +647,8 @@ int32_t q_action_qbase_sender_signal_index(void* self) {
     return QAction_QBaseSenderSignalIndex((QAction*)self);
 }
 
-void q_action_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QAction_OnSenderSignalIndex((QAction*)self, (intptr_t)slot);
+void q_action_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QAction_OnSenderSignalIndex((QAction*)self, (intptr_t)callback);
 }
 
 int32_t q_action_receivers(void* self, const char* signal) {
@@ -655,8 +659,8 @@ int32_t q_action_qbase_receivers(void* self, const char* signal) {
     return QAction_QBaseReceivers((QAction*)self, signal);
 }
 
-void q_action_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QAction_OnReceivers((QAction*)self, (intptr_t)slot);
+void q_action_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QAction_OnReceivers((QAction*)self, (intptr_t)callback);
 }
 
 bool q_action_is_signal_connected(void* self, void* signal) {
@@ -667,12 +671,12 @@ bool q_action_qbase_is_signal_connected(void* self, void* signal) {
     return QAction_QBaseIsSignalConnected((QAction*)self, (QMetaMethod*)signal);
 }
 
-void q_action_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QAction_OnIsSignalConnected((QAction*)self, (intptr_t)slot);
+void q_action_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QAction_OnIsSignalConnected((QAction*)self, (intptr_t)callback);
 }
 
-void q_action_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_action_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_action_delete(void* self) {

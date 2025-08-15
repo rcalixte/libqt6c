@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,69 +15,77 @@
 
 /// q_libraryinfo_new constructs a new QLibraryInfo object.
 ///
-/// ``` QLibraryInfo* other ```
+/// @param other QLibraryInfo*
 QLibraryInfo* q_libraryinfo_new(void* other);
 
 /// q_libraryinfo_new2 constructs a new QLibraryInfo object and invalidates the source QLibraryInfo object.
 ///
-/// ``` QLibraryInfo* other ```
+/// @param other QLibraryInfo*
 QLibraryInfo* q_libraryinfo_new2(void* other);
 
 /// q_libraryinfo_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QLibraryInfo* self, QLibraryInfo* other ```
+/// @param self QLibraryInfo*
+/// @param other QLibraryInfo*
 void q_libraryinfo_copy_assign(void* self, void* other);
 
 /// q_libraryinfo_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QLibraryInfo* self, QLibraryInfo* other ```
+/// @param self QLibraryInfo*
+/// @param other QLibraryInfo*
 void q_libraryinfo_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#build)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_libraryinfo_build();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isDebugBuild)
 ///
-///
 bool q_libraryinfo_is_debug_build();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#isSharedBuild)
-///
 ///
 bool q_libraryinfo_is_shared_build();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#version)
 ///
-///
 QVersionNumber* q_libraryinfo_version();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#path)
 ///
-/// ``` enum QLibraryInfo__LibraryPath p ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param p enum QLibraryInfo__LibraryPath
 const char* q_libraryinfo_path(int64_t p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
 ///
-/// ``` enum QLibraryInfo__LibraryPath p ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param p enum QLibraryInfo__LibraryPath
 const char** q_libraryinfo_paths(int64_t p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
 ///
-/// ``` enum QLibraryInfo__LibraryPath location ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param location enum QLibraryInfo__LibraryPath
 const char* q_libraryinfo_location(int64_t location);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
 ///
-/// ``` const char* platformName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param platformName const char*
 const char** q_libraryinfo_platform_plugin_arguments(const char* platformName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#dtor.QLibraryInfo)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QLibraryInfo* self ```
+/// @param self QLibraryInfo*
 void q_libraryinfo_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qlibraryinfo.html#types

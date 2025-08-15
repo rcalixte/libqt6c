@@ -21,8 +21,8 @@ int32_t q_objectcleanuphandler_metacall(void* self, int64_t param1, int param2, 
     return QObjectCleanupHandler_Metacall((QObjectCleanupHandler*)self, param1, param2, param3);
 }
 
-void q_objectcleanuphandler_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QObjectCleanupHandler_OnMetacall((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QObjectCleanupHandler_OnMetacall((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_objectcleanuphandler_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -170,12 +170,16 @@ const char** q_objectcleanuphandler_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_objectcleanuphandler_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -193,8 +197,8 @@ void q_objectcleanuphandler_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_objectcleanuphandler_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_objectcleanuphandler_parent(void* self) {
@@ -229,8 +233,8 @@ void q_objectcleanuphandler_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_objectcleanuphandler_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_objectcleanuphandler_event(void* self, void* event) {
@@ -241,8 +245,8 @@ bool q_objectcleanuphandler_qbase_event(void* self, void* event) {
     return QObjectCleanupHandler_QBaseEvent((QObjectCleanupHandler*)self, (QEvent*)event);
 }
 
-void q_objectcleanuphandler_on_event(void* self, bool (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnEvent((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_event(void* self, bool (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnEvent((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 bool q_objectcleanuphandler_event_filter(void* self, void* watched, void* event) {
@@ -253,8 +257,8 @@ bool q_objectcleanuphandler_qbase_event_filter(void* self, void* watched, void* 
     return QObjectCleanupHandler_QBaseEventFilter((QObjectCleanupHandler*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_objectcleanuphandler_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QObjectCleanupHandler_OnEventFilter((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QObjectCleanupHandler_OnEventFilter((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_timer_event(void* self, void* event) {
@@ -265,8 +269,8 @@ void q_objectcleanuphandler_qbase_timer_event(void* self, void* event) {
     QObjectCleanupHandler_QBaseTimerEvent((QObjectCleanupHandler*)self, (QTimerEvent*)event);
 }
 
-void q_objectcleanuphandler_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnTimerEvent((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnTimerEvent((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_child_event(void* self, void* event) {
@@ -277,8 +281,8 @@ void q_objectcleanuphandler_qbase_child_event(void* self, void* event) {
     QObjectCleanupHandler_QBaseChildEvent((QObjectCleanupHandler*)self, (QChildEvent*)event);
 }
 
-void q_objectcleanuphandler_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnChildEvent((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnChildEvent((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_custom_event(void* self, void* event) {
@@ -289,8 +293,8 @@ void q_objectcleanuphandler_qbase_custom_event(void* self, void* event) {
     QObjectCleanupHandler_QBaseCustomEvent((QObjectCleanupHandler*)self, (QEvent*)event);
 }
 
-void q_objectcleanuphandler_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnCustomEvent((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnCustomEvent((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_connect_notify(void* self, void* signal) {
@@ -301,8 +305,8 @@ void q_objectcleanuphandler_qbase_connect_notify(void* self, void* signal) {
     QObjectCleanupHandler_QBaseConnectNotify((QObjectCleanupHandler*)self, (QMetaMethod*)signal);
 }
 
-void q_objectcleanuphandler_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnConnectNotify((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnConnectNotify((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_disconnect_notify(void* self, void* signal) {
@@ -313,8 +317,8 @@ void q_objectcleanuphandler_qbase_disconnect_notify(void* self, void* signal) {
     QObjectCleanupHandler_QBaseDisconnectNotify((QObjectCleanupHandler*)self, (QMetaMethod*)signal);
 }
 
-void q_objectcleanuphandler_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnDisconnectNotify((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnDisconnectNotify((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 QObject* q_objectcleanuphandler_sender(void* self) {
@@ -325,8 +329,8 @@ QObject* q_objectcleanuphandler_qbase_sender(void* self) {
     return QObjectCleanupHandler_QBaseSender((QObjectCleanupHandler*)self);
 }
 
-void q_objectcleanuphandler_on_sender(void* self, QObject* (*slot)()) {
-    QObjectCleanupHandler_OnSender((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_sender(void* self, QObject* (*callback)()) {
+    QObjectCleanupHandler_OnSender((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_objectcleanuphandler_sender_signal_index(void* self) {
@@ -337,8 +341,8 @@ int32_t q_objectcleanuphandler_qbase_sender_signal_index(void* self) {
     return QObjectCleanupHandler_QBaseSenderSignalIndex((QObjectCleanupHandler*)self);
 }
 
-void q_objectcleanuphandler_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QObjectCleanupHandler_OnSenderSignalIndex((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QObjectCleanupHandler_OnSenderSignalIndex((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 int32_t q_objectcleanuphandler_receivers(void* self, const char* signal) {
@@ -349,8 +353,8 @@ int32_t q_objectcleanuphandler_qbase_receivers(void* self, const char* signal) {
     return QObjectCleanupHandler_QBaseReceivers((QObjectCleanupHandler*)self, signal);
 }
 
-void q_objectcleanuphandler_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QObjectCleanupHandler_OnReceivers((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QObjectCleanupHandler_OnReceivers((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
 bool q_objectcleanuphandler_is_signal_connected(void* self, void* signal) {
@@ -361,12 +365,12 @@ bool q_objectcleanuphandler_qbase_is_signal_connected(void* self, void* signal) 
     return QObjectCleanupHandler_QBaseIsSignalConnected((QObjectCleanupHandler*)self, (QMetaMethod*)signal);
 }
 
-void q_objectcleanuphandler_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QObjectCleanupHandler_OnIsSignalConnected((QObjectCleanupHandler*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QObjectCleanupHandler_OnIsSignalConnected((QObjectCleanupHandler*)self, (intptr_t)callback);
 }
 
-void q_objectcleanuphandler_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_objectcleanuphandler_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_objectcleanuphandler_delete(void* self) {

@@ -19,13 +19,19 @@ QCompleter* q_completer_new2(void* model) {
 
 QCompleter* q_completer_new3(const char* completions[]) {
     size_t completions_len = libqt_strv_length(completions);
-    libqt_string* completions_qstr = malloc(completions_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < completions_len; ++_i) {
-        completions_qstr[_i] = qstring(completions[_i]);
+    libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
+    if (completions_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_completer_new3");
+        abort();
+    }
+    for (size_t i = 0; i < completions_len; ++i) {
+        completions_qstr[i] = qstring(completions[i]);
     }
     libqt_list completions_list = qlist(completions_qstr, completions_len);
 
-    return QCompleter_new3(completions_list);
+    QCompleter* _out = QCompleter_new3(completions_list);
+    free(completions_qstr);
+    return _out;
 }
 
 QCompleter* q_completer_new4(void* parent) {
@@ -38,13 +44,19 @@ QCompleter* q_completer_new5(void* model, void* parent) {
 
 QCompleter* q_completer_new6(const char* completions[], void* parent) {
     size_t completions_len = libqt_strv_length(completions);
-    libqt_string* completions_qstr = malloc(completions_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < completions_len; ++_i) {
-        completions_qstr[_i] = qstring(completions[_i]);
+    libqt_string* completions_qstr = (libqt_string*)malloc(completions_len * sizeof(libqt_string));
+    if (completions_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_completer_new6");
+        abort();
+    }
+    for (size_t i = 0; i < completions_len; ++i) {
+        completions_qstr[i] = qstring(completions[i]);
     }
     libqt_list completions_list = qlist(completions_qstr, completions_len);
 
-    return QCompleter_new6(completions_list, (QObject*)parent);
+    QCompleter* _out = QCompleter_new6(completions_list, (QObject*)parent);
+    free(completions_qstr);
+    return _out;
 }
 
 const QMetaObject* q_completer_meta_object(void* self) {
@@ -59,8 +71,8 @@ int32_t q_completer_metacall(void* self, int64_t param1, int param2, void* param
     return QCompleter_Metacall((QCompleter*)self, param1, param2, param3);
 }
 
-void q_completer_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QCompleter_OnMetacall((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QCompleter_OnMetacall((QCompleter*)self, (intptr_t)callback);
 }
 
 int32_t q_completer_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -211,8 +223,8 @@ const char* q_completer_path_from_index(void* self, void* index) {
     return _ret;
 }
 
-void q_completer_on_path_from_index(void* self, const char* (*slot)(void*, void*)) {
-    QCompleter_OnPathFromIndex((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_path_from_index(void* self, const char* (*callback)(void*, void*)) {
+    QCompleter_OnPathFromIndex((QCompleter*)self, (intptr_t)callback);
 }
 
 const char* q_completer_qbase_path_from_index(void* self, void* index) {
@@ -226,31 +238,39 @@ const char** q_completer_split_path(void* self, const char* path) {
     libqt_list _arr = QCompleter_SplitPath((QCompleter*)self, qstring(path));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_completer_split_path");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
 }
 
-void q_completer_on_split_path(void* self, const char** (*slot)(void*, const char*)) {
-    QCompleter_OnSplitPath((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_split_path(void* self, const char** (*callback)(void*, const char*)) {
+    QCompleter_OnSplitPath((QCompleter*)self, (intptr_t)callback);
 }
 
 const char** q_completer_qbase_split_path(void* self, const char* path) {
     libqt_list _arr = QCompleter_QBaseSplitPath((QCompleter*)self, qstring(path));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_completer_split_path");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -260,8 +280,8 @@ bool q_completer_event_filter(void* self, void* o, void* e) {
     return QCompleter_EventFilter((QCompleter*)self, (QObject*)o, (QEvent*)e);
 }
 
-void q_completer_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QCompleter_OnEventFilter((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QCompleter_OnEventFilter((QCompleter*)self, (intptr_t)callback);
 }
 
 bool q_completer_qbase_event_filter(void* self, void* o, void* e) {
@@ -272,8 +292,8 @@ bool q_completer_event(void* self, void* param1) {
     return QCompleter_Event((QCompleter*)self, (QEvent*)param1);
 }
 
-void q_completer_on_event(void* self, bool (*slot)(void*, void*)) {
-    QCompleter_OnEvent((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_event(void* self, bool (*callback)(void*, void*)) {
+    QCompleter_OnEvent((QCompleter*)self, (intptr_t)callback);
 }
 
 bool q_completer_qbase_event(void* self, void* param1) {
@@ -418,12 +438,16 @@ const char** q_completer_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_completer_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -441,8 +465,8 @@ void q_completer_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_completer_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_completer_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_completer_parent(void* self) {
@@ -477,8 +501,8 @@ void q_completer_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_completer_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_completer_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 void q_completer_timer_event(void* self, void* event) {
@@ -489,8 +513,8 @@ void q_completer_qbase_timer_event(void* self, void* event) {
     QCompleter_QBaseTimerEvent((QCompleter*)self, (QTimerEvent*)event);
 }
 
-void q_completer_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QCompleter_OnTimerEvent((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QCompleter_OnTimerEvent((QCompleter*)self, (intptr_t)callback);
 }
 
 void q_completer_child_event(void* self, void* event) {
@@ -501,8 +525,8 @@ void q_completer_qbase_child_event(void* self, void* event) {
     QCompleter_QBaseChildEvent((QCompleter*)self, (QChildEvent*)event);
 }
 
-void q_completer_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QCompleter_OnChildEvent((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QCompleter_OnChildEvent((QCompleter*)self, (intptr_t)callback);
 }
 
 void q_completer_custom_event(void* self, void* event) {
@@ -513,8 +537,8 @@ void q_completer_qbase_custom_event(void* self, void* event) {
     QCompleter_QBaseCustomEvent((QCompleter*)self, (QEvent*)event);
 }
 
-void q_completer_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QCompleter_OnCustomEvent((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QCompleter_OnCustomEvent((QCompleter*)self, (intptr_t)callback);
 }
 
 void q_completer_connect_notify(void* self, void* signal) {
@@ -525,8 +549,8 @@ void q_completer_qbase_connect_notify(void* self, void* signal) {
     QCompleter_QBaseConnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-void q_completer_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QCompleter_OnConnectNotify((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QCompleter_OnConnectNotify((QCompleter*)self, (intptr_t)callback);
 }
 
 void q_completer_disconnect_notify(void* self, void* signal) {
@@ -537,8 +561,8 @@ void q_completer_qbase_disconnect_notify(void* self, void* signal) {
     QCompleter_QBaseDisconnectNotify((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-void q_completer_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QCompleter_OnDisconnectNotify((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QCompleter_OnDisconnectNotify((QCompleter*)self, (intptr_t)callback);
 }
 
 QObject* q_completer_sender(void* self) {
@@ -549,8 +573,8 @@ QObject* q_completer_qbase_sender(void* self) {
     return QCompleter_QBaseSender((QCompleter*)self);
 }
 
-void q_completer_on_sender(void* self, QObject* (*slot)()) {
-    QCompleter_OnSender((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_sender(void* self, QObject* (*callback)()) {
+    QCompleter_OnSender((QCompleter*)self, (intptr_t)callback);
 }
 
 int32_t q_completer_sender_signal_index(void* self) {
@@ -561,8 +585,8 @@ int32_t q_completer_qbase_sender_signal_index(void* self) {
     return QCompleter_QBaseSenderSignalIndex((QCompleter*)self);
 }
 
-void q_completer_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QCompleter_OnSenderSignalIndex((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QCompleter_OnSenderSignalIndex((QCompleter*)self, (intptr_t)callback);
 }
 
 int32_t q_completer_receivers(void* self, const char* signal) {
@@ -573,8 +597,8 @@ int32_t q_completer_qbase_receivers(void* self, const char* signal) {
     return QCompleter_QBaseReceivers((QCompleter*)self, signal);
 }
 
-void q_completer_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QCompleter_OnReceivers((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QCompleter_OnReceivers((QCompleter*)self, (intptr_t)callback);
 }
 
 bool q_completer_is_signal_connected(void* self, void* signal) {
@@ -585,12 +609,12 @@ bool q_completer_qbase_is_signal_connected(void* self, void* signal) {
     return QCompleter_QBaseIsSignalConnected((QCompleter*)self, (QMetaMethod*)signal);
 }
 
-void q_completer_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QCompleter_OnIsSignalConnected((QCompleter*)self, (intptr_t)slot);
+void q_completer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QCompleter_OnIsSignalConnected((QCompleter*)self, (intptr_t)callback);
 }
 
-void q_completer_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_completer_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_completer_delete(void* self) {

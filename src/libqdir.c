@@ -62,12 +62,17 @@ const char* q_dir_canonical_path(void* self) {
 
 void q_dir_set_search_paths(const char* prefix, const char* searchPaths[]) {
     size_t searchPaths_len = libqt_strv_length(searchPaths);
-    libqt_string* searchPaths_qstr = malloc(searchPaths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < searchPaths_len; ++_i) {
-        searchPaths_qstr[_i] = qstring(searchPaths[_i]);
+    libqt_string* searchPaths_qstr = (libqt_string*)malloc(searchPaths_len * sizeof(libqt_string));
+    if (searchPaths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_set_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < searchPaths_len; ++i) {
+        searchPaths_qstr[i] = qstring(searchPaths[i]);
     }
     libqt_list searchPaths_list = qlist(searchPaths_qstr, searchPaths_len);
     QDir_SetSearchPaths(qstring(prefix), searchPaths_list);
+    free(searchPaths_qstr);
 }
 
 void q_dir_add_search_path(const char* prefix, const char* path) {
@@ -78,12 +83,16 @@ const char** q_dir_search_paths(const char* prefix) {
     libqt_list _arr = QDir_SearchPaths(qstring(prefix));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_search_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -143,12 +152,16 @@ const char** q_dir_name_filters(void* self) {
     libqt_list _arr = QDir_NameFilters((QDir*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_name_filters");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -156,12 +169,17 @@ const char** q_dir_name_filters(void* self) {
 
 void q_dir_set_name_filters(void* self, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_set_name_filters");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     QDir_SetNameFilters((QDir*)self, nameFilters_list);
+    free(nameFilters_qstr);
 }
 
 int64_t q_dir_filter(void* self) {
@@ -199,12 +217,16 @@ const char** q_dir_name_filters_from_string(const char* nameFilter) {
     libqt_list _arr = QDir_NameFiltersFromString(qstring(nameFilter));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_name_filters_from_string");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -214,12 +236,16 @@ const char** q_dir_entry_list(void* self) {
     libqt_list _arr = QDir_EntryList((QDir*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -227,20 +253,29 @@ const char** q_dir_entry_list(void* self) {
 
 const char** q_dir_entry_list2(void* self, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list2");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList2((QDir*)self, nameFilters_list);
+    free(nameFilters_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list2");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -253,12 +288,17 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self) {
 
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_info_list2");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList2((QDir*)self, nameFilters_list);
+    free(nameFilters_qstr);
     return _arr;
 }
 
@@ -393,12 +433,18 @@ const char* q_dir_temp_path() {
 
 bool q_dir_match(const char* filters[], const char* fileName) {
     size_t filters_len = libqt_strv_length(filters);
-    libqt_string* filters_qstr = malloc(filters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < filters_len; ++_i) {
-        filters_qstr[_i] = qstring(filters[_i]);
+    libqt_string* filters_qstr = (libqt_string*)malloc(filters_len * sizeof(libqt_string));
+    if (filters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_match");
+        abort();
+    }
+    for (size_t i = 0; i < filters_len; ++i) {
+        filters_qstr[i] = qstring(filters[i]);
     }
     libqt_list filters_list = qlist(filters_qstr, filters_len);
-    return QDir_Match(filters_list, qstring(fileName));
+    bool _out = QDir_Match(filters_list, qstring(fileName));
+    free(filters_qstr);
+    return _out;
 }
 
 bool q_dir_match2(const char* filter, const char* fileName) {
@@ -428,12 +474,16 @@ const char** q_dir_entry_list1(void* self, int64_t filters) {
     libqt_list _arr = QDir_EntryList1((QDir*)self, filters);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list1");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -443,12 +493,16 @@ const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort) {
     libqt_list _arr = QDir_EntryList22((QDir*)self, filters, sort);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list22");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -456,20 +510,29 @@ const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort) {
 
 const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list23");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList23((QDir*)self, nameFilters_list, filters);
+    free(nameFilters_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list23");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -477,20 +540,29 @@ const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t f
 
 const char** q_dir_entry_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list3");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryList3((QDir*)self, nameFilters_list, filters, sort);
+    free(nameFilters_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_list3");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -508,23 +580,33 @@ libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int64_t filte
 
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int64_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_info_list23");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList23((QDir*)self, nameFilters_list, filters);
+    free(nameFilters_qstr);
     return _arr;
 }
 
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dir_entry_info_list3");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
     libqt_list _arr = QDir_EntryInfoList3((QDir*)self, nameFilters_list, filters, sort);
+    free(nameFilters_qstr);
     return _arr;
 }
 

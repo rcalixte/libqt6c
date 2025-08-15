@@ -29,8 +29,8 @@ int32_t q_graphicsitemanimation_metacall(void* self, int64_t param1, int param2,
     return QGraphicsItemAnimation_Metacall((QGraphicsItemAnimation*)self, param1, param2, param3);
 }
 
-void q_graphicsitemanimation_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QGraphicsItemAnimation_OnMetacall((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QGraphicsItemAnimation_OnMetacall((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsitemanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -153,8 +153,8 @@ void q_graphicsitemanimation_before_animation_step(void* self, double step) {
     QGraphicsItemAnimation_BeforeAnimationStep((QGraphicsItemAnimation*)self, step);
 }
 
-void q_graphicsitemanimation_on_before_animation_step(void* self, void (*slot)(void*, double)) {
-    QGraphicsItemAnimation_OnBeforeAnimationStep((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_before_animation_step(void* self, void (*callback)(void*, double)) {
+    QGraphicsItemAnimation_OnBeforeAnimationStep((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_qbase_before_animation_step(void* self, double step) {
@@ -165,8 +165,8 @@ void q_graphicsitemanimation_after_animation_step(void* self, double step) {
     QGraphicsItemAnimation_AfterAnimationStep((QGraphicsItemAnimation*)self, step);
 }
 
-void q_graphicsitemanimation_on_after_animation_step(void* self, void (*slot)(void*, double)) {
-    QGraphicsItemAnimation_OnAfterAnimationStep((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_after_animation_step(void* self, void (*callback)(void*, double)) {
+    QGraphicsItemAnimation_OnAfterAnimationStep((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_qbase_after_animation_step(void* self, double step) {
@@ -291,12 +291,16 @@ const char** q_graphicsitemanimation_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_graphicsitemanimation_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -314,8 +318,8 @@ void q_graphicsitemanimation_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_graphicsitemanimation_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_graphicsitemanimation_parent(void* self) {
@@ -350,8 +354,8 @@ void q_graphicsitemanimation_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_graphicsitemanimation_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_graphicsitemanimation_event(void* self, void* event) {
@@ -362,8 +366,8 @@ bool q_graphicsitemanimation_qbase_event(void* self, void* event) {
     return QGraphicsItemAnimation_QBaseEvent((QGraphicsItemAnimation*)self, (QEvent*)event);
 }
 
-void q_graphicsitemanimation_on_event(void* self, bool (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnEvent((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_event(void* self, bool (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnEvent((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 bool q_graphicsitemanimation_event_filter(void* self, void* watched, void* event) {
@@ -374,8 +378,8 @@ bool q_graphicsitemanimation_qbase_event_filter(void* self, void* watched, void*
     return QGraphicsItemAnimation_QBaseEventFilter((QGraphicsItemAnimation*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_graphicsitemanimation_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QGraphicsItemAnimation_OnEventFilter((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QGraphicsItemAnimation_OnEventFilter((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_timer_event(void* self, void* event) {
@@ -386,8 +390,8 @@ void q_graphicsitemanimation_qbase_timer_event(void* self, void* event) {
     QGraphicsItemAnimation_QBaseTimerEvent((QGraphicsItemAnimation*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsitemanimation_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnTimerEvent((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnTimerEvent((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_child_event(void* self, void* event) {
@@ -398,8 +402,8 @@ void q_graphicsitemanimation_qbase_child_event(void* self, void* event) {
     QGraphicsItemAnimation_QBaseChildEvent((QGraphicsItemAnimation*)self, (QChildEvent*)event);
 }
 
-void q_graphicsitemanimation_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnChildEvent((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnChildEvent((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_custom_event(void* self, void* event) {
@@ -410,8 +414,8 @@ void q_graphicsitemanimation_qbase_custom_event(void* self, void* event) {
     QGraphicsItemAnimation_QBaseCustomEvent((QGraphicsItemAnimation*)self, (QEvent*)event);
 }
 
-void q_graphicsitemanimation_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnCustomEvent((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnCustomEvent((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_connect_notify(void* self, void* signal) {
@@ -422,8 +426,8 @@ void q_graphicsitemanimation_qbase_connect_notify(void* self, void* signal) {
     QGraphicsItemAnimation_QBaseConnectNotify((QGraphicsItemAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsitemanimation_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnConnectNotify((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnConnectNotify((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_disconnect_notify(void* self, void* signal) {
@@ -434,8 +438,8 @@ void q_graphicsitemanimation_qbase_disconnect_notify(void* self, void* signal) {
     QGraphicsItemAnimation_QBaseDisconnectNotify((QGraphicsItemAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnDisconnectNotify((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnDisconnectNotify((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 QObject* q_graphicsitemanimation_sender(void* self) {
@@ -446,8 +450,8 @@ QObject* q_graphicsitemanimation_qbase_sender(void* self) {
     return QGraphicsItemAnimation_QBaseSender((QGraphicsItemAnimation*)self);
 }
 
-void q_graphicsitemanimation_on_sender(void* self, QObject* (*slot)()) {
-    QGraphicsItemAnimation_OnSender((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_sender(void* self, QObject* (*callback)()) {
+    QGraphicsItemAnimation_OnSender((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsitemanimation_sender_signal_index(void* self) {
@@ -458,8 +462,8 @@ int32_t q_graphicsitemanimation_qbase_sender_signal_index(void* self) {
     return QGraphicsItemAnimation_QBaseSenderSignalIndex((QGraphicsItemAnimation*)self);
 }
 
-void q_graphicsitemanimation_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QGraphicsItemAnimation_OnSenderSignalIndex((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QGraphicsItemAnimation_OnSenderSignalIndex((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsitemanimation_receivers(void* self, const char* signal) {
@@ -470,8 +474,8 @@ int32_t q_graphicsitemanimation_qbase_receivers(void* self, const char* signal) 
     return QGraphicsItemAnimation_QBaseReceivers((QGraphicsItemAnimation*)self, signal);
 }
 
-void q_graphicsitemanimation_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QGraphicsItemAnimation_OnReceivers((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QGraphicsItemAnimation_OnReceivers((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
 bool q_graphicsitemanimation_is_signal_connected(void* self, void* signal) {
@@ -482,12 +486,12 @@ bool q_graphicsitemanimation_qbase_is_signal_connected(void* self, void* signal)
     return QGraphicsItemAnimation_QBaseIsSignalConnected((QGraphicsItemAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QGraphicsItemAnimation_OnIsSignalConnected((QGraphicsItemAnimation*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QGraphicsItemAnimation_OnIsSignalConnected((QGraphicsItemAnimation*)self, (intptr_t)callback);
 }
 
-void q_graphicsitemanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_graphicsitemanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_graphicsitemanimation_delete(void* self) {

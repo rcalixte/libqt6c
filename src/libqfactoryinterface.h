@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,14 +15,16 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#keys)
 ///
-/// ``` QFactoryInterface* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFactoryInterface*
 const char** q_factoryinterface_keys(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfactoryinterface.html#dtor.QFactoryInterface)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFactoryInterface* self ```
+/// @param self QFactoryInterface*
 void q_factoryinterface_delete(void* self);
 
 #endif

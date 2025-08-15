@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,524 +15,557 @@
 
 /// q_variant_new constructs a new QVariant object.
 ///
-///
 QVariant* q_variant_new();
 
 /// q_variant_new2 constructs a new QVariant object.
 ///
-/// ``` QMetaType* typeVal ```
+/// @param typeVal QMetaType*
 QVariant* q_variant_new2(void* typeVal);
 
 /// q_variant_new3 constructs a new QVariant object.
 ///
-/// ``` QVariant* other ```
+/// @param other QVariant*
 QVariant* q_variant_new3(void* other);
 
 /// q_variant_new4 constructs a new QVariant object.
 ///
-/// ``` int i ```
+/// @param i int
 QVariant* q_variant_new4(int i);
 
 /// q_variant_new5 constructs a new QVariant object.
 ///
-/// ``` uint32_t ui ```
+/// @param ui uint32_t
 QVariant* q_variant_new5(uint32_t ui);
 
 /// q_variant_new6 constructs a new QVariant object.
 ///
-/// ``` long long ll ```
+/// @param ll long long
 QVariant* q_variant_new6(long long ll);
 
 /// q_variant_new7 constructs a new QVariant object.
 ///
-/// ``` uint64_t ull ```
+/// @param ull uint64_t
 QVariant* q_variant_new7(uint64_t ull);
 
 /// q_variant_new8 constructs a new QVariant object.
 ///
-/// ``` bool b ```
+/// @param b bool
 QVariant* q_variant_new8(bool b);
 
 /// q_variant_new9 constructs a new QVariant object.
 ///
-/// ``` double d ```
+/// @param d double
 QVariant* q_variant_new9(double d);
 
 /// q_variant_new10 constructs a new QVariant object.
 ///
-/// ``` float f ```
+/// @param f float
 QVariant* q_variant_new10(float f);
 
 /// q_variant_new11 constructs a new QVariant object.
 ///
-/// ``` QChar* qchar ```
+/// @param qchar QChar*
 QVariant* q_variant_new11(void* qchar);
 
 /// q_variant_new12 constructs a new QVariant object.
 ///
-/// ``` QDate* date ```
+/// @param date QDate*
 QVariant* q_variant_new12(void* date);
 
 /// q_variant_new13 constructs a new QVariant object.
 ///
-/// ``` QTime* time ```
+/// @param time QTime*
 QVariant* q_variant_new13(void* time);
 
 /// q_variant_new14 constructs a new QVariant object.
 ///
-/// ``` QBitArray* bitarray ```
+/// @param bitarray QBitArray*
 QVariant* q_variant_new14(void* bitarray);
 
 /// q_variant_new15 constructs a new QVariant object.
 ///
-/// ``` const char* bytearray ```
+/// @param bytearray const char*
 QVariant* q_variant_new15(const char* bytearray);
 
 /// q_variant_new16 constructs a new QVariant object.
 ///
-/// ``` QDateTime* datetime ```
+/// @param datetime QDateTime*
 QVariant* q_variant_new16(void* datetime);
 
 /// q_variant_new17 constructs a new QVariant object.
 ///
-/// ``` libqt_map /* of const char* to QVariant* */ hash ```
+/// @param hash libqt_map /* of const char* to QVariant* */
 QVariant* q_variant_new17(libqt_map /* of const char* to QVariant* */ hash);
 
 /// q_variant_new18 constructs a new QVariant object.
 ///
-/// ``` QJsonArray* jsonArray ```
+/// @param jsonArray QJsonArray*
 QVariant* q_variant_new18(void* jsonArray);
 
 /// q_variant_new19 constructs a new QVariant object.
 ///
-/// ``` QJsonObject* jsonObject ```
+/// @param jsonObject QJsonObject*
 QVariant* q_variant_new19(void* jsonObject);
 
 /// q_variant_new20 constructs a new QVariant object.
 ///
-/// ``` libqt_list /* of QVariant* */ list ```
+/// @param list libqt_list /* of QVariant* */
 QVariant* q_variant_new20(libqt_list list);
 
 /// q_variant_new21 constructs a new QVariant object.
 ///
-/// ``` QLocale* locale ```
+/// @param locale QLocale*
 QVariant* q_variant_new21(void* locale);
 
 /// q_variant_new22 constructs a new QVariant object.
 ///
-/// ``` libqt_map /* of const char* to QVariant* */ mapVal ```
+/// @param mapVal libqt_map /* of const char* to QVariant* */
 QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal);
 
 /// q_variant_new23 constructs a new QVariant object.
 ///
-/// ``` QRegularExpression* re ```
+/// @param re QRegularExpression*
 QVariant* q_variant_new23(void* re);
 
 /// q_variant_new24 constructs a new QVariant object.
 ///
-/// ``` const char* stringVal ```
+/// @param stringVal const char*
 QVariant* q_variant_new24(const char* stringVal);
 
 /// q_variant_new25 constructs a new QVariant object.
 ///
-/// ``` const char* stringlist[] ```
+/// @param stringlist const char**
 QVariant* q_variant_new25(const char* stringlist[]);
 
 /// q_variant_new26 constructs a new QVariant object.
 ///
-/// ``` QUrl* url ```
+/// @param url QUrl*
 QVariant* q_variant_new26(void* url);
 
 /// q_variant_new27 constructs a new QVariant object.
 ///
-/// ``` QSize* size ```
+/// @param size QSize*
 QVariant* q_variant_new27(void* size);
 
 /// q_variant_new28 constructs a new QVariant object.
 ///
-/// ``` QPoint* pt ```
+/// @param pt QPoint*
 QVariant* q_variant_new28(void* pt);
 
 /// q_variant_new29 constructs a new QVariant object.
 ///
-/// ``` enum QVariant__Type typeVal ```
+/// @param typeVal enum QVariant__Type
 QVariant* q_variant_new29(int64_t typeVal);
 
 /// q_variant_new30 constructs a new QVariant object.
 ///
-/// ``` QMetaType* typeVal, void* copyVal ```
+/// @param typeVal QMetaType*
+/// @param copyVal void*
 QVariant* q_variant_new30(void* typeVal, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///
-/// ``` QVariant* self, QVariant* other ```
+/// @param self QVariant*
+/// @param other QVariant*
 void q_variant_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#swap)
 ///
-/// ``` QVariant* self, QVariant* other ```
+/// @param self QVariant*
+/// @param other QVariant*
 void q_variant_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#userType)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 int32_t q_variant_user_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#typeId)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 int32_t q_variant_type_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#typeName)
 ///
-/// ``` QVariant* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVariant*
 const char* q_variant_type_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#metaType)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QMetaType* q_variant_meta_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#canConvert)
 ///
-/// ``` QVariant* self, QMetaType* targetType ```
+/// @param self QVariant*
+/// @param targetType QMetaType*
 bool q_variant_can_convert(void* self, void* targetType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#convert)
 ///
-/// ``` QVariant* self, QMetaType* typeVal ```
+/// @param self QVariant*
+/// @param typeVal QMetaType*
 bool q_variant_convert(void* self, void* typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#canView)
 ///
-/// ``` QVariant* self, QMetaType* targetType ```
+/// @param self QVariant*
+/// @param targetType QMetaType*
 bool q_variant_can_view(void* self, void* targetType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#canConvert)
 ///
-/// ``` QVariant* self, int targetTypeId ```
+/// @param self QVariant*
+/// @param targetTypeId int
 bool q_variant_can_convert2(void* self, int targetTypeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#convert)
 ///
-/// ``` QVariant* self, int targetTypeId ```
+/// @param self QVariant*
+/// @param targetTypeId int
 bool q_variant_convert2(void* self, int targetTypeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#isValid)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 bool q_variant_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#isNull)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 bool q_variant_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#clear)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 void q_variant_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#detach)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 void q_variant_detach(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#isDetached)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 bool q_variant_is_detached(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toInt)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 int32_t q_variant_to_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toUInt)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 uint32_t q_variant_to_u_int(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toLongLong)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 long long q_variant_to_long_long(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toULongLong)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 uint64_t q_variant_to_u_long_long(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toBool)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 bool q_variant_to_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toDouble)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 double q_variant_to_double(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toFloat)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 float q_variant_to_float(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toReal)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 double q_variant_to_real(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toByteArray)
 ///
-/// ``` QVariant* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVariant*
 char* q_variant_to_byte_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toBitArray)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QBitArray* q_variant_to_bit_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toString)
 ///
-/// ``` QVariant* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVariant*
 const char* q_variant_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toStringList)
 ///
-/// ``` QVariant* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QVariant*
 const char** q_variant_to_string_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toChar)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QChar* q_variant_to_char(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toDate)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QDate* q_variant_to_date(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toTime)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QTime* q_variant_to_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toDateTime)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QDateTime* q_variant_to_date_time(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toList)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 libqt_list /* of QVariant* */ q_variant_to_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toMap)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 libqt_map /* of const char* to QVariant* */ q_variant_to_map(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toHash)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 libqt_map /* of const char* to QVariant* */ q_variant_to_hash(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toPoint)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QPoint* q_variant_to_point(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toPointF)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QPointF* q_variant_to_point_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toRect)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QRect* q_variant_to_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toSize)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QSize* q_variant_to_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toSizeF)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QSizeF* q_variant_to_size_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toLine)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QLine* q_variant_to_line(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toLineF)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QLineF* q_variant_to_line_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toRectF)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QRectF* q_variant_to_rect_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toLocale)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QLocale* q_variant_to_locale(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toRegularExpression)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QRegularExpression* q_variant_to_regular_expression(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toEasingCurve)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QEasingCurve* q_variant_to_easing_curve(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toUuid)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QUuid* q_variant_to_uuid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toUrl)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QUrl* q_variant_to_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toJsonValue)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QJsonValue* q_variant_to_json_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toJsonObject)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QJsonObject* q_variant_to_json_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toJsonArray)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QJsonArray* q_variant_to_json_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toJsonDocument)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QJsonDocument* q_variant_to_json_document(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toModelIndex)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QModelIndex* q_variant_to_model_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toPersistentModelIndex)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 QPersistentModelIndex* q_variant_to_persistent_model_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#load)
 ///
-/// ``` QVariant* self, QDataStream* ds ```
+/// @param self QVariant*
+/// @param ds QDataStream*
 void q_variant_load(void* self, void* ds);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#save)
 ///
-/// ``` QVariant* self, QDataStream* ds ```
+/// @param self QVariant*
+/// @param ds QDataStream*
 void q_variant_save(void* self, void* ds);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#type)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
+///
+/// @return enum QVariant__Type
 int64_t q_variant_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#typeToName)
 ///
-/// ``` int typeId ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param typeId int
 const char* q_variant_type_to_name(int typeId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#nameToType)
 ///
-/// ``` const char* name ```
+/// @param name const char*
+///
+/// @return enum QVariant__Type
 int64_t q_variant_name_to_type(const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#data)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 void* q_variant_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#constData)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 const void* q_variant_const_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#data)
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 const void* q_variant_data2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#setValue)
 ///
-/// ``` QVariant* self, QVariant* avalue ```
+/// @param self QVariant*
+/// @param avalue QVariant*
 void q_variant_set_value(void* self, void* avalue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
 ///
-/// ``` QMetaType* typeVal ```
+/// @param typeVal QMetaType*
 QVariant* q_variant_from_meta_type(void* typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#compare)
 ///
-/// ``` QVariant* lhs, QVariant* rhs ```
+/// @param lhs QVariant*
+/// @param rhs QVariant*
 QPartialOrdering* q_variant_compare(void* lhs, void* rhs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toInt)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 int32_t q_variant_to_int1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toUInt)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 uint32_t q_variant_to_u_int1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toLongLong)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 long long q_variant_to_long_long1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toULongLong)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 uint64_t q_variant_to_u_long_long1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toDouble)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 double q_variant_to_double1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toFloat)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 float q_variant_to_float1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#toReal)
 ///
-/// ``` QVariant* self, bool* ok ```
+/// @param self QVariant*
+/// @param ok bool*
 double q_variant_to_real1(void* self, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#fromMetaType)
 ///
-/// ``` QMetaType* typeVal, void* copyVal ```
+/// @param typeVal QMetaType*
+/// @param copyVal void*
 QVariant* q_variant_from_meta_type2(void* typeVal, void* copyVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariant.html#dtor.QVariant)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QVariant* self ```
+/// @param self QVariant*
 void q_variant_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qvariant.html#types

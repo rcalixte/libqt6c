@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,260 +15,278 @@
 
 /// q_picture_new constructs a new QPicture object.
 ///
-///
 QPicture* q_picture_new();
 
 /// q_picture_new2 constructs a new QPicture object.
 ///
-/// ``` QPicture* param1 ```
+/// @param param1 QPicture*
 QPicture* q_picture_new2(void* param1);
 
 /// q_picture_new3 constructs a new QPicture object.
 ///
-/// ``` int formatVersion ```
+/// @param formatVersion int
 QPicture* q_picture_new3(int formatVersion);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#isNull)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 bool q_picture_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#devType)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_dev_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#devType)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPicture* self, int32_t (*slot)() ```
-void q_picture_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QPicture*
+/// @param callback int32_t fn()
+void q_picture_on_dev_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#devType)
 ///
 /// Base class method implementation
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_qbase_dev_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#size)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 uint32_t q_picture_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#data)
 ///
-/// ``` QPicture* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPicture*
 const char* q_picture_data(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#setData)
 ///
-/// ``` QPicture* self, const char* data, uint32_t size ```
+/// @param self QPicture*
+/// @param data const char*
+/// @param size uint32_t
 void q_picture_set_data(void* self, const char* data, uint32_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#setData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPicture* self, void (*slot)(QPicture*, const char*, uint32_t) ```
-void q_picture_on_set_data(void* self, void (*slot)(void*, const char*, uint32_t));
+/// @param self QPicture*
+/// @param callback void fn(QPicture*, const char*, uint32_t)
+void q_picture_on_set_data(void* self, void (*callback)(void*, const char*, uint32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#setData)
 ///
 /// Base class method implementation
 ///
-/// ``` QPicture* self, const char* data, uint32_t size ```
+/// @param self QPicture*
+/// @param data const char*
+/// @param size uint32_t
 void q_picture_qbase_set_data(void* self, const char* data, uint32_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#play)
 ///
-/// ``` QPicture* self, QPainter* p ```
+/// @param self QPicture*
+/// @param p QPainter*
 bool q_picture_play(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#load)
 ///
-/// ``` QPicture* self, QIODevice* dev ```
+/// @param self QPicture*
+/// @param dev QIODevice*
 bool q_picture_load(void* self, void* dev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#load)
 ///
-/// ``` QPicture* self, const char* fileName ```
+/// @param self QPicture*
+/// @param fileName const char*
 bool q_picture_load2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#save)
 ///
-/// ``` QPicture* self, QIODevice* dev ```
+/// @param self QPicture*
+/// @param dev QIODevice*
 bool q_picture_save(void* self, void* dev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#save)
 ///
-/// ``` QPicture* self, const char* fileName ```
+/// @param self QPicture*
+/// @param fileName const char*
 bool q_picture_save2(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#boundingRect)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 QRect* q_picture_bounding_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#setBoundingRect)
 ///
-/// ``` QPicture* self, QRect* r ```
+/// @param self QPicture*
+/// @param r QRect*
 void q_picture_set_bounding_rect(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#operator-eq)
 ///
-/// ``` QPicture* self, QPicture* p ```
+/// @param self QPicture*
+/// @param p QPicture*
 void q_picture_operator_assign(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#swap)
 ///
-/// ``` QPicture* self, QPicture* other ```
+/// @param self QPicture*
+/// @param other QPicture*
 void q_picture_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#detach)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 void q_picture_detach(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#isDetached)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 bool q_picture_is_detached(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#paintEngine)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 QPaintEngine* q_picture_paint_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#paintEngine)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPicture* self, QPaintEngine* (*slot)() ```
-void q_picture_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QPicture*
+/// @param callback QPaintEngine* fn()
+void q_picture_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#paintEngine)
 ///
 /// Base class method implementation
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 QPaintEngine* q_picture_qbase_paint_engine(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#metric)
 ///
-/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric m ```
+/// @param self QPicture*
+/// @param m enum QPaintDevice__PaintDeviceMetric
 int32_t q_picture_metric(void* self, int64_t m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#metric)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPicture* self, int32_t (*slot)(QPicture*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_picture_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QPicture*
+/// @param callback int32_t fn(QPicture*, enum QPaintDevice__PaintDeviceMetric)
+void q_picture_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#metric)
 ///
 /// Base class method implementation
 ///
-/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric m ```
+/// @param self QPicture*
+/// @param m enum QPaintDevice__PaintDeviceMetric
 int32_t q_picture_qbase_metric(void* self, int64_t m);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 bool q_picture_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#width)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_width(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#height)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_height(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 double q_picture_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 double q_picture_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 int32_t q_picture_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_picture_device_pixel_ratio_f_scale();
 
@@ -277,7 +294,8 @@ double q_picture_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_picture_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QPaintDevice
@@ -286,7 +304,8 @@ int32_t q_picture_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPicture* self, QPainter* painter ```
+/// @param self QPicture*
+/// @param painter QPainter*
 void q_picture_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
@@ -295,7 +314,8 @@ void q_picture_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPicture* self, QPainter* painter ```
+/// @param self QPicture*
+/// @param painter QPainter*
 void q_picture_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
@@ -304,8 +324,9 @@ void q_picture_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPicture* self, void (*slot)(QPicture*, QPainter*) ```
-void q_picture_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QPicture*
+/// @param callback void fn(QPicture*, QPainter*)
+void q_picture_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -313,7 +334,8 @@ void q_picture_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPicture* self, QPoint* offset ```
+/// @param self QPicture*
+/// @param offset QPoint*
 QPaintDevice* q_picture_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
@@ -322,7 +344,8 @@ QPaintDevice* q_picture_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPicture* self, QPoint* offset ```
+/// @param self QPicture*
+/// @param offset QPoint*
 QPaintDevice* q_picture_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
@@ -331,8 +354,9 @@ QPaintDevice* q_picture_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPicture* self, QPaintDevice* (*slot)(QPicture*, QPoint*) ```
-void q_picture_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QPicture*
+/// @param callback QPaintDevice* fn(QPicture*, QPoint*)
+void q_picture_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -340,7 +364,7 @@ void q_picture_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 QPainter* q_picture_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
@@ -349,7 +373,7 @@ QPainter* q_picture_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 QPainter* q_picture_qbase_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
@@ -358,8 +382,9 @@ QPainter* q_picture_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPicture* self, QPainter* (*slot)() ```
-void q_picture_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QPicture*
+/// @param callback QPainter* fn()
+void q_picture_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QPaintDevice
 ///
@@ -367,7 +392,9 @@ void q_picture_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPicture*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -376,7 +403,9 @@ double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metri
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPicture* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QPicture*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -385,14 +414,15 @@ double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPicture* self, double (*slot)(QPicture*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_picture_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QPicture*
+/// @param callback double fn(QPicture*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#dtor.QPicture)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPicture* self ```
+/// @param self QPicture*
 void q_picture_delete(void* self);
 
 #endif

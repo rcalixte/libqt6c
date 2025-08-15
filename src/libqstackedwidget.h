@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1312 +15,1466 @@
 
 /// q_stackedwidget_new constructs a new QStackedWidget object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QStackedWidget* q_stackedwidget_new(void* parent);
 
 /// q_stackedwidget_new2 constructs a new QStackedWidget object.
-///
 ///
 QStackedWidget* q_stackedwidget_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 const QMetaObject* q_stackedwidget_meta_object(void* self);
 
-/// ``` QStackedWidget* self, const char* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 const char*
 void* q_stackedwidget_metacast(void* self, const char* param1);
 
-/// ``` QStackedWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QStackedWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_stackedwidget_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)(QStackedWidget*, enum QMetaObject__Call, int, void*) ```
-void q_stackedwidget_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QStackedWidget*
+/// @param callback int32_t fn(QStackedWidget*, enum QMetaObject__Call, int, void*)
+void q_stackedwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QStackedWidget* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QStackedWidget*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_stackedwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_stackedwidget_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#addWidget)
 ///
-/// ``` QStackedWidget* self, QWidget* w ```
+/// @param self QStackedWidget*
+/// @param w QWidget*
 int32_t q_stackedwidget_add_widget(void* self, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#insertWidget)
 ///
-/// ``` QStackedWidget* self, int index, QWidget* w ```
+/// @param self QStackedWidget*
+/// @param index int
+/// @param w QWidget*
 int32_t q_stackedwidget_insert_widget(void* self, int index, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#removeWidget)
 ///
-/// ``` QStackedWidget* self, QWidget* w ```
+/// @param self QStackedWidget*
+/// @param w QWidget*
 void q_stackedwidget_remove_widget(void* self, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#currentWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_current_widget(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#currentIndex)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_current_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#indexOf)
 ///
-/// ``` QStackedWidget* self, QWidget* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
 int32_t q_stackedwidget_index_of(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#widget)
 ///
-/// ``` QStackedWidget* self, int param1 ```
+/// @param self QStackedWidget*
+/// @param param1 int
 QWidget* q_stackedwidget_widget(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#count)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#setCurrentIndex)
 ///
-/// ``` QStackedWidget* self, int index ```
+/// @param self QStackedWidget*
+/// @param index int
 void q_stackedwidget_set_current_index(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#setCurrentWidget)
 ///
-/// ``` QStackedWidget* self, QWidget* w ```
+/// @param self QStackedWidget*
+/// @param w QWidget*
 void q_stackedwidget_set_current_widget(void* self, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#currentChanged)
 ///
-/// ``` QStackedWidget* self, int param1 ```
+/// @param self QStackedWidget*
+/// @param param1 int
 void q_stackedwidget_current_changed(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#currentChanged)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, int) ```
-void q_stackedwidget_on_current_changed(void* self, void (*slot)(void*, int));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, int)
+void q_stackedwidget_on_current_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#widgetRemoved)
 ///
-/// ``` QStackedWidget* self, int index ```
+/// @param self QStackedWidget*
+/// @param index int
 void q_stackedwidget_widget_removed(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#widgetRemoved)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, int) ```
-void q_stackedwidget_on_widget_removed(void* self, void (*slot)(void*, int));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, int)
+void q_stackedwidget_on_widget_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#event)
 ///
-/// ``` QStackedWidget* self, QEvent* e ```
+/// @param self QStackedWidget*
+/// @param e QEvent*
 bool q_stackedwidget_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QStackedWidget* self, bool (*slot)(QStackedWidget*, QEvent*) ```
-void q_stackedwidget_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback bool fn(QStackedWidget*, QEvent*)
+void q_stackedwidget_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QStackedWidget* self, QEvent* e ```
+/// @param self QStackedWidget*
+/// @param e QEvent*
 bool q_stackedwidget_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_stackedwidget_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_stackedwidget_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_frame_style(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameStyle)
 ///
-/// ``` QStackedWidget* self, int frameStyle ```
+/// @param self QStackedWidget*
+/// @param frameStyle int
 void q_stackedwidget_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_frame_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum QFrame__Shape
 int64_t q_stackedwidget_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShape)
 ///
-/// ``` QStackedWidget* self, enum QFrame__Shape frameShape ```
+/// @param self QStackedWidget*
+/// @param frameShape enum QFrame__Shape
 void q_stackedwidget_set_frame_shape(void* self, int64_t frameShape);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum QFrame__Shadow
 int64_t q_stackedwidget_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShadow)
 ///
-/// ``` QStackedWidget* self, enum QFrame__Shadow frameShadow ```
+/// @param self QStackedWidget*
+/// @param frameShadow enum QFrame__Shadow
 void q_stackedwidget_set_frame_shadow(void* self, int64_t frameShadow);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setLineWidth)
 ///
-/// ``` QStackedWidget* self, int lineWidth ```
+/// @param self QStackedWidget*
+/// @param lineWidth int
 void q_stackedwidget_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_mid_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setMidLineWidth)
 ///
-/// ``` QStackedWidget* self, int midLineWidth ```
+/// @param self QStackedWidget*
+/// @param midLineWidth int
 void q_stackedwidget_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_frame_rect(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameRect)
 ///
-/// ``` QStackedWidget* self, QRect* frameRect ```
+/// @param self QStackedWidget*
+/// @param frameRect QRect*
 void q_stackedwidget_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 uintptr_t q_stackedwidget_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 uintptr_t q_stackedwidget_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 uintptr_t q_stackedwidget_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QStyle* q_stackedwidget_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QStackedWidget* self, QStyle* style ```
+/// @param self QStackedWidget*
+/// @param style QStyle*
 void q_stackedwidget_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum Qt__WindowModality
 int64_t q_stackedwidget_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QStackedWidget* self, enum Qt__WindowModality windowModality ```
+/// @param self QStackedWidget*
+/// @param windowModality enum Qt__WindowModality
 void q_stackedwidget_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QStackedWidget* self, QWidget* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
 bool q_stackedwidget_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QStackedWidget* self, bool enabled ```
+/// @param self QStackedWidget*
+/// @param enabled bool
 void q_stackedwidget_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QStackedWidget* self, bool disabled ```
+/// @param self QStackedWidget*
+/// @param disabled bool
 void q_stackedwidget_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QStackedWidget* self, bool windowModified ```
+/// @param self QStackedWidget*
+/// @param windowModified bool
 void q_stackedwidget_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 const QRect* q_stackedwidget_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPoint* q_stackedwidget_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRegion* q_stackedwidget_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QStackedWidget* self, QSize* minimumSize ```
+/// @param self QStackedWidget*
+/// @param minimumSize QSize*
 void q_stackedwidget_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QStackedWidget* self, int minw, int minh ```
+/// @param self QStackedWidget*
+/// @param minw int
+/// @param minh int
 void q_stackedwidget_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QStackedWidget* self, QSize* maximumSize ```
+/// @param self QStackedWidget*
+/// @param maximumSize QSize*
 void q_stackedwidget_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QStackedWidget* self, int maxw, int maxh ```
+/// @param self QStackedWidget*
+/// @param maxw int
+/// @param maxh int
 void q_stackedwidget_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QStackedWidget* self, int minw ```
+/// @param self QStackedWidget*
+/// @param minw int
 void q_stackedwidget_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QStackedWidget* self, int minh ```
+/// @param self QStackedWidget*
+/// @param minh int
 void q_stackedwidget_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QStackedWidget* self, int maxw ```
+/// @param self QStackedWidget*
+/// @param maxw int
 void q_stackedwidget_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QStackedWidget* self, int maxh ```
+/// @param self QStackedWidget*
+/// @param maxh int
 void q_stackedwidget_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QStackedWidget* self, QSize* sizeIncrement ```
+/// @param self QStackedWidget*
+/// @param sizeIncrement QSize*
 void q_stackedwidget_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QStackedWidget* self, int w, int h ```
+/// @param self QStackedWidget*
+/// @param w int
+/// @param h int
 void q_stackedwidget_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QStackedWidget* self, QSize* baseSize ```
+/// @param self QStackedWidget*
+/// @param baseSize QSize*
 void q_stackedwidget_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QStackedWidget* self, int basew, int baseh ```
+/// @param self QStackedWidget*
+/// @param basew int
+/// @param baseh int
 void q_stackedwidget_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QStackedWidget* self, QSize* fixedSize ```
+/// @param self QStackedWidget*
+/// @param fixedSize QSize*
 void q_stackedwidget_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QStackedWidget* self, int w, int h ```
+/// @param self QStackedWidget*
+/// @param w int
+/// @param h int
 void q_stackedwidget_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QStackedWidget* self, int w ```
+/// @param self QStackedWidget*
+/// @param w int
 void q_stackedwidget_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QStackedWidget* self, int h ```
+/// @param self QStackedWidget*
+/// @param h int
 void q_stackedwidget_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QStackedWidget* self, QPointF* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPointF*
 QPointF* q_stackedwidget_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QStackedWidget* self, QPoint* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPoint*
 QPoint* q_stackedwidget_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QStackedWidget* self, QPointF* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPointF*
 QPointF* q_stackedwidget_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QStackedWidget* self, QPoint* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPoint*
 QPoint* q_stackedwidget_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QStackedWidget* self, QPointF* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPointF*
 QPointF* q_stackedwidget_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QStackedWidget* self, QPoint* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPoint*
 QPoint* q_stackedwidget_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QStackedWidget* self, QPointF* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPointF*
 QPointF* q_stackedwidget_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QStackedWidget* self, QPoint* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPoint*
 QPoint* q_stackedwidget_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QStackedWidget* self, QWidget* param1, QPointF* param2 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_stackedwidget_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QStackedWidget* self, QWidget* param1, QPoint* param2 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_stackedwidget_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QStackedWidget* self, QWidget* param1, QPointF* param2 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_stackedwidget_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QStackedWidget* self, QWidget* param1, QPoint* param2 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_stackedwidget_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 const QPalette* q_stackedwidget_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QStackedWidget* self, QPalette* palette ```
+/// @param self QStackedWidget*
+/// @param palette QPalette*
 void q_stackedwidget_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QStackedWidget* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QStackedWidget*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_stackedwidget_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_stackedwidget_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QStackedWidget* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QStackedWidget*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_stackedwidget_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_stackedwidget_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 const QFont* q_stackedwidget_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QStackedWidget* self, QFont* font ```
+/// @param self QStackedWidget*
+/// @param font QFont*
 void q_stackedwidget_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QFontMetrics* q_stackedwidget_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QFontInfo* q_stackedwidget_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QCursor* q_stackedwidget_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QStackedWidget* self, QCursor* cursor ```
+/// @param self QStackedWidget*
+/// @param cursor QCursor*
 void q_stackedwidget_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QStackedWidget* self, bool enable ```
+/// @param self QStackedWidget*
+/// @param enable bool
 void q_stackedwidget_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QStackedWidget* self, bool enable ```
+/// @param self QStackedWidget*
+/// @param enable bool
 void q_stackedwidget_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QStackedWidget* self, QBitmap* mask ```
+/// @param self QStackedWidget*
+/// @param mask QBitmap*
 void q_stackedwidget_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QStackedWidget* self, QRegion* mask ```
+/// @param self QStackedWidget*
+/// @param mask QRegion*
 void q_stackedwidget_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRegion* q_stackedwidget_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPaintDevice* target ```
+/// @param self QStackedWidget*
+/// @param target QPaintDevice*
 void q_stackedwidget_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPainter* painter ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
 void q_stackedwidget_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPixmap* q_stackedwidget_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QGraphicsEffect* q_stackedwidget_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QStackedWidget* self, QGraphicsEffect* effect ```
+/// @param self QStackedWidget*
+/// @param effect QGraphicsEffect*
 void q_stackedwidget_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QStackedWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QStackedWidget*
+/// @param typeVal enum Qt__GestureType
 void q_stackedwidget_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QStackedWidget* self, enum Qt__GestureType typeVal ```
+/// @param self QStackedWidget*
+/// @param typeVal enum Qt__GestureType
 void q_stackedwidget_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QStackedWidget* self, const char* windowTitle ```
+/// @param self QStackedWidget*
+/// @param windowTitle const char*
 void q_stackedwidget_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QStackedWidget* self, const char* styleSheet ```
+/// @param self QStackedWidget*
+/// @param styleSheet const char*
 void q_stackedwidget_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QStackedWidget* self, QIcon* icon ```
+/// @param self QStackedWidget*
+/// @param icon QIcon*
 void q_stackedwidget_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QIcon* q_stackedwidget_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QStackedWidget* self, const char* windowIconText ```
+/// @param self QStackedWidget*
+/// @param windowIconText const char*
 void q_stackedwidget_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QStackedWidget* self, const char* windowRole ```
+/// @param self QStackedWidget*
+/// @param windowRole const char*
 void q_stackedwidget_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QStackedWidget* self, const char* filePath ```
+/// @param self QStackedWidget*
+/// @param filePath const char*
 void q_stackedwidget_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QStackedWidget* self, double level ```
+/// @param self QStackedWidget*
+/// @param level double
 void q_stackedwidget_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 double q_stackedwidget_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QStackedWidget* self, const char* toolTip ```
+/// @param self QStackedWidget*
+/// @param toolTip const char*
 void q_stackedwidget_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QStackedWidget* self, int msec ```
+/// @param self QStackedWidget*
+/// @param msec int
 void q_stackedwidget_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QStackedWidget* self, const char* statusTip ```
+/// @param self QStackedWidget*
+/// @param statusTip const char*
 void q_stackedwidget_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QStackedWidget* self, const char* whatsThis ```
+/// @param self QStackedWidget*
+/// @param whatsThis const char*
 void q_stackedwidget_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QStackedWidget* self, const char* name ```
+/// @param self QStackedWidget*
+/// @param name const char*
 void q_stackedwidget_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QStackedWidget* self, const char* description ```
+/// @param self QStackedWidget*
+/// @param description const char*
 void q_stackedwidget_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QStackedWidget* self, enum Qt__LayoutDirection direction ```
+/// @param self QStackedWidget*
+/// @param direction enum Qt__LayoutDirection
 void q_stackedwidget_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_stackedwidget_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QStackedWidget* self, QLocale* locale ```
+/// @param self QStackedWidget*
+/// @param locale QLocale*
 void q_stackedwidget_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QLocale* q_stackedwidget_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QStackedWidget* self, enum Qt__FocusReason reason ```
+/// @param self QStackedWidget*
+/// @param reason enum Qt__FocusReason
 void q_stackedwidget_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_stackedwidget_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QStackedWidget* self, enum Qt__FocusPolicy policy ```
+/// @param self QStackedWidget*
+/// @param policy enum Qt__FocusPolicy
 void q_stackedwidget_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_stackedwidget_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QStackedWidget* self, QWidget* focusProxy ```
+/// @param self QStackedWidget*
+/// @param focusProxy QWidget*
 void q_stackedwidget_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_stackedwidget_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QStackedWidget* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QStackedWidget*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_stackedwidget_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QStackedWidget* self, QCursor* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QCursor*
 void q_stackedwidget_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QStackedWidget* self, QKeySequence* key ```
+/// @param self QStackedWidget*
+/// @param key QKeySequence*
 int32_t q_stackedwidget_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QStackedWidget* self, int id ```
+/// @param self QStackedWidget*
+/// @param id int
 void q_stackedwidget_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QStackedWidget* self, int id ```
+/// @param self QStackedWidget*
+/// @param id int
 void q_stackedwidget_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QStackedWidget* self, int id ```
+/// @param self QStackedWidget*
+/// @param id int
 void q_stackedwidget_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_stackedwidget_mouse_grabber();
 
@@ -1329,1161 +1482,1327 @@ QWidget* q_stackedwidget_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_stackedwidget_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QStackedWidget* self, bool enable ```
+/// @param self QStackedWidget*
+/// @param enable bool
 void q_stackedwidget_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QGraphicsProxyWidget* q_stackedwidget_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QStackedWidget* self, int x, int y, int w, int h ```
+/// @param self QStackedWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_stackedwidget_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QStackedWidget* self, QRect* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QRect*
 void q_stackedwidget_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QStackedWidget* self, QRegion* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QRegion*
 void q_stackedwidget_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QStackedWidget* self, int x, int y, int w, int h ```
+/// @param self QStackedWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_stackedwidget_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QStackedWidget* self, QRect* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QRect*
 void q_stackedwidget_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QStackedWidget* self, QRegion* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QRegion*
 void q_stackedwidget_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QStackedWidget* self, bool hidden ```
+/// @param self QStackedWidget*
+/// @param hidden bool
 void q_stackedwidget_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QStackedWidget* self, QWidget* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
 void q_stackedwidget_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QStackedWidget* self, int x, int y ```
+/// @param self QStackedWidget*
+/// @param x int
+/// @param y int
 void q_stackedwidget_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QStackedWidget* self, QPoint* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPoint*
 void q_stackedwidget_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QStackedWidget* self, int w, int h ```
+/// @param self QStackedWidget*
+/// @param w int
+/// @param h int
 void q_stackedwidget_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QStackedWidget* self, QSize* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QSize*
 void q_stackedwidget_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QStackedWidget* self, int x, int y, int w, int h ```
+/// @param self QStackedWidget*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_stackedwidget_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QStackedWidget* self, QRect* geometry ```
+/// @param self QStackedWidget*
+/// @param geometry QRect*
 void q_stackedwidget_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 char* q_stackedwidget_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QStackedWidget* self, const char* geometry ```
+/// @param self QStackedWidget*
+/// @param geometry const char*
 bool q_stackedwidget_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QStackedWidget* self, QWidget* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QWidget*
 bool q_stackedwidget_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_stackedwidget_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QStackedWidget* self, int state ```
+/// @param self QStackedWidget*
+/// @param state flag of enum Qt__WindowState
 void q_stackedwidget_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QStackedWidget* self, int state ```
+/// @param self QStackedWidget*
+/// @param state flag of enum Qt__WindowState
 void q_stackedwidget_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSizePolicy* q_stackedwidget_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QStackedWidget* self, QSizePolicy* sizePolicy ```
+/// @param self QStackedWidget*
+/// @param sizePolicy QSizePolicy*
 void q_stackedwidget_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QStackedWidget* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QStackedWidget*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_stackedwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRegion* q_stackedwidget_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QStackedWidget* self, int left, int top, int right, int bottom ```
+/// @param self QStackedWidget*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_stackedwidget_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QStackedWidget* self, QMargins* margins ```
+/// @param self QStackedWidget*
+/// @param margins QMargins*
 void q_stackedwidget_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QMargins* q_stackedwidget_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QRect* q_stackedwidget_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QLayout* q_stackedwidget_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QStackedWidget* self, QLayout* layout ```
+/// @param self QStackedWidget*
+/// @param layout QLayout*
 void q_stackedwidget_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QStackedWidget* self, QWidget* parent ```
+/// @param self QStackedWidget*
+/// @param parent QWidget*
 void q_stackedwidget_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QStackedWidget* self, QWidget* parent, int f ```
+/// @param self QStackedWidget*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_stackedwidget_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QStackedWidget* self, int dx, int dy ```
+/// @param self QStackedWidget*
+/// @param dx int
+/// @param dy int
 void q_stackedwidget_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QStackedWidget* self, int dx, int dy, QRect* param3 ```
+/// @param self QStackedWidget*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_stackedwidget_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QStackedWidget* self, bool on ```
+/// @param self QStackedWidget*
+/// @param on bool
 void q_stackedwidget_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QStackedWidget* self, QAction* action ```
+/// @param self QStackedWidget*
+/// @param action QAction*
 void q_stackedwidget_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QStackedWidget* self, libqt_list /* of QAction* */ actions ```
+/// @param self QStackedWidget*
+/// @param actions libqt_list /* of QAction* */
 void q_stackedwidget_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QStackedWidget* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QStackedWidget*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_stackedwidget_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QStackedWidget* self, QAction* before, QAction* action ```
+/// @param self QStackedWidget*
+/// @param before QAction*
+/// @param action QAction*
 void q_stackedwidget_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QStackedWidget* self, QAction* action ```
+/// @param self QStackedWidget*
+/// @param action QAction*
 void q_stackedwidget_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 libqt_list /* of QAction* */ q_stackedwidget_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QStackedWidget* self, const char* text ```
+/// @param self QStackedWidget*
+/// @param text const char*
 QAction* q_stackedwidget_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QStackedWidget* self, QIcon* icon, const char* text ```
+/// @param self QStackedWidget*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_stackedwidget_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QStackedWidget* self, const char* text, QKeySequence* shortcut ```
+/// @param self QStackedWidget*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_stackedwidget_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QStackedWidget* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QStackedWidget*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_stackedwidget_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWidget* q_stackedwidget_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QStackedWidget* self, int typeVal ```
+/// @param self QStackedWidget*
+/// @param typeVal flag of enum Qt__WindowType
 void q_stackedwidget_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_stackedwidget_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QStackedWidget* self, enum Qt__WindowType param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__WindowType
 void q_stackedwidget_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QStackedWidget* self, int typeVal ```
+/// @param self QStackedWidget*
+/// @param typeVal flag of enum Qt__WindowType
 void q_stackedwidget_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return enum Qt__WindowType
 int64_t q_stackedwidget_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_stackedwidget_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QStackedWidget* self, int x, int y ```
+/// @param self QStackedWidget*
+/// @param x int
+/// @param y int
 QWidget* q_stackedwidget_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QStackedWidget* self, QPoint* p ```
+/// @param self QStackedWidget*
+/// @param p QPoint*
 QWidget* q_stackedwidget_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QStackedWidget* self, QPointF* p ```
+/// @param self QStackedWidget*
+/// @param p QPointF*
 QWidget* q_stackedwidget_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QStackedWidget* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__WidgetAttribute
 void q_stackedwidget_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QStackedWidget* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_stackedwidget_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QStackedWidget* self, QWidget* child ```
+/// @param self QStackedWidget*
+/// @param child QWidget*
 bool q_stackedwidget_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QStackedWidget* self, bool enabled ```
+/// @param self QStackedWidget*
+/// @param enabled bool
 void q_stackedwidget_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QBackingStore* q_stackedwidget_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QWindow* q_stackedwidget_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QScreen* q_stackedwidget_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QStackedWidget* self, QScreen* screen ```
+/// @param self QStackedWidget*
+/// @param screen QScreen*
 void q_stackedwidget_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_stackedwidget_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QStackedWidget* self, const char* title ```
+/// @param self QStackedWidget*
+/// @param title const char*
 void q_stackedwidget_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, const char*) ```
-void q_stackedwidget_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, const char*)
+void q_stackedwidget_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QStackedWidget* self, QIcon* icon ```
+/// @param self QStackedWidget*
+/// @param icon QIcon*
 void q_stackedwidget_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QIcon*) ```
-void q_stackedwidget_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QIcon*)
+void q_stackedwidget_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QStackedWidget* self, const char* iconText ```
+/// @param self QStackedWidget*
+/// @param iconText const char*
 void q_stackedwidget_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, const char*) ```
-void q_stackedwidget_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, const char*)
+void q_stackedwidget_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QStackedWidget* self, QPoint* pos ```
+/// @param self QStackedWidget*
+/// @param pos QPoint*
 void q_stackedwidget_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QPoint*) ```
-void q_stackedwidget_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QPoint*)
+void q_stackedwidget_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_stackedwidget_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QStackedWidget* self, int hints ```
+/// @param self QStackedWidget*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_stackedwidget_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QStackedWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_stackedwidget_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QStackedWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_stackedwidget_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QStackedWidget*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_stackedwidget_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_stackedwidget_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_stackedwidget_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QStackedWidget* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_stackedwidget_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QStackedWidget* self, QRect* rectangle ```
+/// @param self QStackedWidget*
+/// @param rectangle QRect*
 QPixmap* q_stackedwidget_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QStackedWidget* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QStackedWidget*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_stackedwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QStackedWidget* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QStackedWidget*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_stackedwidget_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QStackedWidget* self, int id, bool enable ```
+/// @param self QStackedWidget*
+/// @param id int
+/// @param enable bool
 void q_stackedwidget_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QStackedWidget* self, int id, bool enable ```
+/// @param self QStackedWidget*
+/// @param id int
+/// @param enable bool
 void q_stackedwidget_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QStackedWidget* self, enum Qt__WindowType param1, bool on ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_stackedwidget_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QStackedWidget* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_stackedwidget_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_stackedwidget_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_stackedwidget_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char* q_stackedwidget_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QStackedWidget* self, char* name ```
+/// @param self QStackedWidget*
+/// @param name char*
 void q_stackedwidget_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QStackedWidget* self, bool b ```
+/// @param self QStackedWidget*
+/// @param b bool
 bool q_stackedwidget_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QThread* q_stackedwidget_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QStackedWidget* self, QThread* thread ```
+/// @param self QStackedWidget*
+/// @param thread QThread*
 bool q_stackedwidget_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QStackedWidget* self, int interval ```
+/// @param self QStackedWidget*
+/// @param interval int
 int32_t q_stackedwidget_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QStackedWidget* self, int id ```
+/// @param self QStackedWidget*
+/// @param id int
 void q_stackedwidget_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QStackedWidget* self, enum Qt__TimerId id ```
+/// @param self QStackedWidget*
+/// @param id enum Qt__TimerId
 void q_stackedwidget_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 libqt_list /* of QObject* */ q_stackedwidget_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QStackedWidget* self, QObject* filterObj ```
+/// @param self QStackedWidget*
+/// @param filterObj QObject*
 void q_stackedwidget_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QStackedWidget* self, QObject* obj ```
+/// @param self QStackedWidget*
+/// @param obj QObject*
 void q_stackedwidget_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_stackedwidget_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QStackedWidget* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QStackedWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_stackedwidget_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_stackedwidget_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_stackedwidget_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QStackedWidget* self, const char* name, QVariant* value ```
+/// @param self QStackedWidget*
+/// @param name const char*
+/// @param value QVariant*
 bool q_stackedwidget_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QStackedWidget* self, const char* name ```
+/// @param self QStackedWidget*
+/// @param name const char*
 QVariant* q_stackedwidget_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QStackedWidget* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStackedWidget*
 const char** q_stackedwidget_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QBindingStorage* q_stackedwidget_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 const QBindingStorage* q_stackedwidget_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*) ```
-void q_stackedwidget_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*)
+void q_stackedwidget_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QObject* q_stackedwidget_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QStackedWidget* self, const char* classname ```
+/// @param self QStackedWidget*
+/// @param classname const char*
 bool q_stackedwidget_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QStackedWidget* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QStackedWidget*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_stackedwidget_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QStackedWidget* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QStackedWidget*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_stackedwidget_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_stackedwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QStackedWidget* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QStackedWidget*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_stackedwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStackedWidget* self, QObject* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QObject*
 void q_stackedwidget_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QObject*) ```
-void q_stackedwidget_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QObject*)
+void q_stackedwidget_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 double q_stackedwidget_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 double q_stackedwidget_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_stackedwidget_device_pixel_ratio_f_scale();
 
@@ -2491,7 +2810,8 @@ double q_stackedwidget_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_stackedwidget_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QFrame
@@ -2500,7 +2820,7 @@ int32_t q_stackedwidget_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_size_hint(void* self);
 
 /// Inherited from QFrame
@@ -2509,7 +2829,7 @@ QSize* q_stackedwidget_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_qbase_size_hint(void* self);
 
 /// Inherited from QFrame
@@ -2518,8 +2838,9 @@ QSize* q_stackedwidget_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QSize* (*slot)() ```
-void q_stackedwidget_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QStackedWidget*
+/// @param callback QSize* fn()
+void q_stackedwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
 ///
@@ -2527,7 +2848,8 @@ void q_stackedwidget_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPaintEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPaintEvent*
 void q_stackedwidget_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2536,7 +2858,8 @@ void q_stackedwidget_paint_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPaintEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPaintEvent*
 void q_stackedwidget_qbase_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2545,8 +2868,9 @@ void q_stackedwidget_qbase_paint_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QPaintEvent*) ```
-void q_stackedwidget_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QPaintEvent*)
+void q_stackedwidget_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -2554,7 +2878,8 @@ void q_stackedwidget_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QEvent*
 void q_stackedwidget_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2563,7 +2888,8 @@ void q_stackedwidget_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QEvent*
 void q_stackedwidget_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -2572,8 +2898,9 @@ void q_stackedwidget_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QEvent*) ```
-void q_stackedwidget_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QEvent*)
+void q_stackedwidget_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -2581,7 +2908,8 @@ void q_stackedwidget_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QStyleOptionFrame* option ```
+/// @param self QStackedWidget*
+/// @param option QStyleOptionFrame*
 void q_stackedwidget_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -2590,7 +2918,8 @@ void q_stackedwidget_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QStyleOptionFrame* option ```
+/// @param self QStackedWidget*
+/// @param option QStyleOptionFrame*
 void q_stackedwidget_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -2599,8 +2928,9 @@ void q_stackedwidget_qbase_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QStyleOptionFrame*) ```
-void q_stackedwidget_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QStyleOptionFrame*)
+void q_stackedwidget_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2608,7 +2938,7 @@ void q_stackedwidget_on_init_style_option(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2617,7 +2947,7 @@ int32_t q_stackedwidget_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2626,8 +2956,9 @@ int32_t q_stackedwidget_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)() ```
-void q_stackedwidget_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QStackedWidget*
+/// @param callback int32_t fn()
+void q_stackedwidget_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2635,7 +2966,8 @@ void q_stackedwidget_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool visible ```
+/// @param self QStackedWidget*
+/// @param visible bool
 void q_stackedwidget_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2644,7 +2976,8 @@ void q_stackedwidget_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool visible ```
+/// @param self QStackedWidget*
+/// @param visible bool
 void q_stackedwidget_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2653,8 +2986,9 @@ void q_stackedwidget_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, bool) ```
-void q_stackedwidget_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, bool)
+void q_stackedwidget_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2662,7 +2996,7 @@ void q_stackedwidget_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2671,7 +3005,7 @@ QSize* q_stackedwidget_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QSize* q_stackedwidget_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2680,8 +3014,9 @@ QSize* q_stackedwidget_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QSize* (*slot)() ```
-void q_stackedwidget_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QStackedWidget*
+/// @param callback QSize* fn()
+void q_stackedwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2689,7 +3024,8 @@ void q_stackedwidget_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, int param1 ```
+/// @param self QStackedWidget*
+/// @param param1 int
 int32_t q_stackedwidget_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2698,7 +3034,8 @@ int32_t q_stackedwidget_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int param1 ```
+/// @param self QStackedWidget*
+/// @param param1 int
 int32_t q_stackedwidget_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2707,8 +3044,9 @@ int32_t q_stackedwidget_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)(QStackedWidget*, int) ```
-void q_stackedwidget_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QStackedWidget*
+/// @param callback int32_t fn(QStackedWidget*, int)
+void q_stackedwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2716,7 +3054,7 @@ void q_stackedwidget_on_height_for_width(void* self, int32_t (*slot)(void*, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2725,7 +3063,7 @@ bool q_stackedwidget_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2734,8 +3072,9 @@ bool q_stackedwidget_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)() ```
-void q_stackedwidget_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QStackedWidget*
+/// @param callback bool fn()
+void q_stackedwidget_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2743,7 +3082,7 @@ void q_stackedwidget_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPaintEngine* q_stackedwidget_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2752,7 +3091,7 @@ QPaintEngine* q_stackedwidget_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPaintEngine* q_stackedwidget_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2761,8 +3100,9 @@ QPaintEngine* q_stackedwidget_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPaintEngine* (*slot)() ```
-void q_stackedwidget_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QStackedWidget*
+/// @param callback QPaintEngine* fn()
+void q_stackedwidget_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2770,7 +3110,8 @@ void q_stackedwidget_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2779,7 +3120,8 @@ void q_stackedwidget_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2788,8 +3130,9 @@ void q_stackedwidget_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMouseEvent*) ```
-void q_stackedwidget_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+void q_stackedwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2797,7 +3140,8 @@ void q_stackedwidget_on_mouse_press_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2806,7 +3150,8 @@ void q_stackedwidget_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2815,8 +3160,9 @@ void q_stackedwidget_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMouseEvent*) ```
-void q_stackedwidget_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+void q_stackedwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2824,7 +3170,8 @@ void q_stackedwidget_on_mouse_release_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2833,7 +3180,8 @@ void q_stackedwidget_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2842,8 +3190,9 @@ void q_stackedwidget_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMouseEvent*) ```
-void q_stackedwidget_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+void q_stackedwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2851,7 +3200,8 @@ void q_stackedwidget_on_mouse_double_click_event(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2860,7 +3210,8 @@ void q_stackedwidget_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMouseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMouseEvent*
 void q_stackedwidget_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2869,8 +3220,9 @@ void q_stackedwidget_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMouseEvent*) ```
-void q_stackedwidget_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMouseEvent*)
+void q_stackedwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2878,7 +3230,8 @@ void q_stackedwidget_on_mouse_move_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QWheelEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QWheelEvent*
 void q_stackedwidget_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2887,7 +3240,8 @@ void q_stackedwidget_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QWheelEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QWheelEvent*
 void q_stackedwidget_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2896,8 +3250,9 @@ void q_stackedwidget_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QWheelEvent*) ```
-void q_stackedwidget_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QWheelEvent*)
+void q_stackedwidget_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2905,7 +3260,8 @@ void q_stackedwidget_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QKeyEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QKeyEvent*
 void q_stackedwidget_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2914,7 +3270,8 @@ void q_stackedwidget_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QKeyEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QKeyEvent*
 void q_stackedwidget_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2923,8 +3280,9 @@ void q_stackedwidget_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QKeyEvent*) ```
-void q_stackedwidget_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QKeyEvent*)
+void q_stackedwidget_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2932,7 +3290,8 @@ void q_stackedwidget_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QKeyEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QKeyEvent*
 void q_stackedwidget_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2941,7 +3300,8 @@ void q_stackedwidget_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QKeyEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QKeyEvent*
 void q_stackedwidget_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2950,8 +3310,9 @@ void q_stackedwidget_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QKeyEvent*) ```
-void q_stackedwidget_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QKeyEvent*)
+void q_stackedwidget_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2959,7 +3320,8 @@ void q_stackedwidget_on_key_release_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QFocusEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QFocusEvent*
 void q_stackedwidget_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2968,7 +3330,8 @@ void q_stackedwidget_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QFocusEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QFocusEvent*
 void q_stackedwidget_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2977,8 +3340,9 @@ void q_stackedwidget_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QFocusEvent*) ```
-void q_stackedwidget_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QFocusEvent*)
+void q_stackedwidget_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2986,7 +3350,8 @@ void q_stackedwidget_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QFocusEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QFocusEvent*
 void q_stackedwidget_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2995,7 +3360,8 @@ void q_stackedwidget_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QFocusEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QFocusEvent*
 void q_stackedwidget_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3004,8 +3370,9 @@ void q_stackedwidget_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QFocusEvent*) ```
-void q_stackedwidget_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QFocusEvent*)
+void q_stackedwidget_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3013,7 +3380,8 @@ void q_stackedwidget_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEnterEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEnterEvent*
 void q_stackedwidget_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3022,7 +3390,8 @@ void q_stackedwidget_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEnterEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEnterEvent*
 void q_stackedwidget_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3031,8 +3400,9 @@ void q_stackedwidget_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QEnterEvent*) ```
-void q_stackedwidget_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QEnterEvent*)
+void q_stackedwidget_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3040,7 +3410,8 @@ void q_stackedwidget_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEvent*
 void q_stackedwidget_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3049,7 +3420,8 @@ void q_stackedwidget_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEvent*
 void q_stackedwidget_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3058,8 +3430,9 @@ void q_stackedwidget_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QEvent*) ```
-void q_stackedwidget_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QEvent*)
+void q_stackedwidget_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3067,7 +3440,8 @@ void q_stackedwidget_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMoveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMoveEvent*
 void q_stackedwidget_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3076,7 +3450,8 @@ void q_stackedwidget_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMoveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QMoveEvent*
 void q_stackedwidget_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3085,8 +3460,9 @@ void q_stackedwidget_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMoveEvent*) ```
-void q_stackedwidget_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMoveEvent*)
+void q_stackedwidget_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3094,7 +3470,8 @@ void q_stackedwidget_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QResizeEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QResizeEvent*
 void q_stackedwidget_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3103,7 +3480,8 @@ void q_stackedwidget_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QResizeEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QResizeEvent*
 void q_stackedwidget_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3112,8 +3490,9 @@ void q_stackedwidget_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QResizeEvent*) ```
-void q_stackedwidget_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QResizeEvent*)
+void q_stackedwidget_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3121,7 +3500,8 @@ void q_stackedwidget_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QCloseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QCloseEvent*
 void q_stackedwidget_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3130,7 +3510,8 @@ void q_stackedwidget_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QCloseEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QCloseEvent*
 void q_stackedwidget_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3139,8 +3520,9 @@ void q_stackedwidget_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QCloseEvent*) ```
-void q_stackedwidget_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QCloseEvent*)
+void q_stackedwidget_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3148,7 +3530,8 @@ void q_stackedwidget_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QContextMenuEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QContextMenuEvent*
 void q_stackedwidget_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3157,7 +3540,8 @@ void q_stackedwidget_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QContextMenuEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QContextMenuEvent*
 void q_stackedwidget_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3166,8 +3550,9 @@ void q_stackedwidget_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QContextMenuEvent*) ```
-void q_stackedwidget_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QContextMenuEvent*)
+void q_stackedwidget_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3175,7 +3560,8 @@ void q_stackedwidget_on_context_menu_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QTabletEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QTabletEvent*
 void q_stackedwidget_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3184,7 +3570,8 @@ void q_stackedwidget_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QTabletEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QTabletEvent*
 void q_stackedwidget_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3193,8 +3580,9 @@ void q_stackedwidget_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QTabletEvent*) ```
-void q_stackedwidget_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QTabletEvent*)
+void q_stackedwidget_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3202,7 +3590,8 @@ void q_stackedwidget_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QActionEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QActionEvent*
 void q_stackedwidget_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3211,7 +3600,8 @@ void q_stackedwidget_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QActionEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QActionEvent*
 void q_stackedwidget_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3220,8 +3610,9 @@ void q_stackedwidget_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QActionEvent*) ```
-void q_stackedwidget_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QActionEvent*)
+void q_stackedwidget_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3229,7 +3620,8 @@ void q_stackedwidget_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragEnterEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragEnterEvent*
 void q_stackedwidget_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3238,7 +3630,8 @@ void q_stackedwidget_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragEnterEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragEnterEvent*
 void q_stackedwidget_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3247,8 +3640,9 @@ void q_stackedwidget_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QDragEnterEvent*) ```
-void q_stackedwidget_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QDragEnterEvent*)
+void q_stackedwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3256,7 +3650,8 @@ void q_stackedwidget_on_drag_enter_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragMoveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragMoveEvent*
 void q_stackedwidget_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3265,7 +3660,8 @@ void q_stackedwidget_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragMoveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragMoveEvent*
 void q_stackedwidget_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3274,8 +3670,9 @@ void q_stackedwidget_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QDragMoveEvent*) ```
-void q_stackedwidget_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QDragMoveEvent*)
+void q_stackedwidget_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3283,7 +3680,8 @@ void q_stackedwidget_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragLeaveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragLeaveEvent*
 void q_stackedwidget_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3292,7 +3690,8 @@ void q_stackedwidget_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDragLeaveEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDragLeaveEvent*
 void q_stackedwidget_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3301,8 +3700,9 @@ void q_stackedwidget_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QDragLeaveEvent*) ```
-void q_stackedwidget_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QDragLeaveEvent*)
+void q_stackedwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3310,7 +3710,8 @@ void q_stackedwidget_on_drag_leave_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDropEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDropEvent*
 void q_stackedwidget_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3319,7 +3720,8 @@ void q_stackedwidget_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QDropEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QDropEvent*
 void q_stackedwidget_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3328,8 +3730,9 @@ void q_stackedwidget_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QDropEvent*) ```
-void q_stackedwidget_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QDropEvent*)
+void q_stackedwidget_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3337,7 +3740,8 @@ void q_stackedwidget_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QShowEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QShowEvent*
 void q_stackedwidget_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3346,7 +3750,8 @@ void q_stackedwidget_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QShowEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QShowEvent*
 void q_stackedwidget_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3355,8 +3760,9 @@ void q_stackedwidget_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QShowEvent*) ```
-void q_stackedwidget_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QShowEvent*)
+void q_stackedwidget_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3364,7 +3770,8 @@ void q_stackedwidget_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QHideEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QHideEvent*
 void q_stackedwidget_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3373,7 +3780,8 @@ void q_stackedwidget_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QHideEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QHideEvent*
 void q_stackedwidget_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3382,8 +3790,9 @@ void q_stackedwidget_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QHideEvent*) ```
-void q_stackedwidget_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QHideEvent*)
+void q_stackedwidget_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3391,7 +3800,10 @@ void q_stackedwidget_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QStackedWidget*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_stackedwidget_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3400,7 +3812,10 @@ bool q_stackedwidget_native_event(void* self, const char* eventType, void* messa
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QStackedWidget*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_stackedwidget_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3409,8 +3824,9 @@ bool q_stackedwidget_qbase_native_event(void* self, const char* eventType, void*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)(QStackedWidget*, const char*, void*, intptr_t*) ```
-void q_stackedwidget_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QStackedWidget*
+/// @param callback bool fn(QStackedWidget*, const char*, void*, intptr_t*)
+void q_stackedwidget_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3418,7 +3834,8 @@ void q_stackedwidget_on_native_event(void* self, bool (*slot)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_stackedwidget_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3427,7 +3844,8 @@ int32_t q_stackedwidget_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_stackedwidget_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3436,8 +3854,9 @@ int32_t q_stackedwidget_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_stackedwidget_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QStackedWidget*
+/// @param callback int32_t fn(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric)
+void q_stackedwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3445,7 +3864,8 @@ void q_stackedwidget_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPainter* painter ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
 void q_stackedwidget_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3454,7 +3874,8 @@ void q_stackedwidget_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPainter* painter ```
+/// @param self QStackedWidget*
+/// @param painter QPainter*
 void q_stackedwidget_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3463,8 +3884,9 @@ void q_stackedwidget_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QPainter*) ```
-void q_stackedwidget_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QPainter*)
+void q_stackedwidget_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3472,7 +3894,8 @@ void q_stackedwidget_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPoint* offset ```
+/// @param self QStackedWidget*
+/// @param offset QPoint*
 QPaintDevice* q_stackedwidget_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3481,7 +3904,8 @@ QPaintDevice* q_stackedwidget_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPoint* offset ```
+/// @param self QStackedWidget*
+/// @param offset QPoint*
 QPaintDevice* q_stackedwidget_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3490,8 +3914,9 @@ QPaintDevice* q_stackedwidget_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPaintDevice* (*slot)(QStackedWidget*, QPoint*) ```
-void q_stackedwidget_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback QPaintDevice* fn(QStackedWidget*, QPoint*)
+void q_stackedwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3499,7 +3924,7 @@ void q_stackedwidget_on_redirected(void* self, QPaintDevice* (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPainter* q_stackedwidget_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3508,7 +3933,7 @@ QPainter* q_stackedwidget_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QPainter* q_stackedwidget_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3517,8 +3942,9 @@ QPainter* q_stackedwidget_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPainter* (*slot)() ```
-void q_stackedwidget_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QStackedWidget*
+/// @param callback QPainter* fn()
+void q_stackedwidget_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3526,7 +3952,8 @@ void q_stackedwidget_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QInputMethodEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QInputMethodEvent*
 void q_stackedwidget_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3535,7 +3962,8 @@ void q_stackedwidget_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QInputMethodEvent* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QInputMethodEvent*
 void q_stackedwidget_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3544,8 +3972,9 @@ void q_stackedwidget_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QInputMethodEvent*) ```
-void q_stackedwidget_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QInputMethodEvent*)
+void q_stackedwidget_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3553,7 +3982,8 @@ void q_stackedwidget_on_input_method_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_stackedwidget_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3562,7 +3992,8 @@ QVariant* q_stackedwidget_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QStackedWidget*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_stackedwidget_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3571,8 +4002,9 @@ QVariant* q_stackedwidget_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QVariant* (*slot)(QStackedWidget*, enum Qt__InputMethodQuery) ```
-void q_stackedwidget_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QStackedWidget*
+/// @param callback QVariant* fn(QStackedWidget*, enum Qt__InputMethodQuery)
+void q_stackedwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3580,7 +4012,8 @@ void q_stackedwidget_on_input_method_query(void* self, QVariant* (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool next ```
+/// @param self QStackedWidget*
+/// @param next bool
 bool q_stackedwidget_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3589,7 +4022,8 @@ bool q_stackedwidget_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool next ```
+/// @param self QStackedWidget*
+/// @param next bool
 bool q_stackedwidget_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3598,8 +4032,9 @@ bool q_stackedwidget_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)(QStackedWidget*, bool) ```
-void q_stackedwidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QStackedWidget*
+/// @param callback bool fn(QStackedWidget*, bool)
+void q_stackedwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3607,7 +4042,9 @@ void q_stackedwidget_on_focus_next_prev_child(void* self, bool (*slot)(void*, bo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QObject* watched, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_stackedwidget_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3616,7 +4053,9 @@ bool q_stackedwidget_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QObject* watched, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_stackedwidget_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3625,8 +4064,9 @@ bool q_stackedwidget_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)(QStackedWidget*, QObject*, QEvent*) ```
-void q_stackedwidget_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QStackedWidget*
+/// @param callback bool fn(QStackedWidget*, QObject*, QEvent*)
+void q_stackedwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3634,7 +4074,8 @@ void q_stackedwidget_on_event_filter(void* self, bool (*slot)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QTimerEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QTimerEvent*
 void q_stackedwidget_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3643,7 +4084,8 @@ void q_stackedwidget_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QTimerEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QTimerEvent*
 void q_stackedwidget_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3652,8 +4094,9 @@ void q_stackedwidget_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QTimerEvent*) ```
-void q_stackedwidget_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QTimerEvent*)
+void q_stackedwidget_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3661,7 +4104,8 @@ void q_stackedwidget_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QChildEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QChildEvent*
 void q_stackedwidget_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3670,7 +4114,8 @@ void q_stackedwidget_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QChildEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QChildEvent*
 void q_stackedwidget_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3679,8 +4124,9 @@ void q_stackedwidget_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QChildEvent*) ```
-void q_stackedwidget_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QChildEvent*)
+void q_stackedwidget_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3688,7 +4134,8 @@ void q_stackedwidget_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEvent*
 void q_stackedwidget_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3697,7 +4144,8 @@ void q_stackedwidget_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QEvent* event ```
+/// @param self QStackedWidget*
+/// @param event QEvent*
 void q_stackedwidget_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3706,8 +4154,9 @@ void q_stackedwidget_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QEvent*) ```
-void q_stackedwidget_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QEvent*)
+void q_stackedwidget_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3715,7 +4164,8 @@ void q_stackedwidget_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 void q_stackedwidget_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3724,7 +4174,8 @@ void q_stackedwidget_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 void q_stackedwidget_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3733,8 +4184,9 @@ void q_stackedwidget_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMetaMethod*) ```
-void q_stackedwidget_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMetaMethod*)
+void q_stackedwidget_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3742,7 +4194,8 @@ void q_stackedwidget_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 void q_stackedwidget_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3751,7 +4204,8 @@ void q_stackedwidget_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 void q_stackedwidget_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3760,8 +4214,9 @@ void q_stackedwidget_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QMetaMethod*) ```
-void q_stackedwidget_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QMetaMethod*)
+void q_stackedwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -3769,7 +4224,8 @@ void q_stackedwidget_on_disconnect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPainter* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPainter*
 void q_stackedwidget_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3778,7 +4234,8 @@ void q_stackedwidget_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QPainter* param1 ```
+/// @param self QStackedWidget*
+/// @param param1 QPainter*
 void q_stackedwidget_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -3787,8 +4244,9 @@ void q_stackedwidget_qbase_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, QPainter*) ```
-void q_stackedwidget_on_draw_frame(void* self, void (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, QPainter*)
+void q_stackedwidget_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3796,7 +4254,7 @@ void q_stackedwidget_on_draw_frame(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3805,7 +4263,7 @@ void q_stackedwidget_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3814,8 +4272,9 @@ void q_stackedwidget_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)() ```
-void q_stackedwidget_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QStackedWidget*
+/// @param callback void fn()
+void q_stackedwidget_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3823,7 +4282,7 @@ void q_stackedwidget_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_create(void* self);
 
 /// Inherited from QWidget
@@ -3832,7 +4291,7 @@ void q_stackedwidget_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3841,8 +4300,9 @@ void q_stackedwidget_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)() ```
-void q_stackedwidget_on_create(void* self, void (*slot)());
+/// @param self QStackedWidget*
+/// @param callback void fn()
+void q_stackedwidget_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3850,7 +4310,7 @@ void q_stackedwidget_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3859,7 +4319,7 @@ void q_stackedwidget_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3868,8 +4328,9 @@ void q_stackedwidget_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, void (*slot)() ```
-void q_stackedwidget_on_destroy(void* self, void (*slot)());
+/// @param self QStackedWidget*
+/// @param callback void fn()
+void q_stackedwidget_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3877,7 +4338,7 @@ void q_stackedwidget_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3886,7 +4347,7 @@ bool q_stackedwidget_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3895,8 +4356,9 @@ bool q_stackedwidget_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)() ```
-void q_stackedwidget_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QStackedWidget*
+/// @param callback bool fn()
+void q_stackedwidget_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3904,7 +4366,7 @@ void q_stackedwidget_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3913,7 +4375,7 @@ bool q_stackedwidget_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 bool q_stackedwidget_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3922,8 +4384,9 @@ bool q_stackedwidget_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)() ```
-void q_stackedwidget_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QStackedWidget*
+/// @param callback bool fn()
+void q_stackedwidget_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3931,7 +4394,7 @@ void q_stackedwidget_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QObject* q_stackedwidget_sender(void* self);
 
 /// Inherited from QObject
@@ -3940,7 +4403,7 @@ QObject* q_stackedwidget_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 QObject* q_stackedwidget_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3949,8 +4412,9 @@ QObject* q_stackedwidget_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QObject* (*slot)() ```
-void q_stackedwidget_on_sender(void* self, QObject* (*slot)());
+/// @param self QStackedWidget*
+/// @param callback QObject* fn()
+void q_stackedwidget_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3958,7 +4422,7 @@ void q_stackedwidget_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3967,7 +4431,7 @@ int32_t q_stackedwidget_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 int32_t q_stackedwidget_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3976,8 +4440,9 @@ int32_t q_stackedwidget_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)() ```
-void q_stackedwidget_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QStackedWidget*
+/// @param callback int32_t fn()
+void q_stackedwidget_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3985,7 +4450,8 @@ void q_stackedwidget_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, const char* signal ```
+/// @param self QStackedWidget*
+/// @param signal const char*
 int32_t q_stackedwidget_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3994,7 +4460,8 @@ int32_t q_stackedwidget_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, const char* signal ```
+/// @param self QStackedWidget*
+/// @param signal const char*
 int32_t q_stackedwidget_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4003,8 +4470,9 @@ int32_t q_stackedwidget_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, int32_t (*slot)(QStackedWidget*, const char*) ```
-void q_stackedwidget_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QStackedWidget*
+/// @param callback int32_t fn(QStackedWidget*, const char*)
+void q_stackedwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4012,7 +4480,8 @@ void q_stackedwidget_on_receivers(void* self, int32_t (*slot)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 bool q_stackedwidget_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4021,7 +4490,8 @@ bool q_stackedwidget_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, QMetaMethod* signal ```
+/// @param self QStackedWidget*
+/// @param signal QMetaMethod*
 bool q_stackedwidget_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4030,8 +4500,9 @@ bool q_stackedwidget_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, bool (*slot)(QStackedWidget*, QMetaMethod*) ```
-void q_stackedwidget_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QStackedWidget*
+/// @param callback bool fn(QStackedWidget*, QMetaMethod*)
+void q_stackedwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4039,7 +4510,9 @@ void q_stackedwidget_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QStackedWidget*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_stackedwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4048,7 +4521,9 @@ double q_stackedwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QStackedWidget*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_stackedwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4057,8 +4532,9 @@ double q_stackedwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStackedWidget* self, double (*slot)(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_stackedwidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QStackedWidget*
+/// @param callback double fn(QStackedWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_stackedwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4066,14 +4542,15 @@ void q_stackedwidget_on_get_decoded_metric_f(void* self, double (*slot)(void*, i
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QStackedWidget* self, void (*slot)(QStackedWidget*, const char*) ```
-void q_stackedwidget_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QStackedWidget*
+/// @param callback void fn(QStackedWidget*, const char*)
+void q_stackedwidget_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedwidget.html#dtor.QStackedWidget)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStackedWidget* self ```
+/// @param self QStackedWidget*
 void q_stackedwidget_delete(void* self);
 
 #endif

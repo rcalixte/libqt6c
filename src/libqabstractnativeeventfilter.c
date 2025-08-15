@@ -9,8 +9,8 @@ bool q_abstractnativeeventfilter_native_event_filter(void* self, const char* eve
     return QAbstractNativeEventFilter_NativeEventFilter((QAbstractNativeEventFilter*)self, qstring(eventType), message, result);
 }
 
-void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QAbstractNativeEventFilter_OnNativeEventFilter((QAbstractNativeEventFilter*)self, (intptr_t)slot);
+void q_abstractnativeeventfilter_on_native_event_filter(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QAbstractNativeEventFilter_OnNativeEventFilter((QAbstractNativeEventFilter*)self, (intptr_t)callback);
 }
 
 bool q_abstractnativeeventfilter_qbase_native_event_filter(void* self, const char* eventType, void* message, intptr_t* result) {

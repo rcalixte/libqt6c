@@ -62,12 +62,16 @@ const char** q_processenvironment_to_string_list(void* self) {
     libqt_list _arr = QProcessEnvironment_ToStringList((QProcessEnvironment*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_processenvironment_to_string_list");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -77,12 +81,16 @@ const char** q_processenvironment_keys(void* self) {
     libqt_list _arr = QProcessEnvironment_Keys((QProcessEnvironment*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_processenvironment_keys");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -127,8 +135,8 @@ int32_t q_process_metacall(void* self, int64_t param1, int param2, void* param3)
     return QProcess_Metacall((QProcess*)self, param1, param2, param3);
 }
 
-void q_process_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QProcess_OnMetacall((QProcess*)self, (intptr_t)slot);
+void q_process_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QProcess_OnMetacall((QProcess*)self, (intptr_t)callback);
 }
 
 int32_t q_process_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -162,8 +170,8 @@ bool q_process_open(void* self, int64_t mode) {
     return QProcess_Open((QProcess*)self, mode);
 }
 
-void q_process_on_open(void* self, bool (*slot)(void*, int64_t)) {
-    QProcess_OnOpen((QProcess*)self, (intptr_t)slot);
+void q_process_on_open(void* self, bool (*callback)(void*, int64_t)) {
+    QProcess_OnOpen((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_qbase_open(void* self, int64_t mode) {
@@ -185,12 +193,16 @@ const char** q_process_arguments(void* self) {
     libqt_list _arr = QProcess_Arguments((QProcess*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_arguments");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -198,12 +210,17 @@ const char** q_process_arguments(void* self) {
 
 void q_process_set_arguments(void* self, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_set_arguments");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_SetArguments((QProcess*)self, arguments_list);
+    free(arguments_qstr);
 }
 
 int64_t q_process_process_channel_mode(void* self) {
@@ -283,24 +300,33 @@ void q_process_set_working_directory(void* self, const char* dir) {
 
 void q_process_set_environment(void* self, const char* environment[]) {
     size_t environment_len = libqt_strv_length(environment);
-    libqt_string* environment_qstr = malloc(environment_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < environment_len; ++_i) {
-        environment_qstr[_i] = qstring(environment[_i]);
+    libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
+    if (environment_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_set_environment");
+        abort();
+    }
+    for (size_t i = 0; i < environment_len; ++i) {
+        environment_qstr[i] = qstring(environment[i]);
     }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
     QProcess_SetEnvironment((QProcess*)self, environment_list);
+    free(environment_qstr);
 }
 
 const char** q_process_environment(void* self) {
     libqt_list _arr = QProcess_Environment((QProcess*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_environment");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -334,8 +360,8 @@ bool q_process_wait_for_ready_read(void* self, int msecs) {
     return QProcess_WaitForReadyRead((QProcess*)self, msecs);
 }
 
-void q_process_on_wait_for_ready_read(void* self, bool (*slot)(void*, int)) {
-    QProcess_OnWaitForReadyRead((QProcess*)self, (intptr_t)slot);
+void q_process_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
+    QProcess_OnWaitForReadyRead((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_qbase_wait_for_ready_read(void* self, int msecs) {
@@ -346,8 +372,8 @@ bool q_process_wait_for_bytes_written(void* self, int msecs) {
     return QProcess_WaitForBytesWritten((QProcess*)self, msecs);
 }
 
-void q_process_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int)) {
-    QProcess_OnWaitForBytesWritten((QProcess*)self, (intptr_t)slot);
+void q_process_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
+    QProcess_OnWaitForBytesWritten((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_qbase_wait_for_bytes_written(void* self, int msecs) {
@@ -384,8 +410,8 @@ long long q_process_bytes_to_write(void* self) {
     return QProcess_BytesToWrite((QProcess*)self);
 }
 
-void q_process_on_bytes_to_write(void* self, long long (*slot)()) {
-    QProcess_OnBytesToWrite((QProcess*)self, (intptr_t)slot);
+void q_process_on_bytes_to_write(void* self, long long (*callback)()) {
+    QProcess_OnBytesToWrite((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_qbase_bytes_to_write(void* self) {
@@ -396,8 +422,8 @@ bool q_process_is_sequential(void* self) {
     return QProcess_IsSequential((QProcess*)self);
 }
 
-void q_process_on_is_sequential(void* self, bool (*slot)()) {
-    QProcess_OnIsSequential((QProcess*)self, (intptr_t)slot);
+void q_process_on_is_sequential(void* self, bool (*callback)()) {
+    QProcess_OnIsSequential((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_qbase_is_sequential(void* self) {
@@ -408,8 +434,8 @@ void q_process_close(void* self) {
     QProcess_Close((QProcess*)self);
 }
 
-void q_process_on_close(void* self, void (*slot)()) {
-    QProcess_OnClose((QProcess*)self, (intptr_t)slot);
+void q_process_on_close(void* self, void (*callback)()) {
+    QProcess_OnClose((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_qbase_close(void* self) {
@@ -428,12 +454,16 @@ const char** q_process_system_environment() {
     libqt_list _arr = QProcess_SystemEnvironment();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_system_environment");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -458,24 +488,24 @@ void q_process_finished(void* self, int exitCode) {
     QProcess_Finished((QProcess*)self, exitCode);
 }
 
-void q_process_on_finished(void* self, void (*slot)(void*, int)) {
-    QProcess_Connect_Finished((QProcess*)self, (intptr_t)slot);
+void q_process_on_finished(void* self, void (*callback)(void*, int)) {
+    QProcess_Connect_Finished((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_error_occurred(void* self, int64_t errorVal) {
     QProcess_ErrorOccurred((QProcess*)self, errorVal);
 }
 
-void q_process_on_error_occurred(void* self, void (*slot)(void*, int64_t)) {
-    QProcess_Connect_ErrorOccurred((QProcess*)self, (intptr_t)slot);
+void q_process_on_error_occurred(void* self, void (*callback)(void*, int64_t)) {
+    QProcess_Connect_ErrorOccurred((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_set_process_state(void* self, int64_t state) {
     QProcess_SetProcessState((QProcess*)self, state);
 }
 
-void q_process_on_set_process_state(void* self, void (*slot)(void*, int64_t)) {
-    QProcess_OnSetProcessState((QProcess*)self, (intptr_t)slot);
+void q_process_on_set_process_state(void* self, void (*callback)(void*, int64_t)) {
+    QProcess_OnSetProcessState((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_qbase_set_process_state(void* self, int64_t state) {
@@ -486,8 +516,8 @@ long long q_process_read_data(void* self, char* data, long long maxlen) {
     return QProcess_ReadData((QProcess*)self, data, maxlen);
 }
 
-void q_process_on_read_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QProcess_OnReadData((QProcess*)self, (intptr_t)slot);
+void q_process_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QProcess_OnReadData((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_qbase_read_data(void* self, char* data, long long maxlen) {
@@ -498,8 +528,8 @@ long long q_process_write_data(void* self, const char* data, long long lenVal) {
     return QProcess_WriteData((QProcess*)self, data, lenVal);
 }
 
-void q_process_on_write_data(void* self, long long (*slot)(void*, const char*, long long)) {
-    QProcess_OnWriteData((QProcess*)self, (intptr_t)slot);
+void q_process_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+    QProcess_OnWriteData((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_qbase_write_data(void* self, const char* data, long long lenVal) {
@@ -522,22 +552,32 @@ const char* q_process_tr3(const char* s, const char* c, int n) {
 
 void q_process_start22(void* self, const char* program, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_start22");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start22((QProcess*)self, qstring(program), arguments_list);
+    free(arguments_qstr);
 }
 
 void q_process_start3(void* self, const char* program, const char* arguments[], int64_t mode) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_start3");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
     QProcess_Start3((QProcess*)self, qstring(program), arguments_list, mode);
+    free(arguments_qstr);
 }
 
 void q_process_start1(void* self, int64_t mode) {
@@ -574,50 +614,74 @@ bool q_process_wait_for_finished1(void* self, int msecs) {
 
 int32_t q_process_execute2(const char* program, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_execute2");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QProcess_Execute2(qstring(program), arguments_list);
+    int32_t _out = QProcess_Execute2(qstring(program), arguments_list);
+    free(arguments_qstr);
+    return _out;
 }
 
 bool q_process_start_detached22(const char* program, const char* arguments[]) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_start_detached22");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QProcess_StartDetached22(qstring(program), arguments_list);
+    bool _out = QProcess_StartDetached22(qstring(program), arguments_list);
+    free(arguments_qstr);
+    return _out;
 }
 
 bool q_process_start_detached3(const char* program, const char* arguments[], const char* workingDirectory) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_start_detached3");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QProcess_StartDetached3(qstring(program), arguments_list, qstring(workingDirectory));
+    bool _out = QProcess_StartDetached3(qstring(program), arguments_list, qstring(workingDirectory));
+    free(arguments_qstr);
+    return _out;
 }
 
 bool q_process_start_detached4(const char* program, const char* arguments[], const char* workingDirectory, long long* pid) {
     size_t arguments_len = libqt_strv_length(arguments);
-    libqt_string* arguments_qstr = malloc(arguments_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < arguments_len; ++_i) {
-        arguments_qstr[_i] = qstring(arguments[_i]);
+    libqt_string* arguments_qstr = (libqt_string*)malloc(arguments_len * sizeof(libqt_string));
+    if (arguments_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_start_detached4");
+        abort();
+    }
+    for (size_t i = 0; i < arguments_len; ++i) {
+        arguments_qstr[i] = qstring(arguments[i]);
     }
     libqt_list arguments_list = qlist(arguments_qstr, arguments_len);
-    return QProcess_StartDetached4(qstring(program), arguments_list, qstring(workingDirectory), pid);
+    bool _out = QProcess_StartDetached4(qstring(program), arguments_list, qstring(workingDirectory), pid);
+    free(arguments_qstr);
+    return _out;
 }
 
 void q_process_finished2(void* self, int exitCode, int64_t exitStatus) {
     QProcess_Finished2((QProcess*)self, exitCode, exitStatus);
 }
 
-void q_process_on_finished2(void* self, void (*slot)(void*, int, int64_t)) {
-    QProcess_Connect_Finished2((QProcess*)self, (intptr_t)slot);
+void q_process_on_finished2(void* self, void (*callback)(void*, int, int64_t)) {
+    QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
 int64_t q_process_open_mode(void* self) {
@@ -763,48 +827,48 @@ void q_process_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_process_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_process_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_process_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_process_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_process_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_process_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_process_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_process_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_process_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_process_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_process_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_process_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_process_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_process_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_process_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_process_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_process_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_process_read_line1(void* self, long long maxlen) {
@@ -918,12 +982,16 @@ const char** q_process_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_process_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -941,8 +1009,8 @@ void q_process_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_process_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_process_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_process_parent(void* self) {
@@ -977,8 +1045,8 @@ void q_process_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_process_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_process_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 long long q_process_pos(void* self) {
@@ -989,8 +1057,8 @@ long long q_process_qbase_pos(void* self) {
     return QProcess_QBasePos((QProcess*)self);
 }
 
-void q_process_on_pos(void* self, long long (*slot)()) {
-    QProcess_OnPos((QProcess*)self, (intptr_t)slot);
+void q_process_on_pos(void* self, long long (*callback)()) {
+    QProcess_OnPos((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_size(void* self) {
@@ -1001,8 +1069,8 @@ long long q_process_qbase_size(void* self) {
     return QProcess_QBaseSize((QProcess*)self);
 }
 
-void q_process_on_size(void* self, long long (*slot)()) {
-    QProcess_OnSize((QProcess*)self, (intptr_t)slot);
+void q_process_on_size(void* self, long long (*callback)()) {
+    QProcess_OnSize((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_seek(void* self, long long pos) {
@@ -1013,8 +1081,8 @@ bool q_process_qbase_seek(void* self, long long pos) {
     return QProcess_QBaseSeek((QProcess*)self, pos);
 }
 
-void q_process_on_seek(void* self, bool (*slot)(void*, long long)) {
-    QProcess_OnSeek((QProcess*)self, (intptr_t)slot);
+void q_process_on_seek(void* self, bool (*callback)(void*, long long)) {
+    QProcess_OnSeek((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_at_end(void* self) {
@@ -1025,8 +1093,8 @@ bool q_process_qbase_at_end(void* self) {
     return QProcess_QBaseAtEnd((QProcess*)self);
 }
 
-void q_process_on_at_end(void* self, bool (*slot)()) {
-    QProcess_OnAtEnd((QProcess*)self, (intptr_t)slot);
+void q_process_on_at_end(void* self, bool (*callback)()) {
+    QProcess_OnAtEnd((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_reset(void* self) {
@@ -1037,8 +1105,8 @@ bool q_process_qbase_reset(void* self) {
     return QProcess_QBaseReset((QProcess*)self);
 }
 
-void q_process_on_reset(void* self, bool (*slot)()) {
-    QProcess_OnReset((QProcess*)self, (intptr_t)slot);
+void q_process_on_reset(void* self, bool (*callback)()) {
+    QProcess_OnReset((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_bytes_available(void* self) {
@@ -1049,8 +1117,8 @@ long long q_process_qbase_bytes_available(void* self) {
     return QProcess_QBaseBytesAvailable((QProcess*)self);
 }
 
-void q_process_on_bytes_available(void* self, long long (*slot)()) {
-    QProcess_OnBytesAvailable((QProcess*)self, (intptr_t)slot);
+void q_process_on_bytes_available(void* self, long long (*callback)()) {
+    QProcess_OnBytesAvailable((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_can_read_line(void* self) {
@@ -1061,8 +1129,8 @@ bool q_process_qbase_can_read_line(void* self) {
     return QProcess_QBaseCanReadLine((QProcess*)self);
 }
 
-void q_process_on_can_read_line(void* self, bool (*slot)()) {
-    QProcess_OnCanReadLine((QProcess*)self, (intptr_t)slot);
+void q_process_on_can_read_line(void* self, bool (*callback)()) {
+    QProcess_OnCanReadLine((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_read_line_data(void* self, char* data, long long maxlen) {
@@ -1073,8 +1141,8 @@ long long q_process_qbase_read_line_data(void* self, char* data, long long maxle
     return QProcess_QBaseReadLineData((QProcess*)self, data, maxlen);
 }
 
-void q_process_on_read_line_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QProcess_OnReadLineData((QProcess*)self, (intptr_t)slot);
+void q_process_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QProcess_OnReadLineData((QProcess*)self, (intptr_t)callback);
 }
 
 long long q_process_skip_data(void* self, long long maxSize) {
@@ -1085,8 +1153,8 @@ long long q_process_qbase_skip_data(void* self, long long maxSize) {
     return QProcess_QBaseSkipData((QProcess*)self, maxSize);
 }
 
-void q_process_on_skip_data(void* self, long long (*slot)(void*, long long)) {
-    QProcess_OnSkipData((QProcess*)self, (intptr_t)slot);
+void q_process_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+    QProcess_OnSkipData((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_event(void* self, void* event) {
@@ -1097,8 +1165,8 @@ bool q_process_qbase_event(void* self, void* event) {
     return QProcess_QBaseEvent((QProcess*)self, (QEvent*)event);
 }
 
-void q_process_on_event(void* self, bool (*slot)(void*, void*)) {
-    QProcess_OnEvent((QProcess*)self, (intptr_t)slot);
+void q_process_on_event(void* self, bool (*callback)(void*, void*)) {
+    QProcess_OnEvent((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_event_filter(void* self, void* watched, void* event) {
@@ -1109,8 +1177,8 @@ bool q_process_qbase_event_filter(void* self, void* watched, void* event) {
     return QProcess_QBaseEventFilter((QProcess*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_process_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QProcess_OnEventFilter((QProcess*)self, (intptr_t)slot);
+void q_process_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QProcess_OnEventFilter((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_timer_event(void* self, void* event) {
@@ -1121,8 +1189,8 @@ void q_process_qbase_timer_event(void* self, void* event) {
     QProcess_QBaseTimerEvent((QProcess*)self, (QTimerEvent*)event);
 }
 
-void q_process_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QProcess_OnTimerEvent((QProcess*)self, (intptr_t)slot);
+void q_process_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QProcess_OnTimerEvent((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_child_event(void* self, void* event) {
@@ -1133,8 +1201,8 @@ void q_process_qbase_child_event(void* self, void* event) {
     QProcess_QBaseChildEvent((QProcess*)self, (QChildEvent*)event);
 }
 
-void q_process_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QProcess_OnChildEvent((QProcess*)self, (intptr_t)slot);
+void q_process_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QProcess_OnChildEvent((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_custom_event(void* self, void* event) {
@@ -1145,8 +1213,8 @@ void q_process_qbase_custom_event(void* self, void* event) {
     QProcess_QBaseCustomEvent((QProcess*)self, (QEvent*)event);
 }
 
-void q_process_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QProcess_OnCustomEvent((QProcess*)self, (intptr_t)slot);
+void q_process_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QProcess_OnCustomEvent((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_connect_notify(void* self, void* signal) {
@@ -1157,8 +1225,8 @@ void q_process_qbase_connect_notify(void* self, void* signal) {
     QProcess_QBaseConnectNotify((QProcess*)self, (QMetaMethod*)signal);
 }
 
-void q_process_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QProcess_OnConnectNotify((QProcess*)self, (intptr_t)slot);
+void q_process_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QProcess_OnConnectNotify((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_disconnect_notify(void* self, void* signal) {
@@ -1169,8 +1237,8 @@ void q_process_qbase_disconnect_notify(void* self, void* signal) {
     QProcess_QBaseDisconnectNotify((QProcess*)self, (QMetaMethod*)signal);
 }
 
-void q_process_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QProcess_OnDisconnectNotify((QProcess*)self, (intptr_t)slot);
+void q_process_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QProcess_OnDisconnectNotify((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_set_open_mode(void* self, int64_t openMode) {
@@ -1181,8 +1249,8 @@ void q_process_qbase_set_open_mode(void* self, int64_t openMode) {
     QProcess_QBaseSetOpenMode((QProcess*)self, openMode);
 }
 
-void q_process_on_set_open_mode(void* self, void (*slot)(void*, int64_t)) {
-    QProcess_OnSetOpenMode((QProcess*)self, (intptr_t)slot);
+void q_process_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+    QProcess_OnSetOpenMode((QProcess*)self, (intptr_t)callback);
 }
 
 void q_process_set_error_string(void* self, const char* errorString) {
@@ -1193,8 +1261,8 @@ void q_process_qbase_set_error_string(void* self, const char* errorString) {
     QProcess_QBaseSetErrorString((QProcess*)self, qstring(errorString));
 }
 
-void q_process_on_set_error_string(void* self, void (*slot)(void*, const char*)) {
-    QProcess_OnSetErrorString((QProcess*)self, (intptr_t)slot);
+void q_process_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
+    QProcess_OnSetErrorString((QProcess*)self, (intptr_t)callback);
 }
 
 QObject* q_process_sender(void* self) {
@@ -1205,8 +1273,8 @@ QObject* q_process_qbase_sender(void* self) {
     return QProcess_QBaseSender((QProcess*)self);
 }
 
-void q_process_on_sender(void* self, QObject* (*slot)()) {
-    QProcess_OnSender((QProcess*)self, (intptr_t)slot);
+void q_process_on_sender(void* self, QObject* (*callback)()) {
+    QProcess_OnSender((QProcess*)self, (intptr_t)callback);
 }
 
 int32_t q_process_sender_signal_index(void* self) {
@@ -1217,8 +1285,8 @@ int32_t q_process_qbase_sender_signal_index(void* self) {
     return QProcess_QBaseSenderSignalIndex((QProcess*)self);
 }
 
-void q_process_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QProcess_OnSenderSignalIndex((QProcess*)self, (intptr_t)slot);
+void q_process_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QProcess_OnSenderSignalIndex((QProcess*)self, (intptr_t)callback);
 }
 
 int32_t q_process_receivers(void* self, const char* signal) {
@@ -1229,8 +1297,8 @@ int32_t q_process_qbase_receivers(void* self, const char* signal) {
     return QProcess_QBaseReceivers((QProcess*)self, signal);
 }
 
-void q_process_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QProcess_OnReceivers((QProcess*)self, (intptr_t)slot);
+void q_process_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QProcess_OnReceivers((QProcess*)self, (intptr_t)callback);
 }
 
 bool q_process_is_signal_connected(void* self, void* signal) {
@@ -1241,28 +1309,28 @@ bool q_process_qbase_is_signal_connected(void* self, void* signal) {
     return QProcess_QBaseIsSignalConnected((QProcess*)self, (QMetaMethod*)signal);
 }
 
-void q_process_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QProcess_OnIsSignalConnected((QProcess*)self, (intptr_t)slot);
+void q_process_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QProcess_OnIsSignalConnected((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_started(void* self, void (*slot)(void*)) {
-    QProcess_Connect_Started((QProcess*)self, (intptr_t)slot);
+void q_process_on_started(void* self, void (*callback)(void*)) {
+    QProcess_Connect_Started((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_state_changed(void* self, void (*slot)(void*, int64_t)) {
-    QProcess_Connect_StateChanged((QProcess*)self, (intptr_t)slot);
+void q_process_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+    QProcess_Connect_StateChanged((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_ready_read_standard_output(void* self, void (*slot)(void*)) {
-    QProcess_Connect_ReadyReadStandardOutput((QProcess*)self, (intptr_t)slot);
+void q_process_on_ready_read_standard_output(void* self, void (*callback)(void*)) {
+    QProcess_Connect_ReadyReadStandardOutput((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_ready_read_standard_error(void* self, void (*slot)(void*)) {
-    QProcess_Connect_ReadyReadStandardError((QProcess*)self, (intptr_t)slot);
+void q_process_on_ready_read_standard_error(void* self, void (*callback)(void*)) {
+    QProcess_Connect_ReadyReadStandardError((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_process_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_process_delete(void* self) {

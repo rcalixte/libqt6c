@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,84 +15,100 @@
 
 /// q_hstspolicy_new constructs a new QHstsPolicy object.
 ///
-///
 QHstsPolicy* q_hstspolicy_new();
 
 /// q_hstspolicy_new2 constructs a new QHstsPolicy object.
 ///
-/// ``` QDateTime* expiry, int flags, const char* host ```
+/// @param expiry QDateTime*
+/// @param flags flag of enum QHstsPolicy__PolicyFlag
+/// @param host const char*
 QHstsPolicy* q_hstspolicy_new2(void* expiry, int64_t flags, const char* host);
 
 /// q_hstspolicy_new3 constructs a new QHstsPolicy object.
 ///
-/// ``` QHstsPolicy* rhs ```
+/// @param rhs QHstsPolicy*
 QHstsPolicy* q_hstspolicy_new3(void* rhs);
 
 /// q_hstspolicy_new4 constructs a new QHstsPolicy object.
 ///
-/// ``` QDateTime* expiry, int flags, const char* host, enum QUrl__ParsingMode mode ```
+/// @param expiry QDateTime*
+/// @param flags flag of enum QHstsPolicy__PolicyFlag
+/// @param host const char*
+/// @param mode enum QUrl__ParsingMode
 QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#operator-eq)
 ///
-/// ``` QHstsPolicy* self, QHstsPolicy* rhs ```
+/// @param self QHstsPolicy*
+/// @param rhs QHstsPolicy*
 void q_hstspolicy_operator_assign(void* self, void* rhs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#swap)
 ///
-/// ``` QHstsPolicy* self, QHstsPolicy* other ```
+/// @param self QHstsPolicy*
+/// @param other QHstsPolicy*
 void q_hstspolicy_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#setHost)
 ///
-/// ``` QHstsPolicy* self, const char* host ```
+/// @param self QHstsPolicy*
+/// @param host const char*
 void q_hstspolicy_set_host(void* self, const char* host);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#host)
 ///
-/// ``` QHstsPolicy* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHstsPolicy*
 const char* q_hstspolicy_host(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#setExpiry)
 ///
-/// ``` QHstsPolicy* self, QDateTime* expiry ```
+/// @param self QHstsPolicy*
+/// @param expiry QDateTime*
 void q_hstspolicy_set_expiry(void* self, void* expiry);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#expiry)
 ///
-/// ``` QHstsPolicy* self ```
+/// @param self QHstsPolicy*
 QDateTime* q_hstspolicy_expiry(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#setIncludesSubDomains)
 ///
-/// ``` QHstsPolicy* self, bool include ```
+/// @param self QHstsPolicy*
+/// @param include bool
 void q_hstspolicy_set_includes_sub_domains(void* self, bool include);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#includesSubDomains)
 ///
-/// ``` QHstsPolicy* self ```
+/// @param self QHstsPolicy*
 bool q_hstspolicy_includes_sub_domains(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#isExpired)
 ///
-/// ``` QHstsPolicy* self ```
+/// @param self QHstsPolicy*
 bool q_hstspolicy_is_expired(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#setHost)
 ///
-/// ``` QHstsPolicy* self, const char* host, enum QUrl__ParsingMode mode ```
+/// @param self QHstsPolicy*
+/// @param host const char*
+/// @param mode enum QUrl__ParsingMode
 void q_hstspolicy_set_host2(void* self, const char* host, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#host)
 ///
-/// ``` QHstsPolicy* self, uint32_t options ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHstsPolicy*
+/// @param options flag of enum QUrl__ComponentFormattingOption
 const char* q_hstspolicy_host1(void* self, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#dtor.QHstsPolicy)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHstsPolicy* self ```
+/// @param self QHstsPolicy*
 void q_hstspolicy_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhstspolicy.html#types

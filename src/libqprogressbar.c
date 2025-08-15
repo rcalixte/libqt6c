@@ -34,8 +34,8 @@ int32_t q_progressbar_metacall(void* self, int64_t param1, int param2, void* par
     return QProgressBar_Metacall((QProgressBar*)self, param1, param2, param3);
 }
 
-void q_progressbar_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QProgressBar_OnMetacall((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QProgressBar_OnMetacall((QProgressBar*)self, (intptr_t)callback);
 }
 
 int32_t q_progressbar_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -68,8 +68,8 @@ const char* q_progressbar_text(void* self) {
     return _ret;
 }
 
-void q_progressbar_on_text(void* self, const char* (*slot)()) {
-    QProgressBar_OnText((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_text(void* self, const char* (*callback)()) {
+    QProgressBar_OnText((QProgressBar*)self, (intptr_t)callback);
 }
 
 const char* q_progressbar_qbase_text(void* self) {
@@ -99,8 +99,8 @@ QSize* q_progressbar_size_hint(void* self) {
     return QProgressBar_SizeHint((QProgressBar*)self);
 }
 
-void q_progressbar_on_size_hint(void* self, QSize* (*slot)()) {
-    QProgressBar_OnSizeHint((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_size_hint(void* self, QSize* (*callback)()) {
+    QProgressBar_OnSizeHint((QProgressBar*)self, (intptr_t)callback);
 }
 
 QSize* q_progressbar_qbase_size_hint(void* self) {
@@ -111,8 +111,8 @@ QSize* q_progressbar_minimum_size_hint(void* self) {
     return QProgressBar_MinimumSizeHint((QProgressBar*)self);
 }
 
-void q_progressbar_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QProgressBar_OnMinimumSizeHint((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QProgressBar_OnMinimumSizeHint((QProgressBar*)self, (intptr_t)callback);
 }
 
 QSize* q_progressbar_qbase_minimum_size_hint(void* self) {
@@ -182,16 +182,16 @@ void q_progressbar_value_changed(void* self, int value) {
     QProgressBar_ValueChanged((QProgressBar*)self, value);
 }
 
-void q_progressbar_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QProgressBar_Connect_ValueChanged((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QProgressBar_Connect_ValueChanged((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_event(void* self, void* e) {
     return QProgressBar_Event((QProgressBar*)self, (QEvent*)e);
 }
 
-void q_progressbar_on_event(void* self, bool (*slot)(void*, void*)) {
-    QProgressBar_OnEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_event(void* self, bool (*callback)(void*, void*)) {
+    QProgressBar_OnEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_qbase_event(void* self, void* e) {
@@ -202,8 +202,8 @@ void q_progressbar_paint_event(void* self, void* param1) {
     QProgressBar_PaintEvent((QProgressBar*)self, (QPaintEvent*)param1);
 }
 
-void q_progressbar_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnPaintEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnPaintEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_qbase_paint_event(void* self, void* param1) {
@@ -214,8 +214,8 @@ void q_progressbar_init_style_option(void* self, void* option) {
     QProgressBar_InitStyleOption((QProgressBar*)self, (QStyleOptionProgressBar*)option);
 }
 
-void q_progressbar_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnInitStyleOption((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnInitStyleOption((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_qbase_init_style_option(void* self, void* option) {
@@ -1262,32 +1262,32 @@ void q_progressbar_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_progressbar_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_progressbar_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressbar_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_progressbar_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_progressbar_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressbar_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_progressbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_progressbar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressbar_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_progressbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_progressbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_progressbar_input_method_hints(void* self) {
@@ -1458,12 +1458,16 @@ const char** q_progressbar_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_progressbar_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1481,8 +1485,8 @@ void q_progressbar_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_progressbar_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_progressbar_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_progressbar_parent(void* self) {
@@ -1517,8 +1521,8 @@ void q_progressbar_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_progressbar_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_progressbar_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_painting_active(void* self) {
@@ -1581,8 +1585,8 @@ int32_t q_progressbar_qbase_dev_type(void* self) {
     return QProgressBar_QBaseDevType((QProgressBar*)self);
 }
 
-void q_progressbar_on_dev_type(void* self, int32_t (*slot)()) {
-    QProgressBar_OnDevType((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_dev_type(void* self, int32_t (*callback)()) {
+    QProgressBar_OnDevType((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_set_visible(void* self, bool visible) {
@@ -1593,8 +1597,8 @@ void q_progressbar_qbase_set_visible(void* self, bool visible) {
     QProgressBar_QBaseSetVisible((QProgressBar*)self, visible);
 }
 
-void q_progressbar_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QProgressBar_OnSetVisible((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QProgressBar_OnSetVisible((QProgressBar*)self, (intptr_t)callback);
 }
 
 int32_t q_progressbar_height_for_width(void* self, int param1) {
@@ -1605,8 +1609,8 @@ int32_t q_progressbar_qbase_height_for_width(void* self, int param1) {
     return QProgressBar_QBaseHeightForWidth((QProgressBar*)self, param1);
 }
 
-void q_progressbar_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QProgressBar_OnHeightForWidth((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QProgressBar_OnHeightForWidth((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_has_height_for_width(void* self) {
@@ -1617,8 +1621,8 @@ bool q_progressbar_qbase_has_height_for_width(void* self) {
     return QProgressBar_QBaseHasHeightForWidth((QProgressBar*)self);
 }
 
-void q_progressbar_on_has_height_for_width(void* self, bool (*slot)()) {
-    QProgressBar_OnHasHeightForWidth((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_has_height_for_width(void* self, bool (*callback)()) {
+    QProgressBar_OnHasHeightForWidth((QProgressBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_progressbar_paint_engine(void* self) {
@@ -1629,8 +1633,8 @@ QPaintEngine* q_progressbar_qbase_paint_engine(void* self) {
     return QProgressBar_QBasePaintEngine((QProgressBar*)self);
 }
 
-void q_progressbar_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QProgressBar_OnPaintEngine((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QProgressBar_OnPaintEngine((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_mouse_press_event(void* self, void* event) {
@@ -1641,8 +1645,8 @@ void q_progressbar_qbase_mouse_press_event(void* self, void* event) {
     QProgressBar_QBaseMousePressEvent((QProgressBar*)self, (QMouseEvent*)event);
 }
 
-void q_progressbar_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnMousePressEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnMousePressEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_mouse_release_event(void* self, void* event) {
@@ -1653,8 +1657,8 @@ void q_progressbar_qbase_mouse_release_event(void* self, void* event) {
     QProgressBar_QBaseMouseReleaseEvent((QProgressBar*)self, (QMouseEvent*)event);
 }
 
-void q_progressbar_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnMouseReleaseEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnMouseReleaseEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_mouse_double_click_event(void* self, void* event) {
@@ -1665,8 +1669,8 @@ void q_progressbar_qbase_mouse_double_click_event(void* self, void* event) {
     QProgressBar_QBaseMouseDoubleClickEvent((QProgressBar*)self, (QMouseEvent*)event);
 }
 
-void q_progressbar_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnMouseDoubleClickEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnMouseDoubleClickEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_mouse_move_event(void* self, void* event) {
@@ -1677,8 +1681,8 @@ void q_progressbar_qbase_mouse_move_event(void* self, void* event) {
     QProgressBar_QBaseMouseMoveEvent((QProgressBar*)self, (QMouseEvent*)event);
 }
 
-void q_progressbar_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnMouseMoveEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnMouseMoveEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_wheel_event(void* self, void* event) {
@@ -1689,8 +1693,8 @@ void q_progressbar_qbase_wheel_event(void* self, void* event) {
     QProgressBar_QBaseWheelEvent((QProgressBar*)self, (QWheelEvent*)event);
 }
 
-void q_progressbar_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnWheelEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnWheelEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_key_press_event(void* self, void* event) {
@@ -1701,8 +1705,8 @@ void q_progressbar_qbase_key_press_event(void* self, void* event) {
     QProgressBar_QBaseKeyPressEvent((QProgressBar*)self, (QKeyEvent*)event);
 }
 
-void q_progressbar_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnKeyPressEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnKeyPressEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_key_release_event(void* self, void* event) {
@@ -1713,8 +1717,8 @@ void q_progressbar_qbase_key_release_event(void* self, void* event) {
     QProgressBar_QBaseKeyReleaseEvent((QProgressBar*)self, (QKeyEvent*)event);
 }
 
-void q_progressbar_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnKeyReleaseEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnKeyReleaseEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_focus_in_event(void* self, void* event) {
@@ -1725,8 +1729,8 @@ void q_progressbar_qbase_focus_in_event(void* self, void* event) {
     QProgressBar_QBaseFocusInEvent((QProgressBar*)self, (QFocusEvent*)event);
 }
 
-void q_progressbar_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnFocusInEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnFocusInEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_focus_out_event(void* self, void* event) {
@@ -1737,8 +1741,8 @@ void q_progressbar_qbase_focus_out_event(void* self, void* event) {
     QProgressBar_QBaseFocusOutEvent((QProgressBar*)self, (QFocusEvent*)event);
 }
 
-void q_progressbar_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnFocusOutEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnFocusOutEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_enter_event(void* self, void* event) {
@@ -1749,8 +1753,8 @@ void q_progressbar_qbase_enter_event(void* self, void* event) {
     QProgressBar_QBaseEnterEvent((QProgressBar*)self, (QEnterEvent*)event);
 }
 
-void q_progressbar_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnEnterEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnEnterEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_leave_event(void* self, void* event) {
@@ -1761,8 +1765,8 @@ void q_progressbar_qbase_leave_event(void* self, void* event) {
     QProgressBar_QBaseLeaveEvent((QProgressBar*)self, (QEvent*)event);
 }
 
-void q_progressbar_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnLeaveEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnLeaveEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_move_event(void* self, void* event) {
@@ -1773,8 +1777,8 @@ void q_progressbar_qbase_move_event(void* self, void* event) {
     QProgressBar_QBaseMoveEvent((QProgressBar*)self, (QMoveEvent*)event);
 }
 
-void q_progressbar_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnMoveEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnMoveEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_resize_event(void* self, void* event) {
@@ -1785,8 +1789,8 @@ void q_progressbar_qbase_resize_event(void* self, void* event) {
     QProgressBar_QBaseResizeEvent((QProgressBar*)self, (QResizeEvent*)event);
 }
 
-void q_progressbar_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnResizeEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnResizeEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_close_event(void* self, void* event) {
@@ -1797,8 +1801,8 @@ void q_progressbar_qbase_close_event(void* self, void* event) {
     QProgressBar_QBaseCloseEvent((QProgressBar*)self, (QCloseEvent*)event);
 }
 
-void q_progressbar_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnCloseEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnCloseEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_context_menu_event(void* self, void* event) {
@@ -1809,8 +1813,8 @@ void q_progressbar_qbase_context_menu_event(void* self, void* event) {
     QProgressBar_QBaseContextMenuEvent((QProgressBar*)self, (QContextMenuEvent*)event);
 }
 
-void q_progressbar_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnContextMenuEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnContextMenuEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_tablet_event(void* self, void* event) {
@@ -1821,8 +1825,8 @@ void q_progressbar_qbase_tablet_event(void* self, void* event) {
     QProgressBar_QBaseTabletEvent((QProgressBar*)self, (QTabletEvent*)event);
 }
 
-void q_progressbar_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnTabletEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnTabletEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_action_event(void* self, void* event) {
@@ -1833,8 +1837,8 @@ void q_progressbar_qbase_action_event(void* self, void* event) {
     QProgressBar_QBaseActionEvent((QProgressBar*)self, (QActionEvent*)event);
 }
 
-void q_progressbar_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnActionEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnActionEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_drag_enter_event(void* self, void* event) {
@@ -1845,8 +1849,8 @@ void q_progressbar_qbase_drag_enter_event(void* self, void* event) {
     QProgressBar_QBaseDragEnterEvent((QProgressBar*)self, (QDragEnterEvent*)event);
 }
 
-void q_progressbar_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnDragEnterEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnDragEnterEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_drag_move_event(void* self, void* event) {
@@ -1857,8 +1861,8 @@ void q_progressbar_qbase_drag_move_event(void* self, void* event) {
     QProgressBar_QBaseDragMoveEvent((QProgressBar*)self, (QDragMoveEvent*)event);
 }
 
-void q_progressbar_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnDragMoveEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnDragMoveEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_drag_leave_event(void* self, void* event) {
@@ -1869,8 +1873,8 @@ void q_progressbar_qbase_drag_leave_event(void* self, void* event) {
     QProgressBar_QBaseDragLeaveEvent((QProgressBar*)self, (QDragLeaveEvent*)event);
 }
 
-void q_progressbar_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnDragLeaveEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnDragLeaveEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_drop_event(void* self, void* event) {
@@ -1881,8 +1885,8 @@ void q_progressbar_qbase_drop_event(void* self, void* event) {
     QProgressBar_QBaseDropEvent((QProgressBar*)self, (QDropEvent*)event);
 }
 
-void q_progressbar_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnDropEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnDropEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_show_event(void* self, void* event) {
@@ -1893,8 +1897,8 @@ void q_progressbar_qbase_show_event(void* self, void* event) {
     QProgressBar_QBaseShowEvent((QProgressBar*)self, (QShowEvent*)event);
 }
 
-void q_progressbar_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnShowEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnShowEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_hide_event(void* self, void* event) {
@@ -1905,8 +1909,8 @@ void q_progressbar_qbase_hide_event(void* self, void* event) {
     QProgressBar_QBaseHideEvent((QProgressBar*)self, (QHideEvent*)event);
 }
 
-void q_progressbar_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnHideEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnHideEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1917,8 +1921,8 @@ bool q_progressbar_qbase_native_event(void* self, const char* eventType, void* m
     return QProgressBar_QBaseNativeEvent((QProgressBar*)self, qstring(eventType), message, result);
 }
 
-void q_progressbar_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QProgressBar_OnNativeEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QProgressBar_OnNativeEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_change_event(void* self, void* param1) {
@@ -1929,8 +1933,8 @@ void q_progressbar_qbase_change_event(void* self, void* param1) {
     QProgressBar_QBaseChangeEvent((QProgressBar*)self, (QEvent*)param1);
 }
 
-void q_progressbar_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnChangeEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnChangeEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 int32_t q_progressbar_metric(void* self, int64_t param1) {
@@ -1941,8 +1945,8 @@ int32_t q_progressbar_qbase_metric(void* self, int64_t param1) {
     return QProgressBar_QBaseMetric((QProgressBar*)self, param1);
 }
 
-void q_progressbar_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QProgressBar_OnMetric((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QProgressBar_OnMetric((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_init_painter(void* self, void* painter) {
@@ -1953,8 +1957,8 @@ void q_progressbar_qbase_init_painter(void* self, void* painter) {
     QProgressBar_QBaseInitPainter((QProgressBar*)self, (QPainter*)painter);
 }
 
-void q_progressbar_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnInitPainter((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnInitPainter((QProgressBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_progressbar_redirected(void* self, void* offset) {
@@ -1965,8 +1969,8 @@ QPaintDevice* q_progressbar_qbase_redirected(void* self, void* offset) {
     return QProgressBar_QBaseRedirected((QProgressBar*)self, (QPoint*)offset);
 }
 
-void q_progressbar_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QProgressBar_OnRedirected((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QProgressBar_OnRedirected((QProgressBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_progressbar_shared_painter(void* self) {
@@ -1977,8 +1981,8 @@ QPainter* q_progressbar_qbase_shared_painter(void* self) {
     return QProgressBar_QBaseSharedPainter((QProgressBar*)self);
 }
 
-void q_progressbar_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QProgressBar_OnSharedPainter((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QProgressBar_OnSharedPainter((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_input_method_event(void* self, void* param1) {
@@ -1989,8 +1993,8 @@ void q_progressbar_qbase_input_method_event(void* self, void* param1) {
     QProgressBar_QBaseInputMethodEvent((QProgressBar*)self, (QInputMethodEvent*)param1);
 }
 
-void q_progressbar_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnInputMethodEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnInputMethodEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 QVariant* q_progressbar_input_method_query(void* self, int64_t param1) {
@@ -2001,8 +2005,8 @@ QVariant* q_progressbar_qbase_input_method_query(void* self, int64_t param1) {
     return QProgressBar_QBaseInputMethodQuery((QProgressBar*)self, param1);
 }
 
-void q_progressbar_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QProgressBar_OnInputMethodQuery((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QProgressBar_OnInputMethodQuery((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_focus_next_prev_child(void* self, bool next) {
@@ -2013,8 +2017,8 @@ bool q_progressbar_qbase_focus_next_prev_child(void* self, bool next) {
     return QProgressBar_QBaseFocusNextPrevChild((QProgressBar*)self, next);
 }
 
-void q_progressbar_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QProgressBar_OnFocusNextPrevChild((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QProgressBar_OnFocusNextPrevChild((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_event_filter(void* self, void* watched, void* event) {
@@ -2025,8 +2029,8 @@ bool q_progressbar_qbase_event_filter(void* self, void* watched, void* event) {
     return QProgressBar_QBaseEventFilter((QProgressBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_progressbar_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QProgressBar_OnEventFilter((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QProgressBar_OnEventFilter((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_timer_event(void* self, void* event) {
@@ -2037,8 +2041,8 @@ void q_progressbar_qbase_timer_event(void* self, void* event) {
     QProgressBar_QBaseTimerEvent((QProgressBar*)self, (QTimerEvent*)event);
 }
 
-void q_progressbar_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnTimerEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnTimerEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_child_event(void* self, void* event) {
@@ -2049,8 +2053,8 @@ void q_progressbar_qbase_child_event(void* self, void* event) {
     QProgressBar_QBaseChildEvent((QProgressBar*)self, (QChildEvent*)event);
 }
 
-void q_progressbar_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnChildEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnChildEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_custom_event(void* self, void* event) {
@@ -2061,8 +2065,8 @@ void q_progressbar_qbase_custom_event(void* self, void* event) {
     QProgressBar_QBaseCustomEvent((QProgressBar*)self, (QEvent*)event);
 }
 
-void q_progressbar_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnCustomEvent((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnCustomEvent((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_connect_notify(void* self, void* signal) {
@@ -2073,8 +2077,8 @@ void q_progressbar_qbase_connect_notify(void* self, void* signal) {
     QProgressBar_QBaseConnectNotify((QProgressBar*)self, (QMetaMethod*)signal);
 }
 
-void q_progressbar_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnConnectNotify((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnConnectNotify((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_disconnect_notify(void* self, void* signal) {
@@ -2085,8 +2089,8 @@ void q_progressbar_qbase_disconnect_notify(void* self, void* signal) {
     QProgressBar_QBaseDisconnectNotify((QProgressBar*)self, (QMetaMethod*)signal);
 }
 
-void q_progressbar_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QProgressBar_OnDisconnectNotify((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QProgressBar_OnDisconnectNotify((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_update_micro_focus(void* self) {
@@ -2097,8 +2101,8 @@ void q_progressbar_qbase_update_micro_focus(void* self) {
     QProgressBar_QBaseUpdateMicroFocus((QProgressBar*)self);
 }
 
-void q_progressbar_on_update_micro_focus(void* self, void (*slot)()) {
-    QProgressBar_OnUpdateMicroFocus((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_update_micro_focus(void* self, void (*callback)()) {
+    QProgressBar_OnUpdateMicroFocus((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_create(void* self) {
@@ -2109,8 +2113,8 @@ void q_progressbar_qbase_create(void* self) {
     QProgressBar_QBaseCreate((QProgressBar*)self);
 }
 
-void q_progressbar_on_create(void* self, void (*slot)()) {
-    QProgressBar_OnCreate((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_create(void* self, void (*callback)()) {
+    QProgressBar_OnCreate((QProgressBar*)self, (intptr_t)callback);
 }
 
 void q_progressbar_destroy(void* self) {
@@ -2121,8 +2125,8 @@ void q_progressbar_qbase_destroy(void* self) {
     QProgressBar_QBaseDestroy((QProgressBar*)self);
 }
 
-void q_progressbar_on_destroy(void* self, void (*slot)()) {
-    QProgressBar_OnDestroy((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_destroy(void* self, void (*callback)()) {
+    QProgressBar_OnDestroy((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_focus_next_child(void* self) {
@@ -2133,8 +2137,8 @@ bool q_progressbar_qbase_focus_next_child(void* self) {
     return QProgressBar_QBaseFocusNextChild((QProgressBar*)self);
 }
 
-void q_progressbar_on_focus_next_child(void* self, bool (*slot)()) {
-    QProgressBar_OnFocusNextChild((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_focus_next_child(void* self, bool (*callback)()) {
+    QProgressBar_OnFocusNextChild((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_focus_previous_child(void* self) {
@@ -2145,8 +2149,8 @@ bool q_progressbar_qbase_focus_previous_child(void* self) {
     return QProgressBar_QBaseFocusPreviousChild((QProgressBar*)self);
 }
 
-void q_progressbar_on_focus_previous_child(void* self, bool (*slot)()) {
-    QProgressBar_OnFocusPreviousChild((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_focus_previous_child(void* self, bool (*callback)()) {
+    QProgressBar_OnFocusPreviousChild((QProgressBar*)self, (intptr_t)callback);
 }
 
 QObject* q_progressbar_sender(void* self) {
@@ -2157,8 +2161,8 @@ QObject* q_progressbar_qbase_sender(void* self) {
     return QProgressBar_QBaseSender((QProgressBar*)self);
 }
 
-void q_progressbar_on_sender(void* self, QObject* (*slot)()) {
-    QProgressBar_OnSender((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_sender(void* self, QObject* (*callback)()) {
+    QProgressBar_OnSender((QProgressBar*)self, (intptr_t)callback);
 }
 
 int32_t q_progressbar_sender_signal_index(void* self) {
@@ -2169,8 +2173,8 @@ int32_t q_progressbar_qbase_sender_signal_index(void* self) {
     return QProgressBar_QBaseSenderSignalIndex((QProgressBar*)self);
 }
 
-void q_progressbar_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QProgressBar_OnSenderSignalIndex((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QProgressBar_OnSenderSignalIndex((QProgressBar*)self, (intptr_t)callback);
 }
 
 int32_t q_progressbar_receivers(void* self, const char* signal) {
@@ -2181,8 +2185,8 @@ int32_t q_progressbar_qbase_receivers(void* self, const char* signal) {
     return QProgressBar_QBaseReceivers((QProgressBar*)self, signal);
 }
 
-void q_progressbar_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QProgressBar_OnReceivers((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QProgressBar_OnReceivers((QProgressBar*)self, (intptr_t)callback);
 }
 
 bool q_progressbar_is_signal_connected(void* self, void* signal) {
@@ -2193,8 +2197,8 @@ bool q_progressbar_qbase_is_signal_connected(void* self, void* signal) {
     return QProgressBar_QBaseIsSignalConnected((QProgressBar*)self, (QMetaMethod*)signal);
 }
 
-void q_progressbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QProgressBar_OnIsSignalConnected((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QProgressBar_OnIsSignalConnected((QProgressBar*)self, (intptr_t)callback);
 }
 
 double q_progressbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2205,12 +2209,12 @@ double q_progressbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int
     return QProgressBar_QBaseGetDecodedMetricF((QProgressBar*)self, metricA, metricB);
 }
 
-void q_progressbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QProgressBar_OnGetDecodedMetricF((QProgressBar*)self, (intptr_t)slot);
+void q_progressbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QProgressBar_OnGetDecodedMetricF((QProgressBar*)self, (intptr_t)callback);
 }
 
-void q_progressbar_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_progressbar_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_progressbar_delete(void* self) {

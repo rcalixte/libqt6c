@@ -35,8 +35,8 @@ int32_t q_dial_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QDial_Metacall((QDial*)self, param1, param2, param3);
 }
 
-void q_dial_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QDial_OnMetacall((QDial*)self, (intptr_t)slot);
+void q_dial_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QDial_OnMetacall((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -74,8 +74,8 @@ QSize* q_dial_size_hint(void* self) {
     return QDial_SizeHint((QDial*)self);
 }
 
-void q_dial_on_size_hint(void* self, QSize* (*slot)()) {
-    QDial_OnSizeHint((QDial*)self, (intptr_t)slot);
+void q_dial_on_size_hint(void* self, QSize* (*callback)()) {
+    QDial_OnSizeHint((QDial*)self, (intptr_t)callback);
 }
 
 QSize* q_dial_qbase_size_hint(void* self) {
@@ -86,8 +86,8 @@ QSize* q_dial_minimum_size_hint(void* self) {
     return QDial_MinimumSizeHint((QDial*)self);
 }
 
-void q_dial_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QDial_OnMinimumSizeHint((QDial*)self, (intptr_t)slot);
+void q_dial_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QDial_OnMinimumSizeHint((QDial*)self, (intptr_t)callback);
 }
 
 QSize* q_dial_qbase_minimum_size_hint(void* self) {
@@ -106,8 +106,8 @@ bool q_dial_event(void* self, void* e) {
     return QDial_Event((QDial*)self, (QEvent*)e);
 }
 
-void q_dial_on_event(void* self, bool (*slot)(void*, void*)) {
-    QDial_OnEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_event(void* self, bool (*callback)(void*, void*)) {
+    QDial_OnEvent((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_qbase_event(void* self, void* e) {
@@ -118,8 +118,8 @@ void q_dial_resize_event(void* self, void* re) {
     QDial_ResizeEvent((QDial*)self, (QResizeEvent*)re);
 }
 
-void q_dial_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnResizeEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnResizeEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_resize_event(void* self, void* re) {
@@ -130,8 +130,8 @@ void q_dial_paint_event(void* self, void* pe) {
     QDial_PaintEvent((QDial*)self, (QPaintEvent*)pe);
 }
 
-void q_dial_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnPaintEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnPaintEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_paint_event(void* self, void* pe) {
@@ -142,8 +142,8 @@ void q_dial_mouse_press_event(void* self, void* me) {
     QDial_MousePressEvent((QDial*)self, (QMouseEvent*)me);
 }
 
-void q_dial_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnMousePressEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnMousePressEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_mouse_press_event(void* self, void* me) {
@@ -154,8 +154,8 @@ void q_dial_mouse_release_event(void* self, void* me) {
     QDial_MouseReleaseEvent((QDial*)self, (QMouseEvent*)me);
 }
 
-void q_dial_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnMouseReleaseEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnMouseReleaseEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_mouse_release_event(void* self, void* me) {
@@ -166,8 +166,8 @@ void q_dial_mouse_move_event(void* self, void* me) {
     QDial_MouseMoveEvent((QDial*)self, (QMouseEvent*)me);
 }
 
-void q_dial_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnMouseMoveEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnMouseMoveEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_mouse_move_event(void* self, void* me) {
@@ -178,8 +178,8 @@ void q_dial_slider_change(void* self, int64_t change) {
     QDial_SliderChange((QDial*)self, change);
 }
 
-void q_dial_on_slider_change(void* self, void (*slot)(void*, int64_t)) {
-    QDial_OnSliderChange((QDial*)self, (intptr_t)slot);
+void q_dial_on_slider_change(void* self, void (*callback)(void*, int64_t)) {
+    QDial_OnSliderChange((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_slider_change(void* self, int64_t change) {
@@ -190,8 +190,8 @@ void q_dial_init_style_option(void* self, void* option) {
     QDial_InitStyleOption((QDial*)self, (QStyleOptionSlider*)option);
 }
 
-void q_dial_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QDial_OnInitStyleOption((QDial*)self, (intptr_t)slot);
+void q_dial_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QDial_OnInitStyleOption((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_qbase_init_style_option(void* self, void* option) {
@@ -312,48 +312,48 @@ void q_dial_value_changed(void* self, int value) {
     QAbstractSlider_ValueChanged((QAbstractSlider*)self, value);
 }
 
-void q_dial_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_dial_slider_pressed(void* self) {
     QAbstractSlider_SliderPressed((QAbstractSlider*)self);
 }
 
-void q_dial_on_slider_pressed(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_slider_pressed(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_dial_slider_moved(void* self, int position) {
     QAbstractSlider_SliderMoved((QAbstractSlider*)self, position);
 }
 
-void q_dial_on_slider_moved(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_slider_moved(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_dial_slider_released(void* self) {
     QAbstractSlider_SliderReleased((QAbstractSlider*)self);
 }
 
-void q_dial_on_slider_released(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_slider_released(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_dial_range_changed(void* self, int min, int max) {
     QAbstractSlider_RangeChanged((QAbstractSlider*)self, min, max);
 }
 
-void q_dial_on_range_changed(void* self, void (*slot)(void*, int, int)) {
-    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_range_changed(void* self, void (*callback)(void*, int, int)) {
+    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_dial_action_triggered(void* self, int action) {
     QAbstractSlider_ActionTriggered((QAbstractSlider*)self, action);
 }
 
-void q_dial_on_action_triggered(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)slot);
+void q_dial_on_action_triggered(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 uintptr_t q_dial_win_id(void* self) {
@@ -1382,32 +1382,32 @@ void q_dial_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_dial_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_dial_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dial_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_dial_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_dial_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dial_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_dial_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_dial_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_dial_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_dial_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_dial_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_dial_input_method_hints(void* self) {
@@ -1578,12 +1578,16 @@ const char** q_dial_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dial_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1601,8 +1605,8 @@ void q_dial_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_dial_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_dial_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_dial_parent(void* self) {
@@ -1637,8 +1641,8 @@ void q_dial_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_dial_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_dial_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_dial_painting_active(void* self) {
@@ -1701,8 +1705,8 @@ void q_dial_qbase_key_press_event(void* self, void* ev) {
     QDial_QBaseKeyPressEvent((QDial*)self, (QKeyEvent*)ev);
 }
 
-void q_dial_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnKeyPressEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnKeyPressEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_timer_event(void* self, void* param1) {
@@ -1713,8 +1717,8 @@ void q_dial_qbase_timer_event(void* self, void* param1) {
     QDial_QBaseTimerEvent((QDial*)self, (QTimerEvent*)param1);
 }
 
-void q_dial_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnTimerEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnTimerEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_wheel_event(void* self, void* e) {
@@ -1725,8 +1729,8 @@ void q_dial_qbase_wheel_event(void* self, void* e) {
     QDial_QBaseWheelEvent((QDial*)self, (QWheelEvent*)e);
 }
 
-void q_dial_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnWheelEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnWheelEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_change_event(void* self, void* e) {
@@ -1737,8 +1741,8 @@ void q_dial_qbase_change_event(void* self, void* e) {
     QDial_QBaseChangeEvent((QDial*)self, (QEvent*)e);
 }
 
-void q_dial_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnChangeEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnChangeEvent((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_dev_type(void* self) {
@@ -1749,8 +1753,8 @@ int32_t q_dial_qbase_dev_type(void* self) {
     return QDial_QBaseDevType((QDial*)self);
 }
 
-void q_dial_on_dev_type(void* self, int32_t (*slot)()) {
-    QDial_OnDevType((QDial*)self, (intptr_t)slot);
+void q_dial_on_dev_type(void* self, int32_t (*callback)()) {
+    QDial_OnDevType((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_set_visible(void* self, bool visible) {
@@ -1761,8 +1765,8 @@ void q_dial_qbase_set_visible(void* self, bool visible) {
     QDial_QBaseSetVisible((QDial*)self, visible);
 }
 
-void q_dial_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QDial_OnSetVisible((QDial*)self, (intptr_t)slot);
+void q_dial_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QDial_OnSetVisible((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_height_for_width(void* self, int param1) {
@@ -1773,8 +1777,8 @@ int32_t q_dial_qbase_height_for_width(void* self, int param1) {
     return QDial_QBaseHeightForWidth((QDial*)self, param1);
 }
 
-void q_dial_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QDial_OnHeightForWidth((QDial*)self, (intptr_t)slot);
+void q_dial_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QDial_OnHeightForWidth((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_has_height_for_width(void* self) {
@@ -1785,8 +1789,8 @@ bool q_dial_qbase_has_height_for_width(void* self) {
     return QDial_QBaseHasHeightForWidth((QDial*)self);
 }
 
-void q_dial_on_has_height_for_width(void* self, bool (*slot)()) {
-    QDial_OnHasHeightForWidth((QDial*)self, (intptr_t)slot);
+void q_dial_on_has_height_for_width(void* self, bool (*callback)()) {
+    QDial_OnHasHeightForWidth((QDial*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_dial_paint_engine(void* self) {
@@ -1797,8 +1801,8 @@ QPaintEngine* q_dial_qbase_paint_engine(void* self) {
     return QDial_QBasePaintEngine((QDial*)self);
 }
 
-void q_dial_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QDial_OnPaintEngine((QDial*)self, (intptr_t)slot);
+void q_dial_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QDial_OnPaintEngine((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_mouse_double_click_event(void* self, void* event) {
@@ -1809,8 +1813,8 @@ void q_dial_qbase_mouse_double_click_event(void* self, void* event) {
     QDial_QBaseMouseDoubleClickEvent((QDial*)self, (QMouseEvent*)event);
 }
 
-void q_dial_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnMouseDoubleClickEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnMouseDoubleClickEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_key_release_event(void* self, void* event) {
@@ -1821,8 +1825,8 @@ void q_dial_qbase_key_release_event(void* self, void* event) {
     QDial_QBaseKeyReleaseEvent((QDial*)self, (QKeyEvent*)event);
 }
 
-void q_dial_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnKeyReleaseEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnKeyReleaseEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_focus_in_event(void* self, void* event) {
@@ -1833,8 +1837,8 @@ void q_dial_qbase_focus_in_event(void* self, void* event) {
     QDial_QBaseFocusInEvent((QDial*)self, (QFocusEvent*)event);
 }
 
-void q_dial_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnFocusInEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnFocusInEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_focus_out_event(void* self, void* event) {
@@ -1845,8 +1849,8 @@ void q_dial_qbase_focus_out_event(void* self, void* event) {
     QDial_QBaseFocusOutEvent((QDial*)self, (QFocusEvent*)event);
 }
 
-void q_dial_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnFocusOutEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnFocusOutEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_enter_event(void* self, void* event) {
@@ -1857,8 +1861,8 @@ void q_dial_qbase_enter_event(void* self, void* event) {
     QDial_QBaseEnterEvent((QDial*)self, (QEnterEvent*)event);
 }
 
-void q_dial_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnEnterEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnEnterEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_leave_event(void* self, void* event) {
@@ -1869,8 +1873,8 @@ void q_dial_qbase_leave_event(void* self, void* event) {
     QDial_QBaseLeaveEvent((QDial*)self, (QEvent*)event);
 }
 
-void q_dial_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnLeaveEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnLeaveEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_move_event(void* self, void* event) {
@@ -1881,8 +1885,8 @@ void q_dial_qbase_move_event(void* self, void* event) {
     QDial_QBaseMoveEvent((QDial*)self, (QMoveEvent*)event);
 }
 
-void q_dial_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnMoveEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnMoveEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_close_event(void* self, void* event) {
@@ -1893,8 +1897,8 @@ void q_dial_qbase_close_event(void* self, void* event) {
     QDial_QBaseCloseEvent((QDial*)self, (QCloseEvent*)event);
 }
 
-void q_dial_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnCloseEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnCloseEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_context_menu_event(void* self, void* event) {
@@ -1905,8 +1909,8 @@ void q_dial_qbase_context_menu_event(void* self, void* event) {
     QDial_QBaseContextMenuEvent((QDial*)self, (QContextMenuEvent*)event);
 }
 
-void q_dial_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnContextMenuEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnContextMenuEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_tablet_event(void* self, void* event) {
@@ -1917,8 +1921,8 @@ void q_dial_qbase_tablet_event(void* self, void* event) {
     QDial_QBaseTabletEvent((QDial*)self, (QTabletEvent*)event);
 }
 
-void q_dial_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnTabletEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnTabletEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_action_event(void* self, void* event) {
@@ -1929,8 +1933,8 @@ void q_dial_qbase_action_event(void* self, void* event) {
     QDial_QBaseActionEvent((QDial*)self, (QActionEvent*)event);
 }
 
-void q_dial_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnActionEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnActionEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_drag_enter_event(void* self, void* event) {
@@ -1941,8 +1945,8 @@ void q_dial_qbase_drag_enter_event(void* self, void* event) {
     QDial_QBaseDragEnterEvent((QDial*)self, (QDragEnterEvent*)event);
 }
 
-void q_dial_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnDragEnterEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnDragEnterEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_drag_move_event(void* self, void* event) {
@@ -1953,8 +1957,8 @@ void q_dial_qbase_drag_move_event(void* self, void* event) {
     QDial_QBaseDragMoveEvent((QDial*)self, (QDragMoveEvent*)event);
 }
 
-void q_dial_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnDragMoveEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnDragMoveEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_drag_leave_event(void* self, void* event) {
@@ -1965,8 +1969,8 @@ void q_dial_qbase_drag_leave_event(void* self, void* event) {
     QDial_QBaseDragLeaveEvent((QDial*)self, (QDragLeaveEvent*)event);
 }
 
-void q_dial_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnDragLeaveEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnDragLeaveEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_drop_event(void* self, void* event) {
@@ -1977,8 +1981,8 @@ void q_dial_qbase_drop_event(void* self, void* event) {
     QDial_QBaseDropEvent((QDial*)self, (QDropEvent*)event);
 }
 
-void q_dial_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnDropEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnDropEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_show_event(void* self, void* event) {
@@ -1989,8 +1993,8 @@ void q_dial_qbase_show_event(void* self, void* event) {
     QDial_QBaseShowEvent((QDial*)self, (QShowEvent*)event);
 }
 
-void q_dial_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnShowEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnShowEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_hide_event(void* self, void* event) {
@@ -2001,8 +2005,8 @@ void q_dial_qbase_hide_event(void* self, void* event) {
     QDial_QBaseHideEvent((QDial*)self, (QHideEvent*)event);
 }
 
-void q_dial_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnHideEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnHideEvent((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2013,8 +2017,8 @@ bool q_dial_qbase_native_event(void* self, const char* eventType, void* message,
     return QDial_QBaseNativeEvent((QDial*)self, qstring(eventType), message, result);
 }
 
-void q_dial_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QDial_OnNativeEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QDial_OnNativeEvent((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_metric(void* self, int64_t param1) {
@@ -2025,8 +2029,8 @@ int32_t q_dial_qbase_metric(void* self, int64_t param1) {
     return QDial_QBaseMetric((QDial*)self, param1);
 }
 
-void q_dial_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QDial_OnMetric((QDial*)self, (intptr_t)slot);
+void q_dial_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QDial_OnMetric((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_init_painter(void* self, void* painter) {
@@ -2037,8 +2041,8 @@ void q_dial_qbase_init_painter(void* self, void* painter) {
     QDial_QBaseInitPainter((QDial*)self, (QPainter*)painter);
 }
 
-void q_dial_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QDial_OnInitPainter((QDial*)self, (intptr_t)slot);
+void q_dial_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QDial_OnInitPainter((QDial*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_dial_redirected(void* self, void* offset) {
@@ -2049,8 +2053,8 @@ QPaintDevice* q_dial_qbase_redirected(void* self, void* offset) {
     return QDial_QBaseRedirected((QDial*)self, (QPoint*)offset);
 }
 
-void q_dial_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QDial_OnRedirected((QDial*)self, (intptr_t)slot);
+void q_dial_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QDial_OnRedirected((QDial*)self, (intptr_t)callback);
 }
 
 QPainter* q_dial_shared_painter(void* self) {
@@ -2061,8 +2065,8 @@ QPainter* q_dial_qbase_shared_painter(void* self) {
     return QDial_QBaseSharedPainter((QDial*)self);
 }
 
-void q_dial_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QDial_OnSharedPainter((QDial*)self, (intptr_t)slot);
+void q_dial_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QDial_OnSharedPainter((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_input_method_event(void* self, void* param1) {
@@ -2073,8 +2077,8 @@ void q_dial_qbase_input_method_event(void* self, void* param1) {
     QDial_QBaseInputMethodEvent((QDial*)self, (QInputMethodEvent*)param1);
 }
 
-void q_dial_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnInputMethodEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnInputMethodEvent((QDial*)self, (intptr_t)callback);
 }
 
 QVariant* q_dial_input_method_query(void* self, int64_t param1) {
@@ -2085,8 +2089,8 @@ QVariant* q_dial_qbase_input_method_query(void* self, int64_t param1) {
     return QDial_QBaseInputMethodQuery((QDial*)self, param1);
 }
 
-void q_dial_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QDial_OnInputMethodQuery((QDial*)self, (intptr_t)slot);
+void q_dial_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QDial_OnInputMethodQuery((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_focus_next_prev_child(void* self, bool next) {
@@ -2097,8 +2101,8 @@ bool q_dial_qbase_focus_next_prev_child(void* self, bool next) {
     return QDial_QBaseFocusNextPrevChild((QDial*)self, next);
 }
 
-void q_dial_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QDial_OnFocusNextPrevChild((QDial*)self, (intptr_t)slot);
+void q_dial_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QDial_OnFocusNextPrevChild((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_event_filter(void* self, void* watched, void* event) {
@@ -2109,8 +2113,8 @@ bool q_dial_qbase_event_filter(void* self, void* watched, void* event) {
     return QDial_QBaseEventFilter((QDial*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_dial_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QDial_OnEventFilter((QDial*)self, (intptr_t)slot);
+void q_dial_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QDial_OnEventFilter((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_child_event(void* self, void* event) {
@@ -2121,8 +2125,8 @@ void q_dial_qbase_child_event(void* self, void* event) {
     QDial_QBaseChildEvent((QDial*)self, (QChildEvent*)event);
 }
 
-void q_dial_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnChildEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnChildEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_custom_event(void* self, void* event) {
@@ -2133,8 +2137,8 @@ void q_dial_qbase_custom_event(void* self, void* event) {
     QDial_QBaseCustomEvent((QDial*)self, (QEvent*)event);
 }
 
-void q_dial_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QDial_OnCustomEvent((QDial*)self, (intptr_t)slot);
+void q_dial_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QDial_OnCustomEvent((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_connect_notify(void* self, void* signal) {
@@ -2145,8 +2149,8 @@ void q_dial_qbase_connect_notify(void* self, void* signal) {
     QDial_QBaseConnectNotify((QDial*)self, (QMetaMethod*)signal);
 }
 
-void q_dial_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QDial_OnConnectNotify((QDial*)self, (intptr_t)slot);
+void q_dial_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QDial_OnConnectNotify((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_disconnect_notify(void* self, void* signal) {
@@ -2157,8 +2161,8 @@ void q_dial_qbase_disconnect_notify(void* self, void* signal) {
     QDial_QBaseDisconnectNotify((QDial*)self, (QMetaMethod*)signal);
 }
 
-void q_dial_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QDial_OnDisconnectNotify((QDial*)self, (intptr_t)slot);
+void q_dial_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QDial_OnDisconnectNotify((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_set_repeat_action(void* self, int64_t action) {
@@ -2169,8 +2173,8 @@ void q_dial_qbase_set_repeat_action(void* self, int64_t action) {
     QDial_QBaseSetRepeatAction((QDial*)self, action);
 }
 
-void q_dial_on_set_repeat_action(void* self, void (*slot)(void*, int64_t)) {
-    QDial_OnSetRepeatAction((QDial*)self, (intptr_t)slot);
+void q_dial_on_set_repeat_action(void* self, void (*callback)(void*, int64_t)) {
+    QDial_OnSetRepeatAction((QDial*)self, (intptr_t)callback);
 }
 
 int64_t q_dial_repeat_action(void* self) {
@@ -2181,8 +2185,8 @@ int64_t q_dial_qbase_repeat_action(void* self) {
     return QDial_QBaseRepeatAction((QDial*)self);
 }
 
-void q_dial_on_repeat_action(void* self, int64_t (*slot)()) {
-    QDial_OnRepeatAction((QDial*)self, (intptr_t)slot);
+void q_dial_on_repeat_action(void* self, int64_t (*callback)()) {
+    QDial_OnRepeatAction((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_update_micro_focus(void* self) {
@@ -2193,8 +2197,8 @@ void q_dial_qbase_update_micro_focus(void* self) {
     QDial_QBaseUpdateMicroFocus((QDial*)self);
 }
 
-void q_dial_on_update_micro_focus(void* self, void (*slot)()) {
-    QDial_OnUpdateMicroFocus((QDial*)self, (intptr_t)slot);
+void q_dial_on_update_micro_focus(void* self, void (*callback)()) {
+    QDial_OnUpdateMicroFocus((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_create(void* self) {
@@ -2205,8 +2209,8 @@ void q_dial_qbase_create(void* self) {
     QDial_QBaseCreate((QDial*)self);
 }
 
-void q_dial_on_create(void* self, void (*slot)()) {
-    QDial_OnCreate((QDial*)self, (intptr_t)slot);
+void q_dial_on_create(void* self, void (*callback)()) {
+    QDial_OnCreate((QDial*)self, (intptr_t)callback);
 }
 
 void q_dial_destroy(void* self) {
@@ -2217,8 +2221,8 @@ void q_dial_qbase_destroy(void* self) {
     QDial_QBaseDestroy((QDial*)self);
 }
 
-void q_dial_on_destroy(void* self, void (*slot)()) {
-    QDial_OnDestroy((QDial*)self, (intptr_t)slot);
+void q_dial_on_destroy(void* self, void (*callback)()) {
+    QDial_OnDestroy((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_focus_next_child(void* self) {
@@ -2229,8 +2233,8 @@ bool q_dial_qbase_focus_next_child(void* self) {
     return QDial_QBaseFocusNextChild((QDial*)self);
 }
 
-void q_dial_on_focus_next_child(void* self, bool (*slot)()) {
-    QDial_OnFocusNextChild((QDial*)self, (intptr_t)slot);
+void q_dial_on_focus_next_child(void* self, bool (*callback)()) {
+    QDial_OnFocusNextChild((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_focus_previous_child(void* self) {
@@ -2241,8 +2245,8 @@ bool q_dial_qbase_focus_previous_child(void* self) {
     return QDial_QBaseFocusPreviousChild((QDial*)self);
 }
 
-void q_dial_on_focus_previous_child(void* self, bool (*slot)()) {
-    QDial_OnFocusPreviousChild((QDial*)self, (intptr_t)slot);
+void q_dial_on_focus_previous_child(void* self, bool (*callback)()) {
+    QDial_OnFocusPreviousChild((QDial*)self, (intptr_t)callback);
 }
 
 QObject* q_dial_sender(void* self) {
@@ -2253,8 +2257,8 @@ QObject* q_dial_qbase_sender(void* self) {
     return QDial_QBaseSender((QDial*)self);
 }
 
-void q_dial_on_sender(void* self, QObject* (*slot)()) {
-    QDial_OnSender((QDial*)self, (intptr_t)slot);
+void q_dial_on_sender(void* self, QObject* (*callback)()) {
+    QDial_OnSender((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_sender_signal_index(void* self) {
@@ -2265,8 +2269,8 @@ int32_t q_dial_qbase_sender_signal_index(void* self) {
     return QDial_QBaseSenderSignalIndex((QDial*)self);
 }
 
-void q_dial_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QDial_OnSenderSignalIndex((QDial*)self, (intptr_t)slot);
+void q_dial_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QDial_OnSenderSignalIndex((QDial*)self, (intptr_t)callback);
 }
 
 int32_t q_dial_receivers(void* self, const char* signal) {
@@ -2277,8 +2281,8 @@ int32_t q_dial_qbase_receivers(void* self, const char* signal) {
     return QDial_QBaseReceivers((QDial*)self, signal);
 }
 
-void q_dial_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QDial_OnReceivers((QDial*)self, (intptr_t)slot);
+void q_dial_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QDial_OnReceivers((QDial*)self, (intptr_t)callback);
 }
 
 bool q_dial_is_signal_connected(void* self, void* signal) {
@@ -2289,8 +2293,8 @@ bool q_dial_qbase_is_signal_connected(void* self, void* signal) {
     return QDial_QBaseIsSignalConnected((QDial*)self, (QMetaMethod*)signal);
 }
 
-void q_dial_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QDial_OnIsSignalConnected((QDial*)self, (intptr_t)slot);
+void q_dial_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QDial_OnIsSignalConnected((QDial*)self, (intptr_t)callback);
 }
 
 double q_dial_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2301,12 +2305,12 @@ double q_dial_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
     return QDial_QBaseGetDecodedMetricF((QDial*)self, metricA, metricB);
 }
 
-void q_dial_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QDial_OnGetDecodedMetricF((QDial*)self, (intptr_t)slot);
+void q_dial_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QDial_OnGetDecodedMetricF((QDial*)self, (intptr_t)callback);
 }
 
-void q_dial_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_dial_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_dial_delete(void* self) {

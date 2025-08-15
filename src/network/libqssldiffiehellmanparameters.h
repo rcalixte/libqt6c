@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,74 +15,80 @@
 
 /// q_ssldiffiehellmanparameters_new constructs a new QSslDiffieHellmanParameters object.
 ///
-///
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new();
 
 /// q_ssldiffiehellmanparameters_new2 constructs a new QSslDiffieHellmanParameters object.
 ///
-/// ``` QSslDiffieHellmanParameters* other ```
+/// @param other QSslDiffieHellmanParameters*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#defaultParameters)
-///
 ///
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#operator-eq)
 ///
-/// ``` QSslDiffieHellmanParameters* self, QSslDiffieHellmanParameters* other ```
+/// @param self QSslDiffieHellmanParameters*
+/// @param other QSslDiffieHellmanParameters*
 void q_ssldiffiehellmanparameters_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#swap)
 ///
-/// ``` QSslDiffieHellmanParameters* self, QSslDiffieHellmanParameters* other ```
+/// @param self QSslDiffieHellmanParameters*
+/// @param other QSslDiffieHellmanParameters*
 void q_ssldiffiehellmanparameters_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// ``` const char* encoded ```
+/// @param encoded const char*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded(const char* encoded);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// ``` QIODevice* device ```
+/// @param device QIODevice*
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded2(void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isEmpty)
 ///
-/// ``` QSslDiffieHellmanParameters* self ```
+/// @param self QSslDiffieHellmanParameters*
 bool q_ssldiffiehellmanparameters_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#isValid)
 ///
-/// ``` QSslDiffieHellmanParameters* self ```
+/// @param self QSslDiffieHellmanParameters*
 bool q_ssldiffiehellmanparameters_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#error)
 ///
-/// ``` QSslDiffieHellmanParameters* self ```
+/// @param self QSslDiffieHellmanParameters*
+///
+/// @return enum QSslDiffieHellmanParameters__Error
 int64_t q_ssldiffiehellmanparameters_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
 ///
-/// ``` QSslDiffieHellmanParameters* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QSslDiffieHellmanParameters*
 const char* q_ssldiffiehellmanparameters_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// ``` const char* encoded, enum QSsl__EncodingFormat format ```
+/// @param encoded const char*
+/// @param format enum QSsl__EncodingFormat
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
-/// ``` QIODevice* device, enum QSsl__EncodingFormat format ```
+/// @param device QIODevice*
+/// @param format enum QSsl__EncodingFormat
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSslDiffieHellmanParameters* self ```
+/// @param self QSslDiffieHellmanParameters*
 void q_ssldiffiehellmanparameters_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#types

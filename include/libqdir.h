@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,409 +15,500 @@
 
 /// q_dir_new constructs a new QDir object.
 ///
-/// ``` QDir* param1 ```
+/// @param param1 QDir*
 QDir* q_dir_new(void* param1);
 
 /// q_dir_new2 constructs a new QDir object.
-///
 ///
 QDir* q_dir_new2();
 
 /// q_dir_new3 constructs a new QDir object.
 ///
-/// ``` const char* path, const char* nameFilter ```
+/// @param path const char*
+/// @param nameFilter const char*
 QDir* q_dir_new3(const char* path, const char* nameFilter);
 
 /// q_dir_new4 constructs a new QDir object.
 ///
-/// ``` const char* path ```
+/// @param path const char*
 QDir* q_dir_new4(const char* path);
 
 /// q_dir_new5 constructs a new QDir object.
 ///
-/// ``` const char* path, const char* nameFilter, int sort ```
+/// @param path const char*
+/// @param nameFilter const char*
+/// @param sort flag of enum QDir__SortFlag
 QDir* q_dir_new5(const char* path, const char* nameFilter, int64_t sort);
 
 /// q_dir_new6 constructs a new QDir object.
 ///
-/// ``` const char* path, const char* nameFilter, int sort, int filter ```
+/// @param path const char*
+/// @param nameFilter const char*
+/// @param sort flag of enum QDir__SortFlag
+/// @param filter flag of enum QDir__Filter
 QDir* q_dir_new6(const char* path, const char* nameFilter, int64_t sort, int64_t filter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator-eq)
 ///
-/// ``` QDir* self, QDir* param1 ```
+/// @param self QDir*
+/// @param param1 QDir*
 void q_dir_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#swap)
 ///
-/// ``` QDir* self, QDir* other ```
+/// @param self QDir*
+/// @param other QDir*
 void q_dir_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setPath)
 ///
-/// ``` QDir* self, const char* path ```
+/// @param self QDir*
+/// @param path const char*
 void q_dir_set_path(void* self, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#path)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char* q_dir_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#absolutePath)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char* q_dir_absolute_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#canonicalPath)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char* q_dir_canonical_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setSearchPaths)
 ///
-/// ``` const char* prefix, const char* searchPaths[] ```
+/// @param prefix const char*
+/// @param searchPaths const char**
 void q_dir_set_search_paths(const char* prefix, const char* searchPaths[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#addSearchPath)
 ///
-/// ``` const char* prefix, const char* path ```
+/// @param prefix const char*
+/// @param path const char*
 void q_dir_add_search_path(const char* prefix, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#searchPaths)
 ///
-/// ``` const char* prefix ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param prefix const char*
 const char** q_dir_search_paths(const char* prefix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#dirName)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char* q_dir_dir_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#filePath)
 ///
-/// ``` QDir* self, const char* fileName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param fileName const char*
 const char* q_dir_file_path(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#absoluteFilePath)
 ///
-/// ``` QDir* self, const char* fileName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param fileName const char*
 const char* q_dir_absolute_file_path(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#relativeFilePath)
 ///
-/// ``` QDir* self, const char* fileName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param fileName const char*
 const char* q_dir_relative_file_path(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#toNativeSeparators)
 ///
-/// ``` const char* pathName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param pathName const char*
 const char* q_dir_to_native_separators(const char* pathName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#fromNativeSeparators)
 ///
-/// ``` const char* pathName ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param pathName const char*
 const char* q_dir_from_native_separators(const char* pathName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#cd)
 ///
-/// ``` QDir* self, const char* dirName ```
+/// @param self QDir*
+/// @param dirName const char*
 bool q_dir_cd(void* self, const char* dirName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#cdUp)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_cd_up(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#nameFilters)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char** q_dir_name_filters(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setNameFilters)
 ///
-/// ``` QDir* self, const char* nameFilters[] ```
+/// @param self QDir*
+/// @param nameFilters const char**
 void q_dir_set_name_filters(void* self, const char* nameFilters[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#filter)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
+///
+/// @return flag of enum QDir__Filter
 int64_t q_dir_filter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setFilter)
 ///
-/// ``` QDir* self, int filter ```
+/// @param self QDir*
+/// @param filter flag of enum QDir__Filter
 void q_dir_set_filter(void* self, int64_t filter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#sorting)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
+///
+/// @return flag of enum QDir__SortFlag
 int64_t q_dir_sorting(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setSorting)
 ///
-/// ``` QDir* self, int sort ```
+/// @param self QDir*
+/// @param sort flag of enum QDir__SortFlag
 void q_dir_set_sorting(void* self, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#count)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 int64_t q_dir_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#operator-5b-5d)
 ///
-/// ``` QDir* self, long long param1 ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param param1 long long
 const char* q_dir_operator_subscript(void* self, long long param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#nameFiltersFromString)
 ///
-/// ``` const char* nameFilter ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param nameFilter const char*
 const char** q_dir_name_filters_from_string(const char* nameFilter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
 const char** q_dir_entry_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self, const char* nameFilters[] ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param nameFilters const char**
 const char** q_dir_entry_list2(void* self, const char* nameFilters[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self, const char* nameFilters[] ```
+/// @param self QDir*
+/// @param nameFilters const char**
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list2(void* self, const char* nameFilters[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkdir)
 ///
-/// ``` QDir* self, const char* dirName ```
+/// @param self QDir*
+/// @param dirName const char*
 bool q_dir_mkdir(void* self, const char* dirName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkdir)
 ///
-/// ``` QDir* self, const char* dirName, int permissions ```
+/// @param self QDir*
+/// @param dirName const char*
+/// @param permissions flag of enum QFileDevice__Permission
 bool q_dir_mkdir2(void* self, const char* dirName, int64_t permissions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rmdir)
 ///
-/// ``` QDir* self, const char* dirName ```
+/// @param self QDir*
+/// @param dirName const char*
 bool q_dir_rmdir(void* self, const char* dirName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#mkpath)
 ///
-/// ``` QDir* self, const char* dirPath ```
+/// @param self QDir*
+/// @param dirPath const char*
 bool q_dir_mkpath(void* self, const char* dirPath);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rmpath)
 ///
-/// ``` QDir* self, const char* dirPath ```
+/// @param self QDir*
+/// @param dirPath const char*
 bool q_dir_rmpath(void* self, const char* dirPath);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#removeRecursively)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_remove_recursively(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isReadable)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_is_readable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#exists)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_exists(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isRoot)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_is_root(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isRelativePath)
 ///
-/// ``` const char* path ```
+/// @param path const char*
 bool q_dir_is_relative_path(const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isAbsolutePath)
 ///
-/// ``` const char* path ```
+/// @param path const char*
 bool q_dir_is_absolute_path(const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isRelative)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_is_relative(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isAbsolute)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_is_absolute(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#makeAbsolute)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 bool q_dir_make_absolute(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#remove)
 ///
-/// ``` QDir* self, const char* fileName ```
+/// @param self QDir*
+/// @param fileName const char*
 bool q_dir_remove(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rename)
 ///
-/// ``` QDir* self, const char* oldName, const char* newName ```
+/// @param self QDir*
+/// @param oldName const char*
+/// @param newName const char*
 bool q_dir_rename(void* self, const char* oldName, const char* newName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#exists)
 ///
-/// ``` QDir* self, const char* name ```
+/// @param self QDir*
+/// @param name const char*
 bool q_dir_exists2(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#drives)
-///
 ///
 libqt_list /* of QFileInfo* */ q_dir_drives();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#listSeparator)
 ///
-///
 QChar* q_dir_list_separator();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#separator)
-///
 ///
 QChar* q_dir_separator();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#setCurrent)
 ///
-/// ``` const char* path ```
+/// @param path const char*
 bool q_dir_set_current(const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#current)
-///
 ///
 QDir* q_dir_current();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#currentPath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_dir_current_path();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#home)
 ///
-///
 QDir* q_dir_home();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#homePath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_dir_home_path();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#root)
 ///
-///
 QDir* q_dir_root();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#rootPath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_dir_root_path();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#temp)
 ///
-///
 QDir* q_dir_temp();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#tempPath)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_dir_temp_path();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#match)
 ///
-/// ``` const char* filters[], const char* fileName ```
+/// @param filters const char**
+/// @param fileName const char*
 bool q_dir_match(const char* filters[], const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#match)
 ///
-/// ``` const char* filter, const char* fileName ```
+/// @param filter const char*
+/// @param fileName const char*
 bool q_dir_match2(const char* filter, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#cleanPath)
 ///
-/// ``` const char* path ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param path const char*
 const char* q_dir_clean_path(const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#refresh)
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 void q_dir_refresh(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#count)
 ///
-/// ``` QDir* self, Disambiguated_t* param1 ```
+/// @param self QDir*
+/// @param param1 Disambiguated_t*
 int64_t q_dir_count1(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///
-/// ``` QDir* self, int filters ```
+/// @param self QDir*
+/// @param filters flag of enum QDir__Filter
 bool q_dir_is_empty1(void* self, int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self, int filters ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param filters flag of enum QDir__Filter
 const char** q_dir_entry_list1(void* self, int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self, int filters, int sort ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param filters flag of enum QDir__Filter
+/// @param sort flag of enum QDir__SortFlag
 const char** q_dir_entry_list22(void* self, int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self, const char* nameFilters[], int filters ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
 const char** q_dir_entry_list23(void* self, const char* nameFilters[], int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryList)
 ///
-/// ``` QDir* self, const char* nameFilters[], int filters, int sort ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDir*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
+/// @param sort flag of enum QDir__SortFlag
 const char** q_dir_entry_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self, int filters ```
+/// @param self QDir*
+/// @param filters flag of enum QDir__Filter
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list1(void* self, int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self, int filters, int sort ```
+/// @param self QDir*
+/// @param filters flag of enum QDir__Filter
+/// @param sort flag of enum QDir__SortFlag
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list22(void* self, int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self, const char* nameFilters[], int filters ```
+/// @param self QDir*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list23(void* self, const char* nameFilters[], int64_t filters);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#entryInfoList)
 ///
-/// ``` QDir* self, const char* nameFilters[], int filters, int sort ```
+/// @param self QDir*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
+/// @param sort flag of enum QDir__SortFlag
 libqt_list /* of QFileInfo* */ q_dir_entry_info_list3(void* self, const char* nameFilters[], int64_t filters, int64_t sort);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdir.html#dtor.QDir)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDir* self ```
+/// @param self QDir*
 void q_dir_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdir.html#types

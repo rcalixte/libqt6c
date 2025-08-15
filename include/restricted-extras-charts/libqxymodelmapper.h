@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,309 +15,366 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 const QMetaObject* q_xymodelmapper_meta_object(void* self);
 
-/// ``` QXYModelMapper* self, const char* param1 ```
+/// @param self QXYModelMapper*
+/// @param param1 const char*
 void* q_xymodelmapper_metacast(void* self, const char* param1);
 
-/// ``` QXYModelMapper* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QXYModelMapper*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_xymodelmapper_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_xymodelmapper_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_xymodelmapper_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_xymodelmapper_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#event)
 ///
-/// ``` QXYModelMapper* self, QEvent* event ```
+/// @param self QXYModelMapper*
+/// @param event QEvent*
 bool q_xymodelmapper_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
-/// ``` QXYModelMapper* self, QObject* watched, QEvent* event ```
+/// @param self QXYModelMapper*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_xymodelmapper_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QXYModelMapper* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QXYModelMapper*
 const char* q_xymodelmapper_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QXYModelMapper* self, char* name ```
+/// @param self QXYModelMapper*
+/// @param name char*
 void q_xymodelmapper_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 bool q_xymodelmapper_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 bool q_xymodelmapper_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 bool q_xymodelmapper_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 bool q_xymodelmapper_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QXYModelMapper* self, bool b ```
+/// @param self QXYModelMapper*
+/// @param b bool
 bool q_xymodelmapper_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 QThread* q_xymodelmapper_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QXYModelMapper* self, QThread* thread ```
+/// @param self QXYModelMapper*
+/// @param thread QThread*
 bool q_xymodelmapper_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QXYModelMapper* self, int interval ```
+/// @param self QXYModelMapper*
+/// @param interval int
 int32_t q_xymodelmapper_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QXYModelMapper* self, int id ```
+/// @param self QXYModelMapper*
+/// @param id int
 void q_xymodelmapper_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QXYModelMapper* self, enum Qt__TimerId id ```
+/// @param self QXYModelMapper*
+/// @param id enum Qt__TimerId
 void q_xymodelmapper_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 libqt_list /* of QObject* */ q_xymodelmapper_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QXYModelMapper* self, QObject* parent ```
+/// @param self QXYModelMapper*
+/// @param parent QObject*
 void q_xymodelmapper_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QXYModelMapper* self, QObject* filterObj ```
+/// @param self QXYModelMapper*
+/// @param filterObj QObject*
 void q_xymodelmapper_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QXYModelMapper* self, QObject* obj ```
+/// @param self QXYModelMapper*
+/// @param obj QObject*
 void q_xymodelmapper_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_xymodelmapper_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QXYModelMapper* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QXYModelMapper*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_xymodelmapper_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_xymodelmapper_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_xymodelmapper_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 void q_xymodelmapper_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 void q_xymodelmapper_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QXYModelMapper* self, const char* name, QVariant* value ```
+/// @param self QXYModelMapper*
+/// @param name const char*
+/// @param value QVariant*
 bool q_xymodelmapper_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QXYModelMapper* self, const char* name ```
+/// @param self QXYModelMapper*
+/// @param name const char*
 QVariant* q_xymodelmapper_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QXYModelMapper* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QXYModelMapper*
 const char** q_xymodelmapper_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 QBindingStorage* q_xymodelmapper_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 const QBindingStorage* q_xymodelmapper_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 void q_xymodelmapper_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYModelMapper* self, void (*slot)(QXYModelMapper*) ```
-void q_xymodelmapper_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QXYModelMapper*
+/// @param callback void fn(QXYModelMapper*)
+void q_xymodelmapper_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 QObject* q_xymodelmapper_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QXYModelMapper* self, const char* classname ```
+/// @param self QXYModelMapper*
+/// @param classname const char*
 bool q_xymodelmapper_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 void q_xymodelmapper_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QXYModelMapper* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QXYModelMapper*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_xymodelmapper_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QXYModelMapper* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QXYModelMapper*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_xymodelmapper_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_xymodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QXYModelMapper* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QXYModelMapper*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_xymodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYModelMapper* self, QObject* param1 ```
+/// @param self QXYModelMapper*
+/// @param param1 QObject*
 void q_xymodelmapper_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QXYModelMapper* self, void (*slot)(QXYModelMapper*, QObject*) ```
-void q_xymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QXYModelMapper*
+/// @param callback void fn(QXYModelMapper*, QObject*)
+void q_xymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -326,14 +382,15 @@ void q_xymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QXYModelMapper* self, void (*slot)(QXYModelMapper*, const char*) ```
-void q_xymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QXYModelMapper*
+/// @param callback void fn(QXYModelMapper*, const char*)
+void q_xymodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxymodelmapper-qtcharts.html#dtor.QXYModelMapper)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QXYModelMapper* self ```
+/// @param self QXYModelMapper*
 void q_xymodelmapper_delete(void* self);
 
 #endif

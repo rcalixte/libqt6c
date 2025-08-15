@@ -42,8 +42,8 @@ int32_t q_proxystyle_metacall(void* self, int64_t param1, int param2, void* para
     return QProxyStyle_Metacall((QProxyStyle*)self, param1, param2, param3);
 }
 
-void q_proxystyle_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QProxyStyle_OnMetacall((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QProxyStyle_OnMetacall((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -69,8 +69,8 @@ void q_proxystyle_draw_primitive(void* self, int64_t element, void* option, void
     QProxyStyle_DrawPrimitive((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_primitive(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnDrawPrimitive((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnDrawPrimitive((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget) {
@@ -81,8 +81,8 @@ void q_proxystyle_draw_control(void* self, int64_t element, void* option, void* 
     QProxyStyle_DrawControl((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnDrawControl((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnDrawControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_draw_control(void* self, int64_t element, void* option, void* painter, void* widget) {
@@ -93,8 +93,8 @@ void q_proxystyle_draw_complex_control(void* self, int64_t control, void* option
     QProxyStyle_DrawComplexControl((QProxyStyle*)self, control, (QStyleOptionComplex*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_complex_control(void* self, void (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnDrawComplexControl((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnDrawComplexControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* option, void* painter, void* widget) {
@@ -105,8 +105,8 @@ void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flag
     QProxyStyle_DrawItemText((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
-void q_proxystyle_on_draw_item_text(void* self, void (*slot)(void*, void*, void*, int, void*, bool, const char*, int64_t)) {
-    QProxyStyle_OnDrawItemText((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int64_t)) {
+    QProxyStyle_OnDrawItemText((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole) {
@@ -117,8 +117,8 @@ void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int al
     QProxyStyle_DrawItemPixmap((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, alignment, (QPixmap*)pixmap);
 }
 
-void q_proxystyle_on_draw_item_pixmap(void* self, void (*slot)(void*, void*, void*, int, void*)) {
-    QProxyStyle_OnDrawItemPixmap((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*)) {
+    QProxyStyle_OnDrawItemPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap) {
@@ -129,8 +129,8 @@ QSize* q_proxystyle_size_from_contents(void* self, int64_t typeVal, void* option
     return QProxyStyle_SizeFromContents((QProxyStyle*)self, typeVal, (QStyleOption*)option, (QSize*)size, (QWidget*)widget);
 }
 
-void q_proxystyle_on_size_from_contents(void* self, QSize* (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnSizeFromContents((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnSizeFromContents((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QSize* q_proxystyle_qbase_size_from_contents(void* self, int64_t typeVal, void* option, void* size, void* widget) {
@@ -141,8 +141,8 @@ QRect* q_proxystyle_sub_element_rect(void* self, int64_t element, void* option, 
     return QProxyStyle_SubElementRect((QProxyStyle*)self, element, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_sub_element_rect(void* self, QRect* (*slot)(void*, int64_t, void*, void*)) {
-    QProxyStyle_OnSubElementRect((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int64_t, void*, void*)) {
+    QProxyStyle_OnSubElementRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_proxystyle_qbase_sub_element_rect(void* self, int64_t element, void* option, void* widget) {
@@ -153,8 +153,8 @@ QRect* q_proxystyle_sub_control_rect(void* self, int64_t cc, void* opt, int64_t 
     return QProxyStyle_SubControlRect((QProxyStyle*)self, cc, (QStyleOptionComplex*)opt, sc, (QWidget*)widget);
 }
 
-void q_proxystyle_on_sub_control_rect(void* self, QRect* (*slot)(void*, int64_t, void*, int64_t, void*)) {
-    QProxyStyle_OnSubControlRect((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int64_t, void*, int64_t, void*)) {
+    QProxyStyle_OnSubControlRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_proxystyle_qbase_sub_control_rect(void* self, int64_t cc, void* opt, int64_t sc, void* widget) {
@@ -165,8 +165,8 @@ QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, boo
     return QProxyStyle_ItemTextRect((QProxyStyle*)self, (QFontMetrics*)fm, (QRect*)r, flags, enabled, qstring(text));
 }
 
-void q_proxystyle_on_item_text_rect(void* self, QRect* (*slot)(void*, void*, void*, int, bool, const char*)) {
-    QProxyStyle_OnItemTextRect((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*)) {
+    QProxyStyle_OnItemTextRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_proxystyle_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text) {
@@ -177,8 +177,8 @@ QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixma
     return QProxyStyle_ItemPixmapRect((QProxyStyle*)self, (QRect*)r, flags, (QPixmap*)pixmap);
 }
 
-void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*slot)(void*, void*, int, void*)) {
-    QProxyStyle_OnItemPixmapRect((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*)) {
+    QProxyStyle_OnItemPixmapRect((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap) {
@@ -189,8 +189,8 @@ int64_t q_proxystyle_hit_test_complex_control(void* self, int64_t control, void*
     return QProxyStyle_HitTestComplexControl((QProxyStyle*)self, control, (QStyleOptionComplex*)option, (QPoint*)pos, (QWidget*)widget);
 }
 
-void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnHitTestComplexControl((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_hit_test_complex_control(void* self, int64_t (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnHitTestComplexControl((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int64_t q_proxystyle_qbase_hit_test_complex_control(void* self, int64_t control, void* option, void* pos, void* widget) {
@@ -201,8 +201,8 @@ int32_t q_proxystyle_style_hint(void* self, int64_t hint, void* option, void* wi
     return QProxyStyle_StyleHint((QProxyStyle*)self, hint, (QStyleOption*)option, (QWidget*)widget, (QStyleHintReturn*)returnData);
 }
 
-void q_proxystyle_on_style_hint(void* self, int32_t (*slot)(void*, int64_t, void*, void*, void*)) {
-    QProxyStyle_OnStyleHint((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int64_t, void*, void*, void*)) {
+    QProxyStyle_OnStyleHint((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_qbase_style_hint(void* self, int64_t hint, void* option, void* widget, void* returnData) {
@@ -213,8 +213,8 @@ int32_t q_proxystyle_pixel_metric(void* self, int64_t metric, void* option, void
     return QProxyStyle_PixelMetric((QProxyStyle*)self, metric, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_pixel_metric(void* self, int32_t (*slot)(void*, int64_t, void*, void*)) {
-    QProxyStyle_OnPixelMetric((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int64_t, void*, void*)) {
+    QProxyStyle_OnPixelMetric((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option, void* widget) {
@@ -225,8 +225,8 @@ int32_t q_proxystyle_layout_spacing(void* self, int64_t control1, int64_t contro
     return QProxyStyle_LayoutSpacing((QProxyStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_layout_spacing(void* self, int32_t (*slot)(void*, int64_t, int64_t, int64_t, void*, void*)) {
-    QProxyStyle_OnLayoutSpacing((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, int64_t, int64_t, void*, void*)) {
+    QProxyStyle_OnLayoutSpacing((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_qbase_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget) {
@@ -237,8 +237,8 @@ QIcon* q_proxystyle_standard_icon(void* self, int64_t standardIcon, void* option
     return QProxyStyle_StandardIcon((QProxyStyle*)self, standardIcon, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_standard_icon(void* self, QIcon* (*slot)(void*, int64_t, void*, void*)) {
-    QProxyStyle_OnStandardIcon((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int64_t, void*, void*)) {
+    QProxyStyle_OnStandardIcon((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QIcon* q_proxystyle_qbase_standard_icon(void* self, int64_t standardIcon, void* option, void* widget) {
@@ -249,8 +249,8 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int64_t standardPixmap, void* 
     return QProxyStyle_StandardPixmap((QProxyStyle*)self, standardPixmap, (QStyleOption*)opt, (QWidget*)widget);
 }
 
-void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*)) {
-    QProxyStyle_OnStandardPixmap((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*)) {
+    QProxyStyle_OnStandardPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, void* opt, void* widget) {
@@ -261,8 +261,8 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int64_t iconMode, void* 
     return QProxyStyle_GeneratedIconPixmap((QProxyStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
-void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*slot)(void*, int64_t, void*, void*)) {
-    QProxyStyle_OnGeneratedIconPixmap((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*)) {
+    QProxyStyle_OnGeneratedIconPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt) {
@@ -273,8 +273,8 @@ QPalette* q_proxystyle_standard_palette(void* self) {
     return QProxyStyle_StandardPalette((QProxyStyle*)self);
 }
 
-void q_proxystyle_on_standard_palette(void* self, QPalette* (*slot)()) {
-    QProxyStyle_OnStandardPalette((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)()) {
+    QProxyStyle_OnStandardPalette((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QPalette* q_proxystyle_qbase_standard_palette(void* self) {
@@ -285,8 +285,8 @@ void q_proxystyle_polish(void* self, void* widget) {
     QProxyStyle_Polish((QProxyStyle*)self, (QWidget*)widget);
 }
 
-void q_proxystyle_on_polish(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnPolish((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnPolish((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_polish(void* self, void* widget) {
@@ -297,8 +297,8 @@ void q_proxystyle_polish2(void* self, void* pal) {
     QProxyStyle_Polish2((QProxyStyle*)self, (QPalette*)pal);
 }
 
-void q_proxystyle_on_polish2(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnPolish2((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnPolish2((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_polish2(void* self, void* pal) {
@@ -309,8 +309,8 @@ void q_proxystyle_polish3(void* self, void* app) {
     QProxyStyle_Polish3((QProxyStyle*)self, (QApplication*)app);
 }
 
-void q_proxystyle_on_polish3(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnPolish3((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnPolish3((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_polish3(void* self, void* app) {
@@ -321,8 +321,8 @@ void q_proxystyle_unpolish(void* self, void* widget) {
     QProxyStyle_Unpolish((QProxyStyle*)self, (QWidget*)widget);
 }
 
-void q_proxystyle_on_unpolish(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnUnpolish((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnUnpolish((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_unpolish(void* self, void* widget) {
@@ -333,8 +333,8 @@ void q_proxystyle_unpolish2(void* self, void* app) {
     QProxyStyle_Unpolish2((QProxyStyle*)self, (QApplication*)app);
 }
 
-void q_proxystyle_on_unpolish2(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnUnpolish2((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnUnpolish2((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_qbase_unpolish2(void* self, void* app) {
@@ -345,8 +345,8 @@ bool q_proxystyle_event(void* self, void* e) {
     return QProxyStyle_Event((QProxyStyle*)self, (QEvent*)e);
 }
 
-void q_proxystyle_on_event(void* self, bool (*slot)(void*, void*)) {
-    QProxyStyle_OnEvent((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*)) {
+    QProxyStyle_OnEvent((QProxyStyle*)self, (intptr_t)callback);
 }
 
 bool q_proxystyle_qbase_event(void* self, void* e) {
@@ -526,12 +526,16 @@ const char** q_proxystyle_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_proxystyle_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -549,8 +553,8 @@ void q_proxystyle_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_proxystyle_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_proxystyle_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_proxystyle_parent(void* self) {
@@ -585,8 +589,8 @@ void q_proxystyle_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_proxystyle_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_proxystyle_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_proxystyle_event_filter(void* self, void* watched, void* event) {
@@ -597,8 +601,8 @@ bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event) {
     return QProxyStyle_QBaseEventFilter((QProxyStyle*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_proxystyle_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QProxyStyle_OnEventFilter((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QProxyStyle_OnEventFilter((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_timer_event(void* self, void* event) {
@@ -609,8 +613,8 @@ void q_proxystyle_qbase_timer_event(void* self, void* event) {
     QProxyStyle_QBaseTimerEvent((QProxyStyle*)self, (QTimerEvent*)event);
 }
 
-void q_proxystyle_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnTimerEvent((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnTimerEvent((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_child_event(void* self, void* event) {
@@ -621,8 +625,8 @@ void q_proxystyle_qbase_child_event(void* self, void* event) {
     QProxyStyle_QBaseChildEvent((QProxyStyle*)self, (QChildEvent*)event);
 }
 
-void q_proxystyle_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnChildEvent((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnChildEvent((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_custom_event(void* self, void* event) {
@@ -633,8 +637,8 @@ void q_proxystyle_qbase_custom_event(void* self, void* event) {
     QProxyStyle_QBaseCustomEvent((QProxyStyle*)self, (QEvent*)event);
 }
 
-void q_proxystyle_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnCustomEvent((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnCustomEvent((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_connect_notify(void* self, void* signal) {
@@ -645,8 +649,8 @@ void q_proxystyle_qbase_connect_notify(void* self, void* signal) {
     QProxyStyle_QBaseConnectNotify((QProxyStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_proxystyle_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnConnectNotify((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnConnectNotify((QProxyStyle*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_disconnect_notify(void* self, void* signal) {
@@ -657,8 +661,8 @@ void q_proxystyle_qbase_disconnect_notify(void* self, void* signal) {
     QProxyStyle_QBaseDisconnectNotify((QProxyStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_proxystyle_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QProxyStyle_OnDisconnectNotify((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QProxyStyle_OnDisconnectNotify((QProxyStyle*)self, (intptr_t)callback);
 }
 
 QObject* q_proxystyle_sender(void* self) {
@@ -669,8 +673,8 @@ QObject* q_proxystyle_qbase_sender(void* self) {
     return QProxyStyle_QBaseSender((QProxyStyle*)self);
 }
 
-void q_proxystyle_on_sender(void* self, QObject* (*slot)()) {
-    QProxyStyle_OnSender((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_sender(void* self, QObject* (*callback)()) {
+    QProxyStyle_OnSender((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_sender_signal_index(void* self) {
@@ -681,8 +685,8 @@ int32_t q_proxystyle_qbase_sender_signal_index(void* self) {
     return QProxyStyle_QBaseSenderSignalIndex((QProxyStyle*)self);
 }
 
-void q_proxystyle_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QProxyStyle_OnSenderSignalIndex((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QProxyStyle_OnSenderSignalIndex((QProxyStyle*)self, (intptr_t)callback);
 }
 
 int32_t q_proxystyle_receivers(void* self, const char* signal) {
@@ -693,8 +697,8 @@ int32_t q_proxystyle_qbase_receivers(void* self, const char* signal) {
     return QProxyStyle_QBaseReceivers((QProxyStyle*)self, signal);
 }
 
-void q_proxystyle_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QProxyStyle_OnReceivers((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QProxyStyle_OnReceivers((QProxyStyle*)self, (intptr_t)callback);
 }
 
 bool q_proxystyle_is_signal_connected(void* self, void* signal) {
@@ -705,12 +709,12 @@ bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal) {
     return QProxyStyle_QBaseIsSignalConnected((QProxyStyle*)self, (QMetaMethod*)signal);
 }
 
-void q_proxystyle_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QProxyStyle_OnIsSignalConnected((QProxyStyle*)self, (intptr_t)slot);
+void q_proxystyle_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QProxyStyle_OnIsSignalConnected((QProxyStyle*)self, (intptr_t)callback);
 }
 
-void q_proxystyle_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_proxystyle_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_proxystyle_delete(void* self) {

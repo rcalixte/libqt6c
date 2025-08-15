@@ -43,8 +43,8 @@ int32_t q_scrollbar_metacall(void* self, int64_t param1, int param2, void* param
     return QScrollBar_Metacall((QScrollBar*)self, param1, param2, param3);
 }
 
-void q_scrollbar_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QScrollBar_OnMetacall((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QScrollBar_OnMetacall((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ QSize* q_scrollbar_size_hint(void* self) {
     return QScrollBar_SizeHint((QScrollBar*)self);
 }
 
-void q_scrollbar_on_size_hint(void* self, QSize* (*slot)()) {
-    QScrollBar_OnSizeHint((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_size_hint(void* self, QSize* (*callback)()) {
+    QScrollBar_OnSizeHint((QScrollBar*)self, (intptr_t)callback);
 }
 
 QSize* q_scrollbar_qbase_size_hint(void* self) {
@@ -74,8 +74,8 @@ bool q_scrollbar_event(void* self, void* event) {
     return QScrollBar_Event((QScrollBar*)self, (QEvent*)event);
 }
 
-void q_scrollbar_on_event(void* self, bool (*slot)(void*, void*)) {
-    QScrollBar_OnEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_event(void* self, bool (*callback)(void*, void*)) {
+    QScrollBar_OnEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_qbase_event(void* self, void* event) {
@@ -86,8 +86,8 @@ void q_scrollbar_wheel_event(void* self, void* param1) {
     QScrollBar_WheelEvent((QScrollBar*)self, (QWheelEvent*)param1);
 }
 
-void q_scrollbar_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnWheelEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnWheelEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_wheel_event(void* self, void* param1) {
@@ -98,8 +98,8 @@ void q_scrollbar_paint_event(void* self, void* param1) {
     QScrollBar_PaintEvent((QScrollBar*)self, (QPaintEvent*)param1);
 }
 
-void q_scrollbar_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnPaintEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnPaintEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_paint_event(void* self, void* param1) {
@@ -110,8 +110,8 @@ void q_scrollbar_mouse_press_event(void* self, void* param1) {
     QScrollBar_MousePressEvent((QScrollBar*)self, (QMouseEvent*)param1);
 }
 
-void q_scrollbar_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnMousePressEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnMousePressEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_mouse_press_event(void* self, void* param1) {
@@ -122,8 +122,8 @@ void q_scrollbar_mouse_release_event(void* self, void* param1) {
     QScrollBar_MouseReleaseEvent((QScrollBar*)self, (QMouseEvent*)param1);
 }
 
-void q_scrollbar_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnMouseReleaseEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnMouseReleaseEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_mouse_release_event(void* self, void* param1) {
@@ -134,8 +134,8 @@ void q_scrollbar_mouse_move_event(void* self, void* param1) {
     QScrollBar_MouseMoveEvent((QScrollBar*)self, (QMouseEvent*)param1);
 }
 
-void q_scrollbar_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnMouseMoveEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnMouseMoveEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_mouse_move_event(void* self, void* param1) {
@@ -146,8 +146,8 @@ void q_scrollbar_hide_event(void* self, void* param1) {
     QScrollBar_HideEvent((QScrollBar*)self, (QHideEvent*)param1);
 }
 
-void q_scrollbar_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnHideEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnHideEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_hide_event(void* self, void* param1) {
@@ -158,8 +158,8 @@ void q_scrollbar_slider_change(void* self, int64_t change) {
     QScrollBar_SliderChange((QScrollBar*)self, change);
 }
 
-void q_scrollbar_on_slider_change(void* self, void (*slot)(void*, int64_t)) {
-    QScrollBar_OnSliderChange((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_slider_change(void* self, void (*callback)(void*, int64_t)) {
+    QScrollBar_OnSliderChange((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_slider_change(void* self, int64_t change) {
@@ -170,8 +170,8 @@ void q_scrollbar_context_menu_event(void* self, void* param1) {
     QScrollBar_ContextMenuEvent((QScrollBar*)self, (QContextMenuEvent*)param1);
 }
 
-void q_scrollbar_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnContextMenuEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnContextMenuEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_context_menu_event(void* self, void* param1) {
@@ -182,8 +182,8 @@ void q_scrollbar_init_style_option(void* self, void* option) {
     QScrollBar_InitStyleOption((QScrollBar*)self, (QStyleOptionSlider*)option);
 }
 
-void q_scrollbar_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnInitStyleOption((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnInitStyleOption((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_qbase_init_style_option(void* self, void* option) {
@@ -304,48 +304,48 @@ void q_scrollbar_value_changed(void* self, int value) {
     QAbstractSlider_ValueChanged((QAbstractSlider*)self, value);
 }
 
-void q_scrollbar_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ValueChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_slider_pressed(void* self) {
     QAbstractSlider_SliderPressed((QAbstractSlider*)self);
 }
 
-void q_scrollbar_on_slider_pressed(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_slider_pressed(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderPressed((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_slider_moved(void* self, int position) {
     QAbstractSlider_SliderMoved((QAbstractSlider*)self, position);
 }
 
-void q_scrollbar_on_slider_moved(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_slider_moved(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_SliderMoved((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_slider_released(void* self) {
     QAbstractSlider_SliderReleased((QAbstractSlider*)self);
 }
 
-void q_scrollbar_on_slider_released(void* self, void (*slot)(void*)) {
-    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_slider_released(void* self, void (*callback)(void*)) {
+    QAbstractSlider_Connect_SliderReleased((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_range_changed(void* self, int min, int max) {
     QAbstractSlider_RangeChanged((QAbstractSlider*)self, min, max);
 }
 
-void q_scrollbar_on_range_changed(void* self, void (*slot)(void*, int, int)) {
-    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_range_changed(void* self, void (*callback)(void*, int, int)) {
+    QAbstractSlider_Connect_RangeChanged((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_action_triggered(void* self, int action) {
     QAbstractSlider_ActionTriggered((QAbstractSlider*)self, action);
 }
 
-void q_scrollbar_on_action_triggered(void* self, void (*slot)(void*, int)) {
-    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)slot);
+void q_scrollbar_on_action_triggered(void* self, void (*callback)(void*, int)) {
+    QAbstractSlider_Connect_ActionTriggered((QAbstractSlider*)self, (intptr_t)callback);
 }
 
 uintptr_t q_scrollbar_win_id(void* self) {
@@ -1374,32 +1374,32 @@ void q_scrollbar_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_scrollbar_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_scrollbar_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_scrollbar_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_scrollbar_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_scrollbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_scrollbar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_scrollbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_scrollbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_scrollbar_input_method_hints(void* self) {
@@ -1570,12 +1570,16 @@ const char** q_scrollbar_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scrollbar_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1593,8 +1597,8 @@ void q_scrollbar_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_scrollbar_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_scrollbar_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_scrollbar_parent(void* self) {
@@ -1629,8 +1633,8 @@ void q_scrollbar_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_scrollbar_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_scrollbar_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_painting_active(void* self) {
@@ -1693,8 +1697,8 @@ void q_scrollbar_qbase_key_press_event(void* self, void* ev) {
     QScrollBar_QBaseKeyPressEvent((QScrollBar*)self, (QKeyEvent*)ev);
 }
 
-void q_scrollbar_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnKeyPressEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnKeyPressEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_timer_event(void* self, void* param1) {
@@ -1705,8 +1709,8 @@ void q_scrollbar_qbase_timer_event(void* self, void* param1) {
     QScrollBar_QBaseTimerEvent((QScrollBar*)self, (QTimerEvent*)param1);
 }
 
-void q_scrollbar_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnTimerEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnTimerEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_change_event(void* self, void* e) {
@@ -1717,8 +1721,8 @@ void q_scrollbar_qbase_change_event(void* self, void* e) {
     QScrollBar_QBaseChangeEvent((QScrollBar*)self, (QEvent*)e);
 }
 
-void q_scrollbar_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnChangeEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnChangeEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_dev_type(void* self) {
@@ -1729,8 +1733,8 @@ int32_t q_scrollbar_qbase_dev_type(void* self) {
     return QScrollBar_QBaseDevType((QScrollBar*)self);
 }
 
-void q_scrollbar_on_dev_type(void* self, int32_t (*slot)()) {
-    QScrollBar_OnDevType((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_dev_type(void* self, int32_t (*callback)()) {
+    QScrollBar_OnDevType((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_set_visible(void* self, bool visible) {
@@ -1741,8 +1745,8 @@ void q_scrollbar_qbase_set_visible(void* self, bool visible) {
     QScrollBar_QBaseSetVisible((QScrollBar*)self, visible);
 }
 
-void q_scrollbar_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QScrollBar_OnSetVisible((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QScrollBar_OnSetVisible((QScrollBar*)self, (intptr_t)callback);
 }
 
 QSize* q_scrollbar_minimum_size_hint(void* self) {
@@ -1753,8 +1757,8 @@ QSize* q_scrollbar_qbase_minimum_size_hint(void* self) {
     return QScrollBar_QBaseMinimumSizeHint((QScrollBar*)self);
 }
 
-void q_scrollbar_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QScrollBar_OnMinimumSizeHint((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QScrollBar_OnMinimumSizeHint((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_height_for_width(void* self, int param1) {
@@ -1765,8 +1769,8 @@ int32_t q_scrollbar_qbase_height_for_width(void* self, int param1) {
     return QScrollBar_QBaseHeightForWidth((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QScrollBar_OnHeightForWidth((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QScrollBar_OnHeightForWidth((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_has_height_for_width(void* self) {
@@ -1777,8 +1781,8 @@ bool q_scrollbar_qbase_has_height_for_width(void* self) {
     return QScrollBar_QBaseHasHeightForWidth((QScrollBar*)self);
 }
 
-void q_scrollbar_on_has_height_for_width(void* self, bool (*slot)()) {
-    QScrollBar_OnHasHeightForWidth((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_has_height_for_width(void* self, bool (*callback)()) {
+    QScrollBar_OnHasHeightForWidth((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_scrollbar_paint_engine(void* self) {
@@ -1789,8 +1793,8 @@ QPaintEngine* q_scrollbar_qbase_paint_engine(void* self) {
     return QScrollBar_QBasePaintEngine((QScrollBar*)self);
 }
 
-void q_scrollbar_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QScrollBar_OnPaintEngine((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QScrollBar_OnPaintEngine((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_mouse_double_click_event(void* self, void* event) {
@@ -1801,8 +1805,8 @@ void q_scrollbar_qbase_mouse_double_click_event(void* self, void* event) {
     QScrollBar_QBaseMouseDoubleClickEvent((QScrollBar*)self, (QMouseEvent*)event);
 }
 
-void q_scrollbar_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnMouseDoubleClickEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnMouseDoubleClickEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_key_release_event(void* self, void* event) {
@@ -1813,8 +1817,8 @@ void q_scrollbar_qbase_key_release_event(void* self, void* event) {
     QScrollBar_QBaseKeyReleaseEvent((QScrollBar*)self, (QKeyEvent*)event);
 }
 
-void q_scrollbar_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnKeyReleaseEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnKeyReleaseEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_focus_in_event(void* self, void* event) {
@@ -1825,8 +1829,8 @@ void q_scrollbar_qbase_focus_in_event(void* self, void* event) {
     QScrollBar_QBaseFocusInEvent((QScrollBar*)self, (QFocusEvent*)event);
 }
 
-void q_scrollbar_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnFocusInEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnFocusInEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_focus_out_event(void* self, void* event) {
@@ -1837,8 +1841,8 @@ void q_scrollbar_qbase_focus_out_event(void* self, void* event) {
     QScrollBar_QBaseFocusOutEvent((QScrollBar*)self, (QFocusEvent*)event);
 }
 
-void q_scrollbar_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnFocusOutEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnFocusOutEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_enter_event(void* self, void* event) {
@@ -1849,8 +1853,8 @@ void q_scrollbar_qbase_enter_event(void* self, void* event) {
     QScrollBar_QBaseEnterEvent((QScrollBar*)self, (QEnterEvent*)event);
 }
 
-void q_scrollbar_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnEnterEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnEnterEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_leave_event(void* self, void* event) {
@@ -1861,8 +1865,8 @@ void q_scrollbar_qbase_leave_event(void* self, void* event) {
     QScrollBar_QBaseLeaveEvent((QScrollBar*)self, (QEvent*)event);
 }
 
-void q_scrollbar_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnLeaveEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnLeaveEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_move_event(void* self, void* event) {
@@ -1873,8 +1877,8 @@ void q_scrollbar_qbase_move_event(void* self, void* event) {
     QScrollBar_QBaseMoveEvent((QScrollBar*)self, (QMoveEvent*)event);
 }
 
-void q_scrollbar_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnMoveEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnMoveEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_resize_event(void* self, void* event) {
@@ -1885,8 +1889,8 @@ void q_scrollbar_qbase_resize_event(void* self, void* event) {
     QScrollBar_QBaseResizeEvent((QScrollBar*)self, (QResizeEvent*)event);
 }
 
-void q_scrollbar_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnResizeEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnResizeEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_close_event(void* self, void* event) {
@@ -1897,8 +1901,8 @@ void q_scrollbar_qbase_close_event(void* self, void* event) {
     QScrollBar_QBaseCloseEvent((QScrollBar*)self, (QCloseEvent*)event);
 }
 
-void q_scrollbar_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnCloseEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnCloseEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_tablet_event(void* self, void* event) {
@@ -1909,8 +1913,8 @@ void q_scrollbar_qbase_tablet_event(void* self, void* event) {
     QScrollBar_QBaseTabletEvent((QScrollBar*)self, (QTabletEvent*)event);
 }
 
-void q_scrollbar_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnTabletEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnTabletEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_action_event(void* self, void* event) {
@@ -1921,8 +1925,8 @@ void q_scrollbar_qbase_action_event(void* self, void* event) {
     QScrollBar_QBaseActionEvent((QScrollBar*)self, (QActionEvent*)event);
 }
 
-void q_scrollbar_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnActionEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnActionEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_drag_enter_event(void* self, void* event) {
@@ -1933,8 +1937,8 @@ void q_scrollbar_qbase_drag_enter_event(void* self, void* event) {
     QScrollBar_QBaseDragEnterEvent((QScrollBar*)self, (QDragEnterEvent*)event);
 }
 
-void q_scrollbar_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnDragEnterEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnDragEnterEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_drag_move_event(void* self, void* event) {
@@ -1945,8 +1949,8 @@ void q_scrollbar_qbase_drag_move_event(void* self, void* event) {
     QScrollBar_QBaseDragMoveEvent((QScrollBar*)self, (QDragMoveEvent*)event);
 }
 
-void q_scrollbar_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnDragMoveEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnDragMoveEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_drag_leave_event(void* self, void* event) {
@@ -1957,8 +1961,8 @@ void q_scrollbar_qbase_drag_leave_event(void* self, void* event) {
     QScrollBar_QBaseDragLeaveEvent((QScrollBar*)self, (QDragLeaveEvent*)event);
 }
 
-void q_scrollbar_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnDragLeaveEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnDragLeaveEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_drop_event(void* self, void* event) {
@@ -1969,8 +1973,8 @@ void q_scrollbar_qbase_drop_event(void* self, void* event) {
     QScrollBar_QBaseDropEvent((QScrollBar*)self, (QDropEvent*)event);
 }
 
-void q_scrollbar_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnDropEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnDropEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_show_event(void* self, void* event) {
@@ -1981,8 +1985,8 @@ void q_scrollbar_qbase_show_event(void* self, void* event) {
     QScrollBar_QBaseShowEvent((QScrollBar*)self, (QShowEvent*)event);
 }
 
-void q_scrollbar_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnShowEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnShowEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1993,8 +1997,8 @@ bool q_scrollbar_qbase_native_event(void* self, const char* eventType, void* mes
     return QScrollBar_QBaseNativeEvent((QScrollBar*)self, qstring(eventType), message, result);
 }
 
-void q_scrollbar_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QScrollBar_OnNativeEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QScrollBar_OnNativeEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_metric(void* self, int64_t param1) {
@@ -2005,8 +2009,8 @@ int32_t q_scrollbar_qbase_metric(void* self, int64_t param1) {
     return QScrollBar_QBaseMetric((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QScrollBar_OnMetric((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QScrollBar_OnMetric((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_init_painter(void* self, void* painter) {
@@ -2017,8 +2021,8 @@ void q_scrollbar_qbase_init_painter(void* self, void* painter) {
     QScrollBar_QBaseInitPainter((QScrollBar*)self, (QPainter*)painter);
 }
 
-void q_scrollbar_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnInitPainter((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnInitPainter((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_scrollbar_redirected(void* self, void* offset) {
@@ -2029,8 +2033,8 @@ QPaintDevice* q_scrollbar_qbase_redirected(void* self, void* offset) {
     return QScrollBar_QBaseRedirected((QScrollBar*)self, (QPoint*)offset);
 }
 
-void q_scrollbar_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QScrollBar_OnRedirected((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QScrollBar_OnRedirected((QScrollBar*)self, (intptr_t)callback);
 }
 
 QPainter* q_scrollbar_shared_painter(void* self) {
@@ -2041,8 +2045,8 @@ QPainter* q_scrollbar_qbase_shared_painter(void* self) {
     return QScrollBar_QBaseSharedPainter((QScrollBar*)self);
 }
 
-void q_scrollbar_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QScrollBar_OnSharedPainter((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QScrollBar_OnSharedPainter((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_input_method_event(void* self, void* param1) {
@@ -2053,8 +2057,8 @@ void q_scrollbar_qbase_input_method_event(void* self, void* param1) {
     QScrollBar_QBaseInputMethodEvent((QScrollBar*)self, (QInputMethodEvent*)param1);
 }
 
-void q_scrollbar_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnInputMethodEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnInputMethodEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 QVariant* q_scrollbar_input_method_query(void* self, int64_t param1) {
@@ -2065,8 +2069,8 @@ QVariant* q_scrollbar_qbase_input_method_query(void* self, int64_t param1) {
     return QScrollBar_QBaseInputMethodQuery((QScrollBar*)self, param1);
 }
 
-void q_scrollbar_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QScrollBar_OnInputMethodQuery((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QScrollBar_OnInputMethodQuery((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_focus_next_prev_child(void* self, bool next) {
@@ -2077,8 +2081,8 @@ bool q_scrollbar_qbase_focus_next_prev_child(void* self, bool next) {
     return QScrollBar_QBaseFocusNextPrevChild((QScrollBar*)self, next);
 }
 
-void q_scrollbar_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QScrollBar_OnFocusNextPrevChild((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QScrollBar_OnFocusNextPrevChild((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_event_filter(void* self, void* watched, void* event) {
@@ -2089,8 +2093,8 @@ bool q_scrollbar_qbase_event_filter(void* self, void* watched, void* event) {
     return QScrollBar_QBaseEventFilter((QScrollBar*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_scrollbar_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QScrollBar_OnEventFilter((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QScrollBar_OnEventFilter((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_child_event(void* self, void* event) {
@@ -2101,8 +2105,8 @@ void q_scrollbar_qbase_child_event(void* self, void* event) {
     QScrollBar_QBaseChildEvent((QScrollBar*)self, (QChildEvent*)event);
 }
 
-void q_scrollbar_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnChildEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnChildEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_custom_event(void* self, void* event) {
@@ -2113,8 +2117,8 @@ void q_scrollbar_qbase_custom_event(void* self, void* event) {
     QScrollBar_QBaseCustomEvent((QScrollBar*)self, (QEvent*)event);
 }
 
-void q_scrollbar_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnCustomEvent((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnCustomEvent((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_connect_notify(void* self, void* signal) {
@@ -2125,8 +2129,8 @@ void q_scrollbar_qbase_connect_notify(void* self, void* signal) {
     QScrollBar_QBaseConnectNotify((QScrollBar*)self, (QMetaMethod*)signal);
 }
 
-void q_scrollbar_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnConnectNotify((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnConnectNotify((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_disconnect_notify(void* self, void* signal) {
@@ -2137,8 +2141,8 @@ void q_scrollbar_qbase_disconnect_notify(void* self, void* signal) {
     QScrollBar_QBaseDisconnectNotify((QScrollBar*)self, (QMetaMethod*)signal);
 }
 
-void q_scrollbar_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QScrollBar_OnDisconnectNotify((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QScrollBar_OnDisconnectNotify((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_set_repeat_action(void* self, int64_t action) {
@@ -2149,8 +2153,8 @@ void q_scrollbar_qbase_set_repeat_action(void* self, int64_t action) {
     QScrollBar_QBaseSetRepeatAction((QScrollBar*)self, action);
 }
 
-void q_scrollbar_on_set_repeat_action(void* self, void (*slot)(void*, int64_t)) {
-    QScrollBar_OnSetRepeatAction((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_set_repeat_action(void* self, void (*callback)(void*, int64_t)) {
+    QScrollBar_OnSetRepeatAction((QScrollBar*)self, (intptr_t)callback);
 }
 
 int64_t q_scrollbar_repeat_action(void* self) {
@@ -2161,8 +2165,8 @@ int64_t q_scrollbar_qbase_repeat_action(void* self) {
     return QScrollBar_QBaseRepeatAction((QScrollBar*)self);
 }
 
-void q_scrollbar_on_repeat_action(void* self, int64_t (*slot)()) {
-    QScrollBar_OnRepeatAction((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_repeat_action(void* self, int64_t (*callback)()) {
+    QScrollBar_OnRepeatAction((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_update_micro_focus(void* self) {
@@ -2173,8 +2177,8 @@ void q_scrollbar_qbase_update_micro_focus(void* self) {
     QScrollBar_QBaseUpdateMicroFocus((QScrollBar*)self);
 }
 
-void q_scrollbar_on_update_micro_focus(void* self, void (*slot)()) {
-    QScrollBar_OnUpdateMicroFocus((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_update_micro_focus(void* self, void (*callback)()) {
+    QScrollBar_OnUpdateMicroFocus((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_create(void* self) {
@@ -2185,8 +2189,8 @@ void q_scrollbar_qbase_create(void* self) {
     QScrollBar_QBaseCreate((QScrollBar*)self);
 }
 
-void q_scrollbar_on_create(void* self, void (*slot)()) {
-    QScrollBar_OnCreate((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_create(void* self, void (*callback)()) {
+    QScrollBar_OnCreate((QScrollBar*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_destroy(void* self) {
@@ -2197,8 +2201,8 @@ void q_scrollbar_qbase_destroy(void* self) {
     QScrollBar_QBaseDestroy((QScrollBar*)self);
 }
 
-void q_scrollbar_on_destroy(void* self, void (*slot)()) {
-    QScrollBar_OnDestroy((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_destroy(void* self, void (*callback)()) {
+    QScrollBar_OnDestroy((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_focus_next_child(void* self) {
@@ -2209,8 +2213,8 @@ bool q_scrollbar_qbase_focus_next_child(void* self) {
     return QScrollBar_QBaseFocusNextChild((QScrollBar*)self);
 }
 
-void q_scrollbar_on_focus_next_child(void* self, bool (*slot)()) {
-    QScrollBar_OnFocusNextChild((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_focus_next_child(void* self, bool (*callback)()) {
+    QScrollBar_OnFocusNextChild((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_focus_previous_child(void* self) {
@@ -2221,8 +2225,8 @@ bool q_scrollbar_qbase_focus_previous_child(void* self) {
     return QScrollBar_QBaseFocusPreviousChild((QScrollBar*)self);
 }
 
-void q_scrollbar_on_focus_previous_child(void* self, bool (*slot)()) {
-    QScrollBar_OnFocusPreviousChild((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_focus_previous_child(void* self, bool (*callback)()) {
+    QScrollBar_OnFocusPreviousChild((QScrollBar*)self, (intptr_t)callback);
 }
 
 QObject* q_scrollbar_sender(void* self) {
@@ -2233,8 +2237,8 @@ QObject* q_scrollbar_qbase_sender(void* self) {
     return QScrollBar_QBaseSender((QScrollBar*)self);
 }
 
-void q_scrollbar_on_sender(void* self, QObject* (*slot)()) {
-    QScrollBar_OnSender((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_sender(void* self, QObject* (*callback)()) {
+    QScrollBar_OnSender((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_sender_signal_index(void* self) {
@@ -2245,8 +2249,8 @@ int32_t q_scrollbar_qbase_sender_signal_index(void* self) {
     return QScrollBar_QBaseSenderSignalIndex((QScrollBar*)self);
 }
 
-void q_scrollbar_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QScrollBar_OnSenderSignalIndex((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QScrollBar_OnSenderSignalIndex((QScrollBar*)self, (intptr_t)callback);
 }
 
 int32_t q_scrollbar_receivers(void* self, const char* signal) {
@@ -2257,8 +2261,8 @@ int32_t q_scrollbar_qbase_receivers(void* self, const char* signal) {
     return QScrollBar_QBaseReceivers((QScrollBar*)self, signal);
 }
 
-void q_scrollbar_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QScrollBar_OnReceivers((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QScrollBar_OnReceivers((QScrollBar*)self, (intptr_t)callback);
 }
 
 bool q_scrollbar_is_signal_connected(void* self, void* signal) {
@@ -2269,8 +2273,8 @@ bool q_scrollbar_qbase_is_signal_connected(void* self, void* signal) {
     return QScrollBar_QBaseIsSignalConnected((QScrollBar*)self, (QMetaMethod*)signal);
 }
 
-void q_scrollbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QScrollBar_OnIsSignalConnected((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QScrollBar_OnIsSignalConnected((QScrollBar*)self, (intptr_t)callback);
 }
 
 double q_scrollbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2281,12 +2285,12 @@ double q_scrollbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
     return QScrollBar_QBaseGetDecodedMetricF((QScrollBar*)self, metricA, metricB);
 }
 
-void q_scrollbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QScrollBar_OnGetDecodedMetricF((QScrollBar*)self, (intptr_t)slot);
+void q_scrollbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QScrollBar_OnGetDecodedMetricF((QScrollBar*)self, (intptr_t)callback);
 }
 
-void q_scrollbar_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_scrollbar_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_scrollbar_delete(void* self) {

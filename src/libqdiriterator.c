@@ -17,13 +17,19 @@ QDirIterator* q_diriterator_new3(const char* path, int64_t filter) {
 
 QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_diriterator_new4");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    return QDirIterator_new4(qstring(path), nameFilters_list);
+    QDirIterator* _out = QDirIterator_new4(qstring(path), nameFilters_list);
+    free(nameFilters_qstr);
+    return _out;
 }
 
 QDirIterator* q_diriterator_new5(void* dir, int64_t flags) {
@@ -40,24 +46,36 @@ QDirIterator* q_diriterator_new7(const char* path, int64_t filter, int64_t flags
 
 QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], int64_t filters) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_diriterator_new8");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    return QDirIterator_new8(qstring(path), nameFilters_list, filters);
+    QDirIterator* _out = QDirIterator_new8(qstring(path), nameFilters_list, filters);
+    free(nameFilters_qstr);
+    return _out;
 }
 
 QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], int64_t filters, int64_t flags) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_diriterator_new9");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    return QDirIterator_new9(qstring(path), nameFilters_list, filters, flags);
+    QDirIterator* _out = QDirIterator_new9(qstring(path), nameFilters_list, filters, flags);
+    free(nameFilters_qstr);
+    return _out;
 }
 
 const char* q_diriterator_next(void* self) {

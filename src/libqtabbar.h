@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1856 +15,2127 @@
 
 /// q_tabbar_new constructs a new QTabBar object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QTabBar* q_tabbar_new(void* parent);
 
 /// q_tabbar_new2 constructs a new QTabBar object.
-///
 ///
 QTabBar* q_tabbar_new2();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 const QMetaObject* q_tabbar_meta_object(void* self);
 
-/// ``` QTabBar* self, const char* param1 ```
+/// @param self QTabBar*
+/// @param param1 const char*
 void* q_tabbar_metacast(void* self, const char* param1);
 
-/// ``` QTabBar* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTabBar*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_tabbar_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, int32_t (*slot)(QTabBar*, enum QMetaObject__Call, int, void*) ```
-void q_tabbar_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTabBar*
+/// @param callback int32_t fn(QTabBar*, enum QMetaObject__Call, int, void*)
+void q_tabbar_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTabBar*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_tabbar_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_tabbar_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#shape)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum QTabBar__Shape
 int64_t q_tabbar_shape(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setShape)
 ///
-/// ``` QTabBar* self, enum QTabBar__Shape shape ```
+/// @param self QTabBar*
+/// @param shape enum QTabBar__Shape
 void q_tabbar_set_shape(void* self, int64_t shape);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#addTab)
 ///
-/// ``` QTabBar* self, const char* text ```
+/// @param self QTabBar*
+/// @param text const char*
 int32_t q_tabbar_add_tab(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#addTab)
 ///
-/// ``` QTabBar* self, QIcon* icon, const char* text ```
+/// @param self QTabBar*
+/// @param icon QIcon*
+/// @param text const char*
 int32_t q_tabbar_add_tab2(void* self, void* icon, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#insertTab)
 ///
-/// ``` QTabBar* self, int index, const char* text ```
+/// @param self QTabBar*
+/// @param index int
+/// @param text const char*
 int32_t q_tabbar_insert_tab(void* self, int index, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#insertTab)
 ///
-/// ``` QTabBar* self, int index, QIcon* icon, const char* text ```
+/// @param self QTabBar*
+/// @param index int
+/// @param icon QIcon*
+/// @param text const char*
 int32_t q_tabbar_insert_tab2(void* self, int index, void* icon, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#removeTab)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_remove_tab(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#moveTab)
 ///
-/// ``` QTabBar* self, int from, int to ```
+/// @param self QTabBar*
+/// @param from int
+/// @param to int
 void q_tabbar_move_tab(void* self, int from, int to);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#isTabEnabled)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 bool q_tabbar_is_tab_enabled(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabEnabled)
 ///
-/// ``` QTabBar* self, int index, bool enabled ```
+/// @param self QTabBar*
+/// @param index int
+/// @param enabled bool
 void q_tabbar_set_tab_enabled(void* self, int index, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#isTabVisible)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 bool q_tabbar_is_tab_visible(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabVisible)
 ///
-/// ``` QTabBar* self, int index, bool visible ```
+/// @param self QTabBar*
+/// @param index int
+/// @param visible bool
 void q_tabbar_set_tab_visible(void* self, int index, bool visible);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabText)
 ///
-/// ``` QTabBar* self, int index ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
+/// @param index int
 const char* q_tabbar_tab_text(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabText)
 ///
-/// ``` QTabBar* self, int index, const char* text ```
+/// @param self QTabBar*
+/// @param index int
+/// @param text const char*
 void q_tabbar_set_tab_text(void* self, int index, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabTextColor)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QColor* q_tabbar_tab_text_color(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabTextColor)
 ///
-/// ``` QTabBar* self, int index, QColor* color ```
+/// @param self QTabBar*
+/// @param index int
+/// @param color QColor*
 void q_tabbar_set_tab_text_color(void* self, int index, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabIcon)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QIcon* q_tabbar_tab_icon(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabIcon)
 ///
-/// ``` QTabBar* self, int index, QIcon* icon ```
+/// @param self QTabBar*
+/// @param index int
+/// @param icon QIcon*
 void q_tabbar_set_tab_icon(void* self, int index, void* icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#elideMode)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__TextElideMode
 int64_t q_tabbar_elide_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setElideMode)
 ///
-/// ``` QTabBar* self, enum Qt__TextElideMode mode ```
+/// @param self QTabBar*
+/// @param mode enum Qt__TextElideMode
 void q_tabbar_set_elide_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabToolTip)
 ///
-/// ``` QTabBar* self, int index, const char* tip ```
+/// @param self QTabBar*
+/// @param index int
+/// @param tip const char*
 void q_tabbar_set_tab_tool_tip(void* self, int index, const char* tip);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabToolTip)
 ///
-/// ``` QTabBar* self, int index ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
+/// @param index int
 const char* q_tabbar_tab_tool_tip(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabWhatsThis)
 ///
-/// ``` QTabBar* self, int index, const char* text ```
+/// @param self QTabBar*
+/// @param index int
+/// @param text const char*
 void q_tabbar_set_tab_whats_this(void* self, int index, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabWhatsThis)
 ///
-/// ``` QTabBar* self, int index ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
+/// @param index int
 const char* q_tabbar_tab_whats_this(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabData)
 ///
-/// ``` QTabBar* self, int index, QVariant* data ```
+/// @param self QTabBar*
+/// @param index int
+/// @param data QVariant*
 void q_tabbar_set_tab_data(void* self, int index, void* data);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabData)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QVariant* q_tabbar_tab_data(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabRect)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QRect* q_tabbar_tab_rect(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabAt)
 ///
-/// ``` QTabBar* self, QPoint* pos ```
+/// @param self QTabBar*
+/// @param pos QPoint*
 int32_t q_tabbar_tab_at(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#currentIndex)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_current_index(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#count)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#sizeHint)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, QSize* (*slot)() ```
-void q_tabbar_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QTabBar*
+/// @param callback QSize* fn()
+void q_tabbar_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumSizeHint)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, QSize* (*slot)() ```
-void q_tabbar_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QTabBar*
+/// @param callback QSize* fn()
+void q_tabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_qbase_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setDrawBase)
 ///
-/// ``` QTabBar* self, bool drawTheBase ```
+/// @param self QTabBar*
+/// @param drawTheBase bool
 void q_tabbar_set_draw_base(void* self, bool drawTheBase);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#drawBase)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_draw_base(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#iconSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_icon_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setIconSize)
 ///
-/// ``` QTabBar* self, QSize* size ```
+/// @param self QTabBar*
+/// @param size QSize*
 void q_tabbar_set_icon_size(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#usesScrollButtons)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_uses_scroll_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setUsesScrollButtons)
 ///
-/// ``` QTabBar* self, bool useButtons ```
+/// @param self QTabBar*
+/// @param useButtons bool
 void q_tabbar_set_uses_scroll_buttons(void* self, bool useButtons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabsClosable)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_tabs_closable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabsClosable)
 ///
-/// ``` QTabBar* self, bool closable ```
+/// @param self QTabBar*
+/// @param closable bool
 void q_tabbar_set_tabs_closable(void* self, bool closable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setTabButton)
 ///
-/// ``` QTabBar* self, int index, enum QTabBar__ButtonPosition position, QWidget* widget ```
+/// @param self QTabBar*
+/// @param index int
+/// @param position enum QTabBar__ButtonPosition
+/// @param widget QWidget*
 void q_tabbar_set_tab_button(void* self, int index, int64_t position, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabButton)
 ///
-/// ``` QTabBar* self, int index, enum QTabBar__ButtonPosition position ```
+/// @param self QTabBar*
+/// @param index int
+/// @param position enum QTabBar__ButtonPosition
 QWidget* q_tabbar_tab_button(void* self, int index, int64_t position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#selectionBehaviorOnRemove)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum QTabBar__SelectionBehavior
 int64_t q_tabbar_selection_behavior_on_remove(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setSelectionBehaviorOnRemove)
 ///
-/// ``` QTabBar* self, enum QTabBar__SelectionBehavior behavior ```
+/// @param self QTabBar*
+/// @param behavior enum QTabBar__SelectionBehavior
 void q_tabbar_set_selection_behavior_on_remove(void* self, int64_t behavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#expanding)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_expanding(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setExpanding)
 ///
-/// ``` QTabBar* self, bool enabled ```
+/// @param self QTabBar*
+/// @param enabled bool
 void q_tabbar_set_expanding(void* self, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#isMovable)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_movable(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setMovable)
 ///
-/// ``` QTabBar* self, bool movable ```
+/// @param self QTabBar*
+/// @param movable bool
 void q_tabbar_set_movable(void* self, bool movable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#documentMode)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_document_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setDocumentMode)
 ///
-/// ``` QTabBar* self, bool set ```
+/// @param self QTabBar*
+/// @param set bool
 void q_tabbar_set_document_mode(void* self, bool set);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#autoHide)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_auto_hide(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setAutoHide)
 ///
-/// ``` QTabBar* self, bool hide ```
+/// @param self QTabBar*
+/// @param hide bool
 void q_tabbar_set_auto_hide(void* self, bool hide);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#changeCurrentOnDrag)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_change_current_on_drag(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setChangeCurrentOnDrag)
 ///
-/// ``` QTabBar* self, bool change ```
+/// @param self QTabBar*
+/// @param change bool
 void q_tabbar_set_change_current_on_drag(void* self, bool change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#accessibleTabName)
 ///
-/// ``` QTabBar* self, int index ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
+/// @param index int
 const char* q_tabbar_accessible_tab_name(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setAccessibleTabName)
 ///
-/// ``` QTabBar* self, int index, const char* name ```
+/// @param self QTabBar*
+/// @param index int
+/// @param name const char*
 void q_tabbar_set_accessible_tab_name(void* self, int index, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#setCurrentIndex)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_set_current_index(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#currentChanged)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_current_changed(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#currentChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_current_changed(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_current_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabCloseRequested)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_tab_close_requested(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabCloseRequested)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_close_requested(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_tab_close_requested(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabMoved)
 ///
-/// ``` QTabBar* self, int from, int to ```
+/// @param self QTabBar*
+/// @param from int
+/// @param to int
 void q_tabbar_tab_moved(void* self, int from, int to);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabMoved)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int, int) ```
-void q_tabbar_on_tab_moved(void* self, void (*slot)(void*, int, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int, int)
+void q_tabbar_on_tab_moved(void* self, void (*callback)(void*, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarClicked)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_tab_bar_clicked(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarClicked)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_bar_clicked(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_tab_bar_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarDoubleClicked)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_tab_bar_double_clicked(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabBarDoubleClicked)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_bar_double_clicked(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_tab_bar_double_clicked(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabSizeHint)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QSize* q_tabbar_tab_size_hint(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, QSize* (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_size_hint(void* self, QSize* (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback QSize* fn(QTabBar*, int)
+void q_tabbar_on_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QSize* q_tabbar_qbase_tab_size_hint(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumTabSizeHint)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QSize* q_tabbar_minimum_tab_size_hint(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumTabSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, QSize* (*slot)(QTabBar*, int) ```
-void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback QSize* fn(QTabBar*, int)
+void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#minimumTabSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 QSize* q_tabbar_qbase_minimum_tab_size_hint(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabInserted)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_tab_inserted(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabInserted)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_inserted(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_tab_inserted(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabInserted)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_qbase_tab_inserted(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabRemoved)
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_tab_removed(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabRemoved)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, int) ```
-void q_tabbar_on_tab_removed(void* self, void (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, int)
+void q_tabbar_on_tab_removed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabRemoved)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, int index ```
+/// @param self QTabBar*
+/// @param index int
 void q_tabbar_qbase_tab_removed(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabLayoutChange)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_tab_layout_change(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabLayoutChange)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)() ```
-void q_tabbar_on_tab_layout_change(void* self, void (*slot)());
+/// @param self QTabBar*
+/// @param callback void fn()
+void q_tabbar_on_tab_layout_change(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#tabLayoutChange)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_qbase_tab_layout_change(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#event)
 ///
-/// ``` QTabBar* self, QEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QEvent*
 bool q_tabbar_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, bool (*slot)(QTabBar*, QEvent*) ```
-void q_tabbar_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback bool fn(QTabBar*, QEvent*)
+void q_tabbar_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QEvent*
 bool q_tabbar_qbase_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#resizeEvent)
 ///
-/// ``` QTabBar* self, QResizeEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QResizeEvent*
 void q_tabbar_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QResizeEvent*) ```
-void q_tabbar_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QResizeEvent*)
+void q_tabbar_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QResizeEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QResizeEvent*
 void q_tabbar_qbase_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#showEvent)
 ///
-/// ``` QTabBar* self, QShowEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QShowEvent*
 void q_tabbar_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QShowEvent*) ```
-void q_tabbar_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QShowEvent*)
+void q_tabbar_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#showEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QShowEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QShowEvent*
 void q_tabbar_qbase_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#hideEvent)
 ///
-/// ``` QTabBar* self, QHideEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QHideEvent*
 void q_tabbar_hide_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#hideEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QHideEvent*) ```
-void q_tabbar_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QHideEvent*)
+void q_tabbar_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#hideEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QHideEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QHideEvent*
 void q_tabbar_qbase_hide_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#paintEvent)
 ///
-/// ``` QTabBar* self, QPaintEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPaintEvent*
 void q_tabbar_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QPaintEvent*) ```
-void q_tabbar_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QPaintEvent*)
+void q_tabbar_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QPaintEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPaintEvent*
 void q_tabbar_qbase_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mousePressEvent)
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_mouse_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mousePressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMouseEvent*) ```
-void q_tabbar_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMouseEvent*)
+void q_tabbar_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mousePressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_qbase_mouse_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseMoveEvent)
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_mouse_move_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseMoveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMouseEvent*) ```
-void q_tabbar_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMouseEvent*)
+void q_tabbar_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseMoveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_qbase_mouse_move_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseReleaseEvent)
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_mouse_release_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMouseEvent*) ```
-void q_tabbar_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMouseEvent*)
+void q_tabbar_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_qbase_mouse_release_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseDoubleClickEvent)
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_mouse_double_click_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseDoubleClickEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMouseEvent*) ```
-void q_tabbar_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMouseEvent*)
+void q_tabbar_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#mouseDoubleClickEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QMouseEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QMouseEvent*
 void q_tabbar_qbase_mouse_double_click_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#wheelEvent)
 ///
-/// ``` QTabBar* self, QWheelEvent* event ```
+/// @param self QTabBar*
+/// @param event QWheelEvent*
 void q_tabbar_wheel_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#wheelEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QWheelEvent*) ```
-void q_tabbar_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QWheelEvent*)
+void q_tabbar_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#wheelEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QWheelEvent* event ```
+/// @param self QTabBar*
+/// @param event QWheelEvent*
 void q_tabbar_qbase_wheel_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#keyPressEvent)
 ///
-/// ``` QTabBar* self, QKeyEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QKeyEvent*
 void q_tabbar_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QKeyEvent*) ```
-void q_tabbar_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QKeyEvent*)
+void q_tabbar_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QKeyEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QKeyEvent*
 void q_tabbar_qbase_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#changeEvent)
 ///
-/// ``` QTabBar* self, QEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QEvent*
 void q_tabbar_change_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QEvent*) ```
-void q_tabbar_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QEvent*)
+void q_tabbar_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#changeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QEvent*
 void q_tabbar_qbase_change_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#timerEvent)
 ///
-/// ``` QTabBar* self, QTimerEvent* event ```
+/// @param self QTabBar*
+/// @param event QTimerEvent*
 void q_tabbar_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QTimerEvent*) ```
-void q_tabbar_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QTimerEvent*)
+void q_tabbar_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QTimerEvent* event ```
+/// @param self QTabBar*
+/// @param event QTimerEvent*
 void q_tabbar_qbase_timer_event(void* self, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#initStyleOption)
 ///
-/// ``` QTabBar* self, QStyleOptionTab* option, int tabIndex ```
+/// @param self QTabBar*
+/// @param option QStyleOptionTab*
+/// @param tabIndex int
 void q_tabbar_init_style_option(void* self, void* option, int tabIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QStyleOptionTab*, int) ```
-void q_tabbar_on_init_style_option(void* self, void (*slot)(void*, void*, int));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QStyleOptionTab*, int)
+void q_tabbar_on_init_style_option(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabBar* self, QStyleOptionTab* option, int tabIndex ```
+/// @param self QTabBar*
+/// @param option QStyleOptionTab*
+/// @param tabIndex int
 void q_tabbar_qbase_init_style_option(void* self, void* option, int tabIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_tabbar_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_tabbar_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 uintptr_t q_tabbar_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 uintptr_t q_tabbar_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 uintptr_t q_tabbar_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QStyle* q_tabbar_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QTabBar* self, QStyle* style ```
+/// @param self QTabBar*
+/// @param style QStyle*
 void q_tabbar_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__WindowModality
 int64_t q_tabbar_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QTabBar* self, enum Qt__WindowModality windowModality ```
+/// @param self QTabBar*
+/// @param windowModality enum Qt__WindowModality
 void q_tabbar_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QTabBar* self, QWidget* param1 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
 bool q_tabbar_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QTabBar* self, bool enabled ```
+/// @param self QTabBar*
+/// @param enabled bool
 void q_tabbar_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QTabBar* self, bool disabled ```
+/// @param self QTabBar*
+/// @param disabled bool
 void q_tabbar_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QTabBar* self, bool windowModified ```
+/// @param self QTabBar*
+/// @param windowModified bool
 void q_tabbar_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRect* q_tabbar_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 const QRect* q_tabbar_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRect* q_tabbar_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPoint* q_tabbar_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRect* q_tabbar_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRect* q_tabbar_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRegion* q_tabbar_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QTabBar* self, QSize* minimumSize ```
+/// @param self QTabBar*
+/// @param minimumSize QSize*
 void q_tabbar_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QTabBar* self, int minw, int minh ```
+/// @param self QTabBar*
+/// @param minw int
+/// @param minh int
 void q_tabbar_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QTabBar* self, QSize* maximumSize ```
+/// @param self QTabBar*
+/// @param maximumSize QSize*
 void q_tabbar_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QTabBar* self, int maxw, int maxh ```
+/// @param self QTabBar*
+/// @param maxw int
+/// @param maxh int
 void q_tabbar_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QTabBar* self, int minw ```
+/// @param self QTabBar*
+/// @param minw int
 void q_tabbar_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QTabBar* self, int minh ```
+/// @param self QTabBar*
+/// @param minh int
 void q_tabbar_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QTabBar* self, int maxw ```
+/// @param self QTabBar*
+/// @param maxw int
 void q_tabbar_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QTabBar* self, int maxh ```
+/// @param self QTabBar*
+/// @param maxh int
 void q_tabbar_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QTabBar* self, QSize* sizeIncrement ```
+/// @param self QTabBar*
+/// @param sizeIncrement QSize*
 void q_tabbar_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QTabBar* self, int w, int h ```
+/// @param self QTabBar*
+/// @param w int
+/// @param h int
 void q_tabbar_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSize* q_tabbar_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QTabBar* self, QSize* baseSize ```
+/// @param self QTabBar*
+/// @param baseSize QSize*
 void q_tabbar_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QTabBar* self, int basew, int baseh ```
+/// @param self QTabBar*
+/// @param basew int
+/// @param baseh int
 void q_tabbar_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QTabBar* self, QSize* fixedSize ```
+/// @param self QTabBar*
+/// @param fixedSize QSize*
 void q_tabbar_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QTabBar* self, int w, int h ```
+/// @param self QTabBar*
+/// @param w int
+/// @param h int
 void q_tabbar_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QTabBar* self, int w ```
+/// @param self QTabBar*
+/// @param w int
 void q_tabbar_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QTabBar* self, int h ```
+/// @param self QTabBar*
+/// @param h int
 void q_tabbar_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QTabBar* self, QPointF* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPointF*
 QPointF* q_tabbar_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QTabBar* self, QPoint* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPoint*
 QPoint* q_tabbar_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QTabBar* self, QPointF* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPointF*
 QPointF* q_tabbar_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QTabBar* self, QPoint* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPoint*
 QPoint* q_tabbar_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QTabBar* self, QPointF* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPointF*
 QPointF* q_tabbar_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QTabBar* self, QPoint* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPoint*
 QPoint* q_tabbar_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QTabBar* self, QPointF* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPointF*
 QPointF* q_tabbar_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QTabBar* self, QPoint* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPoint*
 QPoint* q_tabbar_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QTabBar* self, QWidget* param1, QPointF* param2 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_tabbar_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QTabBar* self, QWidget* param1, QPoint* param2 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_tabbar_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QTabBar* self, QWidget* param1, QPointF* param2 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_tabbar_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QTabBar* self, QWidget* param1, QPoint* param2 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_tabbar_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 const QPalette* q_tabbar_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QTabBar* self, QPalette* palette ```
+/// @param self QTabBar*
+/// @param palette QPalette*
 void q_tabbar_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QTabBar* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QTabBar*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_tabbar_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_tabbar_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QTabBar* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QTabBar*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_tabbar_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_tabbar_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 const QFont* q_tabbar_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QTabBar* self, QFont* font ```
+/// @param self QTabBar*
+/// @param font QFont*
 void q_tabbar_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QFontMetrics* q_tabbar_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QFontInfo* q_tabbar_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QCursor* q_tabbar_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QTabBar* self, QCursor* cursor ```
+/// @param self QTabBar*
+/// @param cursor QCursor*
 void q_tabbar_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QTabBar* self, bool enable ```
+/// @param self QTabBar*
+/// @param enable bool
 void q_tabbar_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QTabBar* self, bool enable ```
+/// @param self QTabBar*
+/// @param enable bool
 void q_tabbar_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QTabBar* self, QBitmap* mask ```
+/// @param self QTabBar*
+/// @param mask QBitmap*
 void q_tabbar_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QTabBar* self, QRegion* mask ```
+/// @param self QTabBar*
+/// @param mask QRegion*
 void q_tabbar_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRegion* q_tabbar_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPaintDevice* target ```
+/// @param self QTabBar*
+/// @param target QPaintDevice*
 void q_tabbar_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPainter* painter ```
+/// @param self QTabBar*
+/// @param painter QPainter*
 void q_tabbar_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPixmap* q_tabbar_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QGraphicsEffect* q_tabbar_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QTabBar* self, QGraphicsEffect* effect ```
+/// @param self QTabBar*
+/// @param effect QGraphicsEffect*
 void q_tabbar_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QTabBar* self, enum Qt__GestureType typeVal ```
+/// @param self QTabBar*
+/// @param typeVal enum Qt__GestureType
 void q_tabbar_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QTabBar* self, enum Qt__GestureType typeVal ```
+/// @param self QTabBar*
+/// @param typeVal enum Qt__GestureType
 void q_tabbar_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QTabBar* self, const char* windowTitle ```
+/// @param self QTabBar*
+/// @param windowTitle const char*
 void q_tabbar_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QTabBar* self, const char* styleSheet ```
+/// @param self QTabBar*
+/// @param styleSheet const char*
 void q_tabbar_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QTabBar* self, QIcon* icon ```
+/// @param self QTabBar*
+/// @param icon QIcon*
 void q_tabbar_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QIcon* q_tabbar_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QTabBar* self, const char* windowIconText ```
+/// @param self QTabBar*
+/// @param windowIconText const char*
 void q_tabbar_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QTabBar* self, const char* windowRole ```
+/// @param self QTabBar*
+/// @param windowRole const char*
 void q_tabbar_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QTabBar* self, const char* filePath ```
+/// @param self QTabBar*
+/// @param filePath const char*
 void q_tabbar_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QTabBar* self, double level ```
+/// @param self QTabBar*
+/// @param level double
 void q_tabbar_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 double q_tabbar_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QTabBar* self, const char* toolTip ```
+/// @param self QTabBar*
+/// @param toolTip const char*
 void q_tabbar_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QTabBar* self, int msec ```
+/// @param self QTabBar*
+/// @param msec int
 void q_tabbar_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QTabBar* self, const char* statusTip ```
+/// @param self QTabBar*
+/// @param statusTip const char*
 void q_tabbar_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QTabBar* self, const char* whatsThis ```
+/// @param self QTabBar*
+/// @param whatsThis const char*
 void q_tabbar_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QTabBar* self, const char* name ```
+/// @param self QTabBar*
+/// @param name const char*
 void q_tabbar_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QTabBar* self, const char* description ```
+/// @param self QTabBar*
+/// @param description const char*
 void q_tabbar_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QTabBar* self, enum Qt__LayoutDirection direction ```
+/// @param self QTabBar*
+/// @param direction enum Qt__LayoutDirection
 void q_tabbar_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_tabbar_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QTabBar* self, QLocale* locale ```
+/// @param self QTabBar*
+/// @param locale QLocale*
 void q_tabbar_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QLocale* q_tabbar_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QTabBar* self, enum Qt__FocusReason reason ```
+/// @param self QTabBar*
+/// @param reason enum Qt__FocusReason
 void q_tabbar_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_tabbar_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QTabBar* self, enum Qt__FocusPolicy policy ```
+/// @param self QTabBar*
+/// @param policy enum Qt__FocusPolicy
 void q_tabbar_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_tabbar_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QTabBar* self, QWidget* focusProxy ```
+/// @param self QTabBar*
+/// @param focusProxy QWidget*
 void q_tabbar_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_tabbar_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QTabBar* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QTabBar*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_tabbar_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QTabBar* self, QCursor* param1 ```
+/// @param self QTabBar*
+/// @param param1 QCursor*
 void q_tabbar_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QTabBar* self, QKeySequence* key ```
+/// @param self QTabBar*
+/// @param key QKeySequence*
 int32_t q_tabbar_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QTabBar* self, int id ```
+/// @param self QTabBar*
+/// @param id int
 void q_tabbar_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QTabBar* self, int id ```
+/// @param self QTabBar*
+/// @param id int
 void q_tabbar_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QTabBar* self, int id ```
+/// @param self QTabBar*
+/// @param id int
 void q_tabbar_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_tabbar_mouse_grabber();
 
@@ -1873,1161 +2143,1327 @@ QWidget* q_tabbar_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_tabbar_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QTabBar* self, bool enable ```
+/// @param self QTabBar*
+/// @param enable bool
 void q_tabbar_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QGraphicsProxyWidget* q_tabbar_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTabBar* self, int x, int y, int w, int h ```
+/// @param self QTabBar*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_tabbar_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTabBar* self, QRect* param1 ```
+/// @param self QTabBar*
+/// @param param1 QRect*
 void q_tabbar_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QTabBar* self, QRegion* param1 ```
+/// @param self QTabBar*
+/// @param param1 QRegion*
 void q_tabbar_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTabBar* self, int x, int y, int w, int h ```
+/// @param self QTabBar*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_tabbar_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTabBar* self, QRect* param1 ```
+/// @param self QTabBar*
+/// @param param1 QRect*
 void q_tabbar_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QTabBar* self, QRegion* param1 ```
+/// @param self QTabBar*
+/// @param param1 QRegion*
 void q_tabbar_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QTabBar* self, bool hidden ```
+/// @param self QTabBar*
+/// @param hidden bool
 void q_tabbar_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QTabBar* self, QWidget* param1 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
 void q_tabbar_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QTabBar* self, int x, int y ```
+/// @param self QTabBar*
+/// @param x int
+/// @param y int
 void q_tabbar_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QTabBar* self, QPoint* param1 ```
+/// @param self QTabBar*
+/// @param param1 QPoint*
 void q_tabbar_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QTabBar* self, int w, int h ```
+/// @param self QTabBar*
+/// @param w int
+/// @param h int
 void q_tabbar_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QTabBar* self, QSize* param1 ```
+/// @param self QTabBar*
+/// @param param1 QSize*
 void q_tabbar_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QTabBar* self, int x, int y, int w, int h ```
+/// @param self QTabBar*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_tabbar_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QTabBar* self, QRect* geometry ```
+/// @param self QTabBar*
+/// @param geometry QRect*
 void q_tabbar_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 char* q_tabbar_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QTabBar* self, const char* geometry ```
+/// @param self QTabBar*
+/// @param geometry const char*
 bool q_tabbar_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QTabBar* self, QWidget* param1 ```
+/// @param self QTabBar*
+/// @param param1 QWidget*
 bool q_tabbar_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_tabbar_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QTabBar* self, int state ```
+/// @param self QTabBar*
+/// @param state flag of enum Qt__WindowState
 void q_tabbar_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QTabBar* self, int state ```
+/// @param self QTabBar*
+/// @param state flag of enum Qt__WindowState
 void q_tabbar_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QSizePolicy* q_tabbar_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QTabBar* self, QSizePolicy* sizePolicy ```
+/// @param self QTabBar*
+/// @param sizePolicy QSizePolicy*
 void q_tabbar_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QTabBar* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QTabBar*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_tabbar_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRegion* q_tabbar_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QTabBar* self, int left, int top, int right, int bottom ```
+/// @param self QTabBar*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_tabbar_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QTabBar* self, QMargins* margins ```
+/// @param self QTabBar*
+/// @param margins QMargins*
 void q_tabbar_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QMargins* q_tabbar_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QRect* q_tabbar_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QLayout* q_tabbar_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QTabBar* self, QLayout* layout ```
+/// @param self QTabBar*
+/// @param layout QLayout*
 void q_tabbar_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QTabBar* self, QWidget* parent ```
+/// @param self QTabBar*
+/// @param parent QWidget*
 void q_tabbar_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QTabBar* self, QWidget* parent, int f ```
+/// @param self QTabBar*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_tabbar_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QTabBar* self, int dx, int dy ```
+/// @param self QTabBar*
+/// @param dx int
+/// @param dy int
 void q_tabbar_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QTabBar* self, int dx, int dy, QRect* param3 ```
+/// @param self QTabBar*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_tabbar_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QTabBar* self, bool on ```
+/// @param self QTabBar*
+/// @param on bool
 void q_tabbar_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTabBar* self, QAction* action ```
+/// @param self QTabBar*
+/// @param action QAction*
 void q_tabbar_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QTabBar* self, libqt_list /* of QAction* */ actions ```
+/// @param self QTabBar*
+/// @param actions libqt_list /* of QAction* */
 void q_tabbar_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QTabBar* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QTabBar*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_tabbar_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QTabBar* self, QAction* before, QAction* action ```
+/// @param self QTabBar*
+/// @param before QAction*
+/// @param action QAction*
 void q_tabbar_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QTabBar* self, QAction* action ```
+/// @param self QTabBar*
+/// @param action QAction*
 void q_tabbar_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 libqt_list /* of QAction* */ q_tabbar_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTabBar* self, const char* text ```
+/// @param self QTabBar*
+/// @param text const char*
 QAction* q_tabbar_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTabBar* self, QIcon* icon, const char* text ```
+/// @param self QTabBar*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_tabbar_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTabBar* self, const char* text, QKeySequence* shortcut ```
+/// @param self QTabBar*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_tabbar_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QTabBar* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QTabBar*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_tabbar_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWidget* q_tabbar_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QTabBar* self, int typeVal ```
+/// @param self QTabBar*
+/// @param typeVal flag of enum Qt__WindowType
 void q_tabbar_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_tabbar_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QTabBar* self, enum Qt__WindowType param1 ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__WindowType
 void q_tabbar_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QTabBar* self, int typeVal ```
+/// @param self QTabBar*
+/// @param typeVal flag of enum Qt__WindowType
 void q_tabbar_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return enum Qt__WindowType
 int64_t q_tabbar_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_tabbar_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTabBar* self, int x, int y ```
+/// @param self QTabBar*
+/// @param x int
+/// @param y int
 QWidget* q_tabbar_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTabBar* self, QPoint* p ```
+/// @param self QTabBar*
+/// @param p QPoint*
 QWidget* q_tabbar_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QTabBar* self, QPointF* p ```
+/// @param self QTabBar*
+/// @param p QPointF*
 QWidget* q_tabbar_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QTabBar* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__WidgetAttribute
 void q_tabbar_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QTabBar* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_tabbar_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QTabBar* self, QWidget* child ```
+/// @param self QTabBar*
+/// @param child QWidget*
 bool q_tabbar_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QTabBar* self, bool enabled ```
+/// @param self QTabBar*
+/// @param enabled bool
 void q_tabbar_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QBackingStore* q_tabbar_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QWindow* q_tabbar_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QScreen* q_tabbar_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QTabBar* self, QScreen* screen ```
+/// @param self QTabBar*
+/// @param screen QScreen*
 void q_tabbar_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_tabbar_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTabBar* self, const char* title ```
+/// @param self QTabBar*
+/// @param title const char*
 void q_tabbar_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
-void q_tabbar_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, const char*)
+void q_tabbar_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTabBar* self, QIcon* icon ```
+/// @param self QTabBar*
+/// @param icon QIcon*
 void q_tabbar_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QIcon*) ```
-void q_tabbar_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QIcon*)
+void q_tabbar_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTabBar* self, const char* iconText ```
+/// @param self QTabBar*
+/// @param iconText const char*
 void q_tabbar_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
-void q_tabbar_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, const char*)
+void q_tabbar_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTabBar* self, QPoint* pos ```
+/// @param self QTabBar*
+/// @param pos QPoint*
 void q_tabbar_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QPoint*) ```
-void q_tabbar_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QPoint*)
+void q_tabbar_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_tabbar_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QTabBar* self, int hints ```
+/// @param self QTabBar*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_tabbar_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QTabBar*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_tabbar_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QTabBar*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_tabbar_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QTabBar*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_tabbar_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QTabBar*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_tabbar_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QTabBar*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_tabbar_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QTabBar* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QTabBar*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_tabbar_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QTabBar* self, QRect* rectangle ```
+/// @param self QTabBar*
+/// @param rectangle QRect*
 QPixmap* q_tabbar_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QTabBar* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QTabBar*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_tabbar_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QTabBar* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QTabBar*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_tabbar_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QTabBar* self, int id, bool enable ```
+/// @param self QTabBar*
+/// @param id int
+/// @param enable bool
 void q_tabbar_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QTabBar* self, int id, bool enable ```
+/// @param self QTabBar*
+/// @param id int
+/// @param enable bool
 void q_tabbar_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QTabBar* self, enum Qt__WindowType param1, bool on ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_tabbar_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QTabBar* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_tabbar_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_tabbar_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_tabbar_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char* q_tabbar_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTabBar* self, char* name ```
+/// @param self QTabBar*
+/// @param name char*
 void q_tabbar_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTabBar* self, bool b ```
+/// @param self QTabBar*
+/// @param b bool
 bool q_tabbar_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QThread* q_tabbar_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTabBar* self, QThread* thread ```
+/// @param self QTabBar*
+/// @param thread QThread*
 bool q_tabbar_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTabBar* self, int interval ```
+/// @param self QTabBar*
+/// @param interval int
 int32_t q_tabbar_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTabBar* self, int id ```
+/// @param self QTabBar*
+/// @param id int
 void q_tabbar_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTabBar* self, enum Qt__TimerId id ```
+/// @param self QTabBar*
+/// @param id enum Qt__TimerId
 void q_tabbar_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 libqt_list /* of QObject* */ q_tabbar_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTabBar* self, QObject* filterObj ```
+/// @param self QTabBar*
+/// @param filterObj QObject*
 void q_tabbar_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTabBar* self, QObject* obj ```
+/// @param self QTabBar*
+/// @param obj QObject*
 void q_tabbar_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_tabbar_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTabBar* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTabBar*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_tabbar_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_tabbar_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_tabbar_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTabBar* self, const char* name, QVariant* value ```
+/// @param self QTabBar*
+/// @param name const char*
+/// @param value QVariant*
 bool q_tabbar_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTabBar* self, const char* name ```
+/// @param self QTabBar*
+/// @param name const char*
 QVariant* q_tabbar_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTabBar* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTabBar*
 const char** q_tabbar_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QBindingStorage* q_tabbar_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 const QBindingStorage* q_tabbar_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*) ```
-void q_tabbar_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*)
+void q_tabbar_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QObject* q_tabbar_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTabBar* self, const char* classname ```
+/// @param self QTabBar*
+/// @param classname const char*
 bool q_tabbar_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTabBar* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTabBar*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_tabbar_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTabBar* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTabBar*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_tabbar_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_tabbar_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTabBar* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTabBar*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_tabbar_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self, QObject* param1 ```
+/// @param self QTabBar*
+/// @param param1 QObject*
 void q_tabbar_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QObject*) ```
-void q_tabbar_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QObject*)
+void q_tabbar_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 double q_tabbar_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 double q_tabbar_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_tabbar_device_pixel_ratio_f_scale();
 
@@ -3035,7 +3471,8 @@ double q_tabbar_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_tabbar_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -3044,7 +3481,7 @@ int32_t q_tabbar_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3053,7 +3490,7 @@ int32_t q_tabbar_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3062,8 +3499,9 @@ int32_t q_tabbar_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, int32_t (*slot)() ```
-void q_tabbar_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QTabBar*
+/// @param callback int32_t fn()
+void q_tabbar_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3071,7 +3509,8 @@ void q_tabbar_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, bool visible ```
+/// @param self QTabBar*
+/// @param visible bool
 void q_tabbar_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3080,7 +3519,8 @@ void q_tabbar_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool visible ```
+/// @param self QTabBar*
+/// @param visible bool
 void q_tabbar_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3089,8 +3529,9 @@ void q_tabbar_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, bool) ```
-void q_tabbar_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, bool)
+void q_tabbar_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -3098,7 +3539,8 @@ void q_tabbar_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, int param1 ```
+/// @param self QTabBar*
+/// @param param1 int
 int32_t q_tabbar_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3107,7 +3549,8 @@ int32_t q_tabbar_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, int param1 ```
+/// @param self QTabBar*
+/// @param param1 int
 int32_t q_tabbar_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -3116,8 +3559,9 @@ int32_t q_tabbar_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, int32_t (*slot)(QTabBar*, int) ```
-void q_tabbar_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QTabBar*
+/// @param callback int32_t fn(QTabBar*, int)
+void q_tabbar_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -3125,7 +3569,7 @@ void q_tabbar_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3134,7 +3578,7 @@ bool q_tabbar_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3143,8 +3587,9 @@ bool q_tabbar_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)() ```
-void q_tabbar_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QTabBar*
+/// @param callback bool fn()
+void q_tabbar_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3152,7 +3597,7 @@ void q_tabbar_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPaintEngine* q_tabbar_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3161,7 +3606,7 @@ QPaintEngine* q_tabbar_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPaintEngine* q_tabbar_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3170,8 +3615,9 @@ QPaintEngine* q_tabbar_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, QPaintEngine* (*slot)() ```
-void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QTabBar*
+/// @param callback QPaintEngine* fn()
+void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3179,7 +3625,8 @@ void q_tabbar_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QKeyEvent* event ```
+/// @param self QTabBar*
+/// @param event QKeyEvent*
 void q_tabbar_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3188,7 +3635,8 @@ void q_tabbar_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QKeyEvent* event ```
+/// @param self QTabBar*
+/// @param event QKeyEvent*
 void q_tabbar_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3197,8 +3645,9 @@ void q_tabbar_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QKeyEvent*) ```
-void q_tabbar_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QKeyEvent*)
+void q_tabbar_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3206,7 +3655,8 @@ void q_tabbar_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QFocusEvent* event ```
+/// @param self QTabBar*
+/// @param event QFocusEvent*
 void q_tabbar_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3215,7 +3665,8 @@ void q_tabbar_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QFocusEvent* event ```
+/// @param self QTabBar*
+/// @param event QFocusEvent*
 void q_tabbar_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3224,8 +3675,9 @@ void q_tabbar_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QFocusEvent*) ```
-void q_tabbar_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QFocusEvent*)
+void q_tabbar_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3233,7 +3685,8 @@ void q_tabbar_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QFocusEvent* event ```
+/// @param self QTabBar*
+/// @param event QFocusEvent*
 void q_tabbar_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3242,7 +3695,8 @@ void q_tabbar_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QFocusEvent* event ```
+/// @param self QTabBar*
+/// @param event QFocusEvent*
 void q_tabbar_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3251,8 +3705,9 @@ void q_tabbar_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QFocusEvent*) ```
-void q_tabbar_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QFocusEvent*)
+void q_tabbar_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3260,7 +3715,8 @@ void q_tabbar_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QEnterEvent* event ```
+/// @param self QTabBar*
+/// @param event QEnterEvent*
 void q_tabbar_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3269,7 +3725,8 @@ void q_tabbar_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QEnterEvent* event ```
+/// @param self QTabBar*
+/// @param event QEnterEvent*
 void q_tabbar_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3278,8 +3735,9 @@ void q_tabbar_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QEnterEvent*) ```
-void q_tabbar_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QEnterEvent*)
+void q_tabbar_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3287,7 +3745,8 @@ void q_tabbar_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QEvent* event ```
+/// @param self QTabBar*
+/// @param event QEvent*
 void q_tabbar_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3296,7 +3755,8 @@ void q_tabbar_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QEvent* event ```
+/// @param self QTabBar*
+/// @param event QEvent*
 void q_tabbar_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3305,8 +3765,9 @@ void q_tabbar_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QEvent*) ```
-void q_tabbar_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QEvent*)
+void q_tabbar_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3314,7 +3775,8 @@ void q_tabbar_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QMoveEvent* event ```
+/// @param self QTabBar*
+/// @param event QMoveEvent*
 void q_tabbar_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3323,7 +3785,8 @@ void q_tabbar_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QMoveEvent* event ```
+/// @param self QTabBar*
+/// @param event QMoveEvent*
 void q_tabbar_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3332,8 +3795,9 @@ void q_tabbar_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMoveEvent*) ```
-void q_tabbar_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMoveEvent*)
+void q_tabbar_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3341,7 +3805,8 @@ void q_tabbar_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QCloseEvent* event ```
+/// @param self QTabBar*
+/// @param event QCloseEvent*
 void q_tabbar_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3350,7 +3815,8 @@ void q_tabbar_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QCloseEvent* event ```
+/// @param self QTabBar*
+/// @param event QCloseEvent*
 void q_tabbar_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3359,8 +3825,9 @@ void q_tabbar_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QCloseEvent*) ```
-void q_tabbar_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QCloseEvent*)
+void q_tabbar_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3368,7 +3835,8 @@ void q_tabbar_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QContextMenuEvent* event ```
+/// @param self QTabBar*
+/// @param event QContextMenuEvent*
 void q_tabbar_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3377,7 +3845,8 @@ void q_tabbar_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QContextMenuEvent* event ```
+/// @param self QTabBar*
+/// @param event QContextMenuEvent*
 void q_tabbar_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3386,8 +3855,9 @@ void q_tabbar_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QContextMenuEvent*) ```
-void q_tabbar_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QContextMenuEvent*)
+void q_tabbar_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3395,7 +3865,8 @@ void q_tabbar_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QTabletEvent* event ```
+/// @param self QTabBar*
+/// @param event QTabletEvent*
 void q_tabbar_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3404,7 +3875,8 @@ void q_tabbar_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QTabletEvent* event ```
+/// @param self QTabBar*
+/// @param event QTabletEvent*
 void q_tabbar_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3413,8 +3885,9 @@ void q_tabbar_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QTabletEvent*) ```
-void q_tabbar_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QTabletEvent*)
+void q_tabbar_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3422,7 +3895,8 @@ void q_tabbar_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QActionEvent* event ```
+/// @param self QTabBar*
+/// @param event QActionEvent*
 void q_tabbar_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3431,7 +3905,8 @@ void q_tabbar_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QActionEvent* event ```
+/// @param self QTabBar*
+/// @param event QActionEvent*
 void q_tabbar_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3440,8 +3915,9 @@ void q_tabbar_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QActionEvent*) ```
-void q_tabbar_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QActionEvent*)
+void q_tabbar_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3449,7 +3925,8 @@ void q_tabbar_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QDragEnterEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragEnterEvent*
 void q_tabbar_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3458,7 +3935,8 @@ void q_tabbar_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QDragEnterEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragEnterEvent*
 void q_tabbar_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3467,8 +3945,9 @@ void q_tabbar_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QDragEnterEvent*) ```
-void q_tabbar_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QDragEnterEvent*)
+void q_tabbar_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3476,7 +3955,8 @@ void q_tabbar_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QDragMoveEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragMoveEvent*
 void q_tabbar_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3485,7 +3965,8 @@ void q_tabbar_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QDragMoveEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragMoveEvent*
 void q_tabbar_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3494,8 +3975,9 @@ void q_tabbar_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QDragMoveEvent*) ```
-void q_tabbar_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QDragMoveEvent*)
+void q_tabbar_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3503,7 +3985,8 @@ void q_tabbar_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QDragLeaveEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragLeaveEvent*
 void q_tabbar_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3512,7 +3995,8 @@ void q_tabbar_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QDragLeaveEvent* event ```
+/// @param self QTabBar*
+/// @param event QDragLeaveEvent*
 void q_tabbar_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3521,8 +4005,9 @@ void q_tabbar_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QDragLeaveEvent*) ```
-void q_tabbar_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QDragLeaveEvent*)
+void q_tabbar_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3530,7 +4015,8 @@ void q_tabbar_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QDropEvent* event ```
+/// @param self QTabBar*
+/// @param event QDropEvent*
 void q_tabbar_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3539,7 +4025,8 @@ void q_tabbar_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QDropEvent* event ```
+/// @param self QTabBar*
+/// @param event QDropEvent*
 void q_tabbar_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3548,8 +4035,9 @@ void q_tabbar_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QDropEvent*) ```
-void q_tabbar_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QDropEvent*)
+void q_tabbar_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3557,7 +4045,10 @@ void q_tabbar_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QTabBar*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_tabbar_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3566,7 +4057,10 @@ bool q_tabbar_native_event(void* self, const char* eventType, void* message, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QTabBar*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_tabbar_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3575,8 +4069,9 @@ bool q_tabbar_qbase_native_event(void* self, const char* eventType, void* messag
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)(QTabBar*, const char*, void*, intptr_t*) ```
-void q_tabbar_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QTabBar*
+/// @param callback bool fn(QTabBar*, const char*, void*, intptr_t*)
+void q_tabbar_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3584,7 +4079,8 @@ void q_tabbar_on_native_event(void* self, bool (*slot)(void*, const char*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QTabBar*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_tabbar_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3593,7 +4089,8 @@ int32_t q_tabbar_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QTabBar*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_tabbar_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3602,8 +4099,9 @@ int32_t q_tabbar_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, int32_t (*slot)(QTabBar*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_tabbar_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QTabBar*
+/// @param callback int32_t fn(QTabBar*, enum QPaintDevice__PaintDeviceMetric)
+void q_tabbar_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3611,7 +4109,8 @@ void q_tabbar_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QPainter* painter ```
+/// @param self QTabBar*
+/// @param painter QPainter*
 void q_tabbar_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3620,7 +4119,8 @@ void q_tabbar_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QPainter* painter ```
+/// @param self QTabBar*
+/// @param painter QPainter*
 void q_tabbar_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3629,8 +4129,9 @@ void q_tabbar_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QPainter*) ```
-void q_tabbar_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QPainter*)
+void q_tabbar_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3638,7 +4139,8 @@ void q_tabbar_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QPoint* offset ```
+/// @param self QTabBar*
+/// @param offset QPoint*
 QPaintDevice* q_tabbar_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3647,7 +4149,8 @@ QPaintDevice* q_tabbar_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QPoint* offset ```
+/// @param self QTabBar*
+/// @param offset QPoint*
 QPaintDevice* q_tabbar_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3656,8 +4159,9 @@ QPaintDevice* q_tabbar_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, QPaintDevice* (*slot)(QTabBar*, QPoint*) ```
-void q_tabbar_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback QPaintDevice* fn(QTabBar*, QPoint*)
+void q_tabbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3665,7 +4169,7 @@ void q_tabbar_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPainter* q_tabbar_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3674,7 +4178,7 @@ QPainter* q_tabbar_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QPainter* q_tabbar_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3683,8 +4187,9 @@ QPainter* q_tabbar_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, QPainter* (*slot)() ```
-void q_tabbar_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QTabBar*
+/// @param callback QPainter* fn()
+void q_tabbar_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3692,7 +4197,8 @@ void q_tabbar_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QInputMethodEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QInputMethodEvent*
 void q_tabbar_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3701,7 +4207,8 @@ void q_tabbar_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QInputMethodEvent* param1 ```
+/// @param self QTabBar*
+/// @param param1 QInputMethodEvent*
 void q_tabbar_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3710,8 +4217,9 @@ void q_tabbar_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QInputMethodEvent*) ```
-void q_tabbar_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QInputMethodEvent*)
+void q_tabbar_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3719,7 +4227,8 @@ void q_tabbar_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_tabbar_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3728,7 +4237,8 @@ QVariant* q_tabbar_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QTabBar*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_tabbar_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3737,8 +4247,9 @@ QVariant* q_tabbar_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, QVariant* (*slot)(QTabBar*, enum Qt__InputMethodQuery) ```
-void q_tabbar_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QTabBar*
+/// @param callback QVariant* fn(QTabBar*, enum Qt__InputMethodQuery)
+void q_tabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3746,7 +4257,8 @@ void q_tabbar_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, bool next ```
+/// @param self QTabBar*
+/// @param next bool
 bool q_tabbar_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3755,7 +4267,8 @@ bool q_tabbar_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool next ```
+/// @param self QTabBar*
+/// @param next bool
 bool q_tabbar_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3764,8 +4277,9 @@ bool q_tabbar_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)(QTabBar*, bool) ```
-void q_tabbar_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QTabBar*
+/// @param callback bool fn(QTabBar*, bool)
+void q_tabbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3773,7 +4287,9 @@ void q_tabbar_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QObject* watched, QEvent* event ```
+/// @param self QTabBar*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_tabbar_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3782,7 +4298,9 @@ bool q_tabbar_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QObject* watched, QEvent* event ```
+/// @param self QTabBar*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_tabbar_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3791,8 +4309,9 @@ bool q_tabbar_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)(QTabBar*, QObject*, QEvent*) ```
-void q_tabbar_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTabBar*
+/// @param callback bool fn(QTabBar*, QObject*, QEvent*)
+void q_tabbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3800,7 +4319,8 @@ void q_tabbar_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QChildEvent* event ```
+/// @param self QTabBar*
+/// @param event QChildEvent*
 void q_tabbar_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3809,7 +4329,8 @@ void q_tabbar_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QChildEvent* event ```
+/// @param self QTabBar*
+/// @param event QChildEvent*
 void q_tabbar_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3818,8 +4339,9 @@ void q_tabbar_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QChildEvent*) ```
-void q_tabbar_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QChildEvent*)
+void q_tabbar_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3827,7 +4349,8 @@ void q_tabbar_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QEvent* event ```
+/// @param self QTabBar*
+/// @param event QEvent*
 void q_tabbar_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3836,7 +4359,8 @@ void q_tabbar_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QEvent* event ```
+/// @param self QTabBar*
+/// @param event QEvent*
 void q_tabbar_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3845,8 +4369,9 @@ void q_tabbar_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QEvent*) ```
-void q_tabbar_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QEvent*)
+void q_tabbar_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3854,7 +4379,8 @@ void q_tabbar_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 void q_tabbar_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3863,7 +4389,8 @@ void q_tabbar_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 void q_tabbar_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3872,8 +4399,9 @@ void q_tabbar_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMetaMethod*) ```
-void q_tabbar_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMetaMethod*)
+void q_tabbar_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3881,7 +4409,8 @@ void q_tabbar_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 void q_tabbar_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3890,7 +4419,8 @@ void q_tabbar_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 void q_tabbar_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3899,8 +4429,9 @@ void q_tabbar_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, QMetaMethod*) ```
-void q_tabbar_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, QMetaMethod*)
+void q_tabbar_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3908,7 +4439,7 @@ void q_tabbar_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3917,7 +4448,7 @@ void q_tabbar_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3926,8 +4457,9 @@ void q_tabbar_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)() ```
-void q_tabbar_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QTabBar*
+/// @param callback void fn()
+void q_tabbar_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3935,7 +4467,7 @@ void q_tabbar_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_create(void* self);
 
 /// Inherited from QWidget
@@ -3944,7 +4476,7 @@ void q_tabbar_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3953,8 +4485,9 @@ void q_tabbar_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)() ```
-void q_tabbar_on_create(void* self, void (*slot)());
+/// @param self QTabBar*
+/// @param callback void fn()
+void q_tabbar_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3962,7 +4495,7 @@ void q_tabbar_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3971,7 +4504,7 @@ void q_tabbar_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3980,8 +4513,9 @@ void q_tabbar_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, void (*slot)() ```
-void q_tabbar_on_destroy(void* self, void (*slot)());
+/// @param self QTabBar*
+/// @param callback void fn()
+void q_tabbar_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3989,7 +4523,7 @@ void q_tabbar_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3998,7 +4532,7 @@ bool q_tabbar_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4007,8 +4541,9 @@ bool q_tabbar_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)() ```
-void q_tabbar_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QTabBar*
+/// @param callback bool fn()
+void q_tabbar_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4016,7 +4551,7 @@ void q_tabbar_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4025,7 +4560,7 @@ bool q_tabbar_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 bool q_tabbar_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4034,8 +4569,9 @@ bool q_tabbar_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)() ```
-void q_tabbar_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QTabBar*
+/// @param callback bool fn()
+void q_tabbar_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4043,7 +4579,7 @@ void q_tabbar_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QObject* q_tabbar_sender(void* self);
 
 /// Inherited from QObject
@@ -4052,7 +4588,7 @@ QObject* q_tabbar_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 QObject* q_tabbar_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4061,8 +4597,9 @@ QObject* q_tabbar_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, QObject* (*slot)() ```
-void q_tabbar_on_sender(void* self, QObject* (*slot)());
+/// @param self QTabBar*
+/// @param callback QObject* fn()
+void q_tabbar_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4070,7 +4607,7 @@ void q_tabbar_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4079,7 +4616,7 @@ int32_t q_tabbar_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 int32_t q_tabbar_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4088,8 +4625,9 @@ int32_t q_tabbar_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, int32_t (*slot)() ```
-void q_tabbar_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTabBar*
+/// @param callback int32_t fn()
+void q_tabbar_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4097,7 +4635,8 @@ void q_tabbar_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, const char* signal ```
+/// @param self QTabBar*
+/// @param signal const char*
 int32_t q_tabbar_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4106,7 +4645,8 @@ int32_t q_tabbar_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, const char* signal ```
+/// @param self QTabBar*
+/// @param signal const char*
 int32_t q_tabbar_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4115,8 +4655,9 @@ int32_t q_tabbar_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, int32_t (*slot)(QTabBar*, const char*) ```
-void q_tabbar_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTabBar*
+/// @param callback int32_t fn(QTabBar*, const char*)
+void q_tabbar_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4124,7 +4665,8 @@ void q_tabbar_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 bool q_tabbar_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4133,7 +4675,8 @@ bool q_tabbar_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, QMetaMethod* signal ```
+/// @param self QTabBar*
+/// @param signal QMetaMethod*
 bool q_tabbar_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4142,8 +4685,9 @@ bool q_tabbar_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, bool (*slot)(QTabBar*, QMetaMethod*) ```
-void q_tabbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTabBar*
+/// @param callback bool fn(QTabBar*, QMetaMethod*)
+void q_tabbar_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4151,7 +4695,9 @@ void q_tabbar_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QTabBar*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_tabbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4160,7 +4706,9 @@ double q_tabbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t metric
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabBar* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QTabBar*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_tabbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4169,8 +4717,9 @@ double q_tabbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabBar* self, double (*slot)(QTabBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_tabbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QTabBar*
+/// @param callback double fn(QTabBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_tabbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4178,14 +4727,15 @@ void q_tabbar_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTabBar* self, void (*slot)(QTabBar*, const char*) ```
-void q_tabbar_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTabBar*
+/// @param callback void fn(QTabBar*, const char*)
+void q_tabbar_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabbar.html#dtor.QTabBar)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTabBar* self ```
+/// @param self QTabBar*
 void q_tabbar_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtabbar.html#types

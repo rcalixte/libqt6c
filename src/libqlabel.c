@@ -54,8 +54,8 @@ int32_t q_label_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QLabel_Metacall((QLabel*)self, param1, param2, param3);
 }
 
-void q_label_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QLabel_OnMetacall((QLabel*)self, (intptr_t)slot);
+void q_label_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QLabel_OnMetacall((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -148,8 +148,8 @@ QSize* q_label_size_hint(void* self) {
     return QLabel_SizeHint((QLabel*)self);
 }
 
-void q_label_on_size_hint(void* self, QSize* (*slot)()) {
-    QLabel_OnSizeHint((QLabel*)self, (intptr_t)slot);
+void q_label_on_size_hint(void* self, QSize* (*callback)()) {
+    QLabel_OnSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
 QSize* q_label_qbase_size_hint(void* self) {
@@ -160,8 +160,8 @@ QSize* q_label_minimum_size_hint(void* self) {
     return QLabel_MinimumSizeHint((QLabel*)self);
 }
 
-void q_label_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QLabel_OnMinimumSizeHint((QLabel*)self, (intptr_t)slot);
+void q_label_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QLabel_OnMinimumSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
 QSize* q_label_qbase_minimum_size_hint(void* self) {
@@ -180,8 +180,8 @@ int32_t q_label_height_for_width(void* self, int param1) {
     return QLabel_HeightForWidth((QLabel*)self, param1);
 }
 
-void q_label_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QLabel_OnHeightForWidth((QLabel*)self, (intptr_t)slot);
+void q_label_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QLabel_OnHeightForWidth((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_qbase_height_for_width(void* self, int param1) {
@@ -255,24 +255,24 @@ void q_label_link_activated(void* self, const char* link) {
     QLabel_LinkActivated((QLabel*)self, qstring(link));
 }
 
-void q_label_on_link_activated(void* self, void (*slot)(void*, const char*)) {
-    QLabel_Connect_LinkActivated((QLabel*)self, (intptr_t)slot);
+void q_label_on_link_activated(void* self, void (*callback)(void*, const char*)) {
+    QLabel_Connect_LinkActivated((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_link_hovered(void* self, const char* link) {
     QLabel_LinkHovered((QLabel*)self, qstring(link));
 }
 
-void q_label_on_link_hovered(void* self, void (*slot)(void*, const char*)) {
-    QLabel_Connect_LinkHovered((QLabel*)self, (intptr_t)slot);
+void q_label_on_link_hovered(void* self, void (*callback)(void*, const char*)) {
+    QLabel_Connect_LinkHovered((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_event(void* self, void* e) {
     return QLabel_Event((QLabel*)self, (QEvent*)e);
 }
 
-void q_label_on_event(void* self, bool (*slot)(void*, void*)) {
-    QLabel_OnEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_event(void* self, bool (*callback)(void*, void*)) {
+    QLabel_OnEvent((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_qbase_event(void* self, void* e) {
@@ -283,8 +283,8 @@ void q_label_key_press_event(void* self, void* ev) {
     QLabel_KeyPressEvent((QLabel*)self, (QKeyEvent*)ev);
 }
 
-void q_label_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnKeyPressEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnKeyPressEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_key_press_event(void* self, void* ev) {
@@ -295,8 +295,8 @@ void q_label_paint_event(void* self, void* param1) {
     QLabel_PaintEvent((QLabel*)self, (QPaintEvent*)param1);
 }
 
-void q_label_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnPaintEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnPaintEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_paint_event(void* self, void* param1) {
@@ -307,8 +307,8 @@ void q_label_change_event(void* self, void* param1) {
     QLabel_ChangeEvent((QLabel*)self, (QEvent*)param1);
 }
 
-void q_label_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnChangeEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnChangeEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_change_event(void* self, void* param1) {
@@ -319,8 +319,8 @@ void q_label_mouse_press_event(void* self, void* ev) {
     QLabel_MousePressEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
-void q_label_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnMousePressEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnMousePressEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_mouse_press_event(void* self, void* ev) {
@@ -331,8 +331,8 @@ void q_label_mouse_move_event(void* self, void* ev) {
     QLabel_MouseMoveEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
-void q_label_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnMouseMoveEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnMouseMoveEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_mouse_move_event(void* self, void* ev) {
@@ -343,8 +343,8 @@ void q_label_mouse_release_event(void* self, void* ev) {
     QLabel_MouseReleaseEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
-void q_label_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnMouseReleaseEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnMouseReleaseEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_mouse_release_event(void* self, void* ev) {
@@ -355,8 +355,8 @@ void q_label_context_menu_event(void* self, void* ev) {
     QLabel_ContextMenuEvent((QLabel*)self, (QContextMenuEvent*)ev);
 }
 
-void q_label_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnContextMenuEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnContextMenuEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_context_menu_event(void* self, void* ev) {
@@ -367,8 +367,8 @@ void q_label_focus_in_event(void* self, void* ev) {
     QLabel_FocusInEvent((QLabel*)self, (QFocusEvent*)ev);
 }
 
-void q_label_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnFocusInEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnFocusInEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_focus_in_event(void* self, void* ev) {
@@ -379,8 +379,8 @@ void q_label_focus_out_event(void* self, void* ev) {
     QLabel_FocusOutEvent((QLabel*)self, (QFocusEvent*)ev);
 }
 
-void q_label_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnFocusOutEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnFocusOutEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_qbase_focus_out_event(void* self, void* ev) {
@@ -391,8 +391,8 @@ bool q_label_focus_next_prev_child(void* self, bool next) {
     return QLabel_FocusNextPrevChild((QLabel*)self, next);
 }
 
-void q_label_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QLabel_OnFocusNextPrevChild((QLabel*)self, (intptr_t)slot);
+void q_label_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QLabel_OnFocusNextPrevChild((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_qbase_focus_next_prev_child(void* self, bool next) {
@@ -1491,32 +1491,32 @@ void q_label_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_label_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_label_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_label_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_label_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_label_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_label_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_label_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_label_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_label_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_label_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_label_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_label_input_method_hints(void* self) {
@@ -1687,12 +1687,16 @@ const char** q_label_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_label_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1710,8 +1714,8 @@ void q_label_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_label_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_label_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_label_parent(void* self) {
@@ -1746,8 +1750,8 @@ void q_label_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_label_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_label_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_label_painting_active(void* self) {
@@ -1810,8 +1814,8 @@ void q_label_qbase_init_style_option(void* self, void* option) {
     QLabel_QBaseInitStyleOption((QLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void q_label_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnInitStyleOption((QLabel*)self, (intptr_t)slot);
+void q_label_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnInitStyleOption((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_dev_type(void* self) {
@@ -1822,8 +1826,8 @@ int32_t q_label_qbase_dev_type(void* self) {
     return QLabel_QBaseDevType((QLabel*)self);
 }
 
-void q_label_on_dev_type(void* self, int32_t (*slot)()) {
-    QLabel_OnDevType((QLabel*)self, (intptr_t)slot);
+void q_label_on_dev_type(void* self, int32_t (*callback)()) {
+    QLabel_OnDevType((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_set_visible(void* self, bool visible) {
@@ -1834,8 +1838,8 @@ void q_label_qbase_set_visible(void* self, bool visible) {
     QLabel_QBaseSetVisible((QLabel*)self, visible);
 }
 
-void q_label_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QLabel_OnSetVisible((QLabel*)self, (intptr_t)slot);
+void q_label_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QLabel_OnSetVisible((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_has_height_for_width(void* self) {
@@ -1846,8 +1850,8 @@ bool q_label_qbase_has_height_for_width(void* self) {
     return QLabel_QBaseHasHeightForWidth((QLabel*)self);
 }
 
-void q_label_on_has_height_for_width(void* self, bool (*slot)()) {
-    QLabel_OnHasHeightForWidth((QLabel*)self, (intptr_t)slot);
+void q_label_on_has_height_for_width(void* self, bool (*callback)()) {
+    QLabel_OnHasHeightForWidth((QLabel*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_label_paint_engine(void* self) {
@@ -1858,8 +1862,8 @@ QPaintEngine* q_label_qbase_paint_engine(void* self) {
     return QLabel_QBasePaintEngine((QLabel*)self);
 }
 
-void q_label_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QLabel_OnPaintEngine((QLabel*)self, (intptr_t)slot);
+void q_label_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QLabel_OnPaintEngine((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_mouse_double_click_event(void* self, void* event) {
@@ -1870,8 +1874,8 @@ void q_label_qbase_mouse_double_click_event(void* self, void* event) {
     QLabel_QBaseMouseDoubleClickEvent((QLabel*)self, (QMouseEvent*)event);
 }
 
-void q_label_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnMouseDoubleClickEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnMouseDoubleClickEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_wheel_event(void* self, void* event) {
@@ -1882,8 +1886,8 @@ void q_label_qbase_wheel_event(void* self, void* event) {
     QLabel_QBaseWheelEvent((QLabel*)self, (QWheelEvent*)event);
 }
 
-void q_label_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnWheelEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnWheelEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_key_release_event(void* self, void* event) {
@@ -1894,8 +1898,8 @@ void q_label_qbase_key_release_event(void* self, void* event) {
     QLabel_QBaseKeyReleaseEvent((QLabel*)self, (QKeyEvent*)event);
 }
 
-void q_label_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnKeyReleaseEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnKeyReleaseEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_enter_event(void* self, void* event) {
@@ -1906,8 +1910,8 @@ void q_label_qbase_enter_event(void* self, void* event) {
     QLabel_QBaseEnterEvent((QLabel*)self, (QEnterEvent*)event);
 }
 
-void q_label_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnEnterEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnEnterEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_leave_event(void* self, void* event) {
@@ -1918,8 +1922,8 @@ void q_label_qbase_leave_event(void* self, void* event) {
     QLabel_QBaseLeaveEvent((QLabel*)self, (QEvent*)event);
 }
 
-void q_label_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnLeaveEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnLeaveEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_move_event(void* self, void* event) {
@@ -1930,8 +1934,8 @@ void q_label_qbase_move_event(void* self, void* event) {
     QLabel_QBaseMoveEvent((QLabel*)self, (QMoveEvent*)event);
 }
 
-void q_label_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnMoveEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnMoveEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_resize_event(void* self, void* event) {
@@ -1942,8 +1946,8 @@ void q_label_qbase_resize_event(void* self, void* event) {
     QLabel_QBaseResizeEvent((QLabel*)self, (QResizeEvent*)event);
 }
 
-void q_label_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnResizeEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnResizeEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_close_event(void* self, void* event) {
@@ -1954,8 +1958,8 @@ void q_label_qbase_close_event(void* self, void* event) {
     QLabel_QBaseCloseEvent((QLabel*)self, (QCloseEvent*)event);
 }
 
-void q_label_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnCloseEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnCloseEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_tablet_event(void* self, void* event) {
@@ -1966,8 +1970,8 @@ void q_label_qbase_tablet_event(void* self, void* event) {
     QLabel_QBaseTabletEvent((QLabel*)self, (QTabletEvent*)event);
 }
 
-void q_label_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnTabletEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnTabletEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_action_event(void* self, void* event) {
@@ -1978,8 +1982,8 @@ void q_label_qbase_action_event(void* self, void* event) {
     QLabel_QBaseActionEvent((QLabel*)self, (QActionEvent*)event);
 }
 
-void q_label_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnActionEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnActionEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_drag_enter_event(void* self, void* event) {
@@ -1990,8 +1994,8 @@ void q_label_qbase_drag_enter_event(void* self, void* event) {
     QLabel_QBaseDragEnterEvent((QLabel*)self, (QDragEnterEvent*)event);
 }
 
-void q_label_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDragEnterEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDragEnterEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_drag_move_event(void* self, void* event) {
@@ -2002,8 +2006,8 @@ void q_label_qbase_drag_move_event(void* self, void* event) {
     QLabel_QBaseDragMoveEvent((QLabel*)self, (QDragMoveEvent*)event);
 }
 
-void q_label_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDragMoveEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDragMoveEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_drag_leave_event(void* self, void* event) {
@@ -2014,8 +2018,8 @@ void q_label_qbase_drag_leave_event(void* self, void* event) {
     QLabel_QBaseDragLeaveEvent((QLabel*)self, (QDragLeaveEvent*)event);
 }
 
-void q_label_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDragLeaveEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDragLeaveEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_drop_event(void* self, void* event) {
@@ -2026,8 +2030,8 @@ void q_label_qbase_drop_event(void* self, void* event) {
     QLabel_QBaseDropEvent((QLabel*)self, (QDropEvent*)event);
 }
 
-void q_label_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDropEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDropEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_show_event(void* self, void* event) {
@@ -2038,8 +2042,8 @@ void q_label_qbase_show_event(void* self, void* event) {
     QLabel_QBaseShowEvent((QLabel*)self, (QShowEvent*)event);
 }
 
-void q_label_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnShowEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnShowEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_hide_event(void* self, void* event) {
@@ -2050,8 +2054,8 @@ void q_label_qbase_hide_event(void* self, void* event) {
     QLabel_QBaseHideEvent((QLabel*)self, (QHideEvent*)event);
 }
 
-void q_label_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnHideEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnHideEvent((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2062,8 +2066,8 @@ bool q_label_qbase_native_event(void* self, const char* eventType, void* message
     return QLabel_QBaseNativeEvent((QLabel*)self, qstring(eventType), message, result);
 }
 
-void q_label_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QLabel_OnNativeEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QLabel_OnNativeEvent((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_metric(void* self, int64_t param1) {
@@ -2074,8 +2078,8 @@ int32_t q_label_qbase_metric(void* self, int64_t param1) {
     return QLabel_QBaseMetric((QLabel*)self, param1);
 }
 
-void q_label_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QLabel_OnMetric((QLabel*)self, (intptr_t)slot);
+void q_label_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QLabel_OnMetric((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_init_painter(void* self, void* painter) {
@@ -2086,8 +2090,8 @@ void q_label_qbase_init_painter(void* self, void* painter) {
     QLabel_QBaseInitPainter((QLabel*)self, (QPainter*)painter);
 }
 
-void q_label_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnInitPainter((QLabel*)self, (intptr_t)slot);
+void q_label_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnInitPainter((QLabel*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_label_redirected(void* self, void* offset) {
@@ -2098,8 +2102,8 @@ QPaintDevice* q_label_qbase_redirected(void* self, void* offset) {
     return QLabel_QBaseRedirected((QLabel*)self, (QPoint*)offset);
 }
 
-void q_label_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QLabel_OnRedirected((QLabel*)self, (intptr_t)slot);
+void q_label_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QLabel_OnRedirected((QLabel*)self, (intptr_t)callback);
 }
 
 QPainter* q_label_shared_painter(void* self) {
@@ -2110,8 +2114,8 @@ QPainter* q_label_qbase_shared_painter(void* self) {
     return QLabel_QBaseSharedPainter((QLabel*)self);
 }
 
-void q_label_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QLabel_OnSharedPainter((QLabel*)self, (intptr_t)slot);
+void q_label_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QLabel_OnSharedPainter((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_input_method_event(void* self, void* param1) {
@@ -2122,8 +2126,8 @@ void q_label_qbase_input_method_event(void* self, void* param1) {
     QLabel_QBaseInputMethodEvent((QLabel*)self, (QInputMethodEvent*)param1);
 }
 
-void q_label_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnInputMethodEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnInputMethodEvent((QLabel*)self, (intptr_t)callback);
 }
 
 QVariant* q_label_input_method_query(void* self, int64_t param1) {
@@ -2134,8 +2138,8 @@ QVariant* q_label_qbase_input_method_query(void* self, int64_t param1) {
     return QLabel_QBaseInputMethodQuery((QLabel*)self, param1);
 }
 
-void q_label_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QLabel_OnInputMethodQuery((QLabel*)self, (intptr_t)slot);
+void q_label_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QLabel_OnInputMethodQuery((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_event_filter(void* self, void* watched, void* event) {
@@ -2146,8 +2150,8 @@ bool q_label_qbase_event_filter(void* self, void* watched, void* event) {
     return QLabel_QBaseEventFilter((QLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_label_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QLabel_OnEventFilter((QLabel*)self, (intptr_t)slot);
+void q_label_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QLabel_OnEventFilter((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_timer_event(void* self, void* event) {
@@ -2158,8 +2162,8 @@ void q_label_qbase_timer_event(void* self, void* event) {
     QLabel_QBaseTimerEvent((QLabel*)self, (QTimerEvent*)event);
 }
 
-void q_label_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnTimerEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnTimerEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_child_event(void* self, void* event) {
@@ -2170,8 +2174,8 @@ void q_label_qbase_child_event(void* self, void* event) {
     QLabel_QBaseChildEvent((QLabel*)self, (QChildEvent*)event);
 }
 
-void q_label_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnChildEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnChildEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_custom_event(void* self, void* event) {
@@ -2182,8 +2186,8 @@ void q_label_qbase_custom_event(void* self, void* event) {
     QLabel_QBaseCustomEvent((QLabel*)self, (QEvent*)event);
 }
 
-void q_label_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnCustomEvent((QLabel*)self, (intptr_t)slot);
+void q_label_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnCustomEvent((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_connect_notify(void* self, void* signal) {
@@ -2194,8 +2198,8 @@ void q_label_qbase_connect_notify(void* self, void* signal) {
     QLabel_QBaseConnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
-void q_label_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnConnectNotify((QLabel*)self, (intptr_t)slot);
+void q_label_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnConnectNotify((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_disconnect_notify(void* self, void* signal) {
@@ -2206,8 +2210,8 @@ void q_label_qbase_disconnect_notify(void* self, void* signal) {
     QLabel_QBaseDisconnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
-void q_label_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDisconnectNotify((QLabel*)self, (intptr_t)slot);
+void q_label_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDisconnectNotify((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_draw_frame(void* self, void* param1) {
@@ -2218,8 +2222,8 @@ void q_label_qbase_draw_frame(void* self, void* param1) {
     QLabel_QBaseDrawFrame((QLabel*)self, (QPainter*)param1);
 }
 
-void q_label_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QLabel_OnDrawFrame((QLabel*)self, (intptr_t)slot);
+void q_label_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QLabel_OnDrawFrame((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_update_micro_focus(void* self) {
@@ -2230,8 +2234,8 @@ void q_label_qbase_update_micro_focus(void* self) {
     QLabel_QBaseUpdateMicroFocus((QLabel*)self);
 }
 
-void q_label_on_update_micro_focus(void* self, void (*slot)()) {
-    QLabel_OnUpdateMicroFocus((QLabel*)self, (intptr_t)slot);
+void q_label_on_update_micro_focus(void* self, void (*callback)()) {
+    QLabel_OnUpdateMicroFocus((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_create(void* self) {
@@ -2242,8 +2246,8 @@ void q_label_qbase_create(void* self) {
     QLabel_QBaseCreate((QLabel*)self);
 }
 
-void q_label_on_create(void* self, void (*slot)()) {
-    QLabel_OnCreate((QLabel*)self, (intptr_t)slot);
+void q_label_on_create(void* self, void (*callback)()) {
+    QLabel_OnCreate((QLabel*)self, (intptr_t)callback);
 }
 
 void q_label_destroy(void* self) {
@@ -2254,8 +2258,8 @@ void q_label_qbase_destroy(void* self) {
     QLabel_QBaseDestroy((QLabel*)self);
 }
 
-void q_label_on_destroy(void* self, void (*slot)()) {
-    QLabel_OnDestroy((QLabel*)self, (intptr_t)slot);
+void q_label_on_destroy(void* self, void (*callback)()) {
+    QLabel_OnDestroy((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_focus_next_child(void* self) {
@@ -2266,8 +2270,8 @@ bool q_label_qbase_focus_next_child(void* self) {
     return QLabel_QBaseFocusNextChild((QLabel*)self);
 }
 
-void q_label_on_focus_next_child(void* self, bool (*slot)()) {
-    QLabel_OnFocusNextChild((QLabel*)self, (intptr_t)slot);
+void q_label_on_focus_next_child(void* self, bool (*callback)()) {
+    QLabel_OnFocusNextChild((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_focus_previous_child(void* self) {
@@ -2278,8 +2282,8 @@ bool q_label_qbase_focus_previous_child(void* self) {
     return QLabel_QBaseFocusPreviousChild((QLabel*)self);
 }
 
-void q_label_on_focus_previous_child(void* self, bool (*slot)()) {
-    QLabel_OnFocusPreviousChild((QLabel*)self, (intptr_t)slot);
+void q_label_on_focus_previous_child(void* self, bool (*callback)()) {
+    QLabel_OnFocusPreviousChild((QLabel*)self, (intptr_t)callback);
 }
 
 QObject* q_label_sender(void* self) {
@@ -2290,8 +2294,8 @@ QObject* q_label_qbase_sender(void* self) {
     return QLabel_QBaseSender((QLabel*)self);
 }
 
-void q_label_on_sender(void* self, QObject* (*slot)()) {
-    QLabel_OnSender((QLabel*)self, (intptr_t)slot);
+void q_label_on_sender(void* self, QObject* (*callback)()) {
+    QLabel_OnSender((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_sender_signal_index(void* self) {
@@ -2302,8 +2306,8 @@ int32_t q_label_qbase_sender_signal_index(void* self) {
     return QLabel_QBaseSenderSignalIndex((QLabel*)self);
 }
 
-void q_label_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QLabel_OnSenderSignalIndex((QLabel*)self, (intptr_t)slot);
+void q_label_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QLabel_OnSenderSignalIndex((QLabel*)self, (intptr_t)callback);
 }
 
 int32_t q_label_receivers(void* self, const char* signal) {
@@ -2314,8 +2318,8 @@ int32_t q_label_qbase_receivers(void* self, const char* signal) {
     return QLabel_QBaseReceivers((QLabel*)self, signal);
 }
 
-void q_label_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QLabel_OnReceivers((QLabel*)self, (intptr_t)slot);
+void q_label_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QLabel_OnReceivers((QLabel*)self, (intptr_t)callback);
 }
 
 bool q_label_is_signal_connected(void* self, void* signal) {
@@ -2326,8 +2330,8 @@ bool q_label_qbase_is_signal_connected(void* self, void* signal) {
     return QLabel_QBaseIsSignalConnected((QLabel*)self, (QMetaMethod*)signal);
 }
 
-void q_label_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QLabel_OnIsSignalConnected((QLabel*)self, (intptr_t)slot);
+void q_label_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QLabel_OnIsSignalConnected((QLabel*)self, (intptr_t)callback);
 }
 
 double q_label_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2338,12 +2342,12 @@ double q_label_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t m
     return QLabel_QBaseGetDecodedMetricF((QLabel*)self, metricA, metricB);
 }
 
-void q_label_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QLabel_OnGetDecodedMetricF((QLabel*)self, (intptr_t)slot);
+void q_label_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QLabel_OnGetDecodedMetricF((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_label_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_label_delete(void* self) {

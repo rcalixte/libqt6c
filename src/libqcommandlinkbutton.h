@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1591 +15,1765 @@
 
 /// q_commandlinkbutton_new constructs a new QCommandLinkButton object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QCommandLinkButton* q_commandlinkbutton_new(void* parent);
 
 /// q_commandlinkbutton_new2 constructs a new QCommandLinkButton object.
-///
 ///
 QCommandLinkButton* q_commandlinkbutton_new2();
 
 /// q_commandlinkbutton_new3 constructs a new QCommandLinkButton object.
 ///
-/// ``` const char* text ```
+/// @param text const char*
 QCommandLinkButton* q_commandlinkbutton_new3(const char* text);
 
 /// q_commandlinkbutton_new4 constructs a new QCommandLinkButton object.
 ///
-/// ``` const char* text, const char* description ```
+/// @param text const char*
+/// @param description const char*
 QCommandLinkButton* q_commandlinkbutton_new4(const char* text, const char* description);
 
 /// q_commandlinkbutton_new5 constructs a new QCommandLinkButton object.
 ///
-/// ``` const char* text, QWidget* parent ```
+/// @param text const char*
+/// @param parent QWidget*
 QCommandLinkButton* q_commandlinkbutton_new5(const char* text, void* parent);
 
 /// q_commandlinkbutton_new6 constructs a new QCommandLinkButton object.
 ///
-/// ``` const char* text, const char* description, QWidget* parent ```
+/// @param text const char*
+/// @param description const char*
+/// @param parent QWidget*
 QCommandLinkButton* q_commandlinkbutton_new6(const char* text, const char* description, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 const QMetaObject* q_commandlinkbutton_meta_object(void* self);
 
-/// ``` QCommandLinkButton* self, const char* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 const char*
 void* q_commandlinkbutton_metacast(void* self, const char* param1);
 
-/// ``` QCommandLinkButton* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_commandlinkbutton_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)(QCommandLinkButton*, enum QMetaObject__Call, int, void*) ```
-void q_commandlinkbutton_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn(QCommandLinkButton*, enum QMetaObject__Call, int, void*)
+void q_commandlinkbutton_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_commandlinkbutton_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_commandlinkbutton_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#description)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_description(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#setDescription)
 ///
-/// ``` QCommandLinkButton* self, const char* description ```
+/// @param self QCommandLinkButton*
+/// @param description const char*
 void q_commandlinkbutton_set_description(void* self, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#sizeHint)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#sizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, QSize* (*slot)() ```
-void q_commandlinkbutton_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback QSize* fn()
+void q_commandlinkbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#sizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_qbase_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#heightForWidth)
 ///
-/// ``` QCommandLinkButton* self, int param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 int
 int32_t q_commandlinkbutton_height_for_width(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#heightForWidth)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)(QCommandLinkButton*, int) ```
-void q_commandlinkbutton_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn(QCommandLinkButton*, int)
+void q_commandlinkbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#heightForWidth)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self, int param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 int
 int32_t q_commandlinkbutton_qbase_height_for_width(void* self, int param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#minimumSizeHint)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#minimumSizeHint)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, QSize* (*slot)() ```
-void q_commandlinkbutton_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback QSize* fn()
+void q_commandlinkbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#minimumSizeHint)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_qbase_minimum_size_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#initStyleOption)
 ///
-/// ``` QCommandLinkButton* self, QStyleOptionButton* option ```
+/// @param self QCommandLinkButton*
+/// @param option QStyleOptionButton*
 void q_commandlinkbutton_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QStyleOptionButton*) ```
-void q_commandlinkbutton_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QStyleOptionButton*)
+void q_commandlinkbutton_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self, QStyleOptionButton* option ```
+/// @param self QCommandLinkButton*
+/// @param option QStyleOptionButton*
 void q_commandlinkbutton_qbase_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#event)
 ///
-/// ``` QCommandLinkButton* self, QEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QEvent*
 bool q_commandlinkbutton_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, QEvent*) ```
-void q_commandlinkbutton_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, QEvent*)
+void q_commandlinkbutton_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self, QEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QEvent*
 bool q_commandlinkbutton_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#paintEvent)
 ///
-/// ``` QCommandLinkButton* self, QPaintEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPaintEvent*
 void q_commandlinkbutton_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QPaintEvent*) ```
-void q_commandlinkbutton_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QPaintEvent*)
+void q_commandlinkbutton_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QCommandLinkButton* self, QPaintEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPaintEvent*
 void q_commandlinkbutton_qbase_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_commandlinkbutton_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_commandlinkbutton_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#autoDefault)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_auto_default(void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#setAutoDefault)
 ///
-/// ``` QCommandLinkButton* self, bool autoDefault ```
+/// @param self QCommandLinkButton*
+/// @param autoDefault bool
 void q_commandlinkbutton_set_auto_default(void* self, bool autoDefault);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#isDefault)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_default(void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#setDefault)
 ///
-/// ``` QCommandLinkButton* self, bool defaultVal ```
+/// @param self QCommandLinkButton*
+/// @param defaultVal bool
 void q_commandlinkbutton_set_default(void* self, bool defaultVal);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#setMenu)
 ///
-/// ``` QCommandLinkButton* self, QMenu* menu ```
+/// @param self QCommandLinkButton*
+/// @param menu QMenu*
 void q_commandlinkbutton_set_menu(void* self, void* menu);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#menu)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QMenu* q_commandlinkbutton_menu(void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#setFlat)
 ///
-/// ``` QCommandLinkButton* self, bool flat ```
+/// @param self QCommandLinkButton*
+/// @param flat bool
 void q_commandlinkbutton_set_flat(void* self, bool flat);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#isFlat)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_flat(void* self);
 
 /// Inherited from QPushButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpushbutton.html#showMenu)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show_menu(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setText)
 ///
-/// ``` QCommandLinkButton* self, const char* text ```
+/// @param self QCommandLinkButton*
+/// @param text const char*
 void q_commandlinkbutton_set_text(void* self, const char* text);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#text)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_text(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setIcon)
 ///
-/// ``` QCommandLinkButton* self, QIcon* icon ```
+/// @param self QCommandLinkButton*
+/// @param icon QIcon*
 void q_commandlinkbutton_set_icon(void* self, void* icon);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#icon)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QIcon* q_commandlinkbutton_icon(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#iconSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_icon_size(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setShortcut)
 ///
-/// ``` QCommandLinkButton* self, QKeySequence* key ```
+/// @param self QCommandLinkButton*
+/// @param key QKeySequence*
 void q_commandlinkbutton_set_shortcut(void* self, void* key);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#shortcut)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QKeySequence* q_commandlinkbutton_shortcut(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setCheckable)
 ///
-/// ``` QCommandLinkButton* self, bool checkable ```
+/// @param self QCommandLinkButton*
+/// @param checkable bool
 void q_commandlinkbutton_set_checkable(void* self, bool checkable);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#isCheckable)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_checkable(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#isChecked)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_checked(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setDown)
 ///
-/// ``` QCommandLinkButton* self, bool down ```
+/// @param self QCommandLinkButton*
+/// @param down bool
 void q_commandlinkbutton_set_down(void* self, bool down);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#isDown)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_down(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setAutoRepeat)
 ///
-/// ``` QCommandLinkButton* self, bool autoRepeat ```
+/// @param self QCommandLinkButton*
+/// @param autoRepeat bool
 void q_commandlinkbutton_set_auto_repeat(void* self, bool autoRepeat);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeat)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_auto_repeat(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setAutoRepeatDelay)
 ///
-/// ``` QCommandLinkButton* self, int autoRepeatDelay ```
+/// @param self QCommandLinkButton*
+/// @param autoRepeatDelay int
 void q_commandlinkbutton_set_auto_repeat_delay(void* self, int autoRepeatDelay);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatDelay)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_auto_repeat_delay(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setAutoRepeatInterval)
 ///
-/// ``` QCommandLinkButton* self, int autoRepeatInterval ```
+/// @param self QCommandLinkButton*
+/// @param autoRepeatInterval int
 void q_commandlinkbutton_set_auto_repeat_interval(void* self, int autoRepeatInterval);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#autoRepeatInterval)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_auto_repeat_interval(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setAutoExclusive)
 ///
-/// ``` QCommandLinkButton* self, bool autoExclusive ```
+/// @param self QCommandLinkButton*
+/// @param autoExclusive bool
 void q_commandlinkbutton_set_auto_exclusive(void* self, bool autoExclusive);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#autoExclusive)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_auto_exclusive(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#group)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QButtonGroup* q_commandlinkbutton_group(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setIconSize)
 ///
-/// ``` QCommandLinkButton* self, QSize* size ```
+/// @param self QCommandLinkButton*
+/// @param size QSize*
 void q_commandlinkbutton_set_icon_size(void* self, void* size);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#animateClick)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_animate_click(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#click)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_click(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggle)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_toggle(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#setChecked)
 ///
-/// ``` QCommandLinkButton* self, bool checked ```
+/// @param self QCommandLinkButton*
+/// @param checked bool
 void q_commandlinkbutton_set_checked(void* self, bool checked);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_pressed(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#pressed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
-void q_commandlinkbutton_on_pressed(void* self, void (*slot)(void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*)
+void q_commandlinkbutton_on_pressed(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_released(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#released)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
-void q_commandlinkbutton_on_released(void* self, void (*slot)(void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*)
+void q_commandlinkbutton_on_released(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_clicked(void* self);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
-void q_commandlinkbutton_on_clicked(void* self, void (*slot)(void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*)
+void q_commandlinkbutton_on_clicked(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QCommandLinkButton* self, bool checked ```
+/// @param self QCommandLinkButton*
+/// @param checked bool
 void q_commandlinkbutton_toggled(void* self, bool checked);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#toggled)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, bool) ```
-void q_commandlinkbutton_on_toggled(void* self, void (*slot)(void*, bool));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, bool)
+void q_commandlinkbutton_on_toggled(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self, bool checked ```
+/// @param self QCommandLinkButton*
+/// @param checked bool
 void q_commandlinkbutton_clicked1(void* self, bool checked);
 
 /// Inherited from QAbstractButton
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractbutton.html#clicked)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, bool) ```
-void q_commandlinkbutton_on_clicked1(void* self, void (*slot)(void*, bool));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, bool)
+void q_commandlinkbutton_on_clicked1(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 uintptr_t q_commandlinkbutton_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 uintptr_t q_commandlinkbutton_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 uintptr_t q_commandlinkbutton_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QStyle* q_commandlinkbutton_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QCommandLinkButton* self, QStyle* style ```
+/// @param self QCommandLinkButton*
+/// @param style QStyle*
 void q_commandlinkbutton_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum Qt__WindowModality
 int64_t q_commandlinkbutton_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WindowModality windowModality ```
+/// @param self QCommandLinkButton*
+/// @param windowModality enum Qt__WindowModality
 void q_commandlinkbutton_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
 bool q_commandlinkbutton_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QCommandLinkButton* self, bool enabled ```
+/// @param self QCommandLinkButton*
+/// @param enabled bool
 void q_commandlinkbutton_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QCommandLinkButton* self, bool disabled ```
+/// @param self QCommandLinkButton*
+/// @param disabled bool
 void q_commandlinkbutton_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QCommandLinkButton* self, bool windowModified ```
+/// @param self QCommandLinkButton*
+/// @param windowModified bool
 void q_commandlinkbutton_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRect* q_commandlinkbutton_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 const QRect* q_commandlinkbutton_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRect* q_commandlinkbutton_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPoint* q_commandlinkbutton_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRect* q_commandlinkbutton_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRect* q_commandlinkbutton_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRegion* q_commandlinkbutton_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QCommandLinkButton* self, QSize* minimumSize ```
+/// @param self QCommandLinkButton*
+/// @param minimumSize QSize*
 void q_commandlinkbutton_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QCommandLinkButton* self, int minw, int minh ```
+/// @param self QCommandLinkButton*
+/// @param minw int
+/// @param minh int
 void q_commandlinkbutton_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QCommandLinkButton* self, QSize* maximumSize ```
+/// @param self QCommandLinkButton*
+/// @param maximumSize QSize*
 void q_commandlinkbutton_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QCommandLinkButton* self, int maxw, int maxh ```
+/// @param self QCommandLinkButton*
+/// @param maxw int
+/// @param maxh int
 void q_commandlinkbutton_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QCommandLinkButton* self, int minw ```
+/// @param self QCommandLinkButton*
+/// @param minw int
 void q_commandlinkbutton_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QCommandLinkButton* self, int minh ```
+/// @param self QCommandLinkButton*
+/// @param minh int
 void q_commandlinkbutton_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QCommandLinkButton* self, int maxw ```
+/// @param self QCommandLinkButton*
+/// @param maxw int
 void q_commandlinkbutton_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QCommandLinkButton* self, int maxh ```
+/// @param self QCommandLinkButton*
+/// @param maxh int
 void q_commandlinkbutton_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QCommandLinkButton* self, QSize* sizeIncrement ```
+/// @param self QCommandLinkButton*
+/// @param sizeIncrement QSize*
 void q_commandlinkbutton_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QCommandLinkButton* self, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSize* q_commandlinkbutton_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QCommandLinkButton* self, QSize* baseSize ```
+/// @param self QCommandLinkButton*
+/// @param baseSize QSize*
 void q_commandlinkbutton_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QCommandLinkButton* self, int basew, int baseh ```
+/// @param self QCommandLinkButton*
+/// @param basew int
+/// @param baseh int
 void q_commandlinkbutton_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QCommandLinkButton* self, QSize* fixedSize ```
+/// @param self QCommandLinkButton*
+/// @param fixedSize QSize*
 void q_commandlinkbutton_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QCommandLinkButton* self, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QCommandLinkButton* self, int w ```
+/// @param self QCommandLinkButton*
+/// @param w int
 void q_commandlinkbutton_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QCommandLinkButton* self, int h ```
+/// @param self QCommandLinkButton*
+/// @param h int
 void q_commandlinkbutton_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QCommandLinkButton* self, QPointF* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPointF*
 QPointF* q_commandlinkbutton_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QCommandLinkButton* self, QPoint* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPoint*
 QPoint* q_commandlinkbutton_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QCommandLinkButton* self, QPointF* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPointF*
 QPointF* q_commandlinkbutton_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QCommandLinkButton* self, QPoint* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPoint*
 QPoint* q_commandlinkbutton_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QCommandLinkButton* self, QPointF* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPointF*
 QPointF* q_commandlinkbutton_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QCommandLinkButton* self, QPoint* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPoint*
 QPoint* q_commandlinkbutton_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QCommandLinkButton* self, QPointF* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPointF*
 QPointF* q_commandlinkbutton_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QCommandLinkButton* self, QPoint* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPoint*
 QPoint* q_commandlinkbutton_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1, QPointF* param2 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_commandlinkbutton_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1, QPoint* param2 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_commandlinkbutton_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1, QPointF* param2 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_commandlinkbutton_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1, QPoint* param2 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_commandlinkbutton_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 const QPalette* q_commandlinkbutton_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QCommandLinkButton* self, QPalette* palette ```
+/// @param self QCommandLinkButton*
+/// @param palette QPalette*
 void q_commandlinkbutton_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QCommandLinkButton* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QCommandLinkButton*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_commandlinkbutton_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_commandlinkbutton_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QCommandLinkButton* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QCommandLinkButton*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_commandlinkbutton_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_commandlinkbutton_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 const QFont* q_commandlinkbutton_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QCommandLinkButton* self, QFont* font ```
+/// @param self QCommandLinkButton*
+/// @param font QFont*
 void q_commandlinkbutton_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QFontMetrics* q_commandlinkbutton_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QFontInfo* q_commandlinkbutton_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QCursor* q_commandlinkbutton_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QCommandLinkButton* self, QCursor* cursor ```
+/// @param self QCommandLinkButton*
+/// @param cursor QCursor*
 void q_commandlinkbutton_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QCommandLinkButton* self, bool enable ```
+/// @param self QCommandLinkButton*
+/// @param enable bool
 void q_commandlinkbutton_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QCommandLinkButton* self, bool enable ```
+/// @param self QCommandLinkButton*
+/// @param enable bool
 void q_commandlinkbutton_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QCommandLinkButton* self, QBitmap* mask ```
+/// @param self QCommandLinkButton*
+/// @param mask QBitmap*
 void q_commandlinkbutton_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QCommandLinkButton* self, QRegion* mask ```
+/// @param self QCommandLinkButton*
+/// @param mask QRegion*
 void q_commandlinkbutton_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRegion* q_commandlinkbutton_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPaintDevice* target ```
+/// @param self QCommandLinkButton*
+/// @param target QPaintDevice*
 void q_commandlinkbutton_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
 void q_commandlinkbutton_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPixmap* q_commandlinkbutton_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QGraphicsEffect* q_commandlinkbutton_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QCommandLinkButton* self, QGraphicsEffect* effect ```
+/// @param self QCommandLinkButton*
+/// @param effect QGraphicsEffect*
 void q_commandlinkbutton_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__GestureType typeVal ```
+/// @param self QCommandLinkButton*
+/// @param typeVal enum Qt__GestureType
 void q_commandlinkbutton_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__GestureType typeVal ```
+/// @param self QCommandLinkButton*
+/// @param typeVal enum Qt__GestureType
 void q_commandlinkbutton_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QCommandLinkButton* self, const char* windowTitle ```
+/// @param self QCommandLinkButton*
+/// @param windowTitle const char*
 void q_commandlinkbutton_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QCommandLinkButton* self, const char* styleSheet ```
+/// @param self QCommandLinkButton*
+/// @param styleSheet const char*
 void q_commandlinkbutton_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QCommandLinkButton* self, QIcon* icon ```
+/// @param self QCommandLinkButton*
+/// @param icon QIcon*
 void q_commandlinkbutton_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QIcon* q_commandlinkbutton_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QCommandLinkButton* self, const char* windowIconText ```
+/// @param self QCommandLinkButton*
+/// @param windowIconText const char*
 void q_commandlinkbutton_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QCommandLinkButton* self, const char* windowRole ```
+/// @param self QCommandLinkButton*
+/// @param windowRole const char*
 void q_commandlinkbutton_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QCommandLinkButton* self, const char* filePath ```
+/// @param self QCommandLinkButton*
+/// @param filePath const char*
 void q_commandlinkbutton_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QCommandLinkButton* self, double level ```
+/// @param self QCommandLinkButton*
+/// @param level double
 void q_commandlinkbutton_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 double q_commandlinkbutton_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QCommandLinkButton* self, const char* toolTip ```
+/// @param self QCommandLinkButton*
+/// @param toolTip const char*
 void q_commandlinkbutton_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QCommandLinkButton* self, int msec ```
+/// @param self QCommandLinkButton*
+/// @param msec int
 void q_commandlinkbutton_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QCommandLinkButton* self, const char* statusTip ```
+/// @param self QCommandLinkButton*
+/// @param statusTip const char*
 void q_commandlinkbutton_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QCommandLinkButton* self, const char* whatsThis ```
+/// @param self QCommandLinkButton*
+/// @param whatsThis const char*
 void q_commandlinkbutton_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QCommandLinkButton* self, const char* name ```
+/// @param self QCommandLinkButton*
+/// @param name const char*
 void q_commandlinkbutton_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QCommandLinkButton* self, const char* description ```
+/// @param self QCommandLinkButton*
+/// @param description const char*
 void q_commandlinkbutton_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__LayoutDirection direction ```
+/// @param self QCommandLinkButton*
+/// @param direction enum Qt__LayoutDirection
 void q_commandlinkbutton_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_commandlinkbutton_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QCommandLinkButton* self, QLocale* locale ```
+/// @param self QCommandLinkButton*
+/// @param locale QLocale*
 void q_commandlinkbutton_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QLocale* q_commandlinkbutton_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__FocusReason reason ```
+/// @param self QCommandLinkButton*
+/// @param reason enum Qt__FocusReason
 void q_commandlinkbutton_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_commandlinkbutton_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__FocusPolicy policy ```
+/// @param self QCommandLinkButton*
+/// @param policy enum Qt__FocusPolicy
 void q_commandlinkbutton_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_commandlinkbutton_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QCommandLinkButton* self, QWidget* focusProxy ```
+/// @param self QCommandLinkButton*
+/// @param focusProxy QWidget*
 void q_commandlinkbutton_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_commandlinkbutton_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QCommandLinkButton*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_commandlinkbutton_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QCommandLinkButton* self, QCursor* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QCursor*
 void q_commandlinkbutton_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QCommandLinkButton* self, QKeySequence* key ```
+/// @param self QCommandLinkButton*
+/// @param key QKeySequence*
 int32_t q_commandlinkbutton_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QCommandLinkButton* self, int id ```
+/// @param self QCommandLinkButton*
+/// @param id int
 void q_commandlinkbutton_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QCommandLinkButton* self, int id ```
+/// @param self QCommandLinkButton*
+/// @param id int
 void q_commandlinkbutton_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QCommandLinkButton* self, int id ```
+/// @param self QCommandLinkButton*
+/// @param id int
 void q_commandlinkbutton_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_commandlinkbutton_mouse_grabber();
 
@@ -1608,1161 +1781,1327 @@ QWidget* q_commandlinkbutton_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_commandlinkbutton_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QCommandLinkButton* self, bool enable ```
+/// @param self QCommandLinkButton*
+/// @param enable bool
 void q_commandlinkbutton_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QGraphicsProxyWidget* q_commandlinkbutton_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QCommandLinkButton* self, int x, int y, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QCommandLinkButton* self, QRect* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QRect*
 void q_commandlinkbutton_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QCommandLinkButton* self, QRegion* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QRegion*
 void q_commandlinkbutton_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QCommandLinkButton* self, int x, int y, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QCommandLinkButton* self, QRect* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QRect*
 void q_commandlinkbutton_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QCommandLinkButton* self, QRegion* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QRegion*
 void q_commandlinkbutton_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QCommandLinkButton* self, bool hidden ```
+/// @param self QCommandLinkButton*
+/// @param hidden bool
 void q_commandlinkbutton_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
 void q_commandlinkbutton_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QCommandLinkButton* self, int x, int y ```
+/// @param self QCommandLinkButton*
+/// @param x int
+/// @param y int
 void q_commandlinkbutton_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QCommandLinkButton* self, QPoint* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QPoint*
 void q_commandlinkbutton_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QCommandLinkButton* self, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QCommandLinkButton* self, QSize* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QSize*
 void q_commandlinkbutton_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QCommandLinkButton* self, int x, int y, int w, int h ```
+/// @param self QCommandLinkButton*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_commandlinkbutton_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QCommandLinkButton* self, QRect* geometry ```
+/// @param self QCommandLinkButton*
+/// @param geometry QRect*
 void q_commandlinkbutton_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 char* q_commandlinkbutton_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QCommandLinkButton* self, const char* geometry ```
+/// @param self QCommandLinkButton*
+/// @param geometry const char*
 bool q_commandlinkbutton_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QCommandLinkButton* self, QWidget* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QWidget*
 bool q_commandlinkbutton_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_commandlinkbutton_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QCommandLinkButton* self, int state ```
+/// @param self QCommandLinkButton*
+/// @param state flag of enum Qt__WindowState
 void q_commandlinkbutton_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QCommandLinkButton* self, int state ```
+/// @param self QCommandLinkButton*
+/// @param state flag of enum Qt__WindowState
 void q_commandlinkbutton_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QSizePolicy* q_commandlinkbutton_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QCommandLinkButton* self, QSizePolicy* sizePolicy ```
+/// @param self QCommandLinkButton*
+/// @param sizePolicy QSizePolicy*
 void q_commandlinkbutton_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QCommandLinkButton* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QCommandLinkButton*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_commandlinkbutton_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRegion* q_commandlinkbutton_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QCommandLinkButton* self, int left, int top, int right, int bottom ```
+/// @param self QCommandLinkButton*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_commandlinkbutton_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QCommandLinkButton* self, QMargins* margins ```
+/// @param self QCommandLinkButton*
+/// @param margins QMargins*
 void q_commandlinkbutton_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QMargins* q_commandlinkbutton_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QRect* q_commandlinkbutton_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QLayout* q_commandlinkbutton_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QCommandLinkButton* self, QLayout* layout ```
+/// @param self QCommandLinkButton*
+/// @param layout QLayout*
 void q_commandlinkbutton_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QCommandLinkButton* self, QWidget* parent ```
+/// @param self QCommandLinkButton*
+/// @param parent QWidget*
 void q_commandlinkbutton_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QCommandLinkButton* self, QWidget* parent, int f ```
+/// @param self QCommandLinkButton*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_commandlinkbutton_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QCommandLinkButton* self, int dx, int dy ```
+/// @param self QCommandLinkButton*
+/// @param dx int
+/// @param dy int
 void q_commandlinkbutton_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QCommandLinkButton* self, int dx, int dy, QRect* param3 ```
+/// @param self QCommandLinkButton*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_commandlinkbutton_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QCommandLinkButton* self, bool on ```
+/// @param self QCommandLinkButton*
+/// @param on bool
 void q_commandlinkbutton_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QCommandLinkButton* self, QAction* action ```
+/// @param self QCommandLinkButton*
+/// @param action QAction*
 void q_commandlinkbutton_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QCommandLinkButton* self, libqt_list /* of QAction* */ actions ```
+/// @param self QCommandLinkButton*
+/// @param actions libqt_list /* of QAction* */
 void q_commandlinkbutton_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QCommandLinkButton* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QCommandLinkButton*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_commandlinkbutton_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QCommandLinkButton* self, QAction* before, QAction* action ```
+/// @param self QCommandLinkButton*
+/// @param before QAction*
+/// @param action QAction*
 void q_commandlinkbutton_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QCommandLinkButton* self, QAction* action ```
+/// @param self QCommandLinkButton*
+/// @param action QAction*
 void q_commandlinkbutton_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 libqt_list /* of QAction* */ q_commandlinkbutton_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QCommandLinkButton* self, const char* text ```
+/// @param self QCommandLinkButton*
+/// @param text const char*
 QAction* q_commandlinkbutton_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QCommandLinkButton* self, QIcon* icon, const char* text ```
+/// @param self QCommandLinkButton*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_commandlinkbutton_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QCommandLinkButton* self, const char* text, QKeySequence* shortcut ```
+/// @param self QCommandLinkButton*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_commandlinkbutton_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QCommandLinkButton* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QCommandLinkButton*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_commandlinkbutton_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWidget* q_commandlinkbutton_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QCommandLinkButton* self, int typeVal ```
+/// @param self QCommandLinkButton*
+/// @param typeVal flag of enum Qt__WindowType
 void q_commandlinkbutton_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_commandlinkbutton_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WindowType param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__WindowType
 void q_commandlinkbutton_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QCommandLinkButton* self, int typeVal ```
+/// @param self QCommandLinkButton*
+/// @param typeVal flag of enum Qt__WindowType
 void q_commandlinkbutton_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return enum Qt__WindowType
 int64_t q_commandlinkbutton_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_commandlinkbutton_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QCommandLinkButton* self, int x, int y ```
+/// @param self QCommandLinkButton*
+/// @param x int
+/// @param y int
 QWidget* q_commandlinkbutton_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QCommandLinkButton* self, QPoint* p ```
+/// @param self QCommandLinkButton*
+/// @param p QPoint*
 QWidget* q_commandlinkbutton_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QCommandLinkButton* self, QPointF* p ```
+/// @param self QCommandLinkButton*
+/// @param p QPointF*
 QWidget* q_commandlinkbutton_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__WidgetAttribute
 void q_commandlinkbutton_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_commandlinkbutton_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QCommandLinkButton* self, QWidget* child ```
+/// @param self QCommandLinkButton*
+/// @param child QWidget*
 bool q_commandlinkbutton_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QCommandLinkButton* self, bool enabled ```
+/// @param self QCommandLinkButton*
+/// @param enabled bool
 void q_commandlinkbutton_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QBackingStore* q_commandlinkbutton_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QWindow* q_commandlinkbutton_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QScreen* q_commandlinkbutton_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QCommandLinkButton* self, QScreen* screen ```
+/// @param self QCommandLinkButton*
+/// @param screen QScreen*
 void q_commandlinkbutton_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_commandlinkbutton_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QCommandLinkButton* self, const char* title ```
+/// @param self QCommandLinkButton*
+/// @param title const char*
 void q_commandlinkbutton_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
-void q_commandlinkbutton_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, const char*)
+void q_commandlinkbutton_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QCommandLinkButton* self, QIcon* icon ```
+/// @param self QCommandLinkButton*
+/// @param icon QIcon*
 void q_commandlinkbutton_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QIcon*) ```
-void q_commandlinkbutton_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QIcon*)
+void q_commandlinkbutton_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QCommandLinkButton* self, const char* iconText ```
+/// @param self QCommandLinkButton*
+/// @param iconText const char*
 void q_commandlinkbutton_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
-void q_commandlinkbutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, const char*)
+void q_commandlinkbutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QCommandLinkButton* self, QPoint* pos ```
+/// @param self QCommandLinkButton*
+/// @param pos QPoint*
 void q_commandlinkbutton_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QPoint*) ```
-void q_commandlinkbutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QPoint*)
+void q_commandlinkbutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_commandlinkbutton_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QCommandLinkButton* self, int hints ```
+/// @param self QCommandLinkButton*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_commandlinkbutton_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QCommandLinkButton*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_commandlinkbutton_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QCommandLinkButton*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_commandlinkbutton_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QCommandLinkButton*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_commandlinkbutton_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_commandlinkbutton_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_commandlinkbutton_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_commandlinkbutton_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QCommandLinkButton* self, QRect* rectangle ```
+/// @param self QCommandLinkButton*
+/// @param rectangle QRect*
 QPixmap* q_commandlinkbutton_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QCommandLinkButton*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_commandlinkbutton_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QCommandLinkButton* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QCommandLinkButton*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_commandlinkbutton_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QCommandLinkButton* self, int id, bool enable ```
+/// @param self QCommandLinkButton*
+/// @param id int
+/// @param enable bool
 void q_commandlinkbutton_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QCommandLinkButton* self, int id, bool enable ```
+/// @param self QCommandLinkButton*
+/// @param id int
+/// @param enable bool
 void q_commandlinkbutton_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WindowType param1, bool on ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_commandlinkbutton_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_commandlinkbutton_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_commandlinkbutton_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_commandlinkbutton_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char* q_commandlinkbutton_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QCommandLinkButton* self, char* name ```
+/// @param self QCommandLinkButton*
+/// @param name char*
 void q_commandlinkbutton_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QCommandLinkButton* self, bool b ```
+/// @param self QCommandLinkButton*
+/// @param b bool
 bool q_commandlinkbutton_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QThread* q_commandlinkbutton_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QCommandLinkButton* self, QThread* thread ```
+/// @param self QCommandLinkButton*
+/// @param thread QThread*
 bool q_commandlinkbutton_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QCommandLinkButton* self, int interval ```
+/// @param self QCommandLinkButton*
+/// @param interval int
 int32_t q_commandlinkbutton_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QCommandLinkButton* self, int id ```
+/// @param self QCommandLinkButton*
+/// @param id int
 void q_commandlinkbutton_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QCommandLinkButton* self, enum Qt__TimerId id ```
+/// @param self QCommandLinkButton*
+/// @param id enum Qt__TimerId
 void q_commandlinkbutton_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 libqt_list /* of QObject* */ q_commandlinkbutton_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QCommandLinkButton* self, QObject* filterObj ```
+/// @param self QCommandLinkButton*
+/// @param filterObj QObject*
 void q_commandlinkbutton_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QCommandLinkButton* self, QObject* obj ```
+/// @param self QCommandLinkButton*
+/// @param obj QObject*
 void q_commandlinkbutton_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_commandlinkbutton_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QCommandLinkButton* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QCommandLinkButton*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_commandlinkbutton_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_commandlinkbutton_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_commandlinkbutton_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QCommandLinkButton* self, const char* name, QVariant* value ```
+/// @param self QCommandLinkButton*
+/// @param name const char*
+/// @param value QVariant*
 bool q_commandlinkbutton_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QCommandLinkButton* self, const char* name ```
+/// @param self QCommandLinkButton*
+/// @param name const char*
 QVariant* q_commandlinkbutton_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QCommandLinkButton* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QCommandLinkButton*
 const char** q_commandlinkbutton_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QBindingStorage* q_commandlinkbutton_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 const QBindingStorage* q_commandlinkbutton_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*) ```
-void q_commandlinkbutton_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*)
+void q_commandlinkbutton_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QObject* q_commandlinkbutton_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QCommandLinkButton* self, const char* classname ```
+/// @param self QCommandLinkButton*
+/// @param classname const char*
 bool q_commandlinkbutton_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QCommandLinkButton* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QCommandLinkButton*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_commandlinkbutton_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QCommandLinkButton* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QCommandLinkButton*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_commandlinkbutton_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_commandlinkbutton_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QCommandLinkButton* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QCommandLinkButton*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_commandlinkbutton_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self, QObject* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QObject*
 void q_commandlinkbutton_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QObject*) ```
-void q_commandlinkbutton_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QObject*)
+void q_commandlinkbutton_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 double q_commandlinkbutton_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 double q_commandlinkbutton_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_commandlinkbutton_device_pixel_ratio_f_scale();
 
@@ -2770,7 +3109,8 @@ double q_commandlinkbutton_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_commandlinkbutton_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QPushButton
@@ -2779,7 +3119,8 @@ int32_t q_commandlinkbutton_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QKeyEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QKeyEvent*
 void q_commandlinkbutton_key_press_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2788,7 +3129,8 @@ void q_commandlinkbutton_key_press_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QKeyEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QKeyEvent*
 void q_commandlinkbutton_qbase_key_press_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2797,8 +3139,9 @@ void q_commandlinkbutton_qbase_key_press_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QKeyEvent*) ```
-void q_commandlinkbutton_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QKeyEvent*)
+void q_commandlinkbutton_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
 ///
@@ -2806,7 +3149,8 @@ void q_commandlinkbutton_on_key_press_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QFocusEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QFocusEvent*
 void q_commandlinkbutton_focus_in_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2815,7 +3159,8 @@ void q_commandlinkbutton_focus_in_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QFocusEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QFocusEvent*
 void q_commandlinkbutton_qbase_focus_in_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2824,8 +3169,9 @@ void q_commandlinkbutton_qbase_focus_in_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QFocusEvent*) ```
-void q_commandlinkbutton_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QFocusEvent*)
+void q_commandlinkbutton_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
 ///
@@ -2833,7 +3179,8 @@ void q_commandlinkbutton_on_focus_in_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QFocusEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QFocusEvent*
 void q_commandlinkbutton_focus_out_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2842,7 +3189,8 @@ void q_commandlinkbutton_focus_out_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QFocusEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QFocusEvent*
 void q_commandlinkbutton_qbase_focus_out_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2851,8 +3199,9 @@ void q_commandlinkbutton_qbase_focus_out_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QFocusEvent*) ```
-void q_commandlinkbutton_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QFocusEvent*)
+void q_commandlinkbutton_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
 ///
@@ -2860,7 +3209,8 @@ void q_commandlinkbutton_on_focus_out_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QMouseEvent*
 void q_commandlinkbutton_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2869,7 +3219,8 @@ void q_commandlinkbutton_mouse_move_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QMouseEvent*
 void q_commandlinkbutton_qbase_mouse_move_event(void* self, void* param1);
 
 /// Inherited from QPushButton
@@ -2878,8 +3229,9 @@ void q_commandlinkbutton_qbase_mouse_move_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMouseEvent*) ```
-void q_commandlinkbutton_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+void q_commandlinkbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPushButton
 ///
@@ -2887,7 +3239,8 @@ void q_commandlinkbutton_on_mouse_move_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPoint* pos ```
+/// @param self QCommandLinkButton*
+/// @param pos QPoint*
 bool q_commandlinkbutton_hit_button(void* self, void* pos);
 
 /// Inherited from QPushButton
@@ -2896,7 +3249,8 @@ bool q_commandlinkbutton_hit_button(void* self, void* pos);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPoint* pos ```
+/// @param self QCommandLinkButton*
+/// @param pos QPoint*
 bool q_commandlinkbutton_qbase_hit_button(void* self, void* pos);
 
 /// Inherited from QPushButton
@@ -2905,8 +3259,9 @@ bool q_commandlinkbutton_qbase_hit_button(void* self, void* pos);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, QPoint*) ```
-void q_commandlinkbutton_on_hit_button(void* self, bool (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, QPoint*)
+void q_commandlinkbutton_on_hit_button(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
 ///
@@ -2914,7 +3269,7 @@ void q_commandlinkbutton_on_hit_button(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_check_state_set(void* self);
 
 /// Inherited from QAbstractButton
@@ -2923,7 +3278,7 @@ void q_commandlinkbutton_check_state_set(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_qbase_check_state_set(void* self);
 
 /// Inherited from QAbstractButton
@@ -2932,8 +3287,9 @@ void q_commandlinkbutton_qbase_check_state_set(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)() ```
-void q_commandlinkbutton_on_check_state_set(void* self, void (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback void fn()
+void q_commandlinkbutton_on_check_state_set(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
 ///
@@ -2941,7 +3297,7 @@ void q_commandlinkbutton_on_check_state_set(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_next_check_state(void* self);
 
 /// Inherited from QAbstractButton
@@ -2950,7 +3306,7 @@ void q_commandlinkbutton_next_check_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_qbase_next_check_state(void* self);
 
 /// Inherited from QAbstractButton
@@ -2959,8 +3315,9 @@ void q_commandlinkbutton_qbase_next_check_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)() ```
-void q_commandlinkbutton_on_next_check_state(void* self, void (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback void fn()
+void q_commandlinkbutton_on_next_check_state(void* self, void (*callback)());
 
 /// Inherited from QAbstractButton
 ///
@@ -2968,7 +3325,8 @@ void q_commandlinkbutton_on_next_check_state(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QKeyEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QKeyEvent*
 void q_commandlinkbutton_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -2977,7 +3335,8 @@ void q_commandlinkbutton_key_release_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QKeyEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QKeyEvent*
 void q_commandlinkbutton_qbase_key_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -2986,8 +3345,9 @@ void q_commandlinkbutton_qbase_key_release_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QKeyEvent*) ```
-void q_commandlinkbutton_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QKeyEvent*)
+void q_commandlinkbutton_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
 ///
@@ -2995,7 +3355,8 @@ void q_commandlinkbutton_on_key_release_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QMouseEvent*
 void q_commandlinkbutton_mouse_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3004,7 +3365,8 @@ void q_commandlinkbutton_mouse_press_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QMouseEvent*
 void q_commandlinkbutton_qbase_mouse_press_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3013,8 +3375,9 @@ void q_commandlinkbutton_qbase_mouse_press_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMouseEvent*) ```
-void q_commandlinkbutton_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+void q_commandlinkbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
 ///
@@ -3022,7 +3385,8 @@ void q_commandlinkbutton_on_mouse_press_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QMouseEvent*
 void q_commandlinkbutton_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3031,7 +3395,8 @@ void q_commandlinkbutton_mouse_release_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QMouseEvent*
 void q_commandlinkbutton_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3040,8 +3405,9 @@ void q_commandlinkbutton_qbase_mouse_release_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMouseEvent*) ```
-void q_commandlinkbutton_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+void q_commandlinkbutton_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
 ///
@@ -3049,7 +3415,8 @@ void q_commandlinkbutton_on_mouse_release_event(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QEvent*
 void q_commandlinkbutton_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3058,7 +3425,8 @@ void q_commandlinkbutton_change_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QEvent*
 void q_commandlinkbutton_qbase_change_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3067,8 +3435,9 @@ void q_commandlinkbutton_qbase_change_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QEvent*) ```
-void q_commandlinkbutton_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QEvent*)
+void q_commandlinkbutton_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractButton
 ///
@@ -3076,7 +3445,8 @@ void q_commandlinkbutton_on_change_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QTimerEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QTimerEvent*
 void q_commandlinkbutton_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3085,7 +3455,8 @@ void q_commandlinkbutton_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QTimerEvent* e ```
+/// @param self QCommandLinkButton*
+/// @param e QTimerEvent*
 void q_commandlinkbutton_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QAbstractButton
@@ -3094,8 +3465,9 @@ void q_commandlinkbutton_qbase_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QTimerEvent*) ```
-void q_commandlinkbutton_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QTimerEvent*)
+void q_commandlinkbutton_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3103,7 +3475,7 @@ void q_commandlinkbutton_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3112,7 +3484,7 @@ int32_t q_commandlinkbutton_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -3121,8 +3493,9 @@ int32_t q_commandlinkbutton_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)() ```
-void q_commandlinkbutton_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn()
+void q_commandlinkbutton_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3130,7 +3503,8 @@ void q_commandlinkbutton_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool visible ```
+/// @param self QCommandLinkButton*
+/// @param visible bool
 void q_commandlinkbutton_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3139,7 +3513,8 @@ void q_commandlinkbutton_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool visible ```
+/// @param self QCommandLinkButton*
+/// @param visible bool
 void q_commandlinkbutton_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -3148,8 +3523,9 @@ void q_commandlinkbutton_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, bool) ```
-void q_commandlinkbutton_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, bool)
+void q_commandlinkbutton_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -3157,7 +3533,7 @@ void q_commandlinkbutton_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3166,7 +3542,7 @@ bool q_commandlinkbutton_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -3175,8 +3551,9 @@ bool q_commandlinkbutton_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)() ```
-void q_commandlinkbutton_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback bool fn()
+void q_commandlinkbutton_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3184,7 +3561,7 @@ void q_commandlinkbutton_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPaintEngine* q_commandlinkbutton_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3193,7 +3570,7 @@ QPaintEngine* q_commandlinkbutton_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPaintEngine* q_commandlinkbutton_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -3202,8 +3579,9 @@ QPaintEngine* q_commandlinkbutton_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPaintEngine* (*slot)() ```
-void q_commandlinkbutton_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback QPaintEngine* fn()
+void q_commandlinkbutton_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3211,7 +3589,8 @@ void q_commandlinkbutton_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QMouseEvent*
 void q_commandlinkbutton_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3220,7 +3599,8 @@ void q_commandlinkbutton_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMouseEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QMouseEvent*
 void q_commandlinkbutton_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3229,8 +3609,9 @@ void q_commandlinkbutton_qbase_mouse_double_click_event(void* self, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMouseEvent*) ```
-void q_commandlinkbutton_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMouseEvent*)
+void q_commandlinkbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3238,7 +3619,8 @@ void q_commandlinkbutton_on_mouse_double_click_event(void* self, void (*slot)(vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QWheelEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QWheelEvent*
 void q_commandlinkbutton_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3247,7 +3629,8 @@ void q_commandlinkbutton_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QWheelEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QWheelEvent*
 void q_commandlinkbutton_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3256,8 +3639,9 @@ void q_commandlinkbutton_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QWheelEvent*) ```
-void q_commandlinkbutton_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QWheelEvent*)
+void q_commandlinkbutton_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3265,7 +3649,8 @@ void q_commandlinkbutton_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEnterEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEnterEvent*
 void q_commandlinkbutton_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3274,7 +3659,8 @@ void q_commandlinkbutton_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEnterEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEnterEvent*
 void q_commandlinkbutton_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3283,8 +3669,9 @@ void q_commandlinkbutton_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QEnterEvent*) ```
-void q_commandlinkbutton_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QEnterEvent*)
+void q_commandlinkbutton_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3292,7 +3679,8 @@ void q_commandlinkbutton_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEvent*
 void q_commandlinkbutton_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3301,7 +3689,8 @@ void q_commandlinkbutton_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEvent*
 void q_commandlinkbutton_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3310,8 +3699,9 @@ void q_commandlinkbutton_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QEvent*) ```
-void q_commandlinkbutton_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QEvent*)
+void q_commandlinkbutton_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3319,7 +3709,8 @@ void q_commandlinkbutton_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMoveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QMoveEvent*
 void q_commandlinkbutton_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3328,7 +3719,8 @@ void q_commandlinkbutton_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMoveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QMoveEvent*
 void q_commandlinkbutton_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3337,8 +3729,9 @@ void q_commandlinkbutton_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMoveEvent*) ```
-void q_commandlinkbutton_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMoveEvent*)
+void q_commandlinkbutton_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3346,7 +3739,8 @@ void q_commandlinkbutton_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QResizeEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QResizeEvent*
 void q_commandlinkbutton_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3355,7 +3749,8 @@ void q_commandlinkbutton_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QResizeEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QResizeEvent*
 void q_commandlinkbutton_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3364,8 +3759,9 @@ void q_commandlinkbutton_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QResizeEvent*) ```
-void q_commandlinkbutton_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QResizeEvent*)
+void q_commandlinkbutton_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3373,7 +3769,8 @@ void q_commandlinkbutton_on_resize_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QCloseEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QCloseEvent*
 void q_commandlinkbutton_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3382,7 +3779,8 @@ void q_commandlinkbutton_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QCloseEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QCloseEvent*
 void q_commandlinkbutton_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3391,8 +3789,9 @@ void q_commandlinkbutton_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QCloseEvent*) ```
-void q_commandlinkbutton_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QCloseEvent*)
+void q_commandlinkbutton_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3400,7 +3799,8 @@ void q_commandlinkbutton_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QContextMenuEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QContextMenuEvent*
 void q_commandlinkbutton_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3409,7 +3809,8 @@ void q_commandlinkbutton_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QContextMenuEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QContextMenuEvent*
 void q_commandlinkbutton_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3418,8 +3819,9 @@ void q_commandlinkbutton_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QContextMenuEvent*) ```
-void q_commandlinkbutton_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QContextMenuEvent*)
+void q_commandlinkbutton_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3427,7 +3829,8 @@ void q_commandlinkbutton_on_context_menu_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QTabletEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QTabletEvent*
 void q_commandlinkbutton_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3436,7 +3839,8 @@ void q_commandlinkbutton_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QTabletEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QTabletEvent*
 void q_commandlinkbutton_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3445,8 +3849,9 @@ void q_commandlinkbutton_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QTabletEvent*) ```
-void q_commandlinkbutton_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QTabletEvent*)
+void q_commandlinkbutton_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3454,7 +3859,8 @@ void q_commandlinkbutton_on_tablet_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QActionEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QActionEvent*
 void q_commandlinkbutton_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3463,7 +3869,8 @@ void q_commandlinkbutton_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QActionEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QActionEvent*
 void q_commandlinkbutton_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3472,8 +3879,9 @@ void q_commandlinkbutton_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QActionEvent*) ```
-void q_commandlinkbutton_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QActionEvent*)
+void q_commandlinkbutton_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3481,7 +3889,8 @@ void q_commandlinkbutton_on_action_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragEnterEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragEnterEvent*
 void q_commandlinkbutton_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3490,7 +3899,8 @@ void q_commandlinkbutton_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragEnterEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragEnterEvent*
 void q_commandlinkbutton_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3499,8 +3909,9 @@ void q_commandlinkbutton_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QDragEnterEvent*) ```
-void q_commandlinkbutton_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QDragEnterEvent*)
+void q_commandlinkbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3508,7 +3919,8 @@ void q_commandlinkbutton_on_drag_enter_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragMoveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragMoveEvent*
 void q_commandlinkbutton_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3517,7 +3929,8 @@ void q_commandlinkbutton_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragMoveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragMoveEvent*
 void q_commandlinkbutton_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3526,8 +3939,9 @@ void q_commandlinkbutton_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QDragMoveEvent*) ```
-void q_commandlinkbutton_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QDragMoveEvent*)
+void q_commandlinkbutton_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3535,7 +3949,8 @@ void q_commandlinkbutton_on_drag_move_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragLeaveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragLeaveEvent*
 void q_commandlinkbutton_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3544,7 +3959,8 @@ void q_commandlinkbutton_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDragLeaveEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDragLeaveEvent*
 void q_commandlinkbutton_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3553,8 +3969,9 @@ void q_commandlinkbutton_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QDragLeaveEvent*) ```
-void q_commandlinkbutton_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QDragLeaveEvent*)
+void q_commandlinkbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3562,7 +3979,8 @@ void q_commandlinkbutton_on_drag_leave_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDropEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDropEvent*
 void q_commandlinkbutton_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3571,7 +3989,8 @@ void q_commandlinkbutton_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QDropEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QDropEvent*
 void q_commandlinkbutton_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3580,8 +3999,9 @@ void q_commandlinkbutton_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QDropEvent*) ```
-void q_commandlinkbutton_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QDropEvent*)
+void q_commandlinkbutton_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3589,7 +4009,8 @@ void q_commandlinkbutton_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QShowEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QShowEvent*
 void q_commandlinkbutton_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3598,7 +4019,8 @@ void q_commandlinkbutton_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QShowEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QShowEvent*
 void q_commandlinkbutton_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3607,8 +4029,9 @@ void q_commandlinkbutton_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QShowEvent*) ```
-void q_commandlinkbutton_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QShowEvent*)
+void q_commandlinkbutton_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3616,7 +4039,8 @@ void q_commandlinkbutton_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QHideEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QHideEvent*
 void q_commandlinkbutton_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3625,7 +4049,8 @@ void q_commandlinkbutton_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QHideEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QHideEvent*
 void q_commandlinkbutton_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3634,8 +4059,9 @@ void q_commandlinkbutton_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QHideEvent*) ```
-void q_commandlinkbutton_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QHideEvent*)
+void q_commandlinkbutton_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3643,7 +4069,10 @@ void q_commandlinkbutton_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QCommandLinkButton*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_commandlinkbutton_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3652,7 +4081,10 @@ bool q_commandlinkbutton_native_event(void* self, const char* eventType, void* m
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QCommandLinkButton*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_commandlinkbutton_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3661,8 +4093,9 @@ bool q_commandlinkbutton_qbase_native_event(void* self, const char* eventType, v
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, const char*, void*, intptr_t*) ```
-void q_commandlinkbutton_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, const char*, void*, intptr_t*)
+void q_commandlinkbutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3670,7 +4103,8 @@ void q_commandlinkbutton_on_native_event(void* self, bool (*slot)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_commandlinkbutton_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3679,7 +4113,8 @@ int32_t q_commandlinkbutton_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_commandlinkbutton_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3688,8 +4123,9 @@ int32_t q_commandlinkbutton_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_commandlinkbutton_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric)
+void q_commandlinkbutton_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3697,7 +4133,8 @@ void q_commandlinkbutton_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
 void q_commandlinkbutton_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3706,7 +4143,8 @@ void q_commandlinkbutton_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPainter* painter ```
+/// @param self QCommandLinkButton*
+/// @param painter QPainter*
 void q_commandlinkbutton_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3715,8 +4153,9 @@ void q_commandlinkbutton_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QPainter*) ```
-void q_commandlinkbutton_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QPainter*)
+void q_commandlinkbutton_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3724,7 +4163,8 @@ void q_commandlinkbutton_on_init_painter(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPoint* offset ```
+/// @param self QCommandLinkButton*
+/// @param offset QPoint*
 QPaintDevice* q_commandlinkbutton_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3733,7 +4173,8 @@ QPaintDevice* q_commandlinkbutton_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPoint* offset ```
+/// @param self QCommandLinkButton*
+/// @param offset QPoint*
 QPaintDevice* q_commandlinkbutton_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3742,8 +4183,9 @@ QPaintDevice* q_commandlinkbutton_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPaintDevice* (*slot)(QCommandLinkButton*, QPoint*) ```
-void q_commandlinkbutton_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback QPaintDevice* fn(QCommandLinkButton*, QPoint*)
+void q_commandlinkbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3751,7 +4193,7 @@ void q_commandlinkbutton_on_redirected(void* self, QPaintDevice* (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPainter* q_commandlinkbutton_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3760,7 +4202,7 @@ QPainter* q_commandlinkbutton_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QPainter* q_commandlinkbutton_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3769,8 +4211,9 @@ QPainter* q_commandlinkbutton_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QPainter* (*slot)() ```
-void q_commandlinkbutton_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback QPainter* fn()
+void q_commandlinkbutton_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3778,7 +4221,8 @@ void q_commandlinkbutton_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QInputMethodEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QInputMethodEvent*
 void q_commandlinkbutton_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3787,7 +4231,8 @@ void q_commandlinkbutton_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QInputMethodEvent* param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 QInputMethodEvent*
 void q_commandlinkbutton_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3796,8 +4241,9 @@ void q_commandlinkbutton_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QInputMethodEvent*) ```
-void q_commandlinkbutton_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QInputMethodEvent*)
+void q_commandlinkbutton_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3805,7 +4251,8 @@ void q_commandlinkbutton_on_input_method_event(void* self, void (*slot)(void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_commandlinkbutton_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3814,7 +4261,8 @@ QVariant* q_commandlinkbutton_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QCommandLinkButton*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_commandlinkbutton_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3823,8 +4271,9 @@ QVariant* q_commandlinkbutton_qbase_input_method_query(void* self, int64_t param
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QVariant* (*slot)(QCommandLinkButton*, enum Qt__InputMethodQuery) ```
-void q_commandlinkbutton_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QCommandLinkButton*
+/// @param callback QVariant* fn(QCommandLinkButton*, enum Qt__InputMethodQuery)
+void q_commandlinkbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3832,7 +4281,8 @@ void q_commandlinkbutton_on_input_method_query(void* self, QVariant* (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool next ```
+/// @param self QCommandLinkButton*
+/// @param next bool
 bool q_commandlinkbutton_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3841,7 +4291,8 @@ bool q_commandlinkbutton_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool next ```
+/// @param self QCommandLinkButton*
+/// @param next bool
 bool q_commandlinkbutton_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3850,8 +4301,9 @@ bool q_commandlinkbutton_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, bool) ```
-void q_commandlinkbutton_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, bool)
+void q_commandlinkbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3859,7 +4311,9 @@ void q_commandlinkbutton_on_focus_next_prev_child(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QObject* watched, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_commandlinkbutton_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3868,7 +4322,9 @@ bool q_commandlinkbutton_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QObject* watched, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_commandlinkbutton_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3877,8 +4333,9 @@ bool q_commandlinkbutton_qbase_event_filter(void* self, void* watched, void* eve
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, QObject*, QEvent*) ```
-void q_commandlinkbutton_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, QObject*, QEvent*)
+void q_commandlinkbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3886,7 +4343,8 @@ void q_commandlinkbutton_on_event_filter(void* self, bool (*slot)(void*, void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QChildEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QChildEvent*
 void q_commandlinkbutton_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3895,7 +4353,8 @@ void q_commandlinkbutton_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QChildEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QChildEvent*
 void q_commandlinkbutton_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3904,8 +4363,9 @@ void q_commandlinkbutton_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QChildEvent*) ```
-void q_commandlinkbutton_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QChildEvent*)
+void q_commandlinkbutton_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3913,7 +4373,8 @@ void q_commandlinkbutton_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEvent*
 void q_commandlinkbutton_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3922,7 +4383,8 @@ void q_commandlinkbutton_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QEvent* event ```
+/// @param self QCommandLinkButton*
+/// @param event QEvent*
 void q_commandlinkbutton_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3931,8 +4393,9 @@ void q_commandlinkbutton_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QEvent*) ```
-void q_commandlinkbutton_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QEvent*)
+void q_commandlinkbutton_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3940,7 +4403,8 @@ void q_commandlinkbutton_on_custom_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 void q_commandlinkbutton_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3949,7 +4413,8 @@ void q_commandlinkbutton_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 void q_commandlinkbutton_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3958,8 +4423,9 @@ void q_commandlinkbutton_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMetaMethod*) ```
-void q_commandlinkbutton_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMetaMethod*)
+void q_commandlinkbutton_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3967,7 +4433,8 @@ void q_commandlinkbutton_on_connect_notify(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 void q_commandlinkbutton_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3976,7 +4443,8 @@ void q_commandlinkbutton_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 void q_commandlinkbutton_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3985,8 +4453,9 @@ void q_commandlinkbutton_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, QMetaMethod*) ```
-void q_commandlinkbutton_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, QMetaMethod*)
+void q_commandlinkbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3994,7 +4463,7 @@ void q_commandlinkbutton_on_disconnect_notify(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4003,7 +4472,7 @@ void q_commandlinkbutton_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -4012,8 +4481,9 @@ void q_commandlinkbutton_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)() ```
-void q_commandlinkbutton_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback void fn()
+void q_commandlinkbutton_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4021,7 +4491,7 @@ void q_commandlinkbutton_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_create(void* self);
 
 /// Inherited from QWidget
@@ -4030,7 +4500,7 @@ void q_commandlinkbutton_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -4039,8 +4509,9 @@ void q_commandlinkbutton_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)() ```
-void q_commandlinkbutton_on_create(void* self, void (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback void fn()
+void q_commandlinkbutton_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4048,7 +4519,7 @@ void q_commandlinkbutton_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4057,7 +4528,7 @@ void q_commandlinkbutton_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -4066,8 +4537,9 @@ void q_commandlinkbutton_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, void (*slot)() ```
-void q_commandlinkbutton_on_destroy(void* self, void (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback void fn()
+void q_commandlinkbutton_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4075,7 +4547,7 @@ void q_commandlinkbutton_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4084,7 +4556,7 @@ bool q_commandlinkbutton_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -4093,8 +4565,9 @@ bool q_commandlinkbutton_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)() ```
-void q_commandlinkbutton_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback bool fn()
+void q_commandlinkbutton_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4102,7 +4575,7 @@ void q_commandlinkbutton_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4111,7 +4584,7 @@ bool q_commandlinkbutton_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 bool q_commandlinkbutton_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -4120,8 +4593,9 @@ bool q_commandlinkbutton_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)() ```
-void q_commandlinkbutton_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback bool fn()
+void q_commandlinkbutton_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4129,7 +4603,7 @@ void q_commandlinkbutton_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QObject* q_commandlinkbutton_sender(void* self);
 
 /// Inherited from QObject
@@ -4138,7 +4612,7 @@ QObject* q_commandlinkbutton_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 QObject* q_commandlinkbutton_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -4147,8 +4621,9 @@ QObject* q_commandlinkbutton_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QObject* (*slot)() ```
-void q_commandlinkbutton_on_sender(void* self, QObject* (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback QObject* fn()
+void q_commandlinkbutton_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4156,7 +4631,7 @@ void q_commandlinkbutton_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4165,7 +4640,7 @@ int32_t q_commandlinkbutton_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 int32_t q_commandlinkbutton_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -4174,8 +4649,9 @@ int32_t q_commandlinkbutton_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)() ```
-void q_commandlinkbutton_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn()
+void q_commandlinkbutton_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -4183,7 +4659,8 @@ void q_commandlinkbutton_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, const char* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal const char*
 int32_t q_commandlinkbutton_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4192,7 +4669,8 @@ int32_t q_commandlinkbutton_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, const char* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal const char*
 int32_t q_commandlinkbutton_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -4201,8 +4679,9 @@ int32_t q_commandlinkbutton_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, int32_t (*slot)(QCommandLinkButton*, const char*) ```
-void q_commandlinkbutton_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QCommandLinkButton*
+/// @param callback int32_t fn(QCommandLinkButton*, const char*)
+void q_commandlinkbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -4210,7 +4689,8 @@ void q_commandlinkbutton_on_receivers(void* self, int32_t (*slot)(void*, const c
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 bool q_commandlinkbutton_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4219,7 +4699,8 @@ bool q_commandlinkbutton_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, QMetaMethod* signal ```
+/// @param self QCommandLinkButton*
+/// @param signal QMetaMethod*
 bool q_commandlinkbutton_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -4228,8 +4709,9 @@ bool q_commandlinkbutton_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, bool (*slot)(QCommandLinkButton*, QMetaMethod*) ```
-void q_commandlinkbutton_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QCommandLinkButton*
+/// @param callback bool fn(QCommandLinkButton*, QMetaMethod*)
+void q_commandlinkbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -4237,7 +4719,9 @@ void q_commandlinkbutton_on_is_signal_connected(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QCommandLinkButton*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_commandlinkbutton_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4246,7 +4730,9 @@ double q_commandlinkbutton_get_decoded_metric_f(void* self, int64_t metricA, int
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QCommandLinkButton*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_commandlinkbutton_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -4255,8 +4741,9 @@ double q_commandlinkbutton_qbase_get_decoded_metric_f(void* self, int64_t metric
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCommandLinkButton* self, double (*slot)(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QCommandLinkButton*
+/// @param callback double fn(QCommandLinkButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -4264,14 +4751,15 @@ void q_commandlinkbutton_on_get_decoded_metric_f(void* self, double (*slot)(void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QCommandLinkButton* self, void (*slot)(QCommandLinkButton*, const char*) ```
-void q_commandlinkbutton_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QCommandLinkButton*
+/// @param callback void fn(QCommandLinkButton*, const char*)
+void q_commandlinkbutton_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlinkbutton.html#dtor.QCommandLinkButton)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCommandLinkButton* self ```
+/// @param self QCommandLinkButton*
 void q_commandlinkbutton_delete(void* self);
 
 #endif

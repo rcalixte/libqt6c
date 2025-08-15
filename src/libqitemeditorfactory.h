@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,96 +15,110 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#createWidget)
 ///
-/// ``` QItemEditorCreatorBase* self, QWidget* parent ```
+/// @param self QItemEditorCreatorBase*
+/// @param parent QWidget*
 QWidget* q_itemeditorcreatorbase_create_widget(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#valuePropertyName)
 ///
-/// ``` QItemEditorCreatorBase* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QItemEditorCreatorBase*
 char* q_itemeditorcreatorbase_value_property_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#operator-eq)
 ///
-/// ``` QItemEditorCreatorBase* self, QItemEditorCreatorBase* param1 ```
+/// @param self QItemEditorCreatorBase*
+/// @param param1 QItemEditorCreatorBase*
 void q_itemeditorcreatorbase_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorcreatorbase.html#dtor.QItemEditorCreatorBase)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QItemEditorCreatorBase* self ```
+/// @param self QItemEditorCreatorBase*
 void q_itemeditorcreatorbase_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qitemeditorfactory.html
 
 /// q_itemeditorfactory_new constructs a new QItemEditorFactory object.
 ///
-///
 QItemEditorFactory* q_itemeditorfactory_new();
 
 /// q_itemeditorfactory_new2 constructs a new QItemEditorFactory object.
 ///
-/// ``` QItemEditorFactory* param1 ```
+/// @param param1 QItemEditorFactory*
 QItemEditorFactory* q_itemeditorfactory_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
-/// ``` QItemEditorFactory* self, int userType, QWidget* parent ```
+/// @param self QItemEditorFactory*
+/// @param userType int
+/// @param parent QWidget*
 QWidget* q_itemeditorfactory_create_editor(void* self, int userType, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QItemEditorFactory* self, QWidget* (*slot)(QItemEditorFactory*, int, QWidget*) ```
-void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*slot)(void*, int, void*));
+/// @param self QItemEditorFactory*
+/// @param callback QWidget* fn(QItemEditorFactory*, int, QWidget*)
+void q_itemeditorfactory_on_create_editor(void* self, QWidget* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#createEditor)
 ///
 /// Base class method implementation
 ///
-/// ``` QItemEditorFactory* self, int userType, QWidget* parent ```
+/// @param self QItemEditorFactory*
+/// @param userType int
+/// @param parent QWidget*
 QWidget* q_itemeditorfactory_qbase_create_editor(void* self, int userType, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
-/// ``` QItemEditorFactory* self, int userType ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QItemEditorFactory*
+/// @param userType int
 char* q_itemeditorfactory_value_property_name(void* self, int userType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QItemEditorFactory* self, char* (*slot)(QItemEditorFactory*, int) ```
-void q_itemeditorfactory_on_value_property_name(void* self, char* (*slot)(void*, int));
+/// @param self QItemEditorFactory*
+/// @param callback char* fn(QItemEditorFactory*, int)
+void q_itemeditorfactory_on_value_property_name(void* self, char* (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#valuePropertyName)
 ///
 /// Base class method implementation
 ///
-/// ``` QItemEditorFactory* self, int userType ```
+/// @param self QItemEditorFactory*
+/// @param userType int
 char* q_itemeditorfactory_qbase_value_property_name(void* self, int userType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#registerEditor)
 ///
-/// ``` QItemEditorFactory* self, int userType, QItemEditorCreatorBase* creator ```
+/// @param self QItemEditorFactory*
+/// @param userType int
+/// @param creator QItemEditorCreatorBase*
 void q_itemeditorfactory_register_editor(void* self, int userType, void* creator);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#defaultFactory)
-///
 ///
 const QItemEditorFactory* q_itemeditorfactory_default_factory();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#setDefaultFactory)
 ///
-/// ``` QItemEditorFactory* factory ```
+/// @param factory QItemEditorFactory*
 void q_itemeditorfactory_set_default_factory(void* factory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemeditorfactory.html#dtor.QItemEditorFactory)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QItemEditorFactory* self ```
+/// @param self QItemEditorFactory*
 void q_itemeditorfactory_delete(void* self);
 
 #endif

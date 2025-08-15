@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,2130 +15,2387 @@
 
 /// q_undoview_new constructs a new QUndoView object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QUndoView* q_undoview_new(void* parent);
 
 /// q_undoview_new2 constructs a new QUndoView object.
-///
 ///
 QUndoView* q_undoview_new2();
 
 /// q_undoview_new3 constructs a new QUndoView object.
 ///
-/// ``` QUndoStack* stack ```
+/// @param stack QUndoStack*
 QUndoView* q_undoview_new3(void* stack);
 
 /// q_undoview_new4 constructs a new QUndoView object.
 ///
-/// ``` QUndoGroup* group ```
+/// @param group QUndoGroup*
 QUndoView* q_undoview_new4(void* group);
 
 /// q_undoview_new5 constructs a new QUndoView object.
 ///
-/// ``` QUndoStack* stack, QWidget* parent ```
+/// @param stack QUndoStack*
+/// @param parent QWidget*
 QUndoView* q_undoview_new5(void* stack, void* parent);
 
 /// q_undoview_new6 constructs a new QUndoView object.
 ///
-/// ``` QUndoGroup* group, QWidget* parent ```
+/// @param group QUndoGroup*
+/// @param parent QWidget*
 QUndoView* q_undoview_new6(void* group, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 const QMetaObject* q_undoview_meta_object(void* self);
 
-/// ``` QUndoView* self, const char* param1 ```
+/// @param self QUndoView*
+/// @param param1 const char*
 void* q_undoview_metacast(void* self, const char* param1);
 
-/// ``` QUndoView* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QUndoView*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_undoview_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, enum QMetaObject__Call, int, void*) ```
-void q_undoview_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, enum QMetaObject__Call, int, void*)
+void q_undoview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QUndoView* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QUndoView*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_undoview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_undoview_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#stack)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QUndoStack* q_undoview_stack(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#group)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QUndoGroup* q_undoview_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#setEmptyLabel)
 ///
-/// ``` QUndoView* self, const char* label ```
+/// @param self QUndoView*
+/// @param label const char*
 void q_undoview_set_empty_label(void* self, const char* label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#emptyLabel)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_empty_label(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#setCleanIcon)
 ///
-/// ``` QUndoView* self, QIcon* icon ```
+/// @param self QUndoView*
+/// @param icon QIcon*
 void q_undoview_set_clean_icon(void* self, void* icon);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#cleanIcon)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QIcon* q_undoview_clean_icon(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#setStack)
 ///
-/// ``` QUndoView* self, QUndoStack* stack ```
+/// @param self QUndoView*
+/// @param stack QUndoStack*
 void q_undoview_set_stack(void* self, void* stack);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#setGroup)
 ///
-/// ``` QUndoView* self, QUndoGroup* group ```
+/// @param self QUndoView*
+/// @param group QUndoGroup*
 void q_undoview_set_group(void* self, void* group);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_undoview_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_undoview_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setMovement)
 ///
-/// ``` QUndoView* self, enum QListView__Movement movement ```
+/// @param self QUndoView*
+/// @param movement enum QListView__Movement
 void q_undoview_set_movement(void* self, int64_t movement);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#movement)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QListView__Movement
 int64_t q_undoview_movement(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setFlow)
 ///
-/// ``` QUndoView* self, enum QListView__Flow flow ```
+/// @param self QUndoView*
+/// @param flow enum QListView__Flow
 void q_undoview_set_flow(void* self, int64_t flow);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#flow)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QListView__Flow
 int64_t q_undoview_flow(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setWrapping)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_wrapping(void* self, bool enable);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#isWrapping)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_wrapping(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setResizeMode)
 ///
-/// ``` QUndoView* self, enum QListView__ResizeMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QListView__ResizeMode
 void q_undoview_set_resize_mode(void* self, int64_t mode);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#resizeMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QListView__ResizeMode
 int64_t q_undoview_resize_mode(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setLayoutMode)
 ///
-/// ``` QUndoView* self, enum QListView__LayoutMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QListView__LayoutMode
 void q_undoview_set_layout_mode(void* self, int64_t mode);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#layoutMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QListView__LayoutMode
 int64_t q_undoview_layout_mode(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setSpacing)
 ///
-/// ``` QUndoView* self, int space ```
+/// @param self QUndoView*
+/// @param space int
 void q_undoview_set_spacing(void* self, int space);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#spacing)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_spacing(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setBatchSize)
 ///
-/// ``` QUndoView* self, int batchSize ```
+/// @param self QUndoView*
+/// @param batchSize int
 void q_undoview_set_batch_size(void* self, int batchSize);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#batchSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_batch_size(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setGridSize)
 ///
-/// ``` QUndoView* self, QSize* size ```
+/// @param self QUndoView*
+/// @param size QSize*
 void q_undoview_set_grid_size(void* self, void* size);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#gridSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_grid_size(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setViewMode)
 ///
-/// ``` QUndoView* self, enum QListView__ViewMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QListView__ViewMode
 void q_undoview_set_view_mode(void* self, int64_t mode);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#viewMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QListView__ViewMode
 int64_t q_undoview_view_mode(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#clearPropertyFlags)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_clear_property_flags(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#isRowHidden)
 ///
-/// ``` QUndoView* self, int row ```
+/// @param self QUndoView*
+/// @param row int
 bool q_undoview_is_row_hidden(void* self, int row);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setRowHidden)
 ///
-/// ``` QUndoView* self, int row, bool hide ```
+/// @param self QUndoView*
+/// @param row int
+/// @param hide bool
 void q_undoview_set_row_hidden(void* self, int row, bool hide);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setModelColumn)
 ///
-/// ``` QUndoView* self, int column ```
+/// @param self QUndoView*
+/// @param column int
 void q_undoview_set_model_column(void* self, int column);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#modelColumn)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_model_column(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setUniformItemSizes)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_uniform_item_sizes(void* self, bool enable);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#uniformItemSizes)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_uniform_item_sizes(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setWordWrap)
 ///
-/// ``` QUndoView* self, bool on ```
+/// @param self QUndoView*
+/// @param on bool
 void q_undoview_set_word_wrap(void* self, bool on);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#wordWrap)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_word_wrap(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setSelectionRectVisible)
 ///
-/// ``` QUndoView* self, bool show ```
+/// @param self QUndoView*
+/// @param show bool
 void q_undoview_set_selection_rect_visible(void* self, bool show);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#isSelectionRectVisible)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_selection_rect_visible(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setItemAlignment)
 ///
-/// ``` QUndoView* self, int alignment ```
+/// @param self QUndoView*
+/// @param alignment flag of enum Qt__AlignmentFlag
 void q_undoview_set_item_alignment(void* self, int64_t alignment);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#itemAlignment)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return flag of enum Qt__AlignmentFlag
 int64_t q_undoview_item_alignment(void* self);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
-/// ``` QUndoView* self, libqt_list /* of QModelIndex* */ indexes ```
+/// @param self QUndoView*
+/// @param indexes libqt_list /* of QModelIndex* */
 void q_undoview_indexes_moved(void* self, libqt_list indexes);
 
 /// Inherited from QListView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexesMoved)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, libqt_list /* of QModelIndex* */ indexes ) ```
-void q_undoview_on_indexes_moved(void* self, void (*slot)(void*, libqt_list));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, libqt_list /* of QModelIndex* */)
+void q_undoview_on_indexes_moved(void* self, void (*callback)(void*, libqt_list));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#model)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QAbstractItemModel* q_undoview_model(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionModel)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QItemSelectionModel* q_undoview_selection_model(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setItemDelegate)
 ///
-/// ``` QUndoView* self, QAbstractItemDelegate* delegate ```
+/// @param self QUndoView*
+/// @param delegate QAbstractItemDelegate*
 void q_undoview_set_item_delegate(void* self, void* delegate);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QAbstractItemDelegate* q_undoview_item_delegate(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionMode)
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__SelectionMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QAbstractItemView__SelectionMode
 void q_undoview_set_selection_mode(void* self, int64_t mode);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__SelectionMode
 int64_t q_undoview_selection_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionBehavior)
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__SelectionBehavior behavior ```
+/// @param self QUndoView*
+/// @param behavior enum QAbstractItemView__SelectionBehavior
 void q_undoview_set_selection_behavior(void* self, int64_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__SelectionBehavior
 int64_t q_undoview_selection_behavior(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QModelIndex* q_undoview_current_index(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#rootIndex)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QModelIndex* q_undoview_root_index(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setEditTriggers)
 ///
-/// ``` QUndoView* self, int triggers ```
+/// @param self QUndoView*
+/// @param triggers flag of enum QAbstractItemView__EditTrigger
 void q_undoview_set_edit_triggers(void* self, int64_t triggers);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#editTriggers)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return flag of enum QAbstractItemView__EditTrigger
 int64_t q_undoview_edit_triggers(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setVerticalScrollMode)
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__ScrollMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QAbstractItemView__ScrollMode
 void q_undoview_set_vertical_scroll_mode(void* self, int64_t mode);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__ScrollMode
 int64_t q_undoview_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resetVerticalScrollMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_reset_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setHorizontalScrollMode)
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__ScrollMode mode ```
+/// @param self QUndoView*
+/// @param mode enum QAbstractItemView__ScrollMode
 void q_undoview_set_horizontal_scroll_mode(void* self, int64_t mode);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__ScrollMode
 int64_t q_undoview_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resetHorizontalScrollMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_reset_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setAutoScroll)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_auto_scroll(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#hasAutoScroll)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_has_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setAutoScrollMargin)
 ///
-/// ``` QUndoView* self, int margin ```
+/// @param self QUndoView*
+/// @param margin int
 void q_undoview_set_auto_scroll_margin(void* self, int margin);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#autoScrollMargin)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_auto_scroll_margin(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setTabKeyNavigation)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_tab_key_navigation(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#tabKeyNavigation)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_tab_key_navigation(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDropIndicatorShown)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_drop_indicator_shown(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#showDropIndicator)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_show_drop_indicator(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDragEnabled)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_drag_enabled(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnabled)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_drag_enabled(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDragDropOverwriteMode)
 ///
-/// ``` QUndoView* self, bool overwrite ```
+/// @param self QUndoView*
+/// @param overwrite bool
 void q_undoview_set_drag_drop_overwrite_mode(void* self, bool overwrite);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropOverwriteMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_drag_drop_overwrite_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDragDropMode)
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__DragDropMode behavior ```
+/// @param self QUndoView*
+/// @param behavior enum QAbstractItemView__DragDropMode
 void q_undoview_set_drag_drop_mode(void* self, int64_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__DragDropMode
 int64_t q_undoview_drag_drop_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDefaultDropAction)
 ///
-/// ``` QUndoView* self, enum Qt__DropAction dropAction ```
+/// @param self QUndoView*
+/// @param dropAction enum Qt__DropAction
 void q_undoview_set_default_drop_action(void* self, int64_t dropAction);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__DropAction
 int64_t q_undoview_default_drop_action(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setAlternatingRowColors)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_alternating_row_colors(void* self, bool enable);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#alternatingRowColors)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_alternating_row_colors(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setIconSize)
 ///
-/// ``` QUndoView* self, QSize* size ```
+/// @param self QUndoView*
+/// @param size QSize*
 void q_undoview_set_icon_size(void* self, void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_icon_size(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setTextElideMode)
 ///
-/// ``` QUndoView* self, enum Qt__TextElideMode mode ```
+/// @param self QUndoView*
+/// @param mode enum Qt__TextElideMode
 void q_undoview_set_text_elide_mode(void* self, int64_t mode);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__TextElideMode
 int64_t q_undoview_text_elide_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForIndex)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QSize* q_undoview_size_hint_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#openPersistentEditor)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_open_persistent_editor(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closePersistentEditor)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_close_persistent_editor(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#isPersistentEditorOpen)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 bool q_undoview_is_persistent_editor_open(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setIndexWidget)
 ///
-/// ``` QUndoView* self, QModelIndex* index, QWidget* widget ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param widget QWidget*
 void q_undoview_set_index_widget(void* self, void* index, void* widget);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#indexWidget)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QWidget* q_undoview_index_widget(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setItemDelegateForRow)
 ///
-/// ``` QUndoView* self, int row, QAbstractItemDelegate* delegate ```
+/// @param self QUndoView*
+/// @param row int
+/// @param delegate QAbstractItemDelegate*
 void q_undoview_set_item_delegate_for_row(void* self, int row, void* delegate);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForRow)
 ///
-/// ``` QUndoView* self, int row ```
+/// @param self QUndoView*
+/// @param row int
 QAbstractItemDelegate* q_undoview_item_delegate_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setItemDelegateForColumn)
 ///
-/// ``` QUndoView* self, int column, QAbstractItemDelegate* delegate ```
+/// @param self QUndoView*
+/// @param column int
+/// @param delegate QAbstractItemDelegate*
 void q_undoview_set_item_delegate_for_column(void* self, int column, void* delegate);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForColumn)
 ///
-/// ``` QUndoView* self, int column ```
+/// @param self QUndoView*
+/// @param column int
 QAbstractItemDelegate* q_undoview_item_delegate_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegate)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QAbstractItemDelegate* q_undoview_item_delegate2(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_edit(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clearSelection)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_clear_selection(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setCurrentIndex)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_set_current_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollToTop)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_scroll_to_top(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollToBottom)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_scroll_to_bottom(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#update)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_update(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_pressed(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#pressed)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_pressed(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_pressed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#clicked)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_double_clicked(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#doubleClicked)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_double_clicked(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_double_clicked(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_activated(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#activated)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_activated(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_activated(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_entered(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#entered)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_entered(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_entered(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_viewport_entered(void* self);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEntered)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*) ```
-void q_undoview_on_viewport_entered(void* self, void (*slot)(void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*)
+void q_undoview_on_viewport_entered(void* self, void (*callback)(void*));
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QUndoView* self, QSize* size ```
+/// @param self QUndoView*
+/// @param size QSize*
 void q_undoview_icon_size_changed(void* self, void* size);
 
 /// Inherited from QAbstractItemView
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#iconSizeChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QSize*) ```
-void q_undoview_on_icon_size_changed(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QSize*)
+void q_undoview_on_icon_size_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBarPolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__ScrollBarPolicy
 int64_t q_undoview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setVerticalScrollBarPolicy)
 ///
-/// ``` QUndoView* self, enum Qt__ScrollBarPolicy verticalScrollBarPolicy ```
+/// @param self QUndoView*
+/// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
 void q_undoview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#verticalScrollBar)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QScrollBar* q_undoview_vertical_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setVerticalScrollBar)
 ///
-/// ``` QUndoView* self, QScrollBar* scrollbar ```
+/// @param self QUndoView*
+/// @param scrollbar QScrollBar*
 void q_undoview_set_vertical_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBarPolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__ScrollBarPolicy
 int64_t q_undoview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setHorizontalScrollBarPolicy)
 ///
-/// ``` QUndoView* self, enum Qt__ScrollBarPolicy horizontalScrollBarPolicy ```
+/// @param self QUndoView*
+/// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
 void q_undoview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#horizontalScrollBar)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QScrollBar* q_undoview_horizontal_scroll_bar(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setHorizontalScrollBar)
 ///
-/// ``` QUndoView* self, QScrollBar* scrollbar ```
+/// @param self QUndoView*
+/// @param scrollbar QScrollBar*
 void q_undoview_set_horizontal_scroll_bar(void* self, void* scrollbar);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#cornerWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_corner_widget(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setCornerWidget)
 ///
-/// ``` QUndoView* self, QWidget* widget ```
+/// @param self QUndoView*
+/// @param widget QWidget*
 void q_undoview_set_corner_widget(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#addScrollBarWidget)
 ///
-/// ``` QUndoView* self, QWidget* widget, int alignment ```
+/// @param self QUndoView*
+/// @param widget QWidget*
+/// @param alignment flag of enum Qt__AlignmentFlag
 void q_undoview_add_scroll_bar_widget(void* self, void* widget, int64_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#scrollBarWidgets)
 ///
-/// ``` QUndoView* self, int alignment ```
+/// @param self QUndoView*
+/// @param alignment flag of enum Qt__AlignmentFlag
 libqt_list /* of QWidget* */ q_undoview_scroll_bar_widgets(void* self, int64_t alignment);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewport)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_viewport(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewport)
 ///
-/// ``` QUndoView* self, QWidget* widget ```
+/// @param self QUndoView*
+/// @param widget QWidget*
 void q_undoview_set_viewport(void* self, void* widget);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#maximumViewportSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_maximum_viewport_size(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeAdjustPolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractScrollArea__SizeAdjustPolicy
 int64_t q_undoview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractscrollarea.html#setSizeAdjustPolicy)
 ///
-/// ``` QUndoView* self, enum QAbstractScrollArea__SizeAdjustPolicy policy ```
+/// @param self QUndoView*
+/// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
 void q_undoview_set_size_adjust_policy(void* self, int64_t policy);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameStyle)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_frame_style(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameStyle)
 ///
-/// ``` QUndoView* self, int frameStyle ```
+/// @param self QUndoView*
+/// @param frameStyle int
 void q_undoview_set_frame_style(void* self, int frameStyle);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameWidth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_frame_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShape)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QFrame__Shape
 int64_t q_undoview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShape)
 ///
-/// ``` QUndoView* self, enum QFrame__Shape frameShape ```
+/// @param self QUndoView*
+/// @param frameShape enum QFrame__Shape
 void q_undoview_set_frame_shape(void* self, int64_t frameShape);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameShadow)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QFrame__Shadow
 int64_t q_undoview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameShadow)
 ///
-/// ``` QUndoView* self, enum QFrame__Shadow frameShadow ```
+/// @param self QUndoView*
+/// @param frameShadow enum QFrame__Shadow
 void q_undoview_set_frame_shadow(void* self, int64_t frameShadow);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#lineWidth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setLineWidth)
 ///
-/// ``` QUndoView* self, int lineWidth ```
+/// @param self QUndoView*
+/// @param lineWidth int
 void q_undoview_set_line_width(void* self, int lineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#midLineWidth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_mid_line_width(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setMidLineWidth)
 ///
-/// ``` QUndoView* self, int midLineWidth ```
+/// @param self QUndoView*
+/// @param midLineWidth int
 void q_undoview_set_mid_line_width(void* self, int midLineWidth);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#frameRect)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_frame_rect(void* self);
 
 /// Inherited from QFrame
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qframe.html#setFrameRect)
 ///
-/// ``` QUndoView* self, QRect* frameRect ```
+/// @param self QUndoView*
+/// @param frameRect QRect*
 void q_undoview_set_frame_rect(void* self, void* frameRect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 uintptr_t q_undoview_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 uintptr_t q_undoview_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 uintptr_t q_undoview_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QStyle* q_undoview_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QUndoView* self, QStyle* style ```
+/// @param self QUndoView*
+/// @param style QStyle*
 void q_undoview_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__WindowModality
 int64_t q_undoview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QUndoView* self, enum Qt__WindowModality windowModality ```
+/// @param self QUndoView*
+/// @param windowModality enum Qt__WindowModality
 void q_undoview_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QUndoView* self, QWidget* param1 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
 bool q_undoview_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QUndoView* self, bool enabled ```
+/// @param self QUndoView*
+/// @param enabled bool
 void q_undoview_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QUndoView* self, bool disabled ```
+/// @param self QUndoView*
+/// @param disabled bool
 void q_undoview_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QUndoView* self, bool windowModified ```
+/// @param self QUndoView*
+/// @param windowModified bool
 void q_undoview_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 const QRect* q_undoview_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPoint* q_undoview_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRegion* q_undoview_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QUndoView* self, QSize* minimumSize ```
+/// @param self QUndoView*
+/// @param minimumSize QSize*
 void q_undoview_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QUndoView* self, int minw, int minh ```
+/// @param self QUndoView*
+/// @param minw int
+/// @param minh int
 void q_undoview_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QUndoView* self, QSize* maximumSize ```
+/// @param self QUndoView*
+/// @param maximumSize QSize*
 void q_undoview_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QUndoView* self, int maxw, int maxh ```
+/// @param self QUndoView*
+/// @param maxw int
+/// @param maxh int
 void q_undoview_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QUndoView* self, int minw ```
+/// @param self QUndoView*
+/// @param minw int
 void q_undoview_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QUndoView* self, int minh ```
+/// @param self QUndoView*
+/// @param minh int
 void q_undoview_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QUndoView* self, int maxw ```
+/// @param self QUndoView*
+/// @param maxw int
 void q_undoview_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QUndoView* self, int maxh ```
+/// @param self QUndoView*
+/// @param maxh int
 void q_undoview_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QUndoView* self, QSize* sizeIncrement ```
+/// @param self QUndoView*
+/// @param sizeIncrement QSize*
 void q_undoview_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QUndoView* self, int w, int h ```
+/// @param self QUndoView*
+/// @param w int
+/// @param h int
 void q_undoview_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QUndoView* self, QSize* baseSize ```
+/// @param self QUndoView*
+/// @param baseSize QSize*
 void q_undoview_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QUndoView* self, int basew, int baseh ```
+/// @param self QUndoView*
+/// @param basew int
+/// @param baseh int
 void q_undoview_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QUndoView* self, QSize* fixedSize ```
+/// @param self QUndoView*
+/// @param fixedSize QSize*
 void q_undoview_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QUndoView* self, int w, int h ```
+/// @param self QUndoView*
+/// @param w int
+/// @param h int
 void q_undoview_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QUndoView* self, int w ```
+/// @param self QUndoView*
+/// @param w int
 void q_undoview_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QUndoView* self, int h ```
+/// @param self QUndoView*
+/// @param h int
 void q_undoview_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QUndoView* self, QPointF* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPointF*
 QPointF* q_undoview_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QUndoView* self, QPoint* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPoint*
 QPoint* q_undoview_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QUndoView* self, QPointF* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPointF*
 QPointF* q_undoview_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QUndoView* self, QPoint* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPoint*
 QPoint* q_undoview_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QUndoView* self, QPointF* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPointF*
 QPointF* q_undoview_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QUndoView* self, QPoint* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPoint*
 QPoint* q_undoview_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QUndoView* self, QPointF* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPointF*
 QPointF* q_undoview_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QUndoView* self, QPoint* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPoint*
 QPoint* q_undoview_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QUndoView* self, QWidget* param1, QPointF* param2 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_undoview_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QUndoView* self, QWidget* param1, QPoint* param2 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_undoview_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QUndoView* self, QWidget* param1, QPointF* param2 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_undoview_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QUndoView* self, QWidget* param1, QPoint* param2 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_undoview_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 const QPalette* q_undoview_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QUndoView* self, QPalette* palette ```
+/// @param self QUndoView*
+/// @param palette QPalette*
 void q_undoview_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QUndoView* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QUndoView*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_undoview_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_undoview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QUndoView* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QUndoView*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_undoview_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_undoview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 const QFont* q_undoview_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QUndoView* self, QFont* font ```
+/// @param self QUndoView*
+/// @param font QFont*
 void q_undoview_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QFontMetrics* q_undoview_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QFontInfo* q_undoview_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QCursor* q_undoview_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QUndoView* self, QCursor* cursor ```
+/// @param self QUndoView*
+/// @param cursor QCursor*
 void q_undoview_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QUndoView* self, QBitmap* mask ```
+/// @param self QUndoView*
+/// @param mask QBitmap*
 void q_undoview_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QUndoView* self, QRegion* mask ```
+/// @param self QUndoView*
+/// @param mask QRegion*
 void q_undoview_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRegion* q_undoview_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPaintDevice* target ```
+/// @param self QUndoView*
+/// @param target QPaintDevice*
 void q_undoview_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPainter* painter ```
+/// @param self QUndoView*
+/// @param painter QPainter*
 void q_undoview_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPixmap* q_undoview_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QGraphicsEffect* q_undoview_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QUndoView* self, QGraphicsEffect* effect ```
+/// @param self QUndoView*
+/// @param effect QGraphicsEffect*
 void q_undoview_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QUndoView* self, enum Qt__GestureType typeVal ```
+/// @param self QUndoView*
+/// @param typeVal enum Qt__GestureType
 void q_undoview_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QUndoView* self, enum Qt__GestureType typeVal ```
+/// @param self QUndoView*
+/// @param typeVal enum Qt__GestureType
 void q_undoview_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QUndoView* self, const char* windowTitle ```
+/// @param self QUndoView*
+/// @param windowTitle const char*
 void q_undoview_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QUndoView* self, const char* styleSheet ```
+/// @param self QUndoView*
+/// @param styleSheet const char*
 void q_undoview_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QUndoView* self, QIcon* icon ```
+/// @param self QUndoView*
+/// @param icon QIcon*
 void q_undoview_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QIcon* q_undoview_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QUndoView* self, const char* windowIconText ```
+/// @param self QUndoView*
+/// @param windowIconText const char*
 void q_undoview_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QUndoView* self, const char* windowRole ```
+/// @param self QUndoView*
+/// @param windowRole const char*
 void q_undoview_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QUndoView* self, const char* filePath ```
+/// @param self QUndoView*
+/// @param filePath const char*
 void q_undoview_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QUndoView* self, double level ```
+/// @param self QUndoView*
+/// @param level double
 void q_undoview_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 double q_undoview_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QUndoView* self, const char* toolTip ```
+/// @param self QUndoView*
+/// @param toolTip const char*
 void q_undoview_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QUndoView* self, int msec ```
+/// @param self QUndoView*
+/// @param msec int
 void q_undoview_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QUndoView* self, const char* statusTip ```
+/// @param self QUndoView*
+/// @param statusTip const char*
 void q_undoview_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QUndoView* self, const char* whatsThis ```
+/// @param self QUndoView*
+/// @param whatsThis const char*
 void q_undoview_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QUndoView* self, const char* name ```
+/// @param self QUndoView*
+/// @param name const char*
 void q_undoview_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QUndoView* self, const char* description ```
+/// @param self QUndoView*
+/// @param description const char*
 void q_undoview_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QUndoView* self, enum Qt__LayoutDirection direction ```
+/// @param self QUndoView*
+/// @param direction enum Qt__LayoutDirection
 void q_undoview_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_undoview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QUndoView* self, QLocale* locale ```
+/// @param self QUndoView*
+/// @param locale QLocale*
 void q_undoview_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QLocale* q_undoview_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QUndoView* self, enum Qt__FocusReason reason ```
+/// @param self QUndoView*
+/// @param reason enum Qt__FocusReason
 void q_undoview_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_undoview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QUndoView* self, enum Qt__FocusPolicy policy ```
+/// @param self QUndoView*
+/// @param policy enum Qt__FocusPolicy
 void q_undoview_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_undoview_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QUndoView* self, QWidget* focusProxy ```
+/// @param self QUndoView*
+/// @param focusProxy QWidget*
 void q_undoview_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_undoview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QUndoView* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QUndoView*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_undoview_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QUndoView* self, QCursor* param1 ```
+/// @param self QUndoView*
+/// @param param1 QCursor*
 void q_undoview_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QUndoView* self, QKeySequence* key ```
+/// @param self QUndoView*
+/// @param key QKeySequence*
 int32_t q_undoview_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QUndoView* self, int id ```
+/// @param self QUndoView*
+/// @param id int
 void q_undoview_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QUndoView* self, int id ```
+/// @param self QUndoView*
+/// @param id int
 void q_undoview_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QUndoView* self, int id ```
+/// @param self QUndoView*
+/// @param id int
 void q_undoview_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_undoview_mouse_grabber();
 
@@ -2147,1154 +2403,1320 @@ QWidget* q_undoview_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_undoview_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QUndoView* self, bool enable ```
+/// @param self QUndoView*
+/// @param enable bool
 void q_undoview_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QGraphicsProxyWidget* q_undoview_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QUndoView* self, int x, int y, int w, int h ```
+/// @param self QUndoView*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_undoview_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QUndoView* self, QRect* param1 ```
+/// @param self QUndoView*
+/// @param param1 QRect*
 void q_undoview_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QUndoView* self, QRegion* param1 ```
+/// @param self QUndoView*
+/// @param param1 QRegion*
 void q_undoview_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QUndoView* self, int x, int y, int w, int h ```
+/// @param self QUndoView*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_undoview_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QUndoView* self, QRect* param1 ```
+/// @param self QUndoView*
+/// @param param1 QRect*
 void q_undoview_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QUndoView* self, QRegion* param1 ```
+/// @param self QUndoView*
+/// @param param1 QRegion*
 void q_undoview_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QUndoView* self, bool hidden ```
+/// @param self QUndoView*
+/// @param hidden bool
 void q_undoview_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QUndoView* self, QWidget* param1 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
 void q_undoview_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QUndoView* self, int x, int y ```
+/// @param self QUndoView*
+/// @param x int
+/// @param y int
 void q_undoview_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QUndoView* self, QPoint* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPoint*
 void q_undoview_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QUndoView* self, int w, int h ```
+/// @param self QUndoView*
+/// @param w int
+/// @param h int
 void q_undoview_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QUndoView* self, QSize* param1 ```
+/// @param self QUndoView*
+/// @param param1 QSize*
 void q_undoview_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QUndoView* self, int x, int y, int w, int h ```
+/// @param self QUndoView*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_undoview_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QUndoView* self, QRect* geometry ```
+/// @param self QUndoView*
+/// @param geometry QRect*
 void q_undoview_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 char* q_undoview_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QUndoView* self, const char* geometry ```
+/// @param self QUndoView*
+/// @param geometry const char*
 bool q_undoview_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QUndoView* self, QWidget* param1 ```
+/// @param self QUndoView*
+/// @param param1 QWidget*
 bool q_undoview_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_undoview_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QUndoView* self, int state ```
+/// @param self QUndoView*
+/// @param state flag of enum Qt__WindowState
 void q_undoview_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QUndoView* self, int state ```
+/// @param self QUndoView*
+/// @param state flag of enum Qt__WindowState
 void q_undoview_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSizePolicy* q_undoview_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QUndoView* self, QSizePolicy* sizePolicy ```
+/// @param self QUndoView*
+/// @param sizePolicy QSizePolicy*
 void q_undoview_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QUndoView* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QUndoView*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_undoview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRegion* q_undoview_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QUndoView* self, int left, int top, int right, int bottom ```
+/// @param self QUndoView*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_undoview_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QUndoView* self, QMargins* margins ```
+/// @param self QUndoView*
+/// @param margins QMargins*
 void q_undoview_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QMargins* q_undoview_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QRect* q_undoview_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QLayout* q_undoview_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QUndoView* self, QLayout* layout ```
+/// @param self QUndoView*
+/// @param layout QLayout*
 void q_undoview_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QUndoView* self, QWidget* parent ```
+/// @param self QUndoView*
+/// @param parent QWidget*
 void q_undoview_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QUndoView* self, QWidget* parent, int f ```
+/// @param self QUndoView*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_undoview_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QUndoView* self, int dx, int dy ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
 void q_undoview_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QUndoView* self, int dx, int dy, QRect* param3 ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_undoview_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QUndoView* self, bool on ```
+/// @param self QUndoView*
+/// @param on bool
 void q_undoview_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QUndoView* self, QAction* action ```
+/// @param self QUndoView*
+/// @param action QAction*
 void q_undoview_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QUndoView* self, libqt_list /* of QAction* */ actions ```
+/// @param self QUndoView*
+/// @param actions libqt_list /* of QAction* */
 void q_undoview_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QUndoView* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QUndoView*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_undoview_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QUndoView* self, QAction* before, QAction* action ```
+/// @param self QUndoView*
+/// @param before QAction*
+/// @param action QAction*
 void q_undoview_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QUndoView* self, QAction* action ```
+/// @param self QUndoView*
+/// @param action QAction*
 void q_undoview_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 libqt_list /* of QAction* */ q_undoview_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QUndoView* self, const char* text ```
+/// @param self QUndoView*
+/// @param text const char*
 QAction* q_undoview_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QUndoView* self, QIcon* icon, const char* text ```
+/// @param self QUndoView*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_undoview_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QUndoView* self, const char* text, QKeySequence* shortcut ```
+/// @param self QUndoView*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_undoview_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QUndoView* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QUndoView*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_undoview_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWidget* q_undoview_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QUndoView* self, int typeVal ```
+/// @param self QUndoView*
+/// @param typeVal flag of enum Qt__WindowType
 void q_undoview_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_undoview_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QUndoView* self, enum Qt__WindowType param1 ```
+/// @param self QUndoView*
+/// @param param1 enum Qt__WindowType
 void q_undoview_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QUndoView* self, int typeVal ```
+/// @param self QUndoView*
+/// @param typeVal flag of enum Qt__WindowType
 void q_undoview_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum Qt__WindowType
 int64_t q_undoview_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_undoview_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QUndoView* self, int x, int y ```
+/// @param self QUndoView*
+/// @param x int
+/// @param y int
 QWidget* q_undoview_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QUndoView* self, QPoint* p ```
+/// @param self QUndoView*
+/// @param p QPoint*
 QWidget* q_undoview_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QUndoView* self, QPointF* p ```
+/// @param self QUndoView*
+/// @param p QPointF*
 QWidget* q_undoview_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QUndoView* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QUndoView*
+/// @param param1 enum Qt__WidgetAttribute
 void q_undoview_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QUndoView* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QUndoView*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_undoview_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QUndoView* self, QWidget* child ```
+/// @param self QUndoView*
+/// @param child QWidget*
 bool q_undoview_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QUndoView* self, bool enabled ```
+/// @param self QUndoView*
+/// @param enabled bool
 void q_undoview_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QBackingStore* q_undoview_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QWindow* q_undoview_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QScreen* q_undoview_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QUndoView* self, QScreen* screen ```
+/// @param self QUndoView*
+/// @param screen QScreen*
 void q_undoview_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_undoview_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QUndoView* self, const char* title ```
+/// @param self QUndoView*
+/// @param title const char*
 void q_undoview_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
-void q_undoview_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, const char*)
+void q_undoview_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QUndoView* self, QIcon* icon ```
+/// @param self QUndoView*
+/// @param icon QIcon*
 void q_undoview_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QIcon*) ```
-void q_undoview_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QIcon*)
+void q_undoview_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QUndoView* self, const char* iconText ```
+/// @param self QUndoView*
+/// @param iconText const char*
 void q_undoview_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
-void q_undoview_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, const char*)
+void q_undoview_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QUndoView* self, QPoint* pos ```
+/// @param self QUndoView*
+/// @param pos QPoint*
 void q_undoview_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QPoint*) ```
-void q_undoview_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QPoint*)
+void q_undoview_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_undoview_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QUndoView* self, int hints ```
+/// @param self QUndoView*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_undoview_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QUndoView*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_undoview_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QUndoView*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_undoview_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QUndoView*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_undoview_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QUndoView*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_undoview_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QUndoView*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_undoview_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QUndoView* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QUndoView*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_undoview_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QUndoView* self, QRect* rectangle ```
+/// @param self QUndoView*
+/// @param rectangle QRect*
 QPixmap* q_undoview_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QUndoView* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QUndoView*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_undoview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QUndoView* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QUndoView*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_undoview_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QUndoView* self, int id, bool enable ```
+/// @param self QUndoView*
+/// @param id int
+/// @param enable bool
 void q_undoview_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QUndoView* self, int id, bool enable ```
+/// @param self QUndoView*
+/// @param id int
+/// @param enable bool
 void q_undoview_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QUndoView* self, enum Qt__WindowType param1, bool on ```
+/// @param self QUndoView*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_undoview_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QUndoView* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QUndoView*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_undoview_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_undoview_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_undoview_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char* q_undoview_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QUndoView* self, char* name ```
+/// @param self QUndoView*
+/// @param name char*
 void q_undoview_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QUndoView* self, bool b ```
+/// @param self QUndoView*
+/// @param b bool
 bool q_undoview_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QThread* q_undoview_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QUndoView* self, QThread* thread ```
+/// @param self QUndoView*
+/// @param thread QThread*
 bool q_undoview_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QUndoView* self, int interval ```
+/// @param self QUndoView*
+/// @param interval int
 int32_t q_undoview_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QUndoView* self, int id ```
+/// @param self QUndoView*
+/// @param id int
 void q_undoview_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QUndoView* self, enum Qt__TimerId id ```
+/// @param self QUndoView*
+/// @param id enum Qt__TimerId
 void q_undoview_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 libqt_list /* of QObject* */ q_undoview_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QUndoView* self, QObject* filterObj ```
+/// @param self QUndoView*
+/// @param filterObj QObject*
 void q_undoview_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QUndoView* self, QObject* obj ```
+/// @param self QUndoView*
+/// @param obj QObject*
 void q_undoview_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_undoview_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QUndoView* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QUndoView*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_undoview_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_undoview_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_undoview_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QUndoView* self, const char* name, QVariant* value ```
+/// @param self QUndoView*
+/// @param name const char*
+/// @param value QVariant*
 bool q_undoview_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QUndoView* self, const char* name ```
+/// @param self QUndoView*
+/// @param name const char*
 QVariant* q_undoview_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QUndoView* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QUndoView*
 const char** q_undoview_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QBindingStorage* q_undoview_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 const QBindingStorage* q_undoview_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*) ```
-void q_undoview_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*)
+void q_undoview_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QObject* q_undoview_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QUndoView* self, const char* classname ```
+/// @param self QUndoView*
+/// @param classname const char*
 bool q_undoview_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QUndoView* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QUndoView*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_undoview_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QUndoView* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QUndoView*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_undoview_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_undoview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QUndoView* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QUndoView*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_undoview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self, QObject* param1 ```
+/// @param self QUndoView*
+/// @param param1 QObject*
 void q_undoview_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QObject*) ```
-void q_undoview_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QObject*)
+void q_undoview_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 double q_undoview_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 double q_undoview_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_undoview_device_pixel_ratio_f_scale();
 
@@ -3302,7 +3724,8 @@ double q_undoview_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_undoview_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QListView
@@ -3311,7 +3734,8 @@ int32_t q_undoview_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QRect* q_undoview_visual_rect(void* self, void* index);
 
 /// Inherited from QListView
@@ -3320,7 +3744,8 @@ QRect* q_undoview_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QRect* q_undoview_qbase_visual_rect(void* self, void* index);
 
 /// Inherited from QListView
@@ -3329,8 +3754,9 @@ QRect* q_undoview_qbase_visual_rect(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QRect* (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_visual_rect(void* self, QRect* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QRect* fn(QUndoView*, QModelIndex*)
+void q_undoview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3338,7 +3764,9 @@ void q_undoview_on_visual_rect(void* self, QRect* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param hint enum QAbstractItemView__ScrollHint
 void q_undoview_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QListView
@@ -3347,7 +3775,9 @@ void q_undoview_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, enum QAbstractItemView__ScrollHint hint ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param hint enum QAbstractItemView__ScrollHint
 void q_undoview_qbase_scroll_to(void* self, void* index, int64_t hint);
 
 /// Inherited from QListView
@@ -3356,8 +3786,9 @@ void q_undoview_qbase_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*, enum QAbstractItemView__ScrollHint) ```
-void q_undoview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
+void q_undoview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t));
 
 /// Inherited from QListView
 ///
@@ -3365,7 +3796,8 @@ void q_undoview_on_scroll_to(void* self, void (*slot)(void*, void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* p ```
+/// @param self QUndoView*
+/// @param p QPoint*
 QModelIndex* q_undoview_index_at(void* self, void* p);
 
 /// Inherited from QListView
@@ -3374,7 +3806,8 @@ QModelIndex* q_undoview_index_at(void* self, void* p);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* p ```
+/// @param self QUndoView*
+/// @param p QPoint*
 QModelIndex* q_undoview_qbase_index_at(void* self, void* p);
 
 /// Inherited from QListView
@@ -3383,8 +3816,9 @@ QModelIndex* q_undoview_qbase_index_at(void* self, void* p);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* (*slot)(QUndoView*, QPoint*) ```
-void q_undoview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QModelIndex* fn(QUndoView*, QPoint*)
+void q_undoview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3392,7 +3826,7 @@ void q_undoview_on_index_at(void* self, QModelIndex* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_do_items_layout(void* self);
 
 /// Inherited from QListView
@@ -3401,7 +3835,7 @@ void q_undoview_do_items_layout(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_do_items_layout(void* self);
 
 /// Inherited from QListView
@@ -3410,8 +3844,9 @@ void q_undoview_qbase_do_items_layout(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_do_items_layout(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_do_items_layout(void* self, void (*callback)());
 
 /// Inherited from QListView
 ///
@@ -3419,7 +3854,7 @@ void q_undoview_on_do_items_layout(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_reset(void* self);
 
 /// Inherited from QListView
@@ -3428,7 +3863,7 @@ void q_undoview_reset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_reset(void* self);
 
 /// Inherited from QListView
@@ -3437,8 +3872,9 @@ void q_undoview_qbase_reset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_reset(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_reset(void* self, void (*callback)());
 
 /// Inherited from QListView
 ///
@@ -3446,7 +3882,8 @@ void q_undoview_on_reset(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -3455,7 +3892,8 @@ void q_undoview_set_root_index(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 void q_undoview_qbase_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -3464,8 +3902,9 @@ void q_undoview_qbase_set_root_index(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_set_root_index(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*)
+void q_undoview_on_set_root_index(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3473,7 +3912,8 @@ void q_undoview_on_set_root_index(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* e ```
+/// @param self QUndoView*
+/// @param e QEvent*
 bool q_undoview_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3482,7 +3922,8 @@ bool q_undoview_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* e ```
+/// @param self QUndoView*
+/// @param e QEvent*
 bool q_undoview_qbase_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3491,8 +3932,9 @@ bool q_undoview_qbase_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QEvent*) ```
-void q_undoview_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QEvent*)
+void q_undoview_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3500,7 +3942,9 @@ void q_undoview_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int dx, int dy ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
 void q_undoview_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
@@ -3509,7 +3953,9 @@ void q_undoview_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int dx, int dy ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
 void q_undoview_qbase_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
@@ -3518,8 +3964,9 @@ void q_undoview_qbase_scroll_contents_by(void* self, int dx, int dy);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int, int) ```
-void q_undoview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int, int)
+void q_undoview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -3527,7 +3974,10 @@ void q_undoview_on_scroll_contents_by(void* self, void (*slot)(void*, int, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+/// @param self QUndoView*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+/// @param roles libqt_list /* of int */
 void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
@@ -3536,7 +3986,10 @@ void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* topLeft, QModelIndex* bottomRight, libqt_list /* of int */ roles ```
+/// @param self QUndoView*
+/// @param topLeft QModelIndex*
+/// @param bottomRight QModelIndex*
+/// @param roles libqt_list /* of int */
 void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
@@ -3545,8 +3998,9 @@ void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*, QModelIndex*, libqt_list /* of int */ roles ) ```
-void q_undoview_on_data_changed(void* self, void (*slot)(void*, void*, void*, libqt_list));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
+void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
 /// Inherited from QListView
 ///
@@ -3554,7 +4008,10 @@ void q_undoview_on_data_changed(void* self, void (*slot)(void*, void*, void*, li
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* parent, int start, int end ```
+/// @param self QUndoView*
+/// @param parent QModelIndex*
+/// @param start int
+/// @param end int
 void q_undoview_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -3563,7 +4020,10 @@ void q_undoview_rows_inserted(void* self, void* parent, int start, int end);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* parent, int start, int end ```
+/// @param self QUndoView*
+/// @param parent QModelIndex*
+/// @param start int
+/// @param end int
 void q_undoview_qbase_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -3572,8 +4032,9 @@ void q_undoview_qbase_rows_inserted(void* self, void* parent, int start, int end
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*, int, int) ```
-void q_undoview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*, int, int)
+void q_undoview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -3581,7 +4042,10 @@ void q_undoview_on_rows_inserted(void* self, void (*slot)(void*, void*, int, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* parent, int start, int end ```
+/// @param self QUndoView*
+/// @param parent QModelIndex*
+/// @param start int
+/// @param end int
 void q_undoview_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -3590,7 +4054,10 @@ void q_undoview_rows_about_to_be_removed(void* self, void* parent, int start, in
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* parent, int start, int end ```
+/// @param self QUndoView*
+/// @param parent QModelIndex*
+/// @param start int
+/// @param end int
 void q_undoview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
@@ -3599,8 +4066,9 @@ void q_undoview_qbase_rows_about_to_be_removed(void* self, void* parent, int sta
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*, int, int) ```
-void q_undoview_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void*, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*, int, int)
+void q_undoview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -3608,7 +4076,8 @@ void q_undoview_on_rows_about_to_be_removed(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* e ```
+/// @param self QUndoView*
+/// @param e QMouseEvent*
 void q_undoview_mouse_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3617,7 +4086,8 @@ void q_undoview_mouse_move_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* e ```
+/// @param self QUndoView*
+/// @param e QMouseEvent*
 void q_undoview_qbase_mouse_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3626,8 +4096,9 @@ void q_undoview_qbase_mouse_move_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMouseEvent*) ```
-void q_undoview_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMouseEvent*)
+void q_undoview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3635,7 +4106,8 @@ void q_undoview_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* e ```
+/// @param self QUndoView*
+/// @param e QMouseEvent*
 void q_undoview_mouse_release_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3644,7 +4116,8 @@ void q_undoview_mouse_release_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* e ```
+/// @param self QUndoView*
+/// @param e QMouseEvent*
 void q_undoview_qbase_mouse_release_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3653,8 +4126,9 @@ void q_undoview_qbase_mouse_release_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMouseEvent*) ```
-void q_undoview_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMouseEvent*)
+void q_undoview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3662,7 +4136,8 @@ void q_undoview_on_mouse_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QWheelEvent* e ```
+/// @param self QUndoView*
+/// @param e QWheelEvent*
 void q_undoview_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3671,7 +4146,8 @@ void q_undoview_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QWheelEvent* e ```
+/// @param self QUndoView*
+/// @param e QWheelEvent*
 void q_undoview_qbase_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3680,8 +4156,9 @@ void q_undoview_qbase_wheel_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QWheelEvent*) ```
-void q_undoview_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QWheelEvent*)
+void q_undoview_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3689,7 +4166,8 @@ void q_undoview_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QTimerEvent* e ```
+/// @param self QUndoView*
+/// @param e QTimerEvent*
 void q_undoview_timer_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3698,7 +4176,8 @@ void q_undoview_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QTimerEvent* e ```
+/// @param self QUndoView*
+/// @param e QTimerEvent*
 void q_undoview_qbase_timer_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3707,8 +4186,9 @@ void q_undoview_qbase_timer_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QTimerEvent*) ```
-void q_undoview_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QTimerEvent*)
+void q_undoview_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3716,7 +4196,8 @@ void q_undoview_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QResizeEvent* e ```
+/// @param self QUndoView*
+/// @param e QResizeEvent*
 void q_undoview_resize_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3725,7 +4206,8 @@ void q_undoview_resize_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QResizeEvent* e ```
+/// @param self QUndoView*
+/// @param e QResizeEvent*
 void q_undoview_qbase_resize_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3734,8 +4216,9 @@ void q_undoview_qbase_resize_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QResizeEvent*) ```
-void q_undoview_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QResizeEvent*)
+void q_undoview_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3743,7 +4226,8 @@ void q_undoview_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QDragMoveEvent* e ```
+/// @param self QUndoView*
+/// @param e QDragMoveEvent*
 void q_undoview_drag_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3752,7 +4236,8 @@ void q_undoview_drag_move_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QDragMoveEvent* e ```
+/// @param self QUndoView*
+/// @param e QDragMoveEvent*
 void q_undoview_qbase_drag_move_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3761,8 +4246,9 @@ void q_undoview_qbase_drag_move_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QDragMoveEvent*) ```
-void q_undoview_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QDragMoveEvent*)
+void q_undoview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3770,7 +4256,8 @@ void q_undoview_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QDragLeaveEvent* e ```
+/// @param self QUndoView*
+/// @param e QDragLeaveEvent*
 void q_undoview_drag_leave_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3779,7 +4266,8 @@ void q_undoview_drag_leave_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QDragLeaveEvent* e ```
+/// @param self QUndoView*
+/// @param e QDragLeaveEvent*
 void q_undoview_qbase_drag_leave_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3788,8 +4276,9 @@ void q_undoview_qbase_drag_leave_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QDragLeaveEvent*) ```
-void q_undoview_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QDragLeaveEvent*)
+void q_undoview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3797,7 +4286,8 @@ void q_undoview_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QDropEvent* e ```
+/// @param self QUndoView*
+/// @param e QDropEvent*
 void q_undoview_drop_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3806,7 +4296,8 @@ void q_undoview_drop_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QDropEvent* e ```
+/// @param self QUndoView*
+/// @param e QDropEvent*
 void q_undoview_qbase_drop_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3815,8 +4306,9 @@ void q_undoview_qbase_drop_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QDropEvent*) ```
-void q_undoview_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QDropEvent*)
+void q_undoview_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3824,7 +4316,8 @@ void q_undoview_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int supportedActions ```
+/// @param self QUndoView*
+/// @param supportedActions flag of enum Qt__DropAction
 void q_undoview_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QListView
@@ -3833,7 +4326,8 @@ void q_undoview_start_drag(void* self, int64_t supportedActions);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int supportedActions ```
+/// @param self QUndoView*
+/// @param supportedActions flag of enum Qt__DropAction
 void q_undoview_qbase_start_drag(void* self, int64_t supportedActions);
 
 /// Inherited from QListView
@@ -3842,8 +4336,9 @@ void q_undoview_qbase_start_drag(void* self, int64_t supportedActions);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int) ```
-void q_undoview_on_start_drag(void* self, void (*slot)(void*, int64_t));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, flag of enum Qt__DropAction)
+void q_undoview_on_start_drag(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QListView
 ///
@@ -3851,7 +4346,8 @@ void q_undoview_on_start_drag(void* self, void (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QStyleOptionViewItem* option ```
+/// @param self QUndoView*
+/// @param option QStyleOptionViewItem*
 void q_undoview_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
@@ -3860,7 +4356,8 @@ void q_undoview_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QStyleOptionViewItem* option ```
+/// @param self QUndoView*
+/// @param option QStyleOptionViewItem*
 void q_undoview_qbase_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
@@ -3869,8 +4366,9 @@ void q_undoview_qbase_init_view_item_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QStyleOptionViewItem*) ```
-void q_undoview_on_init_view_item_option(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QStyleOptionViewItem*)
+void q_undoview_on_init_view_item_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3878,7 +4376,8 @@ void q_undoview_on_init_view_item_option(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPaintEvent* e ```
+/// @param self QUndoView*
+/// @param e QPaintEvent*
 void q_undoview_paint_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3887,7 +4386,8 @@ void q_undoview_paint_event(void* self, void* e);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPaintEvent* e ```
+/// @param self QUndoView*
+/// @param e QPaintEvent*
 void q_undoview_qbase_paint_event(void* self, void* e);
 
 /// Inherited from QListView
@@ -3896,8 +4396,9 @@ void q_undoview_qbase_paint_event(void* self, void* e);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QPaintEvent*) ```
-void q_undoview_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QPaintEvent*)
+void q_undoview_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -3905,7 +4406,7 @@ void q_undoview_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_horizontal_offset(void* self);
 
 /// Inherited from QListView
@@ -3914,7 +4415,7 @@ int32_t q_undoview_horizontal_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_qbase_horizontal_offset(void* self);
 
 /// Inherited from QListView
@@ -3923,8 +4424,9 @@ int32_t q_undoview_qbase_horizontal_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)() ```
-void q_undoview_on_horizontal_offset(void* self, int32_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int32_t fn()
+void q_undoview_on_horizontal_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
 ///
@@ -3932,7 +4434,7 @@ void q_undoview_on_horizontal_offset(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_vertical_offset(void* self);
 
 /// Inherited from QListView
@@ -3941,7 +4443,7 @@ int32_t q_undoview_vertical_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_qbase_vertical_offset(void* self);
 
 /// Inherited from QListView
@@ -3950,8 +4452,9 @@ int32_t q_undoview_qbase_vertical_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)() ```
-void q_undoview_on_vertical_offset(void* self, int32_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int32_t fn()
+void q_undoview_on_vertical_offset(void* self, int32_t (*callback)());
 
 /// Inherited from QListView
 ///
@@ -3959,7 +4462,9 @@ void q_undoview_on_vertical_offset(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
+/// @param self QUndoView*
+/// @param cursorAction enum QAbstractItemView__CursorAction
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QModelIndex* q_undoview_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
 
 /// Inherited from QListView
@@ -3968,7 +4473,9 @@ QModelIndex* q_undoview_move_cursor(void* self, int64_t cursorAction, int64_t mo
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__CursorAction cursorAction, int modifiers ```
+/// @param self QUndoView*
+/// @param cursorAction enum QAbstractItemView__CursorAction
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QModelIndex* q_undoview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
 
 /// Inherited from QListView
@@ -3977,8 +4484,9 @@ QModelIndex* q_undoview_qbase_move_cursor(void* self, int64_t cursorAction, int6
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* (*slot)(QUndoView*, enum QAbstractItemView__CursorAction, int) ```
-void q_undoview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, int64_t));
+/// @param self QUndoView*
+/// @param callback QModelIndex* fn(QUndoView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
+void q_undoview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QListView
 ///
@@ -3986,7 +4494,9 @@ void q_undoview_on_move_cursor(void* self, QModelIndex* (*slot)(void*, int64_t, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QRect* rect, int command ```
+/// @param self QUndoView*
+/// @param rect QRect*
+/// @param command flag of enum QItemSelectionModel__SelectionFlag
 void q_undoview_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QListView
@@ -3995,7 +4505,9 @@ void q_undoview_set_selection(void* self, void* rect, int64_t command);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QRect* rect, int command ```
+/// @param self QUndoView*
+/// @param rect QRect*
+/// @param command flag of enum QItemSelectionModel__SelectionFlag
 void q_undoview_qbase_set_selection(void* self, void* rect, int64_t command);
 
 /// Inherited from QListView
@@ -4004,8 +4516,9 @@ void q_undoview_qbase_set_selection(void* self, void* rect, int64_t command);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QRect*, int) ```
-void q_undoview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QRect*, flag of enum QItemSelectionModel__SelectionFlag)
+void q_undoview_on_set_selection(void* self, void (*callback)(void*, void*, int64_t));
 
 /// Inherited from QListView
 ///
@@ -4013,7 +4526,8 @@ void q_undoview_on_set_selection(void* self, void (*slot)(void*, void*, int64_t)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelection* selection ```
+/// @param self QUndoView*
+/// @param selection QItemSelection*
 QRegion* q_undoview_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
@@ -4022,7 +4536,8 @@ QRegion* q_undoview_visual_region_for_selection(void* self, void* selection);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelection* selection ```
+/// @param self QUndoView*
+/// @param selection QItemSelection*
 QRegion* q_undoview_qbase_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
@@ -4031,8 +4546,9 @@ QRegion* q_undoview_qbase_visual_region_for_selection(void* self, void* selectio
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QRegion* (*slot)(QUndoView*, QItemSelection*) ```
-void q_undoview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QRegion* fn(QUndoView*, QItemSelection*)
+void q_undoview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -4040,7 +4556,7 @@ void q_undoview_on_visual_region_for_selection(void* self, QRegion* (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 libqt_list /* of QModelIndex* */ q_undoview_selected_indexes(void* self);
 
 /// Inherited from QListView
@@ -4049,7 +4565,7 @@ libqt_list /* of QModelIndex* */ q_undoview_selected_indexes(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 libqt_list /* of QModelIndex* */ q_undoview_qbase_selected_indexes(void* self);
 
 /// Inherited from QListView
@@ -4058,8 +4574,9 @@ libqt_list /* of QModelIndex* */ q_undoview_qbase_selected_indexes(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, libqt_list /* of QModelIndex* */ (*slot)() ```
-void q_undoview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*slot)());
+/// @param self QUndoView*
+/// @param callback libqt_list /* of QModelIndex* */ fn()
+void q_undoview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */ (*callback)());
 
 /// Inherited from QListView
 ///
@@ -4067,7 +4584,7 @@ void q_undoview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_update_geometries(void* self);
 
 /// Inherited from QListView
@@ -4076,7 +4593,7 @@ void q_undoview_update_geometries(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_update_geometries(void* self);
 
 /// Inherited from QListView
@@ -4085,8 +4602,9 @@ void q_undoview_qbase_update_geometries(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_update_geometries(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_update_geometries(void* self, void (*callback)());
 
 /// Inherited from QListView
 ///
@@ -4094,7 +4612,8 @@ void q_undoview_on_update_geometries(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 bool q_undoview_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
@@ -4103,7 +4622,8 @@ bool q_undoview_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 bool q_undoview_qbase_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
@@ -4112,8 +4632,9 @@ bool q_undoview_qbase_is_index_hidden(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_is_index_hidden(void* self, bool (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QModelIndex*)
+void q_undoview_on_is_index_hidden(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -4121,7 +4642,9 @@ void q_undoview_on_is_index_hidden(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelection* selected, QItemSelection* deselected ```
+/// @param self QUndoView*
+/// @param selected QItemSelection*
+/// @param deselected QItemSelection*
 void q_undoview_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
@@ -4130,7 +4653,9 @@ void q_undoview_selection_changed(void* self, void* selected, void* deselected);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelection* selected, QItemSelection* deselected ```
+/// @param self QUndoView*
+/// @param selected QItemSelection*
+/// @param deselected QItemSelection*
 void q_undoview_qbase_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
@@ -4139,8 +4664,9 @@ void q_undoview_qbase_selection_changed(void* self, void* selected, void* desele
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QItemSelection*, QItemSelection*) ```
-void q_undoview_on_selection_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QItemSelection*, QItemSelection*)
+void q_undoview_on_selection_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
 ///
@@ -4148,7 +4674,9 @@ void q_undoview_on_selection_changed(void* self, void (*slot)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* current, QModelIndex* previous ```
+/// @param self QUndoView*
+/// @param current QModelIndex*
+/// @param previous QModelIndex*
 void q_undoview_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QListView
@@ -4157,7 +4685,9 @@ void q_undoview_current_changed(void* self, void* current, void* previous);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* current, QModelIndex* previous ```
+/// @param self QUndoView*
+/// @param current QModelIndex*
+/// @param previous QModelIndex*
 void q_undoview_qbase_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QListView
@@ -4166,8 +4696,9 @@ void q_undoview_qbase_current_changed(void* self, void* current, void* previous)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QModelIndex*, QModelIndex*) ```
-void q_undoview_on_current_changed(void* self, void (*slot)(void*, void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QModelIndex*, QModelIndex*)
+void q_undoview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QListView
 ///
@@ -4175,7 +4706,7 @@ void q_undoview_on_current_changed(void* self, void (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_viewport_size_hint(void* self);
 
 /// Inherited from QListView
@@ -4184,7 +4715,7 @@ QSize* q_undoview_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_qbase_viewport_size_hint(void* self);
 
 /// Inherited from QListView
@@ -4193,8 +4724,9 @@ QSize* q_undoview_qbase_viewport_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QSize* (*slot)() ```
-void q_undoview_on_viewport_size_hint(void* self, QSize* (*slot)());
+/// @param self QUndoView*
+/// @param callback QSize* fn()
+void q_undoview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -4202,7 +4734,8 @@ void q_undoview_on_viewport_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QAbstractItemModel* model ```
+/// @param self QUndoView*
+/// @param model QAbstractItemModel*
 void q_undoview_set_model(void* self, void* model);
 
 /// Inherited from QAbstractItemView
@@ -4211,7 +4744,8 @@ void q_undoview_set_model(void* self, void* model);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QAbstractItemModel* model ```
+/// @param self QUndoView*
+/// @param model QAbstractItemModel*
 void q_undoview_qbase_set_model(void* self, void* model);
 
 /// Inherited from QAbstractItemView
@@ -4220,8 +4754,9 @@ void q_undoview_qbase_set_model(void* self, void* model);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QAbstractItemModel*) ```
-void q_undoview_on_set_model(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QAbstractItemModel*)
+void q_undoview_on_set_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4229,7 +4764,8 @@ void q_undoview_on_set_model(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelectionModel* selectionModel ```
+/// @param self QUndoView*
+/// @param selectionModel QItemSelectionModel*
 void q_undoview_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
@@ -4238,7 +4774,8 @@ void q_undoview_set_selection_model(void* self, void* selectionModel);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QItemSelectionModel* selectionModel ```
+/// @param self QUndoView*
+/// @param selectionModel QItemSelectionModel*
 void q_undoview_qbase_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
@@ -4247,8 +4784,9 @@ void q_undoview_qbase_set_selection_model(void* self, void* selectionModel);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QItemSelectionModel*) ```
-void q_undoview_on_set_selection_model(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QItemSelectionModel*)
+void q_undoview_on_set_selection_model(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4256,7 +4794,8 @@ void q_undoview_on_set_selection_model(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, const char* search ```
+/// @param self QUndoView*
+/// @param search const char*
 void q_undoview_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
@@ -4265,7 +4804,8 @@ void q_undoview_keyboard_search(void* self, const char* search);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, const char* search ```
+/// @param self QUndoView*
+/// @param search const char*
 void q_undoview_qbase_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
@@ -4274,8 +4814,9 @@ void q_undoview_qbase_keyboard_search(void* self, const char* search);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
-void q_undoview_on_keyboard_search(void* self, void (*slot)(void*, const char*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, const char*)
+void q_undoview_on_keyboard_search(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4283,7 +4824,8 @@ void q_undoview_on_keyboard_search(void* self, void (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int row ```
+/// @param self QUndoView*
+/// @param row int
 int32_t q_undoview_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
@@ -4292,7 +4834,8 @@ int32_t q_undoview_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int row ```
+/// @param self QUndoView*
+/// @param row int
 int32_t q_undoview_qbase_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
@@ -4301,8 +4844,9 @@ int32_t q_undoview_qbase_size_hint_for_row(void* self, int row);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, int) ```
-void q_undoview_on_size_hint_for_row(void* self, int32_t (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, int)
+void q_undoview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4310,7 +4854,8 @@ void q_undoview_on_size_hint_for_row(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int column ```
+/// @param self QUndoView*
+/// @param column int
 int32_t q_undoview_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
@@ -4319,7 +4864,8 @@ int32_t q_undoview_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int column ```
+/// @param self QUndoView*
+/// @param column int
 int32_t q_undoview_qbase_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
@@ -4328,8 +4874,9 @@ int32_t q_undoview_qbase_size_hint_for_column(void* self, int column);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, int) ```
-void q_undoview_on_size_hint_for_column(void* self, int32_t (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, int)
+void q_undoview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4337,7 +4884,8 @@ void q_undoview_on_size_hint_for_column(void* self, int32_t (*slot)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QAbstractItemDelegate* q_undoview_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -4346,7 +4894,8 @@ QAbstractItemDelegate* q_undoview_item_delegate_for_index(void* self, void* inde
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QAbstractItemDelegate* q_undoview_qbase_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
@@ -4355,8 +4904,9 @@ QAbstractItemDelegate* q_undoview_qbase_item_delegate_for_index(void* self, void
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QAbstractItemDelegate* (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QAbstractItemDelegate* fn(QUndoView*, QModelIndex*)
+void q_undoview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4364,7 +4914,8 @@ void q_undoview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, enum Qt__InputMethodQuery query ```
+/// @param self QUndoView*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_undoview_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
@@ -4373,7 +4924,8 @@ QVariant* q_undoview_input_method_query(void* self, int64_t query);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, enum Qt__InputMethodQuery query ```
+/// @param self QUndoView*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_undoview_qbase_input_method_query(void* self, int64_t query);
 
 /// Inherited from QAbstractItemView
@@ -4382,8 +4934,9 @@ QVariant* q_undoview_qbase_input_method_query(void* self, int64_t query);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QVariant* (*slot)(QUndoView*, enum Qt__InputMethodQuery) ```
-void q_undoview_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QUndoView*
+/// @param callback QVariant* fn(QUndoView*, enum Qt__InputMethodQuery)
+void q_undoview_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4391,7 +4944,7 @@ void q_undoview_on_input_method_query(void* self, QVariant* (*slot)(void*, int64
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_select_all(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4400,7 +4953,7 @@ void q_undoview_select_all(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_select_all(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4409,8 +4962,9 @@ void q_undoview_qbase_select_all(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_select_all(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_select_all(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -4418,7 +4972,7 @@ void q_undoview_on_select_all(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4427,7 +4981,7 @@ void q_undoview_update_editor_data(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4436,8 +4990,9 @@ void q_undoview_qbase_update_editor_data(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_update_editor_data(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_update_editor_data(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -4445,7 +5000,7 @@ void q_undoview_on_update_editor_data(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4454,7 +5009,7 @@ void q_undoview_update_editor_geometries(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
@@ -4463,8 +5018,9 @@ void q_undoview_qbase_update_editor_geometries(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_update_editor_geometries(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_update_editor_geometries(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -4472,7 +5028,8 @@ void q_undoview_on_update_editor_geometries(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int action ```
+/// @param self QUndoView*
+/// @param action int
 void q_undoview_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -4481,7 +5038,8 @@ void q_undoview_vertical_scrollbar_action(void* self, int action);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int action ```
+/// @param self QUndoView*
+/// @param action int
 void q_undoview_qbase_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -4490,8 +5048,9 @@ void q_undoview_qbase_vertical_scrollbar_action(void* self, int action);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int) ```
-void q_undoview_on_vertical_scrollbar_action(void* self, void (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int)
+void q_undoview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4499,7 +5058,8 @@ void q_undoview_on_vertical_scrollbar_action(void* self, void (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int action ```
+/// @param self QUndoView*
+/// @param action int
 void q_undoview_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -4508,7 +5068,8 @@ void q_undoview_horizontal_scrollbar_action(void* self, int action);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int action ```
+/// @param self QUndoView*
+/// @param action int
 void q_undoview_qbase_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
@@ -4517,8 +5078,9 @@ void q_undoview_qbase_horizontal_scrollbar_action(void* self, int action);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int) ```
-void q_undoview_on_horizontal_scrollbar_action(void* self, void (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int)
+void q_undoview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4526,7 +5088,8 @@ void q_undoview_on_horizontal_scrollbar_action(void* self, void (*slot)(void*, i
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int value ```
+/// @param self QUndoView*
+/// @param value int
 void q_undoview_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -4535,7 +5098,8 @@ void q_undoview_vertical_scrollbar_value_changed(void* self, int value);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int value ```
+/// @param self QUndoView*
+/// @param value int
 void q_undoview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -4544,8 +5108,9 @@ void q_undoview_qbase_vertical_scrollbar_value_changed(void* self, int value);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int) ```
-void q_undoview_on_vertical_scrollbar_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int)
+void q_undoview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4553,7 +5118,8 @@ void q_undoview_on_vertical_scrollbar_value_changed(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int value ```
+/// @param self QUndoView*
+/// @param value int
 void q_undoview_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -4562,7 +5128,8 @@ void q_undoview_horizontal_scrollbar_value_changed(void* self, int value);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int value ```
+/// @param self QUndoView*
+/// @param value int
 void q_undoview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
@@ -4571,8 +5138,9 @@ void q_undoview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int) ```
-void q_undoview_on_horizontal_scrollbar_value_changed(void* self, void (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int)
+void q_undoview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4580,7 +5148,9 @@ void q_undoview_on_horizontal_scrollbar_value_changed(void* self, void (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
+/// @param self QUndoView*
+/// @param editor QWidget*
+/// @param hint enum QAbstractItemDelegate__EndEditHint
 void q_undoview_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
@@ -4589,7 +5159,9 @@ void q_undoview_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* editor, enum QAbstractItemDelegate__EndEditHint hint ```
+/// @param self QUndoView*
+/// @param editor QWidget*
+/// @param hint enum QAbstractItemDelegate__EndEditHint
 void q_undoview_qbase_close_editor(void* self, void* editor, int64_t hint);
 
 /// Inherited from QAbstractItemView
@@ -4598,8 +5170,9 @@ void q_undoview_qbase_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QWidget*, enum QAbstractItemDelegate__EndEditHint) ```
-void q_undoview_on_close_editor(void* self, void (*slot)(void*, void*, int64_t));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
+void q_undoview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4607,7 +5180,8 @@ void q_undoview_on_close_editor(void* self, void (*slot)(void*, void*, int64_t))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* editor ```
+/// @param self QUndoView*
+/// @param editor QWidget*
 void q_undoview_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -4616,7 +5190,8 @@ void q_undoview_commit_data(void* self, void* editor);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* editor ```
+/// @param self QUndoView*
+/// @param editor QWidget*
 void q_undoview_qbase_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -4625,8 +5200,9 @@ void q_undoview_qbase_commit_data(void* self, void* editor);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QWidget*) ```
-void q_undoview_on_commit_data(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QWidget*)
+void q_undoview_on_commit_data(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4634,7 +5210,8 @@ void q_undoview_on_commit_data(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QObject* editor ```
+/// @param self QUndoView*
+/// @param editor QObject*
 void q_undoview_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -4643,7 +5220,8 @@ void q_undoview_editor_destroyed(void* self, void* editor);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QObject* editor ```
+/// @param self QUndoView*
+/// @param editor QObject*
 void q_undoview_qbase_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
@@ -4652,8 +5230,9 @@ void q_undoview_qbase_editor_destroyed(void* self, void* editor);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QObject*) ```
-void q_undoview_on_editor_destroyed(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QObject*)
+void q_undoview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4661,7 +5240,10 @@ void q_undoview_on_editor_destroyed(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param trigger enum QAbstractItemView__EditTrigger
+/// @param event QEvent*
 bool q_undoview_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4670,7 +5252,10 @@ bool q_undoview_edit2(void* self, void* index, int64_t trigger, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, enum QAbstractItemView__EditTrigger trigger, QEvent* event ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param trigger enum QAbstractItemView__EditTrigger
+/// @param event QEvent*
 bool q_undoview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4679,8 +5264,9 @@ bool q_undoview_qbase_edit2(void* self, void* index, int64_t trigger, void* even
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*) ```
-void q_undoview_on_edit2(void* self, bool (*slot)(void*, void*, int64_t, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
+void q_undoview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4688,7 +5274,11 @@ void q_undoview_on_edit2(void* self, bool (*slot)(void*, void*, int64_t, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, QEvent* event ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param event QEvent*
+///
+/// @return flag of enum QItemSelectionModel__SelectionFlag
 int64_t q_undoview_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4697,7 +5287,11 @@ int64_t q_undoview_selection_command(void* self, void* index, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index, QEvent* event ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
+/// @param event QEvent*
+///
+/// @return flag of enum QItemSelectionModel__SelectionFlag
 int64_t q_undoview_qbase_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4706,8 +5300,9 @@ int64_t q_undoview_qbase_selection_command(void* self, void* index, void* event)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int64_t (*slot)(QUndoView*, QModelIndex*, QEvent*) ```
-void q_undoview_on_selection_command(void* self, int64_t (*slot)(void*, void*, void*));
+/// @param self QUndoView*
+/// @param callback int64_t fn(QUndoView*, QModelIndex*, QEvent*)
+void q_undoview_on_selection_command(void* self, int64_t (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4715,7 +5310,8 @@ void q_undoview_on_selection_command(void* self, int64_t (*slot)(void*, void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, bool next ```
+/// @param self QUndoView*
+/// @param next bool
 bool q_undoview_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
@@ -4724,7 +5320,8 @@ bool q_undoview_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool next ```
+/// @param self QUndoView*
+/// @param next bool
 bool q_undoview_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
@@ -4733,8 +5330,9 @@ bool q_undoview_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, bool) ```
-void q_undoview_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, bool)
+void q_undoview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4742,7 +5340,8 @@ void q_undoview_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 bool q_undoview_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4751,7 +5350,8 @@ bool q_undoview_viewport_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 bool q_undoview_qbase_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4760,8 +5360,9 @@ bool q_undoview_qbase_viewport_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QEvent*) ```
-void q_undoview_on_viewport_event(void* self, bool (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QEvent*)
+void q_undoview_on_viewport_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4769,7 +5370,8 @@ void q_undoview_on_viewport_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* event ```
+/// @param self QUndoView*
+/// @param event QMouseEvent*
 void q_undoview_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4778,7 +5380,8 @@ void q_undoview_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* event ```
+/// @param self QUndoView*
+/// @param event QMouseEvent*
 void q_undoview_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4787,8 +5390,9 @@ void q_undoview_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMouseEvent*) ```
-void q_undoview_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMouseEvent*)
+void q_undoview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4796,7 +5400,8 @@ void q_undoview_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* event ```
+/// @param self QUndoView*
+/// @param event QMouseEvent*
 void q_undoview_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4805,7 +5410,8 @@ void q_undoview_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMouseEvent* event ```
+/// @param self QUndoView*
+/// @param event QMouseEvent*
 void q_undoview_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4814,8 +5420,9 @@ void q_undoview_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMouseEvent*) ```
-void q_undoview_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMouseEvent*)
+void q_undoview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4823,7 +5430,8 @@ void q_undoview_on_mouse_double_click_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QDragEnterEvent* event ```
+/// @param self QUndoView*
+/// @param event QDragEnterEvent*
 void q_undoview_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4832,7 +5440,8 @@ void q_undoview_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QDragEnterEvent* event ```
+/// @param self QUndoView*
+/// @param event QDragEnterEvent*
 void q_undoview_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4841,8 +5450,9 @@ void q_undoview_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QDragEnterEvent*) ```
-void q_undoview_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QDragEnterEvent*)
+void q_undoview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4850,7 +5460,8 @@ void q_undoview_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QFocusEvent* event ```
+/// @param self QUndoView*
+/// @param event QFocusEvent*
 void q_undoview_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4859,7 +5470,8 @@ void q_undoview_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QFocusEvent* event ```
+/// @param self QUndoView*
+/// @param event QFocusEvent*
 void q_undoview_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4868,8 +5480,9 @@ void q_undoview_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QFocusEvent*) ```
-void q_undoview_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QFocusEvent*)
+void q_undoview_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4877,7 +5490,8 @@ void q_undoview_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QFocusEvent* event ```
+/// @param self QUndoView*
+/// @param event QFocusEvent*
 void q_undoview_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4886,7 +5500,8 @@ void q_undoview_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QFocusEvent* event ```
+/// @param self QUndoView*
+/// @param event QFocusEvent*
 void q_undoview_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4895,8 +5510,9 @@ void q_undoview_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QFocusEvent*) ```
-void q_undoview_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QFocusEvent*)
+void q_undoview_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4904,7 +5520,8 @@ void q_undoview_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QKeyEvent* event ```
+/// @param self QUndoView*
+/// @param event QKeyEvent*
 void q_undoview_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4913,7 +5530,8 @@ void q_undoview_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QKeyEvent* event ```
+/// @param self QUndoView*
+/// @param event QKeyEvent*
 void q_undoview_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4922,8 +5540,9 @@ void q_undoview_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QKeyEvent*) ```
-void q_undoview_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QKeyEvent*)
+void q_undoview_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4931,7 +5550,8 @@ void q_undoview_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QInputMethodEvent* event ```
+/// @param self QUndoView*
+/// @param event QInputMethodEvent*
 void q_undoview_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4940,7 +5560,8 @@ void q_undoview_input_method_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QInputMethodEvent* event ```
+/// @param self QUndoView*
+/// @param event QInputMethodEvent*
 void q_undoview_qbase_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4949,8 +5570,9 @@ void q_undoview_qbase_input_method_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QInputMethodEvent*) ```
-void q_undoview_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QInputMethodEvent*)
+void q_undoview_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4958,7 +5580,9 @@ void q_undoview_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QObject* object, QEvent* event ```
+/// @param self QUndoView*
+/// @param object QObject*
+/// @param event QEvent*
 bool q_undoview_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4967,7 +5591,9 @@ bool q_undoview_event_filter(void* self, void* object, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QObject* object, QEvent* event ```
+/// @param self QUndoView*
+/// @param object QObject*
+/// @param event QEvent*
 bool q_undoview_qbase_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
@@ -4976,8 +5602,9 @@ bool q_undoview_qbase_event_filter(void* self, void* object, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QObject*, QEvent*) ```
-void q_undoview_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QObject*, QEvent*)
+void q_undoview_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4985,7 +5612,7 @@ void q_undoview_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -4994,7 +5621,7 @@ QSize* q_undoview_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5003,8 +5630,9 @@ QSize* q_undoview_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QSize* (*slot)() ```
-void q_undoview_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QUndoView*
+/// @param callback QSize* fn()
+void q_undoview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5012,7 +5640,7 @@ void q_undoview_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5021,7 +5649,7 @@ QSize* q_undoview_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_qbase_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -5030,8 +5658,9 @@ QSize* q_undoview_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QSize* (*slot)() ```
-void q_undoview_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QUndoView*
+/// @param callback QSize* fn()
+void q_undoview_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5039,7 +5668,8 @@ void q_undoview_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* viewport ```
+/// @param self QUndoView*
+/// @param viewport QWidget*
 void q_undoview_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5048,7 +5678,8 @@ void q_undoview_setup_viewport(void* self, void* viewport);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QWidget* viewport ```
+/// @param self QUndoView*
+/// @param viewport QWidget*
 void q_undoview_qbase_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
@@ -5057,8 +5688,9 @@ void q_undoview_qbase_setup_viewport(void* self, void* viewport);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QWidget*) ```
-void q_undoview_on_setup_viewport(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QWidget*)
+void q_undoview_on_setup_viewport(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5066,7 +5698,8 @@ void q_undoview_on_setup_viewport(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QContextMenuEvent* param1 ```
+/// @param self QUndoView*
+/// @param param1 QContextMenuEvent*
 void q_undoview_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -5075,7 +5708,8 @@ void q_undoview_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QContextMenuEvent* param1 ```
+/// @param self QUndoView*
+/// @param param1 QContextMenuEvent*
 void q_undoview_qbase_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
@@ -5084,8 +5718,9 @@ void q_undoview_qbase_context_menu_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QContextMenuEvent*) ```
-void q_undoview_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QContextMenuEvent*)
+void q_undoview_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -5093,7 +5728,8 @@ void q_undoview_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* param1 ```
+/// @param self QUndoView*
+/// @param param1 QEvent*
 void q_undoview_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5102,7 +5738,8 @@ void q_undoview_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* param1 ```
+/// @param self QUndoView*
+/// @param param1 QEvent*
 void q_undoview_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -5111,8 +5748,9 @@ void q_undoview_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QEvent*) ```
-void q_undoview_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QEvent*)
+void q_undoview_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QFrame
 ///
@@ -5120,7 +5758,8 @@ void q_undoview_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QStyleOptionFrame* option ```
+/// @param self QUndoView*
+/// @param option QStyleOptionFrame*
 void q_undoview_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5129,7 +5768,8 @@ void q_undoview_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QStyleOptionFrame* option ```
+/// @param self QUndoView*
+/// @param option QStyleOptionFrame*
 void q_undoview_qbase_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
@@ -5138,8 +5778,9 @@ void q_undoview_qbase_init_style_option(void* self, void* option);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QStyleOptionFrame*) ```
-void q_undoview_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QStyleOptionFrame*)
+void q_undoview_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5147,7 +5788,7 @@ void q_undoview_on_init_style_option(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5156,7 +5797,7 @@ int32_t q_undoview_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -5165,8 +5806,9 @@ int32_t q_undoview_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)() ```
-void q_undoview_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int32_t fn()
+void q_undoview_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5174,7 +5816,8 @@ void q_undoview_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, bool visible ```
+/// @param self QUndoView*
+/// @param visible bool
 void q_undoview_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5183,7 +5826,8 @@ void q_undoview_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool visible ```
+/// @param self QUndoView*
+/// @param visible bool
 void q_undoview_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -5192,8 +5836,9 @@ void q_undoview_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, bool) ```
-void q_undoview_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, bool)
+void q_undoview_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -5201,7 +5846,8 @@ void q_undoview_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int param1 ```
+/// @param self QUndoView*
+/// @param param1 int
 int32_t q_undoview_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5210,7 +5856,8 @@ int32_t q_undoview_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int param1 ```
+/// @param self QUndoView*
+/// @param param1 int
 int32_t q_undoview_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -5219,8 +5866,9 @@ int32_t q_undoview_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, int) ```
-void q_undoview_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, int)
+void q_undoview_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -5228,7 +5876,7 @@ void q_undoview_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5237,7 +5885,7 @@ bool q_undoview_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -5246,8 +5894,9 @@ bool q_undoview_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)() ```
-void q_undoview_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QUndoView*
+/// @param callback bool fn()
+void q_undoview_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5255,7 +5904,7 @@ void q_undoview_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPaintEngine* q_undoview_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5264,7 +5913,7 @@ QPaintEngine* q_undoview_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPaintEngine* q_undoview_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -5273,8 +5922,9 @@ QPaintEngine* q_undoview_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPaintEngine* (*slot)() ```
-void q_undoview_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QUndoView*
+/// @param callback QPaintEngine* fn()
+void q_undoview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -5282,7 +5932,8 @@ void q_undoview_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QKeyEvent* event ```
+/// @param self QUndoView*
+/// @param event QKeyEvent*
 void q_undoview_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5291,7 +5942,8 @@ void q_undoview_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QKeyEvent* event ```
+/// @param self QUndoView*
+/// @param event QKeyEvent*
 void q_undoview_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5300,8 +5952,9 @@ void q_undoview_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QKeyEvent*) ```
-void q_undoview_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QKeyEvent*)
+void q_undoview_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5309,7 +5962,8 @@ void q_undoview_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEnterEvent* event ```
+/// @param self QUndoView*
+/// @param event QEnterEvent*
 void q_undoview_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5318,7 +5972,8 @@ void q_undoview_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEnterEvent* event ```
+/// @param self QUndoView*
+/// @param event QEnterEvent*
 void q_undoview_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5327,8 +5982,9 @@ void q_undoview_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QEnterEvent*) ```
-void q_undoview_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QEnterEvent*)
+void q_undoview_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5336,7 +5992,8 @@ void q_undoview_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 void q_undoview_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5345,7 +6002,8 @@ void q_undoview_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 void q_undoview_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5354,8 +6012,9 @@ void q_undoview_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QEvent*) ```
-void q_undoview_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QEvent*)
+void q_undoview_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5363,7 +6022,8 @@ void q_undoview_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMoveEvent* event ```
+/// @param self QUndoView*
+/// @param event QMoveEvent*
 void q_undoview_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5372,7 +6032,8 @@ void q_undoview_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMoveEvent* event ```
+/// @param self QUndoView*
+/// @param event QMoveEvent*
 void q_undoview_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5381,8 +6042,9 @@ void q_undoview_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMoveEvent*) ```
-void q_undoview_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMoveEvent*)
+void q_undoview_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5390,7 +6052,8 @@ void q_undoview_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QCloseEvent* event ```
+/// @param self QUndoView*
+/// @param event QCloseEvent*
 void q_undoview_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5399,7 +6062,8 @@ void q_undoview_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QCloseEvent* event ```
+/// @param self QUndoView*
+/// @param event QCloseEvent*
 void q_undoview_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5408,8 +6072,9 @@ void q_undoview_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QCloseEvent*) ```
-void q_undoview_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QCloseEvent*)
+void q_undoview_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5417,7 +6082,8 @@ void q_undoview_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QTabletEvent* event ```
+/// @param self QUndoView*
+/// @param event QTabletEvent*
 void q_undoview_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5426,7 +6092,8 @@ void q_undoview_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QTabletEvent* event ```
+/// @param self QUndoView*
+/// @param event QTabletEvent*
 void q_undoview_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5435,8 +6102,9 @@ void q_undoview_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QTabletEvent*) ```
-void q_undoview_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QTabletEvent*)
+void q_undoview_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5444,7 +6112,8 @@ void q_undoview_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QActionEvent* event ```
+/// @param self QUndoView*
+/// @param event QActionEvent*
 void q_undoview_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5453,7 +6122,8 @@ void q_undoview_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QActionEvent* event ```
+/// @param self QUndoView*
+/// @param event QActionEvent*
 void q_undoview_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5462,8 +6132,9 @@ void q_undoview_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QActionEvent*) ```
-void q_undoview_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QActionEvent*)
+void q_undoview_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5471,7 +6142,8 @@ void q_undoview_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QShowEvent* event ```
+/// @param self QUndoView*
+/// @param event QShowEvent*
 void q_undoview_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5480,7 +6152,8 @@ void q_undoview_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QShowEvent* event ```
+/// @param self QUndoView*
+/// @param event QShowEvent*
 void q_undoview_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5489,8 +6162,9 @@ void q_undoview_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QShowEvent*) ```
-void q_undoview_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QShowEvent*)
+void q_undoview_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5498,7 +6172,8 @@ void q_undoview_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QHideEvent* event ```
+/// @param self QUndoView*
+/// @param event QHideEvent*
 void q_undoview_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5507,7 +6182,8 @@ void q_undoview_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QHideEvent* event ```
+/// @param self QUndoView*
+/// @param event QHideEvent*
 void q_undoview_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -5516,8 +6192,9 @@ void q_undoview_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QHideEvent*) ```
-void q_undoview_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QHideEvent*)
+void q_undoview_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5525,7 +6202,10 @@ void q_undoview_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QUndoView*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_undoview_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -5534,7 +6214,10 @@ bool q_undoview_native_event(void* self, const char* eventType, void* message, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QUndoView*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_undoview_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -5543,8 +6226,9 @@ bool q_undoview_qbase_native_event(void* self, const char* eventType, void* mess
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, const char*, void*, intptr_t*) ```
-void q_undoview_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, const char*, void*, intptr_t*)
+void q_undoview_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -5552,7 +6236,8 @@ void q_undoview_on_native_event(void* self, bool (*slot)(void*, const char*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QUndoView*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_undoview_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -5561,7 +6246,8 @@ int32_t q_undoview_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QUndoView*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_undoview_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -5570,8 +6256,9 @@ int32_t q_undoview_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_undoview_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, enum QPaintDevice__PaintDeviceMetric)
+void q_undoview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -5579,7 +6266,8 @@ void q_undoview_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPainter* painter ```
+/// @param self QUndoView*
+/// @param painter QPainter*
 void q_undoview_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -5588,7 +6276,8 @@ void q_undoview_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPainter* painter ```
+/// @param self QUndoView*
+/// @param painter QPainter*
 void q_undoview_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -5597,8 +6286,9 @@ void q_undoview_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QPainter*) ```
-void q_undoview_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QPainter*)
+void q_undoview_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5606,7 +6296,8 @@ void q_undoview_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* offset ```
+/// @param self QUndoView*
+/// @param offset QPoint*
 QPaintDevice* q_undoview_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -5615,7 +6306,8 @@ QPaintDevice* q_undoview_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* offset ```
+/// @param self QUndoView*
+/// @param offset QPoint*
 QPaintDevice* q_undoview_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -5624,8 +6316,9 @@ QPaintDevice* q_undoview_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPaintDevice* (*slot)(QUndoView*, QPoint*) ```
-void q_undoview_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QPaintDevice* fn(QUndoView*, QPoint*)
+void q_undoview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -5633,7 +6326,7 @@ void q_undoview_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPainter* q_undoview_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -5642,7 +6335,7 @@ QPainter* q_undoview_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPainter* q_undoview_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -5651,8 +6344,9 @@ QPainter* q_undoview_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPainter* (*slot)() ```
-void q_undoview_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QUndoView*
+/// @param callback QPainter* fn()
+void q_undoview_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -5660,7 +6354,8 @@ void q_undoview_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QChildEvent* event ```
+/// @param self QUndoView*
+/// @param event QChildEvent*
 void q_undoview_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5669,7 +6364,8 @@ void q_undoview_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QChildEvent* event ```
+/// @param self QUndoView*
+/// @param event QChildEvent*
 void q_undoview_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5678,8 +6374,9 @@ void q_undoview_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QChildEvent*) ```
-void q_undoview_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QChildEvent*)
+void q_undoview_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -5687,7 +6384,8 @@ void q_undoview_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 void q_undoview_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5696,7 +6394,8 @@ void q_undoview_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QEvent* event ```
+/// @param self QUndoView*
+/// @param event QEvent*
 void q_undoview_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -5705,8 +6404,9 @@ void q_undoview_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QEvent*) ```
-void q_undoview_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QEvent*)
+void q_undoview_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -5714,7 +6414,8 @@ void q_undoview_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 void q_undoview_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5723,7 +6424,8 @@ void q_undoview_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 void q_undoview_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5732,8 +6434,9 @@ void q_undoview_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMetaMethod*) ```
-void q_undoview_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMetaMethod*)
+void q_undoview_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -5741,7 +6444,8 @@ void q_undoview_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 void q_undoview_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5750,7 +6454,8 @@ void q_undoview_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 void q_undoview_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -5759,8 +6464,9 @@ void q_undoview_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QMetaMethod*) ```
-void q_undoview_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QMetaMethod*)
+void q_undoview_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -5768,7 +6474,9 @@ void q_undoview_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int width, int height ```
+/// @param self QUndoView*
+/// @param width int
+/// @param height int
 void q_undoview_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
@@ -5777,7 +6485,9 @@ void q_undoview_resize_contents(void* self, int width, int height);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int width, int height ```
+/// @param self QUndoView*
+/// @param width int
+/// @param height int
 void q_undoview_qbase_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
@@ -5786,8 +6496,9 @@ void q_undoview_qbase_resize_contents(void* self, int width, int height);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int, int) ```
-void q_undoview_on_resize_contents(void* self, void (*slot)(void*, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int, int)
+void q_undoview_on_resize_contents(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QListView
 ///
@@ -5795,7 +6506,7 @@ void q_undoview_on_resize_contents(void* self, void (*slot)(void*, int, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_contents_size(void* self);
 
 /// Inherited from QListView
@@ -5804,7 +6515,7 @@ QSize* q_undoview_contents_size(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QSize* q_undoview_qbase_contents_size(void* self);
 
 /// Inherited from QListView
@@ -5813,8 +6524,9 @@ QSize* q_undoview_qbase_contents_size(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QSize* (*slot)() ```
-void q_undoview_on_contents_size(void* self, QSize* (*slot)());
+/// @param self QUndoView*
+/// @param callback QSize* fn()
+void q_undoview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
 ///
@@ -5822,7 +6534,8 @@ void q_undoview_on_contents_size(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QRect* q_undoview_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -5831,7 +6544,8 @@ QRect* q_undoview_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param index QModelIndex*
 QRect* q_undoview_qbase_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
@@ -5840,8 +6554,9 @@ QRect* q_undoview_qbase_rect_for_index(void* self, void* index);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QRect* (*slot)(QUndoView*, QModelIndex*) ```
-void q_undoview_on_rect_for_index(void* self, QRect* (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback QRect* fn(QUndoView*, QModelIndex*)
+void q_undoview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
 ///
@@ -5849,7 +6564,9 @@ void q_undoview_on_rect_for_index(void* self, QRect* (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* position, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param position QPoint*
+/// @param index QModelIndex*
 void q_undoview_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
@@ -5858,7 +6575,9 @@ void q_undoview_set_position_for_index(void* self, void* position, void* index);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* position, QModelIndex* index ```
+/// @param self QUndoView*
+/// @param position QPoint*
+/// @param index QModelIndex*
 void q_undoview_qbase_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
@@ -5867,8 +6586,9 @@ void q_undoview_qbase_set_position_for_index(void* self, void* position, void* i
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QPoint*, QModelIndex*) ```
-void q_undoview_on_set_position_for_index(void* self, void (*slot)(void*, void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QPoint*, QModelIndex*)
+void q_undoview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5876,7 +6596,9 @@ void q_undoview_on_set_position_for_index(void* self, void (*slot)(void*, void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__State
 int64_t q_undoview_state(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5885,7 +6607,9 @@ int64_t q_undoview_state(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__State
 int64_t q_undoview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5894,8 +6618,9 @@ int64_t q_undoview_qbase_state(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int64_t (*slot)() ```
-void q_undoview_on_state(void* self, int64_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int64_t fn()
+void q_undoview_on_state(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -5903,7 +6628,8 @@ void q_undoview_on_state(void* self, int64_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__State state ```
+/// @param self QUndoView*
+/// @param state enum QAbstractItemView__State
 void q_undoview_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
@@ -5912,7 +6638,8 @@ void q_undoview_set_state(void* self, int64_t state);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, enum QAbstractItemView__State state ```
+/// @param self QUndoView*
+/// @param state enum QAbstractItemView__State
 void q_undoview_qbase_set_state(void* self, int64_t state);
 
 /// Inherited from QAbstractItemView
@@ -5921,8 +6648,9 @@ void q_undoview_qbase_set_state(void* self, int64_t state);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, enum QAbstractItemView__State) ```
-void q_undoview_on_set_state(void* self, void (*slot)(void*, int64_t));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, enum QAbstractItemView__State)
+void q_undoview_on_set_state(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5930,7 +6658,7 @@ void q_undoview_on_set_state(void* self, void (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5939,7 +6667,7 @@ void q_undoview_schedule_delayed_items_layout(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5948,8 +6676,9 @@ void q_undoview_qbase_schedule_delayed_items_layout(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_schedule_delayed_items_layout(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_schedule_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -5957,7 +6686,7 @@ void q_undoview_on_schedule_delayed_items_layout(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5966,7 +6695,7 @@ void q_undoview_execute_delayed_items_layout(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
@@ -5975,8 +6704,9 @@ void q_undoview_qbase_execute_delayed_items_layout(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_execute_delayed_items_layout(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_execute_delayed_items_layout(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -5984,7 +6714,8 @@ void q_undoview_on_execute_delayed_items_layout(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QRegion* region ```
+/// @param self QUndoView*
+/// @param region QRegion*
 void q_undoview_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
@@ -5993,7 +6724,8 @@ void q_undoview_set_dirty_region(void* self, void* region);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QRegion* region ```
+/// @param self QUndoView*
+/// @param region QRegion*
 void q_undoview_qbase_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
@@ -6002,8 +6734,9 @@ void q_undoview_qbase_set_dirty_region(void* self, void* region);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QRegion*) ```
-void q_undoview_on_set_dirty_region(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QRegion*)
+void q_undoview_on_set_dirty_region(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6011,7 +6744,9 @@ void q_undoview_on_set_dirty_region(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int dx, int dy ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
 void q_undoview_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
@@ -6020,7 +6755,9 @@ void q_undoview_scroll_dirty_region(void* self, int dx, int dy);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int dx, int dy ```
+/// @param self QUndoView*
+/// @param dx int
+/// @param dy int
 void q_undoview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
@@ -6029,8 +6766,9 @@ void q_undoview_qbase_scroll_dirty_region(void* self, int dx, int dy);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int, int) ```
-void q_undoview_on_scroll_dirty_region(void* self, void (*slot)(void*, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int, int)
+void q_undoview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6038,7 +6776,7 @@ void q_undoview_on_scroll_dirty_region(void* self, void (*slot)(void*, int, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPoint* q_undoview_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6047,7 +6785,7 @@ QPoint* q_undoview_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QPoint* q_undoview_qbase_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6056,8 +6794,9 @@ QPoint* q_undoview_qbase_dirty_region_offset(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPoint* (*slot)() ```
-void q_undoview_on_dirty_region_offset(void* self, QPoint* (*slot)());
+/// @param self QUndoView*
+/// @param callback QPoint* fn()
+void q_undoview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6065,7 +6804,7 @@ void q_undoview_on_dirty_region_offset(void* self, QPoint* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6074,7 +6813,7 @@ void q_undoview_start_auto_scroll(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6083,8 +6822,9 @@ void q_undoview_qbase_start_auto_scroll(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_start_auto_scroll(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_start_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6092,7 +6832,7 @@ void q_undoview_on_start_auto_scroll(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6101,7 +6841,7 @@ void q_undoview_stop_auto_scroll(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6110,8 +6850,9 @@ void q_undoview_qbase_stop_auto_scroll(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_stop_auto_scroll(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_stop_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6119,7 +6860,7 @@ void q_undoview_on_stop_auto_scroll(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6128,7 +6869,7 @@ void q_undoview_do_auto_scroll(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6137,8 +6878,9 @@ void q_undoview_qbase_do_auto_scroll(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_do_auto_scroll(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_do_auto_scroll(void* self, void (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6146,7 +6888,9 @@ void q_undoview_on_do_auto_scroll(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__DropIndicatorPosition
 int64_t q_undoview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6155,7 +6899,9 @@ int64_t q_undoview_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
+///
+/// @return enum QAbstractItemView__DropIndicatorPosition
 int64_t q_undoview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
@@ -6164,8 +6910,9 @@ int64_t q_undoview_qbase_drop_indicator_position(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int64_t (*slot)() ```
-void q_undoview_on_drop_indicator_position(void* self, int64_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int64_t fn()
+void q_undoview_on_drop_indicator_position(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6173,7 +6920,11 @@ void q_undoview_on_drop_indicator_position(void* self, int64_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, int left, int top, int right, int bottom ```
+/// @param self QUndoView*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_undoview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -6182,7 +6933,11 @@ void q_undoview_set_viewport_margins(void* self, int left, int top, int right, i
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, int left, int top, int right, int bottom ```
+/// @param self QUndoView*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_undoview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
@@ -6191,8 +6946,9 @@ void q_undoview_qbase_set_viewport_margins(void* self, int left, int top, int ri
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, int, int, int, int) ```
-void q_undoview_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, int, int, int, int)
+void q_undoview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int));
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6200,7 +6956,7 @@ void q_undoview_on_set_viewport_margins(void* self, void (*slot)(void*, int, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QMargins* q_undoview_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -6209,7 +6965,7 @@ QMargins* q_undoview_viewport_margins(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QMargins* q_undoview_qbase_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
@@ -6218,8 +6974,9 @@ QMargins* q_undoview_qbase_viewport_margins(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMargins* (*slot)() ```
-void q_undoview_on_viewport_margins(void* self, QMargins* (*slot)());
+/// @param self QUndoView*
+/// @param callback QMargins* fn()
+void q_undoview_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
 ///
@@ -6227,7 +6984,8 @@ void q_undoview_on_viewport_margins(void* self, QMargins* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QPainter* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPainter*
 void q_undoview_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -6236,7 +6994,8 @@ void q_undoview_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QPainter* param1 ```
+/// @param self QUndoView*
+/// @param param1 QPainter*
 void q_undoview_qbase_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
@@ -6245,8 +7004,9 @@ void q_undoview_qbase_draw_frame(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, QPainter*) ```
-void q_undoview_on_draw_frame(void* self, void (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, QPainter*)
+void q_undoview_on_draw_frame(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -6254,7 +7014,7 @@ void q_undoview_on_draw_frame(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -6263,7 +7023,7 @@ void q_undoview_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -6272,8 +7032,9 @@ void q_undoview_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -6281,7 +7042,7 @@ void q_undoview_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_create(void* self);
 
 /// Inherited from QWidget
@@ -6290,7 +7051,7 @@ void q_undoview_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -6299,8 +7060,9 @@ void q_undoview_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_create(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -6308,7 +7070,7 @@ void q_undoview_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_destroy(void* self);
 
 /// Inherited from QWidget
@@ -6317,7 +7079,7 @@ void q_undoview_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -6326,8 +7088,9 @@ void q_undoview_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, void (*slot)() ```
-void q_undoview_on_destroy(void* self, void (*slot)());
+/// @param self QUndoView*
+/// @param callback void fn()
+void q_undoview_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -6335,7 +7098,7 @@ void q_undoview_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -6344,7 +7107,7 @@ bool q_undoview_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -6353,8 +7116,9 @@ bool q_undoview_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)() ```
-void q_undoview_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QUndoView*
+/// @param callback bool fn()
+void q_undoview_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -6362,7 +7126,7 @@ void q_undoview_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -6371,7 +7135,7 @@ bool q_undoview_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 bool q_undoview_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -6380,8 +7144,9 @@ bool q_undoview_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)() ```
-void q_undoview_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QUndoView*
+/// @param callback bool fn()
+void q_undoview_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -6389,7 +7154,7 @@ void q_undoview_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QObject* q_undoview_sender(void* self);
 
 /// Inherited from QObject
@@ -6398,7 +7163,7 @@ QObject* q_undoview_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 QObject* q_undoview_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -6407,8 +7172,9 @@ QObject* q_undoview_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, QObject* (*slot)() ```
-void q_undoview_on_sender(void* self, QObject* (*slot)());
+/// @param self QUndoView*
+/// @param callback QObject* fn()
+void q_undoview_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -6416,7 +7182,7 @@ void q_undoview_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -6425,7 +7191,7 @@ int32_t q_undoview_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 int32_t q_undoview_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -6434,8 +7200,9 @@ int32_t q_undoview_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)() ```
-void q_undoview_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QUndoView*
+/// @param callback int32_t fn()
+void q_undoview_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -6443,7 +7210,8 @@ void q_undoview_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, const char* signal ```
+/// @param self QUndoView*
+/// @param signal const char*
 int32_t q_undoview_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -6452,7 +7220,8 @@ int32_t q_undoview_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, const char* signal ```
+/// @param self QUndoView*
+/// @param signal const char*
 int32_t q_undoview_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -6461,8 +7230,9 @@ int32_t q_undoview_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, int32_t (*slot)(QUndoView*, const char*) ```
-void q_undoview_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QUndoView*
+/// @param callback int32_t fn(QUndoView*, const char*)
+void q_undoview_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -6470,7 +7240,8 @@ void q_undoview_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 bool q_undoview_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6479,7 +7250,8 @@ bool q_undoview_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, QMetaMethod* signal ```
+/// @param self QUndoView*
+/// @param signal QMetaMethod*
 bool q_undoview_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -6488,8 +7260,9 @@ bool q_undoview_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, bool (*slot)(QUndoView*, QMetaMethod*) ```
-void q_undoview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QUndoView*
+/// @param callback bool fn(QUndoView*, QMetaMethod*)
+void q_undoview_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -6497,7 +7270,9 @@ void q_undoview_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QUndoView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QUndoView*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_undoview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -6506,7 +7281,9 @@ double q_undoview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QUndoView* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QUndoView*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_undoview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -6515,8 +7292,9 @@ double q_undoview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QUndoView* self, double (*slot)(QUndoView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_undoview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QUndoView*
+/// @param callback double fn(QUndoView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_undoview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -6524,14 +7302,15 @@ void q_undoview_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QUndoView* self, void (*slot)(QUndoView*, const char*) ```
-void q_undoview_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QUndoView*
+/// @param callback void fn(QUndoView*, const char*)
+void q_undoview_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qundoview.html#dtor.QUndoView)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QUndoView* self ```
+/// @param self QUndoView*
 void q_undoview_delete(void* self);
 
 #endif

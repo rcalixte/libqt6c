@@ -53,8 +53,8 @@ int32_t q_progressdialog_metacall(void* self, int64_t param1, int param2, void* 
     return QProgressDialog_Metacall((QProgressDialog*)self, param1, param2, param3);
 }
 
-void q_progressdialog_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QProgressDialog_OnMetacall((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QProgressDialog_OnMetacall((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -100,8 +100,8 @@ QSize* q_progressdialog_size_hint(void* self) {
     return QProgressDialog_SizeHint((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_size_hint(void* self, QSize* (*slot)()) {
-    QProgressDialog_OnSizeHint((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_size_hint(void* self, QSize* (*callback)()) {
+    QProgressDialog_OnSizeHint((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_progressdialog_qbase_size_hint(void* self) {
@@ -175,16 +175,16 @@ void q_progressdialog_canceled(void* self) {
     QProgressDialog_Canceled((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_canceled(void* self, void (*slot)(void*)) {
-    QProgressDialog_Connect_Canceled((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_canceled(void* self, void (*callback)(void*)) {
+    QProgressDialog_Connect_Canceled((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_resize_event(void* self, void* event) {
     QProgressDialog_ResizeEvent((QProgressDialog*)self, (QResizeEvent*)event);
 }
 
-void q_progressdialog_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnResizeEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnResizeEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_qbase_resize_event(void* self, void* event) {
@@ -195,8 +195,8 @@ void q_progressdialog_close_event(void* self, void* event) {
     QProgressDialog_CloseEvent((QProgressDialog*)self, (QCloseEvent*)event);
 }
 
-void q_progressdialog_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnCloseEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnCloseEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_qbase_close_event(void* self, void* event) {
@@ -207,8 +207,8 @@ void q_progressdialog_change_event(void* self, void* event) {
     QProgressDialog_ChangeEvent((QProgressDialog*)self, (QEvent*)event);
 }
 
-void q_progressdialog_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnChangeEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnChangeEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_qbase_change_event(void* self, void* event) {
@@ -219,8 +219,8 @@ void q_progressdialog_show_event(void* self, void* event) {
     QProgressDialog_ShowEvent((QProgressDialog*)self, (QShowEvent*)event);
 }
 
-void q_progressdialog_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnShowEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnShowEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_qbase_show_event(void* self, void* event) {
@@ -231,8 +231,8 @@ void q_progressdialog_force_show(void* self) {
     QProgressDialog_ForceShow((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_force_show(void* self, void (*slot)()) {
-    QProgressDialog_OnForceShow((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_force_show(void* self, void (*callback)()) {
+    QProgressDialog_OnForceShow((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_qbase_force_show(void* self) {
@@ -277,24 +277,24 @@ void q_progressdialog_finished(void* self, int result) {
     QDialog_Finished((QDialog*)self, result);
 }
 
-void q_progressdialog_on_finished(void* self, void (*slot)(void*, int)) {
-    QDialog_Connect_Finished((QDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_finished(void* self, void (*callback)(void*, int)) {
+    QDialog_Connect_Finished((QDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_accepted(void* self) {
     QDialog_Accepted((QDialog*)self);
 }
 
-void q_progressdialog_on_accepted(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_accepted(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_rejected(void* self) {
     QDialog_Rejected((QDialog*)self);
 }
 
-void q_progressdialog_on_rejected(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_rejected(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
 uintptr_t q_progressdialog_win_id(void* self) {
@@ -1323,32 +1323,32 @@ void q_progressdialog_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_progressdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_progressdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_progressdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_progressdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_progressdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_progressdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_progressdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_progressdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_progressdialog_input_method_hints(void* self) {
@@ -1519,12 +1519,16 @@ const char** q_progressdialog_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_progressdialog_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1542,8 +1546,8 @@ void q_progressdialog_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_progressdialog_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_progressdialog_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_progressdialog_parent(void* self) {
@@ -1578,8 +1582,8 @@ void q_progressdialog_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_progressdialog_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_progressdialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_painting_active(void* self) {
@@ -1642,8 +1646,8 @@ void q_progressdialog_qbase_set_visible(void* self, bool visible) {
     QProgressDialog_QBaseSetVisible((QProgressDialog*)self, visible);
 }
 
-void q_progressdialog_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QProgressDialog_OnSetVisible((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QProgressDialog_OnSetVisible((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_progressdialog_minimum_size_hint(void* self) {
@@ -1654,8 +1658,8 @@ QSize* q_progressdialog_qbase_minimum_size_hint(void* self) {
     return QProgressDialog_QBaseMinimumSizeHint((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QProgressDialog_OnMinimumSizeHint((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QProgressDialog_OnMinimumSizeHint((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_open(void* self) {
@@ -1666,8 +1670,8 @@ void q_progressdialog_qbase_open(void* self) {
     QProgressDialog_QBaseOpen((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_open(void* self, void (*slot)()) {
-    QProgressDialog_OnOpen((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_open(void* self, void (*callback)()) {
+    QProgressDialog_OnOpen((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_exec(void* self) {
@@ -1678,8 +1682,8 @@ int32_t q_progressdialog_qbase_exec(void* self) {
     return QProgressDialog_QBaseExec((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_exec(void* self, int32_t (*slot)()) {
-    QProgressDialog_OnExec((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_exec(void* self, int32_t (*callback)()) {
+    QProgressDialog_OnExec((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_done(void* self, int param1) {
@@ -1690,8 +1694,8 @@ void q_progressdialog_qbase_done(void* self, int param1) {
     QProgressDialog_QBaseDone((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_done(void* self, void (*slot)(void*, int)) {
-    QProgressDialog_OnDone((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_done(void* self, void (*callback)(void*, int)) {
+    QProgressDialog_OnDone((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_accept(void* self) {
@@ -1702,8 +1706,8 @@ void q_progressdialog_qbase_accept(void* self) {
     QProgressDialog_QBaseAccept((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_accept(void* self, void (*slot)()) {
-    QProgressDialog_OnAccept((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_accept(void* self, void (*callback)()) {
+    QProgressDialog_OnAccept((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_reject(void* self) {
@@ -1714,8 +1718,8 @@ void q_progressdialog_qbase_reject(void* self) {
     QProgressDialog_QBaseReject((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_reject(void* self, void (*slot)()) {
-    QProgressDialog_OnReject((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_reject(void* self, void (*callback)()) {
+    QProgressDialog_OnReject((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_key_press_event(void* self, void* param1) {
@@ -1726,8 +1730,8 @@ void q_progressdialog_qbase_key_press_event(void* self, void* param1) {
     QProgressDialog_QBaseKeyPressEvent((QProgressDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_progressdialog_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnKeyPressEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnKeyPressEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_context_menu_event(void* self, void* param1) {
@@ -1738,8 +1742,8 @@ void q_progressdialog_qbase_context_menu_event(void* self, void* param1) {
     QProgressDialog_QBaseContextMenuEvent((QProgressDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_progressdialog_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnContextMenuEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnContextMenuEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_event_filter(void* self, void* param1, void* param2) {
@@ -1750,8 +1754,8 @@ bool q_progressdialog_qbase_event_filter(void* self, void* param1, void* param2)
     return QProgressDialog_QBaseEventFilter((QProgressDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_progressdialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QProgressDialog_OnEventFilter((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QProgressDialog_OnEventFilter((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_dev_type(void* self) {
@@ -1762,8 +1766,8 @@ int32_t q_progressdialog_qbase_dev_type(void* self) {
     return QProgressDialog_QBaseDevType((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_dev_type(void* self, int32_t (*slot)()) {
-    QProgressDialog_OnDevType((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_dev_type(void* self, int32_t (*callback)()) {
+    QProgressDialog_OnDevType((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_height_for_width(void* self, int param1) {
@@ -1774,8 +1778,8 @@ int32_t q_progressdialog_qbase_height_for_width(void* self, int param1) {
     return QProgressDialog_QBaseHeightForWidth((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QProgressDialog_OnHeightForWidth((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QProgressDialog_OnHeightForWidth((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_has_height_for_width(void* self) {
@@ -1786,8 +1790,8 @@ bool q_progressdialog_qbase_has_height_for_width(void* self) {
     return QProgressDialog_QBaseHasHeightForWidth((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_has_height_for_width(void* self, bool (*slot)()) {
-    QProgressDialog_OnHasHeightForWidth((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_has_height_for_width(void* self, bool (*callback)()) {
+    QProgressDialog_OnHasHeightForWidth((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_progressdialog_paint_engine(void* self) {
@@ -1798,8 +1802,8 @@ QPaintEngine* q_progressdialog_qbase_paint_engine(void* self) {
     return QProgressDialog_QBasePaintEngine((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QProgressDialog_OnPaintEngine((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QProgressDialog_OnPaintEngine((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_event(void* self, void* event) {
@@ -1810,8 +1814,8 @@ bool q_progressdialog_qbase_event(void* self, void* event) {
     return QProgressDialog_QBaseEvent((QProgressDialog*)self, (QEvent*)event);
 }
 
-void q_progressdialog_on_event(void* self, bool (*slot)(void*, void*)) {
-    QProgressDialog_OnEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_event(void* self, bool (*callback)(void*, void*)) {
+    QProgressDialog_OnEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_mouse_press_event(void* self, void* event) {
@@ -1822,8 +1826,8 @@ void q_progressdialog_qbase_mouse_press_event(void* self, void* event) {
     QProgressDialog_QBaseMousePressEvent((QProgressDialog*)self, (QMouseEvent*)event);
 }
 
-void q_progressdialog_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnMousePressEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnMousePressEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_mouse_release_event(void* self, void* event) {
@@ -1834,8 +1838,8 @@ void q_progressdialog_qbase_mouse_release_event(void* self, void* event) {
     QProgressDialog_QBaseMouseReleaseEvent((QProgressDialog*)self, (QMouseEvent*)event);
 }
 
-void q_progressdialog_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnMouseReleaseEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnMouseReleaseEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_mouse_double_click_event(void* self, void* event) {
@@ -1846,8 +1850,8 @@ void q_progressdialog_qbase_mouse_double_click_event(void* self, void* event) {
     QProgressDialog_QBaseMouseDoubleClickEvent((QProgressDialog*)self, (QMouseEvent*)event);
 }
 
-void q_progressdialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnMouseDoubleClickEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnMouseDoubleClickEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_mouse_move_event(void* self, void* event) {
@@ -1858,8 +1862,8 @@ void q_progressdialog_qbase_mouse_move_event(void* self, void* event) {
     QProgressDialog_QBaseMouseMoveEvent((QProgressDialog*)self, (QMouseEvent*)event);
 }
 
-void q_progressdialog_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnMouseMoveEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnMouseMoveEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_wheel_event(void* self, void* event) {
@@ -1870,8 +1874,8 @@ void q_progressdialog_qbase_wheel_event(void* self, void* event) {
     QProgressDialog_QBaseWheelEvent((QProgressDialog*)self, (QWheelEvent*)event);
 }
 
-void q_progressdialog_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnWheelEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnWheelEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_key_release_event(void* self, void* event) {
@@ -1882,8 +1886,8 @@ void q_progressdialog_qbase_key_release_event(void* self, void* event) {
     QProgressDialog_QBaseKeyReleaseEvent((QProgressDialog*)self, (QKeyEvent*)event);
 }
 
-void q_progressdialog_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnKeyReleaseEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnKeyReleaseEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_focus_in_event(void* self, void* event) {
@@ -1894,8 +1898,8 @@ void q_progressdialog_qbase_focus_in_event(void* self, void* event) {
     QProgressDialog_QBaseFocusInEvent((QProgressDialog*)self, (QFocusEvent*)event);
 }
 
-void q_progressdialog_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnFocusInEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnFocusInEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_focus_out_event(void* self, void* event) {
@@ -1906,8 +1910,8 @@ void q_progressdialog_qbase_focus_out_event(void* self, void* event) {
     QProgressDialog_QBaseFocusOutEvent((QProgressDialog*)self, (QFocusEvent*)event);
 }
 
-void q_progressdialog_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnFocusOutEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnFocusOutEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_enter_event(void* self, void* event) {
@@ -1918,8 +1922,8 @@ void q_progressdialog_qbase_enter_event(void* self, void* event) {
     QProgressDialog_QBaseEnterEvent((QProgressDialog*)self, (QEnterEvent*)event);
 }
 
-void q_progressdialog_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnEnterEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnEnterEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_leave_event(void* self, void* event) {
@@ -1930,8 +1934,8 @@ void q_progressdialog_qbase_leave_event(void* self, void* event) {
     QProgressDialog_QBaseLeaveEvent((QProgressDialog*)self, (QEvent*)event);
 }
 
-void q_progressdialog_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnLeaveEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnLeaveEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_paint_event(void* self, void* event) {
@@ -1942,8 +1946,8 @@ void q_progressdialog_qbase_paint_event(void* self, void* event) {
     QProgressDialog_QBasePaintEvent((QProgressDialog*)self, (QPaintEvent*)event);
 }
 
-void q_progressdialog_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnPaintEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnPaintEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_move_event(void* self, void* event) {
@@ -1954,8 +1958,8 @@ void q_progressdialog_qbase_move_event(void* self, void* event) {
     QProgressDialog_QBaseMoveEvent((QProgressDialog*)self, (QMoveEvent*)event);
 }
 
-void q_progressdialog_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnMoveEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnMoveEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_tablet_event(void* self, void* event) {
@@ -1966,8 +1970,8 @@ void q_progressdialog_qbase_tablet_event(void* self, void* event) {
     QProgressDialog_QBaseTabletEvent((QProgressDialog*)self, (QTabletEvent*)event);
 }
 
-void q_progressdialog_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnTabletEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnTabletEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_action_event(void* self, void* event) {
@@ -1978,8 +1982,8 @@ void q_progressdialog_qbase_action_event(void* self, void* event) {
     QProgressDialog_QBaseActionEvent((QProgressDialog*)self, (QActionEvent*)event);
 }
 
-void q_progressdialog_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnActionEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnActionEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_drag_enter_event(void* self, void* event) {
@@ -1990,8 +1994,8 @@ void q_progressdialog_qbase_drag_enter_event(void* self, void* event) {
     QProgressDialog_QBaseDragEnterEvent((QProgressDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_progressdialog_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnDragEnterEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnDragEnterEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_drag_move_event(void* self, void* event) {
@@ -2002,8 +2006,8 @@ void q_progressdialog_qbase_drag_move_event(void* self, void* event) {
     QProgressDialog_QBaseDragMoveEvent((QProgressDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_progressdialog_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnDragMoveEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnDragMoveEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_drag_leave_event(void* self, void* event) {
@@ -2014,8 +2018,8 @@ void q_progressdialog_qbase_drag_leave_event(void* self, void* event) {
     QProgressDialog_QBaseDragLeaveEvent((QProgressDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_progressdialog_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnDragLeaveEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnDragLeaveEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_drop_event(void* self, void* event) {
@@ -2026,8 +2030,8 @@ void q_progressdialog_qbase_drop_event(void* self, void* event) {
     QProgressDialog_QBaseDropEvent((QProgressDialog*)self, (QDropEvent*)event);
 }
 
-void q_progressdialog_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnDropEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnDropEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_hide_event(void* self, void* event) {
@@ -2038,8 +2042,8 @@ void q_progressdialog_qbase_hide_event(void* self, void* event) {
     QProgressDialog_QBaseHideEvent((QProgressDialog*)self, (QHideEvent*)event);
 }
 
-void q_progressdialog_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnHideEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnHideEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2050,8 +2054,8 @@ bool q_progressdialog_qbase_native_event(void* self, const char* eventType, void
     return QProgressDialog_QBaseNativeEvent((QProgressDialog*)self, qstring(eventType), message, result);
 }
 
-void q_progressdialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QProgressDialog_OnNativeEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QProgressDialog_OnNativeEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_metric(void* self, int64_t param1) {
@@ -2062,8 +2066,8 @@ int32_t q_progressdialog_qbase_metric(void* self, int64_t param1) {
     return QProgressDialog_QBaseMetric((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QProgressDialog_OnMetric((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QProgressDialog_OnMetric((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_init_painter(void* self, void* painter) {
@@ -2074,8 +2078,8 @@ void q_progressdialog_qbase_init_painter(void* self, void* painter) {
     QProgressDialog_QBaseInitPainter((QProgressDialog*)self, (QPainter*)painter);
 }
 
-void q_progressdialog_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnInitPainter((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnInitPainter((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_progressdialog_redirected(void* self, void* offset) {
@@ -2086,8 +2090,8 @@ QPaintDevice* q_progressdialog_qbase_redirected(void* self, void* offset) {
     return QProgressDialog_QBaseRedirected((QProgressDialog*)self, (QPoint*)offset);
 }
 
-void q_progressdialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QProgressDialog_OnRedirected((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QProgressDialog_OnRedirected((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_progressdialog_shared_painter(void* self) {
@@ -2098,8 +2102,8 @@ QPainter* q_progressdialog_qbase_shared_painter(void* self) {
     return QProgressDialog_QBaseSharedPainter((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QProgressDialog_OnSharedPainter((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QProgressDialog_OnSharedPainter((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_input_method_event(void* self, void* param1) {
@@ -2110,8 +2114,8 @@ void q_progressdialog_qbase_input_method_event(void* self, void* param1) {
     QProgressDialog_QBaseInputMethodEvent((QProgressDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_progressdialog_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnInputMethodEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnInputMethodEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QVariant* q_progressdialog_input_method_query(void* self, int64_t param1) {
@@ -2122,8 +2126,8 @@ QVariant* q_progressdialog_qbase_input_method_query(void* self, int64_t param1) 
     return QProgressDialog_QBaseInputMethodQuery((QProgressDialog*)self, param1);
 }
 
-void q_progressdialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QProgressDialog_OnInputMethodQuery((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QProgressDialog_OnInputMethodQuery((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_focus_next_prev_child(void* self, bool next) {
@@ -2134,8 +2138,8 @@ bool q_progressdialog_qbase_focus_next_prev_child(void* self, bool next) {
     return QProgressDialog_QBaseFocusNextPrevChild((QProgressDialog*)self, next);
 }
 
-void q_progressdialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QProgressDialog_OnFocusNextPrevChild((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QProgressDialog_OnFocusNextPrevChild((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_timer_event(void* self, void* event) {
@@ -2146,8 +2150,8 @@ void q_progressdialog_qbase_timer_event(void* self, void* event) {
     QProgressDialog_QBaseTimerEvent((QProgressDialog*)self, (QTimerEvent*)event);
 }
 
-void q_progressdialog_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnTimerEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnTimerEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_child_event(void* self, void* event) {
@@ -2158,8 +2162,8 @@ void q_progressdialog_qbase_child_event(void* self, void* event) {
     QProgressDialog_QBaseChildEvent((QProgressDialog*)self, (QChildEvent*)event);
 }
 
-void q_progressdialog_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnChildEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnChildEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_custom_event(void* self, void* event) {
@@ -2170,8 +2174,8 @@ void q_progressdialog_qbase_custom_event(void* self, void* event) {
     QProgressDialog_QBaseCustomEvent((QProgressDialog*)self, (QEvent*)event);
 }
 
-void q_progressdialog_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnCustomEvent((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnCustomEvent((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_connect_notify(void* self, void* signal) {
@@ -2182,8 +2186,8 @@ void q_progressdialog_qbase_connect_notify(void* self, void* signal) {
     QProgressDialog_QBaseConnectNotify((QProgressDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_progressdialog_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnConnectNotify((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnConnectNotify((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_disconnect_notify(void* self, void* signal) {
@@ -2194,8 +2198,8 @@ void q_progressdialog_qbase_disconnect_notify(void* self, void* signal) {
     QProgressDialog_QBaseDisconnectNotify((QProgressDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_progressdialog_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnDisconnectNotify((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnDisconnectNotify((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_adjust_position(void* self, void* param1) {
@@ -2206,8 +2210,8 @@ void q_progressdialog_qbase_adjust_position(void* self, void* param1) {
     QProgressDialog_QBaseAdjustPosition((QProgressDialog*)self, (QWidget*)param1);
 }
 
-void q_progressdialog_on_adjust_position(void* self, void (*slot)(void*, void*)) {
-    QProgressDialog_OnAdjustPosition((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
+    QProgressDialog_OnAdjustPosition((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_update_micro_focus(void* self) {
@@ -2218,8 +2222,8 @@ void q_progressdialog_qbase_update_micro_focus(void* self) {
     QProgressDialog_QBaseUpdateMicroFocus((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_update_micro_focus(void* self, void (*slot)()) {
-    QProgressDialog_OnUpdateMicroFocus((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_update_micro_focus(void* self, void (*callback)()) {
+    QProgressDialog_OnUpdateMicroFocus((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_create(void* self) {
@@ -2230,8 +2234,8 @@ void q_progressdialog_qbase_create(void* self) {
     QProgressDialog_QBaseCreate((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_create(void* self, void (*slot)()) {
-    QProgressDialog_OnCreate((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_create(void* self, void (*callback)()) {
+    QProgressDialog_OnCreate((QProgressDialog*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_destroy(void* self) {
@@ -2242,8 +2246,8 @@ void q_progressdialog_qbase_destroy(void* self) {
     QProgressDialog_QBaseDestroy((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_destroy(void* self, void (*slot)()) {
-    QProgressDialog_OnDestroy((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_destroy(void* self, void (*callback)()) {
+    QProgressDialog_OnDestroy((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_focus_next_child(void* self) {
@@ -2254,8 +2258,8 @@ bool q_progressdialog_qbase_focus_next_child(void* self) {
     return QProgressDialog_QBaseFocusNextChild((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_focus_next_child(void* self, bool (*slot)()) {
-    QProgressDialog_OnFocusNextChild((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_focus_next_child(void* self, bool (*callback)()) {
+    QProgressDialog_OnFocusNextChild((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_focus_previous_child(void* self) {
@@ -2266,8 +2270,8 @@ bool q_progressdialog_qbase_focus_previous_child(void* self) {
     return QProgressDialog_QBaseFocusPreviousChild((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_focus_previous_child(void* self, bool (*slot)()) {
-    QProgressDialog_OnFocusPreviousChild((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_focus_previous_child(void* self, bool (*callback)()) {
+    QProgressDialog_OnFocusPreviousChild((QProgressDialog*)self, (intptr_t)callback);
 }
 
 QObject* q_progressdialog_sender(void* self) {
@@ -2278,8 +2282,8 @@ QObject* q_progressdialog_qbase_sender(void* self) {
     return QProgressDialog_QBaseSender((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_sender(void* self, QObject* (*slot)()) {
-    QProgressDialog_OnSender((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_sender(void* self, QObject* (*callback)()) {
+    QProgressDialog_OnSender((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_sender_signal_index(void* self) {
@@ -2290,8 +2294,8 @@ int32_t q_progressdialog_qbase_sender_signal_index(void* self) {
     return QProgressDialog_QBaseSenderSignalIndex((QProgressDialog*)self);
 }
 
-void q_progressdialog_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QProgressDialog_OnSenderSignalIndex((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QProgressDialog_OnSenderSignalIndex((QProgressDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_progressdialog_receivers(void* self, const char* signal) {
@@ -2302,8 +2306,8 @@ int32_t q_progressdialog_qbase_receivers(void* self, const char* signal) {
     return QProgressDialog_QBaseReceivers((QProgressDialog*)self, signal);
 }
 
-void q_progressdialog_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QProgressDialog_OnReceivers((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QProgressDialog_OnReceivers((QProgressDialog*)self, (intptr_t)callback);
 }
 
 bool q_progressdialog_is_signal_connected(void* self, void* signal) {
@@ -2314,8 +2318,8 @@ bool q_progressdialog_qbase_is_signal_connected(void* self, void* signal) {
     return QProgressDialog_QBaseIsSignalConnected((QProgressDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_progressdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QProgressDialog_OnIsSignalConnected((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QProgressDialog_OnIsSignalConnected((QProgressDialog*)self, (intptr_t)callback);
 }
 
 double q_progressdialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2326,12 +2330,12 @@ double q_progressdialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, 
     return QProgressDialog_QBaseGetDecodedMetricF((QProgressDialog*)self, metricA, metricB);
 }
 
-void q_progressdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QProgressDialog_OnGetDecodedMetricF((QProgressDialog*)self, (intptr_t)slot);
+void q_progressdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QProgressDialog_OnGetDecodedMetricF((QProgressDialog*)self, (intptr_t)callback);
 }
 
-void q_progressdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_progressdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_progressdialog_delete(void* self) {

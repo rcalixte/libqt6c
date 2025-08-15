@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,492 +15,584 @@
 
 /// q_scilexermarkdown_new constructs a new QsciLexerMarkdown object.
 ///
-///
 QsciLexerMarkdown* q_scilexermarkdown_new();
 
 /// q_scilexermarkdown_new2 constructs a new QsciLexerMarkdown object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QsciLexerMarkdown* q_scilexermarkdown_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const QMetaObject* q_scilexermarkdown_meta_object(void* self);
 
-/// ``` QsciLexerMarkdown* self, const char* param1 ```
+/// @param self QsciLexerMarkdown*
+/// @param param1 const char*
 void* q_scilexermarkdown_metacast(void* self, const char* param1);
 
-/// ``` QsciLexerMarkdown* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciLexerMarkdown*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scilexermarkdown_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)(QsciLexerMarkdown*, enum QMetaObject__Call, int, void*) ```
-void q_scilexermarkdown_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn(QsciLexerMarkdown*, enum QMetaObject__Call, int, void*)
+void q_scilexermarkdown_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QsciLexerMarkdown* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QsciLexerMarkdown*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_scilexermarkdown_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_scilexermarkdown_tr(const char* s);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_language(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_lexer(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_default_color(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QFont* q_scilexermarkdown_default_font(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_default_paper(void* self, int style);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerMarkdown*
+/// @param style int
 const char* q_scilexermarkdown_description(void* self, int style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_scilexermarkdown_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_scilexermarkdown_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QsciAbstractAPIs* q_scilexermarkdown_apis(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_auto_indent_style(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QsciScintilla* q_scilexermarkdown_editor(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QsciAbstractAPIs* apis ```
+/// @param self QsciLexerMarkdown*
+/// @param apis QsciAbstractAPIs*
 void q_scilexermarkdown_set_a_p_is(void* self, void* apis);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
 void q_scilexermarkdown_set_default_color(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QFont* f ```
+/// @param self QsciLexerMarkdown*
+/// @param f QFont*
 void q_scilexermarkdown_set_default_font(void* self, void* f);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
 void q_scilexermarkdown_set_default_paper(void* self, void* c);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
 bool q_scilexermarkdown_read_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
 bool q_scilexermarkdown_write_settings(void* self, void* qs);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_color_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QColor*, int) ```
-void q_scilexermarkdown_on_color_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QColor*, int)
+void q_scilexermarkdown_on_color_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, bool eolfilled, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param eolfilled bool
+/// @param style int
 void q_scilexermarkdown_eol_fill_changed(void* self, bool eolfilled, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, bool, int) ```
-void q_scilexermarkdown_on_eol_fill_changed(void* self, void (*slot)(void*, bool, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, bool, int)
+void q_scilexermarkdown_on_eol_fill_changed(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QFont* f, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param f QFont*
+/// @param style int
 void q_scilexermarkdown_font_changed(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QFont*, int) ```
-void q_scilexermarkdown_on_font_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QFont*, int)
+void q_scilexermarkdown_on_font_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_paper_changed(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QColor*, int) ```
-void q_scilexermarkdown_on_paper_changed(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QColor*, int)
+void q_scilexermarkdown_on_paper_changed(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, const char* prop, const char* val ```
+/// @param self QsciLexerMarkdown*
+/// @param prop const char*
+/// @param val const char*
 void q_scilexermarkdown_property_changed(void* self, const char* prop, const char* val);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, const char*, const char*) ```
-void q_scilexermarkdown_on_property_changed(void* self, void (*slot)(void*, const char*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, const char*, const char*)
+void q_scilexermarkdown_on_property_changed(void* self, void (*callback)(void*, const char*, const char*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_read_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_write_settings2(void* self, void* qs, const char* prefix);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QsciLexerMarkdown* self, char* name ```
+/// @param self QsciLexerMarkdown*
+/// @param name char*
 void q_scilexermarkdown_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QsciLexerMarkdown* self, bool b ```
+/// @param self QsciLexerMarkdown*
+/// @param b bool
 bool q_scilexermarkdown_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QThread* q_scilexermarkdown_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciLexerMarkdown* self, QThread* thread ```
+/// @param self QsciLexerMarkdown*
+/// @param thread QThread*
 bool q_scilexermarkdown_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciLexerMarkdown* self, int interval ```
+/// @param self QsciLexerMarkdown*
+/// @param interval int
 int32_t q_scilexermarkdown_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciLexerMarkdown* self, int id ```
+/// @param self QsciLexerMarkdown*
+/// @param id int
 void q_scilexermarkdown_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QsciLexerMarkdown* self, enum Qt__TimerId id ```
+/// @param self QsciLexerMarkdown*
+/// @param id enum Qt__TimerId
 void q_scilexermarkdown_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 libqt_list /* of QObject* */ q_scilexermarkdown_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* parent ```
+/// @param self QsciLexerMarkdown*
+/// @param parent QObject*
 void q_scilexermarkdown_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* filterObj ```
+/// @param self QsciLexerMarkdown*
+/// @param filterObj QObject*
 void q_scilexermarkdown_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* obj ```
+/// @param self QsciLexerMarkdown*
+/// @param obj QObject*
 void q_scilexermarkdown_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_scilexermarkdown_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QsciLexerMarkdown*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_scilexermarkdown_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_scilexermarkdown_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_scilexermarkdown_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QsciLexerMarkdown* self, const char* name, QVariant* value ```
+/// @param self QsciLexerMarkdown*
+/// @param name const char*
+/// @param value QVariant*
 bool q_scilexermarkdown_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QsciLexerMarkdown* self, const char* name ```
+/// @param self QsciLexerMarkdown*
+/// @param name const char*
 QVariant* q_scilexermarkdown_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QsciLexerMarkdown*
 const char** q_scilexermarkdown_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QBindingStorage* q_scilexermarkdown_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const QBindingStorage* q_scilexermarkdown_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*) ```
-void q_scilexermarkdown_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*)
+void q_scilexermarkdown_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QObject* q_scilexermarkdown_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QsciLexerMarkdown* self, const char* classname ```
+/// @param self QsciLexerMarkdown*
+/// @param classname const char*
 bool q_scilexermarkdown_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QsciLexerMarkdown* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QsciLexerMarkdown*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_scilexermarkdown_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QsciLexerMarkdown* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QsciLexerMarkdown*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_scilexermarkdown_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scilexermarkdown_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QsciLexerMarkdown*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_scilexermarkdown_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMarkdown* self, QObject* param1 ```
+/// @param self QsciLexerMarkdown*
+/// @param param1 QObject*
 void q_scilexermarkdown_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QObject*) ```
-void q_scilexermarkdown_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QObject*)
+void q_scilexermarkdown_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
@@ -509,7 +600,7 @@ void q_scilexermarkdown_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -518,7 +609,7 @@ int32_t q_scilexermarkdown_lexer_id(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_lexer_id(void* self);
 
 /// Inherited from QsciLexer
@@ -527,25 +618,30 @@ int32_t q_scilexermarkdown_qbase_lexer_id(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_lexer_id(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_lexer_id(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_qbase_auto_completion_fillups(void* self);
 
 /// Inherited from QsciLexer
@@ -554,25 +650,30 @@ const char* q_scilexermarkdown_qbase_auto_completion_fillups(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)() ```
-void q_scilexermarkdown_on_auto_completion_fillups(void* self, const char* (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn()
+void q_scilexermarkdown_on_auto_completion_fillups(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char** q_scilexermarkdown_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char** q_scilexermarkdown_qbase_auto_completion_word_separators(void* self);
 
 /// Inherited from QsciLexer
@@ -581,25 +682,32 @@ const char** q_scilexermarkdown_qbase_auto_completion_word_separators(void* self
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char** (*slot)() ```
-void q_scilexermarkdown_on_auto_completion_word_separators(void* self, const char** (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback const char** fn()
+void q_scilexermarkdown_on_auto_completion_word_separators(void* self, const char** (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_qbase_block_end(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -608,8 +716,9 @@ const char* q_scilexermarkdown_qbase_block_end(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, int*) ```
-void q_scilexermarkdown_on_block_end(void* self, const char* (*slot)(void*, int*));
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn(QsciLexerMarkdown*, int*)
+void q_scilexermarkdown_on_block_end(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -617,7 +726,7 @@ void q_scilexermarkdown_on_block_end(void* self, const char* (*slot)(void*, int*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -626,7 +735,7 @@ int32_t q_scilexermarkdown_block_lookback(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_block_lookback(void* self);
 
 /// Inherited from QsciLexer
@@ -635,25 +744,32 @@ int32_t q_scilexermarkdown_qbase_block_lookback(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_block_lookback(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_block_lookback(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_qbase_block_start(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -662,25 +778,32 @@ const char* q_scilexermarkdown_qbase_block_start(void* self, int* style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, int*) ```
-void q_scilexermarkdown_on_block_start(void* self, const char* (*slot)(void*, int*));
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn(QsciLexerMarkdown*, int*)
+void q_scilexermarkdown_on_block_start(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_block_start_keyword(void* self, int* style);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int* style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int*
 const char* q_scilexermarkdown_qbase_block_start_keyword(void* self, int* style);
 
 /// Inherited from QsciLexer
@@ -689,8 +812,9 @@ const char* q_scilexermarkdown_qbase_block_start_keyword(void* self, int* style)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, int*) ```
-void q_scilexermarkdown_on_block_start_keyword(void* self, const char* (*slot)(void*, int*));
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn(QsciLexerMarkdown*, int*)
+void q_scilexermarkdown_on_block_start_keyword(void* self, const char* (*callback)(void*, int*));
 
 /// Inherited from QsciLexer
 ///
@@ -698,7 +822,7 @@ void q_scilexermarkdown_on_block_start_keyword(void* self, const char* (*slot)(v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_brace_style(void* self);
 
 /// Inherited from QsciLexer
@@ -707,7 +831,7 @@ int32_t q_scilexermarkdown_brace_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_brace_style(void* self);
 
 /// Inherited from QsciLexer
@@ -716,8 +840,9 @@ int32_t q_scilexermarkdown_qbase_brace_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_brace_style(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_brace_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -725,7 +850,7 @@ void q_scilexermarkdown_on_brace_style(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -734,7 +859,7 @@ bool q_scilexermarkdown_case_sensitive(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 bool q_scilexermarkdown_qbase_case_sensitive(void* self);
 
 /// Inherited from QsciLexer
@@ -743,8 +868,9 @@ bool q_scilexermarkdown_qbase_case_sensitive(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)() ```
-void q_scilexermarkdown_on_case_sensitive(void* self, bool (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn()
+void q_scilexermarkdown_on_case_sensitive(void* self, bool (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -752,7 +878,8 @@ void q_scilexermarkdown_on_case_sensitive(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -761,7 +888,8 @@ QColor* q_scilexermarkdown_color(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_qbase_color(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -770,8 +898,9 @@ QColor* q_scilexermarkdown_qbase_color(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_color(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QColor* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -779,7 +908,8 @@ void q_scilexermarkdown_on_color(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 bool q_scilexermarkdown_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -788,7 +918,8 @@ bool q_scilexermarkdown_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 bool q_scilexermarkdown_qbase_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -797,8 +928,9 @@ bool q_scilexermarkdown_qbase_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_eol_fill(void* self, bool (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -806,7 +938,8 @@ void q_scilexermarkdown_on_eol_fill(void* self, bool (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QFont* q_scilexermarkdown_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -815,7 +948,8 @@ QFont* q_scilexermarkdown_font(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QFont* q_scilexermarkdown_qbase_font(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -824,8 +958,9 @@ QFont* q_scilexermarkdown_qbase_font(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QFont* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_font(void* self, QFont* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QFont* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_font(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -833,7 +968,7 @@ void q_scilexermarkdown_on_font(void* self, QFont* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -842,7 +977,7 @@ int32_t q_scilexermarkdown_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_indentation_guide_view(void* self);
 
 /// Inherited from QsciLexer
@@ -851,25 +986,32 @@ int32_t q_scilexermarkdown_qbase_indentation_guide_view(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_indentation_guide_view(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_indentation_guide_view(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int set ```
+/// @param self QsciLexerMarkdown*
+/// @param set int
 const char* q_scilexermarkdown_keywords(void* self, int set);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int set ```
+/// @param self QsciLexerMarkdown*
+/// @param set int
 const char* q_scilexermarkdown_qbase_keywords(void* self, int set);
 
 /// Inherited from QsciLexer
@@ -878,8 +1020,9 @@ const char* q_scilexermarkdown_qbase_keywords(void* self, int set);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_keywords(void* self, const char* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_keywords(void* self, const char* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -887,7 +1030,7 @@ void q_scilexermarkdown_on_keywords(void* self, const char* (*slot)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -896,7 +1039,7 @@ int32_t q_scilexermarkdown_default_style(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_default_style(void* self);
 
 /// Inherited from QsciLexer
@@ -905,8 +1048,9 @@ int32_t q_scilexermarkdown_qbase_default_style(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_default_style(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_default_style(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -914,7 +1058,8 @@ void q_scilexermarkdown_on_default_style(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -923,7 +1068,8 @@ QColor* q_scilexermarkdown_paper(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_qbase_paper(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -932,8 +1078,9 @@ QColor* q_scilexermarkdown_qbase_paper(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_paper(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QColor* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -941,7 +1088,8 @@ void q_scilexermarkdown_on_paper(void* self, QColor* (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -950,7 +1098,8 @@ QColor* q_scilexermarkdown_default_color2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_qbase_default_color2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -959,8 +1108,9 @@ QColor* q_scilexermarkdown_qbase_default_color2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_default_color2(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QColor* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -968,7 +1118,8 @@ void q_scilexermarkdown_on_default_color2(void* self, QColor* (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 bool q_scilexermarkdown_default_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -977,7 +1128,8 @@ bool q_scilexermarkdown_default_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 bool q_scilexermarkdown_qbase_default_eol_fill(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -986,8 +1138,9 @@ bool q_scilexermarkdown_qbase_default_eol_fill(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_default_eol_fill(void* self, bool (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_default_eol_fill(void* self, bool (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -995,7 +1148,8 @@ void q_scilexermarkdown_on_default_eol_fill(void* self, bool (*slot)(void*, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QFont* q_scilexermarkdown_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1004,7 +1158,8 @@ QFont* q_scilexermarkdown_default_font2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QFont* q_scilexermarkdown_qbase_default_font2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1013,8 +1168,9 @@ QFont* q_scilexermarkdown_qbase_default_font2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QFont* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_default_font2(void* self, QFont* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QFont* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1022,7 +1178,8 @@ void q_scilexermarkdown_on_default_font2(void* self, QFont* (*slot)(void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1031,7 +1188,8 @@ QColor* q_scilexermarkdown_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param style int
 QColor* q_scilexermarkdown_qbase_default_paper2(void* self, int style);
 
 /// Inherited from QsciLexer
@@ -1040,8 +1198,9 @@ QColor* q_scilexermarkdown_qbase_default_paper2(void* self, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_default_paper2(void* self, QColor* (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback QColor* fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1049,7 +1208,8 @@ void q_scilexermarkdown_on_default_paper2(void* self, QColor* (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QsciScintilla* editor ```
+/// @param self QsciLexerMarkdown*
+/// @param editor QsciScintilla*
 void q_scilexermarkdown_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1058,7 +1218,8 @@ void q_scilexermarkdown_set_editor(void* self, void* editor);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QsciScintilla* editor ```
+/// @param self QsciLexerMarkdown*
+/// @param editor QsciScintilla*
 void q_scilexermarkdown_qbase_set_editor(void* self, void* editor);
 
 /// Inherited from QsciLexer
@@ -1067,8 +1228,9 @@ void q_scilexermarkdown_qbase_set_editor(void* self, void* editor);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QsciScintilla*) ```
-void q_scilexermarkdown_on_set_editor(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QsciScintilla*)
+void q_scilexermarkdown_on_set_editor(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
@@ -1076,7 +1238,7 @@ void q_scilexermarkdown_on_set_editor(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_refresh_properties(void* self);
 
 /// Inherited from QsciLexer
@@ -1085,7 +1247,7 @@ void q_scilexermarkdown_refresh_properties(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_qbase_refresh_properties(void* self);
 
 /// Inherited from QsciLexer
@@ -1094,8 +1256,9 @@ void q_scilexermarkdown_qbase_refresh_properties(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)() ```
-void q_scilexermarkdown_on_refresh_properties(void* self, void (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn()
+void q_scilexermarkdown_on_refresh_properties(void* self, void (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -1103,7 +1266,7 @@ void q_scilexermarkdown_on_refresh_properties(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1112,7 +1275,7 @@ int32_t q_scilexermarkdown_style_bits_needed(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_style_bits_needed(void* self);
 
 /// Inherited from QsciLexer
@@ -1121,25 +1284,30 @@ int32_t q_scilexermarkdown_qbase_style_bits_needed(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_style_bits_needed(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_style_bits_needed(void* self, int32_t (*callback)());
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_word_characters(void* self);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 const char* q_scilexermarkdown_qbase_word_characters(void* self);
 
 /// Inherited from QsciLexer
@@ -1148,8 +1316,9 @@ const char* q_scilexermarkdown_qbase_word_characters(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)() ```
-void q_scilexermarkdown_on_word_characters(void* self, const char* (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn()
+void q_scilexermarkdown_on_word_characters(void* self, const char* (*callback)());
 
 /// Inherited from QsciLexer
 ///
@@ -1157,7 +1326,8 @@ void q_scilexermarkdown_on_word_characters(void* self, const char* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int autoindentstyle ```
+/// @param self QsciLexerMarkdown*
+/// @param autoindentstyle int
 void q_scilexermarkdown_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1166,7 +1336,8 @@ void q_scilexermarkdown_set_auto_indent_style(void* self, int autoindentstyle);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int autoindentstyle ```
+/// @param self QsciLexerMarkdown*
+/// @param autoindentstyle int
 void q_scilexermarkdown_qbase_set_auto_indent_style(void* self, int autoindentstyle);
 
 /// Inherited from QsciLexer
@@ -1175,8 +1346,9 @@ void q_scilexermarkdown_qbase_set_auto_indent_style(void* self, int autoindentst
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, int) ```
-void q_scilexermarkdown_on_set_auto_indent_style(void* self, void (*slot)(void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, int)
+void q_scilexermarkdown_on_set_auto_indent_style(void* self, void (*callback)(void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1184,7 +1356,9 @@ void q_scilexermarkdown_on_set_auto_indent_style(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1193,7 +1367,9 @@ void q_scilexermarkdown_set_color(void* self, void* c, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_qbase_set_color(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1202,8 +1378,9 @@ void q_scilexermarkdown_qbase_set_color(void* self, void* c, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QColor*, int) ```
-void q_scilexermarkdown_on_set_color(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QColor*, int)
+void q_scilexermarkdown_on_set_color(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1211,7 +1388,9 @@ void q_scilexermarkdown_on_set_color(void* self, void (*slot)(void*, void*, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool eoffill, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param eoffill bool
+/// @param style int
 void q_scilexermarkdown_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1220,7 +1399,9 @@ void q_scilexermarkdown_set_eol_fill(void* self, bool eoffill, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool eoffill, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param eoffill bool
+/// @param style int
 void q_scilexermarkdown_qbase_set_eol_fill(void* self, bool eoffill, int style);
 
 /// Inherited from QsciLexer
@@ -1229,8 +1410,9 @@ void q_scilexermarkdown_qbase_set_eol_fill(void* self, bool eoffill, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, bool, int) ```
-void q_scilexermarkdown_on_set_eol_fill(void* self, void (*slot)(void*, bool, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, bool, int)
+void q_scilexermarkdown_on_set_eol_fill(void* self, void (*callback)(void*, bool, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1238,7 +1420,9 @@ void q_scilexermarkdown_on_set_eol_fill(void* self, void (*slot)(void*, bool, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QFont* f, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param f QFont*
+/// @param style int
 void q_scilexermarkdown_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1247,7 +1431,9 @@ void q_scilexermarkdown_set_font(void* self, void* f, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QFont* f, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param f QFont*
+/// @param style int
 void q_scilexermarkdown_qbase_set_font(void* self, void* f, int style);
 
 /// Inherited from QsciLexer
@@ -1256,8 +1442,9 @@ void q_scilexermarkdown_qbase_set_font(void* self, void* f, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QFont*, int) ```
-void q_scilexermarkdown_on_set_font(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QFont*, int)
+void q_scilexermarkdown_on_set_font(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1265,7 +1452,9 @@ void q_scilexermarkdown_on_set_font(void* self, void (*slot)(void*, void*, int))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1274,7 +1463,9 @@ void q_scilexermarkdown_set_paper(void* self, void* c, int style);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QColor* c, int style ```
+/// @param self QsciLexerMarkdown*
+/// @param c QColor*
+/// @param style int
 void q_scilexermarkdown_qbase_set_paper(void* self, void* c, int style);
 
 /// Inherited from QsciLexer
@@ -1283,8 +1474,9 @@ void q_scilexermarkdown_qbase_set_paper(void* self, void* c, int style);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QColor*, int) ```
-void q_scilexermarkdown_on_set_paper(void* self, void (*slot)(void*, void*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QColor*, int)
+void q_scilexermarkdown_on_set_paper(void* self, void (*callback)(void*, void*, int));
 
 /// Inherited from QsciLexer
 ///
@@ -1292,7 +1484,9 @@ void q_scilexermarkdown_on_set_paper(void* self, void (*slot)(void*, void*, int)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_read_properties(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
@@ -1301,7 +1495,9 @@ bool q_scilexermarkdown_read_properties(void* self, void* qs, const char* prefix
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_qbase_read_properties(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
@@ -1310,8 +1506,9 @@ bool q_scilexermarkdown_qbase_read_properties(void* self, void* qs, const char* 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, QSettings*, const char*) ```
-void q_scilexermarkdown_on_read_properties(void* self, bool (*slot)(void*, void*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, QSettings*, const char*)
+void q_scilexermarkdown_on_read_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QsciLexer
 ///
@@ -1319,7 +1516,9 @@ void q_scilexermarkdown_on_read_properties(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_write_properties(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
@@ -1328,7 +1527,9 @@ bool q_scilexermarkdown_write_properties(void* self, void* qs, const char* prefi
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QSettings* qs, const char* prefix ```
+/// @param self QsciLexerMarkdown*
+/// @param qs QSettings*
+/// @param prefix const char*
 bool q_scilexermarkdown_qbase_write_properties(void* self, void* qs, const char* prefix);
 
 /// Inherited from QsciLexer
@@ -1337,8 +1538,9 @@ bool q_scilexermarkdown_qbase_write_properties(void* self, void* qs, const char*
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, QSettings*, const char*) ```
-void q_scilexermarkdown_on_write_properties(void* self, bool (*slot)(void*, void*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, QSettings*, const char*)
+void q_scilexermarkdown_on_write_properties(void* self, bool (*callback)(void*, void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1346,7 +1548,8 @@ void q_scilexermarkdown_on_write_properties(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QEvent*
 bool q_scilexermarkdown_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1355,7 +1558,8 @@ bool q_scilexermarkdown_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QEvent*
 bool q_scilexermarkdown_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1364,8 +1568,9 @@ bool q_scilexermarkdown_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, QEvent*) ```
-void q_scilexermarkdown_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, QEvent*)
+void q_scilexermarkdown_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1373,7 +1578,9 @@ void q_scilexermarkdown_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QObject* watched, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scilexermarkdown_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1382,7 +1589,9 @@ bool q_scilexermarkdown_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QObject* watched, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_scilexermarkdown_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1391,8 +1600,9 @@ bool q_scilexermarkdown_qbase_event_filter(void* self, void* watched, void* even
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, QObject*, QEvent*) ```
-void q_scilexermarkdown_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, QObject*, QEvent*)
+void q_scilexermarkdown_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1400,7 +1610,8 @@ void q_scilexermarkdown_on_event_filter(void* self, bool (*slot)(void*, void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QTimerEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QTimerEvent*
 void q_scilexermarkdown_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1409,7 +1620,8 @@ void q_scilexermarkdown_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QTimerEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QTimerEvent*
 void q_scilexermarkdown_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1418,8 +1630,9 @@ void q_scilexermarkdown_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QTimerEvent*) ```
-void q_scilexermarkdown_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QTimerEvent*)
+void q_scilexermarkdown_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1427,7 +1640,8 @@ void q_scilexermarkdown_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QChildEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QChildEvent*
 void q_scilexermarkdown_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1436,7 +1650,8 @@ void q_scilexermarkdown_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QChildEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QChildEvent*
 void q_scilexermarkdown_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1445,8 +1660,9 @@ void q_scilexermarkdown_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QChildEvent*) ```
-void q_scilexermarkdown_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QChildEvent*)
+void q_scilexermarkdown_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1454,7 +1670,8 @@ void q_scilexermarkdown_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QEvent*
 void q_scilexermarkdown_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1463,7 +1680,8 @@ void q_scilexermarkdown_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QEvent* event ```
+/// @param self QsciLexerMarkdown*
+/// @param event QEvent*
 void q_scilexermarkdown_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1472,8 +1690,9 @@ void q_scilexermarkdown_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QEvent*) ```
-void q_scilexermarkdown_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QEvent*)
+void q_scilexermarkdown_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1481,7 +1700,8 @@ void q_scilexermarkdown_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 void q_scilexermarkdown_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1490,7 +1710,8 @@ void q_scilexermarkdown_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 void q_scilexermarkdown_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1499,8 +1720,9 @@ void q_scilexermarkdown_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QMetaMethod*) ```
-void q_scilexermarkdown_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QMetaMethod*)
+void q_scilexermarkdown_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1508,7 +1730,8 @@ void q_scilexermarkdown_on_connect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 void q_scilexermarkdown_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1517,7 +1740,8 @@ void q_scilexermarkdown_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 void q_scilexermarkdown_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1526,25 +1750,32 @@ void q_scilexermarkdown_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, QMetaMethod*) ```
-void q_scilexermarkdown_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, QMetaMethod*)
+void q_scilexermarkdown_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* text ```
+/// @param self QsciLexerMarkdown*
+/// @param text const char*
 char* q_scilexermarkdown_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* text ```
+/// @param self QsciLexerMarkdown*
+/// @param text const char*
 char* q_scilexermarkdown_qbase_text_as_bytes(void* self, const char* text);
 
 /// Inherited from QsciLexer
@@ -1553,25 +1784,34 @@ char* q_scilexermarkdown_qbase_text_as_bytes(void* self, const char* text);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, char* (*slot)(QsciLexerMarkdown*, const char*) ```
-void q_scilexermarkdown_on_text_as_bytes(void* self, char* (*slot)(void*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback char* fn(QsciLexerMarkdown*, const char*)
+void q_scilexermarkdown_on_text_as_bytes(void* self, char* (*callback)(void*, const char*));
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* bytes, int size ```
+/// @param self QsciLexerMarkdown*
+/// @param bytes const char*
+/// @param size int
 const char* q_scilexermarkdown_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
 ///
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexer.html)
 ///
+/// Caller is responsible for freeing the returned memory
+///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* bytes, int size ```
+/// @param self QsciLexerMarkdown*
+/// @param bytes const char*
+/// @param size int
 const char* q_scilexermarkdown_qbase_bytes_as_text(void* self, const char* bytes, int size);
 
 /// Inherited from QsciLexer
@@ -1580,8 +1820,9 @@ const char* q_scilexermarkdown_qbase_bytes_as_text(void* self, const char* bytes
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* (*slot)(QsciLexerMarkdown*, const char*, int) ```
-void q_scilexermarkdown_on_bytes_as_text(void* self, const char* (*slot)(void*, const char*, int));
+/// @param self QsciLexerMarkdown*
+/// @param callback const char* fn(QsciLexerMarkdown*, const char*, int)
+void q_scilexermarkdown_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
 
 /// Inherited from QObject
 ///
@@ -1589,7 +1830,7 @@ void q_scilexermarkdown_on_bytes_as_text(void* self, const char* (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QObject* q_scilexermarkdown_sender(void* self);
 
 /// Inherited from QObject
@@ -1598,7 +1839,7 @@ QObject* q_scilexermarkdown_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 QObject* q_scilexermarkdown_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1607,8 +1848,9 @@ QObject* q_scilexermarkdown_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QObject* (*slot)() ```
-void q_scilexermarkdown_on_sender(void* self, QObject* (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback QObject* fn()
+void q_scilexermarkdown_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1616,7 +1858,7 @@ void q_scilexermarkdown_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1625,7 +1867,7 @@ int32_t q_scilexermarkdown_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 int32_t q_scilexermarkdown_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1634,8 +1876,9 @@ int32_t q_scilexermarkdown_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)() ```
-void q_scilexermarkdown_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn()
+void q_scilexermarkdown_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1643,7 +1886,8 @@ void q_scilexermarkdown_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal const char*
 int32_t q_scilexermarkdown_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1652,7 +1896,8 @@ int32_t q_scilexermarkdown_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, const char* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal const char*
 int32_t q_scilexermarkdown_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1661,8 +1906,9 @@ int32_t q_scilexermarkdown_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, int32_t (*slot)(QsciLexerMarkdown*, const char*) ```
-void q_scilexermarkdown_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback int32_t fn(QsciLexerMarkdown*, const char*)
+void q_scilexermarkdown_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1670,7 +1916,8 @@ void q_scilexermarkdown_on_receivers(void* self, int32_t (*slot)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 bool q_scilexermarkdown_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1679,7 +1926,8 @@ bool q_scilexermarkdown_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, QMetaMethod* signal ```
+/// @param self QsciLexerMarkdown*
+/// @param signal QMetaMethod*
 bool q_scilexermarkdown_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1688,8 +1936,9 @@ bool q_scilexermarkdown_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QsciLexerMarkdown* self, bool (*slot)(QsciLexerMarkdown*, QMetaMethod*) ```
-void q_scilexermarkdown_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QsciLexerMarkdown*
+/// @param callback bool fn(QsciLexerMarkdown*, QMetaMethod*)
+void q_scilexermarkdown_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1697,14 +1946,15 @@ void q_scilexermarkdown_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QsciLexerMarkdown* self, void (*slot)(QsciLexerMarkdown*, const char*) ```
-void q_scilexermarkdown_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QsciLexerMarkdown*
+/// @param callback void fn(QsciLexerMarkdown*, const char*)
+void q_scilexermarkdown_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerMarkdown.html)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QsciLexerMarkdown* self ```
+/// @param self QsciLexerMarkdown*
 void q_scilexermarkdown_delete(void* self);
 
 typedef enum {

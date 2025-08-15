@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,34 +15,38 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceClass)
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
+///
+/// @return enum QSurface__SurfaceClass
 int64_t q_surface_surface_class(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#format)
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
 QSurfaceFormat* q_surface_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#surfaceType)
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
+///
+/// @return enum QSurface__SurfaceType
 int64_t q_surface_surface_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
 bool q_surface_supports_open_g_l(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#size)
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
 QSize* q_surface_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#dtor.QSurface)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSurface* self ```
+/// @param self QSurface*
 void q_surface_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsurface.html#types

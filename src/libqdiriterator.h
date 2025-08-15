@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,89 +15,108 @@
 
 /// q_diriterator_new constructs a new QDirIterator object.
 ///
-/// ``` QDir* dir ```
+/// @param dir QDir*
 QDirIterator* q_diriterator_new(void* dir);
 
 /// q_diriterator_new2 constructs a new QDirIterator object.
 ///
-/// ``` const char* path ```
+/// @param path const char*
 QDirIterator* q_diriterator_new2(const char* path);
 
 /// q_diriterator_new3 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, int filter ```
+/// @param path const char*
+/// @param filter flag of enum QDir__Filter
 QDirIterator* q_diriterator_new3(const char* path, int64_t filter);
 
 /// q_diriterator_new4 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, const char* nameFilters[] ```
+/// @param path const char*
+/// @param nameFilters const char**
 QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[]);
 
 /// q_diriterator_new5 constructs a new QDirIterator object.
 ///
-/// ``` QDir* dir, int flags ```
+/// @param dir QDir*
+/// @param flags flag of enum QDirIterator__IteratorFlag
 QDirIterator* q_diriterator_new5(void* dir, int64_t flags);
 
 /// q_diriterator_new6 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, int flags ```
+/// @param path const char*
+/// @param flags flag of enum QDirIterator__IteratorFlag
 QDirIterator* q_diriterator_new6(const char* path, int64_t flags);
 
 /// q_diriterator_new7 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, int filter, int flags ```
+/// @param path const char*
+/// @param filter flag of enum QDir__Filter
+/// @param flags flag of enum QDirIterator__IteratorFlag
 QDirIterator* q_diriterator_new7(const char* path, int64_t filter, int64_t flags);
 
 /// q_diriterator_new8 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, const char* nameFilters[], int filters ```
+/// @param path const char*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
 QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[], int64_t filters);
 
 /// q_diriterator_new9 constructs a new QDirIterator object.
 ///
-/// ``` const char* path, const char* nameFilters[], int filters, int flags ```
+/// @param path const char*
+/// @param nameFilters const char**
+/// @param filters flag of enum QDir__Filter
+/// @param flags flag of enum QDirIterator__IteratorFlag
 QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[], int64_t filters, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#next)
 ///
-/// ``` QDirIterator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirIterator*
 const char* q_diriterator_next(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#nextFileInfo)
 ///
-/// ``` QDirIterator* self ```
+/// @param self QDirIterator*
 QFileInfo* q_diriterator_next_file_info(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#hasNext)
 ///
-/// ``` QDirIterator* self ```
+/// @param self QDirIterator*
 bool q_diriterator_has_next(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#fileName)
 ///
-/// ``` QDirIterator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirIterator*
 const char* q_diriterator_file_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#filePath)
 ///
-/// ``` QDirIterator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirIterator*
 const char* q_diriterator_file_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#fileInfo)
 ///
-/// ``` QDirIterator* self ```
+/// @param self QDirIterator*
 QFileInfo* q_diriterator_file_info(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#path)
 ///
-/// ``` QDirIterator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDirIterator*
 const char* q_diriterator_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdiriterator.html#dtor.QDirIterator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDirIterator* self ```
+/// @param self QDirIterator*
 void q_diriterator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdiriterator.html#types

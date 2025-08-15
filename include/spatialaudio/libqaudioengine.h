@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,460 +15,531 @@
 
 /// q_audioengine_new constructs a new QAudioEngine object.
 ///
-///
 QAudioEngine* q_audioengine_new();
 
 /// q_audioengine_new2 constructs a new QAudioEngine object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QAudioEngine* q_audioengine_new2(void* parent);
 
 /// q_audioengine_new3 constructs a new QAudioEngine object.
 ///
-/// ``` int sampleRate ```
+/// @param sampleRate int
 QAudioEngine* q_audioengine_new3(int sampleRate);
 
 /// q_audioengine_new4 constructs a new QAudioEngine object.
 ///
-/// ``` int sampleRate, QObject* parent ```
+/// @param sampleRate int
+/// @param parent QObject*
 QAudioEngine* q_audioengine_new4(int sampleRate, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 const QMetaObject* q_audioengine_meta_object(void* self);
 
-/// ``` QAudioEngine* self, const char* param1 ```
+/// @param self QAudioEngine*
+/// @param param1 const char*
 void* q_audioengine_metacast(void* self, const char* param1);
 
-/// ``` QAudioEngine* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAudioEngine*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_audioengine_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QAudioEngine* self, int32_t (*slot)(QAudioEngine*, enum QMetaObject__Call, int, void*) ```
-void q_audioengine_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QAudioEngine*
+/// @param callback int32_t fn(QAudioEngine*, enum QMetaObject__Call, int, void*)
+void q_audioengine_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QAudioEngine* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QAudioEngine*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_audioengine_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_audioengine_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setOutputMode)
 ///
-/// ``` QAudioEngine* self, enum QAudioEngine__OutputMode mode ```
+/// @param self QAudioEngine*
+/// @param mode enum QAudioEngine__OutputMode
 void q_audioengine_set_output_mode(void* self, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputMode)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
+///
+/// @return enum QAudioEngine__OutputMode
 int64_t q_audioengine_output_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#sampleRate)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 int32_t q_audioengine_sample_rate(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setOutputDevice)
 ///
-/// ``` QAudioEngine* self, QAudioDevice* device ```
+/// @param self QAudioEngine*
+/// @param device QAudioDevice*
 void q_audioengine_set_output_device(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputDevice)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QAudioDevice* q_audioengine_output_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setMasterVolume)
 ///
-/// ``` QAudioEngine* self, float volume ```
+/// @param self QAudioEngine*
+/// @param volume float
 void q_audioengine_set_master_volume(void* self, float volume);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#masterVolume)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 float q_audioengine_master_volume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setPaused)
 ///
-/// ``` QAudioEngine* self, bool paused ```
+/// @param self QAudioEngine*
+/// @param paused bool
 void q_audioengine_set_paused(void* self, bool paused);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#paused)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_paused(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setRoomEffectsEnabled)
 ///
-/// ``` QAudioEngine* self, bool enabled ```
+/// @param self QAudioEngine*
+/// @param enabled bool
 void q_audioengine_set_room_effects_enabled(void* self, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#roomEffectsEnabled)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_room_effects_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#setDistanceScale)
 ///
-/// ``` QAudioEngine* self, float scale ```
+/// @param self QAudioEngine*
+/// @param scale float
 void q_audioengine_set_distance_scale(void* self, float scale);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#distanceScale)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 float q_audioengine_distance_scale(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputModeChanged)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_output_mode_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputModeChanged)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_output_mode_changed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_output_mode_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputDeviceChanged)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_output_device_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#outputDeviceChanged)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_output_device_changed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_output_device_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#masterVolumeChanged)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_master_volume_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#masterVolumeChanged)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_master_volume_changed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_master_volume_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#pausedChanged)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_paused_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#pausedChanged)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_paused_changed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_paused_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#distanceScaleChanged)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_distance_scale_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#distanceScaleChanged)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_distance_scale_changed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_distance_scale_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#start)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#stop)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_stop(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#pause)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_pause(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#resume)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_resume(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_audioengine_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_audioengine_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QAudioEngine* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAudioEngine*
 const char* q_audioengine_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QAudioEngine* self, char* name ```
+/// @param self QAudioEngine*
+/// @param name char*
 void q_audioengine_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 bool q_audioengine_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QAudioEngine* self, bool b ```
+/// @param self QAudioEngine*
+/// @param b bool
 bool q_audioengine_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QThread* q_audioengine_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAudioEngine* self, QThread* thread ```
+/// @param self QAudioEngine*
+/// @param thread QThread*
 bool q_audioengine_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAudioEngine* self, int interval ```
+/// @param self QAudioEngine*
+/// @param interval int
 int32_t q_audioengine_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAudioEngine* self, int id ```
+/// @param self QAudioEngine*
+/// @param id int
 void q_audioengine_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QAudioEngine* self, enum Qt__TimerId id ```
+/// @param self QAudioEngine*
+/// @param id enum Qt__TimerId
 void q_audioengine_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 libqt_list /* of QObject* */ q_audioengine_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QAudioEngine* self, QObject* parent ```
+/// @param self QAudioEngine*
+/// @param parent QObject*
 void q_audioengine_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QAudioEngine* self, QObject* filterObj ```
+/// @param self QAudioEngine*
+/// @param filterObj QObject*
 void q_audioengine_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QAudioEngine* self, QObject* obj ```
+/// @param self QAudioEngine*
+/// @param obj QObject*
 void q_audioengine_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_audioengine_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAudioEngine* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QAudioEngine*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_audioengine_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_audioengine_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_audioengine_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QAudioEngine* self, const char* name, QVariant* value ```
+/// @param self QAudioEngine*
+/// @param name const char*
+/// @param value QVariant*
 bool q_audioengine_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QAudioEngine* self, const char* name ```
+/// @param self QAudioEngine*
+/// @param name const char*
 QVariant* q_audioengine_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QAudioEngine* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QAudioEngine*
 const char** q_audioengine_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QBindingStorage* q_audioengine_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 const QBindingStorage* q_audioengine_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*) ```
-void q_audioengine_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*)
+void q_audioengine_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QObject* q_audioengine_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QAudioEngine* self, const char* classname ```
+/// @param self QAudioEngine*
+/// @param classname const char*
 bool q_audioengine_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QAudioEngine* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QAudioEngine*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_audioengine_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QAudioEngine* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QAudioEngine*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_audioengine_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_audioengine_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QAudioEngine* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QAudioEngine*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_audioengine_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAudioEngine* self, QObject* param1 ```
+/// @param self QAudioEngine*
+/// @param param1 QObject*
 void q_audioengine_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QObject*) ```
-void q_audioengine_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QObject*)
+void q_audioengine_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -477,7 +547,8 @@ void q_audioengine_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QEvent*
 bool q_audioengine_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -486,7 +557,8 @@ bool q_audioengine_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QEvent*
 bool q_audioengine_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -495,8 +567,9 @@ bool q_audioengine_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, bool (*slot)(QAudioEngine*, QEvent*) ```
-void q_audioengine_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback bool fn(QAudioEngine*, QEvent*)
+void q_audioengine_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -504,7 +577,9 @@ void q_audioengine_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QObject* watched, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_audioengine_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -513,7 +588,9 @@ bool q_audioengine_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QObject* watched, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_audioengine_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -522,8 +599,9 @@ bool q_audioengine_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, bool (*slot)(QAudioEngine*, QObject*, QEvent*) ```
-void q_audioengine_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QAudioEngine*
+/// @param callback bool fn(QAudioEngine*, QObject*, QEvent*)
+void q_audioengine_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -531,7 +609,8 @@ void q_audioengine_on_event_filter(void* self, bool (*slot)(void*, void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QTimerEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QTimerEvent*
 void q_audioengine_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -540,7 +619,8 @@ void q_audioengine_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QTimerEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QTimerEvent*
 void q_audioengine_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -549,8 +629,9 @@ void q_audioengine_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QTimerEvent*) ```
-void q_audioengine_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QTimerEvent*)
+void q_audioengine_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -558,7 +639,8 @@ void q_audioengine_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QChildEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QChildEvent*
 void q_audioengine_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -567,7 +649,8 @@ void q_audioengine_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QChildEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QChildEvent*
 void q_audioengine_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -576,8 +659,9 @@ void q_audioengine_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QChildEvent*) ```
-void q_audioengine_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QChildEvent*)
+void q_audioengine_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -585,7 +669,8 @@ void q_audioengine_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QEvent*
 void q_audioengine_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -594,7 +679,8 @@ void q_audioengine_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QEvent* event ```
+/// @param self QAudioEngine*
+/// @param event QEvent*
 void q_audioengine_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -603,8 +689,9 @@ void q_audioengine_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QEvent*) ```
-void q_audioengine_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QEvent*)
+void q_audioengine_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -612,7 +699,8 @@ void q_audioengine_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 void q_audioengine_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -621,7 +709,8 @@ void q_audioengine_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 void q_audioengine_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -630,8 +719,9 @@ void q_audioengine_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QMetaMethod*) ```
-void q_audioengine_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QMetaMethod*)
+void q_audioengine_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -639,7 +729,8 @@ void q_audioengine_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 void q_audioengine_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -648,7 +739,8 @@ void q_audioengine_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 void q_audioengine_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -657,8 +749,9 @@ void q_audioengine_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, QMetaMethod*) ```
-void q_audioengine_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, QMetaMethod*)
+void q_audioengine_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -666,7 +759,7 @@ void q_audioengine_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QObject* q_audioengine_sender(void* self);
 
 /// Inherited from QObject
@@ -675,7 +768,7 @@ QObject* q_audioengine_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 QObject* q_audioengine_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -684,8 +777,9 @@ QObject* q_audioengine_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QObject* (*slot)() ```
-void q_audioengine_on_sender(void* self, QObject* (*slot)());
+/// @param self QAudioEngine*
+/// @param callback QObject* fn()
+void q_audioengine_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -693,7 +787,7 @@ void q_audioengine_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 int32_t q_audioengine_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -702,7 +796,7 @@ int32_t q_audioengine_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 int32_t q_audioengine_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -711,8 +805,9 @@ int32_t q_audioengine_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, int32_t (*slot)() ```
-void q_audioengine_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QAudioEngine*
+/// @param callback int32_t fn()
+void q_audioengine_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -720,7 +815,8 @@ void q_audioengine_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, const char* signal ```
+/// @param self QAudioEngine*
+/// @param signal const char*
 int32_t q_audioengine_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -729,7 +825,8 @@ int32_t q_audioengine_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, const char* signal ```
+/// @param self QAudioEngine*
+/// @param signal const char*
 int32_t q_audioengine_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -738,8 +835,9 @@ int32_t q_audioengine_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, int32_t (*slot)(QAudioEngine*, const char*) ```
-void q_audioengine_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QAudioEngine*
+/// @param callback int32_t fn(QAudioEngine*, const char*)
+void q_audioengine_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -747,7 +845,8 @@ void q_audioengine_on_receivers(void* self, int32_t (*slot)(void*, const char*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 bool q_audioengine_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -756,7 +855,8 @@ bool q_audioengine_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, QMetaMethod* signal ```
+/// @param self QAudioEngine*
+/// @param signal QMetaMethod*
 bool q_audioengine_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -765,8 +865,9 @@ bool q_audioengine_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QAudioEngine* self, bool (*slot)(QAudioEngine*, QMetaMethod*) ```
-void q_audioengine_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QAudioEngine*
+/// @param callback bool fn(QAudioEngine*, QMetaMethod*)
+void q_audioengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -774,14 +875,15 @@ void q_audioengine_on_is_signal_connected(void* self, bool (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QAudioEngine* self, void (*slot)(QAudioEngine*, const char*) ```
-void q_audioengine_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QAudioEngine*
+/// @param callback void fn(QAudioEngine*, const char*)
+void q_audioengine_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioengine.html#dtor.QAudioEngine)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAudioEngine* self ```
+/// @param self QAudioEngine*
 void q_audioengine_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qaudioengine.html#types

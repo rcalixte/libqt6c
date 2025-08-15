@@ -56,8 +56,8 @@ int32_t q_textedit_metacall(void* self, int64_t param1, int param2, void* param3
     return QTextEdit_Metacall((QTextEdit*)self, param1, param2, param3);
 }
 
-void q_textedit_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTextEdit_OnMetacall((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTextEdit_OnMetacall((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -261,8 +261,8 @@ QVariant* q_textedit_load_resource(void* self, int typeVal, void* name) {
     return QTextEdit_LoadResource((QTextEdit*)self, typeVal, (QUrl*)name);
 }
 
-void q_textedit_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*)) {
-    QTextEdit_OnLoadResource((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*)) {
+    QTextEdit_OnLoadResource((QTextEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_textedit_qbase_load_resource(void* self, int typeVal, void* name) {
@@ -353,8 +353,8 @@ QVariant* q_textedit_input_method_query(void* self, int64_t property) {
     return QTextEdit_InputMethodQuery((QTextEdit*)self, property);
 }
 
-void q_textedit_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QTextEdit_OnInputMethodQuery((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QTextEdit_OnInputMethodQuery((QTextEdit*)self, (intptr_t)callback);
 }
 
 QVariant* q_textedit_qbase_input_method_query(void* self, int64_t property) {
@@ -473,64 +473,64 @@ void q_textedit_text_changed(void* self) {
     QTextEdit_TextChanged((QTextEdit*)self);
 }
 
-void q_textedit_on_text_changed(void* self, void (*slot)(void*)) {
-    QTextEdit_Connect_TextChanged((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_text_changed(void* self, void (*callback)(void*)) {
+    QTextEdit_Connect_TextChanged((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_undo_available(void* self, bool b) {
     QTextEdit_UndoAvailable((QTextEdit*)self, b);
 }
 
-void q_textedit_on_undo_available(void* self, void (*slot)(void*, bool)) {
-    QTextEdit_Connect_UndoAvailable((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_undo_available(void* self, void (*callback)(void*, bool)) {
+    QTextEdit_Connect_UndoAvailable((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_redo_available(void* self, bool b) {
     QTextEdit_RedoAvailable((QTextEdit*)self, b);
 }
 
-void q_textedit_on_redo_available(void* self, void (*slot)(void*, bool)) {
-    QTextEdit_Connect_RedoAvailable((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_redo_available(void* self, void (*callback)(void*, bool)) {
+    QTextEdit_Connect_RedoAvailable((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_current_char_format_changed(void* self, void* format) {
     QTextEdit_CurrentCharFormatChanged((QTextEdit*)self, (QTextCharFormat*)format);
 }
 
-void q_textedit_on_current_char_format_changed(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_Connect_CurrentCharFormatChanged((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_current_char_format_changed(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_Connect_CurrentCharFormatChanged((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_copy_available(void* self, bool b) {
     QTextEdit_CopyAvailable((QTextEdit*)self, b);
 }
 
-void q_textedit_on_copy_available(void* self, void (*slot)(void*, bool)) {
-    QTextEdit_Connect_CopyAvailable((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_copy_available(void* self, void (*callback)(void*, bool)) {
+    QTextEdit_Connect_CopyAvailable((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_selection_changed(void* self) {
     QTextEdit_SelectionChanged((QTextEdit*)self);
 }
 
-void q_textedit_on_selection_changed(void* self, void (*slot)(void*)) {
-    QTextEdit_Connect_SelectionChanged((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_selection_changed(void* self, void (*callback)(void*)) {
+    QTextEdit_Connect_SelectionChanged((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_cursor_position_changed(void* self) {
     QTextEdit_CursorPositionChanged((QTextEdit*)self);
 }
 
-void q_textedit_on_cursor_position_changed(void* self, void (*slot)(void*)) {
-    QTextEdit_Connect_CursorPositionChanged((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_cursor_position_changed(void* self, void (*callback)(void*)) {
+    QTextEdit_Connect_CursorPositionChanged((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_event(void* self, void* e) {
     return QTextEdit_Event((QTextEdit*)self, (QEvent*)e);
 }
 
-void q_textedit_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTextEdit_OnEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTextEdit_OnEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_qbase_event(void* self, void* e) {
@@ -541,8 +541,8 @@ void q_textedit_timer_event(void* self, void* e) {
     QTextEdit_TimerEvent((QTextEdit*)self, (QTimerEvent*)e);
 }
 
-void q_textedit_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnTimerEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnTimerEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_timer_event(void* self, void* e) {
@@ -553,8 +553,8 @@ void q_textedit_key_press_event(void* self, void* e) {
     QTextEdit_KeyPressEvent((QTextEdit*)self, (QKeyEvent*)e);
 }
 
-void q_textedit_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnKeyPressEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnKeyPressEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_key_press_event(void* self, void* e) {
@@ -565,8 +565,8 @@ void q_textedit_key_release_event(void* self, void* e) {
     QTextEdit_KeyReleaseEvent((QTextEdit*)self, (QKeyEvent*)e);
 }
 
-void q_textedit_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnKeyReleaseEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnKeyReleaseEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_key_release_event(void* self, void* e) {
@@ -577,8 +577,8 @@ void q_textedit_resize_event(void* self, void* e) {
     QTextEdit_ResizeEvent((QTextEdit*)self, (QResizeEvent*)e);
 }
 
-void q_textedit_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnResizeEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnResizeEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_resize_event(void* self, void* e) {
@@ -589,8 +589,8 @@ void q_textedit_paint_event(void* self, void* e) {
     QTextEdit_PaintEvent((QTextEdit*)self, (QPaintEvent*)e);
 }
 
-void q_textedit_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnPaintEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnPaintEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_paint_event(void* self, void* e) {
@@ -601,8 +601,8 @@ void q_textedit_mouse_press_event(void* self, void* e) {
     QTextEdit_MousePressEvent((QTextEdit*)self, (QMouseEvent*)e);
 }
 
-void q_textedit_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnMousePressEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnMousePressEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_mouse_press_event(void* self, void* e) {
@@ -613,8 +613,8 @@ void q_textedit_mouse_move_event(void* self, void* e) {
     QTextEdit_MouseMoveEvent((QTextEdit*)self, (QMouseEvent*)e);
 }
 
-void q_textedit_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnMouseMoveEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnMouseMoveEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_mouse_move_event(void* self, void* e) {
@@ -625,8 +625,8 @@ void q_textedit_mouse_release_event(void* self, void* e) {
     QTextEdit_MouseReleaseEvent((QTextEdit*)self, (QMouseEvent*)e);
 }
 
-void q_textedit_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnMouseReleaseEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnMouseReleaseEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_mouse_release_event(void* self, void* e) {
@@ -637,8 +637,8 @@ void q_textedit_mouse_double_click_event(void* self, void* e) {
     QTextEdit_MouseDoubleClickEvent((QTextEdit*)self, (QMouseEvent*)e);
 }
 
-void q_textedit_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnMouseDoubleClickEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnMouseDoubleClickEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_mouse_double_click_event(void* self, void* e) {
@@ -649,8 +649,8 @@ bool q_textedit_focus_next_prev_child(void* self, bool next) {
     return QTextEdit_FocusNextPrevChild((QTextEdit*)self, next);
 }
 
-void q_textedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QTextEdit_OnFocusNextPrevChild((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QTextEdit_OnFocusNextPrevChild((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_qbase_focus_next_prev_child(void* self, bool next) {
@@ -661,8 +661,8 @@ void q_textedit_context_menu_event(void* self, void* e) {
     QTextEdit_ContextMenuEvent((QTextEdit*)self, (QContextMenuEvent*)e);
 }
 
-void q_textedit_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnContextMenuEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnContextMenuEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_context_menu_event(void* self, void* e) {
@@ -673,8 +673,8 @@ void q_textedit_drag_enter_event(void* self, void* e) {
     QTextEdit_DragEnterEvent((QTextEdit*)self, (QDragEnterEvent*)e);
 }
 
-void q_textedit_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDragEnterEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDragEnterEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_drag_enter_event(void* self, void* e) {
@@ -685,8 +685,8 @@ void q_textedit_drag_leave_event(void* self, void* e) {
     QTextEdit_DragLeaveEvent((QTextEdit*)self, (QDragLeaveEvent*)e);
 }
 
-void q_textedit_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDragLeaveEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDragLeaveEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_drag_leave_event(void* self, void* e) {
@@ -697,8 +697,8 @@ void q_textedit_drag_move_event(void* self, void* e) {
     QTextEdit_DragMoveEvent((QTextEdit*)self, (QDragMoveEvent*)e);
 }
 
-void q_textedit_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDragMoveEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDragMoveEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_drag_move_event(void* self, void* e) {
@@ -709,8 +709,8 @@ void q_textedit_drop_event(void* self, void* e) {
     QTextEdit_DropEvent((QTextEdit*)self, (QDropEvent*)e);
 }
 
-void q_textedit_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDropEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDropEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_drop_event(void* self, void* e) {
@@ -721,8 +721,8 @@ void q_textedit_focus_in_event(void* self, void* e) {
     QTextEdit_FocusInEvent((QTextEdit*)self, (QFocusEvent*)e);
 }
 
-void q_textedit_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnFocusInEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnFocusInEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_focus_in_event(void* self, void* e) {
@@ -733,8 +733,8 @@ void q_textedit_focus_out_event(void* self, void* e) {
     QTextEdit_FocusOutEvent((QTextEdit*)self, (QFocusEvent*)e);
 }
 
-void q_textedit_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnFocusOutEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnFocusOutEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_focus_out_event(void* self, void* e) {
@@ -745,8 +745,8 @@ void q_textedit_show_event(void* self, void* param1) {
     QTextEdit_ShowEvent((QTextEdit*)self, (QShowEvent*)param1);
 }
 
-void q_textedit_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnShowEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnShowEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_show_event(void* self, void* param1) {
@@ -757,8 +757,8 @@ void q_textedit_change_event(void* self, void* e) {
     QTextEdit_ChangeEvent((QTextEdit*)self, (QEvent*)e);
 }
 
-void q_textedit_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnChangeEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnChangeEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_change_event(void* self, void* e) {
@@ -769,8 +769,8 @@ void q_textedit_wheel_event(void* self, void* e) {
     QTextEdit_WheelEvent((QTextEdit*)self, (QWheelEvent*)e);
 }
 
-void q_textedit_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnWheelEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnWheelEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_wheel_event(void* self, void* e) {
@@ -781,8 +781,8 @@ QMimeData* q_textedit_create_mime_data_from_selection(void* self) {
     return QTextEdit_CreateMimeDataFromSelection((QTextEdit*)self);
 }
 
-void q_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*slot)()) {
-    QTextEdit_OnCreateMimeDataFromSelection((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)()) {
+    QTextEdit_OnCreateMimeDataFromSelection((QTextEdit*)self, (intptr_t)callback);
 }
 
 QMimeData* q_textedit_qbase_create_mime_data_from_selection(void* self) {
@@ -793,8 +793,8 @@ bool q_textedit_can_insert_from_mime_data(void* self, void* source) {
     return QTextEdit_CanInsertFromMimeData((QTextEdit*)self, (QMimeData*)source);
 }
 
-void q_textedit_on_can_insert_from_mime_data(void* self, bool (*slot)(void*, void*)) {
-    QTextEdit_OnCanInsertFromMimeData((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*)) {
+    QTextEdit_OnCanInsertFromMimeData((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_qbase_can_insert_from_mime_data(void* self, void* source) {
@@ -805,8 +805,8 @@ void q_textedit_insert_from_mime_data(void* self, void* source) {
     QTextEdit_InsertFromMimeData((QTextEdit*)self, (QMimeData*)source);
 }
 
-void q_textedit_on_insert_from_mime_data(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnInsertFromMimeData((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_insert_from_mime_data(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnInsertFromMimeData((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_insert_from_mime_data(void* self, void* source) {
@@ -817,8 +817,8 @@ void q_textedit_input_method_event(void* self, void* param1) {
     QTextEdit_InputMethodEvent((QTextEdit*)self, (QInputMethodEvent*)param1);
 }
 
-void q_textedit_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnInputMethodEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnInputMethodEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_input_method_event(void* self, void* param1) {
@@ -829,8 +829,8 @@ void q_textedit_scroll_contents_by(void* self, int dx, int dy) {
     QTextEdit_ScrollContentsBy((QTextEdit*)self, dx, dy);
 }
 
-void q_textedit_on_scroll_contents_by(void* self, void (*slot)(void*, int, int)) {
-    QTextEdit_OnScrollContentsBy((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
+    QTextEdit_OnScrollContentsBy((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_scroll_contents_by(void* self, int dx, int dy) {
@@ -841,8 +841,8 @@ void q_textedit_do_set_text_cursor(void* self, void* cursor) {
     QTextEdit_DoSetTextCursor((QTextEdit*)self, (QTextCursor*)cursor);
 }
 
-void q_textedit_on_do_set_text_cursor(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDoSetTextCursor((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_do_set_text_cursor(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDoSetTextCursor((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_do_set_text_cursor(void* self, void* cursor) {
@@ -853,8 +853,8 @@ void q_textedit_zoom_in_f(void* self, float range) {
     QTextEdit_ZoomInF((QTextEdit*)self, range);
 }
 
-void q_textedit_on_zoom_in_f(void* self, void (*slot)(void*, float)) {
-    QTextEdit_OnZoomInF((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_zoom_in_f(void* self, void (*callback)(void*, float)) {
+    QTextEdit_OnZoomInF((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_qbase_zoom_in_f(void* self, float range) {
@@ -2045,32 +2045,32 @@ void q_textedit_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_textedit_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_textedit_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_textedit_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_textedit_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_textedit_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_textedit_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_textedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_textedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_textedit_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_textedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_textedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_textedit_input_method_hints(void* self) {
@@ -2241,12 +2241,16 @@ const char** q_textedit_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_textedit_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2264,8 +2268,8 @@ void q_textedit_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_textedit_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_textedit_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_textedit_parent(void* self) {
@@ -2300,8 +2304,8 @@ void q_textedit_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_textedit_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_textedit_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_textedit_painting_active(void* self) {
@@ -2364,8 +2368,8 @@ QSize* q_textedit_qbase_minimum_size_hint(void* self) {
     return QTextEdit_QBaseMinimumSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QTextEdit_OnMinimumSizeHint((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QTextEdit_OnMinimumSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_textedit_size_hint(void* self) {
@@ -2376,8 +2380,8 @@ QSize* q_textedit_qbase_size_hint(void* self) {
     return QTextEdit_QBaseSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_size_hint(void* self, QSize* (*slot)()) {
-    QTextEdit_OnSizeHint((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_size_hint(void* self, QSize* (*callback)()) {
+    QTextEdit_OnSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_setup_viewport(void* self, void* viewport) {
@@ -2388,8 +2392,8 @@ void q_textedit_qbase_setup_viewport(void* self, void* viewport) {
     QTextEdit_QBaseSetupViewport((QTextEdit*)self, (QWidget*)viewport);
 }
 
-void q_textedit_on_setup_viewport(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnSetupViewport((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnSetupViewport((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_event_filter(void* self, void* param1, void* param2) {
@@ -2400,8 +2404,8 @@ bool q_textedit_qbase_event_filter(void* self, void* param1, void* param2) {
     return QTextEdit_QBaseEventFilter((QTextEdit*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_textedit_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTextEdit_OnEventFilter((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTextEdit_OnEventFilter((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_viewport_event(void* self, void* param1) {
@@ -2412,8 +2416,8 @@ bool q_textedit_qbase_viewport_event(void* self, void* param1) {
     return QTextEdit_QBaseViewportEvent((QTextEdit*)self, (QEvent*)param1);
 }
 
-void q_textedit_on_viewport_event(void* self, bool (*slot)(void*, void*)) {
-    QTextEdit_OnViewportEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
+    QTextEdit_OnViewportEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 QSize* q_textedit_viewport_size_hint(void* self) {
@@ -2424,8 +2428,8 @@ QSize* q_textedit_qbase_viewport_size_hint(void* self) {
     return QTextEdit_QBaseViewportSizeHint((QTextEdit*)self);
 }
 
-void q_textedit_on_viewport_size_hint(void* self, QSize* (*slot)()) {
-    QTextEdit_OnViewportSizeHint((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_viewport_size_hint(void* self, QSize* (*callback)()) {
+    QTextEdit_OnViewportSizeHint((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_init_style_option(void* self, void* option) {
@@ -2436,8 +2440,8 @@ void q_textedit_qbase_init_style_option(void* self, void* option) {
     QTextEdit_QBaseInitStyleOption((QTextEdit*)self, (QStyleOptionFrame*)option);
 }
 
-void q_textedit_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnInitStyleOption((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnInitStyleOption((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_dev_type(void* self) {
@@ -2448,8 +2452,8 @@ int32_t q_textedit_qbase_dev_type(void* self) {
     return QTextEdit_QBaseDevType((QTextEdit*)self);
 }
 
-void q_textedit_on_dev_type(void* self, int32_t (*slot)()) {
-    QTextEdit_OnDevType((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_dev_type(void* self, int32_t (*callback)()) {
+    QTextEdit_OnDevType((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_set_visible(void* self, bool visible) {
@@ -2460,8 +2464,8 @@ void q_textedit_qbase_set_visible(void* self, bool visible) {
     QTextEdit_QBaseSetVisible((QTextEdit*)self, visible);
 }
 
-void q_textedit_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QTextEdit_OnSetVisible((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QTextEdit_OnSetVisible((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_height_for_width(void* self, int param1) {
@@ -2472,8 +2476,8 @@ int32_t q_textedit_qbase_height_for_width(void* self, int param1) {
     return QTextEdit_QBaseHeightForWidth((QTextEdit*)self, param1);
 }
 
-void q_textedit_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QTextEdit_OnHeightForWidth((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QTextEdit_OnHeightForWidth((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_has_height_for_width(void* self) {
@@ -2484,8 +2488,8 @@ bool q_textedit_qbase_has_height_for_width(void* self) {
     return QTextEdit_QBaseHasHeightForWidth((QTextEdit*)self);
 }
 
-void q_textedit_on_has_height_for_width(void* self, bool (*slot)()) {
-    QTextEdit_OnHasHeightForWidth((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_has_height_for_width(void* self, bool (*callback)()) {
+    QTextEdit_OnHasHeightForWidth((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_textedit_paint_engine(void* self) {
@@ -2496,8 +2500,8 @@ QPaintEngine* q_textedit_qbase_paint_engine(void* self) {
     return QTextEdit_QBasePaintEngine((QTextEdit*)self);
 }
 
-void q_textedit_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QTextEdit_OnPaintEngine((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QTextEdit_OnPaintEngine((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_enter_event(void* self, void* event) {
@@ -2508,8 +2512,8 @@ void q_textedit_qbase_enter_event(void* self, void* event) {
     QTextEdit_QBaseEnterEvent((QTextEdit*)self, (QEnterEvent*)event);
 }
 
-void q_textedit_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnEnterEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnEnterEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_leave_event(void* self, void* event) {
@@ -2520,8 +2524,8 @@ void q_textedit_qbase_leave_event(void* self, void* event) {
     QTextEdit_QBaseLeaveEvent((QTextEdit*)self, (QEvent*)event);
 }
 
-void q_textedit_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnLeaveEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnLeaveEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_move_event(void* self, void* event) {
@@ -2532,8 +2536,8 @@ void q_textedit_qbase_move_event(void* self, void* event) {
     QTextEdit_QBaseMoveEvent((QTextEdit*)self, (QMoveEvent*)event);
 }
 
-void q_textedit_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnMoveEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnMoveEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_close_event(void* self, void* event) {
@@ -2544,8 +2548,8 @@ void q_textedit_qbase_close_event(void* self, void* event) {
     QTextEdit_QBaseCloseEvent((QTextEdit*)self, (QCloseEvent*)event);
 }
 
-void q_textedit_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnCloseEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnCloseEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_tablet_event(void* self, void* event) {
@@ -2556,8 +2560,8 @@ void q_textedit_qbase_tablet_event(void* self, void* event) {
     QTextEdit_QBaseTabletEvent((QTextEdit*)self, (QTabletEvent*)event);
 }
 
-void q_textedit_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnTabletEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnTabletEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_action_event(void* self, void* event) {
@@ -2568,8 +2572,8 @@ void q_textedit_qbase_action_event(void* self, void* event) {
     QTextEdit_QBaseActionEvent((QTextEdit*)self, (QActionEvent*)event);
 }
 
-void q_textedit_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnActionEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnActionEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_hide_event(void* self, void* event) {
@@ -2580,8 +2584,8 @@ void q_textedit_qbase_hide_event(void* self, void* event) {
     QTextEdit_QBaseHideEvent((QTextEdit*)self, (QHideEvent*)event);
 }
 
-void q_textedit_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnHideEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnHideEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2592,8 +2596,8 @@ bool q_textedit_qbase_native_event(void* self, const char* eventType, void* mess
     return QTextEdit_QBaseNativeEvent((QTextEdit*)self, qstring(eventType), message, result);
 }
 
-void q_textedit_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QTextEdit_OnNativeEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QTextEdit_OnNativeEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_metric(void* self, int64_t param1) {
@@ -2604,8 +2608,8 @@ int32_t q_textedit_qbase_metric(void* self, int64_t param1) {
     return QTextEdit_QBaseMetric((QTextEdit*)self, param1);
 }
 
-void q_textedit_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QTextEdit_OnMetric((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QTextEdit_OnMetric((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_init_painter(void* self, void* painter) {
@@ -2616,8 +2620,8 @@ void q_textedit_qbase_init_painter(void* self, void* painter) {
     QTextEdit_QBaseInitPainter((QTextEdit*)self, (QPainter*)painter);
 }
 
-void q_textedit_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnInitPainter((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnInitPainter((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_textedit_redirected(void* self, void* offset) {
@@ -2628,8 +2632,8 @@ QPaintDevice* q_textedit_qbase_redirected(void* self, void* offset) {
     return QTextEdit_QBaseRedirected((QTextEdit*)self, (QPoint*)offset);
 }
 
-void q_textedit_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QTextEdit_OnRedirected((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QTextEdit_OnRedirected((QTextEdit*)self, (intptr_t)callback);
 }
 
 QPainter* q_textedit_shared_painter(void* self) {
@@ -2640,8 +2644,8 @@ QPainter* q_textedit_qbase_shared_painter(void* self) {
     return QTextEdit_QBaseSharedPainter((QTextEdit*)self);
 }
 
-void q_textedit_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QTextEdit_OnSharedPainter((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QTextEdit_OnSharedPainter((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_child_event(void* self, void* event) {
@@ -2652,8 +2656,8 @@ void q_textedit_qbase_child_event(void* self, void* event) {
     QTextEdit_QBaseChildEvent((QTextEdit*)self, (QChildEvent*)event);
 }
 
-void q_textedit_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnChildEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnChildEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_custom_event(void* self, void* event) {
@@ -2664,8 +2668,8 @@ void q_textedit_qbase_custom_event(void* self, void* event) {
     QTextEdit_QBaseCustomEvent((QTextEdit*)self, (QEvent*)event);
 }
 
-void q_textedit_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnCustomEvent((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnCustomEvent((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_connect_notify(void* self, void* signal) {
@@ -2676,8 +2680,8 @@ void q_textedit_qbase_connect_notify(void* self, void* signal) {
     QTextEdit_QBaseConnectNotify((QTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_textedit_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnConnectNotify((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnConnectNotify((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_disconnect_notify(void* self, void* signal) {
@@ -2688,8 +2692,8 @@ void q_textedit_qbase_disconnect_notify(void* self, void* signal) {
     QTextEdit_QBaseDisconnectNotify((QTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_textedit_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDisconnectNotify((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDisconnectNotify((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
@@ -2700,8 +2704,8 @@ void q_textedit_qbase_set_viewport_margins(void* self, int left, int top, int ri
     QTextEdit_QBaseSetViewportMargins((QTextEdit*)self, left, top, right, bottom);
 }
 
-void q_textedit_on_set_viewport_margins(void* self, void (*slot)(void*, int, int, int, int)) {
-    QTextEdit_OnSetViewportMargins((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
+    QTextEdit_OnSetViewportMargins((QTextEdit*)self, (intptr_t)callback);
 }
 
 QMargins* q_textedit_viewport_margins(void* self) {
@@ -2712,8 +2716,8 @@ QMargins* q_textedit_qbase_viewport_margins(void* self) {
     return QTextEdit_QBaseViewportMargins((QTextEdit*)self);
 }
 
-void q_textedit_on_viewport_margins(void* self, QMargins* (*slot)()) {
-    QTextEdit_OnViewportMargins((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_viewport_margins(void* self, QMargins* (*callback)()) {
+    QTextEdit_OnViewportMargins((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_draw_frame(void* self, void* param1) {
@@ -2724,8 +2728,8 @@ void q_textedit_qbase_draw_frame(void* self, void* param1) {
     QTextEdit_QBaseDrawFrame((QTextEdit*)self, (QPainter*)param1);
 }
 
-void q_textedit_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QTextEdit_OnDrawFrame((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QTextEdit_OnDrawFrame((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_update_micro_focus(void* self) {
@@ -2736,8 +2740,8 @@ void q_textedit_qbase_update_micro_focus(void* self) {
     QTextEdit_QBaseUpdateMicroFocus((QTextEdit*)self);
 }
 
-void q_textedit_on_update_micro_focus(void* self, void (*slot)()) {
-    QTextEdit_OnUpdateMicroFocus((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_update_micro_focus(void* self, void (*callback)()) {
+    QTextEdit_OnUpdateMicroFocus((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_create(void* self) {
@@ -2748,8 +2752,8 @@ void q_textedit_qbase_create(void* self) {
     QTextEdit_QBaseCreate((QTextEdit*)self);
 }
 
-void q_textedit_on_create(void* self, void (*slot)()) {
-    QTextEdit_OnCreate((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_create(void* self, void (*callback)()) {
+    QTextEdit_OnCreate((QTextEdit*)self, (intptr_t)callback);
 }
 
 void q_textedit_destroy(void* self) {
@@ -2760,8 +2764,8 @@ void q_textedit_qbase_destroy(void* self) {
     QTextEdit_QBaseDestroy((QTextEdit*)self);
 }
 
-void q_textedit_on_destroy(void* self, void (*slot)()) {
-    QTextEdit_OnDestroy((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_destroy(void* self, void (*callback)()) {
+    QTextEdit_OnDestroy((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_focus_next_child(void* self) {
@@ -2772,8 +2776,8 @@ bool q_textedit_qbase_focus_next_child(void* self) {
     return QTextEdit_QBaseFocusNextChild((QTextEdit*)self);
 }
 
-void q_textedit_on_focus_next_child(void* self, bool (*slot)()) {
-    QTextEdit_OnFocusNextChild((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_focus_next_child(void* self, bool (*callback)()) {
+    QTextEdit_OnFocusNextChild((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_focus_previous_child(void* self) {
@@ -2784,8 +2788,8 @@ bool q_textedit_qbase_focus_previous_child(void* self) {
     return QTextEdit_QBaseFocusPreviousChild((QTextEdit*)self);
 }
 
-void q_textedit_on_focus_previous_child(void* self, bool (*slot)()) {
-    QTextEdit_OnFocusPreviousChild((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_focus_previous_child(void* self, bool (*callback)()) {
+    QTextEdit_OnFocusPreviousChild((QTextEdit*)self, (intptr_t)callback);
 }
 
 QObject* q_textedit_sender(void* self) {
@@ -2796,8 +2800,8 @@ QObject* q_textedit_qbase_sender(void* self) {
     return QTextEdit_QBaseSender((QTextEdit*)self);
 }
 
-void q_textedit_on_sender(void* self, QObject* (*slot)()) {
-    QTextEdit_OnSender((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_sender(void* self, QObject* (*callback)()) {
+    QTextEdit_OnSender((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_sender_signal_index(void* self) {
@@ -2808,8 +2812,8 @@ int32_t q_textedit_qbase_sender_signal_index(void* self) {
     return QTextEdit_QBaseSenderSignalIndex((QTextEdit*)self);
 }
 
-void q_textedit_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTextEdit_OnSenderSignalIndex((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTextEdit_OnSenderSignalIndex((QTextEdit*)self, (intptr_t)callback);
 }
 
 int32_t q_textedit_receivers(void* self, const char* signal) {
@@ -2820,8 +2824,8 @@ int32_t q_textedit_qbase_receivers(void* self, const char* signal) {
     return QTextEdit_QBaseReceivers((QTextEdit*)self, signal);
 }
 
-void q_textedit_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTextEdit_OnReceivers((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTextEdit_OnReceivers((QTextEdit*)self, (intptr_t)callback);
 }
 
 bool q_textedit_is_signal_connected(void* self, void* signal) {
@@ -2832,8 +2836,8 @@ bool q_textedit_qbase_is_signal_connected(void* self, void* signal) {
     return QTextEdit_QBaseIsSignalConnected((QTextEdit*)self, (QMetaMethod*)signal);
 }
 
-void q_textedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTextEdit_OnIsSignalConnected((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTextEdit_OnIsSignalConnected((QTextEdit*)self, (intptr_t)callback);
 }
 
 double q_textedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2844,12 +2848,12 @@ double q_textedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
     return QTextEdit_QBaseGetDecodedMetricF((QTextEdit*)self, metricA, metricB);
 }
 
-void q_textedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QTextEdit_OnGetDecodedMetricF((QTextEdit*)self, (intptr_t)slot);
+void q_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QTextEdit_OnGetDecodedMetricF((QTextEdit*)self, (intptr_t)callback);
 }
 
-void q_textedit_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_textedit_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_textedit_delete(void* self) {

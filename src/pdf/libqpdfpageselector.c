@@ -34,8 +34,8 @@ int32_t q_pdfpageselector_metacall(void* self, int64_t param1, int param2, void*
     return QPdfPageSelector_Metacall((QPdfPageSelector*)self, param1, param2, param3);
 }
 
-void q_pdfpageselector_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPdfPageSelector_OnMetacall((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPdfPageSelector_OnMetacall((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfpageselector_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -76,24 +76,24 @@ void q_pdfpageselector_document_changed(void* self, void* document) {
     QPdfPageSelector_DocumentChanged((QPdfPageSelector*)self, (QPdfDocument*)document);
 }
 
-void q_pdfpageselector_on_document_changed(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_Connect_DocumentChanged((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_document_changed(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_Connect_DocumentChanged((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_current_page_changed(void* self, int index) {
     QPdfPageSelector_CurrentPageChanged((QPdfPageSelector*)self, index);
 }
 
-void q_pdfpageselector_on_current_page_changed(void* self, void (*slot)(void*, int)) {
-    QPdfPageSelector_Connect_CurrentPageChanged((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_current_page_changed(void* self, void (*callback)(void*, int)) {
+    QPdfPageSelector_Connect_CurrentPageChanged((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_current_page_label_changed(void* self, const char* label) {
     QPdfPageSelector_CurrentPageLabelChanged((QPdfPageSelector*)self, qstring(label));
 }
 
-void q_pdfpageselector_on_current_page_label_changed(void* self, void (*slot)(void*, const char*)) {
-    QPdfPageSelector_Connect_CurrentPageLabelChanged((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_current_page_label_changed(void* self, void (*callback)(void*, const char*)) {
+    QPdfPageSelector_Connect_CurrentPageLabelChanged((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 const char* q_pdfpageselector_tr2(const char* s, const char* c) {
@@ -1136,32 +1136,32 @@ void q_pdfpageselector_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_pdfpageselector_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_pdfpageselector_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_pdfpageselector_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_pdfpageselector_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_pdfpageselector_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_pdfpageselector_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_pdfpageselector_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_pdfpageselector_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_pdfpageselector_input_method_hints(void* self) {
@@ -1332,12 +1332,16 @@ const char** q_pdfpageselector_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pdfpageselector_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1355,8 +1359,8 @@ void q_pdfpageselector_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pdfpageselector_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pdfpageselector_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pdfpageselector_parent(void* self) {
@@ -1391,8 +1395,8 @@ void q_pdfpageselector_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pdfpageselector_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pdfpageselector_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_painting_active(void* self) {
@@ -1455,8 +1459,8 @@ int32_t q_pdfpageselector_qbase_dev_type(void* self) {
     return QPdfPageSelector_QBaseDevType((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_dev_type(void* self, int32_t (*slot)()) {
-    QPdfPageSelector_OnDevType((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_dev_type(void* self, int32_t (*callback)()) {
+    QPdfPageSelector_OnDevType((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_set_visible(void* self, bool visible) {
@@ -1467,8 +1471,8 @@ void q_pdfpageselector_qbase_set_visible(void* self, bool visible) {
     QPdfPageSelector_QBaseSetVisible((QPdfPageSelector*)self, visible);
 }
 
-void q_pdfpageselector_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QPdfPageSelector_OnSetVisible((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QPdfPageSelector_OnSetVisible((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QSize* q_pdfpageselector_size_hint(void* self) {
@@ -1479,8 +1483,8 @@ QSize* q_pdfpageselector_qbase_size_hint(void* self) {
     return QPdfPageSelector_QBaseSizeHint((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_size_hint(void* self, QSize* (*slot)()) {
-    QPdfPageSelector_OnSizeHint((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_size_hint(void* self, QSize* (*callback)()) {
+    QPdfPageSelector_OnSizeHint((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QSize* q_pdfpageselector_minimum_size_hint(void* self) {
@@ -1491,8 +1495,8 @@ QSize* q_pdfpageselector_qbase_minimum_size_hint(void* self) {
     return QPdfPageSelector_QBaseMinimumSizeHint((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QPdfPageSelector_OnMinimumSizeHint((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QPdfPageSelector_OnMinimumSizeHint((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfpageselector_height_for_width(void* self, int param1) {
@@ -1503,8 +1507,8 @@ int32_t q_pdfpageselector_qbase_height_for_width(void* self, int param1) {
     return QPdfPageSelector_QBaseHeightForWidth((QPdfPageSelector*)self, param1);
 }
 
-void q_pdfpageselector_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QPdfPageSelector_OnHeightForWidth((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QPdfPageSelector_OnHeightForWidth((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_has_height_for_width(void* self) {
@@ -1515,8 +1519,8 @@ bool q_pdfpageselector_qbase_has_height_for_width(void* self) {
     return QPdfPageSelector_QBaseHasHeightForWidth((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_has_height_for_width(void* self, bool (*slot)()) {
-    QPdfPageSelector_OnHasHeightForWidth((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_has_height_for_width(void* self, bool (*callback)()) {
+    QPdfPageSelector_OnHasHeightForWidth((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_pdfpageselector_paint_engine(void* self) {
@@ -1527,8 +1531,8 @@ QPaintEngine* q_pdfpageselector_qbase_paint_engine(void* self) {
     return QPdfPageSelector_QBasePaintEngine((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QPdfPageSelector_OnPaintEngine((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QPdfPageSelector_OnPaintEngine((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_event(void* self, void* event) {
@@ -1539,8 +1543,8 @@ bool q_pdfpageselector_qbase_event(void* self, void* event) {
     return QPdfPageSelector_QBaseEvent((QPdfPageSelector*)self, (QEvent*)event);
 }
 
-void q_pdfpageselector_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPdfPageSelector_OnEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPdfPageSelector_OnEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_mouse_press_event(void* self, void* event) {
@@ -1551,8 +1555,8 @@ void q_pdfpageselector_qbase_mouse_press_event(void* self, void* event) {
     QPdfPageSelector_QBaseMousePressEvent((QPdfPageSelector*)self, (QMouseEvent*)event);
 }
 
-void q_pdfpageselector_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnMousePressEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnMousePressEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_mouse_release_event(void* self, void* event) {
@@ -1563,8 +1567,8 @@ void q_pdfpageselector_qbase_mouse_release_event(void* self, void* event) {
     QPdfPageSelector_QBaseMouseReleaseEvent((QPdfPageSelector*)self, (QMouseEvent*)event);
 }
 
-void q_pdfpageselector_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnMouseReleaseEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnMouseReleaseEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_mouse_double_click_event(void* self, void* event) {
@@ -1575,8 +1579,8 @@ void q_pdfpageselector_qbase_mouse_double_click_event(void* self, void* event) {
     QPdfPageSelector_QBaseMouseDoubleClickEvent((QPdfPageSelector*)self, (QMouseEvent*)event);
 }
 
-void q_pdfpageselector_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnMouseDoubleClickEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnMouseDoubleClickEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_mouse_move_event(void* self, void* event) {
@@ -1587,8 +1591,8 @@ void q_pdfpageselector_qbase_mouse_move_event(void* self, void* event) {
     QPdfPageSelector_QBaseMouseMoveEvent((QPdfPageSelector*)self, (QMouseEvent*)event);
 }
 
-void q_pdfpageselector_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnMouseMoveEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnMouseMoveEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_wheel_event(void* self, void* event) {
@@ -1599,8 +1603,8 @@ void q_pdfpageselector_qbase_wheel_event(void* self, void* event) {
     QPdfPageSelector_QBaseWheelEvent((QPdfPageSelector*)self, (QWheelEvent*)event);
 }
 
-void q_pdfpageselector_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnWheelEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnWheelEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_key_press_event(void* self, void* event) {
@@ -1611,8 +1615,8 @@ void q_pdfpageselector_qbase_key_press_event(void* self, void* event) {
     QPdfPageSelector_QBaseKeyPressEvent((QPdfPageSelector*)self, (QKeyEvent*)event);
 }
 
-void q_pdfpageselector_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnKeyPressEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnKeyPressEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_key_release_event(void* self, void* event) {
@@ -1623,8 +1627,8 @@ void q_pdfpageselector_qbase_key_release_event(void* self, void* event) {
     QPdfPageSelector_QBaseKeyReleaseEvent((QPdfPageSelector*)self, (QKeyEvent*)event);
 }
 
-void q_pdfpageselector_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnKeyReleaseEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnKeyReleaseEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_focus_in_event(void* self, void* event) {
@@ -1635,8 +1639,8 @@ void q_pdfpageselector_qbase_focus_in_event(void* self, void* event) {
     QPdfPageSelector_QBaseFocusInEvent((QPdfPageSelector*)self, (QFocusEvent*)event);
 }
 
-void q_pdfpageselector_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnFocusInEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnFocusInEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_focus_out_event(void* self, void* event) {
@@ -1647,8 +1651,8 @@ void q_pdfpageselector_qbase_focus_out_event(void* self, void* event) {
     QPdfPageSelector_QBaseFocusOutEvent((QPdfPageSelector*)self, (QFocusEvent*)event);
 }
 
-void q_pdfpageselector_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnFocusOutEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnFocusOutEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_enter_event(void* self, void* event) {
@@ -1659,8 +1663,8 @@ void q_pdfpageselector_qbase_enter_event(void* self, void* event) {
     QPdfPageSelector_QBaseEnterEvent((QPdfPageSelector*)self, (QEnterEvent*)event);
 }
 
-void q_pdfpageselector_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnEnterEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnEnterEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_leave_event(void* self, void* event) {
@@ -1671,8 +1675,8 @@ void q_pdfpageselector_qbase_leave_event(void* self, void* event) {
     QPdfPageSelector_QBaseLeaveEvent((QPdfPageSelector*)self, (QEvent*)event);
 }
 
-void q_pdfpageselector_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnLeaveEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnLeaveEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_paint_event(void* self, void* event) {
@@ -1683,8 +1687,8 @@ void q_pdfpageselector_qbase_paint_event(void* self, void* event) {
     QPdfPageSelector_QBasePaintEvent((QPdfPageSelector*)self, (QPaintEvent*)event);
 }
 
-void q_pdfpageselector_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnPaintEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnPaintEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_move_event(void* self, void* event) {
@@ -1695,8 +1699,8 @@ void q_pdfpageselector_qbase_move_event(void* self, void* event) {
     QPdfPageSelector_QBaseMoveEvent((QPdfPageSelector*)self, (QMoveEvent*)event);
 }
 
-void q_pdfpageselector_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnMoveEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnMoveEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_resize_event(void* self, void* event) {
@@ -1707,8 +1711,8 @@ void q_pdfpageselector_qbase_resize_event(void* self, void* event) {
     QPdfPageSelector_QBaseResizeEvent((QPdfPageSelector*)self, (QResizeEvent*)event);
 }
 
-void q_pdfpageselector_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnResizeEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnResizeEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_close_event(void* self, void* event) {
@@ -1719,8 +1723,8 @@ void q_pdfpageselector_qbase_close_event(void* self, void* event) {
     QPdfPageSelector_QBaseCloseEvent((QPdfPageSelector*)self, (QCloseEvent*)event);
 }
 
-void q_pdfpageselector_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnCloseEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnCloseEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_context_menu_event(void* self, void* event) {
@@ -1731,8 +1735,8 @@ void q_pdfpageselector_qbase_context_menu_event(void* self, void* event) {
     QPdfPageSelector_QBaseContextMenuEvent((QPdfPageSelector*)self, (QContextMenuEvent*)event);
 }
 
-void q_pdfpageselector_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnContextMenuEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnContextMenuEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_tablet_event(void* self, void* event) {
@@ -1743,8 +1747,8 @@ void q_pdfpageselector_qbase_tablet_event(void* self, void* event) {
     QPdfPageSelector_QBaseTabletEvent((QPdfPageSelector*)self, (QTabletEvent*)event);
 }
 
-void q_pdfpageselector_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnTabletEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnTabletEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_action_event(void* self, void* event) {
@@ -1755,8 +1759,8 @@ void q_pdfpageselector_qbase_action_event(void* self, void* event) {
     QPdfPageSelector_QBaseActionEvent((QPdfPageSelector*)self, (QActionEvent*)event);
 }
 
-void q_pdfpageselector_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnActionEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnActionEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_drag_enter_event(void* self, void* event) {
@@ -1767,8 +1771,8 @@ void q_pdfpageselector_qbase_drag_enter_event(void* self, void* event) {
     QPdfPageSelector_QBaseDragEnterEvent((QPdfPageSelector*)self, (QDragEnterEvent*)event);
 }
 
-void q_pdfpageselector_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnDragEnterEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnDragEnterEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_drag_move_event(void* self, void* event) {
@@ -1779,8 +1783,8 @@ void q_pdfpageselector_qbase_drag_move_event(void* self, void* event) {
     QPdfPageSelector_QBaseDragMoveEvent((QPdfPageSelector*)self, (QDragMoveEvent*)event);
 }
 
-void q_pdfpageselector_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnDragMoveEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnDragMoveEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_drag_leave_event(void* self, void* event) {
@@ -1791,8 +1795,8 @@ void q_pdfpageselector_qbase_drag_leave_event(void* self, void* event) {
     QPdfPageSelector_QBaseDragLeaveEvent((QPdfPageSelector*)self, (QDragLeaveEvent*)event);
 }
 
-void q_pdfpageselector_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnDragLeaveEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnDragLeaveEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_drop_event(void* self, void* event) {
@@ -1803,8 +1807,8 @@ void q_pdfpageselector_qbase_drop_event(void* self, void* event) {
     QPdfPageSelector_QBaseDropEvent((QPdfPageSelector*)self, (QDropEvent*)event);
 }
 
-void q_pdfpageselector_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnDropEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnDropEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_show_event(void* self, void* event) {
@@ -1815,8 +1819,8 @@ void q_pdfpageselector_qbase_show_event(void* self, void* event) {
     QPdfPageSelector_QBaseShowEvent((QPdfPageSelector*)self, (QShowEvent*)event);
 }
 
-void q_pdfpageselector_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnShowEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnShowEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_hide_event(void* self, void* event) {
@@ -1827,8 +1831,8 @@ void q_pdfpageselector_qbase_hide_event(void* self, void* event) {
     QPdfPageSelector_QBaseHideEvent((QPdfPageSelector*)self, (QHideEvent*)event);
 }
 
-void q_pdfpageselector_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnHideEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnHideEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1839,8 +1843,8 @@ bool q_pdfpageselector_qbase_native_event(void* self, const char* eventType, voi
     return QPdfPageSelector_QBaseNativeEvent((QPdfPageSelector*)self, qstring(eventType), message, result);
 }
 
-void q_pdfpageselector_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QPdfPageSelector_OnNativeEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QPdfPageSelector_OnNativeEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_change_event(void* self, void* param1) {
@@ -1851,8 +1855,8 @@ void q_pdfpageselector_qbase_change_event(void* self, void* param1) {
     QPdfPageSelector_QBaseChangeEvent((QPdfPageSelector*)self, (QEvent*)param1);
 }
 
-void q_pdfpageselector_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnChangeEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnChangeEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfpageselector_metric(void* self, int64_t param1) {
@@ -1863,8 +1867,8 @@ int32_t q_pdfpageselector_qbase_metric(void* self, int64_t param1) {
     return QPdfPageSelector_QBaseMetric((QPdfPageSelector*)self, param1);
 }
 
-void q_pdfpageselector_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QPdfPageSelector_OnMetric((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QPdfPageSelector_OnMetric((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_init_painter(void* self, void* painter) {
@@ -1875,8 +1879,8 @@ void q_pdfpageselector_qbase_init_painter(void* self, void* painter) {
     QPdfPageSelector_QBaseInitPainter((QPdfPageSelector*)self, (QPainter*)painter);
 }
 
-void q_pdfpageselector_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnInitPainter((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnInitPainter((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_pdfpageselector_redirected(void* self, void* offset) {
@@ -1887,8 +1891,8 @@ QPaintDevice* q_pdfpageselector_qbase_redirected(void* self, void* offset) {
     return QPdfPageSelector_QBaseRedirected((QPdfPageSelector*)self, (QPoint*)offset);
 }
 
-void q_pdfpageselector_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QPdfPageSelector_OnRedirected((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QPdfPageSelector_OnRedirected((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QPainter* q_pdfpageselector_shared_painter(void* self) {
@@ -1899,8 +1903,8 @@ QPainter* q_pdfpageselector_qbase_shared_painter(void* self) {
     return QPdfPageSelector_QBaseSharedPainter((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QPdfPageSelector_OnSharedPainter((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QPdfPageSelector_OnSharedPainter((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_input_method_event(void* self, void* param1) {
@@ -1911,8 +1915,8 @@ void q_pdfpageselector_qbase_input_method_event(void* self, void* param1) {
     QPdfPageSelector_QBaseInputMethodEvent((QPdfPageSelector*)self, (QInputMethodEvent*)param1);
 }
 
-void q_pdfpageselector_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnInputMethodEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnInputMethodEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QVariant* q_pdfpageselector_input_method_query(void* self, int64_t param1) {
@@ -1923,8 +1927,8 @@ QVariant* q_pdfpageselector_qbase_input_method_query(void* self, int64_t param1)
     return QPdfPageSelector_QBaseInputMethodQuery((QPdfPageSelector*)self, param1);
 }
 
-void q_pdfpageselector_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QPdfPageSelector_OnInputMethodQuery((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QPdfPageSelector_OnInputMethodQuery((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_focus_next_prev_child(void* self, bool next) {
@@ -1935,8 +1939,8 @@ bool q_pdfpageselector_qbase_focus_next_prev_child(void* self, bool next) {
     return QPdfPageSelector_QBaseFocusNextPrevChild((QPdfPageSelector*)self, next);
 }
 
-void q_pdfpageselector_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QPdfPageSelector_OnFocusNextPrevChild((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QPdfPageSelector_OnFocusNextPrevChild((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_event_filter(void* self, void* watched, void* event) {
@@ -1947,8 +1951,8 @@ bool q_pdfpageselector_qbase_event_filter(void* self, void* watched, void* event
     return QPdfPageSelector_QBaseEventFilter((QPdfPageSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pdfpageselector_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPdfPageSelector_OnEventFilter((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPdfPageSelector_OnEventFilter((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_timer_event(void* self, void* event) {
@@ -1959,8 +1963,8 @@ void q_pdfpageselector_qbase_timer_event(void* self, void* event) {
     QPdfPageSelector_QBaseTimerEvent((QPdfPageSelector*)self, (QTimerEvent*)event);
 }
 
-void q_pdfpageselector_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnTimerEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnTimerEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_child_event(void* self, void* event) {
@@ -1971,8 +1975,8 @@ void q_pdfpageselector_qbase_child_event(void* self, void* event) {
     QPdfPageSelector_QBaseChildEvent((QPdfPageSelector*)self, (QChildEvent*)event);
 }
 
-void q_pdfpageselector_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnChildEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnChildEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_custom_event(void* self, void* event) {
@@ -1983,8 +1987,8 @@ void q_pdfpageselector_qbase_custom_event(void* self, void* event) {
     QPdfPageSelector_QBaseCustomEvent((QPdfPageSelector*)self, (QEvent*)event);
 }
 
-void q_pdfpageselector_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnCustomEvent((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnCustomEvent((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_connect_notify(void* self, void* signal) {
@@ -1995,8 +1999,8 @@ void q_pdfpageselector_qbase_connect_notify(void* self, void* signal) {
     QPdfPageSelector_QBaseConnectNotify((QPdfPageSelector*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfpageselector_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnConnectNotify((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnConnectNotify((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_disconnect_notify(void* self, void* signal) {
@@ -2007,8 +2011,8 @@ void q_pdfpageselector_qbase_disconnect_notify(void* self, void* signal) {
     QPdfPageSelector_QBaseDisconnectNotify((QPdfPageSelector*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfpageselector_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPdfPageSelector_OnDisconnectNotify((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPdfPageSelector_OnDisconnectNotify((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_update_micro_focus(void* self) {
@@ -2019,8 +2023,8 @@ void q_pdfpageselector_qbase_update_micro_focus(void* self) {
     QPdfPageSelector_QBaseUpdateMicroFocus((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_update_micro_focus(void* self, void (*slot)()) {
-    QPdfPageSelector_OnUpdateMicroFocus((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_update_micro_focus(void* self, void (*callback)()) {
+    QPdfPageSelector_OnUpdateMicroFocus((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_create(void* self) {
@@ -2031,8 +2035,8 @@ void q_pdfpageselector_qbase_create(void* self) {
     QPdfPageSelector_QBaseCreate((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_create(void* self, void (*slot)()) {
-    QPdfPageSelector_OnCreate((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_create(void* self, void (*callback)()) {
+    QPdfPageSelector_OnCreate((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_destroy(void* self) {
@@ -2043,8 +2047,8 @@ void q_pdfpageselector_qbase_destroy(void* self) {
     QPdfPageSelector_QBaseDestroy((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_destroy(void* self, void (*slot)()) {
-    QPdfPageSelector_OnDestroy((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_destroy(void* self, void (*callback)()) {
+    QPdfPageSelector_OnDestroy((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_focus_next_child(void* self) {
@@ -2055,8 +2059,8 @@ bool q_pdfpageselector_qbase_focus_next_child(void* self) {
     return QPdfPageSelector_QBaseFocusNextChild((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_focus_next_child(void* self, bool (*slot)()) {
-    QPdfPageSelector_OnFocusNextChild((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_focus_next_child(void* self, bool (*callback)()) {
+    QPdfPageSelector_OnFocusNextChild((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_focus_previous_child(void* self) {
@@ -2067,8 +2071,8 @@ bool q_pdfpageselector_qbase_focus_previous_child(void* self) {
     return QPdfPageSelector_QBaseFocusPreviousChild((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_focus_previous_child(void* self, bool (*slot)()) {
-    QPdfPageSelector_OnFocusPreviousChild((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_focus_previous_child(void* self, bool (*callback)()) {
+    QPdfPageSelector_OnFocusPreviousChild((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 QObject* q_pdfpageselector_sender(void* self) {
@@ -2079,8 +2083,8 @@ QObject* q_pdfpageselector_qbase_sender(void* self) {
     return QPdfPageSelector_QBaseSender((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_sender(void* self, QObject* (*slot)()) {
-    QPdfPageSelector_OnSender((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_sender(void* self, QObject* (*callback)()) {
+    QPdfPageSelector_OnSender((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfpageselector_sender_signal_index(void* self) {
@@ -2091,8 +2095,8 @@ int32_t q_pdfpageselector_qbase_sender_signal_index(void* self) {
     return QPdfPageSelector_QBaseSenderSignalIndex((QPdfPageSelector*)self);
 }
 
-void q_pdfpageselector_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPdfPageSelector_OnSenderSignalIndex((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPdfPageSelector_OnSenderSignalIndex((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 int32_t q_pdfpageselector_receivers(void* self, const char* signal) {
@@ -2103,8 +2107,8 @@ int32_t q_pdfpageselector_qbase_receivers(void* self, const char* signal) {
     return QPdfPageSelector_QBaseReceivers((QPdfPageSelector*)self, signal);
 }
 
-void q_pdfpageselector_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPdfPageSelector_OnReceivers((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPdfPageSelector_OnReceivers((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 bool q_pdfpageselector_is_signal_connected(void* self, void* signal) {
@@ -2115,8 +2119,8 @@ bool q_pdfpageselector_qbase_is_signal_connected(void* self, void* signal) {
     return QPdfPageSelector_QBaseIsSignalConnected((QPdfPageSelector*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfpageselector_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPdfPageSelector_OnIsSignalConnected((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPdfPageSelector_OnIsSignalConnected((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
 double q_pdfpageselector_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2127,12 +2131,12 @@ double q_pdfpageselector_qbase_get_decoded_metric_f(void* self, int64_t metricA,
     return QPdfPageSelector_QBaseGetDecodedMetricF((QPdfPageSelector*)self, metricA, metricB);
 }
 
-void q_pdfpageselector_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QPdfPageSelector_OnGetDecodedMetricF((QPdfPageSelector*)self, (intptr_t)slot);
+void q_pdfpageselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QPdfPageSelector_OnGetDecodedMetricF((QPdfPageSelector*)self, (intptr_t)callback);
 }
 
-void q_pdfpageselector_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pdfpageselector_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pdfpageselector_delete(void* self) {

@@ -51,8 +51,8 @@ int32_t q_printpreviewdialog_metacall(void* self, int64_t param1, int param2, vo
     return QPrintPreviewDialog_Metacall((QPrintPreviewDialog*)self, param1, param2, param3);
 }
 
-void q_printpreviewdialog_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPrintPreviewDialog_OnMetacall((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPrintPreviewDialog_OnMetacall((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -74,8 +74,8 @@ void q_printpreviewdialog_set_visible(void* self, bool visible) {
     QPrintPreviewDialog_SetVisible((QPrintPreviewDialog*)self, visible);
 }
 
-void q_printpreviewdialog_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QPrintPreviewDialog_OnSetVisible((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QPrintPreviewDialog_OnSetVisible((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_qbase_set_visible(void* self, bool visible) {
@@ -86,8 +86,8 @@ void q_printpreviewdialog_done(void* self, int result) {
     QPrintPreviewDialog_Done((QPrintPreviewDialog*)self, result);
 }
 
-void q_printpreviewdialog_on_done(void* self, void (*slot)(void*, int)) {
-    QPrintPreviewDialog_OnDone((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_done(void* self, void (*callback)(void*, int)) {
+    QPrintPreviewDialog_OnDone((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_qbase_done(void* self, int result) {
@@ -98,8 +98,8 @@ void q_printpreviewdialog_paint_requested(void* self, void* printer) {
     QPrintPreviewDialog_PaintRequested((QPrintPreviewDialog*)self, (QPrinter*)printer);
 }
 
-void q_printpreviewdialog_on_paint_requested(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_Connect_PaintRequested((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_paint_requested(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_Connect_PaintRequested((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 const char* q_printpreviewdialog_tr2(const char* s, const char* c) {
@@ -140,24 +140,24 @@ void q_printpreviewdialog_finished(void* self, int result) {
     QDialog_Finished((QDialog*)self, result);
 }
 
-void q_printpreviewdialog_on_finished(void* self, void (*slot)(void*, int)) {
-    QDialog_Connect_Finished((QDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_finished(void* self, void (*callback)(void*, int)) {
+    QDialog_Connect_Finished((QDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_accepted(void* self) {
     QDialog_Accepted((QDialog*)self);
 }
 
-void q_printpreviewdialog_on_accepted(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_accepted(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Accepted((QDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_rejected(void* self) {
     QDialog_Rejected((QDialog*)self);
 }
 
-void q_printpreviewdialog_on_rejected(void* self, void (*slot)(void*)) {
-    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_rejected(void* self, void (*callback)(void*)) {
+    QDialog_Connect_Rejected((QDialog*)self, (intptr_t)callback);
 }
 
 uintptr_t q_printpreviewdialog_win_id(void* self) {
@@ -1186,32 +1186,32 @@ void q_printpreviewdialog_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_printpreviewdialog_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_printpreviewdialog_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_printpreviewdialog_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_printpreviewdialog_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_printpreviewdialog_input_method_hints(void* self) {
@@ -1382,12 +1382,16 @@ const char** q_printpreviewdialog_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_printpreviewdialog_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1405,8 +1409,8 @@ void q_printpreviewdialog_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_printpreviewdialog_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_printpreviewdialog_parent(void* self) {
@@ -1441,8 +1445,8 @@ void q_printpreviewdialog_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_printpreviewdialog_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_painting_active(void* self) {
@@ -1505,8 +1509,8 @@ QSize* q_printpreviewdialog_qbase_size_hint(void* self) {
     return QPrintPreviewDialog_QBaseSizeHint((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_size_hint(void* self, QSize* (*slot)()) {
-    QPrintPreviewDialog_OnSizeHint((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_size_hint(void* self, QSize* (*callback)()) {
+    QPrintPreviewDialog_OnSizeHint((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QSize* q_printpreviewdialog_minimum_size_hint(void* self) {
@@ -1517,8 +1521,8 @@ QSize* q_printpreviewdialog_qbase_minimum_size_hint(void* self) {
     return QPrintPreviewDialog_QBaseMinimumSizeHint((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QPrintPreviewDialog_OnMinimumSizeHint((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QPrintPreviewDialog_OnMinimumSizeHint((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_open(void* self) {
@@ -1529,8 +1533,8 @@ void q_printpreviewdialog_qbase_open(void* self) {
     QPrintPreviewDialog_QBaseOpen((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_open(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnOpen((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_open(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnOpen((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_exec(void* self) {
@@ -1541,8 +1545,8 @@ int32_t q_printpreviewdialog_qbase_exec(void* self) {
     return QPrintPreviewDialog_QBaseExec((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_exec(void* self, int32_t (*slot)()) {
-    QPrintPreviewDialog_OnExec((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_exec(void* self, int32_t (*callback)()) {
+    QPrintPreviewDialog_OnExec((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_accept(void* self) {
@@ -1553,8 +1557,8 @@ void q_printpreviewdialog_qbase_accept(void* self) {
     QPrintPreviewDialog_QBaseAccept((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_accept(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnAccept((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_accept(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnAccept((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_reject(void* self) {
@@ -1565,8 +1569,8 @@ void q_printpreviewdialog_qbase_reject(void* self) {
     QPrintPreviewDialog_QBaseReject((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_reject(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnReject((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_reject(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnReject((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_key_press_event(void* self, void* param1) {
@@ -1577,8 +1581,8 @@ void q_printpreviewdialog_qbase_key_press_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseKeyPressEvent((QPrintPreviewDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_printpreviewdialog_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnKeyPressEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnKeyPressEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_close_event(void* self, void* param1) {
@@ -1589,8 +1593,8 @@ void q_printpreviewdialog_qbase_close_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseCloseEvent((QPrintPreviewDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_printpreviewdialog_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnCloseEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnCloseEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_show_event(void* self, void* param1) {
@@ -1601,8 +1605,8 @@ void q_printpreviewdialog_qbase_show_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseShowEvent((QPrintPreviewDialog*)self, (QShowEvent*)param1);
 }
 
-void q_printpreviewdialog_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnShowEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnShowEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_resize_event(void* self, void* param1) {
@@ -1613,8 +1617,8 @@ void q_printpreviewdialog_qbase_resize_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseResizeEvent((QPrintPreviewDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_printpreviewdialog_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnResizeEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnResizeEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_context_menu_event(void* self, void* param1) {
@@ -1625,8 +1629,8 @@ void q_printpreviewdialog_qbase_context_menu_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseContextMenuEvent((QPrintPreviewDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_printpreviewdialog_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnContextMenuEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnContextMenuEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_event_filter(void* self, void* param1, void* param2) {
@@ -1637,8 +1641,8 @@ bool q_printpreviewdialog_qbase_event_filter(void* self, void* param1, void* par
     return QPrintPreviewDialog_QBaseEventFilter((QPrintPreviewDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_printpreviewdialog_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPrintPreviewDialog_OnEventFilter((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPrintPreviewDialog_OnEventFilter((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_dev_type(void* self) {
@@ -1649,8 +1653,8 @@ int32_t q_printpreviewdialog_qbase_dev_type(void* self) {
     return QPrintPreviewDialog_QBaseDevType((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_dev_type(void* self, int32_t (*slot)()) {
-    QPrintPreviewDialog_OnDevType((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_dev_type(void* self, int32_t (*callback)()) {
+    QPrintPreviewDialog_OnDevType((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_height_for_width(void* self, int param1) {
@@ -1661,8 +1665,8 @@ int32_t q_printpreviewdialog_qbase_height_for_width(void* self, int param1) {
     return QPrintPreviewDialog_QBaseHeightForWidth((QPrintPreviewDialog*)self, param1);
 }
 
-void q_printpreviewdialog_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QPrintPreviewDialog_OnHeightForWidth((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QPrintPreviewDialog_OnHeightForWidth((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_has_height_for_width(void* self) {
@@ -1673,8 +1677,8 @@ bool q_printpreviewdialog_qbase_has_height_for_width(void* self) {
     return QPrintPreviewDialog_QBaseHasHeightForWidth((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_has_height_for_width(void* self, bool (*slot)()) {
-    QPrintPreviewDialog_OnHasHeightForWidth((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_has_height_for_width(void* self, bool (*callback)()) {
+    QPrintPreviewDialog_OnHasHeightForWidth((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_printpreviewdialog_paint_engine(void* self) {
@@ -1685,8 +1689,8 @@ QPaintEngine* q_printpreviewdialog_qbase_paint_engine(void* self) {
     return QPrintPreviewDialog_QBasePaintEngine((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QPrintPreviewDialog_OnPaintEngine((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QPrintPreviewDialog_OnPaintEngine((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_event(void* self, void* event) {
@@ -1697,8 +1701,8 @@ bool q_printpreviewdialog_qbase_event(void* self, void* event) {
     return QPrintPreviewDialog_QBaseEvent((QPrintPreviewDialog*)self, (QEvent*)event);
 }
 
-void q_printpreviewdialog_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_mouse_press_event(void* self, void* event) {
@@ -1709,8 +1713,8 @@ void q_printpreviewdialog_qbase_mouse_press_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseMousePressEvent((QPrintPreviewDialog*)self, (QMouseEvent*)event);
 }
 
-void q_printpreviewdialog_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnMousePressEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnMousePressEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_mouse_release_event(void* self, void* event) {
@@ -1721,8 +1725,8 @@ void q_printpreviewdialog_qbase_mouse_release_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseMouseReleaseEvent((QPrintPreviewDialog*)self, (QMouseEvent*)event);
 }
 
-void q_printpreviewdialog_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnMouseReleaseEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnMouseReleaseEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_mouse_double_click_event(void* self, void* event) {
@@ -1733,8 +1737,8 @@ void q_printpreviewdialog_qbase_mouse_double_click_event(void* self, void* event
     QPrintPreviewDialog_QBaseMouseDoubleClickEvent((QPrintPreviewDialog*)self, (QMouseEvent*)event);
 }
 
-void q_printpreviewdialog_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnMouseDoubleClickEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnMouseDoubleClickEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_mouse_move_event(void* self, void* event) {
@@ -1745,8 +1749,8 @@ void q_printpreviewdialog_qbase_mouse_move_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseMouseMoveEvent((QPrintPreviewDialog*)self, (QMouseEvent*)event);
 }
 
-void q_printpreviewdialog_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnMouseMoveEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnMouseMoveEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_wheel_event(void* self, void* event) {
@@ -1757,8 +1761,8 @@ void q_printpreviewdialog_qbase_wheel_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseWheelEvent((QPrintPreviewDialog*)self, (QWheelEvent*)event);
 }
 
-void q_printpreviewdialog_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnWheelEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnWheelEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_key_release_event(void* self, void* event) {
@@ -1769,8 +1773,8 @@ void q_printpreviewdialog_qbase_key_release_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseKeyReleaseEvent((QPrintPreviewDialog*)self, (QKeyEvent*)event);
 }
 
-void q_printpreviewdialog_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnKeyReleaseEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnKeyReleaseEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_focus_in_event(void* self, void* event) {
@@ -1781,8 +1785,8 @@ void q_printpreviewdialog_qbase_focus_in_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseFocusInEvent((QPrintPreviewDialog*)self, (QFocusEvent*)event);
 }
 
-void q_printpreviewdialog_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnFocusInEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnFocusInEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_focus_out_event(void* self, void* event) {
@@ -1793,8 +1797,8 @@ void q_printpreviewdialog_qbase_focus_out_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseFocusOutEvent((QPrintPreviewDialog*)self, (QFocusEvent*)event);
 }
 
-void q_printpreviewdialog_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnFocusOutEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnFocusOutEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_enter_event(void* self, void* event) {
@@ -1805,8 +1809,8 @@ void q_printpreviewdialog_qbase_enter_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseEnterEvent((QPrintPreviewDialog*)self, (QEnterEvent*)event);
 }
 
-void q_printpreviewdialog_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnEnterEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnEnterEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_leave_event(void* self, void* event) {
@@ -1817,8 +1821,8 @@ void q_printpreviewdialog_qbase_leave_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseLeaveEvent((QPrintPreviewDialog*)self, (QEvent*)event);
 }
 
-void q_printpreviewdialog_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnLeaveEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnLeaveEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_paint_event(void* self, void* event) {
@@ -1829,8 +1833,8 @@ void q_printpreviewdialog_qbase_paint_event(void* self, void* event) {
     QPrintPreviewDialog_QBasePaintEvent((QPrintPreviewDialog*)self, (QPaintEvent*)event);
 }
 
-void q_printpreviewdialog_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnPaintEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnPaintEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_move_event(void* self, void* event) {
@@ -1841,8 +1845,8 @@ void q_printpreviewdialog_qbase_move_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseMoveEvent((QPrintPreviewDialog*)self, (QMoveEvent*)event);
 }
 
-void q_printpreviewdialog_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnMoveEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnMoveEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_tablet_event(void* self, void* event) {
@@ -1853,8 +1857,8 @@ void q_printpreviewdialog_qbase_tablet_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseTabletEvent((QPrintPreviewDialog*)self, (QTabletEvent*)event);
 }
 
-void q_printpreviewdialog_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnTabletEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnTabletEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_action_event(void* self, void* event) {
@@ -1865,8 +1869,8 @@ void q_printpreviewdialog_qbase_action_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseActionEvent((QPrintPreviewDialog*)self, (QActionEvent*)event);
 }
 
-void q_printpreviewdialog_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnActionEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnActionEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_drag_enter_event(void* self, void* event) {
@@ -1877,8 +1881,8 @@ void q_printpreviewdialog_qbase_drag_enter_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseDragEnterEvent((QPrintPreviewDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_printpreviewdialog_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnDragEnterEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnDragEnterEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_drag_move_event(void* self, void* event) {
@@ -1889,8 +1893,8 @@ void q_printpreviewdialog_qbase_drag_move_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseDragMoveEvent((QPrintPreviewDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_printpreviewdialog_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnDragMoveEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnDragMoveEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_drag_leave_event(void* self, void* event) {
@@ -1901,8 +1905,8 @@ void q_printpreviewdialog_qbase_drag_leave_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseDragLeaveEvent((QPrintPreviewDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_printpreviewdialog_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnDragLeaveEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnDragLeaveEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_drop_event(void* self, void* event) {
@@ -1913,8 +1917,8 @@ void q_printpreviewdialog_qbase_drop_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseDropEvent((QPrintPreviewDialog*)self, (QDropEvent*)event);
 }
 
-void q_printpreviewdialog_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnDropEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnDropEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_hide_event(void* self, void* event) {
@@ -1925,8 +1929,8 @@ void q_printpreviewdialog_qbase_hide_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseHideEvent((QPrintPreviewDialog*)self, (QHideEvent*)event);
 }
 
-void q_printpreviewdialog_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnHideEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnHideEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1937,8 +1941,8 @@ bool q_printpreviewdialog_qbase_native_event(void* self, const char* eventType, 
     return QPrintPreviewDialog_QBaseNativeEvent((QPrintPreviewDialog*)self, qstring(eventType), message, result);
 }
 
-void q_printpreviewdialog_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QPrintPreviewDialog_OnNativeEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QPrintPreviewDialog_OnNativeEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_change_event(void* self, void* param1) {
@@ -1949,8 +1953,8 @@ void q_printpreviewdialog_qbase_change_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseChangeEvent((QPrintPreviewDialog*)self, (QEvent*)param1);
 }
 
-void q_printpreviewdialog_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnChangeEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnChangeEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_metric(void* self, int64_t param1) {
@@ -1961,8 +1965,8 @@ int32_t q_printpreviewdialog_qbase_metric(void* self, int64_t param1) {
     return QPrintPreviewDialog_QBaseMetric((QPrintPreviewDialog*)self, param1);
 }
 
-void q_printpreviewdialog_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QPrintPreviewDialog_OnMetric((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QPrintPreviewDialog_OnMetric((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_init_painter(void* self, void* painter) {
@@ -1973,8 +1977,8 @@ void q_printpreviewdialog_qbase_init_painter(void* self, void* painter) {
     QPrintPreviewDialog_QBaseInitPainter((QPrintPreviewDialog*)self, (QPainter*)painter);
 }
 
-void q_printpreviewdialog_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnInitPainter((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnInitPainter((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_printpreviewdialog_redirected(void* self, void* offset) {
@@ -1985,8 +1989,8 @@ QPaintDevice* q_printpreviewdialog_qbase_redirected(void* self, void* offset) {
     return QPrintPreviewDialog_QBaseRedirected((QPrintPreviewDialog*)self, (QPoint*)offset);
 }
 
-void q_printpreviewdialog_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnRedirected((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnRedirected((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QPainter* q_printpreviewdialog_shared_painter(void* self) {
@@ -1997,8 +2001,8 @@ QPainter* q_printpreviewdialog_qbase_shared_painter(void* self) {
     return QPrintPreviewDialog_QBaseSharedPainter((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QPrintPreviewDialog_OnSharedPainter((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QPrintPreviewDialog_OnSharedPainter((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_input_method_event(void* self, void* param1) {
@@ -2009,8 +2013,8 @@ void q_printpreviewdialog_qbase_input_method_event(void* self, void* param1) {
     QPrintPreviewDialog_QBaseInputMethodEvent((QPrintPreviewDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_printpreviewdialog_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnInputMethodEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnInputMethodEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QVariant* q_printpreviewdialog_input_method_query(void* self, int64_t param1) {
@@ -2021,8 +2025,8 @@ QVariant* q_printpreviewdialog_qbase_input_method_query(void* self, int64_t para
     return QPrintPreviewDialog_QBaseInputMethodQuery((QPrintPreviewDialog*)self, param1);
 }
 
-void q_printpreviewdialog_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QPrintPreviewDialog_OnInputMethodQuery((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QPrintPreviewDialog_OnInputMethodQuery((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_focus_next_prev_child(void* self, bool next) {
@@ -2033,8 +2037,8 @@ bool q_printpreviewdialog_qbase_focus_next_prev_child(void* self, bool next) {
     return QPrintPreviewDialog_QBaseFocusNextPrevChild((QPrintPreviewDialog*)self, next);
 }
 
-void q_printpreviewdialog_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QPrintPreviewDialog_OnFocusNextPrevChild((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QPrintPreviewDialog_OnFocusNextPrevChild((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_timer_event(void* self, void* event) {
@@ -2045,8 +2049,8 @@ void q_printpreviewdialog_qbase_timer_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseTimerEvent((QPrintPreviewDialog*)self, (QTimerEvent*)event);
 }
 
-void q_printpreviewdialog_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnTimerEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnTimerEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_child_event(void* self, void* event) {
@@ -2057,8 +2061,8 @@ void q_printpreviewdialog_qbase_child_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseChildEvent((QPrintPreviewDialog*)self, (QChildEvent*)event);
 }
 
-void q_printpreviewdialog_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnChildEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnChildEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_custom_event(void* self, void* event) {
@@ -2069,8 +2073,8 @@ void q_printpreviewdialog_qbase_custom_event(void* self, void* event) {
     QPrintPreviewDialog_QBaseCustomEvent((QPrintPreviewDialog*)self, (QEvent*)event);
 }
 
-void q_printpreviewdialog_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnCustomEvent((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnCustomEvent((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_connect_notify(void* self, void* signal) {
@@ -2081,8 +2085,8 @@ void q_printpreviewdialog_qbase_connect_notify(void* self, void* signal) {
     QPrintPreviewDialog_QBaseConnectNotify((QPrintPreviewDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_printpreviewdialog_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnConnectNotify((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnConnectNotify((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_disconnect_notify(void* self, void* signal) {
@@ -2093,8 +2097,8 @@ void q_printpreviewdialog_qbase_disconnect_notify(void* self, void* signal) {
     QPrintPreviewDialog_QBaseDisconnectNotify((QPrintPreviewDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_printpreviewdialog_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnDisconnectNotify((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnDisconnectNotify((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_adjust_position(void* self, void* param1) {
@@ -2105,8 +2109,8 @@ void q_printpreviewdialog_qbase_adjust_position(void* self, void* param1) {
     QPrintPreviewDialog_QBaseAdjustPosition((QPrintPreviewDialog*)self, (QWidget*)param1);
 }
 
-void q_printpreviewdialog_on_adjust_position(void* self, void (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnAdjustPosition((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnAdjustPosition((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_update_micro_focus(void* self) {
@@ -2117,8 +2121,8 @@ void q_printpreviewdialog_qbase_update_micro_focus(void* self) {
     QPrintPreviewDialog_QBaseUpdateMicroFocus((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_update_micro_focus(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnUpdateMicroFocus((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_update_micro_focus(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnUpdateMicroFocus((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_create(void* self) {
@@ -2129,8 +2133,8 @@ void q_printpreviewdialog_qbase_create(void* self) {
     QPrintPreviewDialog_QBaseCreate((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_create(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnCreate((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_create(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnCreate((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_destroy(void* self) {
@@ -2141,8 +2145,8 @@ void q_printpreviewdialog_qbase_destroy(void* self) {
     QPrintPreviewDialog_QBaseDestroy((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_destroy(void* self, void (*slot)()) {
-    QPrintPreviewDialog_OnDestroy((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_destroy(void* self, void (*callback)()) {
+    QPrintPreviewDialog_OnDestroy((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_focus_next_child(void* self) {
@@ -2153,8 +2157,8 @@ bool q_printpreviewdialog_qbase_focus_next_child(void* self) {
     return QPrintPreviewDialog_QBaseFocusNextChild((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_focus_next_child(void* self, bool (*slot)()) {
-    QPrintPreviewDialog_OnFocusNextChild((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_focus_next_child(void* self, bool (*callback)()) {
+    QPrintPreviewDialog_OnFocusNextChild((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_focus_previous_child(void* self) {
@@ -2165,8 +2169,8 @@ bool q_printpreviewdialog_qbase_focus_previous_child(void* self) {
     return QPrintPreviewDialog_QBaseFocusPreviousChild((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*slot)()) {
-    QPrintPreviewDialog_OnFocusPreviousChild((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_focus_previous_child(void* self, bool (*callback)()) {
+    QPrintPreviewDialog_OnFocusPreviousChild((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 QObject* q_printpreviewdialog_sender(void* self) {
@@ -2177,8 +2181,8 @@ QObject* q_printpreviewdialog_qbase_sender(void* self) {
     return QPrintPreviewDialog_QBaseSender((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_sender(void* self, QObject* (*slot)()) {
-    QPrintPreviewDialog_OnSender((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_sender(void* self, QObject* (*callback)()) {
+    QPrintPreviewDialog_OnSender((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_sender_signal_index(void* self) {
@@ -2189,8 +2193,8 @@ int32_t q_printpreviewdialog_qbase_sender_signal_index(void* self) {
     return QPrintPreviewDialog_QBaseSenderSignalIndex((QPrintPreviewDialog*)self);
 }
 
-void q_printpreviewdialog_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPrintPreviewDialog_OnSenderSignalIndex((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPrintPreviewDialog_OnSenderSignalIndex((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 int32_t q_printpreviewdialog_receivers(void* self, const char* signal) {
@@ -2201,8 +2205,8 @@ int32_t q_printpreviewdialog_qbase_receivers(void* self, const char* signal) {
     return QPrintPreviewDialog_QBaseReceivers((QPrintPreviewDialog*)self, signal);
 }
 
-void q_printpreviewdialog_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPrintPreviewDialog_OnReceivers((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPrintPreviewDialog_OnReceivers((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 bool q_printpreviewdialog_is_signal_connected(void* self, void* signal) {
@@ -2213,8 +2217,8 @@ bool q_printpreviewdialog_qbase_is_signal_connected(void* self, void* signal) {
     return QPrintPreviewDialog_QBaseIsSignalConnected((QPrintPreviewDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_printpreviewdialog_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPrintPreviewDialog_OnIsSignalConnected((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPrintPreviewDialog_OnIsSignalConnected((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
 double q_printpreviewdialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2225,12 +2229,12 @@ double q_printpreviewdialog_qbase_get_decoded_metric_f(void* self, int64_t metri
     return QPrintPreviewDialog_QBaseGetDecodedMetricF((QPrintPreviewDialog*)self, metricA, metricB);
 }
 
-void q_printpreviewdialog_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QPrintPreviewDialog_OnGetDecodedMetricF((QPrintPreviewDialog*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QPrintPreviewDialog_OnGetDecodedMetricF((QPrintPreviewDialog*)self, (intptr_t)callback);
 }
 
-void q_printpreviewdialog_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_printpreviewdialog_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_printpreviewdialog_delete(void* self) {

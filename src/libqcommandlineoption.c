@@ -7,13 +7,19 @@ QCommandLineOption* q_commandlineoption_new(const char* name) {
 
 QCommandLineOption* q_commandlineoption_new2(const char* names[]) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_new2");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    return QCommandLineOption_new2(names_list);
+    QCommandLineOption* _out = QCommandLineOption_new2(names_list);
+    free(names_qstr);
+    return _out;
 }
 
 QCommandLineOption* q_commandlineoption_new3(const char* name, const char* description) {
@@ -22,13 +28,19 @@ QCommandLineOption* q_commandlineoption_new3(const char* name, const char* descr
 
 QCommandLineOption* q_commandlineoption_new4(const char* names[], const char* description) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_new4");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    return QCommandLineOption_new4(names_list, qstring(description));
+    QCommandLineOption* _out = QCommandLineOption_new4(names_list, qstring(description));
+    free(names_qstr);
+    return _out;
 }
 
 QCommandLineOption* q_commandlineoption_new5(void* other) {
@@ -45,24 +57,36 @@ QCommandLineOption* q_commandlineoption_new7(const char* name, const char* descr
 
 QCommandLineOption* q_commandlineoption_new8(const char* names[], const char* description, const char* valueName) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_new8");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    return QCommandLineOption_new8(names_list, qstring(description), qstring(valueName));
+    QCommandLineOption* _out = QCommandLineOption_new8(names_list, qstring(description), qstring(valueName));
+    free(names_qstr);
+    return _out;
 }
 
 QCommandLineOption* q_commandlineoption_new9(const char* names[], const char* description, const char* valueName, const char* defaultValue) {
     size_t names_len = libqt_strv_length(names);
-    libqt_string* names_qstr = malloc(names_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < names_len; ++_i) {
-        names_qstr[_i] = qstring(names[_i]);
+    libqt_string* names_qstr = (libqt_string*)malloc(names_len * sizeof(libqt_string));
+    if (names_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_new9");
+        abort();
+    }
+    for (size_t i = 0; i < names_len; ++i) {
+        names_qstr[i] = qstring(names[i]);
     }
     libqt_list names_list = qlist(names_qstr, names_len);
 
-    return QCommandLineOption_new9(names_list, qstring(description), qstring(valueName), qstring(defaultValue));
+    QCommandLineOption* _out = QCommandLineOption_new9(names_list, qstring(description), qstring(valueName), qstring(defaultValue));
+    free(names_qstr);
+    return _out;
 }
 
 void q_commandlineoption_operator_assign(void* self, void* other) {
@@ -77,12 +101,16 @@ const char** q_commandlineoption_names(void* self) {
     libqt_list _arr = QCommandLineOption_Names((QCommandLineOption*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -116,24 +144,33 @@ void q_commandlineoption_set_default_value(void* self, const char* defaultValue)
 
 void q_commandlineoption_set_default_values(void* self, const char* defaultValues[]) {
     size_t defaultValues_len = libqt_strv_length(defaultValues);
-    libqt_string* defaultValues_qstr = malloc(defaultValues_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < defaultValues_len; ++_i) {
-        defaultValues_qstr[_i] = qstring(defaultValues[_i]);
+    libqt_string* defaultValues_qstr = (libqt_string*)malloc(defaultValues_len * sizeof(libqt_string));
+    if (defaultValues_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_set_default_values");
+        abort();
+    }
+    for (size_t i = 0; i < defaultValues_len; ++i) {
+        defaultValues_qstr[i] = qstring(defaultValues[i]);
     }
     libqt_list defaultValues_list = qlist(defaultValues_qstr, defaultValues_len);
     QCommandLineOption_SetDefaultValues((QCommandLineOption*)self, defaultValues_list);
+    free(defaultValues_qstr);
 }
 
 const char** q_commandlineoption_default_values(void* self) {
     libqt_list _arr = QCommandLineOption_DefaultValues((QCommandLineOption*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_commandlineoption_default_values");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

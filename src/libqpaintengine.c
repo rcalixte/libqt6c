@@ -90,8 +90,8 @@ bool q_paintengine_begin(void* self, void* pdev) {
     return QPaintEngine_Begin((QPaintEngine*)self, (QPaintDevice*)pdev);
 }
 
-void q_paintengine_on_begin(void* self, bool (*slot)(void*, void*)) {
-    QPaintEngine_OnBegin((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*)) {
+    QPaintEngine_OnBegin((QPaintEngine*)self, (intptr_t)callback);
 }
 
 bool q_paintengine_qbase_begin(void* self, void* pdev) {
@@ -102,8 +102,8 @@ bool q_paintengine_end(void* self) {
     return QPaintEngine_End((QPaintEngine*)self);
 }
 
-void q_paintengine_on_end(void* self, bool (*slot)()) {
-    QPaintEngine_OnEnd((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_end(void* self, bool (*callback)()) {
+    QPaintEngine_OnEnd((QPaintEngine*)self, (intptr_t)callback);
 }
 
 bool q_paintengine_qbase_end(void* self) {
@@ -114,8 +114,8 @@ void q_paintengine_update_state(void* self, void* state) {
     QPaintEngine_UpdateState((QPaintEngine*)self, (QPaintEngineState*)state);
 }
 
-void q_paintengine_on_update_state(void* self, void (*slot)(void*, void*)) {
-    QPaintEngine_OnUpdateState((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*)) {
+    QPaintEngine_OnUpdateState((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_update_state(void* self, void* state) {
@@ -126,8 +126,8 @@ void q_paintengine_draw_rects(void* self, void* rects, int rectCount) {
     QPaintEngine_DrawRects((QPaintEngine*)self, (QRect*)rects, rectCount);
 }
 
-void q_paintengine_on_draw_rects(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawRects((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawRects((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_rects(void* self, void* rects, int rectCount) {
@@ -138,8 +138,8 @@ void q_paintengine_draw_rects2(void* self, void* rects, int rectCount) {
     QPaintEngine_DrawRects2((QPaintEngine*)self, (QRectF*)rects, rectCount);
 }
 
-void q_paintengine_on_draw_rects2(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawRects2((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawRects2((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_rects2(void* self, void* rects, int rectCount) {
@@ -150,8 +150,8 @@ void q_paintengine_draw_lines(void* self, void* lines, int lineCount) {
     QPaintEngine_DrawLines((QPaintEngine*)self, (QLine*)lines, lineCount);
 }
 
-void q_paintengine_on_draw_lines(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawLines((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawLines((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_lines(void* self, void* lines, int lineCount) {
@@ -162,8 +162,8 @@ void q_paintengine_draw_lines2(void* self, void* lines, int lineCount) {
     QPaintEngine_DrawLines2((QPaintEngine*)self, (QLineF*)lines, lineCount);
 }
 
-void q_paintengine_on_draw_lines2(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawLines2((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawLines2((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_lines2(void* self, void* lines, int lineCount) {
@@ -174,8 +174,8 @@ void q_paintengine_draw_ellipse(void* self, void* r) {
     QPaintEngine_DrawEllipse((QPaintEngine*)self, (QRectF*)r);
 }
 
-void q_paintengine_on_draw_ellipse(void* self, void (*slot)(void*, void*)) {
-    QPaintEngine_OnDrawEllipse((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*)) {
+    QPaintEngine_OnDrawEllipse((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_ellipse(void* self, void* r) {
@@ -186,8 +186,8 @@ void q_paintengine_draw_ellipse2(void* self, void* r) {
     QPaintEngine_DrawEllipse2((QPaintEngine*)self, (QRect*)r);
 }
 
-void q_paintengine_on_draw_ellipse2(void* self, void (*slot)(void*, void*)) {
-    QPaintEngine_OnDrawEllipse2((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*)) {
+    QPaintEngine_OnDrawEllipse2((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_ellipse2(void* self, void* r) {
@@ -198,8 +198,8 @@ void q_paintengine_draw_path(void* self, void* path) {
     QPaintEngine_DrawPath((QPaintEngine*)self, (QPainterPath*)path);
 }
 
-void q_paintengine_on_draw_path(void* self, void (*slot)(void*, void*)) {
-    QPaintEngine_OnDrawPath((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*)) {
+    QPaintEngine_OnDrawPath((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_path(void* self, void* path) {
@@ -210,8 +210,8 @@ void q_paintengine_draw_points(void* self, void* points, int pointCount) {
     QPaintEngine_DrawPoints((QPaintEngine*)self, (QPointF*)points, pointCount);
 }
 
-void q_paintengine_on_draw_points(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawPoints((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawPoints((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_points(void* self, void* points, int pointCount) {
@@ -222,8 +222,8 @@ void q_paintengine_draw_points2(void* self, void* points, int pointCount) {
     QPaintEngine_DrawPoints2((QPaintEngine*)self, (QPoint*)points, pointCount);
 }
 
-void q_paintengine_on_draw_points2(void* self, void (*slot)(void*, void*, int)) {
-    QPaintEngine_OnDrawPoints2((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int)) {
+    QPaintEngine_OnDrawPoints2((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount) {
@@ -234,8 +234,8 @@ void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int64_
     QPaintEngine_DrawPolygon((QPaintEngine*)self, (QPointF*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon(void* self, void (*slot)(void*, void*, int, int64_t)) {
-    QPaintEngine_OnDrawPolygon((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int64_t)) {
+    QPaintEngine_OnDrawPolygon((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int64_t mode) {
@@ -246,8 +246,8 @@ void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int64
     QPaintEngine_DrawPolygon2((QPaintEngine*)self, (QPoint*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon2(void* self, void (*slot)(void*, void*, int, int64_t)) {
-    QPaintEngine_OnDrawPolygon2((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int64_t)) {
+    QPaintEngine_OnDrawPolygon2((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int64_t mode) {
@@ -258,8 +258,8 @@ void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr) {
     QPaintEngine_DrawPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pm, (QRectF*)sr);
 }
 
-void q_paintengine_on_draw_pixmap(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QPaintEngine_OnDrawPixmap((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QPaintEngine_OnDrawPixmap((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_pixmap(void* self, void* r, void* pm, void* sr) {
@@ -270,8 +270,8 @@ void q_paintengine_draw_text_item(void* self, void* p, void* textItem) {
     QPaintEngine_DrawTextItem((QPaintEngine*)self, (QPointF*)p, (QTextItem*)textItem);
 }
 
-void q_paintengine_on_draw_text_item(void* self, void (*slot)(void*, void*, void*)) {
-    QPaintEngine_OnDrawTextItem((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*)) {
+    QPaintEngine_OnDrawTextItem((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_text_item(void* self, void* p, void* textItem) {
@@ -282,8 +282,8 @@ void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s)
     QPaintEngine_DrawTiledPixmap((QPaintEngine*)self, (QRectF*)r, (QPixmap*)pixmap, (QPointF*)s);
 }
 
-void q_paintengine_on_draw_tiled_pixmap(void* self, void (*slot)(void*, void*, void*, void*)) {
-    QPaintEngine_OnDrawTiledPixmap((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*)) {
+    QPaintEngine_OnDrawTiledPixmap((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s) {
@@ -294,8 +294,8 @@ void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t f
     QPaintEngine_DrawImage((QPaintEngine*)self, (QRectF*)r, (QImage*)pm, (QRectF*)sr, flags);
 }
 
-void q_paintengine_on_draw_image(void* self, void (*slot)(void*, void*, void*, void*, int64_t)) {
-    QPaintEngine_OnDrawImage((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int64_t)) {
+    QPaintEngine_OnDrawImage((QPaintEngine*)self, (intptr_t)callback);
 }
 
 void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags) {
@@ -330,8 +330,8 @@ QPoint* q_paintengine_coordinate_offset(void* self) {
     return QPaintEngine_CoordinateOffset((QPaintEngine*)self);
 }
 
-void q_paintengine_on_coordinate_offset(void* self, QPoint* (*slot)()) {
-    QPaintEngine_OnCoordinateOffset((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)()) {
+    QPaintEngine_OnCoordinateOffset((QPaintEngine*)self, (intptr_t)callback);
 }
 
 QPoint* q_paintengine_qbase_coordinate_offset(void* self) {
@@ -342,8 +342,8 @@ int64_t q_paintengine_type(void* self) {
     return QPaintEngine_Type((QPaintEngine*)self);
 }
 
-void q_paintengine_on_type(void* self, int64_t (*slot)()) {
-    QPaintEngine_OnType((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_type(void* self, int64_t (*callback)()) {
+    QPaintEngine_OnType((QPaintEngine*)self, (intptr_t)callback);
 }
 
 int64_t q_paintengine_qbase_type(void* self) {
@@ -386,8 +386,8 @@ QPixmap* q_paintengine_create_pixmap(void* self, void* size) {
     return QPaintEngine_CreatePixmap((QPaintEngine*)self, (QSize*)size);
 }
 
-void q_paintengine_on_create_pixmap(void* self, QPixmap* (*slot)(void*, void*)) {
-    QPaintEngine_OnCreatePixmap((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*)) {
+    QPaintEngine_OnCreatePixmap((QPaintEngine*)self, (intptr_t)callback);
 }
 
 QPixmap* q_paintengine_qbase_create_pixmap(void* self, void* size) {
@@ -398,8 +398,8 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t
     return QPaintEngine_CreatePixmapFromImage((QPaintEngine*)self, (QImage*)image, flags);
 }
 
-void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*slot)(void*, void*, int64_t)) {
-    QPaintEngine_OnCreatePixmapFromImage((QPaintEngine*)self, (intptr_t)slot);
+void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int64_t)) {
+    QPaintEngine_OnCreatePixmapFromImage((QPaintEngine*)self, (intptr_t)callback);
 }
 
 QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int64_t flags) {

@@ -97,8 +97,8 @@ QPaintEngine* q_svggenerator_paint_engine(void* self) {
     return QSvgGenerator_PaintEngine((QSvgGenerator*)self);
 }
 
-void q_svggenerator_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QSvgGenerator_OnPaintEngine((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QSvgGenerator_OnPaintEngine((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_svggenerator_qbase_paint_engine(void* self) {
@@ -109,8 +109,8 @@ int32_t q_svggenerator_metric(void* self, int64_t metric) {
     return QSvgGenerator_Metric((QSvgGenerator*)self, metric);
 }
 
-void q_svggenerator_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QSvgGenerator_OnMetric((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QSvgGenerator_OnMetric((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 int32_t q_svggenerator_qbase_metric(void* self, int64_t metric) {
@@ -185,8 +185,8 @@ int32_t q_svggenerator_qbase_dev_type(void* self) {
     return QSvgGenerator_QBaseDevType((QSvgGenerator*)self);
 }
 
-void q_svggenerator_on_dev_type(void* self, int32_t (*slot)()) {
-    QSvgGenerator_OnDevType((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_dev_type(void* self, int32_t (*callback)()) {
+    QSvgGenerator_OnDevType((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 void q_svggenerator_init_painter(void* self, void* painter) {
@@ -197,8 +197,8 @@ void q_svggenerator_qbase_init_painter(void* self, void* painter) {
     QSvgGenerator_QBaseInitPainter((QSvgGenerator*)self, (QPainter*)painter);
 }
 
-void q_svggenerator_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QSvgGenerator_OnInitPainter((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QSvgGenerator_OnInitPainter((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_svggenerator_redirected(void* self, void* offset) {
@@ -209,8 +209,8 @@ QPaintDevice* q_svggenerator_qbase_redirected(void* self, void* offset) {
     return QSvgGenerator_QBaseRedirected((QSvgGenerator*)self, (QPoint*)offset);
 }
 
-void q_svggenerator_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QSvgGenerator_OnRedirected((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QSvgGenerator_OnRedirected((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 QPainter* q_svggenerator_shared_painter(void* self) {
@@ -221,8 +221,8 @@ QPainter* q_svggenerator_qbase_shared_painter(void* self) {
     return QSvgGenerator_QBaseSharedPainter((QSvgGenerator*)self);
 }
 
-void q_svggenerator_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QSvgGenerator_OnSharedPainter((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QSvgGenerator_OnSharedPainter((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -233,8 +233,8 @@ double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
     return QSvgGenerator_QBaseGetDecodedMetricF((QSvgGenerator*)self, metricA, metricB);
 }
 
-void q_svggenerator_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QSvgGenerator_OnGetDecodedMetricF((QSvgGenerator*)self, (intptr_t)slot);
+void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QSvgGenerator_OnGetDecodedMetricF((QSvgGenerator*)self, (intptr_t)callback);
 }
 
 void q_svggenerator_delete(void* self) {

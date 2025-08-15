@@ -37,8 +37,8 @@ int32_t q_fontcombobox_metacall(void* self, int64_t param1, int param2, void* pa
     return QFontComboBox_Metacall((QFontComboBox*)self, param1, param2, param3);
 }
 
-void q_fontcombobox_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QFontComboBox_OnMetacall((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QFontComboBox_OnMetacall((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -76,8 +76,8 @@ QSize* q_fontcombobox_size_hint(void* self) {
     return QFontComboBox_SizeHint((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_size_hint(void* self, QSize* (*slot)()) {
-    QFontComboBox_OnSizeHint((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_size_hint(void* self, QSize* (*callback)()) {
+    QFontComboBox_OnSizeHint((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QSize* q_fontcombobox_qbase_size_hint(void* self) {
@@ -118,16 +118,16 @@ void q_fontcombobox_current_font_changed(void* self, void* f) {
     QFontComboBox_CurrentFontChanged((QFontComboBox*)self, (QFont*)f);
 }
 
-void q_fontcombobox_on_current_font_changed(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_Connect_CurrentFontChanged((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_current_font_changed(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_Connect_CurrentFontChanged((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_event(void* self, void* e) {
     return QFontComboBox_Event((QFontComboBox*)self, (QEvent*)e);
 }
 
-void q_fontcombobox_on_event(void* self, bool (*slot)(void*, void*)) {
-    QFontComboBox_OnEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_event(void* self, bool (*callback)(void*, void*)) {
+    QFontComboBox_OnEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_qbase_event(void* self, void* e) {
@@ -335,12 +335,17 @@ void q_fontcombobox_add_item2(void* self, void* icon, const char* text) {
 
 void q_fontcombobox_add_items(void* self, const char* texts[]) {
     size_t texts_len = libqt_strv_length(texts);
-    libqt_string* texts_qstr = malloc(texts_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < texts_len; ++_i) {
-        texts_qstr[_i] = qstring(texts[_i]);
+    libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
+    if (texts_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_fontcombobox_add_items");
+        abort();
+    }
+    for (size_t i = 0; i < texts_len; ++i) {
+        texts_qstr[i] = qstring(texts[i]);
     }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_AddItems((QComboBox*)self, texts_list);
+    free(texts_qstr);
 }
 
 void q_fontcombobox_insert_item(void* self, int index, const char* text) {
@@ -353,12 +358,17 @@ void q_fontcombobox_insert_item2(void* self, int index, void* icon, const char* 
 
 void q_fontcombobox_insert_items(void* self, int index, const char* texts[]) {
     size_t texts_len = libqt_strv_length(texts);
-    libqt_string* texts_qstr = malloc(texts_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < texts_len; ++_i) {
-        texts_qstr[_i] = qstring(texts[_i]);
+    libqt_string* texts_qstr = (libqt_string*)malloc(texts_len * sizeof(libqt_string));
+    if (texts_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_fontcombobox_insert_items");
+        abort();
+    }
+    for (size_t i = 0; i < texts_len; ++i) {
+        texts_qstr[i] = qstring(texts[i]);
     }
     libqt_list texts_list = qlist(texts_qstr, texts_len);
     QComboBox_InsertItems((QComboBox*)self, index, texts_list);
+    free(texts_qstr);
 }
 
 void q_fontcombobox_insert_separator(void* self, int index) {
@@ -417,56 +427,56 @@ void q_fontcombobox_edit_text_changed(void* self, const char* param1) {
     QComboBox_EditTextChanged((QComboBox*)self, qstring(param1));
 }
 
-void q_fontcombobox_on_edit_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_EditTextChanged((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_edit_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_EditTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_activated(void* self, int index) {
     QComboBox_Activated((QComboBox*)self, index);
 }
 
-void q_fontcombobox_on_activated(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_Activated((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_activated(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_Activated((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_text_activated(void* self, const char* param1) {
     QComboBox_TextActivated((QComboBox*)self, qstring(param1));
 }
 
-void q_fontcombobox_on_text_activated(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_TextActivated((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_text_activated(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_TextActivated((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_highlighted(void* self, int index) {
     QComboBox_Highlighted((QComboBox*)self, index);
 }
 
-void q_fontcombobox_on_highlighted(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_Highlighted((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_highlighted(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_Highlighted((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_text_highlighted(void* self, const char* param1) {
     QComboBox_TextHighlighted((QComboBox*)self, qstring(param1));
 }
 
-void q_fontcombobox_on_text_highlighted(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_TextHighlighted((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_text_highlighted(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_TextHighlighted((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_current_index_changed(void* self, int index) {
     QComboBox_CurrentIndexChanged((QComboBox*)self, index);
 }
 
-void q_fontcombobox_on_current_index_changed(void* self, void (*slot)(void*, int)) {
-    QComboBox_Connect_CurrentIndexChanged((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_current_index_changed(void* self, void (*callback)(void*, int)) {
+    QComboBox_Connect_CurrentIndexChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_current_text_changed(void* self, const char* param1) {
     QComboBox_CurrentTextChanged((QComboBox*)self, qstring(param1));
 }
 
-void q_fontcombobox_on_current_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_current_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QComboBox_Connect_CurrentTextChanged((QComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_find_text2(void* self, const char* text, int64_t flags) {
@@ -1535,32 +1545,32 @@ void q_fontcombobox_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_fontcombobox_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_fontcombobox_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_fontcombobox_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_fontcombobox_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_fontcombobox_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_fontcombobox_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_fontcombobox_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_fontcombobox_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_fontcombobox_input_method_hints(void* self) {
@@ -1731,12 +1741,16 @@ const char** q_fontcombobox_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_fontcombobox_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1754,8 +1768,8 @@ void q_fontcombobox_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_fontcombobox_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_fontcombobox_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_fontcombobox_parent(void* self) {
@@ -1790,8 +1804,8 @@ void q_fontcombobox_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_fontcombobox_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_fontcombobox_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_painting_active(void* self) {
@@ -1854,8 +1868,8 @@ void q_fontcombobox_qbase_set_model(void* self, void* model) {
     QFontComboBox_QBaseSetModel((QFontComboBox*)self, (QAbstractItemModel*)model);
 }
 
-void q_fontcombobox_on_set_model(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnSetModel((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_set_model(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnSetModel((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QSize* q_fontcombobox_minimum_size_hint(void* self) {
@@ -1866,8 +1880,8 @@ QSize* q_fontcombobox_qbase_minimum_size_hint(void* self) {
     return QFontComboBox_QBaseMinimumSizeHint((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QFontComboBox_OnMinimumSizeHint((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QFontComboBox_OnMinimumSizeHint((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_show_popup(void* self) {
@@ -1878,8 +1892,8 @@ void q_fontcombobox_qbase_show_popup(void* self) {
     QFontComboBox_QBaseShowPopup((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_show_popup(void* self, void (*slot)()) {
-    QFontComboBox_OnShowPopup((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_show_popup(void* self, void (*callback)()) {
+    QFontComboBox_OnShowPopup((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_hide_popup(void* self) {
@@ -1890,8 +1904,8 @@ void q_fontcombobox_qbase_hide_popup(void* self) {
     QFontComboBox_QBaseHidePopup((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_hide_popup(void* self, void (*slot)()) {
-    QFontComboBox_OnHidePopup((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_hide_popup(void* self, void (*callback)()) {
+    QFontComboBox_OnHidePopup((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QVariant* q_fontcombobox_input_method_query(void* self, int64_t param1) {
@@ -1902,8 +1916,8 @@ QVariant* q_fontcombobox_qbase_input_method_query(void* self, int64_t param1) {
     return QFontComboBox_QBaseInputMethodQuery((QFontComboBox*)self, param1);
 }
 
-void q_fontcombobox_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QFontComboBox_OnInputMethodQuery((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QFontComboBox_OnInputMethodQuery((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_focus_in_event(void* self, void* e) {
@@ -1914,8 +1928,8 @@ void q_fontcombobox_qbase_focus_in_event(void* self, void* e) {
     QFontComboBox_QBaseFocusInEvent((QFontComboBox*)self, (QFocusEvent*)e);
 }
 
-void q_fontcombobox_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnFocusInEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnFocusInEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_focus_out_event(void* self, void* e) {
@@ -1926,8 +1940,8 @@ void q_fontcombobox_qbase_focus_out_event(void* self, void* e) {
     QFontComboBox_QBaseFocusOutEvent((QFontComboBox*)self, (QFocusEvent*)e);
 }
 
-void q_fontcombobox_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnFocusOutEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnFocusOutEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_change_event(void* self, void* e) {
@@ -1938,8 +1952,8 @@ void q_fontcombobox_qbase_change_event(void* self, void* e) {
     QFontComboBox_QBaseChangeEvent((QFontComboBox*)self, (QEvent*)e);
 }
 
-void q_fontcombobox_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnChangeEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnChangeEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_resize_event(void* self, void* e) {
@@ -1950,8 +1964,8 @@ void q_fontcombobox_qbase_resize_event(void* self, void* e) {
     QFontComboBox_QBaseResizeEvent((QFontComboBox*)self, (QResizeEvent*)e);
 }
 
-void q_fontcombobox_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnResizeEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnResizeEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_paint_event(void* self, void* e) {
@@ -1962,8 +1976,8 @@ void q_fontcombobox_qbase_paint_event(void* self, void* e) {
     QFontComboBox_QBasePaintEvent((QFontComboBox*)self, (QPaintEvent*)e);
 }
 
-void q_fontcombobox_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnPaintEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnPaintEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_show_event(void* self, void* e) {
@@ -1974,8 +1988,8 @@ void q_fontcombobox_qbase_show_event(void* self, void* e) {
     QFontComboBox_QBaseShowEvent((QFontComboBox*)self, (QShowEvent*)e);
 }
 
-void q_fontcombobox_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnShowEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnShowEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_hide_event(void* self, void* e) {
@@ -1986,8 +2000,8 @@ void q_fontcombobox_qbase_hide_event(void* self, void* e) {
     QFontComboBox_QBaseHideEvent((QFontComboBox*)self, (QHideEvent*)e);
 }
 
-void q_fontcombobox_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnHideEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnHideEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_mouse_press_event(void* self, void* e) {
@@ -1998,8 +2012,8 @@ void q_fontcombobox_qbase_mouse_press_event(void* self, void* e) {
     QFontComboBox_QBaseMousePressEvent((QFontComboBox*)self, (QMouseEvent*)e);
 }
 
-void q_fontcombobox_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnMousePressEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnMousePressEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_mouse_release_event(void* self, void* e) {
@@ -2010,8 +2024,8 @@ void q_fontcombobox_qbase_mouse_release_event(void* self, void* e) {
     QFontComboBox_QBaseMouseReleaseEvent((QFontComboBox*)self, (QMouseEvent*)e);
 }
 
-void q_fontcombobox_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnMouseReleaseEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnMouseReleaseEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_key_press_event(void* self, void* e) {
@@ -2022,8 +2036,8 @@ void q_fontcombobox_qbase_key_press_event(void* self, void* e) {
     QFontComboBox_QBaseKeyPressEvent((QFontComboBox*)self, (QKeyEvent*)e);
 }
 
-void q_fontcombobox_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnKeyPressEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnKeyPressEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_key_release_event(void* self, void* e) {
@@ -2034,8 +2048,8 @@ void q_fontcombobox_qbase_key_release_event(void* self, void* e) {
     QFontComboBox_QBaseKeyReleaseEvent((QFontComboBox*)self, (QKeyEvent*)e);
 }
 
-void q_fontcombobox_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnKeyReleaseEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnKeyReleaseEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_wheel_event(void* self, void* e) {
@@ -2046,8 +2060,8 @@ void q_fontcombobox_qbase_wheel_event(void* self, void* e) {
     QFontComboBox_QBaseWheelEvent((QFontComboBox*)self, (QWheelEvent*)e);
 }
 
-void q_fontcombobox_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnWheelEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnWheelEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_context_menu_event(void* self, void* e) {
@@ -2058,8 +2072,8 @@ void q_fontcombobox_qbase_context_menu_event(void* self, void* e) {
     QFontComboBox_QBaseContextMenuEvent((QFontComboBox*)self, (QContextMenuEvent*)e);
 }
 
-void q_fontcombobox_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnContextMenuEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnContextMenuEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_input_method_event(void* self, void* param1) {
@@ -2070,8 +2084,8 @@ void q_fontcombobox_qbase_input_method_event(void* self, void* param1) {
     QFontComboBox_QBaseInputMethodEvent((QFontComboBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_fontcombobox_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnInputMethodEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnInputMethodEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_init_style_option(void* self, void* option) {
@@ -2082,8 +2096,8 @@ void q_fontcombobox_qbase_init_style_option(void* self, void* option) {
     QFontComboBox_QBaseInitStyleOption((QFontComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void q_fontcombobox_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnInitStyleOption((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnInitStyleOption((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_dev_type(void* self) {
@@ -2094,8 +2108,8 @@ int32_t q_fontcombobox_qbase_dev_type(void* self) {
     return QFontComboBox_QBaseDevType((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_dev_type(void* self, int32_t (*slot)()) {
-    QFontComboBox_OnDevType((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_dev_type(void* self, int32_t (*callback)()) {
+    QFontComboBox_OnDevType((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_set_visible(void* self, bool visible) {
@@ -2106,8 +2120,8 @@ void q_fontcombobox_qbase_set_visible(void* self, bool visible) {
     QFontComboBox_QBaseSetVisible((QFontComboBox*)self, visible);
 }
 
-void q_fontcombobox_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QFontComboBox_OnSetVisible((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QFontComboBox_OnSetVisible((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_height_for_width(void* self, int param1) {
@@ -2118,8 +2132,8 @@ int32_t q_fontcombobox_qbase_height_for_width(void* self, int param1) {
     return QFontComboBox_QBaseHeightForWidth((QFontComboBox*)self, param1);
 }
 
-void q_fontcombobox_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QFontComboBox_OnHeightForWidth((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QFontComboBox_OnHeightForWidth((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_has_height_for_width(void* self) {
@@ -2130,8 +2144,8 @@ bool q_fontcombobox_qbase_has_height_for_width(void* self) {
     return QFontComboBox_QBaseHasHeightForWidth((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_has_height_for_width(void* self, bool (*slot)()) {
-    QFontComboBox_OnHasHeightForWidth((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_has_height_for_width(void* self, bool (*callback)()) {
+    QFontComboBox_OnHasHeightForWidth((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_fontcombobox_paint_engine(void* self) {
@@ -2142,8 +2156,8 @@ QPaintEngine* q_fontcombobox_qbase_paint_engine(void* self) {
     return QFontComboBox_QBasePaintEngine((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QFontComboBox_OnPaintEngine((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QFontComboBox_OnPaintEngine((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_mouse_double_click_event(void* self, void* event) {
@@ -2154,8 +2168,8 @@ void q_fontcombobox_qbase_mouse_double_click_event(void* self, void* event) {
     QFontComboBox_QBaseMouseDoubleClickEvent((QFontComboBox*)self, (QMouseEvent*)event);
 }
 
-void q_fontcombobox_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnMouseDoubleClickEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnMouseDoubleClickEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_mouse_move_event(void* self, void* event) {
@@ -2166,8 +2180,8 @@ void q_fontcombobox_qbase_mouse_move_event(void* self, void* event) {
     QFontComboBox_QBaseMouseMoveEvent((QFontComboBox*)self, (QMouseEvent*)event);
 }
 
-void q_fontcombobox_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnMouseMoveEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnMouseMoveEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_enter_event(void* self, void* event) {
@@ -2178,8 +2192,8 @@ void q_fontcombobox_qbase_enter_event(void* self, void* event) {
     QFontComboBox_QBaseEnterEvent((QFontComboBox*)self, (QEnterEvent*)event);
 }
 
-void q_fontcombobox_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnEnterEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnEnterEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_leave_event(void* self, void* event) {
@@ -2190,8 +2204,8 @@ void q_fontcombobox_qbase_leave_event(void* self, void* event) {
     QFontComboBox_QBaseLeaveEvent((QFontComboBox*)self, (QEvent*)event);
 }
 
-void q_fontcombobox_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnLeaveEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnLeaveEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_move_event(void* self, void* event) {
@@ -2202,8 +2216,8 @@ void q_fontcombobox_qbase_move_event(void* self, void* event) {
     QFontComboBox_QBaseMoveEvent((QFontComboBox*)self, (QMoveEvent*)event);
 }
 
-void q_fontcombobox_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnMoveEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnMoveEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_close_event(void* self, void* event) {
@@ -2214,8 +2228,8 @@ void q_fontcombobox_qbase_close_event(void* self, void* event) {
     QFontComboBox_QBaseCloseEvent((QFontComboBox*)self, (QCloseEvent*)event);
 }
 
-void q_fontcombobox_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnCloseEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnCloseEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_tablet_event(void* self, void* event) {
@@ -2226,8 +2240,8 @@ void q_fontcombobox_qbase_tablet_event(void* self, void* event) {
     QFontComboBox_QBaseTabletEvent((QFontComboBox*)self, (QTabletEvent*)event);
 }
 
-void q_fontcombobox_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnTabletEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnTabletEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_action_event(void* self, void* event) {
@@ -2238,8 +2252,8 @@ void q_fontcombobox_qbase_action_event(void* self, void* event) {
     QFontComboBox_QBaseActionEvent((QFontComboBox*)self, (QActionEvent*)event);
 }
 
-void q_fontcombobox_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnActionEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnActionEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_drag_enter_event(void* self, void* event) {
@@ -2250,8 +2264,8 @@ void q_fontcombobox_qbase_drag_enter_event(void* self, void* event) {
     QFontComboBox_QBaseDragEnterEvent((QFontComboBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_fontcombobox_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnDragEnterEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnDragEnterEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_drag_move_event(void* self, void* event) {
@@ -2262,8 +2276,8 @@ void q_fontcombobox_qbase_drag_move_event(void* self, void* event) {
     QFontComboBox_QBaseDragMoveEvent((QFontComboBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_fontcombobox_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnDragMoveEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnDragMoveEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_drag_leave_event(void* self, void* event) {
@@ -2274,8 +2288,8 @@ void q_fontcombobox_qbase_drag_leave_event(void* self, void* event) {
     QFontComboBox_QBaseDragLeaveEvent((QFontComboBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_fontcombobox_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnDragLeaveEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnDragLeaveEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_drop_event(void* self, void* event) {
@@ -2286,8 +2300,8 @@ void q_fontcombobox_qbase_drop_event(void* self, void* event) {
     QFontComboBox_QBaseDropEvent((QFontComboBox*)self, (QDropEvent*)event);
 }
 
-void q_fontcombobox_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnDropEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnDropEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2298,8 +2312,8 @@ bool q_fontcombobox_qbase_native_event(void* self, const char* eventType, void* 
     return QFontComboBox_QBaseNativeEvent((QFontComboBox*)self, qstring(eventType), message, result);
 }
 
-void q_fontcombobox_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QFontComboBox_OnNativeEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QFontComboBox_OnNativeEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_metric(void* self, int64_t param1) {
@@ -2310,8 +2324,8 @@ int32_t q_fontcombobox_qbase_metric(void* self, int64_t param1) {
     return QFontComboBox_QBaseMetric((QFontComboBox*)self, param1);
 }
 
-void q_fontcombobox_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QFontComboBox_OnMetric((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QFontComboBox_OnMetric((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_init_painter(void* self, void* painter) {
@@ -2322,8 +2336,8 @@ void q_fontcombobox_qbase_init_painter(void* self, void* painter) {
     QFontComboBox_QBaseInitPainter((QFontComboBox*)self, (QPainter*)painter);
 }
 
-void q_fontcombobox_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnInitPainter((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnInitPainter((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_fontcombobox_redirected(void* self, void* offset) {
@@ -2334,8 +2348,8 @@ QPaintDevice* q_fontcombobox_qbase_redirected(void* self, void* offset) {
     return QFontComboBox_QBaseRedirected((QFontComboBox*)self, (QPoint*)offset);
 }
 
-void q_fontcombobox_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QFontComboBox_OnRedirected((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QFontComboBox_OnRedirected((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QPainter* q_fontcombobox_shared_painter(void* self) {
@@ -2346,8 +2360,8 @@ QPainter* q_fontcombobox_qbase_shared_painter(void* self) {
     return QFontComboBox_QBaseSharedPainter((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QFontComboBox_OnSharedPainter((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QFontComboBox_OnSharedPainter((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_focus_next_prev_child(void* self, bool next) {
@@ -2358,8 +2372,8 @@ bool q_fontcombobox_qbase_focus_next_prev_child(void* self, bool next) {
     return QFontComboBox_QBaseFocusNextPrevChild((QFontComboBox*)self, next);
 }
 
-void q_fontcombobox_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QFontComboBox_OnFocusNextPrevChild((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QFontComboBox_OnFocusNextPrevChild((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_event_filter(void* self, void* watched, void* event) {
@@ -2370,8 +2384,8 @@ bool q_fontcombobox_qbase_event_filter(void* self, void* watched, void* event) {
     return QFontComboBox_QBaseEventFilter((QFontComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_fontcombobox_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QFontComboBox_OnEventFilter((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QFontComboBox_OnEventFilter((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_timer_event(void* self, void* event) {
@@ -2382,8 +2396,8 @@ void q_fontcombobox_qbase_timer_event(void* self, void* event) {
     QFontComboBox_QBaseTimerEvent((QFontComboBox*)self, (QTimerEvent*)event);
 }
 
-void q_fontcombobox_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnTimerEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnTimerEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_child_event(void* self, void* event) {
@@ -2394,8 +2408,8 @@ void q_fontcombobox_qbase_child_event(void* self, void* event) {
     QFontComboBox_QBaseChildEvent((QFontComboBox*)self, (QChildEvent*)event);
 }
 
-void q_fontcombobox_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnChildEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnChildEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_custom_event(void* self, void* event) {
@@ -2406,8 +2420,8 @@ void q_fontcombobox_qbase_custom_event(void* self, void* event) {
     QFontComboBox_QBaseCustomEvent((QFontComboBox*)self, (QEvent*)event);
 }
 
-void q_fontcombobox_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnCustomEvent((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnCustomEvent((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_connect_notify(void* self, void* signal) {
@@ -2418,8 +2432,8 @@ void q_fontcombobox_qbase_connect_notify(void* self, void* signal) {
     QFontComboBox_QBaseConnectNotify((QFontComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_fontcombobox_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnConnectNotify((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnConnectNotify((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_disconnect_notify(void* self, void* signal) {
@@ -2430,8 +2444,8 @@ void q_fontcombobox_qbase_disconnect_notify(void* self, void* signal) {
     QFontComboBox_QBaseDisconnectNotify((QFontComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_fontcombobox_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QFontComboBox_OnDisconnectNotify((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QFontComboBox_OnDisconnectNotify((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_update_micro_focus(void* self) {
@@ -2442,8 +2456,8 @@ void q_fontcombobox_qbase_update_micro_focus(void* self) {
     QFontComboBox_QBaseUpdateMicroFocus((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_update_micro_focus(void* self, void (*slot)()) {
-    QFontComboBox_OnUpdateMicroFocus((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_update_micro_focus(void* self, void (*callback)()) {
+    QFontComboBox_OnUpdateMicroFocus((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_create(void* self) {
@@ -2454,8 +2468,8 @@ void q_fontcombobox_qbase_create(void* self) {
     QFontComboBox_QBaseCreate((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_create(void* self, void (*slot)()) {
-    QFontComboBox_OnCreate((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_create(void* self, void (*callback)()) {
+    QFontComboBox_OnCreate((QFontComboBox*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_destroy(void* self) {
@@ -2466,8 +2480,8 @@ void q_fontcombobox_qbase_destroy(void* self) {
     QFontComboBox_QBaseDestroy((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_destroy(void* self, void (*slot)()) {
-    QFontComboBox_OnDestroy((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_destroy(void* self, void (*callback)()) {
+    QFontComboBox_OnDestroy((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_focus_next_child(void* self) {
@@ -2478,8 +2492,8 @@ bool q_fontcombobox_qbase_focus_next_child(void* self) {
     return QFontComboBox_QBaseFocusNextChild((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_focus_next_child(void* self, bool (*slot)()) {
-    QFontComboBox_OnFocusNextChild((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_focus_next_child(void* self, bool (*callback)()) {
+    QFontComboBox_OnFocusNextChild((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_focus_previous_child(void* self) {
@@ -2490,8 +2504,8 @@ bool q_fontcombobox_qbase_focus_previous_child(void* self) {
     return QFontComboBox_QBaseFocusPreviousChild((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_focus_previous_child(void* self, bool (*slot)()) {
-    QFontComboBox_OnFocusPreviousChild((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_focus_previous_child(void* self, bool (*callback)()) {
+    QFontComboBox_OnFocusPreviousChild((QFontComboBox*)self, (intptr_t)callback);
 }
 
 QObject* q_fontcombobox_sender(void* self) {
@@ -2502,8 +2516,8 @@ QObject* q_fontcombobox_qbase_sender(void* self) {
     return QFontComboBox_QBaseSender((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_sender(void* self, QObject* (*slot)()) {
-    QFontComboBox_OnSender((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_sender(void* self, QObject* (*callback)()) {
+    QFontComboBox_OnSender((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_sender_signal_index(void* self) {
@@ -2514,8 +2528,8 @@ int32_t q_fontcombobox_qbase_sender_signal_index(void* self) {
     return QFontComboBox_QBaseSenderSignalIndex((QFontComboBox*)self);
 }
 
-void q_fontcombobox_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QFontComboBox_OnSenderSignalIndex((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QFontComboBox_OnSenderSignalIndex((QFontComboBox*)self, (intptr_t)callback);
 }
 
 int32_t q_fontcombobox_receivers(void* self, const char* signal) {
@@ -2526,8 +2540,8 @@ int32_t q_fontcombobox_qbase_receivers(void* self, const char* signal) {
     return QFontComboBox_QBaseReceivers((QFontComboBox*)self, signal);
 }
 
-void q_fontcombobox_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QFontComboBox_OnReceivers((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QFontComboBox_OnReceivers((QFontComboBox*)self, (intptr_t)callback);
 }
 
 bool q_fontcombobox_is_signal_connected(void* self, void* signal) {
@@ -2538,8 +2552,8 @@ bool q_fontcombobox_qbase_is_signal_connected(void* self, void* signal) {
     return QFontComboBox_QBaseIsSignalConnected((QFontComboBox*)self, (QMetaMethod*)signal);
 }
 
-void q_fontcombobox_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QFontComboBox_OnIsSignalConnected((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QFontComboBox_OnIsSignalConnected((QFontComboBox*)self, (intptr_t)callback);
 }
 
 double q_fontcombobox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2550,12 +2564,12 @@ double q_fontcombobox_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
     return QFontComboBox_QBaseGetDecodedMetricF((QFontComboBox*)self, metricA, metricB);
 }
 
-void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QFontComboBox_OnGetDecodedMetricF((QFontComboBox*)self, (intptr_t)slot);
+void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QFontComboBox_OnGetDecodedMetricF((QFontComboBox*)self, (intptr_t)callback);
 }
 
-void q_fontcombobox_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_fontcombobox_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_fontcombobox_delete(void* self) {

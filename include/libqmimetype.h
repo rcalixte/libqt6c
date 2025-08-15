@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,99 +15,123 @@
 
 /// q_mimetype_new constructs a new QMimeType object.
 ///
-///
 QMimeType* q_mimetype_new();
 
 /// q_mimetype_new2 constructs a new QMimeType object.
 ///
-/// ``` QMimeType* other ```
+/// @param other QMimeType*
 QMimeType* q_mimetype_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#operator-eq)
 ///
-/// ``` QMimeType* self, QMimeType* other ```
+/// @param self QMimeType*
+/// @param other QMimeType*
 void q_mimetype_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#swap)
 ///
-/// ``` QMimeType* self, QMimeType* other ```
+/// @param self QMimeType*
+/// @param other QMimeType*
 void q_mimetype_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#isValid)
 ///
-/// ``` QMimeType* self ```
+/// @param self QMimeType*
 bool q_mimetype_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#isDefault)
 ///
-/// ``` QMimeType* self ```
+/// @param self QMimeType*
 bool q_mimetype_is_default(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#name)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#comment)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_comment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#genericIconName)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_generic_icon_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#iconName)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_icon_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#globPatterns)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char** q_mimetype_glob_patterns(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#parentMimeTypes)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char** q_mimetype_parent_mime_types(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#allAncestors)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char** q_mimetype_all_ancestors(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#aliases)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char** q_mimetype_aliases(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#suffixes)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char** q_mimetype_suffixes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#preferredSuffix)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_preferred_suffix(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#inherits)
 ///
-/// ``` QMimeType* self, const char* mimeTypeName ```
+/// @param self QMimeType*
+/// @param mimeTypeName const char*
 bool q_mimetype_inherits(void* self, const char* mimeTypeName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#filterString)
 ///
-/// ``` QMimeType* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMimeType*
 const char* q_mimetype_filter_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimetype.html#dtor.QMimeType)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMimeType* self ```
+/// @param self QMimeType*
 void q_mimetype_delete(void* self);
 
 #endif

@@ -36,8 +36,8 @@ int32_t q_file_metacall(void* self, int64_t param1, int param2, void* param3) {
     return QFile_Metacall((QFile*)self, param1, param2, param3);
 }
 
-void q_file_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QFile_OnMetacall((QFile*)self, (intptr_t)slot);
+void q_file_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QFile_OnMetacall((QFile*)self, (intptr_t)callback);
 }
 
 int32_t q_file_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ const char* q_file_file_name(void* self) {
     return _ret;
 }
 
-void q_file_on_file_name(void* self, const char* (*slot)()) {
-    QFile_OnFileName((QFile*)self, (intptr_t)slot);
+void q_file_on_file_name(void* self, const char* (*callback)()) {
+    QFile_OnFileName((QFile*)self, (intptr_t)callback);
 }
 
 const char* q_file_qbase_file_name(void* self) {
@@ -160,8 +160,8 @@ bool q_file_open(void* self, int64_t flags) {
     return QFile_Open((QFile*)self, flags);
 }
 
-void q_file_on_open(void* self, bool (*slot)(void*, int64_t)) {
-    QFile_OnOpen((QFile*)self, (intptr_t)slot);
+void q_file_on_open(void* self, bool (*callback)(void*, int64_t)) {
+    QFile_OnOpen((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_qbase_open(void* self, int64_t flags) {
@@ -180,8 +180,8 @@ long long q_file_size(void* self) {
     return QFile_Size((QFile*)self);
 }
 
-void q_file_on_size(void* self, long long (*slot)()) {
-    QFile_OnSize((QFile*)self, (intptr_t)slot);
+void q_file_on_size(void* self, long long (*callback)()) {
+    QFile_OnSize((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_qbase_size(void* self) {
@@ -192,8 +192,8 @@ bool q_file_resize(void* self, long long sz) {
     return QFile_Resize((QFile*)self, sz);
 }
 
-void q_file_on_resize(void* self, bool (*slot)(void*, long long)) {
-    QFile_OnResize((QFile*)self, (intptr_t)slot);
+void q_file_on_resize(void* self, bool (*callback)(void*, long long)) {
+    QFile_OnResize((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_qbase_resize(void* self, long long sz) {
@@ -208,8 +208,8 @@ int64_t q_file_permissions(void* self) {
     return QFile_Permissions((QFile*)self);
 }
 
-void q_file_on_permissions(void* self, int64_t (*slot)()) {
-    QFile_OnPermissions((QFile*)self, (intptr_t)slot);
+void q_file_on_permissions(void* self, int64_t (*callback)()) {
+    QFile_OnPermissions((QFile*)self, (intptr_t)callback);
 }
 
 int64_t q_file_qbase_permissions(void* self) {
@@ -224,8 +224,8 @@ bool q_file_set_permissions(void* self, int64_t permissionSpec) {
     return QFile_SetPermissions((QFile*)self, permissionSpec);
 }
 
-void q_file_on_set_permissions(void* self, bool (*slot)(void*, int64_t)) {
-    QFile_OnSetPermissions((QFile*)self, (intptr_t)slot);
+void q_file_on_set_permissions(void* self, bool (*callback)(void*, int64_t)) {
+    QFile_OnSetPermissions((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_qbase_set_permissions(void* self, int64_t permissionSpec) {
@@ -433,48 +433,48 @@ void q_file_ready_read(void* self) {
     QIODevice_ReadyRead((QIODevice*)self);
 }
 
-void q_file_on_ready_read(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_file_on_ready_read(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_file_channel_ready_read(void* self, int channel) {
     QIODevice_ChannelReadyRead((QIODevice*)self, channel);
 }
 
-void q_file_on_channel_ready_read(void* self, void (*slot)(void*, int)) {
-    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)slot);
+void q_file_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
+    QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_file_bytes_written(void* self, long long bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_file_on_bytes_written(void* self, void (*slot)(void*, long long)) {
-    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_file_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+    QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_file_channel_bytes_written(void* self, int channel, long long bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_file_on_channel_bytes_written(void* self, void (*slot)(void*, int, long long)) {
-    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)slot);
+void q_file_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+    QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_file_about_to_close(void* self) {
     QIODevice_AboutToClose((QIODevice*)self);
 }
 
-void q_file_on_about_to_close(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)slot);
+void q_file_on_about_to_close(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_AboutToClose((QIODevice*)self, (intptr_t)callback);
 }
 
 void q_file_read_channel_finished(void* self) {
     QIODevice_ReadChannelFinished((QIODevice*)self);
 }
 
-void q_file_on_read_channel_finished(void* self, void (*slot)(void*)) {
-    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)slot);
+void q_file_on_read_channel_finished(void* self, void (*callback)(void*)) {
+    QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
 char* q_file_read_line1(void* self, long long maxlen) {
@@ -588,12 +588,16 @@ const char** q_file_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_file_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -611,8 +615,8 @@ void q_file_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_file_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_file_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_file_parent(void* self) {
@@ -647,8 +651,8 @@ void q_file_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_file_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_file_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 void q_file_close(void* self) {
@@ -659,8 +663,8 @@ void q_file_qbase_close(void* self) {
     QFile_QBaseClose((QFile*)self);
 }
 
-void q_file_on_close(void* self, void (*slot)()) {
-    QFile_OnClose((QFile*)self, (intptr_t)slot);
+void q_file_on_close(void* self, void (*callback)()) {
+    QFile_OnClose((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_is_sequential(void* self) {
@@ -671,8 +675,8 @@ bool q_file_qbase_is_sequential(void* self) {
     return QFile_QBaseIsSequential((QFile*)self);
 }
 
-void q_file_on_is_sequential(void* self, bool (*slot)()) {
-    QFile_OnIsSequential((QFile*)self, (intptr_t)slot);
+void q_file_on_is_sequential(void* self, bool (*callback)()) {
+    QFile_OnIsSequential((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_pos(void* self) {
@@ -683,8 +687,8 @@ long long q_file_qbase_pos(void* self) {
     return QFile_QBasePos((QFile*)self);
 }
 
-void q_file_on_pos(void* self, long long (*slot)()) {
-    QFile_OnPos((QFile*)self, (intptr_t)slot);
+void q_file_on_pos(void* self, long long (*callback)()) {
+    QFile_OnPos((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_seek(void* self, long long offset) {
@@ -695,8 +699,8 @@ bool q_file_qbase_seek(void* self, long long offset) {
     return QFile_QBaseSeek((QFile*)self, offset);
 }
 
-void q_file_on_seek(void* self, bool (*slot)(void*, long long)) {
-    QFile_OnSeek((QFile*)self, (intptr_t)slot);
+void q_file_on_seek(void* self, bool (*callback)(void*, long long)) {
+    QFile_OnSeek((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_at_end(void* self) {
@@ -707,8 +711,8 @@ bool q_file_qbase_at_end(void* self) {
     return QFile_QBaseAtEnd((QFile*)self);
 }
 
-void q_file_on_at_end(void* self, bool (*slot)()) {
-    QFile_OnAtEnd((QFile*)self, (intptr_t)slot);
+void q_file_on_at_end(void* self, bool (*callback)()) {
+    QFile_OnAtEnd((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_read_data(void* self, char* data, long long maxlen) {
@@ -719,8 +723,8 @@ long long q_file_qbase_read_data(void* self, char* data, long long maxlen) {
     return QFile_QBaseReadData((QFile*)self, data, maxlen);
 }
 
-void q_file_on_read_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QFile_OnReadData((QFile*)self, (intptr_t)slot);
+void q_file_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QFile_OnReadData((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_write_data(void* self, const char* data, long long lenVal) {
@@ -731,8 +735,8 @@ long long q_file_qbase_write_data(void* self, const char* data, long long lenVal
     return QFile_QBaseWriteData((QFile*)self, data, lenVal);
 }
 
-void q_file_on_write_data(void* self, long long (*slot)(void*, const char*, long long)) {
-    QFile_OnWriteData((QFile*)self, (intptr_t)slot);
+void q_file_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+    QFile_OnWriteData((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_read_line_data(void* self, char* data, long long maxlen) {
@@ -743,8 +747,8 @@ long long q_file_qbase_read_line_data(void* self, char* data, long long maxlen) 
     return QFile_QBaseReadLineData((QFile*)self, data, maxlen);
 }
 
-void q_file_on_read_line_data(void* self, long long (*slot)(void*, char*, long long)) {
-    QFile_OnReadLineData((QFile*)self, (intptr_t)slot);
+void q_file_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+    QFile_OnReadLineData((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_reset(void* self) {
@@ -755,8 +759,8 @@ bool q_file_qbase_reset(void* self) {
     return QFile_QBaseReset((QFile*)self);
 }
 
-void q_file_on_reset(void* self, bool (*slot)()) {
-    QFile_OnReset((QFile*)self, (intptr_t)slot);
+void q_file_on_reset(void* self, bool (*callback)()) {
+    QFile_OnReset((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_bytes_available(void* self) {
@@ -767,8 +771,8 @@ long long q_file_qbase_bytes_available(void* self) {
     return QFile_QBaseBytesAvailable((QFile*)self);
 }
 
-void q_file_on_bytes_available(void* self, long long (*slot)()) {
-    QFile_OnBytesAvailable((QFile*)self, (intptr_t)slot);
+void q_file_on_bytes_available(void* self, long long (*callback)()) {
+    QFile_OnBytesAvailable((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_bytes_to_write(void* self) {
@@ -779,8 +783,8 @@ long long q_file_qbase_bytes_to_write(void* self) {
     return QFile_QBaseBytesToWrite((QFile*)self);
 }
 
-void q_file_on_bytes_to_write(void* self, long long (*slot)()) {
-    QFile_OnBytesToWrite((QFile*)self, (intptr_t)slot);
+void q_file_on_bytes_to_write(void* self, long long (*callback)()) {
+    QFile_OnBytesToWrite((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_can_read_line(void* self) {
@@ -791,8 +795,8 @@ bool q_file_qbase_can_read_line(void* self) {
     return QFile_QBaseCanReadLine((QFile*)self);
 }
 
-void q_file_on_can_read_line(void* self, bool (*slot)()) {
-    QFile_OnCanReadLine((QFile*)self, (intptr_t)slot);
+void q_file_on_can_read_line(void* self, bool (*callback)()) {
+    QFile_OnCanReadLine((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_wait_for_ready_read(void* self, int msecs) {
@@ -803,8 +807,8 @@ bool q_file_qbase_wait_for_ready_read(void* self, int msecs) {
     return QFile_QBaseWaitForReadyRead((QFile*)self, msecs);
 }
 
-void q_file_on_wait_for_ready_read(void* self, bool (*slot)(void*, int)) {
-    QFile_OnWaitForReadyRead((QFile*)self, (intptr_t)slot);
+void q_file_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
+    QFile_OnWaitForReadyRead((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_wait_for_bytes_written(void* self, int msecs) {
@@ -815,8 +819,8 @@ bool q_file_qbase_wait_for_bytes_written(void* self, int msecs) {
     return QFile_QBaseWaitForBytesWritten((QFile*)self, msecs);
 }
 
-void q_file_on_wait_for_bytes_written(void* self, bool (*slot)(void*, int)) {
-    QFile_OnWaitForBytesWritten((QFile*)self, (intptr_t)slot);
+void q_file_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
+    QFile_OnWaitForBytesWritten((QFile*)self, (intptr_t)callback);
 }
 
 long long q_file_skip_data(void* self, long long maxSize) {
@@ -827,8 +831,8 @@ long long q_file_qbase_skip_data(void* self, long long maxSize) {
     return QFile_QBaseSkipData((QFile*)self, maxSize);
 }
 
-void q_file_on_skip_data(void* self, long long (*slot)(void*, long long)) {
-    QFile_OnSkipData((QFile*)self, (intptr_t)slot);
+void q_file_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+    QFile_OnSkipData((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_event(void* self, void* event) {
@@ -839,8 +843,8 @@ bool q_file_qbase_event(void* self, void* event) {
     return QFile_QBaseEvent((QFile*)self, (QEvent*)event);
 }
 
-void q_file_on_event(void* self, bool (*slot)(void*, void*)) {
-    QFile_OnEvent((QFile*)self, (intptr_t)slot);
+void q_file_on_event(void* self, bool (*callback)(void*, void*)) {
+    QFile_OnEvent((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_event_filter(void* self, void* watched, void* event) {
@@ -851,8 +855,8 @@ bool q_file_qbase_event_filter(void* self, void* watched, void* event) {
     return QFile_QBaseEventFilter((QFile*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_file_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QFile_OnEventFilter((QFile*)self, (intptr_t)slot);
+void q_file_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QFile_OnEventFilter((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_timer_event(void* self, void* event) {
@@ -863,8 +867,8 @@ void q_file_qbase_timer_event(void* self, void* event) {
     QFile_QBaseTimerEvent((QFile*)self, (QTimerEvent*)event);
 }
 
-void q_file_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QFile_OnTimerEvent((QFile*)self, (intptr_t)slot);
+void q_file_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QFile_OnTimerEvent((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_child_event(void* self, void* event) {
@@ -875,8 +879,8 @@ void q_file_qbase_child_event(void* self, void* event) {
     QFile_QBaseChildEvent((QFile*)self, (QChildEvent*)event);
 }
 
-void q_file_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QFile_OnChildEvent((QFile*)self, (intptr_t)slot);
+void q_file_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QFile_OnChildEvent((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_custom_event(void* self, void* event) {
@@ -887,8 +891,8 @@ void q_file_qbase_custom_event(void* self, void* event) {
     QFile_QBaseCustomEvent((QFile*)self, (QEvent*)event);
 }
 
-void q_file_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QFile_OnCustomEvent((QFile*)self, (intptr_t)slot);
+void q_file_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QFile_OnCustomEvent((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_connect_notify(void* self, void* signal) {
@@ -899,8 +903,8 @@ void q_file_qbase_connect_notify(void* self, void* signal) {
     QFile_QBaseConnectNotify((QFile*)self, (QMetaMethod*)signal);
 }
 
-void q_file_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QFile_OnConnectNotify((QFile*)self, (intptr_t)slot);
+void q_file_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QFile_OnConnectNotify((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_disconnect_notify(void* self, void* signal) {
@@ -911,8 +915,8 @@ void q_file_qbase_disconnect_notify(void* self, void* signal) {
     QFile_QBaseDisconnectNotify((QFile*)self, (QMetaMethod*)signal);
 }
 
-void q_file_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QFile_OnDisconnectNotify((QFile*)self, (intptr_t)slot);
+void q_file_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QFile_OnDisconnectNotify((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_set_open_mode(void* self, int64_t openMode) {
@@ -923,8 +927,8 @@ void q_file_qbase_set_open_mode(void* self, int64_t openMode) {
     QFile_QBaseSetOpenMode((QFile*)self, openMode);
 }
 
-void q_file_on_set_open_mode(void* self, void (*slot)(void*, int64_t)) {
-    QFile_OnSetOpenMode((QFile*)self, (intptr_t)slot);
+void q_file_on_set_open_mode(void* self, void (*callback)(void*, int64_t)) {
+    QFile_OnSetOpenMode((QFile*)self, (intptr_t)callback);
 }
 
 void q_file_set_error_string(void* self, const char* errorString) {
@@ -935,8 +939,8 @@ void q_file_qbase_set_error_string(void* self, const char* errorString) {
     QFile_QBaseSetErrorString((QFile*)self, qstring(errorString));
 }
 
-void q_file_on_set_error_string(void* self, void (*slot)(void*, const char*)) {
-    QFile_OnSetErrorString((QFile*)self, (intptr_t)slot);
+void q_file_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
+    QFile_OnSetErrorString((QFile*)self, (intptr_t)callback);
 }
 
 QObject* q_file_sender(void* self) {
@@ -947,8 +951,8 @@ QObject* q_file_qbase_sender(void* self) {
     return QFile_QBaseSender((QFile*)self);
 }
 
-void q_file_on_sender(void* self, QObject* (*slot)()) {
-    QFile_OnSender((QFile*)self, (intptr_t)slot);
+void q_file_on_sender(void* self, QObject* (*callback)()) {
+    QFile_OnSender((QFile*)self, (intptr_t)callback);
 }
 
 int32_t q_file_sender_signal_index(void* self) {
@@ -959,8 +963,8 @@ int32_t q_file_qbase_sender_signal_index(void* self) {
     return QFile_QBaseSenderSignalIndex((QFile*)self);
 }
 
-void q_file_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QFile_OnSenderSignalIndex((QFile*)self, (intptr_t)slot);
+void q_file_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QFile_OnSenderSignalIndex((QFile*)self, (intptr_t)callback);
 }
 
 int32_t q_file_receivers(void* self, const char* signal) {
@@ -971,8 +975,8 @@ int32_t q_file_qbase_receivers(void* self, const char* signal) {
     return QFile_QBaseReceivers((QFile*)self, signal);
 }
 
-void q_file_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QFile_OnReceivers((QFile*)self, (intptr_t)slot);
+void q_file_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QFile_OnReceivers((QFile*)self, (intptr_t)callback);
 }
 
 bool q_file_is_signal_connected(void* self, void* signal) {
@@ -983,12 +987,12 @@ bool q_file_qbase_is_signal_connected(void* self, void* signal) {
     return QFile_QBaseIsSignalConnected((QFile*)self, (QMetaMethod*)signal);
 }
 
-void q_file_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QFile_OnIsSignalConnected((QFile*)self, (intptr_t)slot);
+void q_file_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QFile_OnIsSignalConnected((QFile*)self, (intptr_t)callback);
 }
 
-void q_file_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_file_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_file_delete(void* self) {

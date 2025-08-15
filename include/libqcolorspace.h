@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,219 +15,282 @@
 
 /// q_colorspace_new constructs a new QColorSpace object.
 ///
-///
 QColorSpace* q_colorspace_new();
 
 /// q_colorspace_new2 constructs a new QColorSpace object.
 ///
-/// ``` enum QColorSpace__NamedColorSpace namedColorSpace ```
+/// @param namedColorSpace enum QColorSpace__NamedColorSpace
 QColorSpace* q_colorspace_new2(int64_t namedColorSpace);
 
 /// q_colorspace_new3 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, enum QColorSpace__TransferFunction transferFunction ```
+/// @param whitePoint QPointF*
+/// @param transferFunction enum QColorSpace__TransferFunction
 QColorSpace* q_colorspace_new3(void* whitePoint, int64_t transferFunction);
 
 /// q_colorspace_new4 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, libqt_list /* of uint16_t */ transferFunctionTable ```
+/// @param whitePoint QPointF*
+/// @param transferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list transferFunctionTable);
 
 /// q_colorspace_new5 constructs a new QColorSpace object.
 ///
-/// ``` enum QColorSpace__Primaries primaries, enum QColorSpace__TransferFunction transferFunction ```
+/// @param primaries enum QColorSpace__Primaries
+/// @param transferFunction enum QColorSpace__TransferFunction
 QColorSpace* q_colorspace_new5(int64_t primaries, int64_t transferFunction);
 
 /// q_colorspace_new6 constructs a new QColorSpace object.
 ///
-/// ``` enum QColorSpace__Primaries primaries, float gamma ```
+/// @param primaries enum QColorSpace__Primaries
+/// @param gamma float
 QColorSpace* q_colorspace_new6(int64_t primaries, float gamma);
 
 /// q_colorspace_new7 constructs a new QColorSpace object.
 ///
-/// ``` enum QColorSpace__Primaries primaries, libqt_list /* of uint16_t */ transferFunctionTable ```
+/// @param primaries enum QColorSpace__Primaries
+/// @param transferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_new7(int64_t primaries, libqt_list transferFunctionTable);
 
 /// q_colorspace_new8 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint, enum QColorSpace__TransferFunction transferFunction ```
+/// @param whitePoint QPointF*
+/// @param redPoint QPointF*
+/// @param greenPoint QPointF*
+/// @param bluePoint QPointF*
+/// @param transferFunction enum QColorSpace__TransferFunction
 QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction);
 
 /// q_colorspace_new9 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint, libqt_list /* of uint16_t */ transferFunctionTable ```
+/// @param whitePoint QPointF*
+/// @param redPoint QPointF*
+/// @param greenPoint QPointF*
+/// @param bluePoint QPointF*
+/// @param transferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_new9(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list transferFunctionTable);
 
 /// q_colorspace_new10 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable ```
+/// @param whitePoint QPointF*
+/// @param redPoint QPointF*
+/// @param greenPoint QPointF*
+/// @param bluePoint QPointF*
+/// @param redTransferFunctionTable libqt_list /* of uint16_t */
+/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
+/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_new10(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
 
 /// q_colorspace_new11 constructs a new QColorSpace object.
 ///
-/// ``` QColorSpace* colorSpace ```
+/// @param colorSpace QColorSpace*
 QColorSpace* q_colorspace_new11(void* colorSpace);
 
 /// q_colorspace_new12 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, enum QColorSpace__TransferFunction transferFunction, float gamma ```
+/// @param whitePoint QPointF*
+/// @param transferFunction enum QColorSpace__TransferFunction
+/// @param gamma float
 QColorSpace* q_colorspace_new12(void* whitePoint, int64_t transferFunction, float gamma);
 
 /// q_colorspace_new13 constructs a new QColorSpace object.
 ///
-/// ``` enum QColorSpace__Primaries primaries, enum QColorSpace__TransferFunction transferFunction, float gamma ```
+/// @param primaries enum QColorSpace__Primaries
+/// @param transferFunction enum QColorSpace__TransferFunction
+/// @param gamma float
 QColorSpace* q_colorspace_new13(int64_t primaries, int64_t transferFunction, float gamma);
 
 /// q_colorspace_new14 constructs a new QColorSpace object.
 ///
-/// ``` QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint, enum QColorSpace__TransferFunction transferFunction, float gamma ```
+/// @param whitePoint QPointF*
+/// @param redPoint QPointF*
+/// @param greenPoint QPointF*
+/// @param bluePoint QPointF*
+/// @param transferFunction enum QColorSpace__TransferFunction
+/// @param gamma float
 QColorSpace* q_colorspace_new14(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator-eq)
 ///
-/// ``` QColorSpace* self, QColorSpace* colorSpace ```
+/// @param self QColorSpace*
+/// @param colorSpace QColorSpace*
 void q_colorspace_operator_assign(void* self, void* colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#swap)
 ///
-/// ``` QColorSpace* self, QColorSpace* colorSpace ```
+/// @param self QColorSpace*
+/// @param colorSpace QColorSpace*
 void q_colorspace_swap(void* self, void* colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#primaries)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
+///
+/// @return enum QColorSpace__Primaries
 int64_t q_colorspace_primaries(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#transferFunction)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
+///
+/// @return enum QColorSpace__TransferFunction
 int64_t q_colorspace_transfer_function(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#gamma)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 float q_colorspace_gamma(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#description)
 ///
-/// ``` QColorSpace* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QColorSpace*
 const char* q_colorspace_description(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setDescription)
 ///
-/// ``` QColorSpace* self, const char* description ```
+/// @param self QColorSpace*
+/// @param description const char*
 void q_colorspace_set_description(void* self, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
-/// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction ```
+/// @param self QColorSpace*
+/// @param transferFunction enum QColorSpace__TransferFunction
 void q_colorspace_set_transfer_function(void* self, int64_t transferFunction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
-/// ``` QColorSpace* self, libqt_list /* of uint16_t */ transferFunctionTable ```
+/// @param self QColorSpace*
+/// @param transferFunctionTable libqt_list /* of uint16_t */
 void q_colorspace_set_transfer_function2(void* self, libqt_list transferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunctions)
 ///
-/// ``` QColorSpace* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable ```
+/// @param self QColorSpace*
+/// @param redTransferFunctionTable libqt_list /* of uint16_t */
+/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
+/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
 void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
-/// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction ```
+/// @param self QColorSpace*
+/// @param transferFunction enum QColorSpace__TransferFunction
 QColorSpace* q_colorspace_with_transfer_function(void* self, int64_t transferFunction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
-/// ``` QColorSpace* self, libqt_list /* of uint16_t */ transferFunctionTable ```
+/// @param self QColorSpace*
+/// @param transferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_with_transfer_function2(void* self, libqt_list transferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunctions)
 ///
-/// ``` QColorSpace* self, libqt_list /* of uint16_t */ redTransferFunctionTable, libqt_list /* of uint16_t */ greenTransferFunctionTable, libqt_list /* of uint16_t */ blueTransferFunctionTable ```
+/// @param self QColorSpace*
+/// @param redTransferFunctionTable libqt_list /* of uint16_t */
+/// @param greenTransferFunctionTable libqt_list /* of uint16_t */
+/// @param blueTransferFunctionTable libqt_list /* of uint16_t */
 QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTransferFunctionTable, libqt_list greenTransferFunctionTable, libqt_list blueTransferFunctionTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setPrimaries)
 ///
-/// ``` QColorSpace* self, enum QColorSpace__Primaries primariesId ```
+/// @param self QColorSpace*
+/// @param primariesId enum QColorSpace__Primaries
 void q_colorspace_set_primaries(void* self, int64_t primariesId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setPrimaries)
 ///
-/// ``` QColorSpace* self, QPointF* whitePoint, QPointF* redPoint, QPointF* greenPoint, QPointF* bluePoint ```
+/// @param self QColorSpace*
+/// @param whitePoint QPointF*
+/// @param redPoint QPointF*
+/// @param greenPoint QPointF*
+/// @param bluePoint QPointF*
 void q_colorspace_set_primaries2(void* self, void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setWhitePoint)
 ///
-/// ``` QColorSpace* self, QPointF* whitePoint ```
+/// @param self QColorSpace*
+/// @param whitePoint QPointF*
 void q_colorspace_set_white_point(void* self, void* whitePoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#whitePoint)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 QPointF* q_colorspace_white_point(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#transformModel)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
+///
+/// @return enum QColorSpace__TransformModel
 int64_t q_colorspace_transform_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#colorModel)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
+///
+/// @return enum QColorSpace__ColorModel
 int64_t q_colorspace_color_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#detach)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 void q_colorspace_detach(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#isValid)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 bool q_colorspace_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#isValidTarget)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 bool q_colorspace_is_valid_target(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#fromIccProfile)
 ///
-/// ``` const char* iccProfile ```
+/// @param iccProfile const char*
 QColorSpace* q_colorspace_from_icc_profile(const char* iccProfile);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#iccProfile)
 ///
-/// ``` QColorSpace* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QColorSpace*
 char* q_colorspace_icc_profile(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#transformationToColorSpace)
 ///
-/// ``` QColorSpace* self, QColorSpace* colorspace ```
+/// @param self QColorSpace*
+/// @param colorspace QColorSpace*
 QColorTransform* q_colorspace_transformation_to_color_space(void* self, void* colorspace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator)
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 QVariant* q_colorspace_to_q_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
-/// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction, float gamma ```
+/// @param self QColorSpace*
+/// @param transferFunction enum QColorSpace__TransferFunction
+/// @param gamma float
 void q_colorspace_set_transfer_function22(void* self, int64_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
-/// ``` QColorSpace* self, enum QColorSpace__TransferFunction transferFunction, float gamma ```
+/// @param self QColorSpace*
+/// @param transferFunction enum QColorSpace__TransferFunction
+/// @param gamma float
 QColorSpace* q_colorspace_with_transfer_function22(void* self, int64_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#dtor.QColorSpace)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QColorSpace* self ```
+/// @param self QColorSpace*
 void q_colorspace_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcolorspace.html#types

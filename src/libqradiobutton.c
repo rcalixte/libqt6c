@@ -43,8 +43,8 @@ int32_t q_radiobutton_metacall(void* self, int64_t param1, int param2, void* par
     return QRadioButton_Metacall((QRadioButton*)self, param1, param2, param3);
 }
 
-void q_radiobutton_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QRadioButton_OnMetacall((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QRadioButton_OnMetacall((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ QSize* q_radiobutton_size_hint(void* self) {
     return QRadioButton_SizeHint((QRadioButton*)self);
 }
 
-void q_radiobutton_on_size_hint(void* self, QSize* (*slot)()) {
-    QRadioButton_OnSizeHint((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_size_hint(void* self, QSize* (*callback)()) {
+    QRadioButton_OnSizeHint((QRadioButton*)self, (intptr_t)callback);
 }
 
 QSize* q_radiobutton_qbase_size_hint(void* self) {
@@ -74,8 +74,8 @@ QSize* q_radiobutton_minimum_size_hint(void* self) {
     return QRadioButton_MinimumSizeHint((QRadioButton*)self);
 }
 
-void q_radiobutton_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QRadioButton_OnMinimumSizeHint((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QRadioButton_OnMinimumSizeHint((QRadioButton*)self, (intptr_t)callback);
 }
 
 QSize* q_radiobutton_qbase_minimum_size_hint(void* self) {
@@ -86,8 +86,8 @@ bool q_radiobutton_event(void* self, void* e) {
     return QRadioButton_Event((QRadioButton*)self, (QEvent*)e);
 }
 
-void q_radiobutton_on_event(void* self, bool (*slot)(void*, void*)) {
-    QRadioButton_OnEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_event(void* self, bool (*callback)(void*, void*)) {
+    QRadioButton_OnEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_qbase_event(void* self, void* e) {
@@ -98,8 +98,8 @@ bool q_radiobutton_hit_button(void* self, void* param1) {
     return QRadioButton_HitButton((QRadioButton*)self, (QPoint*)param1);
 }
 
-void q_radiobutton_on_hit_button(void* self, bool (*slot)(void*, void*)) {
-    QRadioButton_OnHitButton((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_hit_button(void* self, bool (*callback)(void*, void*)) {
+    QRadioButton_OnHitButton((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_qbase_hit_button(void* self, void* param1) {
@@ -110,8 +110,8 @@ void q_radiobutton_paint_event(void* self, void* param1) {
     QRadioButton_PaintEvent((QRadioButton*)self, (QPaintEvent*)param1);
 }
 
-void q_radiobutton_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnPaintEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnPaintEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_qbase_paint_event(void* self, void* param1) {
@@ -122,8 +122,8 @@ void q_radiobutton_mouse_move_event(void* self, void* param1) {
     QRadioButton_MouseMoveEvent((QRadioButton*)self, (QMouseEvent*)param1);
 }
 
-void q_radiobutton_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnMouseMoveEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnMouseMoveEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_qbase_mouse_move_event(void* self, void* param1) {
@@ -134,8 +134,8 @@ void q_radiobutton_init_style_option(void* self, void* button) {
     QRadioButton_InitStyleOption((QRadioButton*)self, (QStyleOptionButton*)button);
 }
 
-void q_radiobutton_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnInitStyleOption((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnInitStyleOption((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_qbase_init_style_option(void* self, void* button) {
@@ -267,40 +267,40 @@ void q_radiobutton_pressed(void* self) {
     QAbstractButton_Pressed((QAbstractButton*)self);
 }
 
-void q_radiobutton_on_pressed(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Pressed((QAbstractButton*)self, (intptr_t)slot);
+void q_radiobutton_on_pressed(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Pressed((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_released(void* self) {
     QAbstractButton_Released((QAbstractButton*)self);
 }
 
-void q_radiobutton_on_released(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Released((QAbstractButton*)self, (intptr_t)slot);
+void q_radiobutton_on_released(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Released((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_clicked(void* self) {
     QAbstractButton_Clicked((QAbstractButton*)self);
 }
 
-void q_radiobutton_on_clicked(void* self, void (*slot)(void*)) {
-    QAbstractButton_Connect_Clicked((QAbstractButton*)self, (intptr_t)slot);
+void q_radiobutton_on_clicked(void* self, void (*callback)(void*)) {
+    QAbstractButton_Connect_Clicked((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_toggled(void* self, bool checked) {
     QAbstractButton_Toggled((QAbstractButton*)self, checked);
 }
 
-void q_radiobutton_on_toggled(void* self, void (*slot)(void*, bool)) {
-    QAbstractButton_Connect_Toggled((QAbstractButton*)self, (intptr_t)slot);
+void q_radiobutton_on_toggled(void* self, void (*callback)(void*, bool)) {
+    QAbstractButton_Connect_Toggled((QAbstractButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_clicked1(void* self, bool checked) {
     QAbstractButton_Clicked1((QAbstractButton*)self, checked);
 }
 
-void q_radiobutton_on_clicked1(void* self, void (*slot)(void*, bool)) {
-    QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)slot);
+void q_radiobutton_on_clicked1(void* self, void (*callback)(void*, bool)) {
+    QAbstractButton_Connect_Clicked1((QAbstractButton*)self, (intptr_t)callback);
 }
 
 uintptr_t q_radiobutton_win_id(void* self) {
@@ -1329,32 +1329,32 @@ void q_radiobutton_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_radiobutton_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_radiobutton_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_radiobutton_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_radiobutton_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_radiobutton_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_radiobutton_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_radiobutton_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_radiobutton_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_radiobutton_input_method_hints(void* self) {
@@ -1525,12 +1525,16 @@ const char** q_radiobutton_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_radiobutton_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1548,8 +1552,8 @@ void q_radiobutton_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_radiobutton_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_radiobutton_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_radiobutton_parent(void* self) {
@@ -1584,8 +1588,8 @@ void q_radiobutton_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_radiobutton_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_radiobutton_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_painting_active(void* self) {
@@ -1648,8 +1652,8 @@ void q_radiobutton_qbase_check_state_set(void* self) {
     QRadioButton_QBaseCheckStateSet((QRadioButton*)self);
 }
 
-void q_radiobutton_on_check_state_set(void* self, void (*slot)()) {
-    QRadioButton_OnCheckStateSet((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_check_state_set(void* self, void (*callback)()) {
+    QRadioButton_OnCheckStateSet((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_next_check_state(void* self) {
@@ -1660,8 +1664,8 @@ void q_radiobutton_qbase_next_check_state(void* self) {
     QRadioButton_QBaseNextCheckState((QRadioButton*)self);
 }
 
-void q_radiobutton_on_next_check_state(void* self, void (*slot)()) {
-    QRadioButton_OnNextCheckState((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_next_check_state(void* self, void (*callback)()) {
+    QRadioButton_OnNextCheckState((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_key_press_event(void* self, void* e) {
@@ -1672,8 +1676,8 @@ void q_radiobutton_qbase_key_press_event(void* self, void* e) {
     QRadioButton_QBaseKeyPressEvent((QRadioButton*)self, (QKeyEvent*)e);
 }
 
-void q_radiobutton_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnKeyPressEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnKeyPressEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_key_release_event(void* self, void* e) {
@@ -1684,8 +1688,8 @@ void q_radiobutton_qbase_key_release_event(void* self, void* e) {
     QRadioButton_QBaseKeyReleaseEvent((QRadioButton*)self, (QKeyEvent*)e);
 }
 
-void q_radiobutton_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnKeyReleaseEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnKeyReleaseEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_mouse_press_event(void* self, void* e) {
@@ -1696,8 +1700,8 @@ void q_radiobutton_qbase_mouse_press_event(void* self, void* e) {
     QRadioButton_QBaseMousePressEvent((QRadioButton*)self, (QMouseEvent*)e);
 }
 
-void q_radiobutton_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnMousePressEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnMousePressEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_mouse_release_event(void* self, void* e) {
@@ -1708,8 +1712,8 @@ void q_radiobutton_qbase_mouse_release_event(void* self, void* e) {
     QRadioButton_QBaseMouseReleaseEvent((QRadioButton*)self, (QMouseEvent*)e);
 }
 
-void q_radiobutton_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnMouseReleaseEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnMouseReleaseEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_focus_in_event(void* self, void* e) {
@@ -1720,8 +1724,8 @@ void q_radiobutton_qbase_focus_in_event(void* self, void* e) {
     QRadioButton_QBaseFocusInEvent((QRadioButton*)self, (QFocusEvent*)e);
 }
 
-void q_radiobutton_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnFocusInEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnFocusInEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_focus_out_event(void* self, void* e) {
@@ -1732,8 +1736,8 @@ void q_radiobutton_qbase_focus_out_event(void* self, void* e) {
     QRadioButton_QBaseFocusOutEvent((QRadioButton*)self, (QFocusEvent*)e);
 }
 
-void q_radiobutton_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnFocusOutEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnFocusOutEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_change_event(void* self, void* e) {
@@ -1744,8 +1748,8 @@ void q_radiobutton_qbase_change_event(void* self, void* e) {
     QRadioButton_QBaseChangeEvent((QRadioButton*)self, (QEvent*)e);
 }
 
-void q_radiobutton_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnChangeEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnChangeEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_timer_event(void* self, void* e) {
@@ -1756,8 +1760,8 @@ void q_radiobutton_qbase_timer_event(void* self, void* e) {
     QRadioButton_QBaseTimerEvent((QRadioButton*)self, (QTimerEvent*)e);
 }
 
-void q_radiobutton_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnTimerEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnTimerEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_dev_type(void* self) {
@@ -1768,8 +1772,8 @@ int32_t q_radiobutton_qbase_dev_type(void* self) {
     return QRadioButton_QBaseDevType((QRadioButton*)self);
 }
 
-void q_radiobutton_on_dev_type(void* self, int32_t (*slot)()) {
-    QRadioButton_OnDevType((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_dev_type(void* self, int32_t (*callback)()) {
+    QRadioButton_OnDevType((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_set_visible(void* self, bool visible) {
@@ -1780,8 +1784,8 @@ void q_radiobutton_qbase_set_visible(void* self, bool visible) {
     QRadioButton_QBaseSetVisible((QRadioButton*)self, visible);
 }
 
-void q_radiobutton_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QRadioButton_OnSetVisible((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QRadioButton_OnSetVisible((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_height_for_width(void* self, int param1) {
@@ -1792,8 +1796,8 @@ int32_t q_radiobutton_qbase_height_for_width(void* self, int param1) {
     return QRadioButton_QBaseHeightForWidth((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QRadioButton_OnHeightForWidth((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QRadioButton_OnHeightForWidth((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_has_height_for_width(void* self) {
@@ -1804,8 +1808,8 @@ bool q_radiobutton_qbase_has_height_for_width(void* self) {
     return QRadioButton_QBaseHasHeightForWidth((QRadioButton*)self);
 }
 
-void q_radiobutton_on_has_height_for_width(void* self, bool (*slot)()) {
-    QRadioButton_OnHasHeightForWidth((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_has_height_for_width(void* self, bool (*callback)()) {
+    QRadioButton_OnHasHeightForWidth((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_radiobutton_paint_engine(void* self) {
@@ -1816,8 +1820,8 @@ QPaintEngine* q_radiobutton_qbase_paint_engine(void* self) {
     return QRadioButton_QBasePaintEngine((QRadioButton*)self);
 }
 
-void q_radiobutton_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QRadioButton_OnPaintEngine((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QRadioButton_OnPaintEngine((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_mouse_double_click_event(void* self, void* event) {
@@ -1828,8 +1832,8 @@ void q_radiobutton_qbase_mouse_double_click_event(void* self, void* event) {
     QRadioButton_QBaseMouseDoubleClickEvent((QRadioButton*)self, (QMouseEvent*)event);
 }
 
-void q_radiobutton_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnMouseDoubleClickEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnMouseDoubleClickEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_wheel_event(void* self, void* event) {
@@ -1840,8 +1844,8 @@ void q_radiobutton_qbase_wheel_event(void* self, void* event) {
     QRadioButton_QBaseWheelEvent((QRadioButton*)self, (QWheelEvent*)event);
 }
 
-void q_radiobutton_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnWheelEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnWheelEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_enter_event(void* self, void* event) {
@@ -1852,8 +1856,8 @@ void q_radiobutton_qbase_enter_event(void* self, void* event) {
     QRadioButton_QBaseEnterEvent((QRadioButton*)self, (QEnterEvent*)event);
 }
 
-void q_radiobutton_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnEnterEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnEnterEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_leave_event(void* self, void* event) {
@@ -1864,8 +1868,8 @@ void q_radiobutton_qbase_leave_event(void* self, void* event) {
     QRadioButton_QBaseLeaveEvent((QRadioButton*)self, (QEvent*)event);
 }
 
-void q_radiobutton_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnLeaveEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnLeaveEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_move_event(void* self, void* event) {
@@ -1876,8 +1880,8 @@ void q_radiobutton_qbase_move_event(void* self, void* event) {
     QRadioButton_QBaseMoveEvent((QRadioButton*)self, (QMoveEvent*)event);
 }
 
-void q_radiobutton_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnMoveEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnMoveEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_resize_event(void* self, void* event) {
@@ -1888,8 +1892,8 @@ void q_radiobutton_qbase_resize_event(void* self, void* event) {
     QRadioButton_QBaseResizeEvent((QRadioButton*)self, (QResizeEvent*)event);
 }
 
-void q_radiobutton_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnResizeEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnResizeEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_close_event(void* self, void* event) {
@@ -1900,8 +1904,8 @@ void q_radiobutton_qbase_close_event(void* self, void* event) {
     QRadioButton_QBaseCloseEvent((QRadioButton*)self, (QCloseEvent*)event);
 }
 
-void q_radiobutton_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnCloseEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnCloseEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_context_menu_event(void* self, void* event) {
@@ -1912,8 +1916,8 @@ void q_radiobutton_qbase_context_menu_event(void* self, void* event) {
     QRadioButton_QBaseContextMenuEvent((QRadioButton*)self, (QContextMenuEvent*)event);
 }
 
-void q_radiobutton_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnContextMenuEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnContextMenuEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_tablet_event(void* self, void* event) {
@@ -1924,8 +1928,8 @@ void q_radiobutton_qbase_tablet_event(void* self, void* event) {
     QRadioButton_QBaseTabletEvent((QRadioButton*)self, (QTabletEvent*)event);
 }
 
-void q_radiobutton_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnTabletEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnTabletEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_action_event(void* self, void* event) {
@@ -1936,8 +1940,8 @@ void q_radiobutton_qbase_action_event(void* self, void* event) {
     QRadioButton_QBaseActionEvent((QRadioButton*)self, (QActionEvent*)event);
 }
 
-void q_radiobutton_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnActionEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnActionEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_drag_enter_event(void* self, void* event) {
@@ -1948,8 +1952,8 @@ void q_radiobutton_qbase_drag_enter_event(void* self, void* event) {
     QRadioButton_QBaseDragEnterEvent((QRadioButton*)self, (QDragEnterEvent*)event);
 }
 
-void q_radiobutton_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnDragEnterEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnDragEnterEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_drag_move_event(void* self, void* event) {
@@ -1960,8 +1964,8 @@ void q_radiobutton_qbase_drag_move_event(void* self, void* event) {
     QRadioButton_QBaseDragMoveEvent((QRadioButton*)self, (QDragMoveEvent*)event);
 }
 
-void q_radiobutton_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnDragMoveEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnDragMoveEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_drag_leave_event(void* self, void* event) {
@@ -1972,8 +1976,8 @@ void q_radiobutton_qbase_drag_leave_event(void* self, void* event) {
     QRadioButton_QBaseDragLeaveEvent((QRadioButton*)self, (QDragLeaveEvent*)event);
 }
 
-void q_radiobutton_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnDragLeaveEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnDragLeaveEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_drop_event(void* self, void* event) {
@@ -1984,8 +1988,8 @@ void q_radiobutton_qbase_drop_event(void* self, void* event) {
     QRadioButton_QBaseDropEvent((QRadioButton*)self, (QDropEvent*)event);
 }
 
-void q_radiobutton_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnDropEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnDropEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_show_event(void* self, void* event) {
@@ -1996,8 +2000,8 @@ void q_radiobutton_qbase_show_event(void* self, void* event) {
     QRadioButton_QBaseShowEvent((QRadioButton*)self, (QShowEvent*)event);
 }
 
-void q_radiobutton_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnShowEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnShowEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_hide_event(void* self, void* event) {
@@ -2008,8 +2012,8 @@ void q_radiobutton_qbase_hide_event(void* self, void* event) {
     QRadioButton_QBaseHideEvent((QRadioButton*)self, (QHideEvent*)event);
 }
 
-void q_radiobutton_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnHideEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnHideEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -2020,8 +2024,8 @@ bool q_radiobutton_qbase_native_event(void* self, const char* eventType, void* m
     return QRadioButton_QBaseNativeEvent((QRadioButton*)self, qstring(eventType), message, result);
 }
 
-void q_radiobutton_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QRadioButton_OnNativeEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QRadioButton_OnNativeEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_metric(void* self, int64_t param1) {
@@ -2032,8 +2036,8 @@ int32_t q_radiobutton_qbase_metric(void* self, int64_t param1) {
     return QRadioButton_QBaseMetric((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QRadioButton_OnMetric((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QRadioButton_OnMetric((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_init_painter(void* self, void* painter) {
@@ -2044,8 +2048,8 @@ void q_radiobutton_qbase_init_painter(void* self, void* painter) {
     QRadioButton_QBaseInitPainter((QRadioButton*)self, (QPainter*)painter);
 }
 
-void q_radiobutton_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnInitPainter((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnInitPainter((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_radiobutton_redirected(void* self, void* offset) {
@@ -2056,8 +2060,8 @@ QPaintDevice* q_radiobutton_qbase_redirected(void* self, void* offset) {
     return QRadioButton_QBaseRedirected((QRadioButton*)self, (QPoint*)offset);
 }
 
-void q_radiobutton_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QRadioButton_OnRedirected((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QRadioButton_OnRedirected((QRadioButton*)self, (intptr_t)callback);
 }
 
 QPainter* q_radiobutton_shared_painter(void* self) {
@@ -2068,8 +2072,8 @@ QPainter* q_radiobutton_qbase_shared_painter(void* self) {
     return QRadioButton_QBaseSharedPainter((QRadioButton*)self);
 }
 
-void q_radiobutton_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QRadioButton_OnSharedPainter((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QRadioButton_OnSharedPainter((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_input_method_event(void* self, void* param1) {
@@ -2080,8 +2084,8 @@ void q_radiobutton_qbase_input_method_event(void* self, void* param1) {
     QRadioButton_QBaseInputMethodEvent((QRadioButton*)self, (QInputMethodEvent*)param1);
 }
 
-void q_radiobutton_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnInputMethodEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnInputMethodEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 QVariant* q_radiobutton_input_method_query(void* self, int64_t param1) {
@@ -2092,8 +2096,8 @@ QVariant* q_radiobutton_qbase_input_method_query(void* self, int64_t param1) {
     return QRadioButton_QBaseInputMethodQuery((QRadioButton*)self, param1);
 }
 
-void q_radiobutton_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QRadioButton_OnInputMethodQuery((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QRadioButton_OnInputMethodQuery((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_focus_next_prev_child(void* self, bool next) {
@@ -2104,8 +2108,8 @@ bool q_radiobutton_qbase_focus_next_prev_child(void* self, bool next) {
     return QRadioButton_QBaseFocusNextPrevChild((QRadioButton*)self, next);
 }
 
-void q_radiobutton_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QRadioButton_OnFocusNextPrevChild((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QRadioButton_OnFocusNextPrevChild((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_event_filter(void* self, void* watched, void* event) {
@@ -2116,8 +2120,8 @@ bool q_radiobutton_qbase_event_filter(void* self, void* watched, void* event) {
     return QRadioButton_QBaseEventFilter((QRadioButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_radiobutton_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QRadioButton_OnEventFilter((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QRadioButton_OnEventFilter((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_child_event(void* self, void* event) {
@@ -2128,8 +2132,8 @@ void q_radiobutton_qbase_child_event(void* self, void* event) {
     QRadioButton_QBaseChildEvent((QRadioButton*)self, (QChildEvent*)event);
 }
 
-void q_radiobutton_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnChildEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnChildEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_custom_event(void* self, void* event) {
@@ -2140,8 +2144,8 @@ void q_radiobutton_qbase_custom_event(void* self, void* event) {
     QRadioButton_QBaseCustomEvent((QRadioButton*)self, (QEvent*)event);
 }
 
-void q_radiobutton_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnCustomEvent((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnCustomEvent((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_connect_notify(void* self, void* signal) {
@@ -2152,8 +2156,8 @@ void q_radiobutton_qbase_connect_notify(void* self, void* signal) {
     QRadioButton_QBaseConnectNotify((QRadioButton*)self, (QMetaMethod*)signal);
 }
 
-void q_radiobutton_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnConnectNotify((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnConnectNotify((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_disconnect_notify(void* self, void* signal) {
@@ -2164,8 +2168,8 @@ void q_radiobutton_qbase_disconnect_notify(void* self, void* signal) {
     QRadioButton_QBaseDisconnectNotify((QRadioButton*)self, (QMetaMethod*)signal);
 }
 
-void q_radiobutton_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QRadioButton_OnDisconnectNotify((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QRadioButton_OnDisconnectNotify((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_update_micro_focus(void* self) {
@@ -2176,8 +2180,8 @@ void q_radiobutton_qbase_update_micro_focus(void* self) {
     QRadioButton_QBaseUpdateMicroFocus((QRadioButton*)self);
 }
 
-void q_radiobutton_on_update_micro_focus(void* self, void (*slot)()) {
-    QRadioButton_OnUpdateMicroFocus((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_update_micro_focus(void* self, void (*callback)()) {
+    QRadioButton_OnUpdateMicroFocus((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_create(void* self) {
@@ -2188,8 +2192,8 @@ void q_radiobutton_qbase_create(void* self) {
     QRadioButton_QBaseCreate((QRadioButton*)self);
 }
 
-void q_radiobutton_on_create(void* self, void (*slot)()) {
-    QRadioButton_OnCreate((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_create(void* self, void (*callback)()) {
+    QRadioButton_OnCreate((QRadioButton*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_destroy(void* self) {
@@ -2200,8 +2204,8 @@ void q_radiobutton_qbase_destroy(void* self) {
     QRadioButton_QBaseDestroy((QRadioButton*)self);
 }
 
-void q_radiobutton_on_destroy(void* self, void (*slot)()) {
-    QRadioButton_OnDestroy((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_destroy(void* self, void (*callback)()) {
+    QRadioButton_OnDestroy((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_focus_next_child(void* self) {
@@ -2212,8 +2216,8 @@ bool q_radiobutton_qbase_focus_next_child(void* self) {
     return QRadioButton_QBaseFocusNextChild((QRadioButton*)self);
 }
 
-void q_radiobutton_on_focus_next_child(void* self, bool (*slot)()) {
-    QRadioButton_OnFocusNextChild((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_focus_next_child(void* self, bool (*callback)()) {
+    QRadioButton_OnFocusNextChild((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_focus_previous_child(void* self) {
@@ -2224,8 +2228,8 @@ bool q_radiobutton_qbase_focus_previous_child(void* self) {
     return QRadioButton_QBaseFocusPreviousChild((QRadioButton*)self);
 }
 
-void q_radiobutton_on_focus_previous_child(void* self, bool (*slot)()) {
-    QRadioButton_OnFocusPreviousChild((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_focus_previous_child(void* self, bool (*callback)()) {
+    QRadioButton_OnFocusPreviousChild((QRadioButton*)self, (intptr_t)callback);
 }
 
 QObject* q_radiobutton_sender(void* self) {
@@ -2236,8 +2240,8 @@ QObject* q_radiobutton_qbase_sender(void* self) {
     return QRadioButton_QBaseSender((QRadioButton*)self);
 }
 
-void q_radiobutton_on_sender(void* self, QObject* (*slot)()) {
-    QRadioButton_OnSender((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_sender(void* self, QObject* (*callback)()) {
+    QRadioButton_OnSender((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_sender_signal_index(void* self) {
@@ -2248,8 +2252,8 @@ int32_t q_radiobutton_qbase_sender_signal_index(void* self) {
     return QRadioButton_QBaseSenderSignalIndex((QRadioButton*)self);
 }
 
-void q_radiobutton_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QRadioButton_OnSenderSignalIndex((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QRadioButton_OnSenderSignalIndex((QRadioButton*)self, (intptr_t)callback);
 }
 
 int32_t q_radiobutton_receivers(void* self, const char* signal) {
@@ -2260,8 +2264,8 @@ int32_t q_radiobutton_qbase_receivers(void* self, const char* signal) {
     return QRadioButton_QBaseReceivers((QRadioButton*)self, signal);
 }
 
-void q_radiobutton_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QRadioButton_OnReceivers((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QRadioButton_OnReceivers((QRadioButton*)self, (intptr_t)callback);
 }
 
 bool q_radiobutton_is_signal_connected(void* self, void* signal) {
@@ -2272,8 +2276,8 @@ bool q_radiobutton_qbase_is_signal_connected(void* self, void* signal) {
     return QRadioButton_QBaseIsSignalConnected((QRadioButton*)self, (QMetaMethod*)signal);
 }
 
-void q_radiobutton_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QRadioButton_OnIsSignalConnected((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QRadioButton_OnIsSignalConnected((QRadioButton*)self, (intptr_t)callback);
 }
 
 double q_radiobutton_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2284,12 +2288,12 @@ double q_radiobutton_qbase_get_decoded_metric_f(void* self, int64_t metricA, int
     return QRadioButton_QBaseGetDecodedMetricF((QRadioButton*)self, metricA, metricB);
 }
 
-void q_radiobutton_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QRadioButton_OnGetDecodedMetricF((QRadioButton*)self, (intptr_t)slot);
+void q_radiobutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QRadioButton_OnGetDecodedMetricF((QRadioButton*)self, (intptr_t)callback);
 }
 
-void q_radiobutton_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_radiobutton_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_radiobutton_delete(void* self) {

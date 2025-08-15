@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,114 +15,131 @@
 
 /// q_statictext_new constructs a new QStaticText object.
 ///
-///
 QStaticText* q_statictext_new();
 
 /// q_statictext_new2 constructs a new QStaticText object.
 ///
-/// ``` const char* text ```
+/// @param text const char*
 QStaticText* q_statictext_new2(const char* text);
 
 /// q_statictext_new3 constructs a new QStaticText object.
 ///
-/// ``` QStaticText* other ```
+/// @param other QStaticText*
 QStaticText* q_statictext_new3(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-eq)
 ///
-/// ``` QStaticText* self, QStaticText* param1 ```
+/// @param self QStaticText*
+/// @param param1 QStaticText*
 void q_statictext_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#swap)
 ///
-/// ``` QStaticText* self, QStaticText* other ```
+/// @param self QStaticText*
+/// @param other QStaticText*
 void q_statictext_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setText)
 ///
-/// ``` QStaticText* self, const char* text ```
+/// @param self QStaticText*
+/// @param text const char*
 void q_statictext_set_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#text)
 ///
-/// ``` QStaticText* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStaticText*
 const char* q_statictext_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextFormat)
 ///
-/// ``` QStaticText* self, enum Qt__TextFormat textFormat ```
+/// @param self QStaticText*
+/// @param textFormat enum Qt__TextFormat
 void q_statictext_set_text_format(void* self, int64_t textFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textFormat)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
+///
+/// @return enum Qt__TextFormat
 int64_t q_statictext_text_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextWidth)
 ///
-/// ``` QStaticText* self, double textWidth ```
+/// @param self QStaticText*
+/// @param textWidth double
 void q_statictext_set_text_width(void* self, double textWidth);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textWidth)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
 double q_statictext_text_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextOption)
 ///
-/// ``` QStaticText* self, QTextOption* textOption ```
+/// @param self QStaticText*
+/// @param textOption QTextOption*
 void q_statictext_set_text_option(void* self, void* textOption);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textOption)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
 QTextOption* q_statictext_text_option(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#size)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
 QSizeF* q_statictext_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
 void q_statictext_prepare(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setPerformanceHint)
 ///
-/// ``` QStaticText* self, enum QStaticText__PerformanceHint performanceHint ```
+/// @param self QStaticText*
+/// @param performanceHint enum QStaticText__PerformanceHint
 void q_statictext_set_performance_hint(void* self, int64_t performanceHint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#performanceHint)
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
+///
+/// @return enum QStaticText__PerformanceHint
 int64_t q_statictext_performance_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-eq-eq)
 ///
-/// ``` QStaticText* self, QStaticText* param1 ```
+/// @param self QStaticText*
+/// @param param1 QStaticText*
 bool q_statictext_operator_equal(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-not-eq)
 ///
-/// ``` QStaticText* self, QStaticText* param1 ```
+/// @param self QStaticText*
+/// @param param1 QStaticText*
 bool q_statictext_operator_not_equal(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
-/// ``` QStaticText* self, QTransform* matrix ```
+/// @param self QStaticText*
+/// @param matrix QTransform*
 void q_statictext_prepare1(void* self, void* matrix);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#prepare)
 ///
-/// ``` QStaticText* self, QTransform* matrix, QFont* font ```
+/// @param self QStaticText*
+/// @param matrix QTransform*
+/// @param font QFont*
 void q_statictext_prepare2(void* self, void* matrix, void* font);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#dtor.QStaticText)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStaticText* self ```
+/// @param self QStaticText*
 void q_statictext_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstatictext.html#types

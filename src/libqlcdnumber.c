@@ -43,8 +43,8 @@ int32_t q_lcdnumber_metacall(void* self, int64_t param1, int param2, void* param
     return QLCDNumber_Metacall((QLCDNumber*)self, param1, param2, param3);
 }
 
-void q_lcdnumber_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QLCDNumber_OnMetacall((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QLCDNumber_OnMetacall((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -106,8 +106,8 @@ QSize* q_lcdnumber_size_hint(void* self) {
     return QLCDNumber_SizeHint((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_size_hint(void* self, QSize* (*slot)()) {
-    QLCDNumber_OnSizeHint((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_size_hint(void* self, QSize* (*callback)()) {
+    QLCDNumber_OnSizeHint((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QSize* q_lcdnumber_qbase_size_hint(void* self) {
@@ -150,16 +150,16 @@ void q_lcdnumber_overflow(void* self) {
     QLCDNumber_Overflow((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_overflow(void* self, void (*slot)(void*)) {
-    QLCDNumber_Connect_Overflow((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_overflow(void* self, void (*callback)(void*)) {
+    QLCDNumber_Connect_Overflow((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_event(void* self, void* e) {
     return QLCDNumber_Event((QLCDNumber*)self, (QEvent*)e);
 }
 
-void q_lcdnumber_on_event(void* self, bool (*slot)(void*, void*)) {
-    QLCDNumber_OnEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_event(void* self, bool (*callback)(void*, void*)) {
+    QLCDNumber_OnEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_qbase_event(void* self, void* e) {
@@ -170,8 +170,8 @@ void q_lcdnumber_paint_event(void* self, void* param1) {
     QLCDNumber_PaintEvent((QLCDNumber*)self, (QPaintEvent*)param1);
 }
 
-void q_lcdnumber_on_paint_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnPaintEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_paint_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnPaintEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_qbase_paint_event(void* self, void* param1) {
@@ -1270,32 +1270,32 @@ void q_lcdnumber_window_title_changed(void* self, const char* title) {
     QWidget_WindowTitleChanged((QWidget*)self, qstring(title));
 }
 
-void q_lcdnumber_on_window_title_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)slot);
+void q_lcdnumber_on_window_title_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowTitleChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_window_icon_changed(void* self, void* icon) {
     QWidget_WindowIconChanged((QWidget*)self, (QIcon*)icon);
 }
 
-void q_lcdnumber_on_window_icon_changed(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)slot);
+void q_lcdnumber_on_window_icon_changed(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_WindowIconChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_window_icon_text_changed(void* self, const char* iconText) {
     QWidget_WindowIconTextChanged((QWidget*)self, qstring(iconText));
 }
 
-void q_lcdnumber_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)slot);
+void q_lcdnumber_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QWidget_Connect_WindowIconTextChanged((QWidget*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_custom_context_menu_requested(void* self, void* pos) {
     QWidget_CustomContextMenuRequested((QWidget*)self, (QPoint*)pos);
 }
 
-void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*)) {
-    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)slot);
+void q_lcdnumber_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*)) {
+    QWidget_Connect_CustomContextMenuRequested((QWidget*)self, (intptr_t)callback);
 }
 
 int64_t q_lcdnumber_input_method_hints(void* self) {
@@ -1466,12 +1466,16 @@ const char** q_lcdnumber_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_lcdnumber_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1489,8 +1493,8 @@ void q_lcdnumber_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_lcdnumber_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_lcdnumber_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_lcdnumber_parent(void* self) {
@@ -1525,8 +1529,8 @@ void q_lcdnumber_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_lcdnumber_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_lcdnumber_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_painting_active(void* self) {
@@ -1589,8 +1593,8 @@ void q_lcdnumber_qbase_change_event(void* self, void* param1) {
     QLCDNumber_QBaseChangeEvent((QLCDNumber*)self, (QEvent*)param1);
 }
 
-void q_lcdnumber_on_change_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnChangeEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_change_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnChangeEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_init_style_option(void* self, void* option) {
@@ -1601,8 +1605,8 @@ void q_lcdnumber_qbase_init_style_option(void* self, void* option) {
     QLCDNumber_QBaseInitStyleOption((QLCDNumber*)self, (QStyleOptionFrame*)option);
 }
 
-void q_lcdnumber_on_init_style_option(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnInitStyleOption((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_init_style_option(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnInitStyleOption((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_dev_type(void* self) {
@@ -1613,8 +1617,8 @@ int32_t q_lcdnumber_qbase_dev_type(void* self) {
     return QLCDNumber_QBaseDevType((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_dev_type(void* self, int32_t (*slot)()) {
-    QLCDNumber_OnDevType((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_dev_type(void* self, int32_t (*callback)()) {
+    QLCDNumber_OnDevType((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_set_visible(void* self, bool visible) {
@@ -1625,8 +1629,8 @@ void q_lcdnumber_qbase_set_visible(void* self, bool visible) {
     QLCDNumber_QBaseSetVisible((QLCDNumber*)self, visible);
 }
 
-void q_lcdnumber_on_set_visible(void* self, void (*slot)(void*, bool)) {
-    QLCDNumber_OnSetVisible((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_set_visible(void* self, void (*callback)(void*, bool)) {
+    QLCDNumber_OnSetVisible((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QSize* q_lcdnumber_minimum_size_hint(void* self) {
@@ -1637,8 +1641,8 @@ QSize* q_lcdnumber_qbase_minimum_size_hint(void* self) {
     return QLCDNumber_QBaseMinimumSizeHint((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_minimum_size_hint(void* self, QSize* (*slot)()) {
-    QLCDNumber_OnMinimumSizeHint((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_minimum_size_hint(void* self, QSize* (*callback)()) {
+    QLCDNumber_OnMinimumSizeHint((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_height_for_width(void* self, int param1) {
@@ -1649,8 +1653,8 @@ int32_t q_lcdnumber_qbase_height_for_width(void* self, int param1) {
     return QLCDNumber_QBaseHeightForWidth((QLCDNumber*)self, param1);
 }
 
-void q_lcdnumber_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QLCDNumber_OnHeightForWidth((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QLCDNumber_OnHeightForWidth((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_has_height_for_width(void* self) {
@@ -1661,8 +1665,8 @@ bool q_lcdnumber_qbase_has_height_for_width(void* self) {
     return QLCDNumber_QBaseHasHeightForWidth((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_has_height_for_width(void* self, bool (*slot)()) {
-    QLCDNumber_OnHasHeightForWidth((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_has_height_for_width(void* self, bool (*callback)()) {
+    QLCDNumber_OnHasHeightForWidth((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QPaintEngine* q_lcdnumber_paint_engine(void* self) {
@@ -1673,8 +1677,8 @@ QPaintEngine* q_lcdnumber_qbase_paint_engine(void* self) {
     return QLCDNumber_QBasePaintEngine((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_paint_engine(void* self, QPaintEngine* (*slot)()) {
-    QLCDNumber_OnPaintEngine((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
+    QLCDNumber_OnPaintEngine((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_mouse_press_event(void* self, void* event) {
@@ -1685,8 +1689,8 @@ void q_lcdnumber_qbase_mouse_press_event(void* self, void* event) {
     QLCDNumber_QBaseMousePressEvent((QLCDNumber*)self, (QMouseEvent*)event);
 }
 
-void q_lcdnumber_on_mouse_press_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnMousePressEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnMousePressEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_mouse_release_event(void* self, void* event) {
@@ -1697,8 +1701,8 @@ void q_lcdnumber_qbase_mouse_release_event(void* self, void* event) {
     QLCDNumber_QBaseMouseReleaseEvent((QLCDNumber*)self, (QMouseEvent*)event);
 }
 
-void q_lcdnumber_on_mouse_release_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnMouseReleaseEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnMouseReleaseEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_mouse_double_click_event(void* self, void* event) {
@@ -1709,8 +1713,8 @@ void q_lcdnumber_qbase_mouse_double_click_event(void* self, void* event) {
     QLCDNumber_QBaseMouseDoubleClickEvent((QLCDNumber*)self, (QMouseEvent*)event);
 }
 
-void q_lcdnumber_on_mouse_double_click_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnMouseDoubleClickEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnMouseDoubleClickEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_mouse_move_event(void* self, void* event) {
@@ -1721,8 +1725,8 @@ void q_lcdnumber_qbase_mouse_move_event(void* self, void* event) {
     QLCDNumber_QBaseMouseMoveEvent((QLCDNumber*)self, (QMouseEvent*)event);
 }
 
-void q_lcdnumber_on_mouse_move_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnMouseMoveEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnMouseMoveEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_wheel_event(void* self, void* event) {
@@ -1733,8 +1737,8 @@ void q_lcdnumber_qbase_wheel_event(void* self, void* event) {
     QLCDNumber_QBaseWheelEvent((QLCDNumber*)self, (QWheelEvent*)event);
 }
 
-void q_lcdnumber_on_wheel_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnWheelEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_wheel_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnWheelEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_key_press_event(void* self, void* event) {
@@ -1745,8 +1749,8 @@ void q_lcdnumber_qbase_key_press_event(void* self, void* event) {
     QLCDNumber_QBaseKeyPressEvent((QLCDNumber*)self, (QKeyEvent*)event);
 }
 
-void q_lcdnumber_on_key_press_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnKeyPressEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_key_press_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnKeyPressEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_key_release_event(void* self, void* event) {
@@ -1757,8 +1761,8 @@ void q_lcdnumber_qbase_key_release_event(void* self, void* event) {
     QLCDNumber_QBaseKeyReleaseEvent((QLCDNumber*)self, (QKeyEvent*)event);
 }
 
-void q_lcdnumber_on_key_release_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnKeyReleaseEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_key_release_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnKeyReleaseEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_focus_in_event(void* self, void* event) {
@@ -1769,8 +1773,8 @@ void q_lcdnumber_qbase_focus_in_event(void* self, void* event) {
     QLCDNumber_QBaseFocusInEvent((QLCDNumber*)self, (QFocusEvent*)event);
 }
 
-void q_lcdnumber_on_focus_in_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnFocusInEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnFocusInEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_focus_out_event(void* self, void* event) {
@@ -1781,8 +1785,8 @@ void q_lcdnumber_qbase_focus_out_event(void* self, void* event) {
     QLCDNumber_QBaseFocusOutEvent((QLCDNumber*)self, (QFocusEvent*)event);
 }
 
-void q_lcdnumber_on_focus_out_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnFocusOutEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnFocusOutEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_enter_event(void* self, void* event) {
@@ -1793,8 +1797,8 @@ void q_lcdnumber_qbase_enter_event(void* self, void* event) {
     QLCDNumber_QBaseEnterEvent((QLCDNumber*)self, (QEnterEvent*)event);
 }
 
-void q_lcdnumber_on_enter_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnEnterEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_enter_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnEnterEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_leave_event(void* self, void* event) {
@@ -1805,8 +1809,8 @@ void q_lcdnumber_qbase_leave_event(void* self, void* event) {
     QLCDNumber_QBaseLeaveEvent((QLCDNumber*)self, (QEvent*)event);
 }
 
-void q_lcdnumber_on_leave_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnLeaveEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_leave_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnLeaveEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_move_event(void* self, void* event) {
@@ -1817,8 +1821,8 @@ void q_lcdnumber_qbase_move_event(void* self, void* event) {
     QLCDNumber_QBaseMoveEvent((QLCDNumber*)self, (QMoveEvent*)event);
 }
 
-void q_lcdnumber_on_move_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnMoveEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_move_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnMoveEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_resize_event(void* self, void* event) {
@@ -1829,8 +1833,8 @@ void q_lcdnumber_qbase_resize_event(void* self, void* event) {
     QLCDNumber_QBaseResizeEvent((QLCDNumber*)self, (QResizeEvent*)event);
 }
 
-void q_lcdnumber_on_resize_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnResizeEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_resize_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnResizeEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_close_event(void* self, void* event) {
@@ -1841,8 +1845,8 @@ void q_lcdnumber_qbase_close_event(void* self, void* event) {
     QLCDNumber_QBaseCloseEvent((QLCDNumber*)self, (QCloseEvent*)event);
 }
 
-void q_lcdnumber_on_close_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnCloseEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_close_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnCloseEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_context_menu_event(void* self, void* event) {
@@ -1853,8 +1857,8 @@ void q_lcdnumber_qbase_context_menu_event(void* self, void* event) {
     QLCDNumber_QBaseContextMenuEvent((QLCDNumber*)self, (QContextMenuEvent*)event);
 }
 
-void q_lcdnumber_on_context_menu_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnContextMenuEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnContextMenuEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_tablet_event(void* self, void* event) {
@@ -1865,8 +1869,8 @@ void q_lcdnumber_qbase_tablet_event(void* self, void* event) {
     QLCDNumber_QBaseTabletEvent((QLCDNumber*)self, (QTabletEvent*)event);
 }
 
-void q_lcdnumber_on_tablet_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnTabletEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_tablet_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnTabletEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_action_event(void* self, void* event) {
@@ -1877,8 +1881,8 @@ void q_lcdnumber_qbase_action_event(void* self, void* event) {
     QLCDNumber_QBaseActionEvent((QLCDNumber*)self, (QActionEvent*)event);
 }
 
-void q_lcdnumber_on_action_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnActionEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_action_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnActionEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_drag_enter_event(void* self, void* event) {
@@ -1889,8 +1893,8 @@ void q_lcdnumber_qbase_drag_enter_event(void* self, void* event) {
     QLCDNumber_QBaseDragEnterEvent((QLCDNumber*)self, (QDragEnterEvent*)event);
 }
 
-void q_lcdnumber_on_drag_enter_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDragEnterEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDragEnterEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_drag_move_event(void* self, void* event) {
@@ -1901,8 +1905,8 @@ void q_lcdnumber_qbase_drag_move_event(void* self, void* event) {
     QLCDNumber_QBaseDragMoveEvent((QLCDNumber*)self, (QDragMoveEvent*)event);
 }
 
-void q_lcdnumber_on_drag_move_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDragMoveEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDragMoveEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_drag_leave_event(void* self, void* event) {
@@ -1913,8 +1917,8 @@ void q_lcdnumber_qbase_drag_leave_event(void* self, void* event) {
     QLCDNumber_QBaseDragLeaveEvent((QLCDNumber*)self, (QDragLeaveEvent*)event);
 }
 
-void q_lcdnumber_on_drag_leave_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDragLeaveEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDragLeaveEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_drop_event(void* self, void* event) {
@@ -1925,8 +1929,8 @@ void q_lcdnumber_qbase_drop_event(void* self, void* event) {
     QLCDNumber_QBaseDropEvent((QLCDNumber*)self, (QDropEvent*)event);
 }
 
-void q_lcdnumber_on_drop_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDropEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_drop_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDropEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_show_event(void* self, void* event) {
@@ -1937,8 +1941,8 @@ void q_lcdnumber_qbase_show_event(void* self, void* event) {
     QLCDNumber_QBaseShowEvent((QLCDNumber*)self, (QShowEvent*)event);
 }
 
-void q_lcdnumber_on_show_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnShowEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_show_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnShowEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_hide_event(void* self, void* event) {
@@ -1949,8 +1953,8 @@ void q_lcdnumber_qbase_hide_event(void* self, void* event) {
     QLCDNumber_QBaseHideEvent((QLCDNumber*)self, (QHideEvent*)event);
 }
 
-void q_lcdnumber_on_hide_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnHideEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_hide_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnHideEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_native_event(void* self, const char* eventType, void* message, intptr_t* result) {
@@ -1961,8 +1965,8 @@ bool q_lcdnumber_qbase_native_event(void* self, const char* eventType, void* mes
     return QLCDNumber_QBaseNativeEvent((QLCDNumber*)self, qstring(eventType), message, result);
 }
 
-void q_lcdnumber_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*)) {
-    QLCDNumber_OnNativeEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*)) {
+    QLCDNumber_OnNativeEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_metric(void* self, int64_t param1) {
@@ -1973,8 +1977,8 @@ int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1) {
     return QLCDNumber_QBaseMetric((QLCDNumber*)self, param1);
 }
 
-void q_lcdnumber_on_metric(void* self, int32_t (*slot)(void*, int64_t)) {
-    QLCDNumber_OnMetric((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+    QLCDNumber_OnMetric((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_init_painter(void* self, void* painter) {
@@ -1985,8 +1989,8 @@ void q_lcdnumber_qbase_init_painter(void* self, void* painter) {
     QLCDNumber_QBaseInitPainter((QLCDNumber*)self, (QPainter*)painter);
 }
 
-void q_lcdnumber_on_init_painter(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnInitPainter((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_init_painter(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnInitPainter((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QPaintDevice* q_lcdnumber_redirected(void* self, void* offset) {
@@ -1997,8 +2001,8 @@ QPaintDevice* q_lcdnumber_qbase_redirected(void* self, void* offset) {
     return QLCDNumber_QBaseRedirected((QLCDNumber*)self, (QPoint*)offset);
 }
 
-void q_lcdnumber_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*)) {
-    QLCDNumber_OnRedirected((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
+    QLCDNumber_OnRedirected((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QPainter* q_lcdnumber_shared_painter(void* self) {
@@ -2009,8 +2013,8 @@ QPainter* q_lcdnumber_qbase_shared_painter(void* self) {
     return QLCDNumber_QBaseSharedPainter((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_shared_painter(void* self, QPainter* (*slot)()) {
-    QLCDNumber_OnSharedPainter((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_shared_painter(void* self, QPainter* (*callback)()) {
+    QLCDNumber_OnSharedPainter((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_input_method_event(void* self, void* param1) {
@@ -2021,8 +2025,8 @@ void q_lcdnumber_qbase_input_method_event(void* self, void* param1) {
     QLCDNumber_QBaseInputMethodEvent((QLCDNumber*)self, (QInputMethodEvent*)param1);
 }
 
-void q_lcdnumber_on_input_method_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnInputMethodEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_input_method_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnInputMethodEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QVariant* q_lcdnumber_input_method_query(void* self, int64_t param1) {
@@ -2033,8 +2037,8 @@ QVariant* q_lcdnumber_qbase_input_method_query(void* self, int64_t param1) {
     return QLCDNumber_QBaseInputMethodQuery((QLCDNumber*)self, param1);
 }
 
-void q_lcdnumber_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t)) {
-    QLCDNumber_OnInputMethodQuery((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t)) {
+    QLCDNumber_OnInputMethodQuery((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_focus_next_prev_child(void* self, bool next) {
@@ -2045,8 +2049,8 @@ bool q_lcdnumber_qbase_focus_next_prev_child(void* self, bool next) {
     return QLCDNumber_QBaseFocusNextPrevChild((QLCDNumber*)self, next);
 }
 
-void q_lcdnumber_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)) {
-    QLCDNumber_OnFocusNextPrevChild((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
+    QLCDNumber_OnFocusNextPrevChild((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_event_filter(void* self, void* watched, void* event) {
@@ -2057,8 +2061,8 @@ bool q_lcdnumber_qbase_event_filter(void* self, void* watched, void* event) {
     return QLCDNumber_QBaseEventFilter((QLCDNumber*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_lcdnumber_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QLCDNumber_OnEventFilter((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QLCDNumber_OnEventFilter((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_timer_event(void* self, void* event) {
@@ -2069,8 +2073,8 @@ void q_lcdnumber_qbase_timer_event(void* self, void* event) {
     QLCDNumber_QBaseTimerEvent((QLCDNumber*)self, (QTimerEvent*)event);
 }
 
-void q_lcdnumber_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnTimerEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnTimerEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_child_event(void* self, void* event) {
@@ -2081,8 +2085,8 @@ void q_lcdnumber_qbase_child_event(void* self, void* event) {
     QLCDNumber_QBaseChildEvent((QLCDNumber*)self, (QChildEvent*)event);
 }
 
-void q_lcdnumber_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnChildEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnChildEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_custom_event(void* self, void* event) {
@@ -2093,8 +2097,8 @@ void q_lcdnumber_qbase_custom_event(void* self, void* event) {
     QLCDNumber_QBaseCustomEvent((QLCDNumber*)self, (QEvent*)event);
 }
 
-void q_lcdnumber_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnCustomEvent((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnCustomEvent((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_connect_notify(void* self, void* signal) {
@@ -2105,8 +2109,8 @@ void q_lcdnumber_qbase_connect_notify(void* self, void* signal) {
     QLCDNumber_QBaseConnectNotify((QLCDNumber*)self, (QMetaMethod*)signal);
 }
 
-void q_lcdnumber_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnConnectNotify((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnConnectNotify((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_disconnect_notify(void* self, void* signal) {
@@ -2117,8 +2121,8 @@ void q_lcdnumber_qbase_disconnect_notify(void* self, void* signal) {
     QLCDNumber_QBaseDisconnectNotify((QLCDNumber*)self, (QMetaMethod*)signal);
 }
 
-void q_lcdnumber_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDisconnectNotify((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDisconnectNotify((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_draw_frame(void* self, void* param1) {
@@ -2129,8 +2133,8 @@ void q_lcdnumber_qbase_draw_frame(void* self, void* param1) {
     QLCDNumber_QBaseDrawFrame((QLCDNumber*)self, (QPainter*)param1);
 }
 
-void q_lcdnumber_on_draw_frame(void* self, void (*slot)(void*, void*)) {
-    QLCDNumber_OnDrawFrame((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_draw_frame(void* self, void (*callback)(void*, void*)) {
+    QLCDNumber_OnDrawFrame((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_update_micro_focus(void* self) {
@@ -2141,8 +2145,8 @@ void q_lcdnumber_qbase_update_micro_focus(void* self) {
     QLCDNumber_QBaseUpdateMicroFocus((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_update_micro_focus(void* self, void (*slot)()) {
-    QLCDNumber_OnUpdateMicroFocus((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_update_micro_focus(void* self, void (*callback)()) {
+    QLCDNumber_OnUpdateMicroFocus((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_create(void* self) {
@@ -2153,8 +2157,8 @@ void q_lcdnumber_qbase_create(void* self) {
     QLCDNumber_QBaseCreate((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_create(void* self, void (*slot)()) {
-    QLCDNumber_OnCreate((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_create(void* self, void (*callback)()) {
+    QLCDNumber_OnCreate((QLCDNumber*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_destroy(void* self) {
@@ -2165,8 +2169,8 @@ void q_lcdnumber_qbase_destroy(void* self) {
     QLCDNumber_QBaseDestroy((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_destroy(void* self, void (*slot)()) {
-    QLCDNumber_OnDestroy((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_destroy(void* self, void (*callback)()) {
+    QLCDNumber_OnDestroy((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_focus_next_child(void* self) {
@@ -2177,8 +2181,8 @@ bool q_lcdnumber_qbase_focus_next_child(void* self) {
     return QLCDNumber_QBaseFocusNextChild((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_focus_next_child(void* self, bool (*slot)()) {
-    QLCDNumber_OnFocusNextChild((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_focus_next_child(void* self, bool (*callback)()) {
+    QLCDNumber_OnFocusNextChild((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_focus_previous_child(void* self) {
@@ -2189,8 +2193,8 @@ bool q_lcdnumber_qbase_focus_previous_child(void* self) {
     return QLCDNumber_QBaseFocusPreviousChild((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_focus_previous_child(void* self, bool (*slot)()) {
-    QLCDNumber_OnFocusPreviousChild((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_focus_previous_child(void* self, bool (*callback)()) {
+    QLCDNumber_OnFocusPreviousChild((QLCDNumber*)self, (intptr_t)callback);
 }
 
 QObject* q_lcdnumber_sender(void* self) {
@@ -2201,8 +2205,8 @@ QObject* q_lcdnumber_qbase_sender(void* self) {
     return QLCDNumber_QBaseSender((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_sender(void* self, QObject* (*slot)()) {
-    QLCDNumber_OnSender((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_sender(void* self, QObject* (*callback)()) {
+    QLCDNumber_OnSender((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_sender_signal_index(void* self) {
@@ -2213,8 +2217,8 @@ int32_t q_lcdnumber_qbase_sender_signal_index(void* self) {
     return QLCDNumber_QBaseSenderSignalIndex((QLCDNumber*)self);
 }
 
-void q_lcdnumber_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QLCDNumber_OnSenderSignalIndex((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QLCDNumber_OnSenderSignalIndex((QLCDNumber*)self, (intptr_t)callback);
 }
 
 int32_t q_lcdnumber_receivers(void* self, const char* signal) {
@@ -2225,8 +2229,8 @@ int32_t q_lcdnumber_qbase_receivers(void* self, const char* signal) {
     return QLCDNumber_QBaseReceivers((QLCDNumber*)self, signal);
 }
 
-void q_lcdnumber_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QLCDNumber_OnReceivers((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QLCDNumber_OnReceivers((QLCDNumber*)self, (intptr_t)callback);
 }
 
 bool q_lcdnumber_is_signal_connected(void* self, void* signal) {
@@ -2237,8 +2241,8 @@ bool q_lcdnumber_qbase_is_signal_connected(void* self, void* signal) {
     return QLCDNumber_QBaseIsSignalConnected((QLCDNumber*)self, (QMetaMethod*)signal);
 }
 
-void q_lcdnumber_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QLCDNumber_OnIsSignalConnected((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QLCDNumber_OnIsSignalConnected((QLCDNumber*)self, (intptr_t)callback);
 }
 
 double q_lcdnumber_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
@@ -2249,12 +2253,12 @@ double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
     return QLCDNumber_QBaseGetDecodedMetricF((QLCDNumber*)self, metricA, metricB);
 }
 
-void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t)) {
-    QLCDNumber_OnGetDecodedMetricF((QLCDNumber*)self, (intptr_t)slot);
+void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+    QLCDNumber_OnGetDecodedMetricF((QLCDNumber*)self, (intptr_t)callback);
 }
 
-void q_lcdnumber_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_lcdnumber_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_lcdnumber_delete(void* self) {

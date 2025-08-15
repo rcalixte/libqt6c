@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1001 +15,1176 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#undo)
 ///
-/// ``` QAbstractUndoItem* self ```
+/// @param self QAbstractUndoItem*
 void q_abstractundoitem_undo(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#redo)
 ///
-/// ``` QAbstractUndoItem* self ```
+/// @param self QAbstractUndoItem*
 void q_abstractundoitem_redo(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#operator-eq)
 ///
-/// ``` QAbstractUndoItem* self, QAbstractUndoItem* param1 ```
+/// @param self QAbstractUndoItem*
+/// @param param1 QAbstractUndoItem*
 void q_abstractundoitem_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractundoitem.html#dtor.QAbstractUndoItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QAbstractUndoItem* self ```
+/// @param self QAbstractUndoItem*
 void q_abstractundoitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextdocument.html
 
 /// q_textdocument_new constructs a new QTextDocument object.
 ///
-///
 QTextDocument* q_textdocument_new();
 
 /// q_textdocument_new2 constructs a new QTextDocument object.
 ///
-/// ``` const char* text ```
+/// @param text const char*
 QTextDocument* q_textdocument_new2(const char* text);
 
 /// q_textdocument_new3 constructs a new QTextDocument object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QTextDocument* q_textdocument_new3(void* parent);
 
 /// q_textdocument_new4 constructs a new QTextDocument object.
 ///
-/// ``` const char* text, QObject* parent ```
+/// @param text const char*
+/// @param parent QObject*
 QTextDocument* q_textdocument_new4(const char* text, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 const QMetaObject* q_textdocument_meta_object(void* self);
 
-/// ``` QTextDocument* self, const char* param1 ```
+/// @param self QTextDocument*
+/// @param param1 const char*
 void* q_textdocument_metacast(void* self, const char* param1);
 
-/// ``` QTextDocument* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextDocument*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textdocument_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QTextDocument* self, int32_t (*slot)(QTextDocument*, enum QMetaObject__Call, int, void*) ```
-void q_textdocument_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QTextDocument*
+/// @param callback int32_t fn(QTextDocument*, enum QMetaObject__Call, int, void*)
+void q_textdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QTextDocument* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QTextDocument*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_textdocument_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_textdocument_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clone)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextDocument* q_textdocument_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isEmpty)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextDocument* self, void (*slot)() ```
-void q_textdocument_on_clear(void* self, void (*slot)());
+/// @param self QTextDocument*
+/// @param callback void fn()
+void q_textdocument_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clear)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_qbase_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setUndoRedoEnabled)
 ///
-/// ``` QTextDocument* self, bool enable ```
+/// @param self QTextDocument*
+/// @param enable bool
 void q_textdocument_set_undo_redo_enabled(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isUndoRedoEnabled)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_undo_redo_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isUndoAvailable)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_undo_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isRedoAvailable)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_redo_available(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#availableUndoSteps)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_available_undo_steps(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#availableRedoSteps)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_available_redo_steps(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#revision)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_revision(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDocumentLayout)
 ///
-/// ``` QTextDocument* self, QAbstractTextDocumentLayout* layout ```
+/// @param self QTextDocument*
+/// @param layout QAbstractTextDocumentLayout*
 void q_textdocument_set_document_layout(void* self, void* layout);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayout)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QAbstractTextDocumentLayout* q_textdocument_document_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setMetaInformation)
 ///
-/// ``` QTextDocument* self, enum QTextDocument__MetaInformation info, const char* param2 ```
+/// @param self QTextDocument*
+/// @param info enum QTextDocument__MetaInformation
+/// @param param2 const char*
 void q_textdocument_set_meta_information(void* self, int64_t info, const char* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#metaInformation)
 ///
-/// ``` QTextDocument* self, enum QTextDocument__MetaInformation info ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
+/// @param info enum QTextDocument__MetaInformation
 const char* q_textdocument_meta_information(void* self, int64_t info);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#toHtml)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_to_html(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setHtml)
 ///
-/// ``` QTextDocument* self, const char* html ```
+/// @param self QTextDocument*
+/// @param html const char*
 void q_textdocument_set_html(void* self, const char* html);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#toMarkdown)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_to_markdown(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setMarkdown)
 ///
-/// ``` QTextDocument* self, const char* markdown ```
+/// @param self QTextDocument*
+/// @param markdown const char*
 void q_textdocument_set_markdown(void* self, const char* markdown);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#toRawText)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_to_raw_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#toPlainText)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_to_plain_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setPlainText)
 ///
-/// ``` QTextDocument* self, const char* text ```
+/// @param self QTextDocument*
+/// @param text const char*
 void q_textdocument_set_plain_text(void* self, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#characterAt)
 ///
-/// ``` QTextDocument* self, int pos ```
+/// @param self QTextDocument*
+/// @param pos int
 QChar* q_textdocument_character_at(void* self, int pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, const char* subString ```
+/// @param self QTextDocument*
+/// @param subString const char*
 QTextCursor* q_textdocument_find(void* self, const char* subString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, const char* subString, QTextCursor* cursor ```
+/// @param self QTextDocument*
+/// @param subString const char*
+/// @param cursor QTextCursor*
 QTextCursor* q_textdocument_find2(void* self, const char* subString, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, QRegularExpression* expr ```
+/// @param self QTextDocument*
+/// @param expr QRegularExpression*
 QTextCursor* q_textdocument_find3(void* self, void* expr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, QRegularExpression* expr, QTextCursor* cursor ```
+/// @param self QTextDocument*
+/// @param expr QRegularExpression*
+/// @param cursor QTextCursor*
 QTextCursor* q_textdocument_find4(void* self, void* expr, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#frameAt)
 ///
-/// ``` QTextDocument* self, int pos ```
+/// @param self QTextDocument*
+/// @param pos int
 QTextFrame* q_textdocument_frame_at(void* self, int pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#rootFrame)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextFrame* q_textdocument_root_frame(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#object)
 ///
-/// ``` QTextDocument* self, int objectIndex ```
+/// @param self QTextDocument*
+/// @param objectIndex int
 QTextObject* q_textdocument_object(void* self, int objectIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#objectForFormat)
 ///
-/// ``` QTextDocument* self, QTextFormat* param1 ```
+/// @param self QTextDocument*
+/// @param param1 QTextFormat*
 QTextObject* q_textdocument_object_for_format(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#findBlock)
 ///
-/// ``` QTextDocument* self, int pos ```
+/// @param self QTextDocument*
+/// @param pos int
 QTextBlock* q_textdocument_find_block(void* self, int pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#findBlockByNumber)
 ///
-/// ``` QTextDocument* self, int blockNumber ```
+/// @param self QTextDocument*
+/// @param blockNumber int
 QTextBlock* q_textdocument_find_block_by_number(void* self, int blockNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#findBlockByLineNumber)
 ///
-/// ``` QTextDocument* self, int blockNumber ```
+/// @param self QTextDocument*
+/// @param blockNumber int
 QTextBlock* q_textdocument_find_block_by_line_number(void* self, int blockNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#begin)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextBlock* q_textdocument_begin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#end)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextBlock* q_textdocument_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#firstBlock)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextBlock* q_textdocument_first_block(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#lastBlock)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextBlock* q_textdocument_last_block(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setPageSize)
 ///
-/// ``` QTextDocument* self, QSizeF* size ```
+/// @param self QTextDocument*
+/// @param size QSizeF*
 void q_textdocument_set_page_size(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#pageSize)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QSizeF* q_textdocument_page_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultFont)
 ///
-/// ``` QTextDocument* self, QFont* font ```
+/// @param self QTextDocument*
+/// @param font QFont*
 void q_textdocument_set_default_font(void* self, void* font);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#defaultFont)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QFont* q_textdocument_default_font(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setSuperScriptBaseline)
 ///
-/// ``` QTextDocument* self, double baseline ```
+/// @param self QTextDocument*
+/// @param baseline double
 void q_textdocument_set_super_script_baseline(void* self, double baseline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#superScriptBaseline)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_super_script_baseline(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setSubScriptBaseline)
 ///
-/// ``` QTextDocument* self, double baseline ```
+/// @param self QTextDocument*
+/// @param baseline double
 void q_textdocument_set_sub_script_baseline(void* self, double baseline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#subScriptBaseline)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_sub_script_baseline(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setBaselineOffset)
 ///
-/// ``` QTextDocument* self, double baseline ```
+/// @param self QTextDocument*
+/// @param baseline double
 void q_textdocument_set_baseline_offset(void* self, double baseline);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baselineOffset)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_baseline_offset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#pageCount)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_page_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isModified)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_modified(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#print)
 ///
-/// ``` QTextDocument* self, QPagedPaintDevice* printer ```
+/// @param self QTextDocument*
+/// @param printer QPagedPaintDevice*
 void q_textdocument_print(void* self, void* printer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#resource)
 ///
-/// ``` QTextDocument* self, int typeVal, QUrl* name ```
+/// @param self QTextDocument*
+/// @param typeVal int
+/// @param name QUrl*
 QVariant* q_textdocument_resource(void* self, int typeVal, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#addResource)
 ///
-/// ``` QTextDocument* self, int typeVal, QUrl* name, QVariant* resource ```
+/// @param self QTextDocument*
+/// @param typeVal int
+/// @param name QUrl*
+/// @param resource QVariant*
 void q_textdocument_add_resource(void* self, int typeVal, void* name, void* resource);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#allFormats)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 libqt_list /* of QTextFormat* */ q_textdocument_all_formats(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#markContentsDirty)
 ///
-/// ``` QTextDocument* self, int from, int length ```
+/// @param self QTextDocument*
+/// @param from int
+/// @param length int
 void q_textdocument_mark_contents_dirty(void* self, int from, int length);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setUseDesignMetrics)
 ///
-/// ``` QTextDocument* self, bool b ```
+/// @param self QTextDocument*
+/// @param b bool
 void q_textdocument_set_use_design_metrics(void* self, bool b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#useDesignMetrics)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_use_design_metrics(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setLayoutEnabled)
 ///
-/// ``` QTextDocument* self, bool b ```
+/// @param self QTextDocument*
+/// @param b bool
 void q_textdocument_set_layout_enabled(void* self, bool b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#isLayoutEnabled)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_layout_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#drawContents)
 ///
-/// ``` QTextDocument* self, QPainter* painter ```
+/// @param self QTextDocument*
+/// @param painter QPainter*
 void q_textdocument_draw_contents(void* self, void* painter);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setTextWidth)
 ///
-/// ``` QTextDocument* self, double width ```
+/// @param self QTextDocument*
+/// @param width double
 void q_textdocument_set_text_width(void* self, double width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#textWidth)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_text_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#idealWidth)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_ideal_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#indentWidth)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_indent_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setIndentWidth)
 ///
-/// ``` QTextDocument* self, double width ```
+/// @param self QTextDocument*
+/// @param width double
 void q_textdocument_set_indent_width(void* self, double width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentMargin)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 double q_textdocument_document_margin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDocumentMargin)
 ///
-/// ``` QTextDocument* self, double margin ```
+/// @param self QTextDocument*
+/// @param margin double
 void q_textdocument_set_document_margin(void* self, double margin);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#adjustSize)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_adjust_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#size)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QSizeF* q_textdocument_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCount)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_block_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#lineCount)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_line_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#characterCount)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_character_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultStyleSheet)
 ///
-/// ``` QTextDocument* self, const char* sheet ```
+/// @param self QTextDocument*
+/// @param sheet const char*
 void q_textdocument_set_default_style_sheet(void* self, const char* sheet);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#defaultStyleSheet)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_default_style_sheet(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undo)
 ///
-/// ``` QTextDocument* self, QTextCursor* cursor ```
+/// @param self QTextDocument*
+/// @param cursor QTextCursor*
 void q_textdocument_undo(void* self, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redo)
 ///
-/// ``` QTextDocument* self, QTextCursor* cursor ```
+/// @param self QTextDocument*
+/// @param cursor QTextCursor*
 void q_textdocument_redo(void* self, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clearUndoRedoStacks)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_clear_undo_redo_stacks(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#maximumBlockCount)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_maximum_block_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setMaximumBlockCount)
 ///
-/// ``` QTextDocument* self, int maximum ```
+/// @param self QTextDocument*
+/// @param maximum int
 void q_textdocument_set_maximum_block_count(void* self, int maximum);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#defaultTextOption)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QTextOption* q_textdocument_default_text_option(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultTextOption)
 ///
-/// ``` QTextDocument* self, QTextOption* option ```
+/// @param self QTextDocument*
+/// @param option QTextOption*
 void q_textdocument_set_default_text_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrl)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QUrl* q_textdocument_base_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setBaseUrl)
 ///
-/// ``` QTextDocument* self, QUrl* url ```
+/// @param self QTextDocument*
+/// @param url QUrl*
 void q_textdocument_set_base_url(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#defaultCursorMoveStyle)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
+///
+/// @return enum Qt__CursorMoveStyle
 int64_t q_textdocument_default_cursor_move_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultCursorMoveStyle)
 ///
-/// ``` QTextDocument* self, enum Qt__CursorMoveStyle style ```
+/// @param self QTextDocument*
+/// @param style enum Qt__CursorMoveStyle
 void q_textdocument_set_default_cursor_move_style(void* self, int64_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChange)
 ///
-/// ``` QTextDocument* self, int from, int charsRemoved, int charsAdded ```
+/// @param self QTextDocument*
+/// @param from int
+/// @param charsRemoved int
+/// @param charsAdded int
 void q_textdocument_contents_change(void* self, int from, int charsRemoved, int charsAdded);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChange)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, int, int, int) ```
-void q_textdocument_on_contents_change(void* self, void (*slot)(void*, int, int, int));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, int, int, int)
+void q_textdocument_on_contents_change(void* self, void (*callback)(void*, int, int, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChanged)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_contents_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#contentsChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
-void q_textdocument_on_contents_changed(void* self, void (*slot)(void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*)
+void q_textdocument_on_contents_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoAvailable)
 ///
-/// ``` QTextDocument* self, bool param1 ```
+/// @param self QTextDocument*
+/// @param param1 bool
 void q_textdocument_undo_available(void* self, bool param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoAvailable)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
-void q_textdocument_on_undo_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, bool)
+void q_textdocument_on_undo_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redoAvailable)
 ///
-/// ``` QTextDocument* self, bool param1 ```
+/// @param self QTextDocument*
+/// @param param1 bool
 void q_textdocument_redo_available(void* self, bool param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redoAvailable)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
-void q_textdocument_on_redo_available(void* self, void (*slot)(void*, bool));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, bool)
+void q_textdocument_on_redo_available(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoCommandAdded)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_undo_command_added(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undoCommandAdded)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
-void q_textdocument_on_undo_command_added(void* self, void (*slot)(void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*)
+void q_textdocument_on_undo_command_added(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#modificationChanged)
 ///
-/// ``` QTextDocument* self, bool m ```
+/// @param self QTextDocument*
+/// @param m bool
 void q_textdocument_modification_changed(void* self, bool m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#modificationChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, bool) ```
-void q_textdocument_on_modification_changed(void* self, void (*slot)(void*, bool));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, bool)
+void q_textdocument_on_modification_changed(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
 ///
-/// ``` QTextDocument* self, QTextCursor* cursor ```
+/// @param self QTextDocument*
+/// @param cursor QTextCursor*
 void q_textdocument_cursor_position_changed(void* self, void* cursor);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#cursorPositionChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QTextCursor*) ```
-void q_textdocument_on_cursor_position_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QTextCursor*)
+void q_textdocument_on_cursor_position_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
 ///
-/// ``` QTextDocument* self, int newBlockCount ```
+/// @param self QTextDocument*
+/// @param newBlockCount int
 void q_textdocument_block_count_changed(void* self, int newBlockCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#blockCountChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, int) ```
-void q_textdocument_on_block_count_changed(void* self, void (*slot)(void*, int));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, int)
+void q_textdocument_on_block_count_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
 ///
-/// ``` QTextDocument* self, QUrl* url ```
+/// @param self QTextDocument*
+/// @param url QUrl*
 void q_textdocument_base_url_changed(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#baseUrlChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QUrl*) ```
-void q_textdocument_on_base_url_changed(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QUrl*)
+void q_textdocument_on_base_url_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_document_layout_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#documentLayoutChanged)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
-void q_textdocument_on_document_layout_changed(void* self, void (*slot)(void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*)
+void q_textdocument_on_document_layout_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#undo)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_undo2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#redo)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_redo2(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#appendUndoItem)
 ///
-/// ``` QTextDocument* self, QAbstractUndoItem* param1 ```
+/// @param self QTextDocument*
+/// @param param1 QAbstractUndoItem*
 void q_textdocument_append_undo_item(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setModified)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_set_modified(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
 ///
-/// ``` QTextDocument* self, QTextFormat* f ```
+/// @param self QTextDocument*
+/// @param f QTextFormat*
 QTextObject* q_textdocument_create_object(void* self, void* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextDocument* self, QTextObject* (*slot)(QTextDocument*, QTextFormat*) ```
-void q_textdocument_on_create_object(void* self, QTextObject* (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback QTextObject* fn(QTextDocument*, QTextFormat*)
+void q_textdocument_on_create_object(void* self, QTextObject* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#createObject)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextDocument* self, QTextFormat* f ```
+/// @param self QTextDocument*
+/// @param f QTextFormat*
 QTextObject* q_textdocument_qbase_create_object(void* self, void* f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
-/// ``` QTextDocument* self, int typeVal, QUrl* name ```
+/// @param self QTextDocument*
+/// @param typeVal int
+/// @param name QUrl*
 QVariant* q_textdocument_load_resource(void* self, int typeVal, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTextDocument* self, QVariant* (*slot)(QTextDocument*, int, QUrl*) ```
-void q_textdocument_on_load_resource(void* self, QVariant* (*slot)(void*, int, void*));
+/// @param self QTextDocument*
+/// @param callback QVariant* fn(QTextDocument*, int, QUrl*)
+void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#loadResource)
 ///
 /// Base class method implementation
 ///
-/// ``` QTextDocument* self, int typeVal, QUrl* name ```
+/// @param self QTextDocument*
+/// @param typeVal int
+/// @param name QUrl*
 QVariant* q_textdocument_qbase_load_resource(void* self, int typeVal, void* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_textdocument_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_textdocument_tr3(const char* s, const char* c, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clone)
 ///
-/// ``` QTextDocument* self, QObject* parent ```
+/// @param self QTextDocument*
+/// @param parent QObject*
 QTextDocument* q_textdocument_clone1(void* self, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#toMarkdown)
 ///
-/// ``` QTextDocument* self, int features ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
+/// @param features flag of enum QTextDocument__MarkdownFeature
 const char* q_textdocument_to_markdown1(void* self, int64_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setMarkdown)
 ///
-/// ``` QTextDocument* self, const char* markdown, int features ```
+/// @param self QTextDocument*
+/// @param markdown const char*
+/// @param features flag of enum QTextDocument__MarkdownFeature
 void q_textdocument_set_markdown2(void* self, const char* markdown, int64_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, const char* subString, int from ```
+/// @param self QTextDocument*
+/// @param subString const char*
+/// @param from int
 QTextCursor* q_textdocument_find22(void* self, const char* subString, int from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, const char* subString, int from, int options ```
+/// @param self QTextDocument*
+/// @param subString const char*
+/// @param from int
+/// @param options flag of enum QTextDocument__FindFlag
 QTextCursor* q_textdocument_find32(void* self, const char* subString, int from, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, const char* subString, QTextCursor* cursor, int options ```
+/// @param self QTextDocument*
+/// @param subString const char*
+/// @param cursor QTextCursor*
+/// @param options flag of enum QTextDocument__FindFlag
 QTextCursor* q_textdocument_find33(void* self, const char* subString, void* cursor, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, QRegularExpression* expr, int from ```
+/// @param self QTextDocument*
+/// @param expr QRegularExpression*
+/// @param from int
 QTextCursor* q_textdocument_find23(void* self, void* expr, int from);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, QRegularExpression* expr, int from, int options ```
+/// @param self QTextDocument*
+/// @param expr QRegularExpression*
+/// @param from int
+/// @param options flag of enum QTextDocument__FindFlag
 QTextCursor* q_textdocument_find34(void* self, void* expr, int from, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#find)
 ///
-/// ``` QTextDocument* self, QRegularExpression* expr, QTextCursor* cursor, int options ```
+/// @param self QTextDocument*
+/// @param expr QRegularExpression*
+/// @param cursor QTextCursor*
+/// @param options flag of enum QTextDocument__FindFlag
 QTextCursor* q_textdocument_find35(void* self, void* expr, void* cursor, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#drawContents)
 ///
-/// ``` QTextDocument* self, QPainter* painter, QRectF* rect ```
+/// @param self QTextDocument*
+/// @param painter QPainter*
+/// @param rect QRectF*
 void q_textdocument_draw_contents2(void* self, void* painter, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#clearUndoRedoStacks)
 ///
-/// ``` QTextDocument* self, enum QTextDocument__Stacks historyToClear ```
+/// @param self QTextDocument*
+/// @param historyToClear enum QTextDocument__Stacks
 void q_textdocument_clear_undo_redo_stacks1(void* self, int64_t historyToClear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#setModified)
 ///
-/// ``` QTextDocument* self, bool m ```
+/// @param self QTextDocument*
+/// @param m bool
 void q_textdocument_set_modified1(void* self, bool m);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char* q_textdocument_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QTextDocument* self, char* name ```
+/// @param self QTextDocument*
+/// @param name char*
 void q_textdocument_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 bool q_textdocument_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QTextDocument* self, bool b ```
+/// @param self QTextDocument*
+/// @param b bool
 bool q_textdocument_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QThread* q_textdocument_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextDocument* self, QThread* thread ```
+/// @param self QTextDocument*
+/// @param thread QThread*
 bool q_textdocument_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextDocument* self, int interval ```
+/// @param self QTextDocument*
+/// @param interval int
 int32_t q_textdocument_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextDocument* self, int id ```
+/// @param self QTextDocument*
+/// @param id int
 void q_textdocument_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QTextDocument* self, enum Qt__TimerId id ```
+/// @param self QTextDocument*
+/// @param id enum Qt__TimerId
 void q_textdocument_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 libqt_list /* of QObject* */ q_textdocument_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QTextDocument* self, QObject* parent ```
+/// @param self QTextDocument*
+/// @param parent QObject*
 void q_textdocument_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QTextDocument* self, QObject* filterObj ```
+/// @param self QTextDocument*
+/// @param filterObj QObject*
 void q_textdocument_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QTextDocument* self, QObject* obj ```
+/// @param self QTextDocument*
+/// @param obj QObject*
 void q_textdocument_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_textdocument_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextDocument* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QTextDocument*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_textdocument_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_textdocument_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_textdocument_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QTextDocument* self, const char* name, QVariant* value ```
+/// @param self QTextDocument*
+/// @param name const char*
+/// @param value QVariant*
 bool q_textdocument_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QTextDocument* self, const char* name ```
+/// @param self QTextDocument*
+/// @param name const char*
 QVariant* q_textdocument_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QTextDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextDocument*
 const char** q_textdocument_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QBindingStorage* q_textdocument_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 const QBindingStorage* q_textdocument_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*) ```
-void q_textdocument_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*)
+void q_textdocument_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QObject* q_textdocument_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QTextDocument* self, const char* classname ```
+/// @param self QTextDocument*
+/// @param classname const char*
 bool q_textdocument_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QTextDocument* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QTextDocument*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_textdocument_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QTextDocument* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QTextDocument*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_textdocument_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QTextDocument* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QTextDocument*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextDocument* self, QObject* param1 ```
+/// @param self QTextDocument*
+/// @param param1 QObject*
 void q_textdocument_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QObject*) ```
-void q_textdocument_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QObject*)
+void q_textdocument_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1018,7 +1192,8 @@ void q_textdocument_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QEvent* event ```
+/// @param self QTextDocument*
+/// @param event QEvent*
 bool q_textdocument_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1027,7 +1202,8 @@ bool q_textdocument_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QEvent* event ```
+/// @param self QTextDocument*
+/// @param event QEvent*
 bool q_textdocument_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1036,8 +1212,9 @@ bool q_textdocument_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, bool (*slot)(QTextDocument*, QEvent*) ```
-void q_textdocument_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback bool fn(QTextDocument*, QEvent*)
+void q_textdocument_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1045,7 +1222,9 @@ void q_textdocument_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QObject* watched, QEvent* event ```
+/// @param self QTextDocument*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textdocument_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1054,7 +1233,9 @@ bool q_textdocument_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QObject* watched, QEvent* event ```
+/// @param self QTextDocument*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_textdocument_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1063,8 +1244,9 @@ bool q_textdocument_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, bool (*slot)(QTextDocument*, QObject*, QEvent*) ```
-void q_textdocument_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QTextDocument*
+/// @param callback bool fn(QTextDocument*, QObject*, QEvent*)
+void q_textdocument_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1072,7 +1254,8 @@ void q_textdocument_on_event_filter(void* self, bool (*slot)(void*, void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QTimerEvent* event ```
+/// @param self QTextDocument*
+/// @param event QTimerEvent*
 void q_textdocument_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1081,7 +1264,8 @@ void q_textdocument_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QTimerEvent* event ```
+/// @param self QTextDocument*
+/// @param event QTimerEvent*
 void q_textdocument_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1090,8 +1274,9 @@ void q_textdocument_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QTimerEvent*) ```
-void q_textdocument_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QTimerEvent*)
+void q_textdocument_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1099,7 +1284,8 @@ void q_textdocument_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QChildEvent* event ```
+/// @param self QTextDocument*
+/// @param event QChildEvent*
 void q_textdocument_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1108,7 +1294,8 @@ void q_textdocument_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QChildEvent* event ```
+/// @param self QTextDocument*
+/// @param event QChildEvent*
 void q_textdocument_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1117,8 +1304,9 @@ void q_textdocument_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QChildEvent*) ```
-void q_textdocument_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QChildEvent*)
+void q_textdocument_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1126,7 +1314,8 @@ void q_textdocument_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QEvent* event ```
+/// @param self QTextDocument*
+/// @param event QEvent*
 void q_textdocument_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1135,7 +1324,8 @@ void q_textdocument_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QEvent* event ```
+/// @param self QTextDocument*
+/// @param event QEvent*
 void q_textdocument_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1144,8 +1334,9 @@ void q_textdocument_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QEvent*) ```
-void q_textdocument_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QEvent*)
+void q_textdocument_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1153,7 +1344,8 @@ void q_textdocument_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 void q_textdocument_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1162,7 +1354,8 @@ void q_textdocument_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 void q_textdocument_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1171,8 +1364,9 @@ void q_textdocument_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QMetaMethod*) ```
-void q_textdocument_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QMetaMethod*)
+void q_textdocument_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1180,7 +1374,8 @@ void q_textdocument_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 void q_textdocument_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1189,7 +1384,8 @@ void q_textdocument_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 void q_textdocument_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1198,8 +1394,9 @@ void q_textdocument_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, QMetaMethod*) ```
-void q_textdocument_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, QMetaMethod*)
+void q_textdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1207,7 +1404,7 @@ void q_textdocument_on_disconnect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QObject* q_textdocument_sender(void* self);
 
 /// Inherited from QObject
@@ -1216,7 +1413,7 @@ QObject* q_textdocument_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 QObject* q_textdocument_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1225,8 +1422,9 @@ QObject* q_textdocument_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QObject* (*slot)() ```
-void q_textdocument_on_sender(void* self, QObject* (*slot)());
+/// @param self QTextDocument*
+/// @param callback QObject* fn()
+void q_textdocument_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1234,7 +1432,7 @@ void q_textdocument_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1243,7 +1441,7 @@ int32_t q_textdocument_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 int32_t q_textdocument_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1252,8 +1450,9 @@ int32_t q_textdocument_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, int32_t (*slot)() ```
-void q_textdocument_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QTextDocument*
+/// @param callback int32_t fn()
+void q_textdocument_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1261,7 +1460,8 @@ void q_textdocument_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, const char* signal ```
+/// @param self QTextDocument*
+/// @param signal const char*
 int32_t q_textdocument_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1270,7 +1470,8 @@ int32_t q_textdocument_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, const char* signal ```
+/// @param self QTextDocument*
+/// @param signal const char*
 int32_t q_textdocument_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1279,8 +1480,9 @@ int32_t q_textdocument_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, int32_t (*slot)(QTextDocument*, const char*) ```
-void q_textdocument_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QTextDocument*
+/// @param callback int32_t fn(QTextDocument*, const char*)
+void q_textdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1288,7 +1490,8 @@ void q_textdocument_on_receivers(void* self, int32_t (*slot)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 bool q_textdocument_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1297,7 +1500,8 @@ bool q_textdocument_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTextDocument* self, QMetaMethod* signal ```
+/// @param self QTextDocument*
+/// @param signal QMetaMethod*
 bool q_textdocument_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1306,8 +1510,9 @@ bool q_textdocument_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTextDocument* self, bool (*slot)(QTextDocument*, QMetaMethod*) ```
-void q_textdocument_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QTextDocument*
+/// @param callback bool fn(QTextDocument*, QMetaMethod*)
+void q_textdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1315,14 +1520,15 @@ void q_textdocument_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QTextDocument* self, void (*slot)(QTextDocument*, const char*) ```
-void q_textdocument_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QTextDocument*
+/// @param callback void fn(QTextDocument*, const char*)
+void q_textdocument_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextdocument.html#dtor.QTextDocument)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextDocument* self ```
+/// @param self QTextDocument*
 void q_textdocument_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtextdocument.html#types

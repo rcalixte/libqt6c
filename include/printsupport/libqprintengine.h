@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,44 +15,51 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#setProperty)
 ///
-/// ``` QPrintEngine* self, enum QPrintEngine__PrintEnginePropertyKey key, QVariant* value ```
+/// @param self QPrintEngine*
+/// @param key enum QPrintEngine__PrintEnginePropertyKey
+/// @param value QVariant*
 void q_printengine_set_property(void* self, int64_t key, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#property)
 ///
-/// ``` QPrintEngine* self, enum QPrintEngine__PrintEnginePropertyKey key ```
+/// @param self QPrintEngine*
+/// @param key enum QPrintEngine__PrintEnginePropertyKey
 QVariant* q_printengine_property(void* self, int64_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#newPage)
 ///
-/// ``` QPrintEngine* self ```
+/// @param self QPrintEngine*
 bool q_printengine_new_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#abort)
 ///
-/// ``` QPrintEngine* self ```
+/// @param self QPrintEngine*
 bool q_printengine_abort(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#metric)
 ///
-/// ``` QPrintEngine* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QPrintEngine*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_printengine_metric(void* self, int64_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#printerState)
 ///
-/// ``` QPrintEngine* self ```
+/// @param self QPrintEngine*
+///
+/// @return enum QPrinter__PrinterState
 int64_t q_printengine_printer_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
 ///
-/// ``` QPrintEngine* self, QPrintEngine* param1 ```
+/// @param self QPrintEngine*
+/// @param param1 QPrintEngine*
 void q_printengine_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#dtor.QPrintEngine)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPrintEngine* self ```
+/// @param self QPrintEngine*
 void q_printengine_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qprintengine.html#types

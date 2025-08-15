@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,404 +15,476 @@
 
 /// q_httppart_new constructs a new QHttpPart object.
 ///
-///
 QHttpPart* q_httppart_new();
 
 /// q_httppart_new2 constructs a new QHttpPart object.
 ///
-/// ``` QHttpPart* other ```
+/// @param other QHttpPart*
 QHttpPart* q_httppart_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-eq)
 ///
-/// ``` QHttpPart* self, QHttpPart* other ```
+/// @param self QHttpPart*
+/// @param other QHttpPart*
 void q_httppart_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#swap)
 ///
-/// ``` QHttpPart* self, QHttpPart* other ```
+/// @param self QHttpPart*
+/// @param other QHttpPart*
 void q_httppart_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-eq-eq)
 ///
-/// ``` QHttpPart* self, QHttpPart* other ```
+/// @param self QHttpPart*
+/// @param other QHttpPart*
 bool q_httppart_operator_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#operator-not-eq)
 ///
-/// ``` QHttpPart* self, QHttpPart* other ```
+/// @param self QHttpPart*
+/// @param other QHttpPart*
 bool q_httppart_operator_not_equal(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#setHeader)
 ///
-/// ``` QHttpPart* self, enum QNetworkRequest__KnownHeaders header, QVariant* value ```
+/// @param self QHttpPart*
+/// @param header enum QNetworkRequest__KnownHeaders
+/// @param value QVariant*
 void q_httppart_set_header(void* self, int64_t header, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#setRawHeader)
 ///
-/// ``` QHttpPart* self, const char* headerName, const char* headerValue ```
+/// @param self QHttpPart*
+/// @param headerName const char*
+/// @param headerValue const char*
 void q_httppart_set_raw_header(void* self, const char* headerName, const char* headerValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#setBody)
 ///
-/// ``` QHttpPart* self, const char* body ```
+/// @param self QHttpPart*
+/// @param body const char*
 void q_httppart_set_body(void* self, const char* body);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#setBodyDevice)
 ///
-/// ``` QHttpPart* self, QIODevice* device ```
+/// @param self QHttpPart*
+/// @param device QIODevice*
 void q_httppart_set_body_device(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#dtor.QHttpPart)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHttpPart* self ```
+/// @param self QHttpPart*
 void q_httppart_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhttpmultipart.html
 
 /// q_httpmultipart_new constructs a new QHttpMultiPart object.
 ///
-///
 QHttpMultiPart* q_httpmultipart_new();
 
 /// q_httpmultipart_new2 constructs a new QHttpMultiPart object.
 ///
-/// ``` enum QHttpMultiPart__ContentType contentType ```
+/// @param contentType enum QHttpMultiPart__ContentType
 QHttpMultiPart* q_httpmultipart_new2(int64_t contentType);
 
 /// q_httpmultipart_new3 constructs a new QHttpMultiPart object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QHttpMultiPart* q_httpmultipart_new3(void* parent);
 
 /// q_httpmultipart_new4 constructs a new QHttpMultiPart object.
 ///
-/// ``` enum QHttpMultiPart__ContentType contentType, QObject* parent ```
+/// @param contentType enum QHttpMultiPart__ContentType
+/// @param parent QObject*
 QHttpMultiPart* q_httpmultipart_new4(int64_t contentType, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 const QMetaObject* q_httpmultipart_meta_object(void* self);
 
-/// ``` QHttpMultiPart* self, const char* param1 ```
+/// @param self QHttpMultiPart*
+/// @param param1 const char*
 void* q_httpmultipart_metacast(void* self, const char* param1);
 
-/// ``` QHttpMultiPart* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QHttpMultiPart*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_httpmultipart_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QHttpMultiPart* self, int32_t (*slot)(QHttpMultiPart*, enum QMetaObject__Call, int, void*) ```
-void q_httpmultipart_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QHttpMultiPart*
+/// @param callback int32_t fn(QHttpMultiPart*, enum QMetaObject__Call, int, void*)
+void q_httpmultipart_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QHttpMultiPart* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QHttpMultiPart*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_httpmultipart_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_httpmultipart_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#append)
 ///
-/// ``` QHttpMultiPart* self, QHttpPart* httpPart ```
+/// @param self QHttpMultiPart*
+/// @param httpPart QHttpPart*
 void q_httpmultipart_append(void* self, void* httpPart);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#setContentType)
 ///
-/// ``` QHttpMultiPart* self, enum QHttpMultiPart__ContentType contentType ```
+/// @param self QHttpMultiPart*
+/// @param contentType enum QHttpMultiPart__ContentType
 void q_httpmultipart_set_content_type(void* self, int64_t contentType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#boundary)
 ///
-/// ``` QHttpMultiPart* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpMultiPart*
 char* q_httpmultipart_boundary(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#setBoundary)
 ///
-/// ``` QHttpMultiPart* self, const char* boundary ```
+/// @param self QHttpMultiPart*
+/// @param boundary const char*
 void q_httpmultipart_set_boundary(void* self, const char* boundary);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_httpmultipart_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_httpmultipart_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QHttpMultiPart* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpMultiPart*
 const char* q_httpmultipart_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QHttpMultiPart* self, char* name ```
+/// @param self QHttpMultiPart*
+/// @param name char*
 void q_httpmultipart_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 bool q_httpmultipart_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 bool q_httpmultipart_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 bool q_httpmultipart_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 bool q_httpmultipart_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QHttpMultiPart* self, bool b ```
+/// @param self QHttpMultiPart*
+/// @param b bool
 bool q_httpmultipart_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 QThread* q_httpmultipart_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QHttpMultiPart* self, QThread* thread ```
+/// @param self QHttpMultiPart*
+/// @param thread QThread*
 bool q_httpmultipart_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QHttpMultiPart* self, int interval ```
+/// @param self QHttpMultiPart*
+/// @param interval int
 int32_t q_httpmultipart_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QHttpMultiPart* self, int id ```
+/// @param self QHttpMultiPart*
+/// @param id int
 void q_httpmultipart_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QHttpMultiPart* self, enum Qt__TimerId id ```
+/// @param self QHttpMultiPart*
+/// @param id enum Qt__TimerId
 void q_httpmultipart_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 libqt_list /* of QObject* */ q_httpmultipart_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QHttpMultiPart* self, QObject* parent ```
+/// @param self QHttpMultiPart*
+/// @param parent QObject*
 void q_httpmultipart_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QHttpMultiPart* self, QObject* filterObj ```
+/// @param self QHttpMultiPart*
+/// @param filterObj QObject*
 void q_httpmultipart_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QHttpMultiPart* self, QObject* obj ```
+/// @param self QHttpMultiPart*
+/// @param obj QObject*
 void q_httpmultipart_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_httpmultipart_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QHttpMultiPart* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QHttpMultiPart*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_httpmultipart_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_httpmultipart_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_httpmultipart_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 void q_httpmultipart_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 void q_httpmultipart_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QHttpMultiPart* self, const char* name, QVariant* value ```
+/// @param self QHttpMultiPart*
+/// @param name const char*
+/// @param value QVariant*
 bool q_httpmultipart_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QHttpMultiPart* self, const char* name ```
+/// @param self QHttpMultiPart*
+/// @param name const char*
 QVariant* q_httpmultipart_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QHttpMultiPart* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpMultiPart*
 const char** q_httpmultipart_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 QBindingStorage* q_httpmultipart_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 const QBindingStorage* q_httpmultipart_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 void q_httpmultipart_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*) ```
-void q_httpmultipart_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*)
+void q_httpmultipart_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 QObject* q_httpmultipart_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QHttpMultiPart* self, const char* classname ```
+/// @param self QHttpMultiPart*
+/// @param classname const char*
 bool q_httpmultipart_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 void q_httpmultipart_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QHttpMultiPart* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QHttpMultiPart*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_httpmultipart_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QHttpMultiPart* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QHttpMultiPart*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_httpmultipart_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_httpmultipart_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QHttpMultiPart* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QHttpMultiPart*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_httpmultipart_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHttpMultiPart* self, QObject* param1 ```
+/// @param self QHttpMultiPart*
+/// @param param1 QObject*
 void q_httpmultipart_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QObject*) ```
-void q_httpmultipart_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QObject*)
+void q_httpmultipart_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -421,7 +492,8 @@ void q_httpmultipart_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QEvent*
 bool q_httpmultipart_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -430,7 +502,8 @@ bool q_httpmultipart_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QEvent*
 bool q_httpmultipart_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -439,8 +512,9 @@ bool q_httpmultipart_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, bool (*slot)(QHttpMultiPart*, QEvent*) ```
-void q_httpmultipart_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback bool fn(QHttpMultiPart*, QEvent*)
+void q_httpmultipart_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -448,7 +522,9 @@ void q_httpmultipart_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QObject* watched, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_httpmultipart_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -457,7 +533,9 @@ bool q_httpmultipart_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QObject* watched, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_httpmultipart_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -466,8 +544,9 @@ bool q_httpmultipart_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, bool (*slot)(QHttpMultiPart*, QObject*, QEvent*) ```
-void q_httpmultipart_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback bool fn(QHttpMultiPart*, QObject*, QEvent*)
+void q_httpmultipart_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -475,7 +554,8 @@ void q_httpmultipart_on_event_filter(void* self, bool (*slot)(void*, void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QTimerEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QTimerEvent*
 void q_httpmultipart_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -484,7 +564,8 @@ void q_httpmultipart_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QTimerEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QTimerEvent*
 void q_httpmultipart_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -493,8 +574,9 @@ void q_httpmultipart_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QTimerEvent*) ```
-void q_httpmultipart_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QTimerEvent*)
+void q_httpmultipart_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -502,7 +584,8 @@ void q_httpmultipart_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QChildEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QChildEvent*
 void q_httpmultipart_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -511,7 +594,8 @@ void q_httpmultipart_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QChildEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QChildEvent*
 void q_httpmultipart_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -520,8 +604,9 @@ void q_httpmultipart_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QChildEvent*) ```
-void q_httpmultipart_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QChildEvent*)
+void q_httpmultipart_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -529,7 +614,8 @@ void q_httpmultipart_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QEvent*
 void q_httpmultipart_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -538,7 +624,8 @@ void q_httpmultipart_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QEvent* event ```
+/// @param self QHttpMultiPart*
+/// @param event QEvent*
 void q_httpmultipart_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -547,8 +634,9 @@ void q_httpmultipart_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QEvent*) ```
-void q_httpmultipart_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QEvent*)
+void q_httpmultipart_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -556,7 +644,8 @@ void q_httpmultipart_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 void q_httpmultipart_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -565,7 +654,8 @@ void q_httpmultipart_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 void q_httpmultipart_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -574,8 +664,9 @@ void q_httpmultipart_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QMetaMethod*) ```
-void q_httpmultipart_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QMetaMethod*)
+void q_httpmultipart_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -583,7 +674,8 @@ void q_httpmultipart_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 void q_httpmultipart_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -592,7 +684,8 @@ void q_httpmultipart_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 void q_httpmultipart_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -601,8 +694,9 @@ void q_httpmultipart_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, QMetaMethod*) ```
-void q_httpmultipart_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, QMetaMethod*)
+void q_httpmultipart_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -610,7 +704,7 @@ void q_httpmultipart_on_disconnect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 QObject* q_httpmultipart_sender(void* self);
 
 /// Inherited from QObject
@@ -619,7 +713,7 @@ QObject* q_httpmultipart_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 QObject* q_httpmultipart_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -628,8 +722,9 @@ QObject* q_httpmultipart_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QObject* (*slot)() ```
-void q_httpmultipart_on_sender(void* self, QObject* (*slot)());
+/// @param self QHttpMultiPart*
+/// @param callback QObject* fn()
+void q_httpmultipart_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -637,7 +732,7 @@ void q_httpmultipart_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 int32_t q_httpmultipart_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -646,7 +741,7 @@ int32_t q_httpmultipart_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 int32_t q_httpmultipart_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -655,8 +750,9 @@ int32_t q_httpmultipart_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, int32_t (*slot)() ```
-void q_httpmultipart_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QHttpMultiPart*
+/// @param callback int32_t fn()
+void q_httpmultipart_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -664,7 +760,8 @@ void q_httpmultipart_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, const char* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal const char*
 int32_t q_httpmultipart_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -673,7 +770,8 @@ int32_t q_httpmultipart_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, const char* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal const char*
 int32_t q_httpmultipart_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -682,8 +780,9 @@ int32_t q_httpmultipart_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, int32_t (*slot)(QHttpMultiPart*, const char*) ```
-void q_httpmultipart_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QHttpMultiPart*
+/// @param callback int32_t fn(QHttpMultiPart*, const char*)
+void q_httpmultipart_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -691,7 +790,8 @@ void q_httpmultipart_on_receivers(void* self, int32_t (*slot)(void*, const char*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 bool q_httpmultipart_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -700,7 +800,8 @@ bool q_httpmultipart_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, QMetaMethod* signal ```
+/// @param self QHttpMultiPart*
+/// @param signal QMetaMethod*
 bool q_httpmultipart_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -709,8 +810,9 @@ bool q_httpmultipart_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHttpMultiPart* self, bool (*slot)(QHttpMultiPart*, QMetaMethod*) ```
-void q_httpmultipart_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QHttpMultiPart*
+/// @param callback bool fn(QHttpMultiPart*, QMetaMethod*)
+void q_httpmultipart_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -718,14 +820,15 @@ void q_httpmultipart_on_is_signal_connected(void* self, bool (*slot)(void*, void
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QHttpMultiPart* self, void (*slot)(QHttpMultiPart*, const char*) ```
-void q_httpmultipart_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QHttpMultiPart*
+/// @param callback void fn(QHttpMultiPart*, const char*)
+void q_httpmultipart_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#dtor.QHttpMultiPart)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHttpMultiPart* self ```
+/// @param self QHttpMultiPart*
 void q_httpmultipart_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhttpmultipart.html#types

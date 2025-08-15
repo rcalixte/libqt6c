@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,705 +15,835 @@
 
 /// q_textitem_new constructs a new QTextItem object.
 ///
-/// ``` QTextItem* other ```
+/// @param other QTextItem*
 QTextItem* q_textitem_new(void* other);
 
 /// q_textitem_new2 constructs a new QTextItem object and invalidates the source QTextItem object.
 ///
-/// ``` QTextItem* other ```
+/// @param other QTextItem*
 QTextItem* q_textitem_new2(void* other);
 
 /// q_textitem_new3 constructs a new QTextItem object.
-///
 ///
 QTextItem* q_textitem_new3();
 
 /// q_textitem_new4 constructs a new QTextItem object.
 ///
-/// ``` QTextItem* param1 ```
+/// @param param1 QTextItem*
 QTextItem* q_textitem_new4(void* param1);
 
 /// q_textitem_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QTextItem* self, QTextItem* other ```
+/// @param self QTextItem*
+/// @param other QTextItem*
 void q_textitem_copy_assign(void* self, void* other);
 
 /// q_textitem_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QTextItem* self, QTextItem* other ```
+/// @param self QTextItem*
+/// @param other QTextItem*
 void q_textitem_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#descent)
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
 double q_textitem_descent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#ascent)
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
 double q_textitem_ascent(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#width)
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
 double q_textitem_width(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#renderFlags)
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
+///
+/// @return flag of enum QTextItem__RenderFlag
 int64_t q_textitem_render_flags(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#text)
 ///
-/// ``` QTextItem* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTextItem*
 const char* q_textitem_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#font)
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
 QFont* q_textitem_font(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextitem.html#dtor.QTextItem)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTextItem* self ```
+/// @param self QTextItem*
 void q_textitem_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpaintengine.html
 
 /// q_paintengine_new constructs a new QPaintEngine object.
 ///
-///
 QPaintEngine* q_paintengine_new();
 
 /// q_paintengine_new2 constructs a new QPaintEngine object.
 ///
-/// ``` int features ```
+/// @param features flag of enum QPaintEngine__PaintEngineFeature
 QPaintEngine* q_paintengine_new2(int64_t features);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#isActive)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 bool q_paintengine_is_active(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setActive)
 ///
-/// ``` QPaintEngine* self, bool newState ```
+/// @param self QPaintEngine*
+/// @param newState bool
 void q_paintengine_set_active(void* self, bool newState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
-/// ``` QPaintEngine* self, QPaintDevice* pdev ```
+/// @param self QPaintEngine*
+/// @param pdev QPaintDevice*
 bool q_paintengine_begin(void* self, void* pdev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, bool (*slot)(QPaintEngine*, QPaintDevice*) ```
-void q_paintengine_on_begin(void* self, bool (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback bool fn(QPaintEngine*, QPaintDevice*)
+void q_paintengine_on_begin(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#begin)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPaintDevice* pdev ```
+/// @param self QPaintEngine*
+/// @param pdev QPaintDevice*
 bool q_paintengine_qbase_begin(void* self, void* pdev);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 bool q_paintengine_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, bool (*slot)() ```
-void q_paintengine_on_end(void* self, bool (*slot)());
+/// @param self QPaintEngine*
+/// @param callback bool fn()
+void q_paintengine_on_end(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#end)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 bool q_paintengine_qbase_end(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
-/// ``` QPaintEngine* self, QPaintEngineState* state ```
+/// @param self QPaintEngine*
+/// @param state QPaintEngineState*
 void q_paintengine_update_state(void* self, void* state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPaintEngineState*) ```
-void q_paintengine_on_update_state(void* self, void (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPaintEngineState*)
+void q_paintengine_on_update_state(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#updateState)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPaintEngineState* state ```
+/// @param self QPaintEngine*
+/// @param state QPaintEngineState*
 void q_paintengine_qbase_update_state(void* self, void* state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
-/// ``` QPaintEngine* self, QRect* rects, int rectCount ```
+/// @param self QPaintEngine*
+/// @param rects QRect*
+/// @param rectCount int
 void q_paintengine_draw_rects(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRect*, int) ```
-void q_paintengine_on_draw_rects(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRect*, int)
+void q_paintengine_on_draw_rects(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRect* rects, int rectCount ```
+/// @param self QPaintEngine*
+/// @param rects QRect*
+/// @param rectCount int
 void q_paintengine_qbase_draw_rects(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
-/// ``` QPaintEngine* self, QRectF* rects, int rectCount ```
+/// @param self QPaintEngine*
+/// @param rects QRectF*
+/// @param rectCount int
 void q_paintengine_draw_rects2(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRectF*, int) ```
-void q_paintengine_on_draw_rects2(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRectF*, int)
+void q_paintengine_on_draw_rects2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawRects)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRectF* rects, int rectCount ```
+/// @param self QPaintEngine*
+/// @param rects QRectF*
+/// @param rectCount int
 void q_paintengine_qbase_draw_rects2(void* self, void* rects, int rectCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
-/// ``` QPaintEngine* self, QLine* lines, int lineCount ```
+/// @param self QPaintEngine*
+/// @param lines QLine*
+/// @param lineCount int
 void q_paintengine_draw_lines(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QLine*, int) ```
-void q_paintengine_on_draw_lines(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QLine*, int)
+void q_paintengine_on_draw_lines(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QLine* lines, int lineCount ```
+/// @param self QPaintEngine*
+/// @param lines QLine*
+/// @param lineCount int
 void q_paintengine_qbase_draw_lines(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
-/// ``` QPaintEngine* self, QLineF* lines, int lineCount ```
+/// @param self QPaintEngine*
+/// @param lines QLineF*
+/// @param lineCount int
 void q_paintengine_draw_lines2(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QLineF*, int) ```
-void q_paintengine_on_draw_lines2(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QLineF*, int)
+void q_paintengine_on_draw_lines2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawLines)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QLineF* lines, int lineCount ```
+/// @param self QPaintEngine*
+/// @param lines QLineF*
+/// @param lineCount int
 void q_paintengine_qbase_draw_lines2(void* self, void* lines, int lineCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
-/// ``` QPaintEngine* self, QRectF* r ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
 void q_paintengine_draw_ellipse(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRectF*) ```
-void q_paintengine_on_draw_ellipse(void* self, void (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRectF*)
+void q_paintengine_on_draw_ellipse(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRectF* r ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
 void q_paintengine_qbase_draw_ellipse(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
-/// ``` QPaintEngine* self, QRect* r ```
+/// @param self QPaintEngine*
+/// @param r QRect*
 void q_paintengine_draw_ellipse2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRect*) ```
-void q_paintengine_on_draw_ellipse2(void* self, void (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRect*)
+void q_paintengine_on_draw_ellipse2(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawEllipse)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRect* r ```
+/// @param self QPaintEngine*
+/// @param r QRect*
 void q_paintengine_qbase_draw_ellipse2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
-/// ``` QPaintEngine* self, QPainterPath* path ```
+/// @param self QPaintEngine*
+/// @param path QPainterPath*
 void q_paintengine_draw_path(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPainterPath*) ```
-void q_paintengine_on_draw_path(void* self, void (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPainterPath*)
+void q_paintengine_on_draw_path(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPath)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPainterPath* path ```
+/// @param self QPaintEngine*
+/// @param path QPainterPath*
 void q_paintengine_qbase_draw_path(void* self, void* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
-/// ``` QPaintEngine* self, QPointF* points, int pointCount ```
+/// @param self QPaintEngine*
+/// @param points QPointF*
+/// @param pointCount int
 void q_paintengine_draw_points(void* self, void* points, int pointCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPointF*, int) ```
-void q_paintengine_on_draw_points(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPointF*, int)
+void q_paintengine_on_draw_points(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPointF* points, int pointCount ```
+/// @param self QPaintEngine*
+/// @param points QPointF*
+/// @param pointCount int
 void q_paintengine_qbase_draw_points(void* self, void* points, int pointCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
-/// ``` QPaintEngine* self, QPoint* points, int pointCount ```
+/// @param self QPaintEngine*
+/// @param points QPoint*
+/// @param pointCount int
 void q_paintengine_draw_points2(void* self, void* points, int pointCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPoint*, int) ```
-void q_paintengine_on_draw_points2(void* self, void (*slot)(void*, void*, int));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPoint*, int)
+void q_paintengine_on_draw_points2(void* self, void (*callback)(void*, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPoints)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPoint* points, int pointCount ```
+/// @param self QPaintEngine*
+/// @param points QPoint*
+/// @param pointCount int
 void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
-/// ``` QPaintEngine* self, QPointF* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode ```
+/// @param self QPaintEngine*
+/// @param points QPointF*
+/// @param pointCount int
+/// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPointF*, int, enum QPaintEngine__PolygonDrawMode) ```
-void q_paintengine_on_draw_polygon(void* self, void (*slot)(void*, void*, int, int64_t));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPointF*, int, enum QPaintEngine__PolygonDrawMode)
+void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPointF* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode ```
+/// @param self QPaintEngine*
+/// @param points QPointF*
+/// @param pointCount int
+/// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
-/// ``` QPaintEngine* self, QPoint* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode ```
+/// @param self QPaintEngine*
+/// @param points QPoint*
+/// @param pointCount int
+/// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPoint*, int, enum QPaintEngine__PolygonDrawMode) ```
-void q_paintengine_on_draw_polygon2(void* self, void (*slot)(void*, void*, int, int64_t));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPoint*, int, enum QPaintEngine__PolygonDrawMode)
+void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPoint* points, int pointCount, enum QPaintEngine__PolygonDrawMode mode ```
+/// @param self QPaintEngine*
+/// @param points QPoint*
+/// @param pointCount int
+/// @param mode enum QPaintEngine__PolygonDrawMode
 void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
-/// ``` QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pm QPixmap*
+/// @param sr QRectF*
 void q_paintengine_draw_pixmap(void* self, void* r, void* pm, void* sr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRectF*, QPixmap*, QRectF*) ```
-void q_paintengine_on_draw_pixmap(void* self, void (*slot)(void*, void*, void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRectF*, QPixmap*, QRectF*)
+void q_paintengine_on_draw_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRectF* r, QPixmap* pm, QRectF* sr ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pm QPixmap*
+/// @param sr QRectF*
 void q_paintengine_qbase_draw_pixmap(void* self, void* r, void* pm, void* sr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
-/// ``` QPaintEngine* self, QPointF* p, QTextItem* textItem ```
+/// @param self QPaintEngine*
+/// @param p QPointF*
+/// @param textItem QTextItem*
 void q_paintengine_draw_text_item(void* self, void* p, void* textItem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QPointF*, QTextItem*) ```
-void q_paintengine_on_draw_text_item(void* self, void (*slot)(void*, void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QPointF*, QTextItem*)
+void q_paintengine_on_draw_text_item(void* self, void (*callback)(void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTextItem)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QPointF* p, QTextItem* textItem ```
+/// @param self QPaintEngine*
+/// @param p QPointF*
+/// @param textItem QTextItem*
 void q_paintengine_qbase_draw_text_item(void* self, void* p, void* textItem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
-/// ``` QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pixmap QPixmap*
+/// @param s QPointF*
 void q_paintengine_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRectF*, QPixmap*, QPointF*) ```
-void q_paintengine_on_draw_tiled_pixmap(void* self, void (*slot)(void*, void*, void*, void*));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRectF*, QPixmap*, QPointF*)
+void q_paintengine_on_draw_tiled_pixmap(void* self, void (*callback)(void*, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawTiledPixmap)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRectF* r, QPixmap* pixmap, QPointF* s ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pixmap QPixmap*
+/// @param s QPointF*
 void q_paintengine_qbase_draw_tiled_pixmap(void* self, void* r, void* pixmap, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
-/// ``` QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, int flags ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pm QImage*
+/// @param sr QRectF*
+/// @param flags flag of enum Qt__ImageConversionFlag
 void q_paintengine_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, void (*slot)(QPaintEngine*, QRectF*, QImage*, QRectF*, int) ```
-void q_paintengine_on_draw_image(void* self, void (*slot)(void*, void*, void*, void*, int64_t));
+/// @param self QPaintEngine*
+/// @param callback void fn(QPaintEngine*, QRectF*, QImage*, QRectF*, flag of enum Qt__ImageConversionFlag)
+void q_paintengine_on_draw_image(void* self, void (*callback)(void*, void*, void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawImage)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QRectF* r, QImage* pm, QRectF* sr, int flags ```
+/// @param self QPaintEngine*
+/// @param r QRectF*
+/// @param pm QImage*
+/// @param sr QRectF*
+/// @param flags flag of enum Qt__ImageConversionFlag
 void q_paintengine_qbase_draw_image(void* self, void* r, void* pm, void* sr, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setPaintDevice)
 ///
-/// ``` QPaintEngine* self, QPaintDevice* device ```
+/// @param self QPaintEngine*
+/// @param device QPaintDevice*
 void q_paintengine_set_paint_device(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#paintDevice)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QPaintDevice* q_paintengine_paint_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setSystemClip)
 ///
-/// ``` QPaintEngine* self, QRegion* baseClip ```
+/// @param self QPaintEngine*
+/// @param baseClip QRegion*
 void q_paintengine_set_system_clip(void* self, void* baseClip);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#systemClip)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QRegion* q_paintengine_system_clip(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setSystemRect)
 ///
-/// ``` QPaintEngine* self, QRect* rect ```
+/// @param self QPaintEngine*
+/// @param rect QRect*
 void q_paintengine_set_system_rect(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#systemRect)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QRect* q_paintengine_system_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QPoint* q_paintengine_coordinate_offset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, QPoint* (*slot)() ```
-void q_paintengine_on_coordinate_offset(void* self, QPoint* (*slot)());
+/// @param self QPaintEngine*
+/// @param callback QPoint* fn()
+void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#coordinateOffset)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QPoint* q_paintengine_qbase_coordinate_offset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
+///
+/// @return enum QPaintEngine__Type
 int64_t q_paintengine_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, int64_t (*slot)() ```
-void q_paintengine_on_type(void* self, int64_t (*slot)());
+/// @param self QPaintEngine*
+/// @param callback int64_t fn()
+void q_paintengine_on_type(void* self, int64_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
+///
+/// @return enum QPaintEngine__Type
 int64_t q_paintengine_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#fix_neg_rect)
 ///
-/// ``` QPaintEngine* self, int* x, int* y, int* w, int* h ```
+/// @param self QPaintEngine*
+/// @param x int*
+/// @param y int*
+/// @param w int*
+/// @param h int*
 void q_paintengine_fix_neg_rect(void* self, int* x, int* y, int* w, int* h);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#testDirty)
 ///
-/// ``` QPaintEngine* self, int df ```
+/// @param self QPaintEngine*
+/// @param df flag of enum QPaintEngine__DirtyFlag
 bool q_paintengine_test_dirty(void* self, int64_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#setDirty)
 ///
-/// ``` QPaintEngine* self, int df ```
+/// @param self QPaintEngine*
+/// @param df flag of enum QPaintEngine__DirtyFlag
 void q_paintengine_set_dirty(void* self, int64_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#clearDirty)
 ///
-/// ``` QPaintEngine* self, int df ```
+/// @param self QPaintEngine*
+/// @param df flag of enum QPaintEngine__DirtyFlag
 void q_paintengine_clear_dirty(void* self, int64_t df);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#hasFeature)
 ///
-/// ``` QPaintEngine* self, int feature ```
+/// @param self QPaintEngine*
+/// @param feature flag of enum QPaintEngine__PaintEngineFeature
 bool q_paintengine_has_feature(void* self, int64_t feature);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#painter)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 QPainter* q_paintengine_painter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#syncState)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 void q_paintengine_sync_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#isExtended)
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 bool q_paintengine_is_extended(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
-/// ``` QPaintEngine* self, QSize* size ```
+/// @param self QPaintEngine*
+/// @param size QSize*
 QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, QPixmap* (*slot)(QPaintEngine*, QSize*) ```
-void q_paintengine_on_create_pixmap(void* self, QPixmap* (*slot)(void*, void*));
+/// @param self QPaintEngine*
+/// @param callback QPixmap* fn(QPaintEngine*, QSize*)
+void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmap)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QSize* size ```
+/// @param self QPaintEngine*
+/// @param size QSize*
 QPixmap* q_paintengine_qbase_create_pixmap(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
-/// ``` QPaintEngine* self, QImage* image, int flags ```
+/// @param self QPaintEngine*
+/// @param image QImage*
+/// @param flags flag of enum Qt__ImageConversionFlag
 QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEngine* self, QPixmap* (*slot)(QPaintEngine*, QImage*, int) ```
-void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*slot)(void*, void*, int64_t));
+/// @param self QPaintEngine*
+/// @param callback QPixmap* fn(QPaintEngine*, QImage*, flag of enum Qt__ImageConversionFlag)
+void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#createPixmapFromImage)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEngine* self, QImage* image, int flags ```
+/// @param self QPaintEngine*
+/// @param image QImage*
+/// @param flags flag of enum Qt__ImageConversionFlag
 QPixmap* q_paintengine_qbase_create_pixmap_from_image(void* self, void* image, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#dtor.QPaintEngine)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPaintEngine* self ```
+/// @param self QPaintEngine*
 void q_paintengine_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpaintenginestate.html
 
 /// q_paintenginestate_new constructs a new QPaintEngineState object.
 ///
-/// ``` QPaintEngineState* other ```
+/// @param other QPaintEngineState*
 QPaintEngineState* q_paintenginestate_new(void* other);
 
 /// q_paintenginestate_new2 constructs a new QPaintEngineState object and invalidates the source QPaintEngineState object.
 ///
-/// ``` QPaintEngineState* other ```
+/// @param other QPaintEngineState*
 QPaintEngineState* q_paintenginestate_new2(void* other);
 
 /// q_paintenginestate_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QPaintEngineState* self, QPaintEngineState* other ```
+/// @param self QPaintEngineState*
+/// @param other QPaintEngineState*
 void q_paintenginestate_copy_assign(void* self, void* other);
 
 /// q_paintenginestate_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QPaintEngineState* self, QPaintEngineState* other ```
+/// @param self QPaintEngineState*
+/// @param other QPaintEngineState*
 void q_paintenginestate_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#state)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
+///
+/// @return flag of enum QPaintEngine__DirtyFlag
 int64_t q_paintenginestate_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#pen)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QPen* q_paintenginestate_pen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brush)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QBrush* q_paintenginestate_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brushOrigin)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QPointF* q_paintenginestate_brush_origin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundBrush)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QBrush* q_paintenginestate_background_brush(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#backgroundMode)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
+///
+/// @return enum Qt__BGMode
 int64_t q_paintenginestate_background_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#font)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QFont* q_paintenginestate_font(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#transform)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QTransform* q_paintenginestate_transform(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipOperation)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
+///
+/// @return enum Qt__ClipOperation
 int64_t q_paintenginestate_clip_operation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipRegion)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QRegion* q_paintenginestate_clip_region(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipPath)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QPainterPath* q_paintenginestate_clip_path(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#isClipEnabled)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 bool q_paintenginestate_is_clip_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#renderHints)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
+///
+/// @return flag of enum QPainter__RenderHint
 int64_t q_paintenginestate_render_hints(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#compositionMode)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
+///
+/// @return enum QPainter__CompositionMode
 int64_t q_paintenginestate_composition_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#opacity)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 double q_paintenginestate_opacity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#painter)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 QPainter* q_paintenginestate_painter(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#brushNeedsResolving)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 bool q_paintenginestate_brush_needs_resolving(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#penNeedsResolving)
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 bool q_paintenginestate_pen_needs_resolving(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#dtor.QPaintEngineState)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPaintEngineState* self ```
+/// @param self QPaintEngineState*
 void q_paintenginestate_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpaintengine.html#types

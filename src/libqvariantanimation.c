@@ -28,8 +28,8 @@ int32_t q_variantanimation_metacall(void* self, int64_t param1, int param2, void
     return QVariantAnimation_Metacall((QVariantAnimation*)self, param1, param2, param3);
 }
 
-void q_variantanimation_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QVariantAnimation_OnMetacall((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QVariantAnimation_OnMetacall((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_variantanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -84,8 +84,8 @@ int32_t q_variantanimation_duration(void* self) {
     return QVariantAnimation_Duration((QVariantAnimation*)self);
 }
 
-void q_variantanimation_on_duration(void* self, int32_t (*slot)()) {
-    QVariantAnimation_OnDuration((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_duration(void* self, int32_t (*callback)()) {
+    QVariantAnimation_OnDuration((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_variantanimation_qbase_duration(void* self) {
@@ -108,16 +108,16 @@ void q_variantanimation_value_changed(void* self, void* value) {
     QVariantAnimation_ValueChanged((QVariantAnimation*)self, (QVariant*)value);
 }
 
-void q_variantanimation_on_value_changed(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_Connect_ValueChanged((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_value_changed(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_Connect_ValueChanged((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 bool q_variantanimation_event(void* self, void* event) {
     return QVariantAnimation_Event((QVariantAnimation*)self, (QEvent*)event);
 }
 
-void q_variantanimation_on_event(void* self, bool (*slot)(void*, void*)) {
-    QVariantAnimation_OnEvent((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_event(void* self, bool (*callback)(void*, void*)) {
+    QVariantAnimation_OnEvent((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 bool q_variantanimation_qbase_event(void* self, void* event) {
@@ -128,8 +128,8 @@ void q_variantanimation_update_current_time(void* self, int param1) {
     QVariantAnimation_UpdateCurrentTime((QVariantAnimation*)self, param1);
 }
 
-void q_variantanimation_on_update_current_time(void* self, void (*slot)(void*, int)) {
-    QVariantAnimation_OnUpdateCurrentTime((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_update_current_time(void* self, void (*callback)(void*, int)) {
+    QVariantAnimation_OnUpdateCurrentTime((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_qbase_update_current_time(void* self, int param1) {
@@ -140,8 +140,8 @@ void q_variantanimation_update_state(void* self, int64_t newState, int64_t oldSt
     QVariantAnimation_UpdateState((QVariantAnimation*)self, newState, oldState);
 }
 
-void q_variantanimation_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t)) {
-    QVariantAnimation_OnUpdateState((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t)) {
+    QVariantAnimation_OnUpdateState((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState) {
@@ -152,8 +152,8 @@ void q_variantanimation_update_current_value(void* self, void* value) {
     QVariantAnimation_UpdateCurrentValue((QVariantAnimation*)self, (QVariant*)value);
 }
 
-void q_variantanimation_on_update_current_value(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnUpdateCurrentValue((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_update_current_value(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnUpdateCurrentValue((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_qbase_update_current_value(void* self, void* value) {
@@ -164,8 +164,8 @@ QVariant* q_variantanimation_interpolated(void* self, void* from, void* to, doub
     return QVariantAnimation_Interpolated((QVariantAnimation*)self, (QVariant*)from, (QVariant*)to, progress);
 }
 
-void q_variantanimation_on_interpolated(void* self, QVariant* (*slot)(void*, void*, void*, double)) {
-    QVariantAnimation_OnInterpolated((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double)) {
+    QVariantAnimation_OnInterpolated((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 QVariant* q_variantanimation_qbase_interpolated(void* self, void* from, void* to, double progress) {
@@ -230,32 +230,32 @@ void q_variantanimation_finished(void* self) {
     QAbstractAnimation_Finished((QAbstractAnimation*)self);
 }
 
-void q_variantanimation_on_finished(void* self, void (*slot)(void*)) {
-    QAbstractAnimation_Connect_Finished((QAbstractAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_finished(void* self, void (*callback)(void*)) {
+    QAbstractAnimation_Connect_Finished((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_state_changed(void* self, int64_t newState, int64_t oldState) {
     QAbstractAnimation_StateChanged((QAbstractAnimation*)self, newState, oldState);
 }
 
-void q_variantanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t)) {
-    QAbstractAnimation_Connect_StateChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t)) {
+    QAbstractAnimation_Connect_StateChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_current_loop_changed(void* self, int currentLoop) {
     QAbstractAnimation_CurrentLoopChanged((QAbstractAnimation*)self, currentLoop);
 }
 
-void q_variantanimation_on_current_loop_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractAnimation_Connect_CurrentLoopChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_current_loop_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractAnimation_Connect_CurrentLoopChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_direction_changed(void* self, int64_t param1) {
     QAbstractAnimation_DirectionChanged((QAbstractAnimation*)self, param1);
 }
 
-void q_variantanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t)) {
-    QAbstractAnimation_Connect_DirectionChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t)) {
+    QAbstractAnimation_Connect_DirectionChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_start(void* self) {
@@ -390,12 +390,16 @@ const char** q_variantanimation_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_variantanimation_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -413,8 +417,8 @@ void q_variantanimation_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_variantanimation_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_variantanimation_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_variantanimation_parent(void* self) {
@@ -449,8 +453,8 @@ void q_variantanimation_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_variantanimation_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_variantanimation_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_update_direction(void* self, int64_t direction) {
@@ -461,8 +465,8 @@ void q_variantanimation_qbase_update_direction(void* self, int64_t direction) {
     QVariantAnimation_QBaseUpdateDirection((QVariantAnimation*)self, direction);
 }
 
-void q_variantanimation_on_update_direction(void* self, void (*slot)(void*, int64_t)) {
-    QVariantAnimation_OnUpdateDirection((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_update_direction(void* self, void (*callback)(void*, int64_t)) {
+    QVariantAnimation_OnUpdateDirection((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 bool q_variantanimation_event_filter(void* self, void* watched, void* event) {
@@ -473,8 +477,8 @@ bool q_variantanimation_qbase_event_filter(void* self, void* watched, void* even
     return QVariantAnimation_QBaseEventFilter((QVariantAnimation*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_variantanimation_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QVariantAnimation_OnEventFilter((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QVariantAnimation_OnEventFilter((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_timer_event(void* self, void* event) {
@@ -485,8 +489,8 @@ void q_variantanimation_qbase_timer_event(void* self, void* event) {
     QVariantAnimation_QBaseTimerEvent((QVariantAnimation*)self, (QTimerEvent*)event);
 }
 
-void q_variantanimation_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnTimerEvent((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnTimerEvent((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_child_event(void* self, void* event) {
@@ -497,8 +501,8 @@ void q_variantanimation_qbase_child_event(void* self, void* event) {
     QVariantAnimation_QBaseChildEvent((QVariantAnimation*)self, (QChildEvent*)event);
 }
 
-void q_variantanimation_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnChildEvent((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnChildEvent((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_custom_event(void* self, void* event) {
@@ -509,8 +513,8 @@ void q_variantanimation_qbase_custom_event(void* self, void* event) {
     QVariantAnimation_QBaseCustomEvent((QVariantAnimation*)self, (QEvent*)event);
 }
 
-void q_variantanimation_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnCustomEvent((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnCustomEvent((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_connect_notify(void* self, void* signal) {
@@ -521,8 +525,8 @@ void q_variantanimation_qbase_connect_notify(void* self, void* signal) {
     QVariantAnimation_QBaseConnectNotify((QVariantAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_variantanimation_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnConnectNotify((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnConnectNotify((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_disconnect_notify(void* self, void* signal) {
@@ -533,8 +537,8 @@ void q_variantanimation_qbase_disconnect_notify(void* self, void* signal) {
     QVariantAnimation_QBaseDisconnectNotify((QVariantAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_variantanimation_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QVariantAnimation_OnDisconnectNotify((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QVariantAnimation_OnDisconnectNotify((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 QObject* q_variantanimation_sender(void* self) {
@@ -545,8 +549,8 @@ QObject* q_variantanimation_qbase_sender(void* self) {
     return QVariantAnimation_QBaseSender((QVariantAnimation*)self);
 }
 
-void q_variantanimation_on_sender(void* self, QObject* (*slot)()) {
-    QVariantAnimation_OnSender((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_sender(void* self, QObject* (*callback)()) {
+    QVariantAnimation_OnSender((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_variantanimation_sender_signal_index(void* self) {
@@ -557,8 +561,8 @@ int32_t q_variantanimation_qbase_sender_signal_index(void* self) {
     return QVariantAnimation_QBaseSenderSignalIndex((QVariantAnimation*)self);
 }
 
-void q_variantanimation_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QVariantAnimation_OnSenderSignalIndex((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QVariantAnimation_OnSenderSignalIndex((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_variantanimation_receivers(void* self, const char* signal) {
@@ -569,8 +573,8 @@ int32_t q_variantanimation_qbase_receivers(void* self, const char* signal) {
     return QVariantAnimation_QBaseReceivers((QVariantAnimation*)self, signal);
 }
 
-void q_variantanimation_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QVariantAnimation_OnReceivers((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QVariantAnimation_OnReceivers((QVariantAnimation*)self, (intptr_t)callback);
 }
 
 bool q_variantanimation_is_signal_connected(void* self, void* signal) {
@@ -581,12 +585,12 @@ bool q_variantanimation_qbase_is_signal_connected(void* self, void* signal) {
     return QVariantAnimation_QBaseIsSignalConnected((QVariantAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_variantanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QVariantAnimation_OnIsSignalConnected((QVariantAnimation*)self, (intptr_t)slot);
+void q_variantanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QVariantAnimation_OnIsSignalConnected((QVariantAnimation*)self, (intptr_t)callback);
 }
 
-void q_variantanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_variantanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_variantanimation_delete(void* self) {

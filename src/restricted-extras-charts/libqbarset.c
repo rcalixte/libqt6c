@@ -29,8 +29,8 @@ int32_t q_barset_metacall(void* self, int64_t param1, int param2, void* param3) 
     return QBarSet_Metacall((QBarSet*)self, param1, param2, param3);
 }
 
-void q_barset_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QBarSet_OnMetacall((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QBarSet_OnMetacall((QBarSet*)self, (intptr_t)callback);
 }
 
 int32_t q_barset_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -204,144 +204,144 @@ void q_barset_clicked(void* self, int index) {
     QBarSet_Clicked((QBarSet*)self, index);
 }
 
-void q_barset_on_clicked(void* self, void (*slot)(void*, int)) {
-    QBarSet_Connect_Clicked((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_clicked(void* self, void (*callback)(void*, int)) {
+    QBarSet_Connect_Clicked((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_hovered(void* self, bool status, int index) {
     QBarSet_Hovered((QBarSet*)self, status, index);
 }
 
-void q_barset_on_hovered(void* self, void (*slot)(void*, bool, int)) {
-    QBarSet_Connect_Hovered((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_hovered(void* self, void (*callback)(void*, bool, int)) {
+    QBarSet_Connect_Hovered((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_pressed(void* self, int index) {
     QBarSet_Pressed((QBarSet*)self, index);
 }
 
-void q_barset_on_pressed(void* self, void (*slot)(void*, int)) {
-    QBarSet_Connect_Pressed((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_pressed(void* self, void (*callback)(void*, int)) {
+    QBarSet_Connect_Pressed((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_released(void* self, int index) {
     QBarSet_Released((QBarSet*)self, index);
 }
 
-void q_barset_on_released(void* self, void (*slot)(void*, int)) {
-    QBarSet_Connect_Released((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_released(void* self, void (*callback)(void*, int)) {
+    QBarSet_Connect_Released((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_double_clicked(void* self, int index) {
     QBarSet_DoubleClicked((QBarSet*)self, index);
 }
 
-void q_barset_on_double_clicked(void* self, void (*slot)(void*, int)) {
-    QBarSet_Connect_DoubleClicked((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_double_clicked(void* self, void (*callback)(void*, int)) {
+    QBarSet_Connect_DoubleClicked((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_pen_changed(void* self) {
     QBarSet_PenChanged((QBarSet*)self);
 }
 
-void q_barset_on_pen_changed(void* self, void (*slot)(void*)) {
-    QBarSet_Connect_PenChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_pen_changed(void* self, void (*callback)(void*)) {
+    QBarSet_Connect_PenChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_brush_changed(void* self) {
     QBarSet_BrushChanged((QBarSet*)self);
 }
 
-void q_barset_on_brush_changed(void* self, void (*slot)(void*)) {
-    QBarSet_Connect_BrushChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_brush_changed(void* self, void (*callback)(void*)) {
+    QBarSet_Connect_BrushChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_label_changed(void* self) {
     QBarSet_LabelChanged((QBarSet*)self);
 }
 
-void q_barset_on_label_changed(void* self, void (*slot)(void*)) {
-    QBarSet_Connect_LabelChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_label_changed(void* self, void (*callback)(void*)) {
+    QBarSet_Connect_LabelChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_label_brush_changed(void* self) {
     QBarSet_LabelBrushChanged((QBarSet*)self);
 }
 
-void q_barset_on_label_brush_changed(void* self, void (*slot)(void*)) {
-    QBarSet_Connect_LabelBrushChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_label_brush_changed(void* self, void (*callback)(void*)) {
+    QBarSet_Connect_LabelBrushChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_label_font_changed(void* self) {
     QBarSet_LabelFontChanged((QBarSet*)self);
 }
 
-void q_barset_on_label_font_changed(void* self, void (*slot)(void*)) {
-    QBarSet_Connect_LabelFontChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_label_font_changed(void* self, void (*callback)(void*)) {
+    QBarSet_Connect_LabelFontChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_color_changed(void* self, void* color) {
     QBarSet_ColorChanged((QBarSet*)self, (QColor*)color);
 }
 
-void q_barset_on_color_changed(void* self, void (*slot)(void*, void*)) {
-    QBarSet_Connect_ColorChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_color_changed(void* self, void (*callback)(void*, void*)) {
+    QBarSet_Connect_ColorChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_border_color_changed(void* self, void* color) {
     QBarSet_BorderColorChanged((QBarSet*)self, (QColor*)color);
 }
 
-void q_barset_on_border_color_changed(void* self, void (*slot)(void*, void*)) {
-    QBarSet_Connect_BorderColorChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_border_color_changed(void* self, void (*callback)(void*, void*)) {
+    QBarSet_Connect_BorderColorChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_label_color_changed(void* self, void* color) {
     QBarSet_LabelColorChanged((QBarSet*)self, (QColor*)color);
 }
 
-void q_barset_on_label_color_changed(void* self, void (*slot)(void*, void*)) {
-    QBarSet_Connect_LabelColorChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_label_color_changed(void* self, void (*callback)(void*, void*)) {
+    QBarSet_Connect_LabelColorChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_selected_color_changed(void* self, void* color) {
     QBarSet_SelectedColorChanged((QBarSet*)self, (QColor*)color);
 }
 
-void q_barset_on_selected_color_changed(void* self, void (*slot)(void*, void*)) {
-    QBarSet_Connect_SelectedColorChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_selected_color_changed(void* self, void (*callback)(void*, void*)) {
+    QBarSet_Connect_SelectedColorChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_values_added(void* self, int index, int count) {
     QBarSet_ValuesAdded((QBarSet*)self, index, count);
 }
 
-void q_barset_on_values_added(void* self, void (*slot)(void*, int, int)) {
-    QBarSet_Connect_ValuesAdded((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_values_added(void* self, void (*callback)(void*, int, int)) {
+    QBarSet_Connect_ValuesAdded((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_values_removed(void* self, int index, int count) {
     QBarSet_ValuesRemoved((QBarSet*)self, index, count);
 }
 
-void q_barset_on_values_removed(void* self, void (*slot)(void*, int, int)) {
-    QBarSet_Connect_ValuesRemoved((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_values_removed(void* self, void (*callback)(void*, int, int)) {
+    QBarSet_Connect_ValuesRemoved((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_value_changed(void* self, int index) {
     QBarSet_ValueChanged((QBarSet*)self, index);
 }
 
-void q_barset_on_value_changed(void* self, void (*slot)(void*, int)) {
-    QBarSet_Connect_ValueChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_value_changed(void* self, void (*callback)(void*, int)) {
+    QBarSet_Connect_ValueChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_selected_bars_changed(void* self, libqt_list indexes) {
     QBarSet_SelectedBarsChanged((QBarSet*)self, indexes);
 }
 
-void q_barset_on_selected_bars_changed(void* self, void (*slot)(void*, libqt_list)) {
-    QBarSet_Connect_SelectedBarsChanged((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list)) {
+    QBarSet_Connect_SelectedBarsChanged((QBarSet*)self, (intptr_t)callback);
 }
 
 const char* q_barset_tr2(const char* s, const char* c) {
@@ -466,12 +466,16 @@ const char** q_barset_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_barset_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -489,8 +493,8 @@ void q_barset_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_barset_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_barset_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_barset_parent(void* self) {
@@ -525,8 +529,8 @@ void q_barset_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_barset_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_barset_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_barset_event(void* self, void* event) {
@@ -537,8 +541,8 @@ bool q_barset_qbase_event(void* self, void* event) {
     return QBarSet_QBaseEvent((QBarSet*)self, (QEvent*)event);
 }
 
-void q_barset_on_event(void* self, bool (*slot)(void*, void*)) {
-    QBarSet_OnEvent((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_event(void* self, bool (*callback)(void*, void*)) {
+    QBarSet_OnEvent((QBarSet*)self, (intptr_t)callback);
 }
 
 bool q_barset_event_filter(void* self, void* watched, void* event) {
@@ -549,8 +553,8 @@ bool q_barset_qbase_event_filter(void* self, void* watched, void* event) {
     return QBarSet_QBaseEventFilter((QBarSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_barset_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QBarSet_OnEventFilter((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QBarSet_OnEventFilter((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_timer_event(void* self, void* event) {
@@ -561,8 +565,8 @@ void q_barset_qbase_timer_event(void* self, void* event) {
     QBarSet_QBaseTimerEvent((QBarSet*)self, (QTimerEvent*)event);
 }
 
-void q_barset_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QBarSet_OnTimerEvent((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QBarSet_OnTimerEvent((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_child_event(void* self, void* event) {
@@ -573,8 +577,8 @@ void q_barset_qbase_child_event(void* self, void* event) {
     QBarSet_QBaseChildEvent((QBarSet*)self, (QChildEvent*)event);
 }
 
-void q_barset_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QBarSet_OnChildEvent((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QBarSet_OnChildEvent((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_custom_event(void* self, void* event) {
@@ -585,8 +589,8 @@ void q_barset_qbase_custom_event(void* self, void* event) {
     QBarSet_QBaseCustomEvent((QBarSet*)self, (QEvent*)event);
 }
 
-void q_barset_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QBarSet_OnCustomEvent((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QBarSet_OnCustomEvent((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_connect_notify(void* self, void* signal) {
@@ -597,8 +601,8 @@ void q_barset_qbase_connect_notify(void* self, void* signal) {
     QBarSet_QBaseConnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-void q_barset_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QBarSet_OnConnectNotify((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QBarSet_OnConnectNotify((QBarSet*)self, (intptr_t)callback);
 }
 
 void q_barset_disconnect_notify(void* self, void* signal) {
@@ -609,8 +613,8 @@ void q_barset_qbase_disconnect_notify(void* self, void* signal) {
     QBarSet_QBaseDisconnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-void q_barset_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QBarSet_OnDisconnectNotify((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QBarSet_OnDisconnectNotify((QBarSet*)self, (intptr_t)callback);
 }
 
 QObject* q_barset_sender(void* self) {
@@ -621,8 +625,8 @@ QObject* q_barset_qbase_sender(void* self) {
     return QBarSet_QBaseSender((QBarSet*)self);
 }
 
-void q_barset_on_sender(void* self, QObject* (*slot)()) {
-    QBarSet_OnSender((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_sender(void* self, QObject* (*callback)()) {
+    QBarSet_OnSender((QBarSet*)self, (intptr_t)callback);
 }
 
 int32_t q_barset_sender_signal_index(void* self) {
@@ -633,8 +637,8 @@ int32_t q_barset_qbase_sender_signal_index(void* self) {
     return QBarSet_QBaseSenderSignalIndex((QBarSet*)self);
 }
 
-void q_barset_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QBarSet_OnSenderSignalIndex((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QBarSet_OnSenderSignalIndex((QBarSet*)self, (intptr_t)callback);
 }
 
 int32_t q_barset_receivers(void* self, const char* signal) {
@@ -645,8 +649,8 @@ int32_t q_barset_qbase_receivers(void* self, const char* signal) {
     return QBarSet_QBaseReceivers((QBarSet*)self, signal);
 }
 
-void q_barset_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QBarSet_OnReceivers((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QBarSet_OnReceivers((QBarSet*)self, (intptr_t)callback);
 }
 
 bool q_barset_is_signal_connected(void* self, void* signal) {
@@ -657,12 +661,12 @@ bool q_barset_qbase_is_signal_connected(void* self, void* signal) {
     return QBarSet_QBaseIsSignalConnected((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-void q_barset_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QBarSet_OnIsSignalConnected((QBarSet*)self, (intptr_t)slot);
+void q_barset_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QBarSet_OnIsSignalConnected((QBarSet*)self, (intptr_t)callback);
 }
 
-void q_barset_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_barset_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_barset_delete(void* self) {

@@ -26,8 +26,8 @@ int32_t q_scimacro_metacall(void* self, int64_t param1, int param2, void* param3
     return QsciMacro_Metacall((QsciMacro*)self, param1, param2, param3);
 }
 
-void q_scimacro_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QsciMacro_OnMetacall((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QsciMacro_OnMetacall((QsciMacro*)self, (intptr_t)callback);
 }
 
 int32_t q_scimacro_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -60,8 +60,8 @@ void q_scimacro_play(void* self) {
     QsciMacro_Play((QsciMacro*)self);
 }
 
-void q_scimacro_on_play(void* self, void (*slot)()) {
-    QsciMacro_OnPlay((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_play(void* self, void (*callback)()) {
+    QsciMacro_OnPlay((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_qbase_play(void* self) {
@@ -72,8 +72,8 @@ void q_scimacro_start_recording(void* self) {
     QsciMacro_StartRecording((QsciMacro*)self);
 }
 
-void q_scimacro_on_start_recording(void* self, void (*slot)()) {
-    QsciMacro_OnStartRecording((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_start_recording(void* self, void (*callback)()) {
+    QsciMacro_OnStartRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_qbase_start_recording(void* self) {
@@ -84,8 +84,8 @@ void q_scimacro_end_recording(void* self) {
     QsciMacro_EndRecording((QsciMacro*)self);
 }
 
-void q_scimacro_on_end_recording(void* self, void (*slot)()) {
-    QsciMacro_OnEndRecording((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_end_recording(void* self, void (*callback)()) {
+    QsciMacro_OnEndRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_qbase_end_recording(void* self) {
@@ -210,12 +210,16 @@ const char** q_scimacro_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_scimacro_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -233,8 +237,8 @@ void q_scimacro_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_scimacro_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_scimacro_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_scimacro_parent(void* self) {
@@ -269,8 +273,8 @@ void q_scimacro_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_scimacro_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_scimacro_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_scimacro_event(void* self, void* event) {
@@ -281,8 +285,8 @@ bool q_scimacro_qbase_event(void* self, void* event) {
     return QsciMacro_QBaseEvent((QsciMacro*)self, (QEvent*)event);
 }
 
-void q_scimacro_on_event(void* self, bool (*slot)(void*, void*)) {
-    QsciMacro_OnEvent((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_event(void* self, bool (*callback)(void*, void*)) {
+    QsciMacro_OnEvent((QsciMacro*)self, (intptr_t)callback);
 }
 
 bool q_scimacro_event_filter(void* self, void* watched, void* event) {
@@ -293,8 +297,8 @@ bool q_scimacro_qbase_event_filter(void* self, void* watched, void* event) {
     return QsciMacro_QBaseEventFilter((QsciMacro*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_scimacro_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QsciMacro_OnEventFilter((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QsciMacro_OnEventFilter((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_timer_event(void* self, void* event) {
@@ -305,8 +309,8 @@ void q_scimacro_qbase_timer_event(void* self, void* event) {
     QsciMacro_QBaseTimerEvent((QsciMacro*)self, (QTimerEvent*)event);
 }
 
-void q_scimacro_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QsciMacro_OnTimerEvent((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QsciMacro_OnTimerEvent((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_child_event(void* self, void* event) {
@@ -317,8 +321,8 @@ void q_scimacro_qbase_child_event(void* self, void* event) {
     QsciMacro_QBaseChildEvent((QsciMacro*)self, (QChildEvent*)event);
 }
 
-void q_scimacro_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QsciMacro_OnChildEvent((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QsciMacro_OnChildEvent((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_custom_event(void* self, void* event) {
@@ -329,8 +333,8 @@ void q_scimacro_qbase_custom_event(void* self, void* event) {
     QsciMacro_QBaseCustomEvent((QsciMacro*)self, (QEvent*)event);
 }
 
-void q_scimacro_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QsciMacro_OnCustomEvent((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QsciMacro_OnCustomEvent((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_connect_notify(void* self, void* signal) {
@@ -341,8 +345,8 @@ void q_scimacro_qbase_connect_notify(void* self, void* signal) {
     QsciMacro_QBaseConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciMacro_OnConnectNotify((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciMacro_OnConnectNotify((QsciMacro*)self, (intptr_t)callback);
 }
 
 void q_scimacro_disconnect_notify(void* self, void* signal) {
@@ -353,8 +357,8 @@ void q_scimacro_qbase_disconnect_notify(void* self, void* signal) {
     QsciMacro_QBaseDisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QsciMacro_OnDisconnectNotify((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QsciMacro_OnDisconnectNotify((QsciMacro*)self, (intptr_t)callback);
 }
 
 QObject* q_scimacro_sender(void* self) {
@@ -365,8 +369,8 @@ QObject* q_scimacro_qbase_sender(void* self) {
     return QsciMacro_QBaseSender((QsciMacro*)self);
 }
 
-void q_scimacro_on_sender(void* self, QObject* (*slot)()) {
-    QsciMacro_OnSender((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_sender(void* self, QObject* (*callback)()) {
+    QsciMacro_OnSender((QsciMacro*)self, (intptr_t)callback);
 }
 
 int32_t q_scimacro_sender_signal_index(void* self) {
@@ -377,8 +381,8 @@ int32_t q_scimacro_qbase_sender_signal_index(void* self) {
     return QsciMacro_QBaseSenderSignalIndex((QsciMacro*)self);
 }
 
-void q_scimacro_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QsciMacro_OnSenderSignalIndex((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QsciMacro_OnSenderSignalIndex((QsciMacro*)self, (intptr_t)callback);
 }
 
 int32_t q_scimacro_receivers(void* self, const char* signal) {
@@ -389,8 +393,8 @@ int32_t q_scimacro_qbase_receivers(void* self, const char* signal) {
     return QsciMacro_QBaseReceivers((QsciMacro*)self, signal);
 }
 
-void q_scimacro_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QsciMacro_OnReceivers((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QsciMacro_OnReceivers((QsciMacro*)self, (intptr_t)callback);
 }
 
 bool q_scimacro_is_signal_connected(void* self, void* signal) {
@@ -401,12 +405,12 @@ bool q_scimacro_qbase_is_signal_connected(void* self, void* signal) {
     return QsciMacro_QBaseIsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QsciMacro_OnIsSignalConnected((QsciMacro*)self, (intptr_t)slot);
+void q_scimacro_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QsciMacro_OnIsSignalConnected((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_scimacro_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_scimacro_delete(void* self) {

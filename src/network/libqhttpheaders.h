@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,174 +15,232 @@
 
 /// q_httpheaders_new constructs a new QHttpHeaders object.
 ///
-///
 QHttpHeaders* q_httpheaders_new();
 
 /// q_httpheaders_new2 constructs a new QHttpHeaders object.
 ///
-/// ``` QHttpHeaders* other ```
+/// @param other QHttpHeaders*
 QHttpHeaders* q_httpheaders_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#operator-eq)
 ///
-/// ``` QHttpHeaders* self, QHttpHeaders* other ```
+/// @param self QHttpHeaders*
+/// @param other QHttpHeaders*
 void q_httpheaders_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#swap)
 ///
-/// ``` QHttpHeaders* self, QHttpHeaders* other ```
+/// @param self QHttpHeaders*
+/// @param other QHttpHeaders*
 void q_httpheaders_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#append)
 ///
-/// ``` QHttpHeaders* self, char* name, char* value ```
+/// @param self QHttpHeaders*
+/// @param name char*
+/// @param value char*
 bool q_httpheaders_append(void* self, char* name, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#append)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name, char* value ```
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
+/// @param value char*
 bool q_httpheaders_append2(void* self, int64_t name, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#insert)
 ///
-/// ``` QHttpHeaders* self, int64_t i, char* name, char* value ```
+/// @param self QHttpHeaders*
+/// @param i int64_t
+/// @param name char*
+/// @param value char*
 bool q_httpheaders_insert(void* self, int64_t i, char* name, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#insert)
 ///
-/// ``` QHttpHeaders* self, int64_t i, enum QHttpHeaders__WellKnownHeader name, char* value ```
+/// @param self QHttpHeaders*
+/// @param i int64_t
+/// @param name enum QHttpHeaders__WellKnownHeader
+/// @param value char*
 bool q_httpheaders_insert2(void* self, int64_t i, int64_t name, char* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#replace)
 ///
-/// ``` QHttpHeaders* self, int64_t i, char* name, char* newValue ```
+/// @param self QHttpHeaders*
+/// @param i int64_t
+/// @param name char*
+/// @param newValue char*
 bool q_httpheaders_replace(void* self, int64_t i, char* name, char* newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#replace)
 ///
-/// ``` QHttpHeaders* self, int64_t i, enum QHttpHeaders__WellKnownHeader name, char* newValue ```
+/// @param self QHttpHeaders*
+/// @param i int64_t
+/// @param name enum QHttpHeaders__WellKnownHeader
+/// @param newValue char*
 bool q_httpheaders_replace2(void* self, int64_t i, int64_t name, char* newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#replaceOrAppend)
 ///
-/// ``` QHttpHeaders* self, char* name, char* newValue ```
+/// @param self QHttpHeaders*
+/// @param name char*
+/// @param newValue char*
 bool q_httpheaders_replace_or_append(void* self, char* name, char* newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#replaceOrAppend)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name, char* newValue ```
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
+/// @param newValue char*
 bool q_httpheaders_replace_or_append2(void* self, int64_t name, char* newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#contains)
 ///
-/// ``` QHttpHeaders* self, char* name ```
+/// @param self QHttpHeaders*
+/// @param name char*
 bool q_httpheaders_contains(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#contains)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name ```
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
 bool q_httpheaders_contains2(void* self, int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#clear)
 ///
-/// ``` QHttpHeaders* self ```
+/// @param self QHttpHeaders*
 void q_httpheaders_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#removeAll)
 ///
-/// ``` QHttpHeaders* self, char* name ```
+/// @param self QHttpHeaders*
+/// @param name char*
 void q_httpheaders_remove_all(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#removeAll)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name ```
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
 void q_httpheaders_remove_all2(void* self, int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#removeAt)
 ///
-/// ``` QHttpHeaders* self, int64_t i ```
+/// @param self QHttpHeaders*
+/// @param i int64_t
 void q_httpheaders_remove_at(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///
-/// ``` QHttpHeaders* self, char* name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name char*
 const char* q_httpheaders_value(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
 const char* q_httpheaders_value2(void* self, int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#values)
 ///
-/// ``` QHttpHeaders* self, char* name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name char*
 const char** q_httpheaders_values(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#values)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
 const char** q_httpheaders_values2(void* self, int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#valueAt)
 ///
-/// ``` QHttpHeaders* self, int64_t i ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param i int64_t
 const char* q_httpheaders_value_at(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#combinedValue)
 ///
-/// ``` QHttpHeaders* self, char* name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name char*
 char* q_httpheaders_combined_value(void* self, char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#combinedValue)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
 char* q_httpheaders_combined_value2(void* self, int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#size)
 ///
-/// ``` QHttpHeaders* self ```
+/// @param self QHttpHeaders*
 int64_t q_httpheaders_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#reserve)
 ///
-/// ``` QHttpHeaders* self, int64_t size ```
+/// @param self QHttpHeaders*
+/// @param size int64_t
 void q_httpheaders_reserve(void* self, int64_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#isEmpty)
 ///
-/// ``` QHttpHeaders* self ```
+/// @param self QHttpHeaders*
 bool q_httpheaders_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#wellKnownHeaderName)
 ///
-/// ``` enum QHttpHeaders__WellKnownHeader name ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param name enum QHttpHeaders__WellKnownHeader
 const char* q_httpheaders_well_known_header_name(int64_t name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#fromListOfPairs)
 ///
-/// ``` libqt_list /* of libqt_pair  tuple of char* and char*  */ headers ```
+/// @param headers libqt_list /* of libqt_pair  tuple of char* and char*  */
 QHttpHeaders* q_httpheaders_from_list_of_pairs(libqt_list /* of libqt_pair  tuple of char* and char*  */ headers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#toListOfPairs)
 ///
-/// ``` QHttpHeaders* self ```
+/// @param self QHttpHeaders*
 libqt_list /* of libqt_pair  tuple of char* and char*  */ q_httpheaders_to_list_of_pairs(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///
-/// ``` QHttpHeaders* self, char* name, const char* defaultValue ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name char*
+/// @param defaultValue const char*
 const char* q_httpheaders_value22(void* self, char* name, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///
-/// ``` QHttpHeaders* self, enum QHttpHeaders__WellKnownHeader name, const char* defaultValue ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QHttpHeaders*
+/// @param name enum QHttpHeaders__WellKnownHeader
+/// @param defaultValue const char*
 const char* q_httpheaders_value23(void* self, int64_t name, const char* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpheaders.html#dtor.QHttpHeaders)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHttpHeaders* self ```
+/// @param self QHttpHeaders*
 void q_httpheaders_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhttpheaders.html#types

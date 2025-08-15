@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,137 +15,150 @@
 
 /// q_inputevent_new constructs a new QInputEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QInputDevice* m_dev ```
+/// @param typeVal enum QEvent__Type
+/// @param m_dev QInputDevice*
 QInputEvent* q_inputevent_new(int64_t typeVal, void* m_dev);
 
 /// q_inputevent_new2 constructs a new QInputEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QInputDevice* m_dev, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param m_dev QInputDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QInputEvent* q_inputevent_new2(int64_t typeVal, void* m_dev, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 QInputEvent* q_inputevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputEvent* self, QInputEvent* (*slot)() ```
-void q_inputevent_on_clone(void* self, QInputEvent* (*slot)());
+/// @param self QInputEvent*
+/// @param callback QInputEvent* fn()
+void q_inputevent_on_clone(void* self, QInputEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 QInputEvent* q_inputevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 const QInputDevice* q_inputevent_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_inputevent_device_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_inputevent_modifiers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QInputEvent* self, int modifiers ```
+/// @param self QInputEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_inputevent_set_modifiers(void* self, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 uint64_t q_inputevent_timestamp(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
-/// ``` QInputEvent* self, uint64_t timestamp ```
+/// @param self QInputEvent*
+/// @param timestamp uint64_t
 void q_inputevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputEvent* self, void (*slot)(QInputEvent*, uint64_t) ```
-void q_inputevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QInputEvent*
+/// @param callback void fn(QInputEvent*, uint64_t)
+void q_inputevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setTimestamp)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputEvent* self, uint64_t timestamp ```
+/// @param self QInputEvent*
+/// @param timestamp uint64_t
 void q_inputevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_inputevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 bool q_inputevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 bool q_inputevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 void q_inputevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 void q_inputevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 bool q_inputevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 bool q_inputevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 bool q_inputevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_inputevent_register_event_type();
 
@@ -154,7 +166,7 @@ int32_t q_inputevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_inputevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -163,7 +175,8 @@ int32_t q_inputevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputEvent* self, bool accepted ```
+/// @param self QInputEvent*
+/// @param accepted bool
 void q_inputevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -172,7 +185,8 @@ void q_inputevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputEvent* self, bool accepted ```
+/// @param self QInputEvent*
+/// @param accepted bool
 void q_inputevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -181,307 +195,342 @@ void q_inputevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputEvent* self, void (*slot)(QInputEvent*, bool) ```
-void q_inputevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QInputEvent*
+/// @param callback void fn(QInputEvent*, bool)
+void q_inputevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#dtor.QInputEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputEvent* self ```
+/// @param self QInputEvent*
 void q_inputevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpointerevent.html
 
 /// q_pointerevent_new constructs a new QPointerEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointingDevice* dev ```
+/// @param typeVal enum QEvent__Type
+/// @param dev QPointingDevice*
 QPointerEvent* q_pointerevent_new(int64_t typeVal, void* dev);
 
 /// q_pointerevent_new2 constructs a new QPointerEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointingDevice* dev, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param dev QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QPointerEvent* q_pointerevent_new2(int64_t typeVal, void* dev, int64_t modifiers);
 
 /// q_pointerevent_new3 constructs a new QPointerEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointingDevice* dev, int modifiers, libqt_list /* of QEventPoint* */ points ```
+/// @param typeVal enum QEvent__Type
+/// @param dev QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param points libqt_list /* of QEventPoint* */
 QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 QPointerEvent* q_pointerevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, QPointerEvent* (*slot)() ```
-void q_pointerevent_on_clone(void* self, QPointerEvent* (*slot)());
+/// @param self QPointerEvent*
+/// @param callback QPointerEvent* fn()
+void q_pointerevent_on_clone(void* self, QPointerEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 QPointerEvent* q_pointerevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 const QPointingDevice* q_pointerevent_pointing_device(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_pointerevent_pointer_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
-/// ``` QPointerEvent* self, uint64_t timestamp ```
+/// @param self QPointerEvent*
+/// @param timestamp uint64_t
 void q_pointerevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, void (*slot)(QPointerEvent*, uint64_t) ```
-void q_pointerevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QPointerEvent*
+/// @param callback void fn(QPointerEvent*, uint64_t)
+void q_pointerevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self, uint64_t timestamp ```
+/// @param self QPointerEvent*
+/// @param timestamp uint64_t
 void q_pointerevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 int64_t q_pointerevent_point_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QPointerEvent* self, int64_t i ```
+/// @param self QPointerEvent*
+/// @param i int64_t
 QEventPoint* q_pointerevent_point(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 libqt_list /* of QEventPoint* */ q_pointerevent_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QPointerEvent* self, int id ```
+/// @param self QPointerEvent*
+/// @param id int
 QEventPoint* q_pointerevent_point_by_id(void* self, int id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_all_points_grabbed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, bool (*slot)() ```
-void q_pointerevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QPointerEvent*
+/// @param callback bool fn()
+void q_pointerevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isBeginEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_qbase_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, bool (*slot)() ```
-void q_pointerevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QPointerEvent*
+/// @param callback bool fn()
+void q_pointerevent_on_is_update_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_qbase_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, bool (*slot)() ```
-void q_pointerevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QPointerEvent*
+/// @param callback bool fn()
+void q_pointerevent_on_is_end_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#isEndEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_qbase_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_all_points_accepted(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
 ///
-/// ``` QPointerEvent* self, bool accepted ```
+/// @param self QPointerEvent*
+/// @param accepted bool
 void q_pointerevent_set_accepted(void* self, bool accepted);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPointerEvent* self, void (*slot)(QPointerEvent*, bool) ```
-void q_pointerevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QPointerEvent*
+/// @param callback void fn(QPointerEvent*, bool)
+void q_pointerevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
 ///
 /// Base class method implementation
 ///
-/// ``` QPointerEvent* self, bool accepted ```
+/// @param self QPointerEvent*
+/// @param accepted bool
 void q_pointerevent_qbase_set_accepted(void* self, bool accepted);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QPointerEvent* self, QEventPoint* point ```
+/// @param self QPointerEvent*
+/// @param point QEventPoint*
 QObject* q_pointerevent_exclusive_grabber(void* self, void* point);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QPointerEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QPointerEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_pointerevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QPointerEvent* self, QEventPoint* point ```
+/// @param self QPointerEvent*
+/// @param point QEventPoint*
 void q_pointerevent_clear_passive_grabbers(void* self, void* point);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QPointerEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QPointerEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_pointerevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QPointerEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QPointerEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_pointerevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 const QInputDevice* q_pointerevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_pointerevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_pointerevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QPointerEvent* self, int modifiers ```
+/// @param self QPointerEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_pointerevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 uint64_t q_pointerevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_pointerevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 void q_pointerevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 void q_pointerevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 bool q_pointerevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_pointerevent_register_event_type();
 
@@ -489,273 +538,298 @@ int32_t q_pointerevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_pointerevent_register_event_type1(int hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#dtor.QPointerEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPointerEvent* self ```
+/// @param self QPointerEvent*
 void q_pointerevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qsinglepointevent.html
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#clone)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 QSinglePointEvent* q_singlepointevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_singlepointevent_button(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_singlepointevent_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 QPointF* q_singlepointevent_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 QPointF* q_singlepointevent_scene_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 QPointF* q_singlepointevent_global_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isBeginEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isUpdateEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#isEndEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 QObject* q_singlepointevent_exclusive_point_grabber(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QSinglePointEvent* self, QObject* exclusiveGrabber ```
+/// @param self QSinglePointEvent*
+/// @param exclusiveGrabber QObject*
 void q_singlepointevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 const QPointingDevice* q_singlepointevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_singlepointevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
-/// ``` QSinglePointEvent* self, uint64_t timestamp ```
+/// @param self QSinglePointEvent*
+/// @param timestamp uint64_t
 void q_singlepointevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 int64_t q_singlepointevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QSinglePointEvent* self, int64_t i ```
+/// @param self QSinglePointEvent*
+/// @param i int64_t
 QEventPoint* q_singlepointevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 libqt_list /* of QEventPoint* */ q_singlepointevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QSinglePointEvent* self, int id ```
+/// @param self QSinglePointEvent*
+/// @param id int
 QEventPoint* q_singlepointevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setAccepted)
 ///
-/// ``` QSinglePointEvent* self, bool accepted ```
+/// @param self QSinglePointEvent*
+/// @param accepted bool
 void q_singlepointevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QSinglePointEvent* self, QEventPoint* point ```
+/// @param self QSinglePointEvent*
+/// @param point QEventPoint*
 QObject* q_singlepointevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QSinglePointEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QSinglePointEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_singlepointevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QSinglePointEvent* self, QEventPoint* point ```
+/// @param self QSinglePointEvent*
+/// @param point QEventPoint*
 void q_singlepointevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QSinglePointEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QSinglePointEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_singlepointevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QSinglePointEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QSinglePointEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_singlepointevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 const QInputDevice* q_singlepointevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_singlepointevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_singlepointevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QSinglePointEvent* self, int modifiers ```
+/// @param self QSinglePointEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_singlepointevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 uint64_t q_singlepointevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_singlepointevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 void q_singlepointevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 void q_singlepointevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 bool q_singlepointevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_singlepointevent_register_event_type();
 
@@ -763,327 +837,356 @@ int32_t q_singlepointevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_singlepointevent_register_event_type1(int hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#dtor.QSinglePointEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QSinglePointEvent* self ```
+/// @param self QSinglePointEvent*
 void q_singlepointevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qenterevent.html
 
 /// q_enterevent_new constructs a new QEnterEvent object.
 ///
-/// ``` QPointF* localPos, QPointF* scenePos, QPointF* globalPos ```
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
 QEnterEvent* q_enterevent_new(void* localPos, void* scenePos, void* globalPos);
 
 /// q_enterevent_new2 constructs a new QEnterEvent object.
 ///
-/// ``` QPointF* localPos, QPointF* scenePos, QPointF* globalPos, QPointingDevice* device ```
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param device QPointingDevice*
 QEnterEvent* q_enterevent_new2(void* localPos, void* scenePos, void* globalPos, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#clone)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QEnterEvent* q_enterevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QEnterEvent* self, QEnterEvent* (*slot)() ```
-void q_enterevent_on_clone(void* self, QEnterEvent* (*slot)());
+/// @param self QEnterEvent*
+/// @param callback QEnterEvent* fn()
+void q_enterevent_on_clone(void* self, QEnterEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QEnterEvent* q_enterevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#pos)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPoint* q_enterevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#globalPos)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPoint* q_enterevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#x)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 int32_t q_enterevent_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#y)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 int32_t q_enterevent_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#globalX)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 int32_t q_enterevent_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#globalY)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 int32_t q_enterevent_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#localPos)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_local_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#windowPos)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_window_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#screenPos)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_screen_pos(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_enterevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_enterevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QPointF* q_enterevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 QObject* q_enterevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QEnterEvent* self, QObject* exclusiveGrabber ```
+/// @param self QEnterEvent*
+/// @param exclusiveGrabber QObject*
 void q_enterevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 const QPointingDevice* q_enterevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_enterevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 int64_t q_enterevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QEnterEvent* self, int64_t i ```
+/// @param self QEnterEvent*
+/// @param i int64_t
 QEventPoint* q_enterevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 libqt_list /* of QEventPoint* */ q_enterevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QEnterEvent* self, int id ```
+/// @param self QEnterEvent*
+/// @param id int
 QEventPoint* q_enterevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QEnterEvent* self, QEventPoint* point ```
+/// @param self QEnterEvent*
+/// @param point QEventPoint*
 QObject* q_enterevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QEnterEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QEnterEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_enterevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QEnterEvent* self, QEventPoint* point ```
+/// @param self QEnterEvent*
+/// @param point QEventPoint*
 void q_enterevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QEnterEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QEnterEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_enterevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QEnterEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QEnterEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_enterevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 const QInputDevice* q_enterevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_enterevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_enterevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QEnterEvent* self, int modifiers ```
+/// @param self QEnterEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_enterevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 uint64_t q_enterevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_enterevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 void q_enterevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 void q_enterevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_enterevent_register_event_type();
 
@@ -1091,7 +1194,7 @@ int32_t q_enterevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_enterevent_register_event_type1(int hint);
 
 /// Inherited from QSinglePointEvent
@@ -1100,7 +1203,7 @@ int32_t q_enterevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1109,7 +1212,7 @@ bool q_enterevent_is_begin_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1118,8 +1221,9 @@ bool q_enterevent_qbase_is_begin_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, bool (*slot)() ```
-void q_enterevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QEnterEvent*
+/// @param callback bool fn()
+void q_enterevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1127,7 +1231,7 @@ void q_enterevent_on_is_begin_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1136,7 +1240,7 @@ bool q_enterevent_is_update_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1145,8 +1249,9 @@ bool q_enterevent_qbase_is_update_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, bool (*slot)() ```
-void q_enterevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QEnterEvent*
+/// @param callback bool fn()
+void q_enterevent_on_is_update_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1154,7 +1259,7 @@ void q_enterevent_on_is_update_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1163,7 +1268,7 @@ bool q_enterevent_is_end_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 bool q_enterevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1172,8 +1277,9 @@ bool q_enterevent_qbase_is_end_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, bool (*slot)() ```
-void q_enterevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QEnterEvent*
+/// @param callback bool fn()
+void q_enterevent_on_is_end_event(void* self, bool (*callback)());
 
 /// Inherited from QPointerEvent
 ///
@@ -1181,7 +1287,8 @@ void q_enterevent_on_is_end_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QEnterEvent* self, uint64_t timestamp ```
+/// @param self QEnterEvent*
+/// @param timestamp uint64_t
 void q_enterevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -1190,7 +1297,8 @@ void q_enterevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, uint64_t timestamp ```
+/// @param self QEnterEvent*
+/// @param timestamp uint64_t
 void q_enterevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -1199,8 +1307,9 @@ void q_enterevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, void (*slot)(QEnterEvent*, uint64_t) ```
-void q_enterevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QEnterEvent*
+/// @param callback void fn(QEnterEvent*, uint64_t)
+void q_enterevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -1208,7 +1317,8 @@ void q_enterevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QEnterEvent* self, bool accepted ```
+/// @param self QEnterEvent*
+/// @param accepted bool
 void q_enterevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -1217,7 +1327,8 @@ void q_enterevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, bool accepted ```
+/// @param self QEnterEvent*
+/// @param accepted bool
 void q_enterevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -1226,367 +1337,444 @@ void q_enterevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QEnterEvent* self, void (*slot)(QEnterEvent*, bool) ```
-void q_enterevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QEnterEvent*
+/// @param callback void fn(QEnterEvent*, bool)
+void q_enterevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qenterevent.html#dtor.QEnterEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QEnterEvent* self ```
+/// @param self QEnterEvent*
 void q_enterevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qmouseevent.html
 
 /// q_mouseevent_new constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, enum Qt__MouseButton button, int buttons, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QMouseEvent* q_mouseevent_new(int64_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new2 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QMouseEvent* q_mouseevent_new2(int64_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new3 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QMouseEvent* q_mouseevent_new3(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new4 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers, enum Qt__MouseEventSource source ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param source enum Qt__MouseEventSource
 QMouseEvent* q_mouseevent_new4(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int64_t source);
 
 /// q_mouseevent_new5 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, enum Qt__MouseButton button, int buttons, int modifiers, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param device QPointingDevice*
 QMouseEvent* q_mouseevent_new5(int64_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new6 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param device QPointingDevice*
 QMouseEvent* q_mouseevent_new6(int64_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new7 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param device QPointingDevice*
 QMouseEvent* q_mouseevent_new7(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new8 constructs a new QMouseEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, enum Qt__MouseButton button, int buttons, int modifiers, enum Qt__MouseEventSource source, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param source enum Qt__MouseEventSource
+/// @param device QPointingDevice*
 QMouseEvent* q_mouseevent_new8(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int64_t source, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QMouseEvent* q_mouseevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMouseEvent* self, QMouseEvent* (*slot)() ```
-void q_mouseevent_on_clone(void* self, QMouseEvent* (*slot)());
+/// @param self QMouseEvent*
+/// @param callback QMouseEvent* fn()
+void q_mouseevent_on_clone(void* self, QMouseEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QMouseEvent* q_mouseevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#pos)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPoint* q_mouseevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#globalPos)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPoint* q_mouseevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#x)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 int32_t q_mouseevent_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#y)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 int32_t q_mouseevent_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#globalX)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 int32_t q_mouseevent_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#globalY)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 int32_t q_mouseevent_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#localPos)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_local_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#windowPos)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_window_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#screenPos)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_screen_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#source)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return enum Qt__MouseEventSource
 int64_t q_mouseevent_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#flags)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return flag of enum Qt__MouseEventFlag
 int64_t q_mouseevent_flags(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_mouseevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_mouseevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QPointF* q_mouseevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 QObject* q_mouseevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QMouseEvent* self, QObject* exclusiveGrabber ```
+/// @param self QMouseEvent*
+/// @param exclusiveGrabber QObject*
 void q_mouseevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 const QPointingDevice* q_mouseevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_mouseevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 int64_t q_mouseevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QMouseEvent* self, int64_t i ```
+/// @param self QMouseEvent*
+/// @param i int64_t
 QEventPoint* q_mouseevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 libqt_list /* of QEventPoint* */ q_mouseevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QMouseEvent* self, int id ```
+/// @param self QMouseEvent*
+/// @param id int
 QEventPoint* q_mouseevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QMouseEvent* self, QEventPoint* point ```
+/// @param self QMouseEvent*
+/// @param point QEventPoint*
 QObject* q_mouseevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QMouseEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QMouseEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_mouseevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QMouseEvent* self, QEventPoint* point ```
+/// @param self QMouseEvent*
+/// @param point QEventPoint*
 void q_mouseevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QMouseEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QMouseEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_mouseevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QMouseEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QMouseEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_mouseevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 const QInputDevice* q_mouseevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_mouseevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_mouseevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QMouseEvent* self, int modifiers ```
+/// @param self QMouseEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_mouseevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 uint64_t q_mouseevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_mouseevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 void q_mouseevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 void q_mouseevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_mouseevent_register_event_type();
 
@@ -1594,7 +1782,7 @@ int32_t q_mouseevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_mouseevent_register_event_type1(int hint);
 
 /// Inherited from QSinglePointEvent
@@ -1603,7 +1791,7 @@ int32_t q_mouseevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1612,7 +1800,7 @@ bool q_mouseevent_is_begin_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1621,8 +1809,9 @@ bool q_mouseevent_qbase_is_begin_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, bool (*slot)() ```
-void q_mouseevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QMouseEvent*
+/// @param callback bool fn()
+void q_mouseevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1630,7 +1819,7 @@ void q_mouseevent_on_is_begin_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1639,7 +1828,7 @@ bool q_mouseevent_is_update_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1648,8 +1837,9 @@ bool q_mouseevent_qbase_is_update_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, bool (*slot)() ```
-void q_mouseevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QMouseEvent*
+/// @param callback bool fn()
+void q_mouseevent_on_is_update_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -1657,7 +1847,7 @@ void q_mouseevent_on_is_update_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1666,7 +1856,7 @@ bool q_mouseevent_is_end_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 bool q_mouseevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -1675,8 +1865,9 @@ bool q_mouseevent_qbase_is_end_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, bool (*slot)() ```
-void q_mouseevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QMouseEvent*
+/// @param callback bool fn()
+void q_mouseevent_on_is_end_event(void* self, bool (*callback)());
 
 /// Inherited from QPointerEvent
 ///
@@ -1684,7 +1875,8 @@ void q_mouseevent_on_is_end_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMouseEvent* self, uint64_t timestamp ```
+/// @param self QMouseEvent*
+/// @param timestamp uint64_t
 void q_mouseevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -1693,7 +1885,8 @@ void q_mouseevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, uint64_t timestamp ```
+/// @param self QMouseEvent*
+/// @param timestamp uint64_t
 void q_mouseevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -1702,8 +1895,9 @@ void q_mouseevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, void (*slot)(QMouseEvent*, uint64_t) ```
-void q_mouseevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QMouseEvent*
+/// @param callback void fn(QMouseEvent*, uint64_t)
+void q_mouseevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -1711,7 +1905,8 @@ void q_mouseevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMouseEvent* self, bool accepted ```
+/// @param self QMouseEvent*
+/// @param accepted bool
 void q_mouseevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -1720,7 +1915,8 @@ void q_mouseevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, bool accepted ```
+/// @param self QMouseEvent*
+/// @param accepted bool
 void q_mouseevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -1729,341 +1925,388 @@ void q_mouseevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMouseEvent* self, void (*slot)(QMouseEvent*, bool) ```
-void q_mouseevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QMouseEvent*
+/// @param callback void fn(QMouseEvent*, bool)
+void q_mouseevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#dtor.QMouseEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMouseEvent* self ```
+/// @param self QMouseEvent*
 void q_mouseevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhoverevent.html
 
 /// q_hoverevent_new constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* scenePos, QPointF* globalPos, QPointF* oldPos ```
+/// @param typeVal enum QEvent__Type
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param oldPos QPointF*
 QHoverEvent* q_hoverevent_new(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos);
 
 /// q_hoverevent_new2 constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* pos, QPointF* oldPos ```
+/// @param typeVal enum QEvent__Type
+/// @param pos QPointF*
+/// @param oldPos QPointF*
 QHoverEvent* q_hoverevent_new2(int64_t typeVal, void* pos, void* oldPos);
 
 /// q_hoverevent_new3 constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* scenePos, QPointF* globalPos, QPointF* oldPos, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param oldPos QPointF*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QHoverEvent* q_hoverevent_new3(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers);
 
 /// q_hoverevent_new4 constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* scenePos, QPointF* globalPos, QPointF* oldPos, int modifiers, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param oldPos QPointF*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param device QPointingDevice*
 QHoverEvent* q_hoverevent_new4(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers, void* device);
 
 /// q_hoverevent_new5 constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* pos, QPointF* oldPos, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param pos QPointF*
+/// @param oldPos QPointF*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QHoverEvent* q_hoverevent_new5(int64_t typeVal, void* pos, void* oldPos, int64_t modifiers);
 
 /// q_hoverevent_new6 constructs a new QHoverEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPointF* pos, QPointF* oldPos, int modifiers, QPointingDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param pos QPointF*
+/// @param oldPos QPointF*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param device QPointingDevice*
 QHoverEvent* q_hoverevent_new6(int64_t typeVal, void* pos, void* oldPos, int64_t modifiers, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QHoverEvent* q_hoverevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QHoverEvent* self, QHoverEvent* (*slot)() ```
-void q_hoverevent_on_clone(void* self, QHoverEvent* (*slot)());
+/// @param self QHoverEvent*
+/// @param callback QHoverEvent* fn()
+void q_hoverevent_on_clone(void* self, QHoverEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QHoverEvent* q_hoverevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#pos)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPoint* q_hoverevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#posF)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPointF* q_hoverevent_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QHoverEvent* self, bool (*slot)() ```
-void q_hoverevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QHoverEvent*
+/// @param callback bool fn()
+void q_hoverevent_on_is_update_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_qbase_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#oldPos)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPoint* q_hoverevent_old_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#oldPosF)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPointF* q_hoverevent_old_pos_f(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_hoverevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_hoverevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPointF* q_hoverevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPointF* q_hoverevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QPointF* q_hoverevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 QObject* q_hoverevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QHoverEvent* self, QObject* exclusiveGrabber ```
+/// @param self QHoverEvent*
+/// @param exclusiveGrabber QObject*
 void q_hoverevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 const QPointingDevice* q_hoverevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_hoverevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 int64_t q_hoverevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QHoverEvent* self, int64_t i ```
+/// @param self QHoverEvent*
+/// @param i int64_t
 QEventPoint* q_hoverevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 libqt_list /* of QEventPoint* */ q_hoverevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QHoverEvent* self, int id ```
+/// @param self QHoverEvent*
+/// @param id int
 QEventPoint* q_hoverevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QHoverEvent* self, QEventPoint* point ```
+/// @param self QHoverEvent*
+/// @param point QEventPoint*
 QObject* q_hoverevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QHoverEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QHoverEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_hoverevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QHoverEvent* self, QEventPoint* point ```
+/// @param self QHoverEvent*
+/// @param point QEventPoint*
 void q_hoverevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QHoverEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QHoverEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_hoverevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QHoverEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QHoverEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_hoverevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 const QInputDevice* q_hoverevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_hoverevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_hoverevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QHoverEvent* self, int modifiers ```
+/// @param self QHoverEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_hoverevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 uint64_t q_hoverevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_hoverevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 void q_hoverevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 void q_hoverevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_hoverevent_register_event_type();
 
@@ -2071,7 +2314,7 @@ int32_t q_hoverevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_hoverevent_register_event_type1(int hint);
 
 /// Inherited from QSinglePointEvent
@@ -2080,7 +2323,7 @@ int32_t q_hoverevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -2089,7 +2332,7 @@ bool q_hoverevent_is_begin_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -2098,8 +2341,9 @@ bool q_hoverevent_qbase_is_begin_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, bool (*slot)() ```
-void q_hoverevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QHoverEvent*
+/// @param callback bool fn()
+void q_hoverevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2107,7 +2351,7 @@ void q_hoverevent_on_is_begin_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -2116,7 +2360,7 @@ bool q_hoverevent_is_end_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 bool q_hoverevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -2125,8 +2369,9 @@ bool q_hoverevent_qbase_is_end_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, bool (*slot)() ```
-void q_hoverevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QHoverEvent*
+/// @param callback bool fn()
+void q_hoverevent_on_is_end_event(void* self, bool (*callback)());
 
 /// Inherited from QPointerEvent
 ///
@@ -2134,7 +2379,8 @@ void q_hoverevent_on_is_end_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHoverEvent* self, uint64_t timestamp ```
+/// @param self QHoverEvent*
+/// @param timestamp uint64_t
 void q_hoverevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -2143,7 +2389,8 @@ void q_hoverevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, uint64_t timestamp ```
+/// @param self QHoverEvent*
+/// @param timestamp uint64_t
 void q_hoverevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -2152,8 +2399,9 @@ void q_hoverevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, void (*slot)(QHoverEvent*, uint64_t) ```
-void q_hoverevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QHoverEvent*
+/// @param callback void fn(QHoverEvent*, uint64_t)
+void q_hoverevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -2161,7 +2409,8 @@ void q_hoverevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHoverEvent* self, bool accepted ```
+/// @param self QHoverEvent*
+/// @param accepted bool
 void q_hoverevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -2170,7 +2419,8 @@ void q_hoverevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, bool accepted ```
+/// @param self QHoverEvent*
+/// @param accepted bool
 void q_hoverevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -2179,379 +2429,435 @@ void q_hoverevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHoverEvent* self, void (*slot)(QHoverEvent*, bool) ```
-void q_hoverevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QHoverEvent*
+/// @param callback void fn(QHoverEvent*, bool)
+void q_hoverevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#dtor.QHoverEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHoverEvent* self ```
+/// @param self QHoverEvent*
 void q_hoverevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwheelevent.html
 
 /// q_wheelevent_new constructs a new QWheelEvent object.
 ///
-/// ``` QPointF* pos, QPointF* globalPos, QPoint* pixelDelta, QPoint* angleDelta, int buttons, int modifiers, enum Qt__ScrollPhase phase, bool inverted ```
+/// @param pos QPointF*
+/// @param globalPos QPointF*
+/// @param pixelDelta QPoint*
+/// @param angleDelta QPoint*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param phase enum Qt__ScrollPhase
+/// @param inverted bool
 QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted);
 
 /// q_wheelevent_new2 constructs a new QWheelEvent object.
 ///
-/// ``` QPointF* pos, QPointF* globalPos, QPoint* pixelDelta, QPoint* angleDelta, int buttons, int modifiers, enum Qt__ScrollPhase phase, bool inverted, enum Qt__MouseEventSource source ```
+/// @param pos QPointF*
+/// @param globalPos QPointF*
+/// @param pixelDelta QPoint*
+/// @param angleDelta QPoint*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param phase enum Qt__ScrollPhase
+/// @param inverted bool
+/// @param source enum Qt__MouseEventSource
 QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted, int64_t source);
 
 /// q_wheelevent_new3 constructs a new QWheelEvent object.
 ///
-/// ``` QPointF* pos, QPointF* globalPos, QPoint* pixelDelta, QPoint* angleDelta, int buttons, int modifiers, enum Qt__ScrollPhase phase, bool inverted, enum Qt__MouseEventSource source, QPointingDevice* device ```
+/// @param pos QPointF*
+/// @param globalPos QPointF*
+/// @param pixelDelta QPoint*
+/// @param angleDelta QPoint*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param phase enum Qt__ScrollPhase
+/// @param inverted bool
+/// @param source enum Qt__MouseEventSource
+/// @param device QPointingDevice*
 QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted, int64_t source, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QWheelEvent* q_wheelevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWheelEvent* self, QWheelEvent* (*slot)() ```
-void q_wheelevent_on_clone(void* self, QWheelEvent* (*slot)());
+/// @param self QWheelEvent*
+/// @param callback QWheelEvent* fn()
+void q_wheelevent_on_clone(void* self, QWheelEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QWheelEvent* q_wheelevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#pixelDelta)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QPoint* q_wheelevent_pixel_delta(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#angleDelta)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QPoint* q_wheelevent_angle_delta(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#phase)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum Qt__ScrollPhase
 int64_t q_wheelevent_phase(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#inverted)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_inverted(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isInverted)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_inverted(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#hasPixelDelta)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_has_pixel_delta(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWheelEvent* self, bool (*slot)() ```
-void q_wheelevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QWheelEvent*
+/// @param callback bool fn()
+void q_wheelevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isBeginEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_qbase_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWheelEvent* self, bool (*slot)() ```
-void q_wheelevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QWheelEvent*
+/// @param callback bool fn()
+void q_wheelevent_on_is_update_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_qbase_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWheelEvent* self, bool (*slot)() ```
-void q_wheelevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QWheelEvent*
+/// @param callback bool fn()
+void q_wheelevent_on_is_end_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#isEndEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_qbase_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#source)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum Qt__MouseEventSource
 int64_t q_wheelevent_source(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_wheelevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_wheelevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QPointF* q_wheelevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QPointF* q_wheelevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QPointF* q_wheelevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 QObject* q_wheelevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QWheelEvent* self, QObject* exclusiveGrabber ```
+/// @param self QWheelEvent*
+/// @param exclusiveGrabber QObject*
 void q_wheelevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 const QPointingDevice* q_wheelevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_wheelevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 int64_t q_wheelevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QWheelEvent* self, int64_t i ```
+/// @param self QWheelEvent*
+/// @param i int64_t
 QEventPoint* q_wheelevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 libqt_list /* of QEventPoint* */ q_wheelevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QWheelEvent* self, int id ```
+/// @param self QWheelEvent*
+/// @param id int
 QEventPoint* q_wheelevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QWheelEvent* self, QEventPoint* point ```
+/// @param self QWheelEvent*
+/// @param point QEventPoint*
 QObject* q_wheelevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QWheelEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QWheelEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_wheelevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QWheelEvent* self, QEventPoint* point ```
+/// @param self QWheelEvent*
+/// @param point QEventPoint*
 void q_wheelevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QWheelEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QWheelEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_wheelevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QWheelEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QWheelEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_wheelevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 const QInputDevice* q_wheelevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_wheelevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_wheelevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QWheelEvent* self, int modifiers ```
+/// @param self QWheelEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_wheelevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 uint64_t q_wheelevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_wheelevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 void q_wheelevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 void q_wheelevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 bool q_wheelevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_wheelevent_register_event_type();
 
@@ -2559,7 +2865,7 @@ int32_t q_wheelevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_wheelevent_register_event_type1(int hint);
 
 /// Inherited from QPointerEvent
@@ -2568,7 +2874,8 @@ int32_t q_wheelevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWheelEvent* self, uint64_t timestamp ```
+/// @param self QWheelEvent*
+/// @param timestamp uint64_t
 void q_wheelevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -2577,7 +2884,8 @@ void q_wheelevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWheelEvent* self, uint64_t timestamp ```
+/// @param self QWheelEvent*
+/// @param timestamp uint64_t
 void q_wheelevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -2586,8 +2894,9 @@ void q_wheelevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWheelEvent* self, void (*slot)(QWheelEvent*, uint64_t) ```
-void q_wheelevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QWheelEvent*
+/// @param callback void fn(QWheelEvent*, uint64_t)
+void q_wheelevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -2595,7 +2904,8 @@ void q_wheelevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWheelEvent* self, bool accepted ```
+/// @param self QWheelEvent*
+/// @param accepted bool
 void q_wheelevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -2604,7 +2914,8 @@ void q_wheelevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWheelEvent* self, bool accepted ```
+/// @param self QWheelEvent*
+/// @param accepted bool
 void q_wheelevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -2613,362 +2924,399 @@ void q_wheelevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWheelEvent* self, void (*slot)(QWheelEvent*, bool) ```
-void q_wheelevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QWheelEvent*
+/// @param callback void fn(QWheelEvent*, bool)
+void q_wheelevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#dtor.QWheelEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWheelEvent* self ```
+/// @param self QWheelEvent*
 void q_wheelevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtabletevent.html
 
 /// q_tabletevent_new constructs a new QTabletEvent object.
 ///
-/// ``` enum QEvent__Type t, QPointingDevice* device, QPointF* pos, QPointF* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int keyState, enum Qt__MouseButton button, int buttons ```
+/// @param t enum QEvent__Type
+/// @param device QPointingDevice*
+/// @param pos QPointF*
+/// @param globalPos QPointF*
+/// @param pressure double
+/// @param xTilt float
+/// @param yTilt float
+/// @param tangentialPressure float
+/// @param rotation double
+/// @param z float
+/// @param keyState flag of enum Qt__KeyboardModifier
+/// @param button enum Qt__MouseButton
+/// @param buttons flag of enum Qt__MouseButton
 QTabletEvent* q_tabletevent_new(int64_t t, void* device, void* pos, void* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int64_t keyState, int64_t button, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QTabletEvent* q_tabletevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTabletEvent* self, QTabletEvent* (*slot)() ```
-void q_tabletevent_on_clone(void* self, QTabletEvent* (*slot)());
+/// @param self QTabletEvent*
+/// @param callback QTabletEvent* fn()
+void q_tabletevent_on_clone(void* self, QTabletEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QTabletEvent* q_tabletevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#pos)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QPoint* q_tabletevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#globalPos)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QPoint* q_tabletevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#posF)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 const QPointF* q_tabletevent_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#globalPosF)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 const QPointF* q_tabletevent_global_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#x)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 int32_t q_tabletevent_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#y)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 int32_t q_tabletevent_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#globalX)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 int32_t q_tabletevent_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#globalY)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 int32_t q_tabletevent_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#hiResGlobalX)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_hi_res_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#hiResGlobalY)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_hi_res_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#uniqueId)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 long long q_tabletevent_unique_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#pressure)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_pressure(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#rotation)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#z)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_z(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#tangentialPressure)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_tangential_pressure(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#xTilt)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_x_tilt(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#yTilt)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 double q_tabletevent_y_tilt(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_tabletevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_tabletevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QPointF* q_tabletevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QPointF* q_tabletevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QPointF* q_tabletevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 QObject* q_tabletevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QTabletEvent* self, QObject* exclusiveGrabber ```
+/// @param self QTabletEvent*
+/// @param exclusiveGrabber QObject*
 void q_tabletevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 const QPointingDevice* q_tabletevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_tabletevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 int64_t q_tabletevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QTabletEvent* self, int64_t i ```
+/// @param self QTabletEvent*
+/// @param i int64_t
 QEventPoint* q_tabletevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 libqt_list /* of QEventPoint* */ q_tabletevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QTabletEvent* self, int id ```
+/// @param self QTabletEvent*
+/// @param id int
 QEventPoint* q_tabletevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QTabletEvent* self, QEventPoint* point ```
+/// @param self QTabletEvent*
+/// @param point QEventPoint*
 QObject* q_tabletevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QTabletEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QTabletEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_tabletevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QTabletEvent* self, QEventPoint* point ```
+/// @param self QTabletEvent*
+/// @param point QEventPoint*
 void q_tabletevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QTabletEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QTabletEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_tabletevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QTabletEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QTabletEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_tabletevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 const QInputDevice* q_tabletevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_tabletevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_tabletevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QTabletEvent* self, int modifiers ```
+/// @param self QTabletEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_tabletevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 uint64_t q_tabletevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_tabletevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 void q_tabletevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 void q_tabletevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_tabletevent_register_event_type();
 
@@ -2976,7 +3324,7 @@ int32_t q_tabletevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_tabletevent_register_event_type1(int hint);
 
 /// Inherited from QSinglePointEvent
@@ -2985,7 +3333,7 @@ int32_t q_tabletevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -2994,7 +3342,7 @@ bool q_tabletevent_is_begin_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3003,8 +3351,9 @@ bool q_tabletevent_qbase_is_begin_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, bool (*slot)() ```
-void q_tabletevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QTabletEvent*
+/// @param callback bool fn()
+void q_tabletevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3012,7 +3361,7 @@ void q_tabletevent_on_is_begin_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3021,7 +3370,7 @@ bool q_tabletevent_is_update_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3030,8 +3379,9 @@ bool q_tabletevent_qbase_is_update_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, bool (*slot)() ```
-void q_tabletevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QTabletEvent*
+/// @param callback bool fn()
+void q_tabletevent_on_is_update_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3039,7 +3389,7 @@ void q_tabletevent_on_is_update_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3048,7 +3398,7 @@ bool q_tabletevent_is_end_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 bool q_tabletevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3057,8 +3407,9 @@ bool q_tabletevent_qbase_is_end_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, bool (*slot)() ```
-void q_tabletevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QTabletEvent*
+/// @param callback bool fn()
+void q_tabletevent_on_is_end_event(void* self, bool (*callback)());
 
 /// Inherited from QPointerEvent
 ///
@@ -3066,7 +3417,8 @@ void q_tabletevent_on_is_end_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabletEvent* self, uint64_t timestamp ```
+/// @param self QTabletEvent*
+/// @param timestamp uint64_t
 void q_tabletevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -3075,7 +3427,8 @@ void q_tabletevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, uint64_t timestamp ```
+/// @param self QTabletEvent*
+/// @param timestamp uint64_t
 void q_tabletevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -3084,8 +3437,9 @@ void q_tabletevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, void (*slot)(QTabletEvent*, uint64_t) ```
-void q_tabletevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QTabletEvent*
+/// @param callback void fn(QTabletEvent*, uint64_t)
+void q_tabletevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -3093,7 +3447,8 @@ void q_tabletevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTabletEvent* self, bool accepted ```
+/// @param self QTabletEvent*
+/// @param accepted bool
 void q_tabletevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -3102,7 +3457,8 @@ void q_tabletevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, bool accepted ```
+/// @param self QTabletEvent*
+/// @param accepted bool
 void q_tabletevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -3111,332 +3467,381 @@ void q_tabletevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTabletEvent* self, void (*slot)(QTabletEvent*, bool) ```
-void q_tabletevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QTabletEvent*
+/// @param callback void fn(QTabletEvent*, bool)
+void q_tabletevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#dtor.QTabletEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTabletEvent* self ```
+/// @param self QTabletEvent*
 void q_tabletevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qnativegestureevent.html
 
 /// q_nativegestureevent_new constructs a new QNativeGestureEvent object.
 ///
-/// ``` enum Qt__NativeGestureType typeVal, QPointingDevice* dev, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, double value, uint64_t sequenceId, uint64_t intArgument ```
+/// @param typeVal enum Qt__NativeGestureType
+/// @param dev QPointingDevice*
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param value double
+/// @param sequenceId uint64_t
+/// @param intArgument uint64_t
 QNativeGestureEvent* q_nativegestureevent_new(int64_t typeVal, void* dev, void* localPos, void* scenePos, void* globalPos, double value, uint64_t sequenceId, uint64_t intArgument);
 
 /// q_nativegestureevent_new2 constructs a new QNativeGestureEvent object.
 ///
-/// ``` enum Qt__NativeGestureType typeVal, QPointingDevice* dev, int fingerCount, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, double value, QPointF* delta ```
+/// @param typeVal enum Qt__NativeGestureType
+/// @param dev QPointingDevice*
+/// @param fingerCount int
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param value double
+/// @param delta QPointF*
 QNativeGestureEvent* q_nativegestureevent_new2(int64_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta);
 
 /// q_nativegestureevent_new3 constructs a new QNativeGestureEvent object.
 ///
-/// ``` enum Qt__NativeGestureType typeVal, QPointingDevice* dev, int fingerCount, QPointF* localPos, QPointF* scenePos, QPointF* globalPos, double value, QPointF* delta, uint64_t sequenceId ```
+/// @param typeVal enum Qt__NativeGestureType
+/// @param dev QPointingDevice*
+/// @param fingerCount int
+/// @param localPos QPointF*
+/// @param scenePos QPointF*
+/// @param globalPos QPointF*
+/// @param value double
+/// @param delta QPointF*
+/// @param sequenceId uint64_t
 QNativeGestureEvent* q_nativegestureevent_new3(int64_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta, uint64_t sequenceId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QNativeGestureEvent* q_nativegestureevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNativeGestureEvent* self, QNativeGestureEvent* (*slot)() ```
-void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*slot)());
+/// @param self QNativeGestureEvent*
+/// @param callback QNativeGestureEvent* fn()
+void q_nativegestureevent_on_clone(void* self, QNativeGestureEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QNativeGestureEvent* q_nativegestureevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#gestureType)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return enum Qt__NativeGestureType
 int64_t q_nativegestureevent_gesture_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#fingerCount)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 int32_t q_nativegestureevent_finger_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#value)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 double q_nativegestureevent_value(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#delta)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_delta(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#pos)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 const QPoint* q_nativegestureevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#globalPos)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 const QPoint* q_nativegestureevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#localPos)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_local_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#windowPos)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_window_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#screenPos)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_screen_pos(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#button)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return enum Qt__MouseButton
 int64_t q_nativegestureevent_button(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#buttons)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_nativegestureevent_buttons(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#position)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#scenePosition)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_scene_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#globalPosition)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QPointF* q_nativegestureevent_global_position(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#exclusivePointGrabber)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 QObject* q_nativegestureevent_exclusive_point_grabber(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qsinglepointevent.html#setExclusivePointGrabber)
 ///
-/// ``` QNativeGestureEvent* self, QObject* exclusiveGrabber ```
+/// @param self QNativeGestureEvent*
+/// @param exclusiveGrabber QObject*
 void q_nativegestureevent_set_exclusive_point_grabber(void* self, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 const QPointingDevice* q_nativegestureevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_nativegestureevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 int64_t q_nativegestureevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QNativeGestureEvent* self, int64_t i ```
+/// @param self QNativeGestureEvent*
+/// @param i int64_t
 QEventPoint* q_nativegestureevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 libqt_list /* of QEventPoint* */ q_nativegestureevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QNativeGestureEvent* self, int id ```
+/// @param self QNativeGestureEvent*
+/// @param id int
 QEventPoint* q_nativegestureevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QNativeGestureEvent* self, QEventPoint* point ```
+/// @param self QNativeGestureEvent*
+/// @param point QEventPoint*
 QObject* q_nativegestureevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QNativeGestureEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QNativeGestureEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_nativegestureevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QNativeGestureEvent* self, QEventPoint* point ```
+/// @param self QNativeGestureEvent*
+/// @param point QEventPoint*
 void q_nativegestureevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QNativeGestureEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QNativeGestureEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_nativegestureevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QNativeGestureEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QNativeGestureEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_nativegestureevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 const QInputDevice* q_nativegestureevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_nativegestureevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_nativegestureevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QNativeGestureEvent* self, int modifiers ```
+/// @param self QNativeGestureEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_nativegestureevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 uint64_t q_nativegestureevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_nativegestureevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 void q_nativegestureevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 void q_nativegestureevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_nativegestureevent_register_event_type();
 
@@ -3444,7 +3849,7 @@ int32_t q_nativegestureevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_nativegestureevent_register_event_type1(int hint);
 
 /// Inherited from QSinglePointEvent
@@ -3453,7 +3858,7 @@ int32_t q_nativegestureevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3462,7 +3867,7 @@ bool q_nativegestureevent_is_begin_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_qbase_is_begin_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3471,8 +3876,9 @@ bool q_nativegestureevent_qbase_is_begin_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, bool (*slot)() ```
-void q_nativegestureevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QNativeGestureEvent*
+/// @param callback bool fn()
+void q_nativegestureevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3480,7 +3886,7 @@ void q_nativegestureevent_on_is_begin_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3489,7 +3895,7 @@ bool q_nativegestureevent_is_update_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_qbase_is_update_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3498,8 +3904,9 @@ bool q_nativegestureevent_qbase_is_update_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, bool (*slot)() ```
-void q_nativegestureevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QNativeGestureEvent*
+/// @param callback bool fn()
+void q_nativegestureevent_on_is_update_event(void* self, bool (*callback)());
 
 /// Inherited from QSinglePointEvent
 ///
@@ -3507,7 +3914,7 @@ void q_nativegestureevent_on_is_update_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3516,7 +3923,7 @@ bool q_nativegestureevent_is_end_event(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 bool q_nativegestureevent_qbase_is_end_event(void* self);
 
 /// Inherited from QSinglePointEvent
@@ -3525,8 +3932,9 @@ bool q_nativegestureevent_qbase_is_end_event(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, bool (*slot)() ```
-void q_nativegestureevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QNativeGestureEvent*
+/// @param callback bool fn()
+void q_nativegestureevent_on_is_end_event(void* self, bool (*callback)());
 
 /// Inherited from QPointerEvent
 ///
@@ -3534,7 +3942,8 @@ void q_nativegestureevent_on_is_end_event(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, uint64_t timestamp ```
+/// @param self QNativeGestureEvent*
+/// @param timestamp uint64_t
 void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -3543,7 +3952,8 @@ void q_nativegestureevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, uint64_t timestamp ```
+/// @param self QNativeGestureEvent*
+/// @param timestamp uint64_t
 void q_nativegestureevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -3552,8 +3962,9 @@ void q_nativegestureevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, void (*slot)(QNativeGestureEvent*, uint64_t) ```
-void q_nativegestureevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QNativeGestureEvent*
+/// @param callback void fn(QNativeGestureEvent*, uint64_t)
+void q_nativegestureevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -3561,7 +3972,8 @@ void q_nativegestureevent_on_set_timestamp(void* self, void (*slot)(void*, uint6
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, bool accepted ```
+/// @param self QNativeGestureEvent*
+/// @param accepted bool
 void q_nativegestureevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -3570,7 +3982,8 @@ void q_nativegestureevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, bool accepted ```
+/// @param self QNativeGestureEvent*
+/// @param accepted bool
 void q_nativegestureevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -3579,220 +3992,280 @@ void q_nativegestureevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNativeGestureEvent* self, void (*slot)(QNativeGestureEvent*, bool) ```
-void q_nativegestureevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QNativeGestureEvent*
+/// @param callback void fn(QNativeGestureEvent*, bool)
+void q_nativegestureevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#dtor.QNativeGestureEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QNativeGestureEvent* self ```
+/// @param self QNativeGestureEvent*
 void q_nativegestureevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qkeyevent.html
 
 /// q_keyevent_new constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QKeyEvent* q_keyevent_new(int64_t typeVal, int key, int64_t modifiers);
 
 /// q_keyevent_new2 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param nativeScanCode uint32_t
+/// @param nativeVirtualKey uint32_t
+/// @param nativeModifiers uint32_t
 QKeyEvent* q_keyevent_new2(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers);
 
 /// q_keyevent_new3 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, const char* text ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param text const char*
 QKeyEvent* q_keyevent_new3(int64_t typeVal, int key, int64_t modifiers, const char* text);
 
 /// q_keyevent_new4 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, const char* text, bool autorep ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param text const char*
+/// @param autorep bool
 QKeyEvent* q_keyevent_new4(int64_t typeVal, int key, int64_t modifiers, const char* text, bool autorep);
 
 /// q_keyevent_new5 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, const char* text, bool autorep, unsigned short count ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param text const char*
+/// @param autorep bool
+/// @param count unsigned short
 QKeyEvent* q_keyevent_new5(int64_t typeVal, int key, int64_t modifiers, const char* text, bool autorep, unsigned short count);
 
 /// q_keyevent_new6 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param nativeScanCode uint32_t
+/// @param nativeVirtualKey uint32_t
+/// @param nativeModifiers uint32_t
+/// @param text const char*
 QKeyEvent* q_keyevent_new6(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text);
 
 /// q_keyevent_new7 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param nativeScanCode uint32_t
+/// @param nativeVirtualKey uint32_t
+/// @param nativeModifiers uint32_t
+/// @param text const char*
+/// @param autorep bool
 QKeyEvent* q_keyevent_new7(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep);
 
 /// q_keyevent_new8 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param nativeScanCode uint32_t
+/// @param nativeVirtualKey uint32_t
+/// @param nativeModifiers uint32_t
+/// @param text const char*
+/// @param autorep bool
+/// @param count unsigned short
 QKeyEvent* q_keyevent_new8(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count);
 
 /// q_keyevent_new9 constructs a new QKeyEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, int key, int modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, QInputDevice* device ```
+/// @param typeVal enum QEvent__Type
+/// @param key int
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param nativeScanCode uint32_t
+/// @param nativeVirtualKey uint32_t
+/// @param nativeModifiers uint32_t
+/// @param text const char*
+/// @param autorep bool
+/// @param count unsigned short
+/// @param device QInputDevice*
 QKeyEvent* q_keyevent_new9(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 QKeyEvent* q_keyevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeyEvent* self, QKeyEvent* (*slot)() ```
-void q_keyevent_on_clone(void* self, QKeyEvent* (*slot)());
+/// @param self QKeyEvent*
+/// @param callback QKeyEvent* fn()
+void q_keyevent_on_clone(void* self, QKeyEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 QKeyEvent* q_keyevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#key)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 int32_t q_keyevent_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#matches)
 ///
-/// ``` QKeyEvent* self, enum QKeySequence__StandardKey key ```
+/// @param self QKeyEvent*
+/// @param key enum QKeySequence__StandardKey
 bool q_keyevent_matches(void* self, int64_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#modifiers)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_keyevent_modifiers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#keyCombination)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 QKeyCombination* q_keyevent_key_combination(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#text)
 ///
-/// ``` QKeyEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeyEvent*
 const char* q_keyevent_text(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#isAutoRepeat)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_is_auto_repeat(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#count)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 int32_t q_keyevent_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#nativeScanCode)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 uint32_t q_keyevent_native_scan_code(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#nativeVirtualKey)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 uint32_t q_keyevent_native_virtual_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#nativeModifiers)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 uint32_t q_keyevent_native_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 const QInputDevice* q_keyevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_keyevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QKeyEvent* self, int modifiers ```
+/// @param self QKeyEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_keyevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 uint64_t q_keyevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_keyevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 void q_keyevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 void q_keyevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 bool q_keyevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_keyevent_register_event_type();
 
@@ -3800,7 +4273,7 @@ int32_t q_keyevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_keyevent_register_event_type1(int hint);
 
 /// Inherited from QInputEvent
@@ -3809,7 +4282,8 @@ int32_t q_keyevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeyEvent* self, uint64_t timestamp ```
+/// @param self QKeyEvent*
+/// @param timestamp uint64_t
 void q_keyevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
@@ -3818,7 +4292,8 @@ void q_keyevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeyEvent* self, uint64_t timestamp ```
+/// @param self QKeyEvent*
+/// @param timestamp uint64_t
 void q_keyevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
@@ -3827,8 +4302,9 @@ void q_keyevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeyEvent* self, void (*slot)(QKeyEvent*, uint64_t) ```
-void q_keyevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QKeyEvent*
+/// @param callback void fn(QKeyEvent*, uint64_t)
+void q_keyevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QEvent
 ///
@@ -3836,7 +4312,8 @@ void q_keyevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeyEvent* self, bool accepted ```
+/// @param self QKeyEvent*
+/// @param accepted bool
 void q_keyevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -3845,7 +4322,8 @@ void q_keyevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeyEvent* self, bool accepted ```
+/// @param self QKeyEvent*
+/// @param accepted bool
 void q_keyevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -3854,122 +4332,128 @@ void q_keyevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeyEvent* self, void (*slot)(QKeyEvent*, bool) ```
-void q_keyevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QKeyEvent*
+/// @param callback void fn(QKeyEvent*, bool)
+void q_keyevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#dtor.QKeyEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QKeyEvent* self ```
+/// @param self QKeyEvent*
 void q_keyevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qfocusevent.html
 
 /// q_focusevent_new constructs a new QFocusEvent object.
 ///
-/// ``` enum QEvent__Type typeVal ```
+/// @param typeVal enum QEvent__Type
 QFocusEvent* q_focusevent_new(int64_t typeVal);
 
 /// q_focusevent_new2 constructs a new QFocusEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, enum Qt__FocusReason reason ```
+/// @param typeVal enum QEvent__Type
+/// @param reason enum Qt__FocusReason
 QFocusEvent* q_focusevent_new2(int64_t typeVal, int64_t reason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 QFocusEvent* q_focusevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFocusEvent* self, QFocusEvent* (*slot)() ```
-void q_focusevent_on_clone(void* self, QFocusEvent* (*slot)());
+/// @param self QFocusEvent*
+/// @param callback QFocusEvent* fn()
+void q_focusevent_on_clone(void* self, QFocusEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 QFocusEvent* q_focusevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#gotFocus)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_got_focus(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#lostFocus)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_lost_focus(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#reason)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
+///
+/// @return enum Qt__FocusReason
 int64_t q_focusevent_reason(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_focusevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 void q_focusevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 void q_focusevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 bool q_focusevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_focusevent_register_event_type();
 
@@ -3977,7 +4461,7 @@ int32_t q_focusevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_focusevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -3986,7 +4470,8 @@ int32_t q_focusevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFocusEvent* self, bool accepted ```
+/// @param self QFocusEvent*
+/// @param accepted bool
 void q_focusevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -3995,7 +4480,8 @@ void q_focusevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFocusEvent* self, bool accepted ```
+/// @param self QFocusEvent*
+/// @param accepted bool
 void q_focusevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4004,117 +4490,120 @@ void q_focusevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFocusEvent* self, void (*slot)(QFocusEvent*, bool) ```
-void q_focusevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QFocusEvent*
+/// @param callback void fn(QFocusEvent*, bool)
+void q_focusevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#dtor.QFocusEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFocusEvent* self ```
+/// @param self QFocusEvent*
 void q_focusevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpaintevent.html
 
 /// q_paintevent_new constructs a new QPaintEvent object.
 ///
-/// ``` QRegion* paintRegion ```
+/// @param paintRegion QRegion*
 QPaintEvent* q_paintevent_new(void* paintRegion);
 
 /// q_paintevent_new2 constructs a new QPaintEvent object.
 ///
-/// ``` QRect* paintRect ```
+/// @param paintRect QRect*
 QPaintEvent* q_paintevent_new2(void* paintRect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#clone)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 QPaintEvent* q_paintevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPaintEvent* self, QPaintEvent* (*slot)() ```
-void q_paintevent_on_clone(void* self, QPaintEvent* (*slot)());
+/// @param self QPaintEvent*
+/// @param callback QPaintEvent* fn()
+void q_paintevent_on_clone(void* self, QPaintEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 QPaintEvent* q_paintevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#rect)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 const QRect* q_paintevent_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#region)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 const QRegion* q_paintevent_region(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_paintevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 bool q_paintevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 bool q_paintevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 void q_paintevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 void q_paintevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 bool q_paintevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 bool q_paintevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 bool q_paintevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_paintevent_register_event_type();
 
@@ -4122,7 +4611,7 @@ int32_t q_paintevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_paintevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4131,7 +4620,8 @@ int32_t q_paintevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPaintEvent* self, bool accepted ```
+/// @param self QPaintEvent*
+/// @param accepted bool
 void q_paintevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4140,7 +4630,8 @@ void q_paintevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPaintEvent* self, bool accepted ```
+/// @param self QPaintEvent*
+/// @param accepted bool
 void q_paintevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4149,112 +4640,116 @@ void q_paintevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPaintEvent* self, void (*slot)(QPaintEvent*, bool) ```
-void q_paintevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QPaintEvent*
+/// @param callback void fn(QPaintEvent*, bool)
+void q_paintevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintevent.html#dtor.QPaintEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPaintEvent* self ```
+/// @param self QPaintEvent*
 void q_paintevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qmoveevent.html
 
 /// q_moveevent_new constructs a new QMoveEvent object.
 ///
-/// ``` QPoint* pos, QPoint* oldPos ```
+/// @param pos QPoint*
+/// @param oldPos QPoint*
 QMoveEvent* q_moveevent_new(void* pos, void* oldPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#clone)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 QMoveEvent* q_moveevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QMoveEvent* self, QMoveEvent* (*slot)() ```
-void q_moveevent_on_clone(void* self, QMoveEvent* (*slot)());
+/// @param self QMoveEvent*
+/// @param callback QMoveEvent* fn()
+void q_moveevent_on_clone(void* self, QMoveEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 QMoveEvent* q_moveevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#pos)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 const QPoint* q_moveevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#oldPos)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 const QPoint* q_moveevent_old_pos(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_moveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 bool q_moveevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 bool q_moveevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 void q_moveevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 void q_moveevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 bool q_moveevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 bool q_moveevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 bool q_moveevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_moveevent_register_event_type();
 
@@ -4262,7 +4757,7 @@ int32_t q_moveevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_moveevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4271,7 +4766,8 @@ int32_t q_moveevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QMoveEvent* self, bool accepted ```
+/// @param self QMoveEvent*
+/// @param accepted bool
 void q_moveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4280,7 +4776,8 @@ void q_moveevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QMoveEvent* self, bool accepted ```
+/// @param self QMoveEvent*
+/// @param accepted bool
 void q_moveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4289,107 +4786,110 @@ void q_moveevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QMoveEvent* self, void (*slot)(QMoveEvent*, bool) ```
-void q_moveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QMoveEvent*
+/// @param callback void fn(QMoveEvent*, bool)
+void q_moveevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmoveevent.html#dtor.QMoveEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QMoveEvent* self ```
+/// @param self QMoveEvent*
 void q_moveevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qexposeevent.html
 
 /// q_exposeevent_new constructs a new QExposeEvent object.
 ///
-/// ``` QRegion* m_region ```
+/// @param m_region QRegion*
 QExposeEvent* q_exposeevent_new(void* m_region);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#clone)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 QExposeEvent* q_exposeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QExposeEvent* self, QExposeEvent* (*slot)() ```
-void q_exposeevent_on_clone(void* self, QExposeEvent* (*slot)());
+/// @param self QExposeEvent*
+/// @param callback QExposeEvent* fn()
+void q_exposeevent_on_clone(void* self, QExposeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 QExposeEvent* q_exposeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#region)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 const QRegion* q_exposeevent_region(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_exposeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 bool q_exposeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 bool q_exposeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 void q_exposeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 void q_exposeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 bool q_exposeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 bool q_exposeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 bool q_exposeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_exposeevent_register_event_type();
 
@@ -4397,7 +4897,7 @@ int32_t q_exposeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_exposeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4406,7 +4906,8 @@ int32_t q_exposeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QExposeEvent* self, bool accepted ```
+/// @param self QExposeEvent*
+/// @param accepted bool
 void q_exposeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4415,7 +4916,8 @@ void q_exposeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QExposeEvent* self, bool accepted ```
+/// @param self QExposeEvent*
+/// @param accepted bool
 void q_exposeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4424,107 +4926,112 @@ void q_exposeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QExposeEvent* self, void (*slot)(QExposeEvent*, bool) ```
-void q_exposeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QExposeEvent*
+/// @param callback void fn(QExposeEvent*, bool)
+void q_exposeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qexposeevent.html#dtor.QExposeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QExposeEvent* self ```
+/// @param self QExposeEvent*
 void q_exposeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qplatformsurfaceevent.html
 
 /// q_platformsurfaceevent_new constructs a new QPlatformSurfaceEvent object.
 ///
-/// ``` enum QPlatformSurfaceEvent__SurfaceEventType surfaceEventType ```
+/// @param surfaceEventType enum QPlatformSurfaceEvent__SurfaceEventType
 QPlatformSurfaceEvent* q_platformsurfaceevent_new(int64_t surfaceEventType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 QPlatformSurfaceEvent* q_platformsurfaceevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QPlatformSurfaceEvent* self, QPlatformSurfaceEvent* (*slot)() ```
-void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*slot)());
+/// @param self QPlatformSurfaceEvent*
+/// @param callback QPlatformSurfaceEvent* fn()
+void q_platformsurfaceevent_on_clone(void* self, QPlatformSurfaceEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 QPlatformSurfaceEvent* q_platformsurfaceevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#surfaceEventType)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
+///
+/// @return enum QPlatformSurfaceEvent__SurfaceEventType
 int64_t q_platformsurfaceevent_surface_event_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_platformsurfaceevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 bool q_platformsurfaceevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 bool q_platformsurfaceevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 void q_platformsurfaceevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 void q_platformsurfaceevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 bool q_platformsurfaceevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 bool q_platformsurfaceevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 bool q_platformsurfaceevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_platformsurfaceevent_register_event_type();
 
@@ -4532,7 +5039,7 @@ int32_t q_platformsurfaceevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_platformsurfaceevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4541,7 +5048,8 @@ int32_t q_platformsurfaceevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QPlatformSurfaceEvent* self, bool accepted ```
+/// @param self QPlatformSurfaceEvent*
+/// @param accepted bool
 void q_platformsurfaceevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4550,7 +5058,8 @@ void q_platformsurfaceevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QPlatformSurfaceEvent* self, bool accepted ```
+/// @param self QPlatformSurfaceEvent*
+/// @param accepted bool
 void q_platformsurfaceevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4559,112 +5068,116 @@ void q_platformsurfaceevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QPlatformSurfaceEvent* self, void (*slot)(QPlatformSurfaceEvent*, bool) ```
-void q_platformsurfaceevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QPlatformSurfaceEvent*
+/// @param callback void fn(QPlatformSurfaceEvent*, bool)
+void q_platformsurfaceevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#dtor.QPlatformSurfaceEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPlatformSurfaceEvent* self ```
+/// @param self QPlatformSurfaceEvent*
 void q_platformsurfaceevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qresizeevent.html
 
 /// q_resizeevent_new constructs a new QResizeEvent object.
 ///
-/// ``` QSize* size, QSize* oldSize ```
+/// @param size QSize*
+/// @param oldSize QSize*
 QResizeEvent* q_resizeevent_new(void* size, void* oldSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#clone)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 QResizeEvent* q_resizeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QResizeEvent* self, QResizeEvent* (*slot)() ```
-void q_resizeevent_on_clone(void* self, QResizeEvent* (*slot)());
+/// @param self QResizeEvent*
+/// @param callback QResizeEvent* fn()
+void q_resizeevent_on_clone(void* self, QResizeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 QResizeEvent* q_resizeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#size)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 const QSize* q_resizeevent_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#oldSize)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 const QSize* q_resizeevent_old_size(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_resizeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 bool q_resizeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 bool q_resizeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 void q_resizeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 void q_resizeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 bool q_resizeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 bool q_resizeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 bool q_resizeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_resizeevent_register_event_type();
 
@@ -4672,7 +5185,7 @@ int32_t q_resizeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_resizeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4681,7 +5194,8 @@ int32_t q_resizeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QResizeEvent* self, bool accepted ```
+/// @param self QResizeEvent*
+/// @param accepted bool
 void q_resizeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4690,7 +5204,8 @@ void q_resizeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QResizeEvent* self, bool accepted ```
+/// @param self QResizeEvent*
+/// @param accepted bool
 void q_resizeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4699,102 +5214,104 @@ void q_resizeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QResizeEvent* self, void (*slot)(QResizeEvent*, bool) ```
-void q_resizeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QResizeEvent*
+/// @param callback void fn(QResizeEvent*, bool)
+void q_resizeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresizeevent.html#dtor.QResizeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QResizeEvent* self ```
+/// @param self QResizeEvent*
 void q_resizeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcloseevent.html
 
 /// q_closeevent_new constructs a new QCloseEvent object.
 ///
-///
 QCloseEvent* q_closeevent_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#clone)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 QCloseEvent* q_closeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QCloseEvent* self, QCloseEvent* (*slot)() ```
-void q_closeevent_on_clone(void* self, QCloseEvent* (*slot)());
+/// @param self QCloseEvent*
+/// @param callback QCloseEvent* fn()
+void q_closeevent_on_clone(void* self, QCloseEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 QCloseEvent* q_closeevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_closeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 bool q_closeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 bool q_closeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 void q_closeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 void q_closeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 bool q_closeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 bool q_closeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 bool q_closeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_closeevent_register_event_type();
 
@@ -4802,7 +5319,7 @@ int32_t q_closeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_closeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4811,7 +5328,8 @@ int32_t q_closeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QCloseEvent* self, bool accepted ```
+/// @param self QCloseEvent*
+/// @param accepted bool
 void q_closeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4820,7 +5338,8 @@ void q_closeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QCloseEvent* self, bool accepted ```
+/// @param self QCloseEvent*
+/// @param accepted bool
 void q_closeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4829,102 +5348,104 @@ void q_closeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QCloseEvent* self, void (*slot)(QCloseEvent*, bool) ```
-void q_closeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QCloseEvent*
+/// @param callback void fn(QCloseEvent*, bool)
+void q_closeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcloseevent.html#dtor.QCloseEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QCloseEvent* self ```
+/// @param self QCloseEvent*
 void q_closeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qicondragevent.html
 
 /// q_icondragevent_new constructs a new QIconDragEvent object.
 ///
-///
 QIconDragEvent* q_icondragevent_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#clone)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 QIconDragEvent* q_icondragevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIconDragEvent* self, QIconDragEvent* (*slot)() ```
-void q_icondragevent_on_clone(void* self, QIconDragEvent* (*slot)());
+/// @param self QIconDragEvent*
+/// @param callback QIconDragEvent* fn()
+void q_icondragevent_on_clone(void* self, QIconDragEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 QIconDragEvent* q_icondragevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_icondragevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 bool q_icondragevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 bool q_icondragevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 void q_icondragevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 void q_icondragevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 bool q_icondragevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 bool q_icondragevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 bool q_icondragevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_icondragevent_register_event_type();
 
@@ -4932,7 +5453,7 @@ int32_t q_icondragevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_icondragevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -4941,7 +5462,8 @@ int32_t q_icondragevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIconDragEvent* self, bool accepted ```
+/// @param self QIconDragEvent*
+/// @param accepted bool
 void q_icondragevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4950,7 +5472,8 @@ void q_icondragevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIconDragEvent* self, bool accepted ```
+/// @param self QIconDragEvent*
+/// @param accepted bool
 void q_icondragevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -4959,102 +5482,104 @@ void q_icondragevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIconDragEvent* self, void (*slot)(QIconDragEvent*, bool) ```
-void q_icondragevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QIconDragEvent*
+/// @param callback void fn(QIconDragEvent*, bool)
+void q_icondragevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qicondragevent.html#dtor.QIconDragEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QIconDragEvent* self ```
+/// @param self QIconDragEvent*
 void q_icondragevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qshowevent.html
 
 /// q_showevent_new constructs a new QShowEvent object.
 ///
-///
 QShowEvent* q_showevent_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#clone)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 QShowEvent* q_showevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QShowEvent* self, QShowEvent* (*slot)() ```
-void q_showevent_on_clone(void* self, QShowEvent* (*slot)());
+/// @param self QShowEvent*
+/// @param callback QShowEvent* fn()
+void q_showevent_on_clone(void* self, QShowEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 QShowEvent* q_showevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_showevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 bool q_showevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 bool q_showevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 void q_showevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 void q_showevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 bool q_showevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 bool q_showevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 bool q_showevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_showevent_register_event_type();
 
@@ -5062,7 +5587,7 @@ int32_t q_showevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_showevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -5071,7 +5596,8 @@ int32_t q_showevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QShowEvent* self, bool accepted ```
+/// @param self QShowEvent*
+/// @param accepted bool
 void q_showevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5080,7 +5606,8 @@ void q_showevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QShowEvent* self, bool accepted ```
+/// @param self QShowEvent*
+/// @param accepted bool
 void q_showevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5089,102 +5616,104 @@ void q_showevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QShowEvent* self, void (*slot)(QShowEvent*, bool) ```
-void q_showevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QShowEvent*
+/// @param callback void fn(QShowEvent*, bool)
+void q_showevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshowevent.html#dtor.QShowEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QShowEvent* self ```
+/// @param self QShowEvent*
 void q_showevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhideevent.html
 
 /// q_hideevent_new constructs a new QHideEvent object.
 ///
-///
 QHideEvent* q_hideevent_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#clone)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 QHideEvent* q_hideevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QHideEvent* self, QHideEvent* (*slot)() ```
-void q_hideevent_on_clone(void* self, QHideEvent* (*slot)());
+/// @param self QHideEvent*
+/// @param callback QHideEvent* fn()
+void q_hideevent_on_clone(void* self, QHideEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 QHideEvent* q_hideevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_hideevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 bool q_hideevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 bool q_hideevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 void q_hideevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 void q_hideevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 bool q_hideevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 bool q_hideevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 bool q_hideevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_hideevent_register_event_type();
 
@@ -5192,7 +5721,7 @@ int32_t q_hideevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_hideevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -5201,7 +5730,8 @@ int32_t q_hideevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHideEvent* self, bool accepted ```
+/// @param self QHideEvent*
+/// @param accepted bool
 void q_hideevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5210,7 +5740,8 @@ void q_hideevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHideEvent* self, bool accepted ```
+/// @param self QHideEvent*
+/// @param accepted bool
 void q_hideevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5219,182 +5750,198 @@ void q_hideevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHideEvent* self, void (*slot)(QHideEvent*, bool) ```
-void q_hideevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QHideEvent*
+/// @param callback void fn(QHideEvent*, bool)
+void q_hideevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhideevent.html#dtor.QHideEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHideEvent* self ```
+/// @param self QHideEvent*
 void q_hideevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qcontextmenuevent.html
 
 /// q_contextmenuevent_new constructs a new QContextMenuEvent object.
 ///
-/// ``` enum QContextMenuEvent__Reason reason, QPoint* pos, QPoint* globalPos ```
+/// @param reason enum QContextMenuEvent__Reason
+/// @param pos QPoint*
+/// @param globalPos QPoint*
 QContextMenuEvent* q_contextmenuevent_new(int64_t reason, void* pos, void* globalPos);
 
 /// q_contextmenuevent_new2 constructs a new QContextMenuEvent object.
 ///
-/// ``` enum QContextMenuEvent__Reason reason, QPoint* pos ```
+/// @param reason enum QContextMenuEvent__Reason
+/// @param pos QPoint*
 QContextMenuEvent* q_contextmenuevent_new2(int64_t reason, void* pos);
 
 /// q_contextmenuevent_new3 constructs a new QContextMenuEvent object.
 ///
-/// ``` enum QContextMenuEvent__Reason reason, QPoint* pos, QPoint* globalPos, int modifiers ```
+/// @param reason enum QContextMenuEvent__Reason
+/// @param pos QPoint*
+/// @param globalPos QPoint*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QContextMenuEvent* q_contextmenuevent_new3(int64_t reason, void* pos, void* globalPos, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 QContextMenuEvent* q_contextmenuevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QContextMenuEvent* self, QContextMenuEvent* (*slot)() ```
-void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*slot)());
+/// @param self QContextMenuEvent*
+/// @param callback QContextMenuEvent* fn()
+void q_contextmenuevent_on_clone(void* self, QContextMenuEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 QContextMenuEvent* q_contextmenuevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#x)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 int32_t q_contextmenuevent_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#y)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 int32_t q_contextmenuevent_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#globalX)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 int32_t q_contextmenuevent_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#globalY)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 int32_t q_contextmenuevent_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#pos)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 const QPoint* q_contextmenuevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#globalPos)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 const QPoint* q_contextmenuevent_global_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#reason)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
+///
+/// @return enum QContextMenuEvent__Reason
 int64_t q_contextmenuevent_reason(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 const QInputDevice* q_contextmenuevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_contextmenuevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_contextmenuevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QContextMenuEvent* self, int modifiers ```
+/// @param self QContextMenuEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_contextmenuevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 uint64_t q_contextmenuevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_contextmenuevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 bool q_contextmenuevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 bool q_contextmenuevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 void q_contextmenuevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 void q_contextmenuevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 bool q_contextmenuevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 bool q_contextmenuevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 bool q_contextmenuevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_contextmenuevent_register_event_type();
 
@@ -5402,7 +5949,7 @@ int32_t q_contextmenuevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_contextmenuevent_register_event_type1(int hint);
 
 /// Inherited from QInputEvent
@@ -5411,7 +5958,8 @@ int32_t q_contextmenuevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, uint64_t timestamp ```
+/// @param self QContextMenuEvent*
+/// @param timestamp uint64_t
 void q_contextmenuevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
@@ -5420,7 +5968,8 @@ void q_contextmenuevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, uint64_t timestamp ```
+/// @param self QContextMenuEvent*
+/// @param timestamp uint64_t
 void q_contextmenuevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QInputEvent
@@ -5429,8 +5978,9 @@ void q_contextmenuevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, void (*slot)(QContextMenuEvent*, uint64_t) ```
-void q_contextmenuevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QContextMenuEvent*
+/// @param callback void fn(QContextMenuEvent*, uint64_t)
+void q_contextmenuevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QEvent
 ///
@@ -5438,7 +5988,8 @@ void q_contextmenuevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, bool accepted ```
+/// @param self QContextMenuEvent*
+/// @param accepted bool
 void q_contextmenuevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5447,7 +5998,8 @@ void q_contextmenuevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, bool accepted ```
+/// @param self QContextMenuEvent*
+/// @param accepted bool
 void q_contextmenuevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5456,147 +6008,160 @@ void q_contextmenuevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QContextMenuEvent* self, void (*slot)(QContextMenuEvent*, bool) ```
-void q_contextmenuevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QContextMenuEvent*
+/// @param callback void fn(QContextMenuEvent*, bool)
+void q_contextmenuevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#dtor.QContextMenuEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QContextMenuEvent* self ```
+/// @param self QContextMenuEvent*
 void q_contextmenuevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qinputmethodevent.html
 
 /// q_inputmethodevent_new constructs a new QInputMethodEvent object.
 ///
-///
 QInputMethodEvent* q_inputmethodevent_new();
 
 /// q_inputmethodevent_new2 constructs a new QInputMethodEvent object.
 ///
-/// ``` const char* preeditText, libqt_list /* of QInputMethodEvent__Attribute* */ attributes ```
+/// @param preeditText const char*
+/// @param attributes libqt_list /* of QInputMethodEvent__Attribute* */
 QInputMethodEvent* q_inputmethodevent_new2(const char* preeditText, libqt_list attributes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 QInputMethodEvent* q_inputmethodevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputMethodEvent* self, QInputMethodEvent* (*slot)() ```
-void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*slot)());
+/// @param self QInputMethodEvent*
+/// @param callback QInputMethodEvent* fn()
+void q_inputmethodevent_on_clone(void* self, QInputMethodEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 QInputMethodEvent* q_inputmethodevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#setCommitString)
 ///
-/// ``` QInputMethodEvent* self, const char* commitString ```
+/// @param self QInputMethodEvent*
+/// @param commitString const char*
 void q_inputmethodevent_set_commit_string(void* self, const char* commitString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#attributes)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 libqt_list /* of QInputMethodEvent__Attribute* */ q_inputmethodevent_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#preeditString)
 ///
-/// ``` QInputMethodEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputMethodEvent*
 const char* q_inputmethodevent_preedit_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#commitString)
 ///
-/// ``` QInputMethodEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QInputMethodEvent*
 const char* q_inputmethodevent_commit_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#replacementStart)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 int32_t q_inputmethodevent_replacement_start(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#replacementLength)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 int32_t q_inputmethodevent_replacement_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#setCommitString)
 ///
-/// ``` QInputMethodEvent* self, const char* commitString, int replaceFrom ```
+/// @param self QInputMethodEvent*
+/// @param commitString const char*
+/// @param replaceFrom int
 void q_inputmethodevent_set_commit_string2(void* self, const char* commitString, int replaceFrom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#setCommitString)
 ///
-/// ``` QInputMethodEvent* self, const char* commitString, int replaceFrom, int replaceLength ```
+/// @param self QInputMethodEvent*
+/// @param commitString const char*
+/// @param replaceFrom int
+/// @param replaceLength int
 void q_inputmethodevent_set_commit_string3(void* self, const char* commitString, int replaceFrom, int replaceLength);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_inputmethodevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 bool q_inputmethodevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 bool q_inputmethodevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 void q_inputmethodevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 void q_inputmethodevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 bool q_inputmethodevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 bool q_inputmethodevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 bool q_inputmethodevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_inputmethodevent_register_event_type();
 
@@ -5604,7 +6169,7 @@ int32_t q_inputmethodevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_inputmethodevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -5613,7 +6178,8 @@ int32_t q_inputmethodevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputMethodEvent* self, bool accepted ```
+/// @param self QInputMethodEvent*
+/// @param accepted bool
 void q_inputmethodevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5622,7 +6188,8 @@ void q_inputmethodevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputMethodEvent* self, bool accepted ```
+/// @param self QInputMethodEvent*
+/// @param accepted bool
 void q_inputmethodevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5631,117 +6198,125 @@ void q_inputmethodevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputMethodEvent* self, void (*slot)(QInputMethodEvent*, bool) ```
-void q_inputmethodevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QInputMethodEvent*
+/// @param callback void fn(QInputMethodEvent*, bool)
+void q_inputmethodevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent.html#dtor.QInputMethodEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputMethodEvent* self ```
+/// @param self QInputMethodEvent*
 void q_inputmethodevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qinputmethodqueryevent.html
 
 /// q_inputmethodqueryevent_new constructs a new QInputMethodQueryEvent object.
 ///
-/// ``` int queries ```
+/// @param queries flag of enum Qt__InputMethodQuery
 QInputMethodQueryEvent* q_inputmethodqueryevent_new(int64_t queries);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 QInputMethodQueryEvent* q_inputmethodqueryevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QInputMethodQueryEvent* self, QInputMethodQueryEvent* (*slot)() ```
-void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*slot)());
+/// @param self QInputMethodQueryEvent*
+/// @param callback QInputMethodQueryEvent* fn()
+void q_inputmethodqueryevent_on_clone(void* self, QInputMethodQueryEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 QInputMethodQueryEvent* q_inputmethodqueryevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#queries)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
+///
+/// @return flag of enum Qt__InputMethodQuery
 int64_t q_inputmethodqueryevent_queries(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#setValue)
 ///
-/// ``` QInputMethodQueryEvent* self, enum Qt__InputMethodQuery query, QVariant* value ```
+/// @param self QInputMethodQueryEvent*
+/// @param query enum Qt__InputMethodQuery
+/// @param value QVariant*
 void q_inputmethodqueryevent_set_value(void* self, int64_t query, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#value)
 ///
-/// ``` QInputMethodQueryEvent* self, enum Qt__InputMethodQuery query ```
+/// @param self QInputMethodQueryEvent*
+/// @param query enum Qt__InputMethodQuery
 QVariant* q_inputmethodqueryevent_value(void* self, int64_t query);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_inputmethodqueryevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 bool q_inputmethodqueryevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 bool q_inputmethodqueryevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 void q_inputmethodqueryevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 void q_inputmethodqueryevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 bool q_inputmethodqueryevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 bool q_inputmethodqueryevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 bool q_inputmethodqueryevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_inputmethodqueryevent_register_event_type();
 
@@ -5749,7 +6324,7 @@ int32_t q_inputmethodqueryevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_inputmethodqueryevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -5758,7 +6333,8 @@ int32_t q_inputmethodqueryevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QInputMethodQueryEvent* self, bool accepted ```
+/// @param self QInputMethodQueryEvent*
+/// @param accepted bool
 void q_inputmethodqueryevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5767,7 +6343,8 @@ void q_inputmethodqueryevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QInputMethodQueryEvent* self, bool accepted ```
+/// @param self QInputMethodQueryEvent*
+/// @param accepted bool
 void q_inputmethodqueryevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5776,177 +6353,204 @@ void q_inputmethodqueryevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QInputMethodQueryEvent* self, void (*slot)(QInputMethodQueryEvent*, bool) ```
-void q_inputmethodqueryevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QInputMethodQueryEvent*
+/// @param callback void fn(QInputMethodQueryEvent*, bool)
+void q_inputmethodqueryevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodqueryevent.html#dtor.QInputMethodQueryEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputMethodQueryEvent* self ```
+/// @param self QInputMethodQueryEvent*
 void q_inputmethodqueryevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdropevent.html
 
 /// q_dropevent_new constructs a new QDropEvent object.
 ///
-/// ``` QPointF* pos, int actions, QMimeData* data, int buttons, int modifiers ```
+/// @param pos QPointF*
+/// @param actions flag of enum Qt__DropAction
+/// @param data QMimeData*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QDropEvent* q_dropevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// q_dropevent_new2 constructs a new QDropEvent object.
 ///
-/// ``` QPointF* pos, int actions, QMimeData* data, int buttons, int modifiers, enum QEvent__Type typeVal ```
+/// @param pos QPointF*
+/// @param actions flag of enum Qt__DropAction
+/// @param data QMimeData*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param typeVal enum QEvent__Type
 QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QDropEvent* q_dropevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDropEvent* self, QDropEvent* (*slot)() ```
-void q_dropevent_on_clone(void* self, QDropEvent* (*slot)());
+/// @param self QDropEvent*
+/// @param callback QDropEvent* fn()
+void q_dropevent_on_clone(void* self, QDropEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QDropEvent* q_dropevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#pos)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QPoint* q_dropevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#posF)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QPointF* q_dropevent_pos_f(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mouseButtons)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dropevent_mouse_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#keyboardModifiers)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dropevent_keyboard_modifiers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#position)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QPointF* q_dropevent_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#buttons)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dropevent_buttons(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#modifiers)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dropevent_modifiers(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#possibleActions)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_dropevent_possible_actions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#proposedAction)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dropevent_proposed_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#acceptProposedAction)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 void q_dropevent_accept_proposed_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#dropAction)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dropevent_drop_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#setDropAction)
 ///
-/// ``` QDropEvent* self, enum Qt__DropAction action ```
+/// @param self QDropEvent*
+/// @param action enum Qt__DropAction
 void q_dropevent_set_drop_action(void* self, int64_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#source)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 QObject* q_dropevent_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 const QMimeData* q_dropevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_dropevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 bool q_dropevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 bool q_dropevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 void q_dropevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 void q_dropevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 bool q_dropevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 bool q_dropevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 bool q_dropevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_dropevent_register_event_type();
 
@@ -5954,7 +6558,7 @@ int32_t q_dropevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_dropevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -5963,7 +6567,8 @@ int32_t q_dropevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDropEvent* self, bool accepted ```
+/// @param self QDropEvent*
+/// @param accepted bool
 void q_dropevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5972,7 +6577,8 @@ void q_dropevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDropEvent* self, bool accepted ```
+/// @param self QDropEvent*
+/// @param accepted bool
 void q_dropevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -5981,216 +6587,245 @@ void q_dropevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDropEvent* self, void (*slot)(QDropEvent*, bool) ```
-void q_dropevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QDropEvent*
+/// @param callback void fn(QDropEvent*, bool)
+void q_dropevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#dtor.QDropEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDropEvent* self ```
+/// @param self QDropEvent*
 void q_dropevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdragmoveevent.html
 
 /// q_dragmoveevent_new constructs a new QDragMoveEvent object.
 ///
-/// ``` QPoint* pos, int actions, QMimeData* data, int buttons, int modifiers ```
+/// @param pos QPoint*
+/// @param actions flag of enum Qt__DropAction
+/// @param data QMimeData*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QDragMoveEvent* q_dragmoveevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// q_dragmoveevent_new2 constructs a new QDragMoveEvent object.
 ///
-/// ``` QPoint* pos, int actions, QMimeData* data, int buttons, int modifiers, enum QEvent__Type typeVal ```
+/// @param pos QPoint*
+/// @param actions flag of enum Qt__DropAction
+/// @param data QMimeData*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param typeVal enum QEvent__Type
 QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int64_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QDragMoveEvent* q_dragmoveevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDragMoveEvent* self, QDragMoveEvent* (*slot)() ```
-void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*slot)());
+/// @param self QDragMoveEvent*
+/// @param callback QDragMoveEvent* fn()
+void q_dragmoveevent_on_clone(void* self, QDragMoveEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QDragMoveEvent* q_dragmoveevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#answerRect)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QRect* q_dragmoveevent_answer_rect(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 void q_dragmoveevent_accept(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 void q_dragmoveevent_ignore(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
-/// ``` QDragMoveEvent* self, QRect* r ```
+/// @param self QDragMoveEvent*
+/// @param r QRect*
 void q_dragmoveevent_accept2(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
-/// ``` QDragMoveEvent* self, QRect* r ```
+/// @param self QDragMoveEvent*
+/// @param r QRect*
 void q_dragmoveevent_ignore2(void* self, void* r);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#pos)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QPoint* q_dragmoveevent_pos(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#posF)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QPointF* q_dragmoveevent_pos_f(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mouseButtons)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dragmoveevent_mouse_buttons(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#keyboardModifiers)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dragmoveevent_keyboard_modifiers(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#position)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QPointF* q_dragmoveevent_position(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#buttons)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dragmoveevent_buttons(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#modifiers)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dragmoveevent_modifiers(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#possibleActions)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_dragmoveevent_possible_actions(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#proposedAction)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dragmoveevent_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#acceptProposedAction)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 void q_dragmoveevent_accept_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#dropAction)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dragmoveevent_drop_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#setDropAction)
 ///
-/// ``` QDragMoveEvent* self, enum Qt__DropAction action ```
+/// @param self QDragMoveEvent*
+/// @param action enum Qt__DropAction
 void q_dragmoveevent_set_drop_action(void* self, int64_t action);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#source)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 QObject* q_dragmoveevent_source(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 const QMimeData* q_dragmoveevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_dragmoveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 bool q_dragmoveevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 bool q_dragmoveevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 bool q_dragmoveevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 bool q_dragmoveevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 bool q_dragmoveevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_dragmoveevent_register_event_type();
 
@@ -6198,7 +6833,7 @@ int32_t q_dragmoveevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_dragmoveevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -6207,7 +6842,8 @@ int32_t q_dragmoveevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDragMoveEvent* self, bool accepted ```
+/// @param self QDragMoveEvent*
+/// @param accepted bool
 void q_dragmoveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6216,7 +6852,8 @@ void q_dragmoveevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDragMoveEvent* self, bool accepted ```
+/// @param self QDragMoveEvent*
+/// @param accepted bool
 void q_dragmoveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6225,221 +6862,245 @@ void q_dragmoveevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDragMoveEvent* self, void (*slot)(QDragMoveEvent*, bool) ```
-void q_dragmoveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QDragMoveEvent*
+/// @param callback void fn(QDragMoveEvent*, bool)
+void q_dragmoveevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#dtor.QDragMoveEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDragMoveEvent* self ```
+/// @param self QDragMoveEvent*
 void q_dragmoveevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdragenterevent.html
 
 /// q_dragenterevent_new constructs a new QDragEnterEvent object.
 ///
-/// ``` QPoint* pos, int actions, QMimeData* data, int buttons, int modifiers ```
+/// @param pos QPoint*
+/// @param actions flag of enum Qt__DropAction
+/// @param data QMimeData*
+/// @param buttons flag of enum Qt__MouseButton
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QDragEnterEvent* q_dragenterevent_new(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QDragEnterEvent* q_dragenterevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDragEnterEvent* self, QDragEnterEvent* (*slot)() ```
-void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*slot)());
+/// @param self QDragEnterEvent*
+/// @param callback QDragEnterEvent* fn()
+void q_dragenterevent_on_clone(void* self, QDragEnterEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QDragEnterEvent* q_dragenterevent_qbase_clone(void* self);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#answerRect)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QRect* q_dragenterevent_answer_rect(void* self);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 void q_dragenterevent_accept(void* self);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 void q_dragenterevent_ignore(void* self);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#accept)
 ///
-/// ``` QDragEnterEvent* self, QRect* r ```
+/// @param self QDragEnterEvent*
+/// @param r QRect*
 void q_dragenterevent_accept2(void* self, void* r);
 
 /// Inherited from QDragMoveEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#ignore)
 ///
-/// ``` QDragEnterEvent* self, QRect* r ```
+/// @param self QDragEnterEvent*
+/// @param r QRect*
 void q_dragenterevent_ignore2(void* self, void* r);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#pos)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QPoint* q_dragenterevent_pos(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#posF)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QPointF* q_dragenterevent_pos_f(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mouseButtons)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dragenterevent_mouse_buttons(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#keyboardModifiers)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dragenterevent_keyboard_modifiers(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#position)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QPointF* q_dragenterevent_position(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#buttons)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return flag of enum Qt__MouseButton
 int64_t q_dragenterevent_buttons(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#modifiers)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_dragenterevent_modifiers(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#possibleActions)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return flag of enum Qt__DropAction
 int64_t q_dragenterevent_possible_actions(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#proposedAction)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dragenterevent_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#acceptProposedAction)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 void q_dragenterevent_accept_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#dropAction)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return enum Qt__DropAction
 int64_t q_dragenterevent_drop_action(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#setDropAction)
 ///
-/// ``` QDragEnterEvent* self, enum Qt__DropAction action ```
+/// @param self QDragEnterEvent*
+/// @param action enum Qt__DropAction
 void q_dragenterevent_set_drop_action(void* self, int64_t action);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#source)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 QObject* q_dragenterevent_source(void* self);
 
 /// Inherited from QDropEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#mimeData)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 const QMimeData* q_dragenterevent_mime_data(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_dragenterevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 bool q_dragenterevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 bool q_dragenterevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 bool q_dragenterevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 bool q_dragenterevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 bool q_dragenterevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_dragenterevent_register_event_type();
 
@@ -6447,7 +7108,7 @@ int32_t q_dragenterevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_dragenterevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -6456,7 +7117,8 @@ int32_t q_dragenterevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDragEnterEvent* self, bool accepted ```
+/// @param self QDragEnterEvent*
+/// @param accepted bool
 void q_dragenterevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6465,7 +7127,8 @@ void q_dragenterevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDragEnterEvent* self, bool accepted ```
+/// @param self QDragEnterEvent*
+/// @param accepted bool
 void q_dragenterevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6474,102 +7137,104 @@ void q_dragenterevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDragEnterEvent* self, void (*slot)(QDragEnterEvent*, bool) ```
-void q_dragenterevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QDragEnterEvent*
+/// @param callback void fn(QDragEnterEvent*, bool)
+void q_dragenterevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragenterevent.html#dtor.QDragEnterEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDragEnterEvent* self ```
+/// @param self QDragEnterEvent*
 void q_dragenterevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdragleaveevent.html
 
 /// q_dragleaveevent_new constructs a new QDragLeaveEvent object.
 ///
-///
 QDragLeaveEvent* q_dragleaveevent_new();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 QDragLeaveEvent* q_dragleaveevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDragLeaveEvent* self, QDragLeaveEvent* (*slot)() ```
-void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*slot)());
+/// @param self QDragLeaveEvent*
+/// @param callback QDragLeaveEvent* fn()
+void q_dragleaveevent_on_clone(void* self, QDragLeaveEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 QDragLeaveEvent* q_dragleaveevent_qbase_clone(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_dragleaveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 bool q_dragleaveevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 bool q_dragleaveevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 void q_dragleaveevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 void q_dragleaveevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 bool q_dragleaveevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 bool q_dragleaveevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 bool q_dragleaveevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_dragleaveevent_register_event_type();
 
@@ -6577,7 +7242,7 @@ int32_t q_dragleaveevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_dragleaveevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -6586,7 +7251,8 @@ int32_t q_dragleaveevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDragLeaveEvent* self, bool accepted ```
+/// @param self QDragLeaveEvent*
+/// @param accepted bool
 void q_dragleaveevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6595,7 +7261,8 @@ void q_dragleaveevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDragLeaveEvent* self, bool accepted ```
+/// @param self QDragLeaveEvent*
+/// @param accepted bool
 void q_dragleaveevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6604,132 +7271,137 @@ void q_dragleaveevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDragLeaveEvent* self, void (*slot)(QDragLeaveEvent*, bool) ```
-void q_dragleaveevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QDragLeaveEvent*
+/// @param callback void fn(QDragLeaveEvent*, bool)
+void q_dragleaveevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragleaveevent.html#dtor.QDragLeaveEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDragLeaveEvent* self ```
+/// @param self QDragLeaveEvent*
 void q_dragleaveevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qhelpevent.html
 
 /// q_helpevent_new constructs a new QHelpEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QPoint* pos, QPoint* globalPos ```
+/// @param typeVal enum QEvent__Type
+/// @param pos QPoint*
+/// @param globalPos QPoint*
 QHelpEvent* q_helpevent_new(int64_t typeVal, void* pos, void* globalPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 QHelpEvent* q_helpevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QHelpEvent* self, QHelpEvent* (*slot)() ```
-void q_helpevent_on_clone(void* self, QHelpEvent* (*slot)());
+/// @param self QHelpEvent*
+/// @param callback QHelpEvent* fn()
+void q_helpevent_on_clone(void* self, QHelpEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 QHelpEvent* q_helpevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#x)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 int32_t q_helpevent_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#y)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 int32_t q_helpevent_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#globalX)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 int32_t q_helpevent_global_x(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#globalY)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 int32_t q_helpevent_global_y(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#pos)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 const QPoint* q_helpevent_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#globalPos)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 const QPoint* q_helpevent_global_pos(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_helpevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 bool q_helpevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 bool q_helpevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 void q_helpevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 void q_helpevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 bool q_helpevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 bool q_helpevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 bool q_helpevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_helpevent_register_event_type();
 
@@ -6737,7 +7409,7 @@ int32_t q_helpevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_helpevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -6746,7 +7418,8 @@ int32_t q_helpevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QHelpEvent* self, bool accepted ```
+/// @param self QHelpEvent*
+/// @param accepted bool
 void q_helpevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6755,7 +7428,8 @@ void q_helpevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QHelpEvent* self, bool accepted ```
+/// @param self QHelpEvent*
+/// @param accepted bool
 void q_helpevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6764,107 +7438,112 @@ void q_helpevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QHelpEvent* self, void (*slot)(QHelpEvent*, bool) ```
-void q_helpevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QHelpEvent*
+/// @param callback void fn(QHelpEvent*, bool)
+void q_helpevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#dtor.QHelpEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QHelpEvent* self ```
+/// @param self QHelpEvent*
 void q_helpevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qstatustipevent.html
 
 /// q_statustipevent_new constructs a new QStatusTipEvent object.
 ///
-/// ``` const char* tip ```
+/// @param tip const char*
 QStatusTipEvent* q_statustipevent_new(const char* tip);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 QStatusTipEvent* q_statustipevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QStatusTipEvent* self, QStatusTipEvent* (*slot)() ```
-void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*slot)());
+/// @param self QStatusTipEvent*
+/// @param callback QStatusTipEvent* fn()
+void q_statustipevent_on_clone(void* self, QStatusTipEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 QStatusTipEvent* q_statustipevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#tip)
 ///
-/// ``` QStatusTipEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QStatusTipEvent*
 const char* q_statustipevent_tip(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_statustipevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 bool q_statustipevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 bool q_statustipevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 void q_statustipevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 void q_statustipevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 bool q_statustipevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 bool q_statustipevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 bool q_statustipevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_statustipevent_register_event_type();
 
@@ -6872,7 +7551,7 @@ int32_t q_statustipevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_statustipevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -6881,7 +7560,8 @@ int32_t q_statustipevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QStatusTipEvent* self, bool accepted ```
+/// @param self QStatusTipEvent*
+/// @param accepted bool
 void q_statustipevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6890,7 +7570,8 @@ void q_statustipevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QStatusTipEvent* self, bool accepted ```
+/// @param self QStatusTipEvent*
+/// @param accepted bool
 void q_statustipevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -6899,107 +7580,112 @@ void q_statustipevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QStatusTipEvent* self, void (*slot)(QStatusTipEvent*, bool) ```
-void q_statustipevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QStatusTipEvent*
+/// @param callback void fn(QStatusTipEvent*, bool)
+void q_statustipevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatustipevent.html#dtor.QStatusTipEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QStatusTipEvent* self ```
+/// @param self QStatusTipEvent*
 void q_statustipevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwhatsthisclickedevent.html
 
 /// q_whatsthisclickedevent_new constructs a new QWhatsThisClickedEvent object.
 ///
-/// ``` const char* href ```
+/// @param href const char*
 QWhatsThisClickedEvent* q_whatsthisclickedevent_new(const char* href);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 QWhatsThisClickedEvent* q_whatsthisclickedevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWhatsThisClickedEvent* self, QWhatsThisClickedEvent* (*slot)() ```
-void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*slot)());
+/// @param self QWhatsThisClickedEvent*
+/// @param callback QWhatsThisClickedEvent* fn()
+void q_whatsthisclickedevent_on_clone(void* self, QWhatsThisClickedEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 QWhatsThisClickedEvent* q_whatsthisclickedevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#href)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QWhatsThisClickedEvent*
 const char* q_whatsthisclickedevent_href(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_whatsthisclickedevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 bool q_whatsthisclickedevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 bool q_whatsthisclickedevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 void q_whatsthisclickedevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 void q_whatsthisclickedevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 bool q_whatsthisclickedevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 bool q_whatsthisclickedevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 bool q_whatsthisclickedevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_whatsthisclickedevent_register_event_type();
 
@@ -7007,7 +7693,7 @@ int32_t q_whatsthisclickedevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_whatsthisclickedevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7016,7 +7702,8 @@ int32_t q_whatsthisclickedevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWhatsThisClickedEvent* self, bool accepted ```
+/// @param self QWhatsThisClickedEvent*
+/// @param accepted bool
 void q_whatsthisclickedevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7025,7 +7712,8 @@ void q_whatsthisclickedevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWhatsThisClickedEvent* self, bool accepted ```
+/// @param self QWhatsThisClickedEvent*
+/// @param accepted bool
 void q_whatsthisclickedevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7034,117 +7722,123 @@ void q_whatsthisclickedevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWhatsThisClickedEvent* self, void (*slot)(QWhatsThisClickedEvent*, bool) ```
-void q_whatsthisclickedevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QWhatsThisClickedEvent*
+/// @param callback void fn(QWhatsThisClickedEvent*, bool)
+void q_whatsthisclickedevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwhatsthisclickedevent.html#dtor.QWhatsThisClickedEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWhatsThisClickedEvent* self ```
+/// @param self QWhatsThisClickedEvent*
 void q_whatsthisclickedevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qactionevent.html
 
 /// q_actionevent_new constructs a new QActionEvent object.
 ///
-/// ``` int typeVal, QAction* action ```
+/// @param typeVal int
+/// @param action QAction*
 QActionEvent* q_actionevent_new(int typeVal, void* action);
 
 /// q_actionevent_new2 constructs a new QActionEvent object.
 ///
-/// ``` int typeVal, QAction* action, QAction* before ```
+/// @param typeVal int
+/// @param action QAction*
+/// @param before QAction*
 QActionEvent* q_actionevent_new2(int typeVal, void* action, void* before);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#clone)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 QActionEvent* q_actionevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QActionEvent* self, QActionEvent* (*slot)() ```
-void q_actionevent_on_clone(void* self, QActionEvent* (*slot)());
+/// @param self QActionEvent*
+/// @param callback QActionEvent* fn()
+void q_actionevent_on_clone(void* self, QActionEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 QActionEvent* q_actionevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#action)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 QAction* q_actionevent_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#before)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 QAction* q_actionevent_before(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_actionevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 bool q_actionevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 bool q_actionevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 void q_actionevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 void q_actionevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 bool q_actionevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 bool q_actionevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 bool q_actionevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_actionevent_register_event_type();
 
@@ -7152,7 +7846,7 @@ int32_t q_actionevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_actionevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7161,7 +7855,8 @@ int32_t q_actionevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QActionEvent* self, bool accepted ```
+/// @param self QActionEvent*
+/// @param accepted bool
 void q_actionevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7170,7 +7865,8 @@ void q_actionevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QActionEvent* self, bool accepted ```
+/// @param self QActionEvent*
+/// @param accepted bool
 void q_actionevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7179,122 +7875,129 @@ void q_actionevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QActionEvent* self, void (*slot)(QActionEvent*, bool) ```
-void q_actionevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QActionEvent*
+/// @param callback void fn(QActionEvent*, bool)
+void q_actionevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactionevent.html#dtor.QActionEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QActionEvent* self ```
+/// @param self QActionEvent*
 void q_actionevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qfileopenevent.html
 
 /// q_fileopenevent_new constructs a new QFileOpenEvent object.
 ///
-/// ``` const char* file ```
+/// @param file const char*
 QFileOpenEvent* q_fileopenevent_new(const char* file);
 
 /// q_fileopenevent_new2 constructs a new QFileOpenEvent object.
 ///
-/// ``` QUrl* url ```
+/// @param url QUrl*
 QFileOpenEvent* q_fileopenevent_new2(void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 QFileOpenEvent* q_fileopenevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QFileOpenEvent* self, QFileOpenEvent* (*slot)() ```
-void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*slot)());
+/// @param self QFileOpenEvent*
+/// @param callback QFileOpenEvent* fn()
+void q_fileopenevent_on_clone(void* self, QFileOpenEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 QFileOpenEvent* q_fileopenevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#file)
 ///
-/// ``` QFileOpenEvent* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QFileOpenEvent*
 const char* q_fileopenevent_file(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#url)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 QUrl* q_fileopenevent_url(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#openFile)
 ///
-/// ``` QFileOpenEvent* self, QFile* file, int flags ```
+/// @param self QFileOpenEvent*
+/// @param file QFile*
+/// @param flags flag of enum QIODeviceBase__OpenModeFlag
 bool q_fileopenevent_open_file(void* self, void* file, int64_t flags);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_fileopenevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 bool q_fileopenevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 bool q_fileopenevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 void q_fileopenevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 void q_fileopenevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 bool q_fileopenevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 bool q_fileopenevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 bool q_fileopenevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_fileopenevent_register_event_type();
 
@@ -7302,7 +8005,7 @@ int32_t q_fileopenevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_fileopenevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7311,7 +8014,8 @@ int32_t q_fileopenevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QFileOpenEvent* self, bool accepted ```
+/// @param self QFileOpenEvent*
+/// @param accepted bool
 void q_fileopenevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7320,7 +8024,8 @@ void q_fileopenevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QFileOpenEvent* self, bool accepted ```
+/// @param self QFileOpenEvent*
+/// @param accepted bool
 void q_fileopenevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7329,107 +8034,110 @@ void q_fileopenevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QFileOpenEvent* self, void (*slot)(QFileOpenEvent*, bool) ```
-void q_fileopenevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QFileOpenEvent*
+/// @param callback void fn(QFileOpenEvent*, bool)
+void q_fileopenevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileopenevent.html#dtor.QFileOpenEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QFileOpenEvent* self ```
+/// @param self QFileOpenEvent*
 void q_fileopenevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtoolbarchangeevent.html
 
 /// q_toolbarchangeevent_new constructs a new QToolBarChangeEvent object.
 ///
-/// ``` bool t ```
+/// @param t bool
 QToolBarChangeEvent* q_toolbarchangeevent_new(bool t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 QToolBarChangeEvent* q_toolbarchangeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QToolBarChangeEvent* self, QToolBarChangeEvent* (*slot)() ```
-void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*slot)());
+/// @param self QToolBarChangeEvent*
+/// @param callback QToolBarChangeEvent* fn()
+void q_toolbarchangeevent_on_clone(void* self, QToolBarChangeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 QToolBarChangeEvent* q_toolbarchangeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#toggle)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_toggle(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_toolbarchangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 void q_toolbarchangeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 void q_toolbarchangeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 bool q_toolbarchangeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_toolbarchangeevent_register_event_type();
 
@@ -7437,7 +8145,7 @@ int32_t q_toolbarchangeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_toolbarchangeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7446,7 +8154,8 @@ int32_t q_toolbarchangeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QToolBarChangeEvent* self, bool accepted ```
+/// @param self QToolBarChangeEvent*
+/// @param accepted bool
 void q_toolbarchangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7455,7 +8164,8 @@ void q_toolbarchangeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QToolBarChangeEvent* self, bool accepted ```
+/// @param self QToolBarChangeEvent*
+/// @param accepted bool
 void q_toolbarchangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7464,137 +8174,146 @@ void q_toolbarchangeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QToolBarChangeEvent* self, void (*slot)(QToolBarChangeEvent*, bool) ```
-void q_toolbarchangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QToolBarChangeEvent*
+/// @param callback void fn(QToolBarChangeEvent*, bool)
+void q_toolbarchangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbarchangeevent.html#dtor.QToolBarChangeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QToolBarChangeEvent* self ```
+/// @param self QToolBarChangeEvent*
 void q_toolbarchangeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qshortcutevent.html
 
 /// q_shortcutevent_new constructs a new QShortcutEvent object.
 ///
-/// ``` QKeySequence* key, int id ```
+/// @param key QKeySequence*
+/// @param id int
 QShortcutEvent* q_shortcutevent_new(void* key, int id);
 
 /// q_shortcutevent_new2 constructs a new QShortcutEvent object.
 ///
-/// ``` QKeySequence* key ```
+/// @param key QKeySequence*
 QShortcutEvent* q_shortcutevent_new2(void* key);
 
 /// q_shortcutevent_new3 constructs a new QShortcutEvent object.
 ///
-/// ``` QKeySequence* key, int id, bool ambiguous ```
+/// @param key QKeySequence*
+/// @param id int
+/// @param ambiguous bool
 QShortcutEvent* q_shortcutevent_new3(void* key, int id, bool ambiguous);
 
 /// q_shortcutevent_new4 constructs a new QShortcutEvent object.
 ///
-/// ``` QKeySequence* key, QShortcut* shortcut ```
+/// @param key QKeySequence*
+/// @param shortcut QShortcut*
 QShortcutEvent* q_shortcutevent_new4(void* key, void* shortcut);
 
 /// q_shortcutevent_new5 constructs a new QShortcutEvent object.
 ///
-/// ``` QKeySequence* key, QShortcut* shortcut, bool ambiguous ```
+/// @param key QKeySequence*
+/// @param shortcut QShortcut*
+/// @param ambiguous bool
 QShortcutEvent* q_shortcutevent_new5(void* key, void* shortcut, bool ambiguous);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 QShortcutEvent* q_shortcutevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QShortcutEvent* self, QShortcutEvent* (*slot)() ```
-void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*slot)());
+/// @param self QShortcutEvent*
+/// @param callback QShortcutEvent* fn()
+void q_shortcutevent_on_clone(void* self, QShortcutEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 QShortcutEvent* q_shortcutevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#key)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 const QKeySequence* q_shortcutevent_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#shortcutId)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 int32_t q_shortcutevent_shortcut_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#isAmbiguous)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_is_ambiguous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_shortcutevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 void q_shortcutevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 void q_shortcutevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 bool q_shortcutevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_shortcutevent_register_event_type();
 
@@ -7602,7 +8321,7 @@ int32_t q_shortcutevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_shortcutevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7611,7 +8330,8 @@ int32_t q_shortcutevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QShortcutEvent* self, bool accepted ```
+/// @param self QShortcutEvent*
+/// @param accepted bool
 void q_shortcutevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7620,7 +8340,8 @@ void q_shortcutevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QShortcutEvent* self, bool accepted ```
+/// @param self QShortcutEvent*
+/// @param accepted bool
 void q_shortcutevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7629,117 +8350,123 @@ void q_shortcutevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QShortcutEvent* self, void (*slot)(QShortcutEvent*, bool) ```
-void q_shortcutevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QShortcutEvent*
+/// @param callback void fn(QShortcutEvent*, bool)
+void q_shortcutevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcutevent.html#dtor.QShortcutEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QShortcutEvent* self ```
+/// @param self QShortcutEvent*
 void q_shortcutevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwindowstatechangeevent.html
 
 /// q_windowstatechangeevent_new constructs a new QWindowStateChangeEvent object.
 ///
-/// ``` int oldState ```
+/// @param oldState flag of enum Qt__WindowState
 QWindowStateChangeEvent* q_windowstatechangeevent_new(int64_t oldState);
 
 /// q_windowstatechangeevent_new2 constructs a new QWindowStateChangeEvent object.
 ///
-/// ``` int oldState, bool isOverride ```
+/// @param oldState flag of enum Qt__WindowState
+/// @param isOverride bool
 QWindowStateChangeEvent* q_windowstatechangeevent_new2(int64_t oldState, bool isOverride);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 QWindowStateChangeEvent* q_windowstatechangeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QWindowStateChangeEvent* self, QWindowStateChangeEvent* (*slot)() ```
-void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*slot)());
+/// @param self QWindowStateChangeEvent*
+/// @param callback QWindowStateChangeEvent* fn()
+void q_windowstatechangeevent_on_clone(void* self, QWindowStateChangeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 QWindowStateChangeEvent* q_windowstatechangeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#oldState)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_windowstatechangeevent_old_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#isOverride)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_is_override(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_windowstatechangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 void q_windowstatechangeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 void q_windowstatechangeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 bool q_windowstatechangeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_windowstatechangeevent_register_event_type();
 
@@ -7747,7 +8474,7 @@ int32_t q_windowstatechangeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_windowstatechangeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -7756,7 +8483,8 @@ int32_t q_windowstatechangeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QWindowStateChangeEvent* self, bool accepted ```
+/// @param self QWindowStateChangeEvent*
+/// @param accepted bool
 void q_windowstatechangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7765,7 +8493,8 @@ void q_windowstatechangeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QWindowStateChangeEvent* self, bool accepted ```
+/// @param self QWindowStateChangeEvent*
+/// @param accepted bool
 void q_windowstatechangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -7774,325 +8503,363 @@ void q_windowstatechangeevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QWindowStateChangeEvent* self, void (*slot)(QWindowStateChangeEvent*, bool) ```
-void q_windowstatechangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QWindowStateChangeEvent*
+/// @param callback void fn(QWindowStateChangeEvent*, bool)
+void q_windowstatechangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowstatechangeevent.html#dtor.QWindowStateChangeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWindowStateChangeEvent* self ```
+/// @param self QWindowStateChangeEvent*
 void q_windowstatechangeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qtouchevent.html
 
 /// q_touchevent_new constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType ```
+/// @param eventType enum QEvent__Type
 QTouchEvent* q_touchevent_new(int64_t eventType);
 
 /// q_touchevent_new2 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, uint8_t touchPointStates ```
+/// @param eventType enum QEvent__Type
+/// @param device QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param touchPointStates flag of enum QEventPoint__State
 QTouchEvent* q_touchevent_new2(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates);
 
 /// q_touchevent_new3 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device ```
+/// @param eventType enum QEvent__Type
+/// @param device QPointingDevice*
 QTouchEvent* q_touchevent_new3(int64_t eventType, void* device);
 
 /// q_touchevent_new4 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers ```
+/// @param eventType enum QEvent__Type
+/// @param device QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 QTouchEvent* q_touchevent_new4(int64_t eventType, void* device, int64_t modifiers);
 
 /// q_touchevent_new5 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, libqt_list /* of QEventPoint* */ touchPoints ```
+/// @param eventType enum QEvent__Type
+/// @param device QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param touchPoints libqt_list /* of QEventPoint* */
 QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, libqt_list touchPoints);
 
 /// q_touchevent_new6 constructs a new QTouchEvent object.
 ///
-/// ``` enum QEvent__Type eventType, QPointingDevice* device, int modifiers, uint8_t touchPointStates, libqt_list /* of QEventPoint* */ touchPoints ```
+/// @param eventType enum QEvent__Type
+/// @param device QPointingDevice*
+/// @param modifiers flag of enum Qt__KeyboardModifier
+/// @param touchPointStates flag of enum QEventPoint__State
+/// @param touchPoints libqt_list /* of QEventPoint* */
 QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 QTouchEvent* q_touchevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTouchEvent* self, QTouchEvent* (*slot)() ```
-void q_touchevent_on_clone(void* self, QTouchEvent* (*slot)());
+/// @param self QTouchEvent*
+/// @param callback QTouchEvent* fn()
+void q_touchevent_on_clone(void* self, QTouchEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 QTouchEvent* q_touchevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#target)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 QObject* q_touchevent_target(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#touchPointStates)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
+///
+/// @return flag of enum QEventPoint__State
 int64_t q_touchevent_touch_point_states(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#touchPoints)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 libqt_list /* of QEventPoint* */ q_touchevent_touch_points(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTouchEvent* self, bool (*slot)() ```
-void q_touchevent_on_is_begin_event(void* self, bool (*slot)());
+/// @param self QTouchEvent*
+/// @param callback bool fn()
+void q_touchevent_on_is_begin_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isBeginEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_qbase_is_begin_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTouchEvent* self, bool (*slot)() ```
-void q_touchevent_on_is_update_event(void* self, bool (*slot)());
+/// @param self QTouchEvent*
+/// @param callback bool fn()
+void q_touchevent_on_is_update_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isUpdateEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_qbase_is_update_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_end_event(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QTouchEvent* self, bool (*slot)() ```
-void q_touchevent_on_is_end_event(void* self, bool (*slot)());
+/// @param self QTouchEvent*
+/// @param callback bool fn()
+void q_touchevent_on_is_end_event(void* self, bool (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#isEndEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_qbase_is_end_event(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointingDevice)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 const QPointingDevice* q_touchevent_pointing_device(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointerType)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
+///
+/// @return enum QPointingDevice__PointerType
 int64_t q_touchevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointCount)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 int64_t q_touchevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
-/// ``` QTouchEvent* self, int64_t i ```
+/// @param self QTouchEvent*
+/// @param i int64_t
 QEventPoint* q_touchevent_point(void* self, int64_t i);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 libqt_list /* of QEventPoint* */ q_touchevent_points(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#pointById)
 ///
-/// ``` QTouchEvent* self, int id ```
+/// @param self QTouchEvent*
+/// @param id int
 QEventPoint* q_touchevent_point_by_id(void* self, int id);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsGrabbed)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_all_points_grabbed(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#allPointsAccepted)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_all_points_accepted(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#exclusiveGrabber)
 ///
-/// ``` QTouchEvent* self, QEventPoint* point ```
+/// @param self QTouchEvent*
+/// @param point QEventPoint*
 QObject* q_touchevent_exclusive_grabber(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setExclusiveGrabber)
 ///
-/// ``` QTouchEvent* self, QEventPoint* point, QObject* exclusiveGrabber ```
+/// @param self QTouchEvent*
+/// @param point QEventPoint*
+/// @param exclusiveGrabber QObject*
 void q_touchevent_set_exclusive_grabber(void* self, void* point, void* exclusiveGrabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clearPassiveGrabbers)
 ///
-/// ``` QTouchEvent* self, QEventPoint* point ```
+/// @param self QTouchEvent*
+/// @param point QEventPoint*
 void q_touchevent_clear_passive_grabbers(void* self, void* point);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#addPassiveGrabber)
 ///
-/// ``` QTouchEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QTouchEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_touchevent_add_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QPointerEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#removePassiveGrabber)
 ///
-/// ``` QTouchEvent* self, QEventPoint* point, QObject* grabber ```
+/// @param self QTouchEvent*
+/// @param point QEventPoint*
+/// @param grabber QObject*
 bool q_touchevent_remove_passive_grabber(void* self, void* point, void* grabber);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#device)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 const QInputDevice* q_touchevent_device(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#deviceType)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
+///
+/// @return enum QInputDevice__DeviceType
 int64_t q_touchevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
+///
+/// @return flag of enum Qt__KeyboardModifier
 int64_t q_touchevent_modifiers(void* self);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#setModifiers)
 ///
-/// ``` QTouchEvent* self, int modifiers ```
+/// @param self QTouchEvent*
+/// @param modifiers flag of enum Qt__KeyboardModifier
 void q_touchevent_set_modifiers(void* self, int64_t modifiers);
 
 /// Inherited from QInputEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#timestamp)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 uint64_t q_touchevent_timestamp(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_touchevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 void q_touchevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 void q_touchevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 bool q_touchevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_touchevent_register_event_type();
 
@@ -8100,7 +8867,7 @@ int32_t q_touchevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_touchevent_register_event_type1(int hint);
 
 /// Inherited from QPointerEvent
@@ -8109,7 +8876,8 @@ int32_t q_touchevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTouchEvent* self, uint64_t timestamp ```
+/// @param self QTouchEvent*
+/// @param timestamp uint64_t
 void q_touchevent_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -8118,7 +8886,8 @@ void q_touchevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTouchEvent* self, uint64_t timestamp ```
+/// @param self QTouchEvent*
+/// @param timestamp uint64_t
 void q_touchevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 
 /// Inherited from QPointerEvent
@@ -8127,8 +8896,9 @@ void q_touchevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTouchEvent* self, void (*slot)(QTouchEvent*, uint64_t) ```
-void q_touchevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
+/// @param self QTouchEvent*
+/// @param callback void fn(QTouchEvent*, uint64_t)
+void q_touchevent_on_set_timestamp(void* self, void (*callback)(void*, uint64_t));
 
 /// Inherited from QPointerEvent
 ///
@@ -8136,7 +8906,8 @@ void q_touchevent_on_set_timestamp(void* self, void (*slot)(void*, uint64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QTouchEvent* self, bool accepted ```
+/// @param self QTouchEvent*
+/// @param accepted bool
 void q_touchevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -8145,7 +8916,8 @@ void q_touchevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QTouchEvent* self, bool accepted ```
+/// @param self QTouchEvent*
+/// @param accepted bool
 void q_touchevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QPointerEvent
@@ -8154,137 +8926,143 @@ void q_touchevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QTouchEvent* self, void (*slot)(QTouchEvent*, bool) ```
-void q_touchevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QTouchEvent*
+/// @param callback void fn(QTouchEvent*, bool)
+void q_touchevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#dtor.QTouchEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QTouchEvent* self ```
+/// @param self QTouchEvent*
 void q_touchevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscrollprepareevent.html
 
 /// q_scrollprepareevent_new constructs a new QScrollPrepareEvent object.
 ///
-/// ``` QPointF* startPos ```
+/// @param startPos QPointF*
 QScrollPrepareEvent* q_scrollprepareevent_new(void* startPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QScrollPrepareEvent* q_scrollprepareevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScrollPrepareEvent* self, QScrollPrepareEvent* (*slot)() ```
-void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*slot)());
+/// @param self QScrollPrepareEvent*
+/// @param callback QScrollPrepareEvent* fn()
+void q_scrollprepareevent_on_clone(void* self, QScrollPrepareEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QScrollPrepareEvent* q_scrollprepareevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#startPos)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QPointF* q_scrollprepareevent_start_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#viewportSize)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QSizeF* q_scrollprepareevent_viewport_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#contentPosRange)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QRectF* q_scrollprepareevent_content_pos_range(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#contentPos)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 QPointF* q_scrollprepareevent_content_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#setViewportSize)
 ///
-/// ``` QScrollPrepareEvent* self, QSizeF* size ```
+/// @param self QScrollPrepareEvent*
+/// @param size QSizeF*
 void q_scrollprepareevent_set_viewport_size(void* self, void* size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#setContentPosRange)
 ///
-/// ``` QScrollPrepareEvent* self, QRectF* rect ```
+/// @param self QScrollPrepareEvent*
+/// @param rect QRectF*
 void q_scrollprepareevent_set_content_pos_range(void* self, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#setContentPos)
 ///
-/// ``` QScrollPrepareEvent* self, QPointF* pos ```
+/// @param self QScrollPrepareEvent*
+/// @param pos QPointF*
 void q_scrollprepareevent_set_content_pos(void* self, void* pos);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_scrollprepareevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 bool q_scrollprepareevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 bool q_scrollprepareevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 void q_scrollprepareevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 void q_scrollprepareevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 bool q_scrollprepareevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 bool q_scrollprepareevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 bool q_scrollprepareevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_scrollprepareevent_register_event_type();
 
@@ -8292,7 +9070,7 @@ int32_t q_scrollprepareevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_scrollprepareevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -8301,7 +9079,8 @@ int32_t q_scrollprepareevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScrollPrepareEvent* self, bool accepted ```
+/// @param self QScrollPrepareEvent*
+/// @param accepted bool
 void q_scrollprepareevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8310,7 +9089,8 @@ void q_scrollprepareevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScrollPrepareEvent* self, bool accepted ```
+/// @param self QScrollPrepareEvent*
+/// @param accepted bool
 void q_scrollprepareevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8319,117 +9099,124 @@ void q_scrollprepareevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScrollPrepareEvent* self, void (*slot)(QScrollPrepareEvent*, bool) ```
-void q_scrollprepareevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QScrollPrepareEvent*
+/// @param callback void fn(QScrollPrepareEvent*, bool)
+void q_scrollprepareevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollprepareevent.html#dtor.QScrollPrepareEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScrollPrepareEvent* self ```
+/// @param self QScrollPrepareEvent*
 void q_scrollprepareevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscrollevent.html
 
 /// q_scrollevent_new constructs a new QScrollEvent object.
 ///
-/// ``` QPointF* contentPos, QPointF* overshoot, enum QScrollEvent__ScrollState scrollState ```
+/// @param contentPos QPointF*
+/// @param overshoot QPointF*
+/// @param scrollState enum QScrollEvent__ScrollState
 QScrollEvent* q_scrollevent_new(void* contentPos, void* overshoot, int64_t scrollState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 QScrollEvent* q_scrollevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScrollEvent* self, QScrollEvent* (*slot)() ```
-void q_scrollevent_on_clone(void* self, QScrollEvent* (*slot)());
+/// @param self QScrollEvent*
+/// @param callback QScrollEvent* fn()
+void q_scrollevent_on_clone(void* self, QScrollEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 QScrollEvent* q_scrollevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#contentPos)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 QPointF* q_scrollevent_content_pos(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#overshootDistance)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 QPointF* q_scrollevent_overshoot_distance(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#scrollState)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
+///
+/// @return enum QScrollEvent__ScrollState
 int64_t q_scrollevent_scroll_state(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_scrollevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 bool q_scrollevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 bool q_scrollevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 void q_scrollevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 void q_scrollevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 bool q_scrollevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 bool q_scrollevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 bool q_scrollevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_scrollevent_register_event_type();
 
@@ -8437,7 +9224,7 @@ int32_t q_scrollevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_scrollevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -8446,7 +9233,8 @@ int32_t q_scrollevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScrollEvent* self, bool accepted ```
+/// @param self QScrollEvent*
+/// @param accepted bool
 void q_scrollevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8455,7 +9243,8 @@ void q_scrollevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScrollEvent* self, bool accepted ```
+/// @param self QScrollEvent*
+/// @param accepted bool
 void q_scrollevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8464,112 +9253,118 @@ void q_scrollevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScrollEvent* self, void (*slot)(QScrollEvent*, bool) ```
-void q_scrollevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QScrollEvent*
+/// @param callback void fn(QScrollEvent*, bool)
+void q_scrollevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#dtor.QScrollEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScrollEvent* self ```
+/// @param self QScrollEvent*
 void q_scrollevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qscreenorientationchangeevent.html
 
 /// q_screenorientationchangeevent_new constructs a new QScreenOrientationChangeEvent object.
 ///
-/// ``` QScreen* screen, enum Qt__ScreenOrientation orientation ```
+/// @param screen QScreen*
+/// @param orientation enum Qt__ScreenOrientation
 QScreenOrientationChangeEvent* q_screenorientationchangeevent_new(void* screen, int64_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 QScreenOrientationChangeEvent* q_screenorientationchangeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QScreenOrientationChangeEvent* self, QScreenOrientationChangeEvent* (*slot)() ```
-void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*slot)());
+/// @param self QScreenOrientationChangeEvent*
+/// @param callback QScreenOrientationChangeEvent* fn()
+void q_screenorientationchangeevent_on_clone(void* self, QScreenOrientationChangeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 QScreenOrientationChangeEvent* q_screenorientationchangeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#screen)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 QScreen* q_screenorientationchangeevent_screen(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#orientation)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
+///
+/// @return enum Qt__ScreenOrientation
 int64_t q_screenorientationchangeevent_orientation(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_screenorientationchangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 bool q_screenorientationchangeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 bool q_screenorientationchangeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 void q_screenorientationchangeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 void q_screenorientationchangeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 bool q_screenorientationchangeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 bool q_screenorientationchangeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 bool q_screenorientationchangeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_screenorientationchangeevent_register_event_type();
 
@@ -8577,7 +9372,7 @@ int32_t q_screenorientationchangeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_screenorientationchangeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -8586,7 +9381,8 @@ int32_t q_screenorientationchangeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QScreenOrientationChangeEvent* self, bool accepted ```
+/// @param self QScreenOrientationChangeEvent*
+/// @param accepted bool
 void q_screenorientationchangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8595,7 +9391,8 @@ void q_screenorientationchangeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QScreenOrientationChangeEvent* self, bool accepted ```
+/// @param self QScreenOrientationChangeEvent*
+/// @param accepted bool
 void q_screenorientationchangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8604,107 +9401,112 @@ void q_screenorientationchangeevent_qbase_set_accepted(void* self, bool accepted
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QScreenOrientationChangeEvent* self, void (*slot)(QScreenOrientationChangeEvent*, bool) ```
-void q_screenorientationchangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QScreenOrientationChangeEvent*
+/// @param callback void fn(QScreenOrientationChangeEvent*, bool)
+void q_screenorientationchangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#dtor.QScreenOrientationChangeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QScreenOrientationChangeEvent* self ```
+/// @param self QScreenOrientationChangeEvent*
 void q_screenorientationchangeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qapplicationstatechangeevent.html
 
 /// q_applicationstatechangeevent_new constructs a new QApplicationStateChangeEvent object.
 ///
-/// ``` enum Qt__ApplicationState state ```
+/// @param state enum Qt__ApplicationState
 QApplicationStateChangeEvent* q_applicationstatechangeevent_new(int64_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 QApplicationStateChangeEvent* q_applicationstatechangeevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QApplicationStateChangeEvent* self, QApplicationStateChangeEvent* (*slot)() ```
-void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*slot)());
+/// @param self QApplicationStateChangeEvent*
+/// @param callback QApplicationStateChangeEvent* fn()
+void q_applicationstatechangeevent_on_clone(void* self, QApplicationStateChangeEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 QApplicationStateChangeEvent* q_applicationstatechangeevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#applicationState)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
+///
+/// @return enum Qt__ApplicationState
 int64_t q_applicationstatechangeevent_application_state(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_applicationstatechangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 bool q_applicationstatechangeevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 bool q_applicationstatechangeevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 void q_applicationstatechangeevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 void q_applicationstatechangeevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 bool q_applicationstatechangeevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 bool q_applicationstatechangeevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 bool q_applicationstatechangeevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_applicationstatechangeevent_register_event_type();
 
@@ -8712,7 +9514,7 @@ int32_t q_applicationstatechangeevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_applicationstatechangeevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -8721,7 +9523,8 @@ int32_t q_applicationstatechangeevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QApplicationStateChangeEvent* self, bool accepted ```
+/// @param self QApplicationStateChangeEvent*
+/// @param accepted bool
 void q_applicationstatechangeevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8730,7 +9533,8 @@ void q_applicationstatechangeevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QApplicationStateChangeEvent* self, bool accepted ```
+/// @param self QApplicationStateChangeEvent*
+/// @param accepted bool
 void q_applicationstatechangeevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8739,107 +9543,111 @@ void q_applicationstatechangeevent_qbase_set_accepted(void* self, bool accepted)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QApplicationStateChangeEvent* self, void (*slot)(QApplicationStateChangeEvent*, bool) ```
-void q_applicationstatechangeevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QApplicationStateChangeEvent*
+/// @param callback void fn(QApplicationStateChangeEvent*, bool)
+void q_applicationstatechangeevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#dtor.QApplicationStateChangeEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QApplicationStateChangeEvent* self ```
+/// @param self QApplicationStateChangeEvent*
 void q_applicationstatechangeevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qchildwindowevent.html
 
 /// q_childwindowevent_new constructs a new QChildWindowEvent object.
 ///
-/// ``` enum QEvent__Type typeVal, QWindow* childWindow ```
+/// @param typeVal enum QEvent__Type
+/// @param childWindow QWindow*
 QChildWindowEvent* q_childwindowevent_new(int64_t typeVal, void* childWindow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 QChildWindowEvent* q_childwindowevent_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QChildWindowEvent* self, QChildWindowEvent* (*slot)() ```
-void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*slot)());
+/// @param self QChildWindowEvent*
+/// @param callback QChildWindowEvent* fn()
+void q_childwindowevent_on_clone(void* self, QChildWindowEvent* (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///
 /// Base class method implementation
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 QChildWindowEvent* q_childwindowevent_qbase_clone(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#child)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 QWindow* q_childwindowevent_child(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
+///
+/// @return enum QEvent__Type
 int64_t q_childwindowevent_type(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 bool q_childwindowevent_spontaneous(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isAccepted)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 bool q_childwindowevent_is_accepted(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#accept)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 void q_childwindowevent_accept(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#ignore)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 void q_childwindowevent_ignore(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isInputEvent)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 bool q_childwindowevent_is_input_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isPointerEvent)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 bool q_childwindowevent_is_pointer_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#isSinglePointEvent)
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 bool q_childwindowevent_is_single_point_event(void* self);
 
 /// Inherited from QEvent
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
-///
 ///
 int32_t q_childwindowevent_register_event_type();
 
@@ -8847,7 +9655,7 @@ int32_t q_childwindowevent_register_event_type();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#registerEventType)
 ///
-/// ``` int hint ```
+/// @param hint int
 int32_t q_childwindowevent_register_event_type1(int hint);
 
 /// Inherited from QEvent
@@ -8856,7 +9664,8 @@ int32_t q_childwindowevent_register_event_type1(int hint);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QChildWindowEvent* self, bool accepted ```
+/// @param self QChildWindowEvent*
+/// @param accepted bool
 void q_childwindowevent_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8865,7 +9674,8 @@ void q_childwindowevent_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QChildWindowEvent* self, bool accepted ```
+/// @param self QChildWindowEvent*
+/// @param accepted bool
 void q_childwindowevent_qbase_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
@@ -8874,38 +9684,45 @@ void q_childwindowevent_qbase_set_accepted(void* self, bool accepted);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QChildWindowEvent* self, void (*slot)(QChildWindowEvent*, bool) ```
-void q_childwindowevent_on_set_accepted(void* self, void (*slot)(void*, bool));
+/// @param self QChildWindowEvent*
+/// @param callback void fn(QChildWindowEvent*, bool)
+void q_childwindowevent_on_set_accepted(void* self, void (*callback)(void*, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#dtor.QChildWindowEvent)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QChildWindowEvent* self ```
+/// @param self QChildWindowEvent*
 void q_childwindowevent_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qinputmethodevent-attribute.html
 
 /// q_inputmethodevent__attribute_new constructs a new QInputMethodEvent::Attribute object.
 ///
-/// ``` enum QInputMethodEvent__AttributeType typ, int s, int l, QVariant* val ```
+/// @param typ enum QInputMethodEvent__AttributeType
+/// @param s int
+/// @param l int
+/// @param val QVariant*
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int64_t typ, int s, int l, void* val);
 
 /// q_inputmethodevent__attribute_new2 constructs a new QInputMethodEvent::Attribute object.
 ///
-/// ``` enum QInputMethodEvent__AttributeType typ, int s, int l ```
+/// @param typ enum QInputMethodEvent__AttributeType
+/// @param s int
+/// @param l int
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, int s, int l);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent__attribute.html#operator-eq)
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#operator-eq)
 ///
-/// ``` QInputMethodEvent__Attribute* self, QInputMethodEvent__Attribute* param1 ```
+/// @param self QInputMethodEvent__Attribute*
+/// @param param1 QInputMethodEvent__Attribute*
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent::attribute.html#dtor.QInputMethodEvent::Attribute)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QInputMethodEvent__Attribute* self ```
+/// @param self QInputMethodEvent__Attribute*
 void q_inputmethodevent__attribute_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qevent.html#types

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,54 +15,59 @@
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#isEmpty)
 ///
-/// ``` QWebEngineScriptCollection* self ```
+/// @param self QWebEngineScriptCollection*
 bool q_webenginescriptcollection_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#count)
 ///
-/// ``` QWebEngineScriptCollection* self ```
+/// @param self QWebEngineScriptCollection*
 int32_t q_webenginescriptcollection_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#contains)
 ///
-/// ``` QWebEngineScriptCollection* self, QWebEngineScript* value ```
+/// @param self QWebEngineScriptCollection*
+/// @param value QWebEngineScript*
 bool q_webenginescriptcollection_contains(void* self, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#find)
 ///
-/// ``` QWebEngineScriptCollection* self, const char* name ```
+/// @param self QWebEngineScriptCollection*
+/// @param name const char*
 libqt_list /* of QWebEngineScript* */ q_webenginescriptcollection_find(void* self, const char* name);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
-/// ``` QWebEngineScriptCollection* self, QWebEngineScript* param1 ```
+/// @param self QWebEngineScriptCollection*
+/// @param param1 QWebEngineScript*
 void q_webenginescriptcollection_insert(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#insert)
 ///
-/// ``` QWebEngineScriptCollection* self, libqt_list /* of QWebEngineScript* */ list ```
+/// @param self QWebEngineScriptCollection*
+/// @param list libqt_list /* of QWebEngineScript* */
 void q_webenginescriptcollection_insert2(void* self, libqt_list list);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#remove)
 ///
-/// ``` QWebEngineScriptCollection* self, QWebEngineScript* param1 ```
+/// @param self QWebEngineScriptCollection*
+/// @param param1 QWebEngineScript*
 bool q_webenginescriptcollection_remove(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#clear)
 ///
-/// ``` QWebEngineScriptCollection* self ```
+/// @param self QWebEngineScriptCollection*
 void q_webenginescriptcollection_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#toList)
 ///
-/// ``` QWebEngineScriptCollection* self ```
+/// @param self QWebEngineScriptCollection*
 libqt_list /* of QWebEngineScript* */ q_webenginescriptcollection_to_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescriptcollection.html#dtor.QWebEngineScriptCollection)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEngineScriptCollection* self ```
+/// @param self QWebEngineScriptCollection*
 void q_webenginescriptcollection_delete(void* self);
 
 #endif

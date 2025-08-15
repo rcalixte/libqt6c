@@ -28,8 +28,8 @@ int32_t q_vxymodelmapper_metacall(void* self, int64_t param1, int param2, void* 
     return QVXYModelMapper_Metacall((QVXYModelMapper*)self, param1, param2, param3);
 }
 
-void q_vxymodelmapper_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QVXYModelMapper_OnMetacall((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QVXYModelMapper_OnMetacall((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -95,48 +95,48 @@ void q_vxymodelmapper_series_replaced(void* self) {
     QVXYModelMapper_SeriesReplaced((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_series_replaced(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_SeriesReplaced((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_series_replaced(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_SeriesReplaced((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_model_replaced(void* self) {
     QVXYModelMapper_ModelReplaced((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_model_replaced(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_ModelReplaced((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_model_replaced(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_ModelReplaced((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_x_column_changed(void* self) {
     QVXYModelMapper_XColumnChanged((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_x_column_changed(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_XColumnChanged((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_x_column_changed(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_XColumnChanged((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_y_column_changed(void* self) {
     QVXYModelMapper_YColumnChanged((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_y_column_changed(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_YColumnChanged((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_y_column_changed(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_YColumnChanged((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_first_row_changed(void* self) {
     QVXYModelMapper_FirstRowChanged((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_first_row_changed(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_FirstRowChanged((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_first_row_changed(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_FirstRowChanged((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_row_count_changed(void* self) {
     QVXYModelMapper_RowCountChanged((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_row_count_changed(void* self, void (*slot)(void*)) {
-    QVXYModelMapper_Connect_RowCountChanged((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_row_count_changed(void* self, void (*callback)(void*)) {
+    QVXYModelMapper_Connect_RowCountChanged((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 const char* q_vxymodelmapper_tr2(const char* s, const char* c) {
@@ -257,12 +257,16 @@ const char** q_vxymodelmapper_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_vxymodelmapper_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -280,8 +284,8 @@ void q_vxymodelmapper_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_vxymodelmapper_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_vxymodelmapper_parent(void* self) {
@@ -316,8 +320,8 @@ void q_vxymodelmapper_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_vxymodelmapper_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_vxymodelmapper_event(void* self, void* event) {
@@ -328,8 +332,8 @@ bool q_vxymodelmapper_qbase_event(void* self, void* event) {
     return QVXYModelMapper_QBaseEvent((QVXYModelMapper*)self, (QEvent*)event);
 }
 
-void q_vxymodelmapper_on_event(void* self, bool (*slot)(void*, void*)) {
-    QVXYModelMapper_OnEvent((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
+    QVXYModelMapper_OnEvent((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_vxymodelmapper_event_filter(void* self, void* watched, void* event) {
@@ -340,8 +344,8 @@ bool q_vxymodelmapper_qbase_event_filter(void* self, void* watched, void* event)
     return QVXYModelMapper_QBaseEventFilter((QVXYModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_vxymodelmapper_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QVXYModelMapper_OnEventFilter((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QVXYModelMapper_OnEventFilter((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_timer_event(void* self, void* event) {
@@ -352,8 +356,8 @@ void q_vxymodelmapper_qbase_timer_event(void* self, void* event) {
     QVXYModelMapper_QBaseTimerEvent((QVXYModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_vxymodelmapper_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QVXYModelMapper_OnTimerEvent((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QVXYModelMapper_OnTimerEvent((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_child_event(void* self, void* event) {
@@ -364,8 +368,8 @@ void q_vxymodelmapper_qbase_child_event(void* self, void* event) {
     QVXYModelMapper_QBaseChildEvent((QVXYModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_vxymodelmapper_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QVXYModelMapper_OnChildEvent((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QVXYModelMapper_OnChildEvent((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_custom_event(void* self, void* event) {
@@ -376,8 +380,8 @@ void q_vxymodelmapper_qbase_custom_event(void* self, void* event) {
     QVXYModelMapper_QBaseCustomEvent((QVXYModelMapper*)self, (QEvent*)event);
 }
 
-void q_vxymodelmapper_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QVXYModelMapper_OnCustomEvent((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QVXYModelMapper_OnCustomEvent((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_connect_notify(void* self, void* signal) {
@@ -388,8 +392,8 @@ void q_vxymodelmapper_qbase_connect_notify(void* self, void* signal) {
     QVXYModelMapper_QBaseConnectNotify((QVXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vxymodelmapper_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QVXYModelMapper_OnConnectNotify((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QVXYModelMapper_OnConnectNotify((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_disconnect_notify(void* self, void* signal) {
@@ -400,8 +404,8 @@ void q_vxymodelmapper_qbase_disconnect_notify(void* self, void* signal) {
     QVXYModelMapper_QBaseDisconnectNotify((QVXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vxymodelmapper_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QVXYModelMapper_OnDisconnectNotify((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QVXYModelMapper_OnDisconnectNotify((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_first(void* self) {
@@ -412,8 +416,8 @@ int32_t q_vxymodelmapper_qbase_first(void* self) {
     return QVXYModelMapper_QBaseFirst((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_first(void* self, int32_t (*slot)()) {
-    QVXYModelMapper_OnFirst((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_first(void* self, int32_t (*callback)()) {
+    QVXYModelMapper_OnFirst((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_set_first(void* self, int first) {
@@ -424,8 +428,8 @@ void q_vxymodelmapper_qbase_set_first(void* self, int first) {
     QVXYModelMapper_QBaseSetFirst((QVXYModelMapper*)self, first);
 }
 
-void q_vxymodelmapper_on_set_first(void* self, void (*slot)(void*, int)) {
-    QVXYModelMapper_OnSetFirst((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
+    QVXYModelMapper_OnSetFirst((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_count(void* self) {
@@ -436,8 +440,8 @@ int32_t q_vxymodelmapper_qbase_count(void* self) {
     return QVXYModelMapper_QBaseCount((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_count(void* self, int32_t (*slot)()) {
-    QVXYModelMapper_OnCount((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_count(void* self, int32_t (*callback)()) {
+    QVXYModelMapper_OnCount((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_set_count(void* self, int count) {
@@ -448,8 +452,8 @@ void q_vxymodelmapper_qbase_set_count(void* self, int count) {
     QVXYModelMapper_QBaseSetCount((QVXYModelMapper*)self, count);
 }
 
-void q_vxymodelmapper_on_set_count(void* self, void (*slot)(void*, int)) {
-    QVXYModelMapper_OnSetCount((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
+    QVXYModelMapper_OnSetCount((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int64_t q_vxymodelmapper_orientation(void* self) {
@@ -460,8 +464,8 @@ int64_t q_vxymodelmapper_qbase_orientation(void* self) {
     return QVXYModelMapper_QBaseOrientation((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_orientation(void* self, int64_t (*slot)()) {
-    QVXYModelMapper_OnOrientation((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_orientation(void* self, int64_t (*callback)()) {
+    QVXYModelMapper_OnOrientation((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_set_orientation(void* self, int64_t orientation) {
@@ -472,8 +476,8 @@ void q_vxymodelmapper_qbase_set_orientation(void* self, int64_t orientation) {
     QVXYModelMapper_QBaseSetOrientation((QVXYModelMapper*)self, orientation);
 }
 
-void q_vxymodelmapper_on_set_orientation(void* self, void (*slot)(void*, int64_t)) {
-    QVXYModelMapper_OnSetOrientation((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t)) {
+    QVXYModelMapper_OnSetOrientation((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_x_section(void* self) {
@@ -484,8 +488,8 @@ int32_t q_vxymodelmapper_qbase_x_section(void* self) {
     return QVXYModelMapper_QBaseXSection((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_x_section(void* self, int32_t (*slot)()) {
-    QVXYModelMapper_OnXSection((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_x_section(void* self, int32_t (*callback)()) {
+    QVXYModelMapper_OnXSection((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_set_x_section(void* self, int xSection) {
@@ -496,8 +500,8 @@ void q_vxymodelmapper_qbase_set_x_section(void* self, int xSection) {
     QVXYModelMapper_QBaseSetXSection((QVXYModelMapper*)self, xSection);
 }
 
-void q_vxymodelmapper_on_set_x_section(void* self, void (*slot)(void*, int)) {
-    QVXYModelMapper_OnSetXSection((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_set_x_section(void* self, void (*callback)(void*, int)) {
+    QVXYModelMapper_OnSetXSection((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_y_section(void* self) {
@@ -508,8 +512,8 @@ int32_t q_vxymodelmapper_qbase_y_section(void* self) {
     return QVXYModelMapper_QBaseYSection((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_y_section(void* self, int32_t (*slot)()) {
-    QVXYModelMapper_OnYSection((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_y_section(void* self, int32_t (*callback)()) {
+    QVXYModelMapper_OnYSection((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_set_y_section(void* self, int ySection) {
@@ -520,8 +524,8 @@ void q_vxymodelmapper_qbase_set_y_section(void* self, int ySection) {
     QVXYModelMapper_QBaseSetYSection((QVXYModelMapper*)self, ySection);
 }
 
-void q_vxymodelmapper_on_set_y_section(void* self, void (*slot)(void*, int)) {
-    QVXYModelMapper_OnSetYSection((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_set_y_section(void* self, void (*callback)(void*, int)) {
+    QVXYModelMapper_OnSetYSection((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 QObject* q_vxymodelmapper_sender(void* self) {
@@ -532,8 +536,8 @@ QObject* q_vxymodelmapper_qbase_sender(void* self) {
     return QVXYModelMapper_QBaseSender((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_sender(void* self, QObject* (*slot)()) {
-    QVXYModelMapper_OnSender((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_sender(void* self, QObject* (*callback)()) {
+    QVXYModelMapper_OnSender((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_sender_signal_index(void* self) {
@@ -544,8 +548,8 @@ int32_t q_vxymodelmapper_qbase_sender_signal_index(void* self) {
     return QVXYModelMapper_QBaseSenderSignalIndex((QVXYModelMapper*)self);
 }
 
-void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QVXYModelMapper_OnSenderSignalIndex((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QVXYModelMapper_OnSenderSignalIndex((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 int32_t q_vxymodelmapper_receivers(void* self, const char* signal) {
@@ -556,8 +560,8 @@ int32_t q_vxymodelmapper_qbase_receivers(void* self, const char* signal) {
     return QVXYModelMapper_QBaseReceivers((QVXYModelMapper*)self, signal);
 }
 
-void q_vxymodelmapper_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QVXYModelMapper_OnReceivers((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QVXYModelMapper_OnReceivers((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
 bool q_vxymodelmapper_is_signal_connected(void* self, void* signal) {
@@ -568,12 +572,12 @@ bool q_vxymodelmapper_qbase_is_signal_connected(void* self, void* signal) {
     return QVXYModelMapper_QBaseIsSignalConnected((QVXYModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QVXYModelMapper_OnIsSignalConnected((QVXYModelMapper*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QVXYModelMapper_OnIsSignalConnected((QVXYModelMapper*)self, (intptr_t)callback);
 }
 
-void q_vxymodelmapper_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_vxymodelmapper_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_vxymodelmapper_delete(void* self) {

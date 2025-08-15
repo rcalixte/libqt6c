@@ -37,8 +37,8 @@ int32_t q_guiapplication_metacall(void* self, int64_t param1, int param2, void* 
     return QGuiApplication_Metacall((QGuiApplication*)self, param1, param2, param3);
 }
 
-void q_guiapplication_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QGuiApplication_OnMetacall((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QGuiApplication_OnMetacall((QGuiApplication*)self, (intptr_t)callback);
 }
 
 int32_t q_guiapplication_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -244,8 +244,8 @@ bool q_guiapplication_notify(void* self, void* param1, void* param2) {
     return QGuiApplication_Notify((QGuiApplication*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-void q_guiapplication_on_notify(void* self, bool (*slot)(void*, void*, void*)) {
-    QGuiApplication_OnNotify((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_notify(void* self, bool (*callback)(void*, void*, void*)) {
+    QGuiApplication_OnNotify((QGuiApplication*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_qbase_notify(void* self, void* param1, void* param2) {
@@ -278,8 +278,8 @@ void* q_guiapplication_resolve_interface(void* self, const char* name, int revis
     return QGuiApplication_ResolveInterface((QGuiApplication*)self, name, revision);
 }
 
-void q_guiapplication_on_resolve_interface(void* self, void* (*slot)(void*, const char*, int)) {
-    QGuiApplication_OnResolveInterface((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
+    QGuiApplication_OnResolveInterface((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void* q_guiapplication_qbase_resolve_interface(void* self, const char* name, int revision) {
@@ -294,120 +294,120 @@ void q_guiapplication_font_database_changed(void* self) {
     QGuiApplication_FontDatabaseChanged((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_font_database_changed(void* self, void (*slot)(void*)) {
-    QGuiApplication_Connect_FontDatabaseChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_font_database_changed(void* self, void (*callback)(void*)) {
+    QGuiApplication_Connect_FontDatabaseChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_screen_added(void* self, void* screen) {
     QGuiApplication_ScreenAdded((QGuiApplication*)self, (QScreen*)screen);
 }
 
-void q_guiapplication_on_screen_added(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_ScreenAdded((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_screen_added(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_ScreenAdded((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_screen_removed(void* self, void* screen) {
     QGuiApplication_ScreenRemoved((QGuiApplication*)self, (QScreen*)screen);
 }
 
-void q_guiapplication_on_screen_removed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_ScreenRemoved((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_screen_removed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_ScreenRemoved((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_primary_screen_changed(void* self, void* screen) {
     QGuiApplication_PrimaryScreenChanged((QGuiApplication*)self, (QScreen*)screen);
 }
 
-void q_guiapplication_on_primary_screen_changed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_PrimaryScreenChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_primary_screen_changed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_PrimaryScreenChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_last_window_closed(void* self) {
     QGuiApplication_LastWindowClosed((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_last_window_closed(void* self, void (*slot)(void*)) {
-    QGuiApplication_Connect_LastWindowClosed((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_last_window_closed(void* self, void (*callback)(void*)) {
+    QGuiApplication_Connect_LastWindowClosed((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_focus_object_changed(void* self, void* focusObject) {
     QGuiApplication_FocusObjectChanged((QGuiApplication*)self, (QObject*)focusObject);
 }
 
-void q_guiapplication_on_focus_object_changed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_FocusObjectChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_focus_object_changed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_FocusObjectChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_focus_window_changed(void* self, void* focusWindow) {
     QGuiApplication_FocusWindowChanged((QGuiApplication*)self, (QWindow*)focusWindow);
 }
 
-void q_guiapplication_on_focus_window_changed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_FocusWindowChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_focus_window_changed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_FocusWindowChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_application_state_changed(void* self, int64_t state) {
     QGuiApplication_ApplicationStateChanged((QGuiApplication*)self, state);
 }
 
-void q_guiapplication_on_application_state_changed(void* self, void (*slot)(void*, int64_t)) {
-    QGuiApplication_Connect_ApplicationStateChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_application_state_changed(void* self, void (*callback)(void*, int64_t)) {
+    QGuiApplication_Connect_ApplicationStateChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_layout_direction_changed(void* self, int64_t direction) {
     QGuiApplication_LayoutDirectionChanged((QGuiApplication*)self, direction);
 }
 
-void q_guiapplication_on_layout_direction_changed(void* self, void (*slot)(void*, int64_t)) {
-    QGuiApplication_Connect_LayoutDirectionChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_layout_direction_changed(void* self, void (*callback)(void*, int64_t)) {
+    QGuiApplication_Connect_LayoutDirectionChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_commit_data_request(void* self, void* sessionManager) {
     QGuiApplication_CommitDataRequest((QGuiApplication*)self, (QSessionManager*)sessionManager);
 }
 
-void q_guiapplication_on_commit_data_request(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_CommitDataRequest((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_commit_data_request(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_CommitDataRequest((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_save_state_request(void* self, void* sessionManager) {
     QGuiApplication_SaveStateRequest((QGuiApplication*)self, (QSessionManager*)sessionManager);
 }
 
-void q_guiapplication_on_save_state_request(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_SaveStateRequest((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_save_state_request(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_SaveStateRequest((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_application_display_name_changed(void* self) {
     QGuiApplication_ApplicationDisplayNameChanged((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_application_display_name_changed(void* self, void (*slot)(void*)) {
-    QGuiApplication_Connect_ApplicationDisplayNameChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_application_display_name_changed(void* self, void (*callback)(void*)) {
+    QGuiApplication_Connect_ApplicationDisplayNameChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_palette_changed(void* self, void* pal) {
     QGuiApplication_PaletteChanged((QGuiApplication*)self, (QPalette*)pal);
 }
 
-void q_guiapplication_on_palette_changed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_PaletteChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_palette_changed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_PaletteChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_font_changed(void* self, void* font) {
     QGuiApplication_FontChanged((QGuiApplication*)self, (QFont*)font);
 }
 
-void q_guiapplication_on_font_changed(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_Connect_FontChanged((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_font_changed(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_Connect_FontChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_event(void* self, void* param1) {
     return QGuiApplication_Event((QGuiApplication*)self, (QEvent*)param1);
 }
 
-void q_guiapplication_on_event(void* self, bool (*slot)(void*, void*)) {
-    QGuiApplication_OnEvent((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_event(void* self, bool (*callback)(void*, void*)) {
+    QGuiApplication_OnEvent((QGuiApplication*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_qbase_event(void* self, void* param1) {
@@ -432,12 +432,16 @@ const char** q_guiapplication_arguments() {
     libqt_list _arr = QCoreApplication_Arguments();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_guiapplication_arguments");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -575,24 +579,33 @@ int64_t q_guiapplication_check_permission(void* self, void* permission) {
 
 void q_guiapplication_set_library_paths(const char* libraryPaths[]) {
     size_t libraryPaths_len = libqt_strv_length(libraryPaths);
-    libqt_string* libraryPaths_qstr = malloc(libraryPaths_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < libraryPaths_len; ++_i) {
-        libraryPaths_qstr[_i] = qstring(libraryPaths[_i]);
+    libqt_string* libraryPaths_qstr = (libqt_string*)malloc(libraryPaths_len * sizeof(libqt_string));
+    if (libraryPaths_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_guiapplication_set_library_paths");
+        abort();
+    }
+    for (size_t i = 0; i < libraryPaths_len; ++i) {
+        libraryPaths_qstr[i] = qstring(libraryPaths[i]);
     }
     libqt_list libraryPaths_list = qlist(libraryPaths_qstr, libraryPaths_len);
     QCoreApplication_SetLibraryPaths(libraryPaths_list);
+    free(libraryPaths_qstr);
 }
 
 const char** q_guiapplication_library_paths() {
     libqt_list _arr = QCoreApplication_LibraryPaths();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_guiapplication_library_paths");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -625,16 +638,16 @@ void q_guiapplication_install_native_event_filter(void* self, void* filterObj) {
     QCoreApplication_InstallNativeEventFilter((QCoreApplication*)self, (QAbstractNativeEventFilter*)filterObj);
 }
 
-void q_guiapplication_on_install_native_event_filter(void* self, void (*slot)(void*, void*)) {
-    QCoreApplication_Connect_InstallNativeEventFilter((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_install_native_event_filter(void* self, void (*callback)(void*, void*)) {
+    QCoreApplication_Connect_InstallNativeEventFilter((QCoreApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_remove_native_event_filter(void* self, void* filterObj) {
     QCoreApplication_RemoveNativeEventFilter((QCoreApplication*)self, (QAbstractNativeEventFilter*)filterObj);
 }
 
-void q_guiapplication_on_remove_native_event_filter(void* self, void (*slot)(void*, void*)) {
-    QCoreApplication_Connect_RemoveNativeEventFilter((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_remove_native_event_filter(void* self, void (*callback)(void*, void*)) {
+    QCoreApplication_Connect_RemoveNativeEventFilter((QCoreApplication*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_is_quit_lock_enabled() {
@@ -657,32 +670,32 @@ void q_guiapplication_organization_name_changed(void* self) {
     QCoreApplication_OrganizationNameChanged((QCoreApplication*)self);
 }
 
-void q_guiapplication_on_organization_name_changed(void* self, void (*slot)(void*)) {
-    QCoreApplication_Connect_OrganizationNameChanged((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_organization_name_changed(void* self, void (*callback)(void*)) {
+    QCoreApplication_Connect_OrganizationNameChanged((QCoreApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_organization_domain_changed(void* self) {
     QCoreApplication_OrganizationDomainChanged((QCoreApplication*)self);
 }
 
-void q_guiapplication_on_organization_domain_changed(void* self, void (*slot)(void*)) {
-    QCoreApplication_Connect_OrganizationDomainChanged((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_organization_domain_changed(void* self, void (*callback)(void*)) {
+    QCoreApplication_Connect_OrganizationDomainChanged((QCoreApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_application_name_changed(void* self) {
     QCoreApplication_ApplicationNameChanged((QCoreApplication*)self);
 }
 
-void q_guiapplication_on_application_name_changed(void* self, void (*slot)(void*)) {
-    QCoreApplication_Connect_ApplicationNameChanged((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_application_name_changed(void* self, void (*callback)(void*)) {
+    QCoreApplication_Connect_ApplicationNameChanged((QCoreApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_application_version_changed(void* self) {
     QCoreApplication_ApplicationVersionChanged((QCoreApplication*)self);
 }
 
-void q_guiapplication_on_application_version_changed(void* self, void (*slot)(void*)) {
-    QCoreApplication_Connect_ApplicationVersionChanged((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_application_version_changed(void* self, void (*callback)(void*)) {
+    QCoreApplication_Connect_ApplicationVersionChanged((QCoreApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_set_attribute2(int64_t attribute, bool on) {
@@ -831,12 +844,16 @@ const char** q_guiapplication_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_guiapplication_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -854,8 +871,8 @@ void q_guiapplication_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_guiapplication_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_guiapplication_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_guiapplication_parent(void* self) {
@@ -890,8 +907,8 @@ void q_guiapplication_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_guiapplication_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_guiapplication_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_event_filter(void* self, void* watched, void* event) {
@@ -902,8 +919,8 @@ bool q_guiapplication_qbase_event_filter(void* self, void* watched, void* event)
     return QGuiApplication_QBaseEventFilter((QGuiApplication*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_guiapplication_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QGuiApplication_OnEventFilter((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QGuiApplication_OnEventFilter((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_timer_event(void* self, void* event) {
@@ -914,8 +931,8 @@ void q_guiapplication_qbase_timer_event(void* self, void* event) {
     QGuiApplication_QBaseTimerEvent((QGuiApplication*)self, (QTimerEvent*)event);
 }
 
-void q_guiapplication_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_OnTimerEvent((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_OnTimerEvent((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_child_event(void* self, void* event) {
@@ -926,8 +943,8 @@ void q_guiapplication_qbase_child_event(void* self, void* event) {
     QGuiApplication_QBaseChildEvent((QGuiApplication*)self, (QChildEvent*)event);
 }
 
-void q_guiapplication_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_OnChildEvent((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_OnChildEvent((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_custom_event(void* self, void* event) {
@@ -938,8 +955,8 @@ void q_guiapplication_qbase_custom_event(void* self, void* event) {
     QGuiApplication_QBaseCustomEvent((QGuiApplication*)self, (QEvent*)event);
 }
 
-void q_guiapplication_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_OnCustomEvent((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_OnCustomEvent((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_connect_notify(void* self, void* signal) {
@@ -950,8 +967,8 @@ void q_guiapplication_qbase_connect_notify(void* self, void* signal) {
     QGuiApplication_QBaseConnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_guiapplication_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_OnConnectNotify((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_OnConnectNotify((QGuiApplication*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_disconnect_notify(void* self, void* signal) {
@@ -962,8 +979,8 @@ void q_guiapplication_qbase_disconnect_notify(void* self, void* signal) {
     QGuiApplication_QBaseDisconnectNotify((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_guiapplication_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QGuiApplication_OnDisconnectNotify((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QGuiApplication_OnDisconnectNotify((QGuiApplication*)self, (intptr_t)callback);
 }
 
 QObject* q_guiapplication_sender(void* self) {
@@ -974,8 +991,8 @@ QObject* q_guiapplication_qbase_sender(void* self) {
     return QGuiApplication_QBaseSender((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_sender(void* self, QObject* (*slot)()) {
-    QGuiApplication_OnSender((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_sender(void* self, QObject* (*callback)()) {
+    QGuiApplication_OnSender((QGuiApplication*)self, (intptr_t)callback);
 }
 
 int32_t q_guiapplication_sender_signal_index(void* self) {
@@ -986,8 +1003,8 @@ int32_t q_guiapplication_qbase_sender_signal_index(void* self) {
     return QGuiApplication_QBaseSenderSignalIndex((QGuiApplication*)self);
 }
 
-void q_guiapplication_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QGuiApplication_OnSenderSignalIndex((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QGuiApplication_OnSenderSignalIndex((QGuiApplication*)self, (intptr_t)callback);
 }
 
 int32_t q_guiapplication_receivers(void* self, const char* signal) {
@@ -998,8 +1015,8 @@ int32_t q_guiapplication_qbase_receivers(void* self, const char* signal) {
     return QGuiApplication_QBaseReceivers((QGuiApplication*)self, signal);
 }
 
-void q_guiapplication_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QGuiApplication_OnReceivers((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QGuiApplication_OnReceivers((QGuiApplication*)self, (intptr_t)callback);
 }
 
 bool q_guiapplication_is_signal_connected(void* self, void* signal) {
@@ -1010,16 +1027,16 @@ bool q_guiapplication_qbase_is_signal_connected(void* self, void* signal) {
     return QGuiApplication_QBaseIsSignalConnected((QGuiApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_guiapplication_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QGuiApplication_OnIsSignalConnected((QGuiApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QGuiApplication_OnIsSignalConnected((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void q_guiapplication_on_about_to_quit(void* self, void (*slot)(void*)) {
-    QCoreApplication_Connect_AboutToQuit((QCoreApplication*)self, (intptr_t)slot);
+void q_guiapplication_on_about_to_quit(void* self, void (*callback)(void*)) {
+    QCoreApplication_Connect_AboutToQuit((QCoreApplication*)self, (intptr_t)callback);
 }
 
-void q_guiapplication_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_guiapplication_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_guiapplication_delete(void* self) {

@@ -177,72 +177,72 @@ void q_screen_geometry_changed(void* self, void* geometry) {
     QScreen_GeometryChanged((QScreen*)self, (QRect*)geometry);
 }
 
-void q_screen_on_geometry_changed(void* self, void (*slot)(void*, void*)) {
-    QScreen_Connect_GeometryChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_geometry_changed(void* self, void (*callback)(void*, void*)) {
+    QScreen_Connect_GeometryChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_available_geometry_changed(void* self, void* geometry) {
     QScreen_AvailableGeometryChanged((QScreen*)self, (QRect*)geometry);
 }
 
-void q_screen_on_available_geometry_changed(void* self, void (*slot)(void*, void*)) {
-    QScreen_Connect_AvailableGeometryChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_available_geometry_changed(void* self, void (*callback)(void*, void*)) {
+    QScreen_Connect_AvailableGeometryChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_physical_size_changed(void* self, void* size) {
     QScreen_PhysicalSizeChanged((QScreen*)self, (QSizeF*)size);
 }
 
-void q_screen_on_physical_size_changed(void* self, void (*slot)(void*, void*)) {
-    QScreen_Connect_PhysicalSizeChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_physical_size_changed(void* self, void (*callback)(void*, void*)) {
+    QScreen_Connect_PhysicalSizeChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_physical_dots_per_inch_changed(void* self, double dpi) {
     QScreen_PhysicalDotsPerInchChanged((QScreen*)self, dpi);
 }
 
-void q_screen_on_physical_dots_per_inch_changed(void* self, void (*slot)(void*, double)) {
-    QScreen_Connect_PhysicalDotsPerInchChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_physical_dots_per_inch_changed(void* self, void (*callback)(void*, double)) {
+    QScreen_Connect_PhysicalDotsPerInchChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_logical_dots_per_inch_changed(void* self, double dpi) {
     QScreen_LogicalDotsPerInchChanged((QScreen*)self, dpi);
 }
 
-void q_screen_on_logical_dots_per_inch_changed(void* self, void (*slot)(void*, double)) {
-    QScreen_Connect_LogicalDotsPerInchChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_logical_dots_per_inch_changed(void* self, void (*callback)(void*, double)) {
+    QScreen_Connect_LogicalDotsPerInchChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_virtual_geometry_changed(void* self, void* rect) {
     QScreen_VirtualGeometryChanged((QScreen*)self, (QRect*)rect);
 }
 
-void q_screen_on_virtual_geometry_changed(void* self, void (*slot)(void*, void*)) {
-    QScreen_Connect_VirtualGeometryChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_virtual_geometry_changed(void* self, void (*callback)(void*, void*)) {
+    QScreen_Connect_VirtualGeometryChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_primary_orientation_changed(void* self, int64_t orientation) {
     QScreen_PrimaryOrientationChanged((QScreen*)self, orientation);
 }
 
-void q_screen_on_primary_orientation_changed(void* self, void (*slot)(void*, int64_t)) {
-    QScreen_Connect_PrimaryOrientationChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_primary_orientation_changed(void* self, void (*callback)(void*, int64_t)) {
+    QScreen_Connect_PrimaryOrientationChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_orientation_changed(void* self, int64_t orientation) {
     QScreen_OrientationChanged((QScreen*)self, orientation);
 }
 
-void q_screen_on_orientation_changed(void* self, void (*slot)(void*, int64_t)) {
-    QScreen_Connect_OrientationChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_orientation_changed(void* self, void (*callback)(void*, int64_t)) {
+    QScreen_Connect_OrientationChanged((QScreen*)self, (intptr_t)callback);
 }
 
 void q_screen_refresh_rate_changed(void* self, double refreshRate) {
     QScreen_RefreshRateChanged((QScreen*)self, refreshRate);
 }
 
-void q_screen_on_refresh_rate_changed(void* self, void (*slot)(void*, double)) {
-    QScreen_Connect_RefreshRateChanged((QScreen*)self, (intptr_t)slot);
+void q_screen_on_refresh_rate_changed(void* self, void (*callback)(void*, double)) {
+    QScreen_Connect_RefreshRateChanged((QScreen*)self, (intptr_t)callback);
 }
 
 const char* q_screen_tr2(const char* s, const char* c) {
@@ -391,12 +391,16 @@ const char** q_screen_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_screen_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -414,8 +418,8 @@ void q_screen_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_screen_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_screen_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_screen_parent(void* self) {
@@ -450,12 +454,12 @@ void q_screen_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_screen_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_screen_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_screen_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_screen_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_screen_delete(void* self) {

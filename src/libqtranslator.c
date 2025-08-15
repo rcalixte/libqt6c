@@ -26,8 +26,8 @@ int32_t q_translator_metacall(void* self, int64_t param1, int param2, void* para
     return QTranslator_Metacall((QTranslator*)self, param1, param2, param3);
 }
 
-void q_translator_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QTranslator_OnMetacall((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QTranslator_OnMetacall((QTranslator*)self, (intptr_t)callback);
 }
 
 int32_t q_translator_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ const char* q_translator_translate(void* self, const char* context, const char* 
     return _ret;
 }
 
-void q_translator_on_translate(void* self, const char* (*slot)(void*, const char*, const char*, const char*, int)) {
-    QTranslator_OnTranslate((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_translate(void* self, const char* (*callback)(void*, const char*, const char*, const char*, int)) {
+    QTranslator_OnTranslate((QTranslator*)self, (intptr_t)callback);
 }
 
 const char* q_translator_qbase_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
@@ -63,8 +63,8 @@ bool q_translator_is_empty(void* self) {
     return QTranslator_IsEmpty((QTranslator*)self);
 }
 
-void q_translator_on_is_empty(void* self, bool (*slot)()) {
-    QTranslator_OnIsEmpty((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_is_empty(void* self, bool (*callback)()) {
+    QTranslator_OnIsEmpty((QTranslator*)self, (intptr_t)callback);
 }
 
 bool q_translator_qbase_is_empty(void* self) {
@@ -243,12 +243,16 @@ const char** q_translator_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_translator_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -266,8 +270,8 @@ void q_translator_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_translator_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_translator_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_translator_parent(void* self) {
@@ -302,8 +306,8 @@ void q_translator_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_translator_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_translator_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_translator_event(void* self, void* event) {
@@ -314,8 +318,8 @@ bool q_translator_qbase_event(void* self, void* event) {
     return QTranslator_QBaseEvent((QTranslator*)self, (QEvent*)event);
 }
 
-void q_translator_on_event(void* self, bool (*slot)(void*, void*)) {
-    QTranslator_OnEvent((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_event(void* self, bool (*callback)(void*, void*)) {
+    QTranslator_OnEvent((QTranslator*)self, (intptr_t)callback);
 }
 
 bool q_translator_event_filter(void* self, void* watched, void* event) {
@@ -326,8 +330,8 @@ bool q_translator_qbase_event_filter(void* self, void* watched, void* event) {
     return QTranslator_QBaseEventFilter((QTranslator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_translator_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QTranslator_OnEventFilter((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QTranslator_OnEventFilter((QTranslator*)self, (intptr_t)callback);
 }
 
 void q_translator_timer_event(void* self, void* event) {
@@ -338,8 +342,8 @@ void q_translator_qbase_timer_event(void* self, void* event) {
     QTranslator_QBaseTimerEvent((QTranslator*)self, (QTimerEvent*)event);
 }
 
-void q_translator_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QTranslator_OnTimerEvent((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QTranslator_OnTimerEvent((QTranslator*)self, (intptr_t)callback);
 }
 
 void q_translator_child_event(void* self, void* event) {
@@ -350,8 +354,8 @@ void q_translator_qbase_child_event(void* self, void* event) {
     QTranslator_QBaseChildEvent((QTranslator*)self, (QChildEvent*)event);
 }
 
-void q_translator_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QTranslator_OnChildEvent((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QTranslator_OnChildEvent((QTranslator*)self, (intptr_t)callback);
 }
 
 void q_translator_custom_event(void* self, void* event) {
@@ -362,8 +366,8 @@ void q_translator_qbase_custom_event(void* self, void* event) {
     QTranslator_QBaseCustomEvent((QTranslator*)self, (QEvent*)event);
 }
 
-void q_translator_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QTranslator_OnCustomEvent((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QTranslator_OnCustomEvent((QTranslator*)self, (intptr_t)callback);
 }
 
 void q_translator_connect_notify(void* self, void* signal) {
@@ -374,8 +378,8 @@ void q_translator_qbase_connect_notify(void* self, void* signal) {
     QTranslator_QBaseConnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-void q_translator_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QTranslator_OnConnectNotify((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QTranslator_OnConnectNotify((QTranslator*)self, (intptr_t)callback);
 }
 
 void q_translator_disconnect_notify(void* self, void* signal) {
@@ -386,8 +390,8 @@ void q_translator_qbase_disconnect_notify(void* self, void* signal) {
     QTranslator_QBaseDisconnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-void q_translator_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QTranslator_OnDisconnectNotify((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QTranslator_OnDisconnectNotify((QTranslator*)self, (intptr_t)callback);
 }
 
 QObject* q_translator_sender(void* self) {
@@ -398,8 +402,8 @@ QObject* q_translator_qbase_sender(void* self) {
     return QTranslator_QBaseSender((QTranslator*)self);
 }
 
-void q_translator_on_sender(void* self, QObject* (*slot)()) {
-    QTranslator_OnSender((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_sender(void* self, QObject* (*callback)()) {
+    QTranslator_OnSender((QTranslator*)self, (intptr_t)callback);
 }
 
 int32_t q_translator_sender_signal_index(void* self) {
@@ -410,8 +414,8 @@ int32_t q_translator_qbase_sender_signal_index(void* self) {
     return QTranslator_QBaseSenderSignalIndex((QTranslator*)self);
 }
 
-void q_translator_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QTranslator_OnSenderSignalIndex((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QTranslator_OnSenderSignalIndex((QTranslator*)self, (intptr_t)callback);
 }
 
 int32_t q_translator_receivers(void* self, const char* signal) {
@@ -422,8 +426,8 @@ int32_t q_translator_qbase_receivers(void* self, const char* signal) {
     return QTranslator_QBaseReceivers((QTranslator*)self, signal);
 }
 
-void q_translator_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QTranslator_OnReceivers((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QTranslator_OnReceivers((QTranslator*)self, (intptr_t)callback);
 }
 
 bool q_translator_is_signal_connected(void* self, void* signal) {
@@ -434,12 +438,12 @@ bool q_translator_qbase_is_signal_connected(void* self, void* signal) {
     return QTranslator_QBaseIsSignalConnected((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-void q_translator_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QTranslator_OnIsSignalConnected((QTranslator*)self, (intptr_t)slot);
+void q_translator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QTranslator_OnIsSignalConnected((QTranslator*)self, (intptr_t)callback);
 }
 
-void q_translator_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_translator_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_translator_delete(void* self) {

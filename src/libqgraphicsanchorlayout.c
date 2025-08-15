@@ -175,12 +175,16 @@ const char** q_graphicsanchor_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_graphicsanchor_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -198,8 +202,8 @@ void q_graphicsanchor_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_graphicsanchor_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_graphicsanchor_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_graphicsanchor_parent(void* self) {
@@ -234,12 +238,12 @@ void q_graphicsanchor_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_graphicsanchor_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_graphicsanchor_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsanchor_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_graphicsanchor_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchor_delete(void* self) {
@@ -294,8 +298,8 @@ void q_graphicsanchorlayout_remove_at(void* self, int index) {
     QGraphicsAnchorLayout_RemoveAt((QGraphicsAnchorLayout*)self, index);
 }
 
-void q_graphicsanchorlayout_on_remove_at(void* self, void (*slot)(void*, int)) {
-    QGraphicsAnchorLayout_OnRemoveAt((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_remove_at(void* self, void (*callback)(void*, int)) {
+    QGraphicsAnchorLayout_OnRemoveAt((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_qbase_remove_at(void* self, int index) {
@@ -306,8 +310,8 @@ void q_graphicsanchorlayout_set_geometry(void* self, void* rect) {
     QGraphicsAnchorLayout_SetGeometry((QGraphicsAnchorLayout*)self, (QRectF*)rect);
 }
 
-void q_graphicsanchorlayout_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QGraphicsAnchorLayout_OnSetGeometry((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QGraphicsAnchorLayout_OnSetGeometry((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_qbase_set_geometry(void* self, void* rect) {
@@ -318,8 +322,8 @@ int32_t q_graphicsanchorlayout_count(void* self) {
     return QGraphicsAnchorLayout_Count((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_count(void* self, int32_t (*slot)()) {
-    QGraphicsAnchorLayout_OnCount((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_count(void* self, int32_t (*callback)()) {
+    QGraphicsAnchorLayout_OnCount((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_graphicsanchorlayout_qbase_count(void* self) {
@@ -330,8 +334,8 @@ QGraphicsLayoutItem* q_graphicsanchorlayout_item_at(void* self, int index) {
     return QGraphicsAnchorLayout_ItemAt((QGraphicsAnchorLayout*)self, index);
 }
 
-void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*slot)(void*, int)) {
-    QGraphicsAnchorLayout_OnItemAt((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_item_at(void* self, QGraphicsLayoutItem* (*callback)(void*, int)) {
+    QGraphicsAnchorLayout_OnItemAt((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 QGraphicsLayoutItem* q_graphicsanchorlayout_qbase_item_at(void* self, int index) {
@@ -342,8 +346,8 @@ void q_graphicsanchorlayout_invalidate(void* self) {
     QGraphicsAnchorLayout_Invalidate((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_invalidate(void* self, void (*slot)()) {
-    QGraphicsAnchorLayout_OnInvalidate((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_invalidate(void* self, void (*callback)()) {
+    QGraphicsAnchorLayout_OnInvalidate((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_qbase_invalidate(void* self) {
@@ -354,8 +358,8 @@ QSizeF* q_graphicsanchorlayout_size_hint(void* self, int64_t which, void* constr
     return QGraphicsAnchorLayout_SizeHint((QGraphicsAnchorLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*slot)(void*, int64_t, void*)) {
-    QGraphicsAnchorLayout_OnSizeHint((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+    QGraphicsAnchorLayout_OnSizeHint((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int64_t which, void* constraint) {
@@ -530,8 +534,8 @@ void q_graphicsanchorlayout_qbase_get_contents_margins(void* self, double* left,
     QGraphicsAnchorLayout_QBaseGetContentsMargins((QGraphicsAnchorLayout*)self, left, top, right, bottom);
 }
 
-void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*slot)(void*, double*, double*, double*, double*)) {
-    QGraphicsAnchorLayout_OnGetContentsMargins((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*)) {
+    QGraphicsAnchorLayout_OnGetContentsMargins((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_update_geometry(void* self) {
@@ -542,8 +546,8 @@ void q_graphicsanchorlayout_qbase_update_geometry(void* self) {
     QGraphicsAnchorLayout_QBaseUpdateGeometry((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_update_geometry(void* self, void (*slot)()) {
-    QGraphicsAnchorLayout_OnUpdateGeometry((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_update_geometry(void* self, void (*callback)()) {
+    QGraphicsAnchorLayout_OnUpdateGeometry((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_widget_event(void* self, void* e) {
@@ -554,8 +558,8 @@ void q_graphicsanchorlayout_qbase_widget_event(void* self, void* e) {
     QGraphicsAnchorLayout_QBaseWidgetEvent((QGraphicsAnchorLayout*)self, (QEvent*)e);
 }
 
-void q_graphicsanchorlayout_on_widget_event(void* self, void (*slot)(void*, void*)) {
-    QGraphicsAnchorLayout_OnWidgetEvent((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
+    QGraphicsAnchorLayout_OnWidgetEvent((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 bool q_graphicsanchorlayout_is_empty(void* self) {
@@ -566,8 +570,8 @@ bool q_graphicsanchorlayout_qbase_is_empty(void* self) {
     return QGraphicsAnchorLayout_QBaseIsEmpty((QGraphicsAnchorLayout*)self);
 }
 
-void q_graphicsanchorlayout_on_is_empty(void* self, bool (*slot)()) {
-    QGraphicsAnchorLayout_OnIsEmpty((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_is_empty(void* self, bool (*callback)()) {
+    QGraphicsAnchorLayout_OnIsEmpty((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_add_child_layout_item(void* self, void* layoutItem) {
@@ -578,8 +582,8 @@ void q_graphicsanchorlayout_qbase_add_child_layout_item(void* self, void* layout
     QGraphicsAnchorLayout_QBaseAddChildLayoutItem((QGraphicsAnchorLayout*)self, (QGraphicsLayoutItem*)layoutItem);
 }
 
-void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*slot)(void*, void*)) {
-    QGraphicsAnchorLayout_OnAddChildLayoutItem((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_add_child_layout_item(void* self, void (*callback)(void*, void*)) {
+    QGraphicsAnchorLayout_OnAddChildLayoutItem((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_set_graphics_item(void* self, void* item) {
@@ -590,8 +594,8 @@ void q_graphicsanchorlayout_qbase_set_graphics_item(void* self, void* item) {
     QGraphicsAnchorLayout_QBaseSetGraphicsItem((QGraphicsAnchorLayout*)self, (QGraphicsItem*)item);
 }
 
-void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*slot)(void*, void*)) {
-    QGraphicsAnchorLayout_OnSetGraphicsItem((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_set_graphics_item(void* self, void (*callback)(void*, void*)) {
+    QGraphicsAnchorLayout_OnSetGraphicsItem((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_set_owned_by_layout(void* self, bool ownedByLayout) {
@@ -602,8 +606,8 @@ void q_graphicsanchorlayout_qbase_set_owned_by_layout(void* self, bool ownedByLa
     QGraphicsAnchorLayout_QBaseSetOwnedByLayout((QGraphicsAnchorLayout*)self, ownedByLayout);
 }
 
-void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*slot)(void*, bool)) {
-    QGraphicsAnchorLayout_OnSetOwnedByLayout((QGraphicsAnchorLayout*)self, (intptr_t)slot);
+void q_graphicsanchorlayout_on_set_owned_by_layout(void* self, void (*callback)(void*, bool)) {
+    QGraphicsAnchorLayout_OnSetOwnedByLayout((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
 void q_graphicsanchorlayout_delete(void* self) {

@@ -27,8 +27,8 @@ int32_t q_datetimeaxis_metacall(void* self, int64_t param1, int param2, void* pa
     return QDateTimeAxis_Metacall((QDateTimeAxis*)self, param1, param2, param3);
 }
 
-void q_datetimeaxis_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QDateTimeAxis_OnMetacall((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QDateTimeAxis_OnMetacall((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_datetimeaxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ int64_t q_datetimeaxis_type(void* self) {
     return QDateTimeAxis_Type((QDateTimeAxis*)self);
 }
 
-void q_datetimeaxis_on_type(void* self, int64_t (*slot)()) {
-    QDateTimeAxis_OnType((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_type(void* self, int64_t (*callback)()) {
+    QDateTimeAxis_OnType((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 int64_t q_datetimeaxis_qbase_type(void* self) {
@@ -97,40 +97,40 @@ void q_datetimeaxis_min_changed(void* self, void* min) {
     QDateTimeAxis_MinChanged((QDateTimeAxis*)self, (QDateTime*)min);
 }
 
-void q_datetimeaxis_on_min_changed(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_Connect_MinChanged((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_min_changed(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_Connect_MinChanged((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_max_changed(void* self, void* max) {
     QDateTimeAxis_MaxChanged((QDateTimeAxis*)self, (QDateTime*)max);
 }
 
-void q_datetimeaxis_on_max_changed(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_Connect_MaxChanged((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_max_changed(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_Connect_MaxChanged((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_range_changed(void* self, void* min, void* max) {
     QDateTimeAxis_RangeChanged((QDateTimeAxis*)self, (QDateTime*)min, (QDateTime*)max);
 }
 
-void q_datetimeaxis_on_range_changed(void* self, void (*slot)(void*, void*, void*)) {
-    QDateTimeAxis_Connect_RangeChanged((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_range_changed(void* self, void (*callback)(void*, void*, void*)) {
+    QDateTimeAxis_Connect_RangeChanged((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_format_changed(void* self, const char* format) {
     QDateTimeAxis_FormatChanged((QDateTimeAxis*)self, qstring(format));
 }
 
-void q_datetimeaxis_on_format_changed(void* self, void (*slot)(void*, const char*)) {
-    QDateTimeAxis_Connect_FormatChanged((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_format_changed(void* self, void (*callback)(void*, const char*)) {
+    QDateTimeAxis_Connect_FormatChanged((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_tick_count_changed(void* self, int tick) {
     QDateTimeAxis_TickCountChanged((QDateTimeAxis*)self, tick);
 }
 
-void q_datetimeaxis_on_tick_count_changed(void* self, void (*slot)(void*, int)) {
-    QDateTimeAxis_Connect_TickCountChanged((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_tick_count_changed(void* self, void (*callback)(void*, int)) {
+    QDateTimeAxis_Connect_TickCountChanged((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 const char* q_datetimeaxis_tr2(const char* s, const char* c) {
@@ -390,224 +390,224 @@ void q_datetimeaxis_visible_changed(void* self, bool visible) {
     QAbstractAxis_VisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_VisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_LinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_datetimeaxis_on_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_line_visible_changed(void* self, bool visible) {
     QAbstractAxis_LineVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_line_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_line_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LineVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_visible_changed(void* self, bool visible) {
     QAbstractAxis_LabelsVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_labels_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_brush_changed(void* self, void* brush) {
     QAbstractAxis_LabelsBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_datetimeaxis_on_labels_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_font_changed(void* self, void* pen) {
     QAbstractAxis_LabelsFontChanged((QAbstractAxis*)self, (QFont*)pen);
 }
 
-void q_datetimeaxis_on_labels_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_angle_changed(void* self, int angle) {
     QAbstractAxis_LabelsAngleChanged((QAbstractAxis*)self, angle);
 }
 
-void q_datetimeaxis_on_labels_angle_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_angle_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractAxis_Connect_LabelsAngleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_GridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_datetimeaxis_on_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_GridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_GridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_minor_grid_visible_changed(void* self, bool visible) {
     QAbstractAxis_MinorGridVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_minor_grid_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_minor_grid_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_MinorGridVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_minor_grid_line_pen_changed(void* self, void* pen) {
     QAbstractAxis_MinorGridLinePenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_datetimeaxis_on_minor_grid_line_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_minor_grid_line_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLinePenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_GridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_GridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_minor_grid_line_color_changed(void* self, void* color) {
     QAbstractAxis_MinorGridLineColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_minor_grid_line_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_minor_grid_line_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_MinorGridLineColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_color_changed(void* self, void* color) {
     QAbstractAxis_ColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_color_changed(void* self, void* color) {
     QAbstractAxis_LabelsColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_labels_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_LabelsColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_title_text_changed(void* self, const char* title) {
     QAbstractAxis_TitleTextChanged((QAbstractAxis*)self, qstring(title));
 }
 
-void q_datetimeaxis_on_title_text_changed(void* self, void (*slot)(void*, const char*)) {
-    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_title_text_changed(void* self, void (*callback)(void*, const char*)) {
+    QAbstractAxis_Connect_TitleTextChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_title_brush_changed(void* self, void* brush) {
     QAbstractAxis_TitleBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_datetimeaxis_on_title_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_title_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_title_visible_changed(void* self, bool visible) {
     QAbstractAxis_TitleVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_title_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_title_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TitleVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_title_font_changed(void* self, void* font) {
     QAbstractAxis_TitleFontChanged((QAbstractAxis*)self, (QFont*)font);
 }
 
-void q_datetimeaxis_on_title_font_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_title_font_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_TitleFontChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_shades_visible_changed(void* self, bool visible) {
     QAbstractAxis_ShadesVisibleChanged((QAbstractAxis*)self, visible);
 }
 
-void q_datetimeaxis_on_shades_visible_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_shades_visible_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ShadesVisibleChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_shades_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_shades_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_shades_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_shades_border_color_changed(void* self, void* color) {
     QAbstractAxis_ShadesBorderColorChanged((QAbstractAxis*)self, (QColor*)color);
 }
 
-void q_datetimeaxis_on_shades_border_color_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_shades_border_color_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBorderColorChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_shades_pen_changed(void* self, void* pen) {
     QAbstractAxis_ShadesPenChanged((QAbstractAxis*)self, (QPen*)pen);
 }
 
-void q_datetimeaxis_on_shades_pen_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_shades_pen_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesPenChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_shades_brush_changed(void* self, void* brush) {
     QAbstractAxis_ShadesBrushChanged((QAbstractAxis*)self, (QBrush*)brush);
 }
 
-void q_datetimeaxis_on_shades_brush_changed(void* self, void (*slot)(void*, void*)) {
-    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_shades_brush_changed(void* self, void (*callback)(void*, void*)) {
+    QAbstractAxis_Connect_ShadesBrushChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_reverse_changed(void* self, bool reverse) {
     QAbstractAxis_ReverseChanged((QAbstractAxis*)self, reverse);
 }
 
-void q_datetimeaxis_on_reverse_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_reverse_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_ReverseChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_editable_changed(void* self, bool editable) {
     QAbstractAxis_LabelsEditableChanged((QAbstractAxis*)self, editable);
 }
 
-void q_datetimeaxis_on_labels_editable_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_editable_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsEditableChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_labels_truncated_changed(void* self, bool labelsTruncated) {
     QAbstractAxis_LabelsTruncatedChanged((QAbstractAxis*)self, labelsTruncated);
 }
 
-void q_datetimeaxis_on_labels_truncated_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_labels_truncated_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_LabelsTruncatedChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_truncate_labels_changed(void* self, bool truncateLabels) {
     QAbstractAxis_TruncateLabelsChanged((QAbstractAxis*)self, truncateLabels);
 }
 
-void q_datetimeaxis_on_truncate_labels_changed(void* self, void (*slot)(void*, bool)) {
-    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_truncate_labels_changed(void* self, void (*callback)(void*, bool)) {
+    QAbstractAxis_Connect_TruncateLabelsChanged((QAbstractAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_set_visible1(void* self, bool visible) {
@@ -754,12 +754,16 @@ const char** q_datetimeaxis_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_datetimeaxis_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -777,8 +781,8 @@ void q_datetimeaxis_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_datetimeaxis_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_datetimeaxis_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_datetimeaxis_parent(void* self) {
@@ -813,8 +817,8 @@ void q_datetimeaxis_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_datetimeaxis_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_datetimeaxis_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_datetimeaxis_event(void* self, void* event) {
@@ -825,8 +829,8 @@ bool q_datetimeaxis_qbase_event(void* self, void* event) {
     return QDateTimeAxis_QBaseEvent((QDateTimeAxis*)self, (QEvent*)event);
 }
 
-void q_datetimeaxis_on_event(void* self, bool (*slot)(void*, void*)) {
-    QDateTimeAxis_OnEvent((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_event(void* self, bool (*callback)(void*, void*)) {
+    QDateTimeAxis_OnEvent((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 bool q_datetimeaxis_event_filter(void* self, void* watched, void* event) {
@@ -837,8 +841,8 @@ bool q_datetimeaxis_qbase_event_filter(void* self, void* watched, void* event) {
     return QDateTimeAxis_QBaseEventFilter((QDateTimeAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_datetimeaxis_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QDateTimeAxis_OnEventFilter((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QDateTimeAxis_OnEventFilter((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_timer_event(void* self, void* event) {
@@ -849,8 +853,8 @@ void q_datetimeaxis_qbase_timer_event(void* self, void* event) {
     QDateTimeAxis_QBaseTimerEvent((QDateTimeAxis*)self, (QTimerEvent*)event);
 }
 
-void q_datetimeaxis_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_OnTimerEvent((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_OnTimerEvent((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_child_event(void* self, void* event) {
@@ -861,8 +865,8 @@ void q_datetimeaxis_qbase_child_event(void* self, void* event) {
     QDateTimeAxis_QBaseChildEvent((QDateTimeAxis*)self, (QChildEvent*)event);
 }
 
-void q_datetimeaxis_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_OnChildEvent((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_OnChildEvent((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_custom_event(void* self, void* event) {
@@ -873,8 +877,8 @@ void q_datetimeaxis_qbase_custom_event(void* self, void* event) {
     QDateTimeAxis_QBaseCustomEvent((QDateTimeAxis*)self, (QEvent*)event);
 }
 
-void q_datetimeaxis_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_OnCustomEvent((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_OnCustomEvent((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_connect_notify(void* self, void* signal) {
@@ -885,8 +889,8 @@ void q_datetimeaxis_qbase_connect_notify(void* self, void* signal) {
     QDateTimeAxis_QBaseConnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_datetimeaxis_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_OnConnectNotify((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_OnConnectNotify((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_disconnect_notify(void* self, void* signal) {
@@ -897,8 +901,8 @@ void q_datetimeaxis_qbase_disconnect_notify(void* self, void* signal) {
     QDateTimeAxis_QBaseDisconnectNotify((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_datetimeaxis_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QDateTimeAxis_OnDisconnectNotify((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QDateTimeAxis_OnDisconnectNotify((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 QObject* q_datetimeaxis_sender(void* self) {
@@ -909,8 +913,8 @@ QObject* q_datetimeaxis_qbase_sender(void* self) {
     return QDateTimeAxis_QBaseSender((QDateTimeAxis*)self);
 }
 
-void q_datetimeaxis_on_sender(void* self, QObject* (*slot)()) {
-    QDateTimeAxis_OnSender((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_sender(void* self, QObject* (*callback)()) {
+    QDateTimeAxis_OnSender((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_datetimeaxis_sender_signal_index(void* self) {
@@ -921,8 +925,8 @@ int32_t q_datetimeaxis_qbase_sender_signal_index(void* self) {
     return QDateTimeAxis_QBaseSenderSignalIndex((QDateTimeAxis*)self);
 }
 
-void q_datetimeaxis_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QDateTimeAxis_OnSenderSignalIndex((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QDateTimeAxis_OnSenderSignalIndex((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 int32_t q_datetimeaxis_receivers(void* self, const char* signal) {
@@ -933,8 +937,8 @@ int32_t q_datetimeaxis_qbase_receivers(void* self, const char* signal) {
     return QDateTimeAxis_QBaseReceivers((QDateTimeAxis*)self, signal);
 }
 
-void q_datetimeaxis_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QDateTimeAxis_OnReceivers((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QDateTimeAxis_OnReceivers((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
 bool q_datetimeaxis_is_signal_connected(void* self, void* signal) {
@@ -945,12 +949,12 @@ bool q_datetimeaxis_qbase_is_signal_connected(void* self, void* signal) {
     return QDateTimeAxis_QBaseIsSignalConnected((QDateTimeAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_datetimeaxis_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QDateTimeAxis_OnIsSignalConnected((QDateTimeAxis*)self, (intptr_t)slot);
+void q_datetimeaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QDateTimeAxis_OnIsSignalConnected((QDateTimeAxis*)self, (intptr_t)callback);
 }
 
-void q_datetimeaxis_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_datetimeaxis_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_datetimeaxis_delete(void* self) {

@@ -13,13 +13,19 @@ QFont* q_font_new2(const char* family) {
 
 QFont* q_font_new3(const char* families[]) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_new3");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    return QFont_new3(families_list);
+    QFont* _out = QFont_new3(families_list);
+    free(families_qstr);
+    return _out;
 }
 
 QFont* q_font_new4(void* font, void* pd) {
@@ -44,35 +50,53 @@ QFont* q_font_new8(const char* family, int pointSize, int weight, bool italic) {
 
 QFont* q_font_new9(const char* families[], int pointSize) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_new9");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    return QFont_new9(families_list, pointSize);
+    QFont* _out = QFont_new9(families_list, pointSize);
+    free(families_qstr);
+    return _out;
 }
 
 QFont* q_font_new10(const char* families[], int pointSize, int weight) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_new10");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    return QFont_new10(families_list, pointSize, weight);
+    QFont* _out = QFont_new10(families_list, pointSize, weight);
+    free(families_qstr);
+    return _out;
 }
 
 QFont* q_font_new11(const char* families[], int pointSize, int weight, bool italic) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_new11");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    return QFont_new11(families_list, pointSize, weight, italic);
+    QFont* _out = QFont_new11(families_list, pointSize, weight, italic);
+    free(families_qstr);
+    return _out;
 }
 
 void q_font_swap(void* self, void* other) {
@@ -94,12 +118,16 @@ const char** q_font_families(void* self) {
     libqt_list _arr = QFont_Families((QFont*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_families");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -107,12 +135,17 @@ const char** q_font_families(void* self) {
 
 void q_font_set_families(void* self, const char* families[]) {
     size_t families_len = libqt_strv_length(families);
-    libqt_string* families_qstr = malloc(families_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < families_len; ++_i) {
-        families_qstr[_i] = qstring(families[_i]);
+    libqt_string* families_qstr = (libqt_string*)malloc(families_len * sizeof(libqt_string));
+    if (families_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_set_families");
+        abort();
+    }
+    for (size_t i = 0; i < families_len; ++i) {
+        families_qstr[i] = qstring(families[i]);
     }
     libqt_list families_list = qlist(families_qstr, families_len);
     QFont_SetFamilies((QFont*)self, families_list);
+    free(families_qstr);
 }
 
 const char* q_font_style_name(void* self) {
@@ -389,12 +422,16 @@ const char** q_font_substitutes(const char* param1) {
     libqt_list _arr = QFont_Substitutes(qstring(param1));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_substitutes");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -404,12 +441,16 @@ const char** q_font_substitutions() {
     libqt_list _arr = QFont_Substitutions();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_substitutions");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -421,12 +462,17 @@ void q_font_insert_substitution(const char* param1, const char* param2) {
 
 void q_font_insert_substitutions(const char* param1, const char* param2[]) {
     size_t param2_len = libqt_strv_length(param2);
-    libqt_string* param2_qstr = malloc(param2_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < param2_len; ++_i) {
-        param2_qstr[_i] = qstring(param2[_i]);
+    libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
+    if (param2_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_font_insert_substitutions");
+        abort();
+    }
+    for (size_t i = 0; i < param2_len; ++i) {
+        param2_qstr[i] = qstring(param2[i]);
     }
     libqt_list param2_list = qlist(param2_qstr, param2_len);
     QFont_InsertSubstitutions(qstring(param1), param2_list);
+    free(param2_qstr);
 }
 
 void q_font_remove_substitutions(const char* param1) {

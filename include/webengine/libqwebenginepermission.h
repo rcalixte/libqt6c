@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,69 +15,74 @@
 
 /// q_webenginepermission_new constructs a new QWebEnginePermission object.
 ///
-///
 QWebEnginePermission* q_webenginepermission_new();
 
 /// q_webenginepermission_new2 constructs a new QWebEnginePermission object.
 ///
-/// ``` QWebEnginePermission* other ```
+/// @param other QWebEnginePermission*
 QWebEnginePermission* q_webenginepermission_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#operator-eq)
 ///
-/// ``` QWebEnginePermission* self, QWebEnginePermission* other ```
+/// @param self QWebEnginePermission*
+/// @param other QWebEnginePermission*
 void q_webenginepermission_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#swap)
 ///
-/// ``` QWebEnginePermission* self, QWebEnginePermission* other ```
+/// @param self QWebEnginePermission*
+/// @param other QWebEnginePermission*
 void q_webenginepermission_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#origin)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 QUrl* q_webenginepermission_origin(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#permissionType)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
+///
+/// @return enum QWebEnginePermission__PermissionType
 int64_t q_webenginepermission_permission_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#state)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
+///
+/// @return enum QWebEnginePermission__State
 int64_t q_webenginepermission_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#isValid)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 bool q_webenginepermission_is_valid(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#grant)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 void q_webenginepermission_grant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#deny)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 void q_webenginepermission_deny(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#reset)
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 void q_webenginepermission_reset(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#isPersistent)
 ///
-/// ``` enum QWebEnginePermission__PermissionType permissionType ```
+/// @param permissionType enum QWebEnginePermission__PermissionType
 bool q_webenginepermission_is_persistent(int64_t permissionType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepermission.html#dtor.QWebEnginePermission)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QWebEnginePermission* self ```
+/// @param self QWebEnginePermission*
 void q_webenginepermission_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qwebenginepermission.html#types

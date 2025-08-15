@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1302 +15,1454 @@
 
 /// q_keysequenceedit_new constructs a new QKeySequenceEdit object.
 ///
-/// ``` QWidget* parent ```
+/// @param parent QWidget*
 QKeySequenceEdit* q_keysequenceedit_new(void* parent);
 
 /// q_keysequenceedit_new2 constructs a new QKeySequenceEdit object.
-///
 ///
 QKeySequenceEdit* q_keysequenceedit_new2();
 
 /// q_keysequenceedit_new3 constructs a new QKeySequenceEdit object.
 ///
-/// ``` QKeySequence* keySequence ```
+/// @param keySequence QKeySequence*
 QKeySequenceEdit* q_keysequenceedit_new3(void* keySequence);
 
 /// q_keysequenceedit_new4 constructs a new QKeySequenceEdit object.
 ///
-/// ``` QKeySequence* keySequence, QWidget* parent ```
+/// @param keySequence QKeySequence*
+/// @param parent QWidget*
 QKeySequenceEdit* q_keysequenceedit_new4(void* keySequence, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 const QMetaObject* q_keysequenceedit_meta_object(void* self);
 
-/// ``` QKeySequenceEdit* self, const char* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 const char*
 void* q_keysequenceedit_metacast(void* self, const char* param1);
 
-/// ``` QKeySequenceEdit* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_keysequenceedit_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)(QKeySequenceEdit*, enum QMetaObject__Call, int, void*) ```
-void q_keysequenceedit_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn(QKeySequenceEdit*, enum QMetaObject__Call, int, void*)
+void q_keysequenceedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_keysequenceedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_keysequenceedit_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequence)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QKeySequence* q_keysequenceedit_key_sequence(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#maximumSequenceLength)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int64_t q_keysequenceedit_maximum_sequence_length(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#setClearButtonEnabled)
 ///
-/// ``` QKeySequenceEdit* self, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param enable bool
 void q_keysequenceedit_set_clear_button_enabled(void* self, bool enable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#isClearButtonEnabled)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_clear_button_enabled(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#setFinishingKeyCombinations)
 ///
-/// ``` QKeySequenceEdit* self, libqt_list /* of QKeyCombination* */ finishingKeyCombinations ```
+/// @param self QKeySequenceEdit*
+/// @param finishingKeyCombinations libqt_list /* of QKeyCombination* */
 void q_keysequenceedit_set_finishing_key_combinations(void* self, libqt_list finishingKeyCombinations);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#finishingKeyCombinations)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 libqt_list /* of QKeyCombination* */ q_keysequenceedit_finishing_key_combinations(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#setKeySequence)
 ///
-/// ``` QKeySequenceEdit* self, QKeySequence* keySequence ```
+/// @param self QKeySequenceEdit*
+/// @param keySequence QKeySequence*
 void q_keysequenceedit_set_key_sequence(void* self, void* keySequence);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#clear)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#setMaximumSequenceLength)
 ///
-/// ``` QKeySequenceEdit* self, int64_t count ```
+/// @param self QKeySequenceEdit*
+/// @param count int64_t
 void q_keysequenceedit_set_maximum_sequence_length(void* self, int64_t count);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_editing_finished(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*) ```
-void q_keysequenceedit_on_editing_finished(void* self, void (*slot)(void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*)
+void q_keysequenceedit_on_editing_finished(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
 ///
-/// ``` QKeySequenceEdit* self, QKeySequence* keySequence ```
+/// @param self QKeySequenceEdit*
+/// @param keySequence QKeySequence*
 void q_keysequenceedit_key_sequence_changed(void* self, void* keySequence);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keySequenceChanged)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QKeySequence*) ```
-void q_keysequenceedit_on_key_sequence_changed(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QKeySequence*)
+void q_keysequenceedit_on_key_sequence_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
 ///
-/// ``` QKeySequenceEdit* self, QEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QEvent*
 bool q_keysequenceedit_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)(QKeySequenceEdit*, QEvent*) ```
-void q_keysequenceedit_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn(QKeySequenceEdit*, QEvent*)
+void q_keysequenceedit_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, QEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QEvent*
 bool q_keysequenceedit_qbase_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
 ///
-/// ``` QKeySequenceEdit* self, QKeyEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QKeyEvent*
 void q_keysequenceedit_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QKeyEvent*) ```
-void q_keysequenceedit_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QKeyEvent*)
+void q_keysequenceedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyPressEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, QKeyEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QKeyEvent*
 void q_keysequenceedit_qbase_key_press_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
 ///
-/// ``` QKeySequenceEdit* self, QKeyEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QKeyEvent*
 void q_keysequenceedit_key_release_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QKeyEvent*) ```
-void q_keysequenceedit_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QKeyEvent*)
+void q_keysequenceedit_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#keyReleaseEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, QKeyEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QKeyEvent*
 void q_keysequenceedit_qbase_key_release_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
 ///
-/// ``` QKeySequenceEdit* self, QTimerEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QTimerEvent*
 void q_keysequenceedit_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QTimerEvent*) ```
-void q_keysequenceedit_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QTimerEvent*)
+void q_keysequenceedit_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#timerEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, QTimerEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QTimerEvent*
 void q_keysequenceedit_qbase_timer_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
 ///
-/// ``` QKeySequenceEdit* self, QFocusEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QFocusEvent*
 void q_keysequenceedit_focus_out_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QFocusEvent*) ```
-void q_keysequenceedit_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QFocusEvent*)
+void q_keysequenceedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#focusOutEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QKeySequenceEdit* self, QFocusEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QFocusEvent*
 void q_keysequenceedit_qbase_focus_out_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_keysequenceedit_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_keysequenceedit_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 uintptr_t q_keysequenceedit_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 uintptr_t q_keysequenceedit_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 uintptr_t q_keysequenceedit_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QStyle* q_keysequenceedit_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QKeySequenceEdit* self, QStyle* style ```
+/// @param self QKeySequenceEdit*
+/// @param style QStyle*
 void q_keysequenceedit_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum Qt__WindowModality
 int64_t q_keysequenceedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WindowModality windowModality ```
+/// @param self QKeySequenceEdit*
+/// @param windowModality enum Qt__WindowModality
 void q_keysequenceedit_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
 bool q_keysequenceedit_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QKeySequenceEdit* self, bool enabled ```
+/// @param self QKeySequenceEdit*
+/// @param enabled bool
 void q_keysequenceedit_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QKeySequenceEdit* self, bool disabled ```
+/// @param self QKeySequenceEdit*
+/// @param disabled bool
 void q_keysequenceedit_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QKeySequenceEdit* self, bool windowModified ```
+/// @param self QKeySequenceEdit*
+/// @param windowModified bool
 void q_keysequenceedit_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRect* q_keysequenceedit_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 const QRect* q_keysequenceedit_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRect* q_keysequenceedit_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPoint* q_keysequenceedit_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRect* q_keysequenceedit_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRect* q_keysequenceedit_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRegion* q_keysequenceedit_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QKeySequenceEdit* self, QSize* minimumSize ```
+/// @param self QKeySequenceEdit*
+/// @param minimumSize QSize*
 void q_keysequenceedit_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QKeySequenceEdit* self, int minw, int minh ```
+/// @param self QKeySequenceEdit*
+/// @param minw int
+/// @param minh int
 void q_keysequenceedit_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QKeySequenceEdit* self, QSize* maximumSize ```
+/// @param self QKeySequenceEdit*
+/// @param maximumSize QSize*
 void q_keysequenceedit_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QKeySequenceEdit* self, int maxw, int maxh ```
+/// @param self QKeySequenceEdit*
+/// @param maxw int
+/// @param maxh int
 void q_keysequenceedit_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QKeySequenceEdit* self, int minw ```
+/// @param self QKeySequenceEdit*
+/// @param minw int
 void q_keysequenceedit_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QKeySequenceEdit* self, int minh ```
+/// @param self QKeySequenceEdit*
+/// @param minh int
 void q_keysequenceedit_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QKeySequenceEdit* self, int maxw ```
+/// @param self QKeySequenceEdit*
+/// @param maxw int
 void q_keysequenceedit_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QKeySequenceEdit* self, int maxh ```
+/// @param self QKeySequenceEdit*
+/// @param maxh int
 void q_keysequenceedit_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QKeySequenceEdit* self, QSize* sizeIncrement ```
+/// @param self QKeySequenceEdit*
+/// @param sizeIncrement QSize*
 void q_keysequenceedit_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QKeySequenceEdit* self, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param w int
+/// @param h int
 void q_keysequenceedit_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QKeySequenceEdit* self, QSize* baseSize ```
+/// @param self QKeySequenceEdit*
+/// @param baseSize QSize*
 void q_keysequenceedit_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QKeySequenceEdit* self, int basew, int baseh ```
+/// @param self QKeySequenceEdit*
+/// @param basew int
+/// @param baseh int
 void q_keysequenceedit_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QKeySequenceEdit* self, QSize* fixedSize ```
+/// @param self QKeySequenceEdit*
+/// @param fixedSize QSize*
 void q_keysequenceedit_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QKeySequenceEdit* self, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param w int
+/// @param h int
 void q_keysequenceedit_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QKeySequenceEdit* self, int w ```
+/// @param self QKeySequenceEdit*
+/// @param w int
 void q_keysequenceedit_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QKeySequenceEdit* self, int h ```
+/// @param self QKeySequenceEdit*
+/// @param h int
 void q_keysequenceedit_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QKeySequenceEdit* self, QPointF* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPointF*
 QPointF* q_keysequenceedit_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPoint*
 QPoint* q_keysequenceedit_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QKeySequenceEdit* self, QPointF* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPointF*
 QPointF* q_keysequenceedit_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPoint*
 QPoint* q_keysequenceedit_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QKeySequenceEdit* self, QPointF* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPointF*
 QPointF* q_keysequenceedit_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPoint*
 QPoint* q_keysequenceedit_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QKeySequenceEdit* self, QPointF* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPointF*
 QPointF* q_keysequenceedit_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPoint*
 QPoint* q_keysequenceedit_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1, QPointF* param2 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_keysequenceedit_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1, QPoint* param2 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_keysequenceedit_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1, QPointF* param2 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_keysequenceedit_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1, QPoint* param2 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_keysequenceedit_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 const QPalette* q_keysequenceedit_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QKeySequenceEdit* self, QPalette* palette ```
+/// @param self QKeySequenceEdit*
+/// @param palette QPalette*
 void q_keysequenceedit_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QKeySequenceEdit* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QKeySequenceEdit*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_keysequenceedit_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_keysequenceedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QKeySequenceEdit* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QKeySequenceEdit*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_keysequenceedit_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_keysequenceedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 const QFont* q_keysequenceedit_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QKeySequenceEdit* self, QFont* font ```
+/// @param self QKeySequenceEdit*
+/// @param font QFont*
 void q_keysequenceedit_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QFontMetrics* q_keysequenceedit_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QFontInfo* q_keysequenceedit_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QCursor* q_keysequenceedit_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QKeySequenceEdit* self, QCursor* cursor ```
+/// @param self QKeySequenceEdit*
+/// @param cursor QCursor*
 void q_keysequenceedit_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QKeySequenceEdit* self, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param enable bool
 void q_keysequenceedit_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QKeySequenceEdit* self, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param enable bool
 void q_keysequenceedit_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QKeySequenceEdit* self, QBitmap* mask ```
+/// @param self QKeySequenceEdit*
+/// @param mask QBitmap*
 void q_keysequenceedit_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QKeySequenceEdit* self, QRegion* mask ```
+/// @param self QKeySequenceEdit*
+/// @param mask QRegion*
 void q_keysequenceedit_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRegion* q_keysequenceedit_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPaintDevice* target ```
+/// @param self QKeySequenceEdit*
+/// @param target QPaintDevice*
 void q_keysequenceedit_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
 void q_keysequenceedit_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPixmap* q_keysequenceedit_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QGraphicsEffect* q_keysequenceedit_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QKeySequenceEdit* self, QGraphicsEffect* effect ```
+/// @param self QKeySequenceEdit*
+/// @param effect QGraphicsEffect*
 void q_keysequenceedit_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__GestureType typeVal ```
+/// @param self QKeySequenceEdit*
+/// @param typeVal enum Qt__GestureType
 void q_keysequenceedit_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__GestureType typeVal ```
+/// @param self QKeySequenceEdit*
+/// @param typeVal enum Qt__GestureType
 void q_keysequenceedit_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QKeySequenceEdit* self, const char* windowTitle ```
+/// @param self QKeySequenceEdit*
+/// @param windowTitle const char*
 void q_keysequenceedit_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QKeySequenceEdit* self, const char* styleSheet ```
+/// @param self QKeySequenceEdit*
+/// @param styleSheet const char*
 void q_keysequenceedit_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QKeySequenceEdit* self, QIcon* icon ```
+/// @param self QKeySequenceEdit*
+/// @param icon QIcon*
 void q_keysequenceedit_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QIcon* q_keysequenceedit_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QKeySequenceEdit* self, const char* windowIconText ```
+/// @param self QKeySequenceEdit*
+/// @param windowIconText const char*
 void q_keysequenceedit_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QKeySequenceEdit* self, const char* windowRole ```
+/// @param self QKeySequenceEdit*
+/// @param windowRole const char*
 void q_keysequenceedit_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QKeySequenceEdit* self, const char* filePath ```
+/// @param self QKeySequenceEdit*
+/// @param filePath const char*
 void q_keysequenceedit_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QKeySequenceEdit* self, double level ```
+/// @param self QKeySequenceEdit*
+/// @param level double
 void q_keysequenceedit_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 double q_keysequenceedit_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QKeySequenceEdit* self, const char* toolTip ```
+/// @param self QKeySequenceEdit*
+/// @param toolTip const char*
 void q_keysequenceedit_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QKeySequenceEdit* self, int msec ```
+/// @param self QKeySequenceEdit*
+/// @param msec int
 void q_keysequenceedit_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QKeySequenceEdit* self, const char* statusTip ```
+/// @param self QKeySequenceEdit*
+/// @param statusTip const char*
 void q_keysequenceedit_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QKeySequenceEdit* self, const char* whatsThis ```
+/// @param self QKeySequenceEdit*
+/// @param whatsThis const char*
 void q_keysequenceedit_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QKeySequenceEdit* self, const char* name ```
+/// @param self QKeySequenceEdit*
+/// @param name const char*
 void q_keysequenceedit_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QKeySequenceEdit* self, const char* description ```
+/// @param self QKeySequenceEdit*
+/// @param description const char*
 void q_keysequenceedit_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__LayoutDirection direction ```
+/// @param self QKeySequenceEdit*
+/// @param direction enum Qt__LayoutDirection
 void q_keysequenceedit_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_keysequenceedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QKeySequenceEdit* self, QLocale* locale ```
+/// @param self QKeySequenceEdit*
+/// @param locale QLocale*
 void q_keysequenceedit_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QLocale* q_keysequenceedit_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__FocusReason reason ```
+/// @param self QKeySequenceEdit*
+/// @param reason enum Qt__FocusReason
 void q_keysequenceedit_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_keysequenceedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__FocusPolicy policy ```
+/// @param self QKeySequenceEdit*
+/// @param policy enum Qt__FocusPolicy
 void q_keysequenceedit_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_keysequenceedit_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* focusProxy ```
+/// @param self QKeySequenceEdit*
+/// @param focusProxy QWidget*
 void q_keysequenceedit_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_keysequenceedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QKeySequenceEdit*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_keysequenceedit_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QKeySequenceEdit* self, QCursor* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QCursor*
 void q_keysequenceedit_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QKeySequenceEdit* self, QKeySequence* key ```
+/// @param self QKeySequenceEdit*
+/// @param key QKeySequence*
 int32_t q_keysequenceedit_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QKeySequenceEdit* self, int id ```
+/// @param self QKeySequenceEdit*
+/// @param id int
 void q_keysequenceedit_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QKeySequenceEdit* self, int id ```
+/// @param self QKeySequenceEdit*
+/// @param id int
 void q_keysequenceedit_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QKeySequenceEdit* self, int id ```
+/// @param self QKeySequenceEdit*
+/// @param id int
 void q_keysequenceedit_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_keysequenceedit_mouse_grabber();
 
@@ -1319,1161 +1470,1327 @@ QWidget* q_keysequenceedit_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_keysequenceedit_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QKeySequenceEdit* self, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param enable bool
 void q_keysequenceedit_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QGraphicsProxyWidget* q_keysequenceedit_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QKeySequenceEdit* self, int x, int y, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_keysequenceedit_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QKeySequenceEdit* self, QRect* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QRect*
 void q_keysequenceedit_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QKeySequenceEdit* self, QRegion* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QRegion*
 void q_keysequenceedit_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QKeySequenceEdit* self, int x, int y, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_keysequenceedit_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QKeySequenceEdit* self, QRect* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QRect*
 void q_keysequenceedit_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QKeySequenceEdit* self, QRegion* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QRegion*
 void q_keysequenceedit_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QKeySequenceEdit* self, bool hidden ```
+/// @param self QKeySequenceEdit*
+/// @param hidden bool
 void q_keysequenceedit_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
 void q_keysequenceedit_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QKeySequenceEdit* self, int x, int y ```
+/// @param self QKeySequenceEdit*
+/// @param x int
+/// @param y int
 void q_keysequenceedit_move(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#move)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QPoint*
 void q_keysequenceedit_move2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QKeySequenceEdit* self, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param w int
+/// @param h int
 void q_keysequenceedit_resize(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#resize)
 ///
-/// ``` QKeySequenceEdit* self, QSize* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QSize*
 void q_keysequenceedit_resize2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QKeySequenceEdit* self, int x, int y, int w, int h ```
+/// @param self QKeySequenceEdit*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_keysequenceedit_set_geometry(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGeometry)
 ///
-/// ``` QKeySequenceEdit* self, QRect* geometry ```
+/// @param self QKeySequenceEdit*
+/// @param geometry QRect*
 void q_keysequenceedit_set_geometry2(void* self, void* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 char* q_keysequenceedit_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QKeySequenceEdit* self, const char* geometry ```
+/// @param self QKeySequenceEdit*
+/// @param geometry const char*
 bool q_keysequenceedit_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QWidget*
 bool q_keysequenceedit_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_keysequenceedit_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QKeySequenceEdit* self, int state ```
+/// @param self QKeySequenceEdit*
+/// @param state flag of enum Qt__WindowState
 void q_keysequenceedit_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QKeySequenceEdit* self, int state ```
+/// @param self QKeySequenceEdit*
+/// @param state flag of enum Qt__WindowState
 void q_keysequenceedit_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSizePolicy* q_keysequenceedit_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QKeySequenceEdit* self, QSizePolicy* sizePolicy ```
+/// @param self QKeySequenceEdit*
+/// @param sizePolicy QSizePolicy*
 void q_keysequenceedit_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QKeySequenceEdit* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QKeySequenceEdit*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_keysequenceedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRegion* q_keysequenceedit_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QKeySequenceEdit* self, int left, int top, int right, int bottom ```
+/// @param self QKeySequenceEdit*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_keysequenceedit_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QKeySequenceEdit* self, QMargins* margins ```
+/// @param self QKeySequenceEdit*
+/// @param margins QMargins*
 void q_keysequenceedit_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QMargins* q_keysequenceedit_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QRect* q_keysequenceedit_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QLayout* q_keysequenceedit_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QKeySequenceEdit* self, QLayout* layout ```
+/// @param self QKeySequenceEdit*
+/// @param layout QLayout*
 void q_keysequenceedit_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* parent ```
+/// @param self QKeySequenceEdit*
+/// @param parent QWidget*
 void q_keysequenceedit_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* parent, int f ```
+/// @param self QKeySequenceEdit*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_keysequenceedit_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QKeySequenceEdit* self, int dx, int dy ```
+/// @param self QKeySequenceEdit*
+/// @param dx int
+/// @param dy int
 void q_keysequenceedit_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QKeySequenceEdit* self, int dx, int dy, QRect* param3 ```
+/// @param self QKeySequenceEdit*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_keysequenceedit_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QKeySequenceEdit* self, bool on ```
+/// @param self QKeySequenceEdit*
+/// @param on bool
 void q_keysequenceedit_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QKeySequenceEdit* self, QAction* action ```
+/// @param self QKeySequenceEdit*
+/// @param action QAction*
 void q_keysequenceedit_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QKeySequenceEdit* self, libqt_list /* of QAction* */ actions ```
+/// @param self QKeySequenceEdit*
+/// @param actions libqt_list /* of QAction* */
 void q_keysequenceedit_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QKeySequenceEdit* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QKeySequenceEdit*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_keysequenceedit_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QKeySequenceEdit* self, QAction* before, QAction* action ```
+/// @param self QKeySequenceEdit*
+/// @param before QAction*
+/// @param action QAction*
 void q_keysequenceedit_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QKeySequenceEdit* self, QAction* action ```
+/// @param self QKeySequenceEdit*
+/// @param action QAction*
 void q_keysequenceedit_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 libqt_list /* of QAction* */ q_keysequenceedit_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QKeySequenceEdit* self, const char* text ```
+/// @param self QKeySequenceEdit*
+/// @param text const char*
 QAction* q_keysequenceedit_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QKeySequenceEdit* self, QIcon* icon, const char* text ```
+/// @param self QKeySequenceEdit*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_keysequenceedit_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QKeySequenceEdit* self, const char* text, QKeySequence* shortcut ```
+/// @param self QKeySequenceEdit*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_keysequenceedit_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QKeySequenceEdit* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QKeySequenceEdit*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_keysequenceedit_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWidget* q_keysequenceedit_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QKeySequenceEdit* self, int typeVal ```
+/// @param self QKeySequenceEdit*
+/// @param typeVal flag of enum Qt__WindowType
 void q_keysequenceedit_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_keysequenceedit_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WindowType param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__WindowType
 void q_keysequenceedit_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QKeySequenceEdit* self, int typeVal ```
+/// @param self QKeySequenceEdit*
+/// @param typeVal flag of enum Qt__WindowType
 void q_keysequenceedit_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return enum Qt__WindowType
 int64_t q_keysequenceedit_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_keysequenceedit_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QKeySequenceEdit* self, int x, int y ```
+/// @param self QKeySequenceEdit*
+/// @param x int
+/// @param y int
 QWidget* q_keysequenceedit_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* p ```
+/// @param self QKeySequenceEdit*
+/// @param p QPoint*
 QWidget* q_keysequenceedit_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QKeySequenceEdit* self, QPointF* p ```
+/// @param self QKeySequenceEdit*
+/// @param p QPointF*
 QWidget* q_keysequenceedit_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__WidgetAttribute
 void q_keysequenceedit_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_keysequenceedit_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QKeySequenceEdit* self, QWidget* child ```
+/// @param self QKeySequenceEdit*
+/// @param child QWidget*
 bool q_keysequenceedit_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QKeySequenceEdit* self, bool enabled ```
+/// @param self QKeySequenceEdit*
+/// @param enabled bool
 void q_keysequenceedit_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QBackingStore* q_keysequenceedit_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QWindow* q_keysequenceedit_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QScreen* q_keysequenceedit_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QKeySequenceEdit* self, QScreen* screen ```
+/// @param self QKeySequenceEdit*
+/// @param screen QScreen*
 void q_keysequenceedit_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_keysequenceedit_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QKeySequenceEdit* self, const char* title ```
+/// @param self QKeySequenceEdit*
+/// @param title const char*
 void q_keysequenceedit_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, const char*) ```
-void q_keysequenceedit_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, const char*)
+void q_keysequenceedit_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QKeySequenceEdit* self, QIcon* icon ```
+/// @param self QKeySequenceEdit*
+/// @param icon QIcon*
 void q_keysequenceedit_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QIcon*) ```
-void q_keysequenceedit_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QIcon*)
+void q_keysequenceedit_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QKeySequenceEdit* self, const char* iconText ```
+/// @param self QKeySequenceEdit*
+/// @param iconText const char*
 void q_keysequenceedit_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, const char*) ```
-void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, const char*)
+void q_keysequenceedit_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QKeySequenceEdit* self, QPoint* pos ```
+/// @param self QKeySequenceEdit*
+/// @param pos QPoint*
 void q_keysequenceedit_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QPoint*) ```
-void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QPoint*)
+void q_keysequenceedit_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_keysequenceedit_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QKeySequenceEdit* self, int hints ```
+/// @param self QKeySequenceEdit*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_keysequenceedit_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QKeySequenceEdit*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_keysequenceedit_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QKeySequenceEdit*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_keysequenceedit_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QKeySequenceEdit*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_keysequenceedit_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_keysequenceedit_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_keysequenceedit_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_keysequenceedit_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QKeySequenceEdit* self, QRect* rectangle ```
+/// @param self QKeySequenceEdit*
+/// @param rectangle QRect*
 QPixmap* q_keysequenceedit_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QKeySequenceEdit*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_keysequenceedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QKeySequenceEdit* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QKeySequenceEdit*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_keysequenceedit_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QKeySequenceEdit* self, int id, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param id int
+/// @param enable bool
 void q_keysequenceedit_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QKeySequenceEdit* self, int id, bool enable ```
+/// @param self QKeySequenceEdit*
+/// @param id int
+/// @param enable bool
 void q_keysequenceedit_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WindowType param1, bool on ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_keysequenceedit_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_keysequenceedit_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_keysequenceedit_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_keysequenceedit_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char* q_keysequenceedit_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QKeySequenceEdit* self, char* name ```
+/// @param self QKeySequenceEdit*
+/// @param name char*
 void q_keysequenceedit_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QKeySequenceEdit* self, bool b ```
+/// @param self QKeySequenceEdit*
+/// @param b bool
 bool q_keysequenceedit_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QThread* q_keysequenceedit_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QKeySequenceEdit* self, QThread* thread ```
+/// @param self QKeySequenceEdit*
+/// @param thread QThread*
 bool q_keysequenceedit_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QKeySequenceEdit* self, int interval ```
+/// @param self QKeySequenceEdit*
+/// @param interval int
 int32_t q_keysequenceedit_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QKeySequenceEdit* self, int id ```
+/// @param self QKeySequenceEdit*
+/// @param id int
 void q_keysequenceedit_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__TimerId id ```
+/// @param self QKeySequenceEdit*
+/// @param id enum Qt__TimerId
 void q_keysequenceedit_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 libqt_list /* of QObject* */ q_keysequenceedit_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QKeySequenceEdit* self, QObject* filterObj ```
+/// @param self QKeySequenceEdit*
+/// @param filterObj QObject*
 void q_keysequenceedit_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QKeySequenceEdit* self, QObject* obj ```
+/// @param self QKeySequenceEdit*
+/// @param obj QObject*
 void q_keysequenceedit_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_keysequenceedit_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QKeySequenceEdit* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QKeySequenceEdit*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_keysequenceedit_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_keysequenceedit_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_keysequenceedit_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QKeySequenceEdit* self, const char* name, QVariant* value ```
+/// @param self QKeySequenceEdit*
+/// @param name const char*
+/// @param value QVariant*
 bool q_keysequenceedit_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QKeySequenceEdit* self, const char* name ```
+/// @param self QKeySequenceEdit*
+/// @param name const char*
 QVariant* q_keysequenceedit_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QKeySequenceEdit*
 const char** q_keysequenceedit_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QBindingStorage* q_keysequenceedit_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 const QBindingStorage* q_keysequenceedit_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*) ```
-void q_keysequenceedit_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*)
+void q_keysequenceedit_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QObject* q_keysequenceedit_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QKeySequenceEdit* self, const char* classname ```
+/// @param self QKeySequenceEdit*
+/// @param classname const char*
 bool q_keysequenceedit_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QKeySequenceEdit* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QKeySequenceEdit*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_keysequenceedit_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QKeySequenceEdit* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QKeySequenceEdit*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_keysequenceedit_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_keysequenceedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QKeySequenceEdit* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QKeySequenceEdit*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_keysequenceedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QKeySequenceEdit* self, QObject* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QObject*
 void q_keysequenceedit_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QObject*) ```
-void q_keysequenceedit_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QObject*)
+void q_keysequenceedit_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 double q_keysequenceedit_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 double q_keysequenceedit_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_keysequenceedit_device_pixel_ratio_f_scale();
 
@@ -2481,7 +2798,8 @@ double q_keysequenceedit_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_keysequenceedit_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2490,7 +2808,7 @@ int32_t q_keysequenceedit_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2499,7 +2817,7 @@ int32_t q_keysequenceedit_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2508,8 +2826,9 @@ int32_t q_keysequenceedit_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)() ```
-void q_keysequenceedit_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn()
+void q_keysequenceedit_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2517,7 +2836,8 @@ void q_keysequenceedit_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool visible ```
+/// @param self QKeySequenceEdit*
+/// @param visible bool
 void q_keysequenceedit_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2526,7 +2846,8 @@ void q_keysequenceedit_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool visible ```
+/// @param self QKeySequenceEdit*
+/// @param visible bool
 void q_keysequenceedit_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2535,8 +2856,9 @@ void q_keysequenceedit_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, bool) ```
-void q_keysequenceedit_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, bool)
+void q_keysequenceedit_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2544,7 +2866,7 @@ void q_keysequenceedit_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2553,7 +2875,7 @@ QSize* q_keysequenceedit_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2562,8 +2884,9 @@ QSize* q_keysequenceedit_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QSize* (*slot)() ```
-void q_keysequenceedit_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback QSize* fn()
+void q_keysequenceedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2571,7 +2894,7 @@ void q_keysequenceedit_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2580,7 +2903,7 @@ QSize* q_keysequenceedit_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2589,8 +2912,9 @@ QSize* q_keysequenceedit_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QSize* (*slot)() ```
-void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback QSize* fn()
+void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2598,7 +2922,8 @@ void q_keysequenceedit_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 int
 int32_t q_keysequenceedit_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2607,7 +2932,8 @@ int32_t q_keysequenceedit_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 int
 int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2616,8 +2942,9 @@ int32_t q_keysequenceedit_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)(QKeySequenceEdit*, int) ```
-void q_keysequenceedit_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn(QKeySequenceEdit*, int)
+void q_keysequenceedit_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2625,7 +2952,7 @@ void q_keysequenceedit_on_height_for_width(void* self, int32_t (*slot)(void*, in
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2634,7 +2961,7 @@ bool q_keysequenceedit_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2643,8 +2970,9 @@ bool q_keysequenceedit_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)() ```
-void q_keysequenceedit_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn()
+void q_keysequenceedit_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2652,7 +2980,7 @@ void q_keysequenceedit_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPaintEngine* q_keysequenceedit_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2661,7 +2989,7 @@ QPaintEngine* q_keysequenceedit_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2670,8 +2998,9 @@ QPaintEngine* q_keysequenceedit_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPaintEngine* (*slot)() ```
-void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback QPaintEngine* fn()
+void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2679,7 +3008,8 @@ void q_keysequenceedit_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2688,7 +3018,8 @@ void q_keysequenceedit_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2697,8 +3028,9 @@ void q_keysequenceedit_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMouseEvent*) ```
-void q_keysequenceedit_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+void q_keysequenceedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2706,7 +3038,8 @@ void q_keysequenceedit_on_mouse_press_event(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2715,7 +3048,8 @@ void q_keysequenceedit_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2724,8 +3058,9 @@ void q_keysequenceedit_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMouseEvent*) ```
-void q_keysequenceedit_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+void q_keysequenceedit_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2733,7 +3068,8 @@ void q_keysequenceedit_on_mouse_release_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2742,7 +3078,8 @@ void q_keysequenceedit_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2751,8 +3088,9 @@ void q_keysequenceedit_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMouseEvent*) ```
-void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2760,7 +3098,8 @@ void q_keysequenceedit_on_mouse_double_click_event(void* self, void (*slot)(void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2769,7 +3108,8 @@ void q_keysequenceedit_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMouseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMouseEvent*
 void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2778,8 +3118,9 @@ void q_keysequenceedit_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMouseEvent*) ```
-void q_keysequenceedit_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMouseEvent*)
+void q_keysequenceedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2787,7 +3128,8 @@ void q_keysequenceedit_on_mouse_move_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QWheelEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QWheelEvent*
 void q_keysequenceedit_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2796,7 +3138,8 @@ void q_keysequenceedit_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QWheelEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QWheelEvent*
 void q_keysequenceedit_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2805,8 +3148,9 @@ void q_keysequenceedit_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QWheelEvent*) ```
-void q_keysequenceedit_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QWheelEvent*)
+void q_keysequenceedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2814,7 +3158,8 @@ void q_keysequenceedit_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QFocusEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QFocusEvent*
 void q_keysequenceedit_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2823,7 +3168,8 @@ void q_keysequenceedit_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QFocusEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QFocusEvent*
 void q_keysequenceedit_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2832,8 +3178,9 @@ void q_keysequenceedit_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QFocusEvent*) ```
-void q_keysequenceedit_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QFocusEvent*)
+void q_keysequenceedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2841,7 +3188,8 @@ void q_keysequenceedit_on_focus_in_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEnterEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEnterEvent*
 void q_keysequenceedit_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2850,7 +3198,8 @@ void q_keysequenceedit_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEnterEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEnterEvent*
 void q_keysequenceedit_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2859,8 +3208,9 @@ void q_keysequenceedit_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QEnterEvent*) ```
-void q_keysequenceedit_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QEnterEvent*)
+void q_keysequenceedit_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2868,7 +3218,8 @@ void q_keysequenceedit_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEvent*
 void q_keysequenceedit_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2877,7 +3228,8 @@ void q_keysequenceedit_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEvent*
 void q_keysequenceedit_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2886,8 +3238,9 @@ void q_keysequenceedit_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QEvent*) ```
-void q_keysequenceedit_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+void q_keysequenceedit_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2895,7 +3248,8 @@ void q_keysequenceedit_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPaintEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QPaintEvent*
 void q_keysequenceedit_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2904,7 +3258,8 @@ void q_keysequenceedit_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPaintEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QPaintEvent*
 void q_keysequenceedit_qbase_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2913,8 +3268,9 @@ void q_keysequenceedit_qbase_paint_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QPaintEvent*) ```
-void q_keysequenceedit_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QPaintEvent*)
+void q_keysequenceedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2922,7 +3278,8 @@ void q_keysequenceedit_on_paint_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMoveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMoveEvent*
 void q_keysequenceedit_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2931,7 +3288,8 @@ void q_keysequenceedit_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMoveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QMoveEvent*
 void q_keysequenceedit_qbase_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2940,8 +3298,9 @@ void q_keysequenceedit_qbase_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMoveEvent*) ```
-void q_keysequenceedit_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMoveEvent*)
+void q_keysequenceedit_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2949,7 +3308,8 @@ void q_keysequenceedit_on_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QResizeEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QResizeEvent*
 void q_keysequenceedit_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2958,7 +3318,8 @@ void q_keysequenceedit_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QResizeEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QResizeEvent*
 void q_keysequenceedit_qbase_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2967,8 +3328,9 @@ void q_keysequenceedit_qbase_resize_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QResizeEvent*) ```
-void q_keysequenceedit_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QResizeEvent*)
+void q_keysequenceedit_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2976,7 +3338,8 @@ void q_keysequenceedit_on_resize_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QCloseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QCloseEvent*
 void q_keysequenceedit_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2985,7 +3348,8 @@ void q_keysequenceedit_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QCloseEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QCloseEvent*
 void q_keysequenceedit_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2994,8 +3358,9 @@ void q_keysequenceedit_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QCloseEvent*) ```
-void q_keysequenceedit_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QCloseEvent*)
+void q_keysequenceedit_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3003,7 +3368,8 @@ void q_keysequenceedit_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QContextMenuEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QContextMenuEvent*
 void q_keysequenceedit_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3012,7 +3378,8 @@ void q_keysequenceedit_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QContextMenuEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QContextMenuEvent*
 void q_keysequenceedit_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3021,8 +3388,9 @@ void q_keysequenceedit_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QContextMenuEvent*) ```
-void q_keysequenceedit_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QContextMenuEvent*)
+void q_keysequenceedit_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3030,7 +3398,8 @@ void q_keysequenceedit_on_context_menu_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QTabletEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QTabletEvent*
 void q_keysequenceedit_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3039,7 +3408,8 @@ void q_keysequenceedit_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QTabletEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QTabletEvent*
 void q_keysequenceedit_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3048,8 +3418,9 @@ void q_keysequenceedit_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QTabletEvent*) ```
-void q_keysequenceedit_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QTabletEvent*)
+void q_keysequenceedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3057,7 +3428,8 @@ void q_keysequenceedit_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QActionEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QActionEvent*
 void q_keysequenceedit_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3066,7 +3438,8 @@ void q_keysequenceedit_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QActionEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QActionEvent*
 void q_keysequenceedit_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3075,8 +3448,9 @@ void q_keysequenceedit_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QActionEvent*) ```
-void q_keysequenceedit_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QActionEvent*)
+void q_keysequenceedit_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3084,7 +3458,8 @@ void q_keysequenceedit_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragEnterEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragEnterEvent*
 void q_keysequenceedit_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3093,7 +3468,8 @@ void q_keysequenceedit_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragEnterEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragEnterEvent*
 void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3102,8 +3478,9 @@ void q_keysequenceedit_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QDragEnterEvent*) ```
-void q_keysequenceedit_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QDragEnterEvent*)
+void q_keysequenceedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3111,7 +3488,8 @@ void q_keysequenceedit_on_drag_enter_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragMoveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragMoveEvent*
 void q_keysequenceedit_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3120,7 +3498,8 @@ void q_keysequenceedit_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragMoveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragMoveEvent*
 void q_keysequenceedit_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3129,8 +3508,9 @@ void q_keysequenceedit_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QDragMoveEvent*) ```
-void q_keysequenceedit_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QDragMoveEvent*)
+void q_keysequenceedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3138,7 +3518,8 @@ void q_keysequenceedit_on_drag_move_event(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragLeaveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragLeaveEvent*
 void q_keysequenceedit_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3147,7 +3528,8 @@ void q_keysequenceedit_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDragLeaveEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDragLeaveEvent*
 void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3156,8 +3538,9 @@ void q_keysequenceedit_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QDragLeaveEvent*) ```
-void q_keysequenceedit_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QDragLeaveEvent*)
+void q_keysequenceedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3165,7 +3548,8 @@ void q_keysequenceedit_on_drag_leave_event(void* self, void (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDropEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDropEvent*
 void q_keysequenceedit_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3174,7 +3558,8 @@ void q_keysequenceedit_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QDropEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QDropEvent*
 void q_keysequenceedit_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3183,8 +3568,9 @@ void q_keysequenceedit_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QDropEvent*) ```
-void q_keysequenceedit_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QDropEvent*)
+void q_keysequenceedit_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3192,7 +3578,8 @@ void q_keysequenceedit_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QShowEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QShowEvent*
 void q_keysequenceedit_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3201,7 +3588,8 @@ void q_keysequenceedit_show_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QShowEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QShowEvent*
 void q_keysequenceedit_qbase_show_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3210,8 +3598,9 @@ void q_keysequenceedit_qbase_show_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QShowEvent*) ```
-void q_keysequenceedit_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QShowEvent*)
+void q_keysequenceedit_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3219,7 +3608,8 @@ void q_keysequenceedit_on_show_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QHideEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QHideEvent*
 void q_keysequenceedit_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3228,7 +3618,8 @@ void q_keysequenceedit_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QHideEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QHideEvent*
 void q_keysequenceedit_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3237,8 +3628,9 @@ void q_keysequenceedit_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QHideEvent*) ```
-void q_keysequenceedit_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QHideEvent*)
+void q_keysequenceedit_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3246,7 +3638,10 @@ void q_keysequenceedit_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QKeySequenceEdit*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_keysequenceedit_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3255,7 +3650,10 @@ bool q_keysequenceedit_native_event(void* self, const char* eventType, void* mes
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QKeySequenceEdit*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3264,8 +3662,9 @@ bool q_keysequenceedit_qbase_native_event(void* self, const char* eventType, voi
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)(QKeySequenceEdit*, const char*, void*, intptr_t*) ```
-void q_keysequenceedit_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn(QKeySequenceEdit*, const char*, void*, intptr_t*)
+void q_keysequenceedit_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3273,7 +3672,8 @@ void q_keysequenceedit_on_native_event(void* self, bool (*slot)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QEvent*
 void q_keysequenceedit_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3282,7 +3682,8 @@ void q_keysequenceedit_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QEvent*
 void q_keysequenceedit_qbase_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3291,8 +3692,9 @@ void q_keysequenceedit_qbase_change_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QEvent*) ```
-void q_keysequenceedit_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+void q_keysequenceedit_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3300,7 +3702,8 @@ void q_keysequenceedit_on_change_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_keysequenceedit_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3309,7 +3712,8 @@ int32_t q_keysequenceedit_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_keysequenceedit_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3318,8 +3722,9 @@ int32_t q_keysequenceedit_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_keysequenceedit_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric)
+void q_keysequenceedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3327,7 +3732,8 @@ void q_keysequenceedit_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
 void q_keysequenceedit_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3336,7 +3742,8 @@ void q_keysequenceedit_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPainter* painter ```
+/// @param self QKeySequenceEdit*
+/// @param painter QPainter*
 void q_keysequenceedit_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3345,8 +3752,9 @@ void q_keysequenceedit_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QPainter*) ```
-void q_keysequenceedit_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QPainter*)
+void q_keysequenceedit_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3354,7 +3762,8 @@ void q_keysequenceedit_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPoint* offset ```
+/// @param self QKeySequenceEdit*
+/// @param offset QPoint*
 QPaintDevice* q_keysequenceedit_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3363,7 +3772,8 @@ QPaintDevice* q_keysequenceedit_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPoint* offset ```
+/// @param self QKeySequenceEdit*
+/// @param offset QPoint*
 QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3372,8 +3782,9 @@ QPaintDevice* q_keysequenceedit_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPaintDevice* (*slot)(QKeySequenceEdit*, QPoint*) ```
-void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback QPaintDevice* fn(QKeySequenceEdit*, QPoint*)
+void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3381,7 +3792,7 @@ void q_keysequenceedit_on_redirected(void* self, QPaintDevice* (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPainter* q_keysequenceedit_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3390,7 +3801,7 @@ QPainter* q_keysequenceedit_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QPainter* q_keysequenceedit_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3399,8 +3810,9 @@ QPainter* q_keysequenceedit_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QPainter* (*slot)() ```
-void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback QPainter* fn()
+void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3408,7 +3820,8 @@ void q_keysequenceedit_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QInputMethodEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QInputMethodEvent*
 void q_keysequenceedit_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3417,7 +3830,8 @@ void q_keysequenceedit_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QInputMethodEvent* param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 QInputMethodEvent*
 void q_keysequenceedit_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3426,8 +3840,9 @@ void q_keysequenceedit_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QInputMethodEvent*) ```
-void q_keysequenceedit_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QInputMethodEvent*)
+void q_keysequenceedit_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3435,7 +3850,8 @@ void q_keysequenceedit_on_input_method_event(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_keysequenceedit_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3444,7 +3860,8 @@ QVariant* q_keysequenceedit_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QKeySequenceEdit*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3453,8 +3870,9 @@ QVariant* q_keysequenceedit_qbase_input_method_query(void* self, int64_t param1)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QVariant* (*slot)(QKeySequenceEdit*, enum Qt__InputMethodQuery) ```
-void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QKeySequenceEdit*
+/// @param callback QVariant* fn(QKeySequenceEdit*, enum Qt__InputMethodQuery)
+void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3462,7 +3880,8 @@ void q_keysequenceedit_on_input_method_query(void* self, QVariant* (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool next ```
+/// @param self QKeySequenceEdit*
+/// @param next bool
 bool q_keysequenceedit_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3471,7 +3890,8 @@ bool q_keysequenceedit_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool next ```
+/// @param self QKeySequenceEdit*
+/// @param next bool
 bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3480,8 +3900,9 @@ bool q_keysequenceedit_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)(QKeySequenceEdit*, bool) ```
-void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn(QKeySequenceEdit*, bool)
+void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3489,7 +3910,9 @@ void q_keysequenceedit_on_focus_next_prev_child(void* self, bool (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QObject* watched, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_keysequenceedit_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3498,7 +3921,9 @@ bool q_keysequenceedit_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QObject* watched, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3507,8 +3932,9 @@ bool q_keysequenceedit_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)(QKeySequenceEdit*, QObject*, QEvent*) ```
-void q_keysequenceedit_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn(QKeySequenceEdit*, QObject*, QEvent*)
+void q_keysequenceedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3516,7 +3942,8 @@ void q_keysequenceedit_on_event_filter(void* self, bool (*slot)(void*, void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QChildEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QChildEvent*
 void q_keysequenceedit_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3525,7 +3952,8 @@ void q_keysequenceedit_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QChildEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QChildEvent*
 void q_keysequenceedit_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3534,8 +3962,9 @@ void q_keysequenceedit_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QChildEvent*) ```
-void q_keysequenceedit_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QChildEvent*)
+void q_keysequenceedit_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3543,7 +3972,8 @@ void q_keysequenceedit_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEvent*
 void q_keysequenceedit_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3552,7 +3982,8 @@ void q_keysequenceedit_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QEvent* event ```
+/// @param self QKeySequenceEdit*
+/// @param event QEvent*
 void q_keysequenceedit_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3561,8 +3992,9 @@ void q_keysequenceedit_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QEvent*) ```
-void q_keysequenceedit_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QEvent*)
+void q_keysequenceedit_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3570,7 +4002,8 @@ void q_keysequenceedit_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 void q_keysequenceedit_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3579,7 +4012,8 @@ void q_keysequenceedit_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 void q_keysequenceedit_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3588,8 +4022,9 @@ void q_keysequenceedit_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMetaMethod*) ```
-void q_keysequenceedit_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMetaMethod*)
+void q_keysequenceedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3597,7 +4032,8 @@ void q_keysequenceedit_on_connect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 void q_keysequenceedit_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3606,7 +4042,8 @@ void q_keysequenceedit_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3615,8 +4052,9 @@ void q_keysequenceedit_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, QMetaMethod*) ```
-void q_keysequenceedit_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, QMetaMethod*)
+void q_keysequenceedit_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3624,7 +4062,7 @@ void q_keysequenceedit_on_disconnect_notify(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3633,7 +4071,7 @@ void q_keysequenceedit_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3642,8 +4080,9 @@ void q_keysequenceedit_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)() ```
-void q_keysequenceedit_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback void fn()
+void q_keysequenceedit_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3651,7 +4090,7 @@ void q_keysequenceedit_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_create(void* self);
 
 /// Inherited from QWidget
@@ -3660,7 +4099,7 @@ void q_keysequenceedit_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3669,8 +4108,9 @@ void q_keysequenceedit_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)() ```
-void q_keysequenceedit_on_create(void* self, void (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback void fn()
+void q_keysequenceedit_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3678,7 +4118,7 @@ void q_keysequenceedit_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3687,7 +4127,7 @@ void q_keysequenceedit_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3696,8 +4136,9 @@ void q_keysequenceedit_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)() ```
-void q_keysequenceedit_on_destroy(void* self, void (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback void fn()
+void q_keysequenceedit_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3705,7 +4146,7 @@ void q_keysequenceedit_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3714,7 +4155,7 @@ bool q_keysequenceedit_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3723,8 +4164,9 @@ bool q_keysequenceedit_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)() ```
-void q_keysequenceedit_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn()
+void q_keysequenceedit_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3732,7 +4174,7 @@ void q_keysequenceedit_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3741,7 +4183,7 @@ bool q_keysequenceedit_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 bool q_keysequenceedit_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3750,8 +4192,9 @@ bool q_keysequenceedit_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)() ```
-void q_keysequenceedit_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn()
+void q_keysequenceedit_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3759,7 +4202,7 @@ void q_keysequenceedit_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QObject* q_keysequenceedit_sender(void* self);
 
 /// Inherited from QObject
@@ -3768,7 +4211,7 @@ QObject* q_keysequenceedit_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 QObject* q_keysequenceedit_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3777,8 +4220,9 @@ QObject* q_keysequenceedit_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QObject* (*slot)() ```
-void q_keysequenceedit_on_sender(void* self, QObject* (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback QObject* fn()
+void q_keysequenceedit_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3786,7 +4230,7 @@ void q_keysequenceedit_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3795,7 +4239,7 @@ int32_t q_keysequenceedit_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 int32_t q_keysequenceedit_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3804,8 +4248,9 @@ int32_t q_keysequenceedit_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)() ```
-void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn()
+void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3813,7 +4258,8 @@ void q_keysequenceedit_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, const char* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal const char*
 int32_t q_keysequenceedit_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3822,7 +4268,8 @@ int32_t q_keysequenceedit_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, const char* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal const char*
 int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3831,8 +4278,9 @@ int32_t q_keysequenceedit_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, int32_t (*slot)(QKeySequenceEdit*, const char*) ```
-void q_keysequenceedit_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QKeySequenceEdit*
+/// @param callback int32_t fn(QKeySequenceEdit*, const char*)
+void q_keysequenceedit_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3840,7 +4288,8 @@ void q_keysequenceedit_on_receivers(void* self, int32_t (*slot)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 bool q_keysequenceedit_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3849,7 +4298,8 @@ bool q_keysequenceedit_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, QMetaMethod* signal ```
+/// @param self QKeySequenceEdit*
+/// @param signal QMetaMethod*
 bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3858,8 +4308,9 @@ bool q_keysequenceedit_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, bool (*slot)(QKeySequenceEdit*, QMetaMethod*) ```
-void q_keysequenceedit_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QKeySequenceEdit*
+/// @param callback bool fn(QKeySequenceEdit*, QMetaMethod*)
+void q_keysequenceedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3867,7 +4318,9 @@ void q_keysequenceedit_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QKeySequenceEdit*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_keysequenceedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3876,7 +4329,9 @@ double q_keysequenceedit_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QKeySequenceEdit*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3885,8 +4340,9 @@ double q_keysequenceedit_qbase_get_decoded_metric_f(void* self, int64_t metricA,
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QKeySequenceEdit* self, double (*slot)(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QKeySequenceEdit*
+/// @param callback double fn(QKeySequenceEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -3894,14 +4350,15 @@ void q_keysequenceedit_on_get_decoded_metric_f(void* self, double (*slot)(void*,
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QKeySequenceEdit* self, void (*slot)(QKeySequenceEdit*, const char*) ```
-void q_keysequenceedit_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QKeySequenceEdit*
+/// @param callback void fn(QKeySequenceEdit*, const char*)
+void q_keysequenceedit_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequenceedit.html#dtor.QKeySequenceEdit)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QKeySequenceEdit* self ```
+/// @param self QKeySequenceEdit*
 void q_keysequenceedit_delete(void* self);
 
 #endif

@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,153 +15,168 @@
 
 /// q_jsonparseerror_new constructs a new QJsonParseError object.
 ///
-/// ``` QJsonParseError* other ```
+/// @param other QJsonParseError*
 QJsonParseError* q_jsonparseerror_new(void* other);
 
 /// q_jsonparseerror_new2 constructs a new QJsonParseError object and invalidates the source QJsonParseError object.
 ///
-/// ``` QJsonParseError* other ```
+/// @param other QJsonParseError*
 QJsonParseError* q_jsonparseerror_new2(void* other);
 
 /// q_jsonparseerror_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QJsonParseError* self, QJsonParseError* other ```
+/// @param self QJsonParseError*
+/// @param other QJsonParseError*
 void q_jsonparseerror_copy_assign(void* self, void* other);
 
 /// q_jsonparseerror_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QJsonParseError* self, QJsonParseError* other ```
+/// @param self QJsonParseError*
+/// @param other QJsonParseError*
 void q_jsonparseerror_move_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#errorString)
 ///
-/// ``` QJsonParseError* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonParseError*
 const char* q_jsonparseerror_error_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QJsonParseError* self ```
+/// @param self QJsonParseError*
 void q_jsonparseerror_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qjsondocument.html
 
 /// q_jsondocument_new constructs a new QJsonDocument object.
 ///
-///
 QJsonDocument* q_jsondocument_new();
 
 /// q_jsondocument_new2 constructs a new QJsonDocument object.
 ///
-/// ``` QJsonObject* object ```
+/// @param object QJsonObject*
 QJsonDocument* q_jsondocument_new2(void* object);
 
 /// q_jsondocument_new3 constructs a new QJsonDocument object.
 ///
-/// ``` QJsonArray* array ```
+/// @param array QJsonArray*
 QJsonDocument* q_jsondocument_new3(void* array);
 
 /// q_jsondocument_new4 constructs a new QJsonDocument object.
 ///
-/// ``` QJsonDocument* other ```
+/// @param other QJsonDocument*
 QJsonDocument* q_jsondocument_new4(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-eq)
 ///
-/// ``` QJsonDocument* self, QJsonDocument* other ```
+/// @param self QJsonDocument*
+/// @param other QJsonDocument*
 void q_jsondocument_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#swap)
 ///
-/// ``` QJsonDocument* self, QJsonDocument* other ```
+/// @param self QJsonDocument*
+/// @param other QJsonDocument*
 void q_jsondocument_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromVariant)
 ///
-/// ``` QVariant* variant ```
+/// @param variant QVariant*
 QJsonDocument* q_jsondocument_from_variant(void* variant);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toVariant)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 QVariant* q_jsondocument_to_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// ``` const char* json ```
+/// @param json const char*
 QJsonDocument* q_jsondocument_from_json(const char* json);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// ``` QJsonDocument* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonDocument*
 char* q_jsondocument_to_json(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isEmpty)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 bool q_jsondocument_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isArray)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 bool q_jsondocument_is_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isObject)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 bool q_jsondocument_is_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#object)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 QJsonObject* q_jsondocument_object(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#array)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 QJsonArray* q_jsondocument_array(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#setObject)
 ///
-/// ``` QJsonDocument* self, QJsonObject* object ```
+/// @param self QJsonDocument*
+/// @param object QJsonObject*
 void q_jsondocument_set_object(void* self, void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#setArray)
 ///
-/// ``` QJsonDocument* self, QJsonArray* array ```
+/// @param self QJsonDocument*
+/// @param array QJsonArray*
 void q_jsondocument_set_array(void* self, void* array);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
-/// ``` QJsonDocument* self, const char* key ```
+/// @param self QJsonDocument*
+/// @param key const char*
 const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
-/// ``` QJsonDocument* self, int64_t i ```
+/// @param self QJsonDocument*
+/// @param i int64_t
 const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 bool q_jsondocument_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#fromJson)
 ///
-/// ``` const char* json, QJsonParseError* errorVal ```
+/// @param json const char*
+/// @param errorVal QJsonParseError*
 QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#toJson)
 ///
-/// ``` QJsonDocument* self, enum QJsonDocument__JsonFormat format ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QJsonDocument*
+/// @param format enum QJsonDocument__JsonFormat
 char* q_jsondocument_to_json1(void* self, int64_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QJsonDocument* self ```
+/// @param self QJsonDocument*
 void q_jsondocument_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qjsondocument.html#types

@@ -34,8 +34,8 @@ int32_t q_pauseanimation_metacall(void* self, int64_t param1, int param2, void* 
     return QPauseAnimation_Metacall((QPauseAnimation*)self, param1, param2, param3);
 }
 
-void q_pauseanimation_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QPauseAnimation_OnMetacall((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QPauseAnimation_OnMetacall((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_pauseanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ int32_t q_pauseanimation_duration(void* self) {
     return QPauseAnimation_Duration((QPauseAnimation*)self);
 }
 
-void q_pauseanimation_on_duration(void* self, int32_t (*slot)()) {
-    QPauseAnimation_OnDuration((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_duration(void* self, int32_t (*callback)()) {
+    QPauseAnimation_OnDuration((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_pauseanimation_qbase_duration(void* self) {
@@ -69,8 +69,8 @@ bool q_pauseanimation_event(void* self, void* e) {
     return QPauseAnimation_Event((QPauseAnimation*)self, (QEvent*)e);
 }
 
-void q_pauseanimation_on_event(void* self, bool (*slot)(void*, void*)) {
-    QPauseAnimation_OnEvent((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_event(void* self, bool (*callback)(void*, void*)) {
+    QPauseAnimation_OnEvent((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 bool q_pauseanimation_qbase_event(void* self, void* e) {
@@ -81,8 +81,8 @@ void q_pauseanimation_update_current_time(void* self, int param1) {
     QPauseAnimation_UpdateCurrentTime((QPauseAnimation*)self, param1);
 }
 
-void q_pauseanimation_on_update_current_time(void* self, void (*slot)(void*, int)) {
-    QPauseAnimation_OnUpdateCurrentTime((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_update_current_time(void* self, void (*callback)(void*, int)) {
+    QPauseAnimation_OnUpdateCurrentTime((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_qbase_update_current_time(void* self, int param1) {
@@ -147,32 +147,32 @@ void q_pauseanimation_finished(void* self) {
     QAbstractAnimation_Finished((QAbstractAnimation*)self);
 }
 
-void q_pauseanimation_on_finished(void* self, void (*slot)(void*)) {
-    QAbstractAnimation_Connect_Finished((QAbstractAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_finished(void* self, void (*callback)(void*)) {
+    QAbstractAnimation_Connect_Finished((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_state_changed(void* self, int64_t newState, int64_t oldState) {
     QAbstractAnimation_StateChanged((QAbstractAnimation*)self, newState, oldState);
 }
 
-void q_pauseanimation_on_state_changed(void* self, void (*slot)(void*, int64_t, int64_t)) {
-    QAbstractAnimation_Connect_StateChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t)) {
+    QAbstractAnimation_Connect_StateChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_current_loop_changed(void* self, int currentLoop) {
     QAbstractAnimation_CurrentLoopChanged((QAbstractAnimation*)self, currentLoop);
 }
 
-void q_pauseanimation_on_current_loop_changed(void* self, void (*slot)(void*, int)) {
-    QAbstractAnimation_Connect_CurrentLoopChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_current_loop_changed(void* self, void (*callback)(void*, int)) {
+    QAbstractAnimation_Connect_CurrentLoopChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_direction_changed(void* self, int64_t param1) {
     QAbstractAnimation_DirectionChanged((QAbstractAnimation*)self, param1);
 }
 
-void q_pauseanimation_on_direction_changed(void* self, void (*slot)(void*, int64_t)) {
-    QAbstractAnimation_Connect_DirectionChanged((QAbstractAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t)) {
+    QAbstractAnimation_Connect_DirectionChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_start(void* self) {
@@ -307,12 +307,16 @@ const char** q_pauseanimation_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_pauseanimation_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -330,8 +334,8 @@ void q_pauseanimation_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_pauseanimation_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_pauseanimation_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_pauseanimation_parent(void* self) {
@@ -366,8 +370,8 @@ void q_pauseanimation_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_pauseanimation_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_pauseanimation_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_update_state(void* self, int64_t newState, int64_t oldState) {
@@ -378,8 +382,8 @@ void q_pauseanimation_qbase_update_state(void* self, int64_t newState, int64_t o
     QPauseAnimation_QBaseUpdateState((QPauseAnimation*)self, newState, oldState);
 }
 
-void q_pauseanimation_on_update_state(void* self, void (*slot)(void*, int64_t, int64_t)) {
-    QPauseAnimation_OnUpdateState((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t)) {
+    QPauseAnimation_OnUpdateState((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_update_direction(void* self, int64_t direction) {
@@ -390,8 +394,8 @@ void q_pauseanimation_qbase_update_direction(void* self, int64_t direction) {
     QPauseAnimation_QBaseUpdateDirection((QPauseAnimation*)self, direction);
 }
 
-void q_pauseanimation_on_update_direction(void* self, void (*slot)(void*, int64_t)) {
-    QPauseAnimation_OnUpdateDirection((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_update_direction(void* self, void (*callback)(void*, int64_t)) {
+    QPauseAnimation_OnUpdateDirection((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 bool q_pauseanimation_event_filter(void* self, void* watched, void* event) {
@@ -402,8 +406,8 @@ bool q_pauseanimation_qbase_event_filter(void* self, void* watched, void* event)
     return QPauseAnimation_QBaseEventFilter((QPauseAnimation*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_pauseanimation_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QPauseAnimation_OnEventFilter((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QPauseAnimation_OnEventFilter((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_timer_event(void* self, void* event) {
@@ -414,8 +418,8 @@ void q_pauseanimation_qbase_timer_event(void* self, void* event) {
     QPauseAnimation_QBaseTimerEvent((QPauseAnimation*)self, (QTimerEvent*)event);
 }
 
-void q_pauseanimation_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QPauseAnimation_OnTimerEvent((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QPauseAnimation_OnTimerEvent((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_child_event(void* self, void* event) {
@@ -426,8 +430,8 @@ void q_pauseanimation_qbase_child_event(void* self, void* event) {
     QPauseAnimation_QBaseChildEvent((QPauseAnimation*)self, (QChildEvent*)event);
 }
 
-void q_pauseanimation_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QPauseAnimation_OnChildEvent((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QPauseAnimation_OnChildEvent((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_custom_event(void* self, void* event) {
@@ -438,8 +442,8 @@ void q_pauseanimation_qbase_custom_event(void* self, void* event) {
     QPauseAnimation_QBaseCustomEvent((QPauseAnimation*)self, (QEvent*)event);
 }
 
-void q_pauseanimation_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QPauseAnimation_OnCustomEvent((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QPauseAnimation_OnCustomEvent((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_connect_notify(void* self, void* signal) {
@@ -450,8 +454,8 @@ void q_pauseanimation_qbase_connect_notify(void* self, void* signal) {
     QPauseAnimation_QBaseConnectNotify((QPauseAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_pauseanimation_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QPauseAnimation_OnConnectNotify((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QPauseAnimation_OnConnectNotify((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_disconnect_notify(void* self, void* signal) {
@@ -462,8 +466,8 @@ void q_pauseanimation_qbase_disconnect_notify(void* self, void* signal) {
     QPauseAnimation_QBaseDisconnectNotify((QPauseAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_pauseanimation_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QPauseAnimation_OnDisconnectNotify((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QPauseAnimation_OnDisconnectNotify((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 QObject* q_pauseanimation_sender(void* self) {
@@ -474,8 +478,8 @@ QObject* q_pauseanimation_qbase_sender(void* self) {
     return QPauseAnimation_QBaseSender((QPauseAnimation*)self);
 }
 
-void q_pauseanimation_on_sender(void* self, QObject* (*slot)()) {
-    QPauseAnimation_OnSender((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_sender(void* self, QObject* (*callback)()) {
+    QPauseAnimation_OnSender((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_pauseanimation_sender_signal_index(void* self) {
@@ -486,8 +490,8 @@ int32_t q_pauseanimation_qbase_sender_signal_index(void* self) {
     return QPauseAnimation_QBaseSenderSignalIndex((QPauseAnimation*)self);
 }
 
-void q_pauseanimation_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QPauseAnimation_OnSenderSignalIndex((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QPauseAnimation_OnSenderSignalIndex((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 int32_t q_pauseanimation_receivers(void* self, const char* signal) {
@@ -498,8 +502,8 @@ int32_t q_pauseanimation_qbase_receivers(void* self, const char* signal) {
     return QPauseAnimation_QBaseReceivers((QPauseAnimation*)self, signal);
 }
 
-void q_pauseanimation_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QPauseAnimation_OnReceivers((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QPauseAnimation_OnReceivers((QPauseAnimation*)self, (intptr_t)callback);
 }
 
 bool q_pauseanimation_is_signal_connected(void* self, void* signal) {
@@ -510,12 +514,12 @@ bool q_pauseanimation_qbase_is_signal_connected(void* self, void* signal) {
     return QPauseAnimation_QBaseIsSignalConnected((QPauseAnimation*)self, (QMetaMethod*)signal);
 }
 
-void q_pauseanimation_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QPauseAnimation_OnIsSignalConnected((QPauseAnimation*)self, (intptr_t)slot);
+void q_pauseanimation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QPauseAnimation_OnIsSignalConnected((QPauseAnimation*)self, (intptr_t)callback);
 }
 
-void q_pauseanimation_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_pauseanimation_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_pauseanimation_delete(void* self) {

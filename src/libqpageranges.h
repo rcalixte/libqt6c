@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,128 +15,137 @@
 
 /// q_pageranges_new constructs a new QPageRanges object.
 ///
-///
 QPageRanges* q_pageranges_new();
 
 /// q_pageranges_new2 constructs a new QPageRanges object.
 ///
-/// ``` QPageRanges* other ```
+/// @param other QPageRanges*
 QPageRanges* q_pageranges_new2(void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#operator-eq)
 ///
-/// ``` QPageRanges* self, QPageRanges* other ```
+/// @param self QPageRanges*
+/// @param other QPageRanges*
 void q_pageranges_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#swap)
 ///
-/// ``` QPageRanges* self, QPageRanges* other ```
+/// @param self QPageRanges*
+/// @param other QPageRanges*
 void q_pageranges_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#addPage)
 ///
-/// ``` QPageRanges* self, int pageNumber ```
+/// @param self QPageRanges*
+/// @param pageNumber int
 void q_pageranges_add_page(void* self, int pageNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#addRange)
 ///
-/// ``` QPageRanges* self, int from, int to ```
+/// @param self QPageRanges*
+/// @param from int
+/// @param to int
 void q_pageranges_add_range(void* self, int from, int to);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#toRangeList)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 libqt_list /* of QPageRanges__Range* */ q_pageranges_to_range_list(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#clear)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 void q_pageranges_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#toString)
 ///
-/// ``` QPageRanges* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPageRanges*
 const char* q_pageranges_to_string(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#fromString)
 ///
-/// ``` const char* ranges ```
+/// @param ranges const char*
 QPageRanges* q_pageranges_from_string(const char* ranges);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#contains)
 ///
-/// ``` QPageRanges* self, int pageNumber ```
+/// @param self QPageRanges*
+/// @param pageNumber int
 bool q_pageranges_contains(void* self, int pageNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#isEmpty)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 bool q_pageranges_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#firstPage)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 int32_t q_pageranges_first_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#lastPage)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 int32_t q_pageranges_last_page(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#detach)
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 void q_pageranges_detach(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges.html#dtor.QPageRanges)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPageRanges* self ```
+/// @param self QPageRanges*
 void q_pageranges_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qpageranges-range.html
 
 /// q_pageranges__range_new constructs a new QPageRanges::Range object.
 ///
-/// ``` QPageRanges__Range* other ```
+/// @param other QPageRanges__Range*
 QPageRanges__Range* q_pageranges__range_new(void* other);
 
 /// q_pageranges__range_new2 constructs a new QPageRanges::Range object and invalidates the source QPageRanges::Range object.
 ///
-/// ``` QPageRanges__Range* other ```
+/// @param other QPageRanges__Range*
 QPageRanges__Range* q_pageranges__range_new2(void* other);
 
 /// q_pageranges__range_new3 constructs a new QPageRanges::Range object.
-///
 ///
 QPageRanges__Range* q_pageranges__range_new3();
 
 /// q_pageranges__range_new4 constructs a new QPageRanges::Range object.
 ///
-/// ``` QPageRanges__Range* param1 ```
+/// @param param1 QPageRanges__Range*
 QPageRanges__Range* q_pageranges__range_new4(void* param1);
 
 /// q_pageranges__range_copy_assign shallow copies `other` into `self`.
 ///
-/// ``` QPageRanges__Range* self, QPageRanges__Range* other ```
+/// @param self QPageRanges__Range*
+/// @param other QPageRanges__Range*
 void q_pageranges__range_copy_assign(void* self, void* other);
 
 /// q_pageranges__range_move_assign moves `other` into `self` and invalidates `other`.
 ///
-/// ``` QPageRanges__Range* self, QPageRanges__Range* other ```
+/// @param self QPageRanges__Range*
+/// @param other QPageRanges__Range*
 void q_pageranges__range_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges__range.html#contains)
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#contains)
 ///
-/// ``` QPageRanges__Range* self, int pageNumber ```
+/// @param self QPageRanges__Range*
+/// @param pageNumber int
 bool q_pageranges__range_contains(void* self, int pageNumber);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges::range.html#dtor.QPageRanges::Range)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPageRanges__Range* self ```
+/// @param self QPageRanges__Range*
 void q_pageranges__range_delete(void* self);
 
 #endif

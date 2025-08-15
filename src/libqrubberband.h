@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,1300 +15,1465 @@
 
 /// q_rubberband_new constructs a new QRubberBand object.
 ///
-/// ``` enum QRubberBand__Shape param1 ```
+/// @param param1 enum QRubberBand__Shape
 QRubberBand* q_rubberband_new(int64_t param1);
 
 /// q_rubberband_new2 constructs a new QRubberBand object.
 ///
-/// ``` enum QRubberBand__Shape param1, QWidget* param2 ```
+/// @param param1 enum QRubberBand__Shape
+/// @param param2 QWidget*
 QRubberBand* q_rubberband_new2(int64_t param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 const QMetaObject* q_rubberband_meta_object(void* self);
 
-/// ``` QRubberBand* self, const char* param1 ```
+/// @param self QRubberBand*
+/// @param param1 const char*
 void* q_rubberband_metacast(void* self, const char* param1);
 
-/// ``` QRubberBand* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QRubberBand*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_rubberband_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)(QRubberBand*, enum QMetaObject__Call, int, void*) ```
-void q_rubberband_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QRubberBand*
+/// @param callback int32_t fn(QRubberBand*, enum QMetaObject__Call, int, void*)
+void q_rubberband_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QRubberBand*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_rubberband_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_rubberband_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#shape)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum QRubberBand__Shape
 int64_t q_rubberband_shape(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#setGeometry)
 ///
-/// ``` QRubberBand* self, QRect* r ```
+/// @param self QRubberBand*
+/// @param r QRect*
 void q_rubberband_set_geometry(void* self, void* r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#setGeometry)
 ///
-/// ``` QRubberBand* self, int x, int y, int w, int h ```
+/// @param self QRubberBand*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_rubberband_set_geometry2(void* self, int x, int y, int w, int h);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#move)
 ///
-/// ``` QRubberBand* self, int x, int y ```
+/// @param self QRubberBand*
+/// @param x int
+/// @param y int
 void q_rubberband_move(void* self, int x, int y);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#move)
 ///
-/// ``` QRubberBand* self, QPoint* p ```
+/// @param self QRubberBand*
+/// @param p QPoint*
 void q_rubberband_move2(void* self, void* p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resize)
 ///
-/// ``` QRubberBand* self, int w, int h ```
+/// @param self QRubberBand*
+/// @param w int
+/// @param h int
 void q_rubberband_resize(void* self, int w, int h);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resize)
 ///
-/// ``` QRubberBand* self, QSize* s ```
+/// @param self QRubberBand*
+/// @param s QSize*
 void q_rubberband_resize2(void* self, void* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#event)
 ///
-/// ``` QRubberBand* self, QEvent* e ```
+/// @param self QRubberBand*
+/// @param e QEvent*
 bool q_rubberband_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#event)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, bool (*slot)(QRubberBand*, QEvent*) ```
-void q_rubberband_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback bool fn(QRubberBand*, QEvent*)
+void q_rubberband_on_event(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#event)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QEvent* e ```
+/// @param self QRubberBand*
+/// @param e QEvent*
 bool q_rubberband_qbase_event(void* self, void* e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#paintEvent)
 ///
-/// ``` QRubberBand* self, QPaintEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPaintEvent*
 void q_rubberband_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#paintEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QPaintEvent*) ```
-void q_rubberband_on_paint_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QPaintEvent*)
+void q_rubberband_on_paint_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#paintEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QPaintEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPaintEvent*
 void q_rubberband_qbase_paint_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#changeEvent)
 ///
-/// ``` QRubberBand* self, QEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QEvent*
 void q_rubberband_change_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#changeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QEvent*) ```
-void q_rubberband_on_change_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QEvent*)
+void q_rubberband_on_change_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#changeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QEvent*
 void q_rubberband_qbase_change_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#showEvent)
 ///
-/// ``` QRubberBand* self, QShowEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QShowEvent*
 void q_rubberband_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#showEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QShowEvent*) ```
-void q_rubberband_on_show_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QShowEvent*)
+void q_rubberband_on_show_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#showEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QShowEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QShowEvent*
 void q_rubberband_qbase_show_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resizeEvent)
 ///
-/// ``` QRubberBand* self, QResizeEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QResizeEvent*
 void q_rubberband_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resizeEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QResizeEvent*) ```
-void q_rubberband_on_resize_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QResizeEvent*)
+void q_rubberband_on_resize_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#resizeEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QResizeEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QResizeEvent*
 void q_rubberband_qbase_resize_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#moveEvent)
 ///
-/// ``` QRubberBand* self, QMoveEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QMoveEvent*
 void q_rubberband_move_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#moveEvent)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMoveEvent*) ```
-void q_rubberband_on_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMoveEvent*)
+void q_rubberband_on_move_event(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#moveEvent)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QMoveEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QMoveEvent*
 void q_rubberband_qbase_move_event(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#initStyleOption)
 ///
-/// ``` QRubberBand* self, QStyleOptionRubberBand* option ```
+/// @param self QRubberBand*
+/// @param option QStyleOptionRubberBand*
 void q_rubberband_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#initStyleOption)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QStyleOptionRubberBand*) ```
-void q_rubberband_on_init_style_option(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QStyleOptionRubberBand*)
+void q_rubberband_on_init_style_option(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#initStyleOption)
 ///
 /// Base class method implementation
 ///
-/// ``` QRubberBand* self, QStyleOptionRubberBand* option ```
+/// @param self QRubberBand*
+/// @param option QStyleOptionRubberBand*
 void q_rubberband_qbase_init_style_option(void* self, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_rubberband_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_rubberband_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#winId)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 uintptr_t q_rubberband_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWinId)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_create_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#internalWinId)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 uintptr_t q_rubberband_internal_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#effectiveWinId)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 uintptr_t q_rubberband_effective_win_id(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#style)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QStyle* q_rubberband_style(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyle)
 ///
-/// ``` QRubberBand* self, QStyle* style ```
+/// @param self QRubberBand*
+/// @param style QStyle*
 void q_rubberband_set_style(void* self, void* style);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isTopLevel)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_top_level(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindow)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isModal)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_modal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowModality)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum Qt__WindowModality
 int64_t q_rubberband_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModality)
 ///
-/// ``` QRubberBand* self, enum Qt__WindowModality windowModality ```
+/// @param self QRubberBand*
+/// @param windowModality enum Qt__WindowModality
 void q_rubberband_set_window_modality(void* self, int64_t windowModality);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabled)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isEnabledTo)
 ///
-/// ``` QRubberBand* self, QWidget* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
 bool q_rubberband_is_enabled_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setEnabled)
 ///
-/// ``` QRubberBand* self, bool enabled ```
+/// @param self QRubberBand*
+/// @param enabled bool
 void q_rubberband_set_enabled(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setDisabled)
 ///
-/// ``` QRubberBand* self, bool disabled ```
+/// @param self QRubberBand*
+/// @param disabled bool
 void q_rubberband_set_disabled(void* self, bool disabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowModified)
 ///
-/// ``` QRubberBand* self, bool windowModified ```
+/// @param self QRubberBand*
+/// @param windowModified bool
 void q_rubberband_set_window_modified(void* self, bool windowModified);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameGeometry)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRect* q_rubberband_frame_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#geometry)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 const QRect* q_rubberband_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#normalGeometry)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRect* q_rubberband_normal_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#x)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_x(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#y)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_y(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#pos)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPoint* q_rubberband_pos(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#frameSize)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_frame_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#size)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#width)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#height)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#rect)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRect* q_rubberband_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRect)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRect* q_rubberband_children_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childrenRegion)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRegion* q_rubberband_children_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumSize)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_minimum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumSize)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_maximum_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumWidth)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_minimum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#minimumHeight)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_minimum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumWidth)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_maximum_width(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#maximumHeight)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_maximum_height(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QRubberBand* self, QSize* minimumSize ```
+/// @param self QRubberBand*
+/// @param minimumSize QSize*
 void q_rubberband_set_minimum_size(void* self, void* minimumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumSize)
 ///
-/// ``` QRubberBand* self, int minw, int minh ```
+/// @param self QRubberBand*
+/// @param minw int
+/// @param minh int
 void q_rubberband_set_minimum_size2(void* self, int minw, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QRubberBand* self, QSize* maximumSize ```
+/// @param self QRubberBand*
+/// @param maximumSize QSize*
 void q_rubberband_set_maximum_size(void* self, void* maximumSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumSize)
 ///
-/// ``` QRubberBand* self, int maxw, int maxh ```
+/// @param self QRubberBand*
+/// @param maxw int
+/// @param maxh int
 void q_rubberband_set_maximum_size2(void* self, int maxw, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumWidth)
 ///
-/// ``` QRubberBand* self, int minw ```
+/// @param self QRubberBand*
+/// @param minw int
 void q_rubberband_set_minimum_width(void* self, int minw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMinimumHeight)
 ///
-/// ``` QRubberBand* self, int minh ```
+/// @param self QRubberBand*
+/// @param minh int
 void q_rubberband_set_minimum_height(void* self, int minh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumWidth)
 ///
-/// ``` QRubberBand* self, int maxw ```
+/// @param self QRubberBand*
+/// @param maxw int
 void q_rubberband_set_maximum_width(void* self, int maxw);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMaximumHeight)
 ///
-/// ``` QRubberBand* self, int maxh ```
+/// @param self QRubberBand*
+/// @param maxh int
 void q_rubberband_set_maximum_height(void* self, int maxh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizeIncrement)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_size_increment(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QRubberBand* self, QSize* sizeIncrement ```
+/// @param self QRubberBand*
+/// @param sizeIncrement QSize*
 void q_rubberband_set_size_increment(void* self, void* sizeIncrement);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizeIncrement)
 ///
-/// ``` QRubberBand* self, int w, int h ```
+/// @param self QRubberBand*
+/// @param w int
+/// @param h int
 void q_rubberband_set_size_increment2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#baseSize)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_base_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QRubberBand* self, QSize* baseSize ```
+/// @param self QRubberBand*
+/// @param baseSize QSize*
 void q_rubberband_set_base_size(void* self, void* baseSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBaseSize)
 ///
-/// ``` QRubberBand* self, int basew, int baseh ```
+/// @param self QRubberBand*
+/// @param basew int
+/// @param baseh int
 void q_rubberband_set_base_size2(void* self, int basew, int baseh);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QRubberBand* self, QSize* fixedSize ```
+/// @param self QRubberBand*
+/// @param fixedSize QSize*
 void q_rubberband_set_fixed_size(void* self, void* fixedSize);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedSize)
 ///
-/// ``` QRubberBand* self, int w, int h ```
+/// @param self QRubberBand*
+/// @param w int
+/// @param h int
 void q_rubberband_set_fixed_size2(void* self, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedWidth)
 ///
-/// ``` QRubberBand* self, int w ```
+/// @param self QRubberBand*
+/// @param w int
 void q_rubberband_set_fixed_width(void* self, int w);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFixedHeight)
 ///
-/// ``` QRubberBand* self, int h ```
+/// @param self QRubberBand*
+/// @param h int
 void q_rubberband_set_fixed_height(void* self, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QRubberBand* self, QPointF* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPointF*
 QPointF* q_rubberband_map_to_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToGlobal)
 ///
-/// ``` QRubberBand* self, QPoint* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPoint*
 QPoint* q_rubberband_map_to_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QRubberBand* self, QPointF* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPointF*
 QPointF* q_rubberband_map_from_global(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromGlobal)
 ///
-/// ``` QRubberBand* self, QPoint* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPoint*
 QPoint* q_rubberband_map_from_global2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QRubberBand* self, QPointF* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPointF*
 QPointF* q_rubberband_map_to_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapToParent)
 ///
-/// ``` QRubberBand* self, QPoint* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPoint*
 QPoint* q_rubberband_map_to_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QRubberBand* self, QPointF* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPointF*
 QPointF* q_rubberband_map_from_parent(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFromParent)
 ///
-/// ``` QRubberBand* self, QPoint* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QPoint*
 QPoint* q_rubberband_map_from_parent2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QRubberBand* self, QWidget* param1, QPointF* param2 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_rubberband_map_to(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapTo)
 ///
-/// ``` QRubberBand* self, QWidget* param1, QPoint* param2 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_rubberband_map_to2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QRubberBand* self, QWidget* param1, QPointF* param2 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
+/// @param param2 QPointF*
 QPointF* q_rubberband_map_from(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mapFrom)
 ///
-/// ``` QRubberBand* self, QWidget* param1, QPoint* param2 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
+/// @param param2 QPoint*
 QPoint* q_rubberband_map_from2(void* self, void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#window)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nativeParentWidget)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_native_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#topLevelWidget)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_top_level_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#palette)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 const QPalette* q_rubberband_palette(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setPalette)
 ///
-/// ``` QRubberBand* self, QPalette* palette ```
+/// @param self QRubberBand*
+/// @param palette QPalette*
 void q_rubberband_set_palette(void* self, void* palette);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setBackgroundRole)
 ///
-/// ``` QRubberBand* self, enum QPalette__ColorRole backgroundRole ```
+/// @param self QRubberBand*
+/// @param backgroundRole enum QPalette__ColorRole
 void q_rubberband_set_background_role(void* self, int64_t backgroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backgroundRole)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_rubberband_background_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setForegroundRole)
 ///
-/// ``` QRubberBand* self, enum QPalette__ColorRole foregroundRole ```
+/// @param self QRubberBand*
+/// @param foregroundRole enum QPalette__ColorRole
 void q_rubberband_set_foreground_role(void* self, int64_t foregroundRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#foregroundRole)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum QPalette__ColorRole
 int64_t q_rubberband_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#font)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 const QFont* q_rubberband_font(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFont)
 ///
-/// ``` QRubberBand* self, QFont* font ```
+/// @param self QRubberBand*
+/// @param font QFont*
 void q_rubberband_set_font(void* self, void* font);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontMetrics)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QFontMetrics* q_rubberband_font_metrics(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#fontInfo)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QFontInfo* q_rubberband_font_info(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#cursor)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QCursor* q_rubberband_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setCursor)
 ///
-/// ``` QRubberBand* self, QCursor* cursor ```
+/// @param self QRubberBand*
+/// @param cursor QCursor*
 void q_rubberband_set_cursor(void* self, void* cursor);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetCursor)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_unset_cursor(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMouseTracking)
 ///
-/// ``` QRubberBand* self, bool enable ```
+/// @param self QRubberBand*
+/// @param enable bool
 void q_rubberband_set_mouse_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasMouseTracking)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_has_mouse_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#underMouse)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_under_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabletTracking)
 ///
-/// ``` QRubberBand* self, bool enable ```
+/// @param self QRubberBand*
+/// @param enable bool
 void q_rubberband_set_tablet_tracking(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasTabletTracking)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_has_tablet_tracking(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QRubberBand* self, QBitmap* mask ```
+/// @param self QRubberBand*
+/// @param mask QBitmap*
 void q_rubberband_set_mask(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setMask)
 ///
-/// ``` QRubberBand* self, QRegion* mask ```
+/// @param self QRubberBand*
+/// @param mask QRegion*
 void q_rubberband_set_mask2(void* self, void* mask);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mask)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRegion* q_rubberband_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearMask)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_clear_mask(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPaintDevice* target ```
+/// @param self QRubberBand*
+/// @param target QPaintDevice*
 void q_rubberband_render(void* self, void* target);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPainter* painter ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
 void q_rubberband_render2(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPixmap* q_rubberband_grab(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsEffect)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QGraphicsEffect* q_rubberband_graphics_effect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setGraphicsEffect)
 ///
-/// ``` QRubberBand* self, QGraphicsEffect* effect ```
+/// @param self QRubberBand*
+/// @param effect QGraphicsEffect*
 void q_rubberband_set_graphics_effect(void* self, void* effect);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QRubberBand* self, enum Qt__GestureType typeVal ```
+/// @param self QRubberBand*
+/// @param typeVal enum Qt__GestureType
 void q_rubberband_grab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ungrabGesture)
 ///
-/// ``` QRubberBand* self, enum Qt__GestureType typeVal ```
+/// @param self QRubberBand*
+/// @param typeVal enum Qt__GestureType
 void q_rubberband_ungrab_gesture(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowTitle)
 ///
-/// ``` QRubberBand* self, const char* windowTitle ```
+/// @param self QRubberBand*
+/// @param windowTitle const char*
 void q_rubberband_set_window_title(void* self, const char* windowTitle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStyleSheet)
 ///
-/// ``` QRubberBand* self, const char* styleSheet ```
+/// @param self QRubberBand*
+/// @param styleSheet const char*
 void q_rubberband_set_style_sheet(void* self, const char* styleSheet);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#styleSheet)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_style_sheet(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitle)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_window_title(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIcon)
 ///
-/// ``` QRubberBand* self, QIcon* icon ```
+/// @param self QRubberBand*
+/// @param icon QIcon*
 void q_rubberband_set_window_icon(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIcon)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QIcon* q_rubberband_window_icon(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowIconText)
 ///
-/// ``` QRubberBand* self, const char* windowIconText ```
+/// @param self QRubberBand*
+/// @param windowIconText const char*
 void q_rubberband_set_window_icon_text(void* self, const char* windowIconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconText)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_window_icon_text(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowRole)
 ///
-/// ``` QRubberBand* self, const char* windowRole ```
+/// @param self QRubberBand*
+/// @param windowRole const char*
 void q_rubberband_set_window_role(void* self, const char* windowRole);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowRole)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_window_role(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFilePath)
 ///
-/// ``` QRubberBand* self, const char* filePath ```
+/// @param self QRubberBand*
+/// @param filePath const char*
 void q_rubberband_set_window_file_path(void* self, const char* filePath);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFilePath)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_window_file_path(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowOpacity)
 ///
-/// ``` QRubberBand* self, double level ```
+/// @param self QRubberBand*
+/// @param level double
 void q_rubberband_set_window_opacity(void* self, double level);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowOpacity)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 double q_rubberband_window_opacity(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isWindowModified)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_window_modified(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTip)
 ///
-/// ``` QRubberBand* self, const char* toolTip ```
+/// @param self QRubberBand*
+/// @param toolTip const char*
 void q_rubberband_set_tool_tip(void* self, const char* toolTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTip)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_tool_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setToolTipDuration)
 ///
-/// ``` QRubberBand* self, int msec ```
+/// @param self QRubberBand*
+/// @param msec int
 void q_rubberband_set_tool_tip_duration(void* self, int msec);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#toolTipDuration)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_tool_tip_duration(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setStatusTip)
 ///
-/// ``` QRubberBand* self, const char* statusTip ```
+/// @param self QRubberBand*
+/// @param statusTip const char*
 void q_rubberband_set_status_tip(void* self, const char* statusTip);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#statusTip)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_status_tip(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWhatsThis)
 ///
-/// ``` QRubberBand* self, const char* whatsThis ```
+/// @param self QRubberBand*
+/// @param whatsThis const char*
 void q_rubberband_set_whats_this(void* self, const char* whatsThis);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#whatsThis)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_whats_this(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleName)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_accessible_name(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleName)
 ///
-/// ``` QRubberBand* self, const char* name ```
+/// @param self QRubberBand*
+/// @param name const char*
 void q_rubberband_set_accessible_name(void* self, const char* name);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#accessibleDescription)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_accessible_description(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAccessibleDescription)
 ///
-/// ``` QRubberBand* self, const char* description ```
+/// @param self QRubberBand*
+/// @param description const char*
 void q_rubberband_set_accessible_description(void* self, const char* description);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayoutDirection)
 ///
-/// ``` QRubberBand* self, enum Qt__LayoutDirection direction ```
+/// @param self QRubberBand*
+/// @param direction enum Qt__LayoutDirection
 void q_rubberband_set_layout_direction(void* self, int64_t direction);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layoutDirection)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum Qt__LayoutDirection
 int64_t q_rubberband_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLayoutDirection)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_unset_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLocale)
 ///
-/// ``` QRubberBand* self, QLocale* locale ```
+/// @param self QRubberBand*
+/// @param locale QLocale*
 void q_rubberband_set_locale(void* self, void* locale);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#locale)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QLocale* q_rubberband_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#unsetLocale)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_unset_locale(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isRightToLeft)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_right_to_left(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isLeftToRight)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_left_to_right(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_set_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isActiveWindow)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_active_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#activateWindow)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_activate_window(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#clearFocus)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_clear_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocus)
 ///
-/// ``` QRubberBand* self, enum Qt__FocusReason reason ```
+/// @param self QRubberBand*
+/// @param reason enum Qt__FocusReason
 void q_rubberband_set_focus2(void* self, int64_t reason);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusPolicy)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum Qt__FocusPolicy
 int64_t q_rubberband_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusPolicy)
 ///
-/// ``` QRubberBand* self, enum Qt__FocusPolicy policy ```
+/// @param self QRubberBand*
+/// @param policy enum Qt__FocusPolicy
 void q_rubberband_set_focus_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hasFocus)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_has_focus(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setTabOrder)
 ///
-/// ``` QWidget* param1, QWidget* param2 ```
+/// @param param1 QWidget*
+/// @param param2 QWidget*
 void q_rubberband_set_tab_order(void* param1, void* param2);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setFocusProxy)
 ///
-/// ``` QRubberBand* self, QWidget* focusProxy ```
+/// @param self QRubberBand*
+/// @param focusProxy QWidget*
 void q_rubberband_set_focus_proxy(void* self, void* focusProxy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusProxy)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_focus_proxy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contextMenuPolicy)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum Qt__ContextMenuPolicy
 int64_t q_rubberband_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContextMenuPolicy)
 ///
-/// ``` QRubberBand* self, enum Qt__ContextMenuPolicy policy ```
+/// @param self QRubberBand*
+/// @param policy enum Qt__ContextMenuPolicy
 void q_rubberband_set_context_menu_policy(void* self, int64_t policy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_grab_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabMouse)
 ///
-/// ``` QRubberBand* self, QCursor* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QCursor*
 void q_rubberband_grab_mouse2(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseMouse)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_release_mouse(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabKeyboard)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_grab_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseKeyboard)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_release_keyboard(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QRubberBand* self, QKeySequence* key ```
+/// @param self QRubberBand*
+/// @param key QKeySequence*
 int32_t q_rubberband_grab_shortcut(void* self, void* key);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#releaseShortcut)
 ///
-/// ``` QRubberBand* self, int id ```
+/// @param self QRubberBand*
+/// @param id int
 void q_rubberband_release_shortcut(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QRubberBand* self, int id ```
+/// @param self QRubberBand*
+/// @param id int
 void q_rubberband_set_shortcut_enabled(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QRubberBand* self, int id ```
+/// @param self QRubberBand*
+/// @param id int
 void q_rubberband_set_shortcut_auto_repeat(void* self, int id);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#mouseGrabber)
-///
 ///
 QWidget* q_rubberband_mouse_grabber();
 
@@ -1317,1119 +1481,1274 @@ QWidget* q_rubberband_mouse_grabber();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#keyboardGrabber)
 ///
-///
 QWidget* q_rubberband_keyboard_grabber();
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updatesEnabled)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_updates_enabled(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setUpdatesEnabled)
 ///
-/// ``` QRubberBand* self, bool enable ```
+/// @param self QRubberBand*
+/// @param enable bool
 void q_rubberband_set_updates_enabled(void* self, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#graphicsProxyWidget)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QGraphicsProxyWidget* q_rubberband_graphics_proxy_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_update(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_repaint(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QRubberBand* self, int x, int y, int w, int h ```
+/// @param self QRubberBand*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_rubberband_update2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QRubberBand* self, QRect* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QRect*
 void q_rubberband_update3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#update)
 ///
-/// ``` QRubberBand* self, QRegion* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QRegion*
 void q_rubberband_update4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QRubberBand* self, int x, int y, int w, int h ```
+/// @param self QRubberBand*
+/// @param x int
+/// @param y int
+/// @param w int
+/// @param h int
 void q_rubberband_repaint2(void* self, int x, int y, int w, int h);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QRubberBand* self, QRect* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QRect*
 void q_rubberband_repaint3(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#repaint)
 ///
-/// ``` QRubberBand* self, QRegion* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QRegion*
 void q_rubberband_repaint4(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setHidden)
 ///
-/// ``` QRubberBand* self, bool hidden ```
+/// @param self QRubberBand*
+/// @param hidden bool
 void q_rubberband_set_hidden(void* self, bool hidden);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#show)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_show(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#hide)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_hide(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMinimized)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_show_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showMaximized)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_show_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showFullScreen)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_show_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#showNormal)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_show_normal(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#close)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_close(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#raise)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_raise(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#lower)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_lower(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#stackUnder)
 ///
-/// ``` QRubberBand* self, QWidget* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
 void q_rubberband_stack_under(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#saveGeometry)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 char* q_rubberband_save_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#restoreGeometry)
 ///
-/// ``` QRubberBand* self, const char* geometry ```
+/// @param self QRubberBand*
+/// @param geometry const char*
 bool q_rubberband_restore_geometry(void* self, const char* geometry);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#adjustSize)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_adjust_size(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisible)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_visible(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isVisibleTo)
 ///
-/// ``` QRubberBand* self, QWidget* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QWidget*
 bool q_rubberband_is_visible_to(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isHidden)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_hidden(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMinimized)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_minimized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isMaximized)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_maximized(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isFullScreen)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_full_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowState)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return flag of enum Qt__WindowState
 int64_t q_rubberband_window_state(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowState)
 ///
-/// ``` QRubberBand* self, int state ```
+/// @param self QRubberBand*
+/// @param state flag of enum Qt__WindowState
 void q_rubberband_set_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowState)
 ///
-/// ``` QRubberBand* self, int state ```
+/// @param self QRubberBand*
+/// @param state flag of enum Qt__WindowState
 void q_rubberband_override_window_state(void* self, int64_t state);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#sizePolicy)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSizePolicy* q_rubberband_size_policy(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QRubberBand* self, QSizePolicy* sizePolicy ```
+/// @param self QRubberBand*
+/// @param sizePolicy QSizePolicy*
 void q_rubberband_set_size_policy(void* self, void* sizePolicy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setSizePolicy)
 ///
-/// ``` QRubberBand* self, enum QSizePolicy__Policy horizontal, enum QSizePolicy__Policy vertical ```
+/// @param self QRubberBand*
+/// @param horizontal enum QSizePolicy__Policy
+/// @param vertical enum QSizePolicy__Policy
 void q_rubberband_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#visibleRegion)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRegion* q_rubberband_visible_region(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QRubberBand* self, int left, int top, int right, int bottom ```
+/// @param self QRubberBand*
+/// @param left int
+/// @param top int
+/// @param right int
+/// @param bottom int
 void q_rubberband_set_contents_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setContentsMargins)
 ///
-/// ``` QRubberBand* self, QMargins* margins ```
+/// @param self QRubberBand*
+/// @param margins QMargins*
 void q_rubberband_set_contents_margins2(void* self, void* margins);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsMargins)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QMargins* q_rubberband_contents_margins(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#contentsRect)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QRect* q_rubberband_contents_rect(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#layout)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QLayout* q_rubberband_layout(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setLayout)
 ///
-/// ``` QRubberBand* self, QLayout* layout ```
+/// @param self QRubberBand*
+/// @param layout QLayout*
 void q_rubberband_set_layout(void* self, void* layout);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#updateGeometry)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_update_geometry(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QRubberBand* self, QWidget* parent ```
+/// @param self QRubberBand*
+/// @param parent QWidget*
 void q_rubberband_set_parent(void* self, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setParent)
 ///
-/// ``` QRubberBand* self, QWidget* parent, int f ```
+/// @param self QRubberBand*
+/// @param parent QWidget*
+/// @param f flag of enum Qt__WindowType
 void q_rubberband_set_parent2(void* self, void* parent, int64_t f);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QRubberBand* self, int dx, int dy ```
+/// @param self QRubberBand*
+/// @param dx int
+/// @param dy int
 void q_rubberband_scroll(void* self, int dx, int dy);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#scroll)
 ///
-/// ``` QRubberBand* self, int dx, int dy, QRect* param3 ```
+/// @param self QRubberBand*
+/// @param dx int
+/// @param dy int
+/// @param param3 QRect*
 void q_rubberband_scroll2(void* self, int dx, int dy, void* param3);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#focusWidget)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_focus_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#nextInFocusChain)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_next_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#previousInFocusChain)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_previous_in_focus_chain(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#acceptDrops)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_accept_drops(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAcceptDrops)
 ///
-/// ``` QRubberBand* self, bool on ```
+/// @param self QRubberBand*
+/// @param on bool
 void q_rubberband_set_accept_drops(void* self, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QRubberBand* self, QAction* action ```
+/// @param self QRubberBand*
+/// @param action QAction*
 void q_rubberband_add_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addActions)
 ///
-/// ``` QRubberBand* self, libqt_list /* of QAction* */ actions ```
+/// @param self QRubberBand*
+/// @param actions libqt_list /* of QAction* */
 void q_rubberband_add_actions(void* self, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertActions)
 ///
-/// ``` QRubberBand* self, QAction* before, libqt_list /* of QAction* */ actions ```
+/// @param self QRubberBand*
+/// @param before QAction*
+/// @param actions libqt_list /* of QAction* */
 void q_rubberband_insert_actions(void* self, void* before, libqt_list actions);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#insertAction)
 ///
-/// ``` QRubberBand* self, QAction* before, QAction* action ```
+/// @param self QRubberBand*
+/// @param before QAction*
+/// @param action QAction*
 void q_rubberband_insert_action(void* self, void* before, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#removeAction)
 ///
-/// ``` QRubberBand* self, QAction* action ```
+/// @param self QRubberBand*
+/// @param action QAction*
 void q_rubberband_remove_action(void* self, void* action);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#actions)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 libqt_list /* of QAction* */ q_rubberband_actions(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QRubberBand* self, const char* text ```
+/// @param self QRubberBand*
+/// @param text const char*
 QAction* q_rubberband_add_action2(void* self, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QRubberBand* self, QIcon* icon, const char* text ```
+/// @param self QRubberBand*
+/// @param icon QIcon*
+/// @param text const char*
 QAction* q_rubberband_add_action3(void* self, void* icon, const char* text);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QRubberBand* self, const char* text, QKeySequence* shortcut ```
+/// @param self QRubberBand*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_rubberband_add_action4(void* self, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#addAction)
 ///
-/// ``` QRubberBand* self, QIcon* icon, const char* text, QKeySequence* shortcut ```
+/// @param self QRubberBand*
+/// @param icon QIcon*
+/// @param text const char*
+/// @param shortcut QKeySequence*
 QAction* q_rubberband_add_action5(void* self, void* icon, const char* text, void* shortcut);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#parentWidget)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWidget* q_rubberband_parent_widget(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlags)
 ///
-/// ``` QRubberBand* self, int typeVal ```
+/// @param self QRubberBand*
+/// @param typeVal flag of enum Qt__WindowType
 void q_rubberband_set_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowFlags)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return flag of enum Qt__WindowType
 int64_t q_rubberband_window_flags(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QRubberBand* self, enum Qt__WindowType param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__WindowType
 void q_rubberband_set_window_flag(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#overrideWindowFlags)
 ///
-/// ``` QRubberBand* self, int typeVal ```
+/// @param self QRubberBand*
+/// @param typeVal flag of enum Qt__WindowType
 void q_rubberband_override_window_flags(void* self, int64_t typeVal);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowType)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return enum Qt__WindowType
 int64_t q_rubberband_window_type(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// ``` uint64_t param1 ```
+/// @param param1 uint64_t
 QWidget* q_rubberband_find(uint64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QRubberBand* self, int x, int y ```
+/// @param self QRubberBand*
+/// @param x int
+/// @param y int
 QWidget* q_rubberband_child_at(void* self, int x, int y);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QRubberBand* self, QPoint* p ```
+/// @param self QRubberBand*
+/// @param p QPoint*
 QWidget* q_rubberband_child_at2(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
-/// ``` QRubberBand* self, QPointF* p ```
+/// @param self QRubberBand*
+/// @param p QPointF*
 QWidget* q_rubberband_child_at3(void* self, void* p);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QRubberBand* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__WidgetAttribute
 void q_rubberband_set_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#testAttribute)
 ///
-/// ``` QRubberBand* self, enum Qt__WidgetAttribute param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__WidgetAttribute
 bool q_rubberband_test_attribute(void* self, int64_t param1);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#ensurePolished)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_ensure_polished(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#isAncestorOf)
 ///
-/// ``` QRubberBand* self, QWidget* child ```
+/// @param self QRubberBand*
+/// @param child QWidget*
 bool q_rubberband_is_ancestor_of(void* self, void* child);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#autoFillBackground)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_auto_fill_background(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAutoFillBackground)
 ///
-/// ``` QRubberBand* self, bool enabled ```
+/// @param self QRubberBand*
+/// @param enabled bool
 void q_rubberband_set_auto_fill_background(void* self, bool enabled);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#backingStore)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QBackingStore* q_rubberband_backing_store(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowHandle)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QWindow* q_rubberband_window_handle(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#screen)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QScreen* q_rubberband_screen(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setScreen)
 ///
-/// ``` QRubberBand* self, QScreen* screen ```
+/// @param self QRubberBand*
+/// @param screen QScreen*
 void q_rubberband_set_screen(void* self, void* screen);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window ```
+/// @param window QWindow*
 QWidget* q_rubberband_create_window_container(void* window);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QRubberBand* self, const char* title ```
+/// @param self QRubberBand*
+/// @param title const char*
 void q_rubberband_window_title_changed(void* self, const char* title);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowTitleChanged)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, const char*) ```
-void q_rubberband_on_window_title_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, const char*)
+void q_rubberband_on_window_title_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QRubberBand* self, QIcon* icon ```
+/// @param self QRubberBand*
+/// @param icon QIcon*
 void q_rubberband_window_icon_changed(void* self, void* icon);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconChanged)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QIcon*) ```
-void q_rubberband_on_window_icon_changed(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QIcon*)
+void q_rubberband_on_window_icon_changed(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QRubberBand* self, const char* iconText ```
+/// @param self QRubberBand*
+/// @param iconText const char*
 void q_rubberband_window_icon_text_changed(void* self, const char* iconText);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#windowIconTextChanged)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, const char*) ```
-void q_rubberband_on_window_icon_text_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, const char*)
+void q_rubberband_on_window_icon_text_changed(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QRubberBand* self, QPoint* pos ```
+/// @param self QRubberBand*
+/// @param pos QPoint*
 void q_rubberband_custom_context_menu_requested(void* self, void* pos);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#customContextMenuRequested)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QPoint*) ```
-void q_rubberband_on_custom_context_menu_requested(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QPoint*)
+void q_rubberband_on_custom_context_menu_requested(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#inputMethodHints)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
+///
+/// @return flag of enum Qt__InputMethodHint
 int64_t q_rubberband_input_method_hints(void* self);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setInputMethodHints)
 ///
-/// ``` QRubberBand* self, int hints ```
+/// @param self QRubberBand*
+/// @param hints flag of enum Qt__InputMethodHint
 void q_rubberband_set_input_method_hints(void* self, int64_t hints);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPaintDevice* target, QPoint* targetOffset ```
+/// @param self QRubberBand*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
 void q_rubberband_render22(void* self, void* target, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QRubberBand*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_rubberband_render3(void* self, void* target, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPaintDevice* target, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QRubberBand*
+/// @param target QPaintDevice*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_rubberband_render4(void* self, void* target, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPainter* painter, QPoint* targetOffset ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
 void q_rubberband_render23(void* self, void* painter, void* targetOffset);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
 void q_rubberband_render32(void* self, void* painter, void* targetOffset, void* sourceRegion);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#render)
 ///
-/// ``` QRubberBand* self, QPainter* painter, QPoint* targetOffset, QRegion* sourceRegion, int renderFlags ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
+/// @param targetOffset QPoint*
+/// @param sourceRegion QRegion*
+/// @param renderFlags flag of enum QWidget__RenderFlag
 void q_rubberband_render42(void* self, void* painter, void* targetOffset, void* sourceRegion, int64_t renderFlags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grab)
 ///
-/// ``` QRubberBand* self, QRect* rectangle ```
+/// @param self QRubberBand*
+/// @param rectangle QRect*
 QPixmap* q_rubberband_grab1(void* self, void* rectangle);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabGesture)
 ///
-/// ``` QRubberBand* self, enum Qt__GestureType typeVal, int flags ```
+/// @param self QRubberBand*
+/// @param typeVal enum Qt__GestureType
+/// @param flags flag of enum Qt__GestureFlag
 void q_rubberband_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#grabShortcut)
 ///
-/// ``` QRubberBand* self, QKeySequence* key, enum Qt__ShortcutContext context ```
+/// @param self QRubberBand*
+/// @param key QKeySequence*
+/// @param context enum Qt__ShortcutContext
 int32_t q_rubberband_grab_shortcut2(void* self, void* key, int64_t context);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutEnabled)
 ///
-/// ``` QRubberBand* self, int id, bool enable ```
+/// @param self QRubberBand*
+/// @param id int
+/// @param enable bool
 void q_rubberband_set_shortcut_enabled2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setShortcutAutoRepeat)
 ///
-/// ``` QRubberBand* self, int id, bool enable ```
+/// @param self QRubberBand*
+/// @param id int
+/// @param enable bool
 void q_rubberband_set_shortcut_auto_repeat2(void* self, int id, bool enable);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setWindowFlag)
 ///
-/// ``` QRubberBand* self, enum Qt__WindowType param1, bool on ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__WindowType
+/// @param on bool
 void q_rubberband_set_window_flag2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#setAttribute)
 ///
-/// ``` QRubberBand* self, enum Qt__WidgetAttribute param1, bool on ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__WidgetAttribute
+/// @param on bool
 void q_rubberband_set_attribute2(void* self, int64_t param1, bool on);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent ```
+/// @param window QWindow*
+/// @param parent QWidget*
 QWidget* q_rubberband_create_window_container2(void* window, void* parent);
 
 /// Inherited from QWidget
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidget.html#createWindowContainer)
 ///
-/// ``` QWindow* window, QWidget* parent, int flags ```
+/// @param window QWindow*
+/// @param parent QWidget*
+/// @param flags flag of enum Qt__WindowType
 QWidget* q_rubberband_create_window_container3(void* window, void* parent, int64_t flags);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char* q_rubberband_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QRubberBand* self, char* name ```
+/// @param self QRubberBand*
+/// @param name char*
 void q_rubberband_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QRubberBand* self, bool b ```
+/// @param self QRubberBand*
+/// @param b bool
 bool q_rubberband_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QThread* q_rubberband_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QRubberBand* self, QThread* thread ```
+/// @param self QRubberBand*
+/// @param thread QThread*
 bool q_rubberband_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QRubberBand* self, int interval ```
+/// @param self QRubberBand*
+/// @param interval int
 int32_t q_rubberband_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QRubberBand* self, int id ```
+/// @param self QRubberBand*
+/// @param id int
 void q_rubberband_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QRubberBand* self, enum Qt__TimerId id ```
+/// @param self QRubberBand*
+/// @param id enum Qt__TimerId
 void q_rubberband_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 libqt_list /* of QObject* */ q_rubberband_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QRubberBand* self, QObject* filterObj ```
+/// @param self QRubberBand*
+/// @param filterObj QObject*
 void q_rubberband_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QRubberBand* self, QObject* obj ```
+/// @param self QRubberBand*
+/// @param obj QObject*
 void q_rubberband_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_rubberband_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QRubberBand* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QRubberBand*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_rubberband_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_rubberband_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_rubberband_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QRubberBand* self, const char* name, QVariant* value ```
+/// @param self QRubberBand*
+/// @param name const char*
+/// @param value QVariant*
 bool q_rubberband_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QRubberBand* self, const char* name ```
+/// @param self QRubberBand*
+/// @param name const char*
 QVariant* q_rubberband_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QRubberBand* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRubberBand*
 const char** q_rubberband_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QBindingStorage* q_rubberband_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 const QBindingStorage* q_rubberband_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*) ```
-void q_rubberband_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*)
+void q_rubberband_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QObject* q_rubberband_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QRubberBand* self, const char* classname ```
+/// @param self QRubberBand*
+/// @param classname const char*
 bool q_rubberband_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QRubberBand* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QRubberBand*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_rubberband_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QRubberBand* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QRubberBand*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_rubberband_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_rubberband_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QRubberBand* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QRubberBand*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_rubberband_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRubberBand* self, QObject* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QObject*
 void q_rubberband_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QObject*) ```
-void q_rubberband_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QObject*)
+void q_rubberband_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#paintingActive)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_painting_active(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#widthMM)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_width_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#heightMM)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_height_m_m(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiX)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_logical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#logicalDpiY)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_logical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiX)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_physical_dpi_x(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#physicalDpiY)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_physical_dpi_y(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatio)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 double q_rubberband_device_pixel_ratio(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioF)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 double q_rubberband_device_pixel_ratio_f(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#colorCount)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_color_count(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#depth)
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_depth(void* self);
 
 /// Inherited from QPaintDevice
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#devicePixelRatioFScale)
-///
 ///
 double q_rubberband_device_pixel_ratio_f_scale();
 
@@ -2437,7 +2756,8 @@ double q_rubberband_device_pixel_ratio_f_scale();
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#encodeMetricF)
 ///
-/// ``` enum QPaintDevice__PaintDeviceMetric metric, double value ```
+/// @param metric enum QPaintDevice__PaintDeviceMetric
+/// @param value double
 int32_t q_rubberband_encode_metric_f(int64_t metric, double value);
 
 /// Inherited from QWidget
@@ -2446,7 +2766,7 @@ int32_t q_rubberband_encode_metric_f(int64_t metric, double value);
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2455,7 +2775,7 @@ int32_t q_rubberband_dev_type(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_qbase_dev_type(void* self);
 
 /// Inherited from QWidget
@@ -2464,8 +2784,9 @@ int32_t q_rubberband_qbase_dev_type(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)() ```
-void q_rubberband_on_dev_type(void* self, int32_t (*slot)());
+/// @param self QRubberBand*
+/// @param callback int32_t fn()
+void q_rubberband_on_dev_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2473,7 +2794,8 @@ void q_rubberband_on_dev_type(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, bool visible ```
+/// @param self QRubberBand*
+/// @param visible bool
 void q_rubberband_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2482,7 +2804,8 @@ void q_rubberband_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool visible ```
+/// @param self QRubberBand*
+/// @param visible bool
 void q_rubberband_qbase_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
@@ -2491,8 +2814,9 @@ void q_rubberband_qbase_set_visible(void* self, bool visible);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, bool) ```
-void q_rubberband_on_set_visible(void* self, void (*slot)(void*, bool));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, bool)
+void q_rubberband_on_set_visible(void* self, void (*callback)(void*, bool));
 
 /// Inherited from QWidget
 ///
@@ -2500,7 +2824,7 @@ void q_rubberband_on_set_visible(void* self, void (*slot)(void*, bool));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2509,7 +2833,7 @@ QSize* q_rubberband_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_qbase_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2518,8 +2842,9 @@ QSize* q_rubberband_qbase_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QSize* (*slot)() ```
-void q_rubberband_on_size_hint(void* self, QSize* (*slot)());
+/// @param self QRubberBand*
+/// @param callback QSize* fn()
+void q_rubberband_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2527,7 +2852,7 @@ void q_rubberband_on_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2536,7 +2861,7 @@ QSize* q_rubberband_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QSize* q_rubberband_qbase_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
@@ -2545,8 +2870,9 @@ QSize* q_rubberband_qbase_minimum_size_hint(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QSize* (*slot)() ```
-void q_rubberband_on_minimum_size_hint(void* self, QSize* (*slot)());
+/// @param self QRubberBand*
+/// @param callback QSize* fn()
+void q_rubberband_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2554,7 +2880,8 @@ void q_rubberband_on_minimum_size_hint(void* self, QSize* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, int param1 ```
+/// @param self QRubberBand*
+/// @param param1 int
 int32_t q_rubberband_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2563,7 +2890,8 @@ int32_t q_rubberband_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int param1 ```
+/// @param self QRubberBand*
+/// @param param1 int
 int32_t q_rubberband_qbase_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
@@ -2572,8 +2900,9 @@ int32_t q_rubberband_qbase_height_for_width(void* self, int param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)(QRubberBand*, int) ```
-void q_rubberband_on_height_for_width(void* self, int32_t (*slot)(void*, int));
+/// @param self QRubberBand*
+/// @param callback int32_t fn(QRubberBand*, int)
+void q_rubberband_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
 /// Inherited from QWidget
 ///
@@ -2581,7 +2910,7 @@ void q_rubberband_on_height_for_width(void* self, int32_t (*slot)(void*, int));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2590,7 +2919,7 @@ bool q_rubberband_has_height_for_width(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_qbase_has_height_for_width(void* self);
 
 /// Inherited from QWidget
@@ -2599,8 +2928,9 @@ bool q_rubberband_qbase_has_height_for_width(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)() ```
-void q_rubberband_on_has_height_for_width(void* self, bool (*slot)());
+/// @param self QRubberBand*
+/// @param callback bool fn()
+void q_rubberband_on_has_height_for_width(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2608,7 +2938,7 @@ void q_rubberband_on_has_height_for_width(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPaintEngine* q_rubberband_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2617,7 +2947,7 @@ QPaintEngine* q_rubberband_paint_engine(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPaintEngine* q_rubberband_qbase_paint_engine(void* self);
 
 /// Inherited from QWidget
@@ -2626,8 +2956,9 @@ QPaintEngine* q_rubberband_qbase_paint_engine(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QPaintEngine* (*slot)() ```
-void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*slot)());
+/// @param self QRubberBand*
+/// @param callback QPaintEngine* fn()
+void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -2635,7 +2966,8 @@ void q_rubberband_on_paint_engine(void* self, QPaintEngine* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2644,7 +2976,8 @@ void q_rubberband_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_qbase_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2653,8 +2986,9 @@ void q_rubberband_qbase_mouse_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMouseEvent*) ```
-void q_rubberband_on_mouse_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMouseEvent*)
+void q_rubberband_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2662,7 +2996,8 @@ void q_rubberband_on_mouse_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2671,7 +3006,8 @@ void q_rubberband_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_qbase_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2680,8 +3016,9 @@ void q_rubberband_qbase_mouse_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMouseEvent*) ```
-void q_rubberband_on_mouse_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMouseEvent*)
+void q_rubberband_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2689,7 +3026,8 @@ void q_rubberband_on_mouse_release_event(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2698,7 +3036,8 @@ void q_rubberband_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_qbase_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2707,8 +3046,9 @@ void q_rubberband_qbase_mouse_double_click_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMouseEvent*) ```
-void q_rubberband_on_mouse_double_click_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMouseEvent*)
+void q_rubberband_on_mouse_double_click_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2716,7 +3056,8 @@ void q_rubberband_on_mouse_double_click_event(void* self, void (*slot)(void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2725,7 +3066,8 @@ void q_rubberband_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMouseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QMouseEvent*
 void q_rubberband_qbase_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2734,8 +3076,9 @@ void q_rubberband_qbase_mouse_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMouseEvent*) ```
-void q_rubberband_on_mouse_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMouseEvent*)
+void q_rubberband_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2743,7 +3086,8 @@ void q_rubberband_on_mouse_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QWheelEvent* event ```
+/// @param self QRubberBand*
+/// @param event QWheelEvent*
 void q_rubberband_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2752,7 +3096,8 @@ void q_rubberband_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QWheelEvent* event ```
+/// @param self QRubberBand*
+/// @param event QWheelEvent*
 void q_rubberband_qbase_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2761,8 +3106,9 @@ void q_rubberband_qbase_wheel_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QWheelEvent*) ```
-void q_rubberband_on_wheel_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QWheelEvent*)
+void q_rubberband_on_wheel_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2770,7 +3116,8 @@ void q_rubberband_on_wheel_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QKeyEvent* event ```
+/// @param self QRubberBand*
+/// @param event QKeyEvent*
 void q_rubberband_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2779,7 +3126,8 @@ void q_rubberband_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QKeyEvent* event ```
+/// @param self QRubberBand*
+/// @param event QKeyEvent*
 void q_rubberband_qbase_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2788,8 +3136,9 @@ void q_rubberband_qbase_key_press_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QKeyEvent*) ```
-void q_rubberband_on_key_press_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QKeyEvent*)
+void q_rubberband_on_key_press_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2797,7 +3146,8 @@ void q_rubberband_on_key_press_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QKeyEvent* event ```
+/// @param self QRubberBand*
+/// @param event QKeyEvent*
 void q_rubberband_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2806,7 +3156,8 @@ void q_rubberband_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QKeyEvent* event ```
+/// @param self QRubberBand*
+/// @param event QKeyEvent*
 void q_rubberband_qbase_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2815,8 +3166,9 @@ void q_rubberband_qbase_key_release_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QKeyEvent*) ```
-void q_rubberband_on_key_release_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QKeyEvent*)
+void q_rubberband_on_key_release_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2824,7 +3176,8 @@ void q_rubberband_on_key_release_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QFocusEvent* event ```
+/// @param self QRubberBand*
+/// @param event QFocusEvent*
 void q_rubberband_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2833,7 +3186,8 @@ void q_rubberband_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QFocusEvent* event ```
+/// @param self QRubberBand*
+/// @param event QFocusEvent*
 void q_rubberband_qbase_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2842,8 +3196,9 @@ void q_rubberband_qbase_focus_in_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QFocusEvent*) ```
-void q_rubberband_on_focus_in_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QFocusEvent*)
+void q_rubberband_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2851,7 +3206,8 @@ void q_rubberband_on_focus_in_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QFocusEvent* event ```
+/// @param self QRubberBand*
+/// @param event QFocusEvent*
 void q_rubberband_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2860,7 +3216,8 @@ void q_rubberband_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QFocusEvent* event ```
+/// @param self QRubberBand*
+/// @param event QFocusEvent*
 void q_rubberband_qbase_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2869,8 +3226,9 @@ void q_rubberband_qbase_focus_out_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QFocusEvent*) ```
-void q_rubberband_on_focus_out_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QFocusEvent*)
+void q_rubberband_on_focus_out_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2878,7 +3236,8 @@ void q_rubberband_on_focus_out_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QEnterEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEnterEvent*
 void q_rubberband_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2887,7 +3246,8 @@ void q_rubberband_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QEnterEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEnterEvent*
 void q_rubberband_qbase_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2896,8 +3256,9 @@ void q_rubberband_qbase_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QEnterEvent*) ```
-void q_rubberband_on_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QEnterEvent*)
+void q_rubberband_on_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2905,7 +3266,8 @@ void q_rubberband_on_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEvent*
 void q_rubberband_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2914,7 +3276,8 @@ void q_rubberband_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEvent*
 void q_rubberband_qbase_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2923,8 +3286,9 @@ void q_rubberband_qbase_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QEvent*) ```
-void q_rubberband_on_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QEvent*)
+void q_rubberband_on_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2932,7 +3296,8 @@ void q_rubberband_on_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QCloseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QCloseEvent*
 void q_rubberband_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2941,7 +3306,8 @@ void q_rubberband_close_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QCloseEvent* event ```
+/// @param self QRubberBand*
+/// @param event QCloseEvent*
 void q_rubberband_qbase_close_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2950,8 +3316,9 @@ void q_rubberband_qbase_close_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QCloseEvent*) ```
-void q_rubberband_on_close_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QCloseEvent*)
+void q_rubberband_on_close_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2959,7 +3326,8 @@ void q_rubberband_on_close_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QContextMenuEvent* event ```
+/// @param self QRubberBand*
+/// @param event QContextMenuEvent*
 void q_rubberband_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2968,7 +3336,8 @@ void q_rubberband_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QContextMenuEvent* event ```
+/// @param self QRubberBand*
+/// @param event QContextMenuEvent*
 void q_rubberband_qbase_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2977,8 +3346,9 @@ void q_rubberband_qbase_context_menu_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QContextMenuEvent*) ```
-void q_rubberband_on_context_menu_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QContextMenuEvent*)
+void q_rubberband_on_context_menu_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -2986,7 +3356,8 @@ void q_rubberband_on_context_menu_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QTabletEvent* event ```
+/// @param self QRubberBand*
+/// @param event QTabletEvent*
 void q_rubberband_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -2995,7 +3366,8 @@ void q_rubberband_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QTabletEvent* event ```
+/// @param self QRubberBand*
+/// @param event QTabletEvent*
 void q_rubberband_qbase_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3004,8 +3376,9 @@ void q_rubberband_qbase_tablet_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QTabletEvent*) ```
-void q_rubberband_on_tablet_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QTabletEvent*)
+void q_rubberband_on_tablet_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3013,7 +3386,8 @@ void q_rubberband_on_tablet_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QActionEvent* event ```
+/// @param self QRubberBand*
+/// @param event QActionEvent*
 void q_rubberband_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3022,7 +3396,8 @@ void q_rubberband_action_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QActionEvent* event ```
+/// @param self QRubberBand*
+/// @param event QActionEvent*
 void q_rubberband_qbase_action_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3031,8 +3406,9 @@ void q_rubberband_qbase_action_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QActionEvent*) ```
-void q_rubberband_on_action_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QActionEvent*)
+void q_rubberband_on_action_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3040,7 +3416,8 @@ void q_rubberband_on_action_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragEnterEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragEnterEvent*
 void q_rubberband_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3049,7 +3426,8 @@ void q_rubberband_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragEnterEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragEnterEvent*
 void q_rubberband_qbase_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3058,8 +3436,9 @@ void q_rubberband_qbase_drag_enter_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QDragEnterEvent*) ```
-void q_rubberband_on_drag_enter_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QDragEnterEvent*)
+void q_rubberband_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3067,7 +3446,8 @@ void q_rubberband_on_drag_enter_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragMoveEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragMoveEvent*
 void q_rubberband_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3076,7 +3456,8 @@ void q_rubberband_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragMoveEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragMoveEvent*
 void q_rubberband_qbase_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3085,8 +3466,9 @@ void q_rubberband_qbase_drag_move_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QDragMoveEvent*) ```
-void q_rubberband_on_drag_move_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QDragMoveEvent*)
+void q_rubberband_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3094,7 +3476,8 @@ void q_rubberband_on_drag_move_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragLeaveEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragLeaveEvent*
 void q_rubberband_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3103,7 +3486,8 @@ void q_rubberband_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QDragLeaveEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDragLeaveEvent*
 void q_rubberband_qbase_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3112,8 +3496,9 @@ void q_rubberband_qbase_drag_leave_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QDragLeaveEvent*) ```
-void q_rubberband_on_drag_leave_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QDragLeaveEvent*)
+void q_rubberband_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3121,7 +3506,8 @@ void q_rubberband_on_drag_leave_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QDropEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDropEvent*
 void q_rubberband_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3130,7 +3516,8 @@ void q_rubberband_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QDropEvent* event ```
+/// @param self QRubberBand*
+/// @param event QDropEvent*
 void q_rubberband_qbase_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3139,8 +3526,9 @@ void q_rubberband_qbase_drop_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QDropEvent*) ```
-void q_rubberband_on_drop_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QDropEvent*)
+void q_rubberband_on_drop_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3148,7 +3536,8 @@ void q_rubberband_on_drop_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QHideEvent* event ```
+/// @param self QRubberBand*
+/// @param event QHideEvent*
 void q_rubberband_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3157,7 +3546,8 @@ void q_rubberband_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QHideEvent* event ```
+/// @param self QRubberBand*
+/// @param event QHideEvent*
 void q_rubberband_qbase_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
@@ -3166,8 +3556,9 @@ void q_rubberband_qbase_hide_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QHideEvent*) ```
-void q_rubberband_on_hide_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QHideEvent*)
+void q_rubberband_on_hide_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3175,7 +3566,10 @@ void q_rubberband_on_hide_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QRubberBand*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_rubberband_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3184,7 +3578,10 @@ bool q_rubberband_native_event(void* self, const char* eventType, void* message,
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, const char* eventType, void* message, intptr_t* result ```
+/// @param self QRubberBand*
+/// @param eventType const char*
+/// @param message void*
+/// @param result intptr_t*
 bool q_rubberband_qbase_native_event(void* self, const char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
@@ -3193,8 +3590,9 @@ bool q_rubberband_qbase_native_event(void* self, const char* eventType, void* me
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)(QRubberBand*, const char*, void*, intptr_t*) ```
-void q_rubberband_on_native_event(void* self, bool (*slot)(void*, const char*, void*, intptr_t*));
+/// @param self QRubberBand*
+/// @param callback bool fn(QRubberBand*, const char*, void*, intptr_t*)
+void q_rubberband_on_native_event(void* self, bool (*callback)(void*, const char*, void*, intptr_t*));
 
 /// Inherited from QWidget
 ///
@@ -3202,7 +3600,8 @@ void q_rubberband_on_native_event(void* self, bool (*slot)(void*, const char*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_rubberband_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3211,7 +3610,8 @@ int32_t q_rubberband_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, enum QPaintDevice__PaintDeviceMetric param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum QPaintDevice__PaintDeviceMetric
 int32_t q_rubberband_qbase_metric(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3220,8 +3620,9 @@ int32_t q_rubberband_qbase_metric(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)(QRubberBand*, enum QPaintDevice__PaintDeviceMetric) ```
-void q_rubberband_on_metric(void* self, int32_t (*slot)(void*, int64_t));
+/// @param self QRubberBand*
+/// @param callback int32_t fn(QRubberBand*, enum QPaintDevice__PaintDeviceMetric)
+void q_rubberband_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3229,7 +3630,8 @@ void q_rubberband_on_metric(void* self, int32_t (*slot)(void*, int64_t));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QPainter* painter ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
 void q_rubberband_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3238,7 +3640,8 @@ void q_rubberband_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QPainter* painter ```
+/// @param self QRubberBand*
+/// @param painter QPainter*
 void q_rubberband_qbase_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
@@ -3247,8 +3650,9 @@ void q_rubberband_qbase_init_painter(void* self, void* painter);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QPainter*) ```
-void q_rubberband_on_init_painter(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QPainter*)
+void q_rubberband_on_init_painter(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3256,7 +3660,8 @@ void q_rubberband_on_init_painter(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QPoint* offset ```
+/// @param self QRubberBand*
+/// @param offset QPoint*
 QPaintDevice* q_rubberband_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3265,7 +3670,8 @@ QPaintDevice* q_rubberband_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QPoint* offset ```
+/// @param self QRubberBand*
+/// @param offset QPoint*
 QPaintDevice* q_rubberband_qbase_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
@@ -3274,8 +3680,9 @@ QPaintDevice* q_rubberband_qbase_redirected(void* self, void* offset);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QPaintDevice* (*slot)(QRubberBand*, QPoint*) ```
-void q_rubberband_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback QPaintDevice* fn(QRubberBand*, QPoint*)
+void q_rubberband_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3283,7 +3690,7 @@ void q_rubberband_on_redirected(void* self, QPaintDevice* (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPainter* q_rubberband_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3292,7 +3699,7 @@ QPainter* q_rubberband_shared_painter(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QPainter* q_rubberband_qbase_shared_painter(void* self);
 
 /// Inherited from QWidget
@@ -3301,8 +3708,9 @@ QPainter* q_rubberband_qbase_shared_painter(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QPainter* (*slot)() ```
-void q_rubberband_on_shared_painter(void* self, QPainter* (*slot)());
+/// @param self QRubberBand*
+/// @param callback QPainter* fn()
+void q_rubberband_on_shared_painter(void* self, QPainter* (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3310,7 +3718,8 @@ void q_rubberband_on_shared_painter(void* self, QPainter* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QInputMethodEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QInputMethodEvent*
 void q_rubberband_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3319,7 +3728,8 @@ void q_rubberband_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QInputMethodEvent* param1 ```
+/// @param self QRubberBand*
+/// @param param1 QInputMethodEvent*
 void q_rubberband_qbase_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
@@ -3328,8 +3738,9 @@ void q_rubberband_qbase_input_method_event(void* self, void* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QInputMethodEvent*) ```
-void q_rubberband_on_input_method_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QInputMethodEvent*)
+void q_rubberband_on_input_method_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3337,7 +3748,8 @@ void q_rubberband_on_input_method_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_rubberband_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3346,7 +3758,8 @@ QVariant* q_rubberband_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, enum Qt__InputMethodQuery param1 ```
+/// @param self QRubberBand*
+/// @param param1 enum Qt__InputMethodQuery
 QVariant* q_rubberband_qbase_input_method_query(void* self, int64_t param1);
 
 /// Inherited from QWidget
@@ -3355,8 +3768,9 @@ QVariant* q_rubberband_qbase_input_method_query(void* self, int64_t param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QVariant* (*slot)(QRubberBand*, enum Qt__InputMethodQuery) ```
-void q_rubberband_on_input_method_query(void* self, QVariant* (*slot)(void*, int64_t));
+/// @param self QRubberBand*
+/// @param callback QVariant* fn(QRubberBand*, enum Qt__InputMethodQuery)
+void q_rubberband_on_input_method_query(void* self, QVariant* (*callback)(void*, int64_t));
 
 /// Inherited from QWidget
 ///
@@ -3364,7 +3778,8 @@ void q_rubberband_on_input_method_query(void* self, QVariant* (*slot)(void*, int
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, bool next ```
+/// @param self QRubberBand*
+/// @param next bool
 bool q_rubberband_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3373,7 +3788,8 @@ bool q_rubberband_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool next ```
+/// @param self QRubberBand*
+/// @param next bool
 bool q_rubberband_qbase_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
@@ -3382,8 +3798,9 @@ bool q_rubberband_qbase_focus_next_prev_child(void* self, bool next);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)(QRubberBand*, bool) ```
-void q_rubberband_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool));
+/// @param self QRubberBand*
+/// @param callback bool fn(QRubberBand*, bool)
+void q_rubberband_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
 /// Inherited from QObject
 ///
@@ -3391,7 +3808,9 @@ void q_rubberband_on_focus_next_prev_child(void* self, bool (*slot)(void*, bool)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QObject* watched, QEvent* event ```
+/// @param self QRubberBand*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_rubberband_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3400,7 +3819,9 @@ bool q_rubberband_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QObject* watched, QEvent* event ```
+/// @param self QRubberBand*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_rubberband_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -3409,8 +3830,9 @@ bool q_rubberband_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)(QRubberBand*, QObject*, QEvent*) ```
-void q_rubberband_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QRubberBand*
+/// @param callback bool fn(QRubberBand*, QObject*, QEvent*)
+void q_rubberband_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3418,7 +3840,8 @@ void q_rubberband_on_event_filter(void* self, bool (*slot)(void*, void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QTimerEvent* event ```
+/// @param self QRubberBand*
+/// @param event QTimerEvent*
 void q_rubberband_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3427,7 +3850,8 @@ void q_rubberband_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QTimerEvent* event ```
+/// @param self QRubberBand*
+/// @param event QTimerEvent*
 void q_rubberband_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3436,8 +3860,9 @@ void q_rubberband_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QTimerEvent*) ```
-void q_rubberband_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QTimerEvent*)
+void q_rubberband_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3445,7 +3870,8 @@ void q_rubberband_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QChildEvent* event ```
+/// @param self QRubberBand*
+/// @param event QChildEvent*
 void q_rubberband_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3454,7 +3880,8 @@ void q_rubberband_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QChildEvent* event ```
+/// @param self QRubberBand*
+/// @param event QChildEvent*
 void q_rubberband_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3463,8 +3890,9 @@ void q_rubberband_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QChildEvent*) ```
-void q_rubberband_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QChildEvent*)
+void q_rubberband_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3472,7 +3900,8 @@ void q_rubberband_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEvent*
 void q_rubberband_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3481,7 +3910,8 @@ void q_rubberband_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QEvent* event ```
+/// @param self QRubberBand*
+/// @param event QEvent*
 void q_rubberband_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -3490,8 +3920,9 @@ void q_rubberband_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QEvent*) ```
-void q_rubberband_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QEvent*)
+void q_rubberband_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3499,7 +3930,8 @@ void q_rubberband_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 void q_rubberband_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3508,7 +3940,8 @@ void q_rubberband_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 void q_rubberband_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3517,8 +3950,9 @@ void q_rubberband_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMetaMethod*) ```
-void q_rubberband_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMetaMethod*)
+void q_rubberband_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -3526,7 +3960,8 @@ void q_rubberband_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 void q_rubberband_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3535,7 +3970,8 @@ void q_rubberband_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 void q_rubberband_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3544,8 +3980,9 @@ void q_rubberband_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, QMetaMethod*) ```
-void q_rubberband_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, QMetaMethod*)
+void q_rubberband_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QWidget
 ///
@@ -3553,7 +3990,7 @@ void q_rubberband_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3562,7 +3999,7 @@ void q_rubberband_update_micro_focus(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_qbase_update_micro_focus(void* self);
 
 /// Inherited from QWidget
@@ -3571,8 +4008,9 @@ void q_rubberband_qbase_update_micro_focus(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)() ```
-void q_rubberband_on_update_micro_focus(void* self, void (*slot)());
+/// @param self QRubberBand*
+/// @param callback void fn()
+void q_rubberband_on_update_micro_focus(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3580,7 +4018,7 @@ void q_rubberband_on_update_micro_focus(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_create(void* self);
 
 /// Inherited from QWidget
@@ -3589,7 +4027,7 @@ void q_rubberband_create(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_qbase_create(void* self);
 
 /// Inherited from QWidget
@@ -3598,8 +4036,9 @@ void q_rubberband_qbase_create(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)() ```
-void q_rubberband_on_create(void* self, void (*slot)());
+/// @param self QRubberBand*
+/// @param callback void fn()
+void q_rubberband_on_create(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3607,7 +4046,7 @@ void q_rubberband_on_create(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3616,7 +4055,7 @@ void q_rubberband_destroy(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_qbase_destroy(void* self);
 
 /// Inherited from QWidget
@@ -3625,8 +4064,9 @@ void q_rubberband_qbase_destroy(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, void (*slot)() ```
-void q_rubberband_on_destroy(void* self, void (*slot)());
+/// @param self QRubberBand*
+/// @param callback void fn()
+void q_rubberband_on_destroy(void* self, void (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3634,7 +4074,7 @@ void q_rubberband_on_destroy(void* self, void (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3643,7 +4083,7 @@ bool q_rubberband_focus_next_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_qbase_focus_next_child(void* self);
 
 /// Inherited from QWidget
@@ -3652,8 +4092,9 @@ bool q_rubberband_qbase_focus_next_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)() ```
-void q_rubberband_on_focus_next_child(void* self, bool (*slot)());
+/// @param self QRubberBand*
+/// @param callback bool fn()
+void q_rubberband_on_focus_next_child(void* self, bool (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -3661,7 +4102,7 @@ void q_rubberband_on_focus_next_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3670,7 +4111,7 @@ bool q_rubberband_focus_previous_child(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 bool q_rubberband_qbase_focus_previous_child(void* self);
 
 /// Inherited from QWidget
@@ -3679,8 +4120,9 @@ bool q_rubberband_qbase_focus_previous_child(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)() ```
-void q_rubberband_on_focus_previous_child(void* self, bool (*slot)());
+/// @param self QRubberBand*
+/// @param callback bool fn()
+void q_rubberband_on_focus_previous_child(void* self, bool (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3688,7 +4130,7 @@ void q_rubberband_on_focus_previous_child(void* self, bool (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QObject* q_rubberband_sender(void* self);
 
 /// Inherited from QObject
@@ -3697,7 +4139,7 @@ QObject* q_rubberband_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 QObject* q_rubberband_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -3706,8 +4148,9 @@ QObject* q_rubberband_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QObject* (*slot)() ```
-void q_rubberband_on_sender(void* self, QObject* (*slot)());
+/// @param self QRubberBand*
+/// @param callback QObject* fn()
+void q_rubberband_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3715,7 +4158,7 @@ void q_rubberband_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3724,7 +4167,7 @@ int32_t q_rubberband_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 int32_t q_rubberband_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -3733,8 +4176,9 @@ int32_t q_rubberband_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)() ```
-void q_rubberband_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QRubberBand*
+/// @param callback int32_t fn()
+void q_rubberband_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -3742,7 +4186,8 @@ void q_rubberband_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, const char* signal ```
+/// @param self QRubberBand*
+/// @param signal const char*
 int32_t q_rubberband_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3751,7 +4196,8 @@ int32_t q_rubberband_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, const char* signal ```
+/// @param self QRubberBand*
+/// @param signal const char*
 int32_t q_rubberband_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -3760,8 +4206,9 @@ int32_t q_rubberband_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, int32_t (*slot)(QRubberBand*, const char*) ```
-void q_rubberband_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QRubberBand*
+/// @param callback int32_t fn(QRubberBand*, const char*)
+void q_rubberband_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -3769,7 +4216,8 @@ void q_rubberband_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 bool q_rubberband_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3778,7 +4226,8 @@ bool q_rubberband_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, QMetaMethod* signal ```
+/// @param self QRubberBand*
+/// @param signal QMetaMethod*
 bool q_rubberband_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -3787,8 +4236,9 @@ bool q_rubberband_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, bool (*slot)(QRubberBand*, QMetaMethod*) ```
-void q_rubberband_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QRubberBand*
+/// @param callback bool fn(QRubberBand*, QMetaMethod*)
+void q_rubberband_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QPaintDevice
 ///
@@ -3796,7 +4246,9 @@ void q_rubberband_on_is_signal_connected(void* self, bool (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRubberBand* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QRubberBand*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_rubberband_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3805,7 +4257,9 @@ double q_rubberband_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRubberBand* self, enum QPaintDevice__PaintDeviceMetric metricA, enum QPaintDevice__PaintDeviceMetric metricB ```
+/// @param self QRubberBand*
+/// @param metricA enum QPaintDevice__PaintDeviceMetric
+/// @param metricB enum QPaintDevice__PaintDeviceMetric
 double q_rubberband_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
 
 /// Inherited from QPaintDevice
@@ -3814,8 +4268,9 @@ double q_rubberband_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRubberBand* self, double (*slot)(QRubberBand*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric) ```
-void q_rubberband_on_get_decoded_metric_f(void* self, double (*slot)(void*, int64_t, int64_t));
+/// @param self QRubberBand*
+/// @param callback double fn(QRubberBand*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
+void q_rubberband_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
 
 /// Inherited from QObject
 ///
@@ -3823,14 +4278,15 @@ void q_rubberband_on_get_decoded_metric_f(void* self, double (*slot)(void*, int6
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QRubberBand* self, void (*slot)(QRubberBand*, const char*) ```
-void q_rubberband_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QRubberBand*
+/// @param callback void fn(QRubberBand*, const char*)
+void q_rubberband_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrubberband.html#dtor.QRubberBand)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QRubberBand* self ```
+/// @param self QRubberBand*
 void q_rubberband_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qrubberband.html#types

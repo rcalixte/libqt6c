@@ -10,13 +10,19 @@ QDirListing* q_dirlisting_new(const char* path) {
 
 QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[]) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dirlisting_new2");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    return QDirListing_new2(qstring(path), nameFilters_list);
+    QDirListing* _out = QDirListing_new2(qstring(path), nameFilters_list);
+    free(nameFilters_qstr);
+    return _out;
 }
 
 QDirListing* q_dirlisting_new3(const char* path, int64_t flags) {
@@ -25,13 +31,19 @@ QDirListing* q_dirlisting_new3(const char* path, int64_t flags) {
 
 QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[], int64_t flags) {
     size_t nameFilters_len = libqt_strv_length(nameFilters);
-    libqt_string* nameFilters_qstr = malloc(nameFilters_len * sizeof(libqt_string));
-    for (size_t _i = 0; _i < nameFilters_len; ++_i) {
-        nameFilters_qstr[_i] = qstring(nameFilters[_i]);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dirlisting_new4");
+        abort();
+    }
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    return QDirListing_new4(qstring(path), nameFilters_list, flags);
+    QDirListing* _out = QDirListing_new4(qstring(path), nameFilters_list, flags);
+    free(nameFilters_qstr);
+    return _out;
 }
 
 void q_dirlisting_swap(void* self, void* other) {
@@ -53,12 +65,16 @@ const char** q_dirlisting_name_filters(void* self) {
     libqt_list _arr = QDirListing_NameFilters((QDirListing*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_dirlisting_name_filters");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;

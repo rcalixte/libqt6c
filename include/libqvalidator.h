@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,373 +15,444 @@
 
 /// q_validator_new constructs a new QValidator object.
 ///
-///
 QValidator* q_validator_new();
 
 /// q_validator_new2 constructs a new QValidator object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QValidator* q_validator_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 const QMetaObject* q_validator_meta_object(void* self);
 
-/// ``` QValidator* self, const char* param1 ```
+/// @param self QValidator*
+/// @param param1 const char*
 void* q_validator_metacast(void* self, const char* param1);
 
-/// ``` QValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_validator_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QValidator* self, int32_t (*slot)(QValidator*, enum QMetaObject__Call, int, void*) ```
-void q_validator_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QValidator*
+/// @param callback int32_t fn(QValidator*, enum QMetaObject__Call, int, void*)
+void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_validator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_validator_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#setLocale)
 ///
-/// ``` QValidator* self, QLocale* locale ```
+/// @param self QValidator*
+/// @param locale QLocale*
 void q_validator_set_locale(void* self, void* locale);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#locale)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QLocale* q_validator_locale(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
-/// ``` QValidator* self, const char* param1, int* param2 ```
+/// @param self QValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_validator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QValidator* self, int64_t (*slot)(QValidator*, const char*, int*) ```
-void q_validator_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
+/// @param self QValidator*
+/// @param callback int64_t fn(QValidator*, const char*, int*)
+void q_validator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
 /// Base class method implementation
 ///
-/// ``` QValidator* self, const char* param1, int* param2 ```
+/// @param self QValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_validator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
-/// ``` QValidator* self, const char* param1 ```
+/// @param self QValidator*
+/// @param param1 const char*
 void q_validator_fixup(void* self, const char* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, const char*) ```
-void q_validator_on_fixup(void* self, void (*slot)(void*, const char*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, const char*)
+void q_validator_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
-/// ``` QValidator* self, const char* param1 ```
+/// @param self QValidator*
+/// @param param1 const char*
 void q_validator_qbase_fixup(void* self, const char* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_changed(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*) ```
-void q_validator_on_changed(void* self, void (*slot)(void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*)
+void q_validator_on_changed(void* self, void (*callback)(void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_validator_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_validator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QValidator*
 const char* q_validator_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QValidator* self, char* name ```
+/// @param self QValidator*
+/// @param name char*
 void q_validator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 bool q_validator_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 bool q_validator_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 bool q_validator_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 bool q_validator_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QValidator* self, bool b ```
+/// @param self QValidator*
+/// @param b bool
 bool q_validator_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QThread* q_validator_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QValidator* self, QThread* thread ```
+/// @param self QValidator*
+/// @param thread QThread*
 bool q_validator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QValidator* self, int interval ```
+/// @param self QValidator*
+/// @param interval int
 int32_t q_validator_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QValidator* self, int id ```
+/// @param self QValidator*
+/// @param id int
 void q_validator_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QValidator* self, enum Qt__TimerId id ```
+/// @param self QValidator*
+/// @param id enum Qt__TimerId
 void q_validator_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 libqt_list /* of QObject* */ q_validator_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QValidator* self, QObject* parent ```
+/// @param self QValidator*
+/// @param parent QObject*
 void q_validator_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QValidator* self, QObject* filterObj ```
+/// @param self QValidator*
+/// @param filterObj QObject*
 void q_validator_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QValidator* self, QObject* obj ```
+/// @param self QValidator*
+/// @param obj QObject*
 void q_validator_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_validator_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QValidator* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_validator_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_validator_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_validator_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QValidator* self, const char* name, QVariant* value ```
+/// @param self QValidator*
+/// @param name const char*
+/// @param value QVariant*
 bool q_validator_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QValidator* self, const char* name ```
+/// @param self QValidator*
+/// @param name const char*
 QVariant* q_validator_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QValidator*
 const char** q_validator_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QBindingStorage* q_validator_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 const QBindingStorage* q_validator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*) ```
-void q_validator_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*)
+void q_validator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QObject* q_validator_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QValidator* self, const char* classname ```
+/// @param self QValidator*
+/// @param classname const char*
 bool q_validator_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QValidator* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QValidator*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_validator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QValidator* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QValidator*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_validator_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QValidator* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self, QObject* param1 ```
+/// @param self QValidator*
+/// @param param1 QObject*
 void q_validator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QObject*) ```
-void q_validator_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QObject*)
+void q_validator_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -390,7 +460,8 @@ void q_validator_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QEvent* event ```
+/// @param self QValidator*
+/// @param event QEvent*
 bool q_validator_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -399,7 +470,8 @@ bool q_validator_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QEvent* event ```
+/// @param self QValidator*
+/// @param event QEvent*
 bool q_validator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -408,8 +480,9 @@ bool q_validator_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, bool (*slot)(QValidator*, QEvent*) ```
-void q_validator_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback bool fn(QValidator*, QEvent*)
+void q_validator_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -417,7 +490,9 @@ void q_validator_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QObject* watched, QEvent* event ```
+/// @param self QValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_validator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -426,7 +501,9 @@ bool q_validator_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QObject* watched, QEvent* event ```
+/// @param self QValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_validator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -435,8 +512,9 @@ bool q_validator_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, bool (*slot)(QValidator*, QObject*, QEvent*) ```
-void q_validator_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QValidator*
+/// @param callback bool fn(QValidator*, QObject*, QEvent*)
+void q_validator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -444,7 +522,8 @@ void q_validator_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QTimerEvent* event ```
+/// @param self QValidator*
+/// @param event QTimerEvent*
 void q_validator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -453,7 +532,8 @@ void q_validator_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QTimerEvent* event ```
+/// @param self QValidator*
+/// @param event QTimerEvent*
 void q_validator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -462,8 +542,9 @@ void q_validator_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QTimerEvent*) ```
-void q_validator_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QTimerEvent*)
+void q_validator_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -471,7 +552,8 @@ void q_validator_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QChildEvent* event ```
+/// @param self QValidator*
+/// @param event QChildEvent*
 void q_validator_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -480,7 +562,8 @@ void q_validator_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QChildEvent* event ```
+/// @param self QValidator*
+/// @param event QChildEvent*
 void q_validator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -489,8 +572,9 @@ void q_validator_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QChildEvent*) ```
-void q_validator_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QChildEvent*)
+void q_validator_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -498,7 +582,8 @@ void q_validator_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QEvent* event ```
+/// @param self QValidator*
+/// @param event QEvent*
 void q_validator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -507,7 +592,8 @@ void q_validator_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QEvent* event ```
+/// @param self QValidator*
+/// @param event QEvent*
 void q_validator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -516,8 +602,9 @@ void q_validator_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QEvent*) ```
-void q_validator_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QEvent*)
+void q_validator_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -525,7 +612,8 @@ void q_validator_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 void q_validator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -534,7 +622,8 @@ void q_validator_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 void q_validator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -543,8 +632,9 @@ void q_validator_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QMetaMethod*) ```
-void q_validator_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QMetaMethod*)
+void q_validator_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -552,7 +642,8 @@ void q_validator_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 void q_validator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -561,7 +652,8 @@ void q_validator_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 void q_validator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -570,8 +662,9 @@ void q_validator_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, QMetaMethod*) ```
-void q_validator_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, QMetaMethod*)
+void q_validator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -579,7 +672,7 @@ void q_validator_on_disconnect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QObject* q_validator_sender(void* self);
 
 /// Inherited from QObject
@@ -588,7 +681,7 @@ QObject* q_validator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 QObject* q_validator_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -597,8 +690,9 @@ QObject* q_validator_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, QObject* (*slot)() ```
-void q_validator_on_sender(void* self, QObject* (*slot)());
+/// @param self QValidator*
+/// @param callback QObject* fn()
+void q_validator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -606,7 +700,7 @@ void q_validator_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 int32_t q_validator_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -615,7 +709,7 @@ int32_t q_validator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 int32_t q_validator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -624,8 +718,9 @@ int32_t q_validator_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, int32_t (*slot)() ```
-void q_validator_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QValidator*
+/// @param callback int32_t fn()
+void q_validator_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -633,7 +728,8 @@ void q_validator_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, const char* signal ```
+/// @param self QValidator*
+/// @param signal const char*
 int32_t q_validator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -642,7 +738,8 @@ int32_t q_validator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, const char* signal ```
+/// @param self QValidator*
+/// @param signal const char*
 int32_t q_validator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -651,8 +748,9 @@ int32_t q_validator_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, int32_t (*slot)(QValidator*, const char*) ```
-void q_validator_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QValidator*
+/// @param callback int32_t fn(QValidator*, const char*)
+void q_validator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -660,7 +758,8 @@ void q_validator_on_receivers(void* self, int32_t (*slot)(void*, const char*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 bool q_validator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -669,7 +768,8 @@ bool q_validator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QValidator* self, QMetaMethod* signal ```
+/// @param self QValidator*
+/// @param signal QMetaMethod*
 bool q_validator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -678,8 +778,9 @@ bool q_validator_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QValidator* self, bool (*slot)(QValidator*, QMetaMethod*) ```
-void q_validator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QValidator*
+/// @param callback bool fn(QValidator*, QMetaMethod*)
+void q_validator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -687,450 +788,533 @@ void q_validator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QValidator* self, void (*slot)(QValidator*, const char*) ```
-void q_validator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QValidator*
+/// @param callback void fn(QValidator*, const char*)
+void q_validator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#dtor.QValidator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QValidator* self ```
+/// @param self QValidator*
 void q_validator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qintvalidator.html
 
 /// q_intvalidator_new constructs a new QIntValidator object.
 ///
-///
 QIntValidator* q_intvalidator_new();
 
 /// q_intvalidator_new2 constructs a new QIntValidator object.
 ///
-/// ``` int bottom, int top ```
+/// @param bottom int
+/// @param top int
 QIntValidator* q_intvalidator_new2(int bottom, int top);
 
 /// q_intvalidator_new3 constructs a new QIntValidator object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QIntValidator* q_intvalidator_new3(void* parent);
 
 /// q_intvalidator_new4 constructs a new QIntValidator object.
 ///
-/// ``` int bottom, int top, QObject* parent ```
+/// @param bottom int
+/// @param top int
+/// @param parent QObject*
 QIntValidator* q_intvalidator_new4(int bottom, int top, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 const QMetaObject* q_intvalidator_meta_object(void* self);
 
-/// ``` QIntValidator* self, const char* param1 ```
+/// @param self QIntValidator*
+/// @param param1 const char*
 void* q_intvalidator_metacast(void* self, const char* param1);
 
-/// ``` QIntValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QIntValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_intvalidator_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QIntValidator* self, int32_t (*slot)(QIntValidator*, enum QMetaObject__Call, int, void*) ```
-void q_intvalidator_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QIntValidator*
+/// @param callback int32_t fn(QIntValidator*, enum QMetaObject__Call, int, void*)
+void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QIntValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QIntValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_intvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_intvalidator_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
-/// ``` QIntValidator* self, const char* param1, int* param2 ```
+/// @param self QIntValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_intvalidator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIntValidator* self, int64_t (*slot)(QIntValidator*, const char*, int*) ```
-void q_intvalidator_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
+/// @param self QIntValidator*
+/// @param callback int64_t fn(QIntValidator*, const char*, int*)
+void q_intvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
 /// Base class method implementation
 ///
-/// ``` QIntValidator* self, const char* param1, int* param2 ```
+/// @param self QIntValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
-/// ``` QIntValidator* self, const char* input ```
+/// @param self QIntValidator*
+/// @param input const char*
 void q_intvalidator_fixup(void* self, const char* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, const char*) ```
-void q_intvalidator_on_fixup(void* self, void (*slot)(void*, const char*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, const char*)
+void q_intvalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
-/// ``` QIntValidator* self, const char* input ```
+/// @param self QIntValidator*
+/// @param input const char*
 void q_intvalidator_qbase_fixup(void* self, const char* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#setBottom)
 ///
-/// ``` QIntValidator* self, int bottom ```
+/// @param self QIntValidator*
+/// @param bottom int
 void q_intvalidator_set_bottom(void* self, int bottom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#setTop)
 ///
-/// ``` QIntValidator* self, int top ```
+/// @param self QIntValidator*
+/// @param top int
 void q_intvalidator_set_top(void* self, int top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#setRange)
 ///
-/// ``` QIntValidator* self, int bottom, int top ```
+/// @param self QIntValidator*
+/// @param bottom int
+/// @param top int
 void q_intvalidator_set_range(void* self, int bottom, int top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#bottom)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 int32_t q_intvalidator_bottom(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#top)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 int32_t q_intvalidator_top(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#bottomChanged)
 ///
-/// ``` QIntValidator* self, int bottom ```
+/// @param self QIntValidator*
+/// @param bottom int
 void q_intvalidator_bottom_changed(void* self, int bottom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#bottomChanged)
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, int) ```
-void q_intvalidator_on_bottom_changed(void* self, void (*slot)(void*, int));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, int)
+void q_intvalidator_on_bottom_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#topChanged)
 ///
-/// ``` QIntValidator* self, int top ```
+/// @param self QIntValidator*
+/// @param top int
 void q_intvalidator_top_changed(void* self, int top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#topChanged)
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, int) ```
-void q_intvalidator_on_top_changed(void* self, void (*slot)(void*, int));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, int)
+void q_intvalidator_on_top_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_intvalidator_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_intvalidator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#setLocale)
 ///
-/// ``` QIntValidator* self, QLocale* locale ```
+/// @param self QIntValidator*
+/// @param locale QLocale*
 void q_intvalidator_set_locale(void* self, void* locale);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#locale)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QLocale* q_intvalidator_locale(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_changed(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*) ```
-void q_intvalidator_on_changed(void* self, void (*slot)(void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*)
+void q_intvalidator_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QIntValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QIntValidator*
 const char* q_intvalidator_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QIntValidator* self, char* name ```
+/// @param self QIntValidator*
+/// @param name char*
 void q_intvalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 bool q_intvalidator_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 bool q_intvalidator_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 bool q_intvalidator_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 bool q_intvalidator_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QIntValidator* self, bool b ```
+/// @param self QIntValidator*
+/// @param b bool
 bool q_intvalidator_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QThread* q_intvalidator_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QIntValidator* self, QThread* thread ```
+/// @param self QIntValidator*
+/// @param thread QThread*
 bool q_intvalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QIntValidator* self, int interval ```
+/// @param self QIntValidator*
+/// @param interval int
 int32_t q_intvalidator_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QIntValidator* self, int id ```
+/// @param self QIntValidator*
+/// @param id int
 void q_intvalidator_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QIntValidator* self, enum Qt__TimerId id ```
+/// @param self QIntValidator*
+/// @param id enum Qt__TimerId
 void q_intvalidator_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 libqt_list /* of QObject* */ q_intvalidator_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QIntValidator* self, QObject* parent ```
+/// @param self QIntValidator*
+/// @param parent QObject*
 void q_intvalidator_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QIntValidator* self, QObject* filterObj ```
+/// @param self QIntValidator*
+/// @param filterObj QObject*
 void q_intvalidator_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QIntValidator* self, QObject* obj ```
+/// @param self QIntValidator*
+/// @param obj QObject*
 void q_intvalidator_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_intvalidator_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QIntValidator* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QIntValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_intvalidator_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_intvalidator_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_intvalidator_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QIntValidator* self, const char* name, QVariant* value ```
+/// @param self QIntValidator*
+/// @param name const char*
+/// @param value QVariant*
 bool q_intvalidator_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QIntValidator* self, const char* name ```
+/// @param self QIntValidator*
+/// @param name const char*
 QVariant* q_intvalidator_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QIntValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QIntValidator*
 const char** q_intvalidator_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QBindingStorage* q_intvalidator_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 const QBindingStorage* q_intvalidator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*) ```
-void q_intvalidator_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*)
+void q_intvalidator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QObject* q_intvalidator_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QIntValidator* self, const char* classname ```
+/// @param self QIntValidator*
+/// @param classname const char*
 bool q_intvalidator_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QIntValidator* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QIntValidator*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QIntValidator* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QIntValidator*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_intvalidator_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QIntValidator* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QIntValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self, QObject* param1 ```
+/// @param self QIntValidator*
+/// @param param1 QObject*
 void q_intvalidator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QObject*) ```
-void q_intvalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QObject*)
+void q_intvalidator_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1138,7 +1322,8 @@ void q_intvalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QEvent* event ```
+/// @param self QIntValidator*
+/// @param event QEvent*
 bool q_intvalidator_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1147,7 +1332,8 @@ bool q_intvalidator_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QEvent* event ```
+/// @param self QIntValidator*
+/// @param event QEvent*
 bool q_intvalidator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1156,8 +1342,9 @@ bool q_intvalidator_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, bool (*slot)(QIntValidator*, QEvent*) ```
-void q_intvalidator_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback bool fn(QIntValidator*, QEvent*)
+void q_intvalidator_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1165,7 +1352,9 @@ void q_intvalidator_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QObject* watched, QEvent* event ```
+/// @param self QIntValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_intvalidator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1174,7 +1363,9 @@ bool q_intvalidator_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QObject* watched, QEvent* event ```
+/// @param self QIntValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_intvalidator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1183,8 +1374,9 @@ bool q_intvalidator_qbase_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, bool (*slot)(QIntValidator*, QObject*, QEvent*) ```
-void q_intvalidator_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QIntValidator*
+/// @param callback bool fn(QIntValidator*, QObject*, QEvent*)
+void q_intvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1192,7 +1384,8 @@ void q_intvalidator_on_event_filter(void* self, bool (*slot)(void*, void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QTimerEvent* event ```
+/// @param self QIntValidator*
+/// @param event QTimerEvent*
 void q_intvalidator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1201,7 +1394,8 @@ void q_intvalidator_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QTimerEvent* event ```
+/// @param self QIntValidator*
+/// @param event QTimerEvent*
 void q_intvalidator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1210,8 +1404,9 @@ void q_intvalidator_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QTimerEvent*) ```
-void q_intvalidator_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QTimerEvent*)
+void q_intvalidator_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1219,7 +1414,8 @@ void q_intvalidator_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QChildEvent* event ```
+/// @param self QIntValidator*
+/// @param event QChildEvent*
 void q_intvalidator_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1228,7 +1424,8 @@ void q_intvalidator_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QChildEvent* event ```
+/// @param self QIntValidator*
+/// @param event QChildEvent*
 void q_intvalidator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1237,8 +1434,9 @@ void q_intvalidator_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QChildEvent*) ```
-void q_intvalidator_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QChildEvent*)
+void q_intvalidator_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1246,7 +1444,8 @@ void q_intvalidator_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QEvent* event ```
+/// @param self QIntValidator*
+/// @param event QEvent*
 void q_intvalidator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1255,7 +1454,8 @@ void q_intvalidator_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QEvent* event ```
+/// @param self QIntValidator*
+/// @param event QEvent*
 void q_intvalidator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1264,8 +1464,9 @@ void q_intvalidator_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QEvent*) ```
-void q_intvalidator_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QEvent*)
+void q_intvalidator_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1273,7 +1474,8 @@ void q_intvalidator_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 void q_intvalidator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1282,7 +1484,8 @@ void q_intvalidator_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 void q_intvalidator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1291,8 +1494,9 @@ void q_intvalidator_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QMetaMethod*) ```
-void q_intvalidator_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QMetaMethod*)
+void q_intvalidator_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1300,7 +1504,8 @@ void q_intvalidator_on_connect_notify(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 void q_intvalidator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1309,7 +1514,8 @@ void q_intvalidator_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 void q_intvalidator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1318,8 +1524,9 @@ void q_intvalidator_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, QMetaMethod*) ```
-void q_intvalidator_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, QMetaMethod*)
+void q_intvalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1327,7 +1534,7 @@ void q_intvalidator_on_disconnect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QObject* q_intvalidator_sender(void* self);
 
 /// Inherited from QObject
@@ -1336,7 +1543,7 @@ QObject* q_intvalidator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 QObject* q_intvalidator_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -1345,8 +1552,9 @@ QObject* q_intvalidator_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QObject* (*slot)() ```
-void q_intvalidator_on_sender(void* self, QObject* (*slot)());
+/// @param self QIntValidator*
+/// @param callback QObject* fn()
+void q_intvalidator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1354,7 +1562,7 @@ void q_intvalidator_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 int32_t q_intvalidator_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1363,7 +1571,7 @@ int32_t q_intvalidator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 int32_t q_intvalidator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -1372,8 +1580,9 @@ int32_t q_intvalidator_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, int32_t (*slot)() ```
-void q_intvalidator_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QIntValidator*
+/// @param callback int32_t fn()
+void q_intvalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -1381,7 +1590,8 @@ void q_intvalidator_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, const char* signal ```
+/// @param self QIntValidator*
+/// @param signal const char*
 int32_t q_intvalidator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1390,7 +1600,8 @@ int32_t q_intvalidator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, const char* signal ```
+/// @param self QIntValidator*
+/// @param signal const char*
 int32_t q_intvalidator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -1399,8 +1610,9 @@ int32_t q_intvalidator_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, int32_t (*slot)(QIntValidator*, const char*) ```
-void q_intvalidator_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QIntValidator*
+/// @param callback int32_t fn(QIntValidator*, const char*)
+void q_intvalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -1408,7 +1620,8 @@ void q_intvalidator_on_receivers(void* self, int32_t (*slot)(void*, const char*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 bool q_intvalidator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1417,7 +1630,8 @@ bool q_intvalidator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QIntValidator* self, QMetaMethod* signal ```
+/// @param self QIntValidator*
+/// @param signal QMetaMethod*
 bool q_intvalidator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -1426,8 +1640,9 @@ bool q_intvalidator_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QIntValidator* self, bool (*slot)(QIntValidator*, QMetaMethod*) ```
-void q_intvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QIntValidator*
+/// @param callback bool fn(QIntValidator*, QMetaMethod*)
+void q_intvalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1435,495 +1650,591 @@ void q_intvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QIntValidator* self, void (*slot)(QIntValidator*, const char*) ```
-void q_intvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QIntValidator*
+/// @param callback void fn(QIntValidator*, const char*)
+void q_intvalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#dtor.QIntValidator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QIntValidator* self ```
+/// @param self QIntValidator*
 void q_intvalidator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qdoublevalidator.html
 
 /// q_doublevalidator_new constructs a new QDoubleValidator object.
 ///
-///
 QDoubleValidator* q_doublevalidator_new();
 
 /// q_doublevalidator_new2 constructs a new QDoubleValidator object.
 ///
-/// ``` double bottom, double top, int decimals ```
+/// @param bottom double
+/// @param top double
+/// @param decimals int
 QDoubleValidator* q_doublevalidator_new2(double bottom, double top, int decimals);
 
 /// q_doublevalidator_new3 constructs a new QDoubleValidator object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QDoubleValidator* q_doublevalidator_new3(void* parent);
 
 /// q_doublevalidator_new4 constructs a new QDoubleValidator object.
 ///
-/// ``` double bottom, double top, int decimals, QObject* parent ```
+/// @param bottom double
+/// @param top double
+/// @param decimals int
+/// @param parent QObject*
 QDoubleValidator* q_doublevalidator_new4(double bottom, double top, int decimals, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 const QMetaObject* q_doublevalidator_meta_object(void* self);
 
-/// ``` QDoubleValidator* self, const char* param1 ```
+/// @param self QDoubleValidator*
+/// @param param1 const char*
 void* q_doublevalidator_metacast(void* self, const char* param1);
 
-/// ``` QDoubleValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDoubleValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_doublevalidator_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QDoubleValidator* self, int32_t (*slot)(QDoubleValidator*, enum QMetaObject__Call, int, void*) ```
-void q_doublevalidator_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QDoubleValidator*
+/// @param callback int32_t fn(QDoubleValidator*, enum QMetaObject__Call, int, void*)
+void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QDoubleValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QDoubleValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_doublevalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_doublevalidator_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
-/// ``` QDoubleValidator* self, const char* param1, int* param2 ```
+/// @param self QDoubleValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_doublevalidator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDoubleValidator* self, int64_t (*slot)(QDoubleValidator*, const char*, int*) ```
-void q_doublevalidator_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
+/// @param self QDoubleValidator*
+/// @param callback int64_t fn(QDoubleValidator*, const char*, int*)
+void q_doublevalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
 /// Base class method implementation
 ///
-/// ``` QDoubleValidator* self, const char* param1, int* param2 ```
+/// @param self QDoubleValidator*
+/// @param param1 const char*
+/// @param param2 int*
+///
+/// @return enum QValidator__State
 int64_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
-/// ``` QDoubleValidator* self, const char* input ```
+/// @param self QDoubleValidator*
+/// @param input const char*
 void q_doublevalidator_fixup(void* self, const char* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, const char*) ```
-void q_doublevalidator_on_fixup(void* self, void (*slot)(void*, const char*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, const char*)
+void q_doublevalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
 /// Base class method implementation
 ///
-/// ``` QDoubleValidator* self, const char* input ```
+/// @param self QDoubleValidator*
+/// @param input const char*
 void q_doublevalidator_qbase_fixup(void* self, const char* input);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setRange)
 ///
-/// ``` QDoubleValidator* self, double bottom, double top, int decimals ```
+/// @param self QDoubleValidator*
+/// @param bottom double
+/// @param top double
+/// @param decimals int
 void q_doublevalidator_set_range(void* self, double bottom, double top, int decimals);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setRange)
 ///
-/// ``` QDoubleValidator* self, double bottom, double top ```
+/// @param self QDoubleValidator*
+/// @param bottom double
+/// @param top double
 void q_doublevalidator_set_range2(void* self, double bottom, double top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setBottom)
 ///
-/// ``` QDoubleValidator* self, double bottom ```
+/// @param self QDoubleValidator*
+/// @param bottom double
 void q_doublevalidator_set_bottom(void* self, double bottom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setTop)
 ///
-/// ``` QDoubleValidator* self, double top ```
+/// @param self QDoubleValidator*
+/// @param top double
 void q_doublevalidator_set_top(void* self, double top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setDecimals)
 ///
-/// ``` QDoubleValidator* self, int decimals ```
+/// @param self QDoubleValidator*
+/// @param decimals int
 void q_doublevalidator_set_decimals(void* self, int decimals);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#setNotation)
 ///
-/// ``` QDoubleValidator* self, enum QDoubleValidator__Notation notation ```
+/// @param self QDoubleValidator*
+/// @param notation enum QDoubleValidator__Notation
 void q_doublevalidator_set_notation(void* self, int64_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#bottom)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 double q_doublevalidator_bottom(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#top)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 double q_doublevalidator_top(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#decimals)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 int32_t q_doublevalidator_decimals(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#notation)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
+///
+/// @return enum QDoubleValidator__Notation
 int64_t q_doublevalidator_notation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#bottomChanged)
 ///
-/// ``` QDoubleValidator* self, double bottom ```
+/// @param self QDoubleValidator*
+/// @param bottom double
 void q_doublevalidator_bottom_changed(void* self, double bottom);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#bottomChanged)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, double) ```
-void q_doublevalidator_on_bottom_changed(void* self, void (*slot)(void*, double));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, double)
+void q_doublevalidator_on_bottom_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#topChanged)
 ///
-/// ``` QDoubleValidator* self, double top ```
+/// @param self QDoubleValidator*
+/// @param top double
 void q_doublevalidator_top_changed(void* self, double top);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#topChanged)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, double) ```
-void q_doublevalidator_on_top_changed(void* self, void (*slot)(void*, double));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, double)
+void q_doublevalidator_on_top_changed(void* self, void (*callback)(void*, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#decimalsChanged)
 ///
-/// ``` QDoubleValidator* self, int decimals ```
+/// @param self QDoubleValidator*
+/// @param decimals int
 void q_doublevalidator_decimals_changed(void* self, int decimals);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#decimalsChanged)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, int) ```
-void q_doublevalidator_on_decimals_changed(void* self, void (*slot)(void*, int));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, int)
+void q_doublevalidator_on_decimals_changed(void* self, void (*callback)(void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#notationChanged)
 ///
-/// ``` QDoubleValidator* self, enum QDoubleValidator__Notation notation ```
+/// @param self QDoubleValidator*
+/// @param notation enum QDoubleValidator__Notation
 void q_doublevalidator_notation_changed(void* self, int64_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#notationChanged)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, enum QDoubleValidator__Notation) ```
-void q_doublevalidator_on_notation_changed(void* self, void (*slot)(void*, int64_t));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, enum QDoubleValidator__Notation)
+void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_doublevalidator_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_doublevalidator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#setLocale)
 ///
-/// ``` QDoubleValidator* self, QLocale* locale ```
+/// @param self QDoubleValidator*
+/// @param locale QLocale*
 void q_doublevalidator_set_locale(void* self, void* locale);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#locale)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QLocale* q_doublevalidator_locale(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_changed(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*) ```
-void q_doublevalidator_on_changed(void* self, void (*slot)(void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*)
+void q_doublevalidator_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QDoubleValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDoubleValidator*
 const char* q_doublevalidator_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QDoubleValidator* self, char* name ```
+/// @param self QDoubleValidator*
+/// @param name char*
 void q_doublevalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 bool q_doublevalidator_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 bool q_doublevalidator_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 bool q_doublevalidator_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 bool q_doublevalidator_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QDoubleValidator* self, bool b ```
+/// @param self QDoubleValidator*
+/// @param b bool
 bool q_doublevalidator_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QThread* q_doublevalidator_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDoubleValidator* self, QThread* thread ```
+/// @param self QDoubleValidator*
+/// @param thread QThread*
 bool q_doublevalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDoubleValidator* self, int interval ```
+/// @param self QDoubleValidator*
+/// @param interval int
 int32_t q_doublevalidator_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDoubleValidator* self, int id ```
+/// @param self QDoubleValidator*
+/// @param id int
 void q_doublevalidator_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QDoubleValidator* self, enum Qt__TimerId id ```
+/// @param self QDoubleValidator*
+/// @param id enum Qt__TimerId
 void q_doublevalidator_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 libqt_list /* of QObject* */ q_doublevalidator_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QDoubleValidator* self, QObject* parent ```
+/// @param self QDoubleValidator*
+/// @param parent QObject*
 void q_doublevalidator_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QDoubleValidator* self, QObject* filterObj ```
+/// @param self QDoubleValidator*
+/// @param filterObj QObject*
 void q_doublevalidator_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QDoubleValidator* self, QObject* obj ```
+/// @param self QDoubleValidator*
+/// @param obj QObject*
 void q_doublevalidator_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_doublevalidator_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDoubleValidator* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QDoubleValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_doublevalidator_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_doublevalidator_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_doublevalidator_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QDoubleValidator* self, const char* name, QVariant* value ```
+/// @param self QDoubleValidator*
+/// @param name const char*
+/// @param value QVariant*
 bool q_doublevalidator_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QDoubleValidator* self, const char* name ```
+/// @param self QDoubleValidator*
+/// @param name const char*
 QVariant* q_doublevalidator_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QDoubleValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDoubleValidator*
 const char** q_doublevalidator_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QBindingStorage* q_doublevalidator_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 const QBindingStorage* q_doublevalidator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*) ```
-void q_doublevalidator_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*)
+void q_doublevalidator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QObject* q_doublevalidator_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QDoubleValidator* self, const char* classname ```
+/// @param self QDoubleValidator*
+/// @param classname const char*
 bool q_doublevalidator_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QDoubleValidator* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QDoubleValidator*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QDoubleValidator* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QDoubleValidator*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_doublevalidator_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QDoubleValidator* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QDoubleValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self, QObject* param1 ```
+/// @param self QDoubleValidator*
+/// @param param1 QObject*
 void q_doublevalidator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QObject*) ```
-void q_doublevalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QObject*)
+void q_doublevalidator_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1931,7 +2242,8 @@ void q_doublevalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QEvent*
 bool q_doublevalidator_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1940,7 +2252,8 @@ bool q_doublevalidator_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QEvent*
 bool q_doublevalidator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1949,8 +2262,9 @@ bool q_doublevalidator_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, bool (*slot)(QDoubleValidator*, QEvent*) ```
-void q_doublevalidator_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback bool fn(QDoubleValidator*, QEvent*)
+void q_doublevalidator_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1958,7 +2272,9 @@ void q_doublevalidator_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QObject* watched, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_doublevalidator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1967,7 +2283,9 @@ bool q_doublevalidator_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QObject* watched, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_doublevalidator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -1976,8 +2294,9 @@ bool q_doublevalidator_qbase_event_filter(void* self, void* watched, void* event
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, bool (*slot)(QDoubleValidator*, QObject*, QEvent*) ```
-void q_doublevalidator_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback bool fn(QDoubleValidator*, QObject*, QEvent*)
+void q_doublevalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -1985,7 +2304,8 @@ void q_doublevalidator_on_event_filter(void* self, bool (*slot)(void*, void*, vo
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QTimerEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QTimerEvent*
 void q_doublevalidator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -1994,7 +2314,8 @@ void q_doublevalidator_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QTimerEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QTimerEvent*
 void q_doublevalidator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2003,8 +2324,9 @@ void q_doublevalidator_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QTimerEvent*) ```
-void q_doublevalidator_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QTimerEvent*)
+void q_doublevalidator_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2012,7 +2334,8 @@ void q_doublevalidator_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QChildEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QChildEvent*
 void q_doublevalidator_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2021,7 +2344,8 @@ void q_doublevalidator_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QChildEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QChildEvent*
 void q_doublevalidator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2030,8 +2354,9 @@ void q_doublevalidator_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QChildEvent*) ```
-void q_doublevalidator_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QChildEvent*)
+void q_doublevalidator_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2039,7 +2364,8 @@ void q_doublevalidator_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QEvent*
 void q_doublevalidator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2048,7 +2374,8 @@ void q_doublevalidator_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QEvent* event ```
+/// @param self QDoubleValidator*
+/// @param event QEvent*
 void q_doublevalidator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2057,8 +2384,9 @@ void q_doublevalidator_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QEvent*) ```
-void q_doublevalidator_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QEvent*)
+void q_doublevalidator_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2066,7 +2394,8 @@ void q_doublevalidator_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 void q_doublevalidator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2075,7 +2404,8 @@ void q_doublevalidator_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 void q_doublevalidator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2084,8 +2414,9 @@ void q_doublevalidator_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QMetaMethod*) ```
-void q_doublevalidator_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QMetaMethod*)
+void q_doublevalidator_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2093,7 +2424,8 @@ void q_doublevalidator_on_connect_notify(void* self, void (*slot)(void*, void*))
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 void q_doublevalidator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2102,7 +2434,8 @@ void q_doublevalidator_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 void q_doublevalidator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2111,8 +2444,9 @@ void q_doublevalidator_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, QMetaMethod*) ```
-void q_doublevalidator_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, QMetaMethod*)
+void q_doublevalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2120,7 +2454,7 @@ void q_doublevalidator_on_disconnect_notify(void* self, void (*slot)(void*, void
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QObject* q_doublevalidator_sender(void* self);
 
 /// Inherited from QObject
@@ -2129,7 +2463,7 @@ QObject* q_doublevalidator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 QObject* q_doublevalidator_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2138,8 +2472,9 @@ QObject* q_doublevalidator_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QObject* (*slot)() ```
-void q_doublevalidator_on_sender(void* self, QObject* (*slot)());
+/// @param self QDoubleValidator*
+/// @param callback QObject* fn()
+void q_doublevalidator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2147,7 +2482,7 @@ void q_doublevalidator_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 int32_t q_doublevalidator_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2156,7 +2491,7 @@ int32_t q_doublevalidator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 int32_t q_doublevalidator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2165,8 +2500,9 @@ int32_t q_doublevalidator_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, int32_t (*slot)() ```
-void q_doublevalidator_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QDoubleValidator*
+/// @param callback int32_t fn()
+void q_doublevalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2174,7 +2510,8 @@ void q_doublevalidator_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, const char* signal ```
+/// @param self QDoubleValidator*
+/// @param signal const char*
 int32_t q_doublevalidator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2183,7 +2520,8 @@ int32_t q_doublevalidator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, const char* signal ```
+/// @param self QDoubleValidator*
+/// @param signal const char*
 int32_t q_doublevalidator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2192,8 +2530,9 @@ int32_t q_doublevalidator_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, int32_t (*slot)(QDoubleValidator*, const char*) ```
-void q_doublevalidator_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QDoubleValidator*
+/// @param callback int32_t fn(QDoubleValidator*, const char*)
+void q_doublevalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2201,7 +2540,8 @@ void q_doublevalidator_on_receivers(void* self, int32_t (*slot)(void*, const cha
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 bool q_doublevalidator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2210,7 +2550,8 @@ bool q_doublevalidator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, QMetaMethod* signal ```
+/// @param self QDoubleValidator*
+/// @param signal QMetaMethod*
 bool q_doublevalidator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2219,8 +2560,9 @@ bool q_doublevalidator_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QDoubleValidator* self, bool (*slot)(QDoubleValidator*, QMetaMethod*) ```
-void q_doublevalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QDoubleValidator*
+/// @param callback bool fn(QDoubleValidator*, QMetaMethod*)
+void q_doublevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2228,406 +2570,479 @@ void q_doublevalidator_on_is_signal_connected(void* self, bool (*slot)(void*, vo
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QDoubleValidator* self, void (*slot)(QDoubleValidator*, const char*) ```
-void q_doublevalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QDoubleValidator*
+/// @param callback void fn(QDoubleValidator*, const char*)
+void q_doublevalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#dtor.QDoubleValidator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QDoubleValidator* self ```
+/// @param self QDoubleValidator*
 void q_doublevalidator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qregularexpressionvalidator.html
 
 /// q_regularexpressionvalidator_new constructs a new QRegularExpressionValidator object.
 ///
-///
 QRegularExpressionValidator* q_regularexpressionvalidator_new();
 
 /// q_regularexpressionvalidator_new2 constructs a new QRegularExpressionValidator object.
 ///
-/// ``` QRegularExpression* re ```
+/// @param re QRegularExpression*
 QRegularExpressionValidator* q_regularexpressionvalidator_new2(void* re);
 
 /// q_regularexpressionvalidator_new3 constructs a new QRegularExpressionValidator object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QRegularExpressionValidator* q_regularexpressionvalidator_new3(void* parent);
 
 /// q_regularexpressionvalidator_new4 constructs a new QRegularExpressionValidator object.
 ///
-/// ``` QRegularExpression* re, QObject* parent ```
+/// @param re QRegularExpression*
+/// @param parent QObject*
 QRegularExpressionValidator* q_regularexpressionvalidator_new4(void* re, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 const QMetaObject* q_regularexpressionvalidator_meta_object(void* self);
 
-/// ``` QRegularExpressionValidator* self, const char* param1 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 const char*
 void* q_regularexpressionvalidator_metacast(void* self, const char* param1);
 
-/// ``` QRegularExpressionValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_regularexpressionvalidator_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QRegularExpressionValidator* self, int32_t (*slot)(QRegularExpressionValidator*, enum QMetaObject__Call, int, void*) ```
-void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback int32_t fn(QRegularExpressionValidator*, enum QMetaObject__Call, int, void*)
+void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QRegularExpressionValidator* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_regularexpressionvalidator_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
-/// ``` QRegularExpressionValidator* self, const char* input, int* pos ```
+/// @param self QRegularExpressionValidator*
+/// @param input const char*
+/// @param pos int*
+///
+/// @return enum QValidator__State
 int64_t q_regularexpressionvalidator_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QRegularExpressionValidator* self, int64_t (*slot)(QRegularExpressionValidator*, const char*, int*) ```
-void q_regularexpressionvalidator_on_validate(void* self, int64_t (*slot)(void*, const char*, int*));
+/// @param self QRegularExpressionValidator*
+/// @param callback int64_t fn(QRegularExpressionValidator*, const char*, int*)
+void q_regularexpressionvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
 /// Base class method implementation
 ///
-/// ``` QRegularExpressionValidator* self, const char* input, int* pos ```
+/// @param self QRegularExpressionValidator*
+/// @param input const char*
+/// @param pos int*
+///
+/// @return enum QValidator__State
 int64_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#regularExpression)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QRegularExpression* q_regularexpressionvalidator_regular_expression(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#setRegularExpression)
 ///
-/// ``` QRegularExpressionValidator* self, QRegularExpression* re ```
+/// @param self QRegularExpressionValidator*
+/// @param re QRegularExpression*
 void q_regularexpressionvalidator_set_regular_expression(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#regularExpressionChanged)
 ///
-/// ``` QRegularExpressionValidator* self, QRegularExpression* re ```
+/// @param self QRegularExpressionValidator*
+/// @param re QRegularExpression*
 void q_regularexpressionvalidator_regular_expression_changed(void* self, void* re);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#regularExpressionChanged)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QRegularExpression*) ```
-void q_regularexpressionvalidator_on_regular_expression_changed(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QRegularExpression*)
+void q_regularexpressionvalidator_on_regular_expression_changed(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_regularexpressionvalidator_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_regularexpressionvalidator_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#setLocale)
 ///
-/// ``` QRegularExpressionValidator* self, QLocale* locale ```
+/// @param self QRegularExpressionValidator*
+/// @param locale QLocale*
 void q_regularexpressionvalidator_set_locale(void* self, void* locale);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#locale)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QLocale* q_regularexpressionvalidator_locale(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_changed(void* self);
 
 /// Inherited from QValidator
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#changed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*) ```
-void q_regularexpressionvalidator_on_changed(void* self, void (*slot)(void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*)
+void q_regularexpressionvalidator_on_changed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRegularExpressionValidator*
 const char* q_regularexpressionvalidator_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QRegularExpressionValidator* self, char* name ```
+/// @param self QRegularExpressionValidator*
+/// @param name char*
 void q_regularexpressionvalidator_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 bool q_regularexpressionvalidator_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 bool q_regularexpressionvalidator_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 bool q_regularexpressionvalidator_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 bool q_regularexpressionvalidator_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QRegularExpressionValidator* self, bool b ```
+/// @param self QRegularExpressionValidator*
+/// @param b bool
 bool q_regularexpressionvalidator_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QThread* q_regularexpressionvalidator_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QRegularExpressionValidator* self, QThread* thread ```
+/// @param self QRegularExpressionValidator*
+/// @param thread QThread*
 bool q_regularexpressionvalidator_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QRegularExpressionValidator* self, int interval ```
+/// @param self QRegularExpressionValidator*
+/// @param interval int
 int32_t q_regularexpressionvalidator_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QRegularExpressionValidator* self, int id ```
+/// @param self QRegularExpressionValidator*
+/// @param id int
 void q_regularexpressionvalidator_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QRegularExpressionValidator* self, enum Qt__TimerId id ```
+/// @param self QRegularExpressionValidator*
+/// @param id enum Qt__TimerId
 void q_regularexpressionvalidator_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 libqt_list /* of QObject* */ q_regularexpressionvalidator_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* parent ```
+/// @param self QRegularExpressionValidator*
+/// @param parent QObject*
 void q_regularexpressionvalidator_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* filterObj ```
+/// @param self QRegularExpressionValidator*
+/// @param filterObj QObject*
 void q_regularexpressionvalidator_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* obj ```
+/// @param self QRegularExpressionValidator*
+/// @param obj QObject*
 void q_regularexpressionvalidator_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_regularexpressionvalidator_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QRegularExpressionValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_regularexpressionvalidator_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_regularexpressionvalidator_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_regularexpressionvalidator_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QRegularExpressionValidator* self, const char* name, QVariant* value ```
+/// @param self QRegularExpressionValidator*
+/// @param name const char*
+/// @param value QVariant*
 bool q_regularexpressionvalidator_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QRegularExpressionValidator* self, const char* name ```
+/// @param self QRegularExpressionValidator*
+/// @param name const char*
 QVariant* q_regularexpressionvalidator_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QRegularExpressionValidator*
 const char** q_regularexpressionvalidator_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QBindingStorage* q_regularexpressionvalidator_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 const QBindingStorage* q_regularexpressionvalidator_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*) ```
-void q_regularexpressionvalidator_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*)
+void q_regularexpressionvalidator_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QObject* q_regularexpressionvalidator_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QRegularExpressionValidator* self, const char* classname ```
+/// @param self QRegularExpressionValidator*
+/// @param classname const char*
 bool q_regularexpressionvalidator_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QRegularExpressionValidator* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QRegularExpressionValidator*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QRegularExpressionValidator* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QRegularExpressionValidator*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QRegularExpressionValidator*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self, QObject* param1 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 QObject*
 void q_regularexpressionvalidator_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QObject*) ```
-void q_regularexpressionvalidator_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QObject*)
+void q_regularexpressionvalidator_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QValidator
 ///
@@ -2635,7 +3050,8 @@ void q_regularexpressionvalidator_on_destroyed1(void* self, void (*slot)(void*, 
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, const char* param1 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 const char*
 void q_regularexpressionvalidator_fixup(void* self, const char* param1);
 
 /// Inherited from QValidator
@@ -2644,7 +3060,8 @@ void q_regularexpressionvalidator_fixup(void* self, const char* param1);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, const char* param1 ```
+/// @param self QRegularExpressionValidator*
+/// @param param1 const char*
 void q_regularexpressionvalidator_qbase_fixup(void* self, const char* param1);
 
 /// Inherited from QValidator
@@ -2653,8 +3070,9 @@ void q_regularexpressionvalidator_qbase_fixup(void* self, const char* param1);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, const char*) ```
-void q_regularexpressionvalidator_on_fixup(void* self, void (*slot)(void*, const char*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, const char*)
+void q_regularexpressionvalidator_on_fixup(void* self, void (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2662,7 +3080,8 @@ void q_regularexpressionvalidator_on_fixup(void* self, void (*slot)(void*, const
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QEvent*
 bool q_regularexpressionvalidator_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2671,7 +3090,8 @@ bool q_regularexpressionvalidator_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QEvent*
 bool q_regularexpressionvalidator_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2680,8 +3100,9 @@ bool q_regularexpressionvalidator_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, bool (*slot)(QRegularExpressionValidator*, QEvent*) ```
-void q_regularexpressionvalidator_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback bool fn(QRegularExpressionValidator*, QEvent*)
+void q_regularexpressionvalidator_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2689,7 +3110,9 @@ void q_regularexpressionvalidator_on_event(void* self, bool (*slot)(void*, void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QObject* watched, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_regularexpressionvalidator_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2698,7 +3121,9 @@ bool q_regularexpressionvalidator_event_filter(void* self, void* watched, void* 
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QObject* watched, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_regularexpressionvalidator_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -2707,8 +3132,9 @@ bool q_regularexpressionvalidator_qbase_event_filter(void* self, void* watched, 
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, bool (*slot)(QRegularExpressionValidator*, QObject*, QEvent*) ```
-void q_regularexpressionvalidator_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback bool fn(QRegularExpressionValidator*, QObject*, QEvent*)
+void q_regularexpressionvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2716,7 +3142,8 @@ void q_regularexpressionvalidator_on_event_filter(void* self, bool (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QTimerEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QTimerEvent*
 void q_regularexpressionvalidator_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2725,7 +3152,8 @@ void q_regularexpressionvalidator_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QTimerEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QTimerEvent*
 void q_regularexpressionvalidator_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2734,8 +3162,9 @@ void q_regularexpressionvalidator_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QTimerEvent*) ```
-void q_regularexpressionvalidator_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QTimerEvent*)
+void q_regularexpressionvalidator_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2743,7 +3172,8 @@ void q_regularexpressionvalidator_on_timer_event(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QChildEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QChildEvent*
 void q_regularexpressionvalidator_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2752,7 +3182,8 @@ void q_regularexpressionvalidator_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QChildEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QChildEvent*
 void q_regularexpressionvalidator_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2761,8 +3192,9 @@ void q_regularexpressionvalidator_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QChildEvent*) ```
-void q_regularexpressionvalidator_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QChildEvent*)
+void q_regularexpressionvalidator_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2770,7 +3202,8 @@ void q_regularexpressionvalidator_on_child_event(void* self, void (*slot)(void*,
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QEvent*
 void q_regularexpressionvalidator_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2779,7 +3212,8 @@ void q_regularexpressionvalidator_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QEvent* event ```
+/// @param self QRegularExpressionValidator*
+/// @param event QEvent*
 void q_regularexpressionvalidator_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -2788,8 +3222,9 @@ void q_regularexpressionvalidator_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QEvent*) ```
-void q_regularexpressionvalidator_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QEvent*)
+void q_regularexpressionvalidator_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2797,7 +3232,8 @@ void q_regularexpressionvalidator_on_custom_event(void* self, void (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 void q_regularexpressionvalidator_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2806,7 +3242,8 @@ void q_regularexpressionvalidator_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 void q_regularexpressionvalidator_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2815,8 +3252,9 @@ void q_regularexpressionvalidator_qbase_connect_notify(void* self, void* signal)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QMetaMethod*) ```
-void q_regularexpressionvalidator_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QMetaMethod*)
+void q_regularexpressionvalidator_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2824,7 +3262,8 @@ void q_regularexpressionvalidator_on_connect_notify(void* self, void (*slot)(voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 void q_regularexpressionvalidator_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2833,7 +3272,8 @@ void q_regularexpressionvalidator_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 void q_regularexpressionvalidator_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2842,8 +3282,9 @@ void q_regularexpressionvalidator_qbase_disconnect_notify(void* self, void* sign
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, QMetaMethod*) ```
-void q_regularexpressionvalidator_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, QMetaMethod*)
+void q_regularexpressionvalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2851,7 +3292,7 @@ void q_regularexpressionvalidator_on_disconnect_notify(void* self, void (*slot)(
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QObject* q_regularexpressionvalidator_sender(void* self);
 
 /// Inherited from QObject
@@ -2860,7 +3301,7 @@ QObject* q_regularexpressionvalidator_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 QObject* q_regularexpressionvalidator_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -2869,8 +3310,9 @@ QObject* q_regularexpressionvalidator_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QObject* (*slot)() ```
-void q_regularexpressionvalidator_on_sender(void* self, QObject* (*slot)());
+/// @param self QRegularExpressionValidator*
+/// @param callback QObject* fn()
+void q_regularexpressionvalidator_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2878,7 +3320,7 @@ void q_regularexpressionvalidator_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 int32_t q_regularexpressionvalidator_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2887,7 +3329,7 @@ int32_t q_regularexpressionvalidator_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 int32_t q_regularexpressionvalidator_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -2896,8 +3338,9 @@ int32_t q_regularexpressionvalidator_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, int32_t (*slot)() ```
-void q_regularexpressionvalidator_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QRegularExpressionValidator*
+/// @param callback int32_t fn()
+void q_regularexpressionvalidator_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -2905,7 +3348,8 @@ void q_regularexpressionvalidator_on_sender_signal_index(void* self, int32_t (*s
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, const char* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal const char*
 int32_t q_regularexpressionvalidator_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2914,7 +3358,8 @@ int32_t q_regularexpressionvalidator_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, const char* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal const char*
 int32_t q_regularexpressionvalidator_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -2923,8 +3368,9 @@ int32_t q_regularexpressionvalidator_qbase_receivers(void* self, const char* sig
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, int32_t (*slot)(QRegularExpressionValidator*, const char*) ```
-void q_regularexpressionvalidator_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QRegularExpressionValidator*
+/// @param callback int32_t fn(QRegularExpressionValidator*, const char*)
+void q_regularexpressionvalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -2932,7 +3378,8 @@ void q_regularexpressionvalidator_on_receivers(void* self, int32_t (*slot)(void*
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 bool q_regularexpressionvalidator_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2941,7 +3388,8 @@ bool q_regularexpressionvalidator_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, QMetaMethod* signal ```
+/// @param self QRegularExpressionValidator*
+/// @param signal QMetaMethod*
 bool q_regularexpressionvalidator_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -2950,8 +3398,9 @@ bool q_regularexpressionvalidator_qbase_is_signal_connected(void* self, void* si
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QRegularExpressionValidator* self, bool (*slot)(QRegularExpressionValidator*, QMetaMethod*) ```
-void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QRegularExpressionValidator*
+/// @param callback bool fn(QRegularExpressionValidator*, QMetaMethod*)
+void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -2959,14 +3408,15 @@ void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*slot
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QRegularExpressionValidator* self, void (*slot)(QRegularExpressionValidator*, const char*) ```
-void q_regularexpressionvalidator_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QRegularExpressionValidator*
+/// @param callback void fn(QRegularExpressionValidator*, const char*)
+void q_regularexpressionvalidator_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#dtor.QRegularExpressionValidator)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QRegularExpressionValidator* self ```
+/// @param self QRegularExpressionValidator*
 void q_regularexpressionvalidator_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qvalidator.html#types

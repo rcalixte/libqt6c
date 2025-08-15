@@ -42,8 +42,8 @@ int32_t q_accessiblebridgeplugin_metacall(void* self, int64_t param1, int param2
     return QAccessibleBridgePlugin_Metacall((QAccessibleBridgePlugin*)self, param1, param2, param3);
 }
 
-void q_accessiblebridgeplugin_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QAccessibleBridgePlugin_OnMetacall((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QAccessibleBridgePlugin_OnMetacall((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_accessiblebridgeplugin_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ QAccessibleBridge* q_accessiblebridgeplugin_create(void* self, const char* key) 
     return QAccessibleBridgePlugin_Create((QAccessibleBridgePlugin*)self, qstring(key));
 }
 
-void q_accessiblebridgeplugin_on_create(void* self, QAccessibleBridge* (*slot)(void*, const char*)) {
-    QAccessibleBridgePlugin_OnCreate((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_create(void* self, QAccessibleBridge* (*callback)(void*, const char*)) {
+    QAccessibleBridgePlugin_OnCreate((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 QAccessibleBridge* q_accessiblebridgeplugin_qbase_create(void* self, const char* key) {
@@ -187,12 +187,16 @@ const char** q_accessiblebridgeplugin_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_accessiblebridgeplugin_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -210,8 +214,8 @@ void q_accessiblebridgeplugin_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_accessiblebridgeplugin_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_accessiblebridgeplugin_parent(void* self) {
@@ -246,8 +250,8 @@ void q_accessiblebridgeplugin_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_accessiblebridgeplugin_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_accessiblebridgeplugin_event(void* self, void* event) {
@@ -258,8 +262,8 @@ bool q_accessiblebridgeplugin_qbase_event(void* self, void* event) {
     return QAccessibleBridgePlugin_QBaseEvent((QAccessibleBridgePlugin*)self, (QEvent*)event);
 }
 
-void q_accessiblebridgeplugin_on_event(void* self, bool (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnEvent((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_event(void* self, bool (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnEvent((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 bool q_accessiblebridgeplugin_event_filter(void* self, void* watched, void* event) {
@@ -270,8 +274,8 @@ bool q_accessiblebridgeplugin_qbase_event_filter(void* self, void* watched, void
     return QAccessibleBridgePlugin_QBaseEventFilter((QAccessibleBridgePlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_accessiblebridgeplugin_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QAccessibleBridgePlugin_OnEventFilter((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QAccessibleBridgePlugin_OnEventFilter((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_timer_event(void* self, void* event) {
@@ -282,8 +286,8 @@ void q_accessiblebridgeplugin_qbase_timer_event(void* self, void* event) {
     QAccessibleBridgePlugin_QBaseTimerEvent((QAccessibleBridgePlugin*)self, (QTimerEvent*)event);
 }
 
-void q_accessiblebridgeplugin_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnTimerEvent((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnTimerEvent((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_child_event(void* self, void* event) {
@@ -294,8 +298,8 @@ void q_accessiblebridgeplugin_qbase_child_event(void* self, void* event) {
     QAccessibleBridgePlugin_QBaseChildEvent((QAccessibleBridgePlugin*)self, (QChildEvent*)event);
 }
 
-void q_accessiblebridgeplugin_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnChildEvent((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnChildEvent((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_custom_event(void* self, void* event) {
@@ -306,8 +310,8 @@ void q_accessiblebridgeplugin_qbase_custom_event(void* self, void* event) {
     QAccessibleBridgePlugin_QBaseCustomEvent((QAccessibleBridgePlugin*)self, (QEvent*)event);
 }
 
-void q_accessiblebridgeplugin_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnCustomEvent((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnCustomEvent((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_connect_notify(void* self, void* signal) {
@@ -318,8 +322,8 @@ void q_accessiblebridgeplugin_qbase_connect_notify(void* self, void* signal) {
     QAccessibleBridgePlugin_QBaseConnectNotify((QAccessibleBridgePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_accessiblebridgeplugin_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnConnectNotify((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnConnectNotify((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_disconnect_notify(void* self, void* signal) {
@@ -330,8 +334,8 @@ void q_accessiblebridgeplugin_qbase_disconnect_notify(void* self, void* signal) 
     QAccessibleBridgePlugin_QBaseDisconnectNotify((QAccessibleBridgePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_accessiblebridgeplugin_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnDisconnectNotify((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnDisconnectNotify((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 QObject* q_accessiblebridgeplugin_sender(void* self) {
@@ -342,8 +346,8 @@ QObject* q_accessiblebridgeplugin_qbase_sender(void* self) {
     return QAccessibleBridgePlugin_QBaseSender((QAccessibleBridgePlugin*)self);
 }
 
-void q_accessiblebridgeplugin_on_sender(void* self, QObject* (*slot)()) {
-    QAccessibleBridgePlugin_OnSender((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_sender(void* self, QObject* (*callback)()) {
+    QAccessibleBridgePlugin_OnSender((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_accessiblebridgeplugin_sender_signal_index(void* self) {
@@ -354,8 +358,8 @@ int32_t q_accessiblebridgeplugin_qbase_sender_signal_index(void* self) {
     return QAccessibleBridgePlugin_QBaseSenderSignalIndex((QAccessibleBridgePlugin*)self);
 }
 
-void q_accessiblebridgeplugin_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QAccessibleBridgePlugin_OnSenderSignalIndex((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QAccessibleBridgePlugin_OnSenderSignalIndex((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_accessiblebridgeplugin_receivers(void* self, const char* signal) {
@@ -366,8 +370,8 @@ int32_t q_accessiblebridgeplugin_qbase_receivers(void* self, const char* signal)
     return QAccessibleBridgePlugin_QBaseReceivers((QAccessibleBridgePlugin*)self, signal);
 }
 
-void q_accessiblebridgeplugin_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QAccessibleBridgePlugin_OnReceivers((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QAccessibleBridgePlugin_OnReceivers((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
 bool q_accessiblebridgeplugin_is_signal_connected(void* self, void* signal) {
@@ -378,12 +382,12 @@ bool q_accessiblebridgeplugin_qbase_is_signal_connected(void* self, void* signal
     return QAccessibleBridgePlugin_QBaseIsSignalConnected((QAccessibleBridgePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_accessiblebridgeplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QAccessibleBridgePlugin_OnIsSignalConnected((QAccessibleBridgePlugin*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QAccessibleBridgePlugin_OnIsSignalConnected((QAccessibleBridgePlugin*)self, (intptr_t)callback);
 }
 
-void q_accessiblebridgeplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_accessiblebridgeplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_accessiblebridgeplugin_delete(void* self) {

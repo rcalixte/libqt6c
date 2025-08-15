@@ -26,8 +26,8 @@ int32_t q_iconengineplugin_metacall(void* self, int64_t param1, int param2, void
     return QIconEnginePlugin_Metacall((QIconEnginePlugin*)self, param1, param2, param3);
 }
 
-void q_iconengineplugin_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QIconEnginePlugin_OnMetacall((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QIconEnginePlugin_OnMetacall((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_iconengineplugin_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ QIconEngine* q_iconengineplugin_create(void* self, const char* filename) {
     return QIconEnginePlugin_Create((QIconEnginePlugin*)self, qstring(filename));
 }
 
-void q_iconengineplugin_on_create(void* self, QIconEngine* (*slot)(void*, const char*)) {
-    QIconEnginePlugin_OnCreate((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_create(void* self, QIconEngine* (*callback)(void*, const char*)) {
+    QIconEnginePlugin_OnCreate((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 QIconEngine* q_iconengineplugin_qbase_create(void* self, const char* filename) {
@@ -171,12 +171,16 @@ const char** q_iconengineplugin_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_iconengineplugin_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -194,8 +198,8 @@ void q_iconengineplugin_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_iconengineplugin_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_iconengineplugin_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_iconengineplugin_parent(void* self) {
@@ -230,8 +234,8 @@ void q_iconengineplugin_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_iconengineplugin_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_iconengineplugin_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 bool q_iconengineplugin_event(void* self, void* event) {
@@ -242,8 +246,8 @@ bool q_iconengineplugin_qbase_event(void* self, void* event) {
     return QIconEnginePlugin_QBaseEvent((QIconEnginePlugin*)self, (QEvent*)event);
 }
 
-void q_iconengineplugin_on_event(void* self, bool (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnEvent((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_event(void* self, bool (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnEvent((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 bool q_iconengineplugin_event_filter(void* self, void* watched, void* event) {
@@ -254,8 +258,8 @@ bool q_iconengineplugin_qbase_event_filter(void* self, void* watched, void* even
     return QIconEnginePlugin_QBaseEventFilter((QIconEnginePlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_iconengineplugin_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QIconEnginePlugin_OnEventFilter((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QIconEnginePlugin_OnEventFilter((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_timer_event(void* self, void* event) {
@@ -266,8 +270,8 @@ void q_iconengineplugin_qbase_timer_event(void* self, void* event) {
     QIconEnginePlugin_QBaseTimerEvent((QIconEnginePlugin*)self, (QTimerEvent*)event);
 }
 
-void q_iconengineplugin_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnTimerEvent((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnTimerEvent((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_child_event(void* self, void* event) {
@@ -278,8 +282,8 @@ void q_iconengineplugin_qbase_child_event(void* self, void* event) {
     QIconEnginePlugin_QBaseChildEvent((QIconEnginePlugin*)self, (QChildEvent*)event);
 }
 
-void q_iconengineplugin_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnChildEvent((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnChildEvent((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_custom_event(void* self, void* event) {
@@ -290,8 +294,8 @@ void q_iconengineplugin_qbase_custom_event(void* self, void* event) {
     QIconEnginePlugin_QBaseCustomEvent((QIconEnginePlugin*)self, (QEvent*)event);
 }
 
-void q_iconengineplugin_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnCustomEvent((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnCustomEvent((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_connect_notify(void* self, void* signal) {
@@ -302,8 +306,8 @@ void q_iconengineplugin_qbase_connect_notify(void* self, void* signal) {
     QIconEnginePlugin_QBaseConnectNotify((QIconEnginePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_iconengineplugin_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnConnectNotify((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnConnectNotify((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_disconnect_notify(void* self, void* signal) {
@@ -314,8 +318,8 @@ void q_iconengineplugin_qbase_disconnect_notify(void* self, void* signal) {
     QIconEnginePlugin_QBaseDisconnectNotify((QIconEnginePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_iconengineplugin_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnDisconnectNotify((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnDisconnectNotify((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 QObject* q_iconengineplugin_sender(void* self) {
@@ -326,8 +330,8 @@ QObject* q_iconengineplugin_qbase_sender(void* self) {
     return QIconEnginePlugin_QBaseSender((QIconEnginePlugin*)self);
 }
 
-void q_iconengineplugin_on_sender(void* self, QObject* (*slot)()) {
-    QIconEnginePlugin_OnSender((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_sender(void* self, QObject* (*callback)()) {
+    QIconEnginePlugin_OnSender((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_iconengineplugin_sender_signal_index(void* self) {
@@ -338,8 +342,8 @@ int32_t q_iconengineplugin_qbase_sender_signal_index(void* self) {
     return QIconEnginePlugin_QBaseSenderSignalIndex((QIconEnginePlugin*)self);
 }
 
-void q_iconengineplugin_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QIconEnginePlugin_OnSenderSignalIndex((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QIconEnginePlugin_OnSenderSignalIndex((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 int32_t q_iconengineplugin_receivers(void* self, const char* signal) {
@@ -350,8 +354,8 @@ int32_t q_iconengineplugin_qbase_receivers(void* self, const char* signal) {
     return QIconEnginePlugin_QBaseReceivers((QIconEnginePlugin*)self, signal);
 }
 
-void q_iconengineplugin_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QIconEnginePlugin_OnReceivers((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QIconEnginePlugin_OnReceivers((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
 bool q_iconengineplugin_is_signal_connected(void* self, void* signal) {
@@ -362,12 +366,12 @@ bool q_iconengineplugin_qbase_is_signal_connected(void* self, void* signal) {
     return QIconEnginePlugin_QBaseIsSignalConnected((QIconEnginePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_iconengineplugin_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QIconEnginePlugin_OnIsSignalConnected((QIconEnginePlugin*)self, (intptr_t)slot);
+void q_iconengineplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QIconEnginePlugin_OnIsSignalConnected((QIconEnginePlugin*)self, (intptr_t)callback);
 }
 
-void q_iconengineplugin_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_iconengineplugin_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_iconengineplugin_delete(void* self) {

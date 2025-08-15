@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "libqttypedefs.h"
 
@@ -16,218 +15,249 @@
 
 /// q_bitarray_new constructs a new QBitArray object.
 ///
-///
 QBitArray* q_bitarray_new();
 
 /// q_bitarray_new2 constructs a new QBitArray object.
 ///
-/// ``` int64_t size ```
+/// @param size int64_t
 QBitArray* q_bitarray_new2(int64_t size);
 
 /// q_bitarray_new3 constructs a new QBitArray object.
 ///
-/// ``` QBitArray* other ```
+/// @param other QBitArray*
 QBitArray* q_bitarray_new3(void* other);
 
 /// q_bitarray_new4 constructs a new QBitArray object.
 ///
-/// ``` int64_t size, bool val ```
+/// @param size int64_t
+/// @param val bool
 QBitArray* q_bitarray_new4(int64_t size, bool val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-eq)
 ///
-/// ``` QBitArray* self, QBitArray* other ```
+/// @param self QBitArray*
+/// @param other QBitArray*
 void q_bitarray_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#swap)
 ///
-/// ``` QBitArray* self, QBitArray* other ```
+/// @param self QBitArray*
+/// @param other QBitArray*
 void q_bitarray_swap(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#size)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 int64_t q_bitarray_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 int64_t q_bitarray_count(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
-/// ``` QBitArray* self, bool on ```
+/// @param self QBitArray*
+/// @param on bool
 int64_t q_bitarray_count2(void* self, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#isEmpty)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 bool q_bitarray_is_empty(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#isNull)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 bool q_bitarray_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#resize)
 ///
-/// ``` QBitArray* self, int64_t size ```
+/// @param self QBitArray*
+/// @param size int64_t
 void q_bitarray_resize(void* self, int64_t size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#detach)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 void q_bitarray_detach(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#isDetached)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 bool q_bitarray_is_detached(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#clear)
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 void q_bitarray_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#testBit)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 bool q_bitarray_test_bit(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#setBit)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 void q_bitarray_set_bit(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#setBit)
 ///
-/// ``` QBitArray* self, int64_t i, bool val ```
+/// @param self QBitArray*
+/// @param i int64_t
+/// @param val bool
 void q_bitarray_set_bit2(void* self, int64_t i, bool val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#clearBit)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 void q_bitarray_clear_bit(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#toggleBit)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 bool q_bitarray_toggle_bit(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#at)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 bool q_bitarray_at(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 QBitRef* q_bitarray_operator_subscript(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
-/// ``` QBitArray* self, int64_t i ```
+/// @param self QBitArray*
+/// @param i int64_t
 bool q_bitarray_operator_subscript2(void* self, int64_t i);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-and-eq)
 ///
-/// ``` QBitArray* self, QBitArray* param1 ```
+/// @param self QBitArray*
+/// @param param1 QBitArray*
 void q_bitarray_operator_bitwise_and_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-7c-eq)
 ///
-/// ``` QBitArray* self, QBitArray* param1 ```
+/// @param self QBitArray*
+/// @param param1 QBitArray*
 void q_bitarray_operator_bitwise_or_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#operator-5e-eq)
 ///
-/// ``` QBitArray* self, QBitArray* param1 ```
+/// @param self QBitArray*
+/// @param param1 QBitArray*
 void q_bitarray_operator_bitwise_not_assign(void* self, void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
-/// ``` QBitArray* self, bool aval ```
+/// @param self QBitArray*
+/// @param aval bool
 bool q_bitarray_fill(void* self, bool aval);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
-/// ``` QBitArray* self, bool val, int64_t first, int64_t last ```
+/// @param self QBitArray*
+/// @param val bool
+/// @param first int64_t
+/// @param last int64_t
 void q_bitarray_fill2(void* self, bool val, int64_t first, int64_t last);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#truncate)
 ///
-/// ``` QBitArray* self, int64_t pos ```
+/// @param self QBitArray*
+/// @param pos int64_t
 void q_bitarray_truncate(void* self, int64_t pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#bits)
 ///
-/// ``` QBitArray* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QBitArray*
 const char* q_bitarray_bits(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fromBits)
 ///
-/// ``` const char* data, int64_t lenVal ```
+/// @param data const char*
+/// @param lenVal int64_t
 QBitArray* q_bitarray_from_bits(const char* data, int64_t lenVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///
-/// ``` QBitArray* self, enum QSysInfo__Endian endianness ```
+/// @param self QBitArray*
+/// @param endianness enum QSysInfo__Endian
 uint32_t q_bitarray_to_u_int32(void* self, int64_t endianness);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
-/// ``` QBitArray* self, bool aval, int64_t asize ```
+/// @param self QBitArray*
+/// @param aval bool
+/// @param asize int64_t
 bool q_bitarray_fill22(void* self, bool aval, int64_t asize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///
-/// ``` QBitArray* self, enum QSysInfo__Endian endianness, bool* ok ```
+/// @param self QBitArray*
+/// @param endianness enum QSysInfo__Endian
+/// @param ok bool*
 uint32_t q_bitarray_to_u_int322(void* self, int64_t endianness, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#dtor.QBitArray)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QBitArray* self ```
+/// @param self QBitArray*
 void q_bitarray_delete(void* self);
 
 /// https://doc.qt.io/qt-6/qbitref.html
 
 /// q_bitref_new constructs a new QBitRef object.
 ///
-/// ``` QBitRef* other ```
+/// @param other QBitRef*
 QBitRef* q_bitref_new(void* other);
 
 /// q_bitref_new2 constructs a new QBitRef object.
 ///
-/// ``` QBitRef* param1 ```
+/// @param param1 QBitRef*
 QBitRef* q_bitref_new2(void* param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator)
 ///
-/// ``` QBitRef* self ```
+/// @param self QBitRef*
 bool q_bitref_to_bool(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-not)
 ///
-/// ``` QBitRef* self ```
+/// @param self QBitRef*
 bool q_bitref_operator_not(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///
-/// ``` QBitRef* self, QBitRef* val ```
+/// @param self QBitRef*
+/// @param val QBitRef*
 void q_bitref_operator_assign(void* self, void* val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#operator-eq)
 ///
-/// ``` QBitRef* self, bool val ```
+/// @param self QBitRef*
+/// @param val bool
 void q_bitref_operator_assign2(void* self, bool val);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitref.html#dtor.QBitRef)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QBitRef* self ```
+/// @param self QBitRef*
 void q_bitref_delete(void* self);
 
 #endif

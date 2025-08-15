@@ -30,8 +30,8 @@ int32_t q_boxlayout_metacall(void* self, int64_t param1, int param2, void* param
     return QBoxLayout_Metacall((QBoxLayout*)self, param1, param2, param3);
 }
 
-void q_boxlayout_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QBoxLayout_OnMetacall((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QBoxLayout_OnMetacall((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -81,8 +81,8 @@ void q_boxlayout_add_item(void* self, void* param1) {
     QBoxLayout_AddItem((QBoxLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_boxlayout_on_add_item(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnAddItem((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_add_item(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnAddItem((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_qbase_add_item(void* self, void* param1) {
@@ -117,8 +117,8 @@ int32_t q_boxlayout_spacing(void* self) {
     return QBoxLayout_Spacing((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_spacing(void* self, int32_t (*slot)()) {
-    QBoxLayout_OnSpacing((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_spacing(void* self, int32_t (*callback)()) {
+    QBoxLayout_OnSpacing((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_spacing(void* self) {
@@ -129,8 +129,8 @@ void q_boxlayout_set_spacing(void* self, int spacing) {
     QBoxLayout_SetSpacing((QBoxLayout*)self, spacing);
 }
 
-void q_boxlayout_on_set_spacing(void* self, void (*slot)(void*, int)) {
-    QBoxLayout_OnSetSpacing((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_set_spacing(void* self, void (*callback)(void*, int)) {
+    QBoxLayout_OnSetSpacing((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_qbase_set_spacing(void* self, int spacing) {
@@ -157,8 +157,8 @@ QSize* q_boxlayout_size_hint(void* self) {
     return QBoxLayout_SizeHint((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_size_hint(void* self, QSize* (*slot)()) {
-    QBoxLayout_OnSizeHint((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_size_hint(void* self, QSize* (*callback)()) {
+    QBoxLayout_OnSizeHint((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_boxlayout_qbase_size_hint(void* self) {
@@ -169,8 +169,8 @@ QSize* q_boxlayout_minimum_size(void* self) {
     return QBoxLayout_MinimumSize((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_minimum_size(void* self, QSize* (*slot)()) {
-    QBoxLayout_OnMinimumSize((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_minimum_size(void* self, QSize* (*callback)()) {
+    QBoxLayout_OnMinimumSize((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_boxlayout_qbase_minimum_size(void* self) {
@@ -181,8 +181,8 @@ QSize* q_boxlayout_maximum_size(void* self) {
     return QBoxLayout_MaximumSize((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_maximum_size(void* self, QSize* (*slot)()) {
-    QBoxLayout_OnMaximumSize((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_maximum_size(void* self, QSize* (*callback)()) {
+    QBoxLayout_OnMaximumSize((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_boxlayout_qbase_maximum_size(void* self) {
@@ -193,8 +193,8 @@ bool q_boxlayout_has_height_for_width(void* self) {
     return QBoxLayout_HasHeightForWidth((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_has_height_for_width(void* self, bool (*slot)()) {
-    QBoxLayout_OnHasHeightForWidth((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_has_height_for_width(void* self, bool (*callback)()) {
+    QBoxLayout_OnHasHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_qbase_has_height_for_width(void* self) {
@@ -205,8 +205,8 @@ int32_t q_boxlayout_height_for_width(void* self, int param1) {
     return QBoxLayout_HeightForWidth((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QBoxLayout_OnHeightForWidth((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QBoxLayout_OnHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_height_for_width(void* self, int param1) {
@@ -217,8 +217,8 @@ int32_t q_boxlayout_minimum_height_for_width(void* self, int param1) {
     return QBoxLayout_MinimumHeightForWidth((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_minimum_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QBoxLayout_OnMinimumHeightForWidth((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QBoxLayout_OnMinimumHeightForWidth((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_minimum_height_for_width(void* self, int param1) {
@@ -229,8 +229,8 @@ int64_t q_boxlayout_expanding_directions(void* self) {
     return QBoxLayout_ExpandingDirections((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_expanding_directions(void* self, int64_t (*slot)()) {
-    QBoxLayout_OnExpandingDirections((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+    QBoxLayout_OnExpandingDirections((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_boxlayout_qbase_expanding_directions(void* self) {
@@ -241,8 +241,8 @@ void q_boxlayout_invalidate(void* self) {
     QBoxLayout_Invalidate((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_invalidate(void* self, void (*slot)()) {
-    QBoxLayout_OnInvalidate((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_invalidate(void* self, void (*callback)()) {
+    QBoxLayout_OnInvalidate((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_qbase_invalidate(void* self) {
@@ -253,8 +253,8 @@ QLayoutItem* q_boxlayout_item_at(void* self, int param1) {
     return QBoxLayout_ItemAt((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_item_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QBoxLayout_OnItemAt((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QBoxLayout_OnItemAt((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_boxlayout_qbase_item_at(void* self, int param1) {
@@ -265,8 +265,8 @@ QLayoutItem* q_boxlayout_take_at(void* self, int param1) {
     return QBoxLayout_TakeAt((QBoxLayout*)self, param1);
 }
 
-void q_boxlayout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QBoxLayout_OnTakeAt((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QBoxLayout_OnTakeAt((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_boxlayout_qbase_take_at(void* self, int param1) {
@@ -277,8 +277,8 @@ int32_t q_boxlayout_count(void* self) {
     return QBoxLayout_Count((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_count(void* self, int32_t (*slot)()) {
-    QBoxLayout_OnCount((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_count(void* self, int32_t (*callback)()) {
+    QBoxLayout_OnCount((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_count(void* self) {
@@ -289,8 +289,8 @@ void q_boxlayout_set_geometry(void* self, void* geometry) {
     QBoxLayout_SetGeometry((QBoxLayout*)self, (QRect*)geometry);
 }
 
-void q_boxlayout_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnSetGeometry((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnSetGeometry((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_qbase_set_geometry(void* self, void* geometry) {
@@ -415,8 +415,8 @@ int32_t q_boxlayout_index_of2(void* self, void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_boxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*)) {
-    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
+    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_qbase_index_of2(void* self, void* param1) {
@@ -559,12 +559,16 @@ const char** q_boxlayout_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_boxlayout_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -582,8 +586,8 @@ void q_boxlayout_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_boxlayout_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_boxlayout_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_boxlayout_parent(void* self) {
@@ -618,8 +622,8 @@ void q_boxlayout_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_boxlayout_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_boxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int64_t q_boxlayout_alignment(void* self) {
@@ -634,8 +638,8 @@ QRect* q_boxlayout_qbase_geometry(void* self) {
     return QBoxLayout_QBaseGeometry((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_geometry(void* self, QRect* (*slot)()) {
-    QBoxLayout_OnGeometry((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_geometry(void* self, QRect* (*callback)()) {
+    QBoxLayout_OnGeometry((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_index_of(void* self, void* param1) {
@@ -646,8 +650,8 @@ int32_t q_boxlayout_qbase_index_of(void* self, void* param1) {
     return QBoxLayout_QBaseIndexOf((QBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_boxlayout_on_index_of(void* self, int32_t (*slot)(void*, void*)) {
-    QBoxLayout_OnIndexOf((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
+    QBoxLayout_OnIndexOf((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_is_empty(void* self) {
@@ -658,8 +662,8 @@ bool q_boxlayout_qbase_is_empty(void* self) {
     return QBoxLayout_QBaseIsEmpty((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_is_empty(void* self, bool (*slot)()) {
-    QBoxLayout_OnIsEmpty((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_is_empty(void* self, bool (*callback)()) {
+    QBoxLayout_OnIsEmpty((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_boxlayout_control_types(void* self) {
@@ -670,8 +674,8 @@ int64_t q_boxlayout_qbase_control_types(void* self) {
     return QBoxLayout_QBaseControlTypes((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_control_types(void* self, int64_t (*slot)()) {
-    QBoxLayout_OnControlTypes((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_control_types(void* self, int64_t (*callback)()) {
+    QBoxLayout_OnControlTypes((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_boxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
@@ -682,8 +686,8 @@ QLayoutItem* q_boxlayout_qbase_replace_widget(void* self, void* from, void* to, 
     return QBoxLayout_QBaseReplaceWidget((QBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*slot)(void*, void*, void*, int64_t)) {
-    QBoxLayout_OnReplaceWidget((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+    QBoxLayout_OnReplaceWidget((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayout* q_boxlayout_layout(void* self) {
@@ -694,8 +698,8 @@ QLayout* q_boxlayout_qbase_layout(void* self) {
     return QBoxLayout_QBaseLayout((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_layout(void* self, QLayout* (*slot)()) {
-    QBoxLayout_OnLayout((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_layout(void* self, QLayout* (*callback)()) {
+    QBoxLayout_OnLayout((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_child_event(void* self, void* e) {
@@ -706,8 +710,8 @@ void q_boxlayout_qbase_child_event(void* self, void* e) {
     QBoxLayout_QBaseChildEvent((QBoxLayout*)self, (QChildEvent*)e);
 }
 
-void q_boxlayout_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnChildEvent((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnChildEvent((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_event(void* self, void* event) {
@@ -718,8 +722,8 @@ bool q_boxlayout_qbase_event(void* self, void* event) {
     return QBoxLayout_QBaseEvent((QBoxLayout*)self, (QEvent*)event);
 }
 
-void q_boxlayout_on_event(void* self, bool (*slot)(void*, void*)) {
-    QBoxLayout_OnEvent((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_event(void* self, bool (*callback)(void*, void*)) {
+    QBoxLayout_OnEvent((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_event_filter(void* self, void* watched, void* event) {
@@ -730,8 +734,8 @@ bool q_boxlayout_qbase_event_filter(void* self, void* watched, void* event) {
     return QBoxLayout_QBaseEventFilter((QBoxLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_boxlayout_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QBoxLayout_OnEventFilter((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QBoxLayout_OnEventFilter((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_timer_event(void* self, void* event) {
@@ -742,8 +746,8 @@ void q_boxlayout_qbase_timer_event(void* self, void* event) {
     QBoxLayout_QBaseTimerEvent((QBoxLayout*)self, (QTimerEvent*)event);
 }
 
-void q_boxlayout_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnTimerEvent((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnTimerEvent((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_custom_event(void* self, void* event) {
@@ -754,8 +758,8 @@ void q_boxlayout_qbase_custom_event(void* self, void* event) {
     QBoxLayout_QBaseCustomEvent((QBoxLayout*)self, (QEvent*)event);
 }
 
-void q_boxlayout_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnCustomEvent((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnCustomEvent((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_connect_notify(void* self, void* signal) {
@@ -766,8 +770,8 @@ void q_boxlayout_qbase_connect_notify(void* self, void* signal) {
     QBoxLayout_QBaseConnectNotify((QBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_boxlayout_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnConnectNotify((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnConnectNotify((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_disconnect_notify(void* self, void* signal) {
@@ -778,8 +782,8 @@ void q_boxlayout_qbase_disconnect_notify(void* self, void* signal) {
     QBoxLayout_QBaseDisconnectNotify((QBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_boxlayout_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnDisconnectNotify((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnDisconnectNotify((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QWidget* q_boxlayout_widget(void* self) {
@@ -790,8 +794,8 @@ QWidget* q_boxlayout_qbase_widget(void* self) {
     return QBoxLayout_QBaseWidget((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_widget(void* self, QWidget* (*slot)()) {
-    QBoxLayout_OnWidget((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_widget(void* self, QWidget* (*callback)()) {
+    QBoxLayout_OnWidget((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_boxlayout_spacer_item(void* self) {
@@ -802,8 +806,8 @@ QSpacerItem* q_boxlayout_qbase_spacer_item(void* self) {
     return QBoxLayout_QBaseSpacerItem((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_spacer_item(void* self, QSpacerItem* (*slot)()) {
-    QBoxLayout_OnSpacerItem((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
+    QBoxLayout_OnSpacerItem((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_widget_event(void* self, void* param1) {
@@ -814,8 +818,8 @@ void q_boxlayout_qbase_widget_event(void* self, void* param1) {
     QBoxLayout_QBaseWidgetEvent((QBoxLayout*)self, (QEvent*)param1);
 }
 
-void q_boxlayout_on_widget_event(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnWidgetEvent((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnWidgetEvent((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_add_child_layout(void* self, void* l) {
@@ -826,8 +830,8 @@ void q_boxlayout_qbase_add_child_layout(void* self, void* l) {
     QBoxLayout_QBaseAddChildLayout((QBoxLayout*)self, (QLayout*)l);
 }
 
-void q_boxlayout_on_add_child_layout(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnAddChildLayout((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnAddChildLayout((QBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_add_child_widget(void* self, void* w) {
@@ -838,8 +842,8 @@ void q_boxlayout_qbase_add_child_widget(void* self, void* w) {
     QBoxLayout_QBaseAddChildWidget((QBoxLayout*)self, (QWidget*)w);
 }
 
-void q_boxlayout_on_add_child_widget(void* self, void (*slot)(void*, void*)) {
-    QBoxLayout_OnAddChildWidget((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
+    QBoxLayout_OnAddChildWidget((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_adopt_layout(void* self, void* layout) {
@@ -850,8 +854,8 @@ bool q_boxlayout_qbase_adopt_layout(void* self, void* layout) {
     return QBoxLayout_QBaseAdoptLayout((QBoxLayout*)self, (QLayout*)layout);
 }
 
-void q_boxlayout_on_adopt_layout(void* self, bool (*slot)(void*, void*)) {
-    QBoxLayout_OnAdoptLayout((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
+    QBoxLayout_OnAdoptLayout((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_boxlayout_alignment_rect(void* self, void* param1) {
@@ -862,8 +866,8 @@ QRect* q_boxlayout_qbase_alignment_rect(void* self, void* param1) {
     return QBoxLayout_QBaseAlignmentRect((QBoxLayout*)self, (QRect*)param1);
 }
 
-void q_boxlayout_on_alignment_rect(void* self, QRect* (*slot)(void*, void*)) {
-    QBoxLayout_OnAlignmentRect((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
+    QBoxLayout_OnAlignmentRect((QBoxLayout*)self, (intptr_t)callback);
 }
 
 QObject* q_boxlayout_sender(void* self) {
@@ -874,8 +878,8 @@ QObject* q_boxlayout_qbase_sender(void* self) {
     return QBoxLayout_QBaseSender((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_sender(void* self, QObject* (*slot)()) {
-    QBoxLayout_OnSender((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_sender(void* self, QObject* (*callback)()) {
+    QBoxLayout_OnSender((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_sender_signal_index(void* self) {
@@ -886,8 +890,8 @@ int32_t q_boxlayout_qbase_sender_signal_index(void* self) {
     return QBoxLayout_QBaseSenderSignalIndex((QBoxLayout*)self);
 }
 
-void q_boxlayout_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QBoxLayout_OnSenderSignalIndex((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QBoxLayout_OnSenderSignalIndex((QBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_boxlayout_receivers(void* self, const char* signal) {
@@ -898,8 +902,8 @@ int32_t q_boxlayout_qbase_receivers(void* self, const char* signal) {
     return QBoxLayout_QBaseReceivers((QBoxLayout*)self, signal);
 }
 
-void q_boxlayout_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QBoxLayout_OnReceivers((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QBoxLayout_OnReceivers((QBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_boxlayout_is_signal_connected(void* self, void* signal) {
@@ -910,12 +914,12 @@ bool q_boxlayout_qbase_is_signal_connected(void* self, void* signal) {
     return QBoxLayout_QBaseIsSignalConnected((QBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_boxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QBoxLayout_OnIsSignalConnected((QBoxLayout*)self, (intptr_t)slot);
+void q_boxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QBoxLayout_OnIsSignalConnected((QBoxLayout*)self, (intptr_t)callback);
 }
 
-void q_boxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_boxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_boxlayout_delete(void* self) {
@@ -942,8 +946,8 @@ int32_t q_hboxlayout_metacall(void* self, int64_t param1, int param2, void* para
     return QHBoxLayout_Metacall((QHBoxLayout*)self, param1, param2, param3);
 }
 
-void q_hboxlayout_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QHBoxLayout_OnMetacall((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QHBoxLayout_OnMetacall((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -1147,8 +1151,8 @@ int32_t q_hboxlayout_index_of2(void* self, void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_hboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*)) {
-    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
+    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_qbase_index_of2(void* self, void* param1) {
@@ -1291,12 +1295,16 @@ const char** q_hboxlayout_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_hboxlayout_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -1314,8 +1322,8 @@ void q_hboxlayout_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_hboxlayout_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_hboxlayout_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_hboxlayout_parent(void* self) {
@@ -1350,8 +1358,8 @@ void q_hboxlayout_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_hboxlayout_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_hboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int64_t q_hboxlayout_alignment(void* self) {
@@ -1366,8 +1374,8 @@ void q_hboxlayout_qbase_add_item(void* self, void* param1) {
     QHBoxLayout_QBaseAddItem((QHBoxLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_hboxlayout_on_add_item(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnAddItem((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_add_item(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnAddItem((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_spacing(void* self) {
@@ -1378,8 +1386,8 @@ int32_t q_hboxlayout_qbase_spacing(void* self) {
     return QHBoxLayout_QBaseSpacing((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_spacing(void* self, int32_t (*slot)()) {
-    QHBoxLayout_OnSpacing((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_spacing(void* self, int32_t (*callback)()) {
+    QHBoxLayout_OnSpacing((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_set_spacing(void* self, int spacing) {
@@ -1390,8 +1398,8 @@ void q_hboxlayout_qbase_set_spacing(void* self, int spacing) {
     QHBoxLayout_QBaseSetSpacing((QHBoxLayout*)self, spacing);
 }
 
-void q_hboxlayout_on_set_spacing(void* self, void (*slot)(void*, int)) {
-    QHBoxLayout_OnSetSpacing((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_set_spacing(void* self, void (*callback)(void*, int)) {
+    QHBoxLayout_OnSetSpacing((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_hboxlayout_size_hint(void* self) {
@@ -1402,8 +1410,8 @@ QSize* q_hboxlayout_qbase_size_hint(void* self) {
     return QHBoxLayout_QBaseSizeHint((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_size_hint(void* self, QSize* (*slot)()) {
-    QHBoxLayout_OnSizeHint((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_size_hint(void* self, QSize* (*callback)()) {
+    QHBoxLayout_OnSizeHint((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_hboxlayout_minimum_size(void* self) {
@@ -1414,8 +1422,8 @@ QSize* q_hboxlayout_qbase_minimum_size(void* self) {
     return QHBoxLayout_QBaseMinimumSize((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_minimum_size(void* self, QSize* (*slot)()) {
-    QHBoxLayout_OnMinimumSize((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_minimum_size(void* self, QSize* (*callback)()) {
+    QHBoxLayout_OnMinimumSize((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_hboxlayout_maximum_size(void* self) {
@@ -1426,8 +1434,8 @@ QSize* q_hboxlayout_qbase_maximum_size(void* self) {
     return QHBoxLayout_QBaseMaximumSize((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_maximum_size(void* self, QSize* (*slot)()) {
-    QHBoxLayout_OnMaximumSize((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_maximum_size(void* self, QSize* (*callback)()) {
+    QHBoxLayout_OnMaximumSize((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_has_height_for_width(void* self) {
@@ -1438,8 +1446,8 @@ bool q_hboxlayout_qbase_has_height_for_width(void* self) {
     return QHBoxLayout_QBaseHasHeightForWidth((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_has_height_for_width(void* self, bool (*slot)()) {
-    QHBoxLayout_OnHasHeightForWidth((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_has_height_for_width(void* self, bool (*callback)()) {
+    QHBoxLayout_OnHasHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_height_for_width(void* self, int param1) {
@@ -1450,8 +1458,8 @@ int32_t q_hboxlayout_qbase_height_for_width(void* self, int param1) {
     return QHBoxLayout_QBaseHeightForWidth((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QHBoxLayout_OnHeightForWidth((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QHBoxLayout_OnHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_minimum_height_for_width(void* self, int param1) {
@@ -1462,8 +1470,8 @@ int32_t q_hboxlayout_qbase_minimum_height_for_width(void* self, int param1) {
     return QHBoxLayout_QBaseMinimumHeightForWidth((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QHBoxLayout_OnMinimumHeightForWidth((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QHBoxLayout_OnMinimumHeightForWidth((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_hboxlayout_expanding_directions(void* self) {
@@ -1474,8 +1482,8 @@ int64_t q_hboxlayout_qbase_expanding_directions(void* self) {
     return QHBoxLayout_QBaseExpandingDirections((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_expanding_directions(void* self, int64_t (*slot)()) {
-    QHBoxLayout_OnExpandingDirections((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+    QHBoxLayout_OnExpandingDirections((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_invalidate(void* self) {
@@ -1486,8 +1494,8 @@ void q_hboxlayout_qbase_invalidate(void* self) {
     QHBoxLayout_QBaseInvalidate((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_invalidate(void* self, void (*slot)()) {
-    QHBoxLayout_OnInvalidate((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_invalidate(void* self, void (*callback)()) {
+    QHBoxLayout_OnInvalidate((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_hboxlayout_item_at(void* self, int param1) {
@@ -1498,8 +1506,8 @@ QLayoutItem* q_hboxlayout_qbase_item_at(void* self, int param1) {
     return QHBoxLayout_QBaseItemAt((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_item_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QHBoxLayout_OnItemAt((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QHBoxLayout_OnItemAt((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_hboxlayout_take_at(void* self, int param1) {
@@ -1510,8 +1518,8 @@ QLayoutItem* q_hboxlayout_qbase_take_at(void* self, int param1) {
     return QHBoxLayout_QBaseTakeAt((QHBoxLayout*)self, param1);
 }
 
-void q_hboxlayout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QHBoxLayout_OnTakeAt((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QHBoxLayout_OnTakeAt((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_count(void* self) {
@@ -1522,8 +1530,8 @@ int32_t q_hboxlayout_qbase_count(void* self) {
     return QHBoxLayout_QBaseCount((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_count(void* self, int32_t (*slot)()) {
-    QHBoxLayout_OnCount((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_count(void* self, int32_t (*callback)()) {
+    QHBoxLayout_OnCount((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_set_geometry(void* self, void* geometry) {
@@ -1534,8 +1542,8 @@ void q_hboxlayout_qbase_set_geometry(void* self, void* geometry) {
     QHBoxLayout_QBaseSetGeometry((QHBoxLayout*)self, (QRect*)geometry);
 }
 
-void q_hboxlayout_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnSetGeometry((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnSetGeometry((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_hboxlayout_geometry(void* self) {
@@ -1546,8 +1554,8 @@ QRect* q_hboxlayout_qbase_geometry(void* self) {
     return QHBoxLayout_QBaseGeometry((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_geometry(void* self, QRect* (*slot)()) {
-    QHBoxLayout_OnGeometry((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_geometry(void* self, QRect* (*callback)()) {
+    QHBoxLayout_OnGeometry((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_index_of(void* self, void* param1) {
@@ -1558,8 +1566,8 @@ int32_t q_hboxlayout_qbase_index_of(void* self, void* param1) {
     return QHBoxLayout_QBaseIndexOf((QHBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_hboxlayout_on_index_of(void* self, int32_t (*slot)(void*, void*)) {
-    QHBoxLayout_OnIndexOf((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
+    QHBoxLayout_OnIndexOf((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_is_empty(void* self) {
@@ -1570,8 +1578,8 @@ bool q_hboxlayout_qbase_is_empty(void* self) {
     return QHBoxLayout_QBaseIsEmpty((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_is_empty(void* self, bool (*slot)()) {
-    QHBoxLayout_OnIsEmpty((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_is_empty(void* self, bool (*callback)()) {
+    QHBoxLayout_OnIsEmpty((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_hboxlayout_control_types(void* self) {
@@ -1582,8 +1590,8 @@ int64_t q_hboxlayout_qbase_control_types(void* self) {
     return QHBoxLayout_QBaseControlTypes((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_control_types(void* self, int64_t (*slot)()) {
-    QHBoxLayout_OnControlTypes((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_control_types(void* self, int64_t (*callback)()) {
+    QHBoxLayout_OnControlTypes((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_hboxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
@@ -1594,8 +1602,8 @@ QLayoutItem* q_hboxlayout_qbase_replace_widget(void* self, void* from, void* to,
     return QHBoxLayout_QBaseReplaceWidget((QHBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*slot)(void*, void*, void*, int64_t)) {
-    QHBoxLayout_OnReplaceWidget((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+    QHBoxLayout_OnReplaceWidget((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayout* q_hboxlayout_layout(void* self) {
@@ -1606,8 +1614,8 @@ QLayout* q_hboxlayout_qbase_layout(void* self) {
     return QHBoxLayout_QBaseLayout((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_layout(void* self, QLayout* (*slot)()) {
-    QHBoxLayout_OnLayout((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_layout(void* self, QLayout* (*callback)()) {
+    QHBoxLayout_OnLayout((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_child_event(void* self, void* e) {
@@ -1618,8 +1626,8 @@ void q_hboxlayout_qbase_child_event(void* self, void* e) {
     QHBoxLayout_QBaseChildEvent((QHBoxLayout*)self, (QChildEvent*)e);
 }
 
-void q_hboxlayout_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnChildEvent((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnChildEvent((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_event(void* self, void* event) {
@@ -1630,8 +1638,8 @@ bool q_hboxlayout_qbase_event(void* self, void* event) {
     return QHBoxLayout_QBaseEvent((QHBoxLayout*)self, (QEvent*)event);
 }
 
-void q_hboxlayout_on_event(void* self, bool (*slot)(void*, void*)) {
-    QHBoxLayout_OnEvent((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_event(void* self, bool (*callback)(void*, void*)) {
+    QHBoxLayout_OnEvent((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_event_filter(void* self, void* watched, void* event) {
@@ -1642,8 +1650,8 @@ bool q_hboxlayout_qbase_event_filter(void* self, void* watched, void* event) {
     return QHBoxLayout_QBaseEventFilter((QHBoxLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_hboxlayout_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QHBoxLayout_OnEventFilter((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QHBoxLayout_OnEventFilter((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_timer_event(void* self, void* event) {
@@ -1654,8 +1662,8 @@ void q_hboxlayout_qbase_timer_event(void* self, void* event) {
     QHBoxLayout_QBaseTimerEvent((QHBoxLayout*)self, (QTimerEvent*)event);
 }
 
-void q_hboxlayout_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnTimerEvent((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnTimerEvent((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_custom_event(void* self, void* event) {
@@ -1666,8 +1674,8 @@ void q_hboxlayout_qbase_custom_event(void* self, void* event) {
     QHBoxLayout_QBaseCustomEvent((QHBoxLayout*)self, (QEvent*)event);
 }
 
-void q_hboxlayout_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnCustomEvent((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnCustomEvent((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_connect_notify(void* self, void* signal) {
@@ -1678,8 +1686,8 @@ void q_hboxlayout_qbase_connect_notify(void* self, void* signal) {
     QHBoxLayout_QBaseConnectNotify((QHBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_hboxlayout_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnConnectNotify((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnConnectNotify((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_disconnect_notify(void* self, void* signal) {
@@ -1690,8 +1698,8 @@ void q_hboxlayout_qbase_disconnect_notify(void* self, void* signal) {
     QHBoxLayout_QBaseDisconnectNotify((QHBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_hboxlayout_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnDisconnectNotify((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnDisconnectNotify((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QWidget* q_hboxlayout_widget(void* self) {
@@ -1702,8 +1710,8 @@ QWidget* q_hboxlayout_qbase_widget(void* self) {
     return QHBoxLayout_QBaseWidget((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_widget(void* self, QWidget* (*slot)()) {
-    QHBoxLayout_OnWidget((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_widget(void* self, QWidget* (*callback)()) {
+    QHBoxLayout_OnWidget((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_hboxlayout_spacer_item(void* self) {
@@ -1714,8 +1722,8 @@ QSpacerItem* q_hboxlayout_qbase_spacer_item(void* self) {
     return QHBoxLayout_QBaseSpacerItem((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_spacer_item(void* self, QSpacerItem* (*slot)()) {
-    QHBoxLayout_OnSpacerItem((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
+    QHBoxLayout_OnSpacerItem((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_widget_event(void* self, void* param1) {
@@ -1726,8 +1734,8 @@ void q_hboxlayout_qbase_widget_event(void* self, void* param1) {
     QHBoxLayout_QBaseWidgetEvent((QHBoxLayout*)self, (QEvent*)param1);
 }
 
-void q_hboxlayout_on_widget_event(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnWidgetEvent((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnWidgetEvent((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_add_child_layout(void* self, void* l) {
@@ -1738,8 +1746,8 @@ void q_hboxlayout_qbase_add_child_layout(void* self, void* l) {
     QHBoxLayout_QBaseAddChildLayout((QHBoxLayout*)self, (QLayout*)l);
 }
 
-void q_hboxlayout_on_add_child_layout(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnAddChildLayout((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnAddChildLayout((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_add_child_widget(void* self, void* w) {
@@ -1750,8 +1758,8 @@ void q_hboxlayout_qbase_add_child_widget(void* self, void* w) {
     QHBoxLayout_QBaseAddChildWidget((QHBoxLayout*)self, (QWidget*)w);
 }
 
-void q_hboxlayout_on_add_child_widget(void* self, void (*slot)(void*, void*)) {
-    QHBoxLayout_OnAddChildWidget((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
+    QHBoxLayout_OnAddChildWidget((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_adopt_layout(void* self, void* layout) {
@@ -1762,8 +1770,8 @@ bool q_hboxlayout_qbase_adopt_layout(void* self, void* layout) {
     return QHBoxLayout_QBaseAdoptLayout((QHBoxLayout*)self, (QLayout*)layout);
 }
 
-void q_hboxlayout_on_adopt_layout(void* self, bool (*slot)(void*, void*)) {
-    QHBoxLayout_OnAdoptLayout((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
+    QHBoxLayout_OnAdoptLayout((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_hboxlayout_alignment_rect(void* self, void* param1) {
@@ -1774,8 +1782,8 @@ QRect* q_hboxlayout_qbase_alignment_rect(void* self, void* param1) {
     return QHBoxLayout_QBaseAlignmentRect((QHBoxLayout*)self, (QRect*)param1);
 }
 
-void q_hboxlayout_on_alignment_rect(void* self, QRect* (*slot)(void*, void*)) {
-    QHBoxLayout_OnAlignmentRect((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
+    QHBoxLayout_OnAlignmentRect((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 QObject* q_hboxlayout_sender(void* self) {
@@ -1786,8 +1794,8 @@ QObject* q_hboxlayout_qbase_sender(void* self) {
     return QHBoxLayout_QBaseSender((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_sender(void* self, QObject* (*slot)()) {
-    QHBoxLayout_OnSender((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_sender(void* self, QObject* (*callback)()) {
+    QHBoxLayout_OnSender((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_sender_signal_index(void* self) {
@@ -1798,8 +1806,8 @@ int32_t q_hboxlayout_qbase_sender_signal_index(void* self) {
     return QHBoxLayout_QBaseSenderSignalIndex((QHBoxLayout*)self);
 }
 
-void q_hboxlayout_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QHBoxLayout_OnSenderSignalIndex((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QHBoxLayout_OnSenderSignalIndex((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_hboxlayout_receivers(void* self, const char* signal) {
@@ -1810,8 +1818,8 @@ int32_t q_hboxlayout_qbase_receivers(void* self, const char* signal) {
     return QHBoxLayout_QBaseReceivers((QHBoxLayout*)self, signal);
 }
 
-void q_hboxlayout_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QHBoxLayout_OnReceivers((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QHBoxLayout_OnReceivers((QHBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_hboxlayout_is_signal_connected(void* self, void* signal) {
@@ -1822,12 +1830,12 @@ bool q_hboxlayout_qbase_is_signal_connected(void* self, void* signal) {
     return QHBoxLayout_QBaseIsSignalConnected((QHBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_hboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QHBoxLayout_OnIsSignalConnected((QHBoxLayout*)self, (intptr_t)slot);
+void q_hboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QHBoxLayout_OnIsSignalConnected((QHBoxLayout*)self, (intptr_t)callback);
 }
 
-void q_hboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_hboxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_hboxlayout_delete(void* self) {
@@ -1854,8 +1862,8 @@ int32_t q_vboxlayout_metacall(void* self, int64_t param1, int param2, void* para
     return QVBoxLayout_Metacall((QVBoxLayout*)self, param1, param2, param3);
 }
 
-void q_vboxlayout_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*)) {
-    QVBoxLayout_OnMetacall((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+    QVBoxLayout_OnMetacall((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
@@ -2059,8 +2067,8 @@ int32_t q_vboxlayout_index_of2(void* self, void* param1) {
     return QLayout_IndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_vboxlayout_on_index_of2(void* self, int32_t (*slot)(void*, void*)) {
-    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
+    QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_qbase_index_of2(void* self, void* param1) {
@@ -2203,12 +2211,16 @@ const char** q_vboxlayout_dynamic_property_names(void* self) {
     libqt_list _arr = QObject_DynamicPropertyNames((QObject*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        _ret[_i] = qstring_to_char(_qstr[_i]);
+    if (_ret == NULL) {
+        fprintf(stderr, "Memory allocation failed in q_vboxlayout_dynamic_property_names");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
     }
     _ret[_arr.len] = NULL;
-    for (size_t _i = 0; _i < _arr.len; ++_i) {
-        libqt_string_free((libqt_string*)&_qstr[_i]);
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
     }
     libqt_free(_arr.data.ptr);
     return _ret;
@@ -2226,8 +2238,8 @@ void q_vboxlayout_destroyed(void* self) {
     QObject_Destroyed((QObject*)self);
 }
 
-void q_vboxlayout_on_destroyed(void* self, void (*slot)(void*)) {
-    QObject_Connect_Destroyed((QObject*)self, (intptr_t)slot);
+void q_vboxlayout_on_destroyed(void* self, void (*callback)(void*)) {
+    QObject_Connect_Destroyed((QObject*)self, (intptr_t)callback);
 }
 
 QObject* q_vboxlayout_parent(void* self) {
@@ -2262,8 +2274,8 @@ void q_vboxlayout_destroyed1(void* self, void* param1) {
     QObject_Destroyed1((QObject*)self, (QObject*)param1);
 }
 
-void q_vboxlayout_on_destroyed1(void* self, void (*slot)(void*, void*)) {
-    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)slot);
+void q_vboxlayout_on_destroyed1(void* self, void (*callback)(void*, void*)) {
+    QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
 int64_t q_vboxlayout_alignment(void* self) {
@@ -2278,8 +2290,8 @@ void q_vboxlayout_qbase_add_item(void* self, void* param1) {
     QVBoxLayout_QBaseAddItem((QVBoxLayout*)self, (QLayoutItem*)param1);
 }
 
-void q_vboxlayout_on_add_item(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnAddItem((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_add_item(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnAddItem((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_spacing(void* self) {
@@ -2290,8 +2302,8 @@ int32_t q_vboxlayout_qbase_spacing(void* self) {
     return QVBoxLayout_QBaseSpacing((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_spacing(void* self, int32_t (*slot)()) {
-    QVBoxLayout_OnSpacing((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_spacing(void* self, int32_t (*callback)()) {
+    QVBoxLayout_OnSpacing((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_set_spacing(void* self, int spacing) {
@@ -2302,8 +2314,8 @@ void q_vboxlayout_qbase_set_spacing(void* self, int spacing) {
     QVBoxLayout_QBaseSetSpacing((QVBoxLayout*)self, spacing);
 }
 
-void q_vboxlayout_on_set_spacing(void* self, void (*slot)(void*, int)) {
-    QVBoxLayout_OnSetSpacing((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_set_spacing(void* self, void (*callback)(void*, int)) {
+    QVBoxLayout_OnSetSpacing((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_vboxlayout_size_hint(void* self) {
@@ -2314,8 +2326,8 @@ QSize* q_vboxlayout_qbase_size_hint(void* self) {
     return QVBoxLayout_QBaseSizeHint((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_size_hint(void* self, QSize* (*slot)()) {
-    QVBoxLayout_OnSizeHint((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_size_hint(void* self, QSize* (*callback)()) {
+    QVBoxLayout_OnSizeHint((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_vboxlayout_minimum_size(void* self) {
@@ -2326,8 +2338,8 @@ QSize* q_vboxlayout_qbase_minimum_size(void* self) {
     return QVBoxLayout_QBaseMinimumSize((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_minimum_size(void* self, QSize* (*slot)()) {
-    QVBoxLayout_OnMinimumSize((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_minimum_size(void* self, QSize* (*callback)()) {
+    QVBoxLayout_OnMinimumSize((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSize* q_vboxlayout_maximum_size(void* self) {
@@ -2338,8 +2350,8 @@ QSize* q_vboxlayout_qbase_maximum_size(void* self) {
     return QVBoxLayout_QBaseMaximumSize((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_maximum_size(void* self, QSize* (*slot)()) {
-    QVBoxLayout_OnMaximumSize((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_maximum_size(void* self, QSize* (*callback)()) {
+    QVBoxLayout_OnMaximumSize((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_has_height_for_width(void* self) {
@@ -2350,8 +2362,8 @@ bool q_vboxlayout_qbase_has_height_for_width(void* self) {
     return QVBoxLayout_QBaseHasHeightForWidth((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_has_height_for_width(void* self, bool (*slot)()) {
-    QVBoxLayout_OnHasHeightForWidth((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_has_height_for_width(void* self, bool (*callback)()) {
+    QVBoxLayout_OnHasHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_height_for_width(void* self, int param1) {
@@ -2362,8 +2374,8 @@ int32_t q_vboxlayout_qbase_height_for_width(void* self, int param1) {
     return QVBoxLayout_QBaseHeightForWidth((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QVBoxLayout_OnHeightForWidth((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QVBoxLayout_OnHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_minimum_height_for_width(void* self, int param1) {
@@ -2374,8 +2386,8 @@ int32_t q_vboxlayout_qbase_minimum_height_for_width(void* self, int param1) {
     return QVBoxLayout_QBaseMinimumHeightForWidth((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*slot)(void*, int)) {
-    QVBoxLayout_OnMinimumHeightForWidth((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
+    QVBoxLayout_OnMinimumHeightForWidth((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_vboxlayout_expanding_directions(void* self) {
@@ -2386,8 +2398,8 @@ int64_t q_vboxlayout_qbase_expanding_directions(void* self) {
     return QVBoxLayout_QBaseExpandingDirections((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_expanding_directions(void* self, int64_t (*slot)()) {
-    QVBoxLayout_OnExpandingDirections((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_expanding_directions(void* self, int64_t (*callback)()) {
+    QVBoxLayout_OnExpandingDirections((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_invalidate(void* self) {
@@ -2398,8 +2410,8 @@ void q_vboxlayout_qbase_invalidate(void* self) {
     QVBoxLayout_QBaseInvalidate((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_invalidate(void* self, void (*slot)()) {
-    QVBoxLayout_OnInvalidate((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_invalidate(void* self, void (*callback)()) {
+    QVBoxLayout_OnInvalidate((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_vboxlayout_item_at(void* self, int param1) {
@@ -2410,8 +2422,8 @@ QLayoutItem* q_vboxlayout_qbase_item_at(void* self, int param1) {
     return QVBoxLayout_QBaseItemAt((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_item_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QVBoxLayout_OnItemAt((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QVBoxLayout_OnItemAt((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_vboxlayout_take_at(void* self, int param1) {
@@ -2422,8 +2434,8 @@ QLayoutItem* q_vboxlayout_qbase_take_at(void* self, int param1) {
     return QVBoxLayout_QBaseTakeAt((QVBoxLayout*)self, param1);
 }
 
-void q_vboxlayout_on_take_at(void* self, QLayoutItem* (*slot)(void*, int)) {
-    QVBoxLayout_OnTakeAt((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)) {
+    QVBoxLayout_OnTakeAt((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_count(void* self) {
@@ -2434,8 +2446,8 @@ int32_t q_vboxlayout_qbase_count(void* self) {
     return QVBoxLayout_QBaseCount((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_count(void* self, int32_t (*slot)()) {
-    QVBoxLayout_OnCount((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_count(void* self, int32_t (*callback)()) {
+    QVBoxLayout_OnCount((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_set_geometry(void* self, void* geometry) {
@@ -2446,8 +2458,8 @@ void q_vboxlayout_qbase_set_geometry(void* self, void* geometry) {
     QVBoxLayout_QBaseSetGeometry((QVBoxLayout*)self, (QRect*)geometry);
 }
 
-void q_vboxlayout_on_set_geometry(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnSetGeometry((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnSetGeometry((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_vboxlayout_geometry(void* self) {
@@ -2458,8 +2470,8 @@ QRect* q_vboxlayout_qbase_geometry(void* self) {
     return QVBoxLayout_QBaseGeometry((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_geometry(void* self, QRect* (*slot)()) {
-    QVBoxLayout_OnGeometry((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_geometry(void* self, QRect* (*callback)()) {
+    QVBoxLayout_OnGeometry((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_index_of(void* self, void* param1) {
@@ -2470,8 +2482,8 @@ int32_t q_vboxlayout_qbase_index_of(void* self, void* param1) {
     return QVBoxLayout_QBaseIndexOf((QVBoxLayout*)self, (QWidget*)param1);
 }
 
-void q_vboxlayout_on_index_of(void* self, int32_t (*slot)(void*, void*)) {
-    QVBoxLayout_OnIndexOf((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
+    QVBoxLayout_OnIndexOf((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_is_empty(void* self) {
@@ -2482,8 +2494,8 @@ bool q_vboxlayout_qbase_is_empty(void* self) {
     return QVBoxLayout_QBaseIsEmpty((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_is_empty(void* self, bool (*slot)()) {
-    QVBoxLayout_OnIsEmpty((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_is_empty(void* self, bool (*callback)()) {
+    QVBoxLayout_OnIsEmpty((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int64_t q_vboxlayout_control_types(void* self) {
@@ -2494,8 +2506,8 @@ int64_t q_vboxlayout_qbase_control_types(void* self) {
     return QVBoxLayout_QBaseControlTypes((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_control_types(void* self, int64_t (*slot)()) {
-    QVBoxLayout_OnControlTypes((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_control_types(void* self, int64_t (*callback)()) {
+    QVBoxLayout_OnControlTypes((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayoutItem* q_vboxlayout_replace_widget(void* self, void* from, void* to, int64_t options) {
@@ -2506,8 +2518,8 @@ QLayoutItem* q_vboxlayout_qbase_replace_widget(void* self, void* from, void* to,
     return QVBoxLayout_QBaseReplaceWidget((QVBoxLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*slot)(void*, void*, void*, int64_t)) {
-    QVBoxLayout_OnReplaceWidget((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int64_t)) {
+    QVBoxLayout_OnReplaceWidget((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QLayout* q_vboxlayout_layout(void* self) {
@@ -2518,8 +2530,8 @@ QLayout* q_vboxlayout_qbase_layout(void* self) {
     return QVBoxLayout_QBaseLayout((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_layout(void* self, QLayout* (*slot)()) {
-    QVBoxLayout_OnLayout((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_layout(void* self, QLayout* (*callback)()) {
+    QVBoxLayout_OnLayout((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_child_event(void* self, void* e) {
@@ -2530,8 +2542,8 @@ void q_vboxlayout_qbase_child_event(void* self, void* e) {
     QVBoxLayout_QBaseChildEvent((QVBoxLayout*)self, (QChildEvent*)e);
 }
 
-void q_vboxlayout_on_child_event(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnChildEvent((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_child_event(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnChildEvent((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_event(void* self, void* event) {
@@ -2542,8 +2554,8 @@ bool q_vboxlayout_qbase_event(void* self, void* event) {
     return QVBoxLayout_QBaseEvent((QVBoxLayout*)self, (QEvent*)event);
 }
 
-void q_vboxlayout_on_event(void* self, bool (*slot)(void*, void*)) {
-    QVBoxLayout_OnEvent((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_event(void* self, bool (*callback)(void*, void*)) {
+    QVBoxLayout_OnEvent((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_event_filter(void* self, void* watched, void* event) {
@@ -2554,8 +2566,8 @@ bool q_vboxlayout_qbase_event_filter(void* self, void* watched, void* event) {
     return QVBoxLayout_QBaseEventFilter((QVBoxLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
-void q_vboxlayout_on_event_filter(void* self, bool (*slot)(void*, void*, void*)) {
-    QVBoxLayout_OnEventFilter((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
+    QVBoxLayout_OnEventFilter((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_timer_event(void* self, void* event) {
@@ -2566,8 +2578,8 @@ void q_vboxlayout_qbase_timer_event(void* self, void* event) {
     QVBoxLayout_QBaseTimerEvent((QVBoxLayout*)self, (QTimerEvent*)event);
 }
 
-void q_vboxlayout_on_timer_event(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnTimerEvent((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_timer_event(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnTimerEvent((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_custom_event(void* self, void* event) {
@@ -2578,8 +2590,8 @@ void q_vboxlayout_qbase_custom_event(void* self, void* event) {
     QVBoxLayout_QBaseCustomEvent((QVBoxLayout*)self, (QEvent*)event);
 }
 
-void q_vboxlayout_on_custom_event(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnCustomEvent((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_custom_event(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnCustomEvent((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_connect_notify(void* self, void* signal) {
@@ -2590,8 +2602,8 @@ void q_vboxlayout_qbase_connect_notify(void* self, void* signal) {
     QVBoxLayout_QBaseConnectNotify((QVBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_vboxlayout_on_connect_notify(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnConnectNotify((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnConnectNotify((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_disconnect_notify(void* self, void* signal) {
@@ -2602,8 +2614,8 @@ void q_vboxlayout_qbase_disconnect_notify(void* self, void* signal) {
     QVBoxLayout_QBaseDisconnectNotify((QVBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_vboxlayout_on_disconnect_notify(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnDisconnectNotify((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnDisconnectNotify((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QWidget* q_vboxlayout_widget(void* self) {
@@ -2614,8 +2626,8 @@ QWidget* q_vboxlayout_qbase_widget(void* self) {
     return QVBoxLayout_QBaseWidget((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_widget(void* self, QWidget* (*slot)()) {
-    QVBoxLayout_OnWidget((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_widget(void* self, QWidget* (*callback)()) {
+    QVBoxLayout_OnWidget((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QSpacerItem* q_vboxlayout_spacer_item(void* self) {
@@ -2626,8 +2638,8 @@ QSpacerItem* q_vboxlayout_qbase_spacer_item(void* self) {
     return QVBoxLayout_QBaseSpacerItem((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_spacer_item(void* self, QSpacerItem* (*slot)()) {
-    QVBoxLayout_OnSpacerItem((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
+    QVBoxLayout_OnSpacerItem((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_widget_event(void* self, void* param1) {
@@ -2638,8 +2650,8 @@ void q_vboxlayout_qbase_widget_event(void* self, void* param1) {
     QVBoxLayout_QBaseWidgetEvent((QVBoxLayout*)self, (QEvent*)param1);
 }
 
-void q_vboxlayout_on_widget_event(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnWidgetEvent((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnWidgetEvent((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_add_child_layout(void* self, void* l) {
@@ -2650,8 +2662,8 @@ void q_vboxlayout_qbase_add_child_layout(void* self, void* l) {
     QVBoxLayout_QBaseAddChildLayout((QVBoxLayout*)self, (QLayout*)l);
 }
 
-void q_vboxlayout_on_add_child_layout(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnAddChildLayout((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnAddChildLayout((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_add_child_widget(void* self, void* w) {
@@ -2662,8 +2674,8 @@ void q_vboxlayout_qbase_add_child_widget(void* self, void* w) {
     QVBoxLayout_QBaseAddChildWidget((QVBoxLayout*)self, (QWidget*)w);
 }
 
-void q_vboxlayout_on_add_child_widget(void* self, void (*slot)(void*, void*)) {
-    QVBoxLayout_OnAddChildWidget((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
+    QVBoxLayout_OnAddChildWidget((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_adopt_layout(void* self, void* layout) {
@@ -2674,8 +2686,8 @@ bool q_vboxlayout_qbase_adopt_layout(void* self, void* layout) {
     return QVBoxLayout_QBaseAdoptLayout((QVBoxLayout*)self, (QLayout*)layout);
 }
 
-void q_vboxlayout_on_adopt_layout(void* self, bool (*slot)(void*, void*)) {
-    QVBoxLayout_OnAdoptLayout((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
+    QVBoxLayout_OnAdoptLayout((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QRect* q_vboxlayout_alignment_rect(void* self, void* param1) {
@@ -2686,8 +2698,8 @@ QRect* q_vboxlayout_qbase_alignment_rect(void* self, void* param1) {
     return QVBoxLayout_QBaseAlignmentRect((QVBoxLayout*)self, (QRect*)param1);
 }
 
-void q_vboxlayout_on_alignment_rect(void* self, QRect* (*slot)(void*, void*)) {
-    QVBoxLayout_OnAlignmentRect((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
+    QVBoxLayout_OnAlignmentRect((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 QObject* q_vboxlayout_sender(void* self) {
@@ -2698,8 +2710,8 @@ QObject* q_vboxlayout_qbase_sender(void* self) {
     return QVBoxLayout_QBaseSender((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_sender(void* self, QObject* (*slot)()) {
-    QVBoxLayout_OnSender((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_sender(void* self, QObject* (*callback)()) {
+    QVBoxLayout_OnSender((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_sender_signal_index(void* self) {
@@ -2710,8 +2722,8 @@ int32_t q_vboxlayout_qbase_sender_signal_index(void* self) {
     return QVBoxLayout_QBaseSenderSignalIndex((QVBoxLayout*)self);
 }
 
-void q_vboxlayout_on_sender_signal_index(void* self, int32_t (*slot)()) {
-    QVBoxLayout_OnSenderSignalIndex((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
+    QVBoxLayout_OnSenderSignalIndex((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 int32_t q_vboxlayout_receivers(void* self, const char* signal) {
@@ -2722,8 +2734,8 @@ int32_t q_vboxlayout_qbase_receivers(void* self, const char* signal) {
     return QVBoxLayout_QBaseReceivers((QVBoxLayout*)self, signal);
 }
 
-void q_vboxlayout_on_receivers(void* self, int32_t (*slot)(void*, const char*)) {
-    QVBoxLayout_OnReceivers((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
+    QVBoxLayout_OnReceivers((QVBoxLayout*)self, (intptr_t)callback);
 }
 
 bool q_vboxlayout_is_signal_connected(void* self, void* signal) {
@@ -2734,12 +2746,12 @@ bool q_vboxlayout_qbase_is_signal_connected(void* self, void* signal) {
     return QVBoxLayout_QBaseIsSignalConnected((QVBoxLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_vboxlayout_on_is_signal_connected(void* self, bool (*slot)(void*, void*)) {
-    QVBoxLayout_OnIsSignalConnected((QVBoxLayout*)self, (intptr_t)slot);
+void q_vboxlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
+    QVBoxLayout_OnIsSignalConnected((QVBoxLayout*)self, (intptr_t)callback);
 }
 
-void q_vboxlayout_on_object_name_changed(void* self, void (*slot)(void*, const char*)) {
-    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)slot);
+void q_vboxlayout_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {
+    QObject_Connect_ObjectNameChanged((QObject*)self, (intptr_t)callback);
 }
 
 void q_vboxlayout_delete(void* self) {

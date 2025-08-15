@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,144 +15,162 @@
 
 /// q_printerinfo_new constructs a new QPrinterInfo object.
 ///
-///
 QPrinterInfo* q_printerinfo_new();
 
 /// q_printerinfo_new2 constructs a new QPrinterInfo object.
 ///
-/// ``` QPrinterInfo* other ```
+/// @param other QPrinterInfo*
 QPrinterInfo* q_printerinfo_new2(void* other);
 
 /// q_printerinfo_new3 constructs a new QPrinterInfo object.
 ///
-/// ``` QPrinter* printer ```
+/// @param printer QPrinter*
 QPrinterInfo* q_printerinfo_new3(void* printer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#operator-eq)
 ///
-/// ``` QPrinterInfo* self, QPrinterInfo* other ```
+/// @param self QPrinterInfo*
+/// @param other QPrinterInfo*
 void q_printerinfo_operator_assign(void* self, void* other);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#printerName)
 ///
-/// ``` QPrinterInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrinterInfo*
 const char* q_printerinfo_printer_name(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#description)
 ///
-/// ``` QPrinterInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrinterInfo*
 const char* q_printerinfo_description(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#location)
 ///
-/// ``` QPrinterInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrinterInfo*
 const char* q_printerinfo_location(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#makeAndModel)
 ///
-/// ``` QPrinterInfo* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPrinterInfo*
 const char* q_printerinfo_make_and_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#isNull)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 bool q_printerinfo_is_null(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#isDefault)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 bool q_printerinfo_is_default(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#isRemote)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 bool q_printerinfo_is_remote(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#state)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
+///
+/// @return enum QPrinter__PrinterState
 int64_t q_printerinfo_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedPageSizes)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 libqt_list /* of QPageSize* */ q_printerinfo_supported_page_sizes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPageSize)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 QPageSize* q_printerinfo_default_page_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportsCustomPageSizes)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 bool q_printerinfo_supports_custom_page_sizes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#minimumPhysicalPageSize)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 QPageSize* q_printerinfo_minimum_physical_page_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#maximumPhysicalPageSize)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 QPageSize* q_printerinfo_maximum_physical_page_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedResolutions)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 libqt_list /* of int */ q_printerinfo_supported_resolutions(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultDuplexMode)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
+///
+/// @return enum QPrinter__DuplexMode
 int64_t q_printerinfo_default_duplex_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedDuplexModes)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
+///
+/// @return libqt_list of enum QPrinter__DuplexMode
 libqt_list /* of int64_t */ q_printerinfo_supported_duplex_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultColorMode)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
+///
+/// @return enum QPrinter__ColorMode
 int64_t q_printerinfo_default_color_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedColorModes)
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
+///
+/// @return libqt_list of enum QPrinter__ColorMode
 libqt_list /* of int64_t */ q_printerinfo_supported_color_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char** q_printerinfo_available_printer_names();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinters)
 ///
-///
 libqt_list /* of QPrinterInfo* */ q_printerinfo_available_printers();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPrinterName)
 ///
+/// Caller is responsible for freeing the returned memory
 ///
 const char* q_printerinfo_default_printer_name();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultPrinter)
 ///
-///
 QPrinterInfo* q_printerinfo_default_printer();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#printerInfo)
 ///
-/// ``` const char* printerName ```
+/// @param printerName const char*
 QPrinterInfo* q_printerinfo_printer_info(const char* printerName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#dtor.QPrinterInfo)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QPrinterInfo* self ```
+/// @param self QPrinterInfo*
 void q_printerinfo_delete(void* self);
 
 #endif

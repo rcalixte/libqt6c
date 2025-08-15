@@ -4,7 +4,6 @@
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #include "../libqttypedefs.h"
 
@@ -16,511 +15,594 @@
 
 /// q_networkdiskcache_new constructs a new QNetworkDiskCache object.
 ///
-///
 QNetworkDiskCache* q_networkdiskcache_new();
 
 /// q_networkdiskcache_new2 constructs a new QNetworkDiskCache object.
 ///
-/// ``` QObject* parent ```
+/// @param parent QObject*
 QNetworkDiskCache* q_networkdiskcache_new2(void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 const QMetaObject* q_networkdiskcache_meta_object(void* self);
 
-/// ``` QNetworkDiskCache* self, const char* param1 ```
+/// @param self QNetworkDiskCache*
+/// @param param1 const char*
 void* q_networkdiskcache_metacast(void* self, const char* param1);
 
-/// ``` QNetworkDiskCache* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QNetworkDiskCache*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_networkdiskcache_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, int32_t (*slot)(QNetworkDiskCache*, enum QMetaObject__Call, int, void*) ```
-void q_networkdiskcache_on_metacall(void* self, int32_t (*slot)(void*, int64_t, int, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback int32_t fn(QNetworkDiskCache*, enum QMetaObject__Call, int, void*)
+void q_networkdiskcache_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
 
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, enum QMetaObject__Call param1, int param2, void* param3 ```
+/// @param self QNetworkDiskCache*
+/// @param param1 enum QMetaObject__Call
+/// @param param2 int
+/// @param param3 void*
 int32_t q_networkdiskcache_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
 const char* q_networkdiskcache_tr(const char* s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheDirectory)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkDiskCache*
 const char* q_networkdiskcache_cache_directory(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#setCacheDirectory)
 ///
-/// ``` QNetworkDiskCache* self, const char* cacheDir ```
+/// @param self QNetworkDiskCache*
+/// @param cacheDir const char*
 void q_networkdiskcache_set_cache_directory(void* self, const char* cacheDir);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#maximumCacheSize)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 long long q_networkdiskcache_maximum_cache_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#setMaximumCacheSize)
 ///
-/// ``` QNetworkDiskCache* self, long long size ```
+/// @param self QNetworkDiskCache*
+/// @param size long long
 void q_networkdiskcache_set_maximum_cache_size(void* self, long long size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheSize)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 long long q_networkdiskcache_cache_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheSize)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, long long (*slot)() ```
-void q_networkdiskcache_on_cache_size(void* self, long long (*slot)());
+/// @param self QNetworkDiskCache*
+/// @param callback long long fn()
+void q_networkdiskcache_on_cache_size(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheSize)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 long long q_networkdiskcache_qbase_cache_size(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#metaData)
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 QNetworkCacheMetaData* q_networkdiskcache_meta_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#metaData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, QNetworkCacheMetaData* (*slot)(QNetworkDiskCache*, QUrl*) ```
-void q_networkdiskcache_on_meta_data(void* self, QNetworkCacheMetaData* (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback QNetworkCacheMetaData* fn(QNetworkDiskCache*, QUrl*)
+void q_networkdiskcache_on_meta_data(void* self, QNetworkCacheMetaData* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#metaData)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 QNetworkCacheMetaData* q_networkdiskcache_qbase_meta_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#updateMetaData)
 ///
-/// ``` QNetworkDiskCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QNetworkDiskCache*
+/// @param metaData QNetworkCacheMetaData*
 void q_networkdiskcache_update_meta_data(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#updateMetaData)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QNetworkCacheMetaData*) ```
-void q_networkdiskcache_on_update_meta_data(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QNetworkCacheMetaData*)
+void q_networkdiskcache_on_update_meta_data(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#updateMetaData)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QNetworkDiskCache*
+/// @param metaData QNetworkCacheMetaData*
 void q_networkdiskcache_qbase_update_meta_data(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#data)
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 QIODevice* q_networkdiskcache_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#data)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, QIODevice* (*slot)(QNetworkDiskCache*, QUrl*) ```
-void q_networkdiskcache_on_data(void* self, QIODevice* (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback QIODevice* fn(QNetworkDiskCache*, QUrl*)
+void q_networkdiskcache_on_data(void* self, QIODevice* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#data)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 QIODevice* q_networkdiskcache_qbase_data(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#remove)
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 bool q_networkdiskcache_remove(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#remove)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, bool (*slot)(QNetworkDiskCache*, QUrl*) ```
-void q_networkdiskcache_on_remove(void* self, bool (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback bool fn(QNetworkDiskCache*, QUrl*)
+void q_networkdiskcache_on_remove(void* self, bool (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#remove)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QUrl* url ```
+/// @param self QNetworkDiskCache*
+/// @param url QUrl*
 bool q_networkdiskcache_qbase_remove(void* self, void* url);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#prepare)
 ///
-/// ``` QNetworkDiskCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QNetworkDiskCache*
+/// @param metaData QNetworkCacheMetaData*
 QIODevice* q_networkdiskcache_prepare(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#prepare)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, QIODevice* (*slot)(QNetworkDiskCache*, QNetworkCacheMetaData*) ```
-void q_networkdiskcache_on_prepare(void* self, QIODevice* (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback QIODevice* fn(QNetworkDiskCache*, QNetworkCacheMetaData*)
+void q_networkdiskcache_on_prepare(void* self, QIODevice* (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#prepare)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QNetworkCacheMetaData* metaData ```
+/// @param self QNetworkDiskCache*
+/// @param metaData QNetworkCacheMetaData*
 QIODevice* q_networkdiskcache_qbase_prepare(void* self, void* metaData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#insert)
 ///
-/// ``` QNetworkDiskCache* self, QIODevice* device ```
+/// @param self QNetworkDiskCache*
+/// @param device QIODevice*
 void q_networkdiskcache_insert(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#insert)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QIODevice*) ```
-void q_networkdiskcache_on_insert(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QIODevice*)
+void q_networkdiskcache_on_insert(void* self, void (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#insert)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self, QIODevice* device ```
+/// @param self QNetworkDiskCache*
+/// @param device QIODevice*
 void q_networkdiskcache_qbase_insert(void* self, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#fileMetaData)
 ///
-/// ``` QNetworkDiskCache* self, const char* fileName ```
+/// @param self QNetworkDiskCache*
+/// @param fileName const char*
 QNetworkCacheMetaData* q_networkdiskcache_file_meta_data(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#clear)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#clear)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)() ```
-void q_networkdiskcache_on_clear(void* self, void (*slot)());
+/// @param self QNetworkDiskCache*
+/// @param callback void fn()
+void q_networkdiskcache_on_clear(void* self, void (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#clear)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_qbase_clear(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#expire)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 long long q_networkdiskcache_expire(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#expire)
 ///
 /// Allows for overriding the related default method
 ///
-/// ``` QNetworkDiskCache* self, long long (*slot)() ```
-void q_networkdiskcache_on_expire(void* self, long long (*slot)());
+/// @param self QNetworkDiskCache*
+/// @param callback long long fn()
+void q_networkdiskcache_on_expire(void* self, long long (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#expire)
 ///
 /// Base class method implementation
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 long long q_networkdiskcache_qbase_expire(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
 const char* q_networkdiskcache_tr2(const char* s, const char* c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
-/// ``` const char* s, const char* c, int n ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param s const char*
+/// @param c const char*
+/// @param n int
 const char* q_networkdiskcache_tr3(const char* s, const char* c, int n);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#objectName)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkDiskCache*
 const char* q_networkdiskcache_object_name(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setObjectName)
 ///
-/// ``` QNetworkDiskCache* self, char* name ```
+/// @param self QNetworkDiskCache*
+/// @param name char*
 void q_networkdiskcache_set_object_name(void* self, char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWidgetType)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 bool q_networkdiskcache_is_widget_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isWindowType)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 bool q_networkdiskcache_is_window_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#isQuickItemType)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 bool q_networkdiskcache_is_quick_item_type(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#signalsBlocked)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 bool q_networkdiskcache_signals_blocked(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#blockSignals)
 ///
-/// ``` QNetworkDiskCache* self, bool b ```
+/// @param self QNetworkDiskCache*
+/// @param b bool
 bool q_networkdiskcache_block_signals(void* self, bool b);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#thread)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 QThread* q_networkdiskcache_thread(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QNetworkDiskCache* self, QThread* thread ```
+/// @param self QNetworkDiskCache*
+/// @param thread QThread*
 bool q_networkdiskcache_move_to_thread(void* self, void* thread);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QNetworkDiskCache* self, int interval ```
+/// @param self QNetworkDiskCache*
+/// @param interval int
 int32_t q_networkdiskcache_start_timer(void* self, int interval);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QNetworkDiskCache* self, int id ```
+/// @param self QNetworkDiskCache*
+/// @param id int
 void q_networkdiskcache_kill_timer(void* self, int id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#killTimer)
 ///
-/// ``` QNetworkDiskCache* self, enum Qt__TimerId id ```
+/// @param self QNetworkDiskCache*
+/// @param id enum Qt__TimerId
 void q_networkdiskcache_kill_timer2(void* self, int64_t id);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#children)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 libqt_list /* of QObject* */ q_networkdiskcache_children(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setParent)
 ///
-/// ``` QNetworkDiskCache* self, QObject* parent ```
+/// @param self QNetworkDiskCache*
+/// @param parent QObject*
 void q_networkdiskcache_set_parent(void* self, void* parent);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#installEventFilter)
 ///
-/// ``` QNetworkDiskCache* self, QObject* filterObj ```
+/// @param self QNetworkDiskCache*
+/// @param filterObj QObject*
 void q_networkdiskcache_install_event_filter(void* self, void* filterObj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#removeEventFilter)
 ///
-/// ``` QNetworkDiskCache* self, QObject* obj ```
+/// @param self QNetworkDiskCache*
+/// @param obj QObject*
 void q_networkdiskcache_remove_event_filter(void* self, void* obj);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
 QMetaObject__Connection* q_networkdiskcache_connect(void* sender, void* signal, void* receiver, void* method);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QNetworkDiskCache* self, QObject* sender, const char* signal, const char* member ```
+/// @param self QNetworkDiskCache*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
 QMetaObject__Connection* q_networkdiskcache_connect2(void* self, void* sender, const char* signal, const char* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* member ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param member QMetaMethod*
 bool q_networkdiskcache_disconnect(void* sender, void* signal, void* receiver, void* member);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#disconnect)
 ///
-/// ``` QMetaObject__Connection* param1 ```
+/// @param param1 QMetaObject__Connection*
 bool q_networkdiskcache_disconnect2(void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectTree)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_dump_object_tree(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dumpObjectInfo)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_dump_object_info(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#setProperty)
 ///
-/// ``` QNetworkDiskCache* self, const char* name, QVariant* value ```
+/// @param self QNetworkDiskCache*
+/// @param name const char*
+/// @param value QVariant*
 bool q_networkdiskcache_set_property(void* self, const char* name, void* value);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#property)
 ///
-/// ``` QNetworkDiskCache* self, const char* name ```
+/// @param self QNetworkDiskCache*
+/// @param name const char*
 QVariant* q_networkdiskcache_property(void* self, const char* name);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#dynamicPropertyNames)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QNetworkDiskCache*
 const char** q_networkdiskcache_dynamic_property_names(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 QBindingStorage* q_networkdiskcache_binding_storage(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#bindingStorage)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 const QBindingStorage* q_networkdiskcache_binding_storage2(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_destroyed(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*) ```
-void q_networkdiskcache_on_destroyed(void* self, void (*slot)(void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*)
+void q_networkdiskcache_on_destroyed(void* self, void (*callback)(void*));
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#parent)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 QObject* q_networkdiskcache_parent(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#inherits)
 ///
-/// ``` QNetworkDiskCache* self, const char* classname ```
+/// @param self QNetworkDiskCache*
+/// @param classname const char*
 bool q_networkdiskcache_inherits(void* self, const char* classname);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#deleteLater)
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_delete_later(void* self);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#moveToThread)
 ///
-/// ``` QNetworkDiskCache* self, QThread* thread, Disambiguated_t* param2 ```
+/// @param self QNetworkDiskCache*
+/// @param thread QThread*
+/// @param param2 Disambiguated_t*
 bool q_networkdiskcache_move_to_thread2(void* self, void* thread, void* param2);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#startTimer)
 ///
-/// ``` QNetworkDiskCache* self, int interval, enum Qt__TimerType timerType ```
+/// @param self QNetworkDiskCache*
+/// @param interval int
+/// @param timerType enum Qt__TimerType
 int32_t q_networkdiskcache_start_timer22(void* self, int interval, int64_t timerType);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QObject* sender, QMetaMethod* signal, QObject* receiver, QMetaMethod* method, enum Qt__ConnectionType typeVal ```
+/// @param sender QObject*
+/// @param signal QMetaMethod*
+/// @param receiver QObject*
+/// @param method QMetaMethod*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_networkdiskcache_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#connect)
 ///
-/// ``` QNetworkDiskCache* self, QObject* sender, const char* signal, const char* member, enum Qt__ConnectionType typeVal ```
+/// @param self QNetworkDiskCache*
+/// @param sender QObject*
+/// @param signal const char*
+/// @param member const char*
+/// @param typeVal enum Qt__ConnectionType
 QMetaObject__Connection* q_networkdiskcache_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkDiskCache* self, QObject* param1 ```
+/// @param self QNetworkDiskCache*
+/// @param param1 QObject*
 void q_networkdiskcache_destroyed1(void* self, void* param1);
 
 /// Inherited from QObject
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#destroyed)
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QObject*) ```
-void q_networkdiskcache_on_destroyed1(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QObject*)
+void q_networkdiskcache_on_destroyed1(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -528,7 +610,8 @@ void q_networkdiskcache_on_destroyed1(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QEvent*
 bool q_networkdiskcache_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -537,7 +620,8 @@ bool q_networkdiskcache_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QEvent*
 bool q_networkdiskcache_qbase_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -546,8 +630,9 @@ bool q_networkdiskcache_qbase_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, bool (*slot)(QNetworkDiskCache*, QEvent*) ```
-void q_networkdiskcache_on_event(void* self, bool (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback bool fn(QNetworkDiskCache*, QEvent*)
+void q_networkdiskcache_on_event(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -555,7 +640,9 @@ void q_networkdiskcache_on_event(void* self, bool (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QObject* watched, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_networkdiskcache_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -564,7 +651,9 @@ bool q_networkdiskcache_event_filter(void* self, void* watched, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QObject* watched, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param watched QObject*
+/// @param event QEvent*
 bool q_networkdiskcache_qbase_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
@@ -573,8 +662,9 @@ bool q_networkdiskcache_qbase_event_filter(void* self, void* watched, void* even
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, bool (*slot)(QNetworkDiskCache*, QObject*, QEvent*) ```
-void q_networkdiskcache_on_event_filter(void* self, bool (*slot)(void*, void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback bool fn(QNetworkDiskCache*, QObject*, QEvent*)
+void q_networkdiskcache_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
 /// Inherited from QObject
 ///
@@ -582,7 +672,8 @@ void q_networkdiskcache_on_event_filter(void* self, bool (*slot)(void*, void*, v
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QTimerEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QTimerEvent*
 void q_networkdiskcache_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -591,7 +682,8 @@ void q_networkdiskcache_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QTimerEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QTimerEvent*
 void q_networkdiskcache_qbase_timer_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -600,8 +692,9 @@ void q_networkdiskcache_qbase_timer_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QTimerEvent*) ```
-void q_networkdiskcache_on_timer_event(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QTimerEvent*)
+void q_networkdiskcache_on_timer_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -609,7 +702,8 @@ void q_networkdiskcache_on_timer_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QChildEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QChildEvent*
 void q_networkdiskcache_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -618,7 +712,8 @@ void q_networkdiskcache_child_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QChildEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QChildEvent*
 void q_networkdiskcache_qbase_child_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -627,8 +722,9 @@ void q_networkdiskcache_qbase_child_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QChildEvent*) ```
-void q_networkdiskcache_on_child_event(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QChildEvent*)
+void q_networkdiskcache_on_child_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -636,7 +732,8 @@ void q_networkdiskcache_on_child_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QEvent*
 void q_networkdiskcache_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -645,7 +742,8 @@ void q_networkdiskcache_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QEvent* event ```
+/// @param self QNetworkDiskCache*
+/// @param event QEvent*
 void q_networkdiskcache_qbase_custom_event(void* self, void* event);
 
 /// Inherited from QObject
@@ -654,8 +752,9 @@ void q_networkdiskcache_qbase_custom_event(void* self, void* event);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QEvent*) ```
-void q_networkdiskcache_on_custom_event(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QEvent*)
+void q_networkdiskcache_on_custom_event(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -663,7 +762,8 @@ void q_networkdiskcache_on_custom_event(void* self, void (*slot)(void*, void*));
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 void q_networkdiskcache_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -672,7 +772,8 @@ void q_networkdiskcache_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 void q_networkdiskcache_qbase_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -681,8 +782,9 @@ void q_networkdiskcache_qbase_connect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QMetaMethod*) ```
-void q_networkdiskcache_on_connect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QMetaMethod*)
+void q_networkdiskcache_on_connect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -690,7 +792,8 @@ void q_networkdiskcache_on_connect_notify(void* self, void (*slot)(void*, void*)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 void q_networkdiskcache_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -699,7 +802,8 @@ void q_networkdiskcache_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 void q_networkdiskcache_qbase_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
@@ -708,8 +812,9 @@ void q_networkdiskcache_qbase_disconnect_notify(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, QMetaMethod*) ```
-void q_networkdiskcache_on_disconnect_notify(void* self, void (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, QMetaMethod*)
+void q_networkdiskcache_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -717,7 +822,7 @@ void q_networkdiskcache_on_disconnect_notify(void* self, void (*slot)(void*, voi
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 QObject* q_networkdiskcache_sender(void* self);
 
 /// Inherited from QObject
@@ -726,7 +831,7 @@ QObject* q_networkdiskcache_sender(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 QObject* q_networkdiskcache_qbase_sender(void* self);
 
 /// Inherited from QObject
@@ -735,8 +840,9 @@ QObject* q_networkdiskcache_qbase_sender(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QObject* (*slot)() ```
-void q_networkdiskcache_on_sender(void* self, QObject* (*slot)());
+/// @param self QNetworkDiskCache*
+/// @param callback QObject* fn()
+void q_networkdiskcache_on_sender(void* self, QObject* (*callback)());
 
 /// Inherited from QObject
 ///
@@ -744,7 +850,7 @@ void q_networkdiskcache_on_sender(void* self, QObject* (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 int32_t q_networkdiskcache_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -753,7 +859,7 @@ int32_t q_networkdiskcache_sender_signal_index(void* self);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 int32_t q_networkdiskcache_qbase_sender_signal_index(void* self);
 
 /// Inherited from QObject
@@ -762,8 +868,9 @@ int32_t q_networkdiskcache_qbase_sender_signal_index(void* self);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, int32_t (*slot)() ```
-void q_networkdiskcache_on_sender_signal_index(void* self, int32_t (*slot)());
+/// @param self QNetworkDiskCache*
+/// @param callback int32_t fn()
+void q_networkdiskcache_on_sender_signal_index(void* self, int32_t (*callback)());
 
 /// Inherited from QObject
 ///
@@ -771,7 +878,8 @@ void q_networkdiskcache_on_sender_signal_index(void* self, int32_t (*slot)());
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, const char* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal const char*
 int32_t q_networkdiskcache_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -780,7 +888,8 @@ int32_t q_networkdiskcache_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, const char* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal const char*
 int32_t q_networkdiskcache_qbase_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
@@ -789,8 +898,9 @@ int32_t q_networkdiskcache_qbase_receivers(void* self, const char* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, int32_t (*slot)(QNetworkDiskCache*, const char*) ```
-void q_networkdiskcache_on_receivers(void* self, int32_t (*slot)(void*, const char*));
+/// @param self QNetworkDiskCache*
+/// @param callback int32_t fn(QNetworkDiskCache*, const char*)
+void q_networkdiskcache_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 
 /// Inherited from QObject
 ///
@@ -798,7 +908,8 @@ void q_networkdiskcache_on_receivers(void* self, int32_t (*slot)(void*, const ch
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 bool q_networkdiskcache_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -807,7 +918,8 @@ bool q_networkdiskcache_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, QMetaMethod* signal ```
+/// @param self QNetworkDiskCache*
+/// @param signal QMetaMethod*
 bool q_networkdiskcache_qbase_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
@@ -816,8 +928,9 @@ bool q_networkdiskcache_qbase_is_signal_connected(void* self, void* signal);
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///
-/// ``` QNetworkDiskCache* self, bool (*slot)(QNetworkDiskCache*, QMetaMethod*) ```
-void q_networkdiskcache_on_is_signal_connected(void* self, bool (*slot)(void*, void*));
+/// @param self QNetworkDiskCache*
+/// @param callback bool fn(QNetworkDiskCache*, QMetaMethod*)
+void q_networkdiskcache_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
 
 /// Inherited from QObject
 ///
@@ -825,14 +938,15 @@ void q_networkdiskcache_on_is_signal_connected(void* self, bool (*slot)(void*, v
 ///
 /// Wrapper to allow calling private signal
 ///
-/// ``` QNetworkDiskCache* self, void (*slot)(QNetworkDiskCache*, const char*) ```
-void q_networkdiskcache_on_object_name_changed(void* self, void (*slot)(void*, const char*));
+/// @param self QNetworkDiskCache*
+/// @param callback void fn(QNetworkDiskCache*, const char*)
+void q_networkdiskcache_on_object_name_changed(void* self, void (*callback)(void*, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkdiskcache.html#dtor.QNetworkDiskCache)
 ///
 /// Delete this object from C++ memory.
 ///
-/// ``` QNetworkDiskCache* self ```
+/// @param self QNetworkDiskCache*
 void q_networkdiskcache_delete(void* self);
 
 #endif
