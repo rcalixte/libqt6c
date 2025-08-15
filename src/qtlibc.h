@@ -3,6 +3,7 @@
 #define QT6C_LIBQT_H
 
 #include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -78,7 +79,7 @@ static inline void libqt_free(const void* ptr) { free((void*)ptr); }
 // Helper functions for common cases
 
 static libqt_string qstring(const char* string) {
-    libqt_string str = {0}; // Initialize to zero
+    libqt_string str = {0, NULL}; // Initialize to zero and NULL
     if (string) {
         str.len = strlen(string);
         str.data = string;
@@ -123,13 +124,13 @@ static char* qstring_to_char(libqt_string str) {
         return NULL;
     }
 
-    // we malloc char* to ensure proper alignment even though
-    // it is wasteful... we can do better
-    char* result = (char*)malloc((str.len + 1) * sizeof(char*));
-    if (result) {
-        memcpy(result, str.data, str.len);
-        result[str.len] = '\0';
+    char* result = (char*)malloc(str.len + 1);
+    if (result == NULL) {
+        fprintf(stderr, "Memory allocation failed in qstring_to_char");
+        abort();
     }
+    memcpy(result, str.data, str.len);
+    result[str.len] = '\0';
     return result;
 }
 
