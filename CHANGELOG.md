@@ -1,4 +1,8 @@
 
+### 6.8.2 rev6 (14 August 2025)
+
+* Update documentation comments and improve library memory management (#25)
+
 ### 6.8.2 rev5 (3 August 2025)
 
 * Add qrc-c and uic-c for use with the Qt Resource System (#23)
