@@ -1,18 +1,37 @@
 const std = @import("std");
+const host_os = @import("builtin").os.tag;
+const host_arch = @import("builtin").cpu.arch;
+const stdout = std.io.getStdOut().writer();
+
+const prefixes: []const []const u8 = &.{
+    "extras-",
+    "foss-extras-",
+    "foss-restricted-",
+    "posix-extras-",
+    "posix-restricted-",
+    "restricted-extras-",
+};
 
 pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const linkage = b.option(std.builtin.LinkMode, "linkage", "Link mode for libqt6c") orelse .static;
     const enable_workaround = b.option(bool, "enable-workaround", "Enable workaround for missing Qt C++ headers") orelse false;
-    const skip_restricted = b.option(bool, "skip-restricted", "Skip restricted libraries") orelse false;
     const optimize = standardOptimizeOption(b, .{});
 
-    const is_bsd_family = switch (target.result.os.tag) {
+    const is_macos = target.result.os.tag == .macos or host_os == .macos;
+    const is_windows = target.result.os.tag == .windows or host_os == .windows;
+
+    const is_bsd_host = switch (host_os) {
         .dragonfly, .freebsd, .netbsd, .openbsd => true,
         else => false,
     };
 
-    const is_macos = target.result.os.tag == .macos;
+    const is_bsd_target = switch (target.result.os.tag) {
+        .dragonfly, .freebsd, .netbsd, .openbsd => true,
+        else => false,
+    };
+
+    const is_bsd_family = is_bsd_host or is_bsd_target;
     const workaround_os = is_bsd_family or is_macos;
 
     var arena = std.heap.ArenaAllocator.init(b.allocator);
@@ -21,6 +40,7 @@ pub fn build(b: *std.Build) !void {
 
     var cpp_sources: std.ArrayListUnmanaged([]const u8) = .empty;
     var c_sources: std.StringHashMapUnmanaged([]const u8) = .empty;
+    var prefix_options: std.StringHashMapUnmanaged(bool) = .empty;
 
     const src_dir = b.build_root.path.?;
     var dir = try std.fs.cwd().openDir(src_dir, .{ .iterate = true });
@@ -28,26 +48,79 @@ pub fn build(b: *std.Build) !void {
     defer walker.deinit();
 
     while (try walker.next()) |entry| {
-        if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".cpp")) {
-            var basename = std.fs.path.basename(entry.path);
-            basename = basename[3 .. basename.len - 4];
-            // conditional removals
-            if (workaroundNeeded(enable_workaround or workaround_os, basename))
-                continue;
-            if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
-                continue;
+        entry_loop: {
+            if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".cpp")) {
+                var basename = std.fs.path.basename(entry.path);
+                basename = basename[3 .. basename.len - 4];
+                // conditional removals
+                if (workaroundNeeded(enable_workaround or workaround_os, basename))
+                    continue;
+                if (is_windows and (std.mem.startsWith(u8, entry.path, "src/foss-") or std.mem.startsWith(u8, entry.path, "src/posix-")))
+                    continue;
+                if (is_macos and std.mem.startsWith(u8, entry.path, "src/foss-"))
+                    continue;
 
-            try cpp_sources.append(allocator, b.dupe(entry.path));
-        } else if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".c")) {
-            var c_basename = std.fs.path.basename(entry.path);
-            c_basename = c_basename[3 .. c_basename.len - 2];
-            // conditional removals
-            if (workaroundNeeded(enable_workaround or workaround_os, c_basename))
-                continue;
-            if (skip_restricted and std.mem.startsWith(u8, entry.path, "src/restricted"))
-                continue;
+                inline for (prefixes) |prefix| {
+                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
+                        var is_enabled = true;
+                        if ((host_os == .macos or host_os == .windows) and std.mem.eql(u8, prefix, "extras-")) {
+                            is_enabled = false;
+                        }
+                        const path = std.fs.path.stem(std.fs.path.dirname(entry.path).?);
+                        var library = std.mem.splitBackwardsScalar(u8, path, '-');
+                        const name = library.first();
+                        const enabled = prefix_options.get(name) orelse is_enabled;
+                        if (!enabled)
+                            break :entry_loop;
+                    }
+                }
 
-            try c_sources.put(allocator, b.dupe(c_basename), b.dupe(entry.path));
+                try cpp_sources.append(allocator, b.dupe(entry.path));
+            } else if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".c")) {
+                var c_basename = std.fs.path.basename(entry.path);
+                c_basename = c_basename[3 .. c_basename.len - 2];
+                // conditional removals
+                if (workaroundNeeded(enable_workaround or workaround_os, c_basename))
+                    continue;
+                if (is_windows and (std.mem.startsWith(u8, entry.path, "src/foss-") or std.mem.startsWith(u8, entry.path, "src/posix-")))
+                    continue;
+                if (is_macos and std.mem.startsWith(u8, entry.path, "src/foss-"))
+                    continue;
+
+                inline for (prefixes) |prefix| {
+                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
+                        var is_enabled = true;
+                        if ((host_os == .macos or host_os == .windows) and std.mem.eql(u8, prefix, "extras-")) {
+                            is_enabled = false;
+                        }
+                        const path = std.fs.path.stem(std.fs.path.dirname(entry.path).?);
+                        var library = std.mem.splitBackwardsScalar(u8, path, '-');
+                        const name = library.first();
+                        const enabled = prefix_options.get(name) orelse is_enabled;
+                        if (!enabled)
+                            break :entry_loop;
+                    }
+                }
+
+                try c_sources.put(allocator, b.dupe(c_basename), b.dupe(entry.path));
+            } else if (entry.kind == .directory) {
+                inline for (prefixes) |prefix| {
+                    if (std.mem.startsWith(u8, entry.path, "src/" ++ prefix)) {
+                        const path = std.fs.path.stem(entry.path);
+                        var library = std.mem.splitBackwardsScalar(u8, path, '-');
+                        const name = library.first();
+                        const description = b.fmt("Enable {s} (where supported)", .{name});
+                        const option_name = try std.mem.concat(allocator, u8, &.{ "enable-", name });
+                        const option_value = b.option(bool, option_name, description);
+                        var is_enabled = true;
+                        if ((host_os == .macos or host_os == .windows) and std.mem.eql(u8, prefix, "extras-")) {
+                            is_enabled = false;
+                        }
+                        const map_value = if (option_value == null) is_enabled else option_value.?;
+                        try prefix_options.put(allocator, name, map_value);
+                    }
+                }
+            }
         }
     }
 
@@ -57,9 +130,9 @@ pub fn build(b: *std.Build) !void {
     if (cpp_sources.items.len != c_sources.count())
         @panic("Number of C sources does not match number of C++ sources.\n");
 
-    const qt_include_path: []const []const u8 = switch (target.result.os.tag) {
+    const qt_include_path: []const []const u8 = switch (host_os) {
         .dragonfly, .freebsd, .netbsd, .openbsd => &.{"/usr/local/include/qt6"},
-        .linux => switch (target.result.cpu.arch) {
+        .linux => switch (host_arch) {
             .x86_64 => &.{
                 "/usr/include/x86_64-linux-gnu/qt6",
                 "/usr/include/qt6",
@@ -79,23 +152,34 @@ pub fn build(b: *std.Build) !void {
     };
 
     const qt_modules = &.{
+        // Qt 6 Core, GUI, Widgets
         "QtCore",
         "QtWidgets",
         "QtGui",
+        // Qt 6 Charts
         "QtCharts",
+        // Qt 6 Multimedia
         "QtMultimedia",
         "QtMultimediaWidgets",
+        // Qt 6 Network
         "QtNetwork",
+        // Qt 6 PDF
         "QtPdf",
         "QtPdfWidgets",
+        // Qt 6 Print Support
         "QtPrintSupport",
+        // Qt 6 Spatial Audio
         "QtSpatialAudio",
+        // Qt 6 SVG
         "QtSvg",
         "QtSvgWidgets",
+        // Qt 6 WebChannel
         "QtWebChannel",
         "QtWebChannelQuick",
+        // Qt 6 WebEngine
         "QtWebEngineCore",
         "QtWebEngineWidgets",
+        // Qt 6 QScintilla
         "Qsci",
     };
 
@@ -108,20 +192,20 @@ pub fn build(b: *std.Build) !void {
     // Add base flags
     var flags_index: usize = 0;
     inline for (base_cpp_flags) |flag| {
-        cpp_flags[flags_index] = try std.fmt.allocPrint(allocator, "{s}", .{flag});
+        cpp_flags[flags_index] = b.fmt("{s}", .{flag});
         flags_index += 1;
     }
 
     // Add include paths
-    for (qt_include_path) |qt_path| {
-        cpp_flags[flags_index] = try std.fmt.allocPrint(allocator, "-I{s}", .{qt_path});
+    inline for (qt_include_path) |qt_path| {
+        cpp_flags[flags_index] = b.fmt("-I{s}", .{qt_path});
         flags_index += 1;
     }
 
     // Add Qt module include paths
     inline for (qt_modules) |module| {
-        for (qt_include_path) |qt_path| {
-            cpp_flags[flags_index] = try std.fmt.allocPrint(allocator, "-I{s}/{s}", .{ qt_path, module });
+        inline for (qt_include_path) |qt_path| {
+            cpp_flags[flags_index] = b.fmt("-I{s}/{s}", .{ qt_path, module });
             flags_index += 1;
         }
     }
@@ -164,7 +248,6 @@ pub fn build(b: *std.Build) !void {
     // Add options
     const options = b.addOptions();
     options.addOption(bool, "enable_workaround", enable_workaround);
-    options.addOption(bool, "skip_restricted", skip_restricted);
     libqt6c.addOptions("build_options", options);
 
     b.modules.put("libqt6c", libqt6c) catch {};
@@ -198,7 +281,7 @@ fn standardOptimizeOption(b: *std.Build, options: std.Build.StandardOptimizeOpti
 
 fn checkSupportedMode(mode: std.builtin.OptimizeMode) void {
     if (mode == .Debug) {
-        std.debug.print("libqt6c does not support Debug build mode.\n", .{});
+        stdout.print("libqt6c does not support Debug build mode.\n", .{}) catch @panic("Failed to print to stdout");
         std.process.exit(1);
     }
 }
@@ -217,17 +300,12 @@ fn generateWindowsBuildPaths(allocator: std.mem.Allocator) ![]const []const u8 {
     var qt_win_paths: std.ArrayListUnmanaged([]const u8) = .empty;
 
     const qt_win_versions = &.{
-        "6.4.3",
-        "6.5.5",
-        "6.6.3",
-        "6.7.3",
         "6.8.2",
-        "6.9.0",
+        "6.9.1",
     };
 
     const win_compilers = &.{
         "mingw_64",
-        "msvc2019_64",
         "msvc2022_64",
     };
 
