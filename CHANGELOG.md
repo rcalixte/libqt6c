@@ -1,7 +1,12 @@
 
+### 6.8.2 rev7 (15 August 2025)
+
+* **BREAKING CHANGE:** Switch to per-library options in some cases
+
 ### 6.8.2 rev6 (14 August 2025)
 
 * Update documentation comments and improve library memory management (#25)
+* Optimize external command processing by batching files (#24)
 
 ### 6.8.2 rev5 (3 August 2025)
 
