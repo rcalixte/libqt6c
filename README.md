@@ -40,12 +40,27 @@ Supported platforms
 | Linux   | arm64  | Static             | ✅ Works |
 | Linux   | x86_64 | Static             | ✅ Works |
 
+By default, these bindings are statically linked and the auxiliary dependent libraries are dynamically linked.
+
+Some libraries have restrictions, either due to limited platform support, less-permissive licensing, or other reasons. For less-permissive licenses, these restrictions are documented in the library's README file. The prefix paths for the subdirectory for these libraries are documented below.
+
+| Prefix             | Operating System Support  | Licensing   |
+| ------------------ | ------------------------- | ----------- |
+| extras-            | all platforms<sup>1</sup> | Permissive  |
+| foss-extras-       | BSD & Linux only          | Permissive  |
+| foss-restricted-   | BSD & Linux only          | Restrictive |
+| posix-extras-      | non-Windows               | Permissive  |
+| posix-restricted-  | non-Windows               | Restrictive |
+| restricted-extras- | all platforms             | Restrictive |
+
+<sup>1</sup>While macOS and Windows are supported upstream by the libraries, library installation for these platforms is non-trivial. Therefore, these libraries are disabled by default and must be explicitly enabled with the appropriate build option.
+
 License
 -------
 
 The `libqt6c` bindings are licensed under the MIT license.
 
-You must also meet your Qt license obligations.
+You must also meet your license obligations for Qt and the included libraries.
 
 Examples
 --------
@@ -108,7 +123,7 @@ Building
 FreeBSD (native)
 ----------------
 
-- *Tested with FreeBSD 14 / Qt 6.8 / GCC 13*
+- *Tested with FreeBSD 14 / Qt 6.8 + 6.9 / GCC 13*
 
 For dynamic linking with the Qt 6 system libraries:
 
@@ -128,9 +143,9 @@ Linux (native)
 
 - *Tested with Ubuntu 24.04 / Qt 6.4 / GCC 13*
 
-- *Tested with Fedora 41 / Qt 6.8 / GCC 14*
+- *Tested with Fedora 41 + 42 / Qt 6.8 + 6.9 / GCC 14*
 
-- *Tested with EndeavourOS Mercury / Qt 6.8 / GCC 14*
+- *Tested with EndeavourOS Mercury Neo / Qt 6.8 + 6.9 / GCC 14*
 
 For dynamic linking with the Qt 6 system libraries:
 
@@ -176,10 +191,10 @@ The compiled libraries can be installed to the system in a non-default location 
 sudo zig build --prefix-lib-dir /usr/local/lib/libqt6c # creates /usr/local/lib/libqt6c/{libraries}
 ```
 
-To skip the restricted extras:
+Prefixed libraries have per-library options that can be used to enable or disable them (where supported):
 
 ```bash
-zig build -Dskip-restricted
+zig build -Denable-charts=true -Denable-qscintilla=false
 ```
 
 To see the full list of build options available:
@@ -224,7 +239,10 @@ __Extra options are required for building on Arch-based distributions. Refer to 
 #include <libqt6c.h>
 ```
 
-Full examples of the build system and sample applications can be found in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository. Cross-compilation is not supported by this library at this time.
+Full examples of the build system and sample applications can be found in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository.
+
+> [!IMPORTANT]
+> Cross-compilation is not supported by this library at this time.
 
 FAQ
 ---
