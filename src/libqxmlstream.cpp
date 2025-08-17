@@ -131,7 +131,7 @@ libqt_string QXmlStreamEntityResolver_ResolveEntity(QXmlStreamEntityResolver* se
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -141,7 +141,7 @@ libqt_string QXmlStreamEntityResolver_ResolveEntity(QXmlStreamEntityResolver* se
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -160,7 +160,7 @@ libqt_string QXmlStreamEntityResolver_QBaseResolveEntity(QXmlStreamEntityResolve
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -170,7 +170,7 @@ libqt_string QXmlStreamEntityResolver_QBaseResolveEntity(QXmlStreamEntityResolve
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -195,7 +195,7 @@ libqt_string QXmlStreamEntityResolver_ResolveUndeclaredEntity(QXmlStreamEntityRe
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -205,7 +205,7 @@ libqt_string QXmlStreamEntityResolver_ResolveUndeclaredEntity(QXmlStreamEntityRe
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -223,7 +223,7 @@ libqt_string QXmlStreamEntityResolver_QBaseResolveUndeclaredEntity(QXmlStreamEnt
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -233,7 +233,7 @@ libqt_string QXmlStreamEntityResolver_QBaseResolveUndeclaredEntity(QXmlStreamEnt
         QByteArray _b = _ret.toUtf8();
         libqt_string _str;
         _str.len = _b.length();
-        _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+        _str.data = static_cast<const char*>(malloc(_str.len + 1));
         memcpy((void*)_str.data, _b.data(), _str.len);
         ((char*)_str.data)[_str.len] = '\0';
         return _str;
@@ -306,7 +306,7 @@ libqt_string QXmlStreamReader_TokenString(const QXmlStreamReader* self) {
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
     _str.len = _b.length();
-    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;
@@ -394,7 +394,7 @@ libqt_string QXmlStreamReader_ReadElementText(QXmlStreamReader* self) {
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
     _str.len = _b.length();
-    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;
@@ -404,7 +404,7 @@ libqt_list /* of QXmlStreamNamespaceDeclaration* */ QXmlStreamReader_NamespaceDe
     QList<QXmlStreamNamespaceDeclaration> _ret = self->namespaceDeclarations();
     // Convert QList<> from C++ memory to manually-managed C memory
     QXmlStreamNamespaceDeclaration** _arr = static_cast<QXmlStreamNamespaceDeclaration**>(malloc(sizeof(QXmlStreamNamespaceDeclaration*) * _ret.size()));
-    for (size_t i = 0; i < _ret.size(); ++i) {
+    for (qsizetype i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QXmlStreamNamespaceDeclaration(_ret[i]);
     }
     libqt_list _out;
@@ -431,7 +431,7 @@ libqt_list /* of QXmlStreamNotationDeclaration* */ QXmlStreamReader_NotationDecl
     QList<QXmlStreamNotationDeclaration> _ret = self->notationDeclarations();
     // Convert QList<> from C++ memory to manually-managed C memory
     QXmlStreamNotationDeclaration** _arr = static_cast<QXmlStreamNotationDeclaration**>(malloc(sizeof(QXmlStreamNotationDeclaration*) * _ret.size()));
-    for (size_t i = 0; i < _ret.size(); ++i) {
+    for (qsizetype i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QXmlStreamNotationDeclaration(_ret[i]);
     }
     libqt_list _out;
@@ -444,7 +444,7 @@ libqt_list /* of QXmlStreamEntityDeclaration* */ QXmlStreamReader_EntityDeclarat
     QList<QXmlStreamEntityDeclaration> _ret = self->entityDeclarations();
     // Convert QList<> from C++ memory to manually-managed C memory
     QXmlStreamEntityDeclaration** _arr = static_cast<QXmlStreamEntityDeclaration**>(malloc(sizeof(QXmlStreamEntityDeclaration*) * _ret.size()));
-    for (size_t i = 0; i < _ret.size(); ++i) {
+    for (qsizetype i = 0; i < _ret.size(); ++i) {
         _arr[i] = new QXmlStreamEntityDeclaration(_ret[i]);
     }
     libqt_list _out;
@@ -471,7 +471,7 @@ libqt_string QXmlStreamReader_ErrorString(const QXmlStreamReader* self) {
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
     _str.len = _b.length();
-    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;
@@ -499,7 +499,7 @@ libqt_string QXmlStreamReader_ReadElementText1(QXmlStreamReader* self, int behav
     QByteArray _b = _ret.toUtf8();
     libqt_string _str;
     _str.len = _b.length();
-    _str.data = static_cast<const char*>(malloc((_str.len + 1) * sizeof(char)));
+    _str.data = static_cast<const char*>(malloc(_str.len + 1));
     memcpy((void*)_str.data, _b.data(), _str.len);
     ((char*)_str.data)[_str.len] = '\0';
     return _str;

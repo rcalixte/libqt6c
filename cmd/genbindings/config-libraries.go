@@ -30,7 +30,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 
 	// Qt 6 modules
 	modules := []moduleConfig{
-		// Qt 6 Core, Gui, Widgets
+		// Qt 6 Core, GUI, Widgets
 		{
 			path: "",
 			dirs: []string{
@@ -49,7 +49,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags: "--std=c++17 " + pkgConfigCflags("Qt6Widgets"),
 		},
 
-		// Qt CBOR
+		// Qt 6 CBOR
+		// Depends on Qt Core
 		{
 			path: "cbor",
 			dirs: []string{
@@ -63,8 +64,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags: "--std=c++20 " + pkgConfigCflags("Qt6Core"),
 		},
 
-		// Qt 6 QtPrintSupport
-		// Depends on QtCore/Gui/Widgets
+		// Qt 6 Print Support
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "printsupport",
 			dirs: []string{
@@ -75,7 +76,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 SVG
-		// Depends on QtCore/Gui/Widgets
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "svg",
 			dirs: []string{
@@ -86,8 +87,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6SvgWidgets"),
 		},
 
-		// Qt 6 QtNetwork
-		// Depends on QtCore
+		// Qt 6 Network
+		// Depends on Qt Core
 		{
 			path: "network",
 			dirs: []string{
@@ -100,8 +101,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags: "--std=c++17 " + pkgConfigCflags("Qt6Network"),
 		},
 
-		// Qt 6 QtMultimedia
-		// Depends on QtCore/Gui/Widgets
+		// Qt 6 Multimedia
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "multimedia",
 			dirs: []string{
@@ -112,8 +113,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6MultimediaWidgets"),
 		},
 
-		// Qt 6 Spatial Audio (on Debian this is a dependency of Qt6Multimedia)
-		// Depends on QtCore
+		// Qt 6 Spatial Audio (on Debian, this is a dependency of Qt Multimedia)
+		// Depends on Qt Core
 		{
 			path: "spatialaudio",
 			dirs: []string{
@@ -123,8 +124,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6SpatialAudio"),
 		},
 
-		// Qt 6 QWebChannel
-		// Depends on QtCore
+		// Qt 6 WebChannel
+		// Depends on Qt Core
 		{
 			path: "webchannel",
 			dirs: []string{
@@ -134,8 +135,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6WebChannel"),
 		},
 
-		// Qt 6 QWebEngine
-		// Depends on QtCore/Gui/Widgets
+		// Qt 6 WebEngine
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "webengine",
 			dirs: []string{
@@ -150,7 +151,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 PDF
-		// Depends on QtCore/Gui/Widgets
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "pdf",
 			dirs: []string{
@@ -162,7 +163,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 Charts
-		// Depends on QtCore/Gui/Widgets
+		// Depends on Qt Core, GUI, Widgets
 		{
 			path: "restricted-extras-charts",
 			dirs: []string{
@@ -173,7 +174,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 		},
 
 		// Qt 6 QScintilla
-		// Depends on QtCore/Gui/Widgets, QPrintSupport
+		// Depends on Qt Core, GUI, Widgets, Print Support
 		{
 			path: "restricted-extras-qscintilla",
 			dirs: []string{
