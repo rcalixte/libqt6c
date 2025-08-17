@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"slices"
 	"sort"
 	"strings"
 )
@@ -129,7 +130,6 @@ func (p CppParameter) RenderTypeCabi() string {
 
 	} else if e, ok := KnownEnums[p.ParameterType]; ok {
 		ret = e.Enum.UnderlyingType.RenderTypeCabi()
-
 	}
 
 	if p.Pointer {
@@ -178,7 +178,7 @@ func emitParametersCpp(m CppMethod, includeHidden bool) string {
 		}
 	}
 
-	return strings.ReplaceAll(strings.Join(tmp, `, `), "const const ", "const ")
+	return strings.ReplaceAll(strings.Join(tmp, ", "), "const const ", "const ")
 }
 
 func emitParameterNames(m CppMethod, includeHidden bool) string {
@@ -193,7 +193,7 @@ func emitParameterNames(m CppMethod, includeHidden bool) string {
 		}
 	}
 
-	return strings.Join(tmp, `, `)
+	return strings.Join(tmp, ", ")
 }
 
 func emitParametersCabi(m CppMethod, selfType string) string {
@@ -239,7 +239,7 @@ func emitParametersCABI2CppForwarding(params []CppParameter, indent, currentVirt
 }
 
 func makeNamePrefix(in string) string {
-	replacer := strings.NewReplacer(`[`, `_`, `]`, "", `.`, `_`)
+	replacer := strings.NewReplacer("[", "_", "]", "", ".", "_")
 	return replacer.Replace(in)
 }
 
@@ -351,8 +351,12 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 		castType := p.RenderTypeQtCpp()
 		if p.IsKnownEnum() {
 			if enum, ok := KnownEnums[p.ParameterType]; ok && enum.Enum.IsProtected {
-				// For protected enums, use unqualified name since we'll have a using declaration
-				castType = "Virtual" + currentClass + "::" + enum.Enum.CabiEnumName()
+				// For protected enums, use the unqualified name since we'll have a using declaration
+				currentClass = strings.ReplaceAll(currentClass, "::", "")
+				if !strings.HasPrefix(currentClass, "Virtual") {
+					currentClass = "Virtual" + currentClass
+				}
+				castType = currentClass + "::" + enum.Enum.CabiEnumName()
 			}
 		}
 
@@ -376,6 +380,9 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 			// CABI has these as int64_t* (long int) which fails a static_cast to qint64& (long long int&)
 			// Hack a hard C-style cast
 			return preamble, "(" + castType + ")(" + castSrc + ")"
+		} else if p.IsKnownEnum() && p.Pointer {
+			// requires reinterpret_cast<>
+			return preamble, "reinterpret_cast<" + castType + ">(" + castSrc + ")"
 		} else {
 			// Use static_cast<> safely
 			return preamble, "static_cast<" + castType + ">(" + castSrc + ")"
@@ -401,7 +408,7 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 	} else if p.QtClassType() && !p.Pointer {
 		// CABI takes all Qt types by pointer, even if C++ wants them by value
 		// Dereference the passed-in pointer
-		if strings.Contains(p.ParameterName, `[`) {
+		if strings.Contains(p.ParameterName, "[") {
 			return preamble, "*(" + p.ParameterName + ")" // Extra brackets aren't necessary, just nice
 		}
 		return preamble, "*" + p.ParameterName
@@ -412,8 +419,8 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string) (preamb
 }
 
 // emitAssignCppToCabi transforms and assigns rvalue to the assignExpression.
-// Sample assignExpression: `return `, `auto foo = `
-// Sample rvalue: `foo`, `foo(xyz)`
+// Sample assignExpression: "return ", "auto foo = "
+// Sample rvalue: "foo", "foo(xyz)"
 // The return is a complete statement including trailing newline.
 func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string) string {
 
@@ -450,7 +457,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 		afterCall += indent + "libqt_string " + namePrefix + "_str;\n"
 		afterCall += indent + namePrefix + "_str.len = " + namePrefix + "_b.length();\n"
-		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc((" + namePrefix + "_str.len + 1) * sizeof(char)));\n"
+		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc(" + namePrefix + "_str.len + 1));\n"
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_b.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + namePrefix + "_str;\n"
@@ -467,7 +474,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 		afterCall += indent + "libqt_string " + namePrefix + "_str;\n"
 		afterCall += indent + namePrefix + "_str.len = " + namePrefix + "_b.length();\n"
-		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc((" + namePrefix + "_str.len + 1) * sizeof(char)));\n"
+		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc(" + namePrefix + "_str.len + 1));\n"
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_b.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + "(char*)" + namePrefix + "_str.data;\n"
@@ -482,7 +489,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 		afterCall += indent + "libqt_string " + namePrefix + "_str;\n"
 		afterCall += indent + namePrefix + "_str.len = " + namePrefix + "_qb.length();\n"
-		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc((" + namePrefix + "_str.len + 1) * sizeof(char)));\n"
+		afterCall += indent + namePrefix + "_str.data = static_cast<const char*>(malloc(" + namePrefix + "_str.len + 1));\n"
 		afterCall += indent + "memcpy((void*)" + namePrefix + "_str.data, " + namePrefix + "_qb.data(), " + namePrefix + "_str.len);\n"
 		afterCall += indent + "((char*)" + namePrefix + "_str.data)[" + namePrefix + "_str.len] = '\\0';\n"
 		afterCall += indent + assignExpression + namePrefix + "_str;\n"
@@ -506,16 +513,25 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 			unionType = "ptrdiffs"
 		}
 
+		var maybeDerefOpen, maybeDerefClose string
+		memberRef := "."
+
+		if p.Pointer {
+			maybeDerefOpen = "(*"
+			maybeDerefClose = ")"
+			memberRef = "->"
+		}
+
 		shouldReturn = p.RenderTypeQtCpp() + " " + namePrefix + "_ret = "
 
 		afterCall += indent + "// Convert " + containerType + "<> from C++ memory to manually-managed C memory\n"
-		afterCall += indent + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * " + namePrefix + "_ret.size()));\n"
-		afterCall += indent + "for (size_t i = 0; i < " + namePrefix + "_ret.size(); ++i) {\n"
-		afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr[i] = ", t, namePrefix+"_ret[i]")
+		afterCall += indent + cType + "* " + namePrefix + "_arr = static_cast<" + cType + "*>(malloc(sizeof(" + cType + ") * " + namePrefix + "_ret" + memberRef + "size()));\n"
+		afterCall += indent + "for (qsizetype i = 0; i < " + namePrefix + "_ret" + memberRef + "size(); ++i) {\n"
+		afterCall += emitAssignCppToCabi(indent+"\t"+namePrefix+"_arr[i] = ", t, maybeDerefOpen+namePrefix+"_ret"+maybeDerefClose+"[i]")
 		afterCall += indent + "}\n"
 
 		afterCall += indent + "libqt_list " + namePrefix + "_out;\n"
-		afterCall += indent + namePrefix + "_out.len = " + namePrefix + "_ret.size();\n"
+		afterCall += indent + namePrefix + "_out.len = " + namePrefix + "_ret" + memberRef + "size();\n"
 		afterCall += indent + namePrefix + "_out.data." + unionType + " = " + castType + maybeLParen + namePrefix + "_arr" + maybeRParen + ";\n"
 
 		afterCall += indent + assignExpression + namePrefix + "_out;\n"
@@ -630,6 +646,8 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		} else if p.QtCppOriginalType != nil && p.QtCppOriginalType.ParameterType == "qintptr" {
 			// Hard int cast
 			afterCall += indent + assignExpression + "(" + p.RenderTypeCabi() + ")(" + namePrefix + "_ret);\n"
+		} else if p.ByRef {
+			afterCall += indent + assignExpression + "reinterpret_cast<" + p.RenderTypeCabi() + ">(&" + rvalue + ");\n"
 		} else {
 			afterCall += indent + assignExpression + "static_cast<" + p.RenderTypeCabi() + ">(" + rvalue + ");\n"
 			return indent + afterCall
@@ -764,10 +782,10 @@ func cabiClassName(className string) string {
 	// Many types are defined in qnamespace.h under Qt::
 	// The C implementation is always called Qt_Foo, and though these names
 	// don't collide with anything, strip the redundant prefix
-	className = strings.TrimPrefix(className, `Qt::`)
+	className = strings.TrimPrefix(className, "Qt::")
 
 	// Must use __ to avoid subclass/method name collision e.g. QPagedPaintDevice::Margins
-	return strings.ReplaceAll(className, `::`, `__`)
+	return strings.ReplaceAll(className, "::", "__")
 }
 
 func cabiPreventStructDeclaration(className string) bool {
@@ -832,10 +850,10 @@ var (
 func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string) (string, error) {
 	ret := strings.Builder{}
 
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`))
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "C_LIBVIRTUAL" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, ".", "_"), "-", "_"))
 	bindingInclude := "qtlibc.h"
 
-	if strings.Contains(packageName, `/`) {
+	if strings.Contains(packageName, "/") {
 		bindingInclude = "../" + bindingInclude
 	}
 
@@ -845,7 +863,6 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
@@ -858,7 +875,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 		protectedMethods := c.ProtectedMethods()
 
 		if len(virtualMethods) > 0 {
-			overriddenClassName := "Virtual" + strings.ReplaceAll(cppClassName, `::`, ``)
+			overriddenClassName := "Virtual" + strings.ReplaceAll(cppClassName, "::", "")
 
 			var publicTypes, privateCallbacks, callbackSetters, baseSetters, privateCallbackVars, privateBaseFlags, friendFuncs []string
 
@@ -869,8 +886,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 			seenProtectedEnums := map[string]struct{}{}
 			allProtectedEnums := getAllProtectedEnums(&c, seenProtectedEnums)
 			for _, e := range allProtectedEnums {
-				parentClass := strings.Split(e.EnumName, "::")[0]
-				publicTypes = append(publicTypes, "\tusing "+parentClass+"::"+e.CabiEnumName()+";\n")
+				publicTypes = append(publicTypes, "\tusing "+e.EnumName+";\n")
 			}
 
 			seenCallbacks := map[string]struct{}{}
@@ -928,8 +944,9 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 
 				// Friend functions
 				if m.IsProtected {
-					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi()+" "+className+"_"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
-					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi()+" "+className+"_QBase"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
+					cClassName := cabiClassName(className)
+					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi()+" "+cClassName+"_"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
+					friendFuncs = append(friendFuncs, "\tfriend "+m.ReturnType.RenderTypeCabi()+" "+cClassName+"_QBase"+m.SafeMethodName()+"("+emitParametersCabi(m, maybeConst+cppClassName+"*")+");\n")
 				}
 
 				seenCallbacks[callbackType] = struct{}{}
@@ -945,12 +962,21 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 				"\n\t// Instance base flags\n" + strings.Join(privateBaseFlags, "") + "\n")
 
 			ret.WriteString("public:\n")
+
+			var seenCtors []string
+
 			for _, ctor := range c.Ctors {
 				if _, ok := moveCtorOnly[c.ClassName]; ok && !ctor.IsMoveCtor {
 					continue
 				}
 
-				ret.WriteString("\t" + overriddenClassName + "(" + emitParametersCpp(ctor, false) + "): " + cppClassName + "(" + emitParameterNames(ctor, false) + ") {};\n")
+				cppParams := emitParametersCpp(ctor, false)
+				paramNames := emitParameterNames(ctor, false)
+
+				if !slices.Contains(seenCtors, cppParams) {
+					ret.WriteString("\t" + overriddenClassName + "(" + cppParams + "): " + cppClassName + "(" + paramNames + ") {};\n")
+					seenCtors = append(seenCtors, cppParams)
+				}
 			}
 			ret.WriteString("\n")
 
@@ -995,7 +1021,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 				}
 
 				maybeReturn := ifv(!m.ReturnType.Void(), "return ", "")
-				maybeOverride := ifv(m.IsVirtual, "override ", "")
+				maybeOverride := ifv(m.IsVirtual || (m.IsProtected && m.IsVirtual), "override ", "")
 				maybeVirtual := ifv(m.IsVirtual, "virtual ", "")
 
 				var maybeReturn2, retTransformP, retTransformF string
@@ -1004,11 +1030,6 @@ func emitVirtualBindingHeader(src *CppParsedHeader, filename, packageName string
 					returnParam := m.ReturnType // copy
 					returnParam.ParameterName = "callback_ret"
 					retTransformP, retTransformF = emitCABI2CppForwarding(returnParam, "\t\t", cppClassName)
-				}
-
-				// fix for QsciLexerAsm
-				if methodPrefixName == "QsciLexerAsm" && m.IsProtected {
-					maybeOverride = ""
 				}
 
 				var customCallback, maybeElse, maybeThis, signalCode string
@@ -1096,10 +1117,10 @@ func emitBindingHeader(src *CppParsedHeader, filename, packageName string) (stri
 	qtstructdefs := make(map[string]struct{})
 	qttypedefs := make(map[string]struct{})
 
-	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, `/`, `_`), `-`, `_`)) + "C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, `.`, `_`), `-`, `_`)+"pp")
+	includeGuard := strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(packageName, "/", "_"), "-", "_")) + "C_LIB" + strings.ToUpper(strings.ReplaceAll(strings.ReplaceAll(filename, ".", "_"), "-", "_")+"pp")
 	bindingInclude := "qtlibc.h"
 
-	if strings.Contains(packageName, `/`) {
+	if strings.Contains(packageName, "/") {
 		bindingInclude = "../" + bindingInclude
 	}
 
@@ -1109,7 +1130,6 @@ func emitBindingHeader(src *CppParsedHeader, filename, packageName string) (stri
 
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
@@ -1139,12 +1159,12 @@ extern "C" {
 			continue
 		}
 
-		if strings.Contains(ft, `::`) {
+		if strings.Contains(ft, "::") {
 			// Forward declarations of inner classes are not yet supported in C++
 			// @ref https://stackoverflow.com/q/1021793
 
-			ret.WriteString(`#if defined(WORKAROUND_INNER_CLASS_DEFINITION_` + cabiClassName(ft) + ")\n")
-			ret.WriteString(`typedef ` + ft + " " + cabiClassName(ft) + ";\n")
+			ret.WriteString("#if defined(WORKAROUND_INNER_CLASS_DEFINITION_" + cabiClassName(ft) + ")\n")
+			ret.WriteString("typedef " + ft + " " + cabiClassName(ft) + ";\n")
 			ret.WriteString("#endif\n")
 		}
 	}
@@ -1259,7 +1279,7 @@ extern "C" {
 
 			if m.ReturnType.BecomesConstInVersion != nil {
 				ret.WriteString(fmt.Sprintf("// This method's return type was changed from non-const to const in Qt %s\n", *m.ReturnType.BecomesConstInVersion) +
-					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, `.`, `,`) + ",0)\n" +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, ".", ",") + ",0)\n" +
 					fmt.Sprintf("%s %s_%s(%s);\n", "const "+returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
 					"#else\n" +
 					fmt.Sprintf("%s %s_%s(%s);\n", returnCabi, methodPrefixName, mSafeMethodName, emitParametersCabi(m, maybeConst+methodPrefixName+"*")) +
@@ -1308,15 +1328,14 @@ extern "C" {
 				continue
 			}
 
-			cppClassName := strings.ReplaceAll(c.ClassName, `::`, ``) + "*"
 			maybeConst := ifv(m.IsConst, "const ", "")
 
 			ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + mSafeMethodName + "(" +
-				emitParametersCabi(m, maybeConst+cppClassName) + ");\n")
+				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
 
 			ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot);\n")
 			ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
-				emitParametersCabi(m, maybeConst+cppClassName) + ");\n")
+				emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n")
 		}
 
 		for _, m := range c.PrivateSignals {
@@ -1360,8 +1379,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			continue
 		}
 
-		if strings.Contains(ref, `::`) {
-			ret.WriteString(`#define WORKAROUND_INNER_CLASS_DEFINITION_` + cabiClassName(ref) + "\n")
+		if strings.Contains(ref, "::") {
+			ret.WriteString("#define WORKAROUND_INNER_CLASS_DEFINITION_" + cabiClassName(ref) + "\n")
 			continue
 		}
 
@@ -1376,10 +1395,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			continue
 		}
 		seenRefs[ref] = struct{}{}
-		ret.WriteString(`#include <` + ref + ">\n")
+		ret.WriteString("#include <" + ref + ">\n")
 	}
 
-	ret.WriteString(`#include <` + filename + ">\n")
+	ret.WriteString("#include <" + filename + ">\n")
 	ret.WriteString(`#include "lib` + filename + `pp"` + "\n")
 	ret.WriteString(`#include "lib` + filename + `xx"` + "\n\n")
 
@@ -1388,7 +1407,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
 		baseMethods := c.Methods
-		cppClassName := strings.ReplaceAll(c.ClassName, `::`, ``)
+		cppClassName := strings.ReplaceAll(c.ClassName, "::", "")
 		virtualEligible := AllowVirtualForClass(c.ClassName)
 
 		// Add protected methods first
@@ -1475,7 +1494,9 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 					maybeMoveCtor = "std::move("
 					maybeCloseMoveCtor = ")"
 				}
-				baseReturn := "new " + virtualName + c.ClassName + "(" + maybeMoveCtor + forwarding + maybeCloseMoveCtor + ")"
+
+				cClassName := ifv(virtualName != "", strings.ReplaceAll(c.ClassName, "::", ""), c.ClassName)
+				baseReturn := "new " + virtualName + cClassName + "(" + maybeMoveCtor + forwarding + maybeCloseMoveCtor + ")"
 				ctorReturn = "\t return " + baseReturn
 
 				ret.WriteString(methodPrefixName + "* " + methodPrefixName + "_new" +
@@ -1580,7 +1601,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					preamble +
 					"// This method was changed from const to non-const in Qt " + *m.BecomesNonConstInVersion + "\n" +
-					"#if QT_VERSION < QT_VERSION_CHECK(" + strings.ReplaceAll(*m.BecomesNonConstInVersion, `.`, `,`) + ",0)\n" +
+					"#if QT_VERSION < QT_VERSION_CHECK(" + strings.ReplaceAll(*m.BecomesNonConstInVersion, ".", ",") + ",0)\n" +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, callTarget) +
 					"#else\n" +
 					emitAssignCppToCabi("\treturn ", m.ReturnType, nonConstCallTarget) +
@@ -1592,7 +1613,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 			} else if m.ReturnType.BecomesConstInVersion != nil {
 
 				ret.WriteString("// This method's return type was changed from non-const to const in Qt " + *m.ReturnType.BecomesConstInVersion + "\n" +
-					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, `.`, `,`) + ",0)\n" +
+					"#if QT_VERSION >= QT_VERSION_CHECK(" + strings.ReplaceAll(*m.ReturnType.BecomesConstInVersion, ".", ",") + ",0)\n" +
 					"const " + m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					"#else\n" +
 					m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
@@ -1608,6 +1629,9 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				returnCallTarget := callTarget
 				if flagOrEnum {
+					if strings.Count(returnCabi, "::") > 1 {
+						returnCabi = strings.TrimPrefix(returnCabi, "Virtual")
+					}
 					returnCallTarget = "static_cast<" + returnCabi + ">(" + callTarget + ")"
 				}
 
@@ -1634,8 +1658,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 						returnCallTarget = vVarTarget
 						emptyReturn = ifv(!m.ReturnType.Void(), "return {};\n", "")
 					}
-					virtualStart = "auto* " + vVar + " = dynamic_cast<" + maybeConst + "Virtual" + c.ClassName + "*>(self);\n"
-					virtualStart += "if (" + vVar + " && " + vVar + "->isVirtual" + c.ClassName + ") {\n"
+
+					cClassName := strings.ReplaceAll(c.ClassName, "::", "")
+					virtualStart = "auto* " + vVar + " = dynamic_cast<" + maybeConst + "Virtual" + cClassName + "*>(self);\n"
+					virtualStart += "if (" + vVar + " && " + vVar + "->isVirtual" + cClassName + ") {\n"
 					virtualClose = maybeElse + baseClose + "}\n"
 				}
 
@@ -1654,17 +1680,19 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
 					var maybeConst, maybeConstCast, closeConstCast string
+
+					cClassName := strings.ReplaceAll(c.ClassName, "::", "")
 					if m.IsConst {
-						maybeConstCast = "const_cast<" + "Virtual" + c.ClassName + "*>("
+						maybeConstCast = "const_cast<Virtual" + cClassName + "*>("
 						maybeConst = "const "
 						closeConstCast = ")"
 					}
 
 					ret.WriteString("// Subclass method to allow providing a virtual method re-implementation\n")
 					ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot) {\n\t" +
-						"  auto* " + vVar + " = " + maybeConstCast + "dynamic_cast<" + maybeConst + "Virtual" + c.ClassName + "*>(self)" + closeConstCast + ";\n" +
-						"  if ( " + vVar + " && " + vVar + "->isVirtual" + c.ClassName + ") {\n" +
-						vVar + "->set" + callbackName + "(reinterpret_cast<Virtual" + c.ClassName + "::" + callbackName + ">(slot));\n\t}\n}\n\n")
+						"  auto* " + vVar + " = " + maybeConstCast + "dynamic_cast<" + maybeConst + "Virtual" + cClassName + "*>(self)" + closeConstCast + ";\n" +
+						"  if ( " + vVar + " && " + vVar + "->isVirtual" + cClassName + ") {\n" +
+						vVar + "->set" + callbackName + "(reinterpret_cast<Virtual" + cClassName + "::" + callbackName + ">(slot));\n\t}\n}\n\n")
 
 					ret.WriteString("// Virtual base class handler implementation\n")
 					baseStart = virtualStart + vVar + "->set" + isBaseName + "(true);\n"
@@ -1714,8 +1742,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				ret.WriteString(
 					"void " + methodPrefixName + "_Connect_" + mSafeMethodName + "(" + methodPrefixName + "* self, intptr_t slot) {\n" +
-						"\tvoid (*slotFunc)(" + cppClassName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + cppClassName + "*" + sigRet + ")>(slot);\n" +
-						"\t" + cppClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, showHiddenParams) + ") {\n" +
+						"\tvoid (*slotFunc)(" + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
+						"\t" + c.ClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, showHiddenParams) + ") {\n" +
 						signalCode + "}\n\n",
 				)
 			}
@@ -1763,6 +1791,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				virtualTarget = maybeConstCast + "dynamic_cast<" + maybeConst + maybeVirtual + cppClassName + "*>(self)" + closeConstCast
 			}
 
+			strippedPrefix := strings.ReplaceAll(methodPrefixName, "__", "")
 			baseName := methodPrefixName + "_" + mSafeMethodName
 			isBaseName := baseName + "_IsBase"
 
@@ -1777,6 +1806,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				var emptyReturn string
 				maybeSelf := ifv(m.IsPrivate || m.IsProtected, vVar+"->", "((Virtual"+cppClassName+"*)self)->")
 				nonConstReturn := strings.TrimPrefix(m.ReturnType.RenderTypeQtCpp(), "const ")
+				nonConstReturn = strings.TrimSuffix(nonConstReturn, "&")
 				maybeElse := "\t} else {\nreturn new " + nonConstReturn + "(" + maybeSelf + vbCallTarget + ");\n}"
 
 				// private hack/workaround
@@ -1787,9 +1817,9 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				ret.WriteString(
 					m.ReturnType.RenderTypeCabi() + " " + baseName + "(" +
-						emitParametersCabi(m, maybeConst+cppClassName+"*") + ") {" +
+						emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
+						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 						"\t\treturn new " + nonConstReturn + "(" + vVar + "->" + vbCallTarget + ");\n" +
 						maybeElse + emptyReturn + "\n}\n\n")
 
@@ -1797,9 +1827,9 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 				ret.WriteString(
 					m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_QBase" + mSafeMethodName + "(" +
-						emitParametersCabi(m, maybeConst+cppClassName+"*") + ") {" +
+						emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 						"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
+						vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 						vVar + "->set" + isBaseName + "(true);\n" +
 						"\t\treturn new " + nonConstReturn + "(" + vVar + "->" + vbCallTarget + ");\n" +
 						maybeElse + emptyReturn + "\n}\n\n")
@@ -1816,30 +1846,32 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				if m.IsPrivate || m.IsProtected || m.IsPureVirtual || strings.HasPrefix(cppClassName, "QsciLexer") {
 					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "((Virtual"+cppClassName+"*)self)->"+vbCallTarget)
 				} else {
-					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+cppClassName+"::"+vbCallTarget)
+					elseReturn = emitAssignCppToCabi("\treturn ", m.ReturnType, "self->"+c.ClassName+"::"+vbCallTarget)
 				}
 
 				ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + baseName +
-					"(" + emitParametersCabi(m, maybeConst+cppClassName+"*") + ") {" +
+					"(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 					"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
+					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 					virtualReturn + "\t} else {\n" + elseReturn + "\n}\n}\n\n")
 
 				ret.WriteString("// Base class handler implementation\n")
+
 				ret.WriteString(m.ReturnType.RenderTypeCabi() + " " + methodPrefixName + "_QBase" + mSafeMethodName +
-					"(" + emitParametersCabi(m, maybeConst+cppClassName+"*") + ") {" +
+					"(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {" +
 					"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
+					vbpreamble + "\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
 					vVar + "->set" + isBaseName + "(true);\n" +
 					virtualReturn + "\t} else {\n" + elseReturn + "\n}\n}\n\n")
 			}
 
 			callbackName := baseName + "_Callback"
 			ret.WriteString("// Auxiliary method to allow providing re-implementation\n")
+
 			ret.WriteString("void " + methodPrefixName + "_On" + mSafeMethodName + "(" + maybeConst + methodPrefixName + "* self, intptr_t slot) {\n" +
 				"\tauto* " + vVar + " = " + virtualTarget + ";\n" +
-				"\tif (" + vVar + " && " + vVar + "->isVirtual" + methodPrefixName + ") {\n" +
-				vVar + "->set" + callbackName + "(reinterpret_cast<Virtual" + c.ClassName + "::" + callbackName + ">(slot));\n}\n}\n\n")
+				"\tif (" + vVar + " && " + vVar + "->isVirtual" + strippedPrefix + ") {\n" +
+				vVar + "->set" + callbackName + "(reinterpret_cast<Virtual" + strippedPrefix + "::" + callbackName + ">(slot));\n}\n}\n\n")
 		}
 
 		for _, m := range c.PrivateSignals {
@@ -1871,8 +1903,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 
 			ret.WriteString(
 				"void " + methodPrefixName + "_Connect_" + m.SafeMethodName() + "(" + methodPrefixName + "* self, intptr_t slot) {\n" +
-					"\tvoid (*slotFunc)(" + cppClassName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + cppClassName + "*" + sigRet + ")>(slot);\n" +
-					"\t" + cppClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, false) + ") {\n" +
+					"\tvoid (*slotFunc)(" + methodPrefixName + "*" + sigRet + ") = reinterpret_cast<void (*)(" + methodPrefixName + "*" + sigRet + ")>(slot);\n" +
+					"\t" + c.ClassName + "::connect(self, &" + c.ClassName + "::" + m.CppCallTarget() + ", [self, slotFunc](" + emitParametersCpp(m, false) + ") {\n" +
 					signalCode + "}\n\n",
 			)
 		}
