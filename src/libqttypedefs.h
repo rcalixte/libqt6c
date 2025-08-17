@@ -712,6 +712,7 @@ typedef struct QTcpSocket QTcpSocket;
 typedef struct QTemporaryDir QTemporaryDir;
 typedef struct QTemporaryFile QTemporaryFile;
 typedef struct QTest__QTouchEventSequence QTest__QTouchEventSequence;
+typedef struct QTest__QTouchEventWidgetSequence QTest__QTouchEventWidgetSequence;
 typedef struct QTextBlock QTextBlock;
 typedef struct QTextBlockFormat QTextBlockFormat;
 typedef struct QTextBlockGroup QTextBlockGroup;

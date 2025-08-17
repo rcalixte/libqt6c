@@ -1,3 +1,4 @@
+#include "libqeventpoint.hpp"
 #include "libqpoint.hpp"
 #include "libqwindow.hpp"
 #include "libqtestsupport_gui.hpp"
