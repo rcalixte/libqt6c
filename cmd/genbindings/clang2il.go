@@ -84,6 +84,9 @@ nextTopLevel:
 			// the CABI
 			// Ignore this node
 
+		case "EmptyDecl":
+			// Ignore
+
 		case "FileScopeAsmDecl":
 		// ignore
 
@@ -290,11 +293,6 @@ func (c *CppClass) IsRequiredProtectedMethod(m *CppMethod) bool {
 
 	// Brute force the removal of certain methods
 	if _, ok := bruteForceMethods[c.ClassName+"_"+m.MethodName]; ok {
-		return false
-	}
-
-	// and a class
-	if c.ClassName == "QTest::QTouchEventSequence" {
 		return false
 	}
 
