@@ -69,7 +69,7 @@ QHostAddress* q_hostaddress_new6(void* copyVal);
 /// q_hostaddress_new7 constructs a new QHostAddress object.
 ///
 /// @param address enum QHostAddress__SpecialAddress
-QHostAddress* q_hostaddress_new7(int64_t address);
+QHostAddress* q_hostaddress_new7(int32_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator-eq)
 ///
@@ -81,7 +81,7 @@ void q_hostaddress_operator_assign(void* self, void* other);
 ///
 /// @param self QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
-void q_hostaddress_operator_assign2(void* self, int64_t address);
+void q_hostaddress_operator_assign2(void* self, int32_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#swap)
 ///
@@ -117,14 +117,14 @@ bool q_hostaddress_set_address5(void* self, const char* address);
 ///
 /// @param self QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
-void q_hostaddress_set_address6(void* self, int64_t address);
+void q_hostaddress_set_address6(void* self, int32_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#protocol)
 ///
 /// @param self QHostAddress*
 ///
 /// @return enum QAbstractSocket__NetworkLayerProtocol
-int64_t q_hostaddress_protocol(void* self);
+int32_t q_hostaddress_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#toIPv4Address)
 ///
@@ -172,7 +172,7 @@ bool q_hostaddress_operator_equal(void* self, void* address);
 ///
 /// @param self QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
-bool q_hostaddress_operator_equal2(void* self, int64_t address);
+bool q_hostaddress_operator_equal2(void* self, int32_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#operator-not-eq)
 ///
@@ -184,7 +184,7 @@ bool q_hostaddress_operator_not_equal(void* self, void* address);
 ///
 /// @param self QHostAddress*
 /// @param address enum QHostAddress__SpecialAddress
-bool q_hostaddress_operator_not_equal2(void* self, int64_t address);
+bool q_hostaddress_operator_not_equal2(void* self, int32_t address);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostaddress.html#isNull)
 ///

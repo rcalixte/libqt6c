@@ -27,7 +27,7 @@ QTileRules* q_tilerules_new2(void* other);
 ///
 /// @param horizontalRule enum Qt__TileRule
 /// @param verticalRule enum Qt__TileRule
-QTileRules* q_tilerules_new3(int64_t horizontalRule, int64_t verticalRule);
+QTileRules* q_tilerules_new3(int32_t horizontalRule, int32_t verticalRule);
 
 /// q_tilerules_new4 constructs a new QTileRules object.
 ///
@@ -41,7 +41,7 @@ QTileRules* q_tilerules_new5(void* param1);
 /// q_tilerules_new6 constructs a new QTileRules object.
 ///
 /// @param rule enum Qt__TileRule
-QTileRules* q_tilerules_new6(int64_t rule);
+QTileRules* q_tilerules_new6(int32_t rule);
 
 /// q_tilerules_copy_assign shallow copies `other` into `self`.
 ///

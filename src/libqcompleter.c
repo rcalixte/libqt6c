@@ -67,15 +67,15 @@ void* q_completer_metacast(void* self, const char* param1) {
     return QCompleter_Metacast((QCompleter*)self, param1);
 }
 
-int32_t q_completer_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_completer_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QCompleter_Metacall((QCompleter*)self, param1, param2, param3);
 }
 
-void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QCompleter_OnMetacall((QCompleter*)self, (intptr_t)callback);
 }
 
-int32_t q_completer_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_completer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QCompleter_QBaseMetacall((QCompleter*)self, param1, param2, param3);
 }
 
@@ -102,11 +102,11 @@ QAbstractItemModel* q_completer_model(void* self) {
     return QCompleter_Model((QCompleter*)self);
 }
 
-void q_completer_set_completion_mode(void* self, int64_t mode) {
+void q_completer_set_completion_mode(void* self, int32_t mode) {
     QCompleter_SetCompletionMode((QCompleter*)self, mode);
 }
 
-int64_t q_completer_completion_mode(void* self) {
+int32_t q_completer_completion_mode(void* self) {
     return QCompleter_CompletionMode((QCompleter*)self);
 }
 
@@ -126,19 +126,19 @@ void q_completer_set_popup(void* self, void* popup) {
     QCompleter_SetPopup((QCompleter*)self, (QAbstractItemView*)popup);
 }
 
-void q_completer_set_case_sensitivity(void* self, int64_t caseSensitivity) {
+void q_completer_set_case_sensitivity(void* self, int32_t caseSensitivity) {
     QCompleter_SetCaseSensitivity((QCompleter*)self, caseSensitivity);
 }
 
-int64_t q_completer_case_sensitivity(void* self) {
+int32_t q_completer_case_sensitivity(void* self) {
     return QCompleter_CaseSensitivity((QCompleter*)self);
 }
 
-void q_completer_set_model_sorting(void* self, int64_t sorting) {
+void q_completer_set_model_sorting(void* self, int32_t sorting) {
     QCompleter_SetModelSorting((QCompleter*)self, sorting);
 }
 
-int64_t q_completer_model_sorting(void* self) {
+int32_t q_completer_model_sorting(void* self) {
     return QCompleter_ModelSorting((QCompleter*)self);
 }
 
@@ -381,7 +381,7 @@ void q_completer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_completer_kill_timer2(void* self, int64_t id) {
+void q_completer_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -485,15 +485,15 @@ bool q_completer_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_completer_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_completer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_completer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_completer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_completer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_completer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

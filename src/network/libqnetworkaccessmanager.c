@@ -33,15 +33,15 @@ void* q_networkaccessmanager_metacast(void* self, const char* param1) {
     return QNetworkAccessManager_Metacast((QNetworkAccessManager*)self, param1);
 }
 
-int32_t q_networkaccessmanager_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_networkaccessmanager_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QNetworkAccessManager_Metacall((QNetworkAccessManager*)self, param1, param2, param3);
 }
 
-void q_networkaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_networkaccessmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QNetworkAccessManager_OnMetacall((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-int32_t q_networkaccessmanager_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_networkaccessmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QNetworkAccessManager_QBaseMetacall((QNetworkAccessManager*)self, param1, param2, param3);
 }
 
@@ -227,11 +227,11 @@ void q_networkaccessmanager_connect_to_host(void* self, const char* hostName) {
     QNetworkAccessManager_ConnectToHost((QNetworkAccessManager*)self, qstring(hostName));
 }
 
-void q_networkaccessmanager_set_redirect_policy(void* self, int64_t policy) {
+void q_networkaccessmanager_set_redirect_policy(void* self, int32_t policy) {
     QNetworkAccessManager_SetRedirectPolicy((QNetworkAccessManager*)self, policy);
 }
 
-int64_t q_networkaccessmanager_redirect_policy(void* self) {
+int32_t q_networkaccessmanager_redirect_policy(void* self) {
     return QNetworkAccessManager_RedirectPolicy((QNetworkAccessManager*)self);
 }
 
@@ -303,15 +303,15 @@ void q_networkaccessmanager_on_pre_shared_key_authentication_required(void* self
     QNetworkAccessManager_Connect_PreSharedKeyAuthenticationRequired((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-QNetworkReply* q_networkaccessmanager_create_request(void* self, int64_t op, void* request, void* outgoingData) {
+QNetworkReply* q_networkaccessmanager_create_request(void* self, int32_t op, void* request, void* outgoingData) {
     return QNetworkAccessManager_CreateRequest((QNetworkAccessManager*)self, op, (QNetworkRequest*)request, (QIODevice*)outgoingData);
 }
 
-void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int64_t, void*, void*)) {
+void q_networkaccessmanager_on_create_request(void* self, QNetworkReply* (*callback)(void*, int32_t, void*, void*)) {
     QNetworkAccessManager_OnCreateRequest((QNetworkAccessManager*)self, (intptr_t)callback);
 }
 
-QNetworkReply* q_networkaccessmanager_qbase_create_request(void* self, int64_t op, void* request, void* outgoingData) {
+QNetworkReply* q_networkaccessmanager_qbase_create_request(void* self, int32_t op, void* request, void* outgoingData) {
     return QNetworkAccessManager_QBaseCreateRequest((QNetworkAccessManager*)self, op, (QNetworkRequest*)request, (QIODevice*)outgoingData);
 }
 
@@ -438,7 +438,7 @@ void q_networkaccessmanager_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_networkaccessmanager_kill_timer2(void* self, int64_t id) {
+void q_networkaccessmanager_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -542,15 +542,15 @@ bool q_networkaccessmanager_move_to_thread2(void* self, void* thread, void* para
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_networkaccessmanager_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_networkaccessmanager_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_networkaccessmanager_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_networkaccessmanager_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_networkaccessmanager_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_networkaccessmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

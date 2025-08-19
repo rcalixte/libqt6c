@@ -27,15 +27,15 @@ void* q_mediarecorder_metacast(void* self, const char* param1) {
     return QMediaRecorder_Metacast((QMediaRecorder*)self, param1);
 }
 
-int32_t q_mediarecorder_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mediarecorder_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMediaRecorder_Metacall((QMediaRecorder*)self, param1, param2, param3);
 }
 
-void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QMediaRecorder_OnMetacall((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-int32_t q_mediarecorder_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mediarecorder_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMediaRecorder_QBaseMetacall((QMediaRecorder*)self, param1, param2, param3);
 }
 
@@ -70,11 +70,11 @@ QUrl* q_mediarecorder_actual_location(void* self) {
     return QMediaRecorder_ActualLocation((QMediaRecorder*)self);
 }
 
-int64_t q_mediarecorder_recorder_state(void* self) {
+int32_t q_mediarecorder_recorder_state(void* self) {
     return QMediaRecorder_RecorderState((QMediaRecorder*)self);
 }
 
-int64_t q_mediarecorder_error(void* self) {
+int32_t q_mediarecorder_error(void* self) {
     return QMediaRecorder_Error((QMediaRecorder*)self);
 }
 
@@ -97,19 +97,19 @@ void q_mediarecorder_set_media_format(void* self, void* format) {
     QMediaRecorder_SetMediaFormat((QMediaRecorder*)self, (QMediaFormat*)format);
 }
 
-int64_t q_mediarecorder_encoding_mode(void* self) {
+int32_t q_mediarecorder_encoding_mode(void* self) {
     return QMediaRecorder_EncodingMode((QMediaRecorder*)self);
 }
 
-void q_mediarecorder_set_encoding_mode(void* self, int64_t encodingMode) {
+void q_mediarecorder_set_encoding_mode(void* self, int32_t encodingMode) {
     QMediaRecorder_SetEncodingMode((QMediaRecorder*)self, encodingMode);
 }
 
-int64_t q_mediarecorder_quality(void* self) {
+int32_t q_mediarecorder_quality(void* self) {
     return QMediaRecorder_Quality((QMediaRecorder*)self);
 }
 
-void q_mediarecorder_set_quality(void* self, int64_t quality) {
+void q_mediarecorder_set_quality(void* self, int32_t quality) {
     QMediaRecorder_SetQuality((QMediaRecorder*)self, quality);
 }
 
@@ -201,11 +201,11 @@ void q_mediarecorder_stop(void* self) {
     QMediaRecorder_Stop((QMediaRecorder*)self);
 }
 
-void q_mediarecorder_recorder_state_changed(void* self, int64_t state) {
+void q_mediarecorder_recorder_state_changed(void* self, int32_t state) {
     QMediaRecorder_RecorderStateChanged((QMediaRecorder*)self, state);
 }
 
-void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QMediaRecorder_Connect_RecorderStateChanged((QMediaRecorder*)self, (intptr_t)callback);
 }
 
@@ -233,11 +233,11 @@ void q_mediarecorder_on_encoder_settings_changed(void* self, void (*callback)(vo
     QMediaRecorder_Connect_EncoderSettingsChanged((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-void q_mediarecorder_error_occurred(void* self, int64_t errorVal, const char* errorString) {
+void q_mediarecorder_error_occurred(void* self, int32_t errorVal, const char* errorString) {
     QMediaRecorder_ErrorOccurred((QMediaRecorder*)self, errorVal, qstring(errorString));
 }
 
-void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*)) {
+void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {
     QMediaRecorder_Connect_ErrorOccurred((QMediaRecorder*)self, (intptr_t)callback);
 }
 
@@ -398,7 +398,7 @@ void q_mediarecorder_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_mediarecorder_kill_timer2(void* self, int64_t id) {
+void q_mediarecorder_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -502,15 +502,15 @@ bool q_mediarecorder_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_mediarecorder_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_mediarecorder_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_mediarecorder_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_mediarecorder_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_mediarecorder_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_mediarecorder_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

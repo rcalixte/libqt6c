@@ -35,19 +35,19 @@ bool q_sslconfiguration_is_null(void* self) {
     return QSslConfiguration_IsNull((QSslConfiguration*)self);
 }
 
-int64_t q_sslconfiguration_protocol(void* self) {
+int32_t q_sslconfiguration_protocol(void* self) {
     return QSslConfiguration_Protocol((QSslConfiguration*)self);
 }
 
-void q_sslconfiguration_set_protocol(void* self, int64_t protocol) {
+void q_sslconfiguration_set_protocol(void* self, int32_t protocol) {
     QSslConfiguration_SetProtocol((QSslConfiguration*)self, protocol);
 }
 
-int64_t q_sslconfiguration_peer_verify_mode(void* self) {
+int32_t q_sslconfiguration_peer_verify_mode(void* self) {
     return QSslConfiguration_PeerVerifyMode((QSslConfiguration*)self);
 }
 
-void q_sslconfiguration_set_peer_verify_mode(void* self, int64_t mode) {
+void q_sslconfiguration_set_peer_verify_mode(void* self, int32_t mode) {
     QSslConfiguration_SetPeerVerifyMode((QSslConfiguration*)self, mode);
 }
 
@@ -89,7 +89,7 @@ QSslCipher* q_sslconfiguration_session_cipher(void* self) {
     return QSslConfiguration_SessionCipher((QSslConfiguration*)self);
 }
 
-int64_t q_sslconfiguration_session_protocol(void* self) {
+int32_t q_sslconfiguration_session_protocol(void* self) {
     return QSslConfiguration_SessionProtocol((QSslConfiguration*)self);
 }
 
@@ -145,11 +145,11 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_system_ca_certificates()
     return _arr;
 }
 
-void q_sslconfiguration_set_ssl_option(void* self, int64_t option, bool on) {
+void q_sslconfiguration_set_ssl_option(void* self, int32_t option, bool on) {
     QSslConfiguration_SetSslOption((QSslConfiguration*)self, option, on);
 }
 
-bool q_sslconfiguration_test_ssl_option(void* self, int64_t option) {
+bool q_sslconfiguration_test_ssl_option(void* self, int32_t option) {
     return QSslConfiguration_TestSslOption((QSslConfiguration*)self, option);
 }
 
@@ -302,15 +302,15 @@ char* q_sslconfiguration_next_negotiated_protocol(void* self) {
     return _ret;
 }
 
-int64_t q_sslconfiguration_next_protocol_negotiation_status(void* self) {
+int32_t q_sslconfiguration_next_protocol_negotiation_status(void* self) {
     return QSslConfiguration_NextProtocolNegotiationStatus((QSslConfiguration*)self);
 }
 
-bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int64_t format) {
+bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int32_t format) {
     return QSslConfiguration_AddCaCertificates22((QSslConfiguration*)self, qstring(path), format);
 }
 
-bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int64_t format, int64_t syntax) {
+bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32_t format, int32_t syntax) {
     return QSslConfiguration_AddCaCertificates3((QSslConfiguration*)self, qstring(path), format, syntax);
 }
 

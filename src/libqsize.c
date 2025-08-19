@@ -66,19 +66,19 @@ QSize* q_size_transposed(void* self) {
     return QSize_Transposed((QSize*)self);
 }
 
-void q_size_scale(void* self, int w, int h, int64_t mode) {
+void q_size_scale(void* self, int w, int h, int32_t mode) {
     QSize_Scale((QSize*)self, w, h, mode);
 }
 
-void q_size_scale2(void* self, void* s, int64_t mode) {
+void q_size_scale2(void* self, void* s, int32_t mode) {
     QSize_Scale2((QSize*)self, (QSize*)s, mode);
 }
 
-QSize* q_size_scaled(void* self, int w, int h, int64_t mode) {
+QSize* q_size_scaled(void* self, int w, int h, int32_t mode) {
     return QSize_Scaled((QSize*)self, w, h, mode);
 }
 
-QSize* q_size_scaled2(void* self, void* s, int64_t mode) {
+QSize* q_size_scaled2(void* self, void* s, int32_t mode) {
     return QSize_Scaled2((QSize*)self, (QSize*)s, mode);
 }
 
@@ -190,19 +190,19 @@ QSizeF* q_sizef_transposed(void* self) {
     return QSizeF_Transposed((QSizeF*)self);
 }
 
-void q_sizef_scale(void* self, double w, double h, int64_t mode) {
+void q_sizef_scale(void* self, double w, double h, int32_t mode) {
     QSizeF_Scale((QSizeF*)self, w, h, mode);
 }
 
-void q_sizef_scale2(void* self, void* s, int64_t mode) {
+void q_sizef_scale2(void* self, void* s, int32_t mode) {
     QSizeF_Scale2((QSizeF*)self, (QSizeF*)s, mode);
 }
 
-QSizeF* q_sizef_scaled(void* self, double w, double h, int64_t mode) {
+QSizeF* q_sizef_scaled(void* self, double w, double h, int32_t mode) {
     return QSizeF_Scaled((QSizeF*)self, w, h, mode);
 }
 
-QSizeF* q_sizef_scaled2(void* self, void* s, int64_t mode) {
+QSizeF* q_sizef_scaled2(void* self, void* s, int32_t mode) {
     return QSizeF_Scaled2((QSizeF*)self, (QSizeF*)s, mode);
 }
 

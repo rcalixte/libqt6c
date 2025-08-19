@@ -21,13 +21,13 @@ QSslKey* q_sslkey_new();
 ///
 /// @param encoded const char*
 /// @param algorithm enum QSsl__KeyAlgorithm
-QSslKey* q_sslkey_new2(const char* encoded, int64_t algorithm);
+QSslKey* q_sslkey_new2(const char* encoded, int32_t algorithm);
 
 /// q_sslkey_new3 constructs a new QSslKey object.
 ///
 /// @param device QIODevice*
 /// @param algorithm enum QSsl__KeyAlgorithm
-QSslKey* q_sslkey_new3(void* device, int64_t algorithm);
+QSslKey* q_sslkey_new3(void* device, int32_t algorithm);
 
 /// q_sslkey_new4 constructs a new QSslKey object.
 ///
@@ -44,7 +44,7 @@ QSslKey* q_sslkey_new5(void* other);
 /// @param encoded const char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
-QSslKey* q_sslkey_new6(const char* encoded, int64_t algorithm, int64_t format);
+QSslKey* q_sslkey_new6(const char* encoded, int32_t algorithm, int32_t format);
 
 /// q_sslkey_new7 constructs a new QSslKey object.
 ///
@@ -52,7 +52,7 @@ QSslKey* q_sslkey_new6(const char* encoded, int64_t algorithm, int64_t format);
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param typeVal enum QSsl__KeyType
-QSslKey* q_sslkey_new7(const char* encoded, int64_t algorithm, int64_t format, int64_t typeVal);
+QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal);
 
 /// q_sslkey_new8 constructs a new QSslKey object.
 ///
@@ -61,14 +61,14 @@ QSslKey* q_sslkey_new7(const char* encoded, int64_t algorithm, int64_t format, i
 /// @param format enum QSsl__EncodingFormat
 /// @param typeVal enum QSsl__KeyType
 /// @param passPhrase const char*
-QSslKey* q_sslkey_new8(const char* encoded, int64_t algorithm, int64_t format, int64_t typeVal, const char* passPhrase);
+QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase);
 
 /// q_sslkey_new9 constructs a new QSslKey object.
 ///
 /// @param device QIODevice*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
-QSslKey* q_sslkey_new9(void* device, int64_t algorithm, int64_t format);
+QSslKey* q_sslkey_new9(void* device, int32_t algorithm, int32_t format);
 
 /// q_sslkey_new10 constructs a new QSslKey object.
 ///
@@ -76,7 +76,7 @@ QSslKey* q_sslkey_new9(void* device, int64_t algorithm, int64_t format);
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param typeVal enum QSsl__KeyType
-QSslKey* q_sslkey_new10(void* device, int64_t algorithm, int64_t format, int64_t typeVal);
+QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t typeVal);
 
 /// q_sslkey_new11 constructs a new QSslKey object.
 ///
@@ -85,13 +85,13 @@ QSslKey* q_sslkey_new10(void* device, int64_t algorithm, int64_t format, int64_t
 /// @param format enum QSsl__EncodingFormat
 /// @param typeVal enum QSsl__KeyType
 /// @param passPhrase const char*
-QSslKey* q_sslkey_new11(void* device, int64_t algorithm, int64_t format, int64_t typeVal, const char* passPhrase);
+QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase);
 
 /// q_sslkey_new12 constructs a new QSslKey object.
 ///
 /// @param handle void*
 /// @param typeVal enum QSsl__KeyType
-QSslKey* q_sslkey_new12(void* handle, int64_t typeVal);
+QSslKey* q_sslkey_new12(void* handle, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#operator-eq)
 ///
@@ -125,14 +125,14 @@ int32_t q_sslkey_length(void* self);
 /// @param self QSslKey*
 ///
 /// @return enum QSsl__KeyType
-int64_t q_sslkey_type(void* self);
+int32_t q_sslkey_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#algorithm)
 ///
 /// @param self QSslKey*
 ///
 /// @return enum QSsl__KeyAlgorithm
-int64_t q_sslkey_algorithm(void* self);
+int32_t q_sslkey_algorithm(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslkey.html#toPem)
 ///

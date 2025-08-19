@@ -35,13 +35,13 @@ void* q_screencapture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_screencapture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_screencapture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QScreenCapture*
 /// @param callback int32_t fn(QScreenCapture*, enum QMetaObject__Call, int, void*)
-void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_screencapture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_screencapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -84,7 +84,7 @@ bool q_screencapture_is_active(void* self);
 /// @param self QScreenCapture*
 ///
 /// @return enum QScreenCapture__Error
-int64_t q_screencapture_error(void* self);
+int32_t q_screencapture_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorString)
 ///
@@ -149,13 +149,13 @@ void q_screencapture_on_screen_changed(void* self, void (*callback)(void*, void*
 /// @param self QScreenCapture*
 /// @param errorVal enum QScreenCapture__Error
 /// @param errorString const char*
-void q_screencapture_error_occurred(void* self, int64_t errorVal, const char* errorString);
+void q_screencapture_error_occurred(void* self, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreencapture.html#errorOccurred)
 ///
 /// @param self QScreenCapture*
 /// @param callback void fn(QScreenCapture*, enum QScreenCapture__Error, const char*)
-void q_screencapture_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
+void q_screencapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -264,7 +264,7 @@ void q_screencapture_kill_timer(void* self, int id);
 ///
 /// @param self QScreenCapture*
 /// @param id enum Qt__TimerId
-void q_screencapture_kill_timer2(void* self, int64_t id);
+void q_screencapture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -441,7 +441,7 @@ bool q_screencapture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QScreenCapture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_screencapture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_screencapture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -452,7 +452,7 @@ int32_t q_screencapture_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_screencapture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_screencapture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -463,7 +463,7 @@ QMetaObject__Connection* q_screencapture_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_screencapture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_screencapture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

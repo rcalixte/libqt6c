@@ -21,7 +21,7 @@ void q_elapsedtimer_move_assign(void* self, void* other) {
     QElapsedTimer_MoveAssign((QElapsedTimer*)self, (QElapsedTimer*)other);
 }
 
-int64_t q_elapsedtimer_clock_type() {
+int32_t q_elapsedtimer_clock_type() {
     return QElapsedTimer_ClockType();
 }
 

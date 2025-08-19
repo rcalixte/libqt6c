@@ -183,11 +183,11 @@ void q_font_set_pixel_size(void* self, int pixelSize) {
     QFont_SetPixelSize((QFont*)self, pixelSize);
 }
 
-int64_t q_font_weight(void* self) {
+int32_t q_font_weight(void* self) {
     return QFont_Weight((QFont*)self);
 }
 
-void q_font_set_weight(void* self, int64_t weight) {
+void q_font_set_weight(void* self, int32_t weight) {
     QFont_SetWeight((QFont*)self, weight);
 }
 
@@ -199,11 +199,11 @@ void q_font_set_bold(void* self, bool bold) {
     QFont_SetBold((QFont*)self, bold);
 }
 
-void q_font_set_style(void* self, int64_t style) {
+void q_font_set_style(void* self, int32_t style) {
     QFont_SetStyle((QFont*)self, style);
 }
 
-int64_t q_font_style(void* self) {
+int32_t q_font_style(void* self) {
     return QFont_Style((QFont*)self);
 }
 
@@ -255,19 +255,19 @@ void q_font_set_kerning(void* self, bool kerning) {
     QFont_SetKerning((QFont*)self, kerning);
 }
 
-int64_t q_font_style_hint(void* self) {
+int32_t q_font_style_hint(void* self) {
     return QFont_StyleHint((QFont*)self);
 }
 
-int64_t q_font_style_strategy(void* self) {
+int32_t q_font_style_strategy(void* self) {
     return QFont_StyleStrategy((QFont*)self);
 }
 
-void q_font_set_style_hint(void* self, int64_t param1) {
+void q_font_set_style_hint(void* self, int32_t param1) {
     QFont_SetStyleHint((QFont*)self, param1);
 }
 
-void q_font_set_style_strategy(void* self, int64_t s) {
+void q_font_set_style_strategy(void* self, int32_t s) {
     QFont_SetStyleStrategy((QFont*)self, s);
 }
 
@@ -283,11 +283,11 @@ double q_font_letter_spacing(void* self) {
     return QFont_LetterSpacing((QFont*)self);
 }
 
-int64_t q_font_letter_spacing_type(void* self) {
+int32_t q_font_letter_spacing_type(void* self) {
     return QFont_LetterSpacingType((QFont*)self);
 }
 
-void q_font_set_letter_spacing(void* self, int64_t typeVal, double spacing) {
+void q_font_set_letter_spacing(void* self, int32_t typeVal, double spacing) {
     QFont_SetLetterSpacing((QFont*)self, typeVal, spacing);
 }
 
@@ -299,19 +299,19 @@ void q_font_set_word_spacing(void* self, double spacing) {
     QFont_SetWordSpacing((QFont*)self, spacing);
 }
 
-void q_font_set_capitalization(void* self, int64_t capitalization) {
+void q_font_set_capitalization(void* self, int32_t capitalization) {
     QFont_SetCapitalization((QFont*)self, capitalization);
 }
 
-int64_t q_font_capitalization(void* self) {
+int32_t q_font_capitalization(void* self) {
     return QFont_Capitalization((QFont*)self);
 }
 
-void q_font_set_hinting_preference(void* self, int64_t hintingPreference) {
+void q_font_set_hinting_preference(void* self, int32_t hintingPreference) {
     QFont_SetHintingPreference((QFont*)self, hintingPreference);
 }
 
-int64_t q_font_hinting_preference(void* self) {
+int32_t q_font_hinting_preference(void* self) {
     return QFont_HintingPreference((QFont*)self);
 }
 
@@ -518,7 +518,7 @@ int32_t q_font_legacy_weight(void* self) {
     return QFont_LegacyWeight((QFont*)self);
 }
 
-void q_font_set_style_hint2(void* self, int64_t param1, int64_t param2) {
+void q_font_set_style_hint2(void* self, int32_t param1, int32_t param2) {
     QFont_SetStyleHint2((QFont*)self, param1, param2);
 }
 

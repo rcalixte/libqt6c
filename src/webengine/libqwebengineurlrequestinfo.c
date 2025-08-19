@@ -3,11 +3,11 @@
 #include "libqwebengineurlrequestinfo.hpp"
 #include "libqwebengineurlrequestinfo.h"
 
-int64_t q_webengineurlrequestinfo_resource_type(void* self) {
+int32_t q_webengineurlrequestinfo_resource_type(void* self) {
     return QWebEngineUrlRequestInfo_ResourceType((QWebEngineUrlRequestInfo*)self);
 }
 
-int64_t q_webengineurlrequestinfo_navigation_type(void* self) {
+int32_t q_webengineurlrequestinfo_navigation_type(void* self) {
     return QWebEngineUrlRequestInfo_NavigationType((QWebEngineUrlRequestInfo*)self);
 }
 

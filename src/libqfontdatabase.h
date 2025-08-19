@@ -47,14 +47,14 @@ libqt_list /* of int */ q_fontdatabase_standard_sizes();
 ///
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
-libqt_list /* of int64_t */ q_fontdatabase_writing_systems();
+libqt_list /* of int32_t */ q_fontdatabase_writing_systems();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystems)
 ///
 /// @param family const char*
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
-libqt_list /* of int64_t */ q_fontdatabase_writing_systems2(const char* family);
+libqt_list /* of int32_t */ q_fontdatabase_writing_systems2(const char* family);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
@@ -154,14 +154,14 @@ bool q_fontdatabase_is_private_family(const char* family);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
-const char* q_fontdatabase_writing_system_name(int64_t writingSystem);
+const char* q_fontdatabase_writing_system_name(int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#writingSystemSample)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
-const char* q_fontdatabase_writing_system_sample(int64_t writingSystem);
+const char* q_fontdatabase_writing_system_sample(int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#addApplicationFont)
 ///
@@ -193,38 +193,38 @@ bool q_fontdatabase_remove_all_application_fonts();
 ///
 /// @param script enum QChar__Script
 /// @param familyName const char*
-void q_fontdatabase_add_application_fallback_font_family(int64_t script, const char* familyName);
+void q_fontdatabase_add_application_fallback_font_family(int32_t script, const char* familyName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#removeApplicationFallbackFontFamily)
 ///
 /// @param script enum QChar__Script
 /// @param familyName const char*
-bool q_fontdatabase_remove_application_fallback_font_family(int64_t script, const char* familyName);
+bool q_fontdatabase_remove_application_fallback_font_family(int32_t script, const char* familyName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#setApplicationFallbackFontFamilies)
 ///
 /// @param param1 enum QChar__Script
 /// @param familyNames const char**
-void q_fontdatabase_set_application_fallback_font_families(int64_t param1, const char* familyNames[]);
+void q_fontdatabase_set_application_fallback_font_families(int32_t param1, const char* familyNames[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#applicationFallbackFontFamilies)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QChar__Script
-const char** q_fontdatabase_application_fallback_font_families(int64_t script);
+const char** q_fontdatabase_application_fallback_font_families(int32_t script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#systemFont)
 ///
 /// @param typeVal enum QFontDatabase__SystemFont
-QFont* q_fontdatabase_system_font(int64_t typeVal);
+QFont* q_fontdatabase_system_font(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#families)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param writingSystem enum QFontDatabase__WritingSystem
-const char** q_fontdatabase_families1(int64_t writingSystem);
+const char** q_fontdatabase_families1(int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontdatabase.html#pointSizes)
 ///

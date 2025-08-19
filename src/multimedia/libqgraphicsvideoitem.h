@@ -35,13 +35,13 @@ void* q_graphicsvideoitem_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsvideoitem_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsvideoitem_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback int32_t fn(QGraphicsVideoItem*, enum QMetaObject__Call, int, void*)
-void q_graphicsvideoitem_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsvideoitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_graphicsvideoitem_on_metacall(void* self, int32_t (*callback)(void*, int6
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsvideoitem_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsvideoitem_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -68,13 +68,13 @@ QVideoSink* q_graphicsvideoitem_video_sink(void* self);
 /// @param self QGraphicsVideoItem*
 ///
 /// @return enum Qt__AspectRatioMode
-int64_t q_graphicsvideoitem_aspect_ratio_mode(void* self);
+int32_t q_graphicsvideoitem_aspect_ratio_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#setAspectRatioMode)
 ///
 /// @param self QGraphicsVideoItem*
 /// @param mode enum Qt__AspectRatioMode
-void q_graphicsvideoitem_set_aspect_ratio_mode(void* self, int64_t mode);
+void q_graphicsvideoitem_set_aspect_ratio_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#offset)
 ///
@@ -208,7 +208,7 @@ void q_graphicsvideoitem_qbase_timer_event(void* self, void* event);
 /// @param self QGraphicsVideoItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsvideoitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsvideoitem_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#itemChange)
 ///
@@ -216,7 +216,7 @@ QVariant* q_graphicsvideoitem_item_change(void* self, int64_t change, void* valu
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback QVariant* fn(QGraphicsVideoItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsvideoitem.html#itemChange)
 ///
@@ -225,7 +225,7 @@ void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*callback)(void*,
 /// @param self QGraphicsVideoItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsvideoitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsvideoitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -539,7 +539,7 @@ void q_graphicsvideoitem_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param id enum Qt__TimerId
-void q_graphicsvideoitem_kill_timer2(void* self, int64_t id);
+void q_graphicsvideoitem_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -716,7 +716,7 @@ bool q_graphicsvideoitem_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QGraphicsVideoItem*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsvideoitem_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsvideoitem_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -727,7 +727,7 @@ int32_t q_graphicsvideoitem_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsvideoitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsvideoitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -738,7 +738,7 @@ QMetaObject__Connection* q_graphicsvideoitem_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsvideoitem_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsvideoitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ int64_t q_graphicsvideoitem_flags(void* self);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsvideoitem_set_flag(void* self, int64_t flag);
+void q_graphicsvideoitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -909,7 +909,7 @@ void q_graphicsvideoitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsVideoItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsvideoitem_cache_mode(void* self);
+int32_t q_graphicsvideoitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -917,7 +917,7 @@ int64_t q_graphicsvideoitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsvideoitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicsvideoitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -926,7 +926,7 @@ void q_graphicsvideoitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsVideoItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsvideoitem_panel_modality(void* self);
+int32_t q_graphicsvideoitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -934,7 +934,7 @@ int64_t q_graphicsvideoitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsvideoitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsvideoitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1960,7 +1960,7 @@ void q_graphicsvideoitem_remove_scene_event_filter(void* self, void* filterItem)
 /// @param self QGraphicsVideoItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsvideoitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsvideoitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1969,7 +1969,7 @@ void q_graphicsvideoitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsVideoItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsvideoitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsvideoitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1977,7 +1977,7 @@ void q_graphicsvideoitem_set_cache_mode2(void* self, int64_t mode, void* cacheSi
 ///
 /// @param self QGraphicsVideoItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsvideoitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicsvideoitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2055,7 +2055,7 @@ void q_graphicsvideoitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsvideoitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsvideoitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2362,7 +2362,7 @@ void q_graphicsvideoitem_on_contains(void* self, bool (*callback)(void*, void*))
 /// @param self QGraphicsVideoItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsvideoitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsvideoitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2373,7 +2373,7 @@ bool q_graphicsvideoitem_collides_with_item(void* self, void* other, int64_t mod
 /// @param self QGraphicsVideoItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsvideoitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsvideoitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2383,7 +2383,7 @@ bool q_graphicsvideoitem_qbase_collides_with_item(void* self, void* other, int64
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback bool fn(QGraphicsVideoItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -2394,7 +2394,7 @@ void q_graphicsvideoitem_on_collides_with_item(void* self, bool (*callback)(void
 /// @param self QGraphicsVideoItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsvideoitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsvideoitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2405,7 +2405,7 @@ bool q_graphicsvideoitem_collides_with_path(void* self, void* path, int64_t mode
 /// @param self QGraphicsVideoItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsvideoitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsvideoitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2415,7 +2415,7 @@ bool q_graphicsvideoitem_qbase_collides_with_path(void* self, void* path, int64_
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback bool fn(QGraphicsVideoItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsvideoitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsvideoitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///

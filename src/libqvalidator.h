@@ -35,13 +35,13 @@ void* q_validator_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_validator_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_validator_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QValidator*
 /// @param callback int32_t fn(QValidator*, enum QMetaObject__Call, int, void*)
-void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_validator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_validator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -76,15 +76,15 @@ QLocale* q_validator_locale(void* self);
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_validator_validate(void* self, const char* param1, int* param2);
+int32_t q_validator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QValidator*
-/// @param callback int64_t fn(QValidator*, const char*, int*)
-void q_validator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QValidator*, const char*, int*)
+void q_validator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#validate)
 ///
@@ -95,7 +95,7 @@ void q_validator_on_validate(void* self, int64_t (*callback)(void*, const char*,
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_validator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_validator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalidator.html#fixup)
 ///
@@ -237,7 +237,7 @@ void q_validator_kill_timer(void* self, int id);
 ///
 /// @param self QValidator*
 /// @param id enum Qt__TimerId
-void q_validator_kill_timer2(void* self, int64_t id);
+void q_validator_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -414,7 +414,7 @@ bool q_validator_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QValidator*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_validator_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_validator_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -425,7 +425,7 @@ int32_t q_validator_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -436,7 +436,7 @@ QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -836,13 +836,13 @@ void* q_intvalidator_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_intvalidator_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_intvalidator_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QIntValidator*
 /// @param callback int32_t fn(QIntValidator*, enum QMetaObject__Call, int, void*)
-void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -850,7 +850,7 @@ void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_intvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_intvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -866,15 +866,15 @@ const char* q_intvalidator_tr(const char* s);
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_intvalidator_validate(void* self, const char* param1, int* param2);
+int32_t q_intvalidator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIntValidator*
-/// @param callback int64_t fn(QIntValidator*, const char*, int*)
-void q_intvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QIntValidator*, const char*, int*)
+void q_intvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#validate)
 ///
@@ -885,7 +885,7 @@ void q_intvalidator_on_validate(void* self, int64_t (*callback)(void*, const cha
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qintvalidator.html#fixup)
 ///
@@ -1099,7 +1099,7 @@ void q_intvalidator_kill_timer(void* self, int id);
 ///
 /// @param self QIntValidator*
 /// @param id enum Qt__TimerId
-void q_intvalidator_kill_timer2(void* self, int64_t id);
+void q_intvalidator_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1276,7 +1276,7 @@ bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QIntValidator*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_intvalidator_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_intvalidator_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1287,7 +1287,7 @@ int32_t q_intvalidator_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1298,7 +1298,7 @@ QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1700,13 +1700,13 @@ void* q_doublevalidator_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_doublevalidator_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_doublevalidator_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDoubleValidator*
 /// @param callback int32_t fn(QDoubleValidator*, enum QMetaObject__Call, int, void*)
-void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1714,7 +1714,7 @@ void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_doublevalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_doublevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1730,15 +1730,15 @@ const char* q_doublevalidator_tr(const char* s);
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_doublevalidator_validate(void* self, const char* param1, int* param2);
+int32_t q_doublevalidator_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDoubleValidator*
-/// @param callback int64_t fn(QDoubleValidator*, const char*, int*)
-void q_doublevalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QDoubleValidator*, const char*, int*)
+void q_doublevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#validate)
 ///
@@ -1749,7 +1749,7 @@ void q_doublevalidator_on_validate(void* self, int64_t (*callback)(void*, const 
 /// @param param2 int*
 ///
 /// @return enum QValidator__State
-int64_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2);
+int32_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#fixup)
 ///
@@ -1810,7 +1810,7 @@ void q_doublevalidator_set_decimals(void* self, int decimals);
 ///
 /// @param self QDoubleValidator*
 /// @param notation enum QDoubleValidator__Notation
-void q_doublevalidator_set_notation(void* self, int64_t notation);
+void q_doublevalidator_set_notation(void* self, int32_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#bottom)
 ///
@@ -1832,7 +1832,7 @@ int32_t q_doublevalidator_decimals(void* self);
 /// @param self QDoubleValidator*
 ///
 /// @return enum QDoubleValidator__Notation
-int64_t q_doublevalidator_notation(void* self);
+int32_t q_doublevalidator_notation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#bottomChanged)
 ///
@@ -1874,13 +1874,13 @@ void q_doublevalidator_on_decimals_changed(void* self, void (*callback)(void*, i
 ///
 /// @param self QDoubleValidator*
 /// @param notation enum QDoubleValidator__Notation
-void q_doublevalidator_notation_changed(void* self, int64_t notation);
+void q_doublevalidator_notation_changed(void* self, int32_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdoublevalidator.html#notationChanged)
 ///
 /// @param self QDoubleValidator*
 /// @param callback void fn(QDoubleValidator*, enum QDoubleValidator__Notation)
-void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, int64_t));
+void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2019,7 +2019,7 @@ void q_doublevalidator_kill_timer(void* self, int id);
 ///
 /// @param self QDoubleValidator*
 /// @param id enum Qt__TimerId
-void q_doublevalidator_kill_timer2(void* self, int64_t id);
+void q_doublevalidator_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2196,7 +2196,7 @@ bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDoubleValidator*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_doublevalidator_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_doublevalidator_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2207,7 +2207,7 @@ int32_t q_doublevalidator_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2218,7 +2218,7 @@ QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2616,13 +2616,13 @@ void* q_regularexpressionvalidator_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_regularexpressionvalidator_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_regularexpressionvalidator_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QRegularExpressionValidator*
 /// @param callback int32_t fn(QRegularExpressionValidator*, enum QMetaObject__Call, int, void*)
-void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -2630,7 +2630,7 @@ void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2646,15 +2646,15 @@ const char* q_regularexpressionvalidator_tr(const char* s);
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_regularexpressionvalidator_validate(void* self, const char* input, int* pos);
+int32_t q_regularexpressionvalidator_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QRegularExpressionValidator*
-/// @param callback int64_t fn(QRegularExpressionValidator*, const char*, int*)
-void q_regularexpressionvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QRegularExpressionValidator*, const char*, int*)
+void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#validate)
 ///
@@ -2665,7 +2665,7 @@ void q_regularexpressionvalidator_on_validate(void* self, int64_t (*callback)(vo
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionvalidator.html#regularExpression)
 ///
@@ -2827,7 +2827,7 @@ void q_regularexpressionvalidator_kill_timer(void* self, int id);
 ///
 /// @param self QRegularExpressionValidator*
 /// @param id enum Qt__TimerId
-void q_regularexpressionvalidator_kill_timer2(void* self, int64_t id);
+void q_regularexpressionvalidator_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3004,7 +3004,7 @@ bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void
 /// @param self QRegularExpressionValidator*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3015,7 +3015,7 @@ int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3026,7 +3026,7 @@ QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

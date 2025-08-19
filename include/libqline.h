@@ -321,7 +321,7 @@ QLineF* q_linef_normal_vector(void* self);
 /// @param l QLineF*
 ///
 /// @return enum QLineF__IntersectionType
-int64_t q_linef_intersects(void* self, void* l);
+int32_t q_linef_intersects(void* self, void* l);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#pointAt)
 ///
@@ -400,7 +400,7 @@ QLine* q_linef_to_line(void* self);
 /// @param intersectionPoint QPointF*
 ///
 /// @return enum QLineF__IntersectionType
-int64_t q_linef_intersects2(void* self, void* l, void* intersectionPoint);
+int32_t q_linef_intersects2(void* self, void* l, void* intersectionPoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlinef.html#dtor.QLineF)
 ///

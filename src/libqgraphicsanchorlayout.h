@@ -26,7 +26,7 @@ void* q_graphicsanchor_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsanchor_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsanchor_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -55,14 +55,14 @@ double q_graphicsanchor_spacing(void* self);
 ///
 /// @param self QGraphicsAnchor*
 /// @param policy enum QSizePolicy__Policy
-void q_graphicsanchor_set_size_policy(void* self, int64_t policy);
+void q_graphicsanchor_set_size_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchor.html#sizePolicy)
 ///
 /// @param self QGraphicsAnchor*
 ///
 /// @return enum QSizePolicy__Policy
-int64_t q_graphicsanchor_size_policy(void* self);
+int32_t q_graphicsanchor_size_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -188,7 +188,7 @@ void q_graphicsanchor_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsAnchor*
 /// @param id enum Qt__TimerId
-void q_graphicsanchor_kill_timer2(void* self, int64_t id);
+void q_graphicsanchor_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -365,7 +365,7 @@ bool q_graphicsanchor_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsAnchor*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsanchor_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsanchor_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -376,7 +376,7 @@ int32_t q_graphicsanchor_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -387,7 +387,7 @@ QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -440,7 +440,7 @@ QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent);
 /// @param firstEdge enum Qt__AnchorPoint
 /// @param secondItem QGraphicsLayoutItem*
 /// @param secondEdge enum Qt__AnchorPoint
-QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge);
+QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#anchor)
 ///
@@ -449,7 +449,7 @@ QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, 
 /// @param firstEdge enum Qt__AnchorPoint
 /// @param secondItem QGraphicsLayoutItem*
 /// @param secondEdge enum Qt__AnchorPoint
-QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge);
+QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addCornerAnchors)
 ///
@@ -458,7 +458,7 @@ QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int6
 /// @param firstCorner enum Qt__Corner
 /// @param secondItem QGraphicsLayoutItem*
 /// @param secondCorner enum Qt__Corner
-void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int64_t firstCorner, void* secondItem, int64_t secondCorner);
+void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int32_t firstCorner, void* secondItem, int32_t secondCorner);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
@@ -606,7 +606,7 @@ void q_graphicsanchorlayout_qbase_invalidate(void* self);
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicsanchorlayout_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
@@ -614,7 +614,7 @@ QSizeF* q_graphicsanchorlayout_size_hint(void* self, int64_t which, void* constr
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param callback QSizeF* fn(QGraphicsAnchorLayout*, enum Qt__SizeHint, QSizeF*)
-void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
+void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#sizeHint)
 ///
@@ -623,7 +623,7 @@ void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, 
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsanchorlayout.html#addAnchors)
 ///
@@ -686,7 +686,7 @@ void q_graphicsanchorlayout_set_size_policy(void* self, void* policy);
 /// @param self QGraphicsAnchorLayout*
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
-void q_graphicsanchorlayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
+void q_graphicsanchorlayout_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -877,7 +877,7 @@ QRectF* q_graphicsanchorlayout_contents_rect(void* self);
 ///
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
-QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int64_t which);
+QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -923,7 +923,7 @@ bool q_graphicsanchorlayout_owned_by_layout(void* self);
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
 /// @param controlType enum QSizePolicy__ControlType
-void q_graphicsanchorlayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
+void q_graphicsanchorlayout_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -932,7 +932,7 @@ void q_graphicsanchorlayout_set_size_policy3(void* self, int64_t hPolicy, int64_
 /// @param self QGraphicsAnchorLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int32_t which, void* constraint);
 
 /// Inherited from QGraphicsLayout
 ///

@@ -26,7 +26,7 @@ void* q_inputmethod_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_inputmethod_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_inputmethod_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -103,7 +103,7 @@ QLocale* q_inputmethod_locale(void* self);
 /// @param self QInputMethod*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_inputmethod_input_direction(void* self);
+int32_t q_inputmethod_input_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#queryFocusObject)
 ///
@@ -142,7 +142,7 @@ void q_inputmethod_commit(void* self);
 /// @param self QInputMethod*
 /// @param a enum QInputMethod__Action
 /// @param cursorPosition int
-void q_inputmethod_invoke_action(void* self, int64_t a, int cursorPosition);
+void q_inputmethod_invoke_action(void* self, int32_t a, int cursorPosition);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#cursorRectangleChanged)
 ///
@@ -225,13 +225,13 @@ void q_inputmethod_on_locale_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QInputMethod*
 /// @param newDirection enum Qt__LayoutDirection
-void q_inputmethod_input_direction_changed(void* self, int64_t newDirection);
+void q_inputmethod_input_direction_changed(void* self, int32_t newDirection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethod.html#inputDirectionChanged)
 ///
 /// @param self QInputMethod*
 /// @param callback void fn(QInputMethod*, enum Qt__LayoutDirection)
-void q_inputmethod_on_input_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_inputmethod_on_input_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -357,7 +357,7 @@ void q_inputmethod_kill_timer(void* self, int id);
 ///
 /// @param self QInputMethod*
 /// @param id enum Qt__TimerId
-void q_inputmethod_kill_timer2(void* self, int64_t id);
+void q_inputmethod_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -534,7 +534,7 @@ bool q_inputmethod_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QInputMethod*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_inputmethod_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_inputmethod_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -545,7 +545,7 @@ int32_t q_inputmethod_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_inputmethod_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_inputmethod_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -556,7 +556,7 @@ QMetaObject__Connection* q_inputmethod_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_inputmethod_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_inputmethod_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

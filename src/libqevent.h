@@ -17,14 +17,14 @@
 ///
 /// @param typeVal enum QEvent__Type
 /// @param m_dev QInputDevice*
-QInputEvent* q_inputevent_new(int64_t typeVal, void* m_dev);
+QInputEvent* q_inputevent_new(int32_t typeVal, void* m_dev);
 
 /// q_inputevent_new2 constructs a new QInputEvent object.
 ///
 /// @param typeVal enum QEvent__Type
 /// @param m_dev QInputDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QInputEvent* q_inputevent_new2(int64_t typeVal, void* m_dev, int64_t modifiers);
+QInputEvent* q_inputevent_new2(int32_t typeVal, void* m_dev, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#clone)
 ///
@@ -56,7 +56,7 @@ const QInputDevice* q_inputevent_device(void* self);
 /// @param self QInputEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_inputevent_device_type(void* self);
+int32_t q_inputevent_device_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputevent.html#modifiers)
 ///
@@ -105,7 +105,7 @@ void q_inputevent_qbase_set_timestamp(void* self, uint64_t timestamp);
 /// @param self QInputEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_inputevent_type(void* self);
+int32_t q_inputevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -212,14 +212,14 @@ void q_inputevent_delete(void* self);
 ///
 /// @param typeVal enum QEvent__Type
 /// @param dev QPointingDevice*
-QPointerEvent* q_pointerevent_new(int64_t typeVal, void* dev);
+QPointerEvent* q_pointerevent_new(int32_t typeVal, void* dev);
 
 /// q_pointerevent_new2 constructs a new QPointerEvent object.
 ///
 /// @param typeVal enum QEvent__Type
 /// @param dev QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QPointerEvent* q_pointerevent_new2(int64_t typeVal, void* dev, int64_t modifiers);
+QPointerEvent* q_pointerevent_new2(int32_t typeVal, void* dev, int64_t modifiers);
 
 /// q_pointerevent_new3 constructs a new QPointerEvent object.
 ///
@@ -227,7 +227,7 @@ QPointerEvent* q_pointerevent_new2(int64_t typeVal, void* dev, int64_t modifiers
 /// @param dev QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param points libqt_list /* of QEventPoint* */
-QPointerEvent* q_pointerevent_new3(int64_t typeVal, void* dev, int64_t modifiers, libqt_list points);
+QPointerEvent* q_pointerevent_new3(int32_t typeVal, void* dev, int64_t modifiers, libqt_list points);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#clone)
 ///
@@ -259,7 +259,7 @@ const QPointingDevice* q_pointerevent_pointing_device(void* self);
 /// @param self QPointerEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_pointerevent_pointer_type(void* self);
+int32_t q_pointerevent_pointer_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointerevent.html#setTimestamp)
 ///
@@ -444,7 +444,7 @@ const QInputDevice* q_pointerevent_device(void* self);
 /// @param self QPointerEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_pointerevent_device_type(void* self);
+int32_t q_pointerevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -477,7 +477,7 @@ uint64_t q_pointerevent_timestamp(void* self);
 /// @param self QPointerEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_pointerevent_type(void* self);
+int32_t q_pointerevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -624,7 +624,7 @@ const QPointingDevice* q_singlepointevent_pointing_device(void* self);
 /// @param self QSinglePointEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_singlepointevent_pointer_type(void* self);
+int32_t q_singlepointevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -743,7 +743,7 @@ const QInputDevice* q_singlepointevent_device(void* self);
 /// @param self QSinglePointEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_singlepointevent_device_type(void* self);
+int32_t q_singlepointevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -776,7 +776,7 @@ uint64_t q_singlepointevent_timestamp(void* self);
 /// @param self QSinglePointEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_singlepointevent_type(void* self);
+int32_t q_singlepointevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -997,7 +997,7 @@ const QPointingDevice* q_enterevent_pointing_device(void* self);
 /// @param self QEnterEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_enterevent_pointer_type(void* self);
+int32_t q_enterevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1100,7 +1100,7 @@ const QInputDevice* q_enterevent_device(void* self);
 /// @param self QEnterEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_enterevent_device_type(void* self);
+int32_t q_enterevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -1133,7 +1133,7 @@ uint64_t q_enterevent_timestamp(void* self);
 /// @param self QEnterEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_enterevent_type(void* self);
+int32_t q_enterevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1357,7 +1357,7 @@ void q_enterevent_delete(void* self);
 /// @param button enum Qt__MouseButton
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QMouseEvent* q_mouseevent_new(int64_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers);
+QMouseEvent* q_mouseevent_new(int32_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new2 constructs a new QMouseEvent object.
 ///
@@ -1367,7 +1367,7 @@ QMouseEvent* q_mouseevent_new(int64_t typeVal, void* localPos, int64_t button, i
 /// @param button enum Qt__MouseButton
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QMouseEvent* q_mouseevent_new2(int64_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
+QMouseEvent* q_mouseevent_new2(int32_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new3 constructs a new QMouseEvent object.
 ///
@@ -1378,7 +1378,7 @@ QMouseEvent* q_mouseevent_new2(int64_t typeVal, void* localPos, void* globalPos,
 /// @param button enum Qt__MouseButton
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QMouseEvent* q_mouseevent_new3(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
+QMouseEvent* q_mouseevent_new3(int32_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers);
 
 /// q_mouseevent_new4 constructs a new QMouseEvent object.
 ///
@@ -1390,7 +1390,7 @@ QMouseEvent* q_mouseevent_new3(int64_t typeVal, void* localPos, void* scenePos, 
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param source enum Qt__MouseEventSource
-QMouseEvent* q_mouseevent_new4(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int64_t source);
+QMouseEvent* q_mouseevent_new4(int32_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int32_t source);
 
 /// q_mouseevent_new5 constructs a new QMouseEvent object.
 ///
@@ -1400,7 +1400,7 @@ QMouseEvent* q_mouseevent_new4(int64_t typeVal, void* localPos, void* scenePos, 
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param device QPointingDevice*
-QMouseEvent* q_mouseevent_new5(int64_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
+QMouseEvent* q_mouseevent_new5(int32_t typeVal, void* localPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new6 constructs a new QMouseEvent object.
 ///
@@ -1411,7 +1411,7 @@ QMouseEvent* q_mouseevent_new5(int64_t typeVal, void* localPos, int64_t button, 
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param device QPointingDevice*
-QMouseEvent* q_mouseevent_new6(int64_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
+QMouseEvent* q_mouseevent_new6(int32_t typeVal, void* localPos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new7 constructs a new QMouseEvent object.
 ///
@@ -1423,7 +1423,7 @@ QMouseEvent* q_mouseevent_new6(int64_t typeVal, void* localPos, void* globalPos,
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param device QPointingDevice*
-QMouseEvent* q_mouseevent_new7(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
+QMouseEvent* q_mouseevent_new7(int32_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, void* device);
 
 /// q_mouseevent_new8 constructs a new QMouseEvent object.
 ///
@@ -1436,7 +1436,7 @@ QMouseEvent* q_mouseevent_new7(int64_t typeVal, void* localPos, void* scenePos, 
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param source enum Qt__MouseEventSource
 /// @param device QPointingDevice*
-QMouseEvent* q_mouseevent_new8(int64_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int64_t source, void* device);
+QMouseEvent* q_mouseevent_new8(int32_t typeVal, void* localPos, void* scenePos, void* globalPos, int64_t button, int64_t buttons, int64_t modifiers, int32_t source, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#clone)
 ///
@@ -1508,7 +1508,7 @@ QPointF* q_mouseevent_screen_pos(void* self);
 /// @param self QMouseEvent*
 ///
 /// @return enum Qt__MouseEventSource
-int64_t q_mouseevent_source(void* self);
+int32_t q_mouseevent_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmouseevent.html#flags)
 ///
@@ -1585,7 +1585,7 @@ const QPointingDevice* q_mouseevent_pointing_device(void* self);
 /// @param self QMouseEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_mouseevent_pointer_type(void* self);
+int32_t q_mouseevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -1688,7 +1688,7 @@ const QInputDevice* q_mouseevent_device(void* self);
 /// @param self QMouseEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_mouseevent_device_type(void* self);
+int32_t q_mouseevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -1721,7 +1721,7 @@ uint64_t q_mouseevent_timestamp(void* self);
 /// @param self QMouseEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_mouseevent_type(void* self);
+int32_t q_mouseevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1944,14 +1944,14 @@ void q_mouseevent_delete(void* self);
 /// @param scenePos QPointF*
 /// @param globalPos QPointF*
 /// @param oldPos QPointF*
-QHoverEvent* q_hoverevent_new(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos);
+QHoverEvent* q_hoverevent_new(int32_t typeVal, void* scenePos, void* globalPos, void* oldPos);
 
 /// q_hoverevent_new2 constructs a new QHoverEvent object.
 ///
 /// @param typeVal enum QEvent__Type
 /// @param pos QPointF*
 /// @param oldPos QPointF*
-QHoverEvent* q_hoverevent_new2(int64_t typeVal, void* pos, void* oldPos);
+QHoverEvent* q_hoverevent_new2(int32_t typeVal, void* pos, void* oldPos);
 
 /// q_hoverevent_new3 constructs a new QHoverEvent object.
 ///
@@ -1960,7 +1960,7 @@ QHoverEvent* q_hoverevent_new2(int64_t typeVal, void* pos, void* oldPos);
 /// @param globalPos QPointF*
 /// @param oldPos QPointF*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QHoverEvent* q_hoverevent_new3(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers);
+QHoverEvent* q_hoverevent_new3(int32_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers);
 
 /// q_hoverevent_new4 constructs a new QHoverEvent object.
 ///
@@ -1970,7 +1970,7 @@ QHoverEvent* q_hoverevent_new3(int64_t typeVal, void* scenePos, void* globalPos,
 /// @param oldPos QPointF*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param device QPointingDevice*
-QHoverEvent* q_hoverevent_new4(int64_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers, void* device);
+QHoverEvent* q_hoverevent_new4(int32_t typeVal, void* scenePos, void* globalPos, void* oldPos, int64_t modifiers, void* device);
 
 /// q_hoverevent_new5 constructs a new QHoverEvent object.
 ///
@@ -1978,7 +1978,7 @@ QHoverEvent* q_hoverevent_new4(int64_t typeVal, void* scenePos, void* globalPos,
 /// @param pos QPointF*
 /// @param oldPos QPointF*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QHoverEvent* q_hoverevent_new5(int64_t typeVal, void* pos, void* oldPos, int64_t modifiers);
+QHoverEvent* q_hoverevent_new5(int32_t typeVal, void* pos, void* oldPos, int64_t modifiers);
 
 /// q_hoverevent_new6 constructs a new QHoverEvent object.
 ///
@@ -1987,7 +1987,7 @@ QHoverEvent* q_hoverevent_new5(int64_t typeVal, void* pos, void* oldPos, int64_t
 /// @param oldPos QPointF*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param device QPointingDevice*
-QHoverEvent* q_hoverevent_new6(int64_t typeVal, void* pos, void* oldPos, int64_t modifiers, void* device);
+QHoverEvent* q_hoverevent_new6(int32_t typeVal, void* pos, void* oldPos, int64_t modifiers, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhoverevent.html#clone)
 ///
@@ -2117,7 +2117,7 @@ const QPointingDevice* q_hoverevent_pointing_device(void* self);
 /// @param self QHoverEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_hoverevent_pointer_type(void* self);
+int32_t q_hoverevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2220,7 +2220,7 @@ const QInputDevice* q_hoverevent_device(void* self);
 /// @param self QHoverEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_hoverevent_device_type(void* self);
+int32_t q_hoverevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -2253,7 +2253,7 @@ uint64_t q_hoverevent_timestamp(void* self);
 /// @param self QHoverEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_hoverevent_type(void* self);
+int32_t q_hoverevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2452,7 +2452,7 @@ void q_hoverevent_delete(void* self);
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param phase enum Qt__ScrollPhase
 /// @param inverted bool
-QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted);
+QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted);
 
 /// q_wheelevent_new2 constructs a new QWheelEvent object.
 ///
@@ -2465,7 +2465,7 @@ QWheelEvent* q_wheelevent_new(void* pos, void* globalPos, void* pixelDelta, void
 /// @param phase enum Qt__ScrollPhase
 /// @param inverted bool
 /// @param source enum Qt__MouseEventSource
-QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted, int64_t source);
+QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted, int32_t source);
 
 /// q_wheelevent_new3 constructs a new QWheelEvent object.
 ///
@@ -2479,7 +2479,7 @@ QWheelEvent* q_wheelevent_new2(void* pos, void* globalPos, void* pixelDelta, voi
 /// @param inverted bool
 /// @param source enum Qt__MouseEventSource
 /// @param device QPointingDevice*
-QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int64_t phase, bool inverted, int64_t source, void* device);
+QWheelEvent* q_wheelevent_new3(void* pos, void* globalPos, void* pixelDelta, void* angleDelta, int64_t buttons, int64_t modifiers, int32_t phase, bool inverted, int32_t source, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#clone)
 ///
@@ -2516,7 +2516,7 @@ QPoint* q_wheelevent_angle_delta(void* self);
 /// @param self QWheelEvent*
 ///
 /// @return enum Qt__ScrollPhase
-int64_t q_wheelevent_phase(void* self);
+int32_t q_wheelevent_phase(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwheelevent.html#inverted)
 ///
@@ -2598,7 +2598,7 @@ bool q_wheelevent_qbase_is_end_event(void* self);
 /// @param self QWheelEvent*
 ///
 /// @return enum Qt__MouseEventSource
-int64_t q_wheelevent_source(void* self);
+int32_t q_wheelevent_source(void* self);
 
 /// Inherited from QSinglePointEvent
 ///
@@ -2668,7 +2668,7 @@ const QPointingDevice* q_wheelevent_pointing_device(void* self);
 /// @param self QWheelEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_wheelevent_pointer_type(void* self);
+int32_t q_wheelevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -2771,7 +2771,7 @@ const QInputDevice* q_wheelevent_device(void* self);
 /// @param self QWheelEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_wheelevent_device_type(void* self);
+int32_t q_wheelevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -2804,7 +2804,7 @@ uint64_t q_wheelevent_timestamp(void* self);
 /// @param self QWheelEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_wheelevent_type(void* self);
+int32_t q_wheelevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2952,7 +2952,7 @@ void q_wheelevent_delete(void* self);
 /// @param keyState flag of enum Qt__KeyboardModifier
 /// @param button enum Qt__MouseButton
 /// @param buttons flag of enum Qt__MouseButton
-QTabletEvent* q_tabletevent_new(int64_t t, void* device, void* pos, void* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int64_t keyState, int64_t button, int64_t buttons);
+QTabletEvent* q_tabletevent_new(int32_t t, void* device, void* pos, void* globalPos, double pressure, float xTilt, float yTilt, float tangentialPressure, double rotation, float z, int64_t keyState, int64_t button, int64_t buttons);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabletevent.html#clone)
 ///
@@ -3127,7 +3127,7 @@ const QPointingDevice* q_tabletevent_pointing_device(void* self);
 /// @param self QTabletEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_tabletevent_pointer_type(void* self);
+int32_t q_tabletevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -3230,7 +3230,7 @@ const QInputDevice* q_tabletevent_device(void* self);
 /// @param self QTabletEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_tabletevent_device_type(void* self);
+int32_t q_tabletevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -3263,7 +3263,7 @@ uint64_t q_tabletevent_timestamp(void* self);
 /// @param self QTabletEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_tabletevent_type(void* self);
+int32_t q_tabletevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -3490,7 +3490,7 @@ void q_tabletevent_delete(void* self);
 /// @param value double
 /// @param sequenceId uint64_t
 /// @param intArgument uint64_t
-QNativeGestureEvent* q_nativegestureevent_new(int64_t typeVal, void* dev, void* localPos, void* scenePos, void* globalPos, double value, uint64_t sequenceId, uint64_t intArgument);
+QNativeGestureEvent* q_nativegestureevent_new(int32_t typeVal, void* dev, void* localPos, void* scenePos, void* globalPos, double value, uint64_t sequenceId, uint64_t intArgument);
 
 /// q_nativegestureevent_new2 constructs a new QNativeGestureEvent object.
 ///
@@ -3502,7 +3502,7 @@ QNativeGestureEvent* q_nativegestureevent_new(int64_t typeVal, void* dev, void* 
 /// @param globalPos QPointF*
 /// @param value double
 /// @param delta QPointF*
-QNativeGestureEvent* q_nativegestureevent_new2(int64_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta);
+QNativeGestureEvent* q_nativegestureevent_new2(int32_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta);
 
 /// q_nativegestureevent_new3 constructs a new QNativeGestureEvent object.
 ///
@@ -3515,7 +3515,7 @@ QNativeGestureEvent* q_nativegestureevent_new2(int64_t typeVal, void* dev, int f
 /// @param value double
 /// @param delta QPointF*
 /// @param sequenceId uint64_t
-QNativeGestureEvent* q_nativegestureevent_new3(int64_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta, uint64_t sequenceId);
+QNativeGestureEvent* q_nativegestureevent_new3(int32_t typeVal, void* dev, int fingerCount, void* localPos, void* scenePos, void* globalPos, double value, void* delta, uint64_t sequenceId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#clone)
 ///
@@ -3542,7 +3542,7 @@ QNativeGestureEvent* q_nativegestureevent_qbase_clone(void* self);
 /// @param self QNativeGestureEvent*
 ///
 /// @return enum Qt__NativeGestureType
-int64_t q_nativegestureevent_gesture_type(void* self);
+int32_t q_nativegestureevent_gesture_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnativegestureevent.html#fingerCount)
 ///
@@ -3652,7 +3652,7 @@ const QPointingDevice* q_nativegestureevent_pointing_device(void* self);
 /// @param self QNativeGestureEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_nativegestureevent_pointer_type(void* self);
+int32_t q_nativegestureevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -3755,7 +3755,7 @@ const QInputDevice* q_nativegestureevent_device(void* self);
 /// @param self QNativeGestureEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_nativegestureevent_device_type(void* self);
+int32_t q_nativegestureevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -3788,7 +3788,7 @@ uint64_t q_nativegestureevent_timestamp(void* self);
 /// @param self QNativeGestureEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_nativegestureevent_type(void* self);
+int32_t q_nativegestureevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4010,7 +4010,7 @@ void q_nativegestureevent_delete(void* self);
 /// @param typeVal enum QEvent__Type
 /// @param key int
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QKeyEvent* q_keyevent_new(int64_t typeVal, int key, int64_t modifiers);
+QKeyEvent* q_keyevent_new(int32_t typeVal, int key, int64_t modifiers);
 
 /// q_keyevent_new2 constructs a new QKeyEvent object.
 ///
@@ -4020,7 +4020,7 @@ QKeyEvent* q_keyevent_new(int64_t typeVal, int key, int64_t modifiers);
 /// @param nativeScanCode uint32_t
 /// @param nativeVirtualKey uint32_t
 /// @param nativeModifiers uint32_t
-QKeyEvent* q_keyevent_new2(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers);
+QKeyEvent* q_keyevent_new2(int32_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers);
 
 /// q_keyevent_new3 constructs a new QKeyEvent object.
 ///
@@ -4028,7 +4028,7 @@ QKeyEvent* q_keyevent_new2(int64_t typeVal, int key, int64_t modifiers, uint32_t
 /// @param key int
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param text const char*
-QKeyEvent* q_keyevent_new3(int64_t typeVal, int key, int64_t modifiers, const char* text);
+QKeyEvent* q_keyevent_new3(int32_t typeVal, int key, int64_t modifiers, const char* text);
 
 /// q_keyevent_new4 constructs a new QKeyEvent object.
 ///
@@ -4037,7 +4037,7 @@ QKeyEvent* q_keyevent_new3(int64_t typeVal, int key, int64_t modifiers, const ch
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param text const char*
 /// @param autorep bool
-QKeyEvent* q_keyevent_new4(int64_t typeVal, int key, int64_t modifiers, const char* text, bool autorep);
+QKeyEvent* q_keyevent_new4(int32_t typeVal, int key, int64_t modifiers, const char* text, bool autorep);
 
 /// q_keyevent_new5 constructs a new QKeyEvent object.
 ///
@@ -4047,7 +4047,7 @@ QKeyEvent* q_keyevent_new4(int64_t typeVal, int key, int64_t modifiers, const ch
 /// @param text const char*
 /// @param autorep bool
 /// @param count unsigned short
-QKeyEvent* q_keyevent_new5(int64_t typeVal, int key, int64_t modifiers, const char* text, bool autorep, unsigned short count);
+QKeyEvent* q_keyevent_new5(int32_t typeVal, int key, int64_t modifiers, const char* text, bool autorep, unsigned short count);
 
 /// q_keyevent_new6 constructs a new QKeyEvent object.
 ///
@@ -4058,7 +4058,7 @@ QKeyEvent* q_keyevent_new5(int64_t typeVal, int key, int64_t modifiers, const ch
 /// @param nativeVirtualKey uint32_t
 /// @param nativeModifiers uint32_t
 /// @param text const char*
-QKeyEvent* q_keyevent_new6(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text);
+QKeyEvent* q_keyevent_new6(int32_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text);
 
 /// q_keyevent_new7 constructs a new QKeyEvent object.
 ///
@@ -4070,7 +4070,7 @@ QKeyEvent* q_keyevent_new6(int64_t typeVal, int key, int64_t modifiers, uint32_t
 /// @param nativeModifiers uint32_t
 /// @param text const char*
 /// @param autorep bool
-QKeyEvent* q_keyevent_new7(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep);
+QKeyEvent* q_keyevent_new7(int32_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep);
 
 /// q_keyevent_new8 constructs a new QKeyEvent object.
 ///
@@ -4083,7 +4083,7 @@ QKeyEvent* q_keyevent_new7(int64_t typeVal, int key, int64_t modifiers, uint32_t
 /// @param text const char*
 /// @param autorep bool
 /// @param count unsigned short
-QKeyEvent* q_keyevent_new8(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count);
+QKeyEvent* q_keyevent_new8(int32_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count);
 
 /// q_keyevent_new9 constructs a new QKeyEvent object.
 ///
@@ -4097,7 +4097,7 @@ QKeyEvent* q_keyevent_new8(int64_t typeVal, int key, int64_t modifiers, uint32_t
 /// @param autorep bool
 /// @param count unsigned short
 /// @param device QInputDevice*
-QKeyEvent* q_keyevent_new9(int64_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device);
+QKeyEvent* q_keyevent_new9(int32_t typeVal, int key, int64_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
@@ -4128,7 +4128,7 @@ int32_t q_keyevent_key(void* self);
 ///
 /// @param self QKeyEvent*
 /// @param key enum QKeySequence__StandardKey
-bool q_keyevent_matches(void* self, int64_t key);
+bool q_keyevent_matches(void* self, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeyevent.html#modifiers)
 ///
@@ -4188,7 +4188,7 @@ const QInputDevice* q_keyevent_device(void* self);
 /// @param self QKeyEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_keyevent_device_type(void* self);
+int32_t q_keyevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -4212,7 +4212,7 @@ uint64_t q_keyevent_timestamp(void* self);
 /// @param self QKeyEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_keyevent_type(void* self);
+int32_t q_keyevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4348,13 +4348,13 @@ void q_keyevent_delete(void* self);
 /// q_focusevent_new constructs a new QFocusEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QFocusEvent* q_focusevent_new(int64_t typeVal);
+QFocusEvent* q_focusevent_new(int32_t typeVal);
 
 /// q_focusevent_new2 constructs a new QFocusEvent object.
 ///
 /// @param typeVal enum QEvent__Type
 /// @param reason enum Qt__FocusReason
-QFocusEvent* q_focusevent_new2(int64_t typeVal, int64_t reason);
+QFocusEvent* q_focusevent_new2(int32_t typeVal, int32_t reason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfocusevent.html#clone)
 ///
@@ -4391,7 +4391,7 @@ bool q_focusevent_lost_focus(void* self);
 /// @param self QFocusEvent*
 ///
 /// @return enum Qt__FocusReason
-int64_t q_focusevent_reason(void* self);
+int32_t q_focusevent_reason(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4400,7 +4400,7 @@ int64_t q_focusevent_reason(void* self);
 /// @param self QFocusEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_focusevent_type(void* self);
+int32_t q_focusevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4550,7 +4550,7 @@ const QRegion* q_paintevent_region(void* self);
 /// @param self QPaintEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_paintevent_type(void* self);
+int32_t q_paintevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4696,7 +4696,7 @@ const QPoint* q_moveevent_old_pos(void* self);
 /// @param self QMoveEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_moveevent_type(void* self);
+int32_t q_moveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4836,7 +4836,7 @@ const QRegion* q_exposeevent_region(void* self);
 /// @param self QExposeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_exposeevent_type(void* self);
+int32_t q_exposeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4942,7 +4942,7 @@ void q_exposeevent_delete(void* self);
 /// q_platformsurfaceevent_new constructs a new QPlatformSurfaceEvent object.
 ///
 /// @param surfaceEventType enum QPlatformSurfaceEvent__SurfaceEventType
-QPlatformSurfaceEvent* q_platformsurfaceevent_new(int64_t surfaceEventType);
+QPlatformSurfaceEvent* q_platformsurfaceevent_new(int32_t surfaceEventType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplatformsurfaceevent.html#clone)
 ///
@@ -4969,7 +4969,7 @@ QPlatformSurfaceEvent* q_platformsurfaceevent_qbase_clone(void* self);
 /// @param self QPlatformSurfaceEvent*
 ///
 /// @return enum QPlatformSurfaceEvent__SurfaceEventType
-int64_t q_platformsurfaceevent_surface_event_type(void* self);
+int32_t q_platformsurfaceevent_surface_event_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -4978,7 +4978,7 @@ int64_t q_platformsurfaceevent_surface_event_type(void* self);
 /// @param self QPlatformSurfaceEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_platformsurfaceevent_type(void* self);
+int32_t q_platformsurfaceevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5124,7 +5124,7 @@ const QSize* q_resizeevent_old_size(void* self);
 /// @param self QResizeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_resizeevent_type(void* self);
+int32_t q_resizeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5258,7 +5258,7 @@ QCloseEvent* q_closeevent_qbase_clone(void* self);
 /// @param self QCloseEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_closeevent_type(void* self);
+int32_t q_closeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5392,7 +5392,7 @@ QIconDragEvent* q_icondragevent_qbase_clone(void* self);
 /// @param self QIconDragEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_icondragevent_type(void* self);
+int32_t q_icondragevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5526,7 +5526,7 @@ QShowEvent* q_showevent_qbase_clone(void* self);
 /// @param self QShowEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_showevent_type(void* self);
+int32_t q_showevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5660,7 +5660,7 @@ QHideEvent* q_hideevent_qbase_clone(void* self);
 /// @param self QHideEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_hideevent_type(void* self);
+int32_t q_hideevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -5768,13 +5768,13 @@ void q_hideevent_delete(void* self);
 /// @param reason enum QContextMenuEvent__Reason
 /// @param pos QPoint*
 /// @param globalPos QPoint*
-QContextMenuEvent* q_contextmenuevent_new(int64_t reason, void* pos, void* globalPos);
+QContextMenuEvent* q_contextmenuevent_new(int32_t reason, void* pos, void* globalPos);
 
 /// q_contextmenuevent_new2 constructs a new QContextMenuEvent object.
 ///
 /// @param reason enum QContextMenuEvent__Reason
 /// @param pos QPoint*
-QContextMenuEvent* q_contextmenuevent_new2(int64_t reason, void* pos);
+QContextMenuEvent* q_contextmenuevent_new2(int32_t reason, void* pos);
 
 /// q_contextmenuevent_new3 constructs a new QContextMenuEvent object.
 ///
@@ -5782,7 +5782,7 @@ QContextMenuEvent* q_contextmenuevent_new2(int64_t reason, void* pos);
 /// @param pos QPoint*
 /// @param globalPos QPoint*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QContextMenuEvent* q_contextmenuevent_new3(int64_t reason, void* pos, void* globalPos, int64_t modifiers);
+QContextMenuEvent* q_contextmenuevent_new3(int32_t reason, void* pos, void* globalPos, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontextmenuevent.html#clone)
 ///
@@ -5839,7 +5839,7 @@ const QPoint* q_contextmenuevent_global_pos(void* self);
 /// @param self QContextMenuEvent*
 ///
 /// @return enum QContextMenuEvent__Reason
-int64_t q_contextmenuevent_reason(void* self);
+int32_t q_contextmenuevent_reason(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -5855,7 +5855,7 @@ const QInputDevice* q_contextmenuevent_device(void* self);
 /// @param self QContextMenuEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_contextmenuevent_device_type(void* self);
+int32_t q_contextmenuevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -5888,7 +5888,7 @@ uint64_t q_contextmenuevent_timestamp(void* self);
 /// @param self QContextMenuEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_contextmenuevent_type(void* self);
+int32_t q_contextmenuevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6108,7 +6108,7 @@ void q_inputmethodevent_set_commit_string3(void* self, const char* commitString,
 /// @param self QInputMethodEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_inputmethodevent_type(void* self);
+int32_t q_inputmethodevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6263,7 +6263,7 @@ QVariant* q_inputmethodqueryevent_value(void* self, int64_t query);
 /// @param self QInputMethodQueryEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_inputmethodqueryevent_type(void* self);
+int32_t q_inputmethodqueryevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6383,7 +6383,7 @@ QDropEvent* q_dropevent_new(void* pos, int64_t actions, void* data, int64_t butt
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param typeVal enum QEvent__Type
-QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int64_t typeVal);
+QDropEvent* q_dropevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#clone)
 ///
@@ -6460,7 +6460,7 @@ int64_t q_dropevent_possible_actions(void* self);
 /// @param self QDropEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dropevent_proposed_action(void* self);
+int32_t q_dropevent_proposed_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#acceptProposedAction)
 ///
@@ -6472,13 +6472,13 @@ void q_dropevent_accept_proposed_action(void* self);
 /// @param self QDropEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dropevent_drop_action(void* self);
+int32_t q_dropevent_drop_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#setDropAction)
 ///
 /// @param self QDropEvent*
 /// @param action enum Qt__DropAction
-void q_dropevent_set_drop_action(void* self, int64_t action);
+void q_dropevent_set_drop_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdropevent.html#source)
 ///
@@ -6497,7 +6497,7 @@ const QMimeData* q_dropevent_mime_data(void* self);
 /// @param self QDropEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_dropevent_type(void* self);
+int32_t q_dropevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -6617,7 +6617,7 @@ QDragMoveEvent* q_dragmoveevent_new(void* pos, int64_t actions, void* data, int6
 /// @param buttons flag of enum Qt__MouseButton
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param typeVal enum QEvent__Type
-QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int64_t typeVal);
+QDragMoveEvent* q_dragmoveevent_new2(void* pos, int64_t actions, void* data, int64_t buttons, int64_t modifiers, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdragmoveevent.html#clone)
 ///
@@ -6739,7 +6739,7 @@ int64_t q_dragmoveevent_possible_actions(void* self);
 /// @param self QDragMoveEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dragmoveevent_proposed_action(void* self);
+int32_t q_dragmoveevent_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -6755,7 +6755,7 @@ void q_dragmoveevent_accept_proposed_action(void* self);
 /// @param self QDragMoveEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dragmoveevent_drop_action(void* self);
+int32_t q_dragmoveevent_drop_action(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -6763,7 +6763,7 @@ int64_t q_dragmoveevent_drop_action(void* self);
 ///
 /// @param self QDragMoveEvent*
 /// @param action enum Qt__DropAction
-void q_dragmoveevent_set_drop_action(void* self, int64_t action);
+void q_dragmoveevent_set_drop_action(void* self, int32_t action);
 
 /// Inherited from QDropEvent
 ///
@@ -6786,7 +6786,7 @@ const QMimeData* q_dragmoveevent_mime_data(void* self);
 /// @param self QDragMoveEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_dragmoveevent_type(void* self);
+int32_t q_dragmoveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7014,7 +7014,7 @@ int64_t q_dragenterevent_possible_actions(void* self);
 /// @param self QDragEnterEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dragenterevent_proposed_action(void* self);
+int32_t q_dragenterevent_proposed_action(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -7030,7 +7030,7 @@ void q_dragenterevent_accept_proposed_action(void* self);
 /// @param self QDragEnterEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_dragenterevent_drop_action(void* self);
+int32_t q_dragenterevent_drop_action(void* self);
 
 /// Inherited from QDropEvent
 ///
@@ -7038,7 +7038,7 @@ int64_t q_dragenterevent_drop_action(void* self);
 ///
 /// @param self QDragEnterEvent*
 /// @param action enum Qt__DropAction
-void q_dragenterevent_set_drop_action(void* self, int64_t action);
+void q_dragenterevent_set_drop_action(void* self, int32_t action);
 
 /// Inherited from QDropEvent
 ///
@@ -7061,7 +7061,7 @@ const QMimeData* q_dragenterevent_mime_data(void* self);
 /// @param self QDragEnterEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_dragenterevent_type(void* self);
+int32_t q_dragenterevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7181,7 +7181,7 @@ QDragLeaveEvent* q_dragleaveevent_qbase_clone(void* self);
 /// @param self QDragLeaveEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_dragleaveevent_type(void* self);
+int32_t q_dragleaveevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7289,7 +7289,7 @@ void q_dragleaveevent_delete(void* self);
 /// @param typeVal enum QEvent__Type
 /// @param pos QPoint*
 /// @param globalPos QPoint*
-QHelpEvent* q_helpevent_new(int64_t typeVal, void* pos, void* globalPos);
+QHelpEvent* q_helpevent_new(int32_t typeVal, void* pos, void* globalPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhelpevent.html#clone)
 ///
@@ -7348,7 +7348,7 @@ const QPoint* q_helpevent_global_pos(void* self);
 /// @param self QHelpEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_helpevent_type(void* self);
+int32_t q_helpevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7490,7 +7490,7 @@ const char* q_statustipevent_tip(void* self);
 /// @param self QStatusTipEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_statustipevent_type(void* self);
+int32_t q_statustipevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7632,7 +7632,7 @@ const char* q_whatsthisclickedevent_href(void* self);
 /// @param self QWhatsThisClickedEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_whatsthisclickedevent_type(void* self);
+int32_t q_whatsthisclickedevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7785,7 +7785,7 @@ QAction* q_actionevent_before(void* self);
 /// @param self QActionEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_actionevent_type(void* self);
+int32_t q_actionevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -7944,7 +7944,7 @@ bool q_fileopenevent_open_file(void* self, void* file, int64_t flags);
 /// @param self QFileOpenEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_fileopenevent_type(void* self);
+int32_t q_fileopenevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -8084,7 +8084,7 @@ bool q_toolbarchangeevent_toggle(void* self);
 /// @param self QToolBarChangeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_toolbarchangeevent_type(void* self);
+int32_t q_toolbarchangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -8260,7 +8260,7 @@ bool q_shortcutevent_is_ambiguous(void* self);
 /// @param self QShortcutEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_shortcutevent_type(void* self);
+int32_t q_shortcutevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -8413,7 +8413,7 @@ bool q_windowstatechangeevent_is_override(void* self);
 /// @param self QWindowStateChangeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_windowstatechangeevent_type(void* self);
+int32_t q_windowstatechangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -8519,7 +8519,7 @@ void q_windowstatechangeevent_delete(void* self);
 /// q_touchevent_new constructs a new QTouchEvent object.
 ///
 /// @param eventType enum QEvent__Type
-QTouchEvent* q_touchevent_new(int64_t eventType);
+QTouchEvent* q_touchevent_new(int32_t eventType);
 
 /// q_touchevent_new2 constructs a new QTouchEvent object.
 ///
@@ -8527,20 +8527,20 @@ QTouchEvent* q_touchevent_new(int64_t eventType);
 /// @param device QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPointStates flag of enum QEventPoint__State
-QTouchEvent* q_touchevent_new2(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates);
+QTouchEvent* q_touchevent_new2(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates);
 
 /// q_touchevent_new3 constructs a new QTouchEvent object.
 ///
 /// @param eventType enum QEvent__Type
 /// @param device QPointingDevice*
-QTouchEvent* q_touchevent_new3(int64_t eventType, void* device);
+QTouchEvent* q_touchevent_new3(int32_t eventType, void* device);
 
 /// q_touchevent_new4 constructs a new QTouchEvent object.
 ///
 /// @param eventType enum QEvent__Type
 /// @param device QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QTouchEvent* q_touchevent_new4(int64_t eventType, void* device, int64_t modifiers);
+QTouchEvent* q_touchevent_new4(int32_t eventType, void* device, int64_t modifiers);
 
 /// q_touchevent_new5 constructs a new QTouchEvent object.
 ///
@@ -8548,7 +8548,7 @@ QTouchEvent* q_touchevent_new4(int64_t eventType, void* device, int64_t modifier
 /// @param device QPointingDevice*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPoints libqt_list /* of QEventPoint* */
-QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifiers, libqt_list touchPoints);
+QTouchEvent* q_touchevent_new5(int32_t eventType, void* device, int64_t modifiers, libqt_list touchPoints);
 
 /// q_touchevent_new6 constructs a new QTouchEvent object.
 ///
@@ -8557,7 +8557,7 @@ QTouchEvent* q_touchevent_new5(int64_t eventType, void* device, int64_t modifier
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param touchPointStates flag of enum QEventPoint__State
 /// @param touchPoints libqt_list /* of QEventPoint* */
-QTouchEvent* q_touchevent_new6(int64_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints);
+QTouchEvent* q_touchevent_new6(int32_t eventType, void* device, int64_t modifiers, int64_t touchPointStates, libqt_list touchPoints);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtouchevent.html#clone)
 ///
@@ -8670,7 +8670,7 @@ const QPointingDevice* q_touchevent_pointing_device(void* self);
 /// @param self QTouchEvent*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_touchevent_pointer_type(void* self);
+int32_t q_touchevent_pointer_type(void* self);
 
 /// Inherited from QPointerEvent
 ///
@@ -8773,7 +8773,7 @@ const QInputDevice* q_touchevent_device(void* self);
 /// @param self QTouchEvent*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_touchevent_device_type(void* self);
+int32_t q_touchevent_device_type(void* self);
 
 /// Inherited from QInputEvent
 ///
@@ -8806,7 +8806,7 @@ uint64_t q_touchevent_timestamp(void* self);
 /// @param self QTouchEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_touchevent_type(void* self);
+int32_t q_touchevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9009,7 +9009,7 @@ void q_scrollprepareevent_set_content_pos(void* self, void* pos);
 /// @param self QScrollPrepareEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_scrollprepareevent_type(void* self);
+int32_t q_scrollprepareevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9117,7 +9117,7 @@ void q_scrollprepareevent_delete(void* self);
 /// @param contentPos QPointF*
 /// @param overshoot QPointF*
 /// @param scrollState enum QScrollEvent__ScrollState
-QScrollEvent* q_scrollevent_new(void* contentPos, void* overshoot, int64_t scrollState);
+QScrollEvent* q_scrollevent_new(void* contentPos, void* overshoot, int32_t scrollState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollevent.html#clone)
 ///
@@ -9154,7 +9154,7 @@ QPointF* q_scrollevent_overshoot_distance(void* self);
 /// @param self QScrollEvent*
 ///
 /// @return enum QScrollEvent__ScrollState
-int64_t q_scrollevent_scroll_state(void* self);
+int32_t q_scrollevent_scroll_state(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9163,7 +9163,7 @@ int64_t q_scrollevent_scroll_state(void* self);
 /// @param self QScrollEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_scrollevent_type(void* self);
+int32_t q_scrollevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9270,7 +9270,7 @@ void q_scrollevent_delete(void* self);
 ///
 /// @param screen QScreen*
 /// @param orientation enum Qt__ScreenOrientation
-QScreenOrientationChangeEvent* q_screenorientationchangeevent_new(void* screen, int64_t orientation);
+QScreenOrientationChangeEvent* q_screenorientationchangeevent_new(void* screen, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreenorientationchangeevent.html#clone)
 ///
@@ -9302,7 +9302,7 @@ QScreen* q_screenorientationchangeevent_screen(void* self);
 /// @param self QScreenOrientationChangeEvent*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_screenorientationchangeevent_orientation(void* self);
+int32_t q_screenorientationchangeevent_orientation(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9311,7 +9311,7 @@ int64_t q_screenorientationchangeevent_orientation(void* self);
 /// @param self QScreenOrientationChangeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_screenorientationchangeevent_type(void* self);
+int32_t q_screenorientationchangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9417,7 +9417,7 @@ void q_screenorientationchangeevent_delete(void* self);
 /// q_applicationstatechangeevent_new constructs a new QApplicationStateChangeEvent object.
 ///
 /// @param state enum Qt__ApplicationState
-QApplicationStateChangeEvent* q_applicationstatechangeevent_new(int64_t state);
+QApplicationStateChangeEvent* q_applicationstatechangeevent_new(int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplicationstatechangeevent.html#clone)
 ///
@@ -9444,7 +9444,7 @@ QApplicationStateChangeEvent* q_applicationstatechangeevent_qbase_clone(void* se
 /// @param self QApplicationStateChangeEvent*
 ///
 /// @return enum Qt__ApplicationState
-int64_t q_applicationstatechangeevent_application_state(void* self);
+int32_t q_applicationstatechangeevent_application_state(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9453,7 +9453,7 @@ int64_t q_applicationstatechangeevent_application_state(void* self);
 /// @param self QApplicationStateChangeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_applicationstatechangeevent_type(void* self);
+int32_t q_applicationstatechangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9560,7 +9560,7 @@ void q_applicationstatechangeevent_delete(void* self);
 ///
 /// @param typeVal enum QEvent__Type
 /// @param childWindow QWindow*
-QChildWindowEvent* q_childwindowevent_new(int64_t typeVal, void* childWindow);
+QChildWindowEvent* q_childwindowevent_new(int32_t typeVal, void* childWindow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildwindowevent.html#clone)
 ///
@@ -9594,7 +9594,7 @@ QWindow* q_childwindowevent_child(void* self);
 /// @param self QChildWindowEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_childwindowevent_type(void* self);
+int32_t q_childwindowevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -9703,14 +9703,14 @@ void q_childwindowevent_delete(void* self);
 /// @param s int
 /// @param l int
 /// @param val QVariant*
-QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int64_t typ, int s, int l, void* val);
+QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int32_t typ, int s, int l, void* val);
 
 /// q_inputmethodevent__attribute_new2 constructs a new QInputMethodEvent::Attribute object.
 ///
 /// @param typ enum QInputMethodEvent__AttributeType
 /// @param s int
 /// @param l int
-QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, int s, int l);
+QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int32_t typ, int s, int l);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#operator-eq)
 ///
@@ -9718,8 +9718,6 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int64_t typ, in
 /// @param param1 QInputMethodEvent__Attribute*
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent::attribute.html#dtor.QInputMethodEvent::Attribute)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QInputMethodEvent__Attribute*

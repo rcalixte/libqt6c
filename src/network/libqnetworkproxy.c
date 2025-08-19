@@ -24,7 +24,7 @@ QNetworkProxyQuery* q_networkproxyquery_new5(void* other) {
     return QNetworkProxyQuery_new5((QNetworkProxyQuery*)other);
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int64_t queryType) {
+QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int32_t queryType) {
     return QNetworkProxyQuery_new6((QUrl*)requestUrl, queryType);
 }
 
@@ -32,7 +32,7 @@ QNetworkProxyQuery* q_networkproxyquery_new7(const char* hostname, int port, con
     return QNetworkProxyQuery_new7(qstring(hostname), port, qstring(protocolTag));
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, const char* protocolTag, int64_t queryType) {
+QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, const char* protocolTag, int32_t queryType) {
     return QNetworkProxyQuery_new8(qstring(hostname), port, qstring(protocolTag), queryType);
 }
 
@@ -40,7 +40,7 @@ QNetworkProxyQuery* q_networkproxyquery_new9(unsigned short bindPort, const char
     return QNetworkProxyQuery_new9(bindPort, qstring(protocolTag));
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int64_t queryType) {
+QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int32_t queryType) {
     return QNetworkProxyQuery_new10(bindPort, qstring(protocolTag), queryType);
 }
 
@@ -60,11 +60,11 @@ bool q_networkproxyquery_operator_not_equal(void* self, void* other) {
     return QNetworkProxyQuery_OperatorNotEqual((QNetworkProxyQuery*)self, (QNetworkProxyQuery*)other);
 }
 
-int64_t q_networkproxyquery_query_type(void* self) {
+int32_t q_networkproxyquery_query_type(void* self) {
     return QNetworkProxyQuery_QueryType((QNetworkProxyQuery*)self);
 }
 
-void q_networkproxyquery_set_query_type(void* self, int64_t typeVal) {
+void q_networkproxyquery_set_query_type(void* self, int32_t typeVal) {
     QNetworkProxyQuery_SetQueryType((QNetworkProxyQuery*)self, typeVal);
 }
 
@@ -122,7 +122,7 @@ QNetworkProxy* q_networkproxy_new() {
     return QNetworkProxy_new();
 }
 
-QNetworkProxy* q_networkproxy_new2(int64_t typeVal) {
+QNetworkProxy* q_networkproxy_new2(int32_t typeVal) {
     return QNetworkProxy_new2(typeVal);
 }
 
@@ -130,19 +130,19 @@ QNetworkProxy* q_networkproxy_new3(void* other) {
     return QNetworkProxy_new3((QNetworkProxy*)other);
 }
 
-QNetworkProxy* q_networkproxy_new4(int64_t typeVal, const char* hostName) {
+QNetworkProxy* q_networkproxy_new4(int32_t typeVal, const char* hostName) {
     return QNetworkProxy_new4(typeVal, qstring(hostName));
 }
 
-QNetworkProxy* q_networkproxy_new5(int64_t typeVal, const char* hostName, unsigned short port) {
+QNetworkProxy* q_networkproxy_new5(int32_t typeVal, const char* hostName, unsigned short port) {
     return QNetworkProxy_new5(typeVal, qstring(hostName), port);
 }
 
-QNetworkProxy* q_networkproxy_new6(int64_t typeVal, const char* hostName, unsigned short port, const char* user) {
+QNetworkProxy* q_networkproxy_new6(int32_t typeVal, const char* hostName, unsigned short port, const char* user) {
     return QNetworkProxy_new6(typeVal, qstring(hostName), port, qstring(user));
 }
 
-QNetworkProxy* q_networkproxy_new7(int64_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password) {
+QNetworkProxy* q_networkproxy_new7(int32_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password) {
     return QNetworkProxy_new7(typeVal, qstring(hostName), port, qstring(user), qstring(password));
 }
 
@@ -162,11 +162,11 @@ bool q_networkproxy_operator_not_equal(void* self, void* other) {
     return QNetworkProxy_OperatorNotEqual((QNetworkProxy*)self, (QNetworkProxy*)other);
 }
 
-void q_networkproxy_set_type(void* self, int64_t typeVal) {
+void q_networkproxy_set_type(void* self, int32_t typeVal) {
     QNetworkProxy_SetType((QNetworkProxy*)self, typeVal);
 }
 
-int64_t q_networkproxy_type(void* self) {
+int32_t q_networkproxy_type(void* self) {
     return QNetworkProxy_Type((QNetworkProxy*)self);
 }
 
@@ -243,11 +243,11 @@ void q_networkproxy_set_headers(void* self, void* newHeaders) {
     QNetworkProxy_SetHeaders((QNetworkProxy*)self, (QHttpHeaders*)newHeaders);
 }
 
-QVariant* q_networkproxy_header(void* self, int64_t header) {
+QVariant* q_networkproxy_header(void* self, int32_t header) {
     return QNetworkProxy_Header((QNetworkProxy*)self, header);
 }
 
-void q_networkproxy_set_header(void* self, int64_t header, void* value) {
+void q_networkproxy_set_header(void* self, int32_t header, void* value) {
     QNetworkProxy_SetHeader((QNetworkProxy*)self, header, (QVariant*)value);
 }
 

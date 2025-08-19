@@ -79,11 +79,11 @@ bool q_scistyle_eol_fill(void* self) {
     return QsciStyle_EolFill((QsciStyle*)self);
 }
 
-void q_scistyle_set_text_case(void* self, int64_t text_case) {
+void q_scistyle_set_text_case(void* self, int32_t text_case) {
     QsciStyle_SetTextCase((QsciStyle*)self, text_case);
 }
 
-int64_t q_scistyle_text_case(void* self) {
+int32_t q_scistyle_text_case(void* self) {
     return QsciStyle_TextCase((QsciStyle*)self);
 }
 

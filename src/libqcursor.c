@@ -10,7 +10,7 @@ QCursor* q_cursor_new() {
     return QCursor_new();
 }
 
-QCursor* q_cursor_new2(int64_t shape) {
+QCursor* q_cursor_new2(int32_t shape) {
     return QCursor_new2(shape);
 }
 
@@ -54,19 +54,19 @@ QVariant* q_cursor_to_q_variant(void* self) {
     return QCursor_ToQVariant((QCursor*)self);
 }
 
-int64_t q_cursor_shape(void* self) {
+int32_t q_cursor_shape(void* self) {
     return QCursor_Shape((QCursor*)self);
 }
 
-void q_cursor_set_shape(void* self, int64_t newShape) {
+void q_cursor_set_shape(void* self, int32_t newShape) {
     QCursor_SetShape((QCursor*)self, newShape);
 }
 
-QBitmap* q_cursor_bitmap(void* self, int64_t param1) {
+QBitmap* q_cursor_bitmap(void* self, int32_t param1) {
     return QCursor_Bitmap((QCursor*)self, param1);
 }
 
-QBitmap* q_cursor_mask(void* self, int64_t param1) {
+QBitmap* q_cursor_mask(void* self, int32_t param1) {
     return QCursor_Mask((QCursor*)self, param1);
 }
 

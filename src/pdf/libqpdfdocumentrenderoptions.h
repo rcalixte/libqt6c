@@ -49,13 +49,13 @@ void q_pdfdocumentrenderoptions_move_assign(void* self, void* other);
 /// @param self QPdfDocumentRenderOptions*
 ///
 /// @return enum QPdfDocumentRenderOptions__Rotation
-int64_t q_pdfdocumentrenderoptions_rotation(void* self);
+int32_t q_pdfdocumentrenderoptions_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#setRotation)
 ///
 /// @param self QPdfDocumentRenderOptions*
 /// @param r enum QPdfDocumentRenderOptions__Rotation
-void q_pdfdocumentrenderoptions_set_rotation(void* self, int64_t r);
+void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocumentrenderoptions.html#renderFlags)
 ///

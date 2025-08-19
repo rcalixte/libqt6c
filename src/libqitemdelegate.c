@@ -34,15 +34,15 @@ void* q_itemdelegate_metacast(void* self, const char* param1) {
     return QItemDelegate_Metacast((QItemDelegate*)self, param1);
 }
 
-int32_t q_itemdelegate_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_itemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QItemDelegate_Metacall((QItemDelegate*)self, param1, param2, param3);
 }
 
-void q_itemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_itemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QItemDelegate_OnMetacall((QItemDelegate*)self, (intptr_t)callback);
 }
 
-int32_t q_itemdelegate_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_itemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QItemDelegate_QBaseMetacall((QItemDelegate*)self, param1, param2, param3);
 }
 
@@ -177,15 +177,15 @@ void q_itemdelegate_qbase_draw_focus(void* self, void* painter, void* option, vo
     QItemDelegate_QBaseDrawFocus((QItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QRect*)rect);
 }
 
-void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* rect, int64_t state) {
+void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* rect, int32_t state) {
     QItemDelegate_DrawCheck((QItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QRect*)rect, state);
 }
 
-void q_itemdelegate_on_draw_check(void* self, void (*callback)(void*, void*, void*, void*, int64_t)) {
+void q_itemdelegate_on_draw_check(void* self, void (*callback)(void*, void*, void*, void*, int32_t)) {
     QItemDelegate_OnDrawCheck((QItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_itemdelegate_qbase_draw_check(void* self, void* painter, void* option, void* rect, int64_t state) {
+void q_itemdelegate_qbase_draw_check(void* self, void* painter, void* option, void* rect, int32_t state) {
     QItemDelegate_QBaseDrawCheck((QItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QRect*)rect, state);
 }
 
@@ -335,11 +335,11 @@ void q_itemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, voi
     QAbstractItemDelegate_Connect_SizeHintChanged((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_itemdelegate_close_editor2(void* self, void* editor, int64_t hint) {
+void q_itemdelegate_close_editor2(void* self, void* editor, int32_t hint) {
     QAbstractItemDelegate_CloseEditor2((QAbstractItemDelegate*)self, (QWidget*)editor, hint);
 }
 
-void q_itemdelegate_on_close_editor2(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_itemdelegate_on_close_editor2(void* self, void (*callback)(void*, void*, int32_t)) {
     QAbstractItemDelegate_Connect_CloseEditor2((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
@@ -390,7 +390,7 @@ void q_itemdelegate_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_itemdelegate_kill_timer2(void* self, int64_t id) {
+void q_itemdelegate_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -494,15 +494,15 @@ bool q_itemdelegate_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_itemdelegate_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_itemdelegate_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_itemdelegate_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_itemdelegate_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_itemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_itemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

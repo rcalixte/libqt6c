@@ -34,14 +34,14 @@ QVersionNumber* q_libraryinfo_version() {
     return QLibraryInfo_Version();
 }
 
-const char* q_libraryinfo_path(int64_t p) {
+const char* q_libraryinfo_path(int32_t p) {
     libqt_string _str = QLibraryInfo_Path(p);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_libraryinfo_paths(int64_t p) {
+const char** q_libraryinfo_paths(int32_t p) {
     libqt_list _arr = QLibraryInfo_Paths(p);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -60,7 +60,7 @@ const char** q_libraryinfo_paths(int64_t p) {
     return _ret;
 }
 
-const char* q_libraryinfo_location(int64_t location) {
+const char* q_libraryinfo_location(int32_t location) {
     libqt_string _str = QLibraryInfo_Location(location);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

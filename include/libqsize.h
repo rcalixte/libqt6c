@@ -103,14 +103,14 @@ QSize* q_size_transposed(void* self);
 /// @param w int
 /// @param h int
 /// @param mode enum Qt__AspectRatioMode
-void q_size_scale(void* self, int w, int h, int64_t mode);
+void q_size_scale(void* self, int w, int h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#scale)
 ///
 /// @param self QSize*
 /// @param s QSize*
 /// @param mode enum Qt__AspectRatioMode
-void q_size_scale2(void* self, void* s, int64_t mode);
+void q_size_scale2(void* self, void* s, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#scaled)
 ///
@@ -118,14 +118,14 @@ void q_size_scale2(void* self, void* s, int64_t mode);
 /// @param w int
 /// @param h int
 /// @param mode enum Qt__AspectRatioMode
-QSize* q_size_scaled(void* self, int w, int h, int64_t mode);
+QSize* q_size_scaled(void* self, int w, int h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#scaled)
 ///
 /// @param self QSize*
 /// @param s QSize*
 /// @param mode enum Qt__AspectRatioMode
-QSize* q_size_scaled2(void* self, void* s, int64_t mode);
+QSize* q_size_scaled2(void* self, void* s, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsize.html#expandedTo)
 ///
@@ -284,14 +284,14 @@ QSizeF* q_sizef_transposed(void* self);
 /// @param w double
 /// @param h double
 /// @param mode enum Qt__AspectRatioMode
-void q_sizef_scale(void* self, double w, double h, int64_t mode);
+void q_sizef_scale(void* self, double w, double h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#scale)
 ///
 /// @param self QSizeF*
 /// @param s QSizeF*
 /// @param mode enum Qt__AspectRatioMode
-void q_sizef_scale2(void* self, void* s, int64_t mode);
+void q_sizef_scale2(void* self, void* s, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#scaled)
 ///
@@ -299,14 +299,14 @@ void q_sizef_scale2(void* self, void* s, int64_t mode);
 /// @param w double
 /// @param h double
 /// @param mode enum Qt__AspectRatioMode
-QSizeF* q_sizef_scaled(void* self, double w, double h, int64_t mode);
+QSizeF* q_sizef_scaled(void* self, double w, double h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#scaled)
 ///
 /// @param self QSizeF*
 /// @param s QSizeF*
 /// @param mode enum Qt__AspectRatioMode
-QSizeF* q_sizef_scaled2(void* self, void* s, int64_t mode);
+QSizeF* q_sizef_scaled2(void* self, void* s, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsizef.html#expandedTo)
 ///

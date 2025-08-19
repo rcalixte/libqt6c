@@ -230,27 +230,27 @@ void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount) 
     QPaintEngine_QBaseDrawPoints2((QPaintEngine*)self, (QPoint*)points, pointCount);
 }
 
-void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int64_t mode) {
+void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_t mode) {
     QPaintEngine_DrawPolygon((QPaintEngine*)self, (QPointF*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int64_t)) {
+void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t)) {
     QPaintEngine_OnDrawPolygon((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int64_t mode) {
+void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int32_t mode) {
     QPaintEngine_QBaseDrawPolygon((QPaintEngine*)self, (QPointF*)points, pointCount, mode);
 }
 
-void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int64_t mode) {
+void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32_t mode) {
     QPaintEngine_DrawPolygon2((QPaintEngine*)self, (QPoint*)points, pointCount, mode);
 }
 
-void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int64_t)) {
+void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t)) {
     QPaintEngine_OnDrawPolygon2((QPaintEngine*)self, (intptr_t)callback);
 }
 
-void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int64_t mode) {
+void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int32_t mode) {
     QPaintEngine_QBaseDrawPolygon2((QPaintEngine*)self, (QPoint*)points, pointCount, mode);
 }
 
@@ -338,15 +338,15 @@ QPoint* q_paintengine_qbase_coordinate_offset(void* self) {
     return QPaintEngine_QBaseCoordinateOffset((QPaintEngine*)self);
 }
 
-int64_t q_paintengine_type(void* self) {
+int32_t q_paintengine_type(void* self) {
     return QPaintEngine_Type((QPaintEngine*)self);
 }
 
-void q_paintengine_on_type(void* self, int64_t (*callback)()) {
+void q_paintengine_on_type(void* self, int32_t (*callback)()) {
     QPaintEngine_OnType((QPaintEngine*)self, (intptr_t)callback);
 }
 
-int64_t q_paintengine_qbase_type(void* self) {
+int32_t q_paintengine_qbase_type(void* self) {
     return QPaintEngine_QBaseType((QPaintEngine*)self);
 }
 
@@ -446,7 +446,7 @@ QBrush* q_paintenginestate_background_brush(void* self) {
     return QPaintEngineState_BackgroundBrush((QPaintEngineState*)self);
 }
 
-int64_t q_paintenginestate_background_mode(void* self) {
+int32_t q_paintenginestate_background_mode(void* self) {
     return QPaintEngineState_BackgroundMode((QPaintEngineState*)self);
 }
 
@@ -458,7 +458,7 @@ QTransform* q_paintenginestate_transform(void* self) {
     return QPaintEngineState_Transform((QPaintEngineState*)self);
 }
 
-int64_t q_paintenginestate_clip_operation(void* self) {
+int32_t q_paintenginestate_clip_operation(void* self) {
     return QPaintEngineState_ClipOperation((QPaintEngineState*)self);
 }
 
@@ -478,7 +478,7 @@ int64_t q_paintenginestate_render_hints(void* self) {
     return QPaintEngineState_RenderHints((QPaintEngineState*)self);
 }
 
-int64_t q_paintenginestate_composition_mode(void* self) {
+int32_t q_paintenginestate_composition_mode(void* self) {
     return QPaintEngineState_CompositionMode((QPaintEngineState*)self);
 }
 

@@ -1,14 +1,14 @@
 #include "libqstandardpaths.hpp"
 #include "libqstandardpaths.h"
 
-const char* q_standardpaths_writable_location(int64_t typeVal) {
+const char* q_standardpaths_writable_location(int32_t typeVal) {
     libqt_string _str = QStandardPaths_WritableLocation(typeVal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_standardpaths_standard_locations(int64_t typeVal) {
+const char** q_standardpaths_standard_locations(int32_t typeVal) {
     libqt_list _arr = QStandardPaths_StandardLocations(typeVal);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -27,14 +27,14 @@ const char** q_standardpaths_standard_locations(int64_t typeVal) {
     return _ret;
 }
 
-const char* q_standardpaths_locate(int64_t typeVal, const char* fileName) {
+const char* q_standardpaths_locate(int32_t typeVal, const char* fileName) {
     libqt_string _str = QStandardPaths_Locate(typeVal, qstring(fileName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_standardpaths_locate_all(int64_t typeVal, const char* fileName) {
+const char** q_standardpaths_locate_all(int32_t typeVal, const char* fileName) {
     libqt_list _arr = QStandardPaths_LocateAll(typeVal, qstring(fileName));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -53,7 +53,7 @@ const char** q_standardpaths_locate_all(int64_t typeVal, const char* fileName) {
     return _ret;
 }
 
-const char* q_standardpaths_display_name(int64_t typeVal) {
+const char* q_standardpaths_display_name(int32_t typeVal) {
     libqt_string _str = QStandardPaths_DisplayName(typeVal);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -75,14 +75,14 @@ bool q_standardpaths_is_test_mode_enabled() {
     return QStandardPaths_IsTestModeEnabled();
 }
 
-const char* q_standardpaths_locate3(int64_t typeVal, const char* fileName, int64_t options) {
+const char* q_standardpaths_locate3(int32_t typeVal, const char* fileName, int64_t options) {
     libqt_string _str = QStandardPaths_Locate3(typeVal, qstring(fileName), options);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** q_standardpaths_locate_all3(int64_t typeVal, const char* fileName, int64_t options) {
+const char** q_standardpaths_locate_all3(int32_t typeVal, const char* fileName, int64_t options) {
     libqt_list _arr = QStandardPaths_LocateAll3(typeVal, qstring(fileName), options);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));

@@ -125,7 +125,7 @@ QBitArray* q_bitarray_from_bits(const char* data, int64_t lenVal) {
     return QBitArray_FromBits(data, lenVal);
 }
 
-uint32_t q_bitarray_to_u_int32(void* self, int64_t endianness) {
+uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness) {
     return QBitArray_ToUInt32((QBitArray*)self, endianness);
 }
 
@@ -133,7 +133,7 @@ bool q_bitarray_fill22(void* self, bool aval, int64_t asize) {
     return QBitArray_Fill22((QBitArray*)self, aval, asize);
 }
 
-uint32_t q_bitarray_to_u_int322(void* self, int64_t endianness, bool* ok) {
+uint32_t q_bitarray_to_u_int322(void* self, int32_t endianness, bool* ok) {
     return QBitArray_ToUInt322((QBitArray*)self, endianness, (bool*)ok);
 }
 

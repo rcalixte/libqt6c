@@ -18,14 +18,14 @@
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param typeVal enum QStandardPaths__StandardLocation
-const char* q_standardpaths_writable_location(int64_t typeVal);
+const char* q_standardpaths_writable_location(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#standardLocations)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param typeVal enum QStandardPaths__StandardLocation
-const char** q_standardpaths_standard_locations(int64_t typeVal);
+const char** q_standardpaths_standard_locations(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locate)
 ///
@@ -33,7 +33,7 @@ const char** q_standardpaths_standard_locations(int64_t typeVal);
 ///
 /// @param typeVal enum QStandardPaths__StandardLocation
 /// @param fileName const char*
-const char* q_standardpaths_locate(int64_t typeVal, const char* fileName);
+const char* q_standardpaths_locate(int32_t typeVal, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
 ///
@@ -41,14 +41,14 @@ const char* q_standardpaths_locate(int64_t typeVal, const char* fileName);
 ///
 /// @param typeVal enum QStandardPaths__StandardLocation
 /// @param fileName const char*
-const char** q_standardpaths_locate_all(int64_t typeVal, const char* fileName);
+const char** q_standardpaths_locate_all(int32_t typeVal, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#displayName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param typeVal enum QStandardPaths__StandardLocation
-const char* q_standardpaths_display_name(int64_t typeVal);
+const char* q_standardpaths_display_name(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
 ///
@@ -73,7 +73,7 @@ bool q_standardpaths_is_test_mode_enabled();
 /// @param typeVal enum QStandardPaths__StandardLocation
 /// @param fileName const char*
 /// @param options flag of enum QStandardPaths__LocateOption
-const char* q_standardpaths_locate3(int64_t typeVal, const char* fileName, int64_t options);
+const char* q_standardpaths_locate3(int32_t typeVal, const char* fileName, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#locateAll)
 ///
@@ -82,7 +82,7 @@ const char* q_standardpaths_locate3(int64_t typeVal, const char* fileName, int64
 /// @param typeVal enum QStandardPaths__StandardLocation
 /// @param fileName const char*
 /// @param options flag of enum QStandardPaths__LocateOption
-const char** q_standardpaths_locate_all3(int64_t typeVal, const char* fileName, int64_t options);
+const char** q_standardpaths_locate_all3(int32_t typeVal, const char* fileName, int64_t options);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstandardpaths.html#findExecutable)
 ///

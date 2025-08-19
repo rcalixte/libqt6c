@@ -18,7 +18,7 @@ bool q_webengineloadinginfo_is_error_page(void* self) {
     return QWebEngineLoadingInfo_IsErrorPage((QWebEngineLoadingInfo*)self);
 }
 
-int64_t q_webengineloadinginfo_status(void* self) {
+int32_t q_webengineloadinginfo_status(void* self) {
     return QWebEngineLoadingInfo_Status((QWebEngineLoadingInfo*)self);
 }
 
@@ -29,7 +29,7 @@ const char* q_webengineloadinginfo_error_string(void* self) {
     return _ret;
 }
 
-int64_t q_webengineloadinginfo_error_domain(void* self) {
+int32_t q_webengineloadinginfo_error_domain(void* self) {
     return QWebEngineLoadingInfo_ErrorDomain((QWebEngineLoadingInfo*)self);
 }
 

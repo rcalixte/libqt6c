@@ -35,13 +35,13 @@ void* q_fontcombobox_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_fontcombobox_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_fontcombobox_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QFontComboBox*
 /// @param callback int32_t fn(QFontComboBox*, enum QMetaObject__Call, int, void*)
-void q_fontcombobox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_fontcombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_fontcombobox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_fontcombobox_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_fontcombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -62,14 +62,14 @@ const char* q_fontcombobox_tr(const char* s);
 ///
 /// @param self QFontComboBox*
 /// @param writingSystem enum QFontDatabase__WritingSystem
-void q_fontcombobox_set_writing_system(void* self, int64_t writingSystem);
+void q_fontcombobox_set_writing_system(void* self, int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#writingSystem)
 ///
 /// @param self QFontComboBox*
 ///
 /// @return enum QFontDatabase__WritingSystem
-int64_t q_fontcombobox_writing_system(void* self);
+int32_t q_fontcombobox_writing_system(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#setFontFilters)
 ///
@@ -114,7 +114,7 @@ QSize* q_fontcombobox_qbase_size_hint(void* self);
 /// @param self QFontComboBox*
 /// @param writingSystem enum QFontDatabase__WritingSystem
 /// @param sampleText const char*
-void q_fontcombobox_set_sample_text_for_system(void* self, int64_t writingSystem, const char* sampleText);
+void q_fontcombobox_set_sample_text_for_system(void* self, int32_t writingSystem, const char* sampleText);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#sampleTextForSystem)
 ///
@@ -122,7 +122,7 @@ void q_fontcombobox_set_sample_text_for_system(void* self, int64_t writingSystem
 ///
 /// @param self QFontComboBox*
 /// @param writingSystem enum QFontDatabase__WritingSystem
-const char* q_fontcombobox_sample_text_for_system(void* self, int64_t writingSystem);
+const char* q_fontcombobox_sample_text_for_system(void* self, int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontcombobox.html#setSampleTextForFont)
 ///
@@ -293,7 +293,7 @@ int32_t q_fontcombobox_find_data(void* self, void* data);
 /// @param self QFontComboBox*
 ///
 /// @return enum QComboBox__InsertPolicy
-int64_t q_fontcombobox_insert_policy(void* self);
+int32_t q_fontcombobox_insert_policy(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -301,7 +301,7 @@ int64_t q_fontcombobox_insert_policy(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param policy enum QComboBox__InsertPolicy
-void q_fontcombobox_set_insert_policy(void* self, int64_t policy);
+void q_fontcombobox_set_insert_policy(void* self, int32_t policy);
 
 /// Inherited from QComboBox
 ///
@@ -310,7 +310,7 @@ void q_fontcombobox_set_insert_policy(void* self, int64_t policy);
 /// @param self QFontComboBox*
 ///
 /// @return enum QComboBox__SizeAdjustPolicy
-int64_t q_fontcombobox_size_adjust_policy(void* self);
+int32_t q_fontcombobox_size_adjust_policy(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -318,7 +318,7 @@ int64_t q_fontcombobox_size_adjust_policy(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param policy enum QComboBox__SizeAdjustPolicy
-void q_fontcombobox_set_size_adjust_policy(void* self, int64_t policy);
+void q_fontcombobox_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QComboBox
 ///
@@ -964,7 +964,7 @@ bool q_fontcombobox_is_modal(void* self);
 /// @param self QFontComboBox*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_fontcombobox_window_modality(void* self);
+int32_t q_fontcombobox_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -972,7 +972,7 @@ int64_t q_fontcombobox_window_modality(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param windowModality enum Qt__WindowModality
-void q_fontcombobox_set_window_modality(void* self, int64_t windowModality);
+void q_fontcombobox_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1435,7 +1435,7 @@ void q_fontcombobox_set_palette(void* self, void* palette);
 ///
 /// @param self QFontComboBox*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_fontcombobox_set_background_role(void* self, int64_t backgroundRole);
+void q_fontcombobox_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1444,7 +1444,7 @@ void q_fontcombobox_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QFontComboBox*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_fontcombobox_background_role(void* self);
+int32_t q_fontcombobox_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1452,7 +1452,7 @@ int64_t q_fontcombobox_background_role(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_fontcombobox_set_foreground_role(void* self, int64_t foregroundRole);
+void q_fontcombobox_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1461,7 +1461,7 @@ void q_fontcombobox_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QFontComboBox*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_fontcombobox_foreground_role(void* self);
+int32_t q_fontcombobox_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1863,7 +1863,7 @@ void q_fontcombobox_set_accessible_description(void* self, const char* descripti
 ///
 /// @param self QFontComboBox*
 /// @param direction enum Qt__LayoutDirection
-void q_fontcombobox_set_layout_direction(void* self, int64_t direction);
+void q_fontcombobox_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1872,7 +1872,7 @@ void q_fontcombobox_set_layout_direction(void* self, int64_t direction);
 /// @param self QFontComboBox*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_fontcombobox_layout_direction(void* self);
+int32_t q_fontcombobox_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1951,7 +1951,7 @@ void q_fontcombobox_clear_focus(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param reason enum Qt__FocusReason
-void q_fontcombobox_set_focus2(void* self, int64_t reason);
+void q_fontcombobox_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1960,7 +1960,7 @@ void q_fontcombobox_set_focus2(void* self, int64_t reason);
 /// @param self QFontComboBox*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_fontcombobox_focus_policy(void* self);
+int32_t q_fontcombobox_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1968,7 +1968,7 @@ int64_t q_fontcombobox_focus_policy(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param policy enum Qt__FocusPolicy
-void q_fontcombobox_set_focus_policy(void* self, int64_t policy);
+void q_fontcombobox_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2007,7 +2007,7 @@ QWidget* q_fontcombobox_focus_proxy(void* self);
 /// @param self QFontComboBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_fontcombobox_context_menu_policy(void* self);
+int32_t q_fontcombobox_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2015,7 +2015,7 @@ int64_t q_fontcombobox_context_menu_policy(void* self);
 ///
 /// @param self QFontComboBox*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_fontcombobox_set_context_menu_policy(void* self, int64_t policy);
+void q_fontcombobox_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2433,7 +2433,7 @@ void q_fontcombobox_set_size_policy(void* self, void* sizePolicy);
 /// @param self QFontComboBox*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_fontcombobox_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_fontcombobox_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2741,7 +2741,7 @@ QWidget* q_fontcombobox_child_at3(void* self, void* p);
 ///
 /// @param self QFontComboBox*
 /// @param param1 enum Qt__WidgetAttribute
-void q_fontcombobox_set_attribute(void* self, int64_t param1);
+void q_fontcombobox_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2749,7 +2749,7 @@ void q_fontcombobox_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QFontComboBox*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_fontcombobox_test_attribute(void* self, int64_t param1);
+bool q_fontcombobox_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2982,7 +2982,7 @@ void q_fontcombobox_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QFontComboBox*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_fontcombobox_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_fontcombobox_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3018,7 +3018,7 @@ void q_fontcombobox_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QFontComboBox*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_fontcombobox_set_attribute2(void* self, int64_t param1, bool on);
+void q_fontcombobox_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3127,7 +3127,7 @@ void q_fontcombobox_kill_timer(void* self, int id);
 ///
 /// @param self QFontComboBox*
 /// @param id enum Qt__TimerId
-void q_fontcombobox_kill_timer2(void* self, int64_t id);
+void q_fontcombobox_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3296,7 +3296,7 @@ bool q_fontcombobox_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QFontComboBox*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_fontcombobox_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_fontcombobox_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3307,7 +3307,7 @@ int32_t q_fontcombobox_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_fontcombobox_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_fontcombobox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3318,7 +3318,7 @@ QMetaObject__Connection* q_fontcombobox_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_fontcombobox_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_fontcombobox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3425,7 +3425,7 @@ double q_fontcombobox_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_fontcombobox_encode_metric_f(int64_t metric, double value);
+int32_t q_fontcombobox_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QComboBox
 ///
@@ -4567,7 +4567,7 @@ void q_fontcombobox_on_native_event(void* self, bool (*callback)(void*, const ch
 ///
 /// @param self QFontComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_fontcombobox_metric(void* self, int64_t param1);
+int32_t q_fontcombobox_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4577,7 +4577,7 @@ int32_t q_fontcombobox_metric(void* self, int64_t param1);
 ///
 /// @param self QFontComboBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_fontcombobox_qbase_metric(void* self, int64_t param1);
+int32_t q_fontcombobox_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4587,7 +4587,7 @@ int32_t q_fontcombobox_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QFontComboBox*
 /// @param callback int32_t fn(QFontComboBox*, enum QPaintDevice__PaintDeviceMetric)
-void q_fontcombobox_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_fontcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5154,7 +5154,7 @@ void q_fontcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param self QFontComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_fontcombobox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_fontcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5165,7 +5165,7 @@ double q_fontcombobox_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 /// @param self QFontComboBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_fontcombobox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_fontcombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5175,7 +5175,7 @@ double q_fontcombobox_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
 ///
 /// @param self QFontComboBox*
 /// @param callback double fn(QFontComboBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_fontcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

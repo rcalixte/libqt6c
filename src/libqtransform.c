@@ -15,7 +15,7 @@ QTransform* q_transform_new2(void* other) {
     return QTransform_new2((QTransform*)other);
 }
 
-QTransform* q_transform_new3(int64_t param1) {
+QTransform* q_transform_new3(int32_t param1) {
     return QTransform_new3(param1);
 }
 
@@ -71,7 +71,7 @@ bool q_transform_is_translating(void* self) {
     return QTransform_IsTranslating((QTransform*)self);
 }
 
-int64_t q_transform_type(void* self) {
+int32_t q_transform_type(void* self) {
     return QTransform_Type((QTransform*)self);
 }
 
@@ -151,7 +151,7 @@ QTransform* q_transform_shear(void* self, double sh, double sv) {
     return QTransform_Shear((QTransform*)self, sh, sv);
 }
 
-QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distanceToPlane) {
+QTransform* q_transform_rotate(void* self, double a, int32_t axis, double distanceToPlane) {
     return QTransform_Rotate((QTransform*)self, a, axis, distanceToPlane);
 }
 
@@ -159,7 +159,7 @@ QTransform* q_transform_rotate2(void* self, double a) {
     return QTransform_Rotate2((QTransform*)self, a);
 }
 
-QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, double distanceToPlane) {
+QTransform* q_transform_rotate_radians(void* self, double a, int32_t axis, double distanceToPlane) {
     return QTransform_RotateRadians((QTransform*)self, a, axis, distanceToPlane);
 }
 
@@ -259,11 +259,11 @@ QTransform* q_transform_inverted1(void* self, bool* invertible) {
     return QTransform_Inverted1((QTransform*)self, (bool*)invertible);
 }
 
-QTransform* q_transform_rotate22(void* self, double a, int64_t axis) {
+QTransform* q_transform_rotate22(void* self, double a, int32_t axis) {
     return QTransform_Rotate22((QTransform*)self, a, axis);
 }
 
-QTransform* q_transform_rotate_radians22(void* self, double a, int64_t axis) {
+QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis) {
     return QTransform_RotateRadians22((QTransform*)self, a, axis);
 }
 

@@ -22,7 +22,7 @@ QInputDevice* q_inputdevice_new();
 /// @param name const char*
 /// @param systemId long long
 /// @param typeVal enum QInputDevice__DeviceType
-QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int64_t typeVal);
+QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t typeVal);
 
 /// q_inputdevice_new3 constructs a new QInputDevice object.
 ///
@@ -35,7 +35,7 @@ QInputDevice* q_inputdevice_new3(void* parent);
 /// @param systemId long long
 /// @param typeVal enum QInputDevice__DeviceType
 /// @param seatName const char*
-QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int64_t typeVal, const char* seatName);
+QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t typeVal, const char* seatName);
 
 /// q_inputdevice_new5 constructs a new QInputDevice object.
 ///
@@ -44,7 +44,7 @@ QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int64_t t
 /// @param typeVal enum QInputDevice__DeviceType
 /// @param seatName const char*
 /// @param parent QObject*
-QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int64_t typeVal, const char* seatName, void* parent);
+QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t typeVal, const char* seatName, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -59,13 +59,13 @@ void* q_inputdevice_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_inputdevice_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_inputdevice_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QInputDevice*
 /// @param callback int32_t fn(QInputDevice*, enum QMetaObject__Call, int, void*)
-void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -73,7 +73,7 @@ void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_inputdevice_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_inputdevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -94,7 +94,7 @@ const char* q_inputdevice_name(void* self);
 /// @param self QInputDevice*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_inputdevice_type(void* self);
+int32_t q_inputdevice_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#capabilities)
 ///
@@ -107,7 +107,7 @@ int64_t q_inputdevice_capabilities(void* self);
 ///
 /// @param self QInputDevice*
 /// @param cap enum QInputDevice__Capability
-bool q_inputdevice_has_capability(void* self, int64_t cap);
+bool q_inputdevice_has_capability(void* self, int32_t cap);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputdevice.html#systemId)
 ///
@@ -270,7 +270,7 @@ void q_inputdevice_kill_timer(void* self, int id);
 ///
 /// @param self QInputDevice*
 /// @param id enum Qt__TimerId
-void q_inputdevice_kill_timer2(void* self, int64_t id);
+void q_inputdevice_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -447,7 +447,7 @@ bool q_inputdevice_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QInputDevice*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_inputdevice_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_inputdevice_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -458,7 +458,7 @@ int32_t q_inputdevice_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -469,7 +469,7 @@ QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

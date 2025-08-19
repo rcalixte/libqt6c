@@ -47,14 +47,14 @@ bool q_painter_is_active(void* self);
 ///
 /// @param self QPainter*
 /// @param mode enum QPainter__CompositionMode
-void q_painter_set_composition_mode(void* self, int64_t mode);
+void q_painter_set_composition_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#compositionMode)
 ///
 /// @param self QPainter*
 ///
 /// @return enum QPainter__CompositionMode
-int64_t q_painter_composition_mode(void* self);
+int32_t q_painter_composition_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#font)
 ///
@@ -93,7 +93,7 @@ void q_painter_set_pen2(void* self, void* pen);
 ///
 /// @param self QPainter*
 /// @param style enum Qt__PenStyle
-void q_painter_set_pen3(void* self, int64_t style);
+void q_painter_set_pen3(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#pen)
 ///
@@ -110,7 +110,7 @@ void q_painter_set_brush(void* self, void* brush);
 ///
 /// @param self QPainter*
 /// @param style enum Qt__BrushStyle
-void q_painter_set_brush2(void* self, int64_t style);
+void q_painter_set_brush2(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brush)
 ///
@@ -121,14 +121,14 @@ const QBrush* q_painter_brush(void* self);
 ///
 /// @param self QPainter*
 /// @param mode enum Qt__BGMode
-void q_painter_set_background_mode(void* self, int64_t mode);
+void q_painter_set_background_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#backgroundMode)
 ///
 /// @param self QPainter*
 ///
 /// @return enum Qt__BGMode
-int64_t q_painter_background_mode(void* self);
+int32_t q_painter_background_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#brushOrigin)
 ///
@@ -980,14 +980,14 @@ void q_painter_draw_image9(void* self, int x, int y, void* image);
 ///
 /// @param self QPainter*
 /// @param direction enum Qt__LayoutDirection
-void q_painter_set_layout_direction(void* self, int64_t direction);
+void q_painter_set_layout_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#layoutDirection)
 ///
 /// @param self QPainter*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_painter_layout_direction(void* self);
+int32_t q_painter_layout_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawGlyphRun)
 ///
@@ -1195,21 +1195,21 @@ void q_painter_fill_rect6(void* self, void* param1, void* color);
 /// @param w int
 /// @param h int
 /// @param c enum Qt__GlobalColor
-void q_painter_fill_rect7(void* self, int x, int y, int w, int h, int64_t c);
+void q_painter_fill_rect7(void* self, int x, int y, int w, int h, int32_t c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param c enum Qt__GlobalColor
-void q_painter_fill_rect8(void* self, void* r, int64_t c);
+void q_painter_fill_rect8(void* self, void* r, int32_t c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param c enum Qt__GlobalColor
-void q_painter_fill_rect9(void* self, void* r, int64_t c);
+void q_painter_fill_rect9(void* self, void* r, int32_t c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
@@ -1219,21 +1219,21 @@ void q_painter_fill_rect9(void* self, void* r, int64_t c);
 /// @param w int
 /// @param h int
 /// @param style enum Qt__BrushStyle
-void q_painter_fill_rect10(void* self, int x, int y, int w, int h, int64_t style);
+void q_painter_fill_rect10(void* self, int x, int y, int w, int h, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param style enum Qt__BrushStyle
-void q_painter_fill_rect11(void* self, void* r, int64_t style);
+void q_painter_fill_rect11(void* self, void* r, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param style enum Qt__BrushStyle
-void q_painter_fill_rect12(void* self, void* r, int64_t style);
+void q_painter_fill_rect12(void* self, void* r, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
@@ -1243,21 +1243,21 @@ void q_painter_fill_rect12(void* self, void* r, int64_t style);
 /// @param w int
 /// @param h int
 /// @param preset enum QGradient__Preset
-void q_painter_fill_rect13(void* self, int x, int y, int w, int h, int64_t preset);
+void q_painter_fill_rect13(void* self, int x, int y, int w, int h, int32_t preset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRect*
 /// @param preset enum QGradient__Preset
-void q_painter_fill_rect14(void* self, void* r, int64_t preset);
+void q_painter_fill_rect14(void* self, void* r, int32_t preset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#fillRect)
 ///
 /// @param self QPainter*
 /// @param r QRectF*
 /// @param preset enum QGradient__Preset
-void q_painter_fill_rect15(void* self, void* r, int64_t preset);
+void q_painter_fill_rect15(void* self, void* r, int32_t preset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#eraseRect)
 ///
@@ -1284,7 +1284,7 @@ void q_painter_erase_rect3(void* self, void* param1);
 ///
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
-void q_painter_set_render_hint(void* self, int64_t hint);
+void q_painter_set_render_hint(void* self, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
 ///
@@ -1303,7 +1303,7 @@ int64_t q_painter_render_hints(void* self);
 ///
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
-bool q_painter_test_render_hint(void* self, int64_t hint);
+bool q_painter_test_render_hint(void* self, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#paintEngine)
 ///
@@ -1325,14 +1325,14 @@ void q_painter_end_native_painting(void* self);
 /// @param self QPainter*
 /// @param param1 QRectF*
 /// @param op enum Qt__ClipOperation
-void q_painter_set_clip_rect22(void* self, void* param1, int64_t op);
+void q_painter_set_clip_rect22(void* self, void* param1, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
 /// @param self QPainter*
 /// @param param1 QRect*
 /// @param op enum Qt__ClipOperation
-void q_painter_set_clip_rect23(void* self, void* param1, int64_t op);
+void q_painter_set_clip_rect23(void* self, void* param1, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRect)
 ///
@@ -1342,21 +1342,21 @@ void q_painter_set_clip_rect23(void* self, void* param1, int64_t op);
 /// @param w int
 /// @param h int
 /// @param op enum Qt__ClipOperation
-void q_painter_set_clip_rect5(void* self, int x, int y, int w, int h, int64_t op);
+void q_painter_set_clip_rect5(void* self, int x, int y, int w, int h, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipRegion)
 ///
 /// @param self QPainter*
 /// @param param1 QRegion*
 /// @param op enum Qt__ClipOperation
-void q_painter_set_clip_region2(void* self, void* param1, int64_t op);
+void q_painter_set_clip_region2(void* self, void* param1, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setClipPath)
 ///
 /// @param self QPainter*
 /// @param path QPainterPath*
 /// @param op enum Qt__ClipOperation
-void q_painter_set_clip_path2(void* self, void* path, int64_t op);
+void q_painter_set_clip_path2(void* self, void* path, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setTransform)
 ///
@@ -1378,7 +1378,7 @@ void q_painter_set_world_transform2(void* self, void* matrix, bool combine);
 /// @param points QPointF*
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
-void q_painter_draw_polygon32(void* self, void* points, int pointCount, int64_t fillRule);
+void q_painter_draw_polygon32(void* self, void* points, int pointCount, int32_t fillRule);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawPolygon)
 ///
@@ -1386,7 +1386,7 @@ void q_painter_draw_polygon32(void* self, void* points, int pointCount, int64_t 
 /// @param points QPoint*
 /// @param pointCount int
 /// @param fillRule enum Qt__FillRule
-void q_painter_draw_polygon33(void* self, void* points, int pointCount, int64_t fillRule);
+void q_painter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
@@ -1395,7 +1395,7 @@ void q_painter_draw_polygon33(void* self, void* points, int pointCount, int64_t 
 /// @param xRadius double
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
-void q_painter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int64_t mode);
+void q_painter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
@@ -1407,7 +1407,7 @@ void q_painter_draw_rounded_rect4(void* self, void* rect, double xRadius, double
 /// @param xRadius double
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
-void q_painter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double xRadius, double yRadius, int64_t mode);
+void q_painter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double xRadius, double yRadius, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawRoundedRect)
 ///
@@ -1416,7 +1416,7 @@ void q_painter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double
 /// @param xRadius double
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
-void q_painter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int64_t mode);
+void q_painter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#drawTiledPixmap)
 ///
@@ -1608,7 +1608,7 @@ QRectF* q_painter_bounding_rect32(void* self, void* rect, const char* text, void
 /// @param self QPainter*
 /// @param hint enum QPainter__RenderHint
 /// @param on bool
-void q_painter_set_render_hint2(void* self, int64_t hint, bool on);
+void q_painter_set_render_hint2(void* self, int32_t hint, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter.html#setRenderHints)
 ///
@@ -1675,8 +1675,6 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_create5(void* pos, void* sou
 /// @param opacity double
 QPainter__PixmapFragment* q_painter__pixmapfragment_create6(void* pos, void* sourceRect, double scaleX, double scaleY, double rotation, double opacity);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainter::pixmapfragment.html#dtor.QPainter::PixmapFragment)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPainter__PixmapFragment*

@@ -68,7 +68,7 @@ double q_paintdevice_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_paintdevice_encode_metric_f(int64_t metric, double value) {
+int32_t q_paintdevice_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 

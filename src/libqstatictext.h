@@ -56,14 +56,14 @@ const char* q_statictext_text(void* self);
 ///
 /// @param self QStaticText*
 /// @param textFormat enum Qt__TextFormat
-void q_statictext_set_text_format(void* self, int64_t textFormat);
+void q_statictext_set_text_format(void* self, int32_t textFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#textFormat)
 ///
 /// @param self QStaticText*
 ///
 /// @return enum Qt__TextFormat
-int64_t q_statictext_text_format(void* self);
+int32_t q_statictext_text_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#setTextWidth)
 ///
@@ -101,14 +101,14 @@ void q_statictext_prepare(void* self);
 ///
 /// @param self QStaticText*
 /// @param performanceHint enum QStaticText__PerformanceHint
-void q_statictext_set_performance_hint(void* self, int64_t performanceHint);
+void q_statictext_set_performance_hint(void* self, int32_t performanceHint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#performanceHint)
 ///
 /// @param self QStaticText*
 ///
 /// @return enum QStaticText__PerformanceHint
-int64_t q_statictext_performance_hint(void* self);
+int32_t q_statictext_performance_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstatictext.html#operator-eq-eq)
 ///

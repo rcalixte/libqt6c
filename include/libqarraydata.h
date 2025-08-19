@@ -56,7 +56,7 @@ int64_t q_arraydata_detach_capacity(void* self, int64_t newSize);
 /// @param objectSize int64_t
 /// @param newCapacity int64_t
 /// @param option enum QArrayData__AllocationOption
-libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int64_t option);
+libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#deallocate)
 ///

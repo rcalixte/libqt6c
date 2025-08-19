@@ -152,7 +152,7 @@ char* q_anystringview_mid2(void* self, int64_t pos, int64_t n) {
     return _ret;
 }
 
-int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs) {
+int32_t q_anystringview_compare3(char* lhs, char* rhs, int32_t cs) {
     return QAnyStringView_Compare3(lhs, rhs, cs);
 }
 

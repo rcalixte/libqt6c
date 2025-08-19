@@ -74,11 +74,11 @@ int32_t q_surfaceformat_samples(void* self) {
     return QSurfaceFormat_Samples((QSurfaceFormat*)self);
 }
 
-void q_surfaceformat_set_swap_behavior(void* self, int64_t behavior) {
+void q_surfaceformat_set_swap_behavior(void* self, int32_t behavior) {
     QSurfaceFormat_SetSwapBehavior((QSurfaceFormat*)self, behavior);
 }
 
-int64_t q_surfaceformat_swap_behavior(void* self) {
+int32_t q_surfaceformat_swap_behavior(void* self) {
     return QSurfaceFormat_SwapBehavior((QSurfaceFormat*)self);
 }
 
@@ -86,19 +86,19 @@ bool q_surfaceformat_has_alpha(void* self) {
     return QSurfaceFormat_HasAlpha((QSurfaceFormat*)self);
 }
 
-void q_surfaceformat_set_profile(void* self, int64_t profile) {
+void q_surfaceformat_set_profile(void* self, int32_t profile) {
     QSurfaceFormat_SetProfile((QSurfaceFormat*)self, profile);
 }
 
-int64_t q_surfaceformat_profile(void* self) {
+int32_t q_surfaceformat_profile(void* self) {
     return QSurfaceFormat_Profile((QSurfaceFormat*)self);
 }
 
-void q_surfaceformat_set_renderable_type(void* self, int64_t typeVal) {
+void q_surfaceformat_set_renderable_type(void* self, int32_t typeVal) {
     QSurfaceFormat_SetRenderableType((QSurfaceFormat*)self, typeVal);
 }
 
-int64_t q_surfaceformat_renderable_type(void* self) {
+int32_t q_surfaceformat_renderable_type(void* self) {
     return QSurfaceFormat_RenderableType((QSurfaceFormat*)self);
 }
 
@@ -138,11 +138,11 @@ void q_surfaceformat_set_options(void* self, int64_t options) {
     QSurfaceFormat_SetOptions((QSurfaceFormat*)self, options);
 }
 
-void q_surfaceformat_set_option(void* self, int64_t option) {
+void q_surfaceformat_set_option(void* self, int32_t option) {
     QSurfaceFormat_SetOption((QSurfaceFormat*)self, option);
 }
 
-bool q_surfaceformat_test_option(void* self, int64_t option) {
+bool q_surfaceformat_test_option(void* self, int32_t option) {
     return QSurfaceFormat_TestOption((QSurfaceFormat*)self, option);
 }
 
@@ -166,7 +166,7 @@ void q_surfaceformat_set_color_space(void* self, void* colorSpace) {
     QSurfaceFormat_SetColorSpace((QSurfaceFormat*)self, (QColorSpace*)colorSpace);
 }
 
-void q_surfaceformat_set_color_space2(void* self, int64_t colorSpace) {
+void q_surfaceformat_set_color_space2(void* self, int32_t colorSpace) {
     QSurfaceFormat_SetColorSpace2((QSurfaceFormat*)self, colorSpace);
 }
 
@@ -178,7 +178,7 @@ QSurfaceFormat* q_surfaceformat_default_format() {
     return QSurfaceFormat_DefaultFormat();
 }
 
-void q_surfaceformat_set_option2(void* self, int64_t option, bool on) {
+void q_surfaceformat_set_option2(void* self, int32_t option, bool on) {
     QSurfaceFormat_SetOption2((QSurfaceFormat*)self, option, on);
 }
 

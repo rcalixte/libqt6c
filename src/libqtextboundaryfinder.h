@@ -26,14 +26,14 @@ QTextBoundaryFinder* q_textboundaryfinder_new2(void* other);
 ///
 /// @param typeVal enum QTextBoundaryFinder__BoundaryType
 /// @param stringVal const char*
-QTextBoundaryFinder* q_textboundaryfinder_new3(int64_t typeVal, const char* stringVal);
+QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t typeVal, const char* stringVal);
 
 /// q_textboundaryfinder_new4 constructs a new QTextBoundaryFinder object.
 ///
 /// @param typeVal enum QTextBoundaryFinder__BoundaryType
 /// @param chars QChar*
 /// @param length int64_t
-QTextBoundaryFinder* q_textboundaryfinder_new4(int64_t typeVal, void* chars, int64_t length);
+QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t typeVal, void* chars, int64_t length);
 
 /// q_textboundaryfinder_new5 constructs a new QTextBoundaryFinder object.
 ///
@@ -41,7 +41,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new4(int64_t typeVal, void* chars, int
 /// @param chars QChar*
 /// @param length int64_t
 /// @param buffer unsigned char*
-QTextBoundaryFinder* q_textboundaryfinder_new5(int64_t typeVal, void* chars, int64_t length, unsigned char* buffer);
+QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t typeVal, void* chars, int64_t length, unsigned char* buffer);
 
 /// q_textboundaryfinder_new6 constructs a new QTextBoundaryFinder object.
 ///
@@ -50,7 +50,7 @@ QTextBoundaryFinder* q_textboundaryfinder_new5(int64_t typeVal, void* chars, int
 /// @param length int64_t
 /// @param buffer unsigned char*
 /// @param bufferSize int64_t
-QTextBoundaryFinder* q_textboundaryfinder_new6(int64_t typeVal, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize);
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t typeVal, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#operator-eq)
 ///
@@ -68,7 +68,7 @@ bool q_textboundaryfinder_is_valid(void* self);
 /// @param self QTextBoundaryFinder*
 ///
 /// @return enum QTextBoundaryFinder__BoundaryType
-int64_t q_textboundaryfinder_type(void* self);
+int32_t q_textboundaryfinder_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextboundaryfinder.html#string)
 ///

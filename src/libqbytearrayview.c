@@ -387,7 +387,7 @@ int64_t q_bytearrayview_last_index_of22(void* self, char ch, int64_t from) {
     return QByteArrayView_LastIndexOf22((QByteArrayView*)self, ch, from);
 }
 
-int32_t q_bytearrayview_compare2(void* self, const char* a, int64_t cs) {
+int32_t q_bytearrayview_compare2(void* self, const char* a, int32_t cs) {
     libqt_string a_string = qstring(a);
     return QByteArrayView_Compare2((QByteArrayView*)self, (QByteArrayView*)&a_string, cs);
 }

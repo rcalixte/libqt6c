@@ -35,13 +35,13 @@ void* q_tcpserver_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tcpserver_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tcpserver_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTcpServer*
 /// @param callback int32_t fn(QTcpServer*, enum QMetaObject__Call, int, void*)
-void q_tcpserver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_tcpserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_tcpserver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tcpserver_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tcpserver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -166,7 +166,7 @@ QTcpSocket* q_tcpserver_qbase_next_pending_connection(void* self);
 /// @param self QTcpServer*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_tcpserver_server_error(void* self);
+int32_t q_tcpserver_server_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#errorString)
 ///
@@ -255,13 +255,13 @@ void q_tcpserver_on_new_connection(void* self, void (*callback)(void*));
 ///
 /// @param self QTcpServer*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_tcpserver_accept_error(void* self, int64_t socketError);
+void q_tcpserver_accept_error(void* self, int32_t socketError);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpserver.html#acceptError)
 ///
 /// @param self QTcpServer*
 /// @param callback void fn(QTcpServer*, enum QAbstractSocket__SocketError)
-void q_tcpserver_on_accept_error(void* self, void (*callback)(void*, int64_t));
+void q_tcpserver_on_accept_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -396,7 +396,7 @@ void q_tcpserver_kill_timer(void* self, int id);
 ///
 /// @param self QTcpServer*
 /// @param id enum Qt__TimerId
-void q_tcpserver_kill_timer2(void* self, int64_t id);
+void q_tcpserver_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -573,7 +573,7 @@ bool q_tcpserver_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTcpServer*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_tcpserver_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_tcpserver_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -584,7 +584,7 @@ int32_t q_tcpserver_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tcpserver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_tcpserver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -595,7 +595,7 @@ QMetaObject__Connection* q_tcpserver_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tcpserver_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_tcpserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

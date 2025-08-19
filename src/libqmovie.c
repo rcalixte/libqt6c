@@ -51,15 +51,15 @@ void* q_movie_metacast(void* self, const char* param1) {
     return QMovie_Metacast((QMovie*)self, param1);
 }
 
-int32_t q_movie_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_movie_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMovie_Metacall((QMovie*)self, param1, param2, param3);
 }
 
-void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QMovie_OnMetacall((QMovie*)self, (intptr_t)callback);
 }
 
-int32_t q_movie_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_movie_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMovie_QBaseMetacall((QMovie*)self, param1, param2, param3);
 }
 
@@ -127,7 +127,7 @@ QColor* q_movie_background_color(void* self) {
     return QMovie_BackgroundColor((QMovie*)self);
 }
 
-int64_t q_movie_state(void* self) {
+int32_t q_movie_state(void* self) {
     return QMovie_State((QMovie*)self);
 }
 
@@ -147,7 +147,7 @@ bool q_movie_is_valid(void* self) {
     return QMovie_IsValid((QMovie*)self);
 }
 
-int64_t q_movie_last_error(void* self) {
+int32_t q_movie_last_error(void* self) {
     return QMovie_LastError((QMovie*)self);
 }
 
@@ -190,11 +190,11 @@ void q_movie_set_scaled_size(void* self, void* size) {
     QMovie_SetScaledSize((QMovie*)self, (QSize*)size);
 }
 
-int64_t q_movie_cache_mode(void* self) {
+int32_t q_movie_cache_mode(void* self) {
     return QMovie_CacheMode((QMovie*)self);
 }
 
-void q_movie_set_cache_mode(void* self, int64_t mode) {
+void q_movie_set_cache_mode(void* self, int32_t mode) {
     QMovie_SetCacheMode((QMovie*)self, mode);
 }
 
@@ -222,19 +222,19 @@ void q_movie_on_updated(void* self, void (*callback)(void*, void*)) {
     QMovie_Connect_Updated((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_state_changed(void* self, int64_t state) {
+void q_movie_state_changed(void* self, int32_t state) {
     QMovie_StateChanged((QMovie*)self, state);
 }
 
-void q_movie_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_movie_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QMovie_Connect_StateChanged((QMovie*)self, (intptr_t)callback);
 }
 
-void q_movie_error(void* self, int64_t errorVal) {
+void q_movie_error(void* self, int32_t errorVal) {
     QMovie_Error((QMovie*)self, errorVal);
 }
 
-void q_movie_on_error(void* self, void (*callback)(void*, int64_t)) {
+void q_movie_on_error(void* self, void (*callback)(void*, int32_t)) {
     QMovie_Connect_Error((QMovie*)self, (intptr_t)callback);
 }
 
@@ -335,7 +335,7 @@ void q_movie_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_movie_kill_timer2(void* self, int64_t id) {
+void q_movie_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -439,15 +439,15 @@ bool q_movie_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_movie_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_movie_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

@@ -35,7 +35,7 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs);
 /// @param flags flag of enum QHstsPolicy__PolicyFlag
 /// @param host const char*
 /// @param mode enum QUrl__ParsingMode
-QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int64_t mode);
+QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#operator-eq)
 ///
@@ -94,7 +94,7 @@ bool q_hstspolicy_is_expired(void* self);
 /// @param self QHstsPolicy*
 /// @param host const char*
 /// @param mode enum QUrl__ParsingMode
-void q_hstspolicy_set_host2(void* self, const char* host, int64_t mode);
+void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhstspolicy.html#host)
 ///

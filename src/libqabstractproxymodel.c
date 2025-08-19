@@ -27,15 +27,15 @@ void* q_abstractproxymodel_metacast(void* self, const char* param1) {
     return QAbstractProxyModel_Metacast((QAbstractProxyModel*)self, param1);
 }
 
-int32_t q_abstractproxymodel_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_abstractproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QAbstractProxyModel_Metacall((QAbstractProxyModel*)self, param1, param2, param3);
 }
 
-void q_abstractproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_abstractproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QAbstractProxyModel_OnMetacall((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_abstractproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_abstractproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QAbstractProxyModel_QBaseMetacall((QAbstractProxyModel*)self, param1, param2, param3);
 }
 
@@ -146,15 +146,15 @@ QVariant* q_abstractproxymodel_qbase_data(void* self, void* proxyIndex, int role
     return QAbstractProxyModel_QBaseData((QAbstractProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-QVariant* q_abstractproxymodel_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_abstractproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
     return QAbstractProxyModel_HeaderData((QAbstractProxyModel*)self, section, orientation, role);
 }
 
-void q_abstractproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int)) {
+void q_abstractproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
     QAbstractProxyModel_OnHeaderData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_abstractproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_abstractproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
     return QAbstractProxyModel_QBaseHeaderData((QAbstractProxyModel*)self, section, orientation, role);
 }
 
@@ -206,15 +206,15 @@ bool q_abstractproxymodel_qbase_set_item_data(void* self, void* index, libqt_map
     return QAbstractProxyModel_QBaseSetItemData((QAbstractProxyModel*)self, (QModelIndex*)index, roles);
 }
 
-bool q_abstractproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_abstractproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QAbstractProxyModel_SetHeaderData((QAbstractProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_abstractproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int)) {
+void q_abstractproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
     QAbstractProxyModel_OnSetHeaderData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_abstractproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_abstractproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QAbstractProxyModel_QBaseSetHeaderData((QAbstractProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
@@ -266,15 +266,15 @@ void q_abstractproxymodel_qbase_fetch_more(void* self, void* parent) {
     QAbstractProxyModel_QBaseFetchMore((QAbstractProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_abstractproxymodel_sort(void* self, int column, int64_t order) {
+void q_abstractproxymodel_sort(void* self, int column, int32_t order) {
     QAbstractProxyModel_Sort((QAbstractProxyModel*)self, column, order);
 }
 
-void q_abstractproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t)) {
+void q_abstractproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
     QAbstractProxyModel_OnSort((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-void q_abstractproxymodel_qbase_sort(void* self, int column, int64_t order) {
+void q_abstractproxymodel_qbase_sort(void* self, int column, int32_t order) {
     QAbstractProxyModel_QBaseSort((QAbstractProxyModel*)self, column, order);
 }
 
@@ -326,27 +326,27 @@ QMimeData* q_abstractproxymodel_qbase_mime_data(void* self, libqt_list indexes) 
     return QAbstractProxyModel_QBaseMimeData((QAbstractProxyModel*)self, indexes);
 }
 
-bool q_abstractproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_abstractproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_CanDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_abstractproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QAbstractProxyModel_OnCanDropMimeData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_abstractproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_abstractproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_QBaseCanDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_abstractproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_abstractproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_DropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_abstractproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_abstractproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QAbstractProxyModel_OnDropMimeData((QAbstractProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_abstractproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_abstractproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractProxyModel_QBaseDropMimeData((QAbstractProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -494,11 +494,11 @@ void q_abstractproxymodel_on_data_changed(void* self, void (*callback)(void*, vo
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_abstractproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
+void q_abstractproxymodel_header_data_changed(void* self, int32_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_abstractproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+void q_abstractproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -558,11 +558,11 @@ void q_abstractproxymodel_on_layout_changed1(void* self, void (*callback)(void*,
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_abstractproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_abstractproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_abstractproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_abstractproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -574,11 +574,11 @@ void q_abstractproxymodel_on_layout_about_to_be_changed1(void* self, void (*call
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_abstractproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_abstractproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_abstractproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_abstractproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -629,7 +629,7 @@ void q_abstractproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstractproxymodel_kill_timer2(void* self, int64_t id) {
+void q_abstractproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -729,15 +729,15 @@ bool q_abstractproxymodel_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstractproxymodel_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_abstractproxymodel_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_abstractproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_abstractproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_abstractproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_abstractproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

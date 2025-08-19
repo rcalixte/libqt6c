@@ -29,15 +29,15 @@ void* q_application_metacast(void* self, const char* param1) {
     return QApplication_Metacast((QApplication*)self, param1);
 }
 
-int32_t q_application_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_application_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QApplication_Metacall((QApplication*)self, param1, param2, param3);
 }
 
-void q_application_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_application_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QApplication_OnMetacall((QApplication*)self, (intptr_t)callback);
 }
 
-int32_t q_application_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_application_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QApplication_QBaseMetacall((QApplication*)self, param1, param2, param3);
 }
 
@@ -194,11 +194,11 @@ int32_t q_application_start_drag_distance() {
     return QApplication_StartDragDistance();
 }
 
-bool q_application_is_effect_enabled(int64_t param1) {
+bool q_application_is_effect_enabled(int32_t param1) {
     return QApplication_IsEffectEnabled(param1);
 }
 
-void q_application_set_effect_enabled(int64_t param1) {
+void q_application_set_effect_enabled(int32_t param1) {
     QApplication_SetEffectEnabled(param1);
 }
 
@@ -303,7 +303,7 @@ void q_application_alert2(void* widget, int duration) {
     QApplication_Alert2((QWidget*)widget, duration);
 }
 
-void q_application_set_effect_enabled2(int64_t param1, bool enable) {
+void q_application_set_effect_enabled2(int32_t param1, bool enable) {
     QApplication_SetEffectEnabled2(param1, enable);
 }
 
@@ -419,11 +419,11 @@ int64_t q_application_mouse_buttons() {
     return QGuiApplication_MouseButtons();
 }
 
-void q_application_set_layout_direction(int64_t direction) {
+void q_application_set_layout_direction(int32_t direction) {
     QGuiApplication_SetLayoutDirection(direction);
 }
 
-int64_t q_application_layout_direction() {
+int32_t q_application_layout_direction() {
     return QGuiApplication_LayoutDirection();
 }
 
@@ -459,15 +459,15 @@ bool q_application_quit_on_last_window_closed() {
     return QGuiApplication_QuitOnLastWindowClosed();
 }
 
-int64_t q_application_application_state() {
+int32_t q_application_application_state() {
     return QGuiApplication_ApplicationState();
 }
 
-void q_application_set_high_dpi_scale_factor_rounding_policy(int64_t policy) {
+void q_application_set_high_dpi_scale_factor_rounding_policy(int32_t policy) {
     QGuiApplication_SetHighDpiScaleFactorRoundingPolicy(policy);
 }
 
-int64_t q_application_high_dpi_scale_factor_rounding_policy() {
+int32_t q_application_high_dpi_scale_factor_rounding_policy() {
     return QGuiApplication_HighDpiScaleFactorRoundingPolicy();
 }
 
@@ -553,19 +553,19 @@ void q_application_on_focus_window_changed(void* self, void (*callback)(void*, v
     QGuiApplication_Connect_FocusWindowChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void q_application_application_state_changed(void* self, int64_t state) {
+void q_application_application_state_changed(void* self, int32_t state) {
     QGuiApplication_ApplicationStateChanged((QGuiApplication*)self, state);
 }
 
-void q_application_on_application_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_application_on_application_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QGuiApplication_Connect_ApplicationStateChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
-void q_application_layout_direction_changed(void* self, int64_t direction) {
+void q_application_layout_direction_changed(void* self, int32_t direction) {
     QGuiApplication_LayoutDirectionChanged((QGuiApplication*)self, direction);
 }
 
-void q_application_on_layout_direction_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_application_on_layout_direction_changed(void* self, void (*callback)(void*, int32_t)) {
     QGuiApplication_Connect_LayoutDirectionChanged((QGuiApplication*)self, (intptr_t)callback);
 }
 
@@ -628,11 +628,11 @@ const char** q_application_arguments() {
     return _ret;
 }
 
-void q_application_set_attribute(int64_t attribute) {
+void q_application_set_attribute(int32_t attribute) {
     QCoreApplication_SetAttribute(attribute);
 }
 
-bool q_application_test_attribute(int64_t attribute) {
+bool q_application_test_attribute(int32_t attribute) {
     return QCoreApplication_TestAttribute(attribute);
 }
 
@@ -754,7 +754,7 @@ long long q_application_application_pid() {
     return QCoreApplication_ApplicationPid();
 }
 
-int64_t q_application_check_permission(void* self, void* permission) {
+int32_t q_application_check_permission(void* self, void* permission) {
     return QCoreApplication_CheckPermission((QCoreApplication*)self, (QPermission*)permission);
 }
 
@@ -879,7 +879,7 @@ void q_application_on_application_version_changed(void* self, void (*callback)(v
     QCoreApplication_Connect_ApplicationVersionChanged((QCoreApplication*)self, (intptr_t)callback);
 }
 
-void q_application_set_attribute2(int64_t attribute, bool on) {
+void q_application_set_attribute2(int32_t attribute, bool on) {
     QCoreApplication_SetAttribute2(attribute, on);
 }
 
@@ -968,7 +968,7 @@ void q_application_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_application_kill_timer2(void* self, int64_t id) {
+void q_application_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1072,15 +1072,15 @@ bool q_application_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_application_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_application_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

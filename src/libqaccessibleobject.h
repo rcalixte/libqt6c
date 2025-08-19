@@ -83,7 +83,7 @@ QRect* q_accessibleobject_qbase_rect(void* self);
 /// @param self QAccessibleObject*
 /// @param t enum QAccessible__Text
 /// @param text const char*
-void q_accessibleobject_set_text(void* self, int64_t t, const char* text);
+void q_accessibleobject_set_text(void* self, int32_t t, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#setText)
 ///
@@ -91,7 +91,7 @@ void q_accessibleobject_set_text(void* self, int64_t t, const char* text);
 ///
 /// @param self QAccessibleObject*
 /// @param callback void fn(QAccessibleObject*, enum QAccessible__Text, const char*)
-void q_accessibleobject_on_set_text(void* self, void (*callback)(void*, int64_t, const char*));
+void q_accessibleobject_on_set_text(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#setText)
 ///
@@ -100,7 +100,7 @@ void q_accessibleobject_on_set_text(void* self, void (*callback)(void*, int64_t,
 /// @param self QAccessibleObject*
 /// @param t enum QAccessible__Text
 /// @param text const char*
-void q_accessibleobject_qbase_set_text(void* self, int64_t t, const char* text);
+void q_accessibleobject_qbase_set_text(void* self, int32_t t, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleobject.html#childAt)
 ///
@@ -408,7 +408,7 @@ void q_accessibleobject_on_index_of_child(void* self, int32_t (*callback)(void*,
 ///
 /// @param self QAccessibleObject*
 /// @param t enum QAccessible__Text
-const char* q_accessibleobject_text(void* self, int64_t t);
+const char* q_accessibleobject_text(void* self, int32_t t);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -420,7 +420,7 @@ const char* q_accessibleobject_text(void* self, int64_t t);
 ///
 /// @param self QAccessibleObject*
 /// @param t enum QAccessible__Text
-const char* q_accessibleobject_qbase_text(void* self, int64_t t);
+const char* q_accessibleobject_qbase_text(void* self, int32_t t);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -430,7 +430,7 @@ const char* q_accessibleobject_qbase_text(void* self, int64_t t);
 ///
 /// @param self QAccessibleObject*
 /// @param callback const char* fn(QAccessibleObject*, enum QAccessible__Text)
-void q_accessibleobject_on_text(void* self, const char* (*callback)(void*, int64_t));
+void q_accessibleobject_on_text(void* self, const char* (*callback)(void*, int32_t));
 
 /// Inherited from QAccessibleInterface
 ///
@@ -441,7 +441,7 @@ void q_accessibleobject_on_text(void* self, const char* (*callback)(void*, int64
 /// @param self QAccessibleObject*
 ///
 /// @return enum QAccessible__Role
-int64_t q_accessibleobject_role(void* self);
+int32_t q_accessibleobject_role(void* self);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -452,7 +452,7 @@ int64_t q_accessibleobject_role(void* self);
 /// @param self QAccessibleObject*
 ///
 /// @return enum QAccessible__Role
-int64_t q_accessibleobject_qbase_role(void* self);
+int32_t q_accessibleobject_qbase_role(void* self);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -461,8 +461,8 @@ int64_t q_accessibleobject_qbase_role(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAccessibleObject*
-/// @param callback int64_t fn()
-void q_accessibleobject_on_role(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_accessibleobject_on_role(void* self, int32_t (*callback)());
 
 /// Inherited from QAccessibleInterface
 ///
@@ -588,7 +588,7 @@ void q_accessibleobject_on_virtual_hook(void* self, void (*callback)(void*, int,
 ///
 /// @param self QAccessibleObject*
 /// @param param1 enum QAccessible__InterfaceType
-void* q_accessibleobject_interface_cast(void* self, int64_t param1);
+void* q_accessibleobject_interface_cast(void* self, int32_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -598,7 +598,7 @@ void* q_accessibleobject_interface_cast(void* self, int64_t param1);
 ///
 /// @param self QAccessibleObject*
 /// @param param1 enum QAccessible__InterfaceType
-void* q_accessibleobject_qbase_interface_cast(void* self, int64_t param1);
+void* q_accessibleobject_qbase_interface_cast(void* self, int32_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -608,7 +608,7 @@ void* q_accessibleobject_qbase_interface_cast(void* self, int64_t param1);
 ///
 /// @param self QAccessibleObject*
 /// @param callback void* fn(QAccessibleObject*, enum QAccessible__InterfaceType)
-void q_accessibleobject_on_interface_cast(void* self, void* (*callback)(void*, int64_t));
+void q_accessibleobject_on_interface_cast(void* self, void* (*callback)(void*, int32_t));
 
 /// https://doc.qt.io/qt-6/qaccessibleapplication.html
 
@@ -746,7 +746,7 @@ QAccessibleInterface* q_accessibleapplication_qbase_child(void* self, int index)
 ///
 /// @param self QAccessibleApplication*
 /// @param t enum QAccessible__Text
-const char* q_accessibleapplication_text(void* self, int64_t t);
+const char* q_accessibleapplication_text(void* self, int32_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#text)
 ///
@@ -754,7 +754,7 @@ const char* q_accessibleapplication_text(void* self, int64_t t);
 ///
 /// @param self QAccessibleApplication*
 /// @param callback const char* fn(QAccessibleApplication*, enum QAccessible__Text)
-void q_accessibleapplication_on_text(void* self, const char* (*callback)(void*, int64_t));
+void q_accessibleapplication_on_text(void* self, const char* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#text)
 ///
@@ -762,22 +762,22 @@ void q_accessibleapplication_on_text(void* self, const char* (*callback)(void*, 
 ///
 /// @param self QAccessibleApplication*
 /// @param t enum QAccessible__Text
-const char* q_accessibleapplication_qbase_text(void* self, int64_t t);
+const char* q_accessibleapplication_qbase_text(void* self, int32_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#role)
 ///
 /// @param self QAccessibleApplication*
 ///
 /// @return enum QAccessible__Role
-int64_t q_accessibleapplication_role(void* self);
+int32_t q_accessibleapplication_role(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#role)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessibleApplication*
-/// @param callback int64_t fn()
-void q_accessibleapplication_on_role(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_accessibleapplication_on_role(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#role)
 ///
@@ -786,7 +786,7 @@ void q_accessibleapplication_on_role(void* self, int64_t (*callback)());
 /// @param self QAccessibleApplication*
 ///
 /// @return enum QAccessible__Role
-int64_t q_accessibleapplication_qbase_role(void* self);
+int32_t q_accessibleapplication_qbase_role(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#state)
 ///
@@ -971,7 +971,7 @@ void q_accessibleapplication_on_rect(void* self, QRect* (*callback)());
 /// @param self QAccessibleApplication*
 /// @param t enum QAccessible__Text
 /// @param text const char*
-void q_accessibleapplication_set_text(void* self, int64_t t, const char* text);
+void q_accessibleapplication_set_text(void* self, int32_t t, const char* text);
 
 /// Inherited from QAccessibleObject
 ///
@@ -982,7 +982,7 @@ void q_accessibleapplication_set_text(void* self, int64_t t, const char* text);
 /// @param self QAccessibleApplication*
 /// @param t enum QAccessible__Text
 /// @param text const char*
-void q_accessibleapplication_qbase_set_text(void* self, int64_t t, const char* text);
+void q_accessibleapplication_qbase_set_text(void* self, int32_t t, const char* text);
 
 /// Inherited from QAccessibleObject
 ///
@@ -992,7 +992,7 @@ void q_accessibleapplication_qbase_set_text(void* self, int64_t t, const char* t
 ///
 /// @param self QAccessibleApplication*
 /// @param callback void fn(QAccessibleApplication*, enum QAccessible__Text, const char*)
-void q_accessibleapplication_on_set_text(void* self, void (*callback)(void*, int64_t, const char*));
+void q_accessibleapplication_on_set_text(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// Inherited from QAccessibleObject
 ///
@@ -1152,7 +1152,7 @@ void q_accessibleapplication_on_virtual_hook(void* self, void (*callback)(void*,
 ///
 /// @param self QAccessibleApplication*
 /// @param param1 enum QAccessible__InterfaceType
-void* q_accessibleapplication_interface_cast(void* self, int64_t param1);
+void* q_accessibleapplication_interface_cast(void* self, int32_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -1162,7 +1162,7 @@ void* q_accessibleapplication_interface_cast(void* self, int64_t param1);
 ///
 /// @param self QAccessibleApplication*
 /// @param param1 enum QAccessible__InterfaceType
-void* q_accessibleapplication_qbase_interface_cast(void* self, int64_t param1);
+void* q_accessibleapplication_qbase_interface_cast(void* self, int32_t param1);
 
 /// Inherited from QAccessibleInterface
 ///
@@ -1172,7 +1172,7 @@ void* q_accessibleapplication_qbase_interface_cast(void* self, int64_t param1);
 ///
 /// @param self QAccessibleApplication*
 /// @param callback void* fn(QAccessibleApplication*, enum QAccessible__InterfaceType)
-void q_accessibleapplication_on_interface_cast(void* self, void* (*callback)(void*, int64_t));
+void q_accessibleapplication_on_interface_cast(void* self, void* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleapplication.html#dtor.QAccessibleApplication)
 ///

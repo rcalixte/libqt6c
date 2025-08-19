@@ -39,14 +39,14 @@ QRawFont* q_rawfont_new4(void* other);
 /// @param fileName const char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
-QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int64_t hintingPreference);
+QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hintingPreference);
 
 /// q_rawfont_new6 constructs a new QRawFont object.
 ///
 /// @param fontData const char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
-QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int64_t hintingPreference);
+QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int32_t hintingPreference);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#operator-eq)
 ///
@@ -96,7 +96,7 @@ const char* q_rawfont_style_name(void* self);
 /// @param self QRawFont*
 ///
 /// @return enum QFont__Style
-int64_t q_rawfont_style(void* self);
+int32_t q_rawfont_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#weight)
 ///
@@ -182,7 +182,7 @@ double q_rawfont_pixel_size(void* self);
 /// @param self QRawFont*
 ///
 /// @return enum QFont__HintingPreference
-int64_t q_rawfont_hinting_preference(void* self);
+int32_t q_rawfont_hinting_preference(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#ascent)
 ///
@@ -240,7 +240,7 @@ double q_rawfont_units_per_em(void* self);
 /// @param fileName const char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
-void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize, int64_t hintingPreference);
+void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize, int32_t hintingPreference);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#loadFromData)
 ///
@@ -248,7 +248,7 @@ void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize
 /// @param fontData const char*
 /// @param pixelSize double
 /// @param hintingPreference enum QFont__HintingPreference
-void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int64_t hintingPreference);
+void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int32_t hintingPreference);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#supportsCharacter)
 ///
@@ -267,7 +267,7 @@ bool q_rawfont_supports_character2(void* self, void* character);
 /// @param self QRawFont*
 ///
 /// @return libqt_list of enum QFontDatabase__WritingSystem
-libqt_list /* of int64_t */ q_rawfont_supported_writing_systems(void* self);
+libqt_list /* of int32_t */ q_rawfont_supported_writing_systems(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fontTable)
 ///
@@ -295,7 +295,7 @@ QRawFont* q_rawfont_from_font(void* font);
 /// @param self QRawFont*
 /// @param glyphIndex uint32_t
 /// @param antialiasingType enum QRawFont__AntialiasingType
-QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int64_t antialiasingType);
+QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int32_t antialiasingType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#alphaMapForGlyph)
 ///
@@ -303,13 +303,13 @@ QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int64_t 
 /// @param glyphIndex uint32_t
 /// @param antialiasingType enum QRawFont__AntialiasingType
 /// @param transform QTransform*
-QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int64_t antialiasingType, void* transform);
+QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int32_t antialiasingType, void* transform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#fromFont)
 ///
 /// @param font QFont*
 /// @param writingSystem enum QFontDatabase__WritingSystem
-QRawFont* q_rawfont_from_font2(void* font, int64_t writingSystem);
+QRawFont* q_rawfont_from_font2(void* font, int32_t writingSystem);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrawfont.html#dtor.QRawFont)
 ///

@@ -29,15 +29,15 @@ void* q_pdfdocument_metacast(void* self, const char* param1) {
     return QPdfDocument_Metacast((QPdfDocument*)self, param1);
 }
 
-int32_t q_pdfdocument_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfdocument_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfDocument_Metacall((QPdfDocument*)self, param1, param2, param3);
 }
 
-void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QPdfDocument_OnMetacall((QPdfDocument*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfdocument_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfdocument_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfDocument_QBaseMetacall((QPdfDocument*)self, param1, param2, param3);
 }
 
@@ -48,11 +48,11 @@ const char* q_pdfdocument_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_pdfdocument_load(void* self, const char* fileName) {
+int32_t q_pdfdocument_load(void* self, const char* fileName) {
     return QPdfDocument_Load((QPdfDocument*)self, qstring(fileName));
 }
 
-int64_t q_pdfdocument_status(void* self) {
+int32_t q_pdfdocument_status(void* self) {
     return QPdfDocument_Status((QPdfDocument*)self);
 }
 
@@ -71,11 +71,11 @@ const char* q_pdfdocument_password(void* self) {
     return _ret;
 }
 
-QVariant* q_pdfdocument_meta_data(void* self, int64_t field) {
+QVariant* q_pdfdocument_meta_data(void* self, int32_t field) {
     return QPdfDocument_MetaData((QPdfDocument*)self, field);
 }
 
-int64_t q_pdfdocument_error(void* self) {
+int32_t q_pdfdocument_error(void* self) {
     return QPdfDocument_Error((QPdfDocument*)self);
 }
 
@@ -138,11 +138,11 @@ void q_pdfdocument_on_password_required(void* self, void (*callback)(void*)) {
     QPdfDocument_Connect_PasswordRequired((QPdfDocument*)self, (intptr_t)callback);
 }
 
-void q_pdfdocument_status_changed(void* self, int64_t status) {
+void q_pdfdocument_status_changed(void* self, int32_t status) {
     QPdfDocument_StatusChanged((QPdfDocument*)self, status);
 }
 
-void q_pdfdocument_on_status_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_pdfdocument_on_status_changed(void* self, void (*callback)(void*, int32_t)) {
     QPdfDocument_Connect_StatusChanged((QPdfDocument*)self, (intptr_t)callback);
 }
 
@@ -227,7 +227,7 @@ void q_pdfdocument_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pdfdocument_kill_timer2(void* self, int64_t id) {
+void q_pdfdocument_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -331,15 +331,15 @@ bool q_pdfdocument_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pdfdocument_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_pdfdocument_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_pdfdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_pdfdocument_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_pdfdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

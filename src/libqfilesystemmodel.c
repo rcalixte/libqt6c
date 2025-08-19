@@ -32,15 +32,15 @@ void* q_filesystemmodel_metacast(void* self, const char* param1) {
     return QFileSystemModel_Metacast((QFileSystemModel*)self, param1);
 }
 
-int32_t q_filesystemmodel_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_filesystemmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QFileSystemModel_Metacall((QFileSystemModel*)self, param1, param2, param3);
 }
 
-void q_filesystemmodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_filesystemmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QFileSystemModel_OnMetacall((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-int32_t q_filesystemmodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_filesystemmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QFileSystemModel_QBaseMetacall((QFileSystemModel*)self, param1, param2, param3);
 }
 
@@ -203,15 +203,15 @@ bool q_filesystemmodel_qbase_set_data(void* self, void* index, void* value, int 
     return QFileSystemModel_QBaseSetData((QFileSystemModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-QVariant* q_filesystemmodel_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_filesystemmodel_header_data(void* self, int section, int32_t orientation, int role) {
     return QFileSystemModel_HeaderData((QFileSystemModel*)self, section, orientation, role);
 }
 
-void q_filesystemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int)) {
+void q_filesystemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
     QFileSystemModel_OnHeaderData((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_filesystemmodel_qbase_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_filesystemmodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
     return QFileSystemModel_QBaseHeaderData((QFileSystemModel*)self, section, orientation, role);
 }
 
@@ -227,15 +227,15 @@ int64_t q_filesystemmodel_qbase_flags(void* self, void* index) {
     return QFileSystemModel_QBaseFlags((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
-void q_filesystemmodel_sort(void* self, int column, int64_t order) {
+void q_filesystemmodel_sort(void* self, int column, int32_t order) {
     QFileSystemModel_Sort((QFileSystemModel*)self, column, order);
 }
 
-void q_filesystemmodel_on_sort(void* self, void (*callback)(void*, int, int64_t)) {
+void q_filesystemmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
     QFileSystemModel_OnSort((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-void q_filesystemmodel_qbase_sort(void* self, int column, int64_t order) {
+void q_filesystemmodel_qbase_sort(void* self, int column, int32_t order) {
     QFileSystemModel_QBaseSort((QFileSystemModel*)self, column, order);
 }
 
@@ -293,15 +293,15 @@ QMimeData* q_filesystemmodel_qbase_mime_data(void* self, libqt_list indexes) {
     return QFileSystemModel_QBaseMimeData((QFileSystemModel*)self, indexes);
 }
 
-bool q_filesystemmodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_filesystemmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QFileSystemModel_DropMimeData((QFileSystemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_filesystemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_filesystemmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QFileSystemModel_OnDropMimeData((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-bool q_filesystemmodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_filesystemmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QFileSystemModel_QBaseDropMimeData((QFileSystemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -418,11 +418,11 @@ const char** q_filesystemmodel_name_filters(void* self) {
     return _ret;
 }
 
-void q_filesystemmodel_set_option(void* self, int64_t option) {
+void q_filesystemmodel_set_option(void* self, int32_t option) {
     QFileSystemModel_SetOption((QFileSystemModel*)self, option);
 }
 
-bool q_filesystemmodel_test_option(void* self, int64_t option) {
+bool q_filesystemmodel_test_option(void* self, int32_t option) {
     return QFileSystemModel_TestOption((QFileSystemModel*)self, option);
 }
 
@@ -541,7 +541,7 @@ QVariant* q_filesystemmodel_my_computer1(void* self, int role) {
     return QFileSystemModel_MyComputer1((QFileSystemModel*)self, role);
 }
 
-void q_filesystemmodel_set_option2(void* self, int64_t option, bool on) {
+void q_filesystemmodel_set_option2(void* self, int32_t option, bool on) {
     QFileSystemModel_SetOption2((QFileSystemModel*)self, option, on);
 }
 
@@ -585,11 +585,11 @@ void q_filesystemmodel_on_data_changed(void* self, void (*callback)(void*, void*
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_filesystemmodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
+void q_filesystemmodel_header_data_changed(void* self, int32_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_filesystemmodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+void q_filesystemmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -649,11 +649,11 @@ void q_filesystemmodel_on_layout_changed1(void* self, void (*callback)(void*, li
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_filesystemmodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_filesystemmodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_filesystemmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_filesystemmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -665,11 +665,11 @@ void q_filesystemmodel_on_layout_about_to_be_changed1(void* self, void (*callbac
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_filesystemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_filesystemmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_filesystemmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -720,7 +720,7 @@ void q_filesystemmodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_filesystemmodel_kill_timer2(void* self, int64_t id) {
+void q_filesystemmodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -820,15 +820,15 @@ bool q_filesystemmodel_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_filesystemmodel_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_filesystemmodel_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_filesystemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_filesystemmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_filesystemmodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_filesystemmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -840,15 +840,15 @@ void q_filesystemmodel_on_destroyed1(void* self, void (*callback)(void*, void*))
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-bool q_filesystemmodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_filesystemmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QFileSystemModel_SetHeaderData((QFileSystemModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool q_filesystemmodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_filesystemmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QFileSystemModel_QBaseSetHeaderData((QFileSystemModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_filesystemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int)) {
+void q_filesystemmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
     QFileSystemModel_OnSetHeaderData((QFileSystemModel*)self, (intptr_t)callback);
 }
 
@@ -888,15 +888,15 @@ void q_filesystemmodel_on_clear_item_data(void* self, bool (*callback)(void*, vo
     QFileSystemModel_OnClearItemData((QFileSystemModel*)self, (intptr_t)callback);
 }
 
-bool q_filesystemmodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_filesystemmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QFileSystemModel_CanDropMimeData((QFileSystemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_filesystemmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_filesystemmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QFileSystemModel_QBaseCanDropMimeData((QFileSystemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_filesystemmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QFileSystemModel_OnCanDropMimeData((QFileSystemModel*)self, (intptr_t)callback);
 }
 

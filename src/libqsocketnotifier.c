@@ -5,19 +5,19 @@
 #include "libqsocketnotifier.hpp"
 #include "libqsocketnotifier.h"
 
-QSocketNotifier* q_socketnotifier_new(int64_t param1) {
+QSocketNotifier* q_socketnotifier_new(int32_t param1) {
     return QSocketNotifier_new(param1);
 }
 
-QSocketNotifier* q_socketnotifier_new2(intptr_t socket, int64_t param2) {
+QSocketNotifier* q_socketnotifier_new2(intptr_t socket, int32_t param2) {
     return QSocketNotifier_new2(socket, param2);
 }
 
-QSocketNotifier* q_socketnotifier_new3(int64_t param1, void* parent) {
+QSocketNotifier* q_socketnotifier_new3(int32_t param1, void* parent) {
     return QSocketNotifier_new3(param1, (QObject*)parent);
 }
 
-QSocketNotifier* q_socketnotifier_new4(intptr_t socket, int64_t param2, void* parent) {
+QSocketNotifier* q_socketnotifier_new4(intptr_t socket, int32_t param2, void* parent) {
     return QSocketNotifier_new4(socket, param2, (QObject*)parent);
 }
 
@@ -29,15 +29,15 @@ void* q_socketnotifier_metacast(void* self, const char* param1) {
     return QSocketNotifier_Metacast((QSocketNotifier*)self, param1);
 }
 
-int32_t q_socketnotifier_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_socketnotifier_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSocketNotifier_Metacall((QSocketNotifier*)self, param1, param2, param3);
 }
 
-void q_socketnotifier_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_socketnotifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSocketNotifier_OnMetacall((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-int32_t q_socketnotifier_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_socketnotifier_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSocketNotifier_QBaseMetacall((QSocketNotifier*)self, param1, param2, param3);
 }
 
@@ -56,7 +56,7 @@ intptr_t q_socketnotifier_socket(void* self) {
     return QSocketNotifier_Socket((QSocketNotifier*)self);
 }
 
-int64_t q_socketnotifier_type(void* self) {
+int32_t q_socketnotifier_type(void* self) {
     return QSocketNotifier_Type((QSocketNotifier*)self);
 }
 
@@ -145,7 +145,7 @@ void q_socketnotifier_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_socketnotifier_kill_timer2(void* self, int64_t id) {
+void q_socketnotifier_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -249,15 +249,15 @@ bool q_socketnotifier_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_socketnotifier_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_socketnotifier_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_socketnotifier_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_socketnotifier_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_socketnotifier_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_socketnotifier_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -389,7 +389,7 @@ void q_socketnotifier_on_is_signal_connected(void* self, bool (*callback)(void*,
     QSocketNotifier_OnIsSignalConnected((QSocketNotifier*)self, (intptr_t)callback);
 }
 
-void q_socketnotifier_on_activated(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_socketnotifier_on_activated(void* self, void (*callback)(void*, void*, int32_t)) {
     QSocketNotifier_Connect_Activated((QSocketNotifier*)self, (intptr_t)callback);
 }
 

@@ -112,7 +112,7 @@ int32_t q_stringview_compare4(void* self, void* c);
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-int32_t q_stringview_compare5(void* self, void* c, int64_t cs);
+int32_t q_stringview_compare5(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#startsWith)
 ///
@@ -125,7 +125,7 @@ bool q_stringview_starts_with3(void* self, void* c);
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_stringview_starts_with4(void* self, void* c, int64_t cs);
+bool q_stringview_starts_with4(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#endsWith)
 ///
@@ -138,7 +138,7 @@ bool q_stringview_ends_with3(void* self, void* c);
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_stringview_ends_with4(void* self, void* c, int64_t cs);
+bool q_stringview_ends_with4(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
@@ -358,28 +358,28 @@ int64_t q_stringview_index_of22(void* self, void* c, int64_t from);
 /// @param c QChar*
 /// @param from int64_t
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_stringview_index_of32(void* self, void* c, int64_t from, int64_t cs);
+int64_t q_stringview_index_of32(void* self, void* c, int64_t from, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_stringview_contains22(void* self, void* c, int64_t cs);
+bool q_stringview_contains22(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#count)
 ///
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_stringview_count22(void* self, void* c, int64_t cs);
+int64_t q_stringview_count22(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_stringview_last_index_of22(void* self, void* c, int64_t cs);
+int64_t q_stringview_last_index_of22(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -387,7 +387,7 @@ int64_t q_stringview_last_index_of22(void* self, void* c, int64_t cs);
 /// @param c QChar*
 /// @param from int64_t
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_stringview_last_index_of32(void* self, void* c, int64_t from, int64_t cs);
+int64_t q_stringview_last_index_of32(void* self, void* c, int64_t from, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///

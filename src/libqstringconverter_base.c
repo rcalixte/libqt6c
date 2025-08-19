@@ -17,7 +17,7 @@ const char* q_stringconverter_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
-const char* q_stringconverter_name_for_encoding(int64_t e) {
+const char* q_stringconverter_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 

@@ -112,7 +112,7 @@ int32_t q_latin1string_compare4(void* self, void* c) {
     return QLatin1String_Compare4((QLatin1String*)self, (QChar*)c);
 }
 
-int32_t q_latin1string_compare5(void* self, void* c, int64_t cs) {
+int32_t q_latin1string_compare5(void* self, void* c, int32_t cs) {
     return QLatin1String_Compare5((QLatin1String*)self, (QChar*)c, cs);
 }
 
@@ -120,7 +120,7 @@ bool q_latin1string_starts_with3(void* self, void* c) {
     return QLatin1String_StartsWith3((QLatin1String*)self, (QChar*)c);
 }
 
-bool q_latin1string_starts_with4(void* self, void* c, int64_t cs) {
+bool q_latin1string_starts_with4(void* self, void* c, int32_t cs) {
     return QLatin1String_StartsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
@@ -128,7 +128,7 @@ bool q_latin1string_ends_with3(void* self, void* c) {
     return QLatin1String_EndsWith3((QLatin1String*)self, (QChar*)c);
 }
 
-bool q_latin1string_ends_with4(void* self, void* c, int64_t cs) {
+bool q_latin1string_ends_with4(void* self, void* c, int32_t cs) {
     return QLatin1String_EndsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
@@ -228,23 +228,23 @@ int64_t q_latin1string_index_of24(void* self, void* c, int64_t from) {
     return QLatin1String_IndexOf24((QLatin1String*)self, (QChar*)c, from);
 }
 
-int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int64_t cs) {
+int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int32_t cs) {
     return QLatin1String_IndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
 }
 
-bool q_latin1string_contains24(void* self, void* c, int64_t cs) {
+bool q_latin1string_contains24(void* self, void* c, int32_t cs) {
     return QLatin1String_Contains24((QLatin1String*)self, (QChar*)c, cs);
 }
 
-int64_t q_latin1string_last_index_of24(void* self, void* c, int64_t cs) {
+int64_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs) {
     return QLatin1String_LastIndexOf24((QLatin1String*)self, (QChar*)c, cs);
 }
 
-int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int64_t cs) {
+int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int32_t cs) {
     return QLatin1String_LastIndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
 }
 
-int64_t q_latin1string_count24(void* self, void* ch, int64_t cs) {
+int64_t q_latin1string_count24(void* self, void* ch, int32_t cs) {
     return QLatin1String_Count24((QLatin1String*)self, (QChar*)ch, cs);
 }
 

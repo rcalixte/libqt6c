@@ -218,7 +218,7 @@ QLineF* q_linef_normal_vector(void* self) {
     return QLineF_NormalVector((QLineF*)self);
 }
 
-int64_t q_linef_intersects(void* self, void* l) {
+int32_t q_linef_intersects(void* self, void* l) {
     return QLineF_Intersects((QLineF*)self, (QLineF*)l);
 }
 
@@ -266,7 +266,7 @@ QLine* q_linef_to_line(void* self) {
     return QLineF_ToLine((QLineF*)self);
 }
 
-int64_t q_linef_intersects2(void* self, void* l, void* intersectionPoint) {
+int32_t q_linef_intersects2(void* self, void* l, void* intersectionPoint) {
     return QLineF_Intersects2((QLineF*)self, (QLineF*)l, (QPointF*)intersectionPoint);
 }
 

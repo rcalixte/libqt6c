@@ -14,7 +14,7 @@ QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url) {
     return QWebEngineHttpRequest_new3((QUrl*)url);
 }
 
-QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int64_t* method) {
+QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int32_t* method) {
     return QWebEngineHttpRequest_new4((QUrl*)url, method);
 }
 
@@ -38,11 +38,11 @@ bool q_webenginehttprequest_operator_not_equal(void* self, void* other) {
     return QWebEngineHttpRequest_OperatorNotEqual((QWebEngineHttpRequest*)self, (QWebEngineHttpRequest*)other);
 }
 
-int64_t q_webenginehttprequest_method(void* self) {
+int32_t q_webenginehttprequest_method(void* self) {
     return QWebEngineHttpRequest_Method((QWebEngineHttpRequest*)self);
 }
 
-void q_webenginehttprequest_set_method(void* self, int64_t method) {
+void q_webenginehttprequest_set_method(void* self, int32_t method) {
     QWebEngineHttpRequest_SetMethod((QWebEngineHttpRequest*)self, method);
 }
 

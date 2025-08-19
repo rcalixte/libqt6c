@@ -1,7 +1,7 @@
 #include "libqcborcommon.hpp"
 #include "libqcborcommon.h"
 
-int64_t q_cborerror_to_q_cbor_error___code(void* self) {
+int32_t q_cborerror_to_q_cbor_error___code(void* self) {
     return QCborError_ToQCborError__Code((QCborError*)self);
 }
 

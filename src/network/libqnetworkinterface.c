@@ -27,11 +27,11 @@ bool q_networkaddressentry_operator_not_equal(void* self, void* other) {
     return QNetworkAddressEntry_OperatorNotEqual((QNetworkAddressEntry*)self, (QNetworkAddressEntry*)other);
 }
 
-int64_t q_networkaddressentry_dns_eligibility(void* self) {
+int8_t q_networkaddressentry_dns_eligibility(void* self) {
     return QNetworkAddressEntry_DnsEligibility((QNetworkAddressEntry*)self);
 }
 
-void q_networkaddressentry_set_dns_eligibility(void* self, int64_t status) {
+void q_networkaddressentry_set_dns_eligibility(void* self, int8_t status) {
     QNetworkAddressEntry_SetDnsEligibility((QNetworkAddressEntry*)self, status);
 }
 
@@ -145,7 +145,7 @@ int64_t q_networkinterface_flags(void* self) {
     return QNetworkInterface_Flags((QNetworkInterface*)self);
 }
 
-int64_t q_networkinterface_type(void* self) {
+int32_t q_networkinterface_type(void* self) {
     return QNetworkInterface_Type((QNetworkInterface*)self);
 }
 

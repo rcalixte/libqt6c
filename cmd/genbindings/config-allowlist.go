@@ -98,6 +98,8 @@ func ImportHeaderForClass(className string, excludeQsci bool) bool {
 		"QGenericRunnable",      // Qt 6.8 qrunnable.h
 		"QCameraPermission",     // Qt 6.8 qpermissions.h
 		"QMicrophonePermission", // Qt 6.8 qpermissions.h
+		"QtVideo",               // Qt 6 qtvideo.h
+		"q20",                   // Qt 6 q20type_traits.h
 		"____last____":
 		return false
 	}

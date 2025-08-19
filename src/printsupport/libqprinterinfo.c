@@ -59,7 +59,7 @@ bool q_printerinfo_is_remote(void* self) {
     return QPrinterInfo_IsRemote((QPrinterInfo*)self);
 }
 
-int64_t q_printerinfo_state(void* self) {
+int32_t q_printerinfo_state(void* self) {
     return QPrinterInfo_State((QPrinterInfo*)self);
 }
 
@@ -89,20 +89,20 @@ libqt_list /* of int */ q_printerinfo_supported_resolutions(void* self) {
     return _arr;
 }
 
-int64_t q_printerinfo_default_duplex_mode(void* self) {
+int32_t q_printerinfo_default_duplex_mode(void* self) {
     return QPrinterInfo_DefaultDuplexMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of int64_t */ q_printerinfo_supported_duplex_modes(void* self) {
+libqt_list /* of int32_t */ q_printerinfo_supported_duplex_modes(void* self) {
     libqt_list _arr = QPrinterInfo_SupportedDuplexModes((QPrinterInfo*)self);
     return _arr;
 }
 
-int64_t q_printerinfo_default_color_mode(void* self) {
+int32_t q_printerinfo_default_color_mode(void* self) {
     return QPrinterInfo_DefaultColorMode((QPrinterInfo*)self);
 }
 
-libqt_list /* of int64_t */ q_printerinfo_supported_color_modes(void* self) {
+libqt_list /* of int32_t */ q_printerinfo_supported_color_modes(void* self) {
     libqt_list _arr = QPrinterInfo_SupportedColorModes((QPrinterInfo*)self);
     return _arr;
 }

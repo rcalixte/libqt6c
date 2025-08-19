@@ -243,15 +243,15 @@ bool q_pixmap_operator_not(void* self) {
     return QPixmap_OperatorNot((QPixmap*)self);
 }
 
-int32_t q_pixmap_metric(void* self, int64_t param1) {
+int32_t q_pixmap_metric(void* self, int32_t param1) {
     return QPixmap_Metric((QPixmap*)self, param1);
 }
 
-void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPixmap_OnMetric((QPixmap*)self, (intptr_t)callback);
 }
 
-int32_t q_pixmap_qbase_metric(void* self, int64_t param1) {
+int32_t q_pixmap_qbase_metric(void* self, int32_t param1) {
     return QPixmap_QBaseMetric((QPixmap*)self, param1);
 }
 
@@ -263,35 +263,35 @@ QBitmap* q_pixmap_create_heuristic_mask1(void* self, bool clipTight) {
     return QPixmap_CreateHeuristicMask1((QPixmap*)self, clipTight);
 }
 
-QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int64_t mode) {
+QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int32_t mode) {
     return QPixmap_CreateMaskFromColor2((QPixmap*)self, (QColor*)maskColor, mode);
 }
 
-QPixmap* q_pixmap_scaled3(void* self, int w, int h, int64_t aspectMode) {
+QPixmap* q_pixmap_scaled3(void* self, int w, int h, int32_t aspectMode) {
     return QPixmap_Scaled3((QPixmap*)self, w, h, aspectMode);
 }
 
-QPixmap* q_pixmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mode) {
+QPixmap* q_pixmap_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode) {
     return QPixmap_Scaled4((QPixmap*)self, w, h, aspectMode, mode);
 }
 
-QPixmap* q_pixmap_scaled22(void* self, void* s, int64_t aspectMode) {
+QPixmap* q_pixmap_scaled22(void* self, void* s, int32_t aspectMode) {
     return QPixmap_Scaled22((QPixmap*)self, (QSize*)s, aspectMode);
 }
 
-QPixmap* q_pixmap_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode) {
+QPixmap* q_pixmap_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode) {
     return QPixmap_Scaled32((QPixmap*)self, (QSize*)s, aspectMode, mode);
 }
 
-QPixmap* q_pixmap_scaled_to_width2(void* self, int w, int64_t mode) {
+QPixmap* q_pixmap_scaled_to_width2(void* self, int w, int32_t mode) {
     return QPixmap_ScaledToWidth2((QPixmap*)self, w, mode);
 }
 
-QPixmap* q_pixmap_scaled_to_height2(void* self, int h, int64_t mode) {
+QPixmap* q_pixmap_scaled_to_height2(void* self, int h, int32_t mode) {
     return QPixmap_ScaledToHeight2((QPixmap*)self, h, mode);
 }
 
-QPixmap* q_pixmap_transformed2(void* self, void* param1, int64_t mode) {
+QPixmap* q_pixmap_transformed2(void* self, void* param1, int32_t mode) {
     return QPixmap_Transformed2((QPixmap*)self, (QTransform*)param1, mode);
 }
 
@@ -399,7 +399,7 @@ double q_pixmap_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_pixmap_encode_metric_f(int64_t metric, double value) {
+int32_t q_pixmap_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -439,15 +439,15 @@ void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)()) {
     QPixmap_OnSharedPainter((QPixmap*)self, (intptr_t)callback);
 }
 
-double q_pixmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pixmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPixmap_GetDecodedMetricF((QPixmap*)self, metricA, metricB);
 }
 
-double q_pixmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pixmap_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPixmap_QBaseGetDecodedMetricF((QPixmap*)self, metricA, metricB);
 }
 
-void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QPixmap_OnGetDecodedMetricF((QPixmap*)self, (intptr_t)callback);
 }
 

@@ -35,13 +35,13 @@ void* q_dtlsclientverifier_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dtlsclientverifier_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dtlsclientverifier_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDtlsClientVerifier*
 /// @param callback int32_t fn(QDtlsClientVerifier*, enum QMetaObject__Call, int, void*)
-void q_dtlsclientverifier_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_dtlsclientverifier_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_dtlsclientverifier_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dtlsclientverifier_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dtlsclientverifier_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -90,7 +90,7 @@ char* q_dtlsclientverifier_verified_hello(void* self);
 /// @param self QDtlsClientVerifier*
 ///
 /// @return enum QDtlsClientVerifier__QDtlsError
-int64_t q_dtlsclientverifier_dtls_error(void* self);
+uint8_t q_dtlsclientverifier_dtls_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier.html#dtlsErrorString)
 ///
@@ -206,7 +206,7 @@ void q_dtlsclientverifier_kill_timer(void* self, int id);
 ///
 /// @param self QDtlsClientVerifier*
 /// @param id enum Qt__TimerId
-void q_dtlsclientverifier_kill_timer2(void* self, int64_t id);
+void q_dtlsclientverifier_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -383,7 +383,7 @@ bool q_dtlsclientverifier_move_to_thread2(void* self, void* thread, void* param2
 /// @param self QDtlsClientVerifier*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_dtlsclientverifier_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_dtlsclientverifier_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -394,7 +394,7 @@ int32_t q_dtlsclientverifier_start_timer22(void* self, int interval, int64_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dtlsclientverifier_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_dtlsclientverifier_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -405,7 +405,7 @@ QMetaObject__Connection* q_dtlsclientverifier_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dtlsclientverifier_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_dtlsclientverifier_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -773,13 +773,13 @@ void q_dtlsclientverifier_delete(void* self);
 /// q_dtls_new constructs a new QDtls object.
 ///
 /// @param mode enum QSslSocket__SslMode
-QDtls* q_dtls_new(int64_t mode);
+QDtls* q_dtls_new(int32_t mode);
 
 /// q_dtls_new2 constructs a new QDtls object.
 ///
 /// @param mode enum QSslSocket__SslMode
 /// @param parent QObject*
-QDtls* q_dtls_new2(int64_t mode, void* parent);
+QDtls* q_dtls_new2(int32_t mode, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -794,13 +794,13 @@ void* q_dtls_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dtls_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dtls_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDtls*
 /// @param callback int32_t fn(QDtls*, enum QMetaObject__Call, int, void*)
-void q_dtls_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_dtls_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -808,7 +808,7 @@ void q_dtls_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, voi
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dtls_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dtls_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -852,7 +852,7 @@ const char* q_dtls_peer_verification_name(void* self);
 /// @param self QDtls*
 ///
 /// @return enum QSslSocket__SslMode
-int64_t q_dtls_ssl_mode(void* self);
+int32_t q_dtls_ssl_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#setMtuHint)
 ///
@@ -892,7 +892,7 @@ QSslConfiguration* q_dtls_dtls_configuration(void* self);
 /// @param self QDtls*
 ///
 /// @return enum QDtls__HandshakeState
-int64_t q_dtls_handshake_state(void* self);
+int32_t q_dtls_handshake_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#doHandshake)
 ///
@@ -939,7 +939,7 @@ QSslCipher* q_dtls_session_cipher(void* self);
 /// @param self QDtls*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_dtls_session_protocol(void* self);
+int32_t q_dtls_session_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#writeDatagramEncrypted)
 ///
@@ -962,7 +962,7 @@ char* q_dtls_decrypt_datagram(void* self, void* socket, const char* dgram);
 /// @param self QDtls*
 ///
 /// @return enum QDtls__QDtlsError
-int64_t q_dtls_dtls_error(void* self);
+uint8_t q_dtls_dtls_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtls.html#dtlsErrorString)
 ///
@@ -1127,7 +1127,7 @@ void q_dtls_kill_timer(void* self, int id);
 ///
 /// @param self QDtls*
 /// @param id enum Qt__TimerId
-void q_dtls_kill_timer2(void* self, int64_t id);
+void q_dtls_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1304,7 +1304,7 @@ bool q_dtls_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDtls*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_dtls_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_dtls_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1315,7 +1315,7 @@ int32_t q_dtls_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dtls_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_dtls_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1326,7 +1326,7 @@ QMetaObject__Connection* q_dtls_connect5(void* sender, void* signal, void* recei
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dtls_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_dtls_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1699,7 +1699,7 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 ///
 /// @param a enum QCryptographicHash__Algorithm
 /// @param s const char*
-QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int64_t a, const char* s);
+QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new2(int32_t a, const char* s);
 
 /// q_dtlsclientverifier__generatorparameters_new3 constructs a new QDtlsClientVerifier::GeneratorParameters object.
 ///
@@ -1712,8 +1712,6 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// @param param1 QDtlsClientVerifier__GeneratorParameters*
 void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier::generatorparameters.html#dtor.QDtlsClientVerifier::GeneratorParameters)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QDtlsClientVerifier__GeneratorParameters*

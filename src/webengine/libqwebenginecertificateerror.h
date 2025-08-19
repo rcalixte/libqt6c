@@ -29,7 +29,7 @@ void q_webenginecertificateerror_operator_assign(void* self, void* other);
 /// @param self QWebEngineCertificateError*
 ///
 /// @return enum QWebEngineCertificateError__Type
-int64_t q_webenginecertificateerror_type(void* self);
+int32_t q_webenginecertificateerror_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecertificateerror.html#url)
 ///

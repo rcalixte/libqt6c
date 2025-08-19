@@ -46,13 +46,13 @@ void* q_chartview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_chartview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_chartview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QChartView*
 /// @param callback int32_t fn(QChartView*, enum QMetaObject__Call, int, void*)
-void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_chartview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_chartview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_chartview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -213,7 +213,7 @@ int64_t q_chartview_render_hints(void* self);
 ///
 /// @param self QChartView*
 /// @param hint enum QPainter__RenderHint
-void q_chartview_set_render_hint(void* self, int64_t hint);
+void q_chartview_set_render_hint(void* self, int32_t hint);
 
 /// Inherited from QGraphicsView
 ///
@@ -247,7 +247,7 @@ void q_chartview_set_alignment(void* self, int64_t alignment);
 /// @param self QChartView*
 ///
 /// @return enum QGraphicsView__ViewportAnchor
-int64_t q_chartview_transformation_anchor(void* self);
+int32_t q_chartview_transformation_anchor(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -255,7 +255,7 @@ int64_t q_chartview_transformation_anchor(void* self);
 ///
 /// @param self QChartView*
 /// @param anchor enum QGraphicsView__ViewportAnchor
-void q_chartview_set_transformation_anchor(void* self, int64_t anchor);
+void q_chartview_set_transformation_anchor(void* self, int32_t anchor);
 
 /// Inherited from QGraphicsView
 ///
@@ -264,7 +264,7 @@ void q_chartview_set_transformation_anchor(void* self, int64_t anchor);
 /// @param self QChartView*
 ///
 /// @return enum QGraphicsView__ViewportAnchor
-int64_t q_chartview_resize_anchor(void* self);
+int32_t q_chartview_resize_anchor(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -272,7 +272,7 @@ int64_t q_chartview_resize_anchor(void* self);
 ///
 /// @param self QChartView*
 /// @param anchor enum QGraphicsView__ViewportAnchor
-void q_chartview_set_resize_anchor(void* self, int64_t anchor);
+void q_chartview_set_resize_anchor(void* self, int32_t anchor);
 
 /// Inherited from QGraphicsView
 ///
@@ -281,7 +281,7 @@ void q_chartview_set_resize_anchor(void* self, int64_t anchor);
 /// @param self QChartView*
 ///
 /// @return enum QGraphicsView__ViewportUpdateMode
-int64_t q_chartview_viewport_update_mode(void* self);
+int32_t q_chartview_viewport_update_mode(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -289,7 +289,7 @@ int64_t q_chartview_viewport_update_mode(void* self);
 ///
 /// @param self QChartView*
 /// @param mode enum QGraphicsView__ViewportUpdateMode
-void q_chartview_set_viewport_update_mode(void* self, int64_t mode);
+void q_chartview_set_viewport_update_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -306,7 +306,7 @@ int64_t q_chartview_optimization_flags(void* self);
 ///
 /// @param self QChartView*
 /// @param flag enum QGraphicsView__OptimizationFlag
-void q_chartview_set_optimization_flag(void* self, int64_t flag);
+void q_chartview_set_optimization_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsView
 ///
@@ -323,7 +323,7 @@ void q_chartview_set_optimization_flags(void* self, int64_t flags);
 /// @param self QChartView*
 ///
 /// @return enum QGraphicsView__DragMode
-int64_t q_chartview_drag_mode(void* self);
+int32_t q_chartview_drag_mode(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -331,7 +331,7 @@ int64_t q_chartview_drag_mode(void* self);
 ///
 /// @param self QChartView*
 /// @param mode enum QGraphicsView__DragMode
-void q_chartview_set_drag_mode(void* self, int64_t mode);
+void q_chartview_set_drag_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -340,7 +340,7 @@ void q_chartview_set_drag_mode(void* self, int64_t mode);
 /// @param self QChartView*
 ///
 /// @return enum Qt__ItemSelectionMode
-int64_t q_chartview_rubber_band_selection_mode(void* self);
+int32_t q_chartview_rubber_band_selection_mode(void* self);
 
 /// Inherited from QGraphicsView
 ///
@@ -348,7 +348,7 @@ int64_t q_chartview_rubber_band_selection_mode(void* self);
 ///
 /// @param self QChartView*
 /// @param mode enum Qt__ItemSelectionMode
-void q_chartview_set_rubber_band_selection_mode(void* self, int64_t mode);
+void q_chartview_set_rubber_band_selection_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -791,7 +791,7 @@ void q_chartview_on_rubber_band_changed(void* self, void (*callback)(void*, void
 /// @param self QChartView*
 /// @param hint enum QPainter__RenderHint
 /// @param enabled bool
-void q_chartview_set_render_hint2(void* self, int64_t hint, bool enabled);
+void q_chartview_set_render_hint2(void* self, int32_t hint, bool enabled);
 
 /// Inherited from QGraphicsView
 ///
@@ -800,7 +800,7 @@ void q_chartview_set_render_hint2(void* self, int64_t hint, bool enabled);
 /// @param self QChartView*
 /// @param flag enum QGraphicsView__OptimizationFlag
 /// @param enabled bool
-void q_chartview_set_optimization_flag2(void* self, int64_t flag, bool enabled);
+void q_chartview_set_optimization_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsView
 ///
@@ -881,7 +881,7 @@ void q_chartview_ensure_visible33(void* self, void* item, int xmargin, int ymarg
 /// @param self QChartView*
 /// @param rect QRectF*
 /// @param aspectRadioMode enum Qt__AspectRatioMode
-void q_chartview_fit_in_view22(void* self, void* rect, int64_t aspectRadioMode);
+void q_chartview_fit_in_view22(void* self, void* rect, int32_t aspectRadioMode);
 
 /// Inherited from QGraphicsView
 ///
@@ -893,7 +893,7 @@ void q_chartview_fit_in_view22(void* self, void* rect, int64_t aspectRadioMode);
 /// @param w double
 /// @param h double
 /// @param aspectRadioMode enum Qt__AspectRatioMode
-void q_chartview_fit_in_view5(void* self, double x, double y, double w, double h, int64_t aspectRadioMode);
+void q_chartview_fit_in_view5(void* self, double x, double y, double w, double h, int32_t aspectRadioMode);
 
 /// Inherited from QGraphicsView
 ///
@@ -902,7 +902,7 @@ void q_chartview_fit_in_view5(void* self, double x, double y, double w, double h
 /// @param self QChartView*
 /// @param item QGraphicsItem*
 /// @param aspectRadioMode enum Qt__AspectRatioMode
-void q_chartview_fit_in_view23(void* self, void* item, int64_t aspectRadioMode);
+void q_chartview_fit_in_view23(void* self, void* item, int32_t aspectRadioMode);
 
 /// Inherited from QGraphicsView
 ///
@@ -932,7 +932,7 @@ void q_chartview_render3(void* self, void* painter, void* target, void* source);
 /// @param target QRectF*
 /// @param source QRect*
 /// @param aspectRatioMode enum Qt__AspectRatioMode
-void q_chartview_render4(void* self, void* painter, void* target, void* source, int64_t aspectRatioMode);
+void q_chartview_render4(void* self, void* painter, void* target, void* source, int32_t aspectRatioMode);
 
 /// Inherited from QGraphicsView
 ///
@@ -941,7 +941,7 @@ void q_chartview_render4(void* self, void* painter, void* target, void* source, 
 /// @param self QChartView*
 /// @param rect QRect*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_chartview_items22(void* self, void* rect, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_chartview_items22(void* self, void* rect, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -953,7 +953,7 @@ libqt_list /* of QGraphicsItem* */ q_chartview_items22(void* self, void* rect, i
 /// @param w int
 /// @param h int
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_chartview_items52(void* self, int x, int y, int w, int h, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_chartview_items52(void* self, int x, int y, int w, int h, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -962,7 +962,7 @@ libqt_list /* of QGraphicsItem* */ q_chartview_items52(void* self, int x, int y,
 /// @param self QChartView*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_chartview_items24(void* self, void* path, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_chartview_items24(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsView
 ///
@@ -988,7 +988,7 @@ void q_chartview_invalidate_scene2(void* self, void* rect, int64_t layers);
 /// @param self QChartView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_chartview_vertical_scroll_bar_policy(void* self);
+int32_t q_chartview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -996,7 +996,7 @@ int64_t q_chartview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QChartView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_chartview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_chartview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1020,7 +1020,7 @@ void q_chartview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QChartView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_chartview_horizontal_scroll_bar_policy(void* self);
+int32_t q_chartview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1028,7 +1028,7 @@ int64_t q_chartview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QChartView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_chartview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_chartview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1106,7 +1106,7 @@ QSize* q_chartview_maximum_viewport_size(void* self);
 /// @param self QChartView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_chartview_size_adjust_policy(void* self);
+int32_t q_chartview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1114,7 +1114,7 @@ int64_t q_chartview_size_adjust_policy(void* self);
 ///
 /// @param self QChartView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_chartview_set_size_adjust_policy(void* self, int64_t policy);
+void q_chartview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -1145,7 +1145,7 @@ int32_t q_chartview_frame_width(void* self);
 /// @param self QChartView*
 ///
 /// @return enum QFrame__Shape
-int64_t q_chartview_frame_shape(void* self);
+int32_t q_chartview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1153,7 +1153,7 @@ int64_t q_chartview_frame_shape(void* self);
 ///
 /// @param self QChartView*
 /// @param frameShape enum QFrame__Shape
-void q_chartview_set_frame_shape(void* self, int64_t frameShape);
+void q_chartview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -1162,7 +1162,7 @@ void q_chartview_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QChartView*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_chartview_frame_shadow(void* self);
+int32_t q_chartview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1170,7 +1170,7 @@ int64_t q_chartview_frame_shadow(void* self);
 ///
 /// @param self QChartView*
 /// @param frameShadow enum QFrame__Shadow
-void q_chartview_set_frame_shadow(void* self, int64_t frameShadow);
+void q_chartview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -1288,7 +1288,7 @@ bool q_chartview_is_modal(void* self);
 /// @param self QChartView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_chartview_window_modality(void* self);
+int32_t q_chartview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1296,7 +1296,7 @@ int64_t q_chartview_window_modality(void* self);
 ///
 /// @param self QChartView*
 /// @param windowModality enum Qt__WindowModality
-void q_chartview_set_window_modality(void* self, int64_t windowModality);
+void q_chartview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1759,7 +1759,7 @@ void q_chartview_set_palette(void* self, void* palette);
 ///
 /// @param self QChartView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_chartview_set_background_role(void* self, int64_t backgroundRole);
+void q_chartview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1768,7 +1768,7 @@ void q_chartview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QChartView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_chartview_background_role(void* self);
+int32_t q_chartview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1776,7 +1776,7 @@ int64_t q_chartview_background_role(void* self);
 ///
 /// @param self QChartView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_chartview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_chartview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1785,7 +1785,7 @@ void q_chartview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QChartView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_chartview_foreground_role(void* self);
+int32_t q_chartview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2171,7 +2171,7 @@ void q_chartview_set_accessible_description(void* self, const char* description)
 ///
 /// @param self QChartView*
 /// @param direction enum Qt__LayoutDirection
-void q_chartview_set_layout_direction(void* self, int64_t direction);
+void q_chartview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -2180,7 +2180,7 @@ void q_chartview_set_layout_direction(void* self, int64_t direction);
 /// @param self QChartView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_chartview_layout_direction(void* self);
+int32_t q_chartview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2259,7 +2259,7 @@ void q_chartview_clear_focus(void* self);
 ///
 /// @param self QChartView*
 /// @param reason enum Qt__FocusReason
-void q_chartview_set_focus2(void* self, int64_t reason);
+void q_chartview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2268,7 +2268,7 @@ void q_chartview_set_focus2(void* self, int64_t reason);
 /// @param self QChartView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_chartview_focus_policy(void* self);
+int32_t q_chartview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2276,7 +2276,7 @@ int64_t q_chartview_focus_policy(void* self);
 ///
 /// @param self QChartView*
 /// @param policy enum Qt__FocusPolicy
-void q_chartview_set_focus_policy(void* self, int64_t policy);
+void q_chartview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2315,7 +2315,7 @@ QWidget* q_chartview_focus_proxy(void* self);
 /// @param self QChartView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_chartview_context_menu_policy(void* self);
+int32_t q_chartview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2323,7 +2323,7 @@ int64_t q_chartview_context_menu_policy(void* self);
 ///
 /// @param self QChartView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_chartview_set_context_menu_policy(void* self, int64_t policy);
+void q_chartview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2741,7 +2741,7 @@ void q_chartview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QChartView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_chartview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_chartview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -3049,7 +3049,7 @@ QWidget* q_chartview_child_at3(void* self, void* p);
 ///
 /// @param self QChartView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_chartview_set_attribute(void* self, int64_t param1);
+void q_chartview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3057,7 +3057,7 @@ void q_chartview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QChartView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_chartview_test_attribute(void* self, int64_t param1);
+bool q_chartview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3269,7 +3269,7 @@ void q_chartview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QChartView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_chartview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_chartview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3305,7 +3305,7 @@ void q_chartview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QChartView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_chartview_set_attribute2(void* self, int64_t param1, bool on);
+void q_chartview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3414,7 +3414,7 @@ void q_chartview_kill_timer(void* self, int id);
 ///
 /// @param self QChartView*
 /// @param id enum Qt__TimerId
-void q_chartview_kill_timer2(void* self, int64_t id);
+void q_chartview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3583,7 +3583,7 @@ bool q_chartview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QChartView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_chartview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_chartview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3594,7 +3594,7 @@ int32_t q_chartview_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_chartview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_chartview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3605,7 +3605,7 @@ QMetaObject__Connection* q_chartview_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_chartview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_chartview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3712,7 +3712,7 @@ double q_chartview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_chartview_encode_metric_f(int64_t metric, double value);
+int32_t q_chartview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QGraphicsView
 ///
@@ -4952,7 +4952,7 @@ void q_chartview_on_native_event(void* self, bool (*callback)(void*, const char*
 ///
 /// @param self QChartView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_chartview_metric(void* self, int64_t param1);
+int32_t q_chartview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4962,7 +4962,7 @@ int32_t q_chartview_metric(void* self, int64_t param1);
 ///
 /// @param self QChartView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_chartview_qbase_metric(void* self, int64_t param1);
+int32_t q_chartview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4972,7 +4972,7 @@ int32_t q_chartview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QChartView*
 /// @param callback int32_t fn(QChartView*, enum QPaintDevice__PaintDeviceMetric)
-void q_chartview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_chartview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5571,7 +5571,7 @@ void q_chartview_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param self QChartView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_chartview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_chartview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5582,7 +5582,7 @@ double q_chartview_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 /// @param self QChartView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_chartview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_chartview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5592,7 +5592,7 @@ double q_chartview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// @param self QChartView*
 /// @param callback double fn(QChartView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_chartview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_chartview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -40,7 +40,7 @@ QPixelFormat* q_pixelformat_new3();
 /// @param alphaPosition enum QPixelFormat__AlphaPosition
 /// @param premultiplied enum QPixelFormat__AlphaPremultiplied
 /// @param typeInterpretation enum QPixelFormat__TypeInterpretation
-QPixelFormat* q_pixelformat_new4(int64_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int64_t alphaUsage, int64_t alphaPosition, int64_t premultiplied, int64_t typeInterpretation);
+QPixelFormat* q_pixelformat_new4(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation);
 
 /// q_pixelformat_new5 constructs a new QPixelFormat object.
 ///
@@ -61,7 +61,7 @@ QPixelFormat* q_pixelformat_new5(void* param1);
 /// @param premultiplied enum QPixelFormat__AlphaPremultiplied
 /// @param typeInterpretation enum QPixelFormat__TypeInterpretation
 /// @param byteOrder enum QPixelFormat__ByteOrder
-QPixelFormat* q_pixelformat_new6(int64_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int64_t alphaUsage, int64_t alphaPosition, int64_t premultiplied, int64_t typeInterpretation, int64_t byteOrder);
+QPixelFormat* q_pixelformat_new6(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation, int32_t byteOrder);
 
 /// q_pixelformat_new7 constructs a new QPixelFormat object.
 ///
@@ -78,7 +78,7 @@ QPixelFormat* q_pixelformat_new6(int64_t colorModel, unsigned char firstSize, un
 /// @param typeInterpretation enum QPixelFormat__TypeInterpretation
 /// @param byteOrder enum QPixelFormat__ByteOrder
 /// @param subEnum unsigned char
-QPixelFormat* q_pixelformat_new7(int64_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int64_t alphaUsage, int64_t alphaPosition, int64_t premultiplied, int64_t typeInterpretation, int64_t byteOrder, unsigned char subEnum);
+QPixelFormat* q_pixelformat_new7(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation, int32_t byteOrder, unsigned char subEnum);
 
 /// q_pixelformat_copy_assign shallow copies `other` into `self`.
 ///
@@ -97,7 +97,7 @@ void q_pixelformat_move_assign(void* self, void* other);
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__ColorModel
-int64_t q_pixelformat_color_model(void* self);
+int32_t q_pixelformat_color_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#channelCount)
 ///
@@ -174,42 +174,42 @@ unsigned char q_pixelformat_bits_per_pixel(void* self);
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaUsage
-int64_t q_pixelformat_alpha_usage(void* self);
+int32_t q_pixelformat_alpha_usage(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#alphaPosition)
 ///
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaPosition
-int64_t q_pixelformat_alpha_position(void* self);
+int32_t q_pixelformat_alpha_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#premultiplied)
 ///
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__AlphaPremultiplied
-int64_t q_pixelformat_premultiplied(void* self);
+int32_t q_pixelformat_premultiplied(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#typeInterpretation)
 ///
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__TypeInterpretation
-int64_t q_pixelformat_type_interpretation(void* self);
+int32_t q_pixelformat_type_interpretation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#byteOrder)
 ///
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__ByteOrder
-int64_t q_pixelformat_byte_order(void* self);
+int32_t q_pixelformat_byte_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#yuvLayout)
 ///
 /// @param self QPixelFormat*
 ///
 /// @return enum QPixelFormat__YUVLayout
-int64_t q_pixelformat_yuv_layout(void* self);
+int32_t q_pixelformat_yuv_layout(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixelformat.html#subEnum)
 ///

@@ -16,13 +16,13 @@
 /// q_headerview_new constructs a new QHeaderView object.
 ///
 /// @param orientation enum Qt__Orientation
-QHeaderView* q_headerview_new(int64_t orientation);
+QHeaderView* q_headerview_new(int32_t orientation);
 
 /// q_headerview_new2 constructs a new QHeaderView object.
 ///
 /// @param orientation enum Qt__Orientation
 /// @param parent QWidget*
-QHeaderView* q_headerview_new2(int64_t orientation, void* parent);
+QHeaderView* q_headerview_new2(int32_t orientation, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -37,13 +37,13 @@ void* q_headerview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_headerview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_headerview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
 /// @param callback int32_t fn(QHeaderView*, enum QMetaObject__Call, int, void*)
-void q_headerview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_headerview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -51,7 +51,7 @@ void q_headerview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_headerview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_headerview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -87,7 +87,7 @@ void q_headerview_qbase_set_model(void* self, void* model);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__Orientation
-int64_t q_headerview_orientation(void* self);
+int32_t q_headerview_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#offset)
 ///
@@ -215,7 +215,7 @@ void q_headerview_resize_section(void* self, int logicalIndex, int size);
 ///
 /// @param self QHeaderView*
 /// @param mode enum QHeaderView__ResizeMode
-void q_headerview_resize_sections(void* self, int64_t mode);
+void q_headerview_resize_sections(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#isSectionHidden)
 ///
@@ -314,20 +314,20 @@ bool q_headerview_highlight_sections(void* self);
 /// @param logicalIndex int
 ///
 /// @return enum QHeaderView__ResizeMode
-int64_t q_headerview_section_resize_mode(void* self, int logicalIndex);
+int32_t q_headerview_section_resize_mode(void* self, int logicalIndex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSectionResizeMode)
 ///
 /// @param self QHeaderView*
 /// @param mode enum QHeaderView__ResizeMode
-void q_headerview_set_section_resize_mode(void* self, int64_t mode);
+void q_headerview_set_section_resize_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSectionResizeMode)
 ///
 /// @param self QHeaderView*
 /// @param logicalIndex int
 /// @param mode enum QHeaderView__ResizeMode
-void q_headerview_set_section_resize_mode2(void* self, int logicalIndex, int64_t mode);
+void q_headerview_set_section_resize_mode2(void* self, int logicalIndex, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setResizeContentsPrecision)
 ///
@@ -361,7 +361,7 @@ bool q_headerview_is_sort_indicator_shown(void* self);
 /// @param self QHeaderView*
 /// @param logicalIndex int
 /// @param order enum Qt__SortOrder
-void q_headerview_set_sort_indicator(void* self, int logicalIndex, int64_t order);
+void q_headerview_set_sort_indicator(void* self, int logicalIndex, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorSection)
 ///
@@ -373,7 +373,7 @@ int32_t q_headerview_sort_indicator_section(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__SortOrder
-int64_t q_headerview_sort_indicator_order(void* self);
+int32_t q_headerview_sort_indicator_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSortIndicatorClearable)
 ///
@@ -545,7 +545,7 @@ void q_headerview_set_offset_to_last_section(void* self);
 /// @param orientation enum Qt__Orientation
 /// @param logicalFirst int
 /// @param logicalLast int
-void q_headerview_header_data_changed(void* self, int64_t orientation, int logicalFirst, int logicalLast);
+void q_headerview_header_data_changed(void* self, int32_t orientation, int logicalFirst, int logicalLast);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sectionMoved)
 ///
@@ -664,13 +664,13 @@ void q_headerview_on_geometries_changed(void* self, void (*callback)(void*));
 /// @param self QHeaderView*
 /// @param logicalIndex int
 /// @param order enum Qt__SortOrder
-void q_headerview_sort_indicator_changed(void* self, int logicalIndex, int64_t order);
+void q_headerview_sort_indicator_changed(void* self, int logicalIndex, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorChanged)
 ///
 /// @param self QHeaderView*
 /// @param callback void fn(QHeaderView*, int, enum Qt__SortOrder)
-void q_headerview_on_sort_indicator_changed(void* self, void (*callback)(void*, int, int64_t));
+void q_headerview_on_sort_indicator_changed(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#sortIndicatorClearableChanged)
 ///
@@ -1231,7 +1231,7 @@ QRect* q_headerview_qbase_visual_rect(void* self, void* index);
 /// @param self QHeaderView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_headerview_scroll_to(void* self, void* index, int64_t hint);
+void q_headerview_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollTo)
 ///
@@ -1239,7 +1239,7 @@ void q_headerview_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// @param self QHeaderView*
 /// @param callback void fn(QHeaderView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
-void q_headerview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t));
+void q_headerview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#scrollTo)
 ///
@@ -1248,7 +1248,7 @@ void q_headerview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_
 /// @param self QHeaderView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_headerview_qbase_scroll_to(void* self, void* index, int64_t hint);
+void q_headerview_qbase_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#indexAt)
 ///
@@ -1299,7 +1299,7 @@ bool q_headerview_qbase_is_index_hidden(void* self, void* index);
 /// @param self QHeaderView*
 /// @param param1 enum QAbstractItemView__CursorAction
 /// @param param2 flag of enum Qt__KeyboardModifier
-QModelIndex* q_headerview_move_cursor(void* self, int64_t param1, int64_t param2);
+QModelIndex* q_headerview_move_cursor(void* self, int32_t param1, int64_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#moveCursor)
 ///
@@ -1307,7 +1307,7 @@ QModelIndex* q_headerview_move_cursor(void* self, int64_t param1, int64_t param2
 ///
 /// @param self QHeaderView*
 /// @param callback QModelIndex* fn(QHeaderView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
-void q_headerview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t));
+void q_headerview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#moveCursor)
 ///
@@ -1316,7 +1316,7 @@ void q_headerview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
 /// @param self QHeaderView*
 /// @param param1 enum QAbstractItemView__CursorAction
 /// @param param2 flag of enum Qt__KeyboardModifier
-QModelIndex* q_headerview_qbase_move_cursor(void* self, int64_t param1, int64_t param2);
+QModelIndex* q_headerview_qbase_move_cursor(void* self, int32_t param1, int64_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#setSelection)
 ///
@@ -1462,7 +1462,7 @@ QAbstractItemDelegate* q_headerview_item_delegate(void* self);
 ///
 /// @param self QHeaderView*
 /// @param mode enum QAbstractItemView__SelectionMode
-void q_headerview_set_selection_mode(void* self, int64_t mode);
+void q_headerview_set_selection_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1471,7 +1471,7 @@ void q_headerview_set_selection_mode(void* self, int64_t mode);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
-int64_t q_headerview_selection_mode(void* self);
+int32_t q_headerview_selection_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1479,7 +1479,7 @@ int64_t q_headerview_selection_mode(void* self);
 ///
 /// @param self QHeaderView*
 /// @param behavior enum QAbstractItemView__SelectionBehavior
-void q_headerview_set_selection_behavior(void* self, int64_t behavior);
+void q_headerview_set_selection_behavior(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1488,7 +1488,7 @@ void q_headerview_set_selection_behavior(void* self, int64_t behavior);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
-int64_t q_headerview_selection_behavior(void* self);
+int32_t q_headerview_selection_behavior(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1527,7 +1527,7 @@ int64_t q_headerview_edit_triggers(void* self);
 ///
 /// @param self QHeaderView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_headerview_set_vertical_scroll_mode(void* self, int64_t mode);
+void q_headerview_set_vertical_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1536,7 +1536,7 @@ void q_headerview_set_vertical_scroll_mode(void* self, int64_t mode);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_headerview_vertical_scroll_mode(void* self);
+int32_t q_headerview_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1551,7 +1551,7 @@ void q_headerview_reset_vertical_scroll_mode(void* self);
 ///
 /// @param self QHeaderView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_headerview_set_horizontal_scroll_mode(void* self, int64_t mode);
+void q_headerview_set_horizontal_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1560,7 +1560,7 @@ void q_headerview_set_horizontal_scroll_mode(void* self, int64_t mode);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_headerview_horizontal_scroll_mode(void* self);
+int32_t q_headerview_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1665,7 +1665,7 @@ bool q_headerview_drag_drop_overwrite_mode(void* self);
 ///
 /// @param self QHeaderView*
 /// @param behavior enum QAbstractItemView__DragDropMode
-void q_headerview_set_drag_drop_mode(void* self, int64_t behavior);
+void q_headerview_set_drag_drop_mode(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1674,7 +1674,7 @@ void q_headerview_set_drag_drop_mode(void* self, int64_t behavior);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
-int64_t q_headerview_drag_drop_mode(void* self);
+int32_t q_headerview_drag_drop_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1682,7 +1682,7 @@ int64_t q_headerview_drag_drop_mode(void* self);
 ///
 /// @param self QHeaderView*
 /// @param dropAction enum Qt__DropAction
-void q_headerview_set_default_drop_action(void* self, int64_t dropAction);
+void q_headerview_set_default_drop_action(void* self, int32_t dropAction);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1691,7 +1691,7 @@ void q_headerview_set_default_drop_action(void* self, int64_t dropAction);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__DropAction
-int64_t q_headerview_default_drop_action(void* self);
+int32_t q_headerview_default_drop_action(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1729,7 +1729,7 @@ QSize* q_headerview_icon_size(void* self);
 ///
 /// @param self QHeaderView*
 /// @param mode enum Qt__TextElideMode
-void q_headerview_set_text_elide_mode(void* self, int64_t mode);
+void q_headerview_set_text_elide_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1738,7 +1738,7 @@ void q_headerview_set_text_elide_mode(void* self, int64_t mode);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__TextElideMode
-int64_t q_headerview_text_elide_mode(void* self);
+int32_t q_headerview_text_elide_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1994,7 +1994,7 @@ void q_headerview_on_icon_size_changed(void* self, void (*callback)(void*, void*
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_headerview_vertical_scroll_bar_policy(void* self);
+int32_t q_headerview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2002,7 +2002,7 @@ int64_t q_headerview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QHeaderView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_headerview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_headerview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2026,7 +2026,7 @@ void q_headerview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_headerview_horizontal_scroll_bar_policy(void* self);
+int32_t q_headerview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2034,7 +2034,7 @@ int64_t q_headerview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QHeaderView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_headerview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_headerview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2112,7 +2112,7 @@ QSize* q_headerview_maximum_viewport_size(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_headerview_size_adjust_policy(void* self);
+int32_t q_headerview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2120,7 +2120,7 @@ int64_t q_headerview_size_adjust_policy(void* self);
 ///
 /// @param self QHeaderView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_headerview_set_size_adjust_policy(void* self, int64_t policy);
+void q_headerview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -2151,7 +2151,7 @@ int32_t q_headerview_frame_width(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum QFrame__Shape
-int64_t q_headerview_frame_shape(void* self);
+int32_t q_headerview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -2159,7 +2159,7 @@ int64_t q_headerview_frame_shape(void* self);
 ///
 /// @param self QHeaderView*
 /// @param frameShape enum QFrame__Shape
-void q_headerview_set_frame_shape(void* self, int64_t frameShape);
+void q_headerview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -2168,7 +2168,7 @@ void q_headerview_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QHeaderView*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_headerview_frame_shadow(void* self);
+int32_t q_headerview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -2176,7 +2176,7 @@ int64_t q_headerview_frame_shadow(void* self);
 ///
 /// @param self QHeaderView*
 /// @param frameShadow enum QFrame__Shadow
-void q_headerview_set_frame_shadow(void* self, int64_t frameShadow);
+void q_headerview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -2294,7 +2294,7 @@ bool q_headerview_is_modal(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_headerview_window_modality(void* self);
+int32_t q_headerview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2302,7 +2302,7 @@ int64_t q_headerview_window_modality(void* self);
 ///
 /// @param self QHeaderView*
 /// @param windowModality enum Qt__WindowModality
-void q_headerview_set_window_modality(void* self, int64_t windowModality);
+void q_headerview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -2765,7 +2765,7 @@ void q_headerview_set_palette(void* self, void* palette);
 ///
 /// @param self QHeaderView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_headerview_set_background_role(void* self, int64_t backgroundRole);
+void q_headerview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2774,7 +2774,7 @@ void q_headerview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QHeaderView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_headerview_background_role(void* self);
+int32_t q_headerview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2782,7 +2782,7 @@ int64_t q_headerview_background_role(void* self);
 ///
 /// @param self QHeaderView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_headerview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_headerview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2791,7 +2791,7 @@ void q_headerview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QHeaderView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_headerview_foreground_role(void* self);
+int32_t q_headerview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3193,7 +3193,7 @@ void q_headerview_set_accessible_description(void* self, const char* description
 ///
 /// @param self QHeaderView*
 /// @param direction enum Qt__LayoutDirection
-void q_headerview_set_layout_direction(void* self, int64_t direction);
+void q_headerview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -3202,7 +3202,7 @@ void q_headerview_set_layout_direction(void* self, int64_t direction);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_headerview_layout_direction(void* self);
+int32_t q_headerview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3281,7 +3281,7 @@ void q_headerview_clear_focus(void* self);
 ///
 /// @param self QHeaderView*
 /// @param reason enum Qt__FocusReason
-void q_headerview_set_focus2(void* self, int64_t reason);
+void q_headerview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -3290,7 +3290,7 @@ void q_headerview_set_focus2(void* self, int64_t reason);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_headerview_focus_policy(void* self);
+int32_t q_headerview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3298,7 +3298,7 @@ int64_t q_headerview_focus_policy(void* self);
 ///
 /// @param self QHeaderView*
 /// @param policy enum Qt__FocusPolicy
-void q_headerview_set_focus_policy(void* self, int64_t policy);
+void q_headerview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3337,7 +3337,7 @@ QWidget* q_headerview_focus_proxy(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_headerview_context_menu_policy(void* self);
+int32_t q_headerview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3345,7 +3345,7 @@ int64_t q_headerview_context_menu_policy(void* self);
 ///
 /// @param self QHeaderView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_headerview_set_context_menu_policy(void* self, int64_t policy);
+void q_headerview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3756,7 +3756,7 @@ void q_headerview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QHeaderView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_headerview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_headerview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -4064,7 +4064,7 @@ QWidget* q_headerview_child_at3(void* self, void* p);
 ///
 /// @param self QHeaderView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_headerview_set_attribute(void* self, int64_t param1);
+void q_headerview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4072,7 +4072,7 @@ void q_headerview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QHeaderView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_headerview_test_attribute(void* self, int64_t param1);
+bool q_headerview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4305,7 +4305,7 @@ void q_headerview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QHeaderView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_headerview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_headerview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4341,7 +4341,7 @@ void q_headerview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QHeaderView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_headerview_set_attribute2(void* self, int64_t param1, bool on);
+void q_headerview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4450,7 +4450,7 @@ void q_headerview_kill_timer(void* self, int id);
 ///
 /// @param self QHeaderView*
 /// @param id enum Qt__TimerId
-void q_headerview_kill_timer2(void* self, int64_t id);
+void q_headerview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4619,7 +4619,7 @@ bool q_headerview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QHeaderView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_headerview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_headerview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4630,7 +4630,7 @@ int32_t q_headerview_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_headerview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_headerview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4641,7 +4641,7 @@ QMetaObject__Connection* q_headerview_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_headerview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_headerview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4748,7 +4748,7 @@ double q_headerview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_headerview_encode_metric_f(int64_t metric, double value);
+int32_t q_headerview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5239,7 +5239,7 @@ void q_headerview_on_horizontal_scrollbar_value_changed(void* self, void (*callb
 /// @param self QHeaderView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_headerview_close_editor(void* self, void* editor, int64_t hint);
+void q_headerview_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5250,7 +5250,7 @@ void q_headerview_close_editor(void* self, void* editor, int64_t hint);
 /// @param self QHeaderView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_headerview_qbase_close_editor(void* self, void* editor, int64_t hint);
+void q_headerview_qbase_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5260,7 +5260,7 @@ void q_headerview_qbase_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// @param self QHeaderView*
 /// @param callback void fn(QHeaderView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
-void q_headerview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t));
+void q_headerview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5360,7 +5360,7 @@ void q_headerview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* 
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_headerview_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_headerview_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5372,7 +5372,7 @@ bool q_headerview_edit2(void* self, void* index, int64_t trigger, void* event);
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_headerview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_headerview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5382,7 +5382,7 @@ bool q_headerview_qbase_edit2(void* self, void* index, int64_t trigger, void* ev
 ///
 /// @param self QHeaderView*
 /// @param callback bool fn(QHeaderView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
-void q_headerview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*));
+void q_headerview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6444,7 +6444,7 @@ void q_headerview_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self QHeaderView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_headerview_metric(void* self, int64_t param1);
+int32_t q_headerview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6454,7 +6454,7 @@ int32_t q_headerview_metric(void* self, int64_t param1);
 ///
 /// @param self QHeaderView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_headerview_qbase_metric(void* self, int64_t param1);
+int32_t q_headerview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6464,7 +6464,7 @@ int32_t q_headerview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QHeaderView*
 /// @param callback int32_t fn(QHeaderView*, enum QPaintDevice__PaintDeviceMetric)
-void q_headerview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_headerview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6683,7 +6683,7 @@ void q_headerview_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_headerview_state(void* self);
+int32_t q_headerview_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6694,7 +6694,7 @@ int64_t q_headerview_state(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_headerview_qbase_state(void* self);
+int32_t q_headerview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6703,8 +6703,8 @@ int64_t q_headerview_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int64_t fn()
-void q_headerview_on_state(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_headerview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6714,7 +6714,7 @@ void q_headerview_on_state(void* self, int64_t (*callback)());
 ///
 /// @param self QHeaderView*
 /// @param state enum QAbstractItemView__State
-void q_headerview_set_state(void* self, int64_t state);
+void q_headerview_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6724,7 +6724,7 @@ void q_headerview_set_state(void* self, int64_t state);
 ///
 /// @param self QHeaderView*
 /// @param state enum QAbstractItemView__State
-void q_headerview_qbase_set_state(void* self, int64_t state);
+void q_headerview_qbase_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6734,7 +6734,7 @@ void q_headerview_qbase_set_state(void* self, int64_t state);
 ///
 /// @param self QHeaderView*
 /// @param callback void fn(QHeaderView*, enum QAbstractItemView__State)
-void q_headerview_on_set_state(void* self, void (*callback)(void*, int64_t));
+void q_headerview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6975,7 +6975,7 @@ void q_headerview_on_do_auto_scroll(void* self, void (*callback)());
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_headerview_drop_indicator_position(void* self);
+int32_t q_headerview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6986,7 +6986,7 @@ int64_t q_headerview_drop_indicator_position(void* self);
 /// @param self QHeaderView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_headerview_qbase_drop_indicator_position(void* self);
+int32_t q_headerview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6995,8 +6995,8 @@ int64_t q_headerview_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QHeaderView*
-/// @param callback int64_t fn()
-void q_headerview_on_drop_indicator_position(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_headerview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7357,7 +7357,7 @@ void q_headerview_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self QHeaderView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_headerview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_headerview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -7368,7 +7368,7 @@ double q_headerview_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 /// @param self QHeaderView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_headerview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_headerview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -7378,7 +7378,7 @@ double q_headerview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// @param self QHeaderView*
 /// @param callback double fn(QHeaderView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_headerview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_headerview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

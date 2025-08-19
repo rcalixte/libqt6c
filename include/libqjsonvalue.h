@@ -65,7 +65,7 @@ QJsonValue* q_jsonvalue_new10(void* other);
 /// q_jsonvalue_new11 constructs a new QJsonValue object.
 ///
 /// @param param1 enum QJsonValue__Type
-QJsonValue* q_jsonvalue_new11(int64_t param1);
+QJsonValue* q_jsonvalue_new11(int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#operator-eq)
 ///
@@ -94,7 +94,7 @@ QVariant* q_jsonvalue_to_variant(void* self);
 /// @param self QJsonValue*
 ///
 /// @return enum QJsonValue__Type
-int64_t q_jsonvalue_type(void* self);
+int32_t q_jsonvalue_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalue.html#isNull)
 ///
@@ -258,7 +258,7 @@ QVariant* q_jsonvalueconstref_to_variant(void* self);
 /// @param self QJsonValueConstRef*
 ///
 /// @return enum QJsonValue__Type
-int64_t q_jsonvalueconstref_type(void* self);
+int32_t q_jsonvalueconstref_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueconstref.html#isNull)
 ///
@@ -428,7 +428,7 @@ QVariant* q_jsonvalueref_to_variant(void* self);
 /// @param self QJsonValueRef*
 ///
 /// @return enum QJsonValue__Type
-int64_t q_jsonvalueref_type(void* self);
+int32_t q_jsonvalueref_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonvalueref.html#isNull)
 ///

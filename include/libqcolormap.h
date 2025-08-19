@@ -41,7 +41,7 @@ void q_colormap_operator_assign(void* self, void* colormap);
 /// @param self QColormap*
 ///
 /// @return enum QColormap__Mode
-int64_t q_colormap_mode(void* self);
+int32_t q_colormap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolormap.html#depth)
 ///

@@ -119,7 +119,7 @@ QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal) {
     return QJsonDocument_FromJson2(qstring(json), (QJsonParseError*)errorVal);
 }
 
-char* q_jsondocument_to_json1(void* self, int64_t format) {
+char* q_jsondocument_to_json1(void* self, int32_t format) {
     libqt_string _str = QJsonDocument_ToJson1((QJsonDocument*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

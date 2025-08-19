@@ -26,7 +26,7 @@ void* q_stylehints_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_stylehints_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_stylehints_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -152,13 +152,13 @@ void q_stylehints_set_show_shortcuts_in_context_menus(void* self, bool showShort
 /// @param self QStyleHints*
 ///
 /// @return enum Qt__ContextMenuTrigger
-int64_t q_stylehints_context_menu_trigger(void* self);
+int32_t q_stylehints_context_menu_trigger(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setContextMenuTrigger)
 ///
 /// @param self QStyleHints*
 /// @param contextMenuTrigger enum Qt__ContextMenuTrigger
-void q_stylehints_set_context_menu_trigger(void* self, int64_t contextMenuTrigger);
+void q_stylehints_set_context_menu_trigger(void* self, int32_t contextMenuTrigger);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#passwordMaskDelay)
 ///
@@ -190,13 +190,13 @@ bool q_stylehints_set_focus_on_touch_release(void* self);
 /// @param self QStyleHints*
 ///
 /// @return enum Qt__TabFocusBehavior
-int64_t q_stylehints_tab_focus_behavior(void* self);
+int32_t q_stylehints_tab_focus_behavior(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setTabFocusBehavior)
 ///
 /// @param self QStyleHints*
 /// @param tabFocusBehavior enum Qt__TabFocusBehavior
-void q_stylehints_set_tab_focus_behavior(void* self, int64_t tabFocusBehavior);
+void q_stylehints_set_tab_focus_behavior(void* self, int32_t tabFocusBehavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#singleClickActivation)
 ///
@@ -241,13 +241,13 @@ int32_t q_stylehints_mouse_quick_selection_threshold(void* self);
 /// @param self QStyleHints*
 ///
 /// @return enum Qt__ColorScheme
-int64_t q_stylehints_color_scheme(void* self);
+int32_t q_stylehints_color_scheme(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#setColorScheme)
 ///
 /// @param self QStyleHints*
 /// @param scheme enum Qt__ColorScheme
-void q_stylehints_set_color_scheme(void* self, int64_t scheme);
+void q_stylehints_set_color_scheme(void* self, int32_t scheme);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#unsetColorScheme)
 ///
@@ -330,13 +330,13 @@ void q_stylehints_on_start_drag_time_changed(void* self, void (*callback)(void*,
 ///
 /// @param self QStyleHints*
 /// @param tabFocusBehavior enum Qt__TabFocusBehavior
-void q_stylehints_tab_focus_behavior_changed(void* self, int64_t tabFocusBehavior);
+void q_stylehints_tab_focus_behavior_changed(void* self, int32_t tabFocusBehavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#tabFocusBehaviorChanged)
 ///
 /// @param self QStyleHints*
 /// @param callback void fn(QStyleHints*, enum Qt__TabFocusBehavior)
-void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int64_t));
+void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#useHoverEffectsChanged)
 ///
@@ -366,13 +366,13 @@ void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*
 ///
 /// @param self QStyleHints*
 /// @param contextMenuTrigger enum Qt__ContextMenuTrigger
-void q_stylehints_context_menu_trigger_changed(void* self, int64_t contextMenuTrigger);
+void q_stylehints_context_menu_trigger_changed(void* self, int32_t contextMenuTrigger);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#contextMenuTriggerChanged)
 ///
 /// @param self QStyleHints*
 /// @param callback void fn(QStyleHints*, enum Qt__ContextMenuTrigger)
-void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int64_t));
+void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#wheelScrollLinesChanged)
 ///
@@ -402,13 +402,13 @@ void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*
 ///
 /// @param self QStyleHints*
 /// @param colorScheme enum Qt__ColorScheme
-void q_stylehints_color_scheme_changed(void* self, int64_t colorScheme);
+void q_stylehints_color_scheme_changed(void* self, int32_t colorScheme);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstylehints.html#colorSchemeChanged)
 ///
 /// @param self QStyleHints*
 /// @param callback void fn(QStyleHints*, enum Qt__ColorScheme)
-void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int64_t));
+void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -534,7 +534,7 @@ void q_stylehints_kill_timer(void* self, int id);
 ///
 /// @param self QStyleHints*
 /// @param id enum Qt__TimerId
-void q_stylehints_kill_timer2(void* self, int64_t id);
+void q_stylehints_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -711,7 +711,7 @@ bool q_stylehints_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStyleHints*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_stylehints_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_stylehints_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -722,7 +722,7 @@ int32_t q_stylehints_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stylehints_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_stylehints_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -733,7 +733,7 @@ QMetaObject__Connection* q_stylehints_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stylehints_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_stylehints_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -44,7 +44,7 @@ bool q_lockfile_remove_stale_lock_file(void* self) {
     return QLockFile_RemoveStaleLockFile((QLockFile*)self);
 }
 
-int64_t q_lockfile_error(void* self) {
+int32_t q_lockfile_error(void* self) {
     return QLockFile_Error((QLockFile*)self);
 }
 

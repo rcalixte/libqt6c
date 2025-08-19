@@ -11,7 +11,7 @@ QBrush* q_brush_new() {
     return QBrush_new();
 }
 
-QBrush* q_brush_new2(int64_t bs) {
+QBrush* q_brush_new2(int32_t bs) {
     return QBrush_new2(bs);
 }
 
@@ -19,7 +19,7 @@ QBrush* q_brush_new3(void* color) {
     return QBrush_new3((QColor*)color);
 }
 
-QBrush* q_brush_new4(int64_t color) {
+QBrush* q_brush_new4(int32_t color) {
     return QBrush_new4(color);
 }
 
@@ -27,7 +27,7 @@ QBrush* q_brush_new5(void* color, void* pixmap) {
     return QBrush_new5((QColor*)color, (QPixmap*)pixmap);
 }
 
-QBrush* q_brush_new6(int64_t color, void* pixmap) {
+QBrush* q_brush_new6(int32_t color, void* pixmap) {
     return QBrush_new6(color, (QPixmap*)pixmap);
 }
 
@@ -47,11 +47,11 @@ QBrush* q_brush_new10(void* gradient) {
     return QBrush_new10((QGradient*)gradient);
 }
 
-QBrush* q_brush_new11(void* color, int64_t bs) {
+QBrush* q_brush_new11(void* color, int32_t bs) {
     return QBrush_new11((QColor*)color, bs);
 }
 
-QBrush* q_brush_new12(int64_t color, int64_t bs) {
+QBrush* q_brush_new12(int32_t color, int32_t bs) {
     return QBrush_new12(color, bs);
 }
 
@@ -67,11 +67,11 @@ QVariant* q_brush_to_q_variant(void* self) {
     return QBrush_ToQVariant((QBrush*)self);
 }
 
-int64_t q_brush_style(void* self) {
+int32_t q_brush_style(void* self) {
     return QBrush_Style((QBrush*)self);
 }
 
-void q_brush_set_style(void* self, int64_t style) {
+void q_brush_set_style(void* self, int32_t style) {
     QBrush_SetStyle((QBrush*)self, style);
 }
 
@@ -107,7 +107,7 @@ void q_brush_set_color(void* self, void* color) {
     QBrush_SetColor((QBrush*)self, (QColor*)color);
 }
 
-void q_brush_set_color2(void* self, int64_t color) {
+void q_brush_set_color2(void* self, int32_t color) {
     QBrush_SetColor2((QBrush*)self, color);
 }
 
@@ -151,7 +151,7 @@ QGradient* q_gradient_new() {
     return QGradient_new();
 }
 
-QGradient* q_gradient_new2(int64_t param1) {
+QGradient* q_gradient_new2(int32_t param1) {
     return QGradient_new2(param1);
 }
 
@@ -159,15 +159,15 @@ QGradient* q_gradient_new3(void* param1) {
     return QGradient_new3((QGradient*)param1);
 }
 
-int64_t q_gradient_type(void* self) {
+int32_t q_gradient_type(void* self) {
     return QGradient_Type((QGradient*)self);
 }
 
-void q_gradient_set_spread(void* self, int64_t spread) {
+void q_gradient_set_spread(void* self, int32_t spread) {
     QGradient_SetSpread((QGradient*)self, spread);
 }
 
-int64_t q_gradient_spread(void* self) {
+int32_t q_gradient_spread(void* self) {
     return QGradient_Spread((QGradient*)self);
 }
 
@@ -180,19 +180,19 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_gradient_stops(vo
     return _arr;
 }
 
-int64_t q_gradient_coordinate_mode(void* self) {
+int32_t q_gradient_coordinate_mode(void* self) {
     return QGradient_CoordinateMode((QGradient*)self);
 }
 
-void q_gradient_set_coordinate_mode(void* self, int64_t mode) {
+void q_gradient_set_coordinate_mode(void* self, int32_t mode) {
     QGradient_SetCoordinateMode((QGradient*)self, mode);
 }
 
-int64_t q_gradient_interpolation_mode(void* self) {
+int32_t q_gradient_interpolation_mode(void* self) {
     return QGradient_InterpolationMode((QGradient*)self);
 }
 
-void q_gradient_set_interpolation_mode(void* self, int64_t mode) {
+void q_gradient_set_interpolation_mode(void* self, int32_t mode) {
     QGradient_SetInterpolationMode((QGradient*)self, mode);
 }
 
@@ -248,15 +248,15 @@ void q_lineargradient_set_final_stop2(void* self, double x, double y) {
     QLinearGradient_SetFinalStop2((QLinearGradient*)self, x, y);
 }
 
-int64_t q_lineargradient_type(void* self) {
+int32_t q_lineargradient_type(void* self) {
     return QGradient_Type((QGradient*)self);
 }
 
-void q_lineargradient_set_spread(void* self, int64_t spread) {
+void q_lineargradient_set_spread(void* self, int32_t spread) {
     QGradient_SetSpread((QGradient*)self, spread);
 }
 
-int64_t q_lineargradient_spread(void* self) {
+int32_t q_lineargradient_spread(void* self) {
     return QGradient_Spread((QGradient*)self);
 }
 
@@ -269,19 +269,19 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_lineargradient_st
     return _arr;
 }
 
-int64_t q_lineargradient_coordinate_mode(void* self) {
+int32_t q_lineargradient_coordinate_mode(void* self) {
     return QGradient_CoordinateMode((QGradient*)self);
 }
 
-void q_lineargradient_set_coordinate_mode(void* self, int64_t mode) {
+void q_lineargradient_set_coordinate_mode(void* self, int32_t mode) {
     QGradient_SetCoordinateMode((QGradient*)self, mode);
 }
 
-int64_t q_lineargradient_interpolation_mode(void* self) {
+int32_t q_lineargradient_interpolation_mode(void* self) {
     return QGradient_InterpolationMode((QGradient*)self);
 }
 
-void q_lineargradient_set_interpolation_mode(void* self, int64_t mode) {
+void q_lineargradient_set_interpolation_mode(void* self, int32_t mode) {
     QGradient_SetInterpolationMode((QGradient*)self, mode);
 }
 
@@ -377,15 +377,15 @@ void q_radialgradient_set_focal_radius(void* self, double radius) {
     QRadialGradient_SetFocalRadius((QRadialGradient*)self, radius);
 }
 
-int64_t q_radialgradient_type(void* self) {
+int32_t q_radialgradient_type(void* self) {
     return QGradient_Type((QGradient*)self);
 }
 
-void q_radialgradient_set_spread(void* self, int64_t spread) {
+void q_radialgradient_set_spread(void* self, int32_t spread) {
     QGradient_SetSpread((QGradient*)self, spread);
 }
 
-int64_t q_radialgradient_spread(void* self) {
+int32_t q_radialgradient_spread(void* self) {
     return QGradient_Spread((QGradient*)self);
 }
 
@@ -398,19 +398,19 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_radialgradient_st
     return _arr;
 }
 
-int64_t q_radialgradient_coordinate_mode(void* self) {
+int32_t q_radialgradient_coordinate_mode(void* self) {
     return QGradient_CoordinateMode((QGradient*)self);
 }
 
-void q_radialgradient_set_coordinate_mode(void* self, int64_t mode) {
+void q_radialgradient_set_coordinate_mode(void* self, int32_t mode) {
     QGradient_SetCoordinateMode((QGradient*)self, mode);
 }
 
-int64_t q_radialgradient_interpolation_mode(void* self) {
+int32_t q_radialgradient_interpolation_mode(void* self) {
     return QGradient_InterpolationMode((QGradient*)self);
 }
 
-void q_radialgradient_set_interpolation_mode(void* self, int64_t mode) {
+void q_radialgradient_set_interpolation_mode(void* self, int32_t mode) {
     QGradient_SetInterpolationMode((QGradient*)self, mode);
 }
 
@@ -462,15 +462,15 @@ void q_conicalgradient_set_angle(void* self, double angle) {
     QConicalGradient_SetAngle((QConicalGradient*)self, angle);
 }
 
-int64_t q_conicalgradient_type(void* self) {
+int32_t q_conicalgradient_type(void* self) {
     return QGradient_Type((QGradient*)self);
 }
 
-void q_conicalgradient_set_spread(void* self, int64_t spread) {
+void q_conicalgradient_set_spread(void* self, int32_t spread) {
     QGradient_SetSpread((QGradient*)self, spread);
 }
 
-int64_t q_conicalgradient_spread(void* self) {
+int32_t q_conicalgradient_spread(void* self) {
     return QGradient_Spread((QGradient*)self);
 }
 
@@ -483,19 +483,19 @@ libqt_list /* of libqt_pair  tuple of double and QColor*  */ q_conicalgradient_s
     return _arr;
 }
 
-int64_t q_conicalgradient_coordinate_mode(void* self) {
+int32_t q_conicalgradient_coordinate_mode(void* self) {
     return QGradient_CoordinateMode((QGradient*)self);
 }
 
-void q_conicalgradient_set_coordinate_mode(void* self, int64_t mode) {
+void q_conicalgradient_set_coordinate_mode(void* self, int32_t mode) {
     QGradient_SetCoordinateMode((QGradient*)self, mode);
 }
 
-int64_t q_conicalgradient_interpolation_mode(void* self) {
+int32_t q_conicalgradient_interpolation_mode(void* self) {
     return QGradient_InterpolationMode((QGradient*)self);
 }
 
-void q_conicalgradient_set_interpolation_mode(void* self, int64_t mode) {
+void q_conicalgradient_set_interpolation_mode(void* self, int32_t mode) {
     QGradient_SetInterpolationMode((QGradient*)self, mode);
 }
 

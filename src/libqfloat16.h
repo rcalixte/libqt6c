@@ -20,7 +20,7 @@ qfloat16* q_qfloat16_new();
 /// q_qfloat16_new2 constructs a new qfloat16 object.
 ///
 /// @param param1 enum Qt__Initialization
-qfloat16* q_qfloat16_new2(int64_t param1);
+qfloat16* q_qfloat16_new2(int32_t param1);
 
 /// q_qfloat16_new3 constructs a new qfloat16 object.
 ///

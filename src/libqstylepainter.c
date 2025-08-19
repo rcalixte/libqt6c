@@ -29,7 +29,7 @@ bool q_stylepainter_begin2(void* self, void* pd, void* w) {
     return QStylePainter_Begin2((QStylePainter*)self, (QPaintDevice*)pd, (QWidget*)w);
 }
 
-void q_stylepainter_draw_primitive(void* self, int64_t pe, void* opt) {
+void q_stylepainter_draw_primitive(void* self, int32_t pe, void* opt) {
     QStylePainter_DrawPrimitive((QStylePainter*)self, pe, (QStyleOption*)opt);
 }
 
@@ -53,7 +53,7 @@ QStyle* q_stylepainter_style(void* self) {
     return QStylePainter_Style((QStylePainter*)self);
 }
 
-void q_stylepainter_draw_item_text6(void* self, void* r, int flags, void* pal, bool enabled, const char* text, int64_t textRole) {
+void q_stylepainter_draw_item_text6(void* self, void* r, int flags, void* pal, bool enabled, const char* text, int32_t textRole) {
     QStylePainter_DrawItemText6((QStylePainter*)self, (QRect*)r, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
@@ -69,11 +69,11 @@ bool q_stylepainter_is_active(void* self) {
     return QPainter_IsActive((QPainter*)self);
 }
 
-void q_stylepainter_set_composition_mode(void* self, int64_t mode) {
+void q_stylepainter_set_composition_mode(void* self, int32_t mode) {
     QPainter_SetCompositionMode((QPainter*)self, mode);
 }
 
-int64_t q_stylepainter_composition_mode(void* self) {
+int32_t q_stylepainter_composition_mode(void* self) {
     return QPainter_CompositionMode((QPainter*)self);
 }
 
@@ -101,7 +101,7 @@ void q_stylepainter_set_pen2(void* self, void* pen) {
     QPainter_SetPen2((QPainter*)self, (QPen*)pen);
 }
 
-void q_stylepainter_set_pen3(void* self, int64_t style) {
+void q_stylepainter_set_pen3(void* self, int32_t style) {
     QPainter_SetPen3((QPainter*)self, style);
 }
 
@@ -113,7 +113,7 @@ void q_stylepainter_set_brush(void* self, void* brush) {
     QPainter_SetBrush((QPainter*)self, (QBrush*)brush);
 }
 
-void q_stylepainter_set_brush2(void* self, int64_t style) {
+void q_stylepainter_set_brush2(void* self, int32_t style) {
     QPainter_SetBrush2((QPainter*)self, style);
 }
 
@@ -121,11 +121,11 @@ const QBrush* q_stylepainter_brush(void* self) {
     return QPainter_Brush((QPainter*)self);
 }
 
-void q_stylepainter_set_background_mode(void* self, int64_t mode) {
+void q_stylepainter_set_background_mode(void* self, int32_t mode) {
     QPainter_SetBackgroundMode((QPainter*)self, mode);
 }
 
-int64_t q_stylepainter_background_mode(void* self) {
+int32_t q_stylepainter_background_mode(void* self) {
     return QPainter_BackgroundMode((QPainter*)self);
 }
 
@@ -613,11 +613,11 @@ void q_stylepainter_draw_image9(void* self, int x, int y, void* image) {
     QPainter_DrawImage9((QPainter*)self, x, y, (QImage*)image);
 }
 
-void q_stylepainter_set_layout_direction(void* self, int64_t direction) {
+void q_stylepainter_set_layout_direction(void* self, int32_t direction) {
     QPainter_SetLayoutDirection((QPainter*)self, direction);
 }
 
-int64_t q_stylepainter_layout_direction(void* self) {
+int32_t q_stylepainter_layout_direction(void* self) {
     return QPainter_LayoutDirection((QPainter*)self);
 }
 
@@ -721,39 +721,39 @@ void q_stylepainter_fill_rect6(void* self, void* param1, void* color) {
     QPainter_FillRect6((QPainter*)self, (QRect*)param1, (QColor*)color);
 }
 
-void q_stylepainter_fill_rect7(void* self, int x, int y, int w, int h, int64_t c) {
+void q_stylepainter_fill_rect7(void* self, int x, int y, int w, int h, int32_t c) {
     QPainter_FillRect7((QPainter*)self, x, y, w, h, c);
 }
 
-void q_stylepainter_fill_rect8(void* self, void* r, int64_t c) {
+void q_stylepainter_fill_rect8(void* self, void* r, int32_t c) {
     QPainter_FillRect8((QPainter*)self, (QRect*)r, c);
 }
 
-void q_stylepainter_fill_rect9(void* self, void* r, int64_t c) {
+void q_stylepainter_fill_rect9(void* self, void* r, int32_t c) {
     QPainter_FillRect9((QPainter*)self, (QRectF*)r, c);
 }
 
-void q_stylepainter_fill_rect10(void* self, int x, int y, int w, int h, int64_t style) {
+void q_stylepainter_fill_rect10(void* self, int x, int y, int w, int h, int32_t style) {
     QPainter_FillRect10((QPainter*)self, x, y, w, h, style);
 }
 
-void q_stylepainter_fill_rect11(void* self, void* r, int64_t style) {
+void q_stylepainter_fill_rect11(void* self, void* r, int32_t style) {
     QPainter_FillRect11((QPainter*)self, (QRect*)r, style);
 }
 
-void q_stylepainter_fill_rect12(void* self, void* r, int64_t style) {
+void q_stylepainter_fill_rect12(void* self, void* r, int32_t style) {
     QPainter_FillRect12((QPainter*)self, (QRectF*)r, style);
 }
 
-void q_stylepainter_fill_rect13(void* self, int x, int y, int w, int h, int64_t preset) {
+void q_stylepainter_fill_rect13(void* self, int x, int y, int w, int h, int32_t preset) {
     QPainter_FillRect13((QPainter*)self, x, y, w, h, preset);
 }
 
-void q_stylepainter_fill_rect14(void* self, void* r, int64_t preset) {
+void q_stylepainter_fill_rect14(void* self, void* r, int32_t preset) {
     QPainter_FillRect14((QPainter*)self, (QRect*)r, preset);
 }
 
-void q_stylepainter_fill_rect15(void* self, void* r, int64_t preset) {
+void q_stylepainter_fill_rect15(void* self, void* r, int32_t preset) {
     QPainter_FillRect15((QPainter*)self, (QRectF*)r, preset);
 }
 
@@ -769,7 +769,7 @@ void q_stylepainter_erase_rect3(void* self, void* param1) {
     QPainter_EraseRect3((QPainter*)self, (QRect*)param1);
 }
 
-void q_stylepainter_set_render_hint(void* self, int64_t hint) {
+void q_stylepainter_set_render_hint(void* self, int32_t hint) {
     QPainter_SetRenderHint((QPainter*)self, hint);
 }
 
@@ -781,7 +781,7 @@ int64_t q_stylepainter_render_hints(void* self) {
     return QPainter_RenderHints((QPainter*)self);
 }
 
-bool q_stylepainter_test_render_hint(void* self, int64_t hint) {
+bool q_stylepainter_test_render_hint(void* self, int32_t hint) {
     return QPainter_TestRenderHint((QPainter*)self, hint);
 }
 
@@ -797,23 +797,23 @@ void q_stylepainter_end_native_painting(void* self) {
     QPainter_EndNativePainting((QPainter*)self);
 }
 
-void q_stylepainter_set_clip_rect22(void* self, void* param1, int64_t op) {
+void q_stylepainter_set_clip_rect22(void* self, void* param1, int32_t op) {
     QPainter_SetClipRect22((QPainter*)self, (QRectF*)param1, op);
 }
 
-void q_stylepainter_set_clip_rect23(void* self, void* param1, int64_t op) {
+void q_stylepainter_set_clip_rect23(void* self, void* param1, int32_t op) {
     QPainter_SetClipRect23((QPainter*)self, (QRect*)param1, op);
 }
 
-void q_stylepainter_set_clip_rect5(void* self, int x, int y, int w, int h, int64_t op) {
+void q_stylepainter_set_clip_rect5(void* self, int x, int y, int w, int h, int32_t op) {
     QPainter_SetClipRect5((QPainter*)self, x, y, w, h, op);
 }
 
-void q_stylepainter_set_clip_region2(void* self, void* param1, int64_t op) {
+void q_stylepainter_set_clip_region2(void* self, void* param1, int32_t op) {
     QPainter_SetClipRegion2((QPainter*)self, (QRegion*)param1, op);
 }
 
-void q_stylepainter_set_clip_path2(void* self, void* path, int64_t op) {
+void q_stylepainter_set_clip_path2(void* self, void* path, int32_t op) {
     QPainter_SetClipPath2((QPainter*)self, (QPainterPath*)path, op);
 }
 
@@ -825,23 +825,23 @@ void q_stylepainter_set_world_transform2(void* self, void* matrix, bool combine)
     QPainter_SetWorldTransform2((QPainter*)self, (QTransform*)matrix, combine);
 }
 
-void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int64_t fillRule) {
+void q_stylepainter_draw_polygon32(void* self, void* points, int pointCount, int32_t fillRule) {
     QPainter_DrawPolygon32((QPainter*)self, (QPointF*)points, pointCount, fillRule);
 }
 
-void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int64_t fillRule) {
+void q_stylepainter_draw_polygon33(void* self, void* points, int pointCount, int32_t fillRule) {
     QPainter_DrawPolygon33((QPainter*)self, (QPoint*)points, pointCount, fillRule);
 }
 
-void q_stylepainter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int64_t mode) {
+void q_stylepainter_draw_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode) {
     QPainter_DrawRoundedRect4((QPainter*)self, (QRectF*)rect, xRadius, yRadius, mode);
 }
 
-void q_stylepainter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double xRadius, double yRadius, int64_t mode) {
+void q_stylepainter_draw_rounded_rect7(void* self, int x, int y, int w, int h, double xRadius, double yRadius, int32_t mode) {
     QPainter_DrawRoundedRect7((QPainter*)self, x, y, w, h, xRadius, yRadius, mode);
 }
 
-void q_stylepainter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int64_t mode) {
+void q_stylepainter_draw_rounded_rect42(void* self, void* rect, double xRadius, double yRadius, int32_t mode) {
     QPainter_DrawRoundedRect42((QPainter*)self, (QRect*)rect, xRadius, yRadius, mode);
 }
 
@@ -921,7 +921,7 @@ QRectF* q_stylepainter_bounding_rect32(void* self, void* rect, const char* text,
     return QPainter_BoundingRect32((QPainter*)self, (QRectF*)rect, qstring(text), (QTextOption*)o);
 }
 
-void q_stylepainter_set_render_hint2(void* self, int64_t hint, bool on) {
+void q_stylepainter_set_render_hint2(void* self, int32_t hint, bool on) {
     QPainter_SetRenderHint2((QPainter*)self, hint, on);
 }
 

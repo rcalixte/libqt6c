@@ -41,13 +41,13 @@ void* q_timeline_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timeline_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timeline_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeLine*
 /// @param callback int32_t fn(QTimeLine*, enum QMetaObject__Call, int, void*)
-void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -55,7 +55,7 @@ void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timeline_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timeline_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -69,7 +69,7 @@ const char* q_timeline_tr(const char* s);
 /// @param self QTimeLine*
 ///
 /// @return enum QTimeLine__State
-int64_t q_timeline_state(void* self);
+int32_t q_timeline_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#loopCount)
 ///
@@ -87,13 +87,13 @@ void q_timeline_set_loop_count(void* self, int count);
 /// @param self QTimeLine*
 ///
 /// @return enum QTimeLine__Direction
-int64_t q_timeline_direction(void* self);
+int32_t q_timeline_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#setDirection)
 ///
 /// @param self QTimeLine*
 /// @param direction enum QTimeLine__Direction
-void q_timeline_set_direction(void* self, int64_t direction);
+void q_timeline_set_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#duration)
 ///
@@ -361,7 +361,7 @@ void q_timeline_kill_timer(void* self, int id);
 ///
 /// @param self QTimeLine*
 /// @param id enum Qt__TimerId
-void q_timeline_kill_timer2(void* self, int64_t id);
+void q_timeline_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -538,7 +538,7 @@ bool q_timeline_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTimeLine*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_timeline_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_timeline_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -549,7 +549,7 @@ int32_t q_timeline_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timeline_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_timeline_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -560,7 +560,7 @@ QMetaObject__Connection* q_timeline_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timeline_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_timeline_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -898,7 +898,7 @@ void q_timeline_on_frame_changed(void* self, void (*callback)(void*, int));
 ///
 /// @param self QTimeLine*
 /// @param callback void fn(QTimeLine*, enum QTimeLine__State)
-void q_timeline_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_timeline_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimeline.html#finished)
 ///

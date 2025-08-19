@@ -48,13 +48,13 @@ void* q_propertyanimation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_propertyanimation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_propertyanimation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPropertyAnimation*
 /// @param callback int32_t fn(QPropertyAnimation*, enum QMetaObject__Call, int, void*)
-void q_propertyanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_propertyanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -62,7 +62,7 @@ void q_propertyanimation_on_metacall(void* self, int32_t (*callback)(void*, int6
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_propertyanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_propertyanimation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -144,7 +144,7 @@ void q_propertyanimation_qbase_update_current_value(void* self, void* value);
 /// @param self QPropertyAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_propertyanimation_update_state(void* self, int64_t newState, int64_t oldState);
+void q_propertyanimation_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
 ///
@@ -152,7 +152,7 @@ void q_propertyanimation_update_state(void* self, int64_t newState, int64_t oldS
 ///
 /// @param self QPropertyAnimation*
 /// @param callback void fn(QPropertyAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_propertyanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_propertyanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertyanimation.html#updateState)
 ///
@@ -161,7 +161,7 @@ void q_propertyanimation_on_update_state(void* self, void (*callback)(void*, int
 /// @param self QPropertyAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_propertyanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState);
+void q_propertyanimation_qbase_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -295,7 +295,7 @@ void q_propertyanimation_on_value_changed(void* self, void (*callback)(void*, vo
 /// @param self QPropertyAnimation*
 ///
 /// @return enum QAbstractAnimation__State
-int64_t q_propertyanimation_state(void* self);
+int32_t q_propertyanimation_state(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -311,7 +311,7 @@ QAnimationGroup* q_propertyanimation_group(void* self);
 /// @param self QPropertyAnimation*
 ///
 /// @return enum QAbstractAnimation__Direction
-int64_t q_propertyanimation_direction(void* self);
+int32_t q_propertyanimation_direction(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -319,7 +319,7 @@ int64_t q_propertyanimation_direction(void* self);
 ///
 /// @param self QPropertyAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_propertyanimation_set_direction(void* self, int64_t direction);
+void q_propertyanimation_set_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -386,7 +386,7 @@ void q_propertyanimation_on_finished(void* self, void (*callback)(void*));
 /// @param self QPropertyAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_propertyanimation_state_changed(void* self, int64_t newState, int64_t oldState);
+void q_propertyanimation_state_changed(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -394,7 +394,7 @@ void q_propertyanimation_state_changed(void* self, int64_t newState, int64_t old
 ///
 /// @param self QPropertyAnimation*
 /// @param callback void fn(QPropertyAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_propertyanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_propertyanimation_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -418,7 +418,7 @@ void q_propertyanimation_on_current_loop_changed(void* self, void (*callback)(vo
 ///
 /// @param self QPropertyAnimation*
 /// @param param1 enum QAbstractAnimation__Direction
-void q_propertyanimation_direction_changed(void* self, int64_t param1);
+void q_propertyanimation_direction_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -426,7 +426,7 @@ void q_propertyanimation_direction_changed(void* self, int64_t param1);
 ///
 /// @param self QPropertyAnimation*
 /// @param callback void fn(QPropertyAnimation*, enum QAbstractAnimation__Direction)
-void q_propertyanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_propertyanimation_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -478,7 +478,7 @@ void q_propertyanimation_set_current_time(void* self, int msecs);
 ///
 /// @param self QPropertyAnimation*
 /// @param policy enum QAbstractAnimation__DeletionPolicy
-void q_propertyanimation_start1(void* self, int64_t policy);
+void q_propertyanimation_start1(void* self, int32_t policy);
 
 /// Inherited from QObject
 ///
@@ -570,7 +570,7 @@ void q_propertyanimation_kill_timer(void* self, int id);
 ///
 /// @param self QPropertyAnimation*
 /// @param id enum Qt__TimerId
-void q_propertyanimation_kill_timer2(void* self, int64_t id);
+void q_propertyanimation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -747,7 +747,7 @@ bool q_propertyanimation_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QPropertyAnimation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_propertyanimation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_propertyanimation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -758,7 +758,7 @@ int32_t q_propertyanimation_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_propertyanimation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_propertyanimation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -769,7 +769,7 @@ QMetaObject__Connection* q_propertyanimation_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_propertyanimation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_propertyanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -887,7 +887,7 @@ void q_propertyanimation_on_interpolated(void* self, QVariant* (*callback)(void*
 ///
 /// @param self QPropertyAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_propertyanimation_update_direction(void* self, int64_t direction);
+void q_propertyanimation_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -897,7 +897,7 @@ void q_propertyanimation_update_direction(void* self, int64_t direction);
 ///
 /// @param self QPropertyAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_propertyanimation_qbase_update_direction(void* self, int64_t direction);
+void q_propertyanimation_qbase_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -907,7 +907,7 @@ void q_propertyanimation_qbase_update_direction(void* self, int64_t direction);
 ///
 /// @param self QPropertyAnimation*
 /// @param callback void fn(QPropertyAnimation*, enum QAbstractAnimation__Direction)
-void q_propertyanimation_on_update_direction(void* self, void (*callback)(void*, int64_t));
+void q_propertyanimation_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

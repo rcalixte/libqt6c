@@ -35,13 +35,13 @@ void* q_variantanimation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_variantanimation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_variantanimation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QVariantAnimation*
 /// @param callback int32_t fn(QVariantAnimation*, enum QMetaObject__Call, int, void*)
-void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_variantanimation_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_variantanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_variantanimation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -207,7 +207,7 @@ void q_variantanimation_qbase_update_current_time(void* self, int param1);
 /// @param self QVariantAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_variantanimation_update_state(void* self, int64_t newState, int64_t oldState);
+void q_variantanimation_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateState)
 ///
@@ -215,7 +215,7 @@ void q_variantanimation_update_state(void* self, int64_t newState, int64_t oldSt
 ///
 /// @param self QVariantAnimation*
 /// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateState)
 ///
@@ -224,7 +224,7 @@ void q_variantanimation_on_update_state(void* self, void (*callback)(void*, int6
 /// @param self QVariantAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_variantanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState);
+void q_variantanimation_qbase_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvariantanimation.html#updateCurrentValue)
 ///
@@ -298,7 +298,7 @@ const char* q_variantanimation_tr3(const char* s, const char* c, int n);
 /// @param self QVariantAnimation*
 ///
 /// @return enum QAbstractAnimation__State
-int64_t q_variantanimation_state(void* self);
+int32_t q_variantanimation_state(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -314,7 +314,7 @@ QAnimationGroup* q_variantanimation_group(void* self);
 /// @param self QVariantAnimation*
 ///
 /// @return enum QAbstractAnimation__Direction
-int64_t q_variantanimation_direction(void* self);
+int32_t q_variantanimation_direction(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -322,7 +322,7 @@ int64_t q_variantanimation_direction(void* self);
 ///
 /// @param self QVariantAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_variantanimation_set_direction(void* self, int64_t direction);
+void q_variantanimation_set_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -389,7 +389,7 @@ void q_variantanimation_on_finished(void* self, void (*callback)(void*));
 /// @param self QVariantAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_variantanimation_state_changed(void* self, int64_t newState, int64_t oldState);
+void q_variantanimation_state_changed(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -397,7 +397,7 @@ void q_variantanimation_state_changed(void* self, int64_t newState, int64_t oldS
 ///
 /// @param self QVariantAnimation*
 /// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_variantanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_variantanimation_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -421,7 +421,7 @@ void q_variantanimation_on_current_loop_changed(void* self, void (*callback)(voi
 ///
 /// @param self QVariantAnimation*
 /// @param param1 enum QAbstractAnimation__Direction
-void q_variantanimation_direction_changed(void* self, int64_t param1);
+void q_variantanimation_direction_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -429,7 +429,7 @@ void q_variantanimation_direction_changed(void* self, int64_t param1);
 ///
 /// @param self QVariantAnimation*
 /// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__Direction)
-void q_variantanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_variantanimation_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -481,7 +481,7 @@ void q_variantanimation_set_current_time(void* self, int msecs);
 ///
 /// @param self QVariantAnimation*
 /// @param policy enum QAbstractAnimation__DeletionPolicy
-void q_variantanimation_start1(void* self, int64_t policy);
+void q_variantanimation_start1(void* self, int32_t policy);
 
 /// Inherited from QObject
 ///
@@ -573,7 +573,7 @@ void q_variantanimation_kill_timer(void* self, int id);
 ///
 /// @param self QVariantAnimation*
 /// @param id enum Qt__TimerId
-void q_variantanimation_kill_timer2(void* self, int64_t id);
+void q_variantanimation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -750,7 +750,7 @@ bool q_variantanimation_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QVariantAnimation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_variantanimation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_variantanimation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -761,7 +761,7 @@ int32_t q_variantanimation_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_variantanimation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_variantanimation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -772,7 +772,7 @@ QMetaObject__Connection* q_variantanimation_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_variantanimation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_variantanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -798,7 +798,7 @@ void q_variantanimation_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QVariantAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_variantanimation_update_direction(void* self, int64_t direction);
+void q_variantanimation_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -808,7 +808,7 @@ void q_variantanimation_update_direction(void* self, int64_t direction);
 ///
 /// @param self QVariantAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_variantanimation_qbase_update_direction(void* self, int64_t direction);
+void q_variantanimation_qbase_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -818,7 +818,7 @@ void q_variantanimation_qbase_update_direction(void* self, int64_t direction);
 ///
 /// @param self QVariantAnimation*
 /// @param callback void fn(QVariantAnimation*, enum QAbstractAnimation__Direction)
-void q_variantanimation_on_update_direction(void* self, void (*callback)(void*, int64_t));
+void q_variantanimation_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

@@ -20,7 +20,7 @@ void* q_xyseries_metacast(void* self, const char* param1) {
     return QXYSeries_Metacast((QXYSeries*)self, param1);
 }
 
-int32_t q_xyseries_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_xyseries_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QXYSeries_Metacall((QXYSeries*)self, param1, param2, param3);
 }
 
@@ -293,7 +293,7 @@ void q_xyseries_clear_point_configuration(void* self, int index) {
     QXYSeries_ClearPointConfiguration((QXYSeries*)self, index);
 }
 
-void q_xyseries_clear_point_configuration2(void* self, int index, int64_t key) {
+void q_xyseries_clear_point_configuration2(void* self, int index, int32_t key) {
     QXYSeries_ClearPointConfiguration2((QXYSeries*)self, index, key);
 }
 
@@ -301,27 +301,27 @@ void q_xyseries_clear_points_configuration(void* self) {
     QXYSeries_ClearPointsConfiguration((QXYSeries*)self);
 }
 
-void q_xyseries_clear_points_configuration2(void* self, int64_t key) {
+void q_xyseries_clear_points_configuration2(void* self, int32_t key) {
     QXYSeries_ClearPointsConfiguration2((QXYSeries*)self, key);
 }
 
-void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration) {
+void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration) {
     QXYSeries_SetPointConfiguration((QXYSeries*)self, index, configuration);
 }
 
-void q_xyseries_set_point_configuration2(void* self, int index, int64_t key, void* value) {
+void q_xyseries_set_point_configuration2(void* self, int index, int32_t key, void* value) {
     QXYSeries_SetPointConfiguration2((QXYSeries*)self, index, key, (QVariant*)value);
 }
 
-void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration) {
+void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration) {
     QXYSeries_SetPointsConfiguration((QXYSeries*)self, pointsConfiguration);
 }
 
-libqt_map /* of int64_t to QVariant* */ q_xyseries_point_configuration(void* self, int index) {
+libqt_map /* of int32_t to QVariant* */ q_xyseries_point_configuration(void* self, int index) {
     return QXYSeries_PointConfiguration((QXYSeries*)self, index);
 }
 
-libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_xyseries_points_configuration(void* self) {
+libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_xyseries_points_configuration(void* self) {
     return QXYSeries_PointsConfiguration((QXYSeries*)self);
 }
 
@@ -525,11 +525,11 @@ void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void
     QXYSeries_Connect_BestFitLineColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
-void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration) {
+void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration) {
     QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration);
 }
 
-void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */)) {
+void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */)) {
     QXYSeries_Connect_PointsConfigurationChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
@@ -575,7 +575,7 @@ void q_xyseries_color_by2(void* self, libqt_list sourceData, void* gradient) {
     QXYSeries_ColorBy2((QXYSeries*)self, sourceData, (QLinearGradient*)gradient);
 }
 
-int64_t q_xyseries_type(void* self) {
+int32_t q_xyseries_type(void* self) {
     return QAbstractSeries_Type((QAbstractSeries*)self);
 }
 
@@ -734,7 +734,7 @@ void q_xyseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_xyseries_kill_timer2(void* self, int64_t id) {
+void q_xyseries_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -838,15 +838,15 @@ bool q_xyseries_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_xyseries_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_xyseries_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_xyseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_xyseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_xyseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_xyseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

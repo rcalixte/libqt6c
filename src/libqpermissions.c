@@ -10,7 +10,7 @@ QPermission* q_permission_new2(void* param1) {
     return QPermission_new2((QPermission*)param1);
 }
 
-int64_t q_permission_status(void* self) {
+int32_t q_permission_status(void* self) {
     return QPermission_Status((QPermission*)self);
 }
 
@@ -30,19 +30,19 @@ QLocationPermission* q_locationpermission_new2(void* other) {
     return QLocationPermission_new2((QLocationPermission*)other);
 }
 
-void q_locationpermission_set_accuracy(void* self, int64_t accuracy) {
+void q_locationpermission_set_accuracy(void* self, uint8_t accuracy) {
     QLocationPermission_SetAccuracy((QLocationPermission*)self, accuracy);
 }
 
-int64_t q_locationpermission_accuracy(void* self) {
+uint8_t q_locationpermission_accuracy(void* self) {
     return QLocationPermission_Accuracy((QLocationPermission*)self);
 }
 
-void q_locationpermission_set_availability(void* self, int64_t availability) {
+void q_locationpermission_set_availability(void* self, uint8_t availability) {
     QLocationPermission_SetAvailability((QLocationPermission*)self, availability);
 }
 
-int64_t q_locationpermission_availability(void* self) {
+uint8_t q_locationpermission_availability(void* self) {
     return QLocationPermission_Availability((QLocationPermission*)self);
 }
 
@@ -66,11 +66,11 @@ QCalendarPermission* q_calendarpermission_new2(void* other) {
     return QCalendarPermission_new2((QCalendarPermission*)other);
 }
 
-void q_calendarpermission_set_access_mode(void* self, int64_t mode) {
+void q_calendarpermission_set_access_mode(void* self, uint8_t mode) {
     QCalendarPermission_SetAccessMode((QCalendarPermission*)self, mode);
 }
 
-int64_t q_calendarpermission_access_mode(void* self) {
+uint8_t q_calendarpermission_access_mode(void* self) {
     return QCalendarPermission_AccessMode((QCalendarPermission*)self);
 }
 
@@ -94,11 +94,11 @@ QContactsPermission* q_contactspermission_new2(void* other) {
     return QContactsPermission_new2((QContactsPermission*)other);
 }
 
-void q_contactspermission_set_access_mode(void* self, int64_t mode) {
+void q_contactspermission_set_access_mode(void* self, uint8_t mode) {
     QContactsPermission_SetAccessMode((QContactsPermission*)self, mode);
 }
 
-int64_t q_contactspermission_access_mode(void* self) {
+uint8_t q_contactspermission_access_mode(void* self) {
     return QContactsPermission_AccessMode((QContactsPermission*)self);
 }
 

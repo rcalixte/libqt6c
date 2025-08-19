@@ -110,7 +110,7 @@ int32_t q_cborstreamreader_container_depth(void* self);
 /// @param self QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__Type
-int64_t q_cborstreamreader_parent_container_type(void* self);
+uint8_t q_cborstreamreader_parent_container_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#hasNext)
 ///
@@ -127,7 +127,7 @@ bool q_cborstreamreader_next(void* self);
 /// @param self QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__Type
-int64_t q_cborstreamreader_type(void* self);
+uint8_t q_cborstreamreader_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#isUnsignedInteger)
 ///
@@ -198,7 +198,7 @@ bool q_cborstreamreader_is_invalid(void* self);
 ///
 /// @param self QCborStreamReader*
 /// @param st enum QCborStreamReader__QCborSimpleType
-bool q_cborstreamreader_is_simple_type2(void* self, int64_t st);
+bool q_cborstreamreader_is_simple_type2(void* self, uint8_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#isFalse)
 ///
@@ -283,7 +283,7 @@ bool q_cborstreamreader_to_bool(void* self);
 /// @param self QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborTag
-int64_t q_cborstreamreader_to_tag(void* self);
+uint64_t q_cborstreamreader_to_tag(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#toUnsignedInteger)
 ///
@@ -295,14 +295,14 @@ uint64_t q_cborstreamreader_to_unsigned_integer(void* self);
 /// @param self QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborNegativeInteger
-int64_t q_cborstreamreader_to_negative_integer(void* self);
+uint64_t q_cborstreamreader_to_negative_integer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#toSimpleType)
 ///
 /// @param self QCborStreamReader*
 ///
 /// @return enum QCborStreamReader__QCborSimpleType
-int64_t q_cborstreamreader_to_simple_type(void* self);
+uint8_t q_cborstreamreader_to_simple_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamreader.html#toFloat)
 ///

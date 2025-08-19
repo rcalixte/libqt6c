@@ -51,11 +51,11 @@ QLocale* q_collator_locale(void* self) {
     return QCollator_Locale((QCollator*)self);
 }
 
-int64_t q_collator_case_sensitivity(void* self) {
+int32_t q_collator_case_sensitivity(void* self) {
     return QCollator_CaseSensitivity((QCollator*)self);
 }
 
-void q_collator_set_case_sensitivity(void* self, int64_t cs) {
+void q_collator_set_case_sensitivity(void* self, int32_t cs) {
     QCollator_SetCaseSensitivity((QCollator*)self, cs);
 }
 

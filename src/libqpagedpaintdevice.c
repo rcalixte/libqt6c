@@ -18,11 +18,11 @@ bool q_pagedpaintdevice_set_page_size(void* self, void* pageSize) {
     return QPagedPaintDevice_SetPageSize((QPagedPaintDevice*)self, (QPageSize*)pageSize);
 }
 
-bool q_pagedpaintdevice_set_page_orientation(void* self, int64_t orientation) {
+bool q_pagedpaintdevice_set_page_orientation(void* self, int32_t orientation) {
     return QPagedPaintDevice_SetPageOrientation((QPagedPaintDevice*)self, orientation);
 }
 
-bool q_pagedpaintdevice_set_page_margins(void* self, void* margins, int64_t units) {
+bool q_pagedpaintdevice_set_page_margins(void* self, void* margins, int32_t units) {
     return QPagedPaintDevice_SetPageMargins((QPagedPaintDevice*)self, (QMarginsF*)margins, units);
 }
 
@@ -102,7 +102,7 @@ double q_pagedpaintdevice_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_pagedpaintdevice_encode_metric_f(int64_t metric, double value) {
+int32_t q_pagedpaintdevice_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 

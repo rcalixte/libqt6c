@@ -53,14 +53,14 @@ void q_scrollerproperties_unset_default_scroller_properties();
 ///
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
-QVariant* q_scrollerproperties_scroll_metric(void* self, int64_t metric);
+QVariant* q_scrollerproperties_scroll_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#setScrollMetric)
 ///
 /// @param self QScrollerProperties*
 /// @param metric enum QScrollerProperties__ScrollMetric
 /// @param value QVariant*
-void q_scrollerproperties_set_scroll_metric(void* self, int64_t metric, void* value);
+void q_scrollerproperties_set_scroll_metric(void* self, int32_t metric, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollerproperties.html#dtor.QScrollerProperties)
 ///

@@ -44,7 +44,7 @@ bool q_restreply_has_error(void* self) {
     return QRestReply_HasError((QRestReply*)self);
 }
 
-int64_t q_restreply_error(void* self) {
+int32_t q_restreply_error(void* self) {
     return QRestReply_Error((QRestReply*)self);
 }
 

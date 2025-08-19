@@ -259,7 +259,7 @@ bool q_xmlstreamreader_at_end(void* self);
 /// @param self QXmlStreamReader*
 ///
 /// @return enum QXmlStreamReader__TokenType
-int64_t q_xmlstreamreader_read_next(void* self);
+int32_t q_xmlstreamreader_read_next(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#readNextStartElement)
 ///
@@ -276,7 +276,7 @@ void q_xmlstreamreader_skip_current_element(void* self);
 /// @param self QXmlStreamReader*
 ///
 /// @return enum QXmlStreamReader__TokenType
-int64_t q_xmlstreamreader_token_type(void* self);
+int32_t q_xmlstreamreader_token_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#tokenString)
 ///
@@ -443,7 +443,7 @@ const char* q_xmlstreamreader_error_string(void* self);
 /// @param self QXmlStreamReader*
 ///
 /// @return enum QXmlStreamReader__Error
-int64_t q_xmlstreamreader_error(void* self);
+int32_t q_xmlstreamreader_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#hasError)
 ///
@@ -467,7 +467,7 @@ QXmlStreamEntityResolver* q_xmlstreamreader_entity_resolver(void* self);
 ///
 /// @param self QXmlStreamReader*
 /// @param behaviour enum QXmlStreamReader__ReadElementTextBehaviour
-const char* q_xmlstreamreader_read_element_text1(void* self, int64_t behaviour);
+const char* q_xmlstreamreader_read_element_text1(void* self, int32_t behaviour);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxmlstreamreader.html#raiseError)
 ///

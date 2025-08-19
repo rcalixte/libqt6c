@@ -11,7 +11,7 @@ void q_webenginecertificateerror_operator_assign(void* self, void* other) {
     QWebEngineCertificateError_OperatorAssign((QWebEngineCertificateError*)self, (QWebEngineCertificateError*)other);
 }
 
-int64_t q_webenginecertificateerror_type(void* self) {
+int32_t q_webenginecertificateerror_type(void* self) {
     return QWebEngineCertificateError_Type((QWebEngineCertificateError*)self);
 }
 

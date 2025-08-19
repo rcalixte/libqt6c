@@ -28,7 +28,7 @@ QsciCommand* q_scicommandset_bound_to(void* self, int key) {
     return QsciCommandSet_BoundTo((QsciCommandSet*)self, key);
 }
 
-QsciCommand* q_scicommandset_find(void* self, int64_t command) {
+QsciCommand* q_scicommandset_find(void* self, int32_t command) {
     return QsciCommandSet_Find((QsciCommandSet*)self, command);
 }
 

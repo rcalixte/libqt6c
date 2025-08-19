@@ -10,63 +10,63 @@ QIconEngine* q_iconengine_new() {
     return QIconEngine_new();
 }
 
-void q_iconengine_paint(void* self, void* painter, void* rect, int64_t mode, int64_t state) {
+void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state) {
     QIconEngine_Paint((QIconEngine*)self, (QPainter*)painter, (QRect*)rect, mode, state);
 }
 
-void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int64_t, int64_t)) {
+void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t)) {
     QIconEngine_OnPaint((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int64_t mode, int64_t state) {
+void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state) {
     QIconEngine_QBasePaint((QIconEngine*)self, (QPainter*)painter, (QRect*)rect, mode, state);
 }
 
-QSize* q_iconengine_actual_size(void* self, void* size, int64_t mode, int64_t state) {
+QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state) {
     return QIconEngine_ActualSize((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int64_t, int64_t)) {
+void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t)) {
     QIconEngine_OnActualSize((QIconEngine*)self, (intptr_t)callback);
 }
 
-QSize* q_iconengine_qbase_actual_size(void* self, void* size, int64_t mode, int64_t state) {
+QSize* q_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int32_t state) {
     return QIconEngine_QBaseActualSize((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-QPixmap* q_iconengine_pixmap(void* self, void* size, int64_t mode, int64_t state) {
+QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state) {
     return QIconEngine_Pixmap((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int64_t, int64_t)) {
+void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t)) {
     QIconEngine_OnPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int64_t mode, int64_t state) {
+QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state) {
     return QIconEngine_QBasePixmap((QIconEngine*)self, (QSize*)size, mode, state);
 }
 
-void q_iconengine_add_pixmap(void* self, void* pixmap, int64_t mode, int64_t state) {
+void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state) {
     QIconEngine_AddPixmap((QIconEngine*)self, (QPixmap*)pixmap, mode, state);
 }
 
-void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int64_t, int64_t)) {
+void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t)) {
     QIconEngine_OnAddPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int64_t mode, int64_t state) {
+void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state) {
     QIconEngine_QBaseAddPixmap((QIconEngine*)self, (QPixmap*)pixmap, mode, state);
 }
 
-void q_iconengine_add_file(void* self, const char* fileName, void* size, int64_t mode, int64_t state) {
+void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state) {
     QIconEngine_AddFile((QIconEngine*)self, qstring(fileName), (QSize*)size, mode, state);
 }
 
-void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int64_t, int64_t)) {
+void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t)) {
     QIconEngine_OnAddFile((QIconEngine*)self, (intptr_t)callback);
 }
 
-void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int64_t mode, int64_t state) {
+void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state) {
     QIconEngine_QBaseAddFile((QIconEngine*)self, qstring(fileName), (QSize*)size, mode, state);
 }
 
@@ -124,16 +124,16 @@ bool q_iconengine_qbase_write(void* self, void* out) {
     return QIconEngine_QBaseWrite((QIconEngine*)self, (QDataStream*)out);
 }
 
-libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int64_t mode, int64_t state) {
+libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode, int32_t state) {
     libqt_list _arr = QIconEngine_AvailableSizes((QIconEngine*)self, mode, state);
     return _arr;
 }
 
-void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int64_t, int64_t)) {
+void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t)) {
     QIconEngine_OnAvailableSizes((QIconEngine*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int64_t mode, int64_t state) {
+libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state) {
     libqt_list _arr = QIconEngine_QBaseAvailableSizes((QIconEngine*)self, mode, state);
     return _arr;
 }
@@ -168,15 +168,15 @@ bool q_iconengine_qbase_is_null(void* self) {
     return QIconEngine_QBaseIsNull((QIconEngine*)self);
 }
 
-QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int64_t mode, int64_t state, double scale) {
+QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale) {
     return QIconEngine_ScaledPixmap((QIconEngine*)self, (QSize*)size, mode, state, scale);
 }
 
-void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int64_t, int64_t, double)) {
+void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double)) {
     QIconEngine_OnScaledPixmap((QIconEngine*)self, (intptr_t)callback);
 }
 
-QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int64_t mode, int64_t state, double scale) {
+QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale) {
     return QIconEngine_QBaseScaledPixmap((QIconEngine*)self, (QSize*)size, mode, state, scale);
 }
 

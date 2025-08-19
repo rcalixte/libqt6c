@@ -35,13 +35,13 @@ void* q_calendarwidget_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_calendarwidget_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_calendarwidget_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QCalendarWidget*
 /// @param callback int32_t fn(QCalendarWidget*, enum QMetaObject__Call, int, void*)
-void q_calendarwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_calendarwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_calendarwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_calendarwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_calendarwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -150,13 +150,13 @@ void q_calendarwidget_clear_maximum_date(void* self);
 /// @param self QCalendarWidget*
 ///
 /// @return enum Qt__DayOfWeek
-int64_t q_calendarwidget_first_day_of_week(void* self);
+int32_t q_calendarwidget_first_day_of_week(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#setFirstDayOfWeek)
 ///
 /// @param self QCalendarWidget*
 /// @param dayOfWeek enum Qt__DayOfWeek
-void q_calendarwidget_set_first_day_of_week(void* self, int64_t dayOfWeek);
+void q_calendarwidget_set_first_day_of_week(void* self, int32_t dayOfWeek);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#isNavigationBarVisible)
 ///
@@ -184,39 +184,39 @@ void q_calendarwidget_set_calendar(void* self, void* calendar);
 /// @param self QCalendarWidget*
 ///
 /// @return enum QCalendarWidget__SelectionMode
-int64_t q_calendarwidget_selection_mode(void* self);
+int32_t q_calendarwidget_selection_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#setSelectionMode)
 ///
 /// @param self QCalendarWidget*
 /// @param mode enum QCalendarWidget__SelectionMode
-void q_calendarwidget_set_selection_mode(void* self, int64_t mode);
+void q_calendarwidget_set_selection_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#horizontalHeaderFormat)
 ///
 /// @param self QCalendarWidget*
 ///
 /// @return enum QCalendarWidget__HorizontalHeaderFormat
-int64_t q_calendarwidget_horizontal_header_format(void* self);
+int32_t q_calendarwidget_horizontal_header_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#setHorizontalHeaderFormat)
 ///
 /// @param self QCalendarWidget*
 /// @param format enum QCalendarWidget__HorizontalHeaderFormat
-void q_calendarwidget_set_horizontal_header_format(void* self, int64_t format);
+void q_calendarwidget_set_horizontal_header_format(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#verticalHeaderFormat)
 ///
 /// @param self QCalendarWidget*
 ///
 /// @return enum QCalendarWidget__VerticalHeaderFormat
-int64_t q_calendarwidget_vertical_header_format(void* self);
+int32_t q_calendarwidget_vertical_header_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#setVerticalHeaderFormat)
 ///
 /// @param self QCalendarWidget*
 /// @param format enum QCalendarWidget__VerticalHeaderFormat
-void q_calendarwidget_set_vertical_header_format(void* self, int64_t format);
+void q_calendarwidget_set_vertical_header_format(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#headerTextFormat)
 ///
@@ -233,14 +233,14 @@ void q_calendarwidget_set_header_text_format(void* self, void* format);
 ///
 /// @param self QCalendarWidget*
 /// @param dayOfWeek enum Qt__DayOfWeek
-QTextCharFormat* q_calendarwidget_weekday_text_format(void* self, int64_t dayOfWeek);
+QTextCharFormat* q_calendarwidget_weekday_text_format(void* self, int32_t dayOfWeek);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#setWeekdayTextFormat)
 ///
 /// @param self QCalendarWidget*
 /// @param dayOfWeek enum Qt__DayOfWeek
 /// @param format QTextCharFormat*
-void q_calendarwidget_set_weekday_text_format(void* self, int64_t dayOfWeek, void* format);
+void q_calendarwidget_set_weekday_text_format(void* self, int32_t dayOfWeek, void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarwidget.html#dateTextFormat)
 ///
@@ -660,7 +660,7 @@ bool q_calendarwidget_is_modal(void* self);
 /// @param self QCalendarWidget*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_calendarwidget_window_modality(void* self);
+int32_t q_calendarwidget_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -668,7 +668,7 @@ int64_t q_calendarwidget_window_modality(void* self);
 ///
 /// @param self QCalendarWidget*
 /// @param windowModality enum Qt__WindowModality
-void q_calendarwidget_set_window_modality(void* self, int64_t windowModality);
+void q_calendarwidget_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1131,7 +1131,7 @@ void q_calendarwidget_set_palette(void* self, void* palette);
 ///
 /// @param self QCalendarWidget*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_calendarwidget_set_background_role(void* self, int64_t backgroundRole);
+void q_calendarwidget_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1140,7 +1140,7 @@ void q_calendarwidget_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QCalendarWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_calendarwidget_background_role(void* self);
+int32_t q_calendarwidget_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1148,7 +1148,7 @@ int64_t q_calendarwidget_background_role(void* self);
 ///
 /// @param self QCalendarWidget*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_calendarwidget_set_foreground_role(void* self, int64_t foregroundRole);
+void q_calendarwidget_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1157,7 +1157,7 @@ void q_calendarwidget_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QCalendarWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_calendarwidget_foreground_role(void* self);
+int32_t q_calendarwidget_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1559,7 +1559,7 @@ void q_calendarwidget_set_accessible_description(void* self, const char* descrip
 ///
 /// @param self QCalendarWidget*
 /// @param direction enum Qt__LayoutDirection
-void q_calendarwidget_set_layout_direction(void* self, int64_t direction);
+void q_calendarwidget_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1568,7 +1568,7 @@ void q_calendarwidget_set_layout_direction(void* self, int64_t direction);
 /// @param self QCalendarWidget*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_calendarwidget_layout_direction(void* self);
+int32_t q_calendarwidget_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1647,7 +1647,7 @@ void q_calendarwidget_clear_focus(void* self);
 ///
 /// @param self QCalendarWidget*
 /// @param reason enum Qt__FocusReason
-void q_calendarwidget_set_focus2(void* self, int64_t reason);
+void q_calendarwidget_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1656,7 +1656,7 @@ void q_calendarwidget_set_focus2(void* self, int64_t reason);
 /// @param self QCalendarWidget*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_calendarwidget_focus_policy(void* self);
+int32_t q_calendarwidget_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1664,7 +1664,7 @@ int64_t q_calendarwidget_focus_policy(void* self);
 ///
 /// @param self QCalendarWidget*
 /// @param policy enum Qt__FocusPolicy
-void q_calendarwidget_set_focus_policy(void* self, int64_t policy);
+void q_calendarwidget_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1703,7 +1703,7 @@ QWidget* q_calendarwidget_focus_proxy(void* self);
 /// @param self QCalendarWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_calendarwidget_context_menu_policy(void* self);
+int32_t q_calendarwidget_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1711,7 +1711,7 @@ int64_t q_calendarwidget_context_menu_policy(void* self);
 ///
 /// @param self QCalendarWidget*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_calendarwidget_set_context_menu_policy(void* self, int64_t policy);
+void q_calendarwidget_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2129,7 +2129,7 @@ void q_calendarwidget_set_size_policy(void* self, void* sizePolicy);
 /// @param self QCalendarWidget*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_calendarwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_calendarwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2437,7 +2437,7 @@ QWidget* q_calendarwidget_child_at3(void* self, void* p);
 ///
 /// @param self QCalendarWidget*
 /// @param param1 enum Qt__WidgetAttribute
-void q_calendarwidget_set_attribute(void* self, int64_t param1);
+void q_calendarwidget_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2445,7 +2445,7 @@ void q_calendarwidget_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QCalendarWidget*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_calendarwidget_test_attribute(void* self, int64_t param1);
+bool q_calendarwidget_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2678,7 +2678,7 @@ void q_calendarwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QCalendarWidget*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_calendarwidget_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_calendarwidget_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2714,7 +2714,7 @@ void q_calendarwidget_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QCalendarWidget*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_calendarwidget_set_attribute2(void* self, int64_t param1, bool on);
+void q_calendarwidget_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2823,7 +2823,7 @@ void q_calendarwidget_kill_timer(void* self, int id);
 ///
 /// @param self QCalendarWidget*
 /// @param id enum Qt__TimerId
-void q_calendarwidget_kill_timer2(void* self, int64_t id);
+void q_calendarwidget_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2992,7 +2992,7 @@ bool q_calendarwidget_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QCalendarWidget*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_calendarwidget_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_calendarwidget_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3003,7 +3003,7 @@ int32_t q_calendarwidget_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_calendarwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_calendarwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3014,7 +3014,7 @@ QMetaObject__Connection* q_calendarwidget_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_calendarwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_calendarwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3121,7 +3121,7 @@ double q_calendarwidget_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_calendarwidget_encode_metric_f(int64_t metric, double value);
+int32_t q_calendarwidget_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -3969,7 +3969,7 @@ void q_calendarwidget_on_change_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QCalendarWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_calendarwidget_metric(void* self, int64_t param1);
+int32_t q_calendarwidget_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3979,7 +3979,7 @@ int32_t q_calendarwidget_metric(void* self, int64_t param1);
 ///
 /// @param self QCalendarWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_calendarwidget_qbase_metric(void* self, int64_t param1);
+int32_t q_calendarwidget_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3989,7 +3989,7 @@ int32_t q_calendarwidget_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QCalendarWidget*
 /// @param callback int32_t fn(QCalendarWidget*, enum QPaintDevice__PaintDeviceMetric)
-void q_calendarwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_calendarwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4584,7 +4584,7 @@ void q_calendarwidget_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param self QCalendarWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_calendarwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_calendarwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4595,7 +4595,7 @@ double q_calendarwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_
 /// @param self QCalendarWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_calendarwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_calendarwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4605,7 +4605,7 @@ double q_calendarwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, 
 ///
 /// @param self QCalendarWidget*
 /// @param callback double fn(QCalendarWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_calendarwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_calendarwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

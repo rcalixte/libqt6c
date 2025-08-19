@@ -19,7 +19,7 @@ QMatrix4x4* q_matrix4x4_new3() {
     return QMatrix4x4_new3();
 }
 
-QMatrix4x4* q_matrix4x4_new4(int64_t param1) {
+QMatrix4x4* q_matrix4x4_new4(int32_t param1) {
     return QMatrix4x4_new4(param1);
 }
 

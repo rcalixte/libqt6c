@@ -96,7 +96,7 @@ double q_paintdevice_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_paintdevice_encode_metric_f(int64_t metric, double value);
+int32_t q_paintdevice_encode_metric_f(int32_t metric, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintdevice.html#dtor.QPaintDevice)
 ///

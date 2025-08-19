@@ -94,8 +94,6 @@ void q_pluginmetadata__header_copy_assign(void* self, void* other);
 /// @param other QPluginMetaData__Header*
 void q_pluginmetadata__header_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::header.html#dtor.QPluginMetaData::Header)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPluginMetaData__Header*
@@ -129,8 +127,6 @@ void q_pluginmetadata__magicheader_copy_assign(void* self, void* other);
 /// @param other QPluginMetaData__MagicHeader*
 void q_pluginmetadata__magicheader_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::magicheader.html#dtor.QPluginMetaData::MagicHeader)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPluginMetaData__MagicHeader*
@@ -170,8 +166,6 @@ void q_pluginmetadata__elfnoteheader_copy_assign(void* self, void* other);
 /// @param other QPluginMetaData__ElfNoteHeader*
 void q_pluginmetadata__elfnoteheader_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpluginmetadata::elfnoteheader.html#dtor.QPluginMetaData::ElfNoteHeader)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPluginMetaData__ElfNoteHeader*

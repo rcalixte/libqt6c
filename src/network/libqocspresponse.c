@@ -14,11 +14,11 @@ void q_ocspresponse_operator_assign(void* self, void* other) {
     QOcspResponse_OperatorAssign((QOcspResponse*)self, (QOcspResponse*)other);
 }
 
-int64_t q_ocspresponse_certificate_status(void* self) {
+int32_t q_ocspresponse_certificate_status(void* self) {
     return QOcspResponse_CertificateStatus((QOcspResponse*)self);
 }
 
-int64_t q_ocspresponse_revocation_reason(void* self) {
+int32_t q_ocspresponse_revocation_reason(void* self) {
     return QOcspResponse_RevocationReason((QOcspResponse*)self);
 }
 

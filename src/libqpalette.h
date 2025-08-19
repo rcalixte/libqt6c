@@ -25,7 +25,7 @@ QPalette* q_palette_new2(void* button);
 /// q_palette_new3 constructs a new QPalette object.
 ///
 /// @param button enum Qt__GlobalColor
-QPalette* q_palette_new3(int64_t button);
+QPalette* q_palette_new3(int32_t button);
 
 /// q_palette_new4 constructs a new QPalette object.
 ///
@@ -84,27 +84,27 @@ QVariant* q_palette_to_q_variant(void* self);
 /// @param self QPalette*
 ///
 /// @return enum QPalette__ColorGroup
-int64_t q_palette_current_color_group(void* self);
+int32_t q_palette_current_color_group(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setCurrentColorGroup)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
-void q_palette_set_current_color_group(void* self, int64_t cg);
+void q_palette_set_current_color_group(void* self, int32_t cg);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
-const QColor* q_palette_color(void* self, int64_t cg, int64_t cr);
+const QColor* q_palette_color(void* self, int32_t cg, int32_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
-const QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr);
+const QBrush* q_palette_brush(void* self, int32_t cg, int32_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColor)
 ///
@@ -112,28 +112,28 @@ const QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr);
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
 /// @param color QColor*
-void q_palette_set_color(void* self, int64_t cg, int64_t cr, void* color);
+void q_palette_set_color(void* self, int32_t cg, int32_t cr, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColor)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 /// @param color QColor*
-void q_palette_set_color2(void* self, int64_t cr, void* color);
+void q_palette_set_color2(void* self, int32_t cr, void* color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setBrush)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
 /// @param brush QBrush*
-void q_palette_set_brush(void* self, int64_t cr, void* brush);
+void q_palette_set_brush(void* self, int32_t cr, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#isBrushSet)
 ///
 /// @param self QPalette*
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
-bool q_palette_is_brush_set(void* self, int64_t cg, int64_t cr);
+bool q_palette_is_brush_set(void* self, int32_t cg, int32_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setBrush)
 ///
@@ -141,7 +141,7 @@ bool q_palette_is_brush_set(void* self, int64_t cg, int64_t cr);
 /// @param cg enum QPalette__ColorGroup
 /// @param cr enum QPalette__ColorRole
 /// @param brush QBrush*
-void q_palette_set_brush2(void* self, int64_t cg, int64_t cr, void* brush);
+void q_palette_set_brush2(void* self, int32_t cg, int32_t cr, void* brush);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#setColorGroup)
 ///
@@ -156,26 +156,26 @@ void q_palette_set_brush2(void* self, int64_t cg, int64_t cr, void* brush);
 /// @param bright_text QBrush*
 /// @param base QBrush*
 /// @param window QBrush*
-void q_palette_set_color_group(void* self, int64_t cr, void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window);
+void q_palette_set_color_group(void* self, int32_t cr, void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#isEqual)
 ///
 /// @param self QPalette*
 /// @param cr1 enum QPalette__ColorGroup
 /// @param cr2 enum QPalette__ColorGroup
-bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2);
+bool q_palette_is_equal(void* self, int32_t cr1, int32_t cr2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#color)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
-const QColor* q_palette_color2(void* self, int64_t cr);
+const QColor* q_palette_color2(void* self, int32_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#brush)
 ///
 /// @param self QPalette*
 /// @param cr enum QPalette__ColorRole
-const QBrush* q_palette_brush2(void* self, int64_t cr);
+const QBrush* q_palette_brush2(void* self, int32_t cr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpalette.html#windowText)
 ///

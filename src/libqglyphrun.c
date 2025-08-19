@@ -94,7 +94,7 @@ bool q_glyphrun_is_right_to_left(void* self) {
     return QGlyphRun_IsRightToLeft((QGlyphRun*)self);
 }
 
-void q_glyphrun_set_flag(void* self, int64_t flag) {
+void q_glyphrun_set_flag(void* self, int32_t flag) {
     QGlyphRun_SetFlag((QGlyphRun*)self, flag);
 }
 
@@ -138,7 +138,7 @@ bool q_glyphrun_is_empty(void* self) {
     return QGlyphRun_IsEmpty((QGlyphRun*)self);
 }
 
-void q_glyphrun_set_flag2(void* self, int64_t flag, bool enabled) {
+void q_glyphrun_set_flag2(void* self, int32_t flag, bool enabled) {
     QGlyphRun_SetFlag2((QGlyphRun*)self, flag, enabled);
 }
 

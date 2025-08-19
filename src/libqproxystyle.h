@@ -40,13 +40,13 @@ void* q_proxystyle_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_proxystyle_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t fn(QProxyStyle*, enum QMetaObject__Call, int, void*)
-void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -54,7 +54,7 @@ void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_proxystyle_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_proxystyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -81,7 +81,7 @@ void q_proxystyle_set_base_style(void* self, void* style);
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
-void q_proxystyle_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget);
+void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
 ///
@@ -89,7 +89,7 @@ void q_proxystyle_draw_primitive(void* self, int64_t element, void* option, void
 ///
 /// @param self QProxyStyle*
 /// @param callback void fn(QProxyStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*)
-void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
 ///
@@ -100,7 +100,7 @@ void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int64_t,
 /// @param option QStyleOption*
 /// @param painter QPainter*
 /// @param widget QWidget*
-void q_proxystyle_qbase_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget);
+void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
 ///
@@ -168,7 +168,7 @@ void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* 
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
-void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
+void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
 ///
@@ -176,7 +176,7 @@ void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flag
 ///
 /// @param self QProxyStyle*
 /// @param callback void fn(QProxyStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole)
-void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int64_t));
+void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
 ///
@@ -190,7 +190,7 @@ void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, v
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
-void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
+void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
 ///
@@ -452,7 +452,7 @@ int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_proxystyle_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
+int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
 ///
@@ -460,7 +460,7 @@ int32_t q_proxystyle_layout_spacing(void* self, int64_t control1, int64_t contro
 ///
 /// @param self QProxyStyle*
 /// @param callback int32_t fn(QProxyStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*)
-void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, int64_t, int64_t, void*, void*));
+void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
 ///
@@ -472,7 +472,7 @@ void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int64
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_proxystyle_qbase_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
+int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
 ///
@@ -532,7 +532,7 @@ QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, 
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
-QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
+QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
 ///
@@ -540,7 +540,7 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int64_t iconMode, void* 
 ///
 /// @param self QProxyStyle*
 /// @param callback QPixmap* fn(QProxyStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*)
-void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
+void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
 ///
@@ -550,7 +550,7 @@ void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
-QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
+QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
 ///
@@ -737,7 +737,7 @@ const char* q_proxystyle_name(void* self);
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalRect QRect*
-QRect* q_proxystyle_visual_rect(int64_t direction, void* boundingRect, void* logicalRect);
+QRect* q_proxystyle_visual_rect(int32_t direction, void* boundingRect, void* logicalRect);
 
 /// Inherited from QStyle
 ///
@@ -746,7 +746,7 @@ QRect* q_proxystyle_visual_rect(int64_t direction, void* boundingRect, void* log
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalPos QPoint*
-QPoint* q_proxystyle_visual_pos(int64_t direction, void* boundingRect, void* logicalPos);
+QPoint* q_proxystyle_visual_pos(int32_t direction, void* boundingRect, void* logicalPos);
 
 /// Inherited from QStyle
 ///
@@ -776,7 +776,7 @@ int32_t q_proxystyle_slider_value_from_position(int min, int max, int pos, int s
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_proxystyle_visual_alignment(int64_t direction, int64_t alignment);
+int64_t q_proxystyle_visual_alignment(int32_t direction, int64_t alignment);
 
 /// Inherited from QStyle
 ///
@@ -786,7 +786,7 @@ int64_t q_proxystyle_visual_alignment(int64_t direction, int64_t alignment);
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param size QSize*
 /// @param rectangle QRect*
-QRect* q_proxystyle_aligned_rect(int64_t direction, int64_t alignment, void* size, void* rectangle);
+QRect* q_proxystyle_aligned_rect(int32_t direction, int64_t alignment, void* size, void* rectangle);
 
 /// Inherited from QStyle
 ///
@@ -796,7 +796,7 @@ QRect* q_proxystyle_aligned_rect(int64_t direction, int64_t alignment, void* siz
 /// @param controls1 flag of enum QSizePolicy__ControlType
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
-int32_t q_proxystyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int64_t orientation);
+int32_t q_proxystyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int32_t orientation);
 
 /// Inherited from QStyle
 ///
@@ -836,7 +836,7 @@ int32_t q_proxystyle_slider_value_from_position5(int min, int max, int pos, int 
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
-int32_t q_proxystyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option);
+int32_t q_proxystyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option);
 
 /// Inherited from QStyle
 ///
@@ -848,7 +848,7 @@ int32_t q_proxystyle_combined_layout_spacing4(void* self, int64_t controls1, int
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_proxystyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option, void* widget);
+int32_t q_proxystyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option, void* widget);
 
 /// Inherited from QObject
 ///
@@ -940,7 +940,7 @@ void q_proxystyle_kill_timer(void* self, int id);
 ///
 /// @param self QProxyStyle*
 /// @param id enum Qt__TimerId
-void q_proxystyle_kill_timer2(void* self, int64_t id);
+void q_proxystyle_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1117,7 +1117,7 @@ bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QProxyStyle*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_proxystyle_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1128,7 +1128,7 @@ int32_t q_proxystyle_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1139,7 +1139,7 @@ QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

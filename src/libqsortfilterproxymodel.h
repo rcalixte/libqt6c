@@ -35,13 +35,13 @@ void* q_sortfilterproxymodel_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sortfilterproxymodel_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sortfilterproxymodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback int32_t fn(QSortFilterProxyModel*, enum QMetaObject__Call, int, void*)
-void q_sortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_sortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_sortfilterproxymodel_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sortfilterproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sortfilterproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -189,26 +189,26 @@ void q_sortfilterproxymodel_set_filter_key_column(void* self, int column);
 /// @param self QSortFilterProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
-int64_t q_sortfilterproxymodel_filter_case_sensitivity(void* self);
+int32_t q_sortfilterproxymodel_filter_case_sensitivity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setFilterCaseSensitivity)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
-void q_sortfilterproxymodel_set_filter_case_sensitivity(void* self, int64_t cs);
+void q_sortfilterproxymodel_set_filter_case_sensitivity(void* self, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivity)
 ///
 /// @param self QSortFilterProxyModel*
 ///
 /// @return enum Qt__CaseSensitivity
-int64_t q_sortfilterproxymodel_sort_case_sensitivity(void* self);
+int32_t q_sortfilterproxymodel_sort_case_sensitivity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setSortCaseSensitivity)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param cs enum Qt__CaseSensitivity
-void q_sortfilterproxymodel_set_sort_case_sensitivity(void* self, int64_t cs);
+void q_sortfilterproxymodel_set_sort_case_sensitivity(void* self, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#isSortLocaleAware)
 ///
@@ -231,7 +231,7 @@ int32_t q_sortfilterproxymodel_sort_column(void* self);
 /// @param self QSortFilterProxyModel*
 ///
 /// @return enum Qt__SortOrder
-int64_t q_sortfilterproxymodel_sort_order(void* self);
+int32_t q_sortfilterproxymodel_sort_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dynamicSortFilter)
 ///
@@ -645,7 +645,7 @@ bool q_sortfilterproxymodel_qbase_set_data(void* self, void* index, void* value,
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
-QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int64_t orientation, int role);
+QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
@@ -653,7 +653,7 @@ QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int64_t or
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QVariant* fn(QSortFilterProxyModel*, int, enum Qt__Orientation, int)
-void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int));
+void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#headerData)
 ///
@@ -663,7 +663,7 @@ void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(voi
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
-QVariant* q_sortfilterproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role);
+QVariant* q_sortfilterproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -672,7 +672,7 @@ QVariant* q_sortfilterproxymodel_qbase_header_data(void* self, int section, int6
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
-bool q_sortfilterproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
+bool q_sortfilterproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -680,7 +680,7 @@ bool q_sortfilterproxymodel_set_header_data(void* self, int section, int64_t ori
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback bool fn(QSortFilterProxyModel*, int, enum Qt__Orientation, QVariant*, int)
-void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int));
+void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#setHeaderData)
 ///
@@ -691,7 +691,7 @@ void q_sortfilterproxymodel_on_set_header_data(void* self, bool (*callback)(void
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
-bool q_sortfilterproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
+bool q_sortfilterproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeData)
 ///
@@ -723,7 +723,7 @@ QMimeData* q_sortfilterproxymodel_qbase_mime_data(void* self, libqt_list indexes
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -731,7 +731,7 @@ bool q_sortfilterproxymodel_drop_mime_data(void* self, void* data, int64_t actio
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback bool fn(QSortFilterProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
-void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
+void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#dropMimeData)
 ///
@@ -743,7 +743,7 @@ void q_sortfilterproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_sortfilterproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#insertRows)
 ///
@@ -998,7 +998,7 @@ QSize* q_sortfilterproxymodel_qbase_span(void* self, void* index);
 /// @param self QSortFilterProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
-void q_sortfilterproxymodel_sort(void* self, int column, int64_t order);
+void q_sortfilterproxymodel_sort(void* self, int column, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sort)
 ///
@@ -1006,7 +1006,7 @@ void q_sortfilterproxymodel_sort(void* self, int column, int64_t order);
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, int, enum Qt__SortOrder)
-void q_sortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t));
+void q_sortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sort)
 ///
@@ -1015,7 +1015,7 @@ void q_sortfilterproxymodel_on_sort(void* self, void (*callback)(void*, int, int
 /// @param self QSortFilterProxyModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
-void q_sortfilterproxymodel_qbase_sort(void* self, int column, int64_t order);
+void q_sortfilterproxymodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#mimeTypes)
 ///
@@ -1079,25 +1079,25 @@ void q_sortfilterproxymodel_on_dynamic_sort_filter_changed(void* self, void (*ca
 ///
 /// @param self QSortFilterProxyModel*
 /// @param filterCaseSensitivity enum Qt__CaseSensitivity
-void q_sortfilterproxymodel_filter_case_sensitivity_changed(void* self, int64_t filterCaseSensitivity);
+void q_sortfilterproxymodel_filter_case_sensitivity_changed(void* self, int32_t filterCaseSensitivity);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#filterCaseSensitivityChanged)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, enum Qt__CaseSensitivity)
-void q_sortfilterproxymodel_on_filter_case_sensitivity_changed(void* self, void (*callback)(void*, int64_t));
+void q_sortfilterproxymodel_on_filter_case_sensitivity_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param sortCaseSensitivity enum Qt__CaseSensitivity
-void q_sortfilterproxymodel_sort_case_sensitivity_changed(void* self, int64_t sortCaseSensitivity);
+void q_sortfilterproxymodel_sort_case_sensitivity_changed(void* self, int32_t sortCaseSensitivity);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortCaseSensitivityChanged)
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, enum Qt__CaseSensitivity)
-void q_sortfilterproxymodel_on_sort_case_sensitivity_changed(void* self, void (*callback)(void*, int64_t));
+void q_sortfilterproxymodel_on_sort_case_sensitivity_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsortfilterproxymodel.html#sortLocaleAwareChanged)
 ///
@@ -1279,7 +1279,7 @@ void q_sortfilterproxymodel_on_data_changed(void* self, void (*callback)(void*, 
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
-void q_sortfilterproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
+void q_sortfilterproxymodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1287,7 +1287,7 @@ void q_sortfilterproxymodel_header_data_changed(void* self, int64_t orientation,
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, enum Qt__Orientation, int, int)
-void q_sortfilterproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
+void q_sortfilterproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1415,7 +1415,7 @@ void q_sortfilterproxymodel_on_layout_changed1(void* self, void (*callback)(void
 /// @param self QSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1423,7 +1423,7 @@ void q_sortfilterproxymodel_layout_changed2(void* self, libqt_list parents, int6
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_sortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_sortfilterproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1448,7 +1448,7 @@ void q_sortfilterproxymodel_on_layout_about_to_be_changed1(void* self, void (*ca
 /// @param self QSortFilterProxyModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1456,7 +1456,7 @@ void q_sortfilterproxymodel_layout_about_to_be_changed2(void* self, libqt_list p
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback void fn(QSortFilterProxyModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_sortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_sortfilterproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -1548,7 +1548,7 @@ void q_sortfilterproxymodel_kill_timer(void* self, int id);
 ///
 /// @param self QSortFilterProxyModel*
 /// @param id enum Qt__TimerId
-void q_sortfilterproxymodel_kill_timer2(void* self, int64_t id);
+void q_sortfilterproxymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1718,7 +1718,7 @@ bool q_sortfilterproxymodel_move_to_thread2(void* self, void* thread, void* para
 /// @param self QSortFilterProxyModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_sortfilterproxymodel_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_sortfilterproxymodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1729,7 +1729,7 @@ int32_t q_sortfilterproxymodel_start_timer22(void* self, int interval, int64_t t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sortfilterproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_sortfilterproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1740,7 +1740,7 @@ QMetaObject__Connection* q_sortfilterproxymodel_connect5(void* sender, void* sig
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sortfilterproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_sortfilterproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1918,7 +1918,7 @@ void q_sortfilterproxymodel_on_clear_item_data(void* self, bool (*callback)(void
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1932,7 +1932,7 @@ bool q_sortfilterproxymodel_can_drop_mime_data(void* self, void* data, int64_t a
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_sortfilterproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_sortfilterproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractProxyModel
 ///
@@ -1942,7 +1942,7 @@ bool q_sortfilterproxymodel_qbase_can_drop_mime_data(void* self, void* data, int
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback bool fn(QSortFilterProxyModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
-void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
+void q_sortfilterproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractProxyModel
 ///

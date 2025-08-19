@@ -131,7 +131,7 @@ QRect* q_fontmetrics_tight_bounding_rect2(void* self, const char* text, void* te
     return QFontMetrics_TightBoundingRect2((QFontMetrics*)self, qstring(text), (QTextOption*)textOption);
 }
 
-const char* q_fontmetrics_elided_text(void* self, const char* text, int64_t mode, int width) {
+const char* q_fontmetrics_elided_text(void* self, const char* text, int32_t mode, int width) {
     libqt_string _str = QFontMetrics_ElidedText((QFontMetrics*)self, qstring(text), mode, width);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -194,7 +194,7 @@ QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops,
     return QFontMetrics_Size4((QFontMetrics*)self, flags, qstring(str), tabstops, tabarray);
 }
 
-const char* q_fontmetrics_elided_text4(void* self, const char* text, int64_t mode, int width, int flags) {
+const char* q_fontmetrics_elided_text4(void* self, const char* text, int32_t mode, int width, int flags) {
     libqt_string _str = QFontMetrics_ElidedText4((QFontMetrics*)self, qstring(text), mode, width, flags);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -333,7 +333,7 @@ QRectF* q_fontmetricsf_tight_bounding_rect2(void* self, const char* text, void* 
     return QFontMetricsF_TightBoundingRect2((QFontMetricsF*)self, qstring(text), (QTextOption*)textOption);
 }
 
-const char* q_fontmetricsf_elided_text(void* self, const char* text, int64_t mode, double width) {
+const char* q_fontmetricsf_elided_text(void* self, const char* text, int32_t mode, double width) {
     libqt_string _str = QFontMetricsF_ElidedText((QFontMetricsF*)self, qstring(text), mode, width);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -388,7 +388,7 @@ QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstop
     return QFontMetricsF_Size4((QFontMetricsF*)self, flags, qstring(str), tabstops, tabarray);
 }
 
-const char* q_fontmetricsf_elided_text4(void* self, const char* text, int64_t mode, double width, int flags) {
+const char* q_fontmetricsf_elided_text4(void* self, const char* text, int32_t mode, double width, int flags) {
     libqt_string _str = QFontMetricsF_ElidedText4((QFontMetricsF*)self, qstring(text), mode, width, flags);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

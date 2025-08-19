@@ -18,7 +18,7 @@
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
 /// @param family const char*
-void q_webenginesettings_set_font_family(void* self, int64_t which, const char* family);
+void q_webenginesettings_set_font_family(void* self, int32_t which, const char* family);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontFamily)
 ///
@@ -26,51 +26,51 @@ void q_webenginesettings_set_font_family(void* self, int64_t which, const char* 
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
-const char* q_webenginesettings_font_family(void* self, int64_t which);
+const char* q_webenginesettings_font_family(void* self, int32_t which);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontFamily)
 ///
 /// @param self QWebEngineSettings*
 /// @param which enum QWebEngineSettings__FontFamily
-void q_webenginesettings_reset_font_family(void* self, int64_t which);
+void q_webenginesettings_reset_font_family(void* self, int32_t which);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setFontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param typeVal enum QWebEngineSettings__FontSize
 /// @param size int
-void q_webenginesettings_set_font_size(void* self, int64_t typeVal, int size);
+void q_webenginesettings_set_font_size(void* self, int32_t typeVal, int size);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#fontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param typeVal enum QWebEngineSettings__FontSize
-int32_t q_webenginesettings_font_size(void* self, int64_t typeVal);
+int32_t q_webenginesettings_font_size(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetFontSize)
 ///
 /// @param self QWebEngineSettings*
 /// @param typeVal enum QWebEngineSettings__FontSize
-void q_webenginesettings_reset_font_size(void* self, int64_t typeVal);
+void q_webenginesettings_reset_font_size(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
 /// @param on bool
-void q_webenginesettings_set_attribute(void* self, int64_t attr, bool on);
+void q_webenginesettings_set_attribute(void* self, int32_t attr, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#testAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
-bool q_webenginesettings_test_attribute(void* self, int64_t attr);
+bool q_webenginesettings_test_attribute(void* self, int32_t attr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetAttribute)
 ///
 /// @param self QWebEngineSettings*
 /// @param attr enum QWebEngineSettings__WebAttribute
-void q_webenginesettings_reset_attribute(void* self, int64_t attr);
+void q_webenginesettings_reset_attribute(void* self, int32_t attr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setDefaultTextEncoding)
 ///
@@ -90,13 +90,13 @@ const char* q_webenginesettings_default_text_encoding(void* self);
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__UnknownUrlSchemePolicy
-int64_t q_webenginesettings_unknown_url_scheme_policy(void* self);
+int32_t q_webenginesettings_unknown_url_scheme_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#setUnknownUrlSchemePolicy)
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__UnknownUrlSchemePolicy
-void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int64_t policy);
+void q_webenginesettings_set_unknown_url_scheme_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetUnknownUrlSchemePolicy)
 ///
@@ -107,14 +107,14 @@ void q_webenginesettings_reset_unknown_url_scheme_policy(void* self);
 ///
 /// @param self QWebEngineSettings*
 /// @param policy enum QWebEngineSettings__ImageAnimationPolicy
-void q_webenginesettings_set_image_animation_policy(void* self, int64_t policy);
+void q_webenginesettings_set_image_animation_policy(void* self, uint8_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#imageAnimationPolicy)
 ///
 /// @param self QWebEngineSettings*
 ///
 /// @return enum QWebEngineSettings__ImageAnimationPolicy
-int64_t q_webenginesettings_image_animation_policy(void* self);
+uint8_t q_webenginesettings_image_animation_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginesettings.html#resetImageAnimationPolicy)
 ///

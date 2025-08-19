@@ -38,7 +38,7 @@ bool q_ssldiffiehellmanparameters_is_valid(void* self) {
     return QSslDiffieHellmanParameters_IsValid((QSslDiffieHellmanParameters*)self);
 }
 
-int64_t q_ssldiffiehellmanparameters_error(void* self) {
+int32_t q_ssldiffiehellmanparameters_error(void* self) {
     return QSslDiffieHellmanParameters_Error((QSslDiffieHellmanParameters*)self);
 }
 
@@ -49,11 +49,11 @@ const char* q_ssldiffiehellmanparameters_error_string(void* self) {
     return _ret;
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int64_t format) {
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int32_t format) {
     return QSslDiffieHellmanParameters_FromEncoded22(qstring(encoded), format);
 }
 
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int64_t format) {
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int32_t format) {
     return QSslDiffieHellmanParameters_FromEncoded23((QIODevice*)device, format);
 }
 

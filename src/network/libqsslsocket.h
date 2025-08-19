@@ -35,13 +35,13 @@ void* q_sslsocket_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sslsocket_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sslsocket_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSslSocket*
 /// @param callback int32_t fn(QSslSocket*, enum QMetaObject__Call, int, void*)
-void q_sslsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_sslsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_sslsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sslsocket_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sslsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -99,7 +99,7 @@ void q_sslsocket_connect_to_host_encrypted2(void* self, const char* hostName, un
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketDescriptor)
 ///
@@ -107,7 +107,7 @@ bool q_sslsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 ///
 /// @param self QSslSocket*
 /// @param callback bool fn(QSslSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
-void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int64_t, int64_t));
+void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketDescriptor)
 ///
@@ -117,7 +117,7 @@ void q_sslsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, in
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_sslsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_sslsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#connectToHost)
 ///
@@ -126,7 +126,7 @@ bool q_sslsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescript
 /// @param port unsigned short
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int64_t protocol);
+void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#connectToHost)
 ///
@@ -134,7 +134,7 @@ void q_sslsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
-void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int64_t));
+void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#connectToHost)
 ///
@@ -145,7 +145,7 @@ void q_sslsocket_on_connect_to_host(void* self, void (*callback)(void*, const ch
 /// @param port unsigned short
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sslsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int64_t protocol);
+void q_sslsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t openMode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#disconnectFromHost)
 ///
@@ -172,7 +172,7 @@ void q_sslsocket_qbase_disconnect_from_host(void* self);
 /// @param self QSslSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_sslsocket_set_socket_option(void* self, int64_t option, void* value);
+void q_sslsocket_set_socket_option(void* self, int32_t option, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketOption)
 ///
@@ -180,7 +180,7 @@ void q_sslsocket_set_socket_option(void* self, int64_t option, void* value);
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketOption, QVariant*)
-void q_sslsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_t, void*));
+void q_sslsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setSocketOption)
 ///
@@ -189,13 +189,13 @@ void q_sslsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_
 /// @param self QSslSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_sslsocket_qbase_set_socket_option(void* self, int64_t option, void* value);
+void q_sslsocket_qbase_set_socket_option(void* self, int32_t option, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#socketOption)
 ///
 /// @param self QSslSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_sslsocket_socket_option(void* self, int64_t option);
+QVariant* q_sslsocket_socket_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#socketOption)
 ///
@@ -203,7 +203,7 @@ QVariant* q_sslsocket_socket_option(void* self, int64_t option);
 ///
 /// @param self QSslSocket*
 /// @param callback QVariant* fn(QSslSocket*, enum QAbstractSocket__SocketOption)
-void q_sslsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64_t));
+void q_sslsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#socketOption)
 ///
@@ -211,14 +211,14 @@ void q_sslsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64
 ///
 /// @param self QSslSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_sslsocket_qbase_socket_option(void* self, int64_t option);
+QVariant* q_sslsocket_qbase_socket_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#mode)
 ///
 /// @param self QSslSocket*
 ///
 /// @return enum QSslSocket__SslMode
-int64_t q_sslsocket_mode(void* self);
+int32_t q_sslsocket_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isEncrypted)
 ///
@@ -230,26 +230,26 @@ bool q_sslsocket_is_encrypted(void* self);
 /// @param self QSslSocket*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_sslsocket_protocol(void* self);
+int32_t q_sslsocket_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setProtocol)
 ///
 /// @param self QSslSocket*
 /// @param protocol enum QSsl__SslProtocol
-void q_sslsocket_set_protocol(void* self, int64_t protocol);
+void q_sslsocket_set_protocol(void* self, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyMode)
 ///
 /// @param self QSslSocket*
 ///
 /// @return enum QSslSocket__PeerVerifyMode
-int64_t q_sslsocket_peer_verify_mode(void* self);
+int32_t q_sslsocket_peer_verify_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPeerVerifyMode)
 ///
 /// @param self QSslSocket*
 /// @param mode enum QSslSocket__PeerVerifyMode
-void q_sslsocket_set_peer_verify_mode(void* self, int64_t mode);
+void q_sslsocket_set_peer_verify_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#peerVerifyDepth)
 ///
@@ -466,7 +466,7 @@ QSslCipher* q_sslsocket_session_cipher(void* self);
 /// @param self QSslSocket*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_sslsocket_session_protocol(void* self);
+int32_t q_sslsocket_session_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#ocspResponses)
 ///
@@ -633,34 +633,34 @@ bool q_sslsocket_set_active_backend(const char* backendName);
 ///
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
-libqt_list /* of int64_t */ q_sslsocket_supported_protocols();
+libqt_list /* of int32_t */ q_sslsocket_supported_protocols();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
 /// @param protocol enum QSsl__SslProtocol
-bool q_sslsocket_is_protocol_supported(int64_t protocol);
+bool q_sslsocket_is_protocol_supported(int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#implementedClasses)
 ///
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
-libqt_list /* of int64_t */ q_sslsocket_implemented_classes();
+libqt_list /* of int32_t */ q_sslsocket_implemented_classes();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
 /// @param cl enum QSsl__ImplementedClass
-bool q_sslsocket_is_class_implemented(int64_t cl);
+bool q_sslsocket_is_class_implemented(int32_t cl);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#supportedFeatures)
 ///
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
-libqt_list /* of int64_t */ q_sslsocket_supported_features();
+libqt_list /* of int32_t */ q_sslsocket_supported_features();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///
 /// @param feat enum QSsl__SupportedFeature
-bool q_sslsocket_is_feature_supported(int64_t feat);
+bool q_sslsocket_is_feature_supported(int32_t feat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#ignoreSslErrors)
 ///
@@ -727,13 +727,13 @@ void q_sslsocket_on_ssl_errors(void* self, void (*callback)(void*, libqt_list));
 ///
 /// @param self QSslSocket*
 /// @param newMode enum QSslSocket__SslMode
-void q_sslsocket_mode_changed(void* self, int64_t newMode);
+void q_sslsocket_mode_changed(void* self, int32_t newMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#modeChanged)
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QSslSocket__SslMode)
-void q_sslsocket_on_mode_changed(void* self, void (*callback)(void*, int64_t));
+void q_sslsocket_on_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#encryptedBytesWritten)
 ///
@@ -776,13 +776,13 @@ void q_sslsocket_on_new_session_ticket_received(void* self, void (*callback)(voi
 /// @param level enum QSsl__AlertLevel
 /// @param typeVal enum QSsl__AlertType
 /// @param description const char*
-void q_sslsocket_alert_sent(void* self, int64_t level, int64_t typeVal, const char* description);
+void q_sslsocket_alert_sent(void* self, int32_t level, int32_t typeVal, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertSent)
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
-void q_sslsocket_on_alert_sent(void* self, void (*callback)(void*, int64_t, int64_t, const char*));
+void q_sslsocket_on_alert_sent(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
 ///
@@ -790,13 +790,13 @@ void q_sslsocket_on_alert_sent(void* self, void (*callback)(void*, int64_t, int6
 /// @param level enum QSsl__AlertLevel
 /// @param typeVal enum QSsl__AlertType
 /// @param description const char*
-void q_sslsocket_alert_received(void* self, int64_t level, int64_t typeVal, const char* description);
+void q_sslsocket_alert_received(void* self, int32_t level, int32_t typeVal, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#alertReceived)
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
-void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int64_t, int64_t, const char*));
+void q_sslsocket_on_alert_received(void* self, void (*callback)(void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#handshakeInterruptedOnError)
 ///
@@ -912,7 +912,7 @@ void q_sslsocket_connect_to_host_encrypted3(void* self, const char* hostName, un
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sslsocket_connect_to_host_encrypted4(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_sslsocket_connect_to_host_encrypted4(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#connectToHostEncrypted)
 ///
@@ -931,21 +931,21 @@ void q_sslsocket_connect_to_host_encrypted42(void* self, const char* hostName, u
 /// @param sslPeerName const char*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int64_t mode, int64_t protocol);
+void q_sslsocket_connect_to_host_encrypted5(void* self, const char* hostName, unsigned short port, const char* sslPeerName, int64_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setLocalCertificate)
 ///
 /// @param self QSslSocket*
 /// @param fileName const char*
 /// @param format enum QSsl__EncodingFormat
-void q_sslsocket_set_local_certificate22(void* self, const char* fileName, int64_t format);
+void q_sslsocket_set_local_certificate22(void* self, const char* fileName, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
 /// @param self QSslSocket*
 /// @param fileName const char*
 /// @param algorithm enum QSsl__KeyAlgorithm
-void q_sslsocket_set_private_key22(void* self, const char* fileName, int64_t algorithm);
+void q_sslsocket_set_private_key22(void* self, const char* fileName, int32_t algorithm);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
@@ -953,7 +953,7 @@ void q_sslsocket_set_private_key22(void* self, const char* fileName, int64_t alg
 /// @param fileName const char*
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
-void q_sslsocket_set_private_key3(void* self, const char* fileName, int64_t algorithm, int64_t format);
+void q_sslsocket_set_private_key3(void* self, const char* fileName, int32_t algorithm, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#setPrivateKey)
 ///
@@ -962,7 +962,7 @@ void q_sslsocket_set_private_key3(void* self, const char* fileName, int64_t algo
 /// @param algorithm enum QSsl__KeyAlgorithm
 /// @param format enum QSsl__EncodingFormat
 /// @param passPhrase const char*
-void q_sslsocket_set_private_key4(void* self, const char* fileName, int64_t algorithm, int64_t format, const char* passPhrase);
+void q_sslsocket_set_private_key4(void* self, const char* fileName, int32_t algorithm, int32_t format, const char* passPhrase);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#waitForEncrypted)
 ///
@@ -975,39 +975,39 @@ bool q_sslsocket_wait_for_encrypted1(void* self, int msecs);
 /// @param backendName const char*
 ///
 /// @return libqt_list of enum QSsl__SslProtocol
-libqt_list /* of int64_t */ q_sslsocket_supported_protocols1(const char* backendName);
+libqt_list /* of int32_t */ q_sslsocket_supported_protocols1(const char* backendName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isProtocolSupported)
 ///
 /// @param protocol enum QSsl__SslProtocol
 /// @param backendName const char*
-bool q_sslsocket_is_protocol_supported2(int64_t protocol, const char* backendName);
+bool q_sslsocket_is_protocol_supported2(int32_t protocol, const char* backendName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#implementedClasses)
 ///
 /// @param backendName const char*
 ///
 /// @return libqt_list of enum QSsl__ImplementedClass
-libqt_list /* of int64_t */ q_sslsocket_implemented_classes1(const char* backendName);
+libqt_list /* of int32_t */ q_sslsocket_implemented_classes1(const char* backendName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isClassImplemented)
 ///
 /// @param cl enum QSsl__ImplementedClass
 /// @param backendName const char*
-bool q_sslsocket_is_class_implemented2(int64_t cl, const char* backendName);
+bool q_sslsocket_is_class_implemented2(int32_t cl, const char* backendName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#supportedFeatures)
 ///
 /// @param backendName const char*
 ///
 /// @return libqt_list of enum QSsl__SupportedFeature
-libqt_list /* of int64_t */ q_sslsocket_supported_features1(const char* backendName);
+libqt_list /* of int32_t */ q_sslsocket_supported_features1(const char* backendName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslsocket.html#isFeatureSupported)
 ///
 /// @param feat enum QSsl__SupportedFeature
 /// @param backendName const char*
-bool q_sslsocket_is_feature_supported2(int64_t feat, const char* backendName);
+bool q_sslsocket_is_feature_supported2(int32_t feat, const char* backendName);
 
 /// Inherited from QTcpSocket
 ///
@@ -1016,7 +1016,7 @@ bool q_sslsocket_is_feature_supported2(int64_t feat, const char* backendName);
 /// @param self QSslSocket*
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
-bool q_sslsocket_bind2(void* self, int64_t addr, unsigned short port);
+bool q_sslsocket_bind2(void* self, int32_t addr, unsigned short port);
 
 /// Inherited from QTcpSocket
 ///
@@ -1026,7 +1026,7 @@ bool q_sslsocket_bind2(void* self, int64_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_sslsocket_bind3(void* self, int64_t addr, unsigned short port, int64_t mode);
+bool q_sslsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1119,7 +1119,7 @@ void q_sslsocket_abort(void* self);
 /// @param self QSslSocket*
 ///
 /// @return enum QAbstractSocket__SocketType
-int64_t q_sslsocket_socket_type(void* self);
+int32_t q_sslsocket_socket_type(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1128,7 +1128,7 @@ int64_t q_sslsocket_socket_type(void* self);
 /// @param self QSslSocket*
 ///
 /// @return enum QAbstractSocket__SocketState
-int64_t q_sslsocket_state(void* self);
+int32_t q_sslsocket_state(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1137,7 +1137,7 @@ int64_t q_sslsocket_state(void* self);
 /// @param self QSslSocket*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_sslsocket_error(void* self);
+int32_t q_sslsocket_error(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1229,7 +1229,7 @@ void q_sslsocket_on_disconnected(void* self, void (*callback)(void*));
 ///
 /// @param self QSslSocket*
 /// @param param1 enum QAbstractSocket__SocketState
-void q_sslsocket_state_changed(void* self, int64_t param1);
+void q_sslsocket_state_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1237,7 +1237,7 @@ void q_sslsocket_state_changed(void* self, int64_t param1);
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketState)
-void q_sslsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_sslsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1245,7 +1245,7 @@ void q_sslsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self QSslSocket*
 /// @param param1 enum QAbstractSocket__SocketError
-void q_sslsocket_error_occurred(void* self, int64_t param1);
+void q_sslsocket_error_occurred(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1253,7 +1253,7 @@ void q_sslsocket_error_occurred(void* self, int64_t param1);
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketError)
-void q_sslsocket_on_error_occurred(void* self, void (*callback)(void*, int64_t));
+void q_sslsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1741,7 +1741,7 @@ void q_sslsocket_kill_timer(void* self, int id);
 ///
 /// @param self QSslSocket*
 /// @param id enum Qt__TimerId
-void q_sslsocket_kill_timer2(void* self, int64_t id);
+void q_sslsocket_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1918,7 +1918,7 @@ bool q_sslsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSslSocket*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_sslsocket_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_sslsocket_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1929,7 +1929,7 @@ int32_t q_sslsocket_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1940,7 +1940,7 @@ QMetaObject__Connection* q_sslsocket_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslsocket_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_sslsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2444,7 +2444,7 @@ void q_sslsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QSslSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_sslsocket_set_socket_state(void* self, int64_t state);
+void q_sslsocket_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2454,7 +2454,7 @@ void q_sslsocket_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QSslSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_sslsocket_qbase_set_socket_state(void* self, int64_t state);
+void q_sslsocket_qbase_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2464,7 +2464,7 @@ void q_sslsocket_qbase_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketState)
-void q_sslsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t));
+void q_sslsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2474,7 +2474,7 @@ void q_sslsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t
 ///
 /// @param self QSslSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_sslsocket_set_socket_error(void* self, int64_t socketError);
+void q_sslsocket_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2484,7 +2484,7 @@ void q_sslsocket_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QSslSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_sslsocket_qbase_set_socket_error(void* self, int64_t socketError);
+void q_sslsocket_qbase_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2494,7 +2494,7 @@ void q_sslsocket_qbase_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QSslSocket*
 /// @param callback void fn(QSslSocket*, enum QAbstractSocket__SocketError)
-void q_sslsocket_on_set_socket_error(void* self, void (*callback)(void*, int64_t));
+void q_sslsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///

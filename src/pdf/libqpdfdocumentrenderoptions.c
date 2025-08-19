@@ -27,11 +27,11 @@ void q_pdfdocumentrenderoptions_move_assign(void* self, void* other) {
     QPdfDocumentRenderOptions_MoveAssign((QPdfDocumentRenderOptions*)self, (QPdfDocumentRenderOptions*)other);
 }
 
-int64_t q_pdfdocumentrenderoptions_rotation(void* self) {
+int32_t q_pdfdocumentrenderoptions_rotation(void* self) {
     return QPdfDocumentRenderOptions_Rotation((QPdfDocumentRenderOptions*)self);
 }
 
-void q_pdfdocumentrenderoptions_set_rotation(void* self, int64_t r) {
+void q_pdfdocumentrenderoptions_set_rotation(void* self, int32_t r) {
     QPdfDocumentRenderOptions_SetRotation((QPdfDocumentRenderOptions*)self, r);
 }
 

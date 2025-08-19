@@ -39,7 +39,7 @@ void q_graphicslayoutitem_set_size_policy(void* self, void* policy);
 /// @param self QGraphicsLayoutItem*
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
-void q_graphicslayoutitem_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
+void q_graphicslayoutitem_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizePolicy)
 ///
@@ -230,7 +230,7 @@ QRectF* q_graphicslayoutitem_contents_rect(void* self);
 ///
 /// @param self QGraphicsLayoutItem*
 /// @param which enum Qt__SizeHint
-QSizeF* q_graphicslayoutitem_effective_size_hint(void* self, int64_t which);
+QSizeF* q_graphicslayoutitem_effective_size_hint(void* self, int32_t which);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#updateGeometry)
 ///
@@ -347,7 +347,7 @@ void q_graphicslayoutitem_qbase_set_owned_by_layout(void* self, bool ownedByLayo
 /// @param self QGraphicsLayoutItem*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayoutitem_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayoutitem_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizeHint)
 ///
@@ -355,7 +355,7 @@ QSizeF* q_graphicslayoutitem_size_hint(void* self, int64_t which, void* constrai
 ///
 /// @param self QGraphicsLayoutItem*
 /// @param callback QSizeF* fn(QGraphicsLayoutItem*, enum Qt__SizeHint, QSizeF*)
-void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
+void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizeHint)
 ///
@@ -364,7 +364,7 @@ void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, in
 /// @param self QGraphicsLayoutItem*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayoutitem_qbase_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayoutitem_qbase_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///
@@ -372,14 +372,14 @@ QSizeF* q_graphicslayoutitem_qbase_size_hint(void* self, int64_t which, void* co
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
 /// @param controlType enum QSizePolicy__ControlType
-void q_graphicslayoutitem_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
+void q_graphicslayoutitem_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#effectiveSizeHint)
 ///
 /// @param self QGraphicsLayoutItem*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayoutitem_effective_size_hint2(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayoutitem_effective_size_hint2(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#dtor.QGraphicsLayoutItem)
 ///

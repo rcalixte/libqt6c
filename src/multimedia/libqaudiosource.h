@@ -59,13 +59,13 @@ void* q_audiosource_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_audiosource_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_audiosource_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioSource*
 /// @param callback int32_t fn(QAudioSource*, enum QMetaObject__Call, int, void*)
-void q_audiosource_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_audiosource_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -73,7 +73,7 @@ void q_audiosource_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_audiosource_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_audiosource_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -165,26 +165,26 @@ long long q_audiosource_elapsed_u_secs(void* self);
 /// @param self QAudioSource*
 ///
 /// @return enum QAudio__Error
-int64_t q_audiosource_error(void* self);
+int32_t q_audiosource_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#state)
 ///
 /// @param self QAudioSource*
 ///
 /// @return enum QAudio__State
-int64_t q_audiosource_state(void* self);
+int32_t q_audiosource_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
 ///
 /// @param self QAudioSource*
 /// @param state enum QAudio__State
-void q_audiosource_state_changed(void* self, int64_t state);
+void q_audiosource_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiosource.html#stateChanged)
 ///
 /// @param self QAudioSource*
 /// @param callback void fn(QAudioSource*, enum QAudio__State)
-void q_audiosource_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_audiosource_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -293,7 +293,7 @@ void q_audiosource_kill_timer(void* self, int id);
 ///
 /// @param self QAudioSource*
 /// @param id enum Qt__TimerId
-void q_audiosource_kill_timer2(void* self, int64_t id);
+void q_audiosource_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -470,7 +470,7 @@ bool q_audiosource_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAudioSource*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_audiosource_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_audiosource_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -481,7 +481,7 @@ int32_t q_audiosource_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_audiosource_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_audiosource_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -492,7 +492,7 @@ QMetaObject__Connection* q_audiosource_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_audiosource_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_audiosource_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

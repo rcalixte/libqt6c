@@ -6,7 +6,7 @@ QReadWriteLock* q_readwritelock_new() {
     return QReadWriteLock_new();
 }
 
-QReadWriteLock* q_readwritelock_new2(int64_t recursionMode) {
+QReadWriteLock* q_readwritelock_new2(int32_t recursionMode) {
     return QReadWriteLock_new2(recursionMode);
 }
 

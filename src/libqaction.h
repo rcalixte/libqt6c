@@ -59,13 +59,13 @@ void* q_action_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_action_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_action_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAction*
 /// @param callback int32_t fn(QAction*, enum QMetaObject__Call, int, void*)
-void q_action_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_action_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -73,7 +73,7 @@ void q_action_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_action_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_action_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -178,14 +178,14 @@ const char* q_action_whats_this(void* self);
 ///
 /// @param self QAction*
 /// @param priority enum QAction__Priority
-void q_action_set_priority(void* self, int64_t priority);
+void q_action_set_priority(void* self, int32_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#priority)
 ///
 /// @param self QAction*
 ///
 /// @return enum QAction__Priority
-int64_t q_action_priority(void* self);
+int32_t q_action_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setSeparator)
 ///
@@ -219,7 +219,7 @@ void q_action_set_shortcuts(void* self, libqt_list shortcuts);
 ///
 /// @param self QAction*
 /// @param shortcuts enum QKeySequence__StandardKey
-void q_action_set_shortcuts2(void* self, int64_t shortcuts);
+void q_action_set_shortcuts2(void* self, int32_t shortcuts);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcuts)
 ///
@@ -230,14 +230,14 @@ libqt_list /* of QKeySequence* */ q_action_shortcuts(void* self);
 ///
 /// @param self QAction*
 /// @param context enum Qt__ShortcutContext
-void q_action_set_shortcut_context(void* self, int64_t context);
+void q_action_set_shortcut_context(void* self, int32_t context);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#shortcutContext)
 ///
 /// @param self QAction*
 ///
 /// @return enum Qt__ShortcutContext
-int64_t q_action_shortcut_context(void* self);
+int32_t q_action_shortcut_context(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setAutoRepeat)
 ///
@@ -302,20 +302,20 @@ bool q_action_is_visible(void* self);
 ///
 /// @param self QAction*
 /// @param event enum QAction__ActionEvent
-void q_action_activate(void* self, int64_t event);
+void q_action_activate(void* self, int32_t event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setMenuRole)
 ///
 /// @param self QAction*
 /// @param menuRole enum QAction__MenuRole
-void q_action_set_menu_role(void* self, int64_t menuRole);
+void q_action_set_menu_role(void* self, int32_t menuRole);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#menuRole)
 ///
 /// @param self QAction*
 ///
 /// @return enum QAction__MenuRole
-int64_t q_action_menu_role(void* self);
+int32_t q_action_menu_role(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaction.html#setIconVisibleInMenu)
 ///
@@ -615,7 +615,7 @@ void q_action_kill_timer(void* self, int id);
 ///
 /// @param self QAction*
 /// @param id enum Qt__TimerId
-void q_action_kill_timer2(void* self, int64_t id);
+void q_action_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -792,7 +792,7 @@ bool q_action_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAction*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_action_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_action_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -803,7 +803,7 @@ int32_t q_action_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_action_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_action_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -814,7 +814,7 @@ QMetaObject__Connection* q_action_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_action_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_action_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

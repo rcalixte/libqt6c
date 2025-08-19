@@ -37,13 +37,13 @@ void* q_abstractprintdialog_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractprintdialog_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractprintdialog_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractPrintDialog*
 /// @param callback int32_t fn(QAbstractPrintDialog*, enum QMetaObject__Call, int, void*)
-void q_abstractprintdialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_abstractprintdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -51,7 +51,7 @@ void q_abstractprintdialog_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractprintdialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractprintdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -70,14 +70,14 @@ void q_abstractprintdialog_set_option_tabs(void* self, libqt_list tabs);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param range enum QAbstractPrintDialog__PrintRange
-void q_abstractprintdialog_set_print_range(void* self, int64_t range);
+void q_abstractprintdialog_set_print_range(void* self, int32_t range);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractprintdialog.html#printRange)
 ///
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum QAbstractPrintDialog__PrintRange
-int64_t q_abstractprintdialog_print_range(void* self);
+int32_t q_abstractprintdialog_print_range(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractprintdialog.html#setMinMax)
 ///
@@ -290,7 +290,7 @@ bool q_abstractprintdialog_is_modal(void* self);
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_abstractprintdialog_window_modality(void* self);
+int32_t q_abstractprintdialog_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -298,7 +298,7 @@ int64_t q_abstractprintdialog_window_modality(void* self);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param windowModality enum Qt__WindowModality
-void q_abstractprintdialog_set_window_modality(void* self, int64_t windowModality);
+void q_abstractprintdialog_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -761,7 +761,7 @@ void q_abstractprintdialog_set_palette(void* self, void* palette);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_abstractprintdialog_set_background_role(void* self, int64_t backgroundRole);
+void q_abstractprintdialog_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -770,7 +770,7 @@ void q_abstractprintdialog_set_background_role(void* self, int64_t backgroundRol
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_abstractprintdialog_background_role(void* self);
+int32_t q_abstractprintdialog_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -778,7 +778,7 @@ int64_t q_abstractprintdialog_background_role(void* self);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_abstractprintdialog_set_foreground_role(void* self, int64_t foregroundRole);
+void q_abstractprintdialog_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -787,7 +787,7 @@ void q_abstractprintdialog_set_foreground_role(void* self, int64_t foregroundRol
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_abstractprintdialog_foreground_role(void* self);
+int32_t q_abstractprintdialog_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1189,7 +1189,7 @@ void q_abstractprintdialog_set_accessible_description(void* self, const char* de
 ///
 /// @param self QAbstractPrintDialog*
 /// @param direction enum Qt__LayoutDirection
-void q_abstractprintdialog_set_layout_direction(void* self, int64_t direction);
+void q_abstractprintdialog_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1198,7 +1198,7 @@ void q_abstractprintdialog_set_layout_direction(void* self, int64_t direction);
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_abstractprintdialog_layout_direction(void* self);
+int32_t q_abstractprintdialog_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1277,7 +1277,7 @@ void q_abstractprintdialog_clear_focus(void* self);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param reason enum Qt__FocusReason
-void q_abstractprintdialog_set_focus2(void* self, int64_t reason);
+void q_abstractprintdialog_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1286,7 +1286,7 @@ void q_abstractprintdialog_set_focus2(void* self, int64_t reason);
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_abstractprintdialog_focus_policy(void* self);
+int32_t q_abstractprintdialog_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1294,7 +1294,7 @@ int64_t q_abstractprintdialog_focus_policy(void* self);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param policy enum Qt__FocusPolicy
-void q_abstractprintdialog_set_focus_policy(void* self, int64_t policy);
+void q_abstractprintdialog_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1333,7 +1333,7 @@ QWidget* q_abstractprintdialog_focus_proxy(void* self);
 /// @param self QAbstractPrintDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_abstractprintdialog_context_menu_policy(void* self);
+int32_t q_abstractprintdialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1341,7 +1341,7 @@ int64_t q_abstractprintdialog_context_menu_policy(void* self);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_abstractprintdialog_set_context_menu_policy(void* self, int64_t policy);
+void q_abstractprintdialog_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1759,7 +1759,7 @@ void q_abstractprintdialog_set_size_policy(void* self, void* sizePolicy);
 /// @param self QAbstractPrintDialog*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_abstractprintdialog_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_abstractprintdialog_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2067,7 +2067,7 @@ QWidget* q_abstractprintdialog_child_at3(void* self, void* p);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param param1 enum Qt__WidgetAttribute
-void q_abstractprintdialog_set_attribute(void* self, int64_t param1);
+void q_abstractprintdialog_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2075,7 +2075,7 @@ void q_abstractprintdialog_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_abstractprintdialog_test_attribute(void* self, int64_t param1);
+bool q_abstractprintdialog_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2308,7 +2308,7 @@ void q_abstractprintdialog_grab_gesture2(void* self, int64_t typeVal, int64_t fl
 /// @param self QAbstractPrintDialog*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_abstractprintdialog_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_abstractprintdialog_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2344,7 +2344,7 @@ void q_abstractprintdialog_set_window_flag2(void* self, int64_t param1, bool on)
 /// @param self QAbstractPrintDialog*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_abstractprintdialog_set_attribute2(void* self, int64_t param1, bool on);
+void q_abstractprintdialog_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2453,7 +2453,7 @@ void q_abstractprintdialog_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param id enum Qt__TimerId
-void q_abstractprintdialog_kill_timer2(void* self, int64_t id);
+void q_abstractprintdialog_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2622,7 +2622,7 @@ bool q_abstractprintdialog_move_to_thread2(void* self, void* thread, void* param
 /// @param self QAbstractPrintDialog*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstractprintdialog_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstractprintdialog_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2633,7 +2633,7 @@ int32_t q_abstractprintdialog_start_timer22(void* self, int interval, int64_t ti
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractprintdialog_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractprintdialog_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2644,7 +2644,7 @@ QMetaObject__Connection* q_abstractprintdialog_connect5(void* sender, void* sign
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractprintdialog_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstractprintdialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2751,7 +2751,7 @@ double q_abstractprintdialog_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_abstractprintdialog_encode_metric_f(int64_t metric, double value);
+int32_t q_abstractprintdialog_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QDialog
 ///
@@ -3949,7 +3949,7 @@ void q_abstractprintdialog_on_change_event(void* self, void (*callback)(void*, v
 ///
 /// @param self QAbstractPrintDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_abstractprintdialog_metric(void* self, int64_t param1);
+int32_t q_abstractprintdialog_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3959,7 +3959,7 @@ int32_t q_abstractprintdialog_metric(void* self, int64_t param1);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_abstractprintdialog_qbase_metric(void* self, int64_t param1);
+int32_t q_abstractprintdialog_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3969,7 +3969,7 @@ int32_t q_abstractprintdialog_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QAbstractPrintDialog*
 /// @param callback int32_t fn(QAbstractPrintDialog*, enum QPaintDevice__PaintDeviceMetric)
-void q_abstractprintdialog_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_abstractprintdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4594,7 +4594,7 @@ void q_abstractprintdialog_on_is_signal_connected(void* self, bool (*callback)(v
 /// @param self QAbstractPrintDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_abstractprintdialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_abstractprintdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4605,7 +4605,7 @@ double q_abstractprintdialog_get_decoded_metric_f(void* self, int64_t metricA, i
 /// @param self QAbstractPrintDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_abstractprintdialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_abstractprintdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4615,7 +4615,7 @@ double q_abstractprintdialog_qbase_get_decoded_metric_f(void* self, int64_t metr
 ///
 /// @param self QAbstractPrintDialog*
 /// @param callback double fn(QAbstractPrintDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_abstractprintdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_abstractprintdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

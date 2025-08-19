@@ -151,7 +151,7 @@ QRegularExpressionMatch* q_regularexpression_match22(void* self, const char* sub
 /// @param subject const char*
 /// @param offset int64_t
 /// @param matchType enum QRegularExpression__MatchType
-QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subject, int64_t offset, int64_t matchType);
+QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subject, int64_t offset, int32_t matchType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#match)
 ///
@@ -160,7 +160,7 @@ QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subj
 /// @param offset int64_t
 /// @param matchType enum QRegularExpression__MatchType
 /// @param matchOptions flag of enum QRegularExpression__MatchOption
-QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int64_t matchType, int64_t matchOptions);
+QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
@@ -175,7 +175,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match22(void* self, 
 /// @param subject const char*
 /// @param offset int64_t
 /// @param matchType enum QRegularExpression__MatchType
-QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, const char* subject, int64_t offset, int64_t matchType);
+QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, const char* subject, int64_t offset, int32_t matchType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#globalMatch)
 ///
@@ -184,7 +184,7 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, c
 /// @param offset int64_t
 /// @param matchType enum QRegularExpression__MatchType
 /// @param matchOptions flag of enum QRegularExpression__MatchOption
-QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int64_t matchType, int64_t matchOptions);
+QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpression.html#wildcardToRegularExpression)
 ///
@@ -234,7 +234,7 @@ QRegularExpression* q_regularexpressionmatch_regular_expression(void* self);
 /// @param self QRegularExpressionMatch*
 ///
 /// @return enum QRegularExpression__MatchType
-int64_t q_regularexpressionmatch_match_type(void* self);
+int32_t q_regularexpressionmatch_match_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatch.html#matchOptions)
 ///
@@ -416,7 +416,7 @@ QRegularExpression* q_regularexpressionmatchiterator_regular_expression(void* se
 /// @param self QRegularExpressionMatchIterator*
 ///
 /// @return enum QRegularExpression__MatchType
-int64_t q_regularexpressionmatchiterator_match_type(void* self);
+int32_t q_regularexpressionmatchiterator_match_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregularexpressionmatchiterator.html#matchOptions)
 ///

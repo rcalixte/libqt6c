@@ -30,7 +30,7 @@ QCalendar* q_calendar_new3();
 /// q_calendar_new4 constructs a new QCalendar object.
 ///
 /// @param system enum QCalendar__System
-QCalendar* q_calendar_new4(int64_t system);
+QCalendar* q_calendar_new4(int32_t system);
 
 /// q_calendar_new5 constructs a new QCalendar object.
 ///
@@ -244,7 +244,7 @@ const char* q_calendar_month_name3(void* self, void* locale, int month, int year
 /// @param month int
 /// @param year int
 /// @param format enum QLocale__FormatType
-const char* q_calendar_month_name4(void* self, void* locale, int month, int year, int64_t format);
+const char* q_calendar_month_name4(void* self, void* locale, int month, int year, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneMonthName)
 ///
@@ -265,7 +265,7 @@ const char* q_calendar_standalone_month_name3(void* self, void* locale, int mont
 /// @param month int
 /// @param year int
 /// @param format enum QLocale__FormatType
-const char* q_calendar_standalone_month_name4(void* self, void* locale, int month, int year, int64_t format);
+const char* q_calendar_standalone_month_name4(void* self, void* locale, int month, int year, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#weekDayName)
 ///
@@ -275,7 +275,7 @@ const char* q_calendar_standalone_month_name4(void* self, void* locale, int mont
 /// @param locale QLocale*
 /// @param day int
 /// @param format enum QLocale__FormatType
-const char* q_calendar_week_day_name3(void* self, void* locale, int day, int64_t format);
+const char* q_calendar_week_day_name3(void* self, void* locale, int day, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#standaloneWeekDayName)
 ///
@@ -285,7 +285,7 @@ const char* q_calendar_week_day_name3(void* self, void* locale, int day, int64_t
 /// @param locale QLocale*
 /// @param day int
 /// @param format enum QLocale__FormatType
-const char* q_calendar_standalone_week_day_name3(void* self, void* locale, int day, int64_t format);
+const char* q_calendar_standalone_week_day_name3(void* self, void* locale, int day, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendar.html#dtor.QCalendar)
 ///
@@ -345,8 +345,6 @@ void q_calendar__yearmonthday_move_assign(void* self, void* other);
 /// @param self QCalendar__YearMonthDay*
 bool q_calendar__yearmonthday_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar::yearmonthday.html#dtor.QCalendar::YearMonthDay)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCalendar__YearMonthDay*
@@ -390,8 +388,6 @@ uint64_t q_calendar__systemid_index(void* self);
 /// @param self QCalendar__SystemId*
 bool q_calendar__systemid_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar::systemid.html#dtor.QCalendar::SystemId)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCalendar__SystemId*

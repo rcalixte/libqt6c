@@ -81,7 +81,7 @@ bool q_printerinfo_is_remote(void* self);
 /// @param self QPrinterInfo*
 ///
 /// @return enum QPrinter__PrinterState
-int64_t q_printerinfo_state(void* self);
+int32_t q_printerinfo_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedPageSizes)
 ///
@@ -118,28 +118,28 @@ libqt_list /* of int */ q_printerinfo_supported_resolutions(void* self);
 /// @param self QPrinterInfo*
 ///
 /// @return enum QPrinter__DuplexMode
-int64_t q_printerinfo_default_duplex_mode(void* self);
+int32_t q_printerinfo_default_duplex_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedDuplexModes)
 ///
 /// @param self QPrinterInfo*
 ///
 /// @return libqt_list of enum QPrinter__DuplexMode
-libqt_list /* of int64_t */ q_printerinfo_supported_duplex_modes(void* self);
+libqt_list /* of int32_t */ q_printerinfo_supported_duplex_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#defaultColorMode)
 ///
 /// @param self QPrinterInfo*
 ///
 /// @return enum QPrinter__ColorMode
-int64_t q_printerinfo_default_color_mode(void* self);
+int32_t q_printerinfo_default_color_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#supportedColorModes)
 ///
 /// @param self QPrinterInfo*
 ///
 /// @return libqt_list of enum QPrinter__ColorMode
-libqt_list /* of int64_t */ q_printerinfo_supported_color_modes(void* self);
+libqt_list /* of int32_t */ q_printerinfo_supported_color_modes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinterinfo.html#availablePrinterNames)
 ///

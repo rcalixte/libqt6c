@@ -51,13 +51,13 @@ bool q_networkaddressentry_operator_not_equal(void* self, void* other);
 /// @param self QNetworkAddressEntry*
 ///
 /// @return enum QNetworkAddressEntry__DnsEligibilityStatus
-int64_t q_networkaddressentry_dns_eligibility(void* self);
+int8_t q_networkaddressentry_dns_eligibility(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#setDnsEligibility)
 ///
 /// @param self QNetworkAddressEntry*
 /// @param status enum QNetworkAddressEntry__DnsEligibilityStatus
-void q_networkaddressentry_set_dns_eligibility(void* self, int64_t status);
+void q_networkaddressentry_set_dns_eligibility(void* self, int8_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkaddressentry.html#ip)
 ///
@@ -211,7 +211,7 @@ int64_t q_networkinterface_flags(void* self);
 /// @param self QNetworkInterface*
 ///
 /// @return enum QNetworkInterface__InterfaceType
-int64_t q_networkinterface_type(void* self);
+int32_t q_networkinterface_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinterface.html#hardwareAddress)
 ///

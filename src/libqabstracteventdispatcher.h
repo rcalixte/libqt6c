@@ -26,7 +26,7 @@ void* q_abstracteventdispatcher_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstracteventdispatcher_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstracteventdispatcher_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,7 +63,7 @@ void q_abstracteventdispatcher_unregister_socket_notifier(void* self, void* noti
 /// @param interval long long
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
-int32_t q_abstracteventdispatcher_register_timer(void* self, long long interval, int64_t timerType, void* object);
+int32_t q_abstracteventdispatcher_register_timer(void* self, long long interval, int32_t timerType, void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
@@ -72,7 +72,7 @@ int32_t q_abstracteventdispatcher_register_timer(void* self, long long interval,
 /// @param interval long long
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
-void q_abstracteventdispatcher_register_timer2(void* self, int timerId, long long interval, int64_t timerType, void* object);
+void q_abstracteventdispatcher_register_timer2(void* self, int timerId, long long interval, int32_t timerType, void* object);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimer)
 ///
@@ -102,7 +102,7 @@ int32_t q_abstracteventdispatcher_remaining_time(void* self, int timerId);
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param timerId enum Qt__TimerId
-bool q_abstracteventdispatcher_unregister_timer2(void* self, int64_t timerId);
+bool q_abstracteventdispatcher_unregister_timer2(void* self, int32_t timerId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#timersForObject)
 ///
@@ -301,7 +301,7 @@ void q_abstracteventdispatcher_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param id enum Qt__TimerId
-void q_abstracteventdispatcher_kill_timer2(void* self, int64_t id);
+void q_abstracteventdispatcher_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -478,7 +478,7 @@ bool q_abstracteventdispatcher_move_to_thread2(void* self, void* thread, void* p
 /// @param self QAbstractEventDispatcher*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstracteventdispatcher_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstracteventdispatcher_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -489,7 +489,7 @@ int32_t q_abstracteventdispatcher_start_timer22(void* self, int interval, int64_
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -500,7 +500,7 @@ QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracteventdispatcher_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstracteventdispatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -550,7 +550,7 @@ void* q_abstracteventdispatcherv2_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstracteventdispatcherv2_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstracteventdispatcherv2_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -563,7 +563,7 @@ const char* q_abstracteventdispatcherv2_tr(const char* s);
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param timerId enum Qt__TimerId
-bool q_abstracteventdispatcherv2_unregister_timer(void* self, int64_t timerId);
+bool q_abstracteventdispatcherv2_unregister_timer(void* self, int32_t timerId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcherv2.html#timersForObject)
 ///
@@ -633,7 +633,7 @@ void q_abstracteventdispatcherv2_unregister_socket_notifier(void* self, void* no
 /// @param interval long long
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
-int32_t q_abstracteventdispatcherv2_register_timer(void* self, long long interval, int64_t timerType, void* object);
+int32_t q_abstracteventdispatcherv2_register_timer(void* self, long long interval, int32_t timerType, void* object);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -644,7 +644,7 @@ int32_t q_abstracteventdispatcherv2_register_timer(void* self, long long interva
 /// @param interval long long
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
-void q_abstracteventdispatcherv2_register_timer2(void* self, int timerId, long long interval, int64_t timerType, void* object);
+void q_abstracteventdispatcherv2_register_timer2(void* self, int timerId, long long interval, int32_t timerType, void* object);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -676,7 +676,7 @@ int32_t q_abstracteventdispatcherv2_remaining_time(void* self, int timerId);
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param timerId enum Qt__TimerId
-bool q_abstracteventdispatcherv2_unregister_timer2(void* self, int64_t timerId);
+bool q_abstracteventdispatcherv2_unregister_timer2(void* self, int32_t timerId);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -876,7 +876,7 @@ void q_abstracteventdispatcherv2_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param id enum Qt__TimerId
-void q_abstracteventdispatcherv2_kill_timer2(void* self, int64_t id);
+void q_abstracteventdispatcherv2_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1053,7 +1053,7 @@ bool q_abstracteventdispatcherv2_move_to_thread2(void* self, void* thread, void*
 /// @param self QAbstractEventDispatcherV2*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstracteventdispatcherv2_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstracteventdispatcherv2_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1064,7 +1064,7 @@ int32_t q_abstracteventdispatcherv2_start_timer22(void* self, int interval, int6
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1075,7 +1075,7 @@ QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1127,7 +1127,7 @@ QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new2(v
 /// @param id int
 /// @param i int
 /// @param t enum Qt__TimerType
-QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(int id, int i, int64_t t);
+QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(int id, int i, int32_t t);
 
 /// q_abstracteventdispatcher__timerinfo_new4 constructs a new QAbstractEventDispatcher::TimerInfo object.
 ///
@@ -1146,8 +1146,6 @@ void q_abstracteventdispatcher__timerinfo_copy_assign(void* self, void* other);
 /// @param other QAbstractEventDispatcher__TimerInfo*
 void q_abstracteventdispatcher__timerinfo_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher::timerinfo.html#dtor.QAbstractEventDispatcher::TimerInfo)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractEventDispatcher__TimerInfo*
@@ -1170,8 +1168,6 @@ QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_ne
 /// @param param1 QAbstractEventDispatcher__TimerInfoV2*
 void q_abstracteventdispatcher__timerinfov2_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher::timerinfov2.html#dtor.QAbstractEventDispatcher::TimerInfoV2)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractEventDispatcher__TimerInfoV2*

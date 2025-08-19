@@ -16,7 +16,7 @@ void* q_abstracteventdispatcher_metacast(void* self, const char* param1) {
     return QAbstractEventDispatcher_Metacast((QAbstractEventDispatcher*)self, param1);
 }
 
-int32_t q_abstracteventdispatcher_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_abstracteventdispatcher_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QAbstractEventDispatcher_Metacall((QAbstractEventDispatcher*)self, param1, param2, param3);
 }
 
@@ -43,11 +43,11 @@ void q_abstracteventdispatcher_unregister_socket_notifier(void* self, void* noti
     QAbstractEventDispatcher_UnregisterSocketNotifier((QAbstractEventDispatcher*)self, (QSocketNotifier*)notifier);
 }
 
-int32_t q_abstracteventdispatcher_register_timer(void* self, long long interval, int64_t timerType, void* object) {
+int32_t q_abstracteventdispatcher_register_timer(void* self, long long interval, int32_t timerType, void* object) {
     return QAbstractEventDispatcher_RegisterTimer((QAbstractEventDispatcher*)self, interval, timerType, (QObject*)object);
 }
 
-void q_abstracteventdispatcher_register_timer2(void* self, int timerId, long long interval, int64_t timerType, void* object) {
+void q_abstracteventdispatcher_register_timer2(void* self, int timerId, long long interval, int32_t timerType, void* object) {
     QAbstractEventDispatcher_RegisterTimer2((QAbstractEventDispatcher*)self, timerId, interval, timerType, (QObject*)object);
 }
 
@@ -68,7 +68,7 @@ int32_t q_abstracteventdispatcher_remaining_time(void* self, int timerId) {
     return QAbstractEventDispatcher_RemainingTime((QAbstractEventDispatcher*)self, timerId);
 }
 
-bool q_abstracteventdispatcher_unregister_timer2(void* self, int64_t timerId) {
+bool q_abstracteventdispatcher_unregister_timer2(void* self, int32_t timerId) {
     return QAbstractEventDispatcher_UnregisterTimer2((QAbstractEventDispatcher*)self, timerId);
 }
 
@@ -194,7 +194,7 @@ void q_abstracteventdispatcher_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstracteventdispatcher_kill_timer2(void* self, int64_t id) {
+void q_abstracteventdispatcher_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -298,15 +298,15 @@ bool q_abstracteventdispatcher_move_to_thread2(void* self, void* thread, void* p
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstracteventdispatcher_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_abstracteventdispatcher_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_abstracteventdispatcher_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_abstracteventdispatcher_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_abstracteventdispatcher_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -334,7 +334,7 @@ void* q_abstracteventdispatcherv2_metacast(void* self, const char* param1) {
     return QAbstractEventDispatcherV2_Metacast((QAbstractEventDispatcherV2*)self, param1);
 }
 
-int32_t q_abstracteventdispatcherv2_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_abstracteventdispatcherv2_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QAbstractEventDispatcherV2_Metacall((QAbstractEventDispatcherV2*)self, param1, param2, param3);
 }
 
@@ -345,7 +345,7 @@ const char* q_abstracteventdispatcherv2_tr(const char* s) {
     return _ret;
 }
 
-bool q_abstracteventdispatcherv2_unregister_timer(void* self, int64_t timerId) {
+bool q_abstracteventdispatcherv2_unregister_timer(void* self, int32_t timerId) {
     return QAbstractEventDispatcherV2_UnregisterTimer((QAbstractEventDispatcherV2*)self, timerId);
 }
 
@@ -388,11 +388,11 @@ void q_abstracteventdispatcherv2_unregister_socket_notifier(void* self, void* no
     QAbstractEventDispatcher_UnregisterSocketNotifier((QAbstractEventDispatcher*)self, (QSocketNotifier*)notifier);
 }
 
-int32_t q_abstracteventdispatcherv2_register_timer(void* self, long long interval, int64_t timerType, void* object) {
+int32_t q_abstracteventdispatcherv2_register_timer(void* self, long long interval, int32_t timerType, void* object) {
     return QAbstractEventDispatcher_RegisterTimer((QAbstractEventDispatcher*)self, interval, timerType, (QObject*)object);
 }
 
-void q_abstracteventdispatcherv2_register_timer2(void* self, int timerId, long long interval, int64_t timerType, void* object) {
+void q_abstracteventdispatcherv2_register_timer2(void* self, int timerId, long long interval, int32_t timerType, void* object) {
     QAbstractEventDispatcher_RegisterTimer2((QAbstractEventDispatcher*)self, timerId, interval, timerType, (QObject*)object);
 }
 
@@ -409,7 +409,7 @@ int32_t q_abstracteventdispatcherv2_remaining_time(void* self, int timerId) {
     return QAbstractEventDispatcher_RemainingTime((QAbstractEventDispatcher*)self, timerId);
 }
 
-bool q_abstracteventdispatcherv2_unregister_timer2(void* self, int64_t timerId) {
+bool q_abstracteventdispatcherv2_unregister_timer2(void* self, int32_t timerId) {
     return QAbstractEventDispatcher_UnregisterTimer2((QAbstractEventDispatcher*)self, timerId);
 }
 
@@ -516,7 +516,7 @@ void q_abstracteventdispatcherv2_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_abstracteventdispatcherv2_kill_timer2(void* self, int64_t id) {
+void q_abstracteventdispatcherv2_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -620,15 +620,15 @@ bool q_abstracteventdispatcherv2_move_to_thread2(void* self, void* thread, void*
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_abstracteventdispatcherv2_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_abstracteventdispatcherv2_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_abstracteventdispatcherv2_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -656,7 +656,7 @@ QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new2(v
     return QAbstractEventDispatcher__TimerInfo_new2((QAbstractEventDispatcher__TimerInfo*)other);
 }
 
-QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(int id, int i, int64_t t) {
+QAbstractEventDispatcher__TimerInfo* q_abstracteventdispatcher__timerinfo_new3(int id, int i, int32_t t) {
     return QAbstractEventDispatcher__TimerInfo_new3(id, i, t);
 }
 

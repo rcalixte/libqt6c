@@ -48,13 +48,13 @@ bool q_datastream_at_end(void* self);
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__Status
-int64_t q_datastream_status(void* self);
+int32_t q_datastream_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#setStatus)
 ///
 /// @param self QDataStream*
 /// @param status enum QDataStream__Status
-void q_datastream_set_status(void* self, int64_t status);
+void q_datastream_set_status(void* self, int32_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#resetStatus)
 ///
@@ -66,26 +66,26 @@ void q_datastream_reset_status(void* self);
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__FloatingPointPrecision
-int64_t q_datastream_floating_point_precision(void* self);
+int32_t q_datastream_floating_point_precision(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#setFloatingPointPrecision)
 ///
 /// @param self QDataStream*
 /// @param precision enum QDataStream__FloatingPointPrecision
-void q_datastream_set_floating_point_precision(void* self, int64_t precision);
+void q_datastream_set_floating_point_precision(void* self, int32_t precision);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#byteOrder)
 ///
 /// @param self QDataStream*
 ///
 /// @return enum QDataStream__ByteOrder
-int64_t q_datastream_byte_order(void* self);
+int32_t q_datastream_byte_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#setByteOrder)
 ///
 /// @param self QDataStream*
 /// @param byteOrder enum QDataStream__ByteOrder
-void q_datastream_set_byte_order(void* self, int64_t byteOrder);
+void q_datastream_set_byte_order(void* self, int32_t byteOrder);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatastream.html#version)
 ///

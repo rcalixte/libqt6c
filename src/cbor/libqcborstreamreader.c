@@ -71,7 +71,7 @@ int32_t q_cborstreamreader_container_depth(void* self) {
     return QCborStreamReader_ContainerDepth((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_parent_container_type(void* self) {
+uint8_t q_cborstreamreader_parent_container_type(void* self) {
     return QCborStreamReader_ParentContainerType((QCborStreamReader*)self);
 }
 
@@ -83,7 +83,7 @@ bool q_cborstreamreader_next(void* self) {
     return QCborStreamReader_Next((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_type(void* self) {
+uint8_t q_cborstreamreader_type(void* self) {
     return QCborStreamReader_Type((QCborStreamReader*)self);
 }
 
@@ -139,7 +139,7 @@ bool q_cborstreamreader_is_invalid(void* self) {
     return QCborStreamReader_IsInvalid((QCborStreamReader*)self);
 }
 
-bool q_cborstreamreader_is_simple_type2(void* self, int64_t st) {
+bool q_cborstreamreader_is_simple_type2(void* self, uint8_t st) {
     return QCborStreamReader_IsSimpleType2((QCborStreamReader*)self, st);
 }
 
@@ -203,7 +203,7 @@ bool q_cborstreamreader_to_bool(void* self) {
     return QCborStreamReader_ToBool((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_to_tag(void* self) {
+uint64_t q_cborstreamreader_to_tag(void* self) {
     return QCborStreamReader_ToTag((QCborStreamReader*)self);
 }
 
@@ -211,11 +211,11 @@ uint64_t q_cborstreamreader_to_unsigned_integer(void* self) {
     return QCborStreamReader_ToUnsignedInteger((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_to_negative_integer(void* self) {
+uint64_t q_cborstreamreader_to_negative_integer(void* self) {
     return QCborStreamReader_ToNegativeInteger((QCborStreamReader*)self);
 }
 
-int64_t q_cborstreamreader_to_simple_type(void* self) {
+uint8_t q_cborstreamreader_to_simple_type(void* self) {
     return QCborStreamReader_ToSimpleType((QCborStreamReader*)self);
 }
 

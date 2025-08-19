@@ -27,15 +27,15 @@ void* q_graphicseffect_metacast(void* self, const char* param1) {
     return QGraphicsEffect_Metacast((QGraphicsEffect*)self, param1);
 }
 
-int32_t q_graphicseffect_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicseffect_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsEffect_Metacall((QGraphicsEffect*)self, param1, param2, param3);
 }
 
-void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsEffect_OnMetacall((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicseffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicseffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsEffect_QBaseMetacall((QGraphicsEffect*)self, param1, param2, param3);
 }
 
@@ -180,51 +180,51 @@ const char* q_graphicseffect_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QRectF* q_graphicseffect_source_bounding_rect1(void* self, int64_t system) {
+QRectF* q_graphicseffect_source_bounding_rect1(void* self, int32_t system) {
     return QGraphicsEffect_SourceBoundingRect1((QGraphicsEffect*)self, system);
 }
 
-void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int64_t)) {
+void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int32_t)) {
     QGraphicsEffect_OnSourceBoundingRect1((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int64_t system) {
+QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int32_t system) {
     return QGraphicsEffect_QBaseSourceBoundingRect1((QGraphicsEffect*)self, system);
 }
 
-QPixmap* q_graphicseffect_source_pixmap1(void* self, int64_t system) {
+QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system) {
     return QGraphicsEffect_SourcePixmap1((QGraphicsEffect*)self, system);
 }
 
-void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int64_t)) {
+void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int32_t)) {
     QGraphicsEffect_OnSourcePixmap1((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int64_t system) {
+QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int32_t system) {
     return QGraphicsEffect_QBaseSourcePixmap1((QGraphicsEffect*)self, system);
 }
 
-QPixmap* q_graphicseffect_source_pixmap2(void* self, int64_t system, void* offset) {
+QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offset) {
     return QGraphicsEffect_SourcePixmap2((QGraphicsEffect*)self, system, (QPoint*)offset);
 }
 
-void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int64_t, void*)) {
+void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int32_t, void*)) {
     QGraphicsEffect_OnSourcePixmap2((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int64_t system, void* offset) {
+QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int32_t system, void* offset) {
     return QGraphicsEffect_QBaseSourcePixmap2((QGraphicsEffect*)self, system, (QPoint*)offset);
 }
 
-QPixmap* q_graphicseffect_source_pixmap3(void* self, int64_t system, void* offset, int64_t mode) {
+QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode) {
     return QGraphicsEffect_SourcePixmap3((QGraphicsEffect*)self, system, (QPoint*)offset, mode);
 }
 
-void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int64_t, void*, int64_t)) {
+void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int32_t, void*, int32_t)) {
     QGraphicsEffect_OnSourcePixmap3((QGraphicsEffect*)self, (intptr_t)callback);
 }
 
-QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int64_t system, void* offset, int64_t mode) {
+QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode) {
     return QGraphicsEffect_QBaseSourcePixmap3((QGraphicsEffect*)self, system, (QPoint*)offset, mode);
 }
 
@@ -275,7 +275,7 @@ void q_graphicseffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicseffect_kill_timer2(void* self, int64_t id) {
+void q_graphicseffect_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -379,15 +379,15 @@ bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicseffect_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicseffect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -555,15 +555,15 @@ void* q_graphicscolorizeeffect_metacast(void* self, const char* param1) {
     return QGraphicsColorizeEffect_Metacast((QGraphicsColorizeEffect*)self, param1);
 }
 
-int32_t q_graphicscolorizeeffect_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicscolorizeeffect_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsColorizeEffect_Metacall((QGraphicsColorizeEffect*)self, param1, param2, param3);
 }
 
-void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsColorizeEffect_OnMetacall((QGraphicsColorizeEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsColorizeEffect_QBaseMetacall((QGraphicsColorizeEffect*)self, param1, param2, param3);
 }
 
@@ -703,7 +703,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicscolorizeeffect_kill_timer2(void* self, int64_t id) {
+void q_graphicscolorizeeffect_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -807,15 +807,15 @@ bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* pa
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1067,15 +1067,15 @@ void* q_graphicsblureffect_metacast(void* self, const char* param1) {
     return QGraphicsBlurEffect_Metacast((QGraphicsBlurEffect*)self, param1);
 }
 
-int32_t q_graphicsblureffect_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsblureffect_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsBlurEffect_Metacall((QGraphicsBlurEffect*)self, param1, param2, param3);
 }
 
-void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsBlurEffect_OnMetacall((QGraphicsBlurEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsblureffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsblureffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsBlurEffect_QBaseMetacall((QGraphicsBlurEffect*)self, param1, param2, param3);
 }
 
@@ -1227,7 +1227,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsblureffect_kill_timer2(void* self, int64_t id) {
+void q_graphicsblureffect_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1331,15 +1331,15 @@ bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1579,15 +1579,15 @@ void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1) {
     return QGraphicsDropShadowEffect_Metacast((QGraphicsDropShadowEffect*)self, param1);
 }
 
-int32_t q_graphicsdropshadoweffect_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsdropshadoweffect_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsDropShadowEffect_Metacall((QGraphicsDropShadowEffect*)self, param1, param2, param3);
 }
 
-void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsDropShadowEffect_OnMetacall((QGraphicsDropShadowEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsDropShadowEffect_QBaseMetacall((QGraphicsDropShadowEffect*)self, param1, param2, param3);
 }
 
@@ -1779,7 +1779,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsdropshadoweffect_kill_timer2(void* self, int64_t id) {
+void q_graphicsdropshadoweffect_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1883,15 +1883,15 @@ bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -2131,15 +2131,15 @@ void* q_graphicsopacityeffect_metacast(void* self, const char* param1) {
     return QGraphicsOpacityEffect_Metacast((QGraphicsOpacityEffect*)self, param1);
 }
 
-int32_t q_graphicsopacityeffect_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsopacityeffect_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsOpacityEffect_Metacall((QGraphicsOpacityEffect*)self, param1, param2, param3);
 }
 
-void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsOpacityEffect_OnMetacall((QGraphicsOpacityEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsOpacityEffect_QBaseMetacall((QGraphicsOpacityEffect*)self, param1, param2, param3);
 }
 
@@ -2279,7 +2279,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsopacityeffect_kill_timer2(void* self, int64_t id) {
+void q_graphicsopacityeffect_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -2383,15 +2383,15 @@ bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* par
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

@@ -55,7 +55,7 @@ double q_textinlineobject_height(void* self) {
     return QTextInlineObject_Height((QTextInlineObject*)self);
 }
 
-int64_t q_textinlineobject_text_direction(void* self) {
+int32_t q_textinlineobject_text_direction(void* self) {
     return QTextInlineObject_TextDirection((QTextInlineObject*)self);
 }
 
@@ -174,11 +174,11 @@ bool q_textlayout_cache_enabled(void* self) {
     return QTextLayout_CacheEnabled((QTextLayout*)self);
 }
 
-void q_textlayout_set_cursor_move_style(void* self, int64_t style) {
+void q_textlayout_set_cursor_move_style(void* self, int32_t style) {
     QTextLayout_SetCursorMoveStyle((QTextLayout*)self, style);
 }
 
-int64_t q_textlayout_cursor_move_style(void* self) {
+int32_t q_textlayout_cursor_move_style(void* self) {
     return QTextLayout_CursorMoveStyle((QTextLayout*)self);
 }
 
@@ -276,11 +276,11 @@ void q_textlayout_set_flags(void* self, int flags) {
     QTextLayout_SetFlags((QTextLayout*)self, flags);
 }
 
-int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int64_t mode) {
+int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int32_t mode) {
     return QTextLayout_NextCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
-int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int64_t mode) {
+int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t mode) {
     return QTextLayout_PreviousCursorPosition2((QTextLayout*)self, oldPos, mode);
 }
 
@@ -440,15 +440,15 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self) {
     return _arr;
 }
 
-double q_textline_cursor_to_x22(void* self, int* cursorPos, int64_t edge) {
+double q_textline_cursor_to_x22(void* self, int* cursorPos, int32_t edge) {
     return QTextLine_CursorToX22((QTextLine*)self, cursorPos, edge);
 }
 
-double q_textline_cursor_to_x23(void* self, int cursorPos, int64_t edge) {
+double q_textline_cursor_to_x23(void* self, int cursorPos, int32_t edge) {
     return QTextLine_CursorToX23((QTextLine*)self, cursorPos, edge);
 }
 
-int32_t q_textline_x_to_cursor2(void* self, double x, int64_t param2) {
+int32_t q_textline_x_to_cursor2(void* self, double x, int32_t param2) {
     return QTextLine_XToCursor2((QTextLine*)self, x, param2);
 }
 

@@ -35,13 +35,13 @@ void* q_vboxplotmodelmapper_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_vboxplotmodelmapper_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_vboxplotmodelmapper_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param callback int32_t fn(QVBoxPlotModelMapper*, enum QMetaObject__Call, int, void*)
-void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_vboxplotmodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_vboxplotmodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -297,7 +297,7 @@ void q_vboxplotmodelmapper_kill_timer(void* self, int id);
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param id enum Qt__TimerId
-void q_vboxplotmodelmapper_kill_timer2(void* self, int64_t id);
+void q_vboxplotmodelmapper_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -474,7 +474,7 @@ bool q_vboxplotmodelmapper_move_to_thread2(void* self, void* thread, void* param
 /// @param self QVBoxPlotModelMapper*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_vboxplotmodelmapper_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_vboxplotmodelmapper_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -485,7 +485,7 @@ int32_t q_vboxplotmodelmapper_start_timer22(void* self, int interval, int64_t ti
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_vboxplotmodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_vboxplotmodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -496,7 +496,7 @@ QMetaObject__Connection* q_vboxplotmodelmapper_connect5(void* sender, void* sign
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_vboxplotmodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_vboxplotmodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -967,7 +967,7 @@ void q_vboxplotmodelmapper_on_set_last_box_set_section(void* self, void (*callba
 /// @param self QVBoxPlotModelMapper*
 ///
 /// @return enum Qt__Orientation
-int64_t q_vboxplotmodelmapper_orientation(void* self);
+int32_t q_vboxplotmodelmapper_orientation(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -978,7 +978,7 @@ int64_t q_vboxplotmodelmapper_orientation(void* self);
 /// @param self QVBoxPlotModelMapper*
 ///
 /// @return enum Qt__Orientation
-int64_t q_vboxplotmodelmapper_qbase_orientation(void* self);
+int32_t q_vboxplotmodelmapper_qbase_orientation(void* self);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -987,8 +987,8 @@ int64_t q_vboxplotmodelmapper_qbase_orientation(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QVBoxPlotModelMapper*
-/// @param callback int64_t fn()
-void q_vboxplotmodelmapper_on_orientation(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_vboxplotmodelmapper_on_orientation(void* self, int32_t (*callback)());
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -998,7 +998,7 @@ void q_vboxplotmodelmapper_on_orientation(void* self, int64_t (*callback)());
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param orientation enum Qt__Orientation
-void q_vboxplotmodelmapper_set_orientation(void* self, int64_t orientation);
+void q_vboxplotmodelmapper_set_orientation(void* self, int32_t orientation);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1008,7 +1008,7 @@ void q_vboxplotmodelmapper_set_orientation(void* self, int64_t orientation);
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param orientation enum Qt__Orientation
-void q_vboxplotmodelmapper_qbase_set_orientation(void* self, int64_t orientation);
+void q_vboxplotmodelmapper_qbase_set_orientation(void* self, int32_t orientation);
 
 /// Inherited from QBoxPlotModelMapper
 ///
@@ -1018,7 +1018,7 @@ void q_vboxplotmodelmapper_qbase_set_orientation(void* self, int64_t orientation
 ///
 /// @param self QVBoxPlotModelMapper*
 /// @param callback void fn(QVBoxPlotModelMapper*, enum Qt__Orientation)
-void q_vboxplotmodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t));
+void q_vboxplotmodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

@@ -35,13 +35,13 @@ void* q_graphicseffect_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicseffect_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicseffect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsEffect*
 /// @param callback int32_t fn(QGraphicsEffect*, enum QMetaObject__Call, int, void*)
-void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_graphicseffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicseffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicseffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -280,7 +280,7 @@ const char* q_graphicseffect_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
-QRectF* q_graphicseffect_source_bounding_rect1(void* self, int64_t system);
+QRectF* q_graphicseffect_source_bounding_rect1(void* self, int32_t system);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
@@ -288,7 +288,7 @@ QRectF* q_graphicseffect_source_bounding_rect1(void* self, int64_t system);
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QRectF* fn(QGraphicsEffect*, enum Qt__CoordinateSystem)
-void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int64_t));
+void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourceBoundingRect)
 ///
@@ -296,13 +296,13 @@ void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(v
 ///
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
-QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int64_t system);
+QRectF* q_graphicseffect_qbase_source_bounding_rect1(void* self, int32_t system);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
-QPixmap* q_graphicseffect_source_pixmap1(void* self, int64_t system);
+QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -310,7 +310,7 @@ QPixmap* q_graphicseffect_source_pixmap1(void* self, int64_t system);
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* fn(QGraphicsEffect*, enum Qt__CoordinateSystem)
-void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int64_t));
+void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -318,14 +318,14 @@ void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, 
 ///
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
-QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int64_t system);
+QPixmap* q_graphicseffect_qbase_source_pixmap1(void* self, int32_t system);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
-QPixmap* q_graphicseffect_source_pixmap2(void* self, int64_t system, void* offset);
+QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -333,7 +333,7 @@ QPixmap* q_graphicseffect_source_pixmap2(void* self, int64_t system, void* offse
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* fn(QGraphicsEffect*, enum Qt__CoordinateSystem, QPoint*)
-void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int64_t, void*));
+void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -342,7 +342,7 @@ void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, 
 /// @param self QGraphicsEffect*
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
-QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int64_t system, void* offset);
+QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int32_t system, void* offset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -350,7 +350,7 @@ QPixmap* q_graphicseffect_qbase_source_pixmap2(void* self, int64_t system, void*
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
 /// @param mode enum QGraphicsEffect__PixmapPadMode
-QPixmap* q_graphicseffect_source_pixmap3(void* self, int64_t system, void* offset, int64_t mode);
+QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -358,7 +358,7 @@ QPixmap* q_graphicseffect_source_pixmap3(void* self, int64_t system, void* offse
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* fn(QGraphicsEffect*, enum Qt__CoordinateSystem, QPoint*, enum QGraphicsEffect__PixmapPadMode)
-void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int64_t, void*, int64_t));
+void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int32_t, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicseffect.html#sourcePixmap)
 ///
@@ -368,7 +368,7 @@ void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, 
 /// @param system enum Qt__CoordinateSystem
 /// @param offset QPoint*
 /// @param mode enum QGraphicsEffect__PixmapPadMode
-QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int64_t system, void* offset, int64_t mode);
+QPixmap* q_graphicseffect_qbase_source_pixmap3(void* self, int32_t system, void* offset, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -460,7 +460,7 @@ void q_graphicseffect_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsEffect*
 /// @param id enum Qt__TimerId
-void q_graphicseffect_kill_timer2(void* self, int64_t id);
+void q_graphicseffect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -637,7 +637,7 @@ bool q_graphicseffect_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsEffect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicseffect_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicseffect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -648,7 +648,7 @@ int32_t q_graphicseffect_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -659,7 +659,7 @@ QMetaObject__Connection* q_graphicseffect_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicseffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1046,13 +1046,13 @@ void* q_graphicscolorizeeffect_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicscolorizeeffect_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicscolorizeeffect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param callback int32_t fn(QGraphicsColorizeEffect*, enum QMetaObject__Call, int, void*)
-void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1060,7 +1060,7 @@ void q_graphicscolorizeeffect_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicscolorizeeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1289,7 +1289,7 @@ void q_graphicscolorizeeffect_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param id enum Qt__TimerId
-void q_graphicscolorizeeffect_kill_timer2(void* self, int64_t id);
+void q_graphicscolorizeeffect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1466,7 +1466,7 @@ bool q_graphicscolorizeeffect_move_to_thread2(void* self, void* thread, void* pa
 /// @param self QGraphicsColorizeEffect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1477,7 +1477,7 @@ int32_t q_graphicscolorizeeffect_start_timer22(void* self, int interval, int64_t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1488,7 +1488,7 @@ QMetaObject__Connection* q_graphicscolorizeeffect_connect5(void* sender, void* s
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicscolorizeeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2077,13 +2077,13 @@ void* q_graphicsblureffect_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsblureffect_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsblureffect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param callback int32_t fn(QGraphicsBlurEffect*, enum QMetaObject__Call, int, void*)
-void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -2091,7 +2091,7 @@ void q_graphicsblureffect_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsblureffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsblureffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2344,7 +2344,7 @@ void q_graphicsblureffect_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param id enum Qt__TimerId
-void q_graphicsblureffect_kill_timer2(void* self, int64_t id);
+void q_graphicsblureffect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2521,7 +2521,7 @@ bool q_graphicsblureffect_move_to_thread2(void* self, void* thread, void* param2
 /// @param self QGraphicsBlurEffect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2532,7 +2532,7 @@ int32_t q_graphicsblureffect_start_timer22(void* self, int interval, int64_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2543,7 +2543,7 @@ QMetaObject__Connection* q_graphicsblureffect_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsblureffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3102,13 +3102,13 @@ void* q_graphicsdropshadoweffect_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsdropshadoweffect_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsdropshadoweffect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback int32_t fn(QGraphicsDropShadowEffect*, enum QMetaObject__Call, int, void*)
-void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -3116,7 +3116,7 @@ void q_graphicsdropshadoweffect_on_metacall(void* self, int32_t (*callback)(void
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsdropshadoweffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3425,7 +3425,7 @@ void q_graphicsdropshadoweffect_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param id enum Qt__TimerId
-void q_graphicsdropshadoweffect_kill_timer2(void* self, int64_t id);
+void q_graphicsdropshadoweffect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3602,7 +3602,7 @@ bool q_graphicsdropshadoweffect_move_to_thread2(void* self, void* thread, void* 
 /// @param self QGraphicsDropShadowEffect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3613,7 +3613,7 @@ int32_t q_graphicsdropshadoweffect_start_timer22(void* self, int interval, int64
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3624,7 +3624,7 @@ QMetaObject__Connection* q_graphicsdropshadoweffect_connect5(void* sender, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsdropshadoweffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4183,13 +4183,13 @@ void* q_graphicsopacityeffect_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsopacityeffect_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsopacityeffect_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param callback int32_t fn(QGraphicsOpacityEffect*, enum QMetaObject__Call, int, void*)
-void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -4197,7 +4197,7 @@ void q_graphicsopacityeffect_on_metacall(void* self, int32_t (*callback)(void*, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsopacityeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4426,7 +4426,7 @@ void q_graphicsopacityeffect_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param id enum Qt__TimerId
-void q_graphicsopacityeffect_kill_timer2(void* self, int64_t id);
+void q_graphicsopacityeffect_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4603,7 +4603,7 @@ bool q_graphicsopacityeffect_move_to_thread2(void* self, void* thread, void* par
 /// @param self QGraphicsOpacityEffect*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4614,7 +4614,7 @@ int32_t q_graphicsopacityeffect_start_timer22(void* self, int interval, int64_t 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4625,7 +4625,7 @@ QMetaObject__Connection* q_graphicsopacityeffect_connect5(void* sender, void* si
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsopacityeffect_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

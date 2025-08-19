@@ -44,7 +44,7 @@ QJsonValue* q_jsonvalue_new10(void* other) {
     return QJsonValue_new10((QJsonValue*)other);
 }
 
-QJsonValue* q_jsonvalue_new11(int64_t param1) {
+QJsonValue* q_jsonvalue_new11(int32_t param1) {
     return QJsonValue_new11(param1);
 }
 
@@ -64,7 +64,7 @@ QVariant* q_jsonvalue_to_variant(void* self) {
     return QJsonValue_ToVariant((QJsonValue*)self);
 }
 
-int64_t q_jsonvalue_type(void* self) {
+int32_t q_jsonvalue_type(void* self) {
     return QJsonValue_Type((QJsonValue*)self);
 }
 
@@ -186,7 +186,7 @@ QVariant* q_jsonvalueconstref_to_variant(void* self) {
     return QJsonValueConstRef_ToVariant((QJsonValueConstRef*)self);
 }
 
-int64_t q_jsonvalueconstref_type(void* self) {
+int32_t q_jsonvalueconstref_type(void* self) {
     return QJsonValueConstRef_Type((QJsonValueConstRef*)self);
 }
 
@@ -312,7 +312,7 @@ QVariant* q_jsonvalueref_to_variant(void* self) {
     return QJsonValueRef_ToVariant((QJsonValueRef*)self);
 }
 
-int64_t q_jsonvalueref_type(void* self) {
+int32_t q_jsonvalueref_type(void* self) {
     return QJsonValueRef_Type((QJsonValueRef*)self);
 }
 

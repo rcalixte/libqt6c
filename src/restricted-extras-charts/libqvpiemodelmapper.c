@@ -24,15 +24,15 @@ void* q_vpiemodelmapper_metacast(void* self, const char* param1) {
     return QVPieModelMapper_Metacast((QVPieModelMapper*)self, param1);
 }
 
-int32_t q_vpiemodelmapper_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_vpiemodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QVPieModelMapper_Metacall((QVPieModelMapper*)self, param1, param2, param3);
 }
 
-void q_vpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_vpiemodelmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QVPieModelMapper_OnMetacall((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_vpiemodelmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_vpiemodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QVPieModelMapper_QBaseMetacall((QVPieModelMapper*)self, param1, param2, param3);
 }
 
@@ -200,7 +200,7 @@ void q_vpiemodelmapper_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_vpiemodelmapper_kill_timer2(void* self, int64_t id) {
+void q_vpiemodelmapper_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -304,15 +304,15 @@ bool q_vpiemodelmapper_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_vpiemodelmapper_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_vpiemodelmapper_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_vpiemodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_vpiemodelmapper_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_vpiemodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_vpiemodelmapper_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -504,27 +504,27 @@ void q_vpiemodelmapper_on_set_labels_section(void* self, void (*callback)(void*,
     QVPieModelMapper_OnSetLabelsSection((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-int64_t q_vpiemodelmapper_orientation(void* self) {
+int32_t q_vpiemodelmapper_orientation(void* self) {
     return QVPieModelMapper_Orientation((QVPieModelMapper*)self);
 }
 
-int64_t q_vpiemodelmapper_qbase_orientation(void* self) {
+int32_t q_vpiemodelmapper_qbase_orientation(void* self) {
     return QVPieModelMapper_QBaseOrientation((QVPieModelMapper*)self);
 }
 
-void q_vpiemodelmapper_on_orientation(void* self, int64_t (*callback)()) {
+void q_vpiemodelmapper_on_orientation(void* self, int32_t (*callback)()) {
     QVPieModelMapper_OnOrientation((QVPieModelMapper*)self, (intptr_t)callback);
 }
 
-void q_vpiemodelmapper_set_orientation(void* self, int64_t orientation) {
+void q_vpiemodelmapper_set_orientation(void* self, int32_t orientation) {
     QVPieModelMapper_SetOrientation((QVPieModelMapper*)self, orientation);
 }
 
-void q_vpiemodelmapper_qbase_set_orientation(void* self, int64_t orientation) {
+void q_vpiemodelmapper_qbase_set_orientation(void* self, int32_t orientation) {
     QVPieModelMapper_QBaseSetOrientation((QVPieModelMapper*)self, orientation);
 }
 
-void q_vpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, int64_t)) {
+void q_vpiemodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t)) {
     QVPieModelMapper_OnSetOrientation((QVPieModelMapper*)self, (intptr_t)callback);
 }
 

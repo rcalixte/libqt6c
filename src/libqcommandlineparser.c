@@ -14,11 +14,11 @@ const char* q_commandlineparser_tr(const char* sourceText) {
     return _ret;
 }
 
-void q_commandlineparser_set_single_dash_word_option_mode(void* self, int64_t parsingMode) {
+void q_commandlineparser_set_single_dash_word_option_mode(void* self, int32_t parsingMode) {
     QCommandLineParser_SetSingleDashWordOptionMode((QCommandLineParser*)self, parsingMode);
 }
 
-void q_commandlineparser_set_options_after_positional_arguments_mode(void* self, int64_t mode) {
+void q_commandlineparser_set_options_after_positional_arguments_mode(void* self, int32_t mode) {
     QCommandLineParser_SetOptionsAfterPositionalArgumentsMode((QCommandLineParser*)self, mode);
 }
 

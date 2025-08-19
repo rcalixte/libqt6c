@@ -14,7 +14,7 @@ QHstsPolicy* q_hstspolicy_new3(void* rhs) {
     return QHstsPolicy_new3((QHstsPolicy*)rhs);
 }
 
-QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int64_t mode) {
+QHstsPolicy* q_hstspolicy_new4(void* expiry, int64_t flags, const char* host, int32_t mode) {
     return QHstsPolicy_new4((QDateTime*)expiry, flags, qstring(host), mode);
 }
 
@@ -57,7 +57,7 @@ bool q_hstspolicy_is_expired(void* self) {
     return QHstsPolicy_IsExpired((QHstsPolicy*)self);
 }
 
-void q_hstspolicy_set_host2(void* self, const char* host, int64_t mode) {
+void q_hstspolicy_set_host2(void* self, const char* host, int32_t mode) {
     QHstsPolicy_SetHost2((QHstsPolicy*)self, qstring(host), mode);
 }
 

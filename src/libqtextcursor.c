@@ -64,7 +64,7 @@ void q_textcursor_insert_text2(void* self, const char* text, void* format) {
     QTextCursor_InsertText2((QTextCursor*)self, qstring(text), (QTextCharFormat*)format);
 }
 
-bool q_textcursor_move_position(void* self, int64_t op) {
+bool q_textcursor_move_position(void* self, int32_t op) {
     return QTextCursor_MovePosition((QTextCursor*)self, op);
 }
 
@@ -100,7 +100,7 @@ void q_textcursor_delete_previous_char(void* self) {
     QTextCursor_DeletePreviousChar((QTextCursor*)self);
 }
 
-void q_textcursor_select(void* self, int64_t selection) {
+void q_textcursor_select(void* self, int32_t selection) {
     QTextCursor_Select((QTextCursor*)self, selection);
 }
 
@@ -215,7 +215,7 @@ QTextList* q_textcursor_insert_list(void* self, void* format) {
     return QTextCursor_InsertList((QTextCursor*)self, (QTextListFormat*)format);
 }
 
-QTextList* q_textcursor_insert_list2(void* self, int64_t style) {
+QTextList* q_textcursor_insert_list2(void* self, int32_t style) {
     return QTextCursor_InsertList2((QTextCursor*)self, style);
 }
 
@@ -223,7 +223,7 @@ QTextList* q_textcursor_create_list(void* self, void* format) {
     return QTextCursor_CreateList((QTextCursor*)self, (QTextListFormat*)format);
 }
 
-QTextList* q_textcursor_create_list2(void* self, int64_t style) {
+QTextList* q_textcursor_create_list2(void* self, int32_t style) {
     return QTextCursor_CreateList2((QTextCursor*)self, style);
 }
 
@@ -263,7 +263,7 @@ void q_textcursor_insert_markdown(void* self, const char* markdown) {
     QTextCursor_InsertMarkdown((QTextCursor*)self, qstring(markdown));
 }
 
-void q_textcursor_insert_image(void* self, void* format, int64_t alignment) {
+void q_textcursor_insert_image(void* self, void* format, int32_t alignment) {
     QTextCursor_InsertImage((QTextCursor*)self, (QTextImageFormat*)format, alignment);
 }
 
@@ -331,15 +331,15 @@ QTextDocument* q_textcursor_document(void* self) {
     return QTextCursor_Document((QTextCursor*)self);
 }
 
-void q_textcursor_set_position2(void* self, int pos, int64_t mode) {
+void q_textcursor_set_position2(void* self, int pos, int32_t mode) {
     QTextCursor_SetPosition2((QTextCursor*)self, pos, mode);
 }
 
-bool q_textcursor_move_position2(void* self, int64_t op, int64_t param2) {
+bool q_textcursor_move_position2(void* self, int32_t op, int32_t param2) {
     return QTextCursor_MovePosition2((QTextCursor*)self, op, param2);
 }
 
-bool q_textcursor_move_position3(void* self, int64_t op, int64_t param2, int n) {
+bool q_textcursor_move_position3(void* self, int32_t op, int32_t param2, int n) {
     return QTextCursor_MovePosition3((QTextCursor*)self, op, param2, n);
 }
 

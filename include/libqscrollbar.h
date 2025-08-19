@@ -25,13 +25,13 @@ QScrollBar* q_scrollbar_new2();
 /// q_scrollbar_new3 constructs a new QScrollBar object.
 ///
 /// @param param1 enum Qt__Orientation
-QScrollBar* q_scrollbar_new3(int64_t param1);
+QScrollBar* q_scrollbar_new3(int32_t param1);
 
 /// q_scrollbar_new4 constructs a new QScrollBar object.
 ///
 /// @param param1 enum Qt__Orientation
 /// @param parent QWidget*
-QScrollBar* q_scrollbar_new4(int64_t param1, void* parent);
+QScrollBar* q_scrollbar_new4(int32_t param1, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -46,13 +46,13 @@ void* q_scrollbar_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_scrollbar_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_scrollbar_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QScrollBar*
 /// @param callback int32_t fn(QScrollBar*, enum QMetaObject__Call, int, void*)
-void q_scrollbar_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_scrollbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_scrollbar_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_scrollbar_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_scrollbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -247,7 +247,7 @@ void q_scrollbar_qbase_hide_event(void* self, void* param1);
 ///
 /// @param self QScrollBar*
 /// @param change enum QAbstractSlider__SliderChange
-void q_scrollbar_slider_change(void* self, int64_t change);
+void q_scrollbar_slider_change(void* self, int32_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sliderChange)
 ///
@@ -255,7 +255,7 @@ void q_scrollbar_slider_change(void* self, int64_t change);
 ///
 /// @param self QScrollBar*
 /// @param callback void fn(QScrollBar*, enum QAbstractSlider__SliderChange)
-void q_scrollbar_on_slider_change(void* self, void (*callback)(void*, int64_t));
+void q_scrollbar_on_slider_change(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#sliderChange)
 ///
@@ -263,7 +263,7 @@ void q_scrollbar_on_slider_change(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self QScrollBar*
 /// @param change enum QAbstractSlider__SliderChange
-void q_scrollbar_qbase_slider_change(void* self, int64_t change);
+void q_scrollbar_qbase_slider_change(void* self, int32_t change);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscrollbar.html#contextMenuEvent)
 ///
@@ -333,7 +333,7 @@ const char* q_scrollbar_tr3(const char* s, const char* c, int n);
 /// @param self QScrollBar*
 ///
 /// @return enum Qt__Orientation
-int64_t q_scrollbar_orientation(void* self);
+int32_t q_scrollbar_orientation(void* self);
 
 /// Inherited from QAbstractSlider
 ///
@@ -483,7 +483,7 @@ int32_t q_scrollbar_value(void* self);
 ///
 /// @param self QScrollBar*
 /// @param action enum QAbstractSlider__SliderAction
-void q_scrollbar_trigger_action(void* self, int64_t action);
+void q_scrollbar_trigger_action(void* self, int32_t action);
 
 /// Inherited from QAbstractSlider
 ///
@@ -499,7 +499,7 @@ void q_scrollbar_set_value(void* self, int value);
 ///
 /// @param self QScrollBar*
 /// @param orientation enum Qt__Orientation
-void q_scrollbar_set_orientation(void* self, int64_t orientation);
+void q_scrollbar_set_orientation(void* self, int32_t orientation);
 
 /// Inherited from QAbstractSlider
 ///
@@ -676,7 +676,7 @@ bool q_scrollbar_is_modal(void* self);
 /// @param self QScrollBar*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_scrollbar_window_modality(void* self);
+int32_t q_scrollbar_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -684,7 +684,7 @@ int64_t q_scrollbar_window_modality(void* self);
 ///
 /// @param self QScrollBar*
 /// @param windowModality enum Qt__WindowModality
-void q_scrollbar_set_window_modality(void* self, int64_t windowModality);
+void q_scrollbar_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1147,7 +1147,7 @@ void q_scrollbar_set_palette(void* self, void* palette);
 ///
 /// @param self QScrollBar*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_scrollbar_set_background_role(void* self, int64_t backgroundRole);
+void q_scrollbar_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1156,7 +1156,7 @@ void q_scrollbar_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QScrollBar*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_scrollbar_background_role(void* self);
+int32_t q_scrollbar_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1164,7 +1164,7 @@ int64_t q_scrollbar_background_role(void* self);
 ///
 /// @param self QScrollBar*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_scrollbar_set_foreground_role(void* self, int64_t foregroundRole);
+void q_scrollbar_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1173,7 +1173,7 @@ void q_scrollbar_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QScrollBar*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_scrollbar_foreground_role(void* self);
+int32_t q_scrollbar_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1575,7 +1575,7 @@ void q_scrollbar_set_accessible_description(void* self, const char* description)
 ///
 /// @param self QScrollBar*
 /// @param direction enum Qt__LayoutDirection
-void q_scrollbar_set_layout_direction(void* self, int64_t direction);
+void q_scrollbar_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1584,7 +1584,7 @@ void q_scrollbar_set_layout_direction(void* self, int64_t direction);
 /// @param self QScrollBar*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_scrollbar_layout_direction(void* self);
+int32_t q_scrollbar_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1663,7 +1663,7 @@ void q_scrollbar_clear_focus(void* self);
 ///
 /// @param self QScrollBar*
 /// @param reason enum Qt__FocusReason
-void q_scrollbar_set_focus2(void* self, int64_t reason);
+void q_scrollbar_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1672,7 +1672,7 @@ void q_scrollbar_set_focus2(void* self, int64_t reason);
 /// @param self QScrollBar*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_scrollbar_focus_policy(void* self);
+int32_t q_scrollbar_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1680,7 +1680,7 @@ int64_t q_scrollbar_focus_policy(void* self);
 ///
 /// @param self QScrollBar*
 /// @param policy enum Qt__FocusPolicy
-void q_scrollbar_set_focus_policy(void* self, int64_t policy);
+void q_scrollbar_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1719,7 +1719,7 @@ QWidget* q_scrollbar_focus_proxy(void* self);
 /// @param self QScrollBar*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_scrollbar_context_menu_policy(void* self);
+int32_t q_scrollbar_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1727,7 +1727,7 @@ int64_t q_scrollbar_context_menu_policy(void* self);
 ///
 /// @param self QScrollBar*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_scrollbar_set_context_menu_policy(void* self, int64_t policy);
+void q_scrollbar_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2145,7 +2145,7 @@ void q_scrollbar_set_size_policy(void* self, void* sizePolicy);
 /// @param self QScrollBar*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_scrollbar_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_scrollbar_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2453,7 +2453,7 @@ QWidget* q_scrollbar_child_at3(void* self, void* p);
 ///
 /// @param self QScrollBar*
 /// @param param1 enum Qt__WidgetAttribute
-void q_scrollbar_set_attribute(void* self, int64_t param1);
+void q_scrollbar_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2461,7 +2461,7 @@ void q_scrollbar_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QScrollBar*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_scrollbar_test_attribute(void* self, int64_t param1);
+bool q_scrollbar_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2694,7 +2694,7 @@ void q_scrollbar_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QScrollBar*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_scrollbar_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_scrollbar_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2730,7 +2730,7 @@ void q_scrollbar_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QScrollBar*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_scrollbar_set_attribute2(void* self, int64_t param1, bool on);
+void q_scrollbar_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2839,7 +2839,7 @@ void q_scrollbar_kill_timer(void* self, int id);
 ///
 /// @param self QScrollBar*
 /// @param id enum Qt__TimerId
-void q_scrollbar_kill_timer2(void* self, int64_t id);
+void q_scrollbar_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3008,7 +3008,7 @@ bool q_scrollbar_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QScrollBar*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_scrollbar_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_scrollbar_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3019,7 +3019,7 @@ int32_t q_scrollbar_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_scrollbar_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_scrollbar_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3030,7 +3030,7 @@ QMetaObject__Connection* q_scrollbar_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_scrollbar_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_scrollbar_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3137,7 +3137,7 @@ double q_scrollbar_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_scrollbar_encode_metric_f(int64_t metric, double value);
+int32_t q_scrollbar_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractSlider
 ///
@@ -3923,7 +3923,7 @@ void q_scrollbar_on_native_event(void* self, bool (*callback)(void*, const char*
 ///
 /// @param self QScrollBar*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_scrollbar_metric(void* self, int64_t param1);
+int32_t q_scrollbar_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3933,7 +3933,7 @@ int32_t q_scrollbar_metric(void* self, int64_t param1);
 ///
 /// @param self QScrollBar*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_scrollbar_qbase_metric(void* self, int64_t param1);
+int32_t q_scrollbar_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3943,7 +3943,7 @@ int32_t q_scrollbar_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QScrollBar*
 /// @param callback int32_t fn(QScrollBar*, enum QPaintDevice__PaintDeviceMetric)
-void q_scrollbar_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_scrollbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4283,7 +4283,7 @@ void q_scrollbar_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QScrollBar*
 /// @param action enum QAbstractSlider__SliderAction
-void q_scrollbar_set_repeat_action(void* self, int64_t action);
+void q_scrollbar_set_repeat_action(void* self, int32_t action);
 
 /// Inherited from QAbstractSlider
 ///
@@ -4293,7 +4293,7 @@ void q_scrollbar_set_repeat_action(void* self, int64_t action);
 ///
 /// @param self QScrollBar*
 /// @param action enum QAbstractSlider__SliderAction
-void q_scrollbar_qbase_set_repeat_action(void* self, int64_t action);
+void q_scrollbar_qbase_set_repeat_action(void* self, int32_t action);
 
 /// Inherited from QAbstractSlider
 ///
@@ -4303,7 +4303,7 @@ void q_scrollbar_qbase_set_repeat_action(void* self, int64_t action);
 ///
 /// @param self QScrollBar*
 /// @param callback void fn(QScrollBar*, enum QAbstractSlider__SliderAction)
-void q_scrollbar_on_set_repeat_action(void* self, void (*callback)(void*, int64_t));
+void q_scrollbar_on_set_repeat_action(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSlider
 ///
@@ -4314,7 +4314,7 @@ void q_scrollbar_on_set_repeat_action(void* self, void (*callback)(void*, int64_
 /// @param self QScrollBar*
 ///
 /// @return enum QAbstractSlider__SliderAction
-int64_t q_scrollbar_repeat_action(void* self);
+int32_t q_scrollbar_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
 ///
@@ -4325,7 +4325,7 @@ int64_t q_scrollbar_repeat_action(void* self);
 /// @param self QScrollBar*
 ///
 /// @return enum QAbstractSlider__SliderAction
-int64_t q_scrollbar_qbase_repeat_action(void* self);
+int32_t q_scrollbar_qbase_repeat_action(void* self);
 
 /// Inherited from QAbstractSlider
 ///
@@ -4334,8 +4334,8 @@ int64_t q_scrollbar_qbase_repeat_action(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QScrollBar*
-/// @param callback int64_t fn()
-void q_scrollbar_on_repeat_action(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_scrollbar_on_repeat_action(void* self, int32_t (*callback)());
 
 /// Inherited from QWidget
 ///
@@ -4602,7 +4602,7 @@ void q_scrollbar_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param self QScrollBar*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_scrollbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_scrollbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4613,7 +4613,7 @@ double q_scrollbar_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 /// @param self QScrollBar*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_scrollbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_scrollbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4623,7 +4623,7 @@ double q_scrollbar_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// @param self QScrollBar*
 /// @param callback double fn(QScrollBar*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_scrollbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_scrollbar_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -47,13 +47,13 @@ QRegion* q_region_new5(void* bitmap);
 /// @param w int
 /// @param h int
 /// @param t enum QRegion__RegionType
-QRegion* q_region_new6(int x, int y, int w, int h, int64_t t);
+QRegion* q_region_new6(int x, int y, int w, int h, int32_t t);
 
 /// q_region_new7 constructs a new QRegion object.
 ///
 /// @param r QRect*
 /// @param t enum QRegion__RegionType
-QRegion* q_region_new7(void* r, int64_t t);
+QRegion* q_region_new7(void* r, int32_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qregion.html#operator-eq)
 ///

@@ -50,7 +50,7 @@ QsciCommand* q_scicommandset_bound_to(void* self, int key);
 ///
 /// @param self QsciCommandSet*
 /// @param command enum QsciCommand__Command
-QsciCommand* q_scicommandset_find(void* self, int64_t command);
+QsciCommand* q_scicommandset_find(void* self, int32_t command);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommandSet.html)
 ///

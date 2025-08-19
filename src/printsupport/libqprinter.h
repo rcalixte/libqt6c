@@ -25,13 +25,13 @@ QPrinter* q_printer_new2(void* printer);
 /// q_printer_new3 constructs a new QPrinter object.
 ///
 /// @param mode enum QPrinter__PrinterMode
-QPrinter* q_printer_new3(int64_t mode);
+QPrinter* q_printer_new3(int32_t mode);
 
 /// q_printer_new4 constructs a new QPrinter object.
 ///
 /// @param printer QPrinterInfo*
 /// @param mode enum QPrinter__PrinterMode
-QPrinter* q_printer_new4(void* printer, int64_t mode);
+QPrinter* q_printer_new4(void* printer, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#devType)
 ///
@@ -57,27 +57,27 @@ int32_t q_printer_qbase_dev_type(void* self);
 ///
 /// @param self QPrinter*
 /// @param format enum QPrinter__OutputFormat
-void q_printer_set_output_format(void* self, int64_t format);
+void q_printer_set_output_format(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#outputFormat)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__OutputFormat
-int64_t q_printer_output_format(void* self);
+int32_t q_printer_output_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setPdfVersion)
 ///
 /// @param self QPrinter*
 /// @param version enum QPagedPaintDevice__PdfVersion
-void q_printer_set_pdf_version(void* self, int64_t version);
+void q_printer_set_pdf_version(void* self, int32_t version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#pdfVersion)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPagedPaintDevice__PdfVersion
-int64_t q_printer_pdf_version(void* self);
+int32_t q_printer_pdf_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setPrinterName)
 ///
@@ -153,14 +153,14 @@ const char* q_printer_creator(void* self);
 ///
 /// @param self QPrinter*
 /// @param pageOrder enum QPrinter__PageOrder
-void q_printer_set_page_order(void* self, int64_t pageOrder);
+void q_printer_set_page_order(void* self, int32_t pageOrder);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#pageOrder)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__PageOrder
-int64_t q_printer_page_order(void* self);
+int32_t q_printer_page_order(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setResolution)
 ///
@@ -177,14 +177,14 @@ int32_t q_printer_resolution(void* self);
 ///
 /// @param self QPrinter*
 /// @param colorMode enum QPrinter__ColorMode
-void q_printer_set_color_mode(void* self, int64_t colorMode);
+void q_printer_set_color_mode(void* self, int32_t colorMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#colorMode)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__ColorMode
-int64_t q_printer_color_mode(void* self);
+int32_t q_printer_color_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setCollateCopies)
 ///
@@ -228,27 +228,27 @@ bool q_printer_supports_multiple_copies(void* self);
 ///
 /// @param self QPrinter*
 /// @param paperSource enum QPrinter__PaperSource
-void q_printer_set_paper_source(void* self, int64_t paperSource);
+void q_printer_set_paper_source(void* self, int32_t paperSource);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#paperSource)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__PaperSource
-int64_t q_printer_paper_source(void* self);
+int32_t q_printer_paper_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setDuplex)
 ///
 /// @param self QPrinter*
 /// @param duplex enum QPrinter__DuplexMode
-void q_printer_set_duplex(void* self, int64_t duplex);
+void q_printer_set_duplex(void* self, int32_t duplex);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#duplex)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__DuplexMode
-int64_t q_printer_duplex(void* self);
+int32_t q_printer_duplex(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#supportedResolutions)
 ///
@@ -270,13 +270,13 @@ bool q_printer_font_embedding_enabled(void* self);
 ///
 /// @param self QPrinter*
 /// @param param1 enum QPrinter__Unit
-QRectF* q_printer_paper_rect(void* self, int64_t param1);
+QRectF* q_printer_paper_rect(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#pageRect)
 ///
 /// @param self QPrinter*
 /// @param param1 enum QPrinter__Unit
-QRectF* q_printer_page_rect(void* self, int64_t param1);
+QRectF* q_printer_page_rect(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#printerSelectionOption)
 ///
@@ -321,7 +321,7 @@ bool q_printer_abort(void* self);
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__PrinterState
-int64_t q_printer_printer_state(void* self);
+int32_t q_printer_printer_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#paintEngine)
 ///
@@ -369,20 +369,20 @@ int32_t q_printer_to_page(void* self);
 ///
 /// @param self QPrinter*
 /// @param range enum QPrinter__PrintRange
-void q_printer_set_print_range(void* self, int64_t range);
+void q_printer_set_print_range(void* self, int32_t range);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#printRange)
 ///
 /// @param self QPrinter*
 ///
 /// @return enum QPrinter__PrintRange
-int64_t q_printer_print_range(void* self);
+int32_t q_printer_print_range(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
 /// @param self QPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_printer_metric(void* self, int64_t param1);
+int32_t q_printer_metric(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
@@ -390,7 +390,7 @@ int32_t q_printer_metric(void* self, int64_t param1);
 ///
 /// @param self QPrinter*
 /// @param callback int32_t fn(QPrinter*, enum QPaintDevice__PaintDeviceMetric)
-void q_printer_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_printer_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#metric)
 ///
@@ -398,7 +398,7 @@ void q_printer_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_printer_qbase_metric(void* self, int64_t param1);
+int32_t q_printer_qbase_metric(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#setEngines)
 ///
@@ -541,7 +541,7 @@ double q_printer_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_printer_encode_metric_f(int64_t metric, double value);
+int32_t q_printer_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -611,7 +611,7 @@ void q_printer_on_set_page_size(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QPrinter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_printer_set_page_orientation(void* self, int64_t orientation);
+bool q_printer_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -621,7 +621,7 @@ bool q_printer_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QPrinter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_printer_qbase_set_page_orientation(void* self, int64_t orientation);
+bool q_printer_qbase_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -631,7 +631,7 @@ bool q_printer_qbase_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QPrinter*
 /// @param callback bool fn(QPrinter*, enum QPageLayout__Orientation)
-void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t));
+void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -642,7 +642,7 @@ void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int64
 /// @param self QPrinter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_printer_set_page_margins(void* self, void* margins, int64_t units);
+bool q_printer_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -653,7 +653,7 @@ bool q_printer_set_page_margins(void* self, void* margins, int64_t units);
 /// @param self QPrinter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_printer_qbase_set_page_margins(void* self, void* margins, int64_t units);
+bool q_printer_qbase_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -663,7 +663,7 @@ bool q_printer_qbase_set_page_margins(void* self, void* margins, int64_t units);
 ///
 /// @param self QPrinter*
 /// @param callback bool fn(QPrinter*, QMarginsF*, enum QPageLayout__Unit)
-void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t));
+void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -792,7 +792,7 @@ void q_printer_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_printer_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_printer_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -803,7 +803,7 @@ double q_printer_get_decoded_metric_f(void* self, int64_t metricA, int64_t metri
 /// @param self QPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_printer_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_printer_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -813,7 +813,7 @@ double q_printer_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 ///
 /// @param self QPrinter*
 /// @param callback double fn(QPrinter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprinter.html#dtor.QPrinter)
 ///

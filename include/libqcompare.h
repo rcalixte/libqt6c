@@ -40,7 +40,7 @@ void q_partial_ordering_copy_assign(void* self, void* other);
 /// @param other partial_ordering*
 void q_partial_ordering_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qt::partial_ordering.html#dtor.Qt::partial_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/partial_ordering.html#dtor.partial_ordering)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -81,7 +81,7 @@ void q_weak_ordering_move_assign(void* self, void* other);
 /// @param self weak_ordering*
 partial_ordering* q_weak_ordering_to_partial_ordering(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qt::weak_ordering.html#dtor.Qt::weak_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/weak_ordering.html#dtor.weak_ordering)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -127,7 +127,7 @@ partial_ordering* q_strong_ordering_to_partial_ordering(void* self);
 /// @param self strong_ordering*
 weak_ordering* q_strong_ordering_to_weak_ordering(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qt::strong_ordering.html#dtor.Qt::strong_ordering)
+/// [Qt documentation](https://doc.qt.io/qt-6/strong_ordering.html#dtor.strong_ordering)
 ///
 /// Delete this object from C++ memory.
 ///

@@ -14,7 +14,7 @@ void q_cameraformat_operator_assign(void* self, void* other) {
     QCameraFormat_OperatorAssign((QCameraFormat*)self, (QCameraFormat*)other);
 }
 
-int64_t q_cameraformat_pixel_format(void* self) {
+int32_t q_cameraformat_pixel_format(void* self) {
     return QCameraFormat_PixelFormat((QCameraFormat*)self);
 }
 
@@ -88,7 +88,7 @@ bool q_cameradevice_is_default(void* self) {
     return QCameraDevice_IsDefault((QCameraDevice*)self);
 }
 
-int64_t q_cameradevice_position(void* self) {
+int32_t q_cameradevice_position(void* self) {
     return QCameraDevice_Position((QCameraDevice*)self);
 }
 
@@ -102,7 +102,7 @@ libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self) {
     return _arr;
 }
 
-int64_t q_cameradevice_correction_angle(void* self) {
+int32_t q_cameradevice_correction_angle(void* self) {
     return QCameraDevice_CorrectionAngle((QCameraDevice*)self);
 }
 

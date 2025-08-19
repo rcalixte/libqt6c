@@ -303,8 +303,6 @@ QJsonObject__iterator* q_jsonobject__iterator_operator_minus_assign(void* self, 
 /// @param j QJsonObject__iterator*
 int64_t q_jsonobject__iterator_operator_minus2(void* self, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject::iterator.html#dtor.QJsonObject::iterator)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QJsonObject__iterator*
@@ -423,8 +421,6 @@ QJsonObject__const_iterator* q_jsonobject__const_iterator_operator_minus_assign(
 /// @param j QJsonObject__const_iterator*
 int64_t q_jsonobject__const_iterator_operator_minus2(void* self, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qjsonobject::const_iterator.html#dtor.QJsonObject::const_iterator)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QJsonObject__const_iterator*

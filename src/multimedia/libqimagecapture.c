@@ -26,15 +26,15 @@ void* q_imagecapture_metacast(void* self, const char* param1) {
     return QImageCapture_Metacast((QImageCapture*)self, param1);
 }
 
-int32_t q_imagecapture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QImageCapture_Metacall((QImageCapture*)self, param1, param2, param3);
 }
 
-void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QImageCapture_OnMetacall((QImageCapture*)self, (intptr_t)callback);
 }
 
-int32_t q_imagecapture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_imagecapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QImageCapture_QBaseMetacall((QImageCapture*)self, param1, param2, param3);
 }
 
@@ -53,7 +53,7 @@ QMediaCaptureSession* q_imagecapture_capture_session(void* self) {
     return QImageCapture_CaptureSession((QImageCapture*)self);
 }
 
-int64_t q_imagecapture_error(void* self) {
+int32_t q_imagecapture_error(void* self) {
     return QImageCapture_Error((QImageCapture*)self);
 }
 
@@ -68,27 +68,27 @@ bool q_imagecapture_is_ready_for_capture(void* self) {
     return QImageCapture_IsReadyForCapture((QImageCapture*)self);
 }
 
-int64_t q_imagecapture_file_format(void* self) {
+int32_t q_imagecapture_file_format(void* self) {
     return QImageCapture_FileFormat((QImageCapture*)self);
 }
 
-void q_imagecapture_set_file_format(void* self, int64_t format) {
+void q_imagecapture_set_file_format(void* self, int32_t format) {
     QImageCapture_SetFileFormat((QImageCapture*)self, format);
 }
 
-libqt_list /* of int64_t */ q_imagecapture_supported_formats() {
+libqt_list /* of int32_t */ q_imagecapture_supported_formats() {
     libqt_list _arr = QImageCapture_SupportedFormats();
     return _arr;
 }
 
-const char* q_imagecapture_file_format_name(int64_t c) {
+const char* q_imagecapture_file_format_name(int32_t c) {
     libqt_string _str = QImageCapture_FileFormatName(c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_imagecapture_file_format_description(int64_t c) {
+const char* q_imagecapture_file_format_description(int32_t c) {
     libqt_string _str = QImageCapture_FileFormatDescription(c);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -107,11 +107,11 @@ void q_imagecapture_set_resolution2(void* self, int width, int height) {
     QImageCapture_SetResolution2((QImageCapture*)self, width, height);
 }
 
-int64_t q_imagecapture_quality(void* self) {
+int32_t q_imagecapture_quality(void* self) {
     return QImageCapture_Quality((QImageCapture*)self);
 }
 
-void q_imagecapture_set_quality(void* self, int64_t quality) {
+void q_imagecapture_set_quality(void* self, int32_t quality) {
     QImageCapture_SetQuality((QImageCapture*)self, quality);
 }
 
@@ -143,11 +143,11 @@ void q_imagecapture_on_error_changed(void* self, void (*callback)(void*)) {
     QImageCapture_Connect_ErrorChanged((QImageCapture*)self, (intptr_t)callback);
 }
 
-void q_imagecapture_error_occurred(void* self, int id, int64_t errorVal, const char* errorString) {
+void q_imagecapture_error_occurred(void* self, int id, int32_t errorVal, const char* errorString) {
     QImageCapture_ErrorOccurred((QImageCapture*)self, id, errorVal, qstring(errorString));
 }
 
-void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int64_t, const char*)) {
+void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int32_t, const char*)) {
     QImageCapture_Connect_ErrorOccurred((QImageCapture*)self, (intptr_t)callback);
 }
 
@@ -296,7 +296,7 @@ void q_imagecapture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_imagecapture_kill_timer2(void* self, int64_t id) {
+void q_imagecapture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -400,15 +400,15 @@ bool q_imagecapture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_imagecapture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_imagecapture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_imagecapture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_imagecapture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_imagecapture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_imagecapture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

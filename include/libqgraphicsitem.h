@@ -120,7 +120,7 @@ int64_t q_graphicsitem_flags(void* self);
 ///
 /// @param self QGraphicsItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsitem_set_flag(void* self, int64_t flag);
+void q_graphicsitem_set_flag(void* self, int32_t flag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFlags)
 ///
@@ -133,26 +133,26 @@ void q_graphicsitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsitem_cache_mode(void* self);
+int32_t q_graphicsitem_cache_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
 /// @param self QGraphicsItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicsitem_set_cache_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#panelModality)
 ///
 /// @param self QGraphicsItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsitem_panel_modality(void* self);
+int32_t q_graphicsitem_panel_modality(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setPanelModality)
 ///
 /// @param self QGraphicsItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isBlockedByModalPanel)
 ///
@@ -680,7 +680,7 @@ bool q_graphicsitem_qbase_contains(void* self, void* point);
 /// @param self QGraphicsItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
@@ -688,7 +688,7 @@ bool q_graphicsitem_collides_with_item(void* self, void* other, int64_t mode);
 ///
 /// @param self QGraphicsItem*
 /// @param callback bool fn(QGraphicsItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithItem)
 ///
@@ -697,14 +697,14 @@ void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, vo
 /// @param self QGraphicsItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
 /// @param self QGraphicsItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
@@ -712,7 +712,7 @@ bool q_graphicsitem_collides_with_path(void* self, void* path, int64_t mode);
 ///
 /// @param self QGraphicsItem*
 /// @param callback bool fn(QGraphicsItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidesWithPath)
 ///
@@ -721,7 +721,7 @@ void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, vo
 /// @param self QGraphicsItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#collidingItems)
 ///
@@ -1626,7 +1626,7 @@ QVariant* q_graphicsitem_qbase_input_method_query(void* self, int64_t query);
 /// @param self QGraphicsItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
@@ -1634,7 +1634,7 @@ QVariant* q_graphicsitem_item_change(void* self, int64_t change, void* value);
 ///
 /// @param self QGraphicsItem*
 /// @param callback QVariant* fn(QGraphicsItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#itemChange)
 ///
@@ -1643,7 +1643,7 @@ void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int6
 /// @param self QGraphicsItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#supportsExtension)
 ///
@@ -1778,20 +1778,20 @@ void q_graphicsitem_qbase_prepare_geometry_change(void* self);
 /// @param self QGraphicsItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setCacheMode)
 ///
 /// @param self QGraphicsItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#setFocus)
 ///
 /// @param self QGraphicsItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicsitem_set_focus1(void* self, int32_t focusReason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#ensureVisible)
 ///
@@ -1853,7 +1853,7 @@ void q_graphicsitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsitem_colliding_items1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsitem.html#isObscured)
 ///
@@ -1906,13 +1906,13 @@ void* q_graphicsobject_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsobject_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsobject_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsObject*
 /// @param callback int32_t fn(QGraphicsObject*, enum QMetaObject__Call, int, void*)
-void q_graphicsobject_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsobject_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1920,7 +1920,7 @@ void q_graphicsobject_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsobject_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2229,7 +2229,7 @@ void q_graphicsobject_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsObject*
 /// @param id enum Qt__TimerId
-void q_graphicsobject_kill_timer2(void* self, int64_t id);
+void q_graphicsobject_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2406,7 +2406,7 @@ bool q_graphicsobject_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsObject*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsobject_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsobject_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2417,7 +2417,7 @@ int32_t q_graphicsobject_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2428,7 +2428,7 @@ QMetaObject__Connection* q_graphicsobject_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2582,7 +2582,7 @@ int64_t q_graphicsobject_flags(void* self);
 ///
 /// @param self QGraphicsObject*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsobject_set_flag(void* self, int64_t flag);
+void q_graphicsobject_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2599,7 +2599,7 @@ void q_graphicsobject_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsObject*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsobject_cache_mode(void* self);
+int32_t q_graphicsobject_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2607,7 +2607,7 @@ int64_t q_graphicsobject_cache_mode(void* self);
 ///
 /// @param self QGraphicsObject*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsobject_set_cache_mode(void* self, int64_t mode);
+void q_graphicsobject_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2616,7 +2616,7 @@ void q_graphicsobject_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsObject*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsobject_panel_modality(void* self);
+int32_t q_graphicsobject_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2624,7 +2624,7 @@ int64_t q_graphicsobject_panel_modality(void* self);
 ///
 /// @param self QGraphicsObject*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsobject_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsobject_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3650,7 +3650,7 @@ void q_graphicsobject_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsObject*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsobject_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsobject_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3659,7 +3659,7 @@ void q_graphicsobject_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsObject*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsobject_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsobject_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3667,7 +3667,7 @@ void q_graphicsobject_set_cache_mode2(void* self, int64_t mode, void* cacheSize)
 ///
 /// @param self QGraphicsObject*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsobject_set_focus1(void* self, int64_t focusReason);
+void q_graphicsobject_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3745,7 +3745,7 @@ void q_graphicsobject_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsObject*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsobject_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsobject_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4080,7 +4080,7 @@ void q_graphicsobject_on_contains(void* self, bool (*callback)(void*, void*));
 /// @param self QGraphicsObject*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsobject_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsobject_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4091,7 +4091,7 @@ bool q_graphicsobject_collides_with_item(void* self, void* other, int64_t mode);
 /// @param self QGraphicsObject*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsobject_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsobject_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4101,7 +4101,7 @@ bool q_graphicsobject_qbase_collides_with_item(void* self, void* other, int64_t 
 ///
 /// @param self QGraphicsObject*
 /// @param callback bool fn(QGraphicsObject*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4112,7 +4112,7 @@ void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, 
 /// @param self QGraphicsObject*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsobject_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsobject_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4123,7 +4123,7 @@ bool q_graphicsobject_collides_with_path(void* self, void* path, int64_t mode);
 /// @param self QGraphicsObject*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsobject_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsobject_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4133,7 +4133,7 @@ bool q_graphicsobject_qbase_collides_with_path(void* self, void* path, int64_t m
 ///
 /// @param self QGraphicsObject*
 /// @param callback bool fn(QGraphicsObject*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -4896,7 +4896,7 @@ void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(vo
 /// @param self QGraphicsObject*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsobject_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsobject_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4907,7 +4907,7 @@ QVariant* q_graphicsobject_item_change(void* self, int64_t change, void* value);
 /// @param self QGraphicsObject*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsobject_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsobject_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -4917,7 +4917,7 @@ QVariant* q_graphicsobject_qbase_item_change(void* self, int64_t change, void* v
 ///
 /// @param self QGraphicsObject*
 /// @param callback QVariant* fn(QGraphicsObject*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -5439,7 +5439,7 @@ int64_t q_abstractgraphicsshapeitem_flags(void* self);
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_abstractgraphicsshapeitem_set_flag(void* self, int64_t flag);
+void q_abstractgraphicsshapeitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5456,7 +5456,7 @@ void q_abstractgraphicsshapeitem_set_flags(void* self, int64_t flags);
 /// @param self QAbstractGraphicsShapeItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_abstractgraphicsshapeitem_cache_mode(void* self);
+int32_t q_abstractgraphicsshapeitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5464,7 +5464,7 @@ int64_t q_abstractgraphicsshapeitem_cache_mode(void* self);
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_abstractgraphicsshapeitem_set_cache_mode(void* self, int64_t mode);
+void q_abstractgraphicsshapeitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5473,7 +5473,7 @@ void q_abstractgraphicsshapeitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QAbstractGraphicsShapeItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_abstractgraphicsshapeitem_panel_modality(void* self);
+int32_t q_abstractgraphicsshapeitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -5481,7 +5481,7 @@ int64_t q_abstractgraphicsshapeitem_panel_modality(void* self);
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_abstractgraphicsshapeitem_set_panel_modality(void* self, int64_t panelModality);
+void q_abstractgraphicsshapeitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6507,7 +6507,7 @@ void q_abstractgraphicsshapeitem_remove_scene_event_filter(void* self, void* fil
 /// @param self QAbstractGraphicsShapeItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_abstractgraphicsshapeitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_abstractgraphicsshapeitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6516,7 +6516,7 @@ void q_abstractgraphicsshapeitem_set_flag2(void* self, int64_t flag, bool enable
 /// @param self QAbstractGraphicsShapeItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6524,7 +6524,7 @@ void q_abstractgraphicsshapeitem_set_cache_mode2(void* self, int64_t mode, void*
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param focusReason enum Qt__FocusReason
-void q_abstractgraphicsshapeitem_set_focus1(void* self, int64_t focusReason);
+void q_abstractgraphicsshapeitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6602,7 +6602,7 @@ void q_abstractgraphicsshapeitem_set_transform2(void* self, void* matrix, bool c
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_abstractgraphicsshapeitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_abstractgraphicsshapeitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6755,7 +6755,7 @@ void q_abstractgraphicsshapeitem_on_contains(void* self, bool (*callback)(void*,
 /// @param self QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6766,7 +6766,7 @@ bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int
 /// @param self QAbstractGraphicsShapeItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_abstractgraphicsshapeitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_abstractgraphicsshapeitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6776,7 +6776,7 @@ bool q_abstractgraphicsshapeitem_qbase_collides_with_item(void* self, void* othe
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback bool fn(QAbstractGraphicsShapeItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -6787,7 +6787,7 @@ void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callba
 /// @param self QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6798,7 +6798,7 @@ bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int6
 /// @param self QAbstractGraphicsShapeItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_abstractgraphicsshapeitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_abstractgraphicsshapeitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -6808,7 +6808,7 @@ bool q_abstractgraphicsshapeitem_qbase_collides_with_path(void* self, void* path
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback bool fn(QAbstractGraphicsShapeItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -7513,7 +7513,7 @@ void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*c
 /// @param self QAbstractGraphicsShapeItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7524,7 +7524,7 @@ QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int64_t change, vo
 /// @param self QAbstractGraphicsShapeItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_abstractgraphicsshapeitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_abstractgraphicsshapeitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -7534,7 +7534,7 @@ QVariant* q_abstractgraphicsshapeitem_qbase_item_change(void* self, int64_t chan
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QVariant* fn(QAbstractGraphicsShapeItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -8164,7 +8164,7 @@ int64_t q_graphicspathitem_flags(void* self);
 ///
 /// @param self QGraphicsPathItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicspathitem_set_flag(void* self, int64_t flag);
+void q_graphicspathitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8181,7 +8181,7 @@ void q_graphicspathitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsPathItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicspathitem_cache_mode(void* self);
+int32_t q_graphicspathitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8189,7 +8189,7 @@ int64_t q_graphicspathitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsPathItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicspathitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicspathitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8198,7 +8198,7 @@ void q_graphicspathitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsPathItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicspathitem_panel_modality(void* self);
+int32_t q_graphicspathitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -8206,7 +8206,7 @@ int64_t q_graphicspathitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsPathItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicspathitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicspathitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9232,7 +9232,7 @@ void q_graphicspathitem_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsPathItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicspathitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicspathitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9241,7 +9241,7 @@ void q_graphicspathitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsPathItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicspathitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicspathitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9249,7 +9249,7 @@ void q_graphicspathitem_set_cache_mode2(void* self, int64_t mode, void* cacheSiz
 ///
 /// @param self QGraphicsPathItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicspathitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicspathitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9327,7 +9327,7 @@ void q_graphicspathitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsPathItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicspathitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicspathitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9394,7 +9394,7 @@ void q_graphicspathitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsPathItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspathitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspathitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9405,7 +9405,7 @@ bool q_graphicspathitem_collides_with_item(void* self, void* other, int64_t mode
 /// @param self QGraphicsPathItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspathitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspathitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9415,7 +9415,7 @@ bool q_graphicspathitem_qbase_collides_with_item(void* self, void* other, int64_
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback bool fn(QGraphicsPathItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -9426,7 +9426,7 @@ void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*
 /// @param self QGraphicsPathItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspathitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspathitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9437,7 +9437,7 @@ bool q_graphicspathitem_collides_with_path(void* self, void* path, int64_t mode)
 /// @param self QGraphicsPathItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspathitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspathitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -9447,7 +9447,7 @@ bool q_graphicspathitem_qbase_collides_with_path(void* self, void* path, int64_t
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback bool fn(QGraphicsPathItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicspathitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspathitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -10090,7 +10090,7 @@ void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param self QGraphicsPathItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspathitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspathitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10101,7 +10101,7 @@ QVariant* q_graphicspathitem_item_change(void* self, int64_t change, void* value
 /// @param self QGraphicsPathItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspathitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspathitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10111,7 +10111,7 @@ QVariant* q_graphicspathitem_qbase_item_change(void* self, int64_t change, void*
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback QVariant* fn(QGraphicsPathItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -10675,7 +10675,7 @@ int64_t q_graphicsrectitem_flags(void* self);
 ///
 /// @param self QGraphicsRectItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsrectitem_set_flag(void* self, int64_t flag);
+void q_graphicsrectitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10692,7 +10692,7 @@ void q_graphicsrectitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsRectItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsrectitem_cache_mode(void* self);
+int32_t q_graphicsrectitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10700,7 +10700,7 @@ int64_t q_graphicsrectitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsRectItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsrectitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicsrectitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10709,7 +10709,7 @@ void q_graphicsrectitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsRectItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsrectitem_panel_modality(void* self);
+int32_t q_graphicsrectitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -10717,7 +10717,7 @@ int64_t q_graphicsrectitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsRectItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsrectitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsrectitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11743,7 +11743,7 @@ void q_graphicsrectitem_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsRectItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsrectitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsrectitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11752,7 +11752,7 @@ void q_graphicsrectitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsRectItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsrectitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsrectitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11760,7 +11760,7 @@ void q_graphicsrectitem_set_cache_mode2(void* self, int64_t mode, void* cacheSiz
 ///
 /// @param self QGraphicsRectItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsrectitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicsrectitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11838,7 +11838,7 @@ void q_graphicsrectitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsRectItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsrectitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsrectitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11905,7 +11905,7 @@ void q_graphicsrectitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsRectItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsrectitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsrectitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11916,7 +11916,7 @@ bool q_graphicsrectitem_collides_with_item(void* self, void* other, int64_t mode
 /// @param self QGraphicsRectItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsrectitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsrectitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11926,7 +11926,7 @@ bool q_graphicsrectitem_qbase_collides_with_item(void* self, void* other, int64_
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback bool fn(QGraphicsRectItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -11937,7 +11937,7 @@ void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*
 /// @param self QGraphicsRectItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsrectitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsrectitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11948,7 +11948,7 @@ bool q_graphicsrectitem_collides_with_path(void* self, void* path, int64_t mode)
 /// @param self QGraphicsRectItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsrectitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsrectitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -11958,7 +11958,7 @@ bool q_graphicsrectitem_qbase_collides_with_path(void* self, void* path, int64_t
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback bool fn(QGraphicsRectItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsrectitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsrectitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -12601,7 +12601,7 @@ void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param self QGraphicsRectItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsrectitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12612,7 +12612,7 @@ QVariant* q_graphicsrectitem_item_change(void* self, int64_t change, void* value
 /// @param self QGraphicsRectItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsrectitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsrectitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -12622,7 +12622,7 @@ QVariant* q_graphicsrectitem_qbase_item_change(void* self, int64_t change, void*
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback QVariant* fn(QGraphicsRectItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -13208,7 +13208,7 @@ int64_t q_graphicsellipseitem_flags(void* self);
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsellipseitem_set_flag(void* self, int64_t flag);
+void q_graphicsellipseitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13225,7 +13225,7 @@ void q_graphicsellipseitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsEllipseItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsellipseitem_cache_mode(void* self);
+int32_t q_graphicsellipseitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13233,7 +13233,7 @@ int64_t q_graphicsellipseitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsellipseitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicsellipseitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13242,7 +13242,7 @@ void q_graphicsellipseitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsEllipseItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsellipseitem_panel_modality(void* self);
+int32_t q_graphicsellipseitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -13250,7 +13250,7 @@ int64_t q_graphicsellipseitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsellipseitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsellipseitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14276,7 +14276,7 @@ void q_graphicsellipseitem_remove_scene_event_filter(void* self, void* filterIte
 /// @param self QGraphicsEllipseItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsellipseitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsellipseitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14285,7 +14285,7 @@ void q_graphicsellipseitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsEllipseItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsellipseitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsellipseitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14293,7 +14293,7 @@ void q_graphicsellipseitem_set_cache_mode2(void* self, int64_t mode, void* cache
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsellipseitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicsellipseitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14371,7 +14371,7 @@ void q_graphicsellipseitem_set_transform2(void* self, void* matrix, bool combine
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsellipseitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsellipseitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14438,7 +14438,7 @@ void q_graphicsellipseitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14449,7 +14449,7 @@ bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int64_t m
 /// @param self QGraphicsEllipseItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsellipseitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsellipseitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14459,7 +14459,7 @@ bool q_graphicsellipseitem_qbase_collides_with_item(void* self, void* other, int
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback bool fn(QGraphicsEllipseItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -14470,7 +14470,7 @@ void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(vo
 /// @param self QGraphicsEllipseItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14481,7 +14481,7 @@ bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int64_t mo
 /// @param self QGraphicsEllipseItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsellipseitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsellipseitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -14491,7 +14491,7 @@ bool q_graphicsellipseitem_qbase_collides_with_path(void* self, void* path, int6
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback bool fn(QGraphicsEllipseItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsellipseitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsellipseitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15134,7 +15134,7 @@ void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callbac
 /// @param self QGraphicsEllipseItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsellipseitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15145,7 +15145,7 @@ QVariant* q_graphicsellipseitem_item_change(void* self, int64_t change, void* va
 /// @param self QGraphicsEllipseItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsellipseitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsellipseitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15155,7 +15155,7 @@ QVariant* q_graphicsellipseitem_qbase_item_change(void* self, int64_t change, vo
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback QVariant* fn(QGraphicsEllipseItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -15292,13 +15292,13 @@ QGraphicsPolygonItem* q_graphicspolygonitem_new2(void* parent);
 /// @param self QGraphicsPolygonItem*
 ///
 /// @return enum Qt__FillRule
-int64_t q_graphicspolygonitem_fill_rule(void* self);
+int32_t q_graphicspolygonitem_fill_rule(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#setFillRule)
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param rule enum Qt__FillRule
-void q_graphicspolygonitem_set_fill_rule(void* self, int64_t rule);
+void q_graphicspolygonitem_set_fill_rule(void* self, int32_t rule);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspolygonitem.html#boundingRect)
 ///
@@ -15684,7 +15684,7 @@ int64_t q_graphicspolygonitem_flags(void* self);
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicspolygonitem_set_flag(void* self, int64_t flag);
+void q_graphicspolygonitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15701,7 +15701,7 @@ void q_graphicspolygonitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsPolygonItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicspolygonitem_cache_mode(void* self);
+int32_t q_graphicspolygonitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15709,7 +15709,7 @@ int64_t q_graphicspolygonitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicspolygonitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicspolygonitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15718,7 +15718,7 @@ void q_graphicspolygonitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsPolygonItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicspolygonitem_panel_modality(void* self);
+int32_t q_graphicspolygonitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -15726,7 +15726,7 @@ int64_t q_graphicspolygonitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicspolygonitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicspolygonitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16752,7 +16752,7 @@ void q_graphicspolygonitem_remove_scene_event_filter(void* self, void* filterIte
 /// @param self QGraphicsPolygonItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicspolygonitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicspolygonitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16761,7 +16761,7 @@ void q_graphicspolygonitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsPolygonItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicspolygonitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicspolygonitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16769,7 +16769,7 @@ void q_graphicspolygonitem_set_cache_mode2(void* self, int64_t mode, void* cache
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicspolygonitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicspolygonitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16847,7 +16847,7 @@ void q_graphicspolygonitem_set_transform2(void* self, void* matrix, bool combine
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicspolygonitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicspolygonitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16914,7 +16914,7 @@ void q_graphicspolygonitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16925,7 +16925,7 @@ bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int64_t m
 /// @param self QGraphicsPolygonItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspolygonitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspolygonitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16935,7 +16935,7 @@ bool q_graphicspolygonitem_qbase_collides_with_item(void* self, void* other, int
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback bool fn(QGraphicsPolygonItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -16946,7 +16946,7 @@ void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(vo
 /// @param self QGraphicsPolygonItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16957,7 +16957,7 @@ bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int64_t mo
 /// @param self QGraphicsPolygonItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspolygonitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspolygonitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -16967,7 +16967,7 @@ bool q_graphicspolygonitem_qbase_collides_with_path(void* self, void* path, int6
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback bool fn(QGraphicsPolygonItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicspolygonitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspolygonitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -17610,7 +17610,7 @@ void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callbac
 /// @param self QGraphicsPolygonItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspolygonitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17621,7 +17621,7 @@ QVariant* q_graphicspolygonitem_item_change(void* self, int64_t change, void* va
 /// @param self QGraphicsPolygonItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspolygonitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspolygonitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -17631,7 +17631,7 @@ QVariant* q_graphicspolygonitem_qbase_item_change(void* self, int64_t change, vo
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback QVariant* fn(QGraphicsPolygonItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -18176,7 +18176,7 @@ int64_t q_graphicslineitem_flags(void* self);
 ///
 /// @param self QGraphicsLineItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicslineitem_set_flag(void* self, int64_t flag);
+void q_graphicslineitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18193,7 +18193,7 @@ void q_graphicslineitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsLineItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicslineitem_cache_mode(void* self);
+int32_t q_graphicslineitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18201,7 +18201,7 @@ int64_t q_graphicslineitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsLineItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicslineitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicslineitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18210,7 +18210,7 @@ void q_graphicslineitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsLineItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicslineitem_panel_modality(void* self);
+int32_t q_graphicslineitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -18218,7 +18218,7 @@ int64_t q_graphicslineitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsLineItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicslineitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicslineitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19244,7 +19244,7 @@ void q_graphicslineitem_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsLineItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicslineitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicslineitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19253,7 +19253,7 @@ void q_graphicslineitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsLineItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicslineitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicslineitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19261,7 +19261,7 @@ void q_graphicslineitem_set_cache_mode2(void* self, int64_t mode, void* cacheSiz
 ///
 /// @param self QGraphicsLineItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicslineitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicslineitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19339,7 +19339,7 @@ void q_graphicslineitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsLineItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicslineitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicslineitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19406,7 +19406,7 @@ void q_graphicslineitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsLineItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicslineitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicslineitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19417,7 +19417,7 @@ bool q_graphicslineitem_collides_with_item(void* self, void* other, int64_t mode
 /// @param self QGraphicsLineItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicslineitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicslineitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19427,7 +19427,7 @@ bool q_graphicslineitem_qbase_collides_with_item(void* self, void* other, int64_
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback bool fn(QGraphicsLineItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -19438,7 +19438,7 @@ void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*
 /// @param self QGraphicsLineItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicslineitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicslineitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19449,7 +19449,7 @@ bool q_graphicslineitem_collides_with_path(void* self, void* path, int64_t mode)
 /// @param self QGraphicsLineItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicslineitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicslineitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -19459,7 +19459,7 @@ bool q_graphicslineitem_qbase_collides_with_path(void* self, void* path, int64_t
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback bool fn(QGraphicsLineItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicslineitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicslineitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -20102,7 +20102,7 @@ void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(
 /// @param self QGraphicsLineItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicslineitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicslineitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20113,7 +20113,7 @@ QVariant* q_graphicslineitem_item_change(void* self, int64_t change, void* value
 /// @param self QGraphicsLineItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicslineitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicslineitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20123,7 +20123,7 @@ QVariant* q_graphicslineitem_qbase_item_change(void* self, int64_t change, void*
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback QVariant* fn(QGraphicsLineItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -20282,13 +20282,13 @@ void q_graphicspixmapitem_set_pixmap(void* self, void* pixmap);
 /// @param self QGraphicsPixmapItem*
 ///
 /// @return enum Qt__TransformationMode
-int64_t q_graphicspixmapitem_transformation_mode(void* self);
+int32_t q_graphicspixmapitem_transformation_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setTransformationMode)
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param mode enum Qt__TransformationMode
-void q_graphicspixmapitem_set_transformation_mode(void* self, int64_t mode);
+void q_graphicspixmapitem_set_transformation_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#offset)
 ///
@@ -20463,13 +20463,13 @@ int32_t q_graphicspixmapitem_qbase_type(void* self);
 /// @param self QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsPixmapItem__ShapeMode
-int64_t q_graphicspixmapitem_shape_mode(void* self);
+int32_t q_graphicspixmapitem_shape_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#setShapeMode)
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param mode enum QGraphicsPixmapItem__ShapeMode
-void q_graphicspixmapitem_set_shape_mode(void* self, int64_t mode);
+void q_graphicspixmapitem_set_shape_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicspixmapitem.html#supportsExtension)
 ///
@@ -20675,7 +20675,7 @@ int64_t q_graphicspixmapitem_flags(void* self);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicspixmapitem_set_flag(void* self, int64_t flag);
+void q_graphicspixmapitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20692,7 +20692,7 @@ void q_graphicspixmapitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicspixmapitem_cache_mode(void* self);
+int32_t q_graphicspixmapitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20700,7 +20700,7 @@ int64_t q_graphicspixmapitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicspixmapitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicspixmapitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20709,7 +20709,7 @@ void q_graphicspixmapitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsPixmapItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicspixmapitem_panel_modality(void* self);
+int32_t q_graphicspixmapitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -20717,7 +20717,7 @@ int64_t q_graphicspixmapitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicspixmapitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicspixmapitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21743,7 +21743,7 @@ void q_graphicspixmapitem_remove_scene_event_filter(void* self, void* filterItem
 /// @param self QGraphicsPixmapItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicspixmapitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicspixmapitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21752,7 +21752,7 @@ void q_graphicspixmapitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsPixmapItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicspixmapitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicspixmapitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21760,7 +21760,7 @@ void q_graphicspixmapitem_set_cache_mode2(void* self, int64_t mode, void* cacheS
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicspixmapitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicspixmapitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21838,7 +21838,7 @@ void q_graphicspixmapitem_set_transform2(void* self, void* matrix, bool combine)
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicspixmapitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicspixmapitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21905,7 +21905,7 @@ void q_graphicspixmapitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21916,7 +21916,7 @@ bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int64_t mo
 /// @param self QGraphicsPixmapItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspixmapitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicspixmapitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21926,7 +21926,7 @@ bool q_graphicspixmapitem_qbase_collides_with_item(void* self, void* other, int6
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback bool fn(QGraphicsPixmapItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -21937,7 +21937,7 @@ void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(voi
 /// @param self QGraphicsPixmapItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21948,7 +21948,7 @@ bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int64_t mod
 /// @param self QGraphicsPixmapItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicspixmapitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicspixmapitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -21958,7 +21958,7 @@ bool q_graphicspixmapitem_qbase_collides_with_path(void* self, void* path, int64
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback bool fn(QGraphicsPixmapItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicspixmapitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicspixmapitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -22601,7 +22601,7 @@ void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback
 /// @param self QGraphicsPixmapItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspixmapitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22612,7 +22612,7 @@ QVariant* q_graphicspixmapitem_item_change(void* self, int64_t change, void* val
 /// @param self QGraphicsPixmapItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicspixmapitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicspixmapitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -22622,7 +22622,7 @@ QVariant* q_graphicspixmapitem_qbase_item_change(void* self, int64_t change, voi
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback QVariant* fn(QGraphicsPixmapItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -22778,13 +22778,13 @@ void* q_graphicstextitem_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicstextitem_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicstextitem_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback int32_t fn(QGraphicsTextItem*, enum QMetaObject__Call, int, void*)
-void q_graphicstextitem_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicstextitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -22792,7 +22792,7 @@ void q_graphicstextitem_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicstextitem_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicstextitem_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -23894,7 +23894,7 @@ void q_graphicstextitem_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsTextItem*
 /// @param id enum Qt__TimerId
-void q_graphicstextitem_kill_timer2(void* self, int64_t id);
+void q_graphicstextitem_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -24071,7 +24071,7 @@ bool q_graphicstextitem_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsTextItem*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicstextitem_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicstextitem_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -24082,7 +24082,7 @@ int32_t q_graphicstextitem_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -24093,7 +24093,7 @@ QMetaObject__Connection* q_graphicstextitem_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicstextitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -24247,7 +24247,7 @@ int64_t q_graphicstextitem_flags(void* self);
 ///
 /// @param self QGraphicsTextItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicstextitem_set_flag(void* self, int64_t flag);
+void q_graphicstextitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24264,7 +24264,7 @@ void q_graphicstextitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsTextItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicstextitem_cache_mode(void* self);
+int32_t q_graphicstextitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24272,7 +24272,7 @@ int64_t q_graphicstextitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsTextItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicstextitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicstextitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24281,7 +24281,7 @@ void q_graphicstextitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsTextItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicstextitem_panel_modality(void* self);
+int32_t q_graphicstextitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -24289,7 +24289,7 @@ int64_t q_graphicstextitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsTextItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicstextitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicstextitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25315,7 +25315,7 @@ void q_graphicstextitem_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsTextItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicstextitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicstextitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25324,7 +25324,7 @@ void q_graphicstextitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsTextItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicstextitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicstextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25332,7 +25332,7 @@ void q_graphicstextitem_set_cache_mode2(void* self, int64_t mode, void* cacheSiz
 ///
 /// @param self QGraphicsTextItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicstextitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicstextitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25410,7 +25410,7 @@ void q_graphicstextitem_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsTextItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicstextitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicstextitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25689,7 +25689,7 @@ void q_graphicstextitem_on_advance(void* self, void (*callback)(void*, int));
 /// @param self QGraphicsTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicstextitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicstextitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25700,7 +25700,7 @@ bool q_graphicstextitem_collides_with_item(void* self, void* other, int64_t mode
 /// @param self QGraphicsTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicstextitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicstextitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25710,7 +25710,7 @@ bool q_graphicstextitem_qbase_collides_with_item(void* self, void* other, int64_
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback bool fn(QGraphicsTextItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -25721,7 +25721,7 @@ void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*
 /// @param self QGraphicsTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicstextitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicstextitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25732,7 +25732,7 @@ bool q_graphicstextitem_collides_with_path(void* self, void* path, int64_t mode)
 /// @param self QGraphicsTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicstextitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicstextitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25742,7 +25742,7 @@ bool q_graphicstextitem_qbase_collides_with_path(void* self, void* path, int64_t
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback bool fn(QGraphicsTextItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicstextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicstextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -25815,7 +25815,7 @@ void q_graphicstextitem_on_wheel_event(void* self, void (*callback)(void*, void*
 /// @param self QGraphicsTextItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicstextitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicstextitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25826,7 +25826,7 @@ QVariant* q_graphicstextitem_item_change(void* self, int64_t change, void* value
 /// @param self QGraphicsTextItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicstextitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicstextitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -25836,7 +25836,7 @@ QVariant* q_graphicstextitem_qbase_item_change(void* self, int64_t change, void*
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback QVariant* fn(QGraphicsTextItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsObject
 ///
@@ -26513,7 +26513,7 @@ int64_t q_graphicssimpletextitem_flags(void* self);
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicssimpletextitem_set_flag(void* self, int64_t flag);
+void q_graphicssimpletextitem_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26530,7 +26530,7 @@ void q_graphicssimpletextitem_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsSimpleTextItem*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicssimpletextitem_cache_mode(void* self);
+int32_t q_graphicssimpletextitem_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26538,7 +26538,7 @@ int64_t q_graphicssimpletextitem_cache_mode(void* self);
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicssimpletextitem_set_cache_mode(void* self, int64_t mode);
+void q_graphicssimpletextitem_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26547,7 +26547,7 @@ void q_graphicssimpletextitem_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsSimpleTextItem*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicssimpletextitem_panel_modality(void* self);
+int32_t q_graphicssimpletextitem_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -26555,7 +26555,7 @@ int64_t q_graphicssimpletextitem_panel_modality(void* self);
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicssimpletextitem_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicssimpletextitem_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27581,7 +27581,7 @@ void q_graphicssimpletextitem_remove_scene_event_filter(void* self, void* filter
 /// @param self QGraphicsSimpleTextItem*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicssimpletextitem_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicssimpletextitem_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27590,7 +27590,7 @@ void q_graphicssimpletextitem_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsSimpleTextItem*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicssimpletextitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicssimpletextitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27598,7 +27598,7 @@ void q_graphicssimpletextitem_set_cache_mode2(void* self, int64_t mode, void* ca
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicssimpletextitem_set_focus1(void* self, int64_t focusReason);
+void q_graphicssimpletextitem_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27676,7 +27676,7 @@ void q_graphicssimpletextitem_set_transform2(void* self, void* matrix, bool comb
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicssimpletextitem_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicssimpletextitem_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27743,7 +27743,7 @@ void q_graphicssimpletextitem_on_advance(void* self, void (*callback)(void*, int
 /// @param self QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27754,7 +27754,7 @@ bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int64_
 /// @param self QGraphicsSimpleTextItem*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicssimpletextitem_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicssimpletextitem_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27764,7 +27764,7 @@ bool q_graphicssimpletextitem_qbase_collides_with_item(void* self, void* other, 
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback bool fn(QGraphicsSimpleTextItem*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -27775,7 +27775,7 @@ void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)
 /// @param self QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27786,7 +27786,7 @@ bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int64_t
 /// @param self QGraphicsSimpleTextItem*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicssimpletextitem_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicssimpletextitem_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -27796,7 +27796,7 @@ bool q_graphicssimpletextitem_qbase_collides_with_path(void* self, void* path, i
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback bool fn(QGraphicsSimpleTextItem*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicssimpletextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicssimpletextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -28439,7 +28439,7 @@ void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*call
 /// @param self QGraphicsSimpleTextItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicssimpletextitem_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28450,7 +28450,7 @@ QVariant* q_graphicssimpletextitem_item_change(void* self, int64_t change, void*
 /// @param self QGraphicsSimpleTextItem*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicssimpletextitem_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicssimpletextitem_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28460,7 +28460,7 @@ QVariant* q_graphicssimpletextitem_qbase_item_change(void* self, int64_t change,
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QVariant* fn(QGraphicsSimpleTextItem*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///
@@ -28848,7 +28848,7 @@ int64_t q_graphicsitemgroup_flags(void* self);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicsitemgroup_set_flag(void* self, int64_t flag);
+void q_graphicsitemgroup_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28865,7 +28865,7 @@ void q_graphicsitemgroup_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsItemGroup*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicsitemgroup_cache_mode(void* self);
+int32_t q_graphicsitemgroup_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28873,7 +28873,7 @@ int64_t q_graphicsitemgroup_cache_mode(void* self);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicsitemgroup_set_cache_mode(void* self, int64_t mode);
+void q_graphicsitemgroup_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28882,7 +28882,7 @@ void q_graphicsitemgroup_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsItemGroup*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicsitemgroup_panel_modality(void* self);
+int32_t q_graphicsitemgroup_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -28890,7 +28890,7 @@ int64_t q_graphicsitemgroup_panel_modality(void* self);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicsitemgroup_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicsitemgroup_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29916,7 +29916,7 @@ void q_graphicsitemgroup_remove_scene_event_filter(void* self, void* filterItem)
 /// @param self QGraphicsItemGroup*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicsitemgroup_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicsitemgroup_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29925,7 +29925,7 @@ void q_graphicsitemgroup_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsItemGroup*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicsitemgroup_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicsitemgroup_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -29933,7 +29933,7 @@ void q_graphicsitemgroup_set_cache_mode2(void* self, int64_t mode, void* cacheSi
 ///
 /// @param self QGraphicsItemGroup*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsitemgroup_set_focus1(void* self, int64_t focusReason);
+void q_graphicsitemgroup_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30011,7 +30011,7 @@ void q_graphicsitemgroup_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsitemgroup_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsitemgroup_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30136,7 +30136,7 @@ void q_graphicsitemgroup_on_contains(void* self, bool (*callback)(void*, void*))
 /// @param self QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30147,7 +30147,7 @@ bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int64_t mod
 /// @param self QGraphicsItemGroup*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitemgroup_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicsitemgroup_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30157,7 +30157,7 @@ bool q_graphicsitemgroup_qbase_collides_with_item(void* self, void* other, int64
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback bool fn(QGraphicsItemGroup*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -30168,7 +30168,7 @@ void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void
 /// @param self QGraphicsItemGroup*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30179,7 +30179,7 @@ bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int64_t mode
 /// @param self QGraphicsItemGroup*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicsitemgroup_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicsitemgroup_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30189,7 +30189,7 @@ bool q_graphicsitemgroup_qbase_collides_with_path(void* self, void* path, int64_
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback bool fn(QGraphicsItemGroup*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicsitemgroup_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicsitemgroup_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -30832,7 +30832,7 @@ void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)
 /// @param self QGraphicsItemGroup*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsitemgroup_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30843,7 +30843,7 @@ QVariant* q_graphicsitemgroup_item_change(void* self, int64_t change, void* valu
 /// @param self QGraphicsItemGroup*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicsitemgroup_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicsitemgroup_qbase_item_change(void* self, int32_t change, void* value);
 
 /// Inherited from QGraphicsItem
 ///
@@ -30853,7 +30853,7 @@ QVariant* q_graphicsitemgroup_qbase_item_change(void* self, int64_t change, void
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback QVariant* fn(QGraphicsItemGroup*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsItem
 ///

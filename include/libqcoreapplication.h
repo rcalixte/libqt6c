@@ -39,13 +39,13 @@ void* q_coreapplication_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_coreapplication_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_coreapplication_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QCoreApplication*
 /// @param callback int32_t fn(QCoreApplication*, enum QMetaObject__Call, int, void*)
-void q_coreapplication_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_coreapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -53,7 +53,7 @@ void q_coreapplication_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_coreapplication_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_coreapplication_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -71,12 +71,12 @@ const char** q_coreapplication_arguments();
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
-void q_coreapplication_set_attribute(int64_t attribute);
+void q_coreapplication_set_attribute(int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#testAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
-bool q_coreapplication_test_attribute(int64_t attribute);
+bool q_coreapplication_test_attribute(int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setOrganizationDomain)
 ///
@@ -239,7 +239,7 @@ long long q_coreapplication_application_pid();
 /// @param permission QPermission*
 ///
 /// @return enum Qt__PermissionStatus
-int64_t q_coreapplication_check_permission(void* self, void* permission);
+int32_t q_coreapplication_check_permission(void* self, void* permission);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setLibraryPaths)
 ///
@@ -432,7 +432,7 @@ const char* q_coreapplication_tr3(const char* s, const char* c, int n);
 ///
 /// @param attribute enum Qt__ApplicationAttribute
 /// @param on bool
-void q_coreapplication_set_attribute2(int64_t attribute, bool on);
+void q_coreapplication_set_attribute2(int32_t attribute, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#processEvents)
 ///
@@ -577,7 +577,7 @@ void q_coreapplication_kill_timer(void* self, int id);
 ///
 /// @param self QCoreApplication*
 /// @param id enum Qt__TimerId
-void q_coreapplication_kill_timer2(void* self, int64_t id);
+void q_coreapplication_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -754,7 +754,7 @@ bool q_coreapplication_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QCoreApplication*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_coreapplication_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_coreapplication_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -765,7 +765,7 @@ int32_t q_coreapplication_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_coreapplication_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_coreapplication_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -776,7 +776,7 @@ QMetaObject__Connection* q_coreapplication_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_coreapplication_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_coreapplication_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

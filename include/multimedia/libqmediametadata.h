@@ -26,33 +26,33 @@ QMediaMetaData* q_mediametadata_new2();
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
-QVariant* q_mediametadata_value(void* self, int64_t k);
+QVariant* q_mediametadata_value(void* self, int32_t k);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#insert)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
 /// @param value QVariant*
-void q_mediametadata_insert(void* self, int64_t k, void* value);
+void q_mediametadata_insert(void* self, int32_t k, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#remove)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
-void q_mediametadata_remove(void* self, int64_t k);
+void q_mediametadata_remove(void* self, int32_t k);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#keys)
 ///
 /// @param self QMediaMetaData*
 ///
 /// @return libqt_list of enum QMediaMetaData__Key
-libqt_list /* of int64_t */ q_mediametadata_keys(void* self);
+libqt_list /* of int32_t */ q_mediametadata_keys(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#operator-5b-5d)
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
-QVariant* q_mediametadata_operator_subscript(void* self, int64_t k);
+QVariant* q_mediametadata_operator_subscript(void* self, int32_t k);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#clear)
 ///
@@ -70,14 +70,14 @@ bool q_mediametadata_is_empty(void* self);
 ///
 /// @param self QMediaMetaData*
 /// @param k enum QMediaMetaData__Key
-const char* q_mediametadata_string_value(void* self, int64_t k);
+const char* q_mediametadata_string_value(void* self, int32_t k);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#metaDataKeyToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param k enum QMediaMetaData__Key
-const char* q_mediametadata_meta_data_key_to_string(int64_t k);
+const char* q_mediametadata_meta_data_key_to_string(int32_t k);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediametadata.html#dtor.QMediaMetaData)
 ///

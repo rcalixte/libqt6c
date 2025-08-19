@@ -41,7 +41,7 @@ void q_pdfselection_copy_to_clipboard(void* self) {
     QPdfSelection_CopyToClipboard((QPdfSelection*)self);
 }
 
-void q_pdfselection_copy_to_clipboard1(void* self, int64_t mode) {
+void q_pdfselection_copy_to_clipboard1(void* self, int32_t mode) {
     QPdfSelection_CopyToClipboard1((QPdfSelection*)self, mode);
 }
 

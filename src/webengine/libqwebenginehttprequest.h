@@ -31,7 +31,7 @@ QWebEngineHttpRequest* q_webenginehttprequest_new3(void* url);
 ///
 /// @param url QUrl*
 /// @param method enum QWebEngineHttpRequest__Method*
-QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int64_t* method);
+QWebEngineHttpRequest* q_webenginehttprequest_new4(void* url, int32_t* method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#operator-eq)
 ///
@@ -68,13 +68,13 @@ bool q_webenginehttprequest_operator_not_equal(void* self, void* other);
 /// @param self QWebEngineHttpRequest*
 ///
 /// @return enum QWebEngineHttpRequest__Method
-int64_t q_webenginehttprequest_method(void* self);
+int32_t q_webenginehttprequest_method(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#setMethod)
 ///
 /// @param self QWebEngineHttpRequest*
 /// @param method enum QWebEngineHttpRequest__Method
-void q_webenginehttprequest_set_method(void* self, int64_t method);
+void q_webenginehttprequest_set_method(void* self, int32_t method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginehttprequest.html#url)
 ///

@@ -35,13 +35,13 @@ void* q_timer_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timer_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timer_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTimer*
 /// @param callback int32_t fn(QTimer*, enum QMetaObject__Call, int, void*)
-void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_timer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timer_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -73,7 +73,7 @@ int32_t q_timer_timer_id(void* self);
 /// @param self QTimer*
 ///
 /// @return enum Qt__TimerId
-int64_t q_timer_id(void* self);
+int32_t q_timer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#setInterval)
 ///
@@ -95,14 +95,14 @@ int32_t q_timer_remaining_time(void* self);
 ///
 /// @param self QTimer*
 /// @param atype enum Qt__TimerType
-void q_timer_set_timer_type(void* self, int64_t atype);
+void q_timer_set_timer_type(void* self, int32_t atype);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#timerType)
 ///
 /// @param self QTimer*
 ///
 /// @return enum Qt__TimerType
-int64_t q_timer_timer_type(void* self);
+int32_t q_timer_timer_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimer.html#setSingleShot)
 ///
@@ -260,7 +260,7 @@ void q_timer_kill_timer(void* self, int id);
 ///
 /// @param self QTimer*
 /// @param id enum Qt__TimerId
-void q_timer_kill_timer2(void* self, int64_t id);
+void q_timer_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -437,7 +437,7 @@ bool q_timer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTimer*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_timer_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_timer_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -448,7 +448,7 @@ int32_t q_timer_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_timer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -459,7 +459,7 @@ QMetaObject__Connection* q_timer_connect5(void* sender, void* signal, void* rece
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_timer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -32,15 +32,15 @@ void* q_savefile_metacast(void* self, const char* param1) {
     return QSaveFile_Metacast((QSaveFile*)self, param1);
 }
 
-int32_t q_savefile_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_savefile_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSaveFile_Metacall((QSaveFile*)self, param1, param2, param3);
 }
 
-void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSaveFile_OnMetacall((QSaveFile*)self, (intptr_t)callback);
 }
 
-int32_t q_savefile_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_savefile_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSaveFile_QBaseMetacall((QSaveFile*)self, param1, param2, param3);
 }
 
@@ -127,7 +127,7 @@ const char* q_savefile_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_savefile_error(void* self) {
+int32_t q_savefile_error(void* self) {
     return QFileDevice_Error((QFileDevice*)self);
 }
 
@@ -155,11 +155,11 @@ bool q_savefile_unmap(void* self, unsigned char* address) {
     return QFileDevice_Unmap((QFileDevice*)self, address);
 }
 
-QDateTime* q_savefile_file_time(void* self, int64_t time) {
+QDateTime* q_savefile_file_time(void* self, int32_t time) {
     return QFileDevice_FileTime((QFileDevice*)self, time);
 }
 
-bool q_savefile_set_file_time(void* self, void* newDate, int64_t fileTime) {
+bool q_savefile_set_file_time(void* self, void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
@@ -408,7 +408,7 @@ void q_savefile_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_savefile_kill_timer2(void* self, int64_t id) {
+void q_savefile_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -512,15 +512,15 @@ bool q_savefile_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_savefile_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_savefile_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_savefile_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_savefile_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_savefile_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_savefile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

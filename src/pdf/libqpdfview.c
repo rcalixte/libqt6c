@@ -36,15 +36,15 @@ void* q_pdfview_metacast(void* self, const char* param1) {
     return QPdfView_Metacast((QPdfView*)self, param1);
 }
 
-int32_t q_pdfview_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfview_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfView_Metacall((QPdfView*)self, param1, param2, param3);
 }
 
-void q_pdfview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_pdfview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QPdfView_OnMetacall((QPdfView*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfview_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfView_QBaseMetacall((QPdfView*)self, param1, param2, param3);
 }
 
@@ -79,11 +79,11 @@ QPdfPageNavigator* q_pdfview_page_navigator(void* self) {
     return QPdfView_PageNavigator((QPdfView*)self);
 }
 
-int64_t q_pdfview_page_mode(void* self) {
+int32_t q_pdfview_page_mode(void* self) {
     return QPdfView_PageMode((QPdfView*)self);
 }
 
-int64_t q_pdfview_zoom_mode(void* self) {
+int32_t q_pdfview_zoom_mode(void* self) {
     return QPdfView_ZoomMode((QPdfView*)self);
 }
 
@@ -107,11 +107,11 @@ void q_pdfview_set_document_margins(void* self, void* margins) {
     QPdfView_SetDocumentMargins((QPdfView*)self, (QMargins*)margins);
 }
 
-void q_pdfview_set_page_mode(void* self, int64_t mode) {
+void q_pdfview_set_page_mode(void* self, int32_t mode) {
     QPdfView_SetPageMode((QPdfView*)self, mode);
 }
 
-void q_pdfview_set_zoom_mode(void* self, int64_t mode) {
+void q_pdfview_set_zoom_mode(void* self, int32_t mode) {
     QPdfView_SetZoomMode((QPdfView*)self, mode);
 }
 
@@ -131,19 +131,19 @@ void q_pdfview_on_document_changed(void* self, void (*callback)(void*, void*)) {
     QPdfView_Connect_DocumentChanged((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_page_mode_changed(void* self, int64_t pageMode) {
+void q_pdfview_page_mode_changed(void* self, int32_t pageMode) {
     QPdfView_PageModeChanged((QPdfView*)self, pageMode);
 }
 
-void q_pdfview_on_page_mode_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_pdfview_on_page_mode_changed(void* self, void (*callback)(void*, int32_t)) {
     QPdfView_Connect_PageModeChanged((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_zoom_mode_changed(void* self, int64_t zoomMode) {
+void q_pdfview_zoom_mode_changed(void* self, int32_t zoomMode) {
     QPdfView_ZoomModeChanged((QPdfView*)self, zoomMode);
 }
 
-void q_pdfview_on_zoom_mode_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_pdfview_on_zoom_mode_changed(void* self, void (*callback)(void*, int32_t)) {
     QPdfView_Connect_ZoomModeChanged((QPdfView*)self, (intptr_t)callback);
 }
 
@@ -273,11 +273,11 @@ const char* q_pdfview_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_pdfview_vertical_scroll_bar_policy(void* self) {
+int32_t q_pdfview_vertical_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_VerticalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_pdfview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy) {
+void q_pdfview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy) {
     QAbstractScrollArea_SetVerticalScrollBarPolicy((QAbstractScrollArea*)self, verticalScrollBarPolicy);
 }
 
@@ -289,11 +289,11 @@ void q_pdfview_set_vertical_scroll_bar(void* self, void* scrollbar) {
     QAbstractScrollArea_SetVerticalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-int64_t q_pdfview_horizontal_scroll_bar_policy(void* self) {
+int32_t q_pdfview_horizontal_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_HorizontalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_pdfview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy) {
+void q_pdfview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy) {
     QAbstractScrollArea_SetHorizontalScrollBarPolicy((QAbstractScrollArea*)self, horizontalScrollBarPolicy);
 }
 
@@ -334,11 +334,11 @@ QSize* q_pdfview_maximum_viewport_size(void* self) {
     return QAbstractScrollArea_MaximumViewportSize((QAbstractScrollArea*)self);
 }
 
-int64_t q_pdfview_size_adjust_policy(void* self) {
+int32_t q_pdfview_size_adjust_policy(void* self) {
     return QAbstractScrollArea_SizeAdjustPolicy((QAbstractScrollArea*)self);
 }
 
-void q_pdfview_set_size_adjust_policy(void* self, int64_t policy) {
+void q_pdfview_set_size_adjust_policy(void* self, int32_t policy) {
     QAbstractScrollArea_SetSizeAdjustPolicy((QAbstractScrollArea*)self, policy);
 }
 
@@ -354,19 +354,19 @@ int32_t q_pdfview_frame_width(void* self) {
     return QFrame_FrameWidth((QFrame*)self);
 }
 
-int64_t q_pdfview_frame_shape(void* self) {
+int32_t q_pdfview_frame_shape(void* self) {
     return QFrame_FrameShape((QFrame*)self);
 }
 
-void q_pdfview_set_frame_shape(void* self, int64_t frameShape) {
+void q_pdfview_set_frame_shape(void* self, int32_t frameShape) {
     QFrame_SetFrameShape((QFrame*)self, frameShape);
 }
 
-int64_t q_pdfview_frame_shadow(void* self) {
+int32_t q_pdfview_frame_shadow(void* self) {
     return QFrame_FrameShadow((QFrame*)self);
 }
 
-void q_pdfview_set_frame_shadow(void* self, int64_t frameShadow) {
+void q_pdfview_set_frame_shadow(void* self, int32_t frameShadow) {
     QFrame_SetFrameShadow((QFrame*)self, frameShadow);
 }
 
@@ -430,11 +430,11 @@ bool q_pdfview_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_pdfview_window_modality(void* self) {
+int32_t q_pdfview_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_pdfview_set_window_modality(void* self, int64_t windowModality) {
+void q_pdfview_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -674,19 +674,19 @@ void q_pdfview_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_pdfview_set_background_role(void* self, int64_t backgroundRole) {
+void q_pdfview_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_pdfview_background_role(void* self) {
+int32_t q_pdfview_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_pdfview_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_pdfview_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_pdfview_foreground_role(void* self) {
+int32_t q_pdfview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -920,11 +920,11 @@ void q_pdfview_set_accessible_description(void* self, const char* description) {
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_pdfview_set_layout_direction(void* self, int64_t direction) {
+void q_pdfview_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_pdfview_layout_direction(void* self) {
+int32_t q_pdfview_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -968,15 +968,15 @@ void q_pdfview_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_pdfview_set_focus2(void* self, int64_t reason) {
+void q_pdfview_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_pdfview_focus_policy(void* self) {
+int32_t q_pdfview_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_pdfview_set_focus_policy(void* self, int64_t policy) {
+void q_pdfview_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -996,11 +996,11 @@ QWidget* q_pdfview_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_pdfview_context_menu_policy(void* self) {
+int32_t q_pdfview_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_pdfview_set_context_menu_policy(void* self, int64_t policy) {
+void q_pdfview_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -1219,7 +1219,7 @@ void q_pdfview_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_pdfview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_pdfview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -1372,11 +1372,11 @@ QWidget* q_pdfview_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_pdfview_set_attribute(void* self, int64_t param1) {
+void q_pdfview_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_pdfview_test_attribute(void* self, int64_t param1) {
+bool q_pdfview_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -1488,7 +1488,7 @@ void q_pdfview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_pdfview_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_pdfview_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1504,7 +1504,7 @@ void q_pdfview_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_pdfview_set_attribute2(void* self, int64_t param1, bool on) {
+void q_pdfview_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -1563,7 +1563,7 @@ void q_pdfview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pdfview_kill_timer2(void* self, int64_t id) {
+void q_pdfview_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1663,15 +1663,15 @@ bool q_pdfview_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pdfview_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_pdfview_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_pdfview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_pdfview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_pdfview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_pdfview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1731,7 +1731,7 @@ double q_pdfview_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_pdfview_encode_metric_f(int64_t metric, double value) {
+int32_t q_pdfview_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -2143,15 +2143,15 @@ void q_pdfview_on_native_event(void* self, bool (*callback)(void*, const char*, 
     QPdfView_OnNativeEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfview_metric(void* self, int64_t param1) {
+int32_t q_pdfview_metric(void* self, int32_t param1) {
     return QPdfView_Metric((QPdfView*)self, param1);
 }
 
-int32_t q_pdfview_qbase_metric(void* self, int64_t param1) {
+int32_t q_pdfview_qbase_metric(void* self, int32_t param1) {
     return QPdfView_QBaseMetric((QPdfView*)self, param1);
 }
 
-void q_pdfview_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_pdfview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPdfView_OnMetric((QPdfView*)self, (intptr_t)callback);
 }
 
@@ -2431,15 +2431,15 @@ void q_pdfview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
     QPdfView_OnIsSignalConnected((QPdfView*)self, (intptr_t)callback);
 }
 
-double q_pdfview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pdfview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPdfView_GetDecodedMetricF((QPdfView*)self, metricA, metricB);
 }
 
-double q_pdfview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pdfview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPdfView_QBaseGetDecodedMetricF((QPdfView*)self, metricA, metricB);
 }
 
-void q_pdfview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_pdfview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QPdfView_OnGetDecodedMetricF((QPdfView*)self, (intptr_t)callback);
 }
 

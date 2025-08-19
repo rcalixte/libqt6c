@@ -84,13 +84,13 @@ void q_networkcookie_set_http_only(void* self, bool enable);
 /// @param self QNetworkCookie*
 ///
 /// @return enum QNetworkCookie__SameSite
-int64_t q_networkcookie_same_site_policy(void* self);
+int32_t q_networkcookie_same_site_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#setSameSitePolicy)
 ///
 /// @param self QNetworkCookie*
 /// @param sameSite enum QNetworkCookie__SameSite
-void q_networkcookie_set_same_site_policy(void* self, int64_t sameSite);
+void q_networkcookie_set_same_site_policy(void* self, int32_t sameSite);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#isSessionCookie)
 ///
@@ -190,7 +190,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* co
 ///
 /// @param self QNetworkCookie*
 /// @param form enum QNetworkCookie__RawForm
-char* q_networkcookie_to_raw_form1(void* self, int64_t form);
+char* q_networkcookie_to_raw_form1(void* self, int32_t form);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcookie.html#dtor.QNetworkCookie)
 ///

@@ -37,11 +37,11 @@ int32_t q_audioformat_sample_rate(void* self) {
     return QAudioFormat_SampleRate((QAudioFormat*)self);
 }
 
-void q_audioformat_set_channel_config(void* self, int64_t config) {
+void q_audioformat_set_channel_config(void* self, uint32_t config) {
     QAudioFormat_SetChannelConfig((QAudioFormat*)self, config);
 }
 
-int64_t q_audioformat_channel_config(void* self) {
+uint32_t q_audioformat_channel_config(void* self) {
     return QAudioFormat_ChannelConfig((QAudioFormat*)self);
 }
 
@@ -53,15 +53,15 @@ int32_t q_audioformat_channel_count(void* self) {
     return QAudioFormat_ChannelCount((QAudioFormat*)self);
 }
 
-int32_t q_audioformat_channel_offset(void* self, int64_t channel) {
+int32_t q_audioformat_channel_offset(void* self, int32_t channel) {
     return QAudioFormat_ChannelOffset((QAudioFormat*)self, channel);
 }
 
-void q_audioformat_set_sample_format(void* self, int64_t f) {
+void q_audioformat_set_sample_format(void* self, uint16_t f) {
     QAudioFormat_SetSampleFormat((QAudioFormat*)self, f);
 }
 
-int64_t q_audioformat_sample_format(void* self) {
+uint16_t q_audioformat_sample_format(void* self) {
     return QAudioFormat_SampleFormat((QAudioFormat*)self);
 }
 
@@ -101,7 +101,7 @@ float q_audioformat_normalized_sample_value(void* self, void* sample) {
     return QAudioFormat_NormalizedSampleValue((QAudioFormat*)self, sample);
 }
 
-int64_t q_audioformat_default_channel_config_for_channel_count(int channelCount) {
+uint32_t q_audioformat_default_channel_config_for_channel_count(int channelCount) {
     return QAudioFormat_DefaultChannelConfigForChannelCount(channelCount);
 }
 

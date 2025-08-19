@@ -84,7 +84,7 @@ void* q_webenginehistorymodel_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webenginehistorymodel_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webenginehistorymodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -163,7 +163,7 @@ QModelIndex* q_webenginehistorymodel_sibling(void* self, int row, int column, vo
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -226,7 +226,7 @@ bool q_webenginehistorymodel_set_data(void* self, void* index, void* value, int 
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
-QVariant* q_webenginehistorymodel_header_data(void* self, int section, int64_t orientation, int role);
+QVariant* q_webenginehistorymodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -237,7 +237,7 @@ QVariant* q_webenginehistorymodel_header_data(void* self, int section, int64_t o
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
-bool q_webenginehistorymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
+bool q_webenginehistorymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -291,7 +291,7 @@ QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list indexes);
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -452,7 +452,7 @@ bool q_webenginehistorymodel_can_fetch_more(void* self, void* parent);
 /// @param self QWebEngineHistoryModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
-void q_webenginehistorymodel_sort(void* self, int column, int64_t order);
+void q_webenginehistorymodel_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -524,7 +524,7 @@ void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*,
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
-void q_webenginehistorymodel_header_data_changed(void* self, int64_t orientation, int first, int last);
+void q_webenginehistorymodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -532,7 +532,7 @@ void q_webenginehistorymodel_header_data_changed(void* self, int64_t orientation
 ///
 /// @param self QWebEngineHistoryModel*
 /// @param callback void fn(QWebEngineHistoryModel*, enum Qt__Orientation, int, int)
-void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
+void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -674,7 +674,7 @@ void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(voi
 /// @param self QWebEngineHistoryModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -682,7 +682,7 @@ void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int
 ///
 /// @param self QWebEngineHistoryModel*
 /// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -707,7 +707,7 @@ void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*c
 /// @param self QWebEngineHistoryModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -715,7 +715,7 @@ void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list 
 ///
 /// @param self QWebEngineHistoryModel*
 /// @param callback void fn(QWebEngineHistoryModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -824,7 +824,7 @@ void q_webenginehistorymodel_kill_timer(void* self, int id);
 ///
 /// @param self QWebEngineHistoryModel*
 /// @param id enum Qt__TimerId
-void q_webenginehistorymodel_kill_timer2(void* self, int64_t id);
+void q_webenginehistorymodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -994,7 +994,7 @@ bool q_webenginehistorymodel_move_to_thread2(void* self, void* thread, void* par
 /// @param self QWebEngineHistoryModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1005,7 +1005,7 @@ int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int64_t 
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1016,7 +1016,7 @@ QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* si
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1199,7 +1199,7 @@ void* q_webenginehistory_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webenginehistory_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webenginehistory_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1426,7 +1426,7 @@ void q_webenginehistory_kill_timer(void* self, int id);
 ///
 /// @param self QWebEngineHistory*
 /// @param id enum Qt__TimerId
-void q_webenginehistory_kill_timer2(void* self, int64_t id);
+void q_webenginehistory_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1603,7 +1603,7 @@ bool q_webenginehistory_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWebEngineHistory*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webenginehistory_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webenginehistory_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1614,7 +1614,7 @@ int32_t q_webenginehistory_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1625,7 +1625,7 @@ QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

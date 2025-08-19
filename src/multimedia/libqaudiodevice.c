@@ -48,7 +48,7 @@ bool q_audiodevice_is_default(void* self) {
     return QAudioDevice_IsDefault((QAudioDevice*)self);
 }
 
-int64_t q_audiodevice_mode(void* self) {
+int32_t q_audiodevice_mode(void* self) {
     return QAudioDevice_Mode((QAudioDevice*)self);
 }
 
@@ -76,12 +76,12 @@ int32_t q_audiodevice_maximum_channel_count(void* self) {
     return QAudioDevice_MaximumChannelCount((QAudioDevice*)self);
 }
 
-libqt_list /* of int64_t */ q_audiodevice_supported_sample_formats(void* self) {
+libqt_list /* of uint16_t */ q_audiodevice_supported_sample_formats(void* self) {
     libqt_list _arr = QAudioDevice_SupportedSampleFormats((QAudioDevice*)self);
     return _arr;
 }
 
-int64_t q_audiodevice_channel_configuration(void* self) {
+uint32_t q_audiodevice_channel_configuration(void* self) {
     return QAudioDevice_ChannelConfiguration((QAudioDevice*)self);
 }
 

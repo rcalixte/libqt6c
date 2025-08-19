@@ -30,7 +30,7 @@ QMatrix4x4* q_matrix4x4_new3();
 /// q_matrix4x4_new4 constructs a new QMatrix4x4 object.
 ///
 /// @param param1 enum Qt__Initialization
-QMatrix4x4* q_matrix4x4_new4(int64_t param1);
+QMatrix4x4* q_matrix4x4_new4(int32_t param1);
 
 /// q_matrix4x4_new5 constructs a new QMatrix4x4 object.
 ///

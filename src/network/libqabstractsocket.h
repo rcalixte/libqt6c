@@ -17,7 +17,7 @@
 ///
 /// @param socketType enum QAbstractSocket__SocketType
 /// @param parent QObject*
-QAbstractSocket* q_abstractsocket_new(int64_t socketType, void* parent);
+QAbstractSocket* q_abstractsocket_new(int32_t socketType, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -32,13 +32,13 @@ void* q_abstractsocket_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractsocket_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractsocket_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
 /// @param callback int32_t fn(QAbstractSocket*, enum QMetaObject__Call, int, void*)
-void q_abstractsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_abstractsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -46,7 +46,7 @@ void q_abstractsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractsocket_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -126,7 +126,7 @@ bool q_abstractsocket_bind2(void* self);
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -134,7 +134,7 @@ void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
-void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int64_t));
+void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -145,7 +145,7 @@ void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, con
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_abstractsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
@@ -304,7 +304,7 @@ intptr_t q_abstractsocket_qbase_socket_descriptor(void* self);
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
 ///
@@ -312,7 +312,7 @@ bool q_abstractsocket_set_socket_descriptor(void* self, intptr_t socketDescripto
 ///
 /// @param self QAbstractSocket*
 /// @param callback bool fn(QAbstractSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
-void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int64_t, int64_t));
+void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketDescriptor)
 ///
@@ -322,14 +322,14 @@ void q_abstractsocket_on_set_socket_descriptor(void* self, bool (*callback)(void
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_abstractsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
 ///
 /// @param self QAbstractSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_abstractsocket_set_socket_option(void* self, int64_t option, void* value);
+void q_abstractsocket_set_socket_option(void* self, int32_t option, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
 ///
@@ -337,7 +337,7 @@ void q_abstractsocket_set_socket_option(void* self, int64_t option, void* value)
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketOption, QVariant*)
-void q_abstractsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_t, void*));
+void q_abstractsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketOption)
 ///
@@ -346,13 +346,13 @@ void q_abstractsocket_on_set_socket_option(void* self, void (*callback)(void*, i
 /// @param self QAbstractSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_abstractsocket_qbase_set_socket_option(void* self, int64_t option, void* value);
+void q_abstractsocket_qbase_set_socket_option(void* self, int32_t option, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
 ///
 /// @param self QAbstractSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_abstractsocket_socket_option(void* self, int64_t option);
+QVariant* q_abstractsocket_socket_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
 ///
@@ -360,7 +360,7 @@ QVariant* q_abstractsocket_socket_option(void* self, int64_t option);
 ///
 /// @param self QAbstractSocket*
 /// @param callback QVariant* fn(QAbstractSocket*, enum QAbstractSocket__SocketOption)
-void q_abstractsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64_t));
+void q_abstractsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketOption)
 ///
@@ -368,28 +368,28 @@ void q_abstractsocket_on_socket_option(void* self, QVariant* (*callback)(void*, 
 ///
 /// @param self QAbstractSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_abstractsocket_qbase_socket_option(void* self, int64_t option);
+QVariant* q_abstractsocket_qbase_socket_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#socketType)
 ///
 /// @param self QAbstractSocket*
 ///
 /// @return enum QAbstractSocket__SocketType
-int64_t q_abstractsocket_socket_type(void* self);
+int32_t q_abstractsocket_socket_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#state)
 ///
 /// @param self QAbstractSocket*
 ///
 /// @return enum QAbstractSocket__SocketState
-int64_t q_abstractsocket_state(void* self);
+int32_t q_abstractsocket_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#error)
 ///
 /// @param self QAbstractSocket*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_abstractsocket_error(void* self);
+int32_t q_abstractsocket_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#close)
 ///
@@ -585,25 +585,25 @@ void q_abstractsocket_on_disconnected(void* self, void (*callback)(void*));
 ///
 /// @param self QAbstractSocket*
 /// @param param1 enum QAbstractSocket__SocketState
-void q_abstractsocket_state_changed(void* self, int64_t param1);
+void q_abstractsocket_state_changed(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#stateChanged)
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketState)
-void q_abstractsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_abstractsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
 /// @param self QAbstractSocket*
 /// @param param1 enum QAbstractSocket__SocketError
-void q_abstractsocket_error_occurred(void* self, int64_t param1);
+void q_abstractsocket_error_occurred(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#errorOccurred)
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketError)
-void q_abstractsocket_on_error_occurred(void* self, void (*callback)(void*, int64_t));
+void q_abstractsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#proxyAuthenticationRequired)
 ///
@@ -716,7 +716,7 @@ long long q_abstractsocket_qbase_write_data(void* self, const char* data, long l
 ///
 /// @param self QAbstractSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_abstractsocket_set_socket_state(void* self, int64_t state);
+void q_abstractsocket_set_socket_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
 ///
@@ -724,7 +724,7 @@ void q_abstractsocket_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketState)
-void q_abstractsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t));
+void q_abstractsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
 ///
@@ -732,13 +732,13 @@ void q_abstractsocket_on_set_socket_state(void* self, void (*callback)(void*, in
 ///
 /// @param self QAbstractSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_abstractsocket_qbase_set_socket_state(void* self, int64_t state);
+void q_abstractsocket_qbase_set_socket_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
 ///
 /// @param self QAbstractSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_abstractsocket_set_socket_error(void* self, int64_t socketError);
+void q_abstractsocket_set_socket_error(void* self, int32_t socketError);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
 ///
@@ -746,7 +746,7 @@ void q_abstractsocket_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QAbstractSocket*
 /// @param callback void fn(QAbstractSocket*, enum QAbstractSocket__SocketError)
-void q_abstractsocket_on_set_socket_error(void* self, void (*callback)(void*, int64_t));
+void q_abstractsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketError)
 ///
@@ -754,7 +754,7 @@ void q_abstractsocket_on_set_socket_error(void* self, void (*callback)(void*, in
 ///
 /// @param self QAbstractSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_abstractsocket_qbase_set_socket_error(void* self, int64_t socketError);
+void q_abstractsocket_qbase_set_socket_error(void* self, int32_t socketError);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
 ///
@@ -1346,7 +1346,7 @@ void q_abstractsocket_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractSocket*
 /// @param id enum Qt__TimerId
-void q_abstractsocket_kill_timer2(void* self, int64_t id);
+void q_abstractsocket_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1523,7 +1523,7 @@ bool q_abstractsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAbstractSocket*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstractsocket_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstractsocket_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1534,7 +1534,7 @@ int32_t q_abstractsocket_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1545,7 +1545,7 @@ QMetaObject__Connection* q_abstractsocket_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractsocket_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstractsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

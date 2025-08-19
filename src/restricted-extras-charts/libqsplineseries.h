@@ -35,13 +35,13 @@ void* q_splineseries_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splineseries_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splineseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSplineSeries*
 /// @param callback int32_t fn(QSplineSeries*, enum QMetaObject__Call, int, void*)
-void q_splineseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_splineseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_splineseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splineseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splineseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,15 +63,15 @@ const char* q_splineseries_tr(const char* s);
 /// @param self QSplineSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_splineseries_type(void* self);
+int32_t q_splineseries_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QSplineSeries*
-/// @param callback int64_t fn()
-void q_splineseries_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_splineseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplineseries-qtcharts.html#type)
 ///
@@ -80,7 +80,7 @@ void q_splineseries_on_type(void* self, int64_t (*callback)());
 /// @param self QSplineSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_splineseries_qbase_type(void* self);
+int32_t q_splineseries_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -574,7 +574,7 @@ void q_splineseries_clear_point_configuration(void* self, int index);
 /// @param self QSplineSeries*
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
-void q_splineseries_clear_point_configuration2(void* self, int index, int64_t key);
+void q_splineseries_clear_point_configuration2(void* self, int index, int32_t key);
 
 /// Inherited from QXYSeries
 ///
@@ -589,7 +589,7 @@ void q_splineseries_clear_points_configuration(void* self);
 ///
 /// @param self QSplineSeries*
 /// @param key enum QXYSeries__PointConfiguration
-void q_splineseries_clear_points_configuration2(void* self, int64_t key);
+void q_splineseries_clear_points_configuration2(void* self, int32_t key);
 
 /// Inherited from QXYSeries
 ///
@@ -598,7 +598,7 @@ void q_splineseries_clear_points_configuration2(void* self, int64_t key);
 /// @param self QSplineSeries*
 /// @param index int
 /// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
-void q_splineseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration);
+void q_splineseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -608,7 +608,7 @@ void q_splineseries_set_point_configuration(void* self, int index, libqt_map /* 
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
 /// @param value QVariant*
-void q_splineseries_set_point_configuration2(void* self, int index, int64_t key, void* value);
+void q_splineseries_set_point_configuration2(void* self, int index, int32_t key, void* value);
 
 /// Inherited from QXYSeries
 ///
@@ -616,7 +616,7 @@ void q_splineseries_set_point_configuration2(void* self, int index, int64_t key,
 ///
 /// @param self QSplineSeries*
 /// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_splineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration);
+void q_splineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration);
 
 /// Inherited from QXYSeries
 ///
@@ -624,14 +624,14 @@ void q_splineseries_set_points_configuration(void* self, libqt_map /* of int to 
 ///
 /// @param self QSplineSeries*
 /// @param index int
-libqt_map /* of int64_t to QVariant* */ q_splineseries_point_configuration(void* self, int index);
+libqt_map /* of int32_t to QVariant* */ q_splineseries_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfiguration)
 ///
 /// @param self QSplineSeries*
-libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_splineseries_points_configuration(void* self);
+libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_splineseries_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -1041,7 +1041,7 @@ void q_splineseries_on_best_fit_line_color_changed(void* self, void (*callback)(
 ///
 /// @param self QSplineSeries*
 /// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_splineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration);
+void q_splineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -1049,7 +1049,7 @@ void q_splineseries_points_configuration_changed(void* self, libqt_map /* of int
 ///
 /// @param self QSplineSeries*
 /// @param callback void fn(QSplineSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
-void q_splineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
+void q_splineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
 
 /// Inherited from QXYSeries
 ///
@@ -1378,7 +1378,7 @@ void q_splineseries_kill_timer(void* self, int id);
 ///
 /// @param self QSplineSeries*
 /// @param id enum Qt__TimerId
-void q_splineseries_kill_timer2(void* self, int64_t id);
+void q_splineseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1555,7 +1555,7 @@ bool q_splineseries_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSplineSeries*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_splineseries_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_splineseries_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1566,7 +1566,7 @@ int32_t q_splineseries_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splineseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_splineseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1577,7 +1577,7 @@ QMetaObject__Connection* q_splineseries_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splineseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_splineseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

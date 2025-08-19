@@ -23,11 +23,11 @@ QKeySequence* q_keysequence_new5(void* ks) {
     return QKeySequence_new5((QKeySequence*)ks);
 }
 
-QKeySequence* q_keysequence_new6(int64_t key) {
+QKeySequence* q_keysequence_new6(int32_t key) {
     return QKeySequence_new6(key);
 }
 
-QKeySequence* q_keysequence_new7(const char* key, int64_t format) {
+QKeySequence* q_keysequence_new7(const char* key, int32_t format) {
     return QKeySequence_new7(qstring(key), format);
 }
 
@@ -86,7 +86,7 @@ const char* q_keysequence_list_to_string(libqt_list list) {
     return _ret;
 }
 
-int64_t q_keysequence_matches(void* self, void* seq) {
+int32_t q_keysequence_matches(void* self, void* seq) {
     return QKeySequence_Matches((QKeySequence*)self, (QKeySequence*)seq);
 }
 
@@ -94,7 +94,7 @@ QKeySequence* q_keysequence_mnemonic(const char* text) {
     return QKeySequence_Mnemonic(qstring(text));
 }
 
-libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int64_t key) {
+libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int32_t key) {
     libqt_list _arr = QKeySequence_KeyBindings(key);
     return _arr;
 }
@@ -143,23 +143,23 @@ bool q_keysequence_is_detached(void* self) {
     return QKeySequence_IsDetached((QKeySequence*)self);
 }
 
-const char* q_keysequence_to_string1(void* self, int64_t format) {
+const char* q_keysequence_to_string1(void* self, int32_t format) {
     libqt_string _str = QKeySequence_ToString1((QKeySequence*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QKeySequence* q_keysequence_from_string2(const char* str, int64_t format) {
+QKeySequence* q_keysequence_from_string2(const char* str, int32_t format) {
     return QKeySequence_FromString2(qstring(str), format);
 }
 
-libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int64_t format) {
+libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int32_t format) {
     libqt_list _arr = QKeySequence_ListFromString2(qstring(str), format);
     return _arr;
 }
 
-const char* q_keysequence_list_to_string2(libqt_list list, int64_t format) {
+const char* q_keysequence_list_to_string2(libqt_list list, int32_t format) {
     libqt_string _str = QKeySequence_ListToString2(list, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

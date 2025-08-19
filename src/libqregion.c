@@ -25,11 +25,11 @@ QRegion* q_region_new5(void* bitmap) {
     return QRegion_new5((QBitmap*)bitmap);
 }
 
-QRegion* q_region_new6(int x, int y, int w, int h, int64_t t) {
+QRegion* q_region_new6(int x, int y, int w, int h, int32_t t) {
     return QRegion_new6(x, y, w, h, t);
 }
 
-QRegion* q_region_new7(void* r, int64_t t) {
+QRegion* q_region_new7(void* r, int32_t t) {
     return QRegion_new7((QRect*)r, t);
 }
 

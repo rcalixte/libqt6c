@@ -31,13 +31,13 @@ void* q_audioroom_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_audioroom_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_audioroom_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAudioRoom*
 /// @param callback int32_t fn(QAudioRoom*, enum QMetaObject__Call, int, void*)
-void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -45,7 +45,7 @@ void q_audioroom_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_audioroom_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_audioroom_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -92,7 +92,7 @@ QQuaternion* q_audioroom_rotation(void* self);
 /// @param self QAudioRoom*
 /// @param wall enum QAudioRoom__Wall
 /// @param material enum QAudioRoom__Material
-void q_audioroom_set_wall_material(void* self, int64_t wall, int64_t material);
+void q_audioroom_set_wall_material(void* self, int32_t wall, int32_t material);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#wallMaterial)
 ///
@@ -100,7 +100,7 @@ void q_audioroom_set_wall_material(void* self, int64_t wall, int64_t material);
 /// @param wall enum QAudioRoom__Wall
 ///
 /// @return enum QAudioRoom__Material
-int64_t q_audioroom_wall_material(void* self, int64_t wall);
+int32_t q_audioroom_wall_material(void* self, int32_t wall);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioroom.html#setReflectionGain)
 ///
@@ -341,7 +341,7 @@ void q_audioroom_kill_timer(void* self, int id);
 ///
 /// @param self QAudioRoom*
 /// @param id enum Qt__TimerId
-void q_audioroom_kill_timer2(void* self, int64_t id);
+void q_audioroom_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -518,7 +518,7 @@ bool q_audioroom_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAudioRoom*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_audioroom_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_audioroom_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -529,7 +529,7 @@ int32_t q_audioroom_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_audioroom_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_audioroom_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -540,7 +540,7 @@ QMetaObject__Connection* q_audioroom_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_audioroom_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_audioroom_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

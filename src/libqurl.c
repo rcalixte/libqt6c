@@ -15,7 +15,7 @@ QUrl* q_url_new3(const char* url) {
     return QUrl_new3(qstring(url));
 }
 
-QUrl* q_url_new4(const char* url, int64_t mode) {
+QUrl* q_url_new4(const char* url, int32_t mode) {
     return QUrl_new4(qstring(url), mode);
 }
 
@@ -349,11 +349,11 @@ void q_url_set_idn_whitelist(const char* idnWhitelist[]) {
     free(idnWhitelist_qstr);
 }
 
-void q_url_set_url2(void* self, const char* url, int64_t mode) {
+void q_url_set_url2(void* self, const char* url, int32_t mode) {
     QUrl_SetUrl2((QUrl*)self, qstring(url), mode);
 }
 
-QUrl* q_url_from_encoded2(const char* input, int64_t mode) {
+QUrl* q_url_from_encoded2(const char* input, int32_t mode) {
     libqt_string input_string = qstring(input);
     return QUrl_FromEncoded2((QByteArrayView*)&input_string, mode);
 }
@@ -366,7 +366,7 @@ QUrl* q_url_from_user_input3(const char* userInput, const char* workingDirectory
     return QUrl_FromUserInput3(qstring(userInput), qstring(workingDirectory), options);
 }
 
-void q_url_set_authority2(void* self, const char* authority, int64_t mode) {
+void q_url_set_authority2(void* self, const char* authority, int32_t mode) {
     QUrl_SetAuthority2((QUrl*)self, qstring(authority), mode);
 }
 
@@ -377,7 +377,7 @@ const char* q_url_authority1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_user_info2(void* self, const char* userInfo, int64_t mode) {
+void q_url_set_user_info2(void* self, const char* userInfo, int32_t mode) {
     QUrl_SetUserInfo2((QUrl*)self, qstring(userInfo), mode);
 }
 
@@ -388,7 +388,7 @@ const char* q_url_user_info1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_user_name2(void* self, const char* userName, int64_t mode) {
+void q_url_set_user_name2(void* self, const char* userName, int32_t mode) {
     QUrl_SetUserName2((QUrl*)self, qstring(userName), mode);
 }
 
@@ -399,7 +399,7 @@ const char* q_url_user_name1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_password2(void* self, const char* password, int64_t mode) {
+void q_url_set_password2(void* self, const char* password, int32_t mode) {
     QUrl_SetPassword2((QUrl*)self, qstring(password), mode);
 }
 
@@ -410,7 +410,7 @@ const char* q_url_password1(void* self, int64_t param1) {
     return _ret;
 }
 
-void q_url_set_host2(void* self, const char* host, int64_t mode) {
+void q_url_set_host2(void* self, const char* host, int32_t mode) {
     QUrl_SetHost2((QUrl*)self, qstring(host), mode);
 }
 
@@ -425,7 +425,7 @@ int32_t q_url_port1(void* self, int defaultPort) {
     return QUrl_Port1((QUrl*)self, defaultPort);
 }
 
-void q_url_set_path2(void* self, const char* path, int64_t mode) {
+void q_url_set_path2(void* self, const char* path, int32_t mode) {
     QUrl_SetPath2((QUrl*)self, qstring(path), mode);
 }
 
@@ -443,7 +443,7 @@ const char* q_url_file_name1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_query22(void* self, const char* query, int64_t mode) {
+void q_url_set_query22(void* self, const char* query, int32_t mode) {
     QUrl_SetQuery22((QUrl*)self, qstring(query), mode);
 }
 
@@ -461,7 +461,7 @@ const char* q_url_fragment1(void* self, int64_t options) {
     return _ret;
 }
 
-void q_url_set_fragment2(void* self, const char* fragment, int64_t mode) {
+void q_url_set_fragment2(void* self, const char* fragment, int32_t mode) {
     QUrl_SetFragment2((QUrl*)self, qstring(fragment), mode);
 }
 
@@ -493,7 +493,7 @@ char* q_url_to_ace2(const char* domain, int64_t options) {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[], int64_t mode) {
+libqt_list /* of QUrl* */ q_url_from_string_list2(const char* uris[], int32_t mode) {
     size_t uris_len = libqt_strv_length(uris);
     libqt_string* uris_qstr = (libqt_string*)malloc(uris_len * sizeof(libqt_string));
     if (uris_qstr == NULL) {

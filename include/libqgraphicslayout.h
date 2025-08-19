@@ -241,7 +241,7 @@ void q_graphicslayout_set_size_policy(void* self, void* policy);
 /// @param self QGraphicsLayout*
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
-void q_graphicslayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
+void q_graphicslayout_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -432,7 +432,7 @@ QRectF* q_graphicslayout_contents_rect(void* self);
 ///
 /// @param self QGraphicsLayout*
 /// @param which enum Qt__SizeHint
-QSizeF* q_graphicslayout_effective_size_hint(void* self, int64_t which);
+QSizeF* q_graphicslayout_effective_size_hint(void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -478,7 +478,7 @@ bool q_graphicslayout_owned_by_layout(void* self);
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
 /// @param controlType enum QSizePolicy__ControlType
-void q_graphicslayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
+void q_graphicslayout_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -487,7 +487,7 @@ void q_graphicslayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPol
 /// @param self QGraphicsLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayout_effective_size_hint2(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayout_effective_size_hint2(void* self, int32_t which, void* constraint);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -556,7 +556,7 @@ void q_graphicslayout_on_is_empty(void* self, bool (*callback)());
 /// @param self QGraphicsLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayout_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayout_size_hint(void* self, int32_t which, void* constraint);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -567,7 +567,7 @@ QSizeF* q_graphicslayout_size_hint(void* self, int64_t which, void* constraint);
 /// @param self QGraphicsLayout*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicslayout_qbase_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicslayout_qbase_size_hint(void* self, int32_t which, void* constraint);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -577,7 +577,7 @@ QSizeF* q_graphicslayout_qbase_size_hint(void* self, int64_t which, void* constr
 ///
 /// @param self QGraphicsLayout*
 /// @param callback QSizeF* fn(QGraphicsLayout*, enum Qt__SizeHint, QSizeF*)
-void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
+void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsLayoutItem
 ///

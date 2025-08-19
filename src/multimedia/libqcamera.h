@@ -25,7 +25,7 @@ QCamera* q_camera_new2(void* cameraDevice);
 /// q_camera_new3 constructs a new QCamera object.
 ///
 /// @param position enum QCameraDevice__Position
-QCamera* q_camera_new3(int64_t position);
+QCamera* q_camera_new3(int32_t position);
 
 /// q_camera_new4 constructs a new QCamera object.
 ///
@@ -42,7 +42,7 @@ QCamera* q_camera_new5(void* cameraDevice, void* parent);
 ///
 /// @param position enum QCameraDevice__Position
 /// @param parent QObject*
-QCamera* q_camera_new6(int64_t position, void* parent);
+QCamera* q_camera_new6(int32_t position, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -57,13 +57,13 @@ void* q_camera_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_camera_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_camera_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QCamera*
 /// @param callback int32_t fn(QCamera*, enum QMetaObject__Call, int, void*)
-void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -71,7 +71,7 @@ void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_camera_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_camera_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -122,7 +122,7 @@ void q_camera_set_camera_format(void* self, void* format);
 /// @param self QCamera*
 ///
 /// @return enum QCamera__Error
-int64_t q_camera_error(void* self);
+int32_t q_camera_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorString)
 ///
@@ -143,19 +143,19 @@ int64_t q_camera_supported_features(void* self);
 /// @param self QCamera*
 ///
 /// @return enum QCamera__FocusMode
-int64_t q_camera_focus_mode(void* self);
+int32_t q_camera_focus_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#setFocusMode)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__FocusMode
-void q_camera_set_focus_mode(void* self, int64_t mode);
+void q_camera_set_focus_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isFocusModeSupported)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__FocusMode
-bool q_camera_is_focus_mode_supported(void* self, int64_t mode);
+bool q_camera_is_focus_mode_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#focusPoint)
 ///
@@ -210,13 +210,13 @@ void q_camera_set_zoom_factor(void* self, float factor);
 /// @param self QCamera*
 ///
 /// @return enum QCamera__FlashMode
-int64_t q_camera_flash_mode(void* self);
+int32_t q_camera_flash_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isFlashModeSupported)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__FlashMode
-bool q_camera_is_flash_mode_supported(void* self, int64_t mode);
+bool q_camera_is_flash_mode_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isFlashReady)
 ///
@@ -228,26 +228,26 @@ bool q_camera_is_flash_ready(void* self);
 /// @param self QCamera*
 ///
 /// @return enum QCamera__TorchMode
-int64_t q_camera_torch_mode(void* self);
+int32_t q_camera_torch_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isTorchModeSupported)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__TorchMode
-bool q_camera_is_torch_mode_supported(void* self, int64_t mode);
+bool q_camera_is_torch_mode_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureMode)
 ///
 /// @param self QCamera*
 ///
 /// @return enum QCamera__ExposureMode
-int64_t q_camera_exposure_mode(void* self);
+int32_t q_camera_exposure_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isExposureModeSupported)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__ExposureMode
-bool q_camera_is_exposure_mode_supported(void* self, int64_t mode);
+bool q_camera_is_exposure_mode_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#exposureCompensation)
 ///
@@ -299,13 +299,13 @@ float q_camera_maximum_exposure_time(void* self);
 /// @param self QCamera*
 ///
 /// @return enum QCamera__WhiteBalanceMode
-int64_t q_camera_white_balance_mode(void* self);
+int32_t q_camera_white_balance_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#isWhiteBalanceModeSupported)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__WhiteBalanceMode
-bool q_camera_is_white_balance_mode_supported(void* self, int64_t mode);
+bool q_camera_is_white_balance_mode_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#colorTemperature)
 ///
@@ -339,19 +339,19 @@ void q_camera_zoom_to(void* self, float zoom, float rate);
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__FlashMode
-void q_camera_set_flash_mode(void* self, int64_t mode);
+void q_camera_set_flash_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#setTorchMode)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__TorchMode
-void q_camera_set_torch_mode(void* self, int64_t mode);
+void q_camera_set_torch_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#setExposureMode)
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__ExposureMode
-void q_camera_set_exposure_mode(void* self, int64_t mode);
+void q_camera_set_exposure_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#setExposureCompensation)
 ///
@@ -385,7 +385,7 @@ void q_camera_set_auto_exposure_time(void* self);
 ///
 /// @param self QCamera*
 /// @param mode enum QCamera__WhiteBalanceMode
-void q_camera_set_white_balance_mode(void* self, int64_t mode);
+void q_camera_set_white_balance_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#setColorTemperature)
 ///
@@ -421,13 +421,13 @@ void q_camera_on_error_changed(void* self, void (*callback)(void*));
 /// @param self QCamera*
 /// @param errorVal enum QCamera__Error
 /// @param errorString const char*
-void q_camera_error_occurred(void* self, int64_t errorVal, const char* errorString);
+void q_camera_error_occurred(void* self, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#errorOccurred)
 ///
 /// @param self QCamera*
 /// @param callback void fn(QCamera*, enum QCamera__Error, const char*)
-void q_camera_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
+void q_camera_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcamera.html#cameraDeviceChanged)
 ///
@@ -821,7 +821,7 @@ void q_camera_kill_timer(void* self, int id);
 ///
 /// @param self QCamera*
 /// @param id enum Qt__TimerId
-void q_camera_kill_timer2(void* self, int64_t id);
+void q_camera_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -998,7 +998,7 @@ bool q_camera_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QCamera*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_camera_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_camera_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1009,7 +1009,7 @@ int32_t q_camera_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_camera_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_camera_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1020,7 +1020,7 @@ QMetaObject__Connection* q_camera_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_camera_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_camera_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

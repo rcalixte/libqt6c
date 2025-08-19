@@ -20,7 +20,7 @@ QProcessEnvironment* q_processenvironment_new();
 /// q_processenvironment_new2 constructs a new QProcessEnvironment object.
 ///
 /// @param param1 enum QProcessEnvironment__Initialization
-QProcessEnvironment* q_processenvironment_new2(int64_t param1);
+QProcessEnvironment* q_processenvironment_new2(int32_t param1);
 
 /// q_processenvironment_new3 constructs a new QProcessEnvironment object.
 ///
@@ -145,13 +145,13 @@ void* q_process_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_process_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_process_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QProcess*
 /// @param callback int32_t fn(QProcess*, enum QMetaObject__Call, int, void*)
-void q_process_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_process_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -159,7 +159,7 @@ void q_process_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_process_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_process_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -243,45 +243,45 @@ void q_process_set_arguments(void* self, const char* arguments[]);
 /// @param self QProcess*
 ///
 /// @return enum QProcess__ProcessChannelMode
-int64_t q_process_process_channel_mode(void* self);
+int32_t q_process_process_channel_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessChannelMode)
 ///
 /// @param self QProcess*
 /// @param mode enum QProcess__ProcessChannelMode
-void q_process_set_process_channel_mode(void* self, int64_t mode);
+void q_process_set_process_channel_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#inputChannelMode)
 ///
 /// @param self QProcess*
 ///
 /// @return enum QProcess__InputChannelMode
-int64_t q_process_input_channel_mode(void* self);
+int32_t q_process_input_channel_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setInputChannelMode)
 ///
 /// @param self QProcess*
 /// @param mode enum QProcess__InputChannelMode
-void q_process_set_input_channel_mode(void* self, int64_t mode);
+void q_process_set_input_channel_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readChannel)
 ///
 /// @param self QProcess*
 ///
 /// @return enum QProcess__ProcessChannel
-int64_t q_process_read_channel(void* self);
+int32_t q_process_read_channel(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setReadChannel)
 ///
 /// @param self QProcess*
 /// @param channel enum QProcess__ProcessChannel
-void q_process_set_read_channel(void* self, int64_t channel);
+void q_process_set_read_channel(void* self, int32_t channel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#closeReadChannel)
 ///
 /// @param self QProcess*
 /// @param channel enum QProcess__ProcessChannel
-void q_process_close_read_channel(void* self, int64_t channel);
+void q_process_close_read_channel(void* self, int32_t channel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#closeWriteChannel)
 ///
@@ -377,14 +377,14 @@ QProcessEnvironment* q_process_process_environment(void* self);
 /// @param self QProcess*
 ///
 /// @return enum QProcess__ProcessError
-int64_t q_process_error(void* self);
+int32_t q_process_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#state)
 ///
 /// @param self QProcess*
 ///
 /// @return enum QProcess__ProcessState
-int64_t q_process_state(void* self);
+int32_t q_process_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#processId)
 ///
@@ -469,7 +469,7 @@ int32_t q_process_exit_code(void* self);
 /// @param self QProcess*
 ///
 /// @return enum QProcess__ExitStatus
-int64_t q_process_exit_status(void* self);
+int32_t q_process_exit_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#bytesToWrite)
 ///
@@ -579,19 +579,19 @@ void q_process_on_finished(void* self, void (*callback)(void*, int));
 ///
 /// @param self QProcess*
 /// @param errorVal enum QProcess__ProcessError
-void q_process_error_occurred(void* self, int64_t errorVal);
+void q_process_error_occurred(void* self, int32_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#errorOccurred)
 ///
 /// @param self QProcess*
 /// @param callback void fn(QProcess*, enum QProcess__ProcessError)
-void q_process_on_error_occurred(void* self, void (*callback)(void*, int64_t));
+void q_process_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
 ///
 /// @param self QProcess*
 /// @param state enum QProcess__ProcessState
-void q_process_set_process_state(void* self, int64_t state);
+void q_process_set_process_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
 ///
@@ -599,7 +599,7 @@ void q_process_set_process_state(void* self, int64_t state);
 ///
 /// @param self QProcess*
 /// @param callback void fn(QProcess*, enum QProcess__ProcessState)
-void q_process_on_set_process_state(void* self, void (*callback)(void*, int64_t));
+void q_process_on_set_process_state(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#setProcessState)
 ///
@@ -607,7 +607,7 @@ void q_process_on_set_process_state(void* self, void (*callback)(void*, int64_t)
 ///
 /// @param self QProcess*
 /// @param state enum QProcess__ProcessState
-void q_process_qbase_set_process_state(void* self, int64_t state);
+void q_process_qbase_set_process_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readData)
 ///
@@ -773,13 +773,13 @@ bool q_process_start_detached4(const char* program, const char* arguments[], con
 /// @param self QProcess*
 /// @param exitCode int
 /// @param exitStatus enum QProcess__ExitStatus
-void q_process_finished2(void* self, int exitCode, int64_t exitStatus);
+void q_process_finished2(void* self, int exitCode, int32_t exitStatus);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#finished)
 ///
 /// @param self QProcess*
 /// @param callback void fn(QProcess*, int, enum QProcess__ExitStatus)
-void q_process_on_finished2(void* self, void (*callback)(void*, int, int64_t));
+void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t));
 
 /// Inherited from QIODevice
 ///
@@ -1223,7 +1223,7 @@ void q_process_kill_timer(void* self, int id);
 ///
 /// @param self QProcess*
 /// @param id enum Qt__TimerId
-void q_process_kill_timer2(void* self, int64_t id);
+void q_process_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1400,7 +1400,7 @@ bool q_process_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QProcess*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_process_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_process_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1411,7 +1411,7 @@ int32_t q_process_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1422,7 +1422,7 @@ QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* re
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_process_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_process_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2102,7 +2102,7 @@ void q_process_on_started(void* self, void (*callback)(void*));
 ///
 /// @param self QProcess*
 /// @param callback void fn(QProcess*, enum QProcess__ProcessState)
-void q_process_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_process_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprocess.html#readyReadStandardOutput)
 ///
@@ -2161,8 +2161,6 @@ void q_process__unixprocessparameters_copy_assign(void* self, void* other);
 /// @param other QProcess__UnixProcessParameters*
 void q_process__unixprocessparameters_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qprocess::unixprocessparameters.html#dtor.QProcess::UnixProcessParameters)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QProcess__UnixProcessParameters*

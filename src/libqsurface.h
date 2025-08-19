@@ -18,7 +18,7 @@
 /// @param self QSurface*
 ///
 /// @return enum QSurface__SurfaceClass
-int64_t q_surface_surface_class(void* self);
+int32_t q_surface_surface_class(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#format)
 ///
@@ -30,7 +30,7 @@ QSurfaceFormat* q_surface_format(void* self);
 /// @param self QSurface*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_surface_surface_type(void* self);
+int32_t q_surface_surface_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurface.html#supportsOpenGL)
 ///

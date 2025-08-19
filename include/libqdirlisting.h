@@ -283,7 +283,7 @@ QDateTime* q_dirlisting__direntry_last_read(void* self, void* tz);
 /// @param self QDirListing__DirEntry*
 /// @param typeVal enum QFileDevice__FileTime
 /// @param tz QTimeZone*
-QDateTime* q_dirlisting__direntry_file_time(void* self, int64_t typeVal, void* tz);
+QDateTime* q_dirlisting__direntry_file_time(void* self, int32_t typeVal, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting-direntry.html#operator-eq)
 ///
@@ -291,8 +291,6 @@ QDateTime* q_dirlisting__direntry_file_time(void* self, int64_t typeVal, void* t
 /// @param param1 QDirListing__DirEntry*
 void q_dirlisting__direntry_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::direntry.html#dtor.QDirListing::DirEntry)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QDirListing__DirEntry*
@@ -331,8 +329,6 @@ void q_dirlisting__sentinel_copy_assign(void* self, void* other);
 /// @param other QDirListing__sentinel*
 void q_dirlisting__sentinel_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::sentinel.html#dtor.QDirListing::sentinel)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QDirListing__sentinel*
@@ -367,8 +363,6 @@ QDirListing__const_iterator* q_dirlisting__const_iterator_operator_plus_plus(voi
 /// @param param1 int
 void q_dirlisting__const_iterator_operator_plus_plus2(void* self, int param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qdirlisting::const_iterator.html#dtor.QDirListing::const_iterator)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QDirListing__const_iterator*

@@ -24,11 +24,11 @@ QRawFont* q_rawfont_new4(void* other) {
     return QRawFont_new4((QRawFont*)other);
 }
 
-QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int64_t hintingPreference) {
+QRawFont* q_rawfont_new5(const char* fileName, double pixelSize, int32_t hintingPreference) {
     return QRawFont_new5(qstring(fileName), pixelSize, hintingPreference);
 }
 
-QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int64_t hintingPreference) {
+QRawFont* q_rawfont_new6(const char* fontData, double pixelSize, int32_t hintingPreference) {
     return QRawFont_new6(qstring(fontData), pixelSize, hintingPreference);
 }
 
@@ -66,7 +66,7 @@ const char* q_rawfont_style_name(void* self) {
     return _ret;
 }
 
-int64_t q_rawfont_style(void* self) {
+int32_t q_rawfont_style(void* self) {
     return QRawFont_Style((QRawFont*)self);
 }
 
@@ -121,7 +121,7 @@ double q_rawfont_pixel_size(void* self) {
     return QRawFont_PixelSize((QRawFont*)self);
 }
 
-int64_t q_rawfont_hinting_preference(void* self) {
+int32_t q_rawfont_hinting_preference(void* self) {
     return QRawFont_HintingPreference((QRawFont*)self);
 }
 
@@ -165,11 +165,11 @@ double q_rawfont_units_per_em(void* self) {
     return QRawFont_UnitsPerEm((QRawFont*)self);
 }
 
-void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize, int64_t hintingPreference) {
+void q_rawfont_load_from_file(void* self, const char* fileName, double pixelSize, int32_t hintingPreference) {
     QRawFont_LoadFromFile((QRawFont*)self, qstring(fileName), pixelSize, hintingPreference);
 }
 
-void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int64_t hintingPreference) {
+void q_rawfont_load_from_data(void* self, const char* fontData, double pixelSize, int32_t hintingPreference) {
     QRawFont_LoadFromData((QRawFont*)self, qstring(fontData), pixelSize, hintingPreference);
 }
 
@@ -181,7 +181,7 @@ bool q_rawfont_supports_character2(void* self, void* character) {
     return QRawFont_SupportsCharacter2((QRawFont*)self, (QChar*)character);
 }
 
-libqt_list /* of int64_t */ q_rawfont_supported_writing_systems(void* self) {
+libqt_list /* of int32_t */ q_rawfont_supported_writing_systems(void* self) {
     libqt_list _arr = QRawFont_SupportedWritingSystems((QRawFont*)self);
     return _arr;
 }
@@ -204,15 +204,15 @@ QRawFont* q_rawfont_from_font(void* font) {
     return QRawFont_FromFont((QFont*)font);
 }
 
-QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int64_t antialiasingType) {
+QImage* q_rawfont_alpha_map_for_glyph2(void* self, uint32_t glyphIndex, int32_t antialiasingType) {
     return QRawFont_AlphaMapForGlyph2((QRawFont*)self, glyphIndex, antialiasingType);
 }
 
-QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int64_t antialiasingType, void* transform) {
+QImage* q_rawfont_alpha_map_for_glyph3(void* self, uint32_t glyphIndex, int32_t antialiasingType, void* transform) {
     return QRawFont_AlphaMapForGlyph3((QRawFont*)self, glyphIndex, antialiasingType, (QTransform*)transform);
 }
 
-QRawFont* q_rawfont_from_font2(void* font, int64_t writingSystem) {
+QRawFont* q_rawfont_from_font2(void* font, int32_t writingSystem) {
     return QRawFont_FromFont2((QFont*)font, writingSystem);
 }
 

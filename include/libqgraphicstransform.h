@@ -35,13 +35,13 @@ void* q_graphicstransform_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicstransform_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicstransform_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsTransform*
 /// @param callback int32_t fn(QGraphicsTransform*, enum QMetaObject__Call, int, void*)
-void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int6
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicstransform_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicstransform_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -207,7 +207,7 @@ void q_graphicstransform_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsTransform*
 /// @param id enum Qt__TimerId
-void q_graphicstransform_kill_timer2(void* self, int64_t id);
+void q_graphicstransform_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -384,7 +384,7 @@ bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QGraphicsTransform*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicstransform_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicstransform_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -395,7 +395,7 @@ int32_t q_graphicstransform_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -406,7 +406,7 @@ QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicstransform_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicstransform_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -793,13 +793,13 @@ void* q_graphicsscale_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsscale_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsscale_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScale*
 /// @param callback int32_t fn(QGraphicsScale*, enum QMetaObject__Call, int, void*)
-void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -807,7 +807,7 @@ void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsscale_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsscale_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1044,7 +1044,7 @@ void q_graphicsscale_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsScale*
 /// @param id enum Qt__TimerId
-void q_graphicsscale_kill_timer2(void* self, int64_t id);
+void q_graphicsscale_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1221,7 +1221,7 @@ bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsScale*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsscale_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsscale_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1232,7 +1232,7 @@ int32_t q_graphicsscale_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1243,7 +1243,7 @@ QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsscale_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsscale_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1658,13 +1658,13 @@ void* q_graphicsrotation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsrotation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsrotation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsRotation*
 /// @param callback int32_t fn(QGraphicsRotation*, enum QMetaObject__Call, int, void*)
-void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1672,7 +1672,7 @@ void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsrotation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsrotation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1718,7 +1718,7 @@ void q_graphicsrotation_set_axis(void* self, void* axis);
 ///
 /// @param self QGraphicsRotation*
 /// @param axis enum Qt__Axis
-void q_graphicsrotation_set_axis2(void* self, int64_t axis);
+void q_graphicsrotation_set_axis2(void* self, int32_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsrotation.html#applyTo)
 ///
@@ -1882,7 +1882,7 @@ void q_graphicsrotation_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsRotation*
 /// @param id enum Qt__TimerId
-void q_graphicsrotation_kill_timer2(void* self, int64_t id);
+void q_graphicsrotation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2059,7 +2059,7 @@ bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsRotation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsrotation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsrotation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2070,7 +2070,7 @@ int32_t q_graphicsrotation_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2081,7 +2081,7 @@ QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsrotation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsrotation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

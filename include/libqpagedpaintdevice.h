@@ -34,14 +34,14 @@ bool q_pagedpaintdevice_set_page_size(void* self, void* pageSize);
 ///
 /// @param self QPagedPaintDevice*
 /// @param orientation enum QPageLayout__Orientation
-bool q_pagedpaintdevice_set_page_orientation(void* self, int64_t orientation);
+bool q_pagedpaintdevice_set_page_orientation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#setPageMargins)
 ///
 /// @param self QPagedPaintDevice*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_pagedpaintdevice_set_page_margins(void* self, void* margins, int64_t units);
+bool q_pagedpaintdevice_set_page_margins(void* self, void* margins, int32_t units);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#pageLayout)
 ///
@@ -176,7 +176,7 @@ double q_pagedpaintdevice_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_pagedpaintdevice_encode_metric_f(int64_t metric, double value);
+int32_t q_pagedpaintdevice_encode_metric_f(int32_t metric, double value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpagedpaintdevice.html#dtor.QPagedPaintDevice)
 ///

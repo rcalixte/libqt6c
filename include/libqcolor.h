@@ -30,7 +30,7 @@ QColor* q_color_new3();
 /// q_color_new4 constructs a new QColor object.
 ///
 /// @param color enum Qt__GlobalColor
-QColor* q_color_new4(int64_t color);
+QColor* q_color_new4(int32_t color);
 
 /// q_color_new5 constructs a new QColor object.
 ///
@@ -62,7 +62,7 @@ QColor* q_color_new9(const char* aname);
 /// q_color_new10 constructs a new QColor object.
 ///
 /// @param spec enum QColor__Spec
-QColor* q_color_new10(int64_t spec);
+QColor* q_color_new10(int32_t spec);
 
 /// q_color_new11 constructs a new QColor object.
 ///
@@ -71,7 +71,7 @@ QColor* q_color_new10(int64_t spec);
 /// @param a2 unsigned short
 /// @param a3 unsigned short
 /// @param a4 unsigned short
-QColor* q_color_new11(int64_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4);
+QColor* q_color_new11(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4);
 
 /// q_color_new12 constructs a new QColor object.
 ///
@@ -94,7 +94,7 @@ QColor* q_color_new13(int r, int g, int b, int a);
 /// @param a3 unsigned short
 /// @param a4 unsigned short
 /// @param a5 unsigned short
-QColor* q_color_new14(int64_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4, unsigned short a5);
+QColor* q_color_new14(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4, unsigned short a5);
 
 /// q_color_copy_assign shallow copies `other` into `self`.
 ///
@@ -117,7 +117,7 @@ QColor* q_color_from_string(char* name);
 ///
 /// @param self QColor*
 /// @param color enum Qt__GlobalColor
-void q_color_operator_assign(void* self, int64_t color);
+void q_color_operator_assign(void* self, int32_t color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#isValid)
 ///
@@ -148,7 +148,7 @@ const char** q_color_color_names();
 /// @param self QColor*
 ///
 /// @return enum QColor__Spec
-int64_t q_color_spec(void* self);
+int32_t q_color_spec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#alpha)
 ///
@@ -552,7 +552,7 @@ QColor* q_color_to_extended_rgb(void* self);
 ///
 /// @param self QColor*
 /// @param colorSpec enum QColor__Spec
-QColor* q_color_convert_to(void* self, int64_t colorSpec);
+QColor* q_color_convert_to(void* self, int32_t colorSpec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#fromRgb)
 ///
@@ -677,7 +677,7 @@ bool q_color_is_valid_color_name(char* param1);
 ///
 /// @param self QColor*
 /// @param format enum QColor__NameFormat
-const char* q_color_name1(void* self, int64_t format);
+const char* q_color_name1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolor.html#getRgb)
 ///

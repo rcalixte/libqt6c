@@ -25,13 +25,13 @@ QSplitter* q_splitter_new2();
 /// q_splitter_new3 constructs a new QSplitter object.
 ///
 /// @param param1 enum Qt__Orientation
-QSplitter* q_splitter_new3(int64_t param1);
+QSplitter* q_splitter_new3(int32_t param1);
 
 /// q_splitter_new4 constructs a new QSplitter object.
 ///
 /// @param param1 enum Qt__Orientation
 /// @param parent QWidget*
-QSplitter* q_splitter_new4(int64_t param1, void* parent);
+QSplitter* q_splitter_new4(int32_t param1, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -46,13 +46,13 @@ void* q_splitter_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splitter_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splitter_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitter*
 /// @param callback int32_t fn(QSplitter*, enum QMetaObject__Call, int, void*)
-void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_splitter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splitter_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splitter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -93,14 +93,14 @@ QWidget* q_splitter_replace_widget(void* self, int index, void* widget);
 ///
 /// @param self QSplitter*
 /// @param orientation enum Qt__Orientation
-void q_splitter_set_orientation(void* self, int64_t orientation);
+void q_splitter_set_orientation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#orientation)
 ///
 /// @param self QSplitter*
 ///
 /// @return enum Qt__Orientation
-int64_t q_splitter_orientation(void* self);
+int32_t q_splitter_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitter.html#setChildrenCollapsible)
 ///
@@ -497,7 +497,7 @@ int32_t q_splitter_frame_width(void* self);
 /// @param self QSplitter*
 ///
 /// @return enum QFrame__Shape
-int64_t q_splitter_frame_shape(void* self);
+int32_t q_splitter_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -505,7 +505,7 @@ int64_t q_splitter_frame_shape(void* self);
 ///
 /// @param self QSplitter*
 /// @param frameShape enum QFrame__Shape
-void q_splitter_set_frame_shape(void* self, int64_t frameShape);
+void q_splitter_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -514,7 +514,7 @@ void q_splitter_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QSplitter*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_splitter_frame_shadow(void* self);
+int32_t q_splitter_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -522,7 +522,7 @@ int64_t q_splitter_frame_shadow(void* self);
 ///
 /// @param self QSplitter*
 /// @param frameShadow enum QFrame__Shadow
-void q_splitter_set_frame_shadow(void* self, int64_t frameShadow);
+void q_splitter_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -640,7 +640,7 @@ bool q_splitter_is_modal(void* self);
 /// @param self QSplitter*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_splitter_window_modality(void* self);
+int32_t q_splitter_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -648,7 +648,7 @@ int64_t q_splitter_window_modality(void* self);
 ///
 /// @param self QSplitter*
 /// @param windowModality enum Qt__WindowModality
-void q_splitter_set_window_modality(void* self, int64_t windowModality);
+void q_splitter_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1111,7 +1111,7 @@ void q_splitter_set_palette(void* self, void* palette);
 ///
 /// @param self QSplitter*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_splitter_set_background_role(void* self, int64_t backgroundRole);
+void q_splitter_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1120,7 +1120,7 @@ void q_splitter_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QSplitter*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_splitter_background_role(void* self);
+int32_t q_splitter_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1128,7 +1128,7 @@ int64_t q_splitter_background_role(void* self);
 ///
 /// @param self QSplitter*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_splitter_set_foreground_role(void* self, int64_t foregroundRole);
+void q_splitter_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1137,7 +1137,7 @@ void q_splitter_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QSplitter*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_splitter_foreground_role(void* self);
+int32_t q_splitter_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1539,7 +1539,7 @@ void q_splitter_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QSplitter*
 /// @param direction enum Qt__LayoutDirection
-void q_splitter_set_layout_direction(void* self, int64_t direction);
+void q_splitter_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1548,7 +1548,7 @@ void q_splitter_set_layout_direction(void* self, int64_t direction);
 /// @param self QSplitter*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_splitter_layout_direction(void* self);
+int32_t q_splitter_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1627,7 +1627,7 @@ void q_splitter_clear_focus(void* self);
 ///
 /// @param self QSplitter*
 /// @param reason enum Qt__FocusReason
-void q_splitter_set_focus2(void* self, int64_t reason);
+void q_splitter_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1636,7 +1636,7 @@ void q_splitter_set_focus2(void* self, int64_t reason);
 /// @param self QSplitter*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_splitter_focus_policy(void* self);
+int32_t q_splitter_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1644,7 +1644,7 @@ int64_t q_splitter_focus_policy(void* self);
 ///
 /// @param self QSplitter*
 /// @param policy enum Qt__FocusPolicy
-void q_splitter_set_focus_policy(void* self, int64_t policy);
+void q_splitter_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1683,7 +1683,7 @@ QWidget* q_splitter_focus_proxy(void* self);
 /// @param self QSplitter*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_splitter_context_menu_policy(void* self);
+int32_t q_splitter_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1691,7 +1691,7 @@ int64_t q_splitter_context_menu_policy(void* self);
 ///
 /// @param self QSplitter*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_splitter_set_context_menu_policy(void* self, int64_t policy);
+void q_splitter_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2109,7 +2109,7 @@ void q_splitter_set_size_policy(void* self, void* sizePolicy);
 /// @param self QSplitter*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_splitter_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_splitter_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2417,7 +2417,7 @@ QWidget* q_splitter_child_at3(void* self, void* p);
 ///
 /// @param self QSplitter*
 /// @param param1 enum Qt__WidgetAttribute
-void q_splitter_set_attribute(void* self, int64_t param1);
+void q_splitter_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2425,7 +2425,7 @@ void q_splitter_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QSplitter*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_splitter_test_attribute(void* self, int64_t param1);
+bool q_splitter_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2658,7 +2658,7 @@ void q_splitter_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QSplitter*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_splitter_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_splitter_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2694,7 +2694,7 @@ void q_splitter_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QSplitter*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_splitter_set_attribute2(void* self, int64_t param1, bool on);
+void q_splitter_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2803,7 +2803,7 @@ void q_splitter_kill_timer(void* self, int id);
 ///
 /// @param self QSplitter*
 /// @param id enum Qt__TimerId
-void q_splitter_kill_timer2(void* self, int64_t id);
+void q_splitter_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2972,7 +2972,7 @@ bool q_splitter_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSplitter*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_splitter_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_splitter_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2983,7 +2983,7 @@ int32_t q_splitter_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splitter_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_splitter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2994,7 +2994,7 @@ QMetaObject__Connection* q_splitter_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splitter_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_splitter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3101,7 +3101,7 @@ double q_splitter_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_splitter_encode_metric_f(int64_t metric, double value);
+int32_t q_splitter_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QFrame
 ///
@@ -4009,7 +4009,7 @@ void q_splitter_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QSplitter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_splitter_metric(void* self, int64_t param1);
+int32_t q_splitter_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4019,7 +4019,7 @@ int32_t q_splitter_metric(void* self, int64_t param1);
 ///
 /// @param self QSplitter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_splitter_qbase_metric(void* self, int64_t param1);
+int32_t q_splitter_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4029,7 +4029,7 @@ int32_t q_splitter_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QSplitter*
 /// @param callback int32_t fn(QSplitter*, enum QPaintDevice__PaintDeviceMetric)
-void q_splitter_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_splitter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4656,7 +4656,7 @@ void q_splitter_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QSplitter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_splitter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_splitter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4667,7 +4667,7 @@ double q_splitter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 /// @param self QSplitter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_splitter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_splitter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4677,7 +4677,7 @@ double q_splitter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// @param self QSplitter*
 /// @param callback double fn(QSplitter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_splitter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_splitter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -4702,7 +4702,7 @@ void q_splitter_delete(void* self);
 ///
 /// @param o enum Qt__Orientation
 /// @param parent QSplitter*
-QSplitterHandle* q_splitterhandle_new(int64_t o, void* parent);
+QSplitterHandle* q_splitterhandle_new(int32_t o, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -4717,13 +4717,13 @@ void* q_splitterhandle_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splitterhandle_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splitterhandle_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSplitterHandle*
 /// @param callback int32_t fn(QSplitterHandle*, enum QMetaObject__Call, int, void*)
-void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -4731,7 +4731,7 @@ void q_splitterhandle_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_splitterhandle_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_splitterhandle_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4744,14 +4744,14 @@ const char* q_splitterhandle_tr(const char* s);
 ///
 /// @param self QSplitterHandle*
 /// @param o enum Qt__Orientation
-void q_splitterhandle_set_orientation(void* self, int64_t o);
+void q_splitterhandle_set_orientation(void* self, int32_t o);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#orientation)
 ///
 /// @param self QSplitterHandle*
 ///
 /// @return enum Qt__Orientation
-int64_t q_splitterhandle_orientation(void* self);
+int32_t q_splitterhandle_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsplitterhandle.html#opaqueResize)
 ///
@@ -5047,7 +5047,7 @@ bool q_splitterhandle_is_modal(void* self);
 /// @param self QSplitterHandle*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_splitterhandle_window_modality(void* self);
+int32_t q_splitterhandle_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5055,7 +5055,7 @@ int64_t q_splitterhandle_window_modality(void* self);
 ///
 /// @param self QSplitterHandle*
 /// @param windowModality enum Qt__WindowModality
-void q_splitterhandle_set_window_modality(void* self, int64_t windowModality);
+void q_splitterhandle_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -5518,7 +5518,7 @@ void q_splitterhandle_set_palette(void* self, void* palette);
 ///
 /// @param self QSplitterHandle*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_splitterhandle_set_background_role(void* self, int64_t backgroundRole);
+void q_splitterhandle_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -5527,7 +5527,7 @@ void q_splitterhandle_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QSplitterHandle*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_splitterhandle_background_role(void* self);
+int32_t q_splitterhandle_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5535,7 +5535,7 @@ int64_t q_splitterhandle_background_role(void* self);
 ///
 /// @param self QSplitterHandle*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_splitterhandle_set_foreground_role(void* self, int64_t foregroundRole);
+void q_splitterhandle_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -5544,7 +5544,7 @@ void q_splitterhandle_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QSplitterHandle*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_splitterhandle_foreground_role(void* self);
+int32_t q_splitterhandle_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5946,7 +5946,7 @@ void q_splitterhandle_set_accessible_description(void* self, const char* descrip
 ///
 /// @param self QSplitterHandle*
 /// @param direction enum Qt__LayoutDirection
-void q_splitterhandle_set_layout_direction(void* self, int64_t direction);
+void q_splitterhandle_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -5955,7 +5955,7 @@ void q_splitterhandle_set_layout_direction(void* self, int64_t direction);
 /// @param self QSplitterHandle*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_splitterhandle_layout_direction(void* self);
+int32_t q_splitterhandle_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6034,7 +6034,7 @@ void q_splitterhandle_clear_focus(void* self);
 ///
 /// @param self QSplitterHandle*
 /// @param reason enum Qt__FocusReason
-void q_splitterhandle_set_focus2(void* self, int64_t reason);
+void q_splitterhandle_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -6043,7 +6043,7 @@ void q_splitterhandle_set_focus2(void* self, int64_t reason);
 /// @param self QSplitterHandle*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_splitterhandle_focus_policy(void* self);
+int32_t q_splitterhandle_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6051,7 +6051,7 @@ int64_t q_splitterhandle_focus_policy(void* self);
 ///
 /// @param self QSplitterHandle*
 /// @param policy enum Qt__FocusPolicy
-void q_splitterhandle_set_focus_policy(void* self, int64_t policy);
+void q_splitterhandle_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -6090,7 +6090,7 @@ QWidget* q_splitterhandle_focus_proxy(void* self);
 /// @param self QSplitterHandle*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_splitterhandle_context_menu_policy(void* self);
+int32_t q_splitterhandle_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6098,7 +6098,7 @@ int64_t q_splitterhandle_context_menu_policy(void* self);
 ///
 /// @param self QSplitterHandle*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_splitterhandle_set_context_menu_policy(void* self, int64_t policy);
+void q_splitterhandle_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -6516,7 +6516,7 @@ void q_splitterhandle_set_size_policy(void* self, void* sizePolicy);
 /// @param self QSplitterHandle*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_splitterhandle_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_splitterhandle_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -6824,7 +6824,7 @@ QWidget* q_splitterhandle_child_at3(void* self, void* p);
 ///
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__WidgetAttribute
-void q_splitterhandle_set_attribute(void* self, int64_t param1);
+void q_splitterhandle_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6832,7 +6832,7 @@ void q_splitterhandle_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_splitterhandle_test_attribute(void* self, int64_t param1);
+bool q_splitterhandle_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7065,7 +7065,7 @@ void q_splitterhandle_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QSplitterHandle*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_splitterhandle_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_splitterhandle_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -7101,7 +7101,7 @@ void q_splitterhandle_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QSplitterHandle*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_splitterhandle_set_attribute2(void* self, int64_t param1, bool on);
+void q_splitterhandle_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -7210,7 +7210,7 @@ void q_splitterhandle_kill_timer(void* self, int id);
 ///
 /// @param self QSplitterHandle*
 /// @param id enum Qt__TimerId
-void q_splitterhandle_kill_timer2(void* self, int64_t id);
+void q_splitterhandle_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -7379,7 +7379,7 @@ bool q_splitterhandle_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSplitterHandle*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_splitterhandle_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_splitterhandle_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -7390,7 +7390,7 @@ int32_t q_splitterhandle_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splitterhandle_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_splitterhandle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -7401,7 +7401,7 @@ QMetaObject__Connection* q_splitterhandle_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_splitterhandle_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_splitterhandle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -7508,7 +7508,7 @@ double q_splitterhandle_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_splitterhandle_encode_metric_f(int64_t metric, double value);
+int32_t q_splitterhandle_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -8324,7 +8324,7 @@ void q_splitterhandle_on_change_event(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QSplitterHandle*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_splitterhandle_metric(void* self, int64_t param1);
+int32_t q_splitterhandle_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8334,7 +8334,7 @@ int32_t q_splitterhandle_metric(void* self, int64_t param1);
 ///
 /// @param self QSplitterHandle*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_splitterhandle_qbase_metric(void* self, int64_t param1);
+int32_t q_splitterhandle_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8344,7 +8344,7 @@ int32_t q_splitterhandle_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QSplitterHandle*
 /// @param callback int32_t fn(QSplitterHandle*, enum QPaintDevice__PaintDeviceMetric)
-void q_splitterhandle_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_splitterhandle_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -8971,7 +8971,7 @@ void q_splitterhandle_on_is_signal_connected(void* self, bool (*callback)(void*,
 /// @param self QSplitterHandle*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_splitterhandle_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_splitterhandle_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8982,7 +8982,7 @@ double q_splitterhandle_get_decoded_metric_f(void* self, int64_t metricA, int64_
 /// @param self QSplitterHandle*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -8992,7 +8992,7 @@ double q_splitterhandle_qbase_get_decoded_metric_f(void* self, int64_t metricA, 
 ///
 /// @param self QSplitterHandle*
 /// @param callback double fn(QSplitterHandle*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_splitterhandle_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

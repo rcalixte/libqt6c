@@ -134,8 +134,6 @@ void q_pixmapcache__key_swap(void* self, void* other);
 /// @param self QPixmapCache__Key*
 bool q_pixmapcache__key_is_valid(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpixmapcache::key.html#dtor.QPixmapCache::Key)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPixmapCache__Key*

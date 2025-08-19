@@ -50,27 +50,27 @@ int64_t q_textoption_alignment(void* self);
 ///
 /// @param self QTextOption*
 /// @param aDirection enum Qt__LayoutDirection
-void q_textoption_set_text_direction(void* self, int64_t aDirection);
+void q_textoption_set_text_direction(void* self, int32_t aDirection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#textDirection)
 ///
 /// @param self QTextOption*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textoption_text_direction(void* self);
+int32_t q_textoption_text_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#setWrapMode)
 ///
 /// @param self QTextOption*
 /// @param wrap enum QTextOption__WrapMode
-void q_textoption_set_wrap_mode(void* self, int64_t wrap);
+void q_textoption_set_wrap_mode(void* self, int32_t wrap);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#wrapMode)
 ///
 /// @param self QTextOption*
 ///
 /// @return enum QTextOption__WrapMode
-int64_t q_textoption_wrap_mode(void* self);
+int32_t q_textoption_wrap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextoption.html#setFlags)
 ///
@@ -156,14 +156,14 @@ QTextOption__Tab* q_textoption__tab_new3();
 ///
 /// @param pos double
 /// @param tabType enum QTextOption__TabType
-QTextOption__Tab* q_textoption__tab_new4(double pos, int64_t tabType);
+QTextOption__Tab* q_textoption__tab_new4(double pos, int32_t tabType);
 
 /// q_textoption__tab_new5 constructs a new QTextOption::Tab object.
 ///
 /// @param pos double
 /// @param tabType enum QTextOption__TabType
 /// @param delim QChar*
-QTextOption__Tab* q_textoption__tab_new5(double pos, int64_t tabType, void* delim);
+QTextOption__Tab* q_textoption__tab_new5(double pos, int32_t tabType, void* delim);
 
 /// q_textoption__tab_copy_assign shallow copies `other` into `self`.
 ///
@@ -189,8 +189,6 @@ bool q_textoption__tab_operator_equal(void* self, void* other);
 /// @param other QTextOption__Tab*
 bool q_textoption__tab_operator_not_equal(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption::tab.html#dtor.QTextOption::Tab)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTextOption__Tab*

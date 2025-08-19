@@ -68,13 +68,13 @@ void* q_datetimeedit_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_datetimeedit_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_datetimeedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
 /// @param callback int32_t fn(QDateTimeEdit*, enum QMetaObject__Call, int, void*)
-void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -82,7 +82,7 @@ void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_datetimeedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -246,7 +246,7 @@ int64_t q_datetimeedit_displayed_sections(void* self);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_datetimeedit_current_section(void* self);
+int32_t q_datetimeedit_current_section(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionAt)
 ///
@@ -254,13 +254,13 @@ int64_t q_datetimeedit_current_section(void* self);
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_datetimeedit_section_at(void* self, int index);
+int32_t q_datetimeedit_section_at(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setCurrentSection)
 ///
 /// @param self QDateTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_datetimeedit_set_current_section(void* self, int64_t section);
+void q_datetimeedit_set_current_section(void* self, int32_t section);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#currentSectionIndex)
 ///
@@ -293,7 +293,7 @@ int32_t q_datetimeedit_section_count(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_datetimeedit_set_selected_section(void* self, int64_t section);
+void q_datetimeedit_set_selected_section(void* self, int32_t section);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#sectionText)
 ///
@@ -301,7 +301,7 @@ void q_datetimeedit_set_selected_section(void* self, int64_t section);
 ///
 /// @param self QDateTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-const char* q_datetimeedit_section_text(void* self, int64_t section);
+const char* q_datetimeedit_section_text(void* self, int32_t section);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#displayFormat)
 ///
@@ -332,13 +332,13 @@ void q_datetimeedit_set_calendar_popup(void* self, bool enable);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum Qt__TimeSpec
-int64_t q_datetimeedit_time_spec(void* self);
+int32_t q_datetimeedit_time_spec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#setTimeSpec)
 ///
 /// @param self QDateTimeEdit*
 /// @param spec enum Qt__TimeSpec
-void q_datetimeedit_set_time_spec(void* self, int64_t spec);
+void q_datetimeedit_set_time_spec(void* self, int32_t spec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#timeZone)
 ///
@@ -584,15 +584,15 @@ bool q_datetimeedit_qbase_focus_next_prev_child(void* self, bool next);
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_datetimeedit_validate(void* self, const char* input, int* pos);
+int32_t q_datetimeedit_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QDateTimeEdit*
-/// @param callback int64_t fn(QDateTimeEdit*, const char*, int*)
-void q_datetimeedit_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QDateTimeEdit*, const char*, int*)
+void q_datetimeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
@@ -603,7 +603,7 @@ void q_datetimeedit_on_validate(void* self, int64_t (*callback)(void*, const cha
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_datetimeedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_datetimeedit_qbase_validate(void* self, const char* input, int* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
@@ -787,7 +787,7 @@ const char* q_datetimeedit_tr3(const char* s, const char* c, int n);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
-int64_t q_datetimeedit_button_symbols(void* self);
+int32_t q_datetimeedit_button_symbols(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -795,7 +795,7 @@ int64_t q_datetimeedit_button_symbols(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param bs enum QAbstractSpinBox__ButtonSymbols
-void q_datetimeedit_set_button_symbols(void* self, int64_t bs);
+void q_datetimeedit_set_button_symbols(void* self, int32_t bs);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -803,7 +803,7 @@ void q_datetimeedit_set_button_symbols(void* self, int64_t bs);
 ///
 /// @param self QDateTimeEdit*
 /// @param cm enum QAbstractSpinBox__CorrectionMode
-void q_datetimeedit_set_correction_mode(void* self, int64_t cm);
+void q_datetimeedit_set_correction_mode(void* self, int32_t cm);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -812,7 +812,7 @@ void q_datetimeedit_set_correction_mode(void* self, int64_t cm);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
-int64_t q_datetimeedit_correction_mode(void* self);
+int32_t q_datetimeedit_correction_mode(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -1068,7 +1068,7 @@ bool q_datetimeedit_is_modal(void* self);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_datetimeedit_window_modality(void* self);
+int32_t q_datetimeedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1076,7 +1076,7 @@ int64_t q_datetimeedit_window_modality(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param windowModality enum Qt__WindowModality
-void q_datetimeedit_set_window_modality(void* self, int64_t windowModality);
+void q_datetimeedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1539,7 +1539,7 @@ void q_datetimeedit_set_palette(void* self, void* palette);
 ///
 /// @param self QDateTimeEdit*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_datetimeedit_set_background_role(void* self, int64_t backgroundRole);
+void q_datetimeedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1548,7 +1548,7 @@ void q_datetimeedit_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_datetimeedit_background_role(void* self);
+int32_t q_datetimeedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1556,7 +1556,7 @@ int64_t q_datetimeedit_background_role(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_datetimeedit_set_foreground_role(void* self, int64_t foregroundRole);
+void q_datetimeedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1565,7 +1565,7 @@ void q_datetimeedit_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_datetimeedit_foreground_role(void* self);
+int32_t q_datetimeedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1967,7 +1967,7 @@ void q_datetimeedit_set_accessible_description(void* self, const char* descripti
 ///
 /// @param self QDateTimeEdit*
 /// @param direction enum Qt__LayoutDirection
-void q_datetimeedit_set_layout_direction(void* self, int64_t direction);
+void q_datetimeedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1976,7 +1976,7 @@ void q_datetimeedit_set_layout_direction(void* self, int64_t direction);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_datetimeedit_layout_direction(void* self);
+int32_t q_datetimeedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2055,7 +2055,7 @@ void q_datetimeedit_clear_focus(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param reason enum Qt__FocusReason
-void q_datetimeedit_set_focus2(void* self, int64_t reason);
+void q_datetimeedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2064,7 +2064,7 @@ void q_datetimeedit_set_focus2(void* self, int64_t reason);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_datetimeedit_focus_policy(void* self);
+int32_t q_datetimeedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2072,7 +2072,7 @@ int64_t q_datetimeedit_focus_policy(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param policy enum Qt__FocusPolicy
-void q_datetimeedit_set_focus_policy(void* self, int64_t policy);
+void q_datetimeedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2111,7 +2111,7 @@ QWidget* q_datetimeedit_focus_proxy(void* self);
 /// @param self QDateTimeEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_datetimeedit_context_menu_policy(void* self);
+int32_t q_datetimeedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2119,7 +2119,7 @@ int64_t q_datetimeedit_context_menu_policy(void* self);
 ///
 /// @param self QDateTimeEdit*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_datetimeedit_set_context_menu_policy(void* self, int64_t policy);
+void q_datetimeedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2537,7 +2537,7 @@ void q_datetimeedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QDateTimeEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_datetimeedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_datetimeedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2845,7 +2845,7 @@ QWidget* q_datetimeedit_child_at3(void* self, void* p);
 ///
 /// @param self QDateTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
-void q_datetimeedit_set_attribute(void* self, int64_t param1);
+void q_datetimeedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2853,7 +2853,7 @@ void q_datetimeedit_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QDateTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_datetimeedit_test_attribute(void* self, int64_t param1);
+bool q_datetimeedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3086,7 +3086,7 @@ void q_datetimeedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QDateTimeEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_datetimeedit_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_datetimeedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3122,7 +3122,7 @@ void q_datetimeedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QDateTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_datetimeedit_set_attribute2(void* self, int64_t param1, bool on);
+void q_datetimeedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3231,7 +3231,7 @@ void q_datetimeedit_kill_timer(void* self, int id);
 ///
 /// @param self QDateTimeEdit*
 /// @param id enum Qt__TimerId
-void q_datetimeedit_kill_timer2(void* self, int64_t id);
+void q_datetimeedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3400,7 +3400,7 @@ bool q_datetimeedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDateTimeEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_datetimeedit_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_datetimeedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3411,7 +3411,7 @@ int32_t q_datetimeedit_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_datetimeedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_datetimeedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3422,7 +3422,7 @@ QMetaObject__Connection* q_datetimeedit_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_datetimeedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_datetimeedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3529,7 +3529,7 @@ double q_datetimeedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_datetimeedit_encode_metric_f(int64_t metric, double value);
+int32_t q_datetimeedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4405,7 +4405,7 @@ void q_datetimeedit_on_native_event(void* self, bool (*callback)(void*, const ch
 ///
 /// @param self QDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_datetimeedit_metric(void* self, int64_t param1);
+int32_t q_datetimeedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4415,7 +4415,7 @@ int32_t q_datetimeedit_metric(void* self, int64_t param1);
 ///
 /// @param self QDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_datetimeedit_qbase_metric(void* self, int64_t param1);
+int32_t q_datetimeedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4425,7 +4425,7 @@ int32_t q_datetimeedit_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QDateTimeEdit*
 /// @param callback int32_t fn(QDateTimeEdit*, enum QPaintDevice__PaintDeviceMetric)
-void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5020,7 +5020,7 @@ void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param self QDateTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_datetimeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5031,7 +5031,7 @@ double q_datetimeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 /// @param self QDateTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5041,7 +5041,7 @@ double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
 ///
 /// @param self QDateTimeEdit*
 /// @param callback double fn(QDateTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_datetimeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5095,13 +5095,13 @@ void* q_timeedit_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timeedit_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timeedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTimeEdit*
 /// @param callback int32_t fn(QTimeEdit*, enum QMetaObject__Call, int, void*)
-void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -5109,7 +5109,7 @@ void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_timeedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_timeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -5358,7 +5358,7 @@ int64_t q_timeedit_displayed_sections(void* self);
 /// @param self QTimeEdit*
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_timeedit_current_section(void* self);
+int32_t q_timeedit_current_section(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5368,7 +5368,7 @@ int64_t q_timeedit_current_section(void* self);
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_timeedit_section_at(void* self, int index);
+int32_t q_timeedit_section_at(void* self, int index);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5376,7 +5376,7 @@ int64_t q_timeedit_section_at(void* self, int index);
 ///
 /// @param self QTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_timeedit_set_current_section(void* self, int64_t section);
+void q_timeedit_set_current_section(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5421,7 +5421,7 @@ int32_t q_timeedit_section_count(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_timeedit_set_selected_section(void* self, int64_t section);
+void q_timeedit_set_selected_section(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5431,7 +5431,7 @@ void q_timeedit_set_selected_section(void* self, int64_t section);
 ///
 /// @param self QTimeEdit*
 /// @param section enum QDateTimeEdit__Section
-const char* q_timeedit_section_text(void* self, int64_t section);
+const char* q_timeedit_section_text(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5472,7 +5472,7 @@ void q_timeedit_set_calendar_popup(void* self, bool enable);
 /// @param self QTimeEdit*
 ///
 /// @return enum Qt__TimeSpec
-int64_t q_timeedit_time_spec(void* self);
+int32_t q_timeedit_time_spec(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5480,7 +5480,7 @@ int64_t q_timeedit_time_spec(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param spec enum Qt__TimeSpec
-void q_timeedit_set_time_spec(void* self, int64_t spec);
+void q_timeedit_set_time_spec(void* self, int32_t spec);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -5576,7 +5576,7 @@ void q_timeedit_set_time(void* self, void* time);
 /// @param self QTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
-int64_t q_timeedit_button_symbols(void* self);
+int32_t q_timeedit_button_symbols(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5584,7 +5584,7 @@ int64_t q_timeedit_button_symbols(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param bs enum QAbstractSpinBox__ButtonSymbols
-void q_timeedit_set_button_symbols(void* self, int64_t bs);
+void q_timeedit_set_button_symbols(void* self, int32_t bs);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5592,7 +5592,7 @@ void q_timeedit_set_button_symbols(void* self, int64_t bs);
 ///
 /// @param self QTimeEdit*
 /// @param cm enum QAbstractSpinBox__CorrectionMode
-void q_timeedit_set_correction_mode(void* self, int64_t cm);
+void q_timeedit_set_correction_mode(void* self, int32_t cm);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5601,7 +5601,7 @@ void q_timeedit_set_correction_mode(void* self, int64_t cm);
 /// @param self QTimeEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
-int64_t q_timeedit_correction_mode(void* self);
+int32_t q_timeedit_correction_mode(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5857,7 +5857,7 @@ bool q_timeedit_is_modal(void* self);
 /// @param self QTimeEdit*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_timeedit_window_modality(void* self);
+int32_t q_timeedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5865,7 +5865,7 @@ int64_t q_timeedit_window_modality(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param windowModality enum Qt__WindowModality
-void q_timeedit_set_window_modality(void* self, int64_t windowModality);
+void q_timeedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -6328,7 +6328,7 @@ void q_timeedit_set_palette(void* self, void* palette);
 ///
 /// @param self QTimeEdit*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_timeedit_set_background_role(void* self, int64_t backgroundRole);
+void q_timeedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -6337,7 +6337,7 @@ void q_timeedit_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_timeedit_background_role(void* self);
+int32_t q_timeedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6345,7 +6345,7 @@ int64_t q_timeedit_background_role(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_timeedit_set_foreground_role(void* self, int64_t foregroundRole);
+void q_timeedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -6354,7 +6354,7 @@ void q_timeedit_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QTimeEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_timeedit_foreground_role(void* self);
+int32_t q_timeedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6756,7 +6756,7 @@ void q_timeedit_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QTimeEdit*
 /// @param direction enum Qt__LayoutDirection
-void q_timeedit_set_layout_direction(void* self, int64_t direction);
+void q_timeedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -6765,7 +6765,7 @@ void q_timeedit_set_layout_direction(void* self, int64_t direction);
 /// @param self QTimeEdit*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_timeedit_layout_direction(void* self);
+int32_t q_timeedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6844,7 +6844,7 @@ void q_timeedit_clear_focus(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param reason enum Qt__FocusReason
-void q_timeedit_set_focus2(void* self, int64_t reason);
+void q_timeedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -6853,7 +6853,7 @@ void q_timeedit_set_focus2(void* self, int64_t reason);
 /// @param self QTimeEdit*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_timeedit_focus_policy(void* self);
+int32_t q_timeedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6861,7 +6861,7 @@ int64_t q_timeedit_focus_policy(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param policy enum Qt__FocusPolicy
-void q_timeedit_set_focus_policy(void* self, int64_t policy);
+void q_timeedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -6900,7 +6900,7 @@ QWidget* q_timeedit_focus_proxy(void* self);
 /// @param self QTimeEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_timeedit_context_menu_policy(void* self);
+int32_t q_timeedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6908,7 +6908,7 @@ int64_t q_timeedit_context_menu_policy(void* self);
 ///
 /// @param self QTimeEdit*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_timeedit_set_context_menu_policy(void* self, int64_t policy);
+void q_timeedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -7326,7 +7326,7 @@ void q_timeedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QTimeEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_timeedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_timeedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -7634,7 +7634,7 @@ QWidget* q_timeedit_child_at3(void* self, void* p);
 ///
 /// @param self QTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
-void q_timeedit_set_attribute(void* self, int64_t param1);
+void q_timeedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7642,7 +7642,7 @@ void q_timeedit_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_timeedit_test_attribute(void* self, int64_t param1);
+bool q_timeedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7875,7 +7875,7 @@ void q_timeedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QTimeEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_timeedit_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_timeedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -7911,7 +7911,7 @@ void q_timeedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QTimeEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_timeedit_set_attribute2(void* self, int64_t param1, bool on);
+void q_timeedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -8020,7 +8020,7 @@ void q_timeedit_kill_timer(void* self, int id);
 ///
 /// @param self QTimeEdit*
 /// @param id enum Qt__TimerId
-void q_timeedit_kill_timer2(void* self, int64_t id);
+void q_timeedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -8189,7 +8189,7 @@ bool q_timeedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTimeEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_timeedit_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_timeedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -8200,7 +8200,7 @@ int32_t q_timeedit_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timeedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_timeedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -8211,7 +8211,7 @@ QMetaObject__Connection* q_timeedit_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_timeedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_timeedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -8318,7 +8318,7 @@ double q_timeedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_timeedit_encode_metric_f(int64_t metric, double value);
+int32_t q_timeedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -8567,7 +8567,7 @@ void q_timeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_timeedit_validate(void* self, const char* input, int* pos);
+int32_t q_timeedit_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -8580,7 +8580,7 @@ int64_t q_timeedit_validate(void* self, const char* input, int* pos);
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -8589,8 +8589,8 @@ int64_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTimeEdit*
-/// @param callback int64_t fn(QTimeEdit*, const char*, int*)
-void q_timeedit_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QTimeEdit*, const char*, int*)
+void q_timeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9682,7 +9682,7 @@ void q_timeedit_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_timeedit_metric(void* self, int64_t param1);
+int32_t q_timeedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9692,7 +9692,7 @@ int32_t q_timeedit_metric(void* self, int64_t param1);
 ///
 /// @param self QTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_timeedit_qbase_metric(void* self, int64_t param1);
+int32_t q_timeedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -9702,7 +9702,7 @@ int32_t q_timeedit_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QTimeEdit*
 /// @param callback int32_t fn(QTimeEdit*, enum QPaintDevice__PaintDeviceMetric)
-void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -10297,7 +10297,7 @@ void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_timeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_timeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10308,7 +10308,7 @@ double q_timeedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 /// @param self QTimeEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_timeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_timeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -10318,7 +10318,7 @@ double q_timeedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// @param self QTimeEdit*
 /// @param callback double fn(QTimeEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_timeedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -10372,13 +10372,13 @@ void* q_dateedit_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dateedit_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dateedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDateEdit*
 /// @param callback int32_t fn(QDateEdit*, enum QMetaObject__Call, int, void*)
-void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -10386,7 +10386,7 @@ void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dateedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dateedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -10635,7 +10635,7 @@ int64_t q_dateedit_displayed_sections(void* self);
 /// @param self QDateEdit*
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_dateedit_current_section(void* self);
+int32_t q_dateedit_current_section(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10645,7 +10645,7 @@ int64_t q_dateedit_current_section(void* self);
 /// @param index int
 ///
 /// @return enum QDateTimeEdit__Section
-int64_t q_dateedit_section_at(void* self, int index);
+int32_t q_dateedit_section_at(void* self, int index);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10653,7 +10653,7 @@ int64_t q_dateedit_section_at(void* self, int index);
 ///
 /// @param self QDateEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_dateedit_set_current_section(void* self, int64_t section);
+void q_dateedit_set_current_section(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10698,7 +10698,7 @@ int32_t q_dateedit_section_count(void* self);
 ///
 /// @param self QDateEdit*
 /// @param section enum QDateTimeEdit__Section
-void q_dateedit_set_selected_section(void* self, int64_t section);
+void q_dateedit_set_selected_section(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10708,7 +10708,7 @@ void q_dateedit_set_selected_section(void* self, int64_t section);
 ///
 /// @param self QDateEdit*
 /// @param section enum QDateTimeEdit__Section
-const char* q_dateedit_section_text(void* self, int64_t section);
+const char* q_dateedit_section_text(void* self, int32_t section);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10749,7 +10749,7 @@ void q_dateedit_set_calendar_popup(void* self, bool enable);
 /// @param self QDateEdit*
 ///
 /// @return enum Qt__TimeSpec
-int64_t q_dateedit_time_spec(void* self);
+int32_t q_dateedit_time_spec(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10757,7 +10757,7 @@ int64_t q_dateedit_time_spec(void* self);
 ///
 /// @param self QDateEdit*
 /// @param spec enum Qt__TimeSpec
-void q_dateedit_set_time_spec(void* self, int64_t spec);
+void q_dateedit_set_time_spec(void* self, int32_t spec);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10853,7 +10853,7 @@ void q_dateedit_set_time(void* self, void* time);
 /// @param self QDateEdit*
 ///
 /// @return enum QAbstractSpinBox__ButtonSymbols
-int64_t q_dateedit_button_symbols(void* self);
+int32_t q_dateedit_button_symbols(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10861,7 +10861,7 @@ int64_t q_dateedit_button_symbols(void* self);
 ///
 /// @param self QDateEdit*
 /// @param bs enum QAbstractSpinBox__ButtonSymbols
-void q_dateedit_set_button_symbols(void* self, int64_t bs);
+void q_dateedit_set_button_symbols(void* self, int32_t bs);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10869,7 +10869,7 @@ void q_dateedit_set_button_symbols(void* self, int64_t bs);
 ///
 /// @param self QDateEdit*
 /// @param cm enum QAbstractSpinBox__CorrectionMode
-void q_dateedit_set_correction_mode(void* self, int64_t cm);
+void q_dateedit_set_correction_mode(void* self, int32_t cm);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10878,7 +10878,7 @@ void q_dateedit_set_correction_mode(void* self, int64_t cm);
 /// @param self QDateEdit*
 ///
 /// @return enum QAbstractSpinBox__CorrectionMode
-int64_t q_dateedit_correction_mode(void* self);
+int32_t q_dateedit_correction_mode(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11134,7 +11134,7 @@ bool q_dateedit_is_modal(void* self);
 /// @param self QDateEdit*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_dateedit_window_modality(void* self);
+int32_t q_dateedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11142,7 +11142,7 @@ int64_t q_dateedit_window_modality(void* self);
 ///
 /// @param self QDateEdit*
 /// @param windowModality enum Qt__WindowModality
-void q_dateedit_set_window_modality(void* self, int64_t windowModality);
+void q_dateedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -11605,7 +11605,7 @@ void q_dateedit_set_palette(void* self, void* palette);
 ///
 /// @param self QDateEdit*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_dateedit_set_background_role(void* self, int64_t backgroundRole);
+void q_dateedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -11614,7 +11614,7 @@ void q_dateedit_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QDateEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_dateedit_background_role(void* self);
+int32_t q_dateedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11622,7 +11622,7 @@ int64_t q_dateedit_background_role(void* self);
 ///
 /// @param self QDateEdit*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_dateedit_set_foreground_role(void* self, int64_t foregroundRole);
+void q_dateedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -11631,7 +11631,7 @@ void q_dateedit_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QDateEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_dateedit_foreground_role(void* self);
+int32_t q_dateedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -12033,7 +12033,7 @@ void q_dateedit_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QDateEdit*
 /// @param direction enum Qt__LayoutDirection
-void q_dateedit_set_layout_direction(void* self, int64_t direction);
+void q_dateedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -12042,7 +12042,7 @@ void q_dateedit_set_layout_direction(void* self, int64_t direction);
 /// @param self QDateEdit*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_dateedit_layout_direction(void* self);
+int32_t q_dateedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -12121,7 +12121,7 @@ void q_dateedit_clear_focus(void* self);
 ///
 /// @param self QDateEdit*
 /// @param reason enum Qt__FocusReason
-void q_dateedit_set_focus2(void* self, int64_t reason);
+void q_dateedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -12130,7 +12130,7 @@ void q_dateedit_set_focus2(void* self, int64_t reason);
 /// @param self QDateEdit*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_dateedit_focus_policy(void* self);
+int32_t q_dateedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -12138,7 +12138,7 @@ int64_t q_dateedit_focus_policy(void* self);
 ///
 /// @param self QDateEdit*
 /// @param policy enum Qt__FocusPolicy
-void q_dateedit_set_focus_policy(void* self, int64_t policy);
+void q_dateedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -12177,7 +12177,7 @@ QWidget* q_dateedit_focus_proxy(void* self);
 /// @param self QDateEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_dateedit_context_menu_policy(void* self);
+int32_t q_dateedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -12185,7 +12185,7 @@ int64_t q_dateedit_context_menu_policy(void* self);
 ///
 /// @param self QDateEdit*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_dateedit_set_context_menu_policy(void* self, int64_t policy);
+void q_dateedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -12603,7 +12603,7 @@ void q_dateedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QDateEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_dateedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_dateedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -12911,7 +12911,7 @@ QWidget* q_dateedit_child_at3(void* self, void* p);
 ///
 /// @param self QDateEdit*
 /// @param param1 enum Qt__WidgetAttribute
-void q_dateedit_set_attribute(void* self, int64_t param1);
+void q_dateedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -12919,7 +12919,7 @@ void q_dateedit_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QDateEdit*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_dateedit_test_attribute(void* self, int64_t param1);
+bool q_dateedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -13152,7 +13152,7 @@ void q_dateedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QDateEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_dateedit_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_dateedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -13188,7 +13188,7 @@ void q_dateedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QDateEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_dateedit_set_attribute2(void* self, int64_t param1, bool on);
+void q_dateedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -13297,7 +13297,7 @@ void q_dateedit_kill_timer(void* self, int id);
 ///
 /// @param self QDateEdit*
 /// @param id enum Qt__TimerId
-void q_dateedit_kill_timer2(void* self, int64_t id);
+void q_dateedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -13466,7 +13466,7 @@ bool q_dateedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDateEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_dateedit_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_dateedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -13477,7 +13477,7 @@ int32_t q_dateedit_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dateedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_dateedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -13488,7 +13488,7 @@ QMetaObject__Connection* q_dateedit_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dateedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_dateedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -13595,7 +13595,7 @@ double q_dateedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_dateedit_encode_metric_f(int64_t metric, double value);
+int32_t q_dateedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13844,7 +13844,7 @@ void q_dateedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_dateedit_validate(void* self, const char* input, int* pos);
+int32_t q_dateedit_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13857,7 +13857,7 @@ int64_t q_dateedit_validate(void* self, const char* input, int* pos);
 /// @param pos int*
 ///
 /// @return enum QValidator__State
-int64_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -13866,8 +13866,8 @@ int64_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QDateEdit*
-/// @param callback int64_t fn(QDateEdit*, const char*, int*)
-void q_dateedit_on_validate(void* self, int64_t (*callback)(void*, const char*, int*));
+/// @param callback int32_t fn(QDateEdit*, const char*, int*)
+void q_dateedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
 /// Inherited from QDateTimeEdit
 ///
@@ -14959,7 +14959,7 @@ void q_dateedit_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QDateEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_dateedit_metric(void* self, int64_t param1);
+int32_t q_dateedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -14969,7 +14969,7 @@ int32_t q_dateedit_metric(void* self, int64_t param1);
 ///
 /// @param self QDateEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_dateedit_qbase_metric(void* self, int64_t param1);
+int32_t q_dateedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -14979,7 +14979,7 @@ int32_t q_dateedit_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QDateEdit*
 /// @param callback int32_t fn(QDateEdit*, enum QPaintDevice__PaintDeviceMetric)
-void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -15574,7 +15574,7 @@ void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QDateEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_dateedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_dateedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -15585,7 +15585,7 @@ double q_dateedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 /// @param self QDateEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_dateedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_dateedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -15595,7 +15595,7 @@ double q_dateedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// @param self QDateEdit*
 /// @param callback double fn(QDateEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_dateedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

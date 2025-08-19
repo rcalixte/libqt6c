@@ -31,13 +31,13 @@ void* q_actiongroup_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_actiongroup_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_actiongroup_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QActionGroup*
 /// @param callback int32_t fn(QActionGroup*, enum QMetaObject__Call, int, void*)
-void q_actiongroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_actiongroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -45,7 +45,7 @@ void q_actiongroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_actiongroup_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_actiongroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -109,7 +109,7 @@ bool q_actiongroup_is_visible(void* self);
 /// @param self QActionGroup*
 ///
 /// @return enum QActionGroup__ExclusionPolicy
-int64_t q_actiongroup_exclusion_policy(void* self);
+int32_t q_actiongroup_exclusion_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactiongroup.html#setEnabled)
 ///
@@ -139,7 +139,7 @@ void q_actiongroup_set_exclusive(void* self, bool exclusive);
 ///
 /// @param self QActionGroup*
 /// @param policy enum QActionGroup__ExclusionPolicy
-void q_actiongroup_set_exclusion_policy(void* self, int64_t policy);
+void q_actiongroup_set_exclusion_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qactiongroup.html#triggered)
 ///
@@ -272,7 +272,7 @@ void q_actiongroup_kill_timer(void* self, int id);
 ///
 /// @param self QActionGroup*
 /// @param id enum Qt__TimerId
-void q_actiongroup_kill_timer2(void* self, int64_t id);
+void q_actiongroup_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -449,7 +449,7 @@ bool q_actiongroup_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QActionGroup*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_actiongroup_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_actiongroup_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -460,7 +460,7 @@ int32_t q_actiongroup_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_actiongroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_actiongroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -471,7 +471,7 @@ QMetaObject__Connection* q_actiongroup_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_actiongroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_actiongroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

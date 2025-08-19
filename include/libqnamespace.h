@@ -44,7 +44,7 @@ void q_disambiguated_t_copy_assign(void* self, void* other);
 /// @param other Disambiguated_t*
 void q_disambiguated_t_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qt::disambiguated_t.html#dtor.Qt::Disambiguated_t)
+/// [Qt documentation](https://doc.qt.io/qt-6/disambiguated_t.html#dtor.Disambiguated_t)
 ///
 /// Delete this object from C++ memory.
 ///
@@ -79,7 +79,7 @@ void q_internal_move_assign(void* self, void* other);
 ///
 /// @param param1 enum QInternal__Callback
 /// @param param2 void*
-bool q_internal_activate_callbacks(int64_t param1, void* param2);
+bool q_internal_activate_callbacks(int32_t param1, void* param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qinternal.html#dtor.QInternal)
 ///
@@ -122,19 +122,19 @@ QKeyCombination* q_keycombination_new6(void* param1);
 /// q_keycombination_new7 constructs a new QKeyCombination object.
 ///
 /// @param key enum Qt__Key
-QKeyCombination* q_keycombination_new7(int64_t key);
+QKeyCombination* q_keycombination_new7(int32_t key);
 
 /// q_keycombination_new8 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__Modifier
 /// @param key enum Qt__Key
-QKeyCombination* q_keycombination_new8(int64_t modifiers, int64_t key);
+QKeyCombination* q_keycombination_new8(int64_t modifiers, int32_t key);
 
 /// q_keycombination_new9 constructs a new QKeyCombination object.
 ///
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param key enum Qt__Key
-QKeyCombination* q_keycombination_new9(int64_t modifiers, int64_t key);
+QKeyCombination* q_keycombination_new9(int64_t modifiers, int32_t key);
 
 /// q_keycombination_copy_assign shallow copies `other` into `self`.
 ///
@@ -160,7 +160,7 @@ int64_t q_keycombination_keyboard_modifiers(void* self);
 /// @param self QKeyCombination*
 ///
 /// @return enum Qt__Key
-int64_t q_keycombination_key(void* self);
+int32_t q_keycombination_key(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeycombination.html#fromCombined)
 ///

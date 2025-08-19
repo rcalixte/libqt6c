@@ -53,11 +53,11 @@ void q_networkrequest_set_headers(void* self, void* newHeaders) {
     QNetworkRequest_SetHeaders((QNetworkRequest*)self, (QHttpHeaders*)newHeaders);
 }
 
-QVariant* q_networkrequest_header(void* self, int64_t header) {
+QVariant* q_networkrequest_header(void* self, int32_t header) {
     return QNetworkRequest_Header((QNetworkRequest*)self, header);
 }
 
-void q_networkrequest_set_header(void* self, int64_t header, void* value) {
+void q_networkrequest_set_header(void* self, int32_t header, void* value) {
     QNetworkRequest_SetHeader((QNetworkRequest*)self, header, (QVariant*)value);
 }
 
@@ -95,11 +95,11 @@ void q_networkrequest_set_raw_header(void* self, const char* headerName, const c
     QNetworkRequest_SetRawHeader((QNetworkRequest*)self, qstring(headerName), qstring(value));
 }
 
-QVariant* q_networkrequest_attribute(void* self, int64_t code) {
+QVariant* q_networkrequest_attribute(void* self, int32_t code) {
     return QNetworkRequest_Attribute((QNetworkRequest*)self, code);
 }
 
-void q_networkrequest_set_attribute(void* self, int64_t code, void* value) {
+void q_networkrequest_set_attribute(void* self, int32_t code, void* value) {
     QNetworkRequest_SetAttribute((QNetworkRequest*)self, code, (QVariant*)value);
 }
 
@@ -119,11 +119,11 @@ QObject* q_networkrequest_originating_object(void* self) {
     return QNetworkRequest_OriginatingObject((QNetworkRequest*)self);
 }
 
-int64_t q_networkrequest_priority(void* self) {
+int32_t q_networkrequest_priority(void* self) {
     return QNetworkRequest_Priority((QNetworkRequest*)self);
 }
 
-void q_networkrequest_set_priority(void* self, int64_t priority) {
+void q_networkrequest_set_priority(void* self, int32_t priority) {
     QNetworkRequest_SetPriority((QNetworkRequest*)self, priority);
 }
 
@@ -182,7 +182,7 @@ void q_networkrequest_set_transfer_timeout2(void* self) {
     QNetworkRequest_SetTransferTimeout2((QNetworkRequest*)self);
 }
 
-QVariant* q_networkrequest_attribute2(void* self, int64_t code, void* defaultValue) {
+QVariant* q_networkrequest_attribute2(void* self, int32_t code, void* defaultValue) {
     return QNetworkRequest_Attribute2((QNetworkRequest*)self, code, (QVariant*)defaultValue);
 }
 

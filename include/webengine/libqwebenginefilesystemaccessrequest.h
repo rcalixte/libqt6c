@@ -55,7 +55,7 @@ QUrl* q_webenginefilesystemaccessrequest_file_path(void* self);
 /// @param self QWebEngineFileSystemAccessRequest*
 ///
 /// @return enum QWebEngineFileSystemAccessRequest__HandleType
-int64_t q_webenginefilesystemaccessrequest_handle_type(void* self);
+int32_t q_webenginefilesystemaccessrequest_handle_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginefilesystemaccessrequest.html#accessFlags)
 ///

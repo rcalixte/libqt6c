@@ -12,7 +12,7 @@ void* q_webenginewebauthuxrequest_metacast(void* self, const char* param1) {
     return QWebEngineWebAuthUxRequest_Metacast((QWebEngineWebAuthUxRequest*)self, param1);
 }
 
-int32_t q_webenginewebauthuxrequest_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webenginewebauthuxrequest_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineWebAuthUxRequest_Metacall((QWebEngineWebAuthUxRequest*)self, param1, param2, param3);
 }
 
@@ -53,19 +53,19 @@ QWebEngineWebAuthPinRequest* q_webenginewebauthuxrequest_pin_request(void* self)
     return QWebEngineWebAuthUxRequest_PinRequest((QWebEngineWebAuthUxRequest*)self);
 }
 
-int64_t q_webenginewebauthuxrequest_state(void* self) {
+int32_t q_webenginewebauthuxrequest_state(void* self) {
     return QWebEngineWebAuthUxRequest_State((QWebEngineWebAuthUxRequest*)self);
 }
 
-int64_t q_webenginewebauthuxrequest_request_failure_reason(void* self) {
+int32_t q_webenginewebauthuxrequest_request_failure_reason(void* self) {
     return QWebEngineWebAuthUxRequest_RequestFailureReason((QWebEngineWebAuthUxRequest*)self);
 }
 
-void q_webenginewebauthuxrequest_state_changed(void* self, int64_t state) {
+void q_webenginewebauthuxrequest_state_changed(void* self, int32_t state) {
     QWebEngineWebAuthUxRequest_StateChanged((QWebEngineWebAuthUxRequest*)self, state);
 }
 
-void q_webenginewebauthuxrequest_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_webenginewebauthuxrequest_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QWebEngineWebAuthUxRequest_Connect_StateChanged((QWebEngineWebAuthUxRequest*)self, (intptr_t)callback);
 }
 
@@ -154,7 +154,7 @@ void q_webenginewebauthuxrequest_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_webenginewebauthuxrequest_kill_timer2(void* self, int64_t id) {
+void q_webenginewebauthuxrequest_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -258,15 +258,15 @@ bool q_webenginewebauthuxrequest_move_to_thread2(void* self, void* thread, void*
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_webenginewebauthuxrequest_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_webenginewebauthuxrequest_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_webenginewebauthuxrequest_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_webenginewebauthuxrequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

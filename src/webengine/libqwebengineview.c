@@ -59,15 +59,15 @@ void* q_webengineview_metacast(void* self, const char* param1) {
     return QWebEngineView_Metacast((QWebEngineView*)self, param1);
 }
 
-int32_t q_webengineview_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webengineview_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineView_Metacall((QWebEngineView*)self, param1, param2, param3);
 }
 
-void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QWebEngineView_OnMetacall((QWebEngineView*)self, (intptr_t)callback);
 }
 
-int32_t q_webengineview_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webengineview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineView_QBaseMetacall((QWebEngineView*)self, param1, param2, param3);
 }
 
@@ -144,11 +144,11 @@ const char* q_webengineview_selected_text(void* self) {
     return _ret;
 }
 
-QAction* q_webengineview_page_action(void* self, int64_t action) {
+QAction* q_webengineview_page_action(void* self, int32_t action) {
     return QWebEngineView_PageAction((QWebEngineView*)self, action);
 }
 
-void q_webengineview_trigger_page_action(void* self, int64_t action) {
+void q_webengineview_trigger_page_action(void* self, int32_t action) {
     QWebEngineView_TriggerPageAction((QWebEngineView*)self, action);
 }
 
@@ -272,11 +272,11 @@ void q_webengineview_on_icon_changed(void* self, void (*callback)(void*, void*))
     QWebEngineView_Connect_IconChanged((QWebEngineView*)self, (intptr_t)callback);
 }
 
-void q_webengineview_render_process_terminated(void* self, int64_t terminationStatus, int exitCode) {
+void q_webengineview_render_process_terminated(void* self, int32_t terminationStatus, int exitCode) {
     QWebEngineView_RenderProcessTerminated((QWebEngineView*)self, terminationStatus, exitCode);
 }
 
-void q_webengineview_on_render_process_terminated(void* self, void (*callback)(void*, int64_t, int)) {
+void q_webengineview_on_render_process_terminated(void* self, void (*callback)(void*, int32_t, int)) {
     QWebEngineView_Connect_RenderProcessTerminated((QWebEngineView*)self, (intptr_t)callback);
 }
 
@@ -312,15 +312,15 @@ void q_webengineview_on_print_finished(void* self, void (*callback)(void*, bool)
     QWebEngineView_Connect_PrintFinished((QWebEngineView*)self, (intptr_t)callback);
 }
 
-QWebEngineView* q_webengineview_create_window(void* self, int64_t typeVal) {
+QWebEngineView* q_webengineview_create_window(void* self, int32_t typeVal) {
     return QWebEngineView_CreateWindow((QWebEngineView*)self, typeVal);
 }
 
-void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int64_t)) {
+void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int32_t)) {
     QWebEngineView_OnCreateWindow((QWebEngineView*)self, (intptr_t)callback);
 }
 
-QWebEngineView* q_webengineview_qbase_create_window(void* self, int64_t typeVal) {
+QWebEngineView* q_webengineview_qbase_create_window(void* self, int32_t typeVal) {
     return QWebEngineView_QBaseCreateWindow((QWebEngineView*)self, typeVal);
 }
 
@@ -458,7 +458,7 @@ void q_webengineview_set_content3(void* self, const char* data, const char* mime
     QWebEngineView_SetContent3((QWebEngineView*)self, qstring(data), qstring(mimeType), (QUrl*)baseUrl);
 }
 
-void q_webengineview_trigger_page_action2(void* self, int64_t action, bool checked) {
+void q_webengineview_trigger_page_action2(void* self, int32_t action, bool checked) {
     QWebEngineView_TriggerPageAction2((QWebEngineView*)self, action, checked);
 }
 
@@ -506,11 +506,11 @@ bool q_webengineview_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_webengineview_window_modality(void* self) {
+int32_t q_webengineview_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_webengineview_set_window_modality(void* self, int64_t windowModality) {
+void q_webengineview_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -750,19 +750,19 @@ void q_webengineview_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_webengineview_set_background_role(void* self, int64_t backgroundRole) {
+void q_webengineview_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_webengineview_background_role(void* self) {
+int32_t q_webengineview_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_webengineview_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_webengineview_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_webengineview_foreground_role(void* self) {
+int32_t q_webengineview_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -996,11 +996,11 @@ void q_webengineview_set_accessible_description(void* self, const char* descript
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_webengineview_set_layout_direction(void* self, int64_t direction) {
+void q_webengineview_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_webengineview_layout_direction(void* self) {
+int32_t q_webengineview_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1044,15 +1044,15 @@ void q_webengineview_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_webengineview_set_focus2(void* self, int64_t reason) {
+void q_webengineview_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_webengineview_focus_policy(void* self) {
+int32_t q_webengineview_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_webengineview_set_focus_policy(void* self, int64_t policy) {
+void q_webengineview_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -1072,11 +1072,11 @@ QWidget* q_webengineview_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_webengineview_context_menu_policy(void* self) {
+int32_t q_webengineview_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_webengineview_set_context_menu_policy(void* self, int64_t policy) {
+void q_webengineview_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -1295,7 +1295,7 @@ void q_webengineview_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_webengineview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_webengineview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -1448,11 +1448,11 @@ QWidget* q_webengineview_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_webengineview_set_attribute(void* self, int64_t param1) {
+void q_webengineview_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_webengineview_test_attribute(void* self, int64_t param1) {
+bool q_webengineview_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -1564,7 +1564,7 @@ void q_webengineview_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_webengineview_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_webengineview_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1580,7 +1580,7 @@ void q_webengineview_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_webengineview_set_attribute2(void* self, int64_t param1, bool on) {
+void q_webengineview_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -1639,7 +1639,7 @@ void q_webengineview_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_webengineview_kill_timer2(void* self, int64_t id) {
+void q_webengineview_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1739,15 +1739,15 @@ bool q_webengineview_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_webengineview_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_webengineview_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webengineview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_webengineview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_webengineview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_webengineview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1807,7 +1807,7 @@ double q_webengineview_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_webengineview_encode_metric_f(int64_t metric, double value) {
+int32_t q_webengineview_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -2099,15 +2099,15 @@ void q_webengineview_on_change_event(void* self, void (*callback)(void*, void*))
     QWebEngineView_OnChangeEvent((QWebEngineView*)self, (intptr_t)callback);
 }
 
-int32_t q_webengineview_metric(void* self, int64_t param1) {
+int32_t q_webengineview_metric(void* self, int32_t param1) {
     return QWebEngineView_Metric((QWebEngineView*)self, param1);
 }
 
-int32_t q_webengineview_qbase_metric(void* self, int64_t param1) {
+int32_t q_webengineview_qbase_metric(void* self, int32_t param1) {
     return QWebEngineView_QBaseMetric((QWebEngineView*)self, param1);
 }
 
-void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QWebEngineView_OnMetric((QWebEngineView*)self, (intptr_t)callback);
 }
 
@@ -2363,15 +2363,15 @@ void q_webengineview_on_is_signal_connected(void* self, bool (*callback)(void*, 
     QWebEngineView_OnIsSignalConnected((QWebEngineView*)self, (intptr_t)callback);
 }
 
-double q_webengineview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_webengineview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QWebEngineView_GetDecodedMetricF((QWebEngineView*)self, metricA, metricB);
 }
 
-double q_webengineview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_webengineview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QWebEngineView_QBaseGetDecodedMetricF((QWebEngineView*)self, metricA, metricB);
 }
 
-void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QWebEngineView_OnGetDecodedMetricF((QWebEngineView*)self, (intptr_t)callback);
 }
 

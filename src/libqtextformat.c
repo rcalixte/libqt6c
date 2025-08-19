@@ -18,7 +18,7 @@ QTextLength* q_textlength_new3() {
     return QTextLength_new3();
 }
 
-QTextLength* q_textlength_new4(int64_t typeVal, double value) {
+QTextLength* q_textlength_new4(int32_t typeVal, double value) {
     return QTextLength_new4(typeVal, value);
 }
 
@@ -34,7 +34,7 @@ void q_textlength_move_assign(void* self, void* other) {
     QTextLength_MoveAssign((QTextLength*)self, (QTextLength*)other);
 }
 
-int64_t q_textlength_type(void* self) {
+int32_t q_textlength_type(void* self) {
     return QTextLength_Type((QTextLength*)self);
 }
 
@@ -250,11 +250,11 @@ QVariant* q_textformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textformat_set_layout_direction(void* self, int64_t direction) {
+void q_textformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textformat_layout_direction(void* self) {
+int32_t q_textformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -364,19 +364,19 @@ bool q_textcharformat_font_italic(void* self) {
     return QTextCharFormat_FontItalic((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_font_capitalization(void* self, int64_t capitalization) {
+void q_textcharformat_set_font_capitalization(void* self, int32_t capitalization) {
     QTextCharFormat_SetFontCapitalization((QTextCharFormat*)self, capitalization);
 }
 
-int64_t q_textcharformat_font_capitalization(void* self) {
+int32_t q_textcharformat_font_capitalization(void* self) {
     return QTextCharFormat_FontCapitalization((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType) {
+void q_textcharformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType) {
     QTextCharFormat_SetFontLetterSpacingType((QTextCharFormat*)self, letterSpacingType);
 }
 
-int64_t q_textcharformat_font_letter_spacing_type(void* self) {
+int32_t q_textcharformat_font_letter_spacing_type(void* self) {
     return QTextCharFormat_FontLetterSpacingType((QTextCharFormat*)self);
 }
 
@@ -444,27 +444,27 @@ int32_t q_textcharformat_font_stretch(void* self) {
     return QTextCharFormat_FontStretch((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_font_style_hint(void* self, int64_t hint) {
+void q_textcharformat_set_font_style_hint(void* self, int32_t hint) {
     QTextCharFormat_SetFontStyleHint((QTextCharFormat*)self, hint);
 }
 
-void q_textcharformat_set_font_style_strategy(void* self, int64_t strategy) {
+void q_textcharformat_set_font_style_strategy(void* self, int32_t strategy) {
     QTextCharFormat_SetFontStyleStrategy((QTextCharFormat*)self, strategy);
 }
 
-int64_t q_textcharformat_font_style_hint(void* self) {
+int32_t q_textcharformat_font_style_hint(void* self) {
     return QTextCharFormat_FontStyleHint((QTextCharFormat*)self);
 }
 
-int64_t q_textcharformat_font_style_strategy(void* self) {
+int32_t q_textcharformat_font_style_strategy(void* self) {
     return QTextCharFormat_FontStyleStrategy((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_font_hinting_preference(void* self, int64_t hintingPreference) {
+void q_textcharformat_set_font_hinting_preference(void* self, int32_t hintingPreference) {
     QTextCharFormat_SetFontHintingPreference((QTextCharFormat*)self, hintingPreference);
 }
 
-int64_t q_textcharformat_font_hinting_preference(void* self) {
+int32_t q_textcharformat_font_hinting_preference(void* self) {
     return QTextCharFormat_FontHintingPreference((QTextCharFormat*)self);
 }
 
@@ -476,19 +476,19 @@ bool q_textcharformat_font_kerning(void* self) {
     return QTextCharFormat_FontKerning((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_underline_style(void* self, int64_t style) {
+void q_textcharformat_set_underline_style(void* self, int32_t style) {
     QTextCharFormat_SetUnderlineStyle((QTextCharFormat*)self, style);
 }
 
-int64_t q_textcharformat_underline_style(void* self) {
+int32_t q_textcharformat_underline_style(void* self) {
     return QTextCharFormat_UnderlineStyle((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_vertical_alignment(void* self, int64_t alignment) {
+void q_textcharformat_set_vertical_alignment(void* self, int32_t alignment) {
     QTextCharFormat_SetVerticalAlignment((QTextCharFormat*)self, alignment);
 }
 
-int64_t q_textcharformat_vertical_alignment(void* self) {
+int32_t q_textcharformat_vertical_alignment(void* self) {
     return QTextCharFormat_VerticalAlignment((QTextCharFormat*)self);
 }
 
@@ -604,11 +604,11 @@ int32_t q_textcharformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
-void q_textcharformat_set_font2(void* self, void* font, int64_t behavior) {
+void q_textcharformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
-void q_textcharformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy) {
+void q_textcharformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
 }
 
@@ -784,11 +784,11 @@ QVariant* q_textcharformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textcharformat_set_layout_direction(void* self, int64_t direction) {
+void q_textcharformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textcharformat_layout_direction(void* self) {
+int32_t q_textcharformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -933,11 +933,11 @@ libqt_list /* of QTextOption__Tab* */ q_textblockformat_tab_positions(void* self
     return _arr;
 }
 
-void q_textblockformat_set_marker(void* self, int64_t marker) {
+void q_textblockformat_set_marker(void* self, int32_t marker) {
     QTextBlockFormat_SetMarker((QTextBlockFormat*)self, marker);
 }
 
-int64_t q_textblockformat_marker(void* self) {
+int32_t q_textblockformat_marker(void* self) {
     return QTextBlockFormat_Marker((QTextBlockFormat*)self);
 }
 
@@ -1113,11 +1113,11 @@ QVariant* q_textblockformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textblockformat_set_layout_direction(void* self, int64_t direction) {
+void q_textblockformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textblockformat_layout_direction(void* self) {
+int32_t q_textblockformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -1157,11 +1157,11 @@ bool q_textlistformat_is_valid(void* self) {
     return QTextListFormat_IsValid((QTextListFormat*)self);
 }
 
-void q_textlistformat_set_style(void* self, int64_t style) {
+void q_textlistformat_set_style(void* self, int32_t style) {
     QTextListFormat_SetStyle((QTextListFormat*)self, style);
 }
 
-int64_t q_textlistformat_style(void* self) {
+int32_t q_textlistformat_style(void* self) {
     return QTextListFormat_Style((QTextListFormat*)self);
 }
 
@@ -1375,11 +1375,11 @@ QVariant* q_textlistformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textlistformat_set_layout_direction(void* self, int64_t direction) {
+void q_textlistformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textlistformat_layout_direction(void* self) {
+int32_t q_textlistformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -1536,19 +1536,19 @@ bool q_textimageformat_font_italic(void* self) {
     return QTextCharFormat_FontItalic((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_font_capitalization(void* self, int64_t capitalization) {
+void q_textimageformat_set_font_capitalization(void* self, int32_t capitalization) {
     QTextCharFormat_SetFontCapitalization((QTextCharFormat*)self, capitalization);
 }
 
-int64_t q_textimageformat_font_capitalization(void* self) {
+int32_t q_textimageformat_font_capitalization(void* self) {
     return QTextCharFormat_FontCapitalization((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType) {
+void q_textimageformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType) {
     QTextCharFormat_SetFontLetterSpacingType((QTextCharFormat*)self, letterSpacingType);
 }
 
-int64_t q_textimageformat_font_letter_spacing_type(void* self) {
+int32_t q_textimageformat_font_letter_spacing_type(void* self) {
     return QTextCharFormat_FontLetterSpacingType((QTextCharFormat*)self);
 }
 
@@ -1616,27 +1616,27 @@ int32_t q_textimageformat_font_stretch(void* self) {
     return QTextCharFormat_FontStretch((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_font_style_hint(void* self, int64_t hint) {
+void q_textimageformat_set_font_style_hint(void* self, int32_t hint) {
     QTextCharFormat_SetFontStyleHint((QTextCharFormat*)self, hint);
 }
 
-void q_textimageformat_set_font_style_strategy(void* self, int64_t strategy) {
+void q_textimageformat_set_font_style_strategy(void* self, int32_t strategy) {
     QTextCharFormat_SetFontStyleStrategy((QTextCharFormat*)self, strategy);
 }
 
-int64_t q_textimageformat_font_style_hint(void* self) {
+int32_t q_textimageformat_font_style_hint(void* self) {
     return QTextCharFormat_FontStyleHint((QTextCharFormat*)self);
 }
 
-int64_t q_textimageformat_font_style_strategy(void* self) {
+int32_t q_textimageformat_font_style_strategy(void* self) {
     return QTextCharFormat_FontStyleStrategy((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_font_hinting_preference(void* self, int64_t hintingPreference) {
+void q_textimageformat_set_font_hinting_preference(void* self, int32_t hintingPreference) {
     QTextCharFormat_SetFontHintingPreference((QTextCharFormat*)self, hintingPreference);
 }
 
-int64_t q_textimageformat_font_hinting_preference(void* self) {
+int32_t q_textimageformat_font_hinting_preference(void* self) {
     return QTextCharFormat_FontHintingPreference((QTextCharFormat*)self);
 }
 
@@ -1648,19 +1648,19 @@ bool q_textimageformat_font_kerning(void* self) {
     return QTextCharFormat_FontKerning((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_underline_style(void* self, int64_t style) {
+void q_textimageformat_set_underline_style(void* self, int32_t style) {
     QTextCharFormat_SetUnderlineStyle((QTextCharFormat*)self, style);
 }
 
-int64_t q_textimageformat_underline_style(void* self) {
+int32_t q_textimageformat_underline_style(void* self) {
     return QTextCharFormat_UnderlineStyle((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_vertical_alignment(void* self, int64_t alignment) {
+void q_textimageformat_set_vertical_alignment(void* self, int32_t alignment) {
     QTextCharFormat_SetVerticalAlignment((QTextCharFormat*)self, alignment);
 }
 
-int64_t q_textimageformat_vertical_alignment(void* self) {
+int32_t q_textimageformat_vertical_alignment(void* self) {
     return QTextCharFormat_VerticalAlignment((QTextCharFormat*)self);
 }
 
@@ -1776,11 +1776,11 @@ int32_t q_textimageformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
-void q_textimageformat_set_font2(void* self, void* font, int64_t behavior) {
+void q_textimageformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
-void q_textimageformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy) {
+void q_textimageformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
 }
 
@@ -1956,11 +1956,11 @@ QVariant* q_textimageformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textimageformat_set_layout_direction(void* self, int64_t direction) {
+void q_textimageformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textimageformat_layout_direction(void* self) {
+int32_t q_textimageformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -2000,11 +2000,11 @@ bool q_textframeformat_is_valid(void* self) {
     return QTextFrameFormat_IsValid((QTextFrameFormat*)self);
 }
 
-void q_textframeformat_set_position(void* self, int64_t f) {
+void q_textframeformat_set_position(void* self, int32_t f) {
     QTextFrameFormat_SetPosition((QTextFrameFormat*)self, f);
 }
 
-int64_t q_textframeformat_position(void* self) {
+int32_t q_textframeformat_position(void* self) {
     return QTextFrameFormat_Position((QTextFrameFormat*)self);
 }
 
@@ -2024,11 +2024,11 @@ QBrush* q_textframeformat_border_brush(void* self) {
     return QTextFrameFormat_BorderBrush((QTextFrameFormat*)self);
 }
 
-void q_textframeformat_set_border_style(void* self, int64_t style) {
+void q_textframeformat_set_border_style(void* self, int32_t style) {
     QTextFrameFormat_SetBorderStyle((QTextFrameFormat*)self, style);
 }
 
-int64_t q_textframeformat_border_style(void* self) {
+int32_t q_textframeformat_border_style(void* self) {
     return QTextFrameFormat_BorderStyle((QTextFrameFormat*)self);
 }
 
@@ -2284,11 +2284,11 @@ QVariant* q_textframeformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_textframeformat_set_layout_direction(void* self, int64_t direction) {
+void q_textframeformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_textframeformat_layout_direction(void* self) {
+int32_t q_textframeformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -2389,11 +2389,11 @@ bool q_texttableformat_border_collapse(void* self) {
     return QTextTableFormat_BorderCollapse((QTextTableFormat*)self);
 }
 
-void q_texttableformat_set_position(void* self, int64_t f) {
+void q_texttableformat_set_position(void* self, int32_t f) {
     QTextFrameFormat_SetPosition((QTextFrameFormat*)self, f);
 }
 
-int64_t q_texttableformat_position(void* self) {
+int32_t q_texttableformat_position(void* self) {
     return QTextFrameFormat_Position((QTextFrameFormat*)self);
 }
 
@@ -2413,11 +2413,11 @@ QBrush* q_texttableformat_border_brush(void* self) {
     return QTextFrameFormat_BorderBrush((QTextFrameFormat*)self);
 }
 
-void q_texttableformat_set_border_style(void* self, int64_t style) {
+void q_texttableformat_set_border_style(void* self, int32_t style) {
     QTextFrameFormat_SetBorderStyle((QTextFrameFormat*)self, style);
 }
 
-int64_t q_texttableformat_border_style(void* self) {
+int32_t q_texttableformat_border_style(void* self) {
     return QTextFrameFormat_BorderStyle((QTextFrameFormat*)self);
 }
 
@@ -2673,11 +2673,11 @@ QVariant* q_texttableformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_texttableformat_set_layout_direction(void* self, int64_t direction) {
+void q_texttableformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_texttableformat_layout_direction(void* self) {
+int32_t q_texttableformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 
@@ -2789,39 +2789,39 @@ void q_texttablecellformat_set_border(void* self, double width) {
     QTextTableCellFormat_SetBorder((QTextTableCellFormat*)self, width);
 }
 
-void q_texttablecellformat_set_top_border_style(void* self, int64_t style) {
+void q_texttablecellformat_set_top_border_style(void* self, int32_t style) {
     QTextTableCellFormat_SetTopBorderStyle((QTextTableCellFormat*)self, style);
 }
 
-int64_t q_texttablecellformat_top_border_style(void* self) {
+int32_t q_texttablecellformat_top_border_style(void* self) {
     return QTextTableCellFormat_TopBorderStyle((QTextTableCellFormat*)self);
 }
 
-void q_texttablecellformat_set_bottom_border_style(void* self, int64_t style) {
+void q_texttablecellformat_set_bottom_border_style(void* self, int32_t style) {
     QTextTableCellFormat_SetBottomBorderStyle((QTextTableCellFormat*)self, style);
 }
 
-int64_t q_texttablecellformat_bottom_border_style(void* self) {
+int32_t q_texttablecellformat_bottom_border_style(void* self) {
     return QTextTableCellFormat_BottomBorderStyle((QTextTableCellFormat*)self);
 }
 
-void q_texttablecellformat_set_left_border_style(void* self, int64_t style) {
+void q_texttablecellformat_set_left_border_style(void* self, int32_t style) {
     QTextTableCellFormat_SetLeftBorderStyle((QTextTableCellFormat*)self, style);
 }
 
-int64_t q_texttablecellformat_left_border_style(void* self) {
+int32_t q_texttablecellformat_left_border_style(void* self) {
     return QTextTableCellFormat_LeftBorderStyle((QTextTableCellFormat*)self);
 }
 
-void q_texttablecellformat_set_right_border_style(void* self, int64_t style) {
+void q_texttablecellformat_set_right_border_style(void* self, int32_t style) {
     QTextTableCellFormat_SetRightBorderStyle((QTextTableCellFormat*)self, style);
 }
 
-int64_t q_texttablecellformat_right_border_style(void* self) {
+int32_t q_texttablecellformat_right_border_style(void* self) {
     return QTextTableCellFormat_RightBorderStyle((QTextTableCellFormat*)self);
 }
 
-void q_texttablecellformat_set_border_style(void* self, int64_t style) {
+void q_texttablecellformat_set_border_style(void* self, int32_t style) {
     QTextTableCellFormat_SetBorderStyle((QTextTableCellFormat*)self, style);
 }
 
@@ -2931,19 +2931,19 @@ bool q_texttablecellformat_font_italic(void* self) {
     return QTextCharFormat_FontItalic((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_font_capitalization(void* self, int64_t capitalization) {
+void q_texttablecellformat_set_font_capitalization(void* self, int32_t capitalization) {
     QTextCharFormat_SetFontCapitalization((QTextCharFormat*)self, capitalization);
 }
 
-int64_t q_texttablecellformat_font_capitalization(void* self) {
+int32_t q_texttablecellformat_font_capitalization(void* self) {
     return QTextCharFormat_FontCapitalization((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType) {
+void q_texttablecellformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType) {
     QTextCharFormat_SetFontLetterSpacingType((QTextCharFormat*)self, letterSpacingType);
 }
 
-int64_t q_texttablecellformat_font_letter_spacing_type(void* self) {
+int32_t q_texttablecellformat_font_letter_spacing_type(void* self) {
     return QTextCharFormat_FontLetterSpacingType((QTextCharFormat*)self);
 }
 
@@ -3011,27 +3011,27 @@ int32_t q_texttablecellformat_font_stretch(void* self) {
     return QTextCharFormat_FontStretch((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_font_style_hint(void* self, int64_t hint) {
+void q_texttablecellformat_set_font_style_hint(void* self, int32_t hint) {
     QTextCharFormat_SetFontStyleHint((QTextCharFormat*)self, hint);
 }
 
-void q_texttablecellformat_set_font_style_strategy(void* self, int64_t strategy) {
+void q_texttablecellformat_set_font_style_strategy(void* self, int32_t strategy) {
     QTextCharFormat_SetFontStyleStrategy((QTextCharFormat*)self, strategy);
 }
 
-int64_t q_texttablecellformat_font_style_hint(void* self) {
+int32_t q_texttablecellformat_font_style_hint(void* self) {
     return QTextCharFormat_FontStyleHint((QTextCharFormat*)self);
 }
 
-int64_t q_texttablecellformat_font_style_strategy(void* self) {
+int32_t q_texttablecellformat_font_style_strategy(void* self) {
     return QTextCharFormat_FontStyleStrategy((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_font_hinting_preference(void* self, int64_t hintingPreference) {
+void q_texttablecellformat_set_font_hinting_preference(void* self, int32_t hintingPreference) {
     QTextCharFormat_SetFontHintingPreference((QTextCharFormat*)self, hintingPreference);
 }
 
-int64_t q_texttablecellformat_font_hinting_preference(void* self) {
+int32_t q_texttablecellformat_font_hinting_preference(void* self) {
     return QTextCharFormat_FontHintingPreference((QTextCharFormat*)self);
 }
 
@@ -3043,19 +3043,19 @@ bool q_texttablecellformat_font_kerning(void* self) {
     return QTextCharFormat_FontKerning((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_underline_style(void* self, int64_t style) {
+void q_texttablecellformat_set_underline_style(void* self, int32_t style) {
     QTextCharFormat_SetUnderlineStyle((QTextCharFormat*)self, style);
 }
 
-int64_t q_texttablecellformat_underline_style(void* self) {
+int32_t q_texttablecellformat_underline_style(void* self) {
     return QTextCharFormat_UnderlineStyle((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_vertical_alignment(void* self, int64_t alignment) {
+void q_texttablecellformat_set_vertical_alignment(void* self, int32_t alignment) {
     QTextCharFormat_SetVerticalAlignment((QTextCharFormat*)self, alignment);
 }
 
-int64_t q_texttablecellformat_vertical_alignment(void* self) {
+int32_t q_texttablecellformat_vertical_alignment(void* self) {
     return QTextCharFormat_VerticalAlignment((QTextCharFormat*)self);
 }
 
@@ -3171,11 +3171,11 @@ int32_t q_texttablecellformat_table_cell_column_span(void* self) {
     return QTextCharFormat_TableCellColumnSpan((QTextCharFormat*)self);
 }
 
-void q_texttablecellformat_set_font2(void* self, void* font, int64_t behavior) {
+void q_texttablecellformat_set_font2(void* self, void* font, int32_t behavior) {
     QTextCharFormat_SetFont2((QTextCharFormat*)self, (QFont*)font, behavior);
 }
 
-void q_texttablecellformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy) {
+void q_texttablecellformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy) {
     QTextCharFormat_SetFontStyleHint2((QTextCharFormat*)self, hint, strategy);
 }
 
@@ -3351,11 +3351,11 @@ QVariant* q_texttablecellformat_to_q_variant(void* self) {
     return QTextFormat_ToQVariant((QTextFormat*)self);
 }
 
-void q_texttablecellformat_set_layout_direction(void* self, int64_t direction) {
+void q_texttablecellformat_set_layout_direction(void* self, int32_t direction) {
     QTextFormat_SetLayoutDirection((QTextFormat*)self, direction);
 }
 
-int64_t q_texttablecellformat_layout_direction(void* self) {
+int32_t q_texttablecellformat_layout_direction(void* self) {
     return QTextFormat_LayoutDirection((QTextFormat*)self);
 }
 

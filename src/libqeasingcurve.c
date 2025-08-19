@@ -10,7 +10,7 @@ QEasingCurve* q_easingcurve_new2(void* other) {
     return QEasingCurve_new2((QEasingCurve*)other);
 }
 
-QEasingCurve* q_easingcurve_new3(int64_t typeVal) {
+QEasingCurve* q_easingcurve_new3(int32_t typeVal) {
     return QEasingCurve_new3(typeVal);
 }
 
@@ -59,11 +59,11 @@ libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self) {
     return _arr;
 }
 
-int64_t q_easingcurve_type(void* self) {
+int32_t q_easingcurve_type(void* self) {
     return QEasingCurve_Type((QEasingCurve*)self);
 }
 
-void q_easingcurve_set_type(void* self, int64_t typeVal) {
+void q_easingcurve_set_type(void* self, int32_t typeVal) {
     QEasingCurve_SetType((QEasingCurve*)self, typeVal);
 }
 

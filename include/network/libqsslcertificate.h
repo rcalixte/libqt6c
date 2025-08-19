@@ -31,7 +31,7 @@ QSslCertificate* q_sslcertificate_new3(void* other);
 ///
 /// @param device QIODevice*
 /// @param format enum QSsl__EncodingFormat
-QSslCertificate* q_sslcertificate_new4(void* device, int64_t format);
+QSslCertificate* q_sslcertificate_new4(void* device, int32_t format);
 
 /// q_sslcertificate_new5 constructs a new QSslCertificate object.
 ///
@@ -42,7 +42,7 @@ QSslCertificate* q_sslcertificate_new5(const char* data);
 ///
 /// @param data const char*
 /// @param format enum QSsl__EncodingFormat
-QSslCertificate* q_sslcertificate_new6(const char* data, int64_t format);
+QSslCertificate* q_sslcertificate_new6(const char* data, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#operator-eq)
 ///
@@ -115,7 +115,7 @@ char* q_sslcertificate_digest(void* self);
 ///
 /// @param self QSslCertificate*
 /// @param info enum QSslCertificate__SubjectInfo
-const char** q_sslcertificate_issuer_info(void* self, int64_t info);
+const char** q_sslcertificate_issuer_info(void* self, int32_t info);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#issuerInfo)
 ///
@@ -131,7 +131,7 @@ const char** q_sslcertificate_issuer_info2(void* self, const char* attribute);
 ///
 /// @param self QSslCertificate*
 /// @param info enum QSslCertificate__SubjectInfo
-const char** q_sslcertificate_subject_info(void* self, int64_t info);
+const char** q_sslcertificate_subject_info(void* self, int32_t info);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#subjectInfo)
 ///
@@ -248,32 +248,32 @@ void* q_sslcertificate_handle(void* self);
 ///
 /// @param self QSslCertificate*
 /// @param algorithm enum QCryptographicHash__Algorithm
-char* q_sslcertificate_digest1(void* self, int64_t algorithm);
+char* q_sslcertificate_digest1(void* self, int32_t algorithm);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#fromPath)
 ///
 /// @param path const char*
 /// @param format enum QSsl__EncodingFormat
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_path2(const char* path, int64_t format);
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_path2(const char* path, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#fromPath)
 ///
 /// @param path const char*
 /// @param format enum QSsl__EncodingFormat
 /// @param syntax enum QSslCertificate__PatternSyntax
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_path3(const char* path, int64_t format, int64_t syntax);
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_path3(const char* path, int32_t format, int32_t syntax);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#fromDevice)
 ///
 /// @param device QIODevice*
 /// @param format enum QSsl__EncodingFormat
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_device2(void* device, int64_t format);
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_device2(void* device, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#fromData)
 ///
 /// @param data const char*
 /// @param format enum QSsl__EncodingFormat
-libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* data, int64_t format);
+libqt_list /* of QSslCertificate* */ q_sslcertificate_from_data2(const char* data, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcertificate.html#verify)
 ///

@@ -25,7 +25,7 @@ QFutureInterfaceBase* q_futureinterfacebase_new2(void* other);
 /// q_futureinterfacebase_new3 constructs a new QFutureInterfaceBase object.
 ///
 /// @param initialState enum QFutureInterfaceBase__State
-QFutureInterfaceBase* q_futureinterfacebase_new3(int64_t initialState);
+QFutureInterfaceBase* q_futureinterfacebase_new3(int32_t initialState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#operator-eq)
 ///
@@ -145,7 +145,7 @@ int32_t q_futureinterfacebase_result_count(void* self);
 ///
 /// @param self QFutureInterfaceBase*
 /// @param state enum QFutureInterfaceBase__State
-bool q_futureinterfacebase_query_state(void* self, int64_t state);
+bool q_futureinterfacebase_query_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfutureinterfacebase.html#isRunning)
 ///

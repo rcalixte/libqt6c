@@ -20,7 +20,7 @@ QReadWriteLock* q_readwritelock_new();
 /// q_readwritelock_new2 constructs a new QReadWriteLock object.
 ///
 /// @param recursionMode enum QReadWriteLock__RecursionMode
-QReadWriteLock* q_readwritelock_new2(int64_t recursionMode);
+QReadWriteLock* q_readwritelock_new2(int32_t recursionMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qreadwritelock.html#lockForRead)
 ///

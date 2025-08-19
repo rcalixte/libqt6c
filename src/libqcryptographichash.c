@@ -3,7 +3,7 @@
 #include "libqcryptographichash.hpp"
 #include "libqcryptographichash.h"
 
-QCryptographicHash* q_cryptographichash_new(int64_t method) {
+QCryptographicHash* q_cryptographichash_new(int32_t method) {
     return QCryptographicHash_new(method);
 }
 
@@ -15,7 +15,7 @@ void q_cryptographichash_reset(void* self) {
     QCryptographicHash_Reset((QCryptographicHash*)self);
 }
 
-int64_t q_cryptographichash_algorithm(void* self) {
+int32_t q_cryptographichash_algorithm(void* self) {
     return QCryptographicHash_Algorithm((QCryptographicHash*)self);
 }
 
@@ -45,7 +45,7 @@ const char* q_cryptographichash_result_view(void* self) {
     return _ret;
 }
 
-char* q_cryptographichash_hash(const char* data, int64_t method) {
+char* q_cryptographichash_hash(const char* data, int32_t method) {
     libqt_string data_string = qstring(data);
     libqt_string _str = QCryptographicHash_Hash((QByteArrayView*)&data_string, method);
     char* _ret = qstring_to_char(_str);
@@ -53,37 +53,37 @@ char* q_cryptographichash_hash(const char* data, int64_t method) {
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int64_t method) {
+const char* q_cryptographichash_hash_into(libqt_list buffer, const char* data, int32_t method) {
     libqt_string data_string = qstring(data);
     QByteArrayView* _str = QCryptographicHash_HashInto(buffer, (QByteArrayView*)&data_string, method);
     const char* _ret = QByteArrayView_Data(_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int64_t method) {
+const char* q_cryptographichash_hash_into2(libqt_list buffer, const char* data, int32_t method) {
     libqt_string data_string = qstring(data);
     QByteArrayView* _str = QCryptographicHash_HashInto2(buffer, (QByteArrayView*)&data_string, method);
     const char* _ret = QByteArrayView_Data(_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int64_t method) {
+const char* q_cryptographichash_hash_into4(libqt_list buffer, libqt_list data, int32_t method) {
     QByteArrayView* _str = QCryptographicHash_HashInto4(buffer, data, method);
     const char* _ret = QByteArrayView_Data(_str);
     return _ret;
 }
 
-const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int64_t method) {
+const char* q_cryptographichash_hash_into5(libqt_list buffer, libqt_list data, int32_t method) {
     QByteArrayView* _str = QCryptographicHash_HashInto5(buffer, data, method);
     const char* _ret = QByteArrayView_Data(_str);
     return _ret;
 }
 
-int32_t q_cryptographichash_hash_length(int64_t method) {
+int32_t q_cryptographichash_hash_length(int32_t method) {
     return QCryptographicHash_HashLength(method);
 }
 
-bool q_cryptographichash_supports_algorithm(int64_t method) {
+bool q_cryptographichash_supports_algorithm(int32_t method) {
     return QCryptographicHash_SupportsAlgorithm(method);
 }
 

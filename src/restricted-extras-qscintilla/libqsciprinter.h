@@ -20,7 +20,7 @@ QsciPrinter* q_sciprinter_new();
 /// q_sciprinter_new2 constructs a new QsciPrinter object.
 ///
 /// @param mode enum QPrinter__PrinterMode
-QsciPrinter* q_sciprinter_new2(int64_t mode);
+QsciPrinter* q_sciprinter_new2(int32_t mode);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -136,13 +136,13 @@ int32_t q_sciprinter_qbase_print_range2(void* self, void* qsb, int from, int to)
 /// @param self QsciPrinter*
 ///
 /// @return enum QsciScintilla__WrapMode
-int64_t q_sciprinter_wrap_mode(void* self);
+int32_t q_sciprinter_wrap_mode(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
 /// @param self QsciPrinter*
 /// @param wmode enum QsciScintilla__WrapMode
-void q_sciprinter_set_wrap_mode(void* self, int64_t wmode);
+void q_sciprinter_set_wrap_mode(void* self, int32_t wmode);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -150,7 +150,7 @@ void q_sciprinter_set_wrap_mode(void* self, int64_t wmode);
 ///
 /// @param self QsciPrinter*
 /// @param callback void fn(QsciPrinter*, enum QsciScintilla__WrapMode)
-void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int64_t));
+void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///
@@ -158,7 +158,7 @@ void q_sciprinter_on_set_wrap_mode(void* self, void (*callback)(void*, int64_t))
 ///
 /// @param self QsciPrinter*
 /// @param wmode enum QsciScintilla__WrapMode
-void q_sciprinter_qbase_set_wrap_mode(void* self, int64_t wmode);
+void q_sciprinter_qbase_set_wrap_mode(void* self, int32_t wmode);
 
 /// Inherited from QPrinter
 ///
@@ -166,7 +166,7 @@ void q_sciprinter_qbase_set_wrap_mode(void* self, int64_t wmode);
 ///
 /// @param self QsciPrinter*
 /// @param format enum QPrinter__OutputFormat
-void q_sciprinter_set_output_format(void* self, int64_t format);
+void q_sciprinter_set_output_format(void* self, int32_t format);
 
 /// Inherited from QPrinter
 ///
@@ -175,7 +175,7 @@ void q_sciprinter_set_output_format(void* self, int64_t format);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__OutputFormat
-int64_t q_sciprinter_output_format(void* self);
+int32_t q_sciprinter_output_format(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -183,7 +183,7 @@ int64_t q_sciprinter_output_format(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param version enum QPagedPaintDevice__PdfVersion
-void q_sciprinter_set_pdf_version(void* self, int64_t version);
+void q_sciprinter_set_pdf_version(void* self, int32_t version);
 
 /// Inherited from QPrinter
 ///
@@ -192,7 +192,7 @@ void q_sciprinter_set_pdf_version(void* self, int64_t version);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPagedPaintDevice__PdfVersion
-int64_t q_sciprinter_pdf_version(void* self);
+int32_t q_sciprinter_pdf_version(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -292,7 +292,7 @@ const char* q_sciprinter_creator(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param pageOrder enum QPrinter__PageOrder
-void q_sciprinter_set_page_order(void* self, int64_t pageOrder);
+void q_sciprinter_set_page_order(void* self, int32_t pageOrder);
 
 /// Inherited from QPrinter
 ///
@@ -301,7 +301,7 @@ void q_sciprinter_set_page_order(void* self, int64_t pageOrder);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__PageOrder
-int64_t q_sciprinter_page_order(void* self);
+int32_t q_sciprinter_page_order(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -324,7 +324,7 @@ int32_t q_sciprinter_resolution(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param colorMode enum QPrinter__ColorMode
-void q_sciprinter_set_color_mode(void* self, int64_t colorMode);
+void q_sciprinter_set_color_mode(void* self, int32_t colorMode);
 
 /// Inherited from QPrinter
 ///
@@ -333,7 +333,7 @@ void q_sciprinter_set_color_mode(void* self, int64_t colorMode);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__ColorMode
-int64_t q_sciprinter_color_mode(void* self);
+int32_t q_sciprinter_color_mode(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -393,7 +393,7 @@ bool q_sciprinter_supports_multiple_copies(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param paperSource enum QPrinter__PaperSource
-void q_sciprinter_set_paper_source(void* self, int64_t paperSource);
+void q_sciprinter_set_paper_source(void* self, int32_t paperSource);
 
 /// Inherited from QPrinter
 ///
@@ -402,7 +402,7 @@ void q_sciprinter_set_paper_source(void* self, int64_t paperSource);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__PaperSource
-int64_t q_sciprinter_paper_source(void* self);
+int32_t q_sciprinter_paper_source(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -410,7 +410,7 @@ int64_t q_sciprinter_paper_source(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param duplex enum QPrinter__DuplexMode
-void q_sciprinter_set_duplex(void* self, int64_t duplex);
+void q_sciprinter_set_duplex(void* self, int32_t duplex);
 
 /// Inherited from QPrinter
 ///
@@ -419,7 +419,7 @@ void q_sciprinter_set_duplex(void* self, int64_t duplex);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__DuplexMode
-int64_t q_sciprinter_duplex(void* self);
+int32_t q_sciprinter_duplex(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -449,7 +449,7 @@ bool q_sciprinter_font_embedding_enabled(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param param1 enum QPrinter__Unit
-QRectF* q_sciprinter_paper_rect(void* self, int64_t param1);
+QRectF* q_sciprinter_paper_rect(void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -457,7 +457,7 @@ QRectF* q_sciprinter_paper_rect(void* self, int64_t param1);
 ///
 /// @param self QsciPrinter*
 /// @param param1 enum QPrinter__Unit
-QRectF* q_sciprinter_page_rect(void* self, int64_t param1);
+QRectF* q_sciprinter_page_rect(void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -490,7 +490,7 @@ bool q_sciprinter_abort(void* self);
 /// @param self QsciPrinter*
 ///
 /// @return enum QPrinter__PrinterState
-int64_t q_sciprinter_printer_state(void* self);
+int32_t q_sciprinter_printer_state(void* self);
 
 /// Inherited from QPrinter
 ///
@@ -528,7 +528,7 @@ int32_t q_sciprinter_to_page(void* self);
 ///
 /// @param self QsciPrinter*
 /// @param range enum QPrinter__PrintRange
-void q_sciprinter_set_print_range(void* self, int64_t range);
+void q_sciprinter_set_print_range(void* self, int32_t range);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -647,7 +647,7 @@ double q_sciprinter_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_sciprinter_encode_metric_f(int64_t metric, double value);
+int32_t q_sciprinter_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPrinter
 ///
@@ -741,7 +741,7 @@ void q_sciprinter_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 /// @param self QsciPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_sciprinter_metric(void* self, int64_t param1);
+int32_t q_sciprinter_metric(void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -751,7 +751,7 @@ int32_t q_sciprinter_metric(void* self, int64_t param1);
 ///
 /// @param self QsciPrinter*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_sciprinter_qbase_metric(void* self, int64_t param1);
+int32_t q_sciprinter_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QPrinter
 ///
@@ -761,7 +761,7 @@ int32_t q_sciprinter_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QsciPrinter*
 /// @param callback int32_t fn(QsciPrinter*, enum QPaintDevice__PaintDeviceMetric)
-void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_sciprinter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -831,7 +831,7 @@ void q_sciprinter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QsciPrinter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_sciprinter_set_page_orientation(void* self, int64_t orientation);
+bool q_sciprinter_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -841,7 +841,7 @@ bool q_sciprinter_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QsciPrinter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_sciprinter_qbase_set_page_orientation(void* self, int64_t orientation);
+bool q_sciprinter_qbase_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -851,7 +851,7 @@ bool q_sciprinter_qbase_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QsciPrinter*
 /// @param callback bool fn(QsciPrinter*, enum QPageLayout__Orientation)
-void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t));
+void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -862,7 +862,7 @@ void q_sciprinter_on_set_page_orientation(void* self, bool (*callback)(void*, in
 /// @param self QsciPrinter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_sciprinter_set_page_margins(void* self, void* margins, int64_t units);
+bool q_sciprinter_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -873,7 +873,7 @@ bool q_sciprinter_set_page_margins(void* self, void* margins, int64_t units);
 /// @param self QsciPrinter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int64_t units);
+bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -883,7 +883,7 @@ bool q_sciprinter_qbase_set_page_margins(void* self, void* margins, int64_t unit
 ///
 /// @param self QsciPrinter*
 /// @param callback bool fn(QsciPrinter*, QMarginsF*, enum QPageLayout__Unit)
-void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t));
+void q_sciprinter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1044,7 +1044,7 @@ void q_sciprinter_on_set_engines(void* self, void (*callback)(void*, void*, void
 /// @param self QsciPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_sciprinter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_sciprinter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1055,7 +1055,7 @@ double q_sciprinter_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 /// @param self QsciPrinter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_sciprinter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_sciprinter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1065,7 +1065,7 @@ double q_sciprinter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// @param self QsciPrinter*
 /// @param callback double fn(QsciPrinter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_sciprinter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciPrinter.html)
 ///

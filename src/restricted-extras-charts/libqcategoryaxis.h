@@ -35,13 +35,13 @@ void* q_categoryaxis_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_categoryaxis_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_categoryaxis_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QCategoryAxis*
 /// @param callback int32_t fn(QCategoryAxis*, enum QMetaObject__Call, int, void*)
-void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_categoryaxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_categoryaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,15 +63,15 @@ const char* q_categoryaxis_tr(const char* s);
 /// @param self QCategoryAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
-int64_t q_categoryaxis_type(void* self);
+int32_t q_categoryaxis_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QCategoryAxis*
-/// @param callback int64_t fn()
-void q_categoryaxis_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_categoryaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#type)
 ///
@@ -80,7 +80,7 @@ void q_categoryaxis_on_type(void* self, int64_t (*callback)());
 /// @param self QCategoryAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
-int64_t q_categoryaxis_qbase_type(void* self);
+int32_t q_categoryaxis_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#append)
 ///
@@ -136,13 +136,13 @@ int32_t q_categoryaxis_count(void* self);
 /// @param self QCategoryAxis*
 ///
 /// @return enum QCategoryAxis__AxisLabelsPosition
-int64_t q_categoryaxis_labels_position(void* self);
+int32_t q_categoryaxis_labels_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#setLabelsPosition)
 ///
 /// @param self QCategoryAxis*
 /// @param position enum QCategoryAxis__AxisLabelsPosition
-void q_categoryaxis_set_labels_position(void* self, int64_t position);
+void q_categoryaxis_set_labels_position(void* self, int32_t position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#categoriesChanged)
 ///
@@ -159,13 +159,13 @@ void q_categoryaxis_on_categories_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QCategoryAxis*
 /// @param position enum QCategoryAxis__AxisLabelsPosition
-void q_categoryaxis_labels_position_changed(void* self, int64_t position);
+void q_categoryaxis_labels_position_changed(void* self, int32_t position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcategoryaxis-qtcharts.html#labelsPositionChanged)
 ///
 /// @param self QCategoryAxis*
 /// @param callback void fn(QCategoryAxis*, enum QCategoryAxis__AxisLabelsPosition)
-void q_categoryaxis_on_labels_position_changed(void* self, void (*callback)(void*, int64_t));
+void q_categoryaxis_on_labels_position_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -295,7 +295,7 @@ double q_categoryaxis_tick_interval(void* self);
 ///
 /// @param self QCategoryAxis*
 /// @param typeVal enum QValueAxis__TickType
-void q_categoryaxis_set_tick_type(void* self, int64_t typeVal);
+void q_categoryaxis_set_tick_type(void* self, int32_t typeVal);
 
 /// Inherited from QValueAxis
 ///
@@ -304,7 +304,7 @@ void q_categoryaxis_set_tick_type(void* self, int64_t typeVal);
 /// @param self QCategoryAxis*
 ///
 /// @return enum QValueAxis__TickType
-int64_t q_categoryaxis_tick_type(void* self);
+int32_t q_categoryaxis_tick_type(void* self);
 
 /// Inherited from QValueAxis
 ///
@@ -465,7 +465,7 @@ void q_categoryaxis_on_tick_anchor_changed(void* self, void (*callback)(void*, d
 ///
 /// @param self QCategoryAxis*
 /// @param typeVal enum QValueAxis__TickType
-void q_categoryaxis_tick_type_changed(void* self, int64_t typeVal);
+void q_categoryaxis_tick_type_changed(void* self, int32_t typeVal);
 
 /// Inherited from QValueAxis
 ///
@@ -473,7 +473,7 @@ void q_categoryaxis_tick_type_changed(void* self, int64_t typeVal);
 ///
 /// @param self QCategoryAxis*
 /// @param callback void fn(QCategoryAxis*, enum QValueAxis__TickType)
-void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int64_t));
+void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAxis
 ///
@@ -851,7 +851,7 @@ QColor* q_categoryaxis_shades_border_color(void* self);
 /// @param self QCategoryAxis*
 ///
 /// @return enum Qt__Orientation
-int64_t q_categoryaxis_orientation(void* self);
+int32_t q_categoryaxis_orientation(void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1529,7 +1529,7 @@ void q_categoryaxis_kill_timer(void* self, int id);
 ///
 /// @param self QCategoryAxis*
 /// @param id enum Qt__TimerId
-void q_categoryaxis_kill_timer2(void* self, int64_t id);
+void q_categoryaxis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1706,7 +1706,7 @@ bool q_categoryaxis_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QCategoryAxis*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_categoryaxis_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_categoryaxis_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1717,7 +1717,7 @@ int32_t q_categoryaxis_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1728,7 +1728,7 @@ QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

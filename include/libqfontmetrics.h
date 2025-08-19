@@ -205,7 +205,7 @@ QRect* q_fontmetrics_tight_bounding_rect2(void* self, const char* text, void* te
 /// @param text const char*
 /// @param mode enum Qt__TextElideMode
 /// @param width int
-const char* q_fontmetrics_elided_text(void* self, const char* text, int64_t mode, int width);
+const char* q_fontmetrics_elided_text(void* self, const char* text, int32_t mode, int width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#underlinePos)
 ///
@@ -321,7 +321,7 @@ QSize* q_fontmetrics_size4(void* self, int flags, const char* str, int tabstops,
 /// @param mode enum Qt__TextElideMode
 /// @param width int
 /// @param flags int
-const char* q_fontmetrics_elided_text4(void* self, const char* text, int64_t mode, int width, int flags);
+const char* q_fontmetrics_elided_text4(void* self, const char* text, int32_t mode, int width, int flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetrics.html#dtor.QFontMetrics)
 ///
@@ -524,7 +524,7 @@ QRectF* q_fontmetricsf_tight_bounding_rect2(void* self, const char* text, void* 
 /// @param text const char*
 /// @param mode enum Qt__TextElideMode
 /// @param width double
-const char* q_fontmetricsf_elided_text(void* self, const char* text, int64_t mode, double width);
+const char* q_fontmetricsf_elided_text(void* self, const char* text, int32_t mode, double width);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#underlinePos)
 ///
@@ -615,7 +615,7 @@ QSizeF* q_fontmetricsf_size4(void* self, int flags, const char* str, int tabstop
 /// @param mode enum Qt__TextElideMode
 /// @param width double
 /// @param flags int
-const char* q_fontmetricsf_elided_text4(void* self, const char* text, int64_t mode, double width, int flags);
+const char* q_fontmetricsf_elided_text4(void* self, const char* text, int32_t mode, double width, int flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontmetricsf.html#dtor.QFontMetricsF)
 ///

@@ -16,13 +16,13 @@
 /// q_boxlayout_new constructs a new QBoxLayout object.
 ///
 /// @param param1 enum QBoxLayout__Direction
-QBoxLayout* q_boxlayout_new(int64_t param1);
+QBoxLayout* q_boxlayout_new(int32_t param1);
 
 /// q_boxlayout_new2 constructs a new QBoxLayout object.
 ///
 /// @param param1 enum QBoxLayout__Direction
 /// @param parent QWidget*
-QBoxLayout* q_boxlayout_new2(int64_t param1, void* parent);
+QBoxLayout* q_boxlayout_new2(int32_t param1, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -37,13 +37,13 @@ void* q_boxlayout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_boxlayout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_boxlayout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QBoxLayout*
 /// @param callback int32_t fn(QBoxLayout*, enum QMetaObject__Call, int, void*)
-void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -51,7 +51,7 @@ void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_boxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_boxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -65,13 +65,13 @@ const char* q_boxlayout_tr(const char* s);
 /// @param self QBoxLayout*
 ///
 /// @return enum QBoxLayout__Direction
-int64_t q_boxlayout_direction(void* self);
+int32_t q_boxlayout_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#setDirection)
 ///
 /// @param self QBoxLayout*
 /// @param direction enum QBoxLayout__Direction
-void q_boxlayout_set_direction(void* self, int64_t direction);
+void q_boxlayout_set_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qboxlayout.html#addSpacing)
 ///
@@ -646,7 +646,7 @@ bool q_boxlayout_set_alignment2(void* self, void* l, int64_t alignment);
 ///
 /// @param self QBoxLayout*
 /// @param sizeConstraint enum QLayout__SizeConstraint
-void q_boxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
+void q_boxlayout_set_size_constraint(void* self, int32_t sizeConstraint);
 
 /// Inherited from QLayout
 ///
@@ -655,7 +655,7 @@ void q_boxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
 /// @param self QBoxLayout*
 ///
 /// @return enum QLayout__SizeConstraint
-int64_t q_boxlayout_size_constraint(void* self);
+int32_t q_boxlayout_size_constraint(void* self);
 
 /// Inherited from QLayout
 ///
@@ -887,7 +887,7 @@ void q_boxlayout_kill_timer(void* self, int id);
 ///
 /// @param self QBoxLayout*
 /// @param id enum Qt__TimerId
-void q_boxlayout_kill_timer2(void* self, int64_t id);
+void q_boxlayout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1064,7 +1064,7 @@ bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QBoxLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_boxlayout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_boxlayout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1075,7 +1075,7 @@ int32_t q_boxlayout_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_boxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_boxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1086,7 +1086,7 @@ QMetaObject__Connection* q_boxlayout_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_boxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_boxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1868,13 +1868,13 @@ void* q_hboxlayout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_hboxlayout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_hboxlayout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QHBoxLayout*
 /// @param callback int32_t fn(QHBoxLayout*, enum QMetaObject__Call, int, void*)
-void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1882,7 +1882,7 @@ void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_hboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_hboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1915,7 +1915,7 @@ const char* q_hboxlayout_tr3(const char* s, const char* c, int n);
 /// @param self QHBoxLayout*
 ///
 /// @return enum QBoxLayout__Direction
-int64_t q_hboxlayout_direction(void* self);
+int32_t q_hboxlayout_direction(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -1923,7 +1923,7 @@ int64_t q_hboxlayout_direction(void* self);
 ///
 /// @param self QHBoxLayout*
 /// @param direction enum QBoxLayout__Direction
-void q_hboxlayout_set_direction(void* self, int64_t direction);
+void q_hboxlayout_set_direction(void* self, int32_t direction);
 
 /// Inherited from QBoxLayout
 ///
@@ -2211,7 +2211,7 @@ bool q_hboxlayout_set_alignment2(void* self, void* l, int64_t alignment);
 ///
 /// @param self QHBoxLayout*
 /// @param sizeConstraint enum QLayout__SizeConstraint
-void q_hboxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
+void q_hboxlayout_set_size_constraint(void* self, int32_t sizeConstraint);
 
 /// Inherited from QLayout
 ///
@@ -2220,7 +2220,7 @@ void q_hboxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
 /// @param self QHBoxLayout*
 ///
 /// @return enum QLayout__SizeConstraint
-int64_t q_hboxlayout_size_constraint(void* self);
+int32_t q_hboxlayout_size_constraint(void* self);
 
 /// Inherited from QLayout
 ///
@@ -2452,7 +2452,7 @@ void q_hboxlayout_kill_timer(void* self, int id);
 ///
 /// @param self QHBoxLayout*
 /// @param id enum Qt__TimerId
-void q_hboxlayout_kill_timer2(void* self, int64_t id);
+void q_hboxlayout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2629,7 +2629,7 @@ bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QHBoxLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_hboxlayout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_hboxlayout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2640,7 +2640,7 @@ int32_t q_hboxlayout_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_hboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_hboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2651,7 +2651,7 @@ QMetaObject__Connection* q_hboxlayout_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_hboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_hboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3871,13 +3871,13 @@ void* q_vboxlayout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_vboxlayout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_vboxlayout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QVBoxLayout*
 /// @param callback int32_t fn(QVBoxLayout*, enum QMetaObject__Call, int, void*)
-void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -3885,7 +3885,7 @@ void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_vboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_vboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3918,7 +3918,7 @@ const char* q_vboxlayout_tr3(const char* s, const char* c, int n);
 /// @param self QVBoxLayout*
 ///
 /// @return enum QBoxLayout__Direction
-int64_t q_vboxlayout_direction(void* self);
+int32_t q_vboxlayout_direction(void* self);
 
 /// Inherited from QBoxLayout
 ///
@@ -3926,7 +3926,7 @@ int64_t q_vboxlayout_direction(void* self);
 ///
 /// @param self QVBoxLayout*
 /// @param direction enum QBoxLayout__Direction
-void q_vboxlayout_set_direction(void* self, int64_t direction);
+void q_vboxlayout_set_direction(void* self, int32_t direction);
 
 /// Inherited from QBoxLayout
 ///
@@ -4214,7 +4214,7 @@ bool q_vboxlayout_set_alignment2(void* self, void* l, int64_t alignment);
 ///
 /// @param self QVBoxLayout*
 /// @param sizeConstraint enum QLayout__SizeConstraint
-void q_vboxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
+void q_vboxlayout_set_size_constraint(void* self, int32_t sizeConstraint);
 
 /// Inherited from QLayout
 ///
@@ -4223,7 +4223,7 @@ void q_vboxlayout_set_size_constraint(void* self, int64_t sizeConstraint);
 /// @param self QVBoxLayout*
 ///
 /// @return enum QLayout__SizeConstraint
-int64_t q_vboxlayout_size_constraint(void* self);
+int32_t q_vboxlayout_size_constraint(void* self);
 
 /// Inherited from QLayout
 ///
@@ -4455,7 +4455,7 @@ void q_vboxlayout_kill_timer(void* self, int id);
 ///
 /// @param self QVBoxLayout*
 /// @param id enum Qt__TimerId
-void q_vboxlayout_kill_timer2(void* self, int64_t id);
+void q_vboxlayout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4632,7 +4632,7 @@ bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QVBoxLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_vboxlayout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_vboxlayout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4643,7 +4643,7 @@ int32_t q_vboxlayout_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_vboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_vboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4654,7 +4654,7 @@ QMetaObject__Connection* q_vboxlayout_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_vboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_vboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

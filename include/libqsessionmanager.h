@@ -26,7 +26,7 @@ void* q_sessionmanager_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sessionmanager_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sessionmanager_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -73,14 +73,14 @@ void q_sessionmanager_cancel(void* self);
 ///
 /// @param self QSessionManager*
 /// @param restartHint enum QSessionManager__RestartHint
-void q_sessionmanager_set_restart_hint(void* self, int64_t restartHint);
+void q_sessionmanager_set_restart_hint(void* self, int32_t restartHint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#restartHint)
 ///
 /// @param self QSessionManager*
 ///
 /// @return enum QSessionManager__RestartHint
-int64_t q_sessionmanager_restart_hint(void* self);
+int32_t q_sessionmanager_restart_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsessionmanager.html#setRestartCommand)
 ///
@@ -256,7 +256,7 @@ void q_sessionmanager_kill_timer(void* self, int id);
 ///
 /// @param self QSessionManager*
 /// @param id enum Qt__TimerId
-void q_sessionmanager_kill_timer2(void* self, int64_t id);
+void q_sessionmanager_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -433,7 +433,7 @@ bool q_sessionmanager_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSessionManager*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_sessionmanager_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_sessionmanager_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -444,7 +444,7 @@ int32_t q_sessionmanager_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sessionmanager_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_sessionmanager_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -455,7 +455,7 @@ QMetaObject__Connection* q_sessionmanager_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sessionmanager_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_sessionmanager_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

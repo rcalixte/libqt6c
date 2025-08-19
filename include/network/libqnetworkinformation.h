@@ -26,7 +26,7 @@ void* q_networkinformation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_networkinformation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_networkinformation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -40,7 +40,7 @@ const char* q_networkinformation_tr(const char* s);
 /// @param self QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__Reachability
-int64_t q_networkinformation_reachability(void* self);
+int32_t q_networkinformation_reachability(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortal)
 ///
@@ -52,7 +52,7 @@ bool q_networkinformation_is_behind_captive_portal(void* self);
 /// @param self QNetworkInformation*
 ///
 /// @return enum QNetworkInformation__TransportMedium
-int64_t q_networkinformation_transport_medium(void* self);
+int32_t q_networkinformation_transport_medium(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMetered)
 ///
@@ -107,13 +107,13 @@ QNetworkInformation* q_networkinformation_instance();
 ///
 /// @param self QNetworkInformation*
 /// @param newReachability enum QNetworkInformation__Reachability
-void q_networkinformation_reachability_changed(void* self, int64_t newReachability);
+void q_networkinformation_reachability_changed(void* self, int32_t newReachability);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#reachabilityChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void fn(QNetworkInformation*, enum QNetworkInformation__Reachability)
-void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int64_t));
+void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isBehindCaptivePortalChanged)
 ///
@@ -131,13 +131,13 @@ void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (
 ///
 /// @param self QNetworkInformation*
 /// @param current enum QNetworkInformation__TransportMedium
-void q_networkinformation_transport_medium_changed(void* self, int64_t current);
+void q_networkinformation_transport_medium_changed(void* self, int32_t current);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#transportMediumChanged)
 ///
 /// @param self QNetworkInformation*
 /// @param callback void fn(QNetworkInformation*, enum QNetworkInformation__TransportMedium)
-void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int64_t));
+void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkinformation.html#isMeteredChanged)
 ///
@@ -275,7 +275,7 @@ void q_networkinformation_kill_timer(void* self, int id);
 ///
 /// @param self QNetworkInformation*
 /// @param id enum Qt__TimerId
-void q_networkinformation_kill_timer2(void* self, int64_t id);
+void q_networkinformation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -452,7 +452,7 @@ bool q_networkinformation_move_to_thread2(void* self, void* thread, void* param2
 /// @param self QNetworkInformation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_networkinformation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_networkinformation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -463,7 +463,7 @@ int32_t q_networkinformation_start_timer22(void* self, int interval, int64_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -474,7 +474,7 @@ QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

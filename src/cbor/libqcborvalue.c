@@ -42,7 +42,7 @@ QCborValue* q_cborvalue_new() {
     return QCborValue_new();
 }
 
-QCborValue* q_cborvalue_new2(int64_t t_) {
+QCborValue* q_cborvalue_new2(int32_t t_) {
     return QCborValue_new2(t_);
 }
 
@@ -66,7 +66,7 @@ QCborValue* q_cborvalue_new7(double v) {
     return QCborValue_new7(v);
 }
 
-QCborValue* q_cborvalue_new8(int64_t st) {
+QCborValue* q_cborvalue_new8(uint8_t st) {
     return QCborValue_new8(st);
 }
 
@@ -90,11 +90,11 @@ QCborValue* q_cborvalue_new13(void* m) {
     return QCborValue_new13((QCborMap*)m);
 }
 
-QCborValue* q_cborvalue_new14(int64_t tag) {
+QCborValue* q_cborvalue_new14(uint64_t tag) {
     return QCborValue_new14(tag);
 }
 
-QCborValue* q_cborvalue_new15(int64_t t_) {
+QCborValue* q_cborvalue_new15(int32_t t_) {
     return QCborValue_new15(t_);
 }
 
@@ -118,11 +118,11 @@ QCborValue* q_cborvalue_new20(void* other) {
     return QCborValue_new20((QCborValue*)other);
 }
 
-QCborValue* q_cborvalue_new21(int64_t tag, void* taggedValue) {
+QCborValue* q_cborvalue_new21(uint64_t tag, void* taggedValue) {
     return QCborValue_new21(tag, (QCborValue*)taggedValue);
 }
 
-QCborValue* q_cborvalue_new22(int64_t t_, void* tv) {
+QCborValue* q_cborvalue_new22(int32_t t_, void* tv) {
     return QCborValue_new22(t_, (QCborValue*)tv);
 }
 
@@ -134,7 +134,7 @@ void q_cborvalue_swap(void* self, void* other) {
     QCborValue_Swap((QCborValue*)self, (QCborValue*)other);
 }
 
-int64_t q_cborvalue_type(void* self) {
+int32_t q_cborvalue_type(void* self) {
     return QCborValue_Type((QCborValue*)self);
 }
 
@@ -214,11 +214,11 @@ bool q_cborvalue_is_simple_type(void* self) {
     return QCborValue_IsSimpleType((QCborValue*)self);
 }
 
-bool q_cborvalue_is_simple_type2(void* self, int64_t st) {
+bool q_cborvalue_is_simple_type2(void* self, uint8_t st) {
     return QCborValue_IsSimpleType2((QCborValue*)self, st);
 }
 
-int64_t q_cborvalue_to_simple_type(void* self) {
+uint8_t q_cborvalue_to_simple_type(void* self) {
     return QCborValue_ToSimpleType((QCborValue*)self);
 }
 
@@ -234,7 +234,7 @@ double q_cborvalue_to_double(void* self) {
     return QCborValue_ToDouble((QCborValue*)self);
 }
 
-int64_t q_cborvalue_tag(void* self) {
+uint64_t q_cborvalue_tag(void* self) {
     return QCborValue_Tag((QCborValue*)self);
 }
 
@@ -358,7 +358,7 @@ const char* q_cborvalue_to_diagnostic_notation(void* self) {
     return _ret;
 }
 
-int64_t q_cborvalue_to_simple_type1(void* self, int64_t defaultValue) {
+uint8_t q_cborvalue_to_simple_type1(void* self, uint8_t defaultValue) {
     return QCborValue_ToSimpleType1((QCborValue*)self, defaultValue);
 }
 
@@ -374,7 +374,7 @@ double q_cborvalue_to_double1(void* self, double defaultValue) {
     return QCborValue_ToDouble1((QCborValue*)self, defaultValue);
 }
 
-int64_t q_cborvalue_tag1(void* self, int64_t defaultValue) {
+uint64_t q_cborvalue_tag1(void* self, uint64_t defaultValue) {
     return QCborValue_Tag1((QCborValue*)self, defaultValue);
 }
 
@@ -458,7 +458,7 @@ QCborValue* q_cborvalueconstref_to_q_cbor_value(void* self) {
     return QCborValueConstRef_ToQCborValue((QCborValueConstRef*)self);
 }
 
-int64_t q_cborvalueconstref_type(void* self) {
+int32_t q_cborvalueconstref_type(void* self) {
     return QCborValueConstRef_Type((QCborValueConstRef*)self);
 }
 
@@ -538,15 +538,15 @@ bool q_cborvalueconstref_is_simple_type(void* self) {
     return QCborValueConstRef_IsSimpleType((QCborValueConstRef*)self);
 }
 
-bool q_cborvalueconstref_is_simple_type2(void* self, int64_t st) {
+bool q_cborvalueconstref_is_simple_type2(void* self, uint8_t st) {
     return QCborValueConstRef_IsSimpleType2((QCborValueConstRef*)self, st);
 }
 
-int64_t q_cborvalueconstref_to_simple_type(void* self) {
+uint8_t q_cborvalueconstref_to_simple_type(void* self) {
     return QCborValueConstRef_ToSimpleType((QCborValueConstRef*)self);
 }
 
-int64_t q_cborvalueconstref_tag(void* self) {
+uint64_t q_cborvalueconstref_tag(void* self) {
     return QCborValueConstRef_Tag((QCborValueConstRef*)self);
 }
 
@@ -650,11 +650,11 @@ const char* q_cborvalueconstref_to_diagnostic_notation(void* self) {
     return _ret;
 }
 
-int64_t q_cborvalueconstref_to_simple_type1(void* self, int64_t defaultValue) {
+uint8_t q_cborvalueconstref_to_simple_type1(void* self, uint8_t defaultValue) {
     return QCborValueConstRef_ToSimpleType1((QCborValueConstRef*)self, defaultValue);
 }
 
-int64_t q_cborvalueconstref_tag1(void* self, int64_t defaultValue) {
+uint64_t q_cborvalueconstref_tag1(void* self, uint64_t defaultValue) {
     return QCborValueConstRef_Tag1((QCborValueConstRef*)self, defaultValue);
 }
 
@@ -758,7 +758,7 @@ QCborValue* q_cborvalueref_to_q_cbor_value(void* self) {
     return QCborValueRef_ToQCborValue((QCborValueRef*)self);
 }
 
-int64_t q_cborvalueref_type(void* self) {
+int32_t q_cborvalueref_type(void* self) {
     return QCborValueRef_Type((QCborValueRef*)self);
 }
 
@@ -838,15 +838,15 @@ bool q_cborvalueref_is_simple_type(void* self) {
     return QCborValueRef_IsSimpleType((QCborValueRef*)self);
 }
 
-bool q_cborvalueref_is_simple_type2(void* self, int64_t st) {
+bool q_cborvalueref_is_simple_type2(void* self, uint8_t st) {
     return QCborValueRef_IsSimpleType2((QCborValueRef*)self, st);
 }
 
-int64_t q_cborvalueref_to_simple_type(void* self) {
+uint8_t q_cborvalueref_to_simple_type(void* self) {
     return QCborValueRef_ToSimpleType((QCborValueRef*)self);
 }
 
-int64_t q_cborvalueref_tag(void* self) {
+uint64_t q_cborvalueref_tag(void* self) {
     return QCborValueRef_Tag((QCborValueRef*)self);
 }
 
@@ -950,11 +950,11 @@ const char* q_cborvalueref_to_diagnostic_notation(void* self) {
     return _ret;
 }
 
-int64_t q_cborvalueref_to_simple_type1(void* self, int64_t defaultValue) {
+uint8_t q_cborvalueref_to_simple_type1(void* self, uint8_t defaultValue) {
     return QCborValueRef_ToSimpleType1((QCborValueRef*)self, defaultValue);
 }
 
-int64_t q_cborvalueref_tag1(void* self, int64_t defaultValue) {
+uint64_t q_cborvalueref_tag1(void* self, uint64_t defaultValue) {
     return QCborValueRef_Tag1((QCborValueRef*)self, defaultValue);
 }
 

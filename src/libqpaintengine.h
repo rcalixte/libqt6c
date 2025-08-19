@@ -387,7 +387,7 @@ void q_paintengine_qbase_draw_points2(void* self, void* points, int pointCount);
 /// @param points QPointF*
 /// @param pointCount int
 /// @param mode enum QPaintEngine__PolygonDrawMode
-void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int64_t mode);
+void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -395,7 +395,7 @@ void q_paintengine_draw_polygon(void* self, void* points, int pointCount, int64_
 ///
 /// @param self QPaintEngine*
 /// @param callback void fn(QPaintEngine*, QPointF*, int, enum QPaintEngine__PolygonDrawMode)
-void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int64_t));
+void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -405,7 +405,7 @@ void q_paintengine_on_draw_polygon(void* self, void (*callback)(void*, void*, in
 /// @param points QPointF*
 /// @param pointCount int
 /// @param mode enum QPaintEngine__PolygonDrawMode
-void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int64_t mode);
+void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -413,7 +413,7 @@ void q_paintengine_qbase_draw_polygon(void* self, void* points, int pointCount, 
 /// @param points QPoint*
 /// @param pointCount int
 /// @param mode enum QPaintEngine__PolygonDrawMode
-void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int64_t mode);
+void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -421,7 +421,7 @@ void q_paintengine_draw_polygon2(void* self, void* points, int pointCount, int64
 ///
 /// @param self QPaintEngine*
 /// @param callback void fn(QPaintEngine*, QPoint*, int, enum QPaintEngine__PolygonDrawMode)
-void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int64_t));
+void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPolygon)
 ///
@@ -431,7 +431,7 @@ void q_paintengine_on_draw_polygon2(void* self, void (*callback)(void*, void*, i
 /// @param points QPoint*
 /// @param pointCount int
 /// @param mode enum QPaintEngine__PolygonDrawMode
-void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int64_t mode);
+void q_paintengine_qbase_draw_polygon2(void* self, void* points, int pointCount, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#drawPixmap)
 ///
@@ -595,15 +595,15 @@ QPoint* q_paintengine_qbase_coordinate_offset(void* self);
 /// @param self QPaintEngine*
 ///
 /// @return enum QPaintEngine__Type
-int64_t q_paintengine_type(void* self);
+int32_t q_paintengine_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QPaintEngine*
-/// @param callback int64_t fn()
-void q_paintengine_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_paintengine_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#type)
 ///
@@ -612,7 +612,7 @@ void q_paintengine_on_type(void* self, int64_t (*callback)());
 /// @param self QPaintEngine*
 ///
 /// @return enum QPaintEngine__Type
-int64_t q_paintengine_qbase_type(void* self);
+int32_t q_paintengine_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintengine.html#fix_neg_rect)
 ///
@@ -771,7 +771,7 @@ QBrush* q_paintenginestate_background_brush(void* self);
 /// @param self QPaintEngineState*
 ///
 /// @return enum Qt__BGMode
-int64_t q_paintenginestate_background_mode(void* self);
+int32_t q_paintenginestate_background_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#font)
 ///
@@ -788,7 +788,7 @@ QTransform* q_paintenginestate_transform(void* self);
 /// @param self QPaintEngineState*
 ///
 /// @return enum Qt__ClipOperation
-int64_t q_paintenginestate_clip_operation(void* self);
+int32_t q_paintenginestate_clip_operation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#clipRegion)
 ///
@@ -817,7 +817,7 @@ int64_t q_paintenginestate_render_hints(void* self);
 /// @param self QPaintEngineState*
 ///
 /// @return enum QPainter__CompositionMode
-int64_t q_paintenginestate_composition_mode(void* self);
+int32_t q_paintenginestate_composition_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpaintenginestate.html#opacity)
 ///

@@ -28,15 +28,15 @@ void* q_identityproxymodel_metacast(void* self, const char* param1) {
     return QIdentityProxyModel_Metacast((QIdentityProxyModel*)self, param1);
 }
 
-int32_t q_identityproxymodel_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_identityproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QIdentityProxyModel_Metacall((QIdentityProxyModel*)self, param1, param2, param3);
 }
 
-void q_identityproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_identityproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QIdentityProxyModel_OnMetacall((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_identityproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_identityproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QIdentityProxyModel_QBaseMetacall((QIdentityProxyModel*)self, param1, param2, param3);
 }
 
@@ -119,27 +119,27 @@ int32_t q_identityproxymodel_qbase_row_count(void* self, void* parent) {
     return QIdentityProxyModel_QBaseRowCount((QIdentityProxyModel*)self, (QModelIndex*)parent);
 }
 
-QVariant* q_identityproxymodel_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_identityproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
     return QIdentityProxyModel_HeaderData((QIdentityProxyModel*)self, section, orientation, role);
 }
 
-void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int)) {
+void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
     QIdentityProxyModel_OnHeaderData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_identityproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_identityproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
     return QIdentityProxyModel_QBaseHeaderData((QIdentityProxyModel*)self, section, orientation, role);
 }
 
-bool q_identityproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_identityproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QIdentityProxyModel_DropMimeData((QIdentityProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_identityproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QIdentityProxyModel_OnDropMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_identityproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_identityproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QIdentityProxyModel_QBaseDropMimeData((QIdentityProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -367,11 +367,11 @@ void q_identityproxymodel_on_data_changed(void* self, void (*callback)(void*, vo
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_identityproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
+void q_identityproxymodel_header_data_changed(void* self, int32_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_identityproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+void q_identityproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -431,11 +431,11 @@ void q_identityproxymodel_on_layout_changed1(void* self, void (*callback)(void*,
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_identityproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_identityproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_identityproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -447,11 +447,11 @@ void q_identityproxymodel_on_layout_about_to_be_changed1(void* self, void (*call
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_identityproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_identityproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -502,7 +502,7 @@ void q_identityproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_identityproxymodel_kill_timer2(void* self, int64_t id) {
+void q_identityproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -602,15 +602,15 @@ bool q_identityproxymodel_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_identityproxymodel_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_identityproxymodel_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_identityproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_identityproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_identityproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_identityproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -706,15 +706,15 @@ void q_identityproxymodel_on_set_item_data(void* self, bool (*callback)(void*, v
     QIdentityProxyModel_OnSetItemData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_identityproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_identityproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QIdentityProxyModel_SetHeaderData((QIdentityProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool q_identityproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_identityproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QIdentityProxyModel_QBaseSetHeaderData((QIdentityProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_identityproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int)) {
+void q_identityproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
     QIdentityProxyModel_OnSetHeaderData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -766,15 +766,15 @@ void q_identityproxymodel_on_fetch_more(void* self, void (*callback)(void*, void
     QIdentityProxyModel_OnFetchMore((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-void q_identityproxymodel_sort(void* self, int column, int64_t order) {
+void q_identityproxymodel_sort(void* self, int column, int32_t order) {
     QIdentityProxyModel_Sort((QIdentityProxyModel*)self, column, order);
 }
 
-void q_identityproxymodel_qbase_sort(void* self, int column, int64_t order) {
+void q_identityproxymodel_qbase_sort(void* self, int column, int32_t order) {
     QIdentityProxyModel_QBaseSort((QIdentityProxyModel*)self, column, order);
 }
 
-void q_identityproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t)) {
+void q_identityproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
     QIdentityProxyModel_OnSort((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
@@ -814,15 +814,15 @@ void q_identityproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*,
     QIdentityProxyModel_OnMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_identityproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_identityproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QIdentityProxyModel_CanDropMimeData((QIdentityProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_identityproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_identityproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QIdentityProxyModel_QBaseCanDropMimeData((QIdentityProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_identityproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QIdentityProxyModel_OnCanDropMimeData((QIdentityProxyModel*)self, (intptr_t)callback);
 }
 

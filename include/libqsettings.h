@@ -22,20 +22,20 @@ QSettings* q_settings_new(const char* organization);
 ///
 /// @param scope enum QSettings__Scope
 /// @param organization const char*
-QSettings* q_settings_new2(int64_t scope, const char* organization);
+QSettings* q_settings_new2(int32_t scope, const char* organization);
 
 /// q_settings_new3 constructs a new QSettings object.
 ///
 /// @param format enum QSettings__Format
 /// @param scope enum QSettings__Scope
 /// @param organization const char*
-QSettings* q_settings_new3(int64_t format, int64_t scope, const char* organization);
+QSettings* q_settings_new3(int32_t format, int32_t scope, const char* organization);
 
 /// q_settings_new4 constructs a new QSettings object.
 ///
 /// @param fileName const char*
 /// @param format enum QSettings__Format
-QSettings* q_settings_new4(const char* fileName, int64_t format);
+QSettings* q_settings_new4(const char* fileName, int32_t format);
 
 /// q_settings_new5 constructs a new QSettings object.
 ///
@@ -44,7 +44,7 @@ QSettings* q_settings_new5();
 /// q_settings_new6 constructs a new QSettings object.
 ///
 /// @param scope enum QSettings__Scope
-QSettings* q_settings_new6(int64_t scope);
+QSettings* q_settings_new6(int32_t scope);
 
 /// q_settings_new7 constructs a new QSettings object.
 ///
@@ -64,7 +64,7 @@ QSettings* q_settings_new8(const char* organization, const char* application, vo
 /// @param scope enum QSettings__Scope
 /// @param organization const char*
 /// @param application const char*
-QSettings* q_settings_new9(int64_t scope, const char* organization, const char* application);
+QSettings* q_settings_new9(int32_t scope, const char* organization, const char* application);
 
 /// q_settings_new10 constructs a new QSettings object.
 ///
@@ -72,7 +72,7 @@ QSettings* q_settings_new9(int64_t scope, const char* organization, const char* 
 /// @param organization const char*
 /// @param application const char*
 /// @param parent QObject*
-QSettings* q_settings_new10(int64_t scope, const char* organization, const char* application, void* parent);
+QSettings* q_settings_new10(int32_t scope, const char* organization, const char* application, void* parent);
 
 /// q_settings_new11 constructs a new QSettings object.
 ///
@@ -80,7 +80,7 @@ QSettings* q_settings_new10(int64_t scope, const char* organization, const char*
 /// @param scope enum QSettings__Scope
 /// @param organization const char*
 /// @param application const char*
-QSettings* q_settings_new11(int64_t format, int64_t scope, const char* organization, const char* application);
+QSettings* q_settings_new11(int32_t format, int32_t scope, const char* organization, const char* application);
 
 /// q_settings_new12 constructs a new QSettings object.
 ///
@@ -89,14 +89,14 @@ QSettings* q_settings_new11(int64_t format, int64_t scope, const char* organizat
 /// @param organization const char*
 /// @param application const char*
 /// @param parent QObject*
-QSettings* q_settings_new12(int64_t format, int64_t scope, const char* organization, const char* application, void* parent);
+QSettings* q_settings_new12(int32_t format, int32_t scope, const char* organization, const char* application, void* parent);
 
 /// q_settings_new13 constructs a new QSettings object.
 ///
 /// @param fileName const char*
 /// @param format enum QSettings__Format
 /// @param parent QObject*
-QSettings* q_settings_new13(const char* fileName, int64_t format, void* parent);
+QSettings* q_settings_new13(const char* fileName, int32_t format, void* parent);
 
 /// q_settings_new14 constructs a new QSettings object.
 ///
@@ -107,7 +107,7 @@ QSettings* q_settings_new14(void* parent);
 ///
 /// @param scope enum QSettings__Scope
 /// @param parent QObject*
-QSettings* q_settings_new15(int64_t scope, void* parent);
+QSettings* q_settings_new15(int32_t scope, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -122,13 +122,13 @@ void* q_settings_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_settings_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_settings_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSettings*
 /// @param callback int32_t fn(QSettings*, enum QMetaObject__Call, int, void*)
-void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -136,7 +136,7 @@ void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_settings_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_settings_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -160,7 +160,7 @@ void q_settings_sync(void* self);
 /// @param self QSettings*
 ///
 /// @return enum QSettings__Status
-int64_t q_settings_status(void* self);
+int32_t q_settings_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#isAtomicSyncRequired)
 ///
@@ -295,14 +295,14 @@ const char* q_settings_file_name(void* self);
 /// @param self QSettings*
 ///
 /// @return enum QSettings__Format
-int64_t q_settings_format(void* self);
+int32_t q_settings_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#scope)
 ///
 /// @param self QSettings*
 ///
 /// @return enum QSettings__Scope
-int64_t q_settings_scope(void* self);
+int32_t q_settings_scope(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#organizationName)
 ///
@@ -321,20 +321,20 @@ const char* q_settings_application_name(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setDefaultFormat)
 ///
 /// @param format enum QSettings__Format
-void q_settings_set_default_format(int64_t format);
+void q_settings_set_default_format(int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#defaultFormat)
 ///
 ///
 /// @return enum QSettings__Format
-int64_t q_settings_default_format();
+int32_t q_settings_default_format();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#setPath)
 ///
 /// @param format enum QSettings__Format
 /// @param scope enum QSettings__Scope
 /// @param path const char*
-void q_settings_set_path(int64_t format, int64_t scope, const char* path);
+void q_settings_set_path(int32_t format, int32_t scope, const char* path);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsettings.html#event)
 ///
@@ -472,7 +472,7 @@ void q_settings_kill_timer(void* self, int id);
 ///
 /// @param self QSettings*
 /// @param id enum Qt__TimerId
-void q_settings_kill_timer2(void* self, int64_t id);
+void q_settings_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -649,7 +649,7 @@ bool q_settings_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSettings*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_settings_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_settings_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -660,7 +660,7 @@ int32_t q_settings_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -671,7 +671,7 @@ QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

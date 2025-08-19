@@ -35,13 +35,13 @@ void* q_mediarecorder_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_mediarecorder_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_mediarecorder_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QMediaRecorder*
 /// @param callback int32_t fn(QMediaRecorder*, enum QMetaObject__Call, int, void*)
-void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_mediarecorder_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_mediarecorder_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_mediarecorder_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -95,14 +95,14 @@ QUrl* q_mediarecorder_actual_location(void* self);
 /// @param self QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__RecorderState
-int64_t q_mediarecorder_recorder_state(void* self);
+int32_t q_mediarecorder_recorder_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#error)
 ///
 /// @param self QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__Error
-int64_t q_mediarecorder_error(void* self);
+int32_t q_mediarecorder_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorString)
 ///
@@ -132,26 +132,26 @@ void q_mediarecorder_set_media_format(void* self, void* format);
 /// @param self QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__EncodingMode
-int64_t q_mediarecorder_encoding_mode(void* self);
+int32_t q_mediarecorder_encoding_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#setEncodingMode)
 ///
 /// @param self QMediaRecorder*
 /// @param encodingMode enum QMediaRecorder__EncodingMode
-void q_mediarecorder_set_encoding_mode(void* self, int64_t encodingMode);
+void q_mediarecorder_set_encoding_mode(void* self, int32_t encodingMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#quality)
 ///
 /// @param self QMediaRecorder*
 ///
 /// @return enum QMediaRecorder__Quality
-int64_t q_mediarecorder_quality(void* self);
+int32_t q_mediarecorder_quality(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#setQuality)
 ///
 /// @param self QMediaRecorder*
 /// @param quality enum QMediaRecorder__Quality
-void q_mediarecorder_set_quality(void* self, int64_t quality);
+void q_mediarecorder_set_quality(void* self, int32_t quality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#videoResolution)
 ///
@@ -278,13 +278,13 @@ void q_mediarecorder_stop(void* self);
 ///
 /// @param self QMediaRecorder*
 /// @param state enum QMediaRecorder__RecorderState
-void q_mediarecorder_recorder_state_changed(void* self, int64_t state);
+void q_mediarecorder_recorder_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#recorderStateChanged)
 ///
 /// @param self QMediaRecorder*
 /// @param callback void fn(QMediaRecorder*, enum QMediaRecorder__RecorderState)
-void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#durationChanged)
 ///
@@ -326,13 +326,13 @@ void q_mediarecorder_on_encoder_settings_changed(void* self, void (*callback)(vo
 /// @param self QMediaRecorder*
 /// @param errorVal enum QMediaRecorder__Error
 /// @param errorString const char*
-void q_mediarecorder_error_occurred(void* self, int64_t errorVal, const char* errorString);
+void q_mediarecorder_error_occurred(void* self, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorOccurred)
 ///
 /// @param self QMediaRecorder*
 /// @param callback void fn(QMediaRecorder*, enum QMediaRecorder__Error, const char*)
-void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
+void q_mediarecorder_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediarecorder.html#errorChanged)
 ///
@@ -573,7 +573,7 @@ void q_mediarecorder_kill_timer(void* self, int id);
 ///
 /// @param self QMediaRecorder*
 /// @param id enum Qt__TimerId
-void q_mediarecorder_kill_timer2(void* self, int64_t id);
+void q_mediarecorder_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -750,7 +750,7 @@ bool q_mediarecorder_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QMediaRecorder*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_mediarecorder_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_mediarecorder_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -761,7 +761,7 @@ int32_t q_mediarecorder_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_mediarecorder_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_mediarecorder_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -772,7 +772,7 @@ QMetaObject__Connection* q_mediarecorder_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_mediarecorder_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_mediarecorder_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

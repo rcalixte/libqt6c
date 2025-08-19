@@ -35,13 +35,13 @@ void* q_columnview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_columnview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_columnview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QColumnView*
 /// @param callback int32_t fn(QColumnView*, enum QMetaObject__Call, int, void*)
-void q_columnview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_columnview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_columnview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_columnview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_columnview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -97,7 +97,7 @@ QModelIndex* q_columnview_qbase_index_at(void* self, void* point);
 /// @param self QColumnView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_columnview_scroll_to(void* self, void* index, int64_t hint);
+void q_columnview_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollTo)
 ///
@@ -105,7 +105,7 @@ void q_columnview_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// @param self QColumnView*
 /// @param callback void fn(QColumnView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
-void q_columnview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t));
+void q_columnview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#scrollTo)
 ///
@@ -114,7 +114,7 @@ void q_columnview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_
 /// @param self QColumnView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_columnview_qbase_scroll_to(void* self, void* index, int64_t hint);
+void q_columnview_qbase_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#sizeHint)
 ///
@@ -304,7 +304,7 @@ bool q_columnview_qbase_is_index_hidden(void* self, void* index);
 /// @param self QColumnView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_columnview_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
 ///
@@ -312,7 +312,7 @@ QModelIndex* q_columnview_move_cursor(void* self, int64_t cursorAction, int64_t 
 ///
 /// @param self QColumnView*
 /// @param callback QModelIndex* fn(QColumnView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
-void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t));
+void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#moveCursor)
 ///
@@ -321,7 +321,7 @@ void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
 /// @param self QColumnView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_columnview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_columnview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolumnview.html#resizeEvent)
 ///
@@ -601,7 +601,7 @@ QAbstractItemDelegate* q_columnview_item_delegate(void* self);
 ///
 /// @param self QColumnView*
 /// @param mode enum QAbstractItemView__SelectionMode
-void q_columnview_set_selection_mode(void* self, int64_t mode);
+void q_columnview_set_selection_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -610,7 +610,7 @@ void q_columnview_set_selection_mode(void* self, int64_t mode);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
-int64_t q_columnview_selection_mode(void* self);
+int32_t q_columnview_selection_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -618,7 +618,7 @@ int64_t q_columnview_selection_mode(void* self);
 ///
 /// @param self QColumnView*
 /// @param behavior enum QAbstractItemView__SelectionBehavior
-void q_columnview_set_selection_behavior(void* self, int64_t behavior);
+void q_columnview_set_selection_behavior(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -627,7 +627,7 @@ void q_columnview_set_selection_behavior(void* self, int64_t behavior);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
-int64_t q_columnview_selection_behavior(void* self);
+int32_t q_columnview_selection_behavior(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -666,7 +666,7 @@ int64_t q_columnview_edit_triggers(void* self);
 ///
 /// @param self QColumnView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_columnview_set_vertical_scroll_mode(void* self, int64_t mode);
+void q_columnview_set_vertical_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -675,7 +675,7 @@ void q_columnview_set_vertical_scroll_mode(void* self, int64_t mode);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_columnview_vertical_scroll_mode(void* self);
+int32_t q_columnview_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -690,7 +690,7 @@ void q_columnview_reset_vertical_scroll_mode(void* self);
 ///
 /// @param self QColumnView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_columnview_set_horizontal_scroll_mode(void* self, int64_t mode);
+void q_columnview_set_horizontal_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -699,7 +699,7 @@ void q_columnview_set_horizontal_scroll_mode(void* self, int64_t mode);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_columnview_horizontal_scroll_mode(void* self);
+int32_t q_columnview_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -804,7 +804,7 @@ bool q_columnview_drag_drop_overwrite_mode(void* self);
 ///
 /// @param self QColumnView*
 /// @param behavior enum QAbstractItemView__DragDropMode
-void q_columnview_set_drag_drop_mode(void* self, int64_t behavior);
+void q_columnview_set_drag_drop_mode(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -813,7 +813,7 @@ void q_columnview_set_drag_drop_mode(void* self, int64_t behavior);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
-int64_t q_columnview_drag_drop_mode(void* self);
+int32_t q_columnview_drag_drop_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -821,7 +821,7 @@ int64_t q_columnview_drag_drop_mode(void* self);
 ///
 /// @param self QColumnView*
 /// @param dropAction enum Qt__DropAction
-void q_columnview_set_default_drop_action(void* self, int64_t dropAction);
+void q_columnview_set_default_drop_action(void* self, int32_t dropAction);
 
 /// Inherited from QAbstractItemView
 ///
@@ -830,7 +830,7 @@ void q_columnview_set_default_drop_action(void* self, int64_t dropAction);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__DropAction
-int64_t q_columnview_default_drop_action(void* self);
+int32_t q_columnview_default_drop_action(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -868,7 +868,7 @@ QSize* q_columnview_icon_size(void* self);
 ///
 /// @param self QColumnView*
 /// @param mode enum Qt__TextElideMode
-void q_columnview_set_text_elide_mode(void* self, int64_t mode);
+void q_columnview_set_text_elide_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -877,7 +877,7 @@ void q_columnview_set_text_elide_mode(void* self, int64_t mode);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__TextElideMode
-int64_t q_columnview_text_elide_mode(void* self);
+int32_t q_columnview_text_elide_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1133,7 +1133,7 @@ void q_columnview_on_icon_size_changed(void* self, void (*callback)(void*, void*
 /// @param self QColumnView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_columnview_vertical_scroll_bar_policy(void* self);
+int32_t q_columnview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1141,7 +1141,7 @@ int64_t q_columnview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QColumnView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_columnview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_columnview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1165,7 +1165,7 @@ void q_columnview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_columnview_horizontal_scroll_bar_policy(void* self);
+int32_t q_columnview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1173,7 +1173,7 @@ int64_t q_columnview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QColumnView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_columnview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_columnview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1251,7 +1251,7 @@ QSize* q_columnview_maximum_viewport_size(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_columnview_size_adjust_policy(void* self);
+int32_t q_columnview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1259,7 +1259,7 @@ int64_t q_columnview_size_adjust_policy(void* self);
 ///
 /// @param self QColumnView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_columnview_set_size_adjust_policy(void* self, int64_t policy);
+void q_columnview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -1290,7 +1290,7 @@ int32_t q_columnview_frame_width(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum QFrame__Shape
-int64_t q_columnview_frame_shape(void* self);
+int32_t q_columnview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1298,7 +1298,7 @@ int64_t q_columnview_frame_shape(void* self);
 ///
 /// @param self QColumnView*
 /// @param frameShape enum QFrame__Shape
-void q_columnview_set_frame_shape(void* self, int64_t frameShape);
+void q_columnview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -1307,7 +1307,7 @@ void q_columnview_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QColumnView*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_columnview_frame_shadow(void* self);
+int32_t q_columnview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1315,7 +1315,7 @@ int64_t q_columnview_frame_shadow(void* self);
 ///
 /// @param self QColumnView*
 /// @param frameShadow enum QFrame__Shadow
-void q_columnview_set_frame_shadow(void* self, int64_t frameShadow);
+void q_columnview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -1433,7 +1433,7 @@ bool q_columnview_is_modal(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_columnview_window_modality(void* self);
+int32_t q_columnview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1441,7 +1441,7 @@ int64_t q_columnview_window_modality(void* self);
 ///
 /// @param self QColumnView*
 /// @param windowModality enum Qt__WindowModality
-void q_columnview_set_window_modality(void* self, int64_t windowModality);
+void q_columnview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1904,7 +1904,7 @@ void q_columnview_set_palette(void* self, void* palette);
 ///
 /// @param self QColumnView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_columnview_set_background_role(void* self, int64_t backgroundRole);
+void q_columnview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1913,7 +1913,7 @@ void q_columnview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QColumnView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_columnview_background_role(void* self);
+int32_t q_columnview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1921,7 +1921,7 @@ int64_t q_columnview_background_role(void* self);
 ///
 /// @param self QColumnView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_columnview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_columnview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1930,7 +1930,7 @@ void q_columnview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QColumnView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_columnview_foreground_role(void* self);
+int32_t q_columnview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2332,7 +2332,7 @@ void q_columnview_set_accessible_description(void* self, const char* description
 ///
 /// @param self QColumnView*
 /// @param direction enum Qt__LayoutDirection
-void q_columnview_set_layout_direction(void* self, int64_t direction);
+void q_columnview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -2341,7 +2341,7 @@ void q_columnview_set_layout_direction(void* self, int64_t direction);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_columnview_layout_direction(void* self);
+int32_t q_columnview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2420,7 +2420,7 @@ void q_columnview_clear_focus(void* self);
 ///
 /// @param self QColumnView*
 /// @param reason enum Qt__FocusReason
-void q_columnview_set_focus2(void* self, int64_t reason);
+void q_columnview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2429,7 +2429,7 @@ void q_columnview_set_focus2(void* self, int64_t reason);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_columnview_focus_policy(void* self);
+int32_t q_columnview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2437,7 +2437,7 @@ int64_t q_columnview_focus_policy(void* self);
 ///
 /// @param self QColumnView*
 /// @param policy enum Qt__FocusPolicy
-void q_columnview_set_focus_policy(void* self, int64_t policy);
+void q_columnview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2476,7 +2476,7 @@ QWidget* q_columnview_focus_proxy(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_columnview_context_menu_policy(void* self);
+int32_t q_columnview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2484,7 +2484,7 @@ int64_t q_columnview_context_menu_policy(void* self);
 ///
 /// @param self QColumnView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_columnview_set_context_menu_policy(void* self, int64_t policy);
+void q_columnview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2895,7 +2895,7 @@ void q_columnview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QColumnView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_columnview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_columnview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -3203,7 +3203,7 @@ QWidget* q_columnview_child_at3(void* self, void* p);
 ///
 /// @param self QColumnView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_columnview_set_attribute(void* self, int64_t param1);
+void q_columnview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3211,7 +3211,7 @@ void q_columnview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QColumnView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_columnview_test_attribute(void* self, int64_t param1);
+bool q_columnview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3444,7 +3444,7 @@ void q_columnview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QColumnView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_columnview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_columnview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3480,7 +3480,7 @@ void q_columnview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QColumnView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_columnview_set_attribute2(void* self, int64_t param1, bool on);
+void q_columnview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3589,7 +3589,7 @@ void q_columnview_kill_timer(void* self, int id);
 ///
 /// @param self QColumnView*
 /// @param id enum Qt__TimerId
-void q_columnview_kill_timer2(void* self, int64_t id);
+void q_columnview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3758,7 +3758,7 @@ bool q_columnview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QColumnView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_columnview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_columnview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3769,7 +3769,7 @@ int32_t q_columnview_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_columnview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_columnview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3780,7 +3780,7 @@ QMetaObject__Connection* q_columnview_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_columnview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_columnview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3887,7 +3887,7 @@ double q_columnview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_columnview_encode_metric_f(int64_t metric, double value);
+int32_t q_columnview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4408,7 +4408,7 @@ void q_columnview_on_horizontal_scrollbar_value_changed(void* self, void (*callb
 /// @param self QColumnView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_columnview_close_editor(void* self, void* editor, int64_t hint);
+void q_columnview_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4419,7 +4419,7 @@ void q_columnview_close_editor(void* self, void* editor, int64_t hint);
 /// @param self QColumnView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_columnview_qbase_close_editor(void* self, void* editor, int64_t hint);
+void q_columnview_qbase_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4429,7 +4429,7 @@ void q_columnview_qbase_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// @param self QColumnView*
 /// @param callback void fn(QColumnView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
-void q_columnview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t));
+void q_columnview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4529,7 +4529,7 @@ void q_columnview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* 
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_columnview_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_columnview_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4541,7 +4541,7 @@ bool q_columnview_edit2(void* self, void* index, int64_t trigger, void* event);
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_columnview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_columnview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4551,7 +4551,7 @@ bool q_columnview_qbase_edit2(void* self, void* index, int64_t trigger, void* ev
 ///
 /// @param self QColumnView*
 /// @param callback bool fn(QColumnView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
-void q_columnview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*));
+void q_columnview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5853,7 +5853,7 @@ void q_columnview_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self QColumnView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_columnview_metric(void* self, int64_t param1);
+int32_t q_columnview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5863,7 +5863,7 @@ int32_t q_columnview_metric(void* self, int64_t param1);
 ///
 /// @param self QColumnView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_columnview_qbase_metric(void* self, int64_t param1);
+int32_t q_columnview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5873,7 +5873,7 @@ int32_t q_columnview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QColumnView*
 /// @param callback int32_t fn(QColumnView*, enum QPaintDevice__PaintDeviceMetric)
-void q_columnview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_columnview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6092,7 +6092,7 @@ void q_columnview_on_disconnect_notify(void* self, void (*callback)(void*, void*
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_columnview_state(void* self);
+int32_t q_columnview_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6103,7 +6103,7 @@ int64_t q_columnview_state(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_columnview_qbase_state(void* self);
+int32_t q_columnview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6112,8 +6112,8 @@ int64_t q_columnview_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback int64_t fn()
-void q_columnview_on_state(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_columnview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6123,7 +6123,7 @@ void q_columnview_on_state(void* self, int64_t (*callback)());
 ///
 /// @param self QColumnView*
 /// @param state enum QAbstractItemView__State
-void q_columnview_set_state(void* self, int64_t state);
+void q_columnview_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6133,7 +6133,7 @@ void q_columnview_set_state(void* self, int64_t state);
 ///
 /// @param self QColumnView*
 /// @param state enum QAbstractItemView__State
-void q_columnview_qbase_set_state(void* self, int64_t state);
+void q_columnview_qbase_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6143,7 +6143,7 @@ void q_columnview_qbase_set_state(void* self, int64_t state);
 ///
 /// @param self QColumnView*
 /// @param callback void fn(QColumnView*, enum QAbstractItemView__State)
-void q_columnview_on_set_state(void* self, void (*callback)(void*, int64_t));
+void q_columnview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6384,7 +6384,7 @@ void q_columnview_on_do_auto_scroll(void* self, void (*callback)());
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_columnview_drop_indicator_position(void* self);
+int32_t q_columnview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6395,7 +6395,7 @@ int64_t q_columnview_drop_indicator_position(void* self);
 /// @param self QColumnView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_columnview_qbase_drop_indicator_position(void* self);
+int32_t q_columnview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6404,8 +6404,8 @@ int64_t q_columnview_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QColumnView*
-/// @param callback int64_t fn()
-void q_columnview_on_drop_indicator_position(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_columnview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6766,7 +6766,7 @@ void q_columnview_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self QColumnView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_columnview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_columnview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6777,7 +6777,7 @@ double q_columnview_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 /// @param self QColumnView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_columnview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_columnview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6787,7 +6787,7 @@ double q_columnview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// @param self QColumnView*
 /// @param callback double fn(QColumnView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_columnview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_columnview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -11,7 +11,7 @@ QGraphicsLinearLayout* q_graphicslinearlayout_new() {
     return QGraphicsLinearLayout_new();
 }
 
-QGraphicsLinearLayout* q_graphicslinearlayout_new2(int64_t orientation) {
+QGraphicsLinearLayout* q_graphicslinearlayout_new2(int32_t orientation) {
     return QGraphicsLinearLayout_new2(orientation);
 }
 
@@ -19,15 +19,15 @@ QGraphicsLinearLayout* q_graphicslinearlayout_new3(void* parent) {
     return QGraphicsLinearLayout_new3((QGraphicsLayoutItem*)parent);
 }
 
-QGraphicsLinearLayout* q_graphicslinearlayout_new4(int64_t orientation, void* parent) {
+QGraphicsLinearLayout* q_graphicslinearlayout_new4(int32_t orientation, void* parent) {
     return QGraphicsLinearLayout_new4(orientation, (QGraphicsLayoutItem*)parent);
 }
 
-void q_graphicslinearlayout_set_orientation(void* self, int64_t orientation) {
+void q_graphicslinearlayout_set_orientation(void* self, int32_t orientation) {
     QGraphicsLinearLayout_SetOrientation((QGraphicsLinearLayout*)self, orientation);
 }
 
-int64_t q_graphicslinearlayout_orientation(void* self) {
+int32_t q_graphicslinearlayout_orientation(void* self) {
     return QGraphicsLinearLayout_Orientation((QGraphicsLinearLayout*)self);
 }
 
@@ -143,15 +143,15 @@ void q_graphicslinearlayout_qbase_invalidate(void* self) {
     QGraphicsLinearLayout_QBaseInvalidate((QGraphicsLinearLayout*)self);
 }
 
-QSizeF* q_graphicslinearlayout_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslinearlayout_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsLinearLayout_SizeHint((QGraphicsLinearLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+void q_graphicslinearlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*)) {
     QGraphicsLinearLayout_OnSizeHint((QGraphicsLinearLayout*)self, (intptr_t)callback);
 }
 
-QSizeF* q_graphicslinearlayout_qbase_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslinearlayout_qbase_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsLinearLayout_QBaseSizeHint((QGraphicsLinearLayout*)self, which, (QSizeF*)constraint);
 }
 
@@ -195,7 +195,7 @@ void q_graphicslinearlayout_set_size_policy(void* self, void* policy) {
     QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
 }
 
-void q_graphicslinearlayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy) {
+void q_graphicslinearlayout_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
     QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
 }
 
@@ -295,7 +295,7 @@ QRectF* q_graphicslinearlayout_contents_rect(void* self) {
     return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
 }
 
-QSizeF* q_graphicslinearlayout_effective_size_hint(void* self, int64_t which) {
+QSizeF* q_graphicslinearlayout_effective_size_hint(void* self, int32_t which) {
     return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
 }
 
@@ -319,11 +319,11 @@ bool q_graphicslinearlayout_owned_by_layout(void* self) {
     return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
 }
 
-void q_graphicslinearlayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType) {
+void q_graphicslinearlayout_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
     QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
 }
 
-QSizeF* q_graphicslinearlayout_effective_size_hint2(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslinearlayout_effective_size_hint2(void* self, int32_t which, void* constraint) {
     return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 

@@ -40,7 +40,7 @@ const char* q_stringconverter_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
-const char* q_stringconverter_name_for_encoding(int64_t e);
+const char* q_stringconverter_name_for_encoding(int32_t e);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringconverter.html#availableCodecs)
 ///
@@ -69,8 +69,6 @@ void q_stringconverterbase__state_clear(void* self);
 /// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_reset(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase::state.html#dtor.QStringConverterBase::State)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QStringConverterBase__State*

@@ -38,15 +38,15 @@ void* q_svgwidget_metacast(void* self, const char* param1) {
     return QSvgWidget_Metacast((QSvgWidget*)self, param1);
 }
 
-int32_t q_svgwidget_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_svgwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSvgWidget_Metacall((QSvgWidget*)self, param1, param2, param3);
 }
 
-void q_svgwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_svgwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSvgWidget_OnMetacall((QSvgWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_svgwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_svgwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSvgWidget_QBaseMetacall((QSvgWidget*)self, param1, param2, param3);
 }
 
@@ -151,11 +151,11 @@ bool q_svgwidget_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_svgwidget_window_modality(void* self) {
+int32_t q_svgwidget_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_svgwidget_set_window_modality(void* self, int64_t windowModality) {
+void q_svgwidget_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -395,19 +395,19 @@ void q_svgwidget_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_svgwidget_set_background_role(void* self, int64_t backgroundRole) {
+void q_svgwidget_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_svgwidget_background_role(void* self) {
+int32_t q_svgwidget_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_svgwidget_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_svgwidget_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_svgwidget_foreground_role(void* self) {
+int32_t q_svgwidget_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -641,11 +641,11 @@ void q_svgwidget_set_accessible_description(void* self, const char* description)
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_svgwidget_set_layout_direction(void* self, int64_t direction) {
+void q_svgwidget_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_svgwidget_layout_direction(void* self) {
+int32_t q_svgwidget_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -689,15 +689,15 @@ void q_svgwidget_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_svgwidget_set_focus2(void* self, int64_t reason) {
+void q_svgwidget_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_svgwidget_focus_policy(void* self) {
+int32_t q_svgwidget_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_svgwidget_set_focus_policy(void* self, int64_t policy) {
+void q_svgwidget_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -717,11 +717,11 @@ QWidget* q_svgwidget_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_svgwidget_context_menu_policy(void* self) {
+int32_t q_svgwidget_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_svgwidget_set_context_menu_policy(void* self, int64_t policy) {
+void q_svgwidget_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -940,7 +940,7 @@ void q_svgwidget_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_svgwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_svgwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -1093,11 +1093,11 @@ QWidget* q_svgwidget_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_svgwidget_set_attribute(void* self, int64_t param1) {
+void q_svgwidget_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_svgwidget_test_attribute(void* self, int64_t param1) {
+bool q_svgwidget_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -1209,7 +1209,7 @@ void q_svgwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_svgwidget_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_svgwidget_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1225,7 +1225,7 @@ void q_svgwidget_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_svgwidget_set_attribute2(void* self, int64_t param1, bool on) {
+void q_svgwidget_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -1284,7 +1284,7 @@ void q_svgwidget_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_svgwidget_kill_timer2(void* self, int64_t id) {
+void q_svgwidget_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1384,15 +1384,15 @@ bool q_svgwidget_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_svgwidget_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_svgwidget_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_svgwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_svgwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_svgwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_svgwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1452,7 +1452,7 @@ double q_svgwidget_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_svgwidget_encode_metric_f(int64_t metric, double value) {
+int32_t q_svgwidget_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -1840,15 +1840,15 @@ void q_svgwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
     QSvgWidget_OnChangeEvent((QSvgWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_svgwidget_metric(void* self, int64_t param1) {
+int32_t q_svgwidget_metric(void* self, int32_t param1) {
     return QSvgWidget_Metric((QSvgWidget*)self, param1);
 }
 
-int32_t q_svgwidget_qbase_metric(void* self, int64_t param1) {
+int32_t q_svgwidget_qbase_metric(void* self, int32_t param1) {
     return QSvgWidget_QBaseMetric((QSvgWidget*)self, param1);
 }
 
-void q_svgwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_svgwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QSvgWidget_OnMetric((QSvgWidget*)self, (intptr_t)callback);
 }
 
@@ -2104,15 +2104,15 @@ void q_svgwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void
     QSvgWidget_OnIsSignalConnected((QSvgWidget*)self, (intptr_t)callback);
 }
 
-double q_svgwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_svgwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QSvgWidget_GetDecodedMetricF((QSvgWidget*)self, metricA, metricB);
 }
 
-double q_svgwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_svgwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QSvgWidget_QBaseGetDecodedMetricF((QSvgWidget*)self, metricA, metricB);
 }
 
-void q_svgwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_svgwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QSvgWidget_OnGetDecodedMetricF((QSvgWidget*)self, (intptr_t)callback);
 }
 

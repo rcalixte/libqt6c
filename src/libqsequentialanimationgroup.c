@@ -24,15 +24,15 @@ void* q_sequentialanimationgroup_metacast(void* self, const char* param1) {
     return QSequentialAnimationGroup_Metacast((QSequentialAnimationGroup*)self, param1);
 }
 
-int32_t q_sequentialanimationgroup_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sequentialanimationgroup_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSequentialAnimationGroup_Metacall((QSequentialAnimationGroup*)self, param1, param2, param3);
 }
 
-void q_sequentialanimationgroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_sequentialanimationgroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSequentialAnimationGroup_OnMetacall((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_sequentialanimationgroup_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sequentialanimationgroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSequentialAnimationGroup_QBaseMetacall((QSequentialAnimationGroup*)self, param1, param2, param3);
 }
 
@@ -99,27 +99,27 @@ void q_sequentialanimationgroup_qbase_update_current_time(void* self, int param1
     QSequentialAnimationGroup_QBaseUpdateCurrentTime((QSequentialAnimationGroup*)self, param1);
 }
 
-void q_sequentialanimationgroup_update_state(void* self, int64_t newState, int64_t oldState) {
+void q_sequentialanimationgroup_update_state(void* self, int32_t newState, int32_t oldState) {
     QSequentialAnimationGroup_UpdateState((QSequentialAnimationGroup*)self, newState, oldState);
 }
 
-void q_sequentialanimationgroup_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t)) {
+void q_sequentialanimationgroup_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t)) {
     QSequentialAnimationGroup_OnUpdateState((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_qbase_update_state(void* self, int64_t newState, int64_t oldState) {
+void q_sequentialanimationgroup_qbase_update_state(void* self, int32_t newState, int32_t oldState) {
     QSequentialAnimationGroup_QBaseUpdateState((QSequentialAnimationGroup*)self, newState, oldState);
 }
 
-void q_sequentialanimationgroup_update_direction(void* self, int64_t direction) {
+void q_sequentialanimationgroup_update_direction(void* self, int32_t direction) {
     QSequentialAnimationGroup_UpdateDirection((QSequentialAnimationGroup*)self, direction);
 }
 
-void q_sequentialanimationgroup_on_update_direction(void* self, void (*callback)(void*, int64_t)) {
+void q_sequentialanimationgroup_on_update_direction(void* self, void (*callback)(void*, int32_t)) {
     QSequentialAnimationGroup_OnUpdateDirection((QSequentialAnimationGroup*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_qbase_update_direction(void* self, int64_t direction) {
+void q_sequentialanimationgroup_qbase_update_direction(void* self, int32_t direction) {
     QSequentialAnimationGroup_QBaseUpdateDirection((QSequentialAnimationGroup*)self, direction);
 }
 
@@ -169,7 +169,7 @@ void q_sequentialanimationgroup_clear(void* self) {
     QAnimationGroup_Clear((QAnimationGroup*)self);
 }
 
-int64_t q_sequentialanimationgroup_state(void* self) {
+int32_t q_sequentialanimationgroup_state(void* self) {
     return QAbstractAnimation_State((QAbstractAnimation*)self);
 }
 
@@ -177,11 +177,11 @@ QAnimationGroup* q_sequentialanimationgroup_group(void* self) {
     return QAbstractAnimation_Group((QAbstractAnimation*)self);
 }
 
-int64_t q_sequentialanimationgroup_direction(void* self) {
+int32_t q_sequentialanimationgroup_direction(void* self) {
     return QAbstractAnimation_Direction((QAbstractAnimation*)self);
 }
 
-void q_sequentialanimationgroup_set_direction(void* self, int64_t direction) {
+void q_sequentialanimationgroup_set_direction(void* self, int32_t direction) {
     QAbstractAnimation_SetDirection((QAbstractAnimation*)self, direction);
 }
 
@@ -217,11 +217,11 @@ void q_sequentialanimationgroup_on_finished(void* self, void (*callback)(void*))
     QAbstractAnimation_Connect_Finished((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_state_changed(void* self, int64_t newState, int64_t oldState) {
+void q_sequentialanimationgroup_state_changed(void* self, int32_t newState, int32_t oldState) {
     QAbstractAnimation_StateChanged((QAbstractAnimation*)self, newState, oldState);
 }
 
-void q_sequentialanimationgroup_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t)) {
+void q_sequentialanimationgroup_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t)) {
     QAbstractAnimation_Connect_StateChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
@@ -233,11 +233,11 @@ void q_sequentialanimationgroup_on_current_loop_changed(void* self, void (*callb
     QAbstractAnimation_Connect_CurrentLoopChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
-void q_sequentialanimationgroup_direction_changed(void* self, int64_t param1) {
+void q_sequentialanimationgroup_direction_changed(void* self, int32_t param1) {
     QAbstractAnimation_DirectionChanged((QAbstractAnimation*)self, param1);
 }
 
-void q_sequentialanimationgroup_on_direction_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_sequentialanimationgroup_on_direction_changed(void* self, void (*callback)(void*, int32_t)) {
     QAbstractAnimation_Connect_DirectionChanged((QAbstractAnimation*)self, (intptr_t)callback);
 }
 
@@ -265,7 +265,7 @@ void q_sequentialanimationgroup_set_current_time(void* self, int msecs) {
     QAbstractAnimation_SetCurrentTime((QAbstractAnimation*)self, msecs);
 }
 
-void q_sequentialanimationgroup_start1(void* self, int64_t policy) {
+void q_sequentialanimationgroup_start1(void* self, int32_t policy) {
     QAbstractAnimation_Start1((QAbstractAnimation*)self, policy);
 }
 
@@ -316,7 +316,7 @@ void q_sequentialanimationgroup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_sequentialanimationgroup_kill_timer2(void* self, int64_t id) {
+void q_sequentialanimationgroup_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -420,15 +420,15 @@ bool q_sequentialanimationgroup_move_to_thread2(void* self, void* thread, void* 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_sequentialanimationgroup_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_sequentialanimationgroup_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_sequentialanimationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_sequentialanimationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

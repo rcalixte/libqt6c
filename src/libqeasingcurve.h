@@ -25,7 +25,7 @@ QEasingCurve* q_easingcurve_new2(void* other);
 /// q_easingcurve_new3 constructs a new QEasingCurve object.
 ///
 /// @param typeVal enum QEasingCurve__Type
-QEasingCurve* q_easingcurve_new3(int64_t typeVal);
+QEasingCurve* q_easingcurve_new3(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#operator-eq)
 ///
@@ -99,13 +99,13 @@ libqt_list /* of QPointF* */ q_easingcurve_to_cubic_spline(void* self);
 /// @param self QEasingCurve*
 ///
 /// @return enum QEasingCurve__Type
-int64_t q_easingcurve_type(void* self);
+int32_t q_easingcurve_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#setType)
 ///
 /// @param self QEasingCurve*
 /// @param typeVal enum QEasingCurve__Type
-void q_easingcurve_set_type(void* self, int64_t typeVal);
+void q_easingcurve_set_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeasingcurve.html#valueForProgress)
 ///

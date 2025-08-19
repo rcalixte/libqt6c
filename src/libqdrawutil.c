@@ -9,7 +9,7 @@ QTileRules* q_tilerules_new2(void* other) {
     return QTileRules_new2((QTileRules*)other);
 }
 
-QTileRules* q_tilerules_new3(int64_t horizontalRule, int64_t verticalRule) {
+QTileRules* q_tilerules_new3(int32_t horizontalRule, int32_t verticalRule) {
     return QTileRules_new3(horizontalRule, verticalRule);
 }
 
@@ -21,7 +21,7 @@ QTileRules* q_tilerules_new5(void* param1) {
     return QTileRules_new5((QTileRules*)param1);
 }
 
-QTileRules* q_tilerules_new6(int64_t rule) {
+QTileRules* q_tilerules_new6(int32_t rule) {
     return QTileRules_new6(rule);
 }
 

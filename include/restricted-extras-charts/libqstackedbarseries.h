@@ -35,13 +35,13 @@ void* q_stackedbarseries_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_stackedbarseries_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_stackedbarseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStackedBarSeries*
 /// @param callback int32_t fn(QStackedBarSeries*, enum QMetaObject__Call, int, void*)
-void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_stackedbarseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_stackedbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,15 +63,15 @@ const char* q_stackedbarseries_tr(const char* s);
 /// @param self QStackedBarSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_stackedbarseries_type(void* self);
+int32_t q_stackedbarseries_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QStackedBarSeries*
-/// @param callback int64_t fn()
-void q_stackedbarseries_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_stackedbarseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstackedbarseries-qtcharts.html#type)
 ///
@@ -80,7 +80,7 @@ void q_stackedbarseries_on_type(void* self, int64_t (*callback)());
 /// @param self QStackedBarSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_stackedbarseries_qbase_type(void* self);
+int32_t q_stackedbarseries_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -228,7 +228,7 @@ double q_stackedbarseries_labels_angle(void* self);
 ///
 /// @param self QStackedBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
-void q_stackedbarseries_set_labels_position(void* self, int64_t position);
+void q_stackedbarseries_set_labels_position(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -237,7 +237,7 @@ void q_stackedbarseries_set_labels_position(void* self, int64_t position);
 /// @param self QStackedBarSeries*
 ///
 /// @return enum QAbstractBarSeries__LabelsPosition
-int64_t q_stackedbarseries_labels_position(void* self);
+int32_t q_stackedbarseries_labels_position(void* self);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -392,7 +392,7 @@ void q_stackedbarseries_on_labels_format_changed(void* self, void (*callback)(vo
 ///
 /// @param self QStackedBarSeries*
 /// @param position enum QAbstractBarSeries__LabelsPosition
-void q_stackedbarseries_labels_position_changed(void* self, int64_t position);
+void q_stackedbarseries_labels_position_changed(void* self, int32_t position);
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -400,7 +400,7 @@ void q_stackedbarseries_labels_position_changed(void* self, int64_t position);
 ///
 /// @param self QStackedBarSeries*
 /// @param callback void fn(QStackedBarSeries*, enum QAbstractBarSeries__LabelsPosition)
-void q_stackedbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int64_t));
+void q_stackedbarseries_on_labels_position_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractBarSeries
 ///
@@ -744,7 +744,7 @@ void q_stackedbarseries_kill_timer(void* self, int id);
 ///
 /// @param self QStackedBarSeries*
 /// @param id enum Qt__TimerId
-void q_stackedbarseries_kill_timer2(void* self, int64_t id);
+void q_stackedbarseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -921,7 +921,7 @@ bool q_stackedbarseries_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStackedBarSeries*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_stackedbarseries_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_stackedbarseries_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -932,7 +932,7 @@ int32_t q_stackedbarseries_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stackedbarseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_stackedbarseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -943,7 +943,7 @@ QMetaObject__Connection* q_stackedbarseries_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stackedbarseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_stackedbarseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

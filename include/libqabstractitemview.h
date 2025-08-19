@@ -35,13 +35,13 @@ void* q_abstractitemview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractitemview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractitemview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
 /// @param callback int32_t fn(QAbstractItemView*, enum QMetaObject__Call, int, void*)
-void q_abstractitemview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_abstractitemview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_abstractitemview_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractitemview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractitemview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -127,27 +127,27 @@ QAbstractItemDelegate* q_abstractitemview_item_delegate(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param mode enum QAbstractItemView__SelectionMode
-void q_abstractitemview_set_selection_mode(void* self, int64_t mode);
+void q_abstractitemview_set_selection_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionMode)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
-int64_t q_abstractitemview_selection_mode(void* self);
+int32_t q_abstractitemview_selection_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionBehavior)
 ///
 /// @param self QAbstractItemView*
 /// @param behavior enum QAbstractItemView__SelectionBehavior
-void q_abstractitemview_set_selection_behavior(void* self, int64_t behavior);
+void q_abstractitemview_set_selection_behavior(void* self, int32_t behavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionBehavior)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
-int64_t q_abstractitemview_selection_behavior(void* self);
+int32_t q_abstractitemview_selection_behavior(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#currentIndex)
 ///
@@ -176,14 +176,14 @@ int64_t q_abstractitemview_edit_triggers(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_abstractitemview_set_vertical_scroll_mode(void* self, int64_t mode);
+void q_abstractitemview_set_vertical_scroll_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollMode)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_abstractitemview_vertical_scroll_mode(void* self);
+int32_t q_abstractitemview_vertical_scroll_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resetVerticalScrollMode)
 ///
@@ -194,14 +194,14 @@ void q_abstractitemview_reset_vertical_scroll_mode(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_abstractitemview_set_horizontal_scroll_mode(void* self, int64_t mode);
+void q_abstractitemview_set_horizontal_scroll_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollMode)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_abstractitemview_horizontal_scroll_mode(void* self);
+int32_t q_abstractitemview_horizontal_scroll_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#resetHorizontalScrollMode)
 ///
@@ -278,27 +278,27 @@ bool q_abstractitemview_drag_drop_overwrite_mode(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param behavior enum QAbstractItemView__DragDropMode
-void q_abstractitemview_set_drag_drop_mode(void* self, int64_t behavior);
+void q_abstractitemview_set_drag_drop_mode(void* self, int32_t behavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dragDropMode)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
-int64_t q_abstractitemview_drag_drop_mode(void* self);
+int32_t q_abstractitemview_drag_drop_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setDefaultDropAction)
 ///
 /// @param self QAbstractItemView*
 /// @param dropAction enum Qt__DropAction
-void q_abstractitemview_set_default_drop_action(void* self, int64_t dropAction);
+void q_abstractitemview_set_default_drop_action(void* self, int32_t dropAction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#defaultDropAction)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__DropAction
-int64_t q_abstractitemview_default_drop_action(void* self);
+int32_t q_abstractitemview_default_drop_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setAlternatingRowColors)
 ///
@@ -326,14 +326,14 @@ QSize* q_abstractitemview_icon_size(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param mode enum Qt__TextElideMode
-void q_abstractitemview_set_text_elide_mode(void* self, int64_t mode);
+void q_abstractitemview_set_text_elide_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#textElideMode)
 ///
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__TextElideMode
-int64_t q_abstractitemview_text_elide_mode(void* self);
+int32_t q_abstractitemview_text_elide_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
 ///
@@ -384,7 +384,7 @@ QRect* q_abstractitemview_qbase_visual_rect(void* self, void* index);
 /// @param self QAbstractItemView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_abstractitemview_scroll_to(void* self, void* index, int64_t hint);
+void q_abstractitemview_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollTo)
 ///
@@ -392,7 +392,7 @@ void q_abstractitemview_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// @param self QAbstractItemView*
 /// @param callback void fn(QAbstractItemView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
-void q_abstractitemview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t));
+void q_abstractitemview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scrollTo)
 ///
@@ -401,7 +401,7 @@ void q_abstractitemview_on_scroll_to(void* self, void (*callback)(void*, void*, 
 /// @param self QAbstractItemView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_abstractitemview_qbase_scroll_to(void* self, void* index, int64_t hint);
+void q_abstractitemview_qbase_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#indexAt)
 ///
@@ -976,7 +976,7 @@ void q_abstractitemview_qbase_horizontal_scrollbar_value_changed(void* self, int
 /// @param self QAbstractItemView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_abstractitemview_close_editor(void* self, void* editor, int64_t hint);
+void q_abstractitemview_close_editor(void* self, void* editor, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
@@ -984,7 +984,7 @@ void q_abstractitemview_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// @param self QAbstractItemView*
 /// @param callback void fn(QAbstractItemView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
-void q_abstractitemview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t));
+void q_abstractitemview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
 ///
@@ -993,7 +993,7 @@ void q_abstractitemview_on_close_editor(void* self, void (*callback)(void*, void
 /// @param self QAbstractItemView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_abstractitemview_qbase_close_editor(void* self, void* editor, int64_t hint);
+void q_abstractitemview_qbase_close_editor(void* self, void* editor, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
 ///
@@ -1127,7 +1127,7 @@ void q_abstractitemview_on_icon_size_changed(void* self, void (*callback)(void*,
 /// @param self QAbstractItemView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_abstractitemview_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_abstractitemview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#moveCursor)
 ///
@@ -1135,7 +1135,7 @@ QModelIndex* q_abstractitemview_move_cursor(void* self, int64_t cursorAction, in
 ///
 /// @param self QAbstractItemView*
 /// @param callback QModelIndex* fn(QAbstractItemView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
-void q_abstractitemview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t));
+void q_abstractitemview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#moveCursor)
 ///
@@ -1144,7 +1144,7 @@ void q_abstractitemview_on_move_cursor(void* self, QModelIndex* (*callback)(void
 /// @param self QAbstractItemView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_abstractitemview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_abstractitemview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalOffset)
 ///
@@ -1280,7 +1280,7 @@ libqt_list /* of QModelIndex* */ q_abstractitemview_qbase_selected_indexes(void*
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_abstractitemview_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_abstractitemview_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
@@ -1288,7 +1288,7 @@ bool q_abstractitemview_edit2(void* self, void* index, int64_t trigger, void* ev
 ///
 /// @param self QAbstractItemView*
 /// @param callback bool fn(QAbstractItemView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
-void q_abstractitemview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*));
+void q_abstractitemview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
 ///
@@ -1298,7 +1298,7 @@ void q_abstractitemview_on_edit2(void* self, bool (*callback)(void*, void*, int6
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_abstractitemview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_abstractitemview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
 ///
@@ -1377,15 +1377,15 @@ void q_abstractitemview_qbase_init_view_item_option(void* self, void* option);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_abstractitemview_state(void* self);
+int32_t q_abstractitemview_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback int64_t fn()
-void q_abstractitemview_on_state(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_abstractitemview_on_state(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#state)
 ///
@@ -1394,13 +1394,13 @@ void q_abstractitemview_on_state(void* self, int64_t (*callback)());
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_abstractitemview_qbase_state(void* self);
+int32_t q_abstractitemview_qbase_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
 /// @param self QAbstractItemView*
 /// @param state enum QAbstractItemView__State
-void q_abstractitemview_set_state(void* self, int64_t state);
+void q_abstractitemview_set_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
@@ -1408,7 +1408,7 @@ void q_abstractitemview_set_state(void* self, int64_t state);
 ///
 /// @param self QAbstractItemView*
 /// @param callback void fn(QAbstractItemView*, enum QAbstractItemView__State)
-void q_abstractitemview_on_set_state(void* self, void (*callback)(void*, int64_t));
+void q_abstractitemview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
 ///
@@ -1416,7 +1416,7 @@ void q_abstractitemview_on_set_state(void* self, void (*callback)(void*, int64_t
 ///
 /// @param self QAbstractItemView*
 /// @param state enum QAbstractItemView__State
-void q_abstractitemview_qbase_set_state(void* self, int64_t state);
+void q_abstractitemview_qbase_set_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
 ///
@@ -1987,15 +1987,15 @@ bool q_abstractitemview_qbase_event_filter(void* self, void* object, void* event
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_abstractitemview_drop_indicator_position(void* self);
+int32_t q_abstractitemview_drop_indicator_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback int64_t fn()
-void q_abstractitemview_on_drop_indicator_position(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_abstractitemview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
 ///
@@ -2004,7 +2004,7 @@ void q_abstractitemview_on_drop_indicator_position(void* self, int64_t (*callbac
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_abstractitemview_qbase_drop_indicator_position(void* self);
+int32_t q_abstractitemview_qbase_drop_indicator_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#viewportSizeHint)
 ///
@@ -2050,7 +2050,7 @@ const char* q_abstractitemview_tr3(const char* s, const char* c, int n);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_abstractitemview_vertical_scroll_bar_policy(void* self);
+int32_t q_abstractitemview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2058,7 +2058,7 @@ int64_t q_abstractitemview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_abstractitemview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_abstractitemview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2082,7 +2082,7 @@ void q_abstractitemview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_abstractitemview_horizontal_scroll_bar_policy(void* self);
+int32_t q_abstractitemview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2090,7 +2090,7 @@ int64_t q_abstractitemview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_abstractitemview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_abstractitemview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2168,7 +2168,7 @@ QSize* q_abstractitemview_maximum_viewport_size(void* self);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_abstractitemview_size_adjust_policy(void* self);
+int32_t q_abstractitemview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -2176,7 +2176,7 @@ int64_t q_abstractitemview_size_adjust_policy(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_abstractitemview_set_size_adjust_policy(void* self, int64_t policy);
+void q_abstractitemview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -2207,7 +2207,7 @@ int32_t q_abstractitemview_frame_width(void* self);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QFrame__Shape
-int64_t q_abstractitemview_frame_shape(void* self);
+int32_t q_abstractitemview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -2215,7 +2215,7 @@ int64_t q_abstractitemview_frame_shape(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param frameShape enum QFrame__Shape
-void q_abstractitemview_set_frame_shape(void* self, int64_t frameShape);
+void q_abstractitemview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -2224,7 +2224,7 @@ void q_abstractitemview_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_abstractitemview_frame_shadow(void* self);
+int32_t q_abstractitemview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -2232,7 +2232,7 @@ int64_t q_abstractitemview_frame_shadow(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param frameShadow enum QFrame__Shadow
-void q_abstractitemview_set_frame_shadow(void* self, int64_t frameShadow);
+void q_abstractitemview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -2350,7 +2350,7 @@ bool q_abstractitemview_is_modal(void* self);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_abstractitemview_window_modality(void* self);
+int32_t q_abstractitemview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2358,7 +2358,7 @@ int64_t q_abstractitemview_window_modality(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param windowModality enum Qt__WindowModality
-void q_abstractitemview_set_window_modality(void* self, int64_t windowModality);
+void q_abstractitemview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -2821,7 +2821,7 @@ void q_abstractitemview_set_palette(void* self, void* palette);
 ///
 /// @param self QAbstractItemView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_abstractitemview_set_background_role(void* self, int64_t backgroundRole);
+void q_abstractitemview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2830,7 +2830,7 @@ void q_abstractitemview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_abstractitemview_background_role(void* self);
+int32_t q_abstractitemview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2838,7 +2838,7 @@ int64_t q_abstractitemview_background_role(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_abstractitemview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_abstractitemview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2847,7 +2847,7 @@ void q_abstractitemview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QAbstractItemView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_abstractitemview_foreground_role(void* self);
+int32_t q_abstractitemview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3249,7 +3249,7 @@ void q_abstractitemview_set_accessible_description(void* self, const char* descr
 ///
 /// @param self QAbstractItemView*
 /// @param direction enum Qt__LayoutDirection
-void q_abstractitemview_set_layout_direction(void* self, int64_t direction);
+void q_abstractitemview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -3258,7 +3258,7 @@ void q_abstractitemview_set_layout_direction(void* self, int64_t direction);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_abstractitemview_layout_direction(void* self);
+int32_t q_abstractitemview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3337,7 +3337,7 @@ void q_abstractitemview_clear_focus(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param reason enum Qt__FocusReason
-void q_abstractitemview_set_focus2(void* self, int64_t reason);
+void q_abstractitemview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -3346,7 +3346,7 @@ void q_abstractitemview_set_focus2(void* self, int64_t reason);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_abstractitemview_focus_policy(void* self);
+int32_t q_abstractitemview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3354,7 +3354,7 @@ int64_t q_abstractitemview_focus_policy(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param policy enum Qt__FocusPolicy
-void q_abstractitemview_set_focus_policy(void* self, int64_t policy);
+void q_abstractitemview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3393,7 +3393,7 @@ QWidget* q_abstractitemview_focus_proxy(void* self);
 /// @param self QAbstractItemView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_abstractitemview_context_menu_policy(void* self);
+int32_t q_abstractitemview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3401,7 +3401,7 @@ int64_t q_abstractitemview_context_menu_policy(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_abstractitemview_set_context_menu_policy(void* self, int64_t policy);
+void q_abstractitemview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3812,7 +3812,7 @@ void q_abstractitemview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QAbstractItemView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_abstractitemview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_abstractitemview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -4120,7 +4120,7 @@ QWidget* q_abstractitemview_child_at3(void* self, void* p);
 ///
 /// @param self QAbstractItemView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_abstractitemview_set_attribute(void* self, int64_t param1);
+void q_abstractitemview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4128,7 +4128,7 @@ void q_abstractitemview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QAbstractItemView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_abstractitemview_test_attribute(void* self, int64_t param1);
+bool q_abstractitemview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4361,7 +4361,7 @@ void q_abstractitemview_grab_gesture2(void* self, int64_t typeVal, int64_t flags
 /// @param self QAbstractItemView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_abstractitemview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_abstractitemview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4397,7 +4397,7 @@ void q_abstractitemview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QAbstractItemView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_abstractitemview_set_attribute2(void* self, int64_t param1, bool on);
+void q_abstractitemview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4506,7 +4506,7 @@ void q_abstractitemview_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractItemView*
 /// @param id enum Qt__TimerId
-void q_abstractitemview_kill_timer2(void* self, int64_t id);
+void q_abstractitemview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4675,7 +4675,7 @@ bool q_abstractitemview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAbstractItemView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstractitemview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstractitemview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4686,7 +4686,7 @@ int32_t q_abstractitemview_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractitemview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractitemview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4697,7 +4697,7 @@ QMetaObject__Connection* q_abstractitemview_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractitemview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstractitemview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4804,7 +4804,7 @@ double q_abstractitemview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_abstractitemview_encode_metric_f(int64_t metric, double value);
+int32_t q_abstractitemview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -5530,7 +5530,7 @@ void q_abstractitemview_on_native_event(void* self, bool (*callback)(void*, cons
 ///
 /// @param self QAbstractItemView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_abstractitemview_metric(void* self, int64_t param1);
+int32_t q_abstractitemview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5540,7 +5540,7 @@ int32_t q_abstractitemview_metric(void* self, int64_t param1);
 ///
 /// @param self QAbstractItemView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_abstractitemview_qbase_metric(void* self, int64_t param1);
+int32_t q_abstractitemview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5550,7 +5550,7 @@ int32_t q_abstractitemview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QAbstractItemView*
 /// @param callback int32_t fn(QAbstractItemView*, enum QPaintDevice__PaintDeviceMetric)
-void q_abstractitemview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_abstractitemview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6119,7 +6119,7 @@ void q_abstractitemview_on_is_signal_connected(void* self, bool (*callback)(void
 /// @param self QAbstractItemView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_abstractitemview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_abstractitemview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6130,7 +6130,7 @@ double q_abstractitemview_get_decoded_metric_f(void* self, int64_t metricA, int6
 /// @param self QAbstractItemView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_abstractitemview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_abstractitemview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6140,7 +6140,7 @@ double q_abstractitemview_qbase_get_decoded_metric_f(void* self, int64_t metricA
 ///
 /// @param self QAbstractItemView*
 /// @param callback double fn(QAbstractItemView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_abstractitemview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_abstractitemview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

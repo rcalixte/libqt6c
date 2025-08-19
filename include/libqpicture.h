@@ -175,7 +175,7 @@ QPaintEngine* q_picture_qbase_paint_engine(void* self);
 ///
 /// @param self QPicture*
 /// @param m enum QPaintDevice__PaintDeviceMetric
-int32_t q_picture_metric(void* self, int64_t m);
+int32_t q_picture_metric(void* self, int32_t m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#metric)
 ///
@@ -183,7 +183,7 @@ int32_t q_picture_metric(void* self, int64_t m);
 ///
 /// @param self QPicture*
 /// @param callback int32_t fn(QPicture*, enum QPaintDevice__PaintDeviceMetric)
-void q_picture_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_picture_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#metric)
 ///
@@ -191,7 +191,7 @@ void q_picture_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QPicture*
 /// @param m enum QPaintDevice__PaintDeviceMetric
-int32_t q_picture_qbase_metric(void* self, int64_t m);
+int32_t q_picture_qbase_metric(void* self, int32_t m);
 
 /// Inherited from QPaintDevice
 ///
@@ -296,7 +296,7 @@ double q_picture_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_picture_encode_metric_f(int64_t metric, double value);
+int32_t q_picture_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDevice
 ///
@@ -395,7 +395,7 @@ void q_picture_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QPicture*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_picture_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -406,7 +406,7 @@ double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metri
 /// @param self QPicture*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_picture_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -416,7 +416,7 @@ double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 ///
 /// @param self QPicture*
 /// @param callback double fn(QPicture*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpicture.html#dtor.QPicture)
 ///

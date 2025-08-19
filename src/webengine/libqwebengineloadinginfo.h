@@ -39,7 +39,7 @@ bool q_webengineloadinginfo_is_error_page(void* self);
 /// @param self QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__LoadStatus
-int64_t q_webengineloadinginfo_status(void* self);
+int32_t q_webengineloadinginfo_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorString)
 ///
@@ -53,7 +53,7 @@ const char* q_webengineloadinginfo_error_string(void* self);
 /// @param self QWebEngineLoadingInfo*
 ///
 /// @return enum QWebEngineLoadingInfo__ErrorDomain
-int64_t q_webengineloadinginfo_error_domain(void* self);
+int32_t q_webengineloadinginfo_error_domain(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineloadinginfo.html#errorCode)
 ///

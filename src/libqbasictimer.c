@@ -18,7 +18,7 @@ int32_t q_basictimer_timer_id(void* self) {
     return QBasicTimer_TimerId((QBasicTimer*)self);
 }
 
-int64_t q_basictimer_id(void* self) {
+int32_t q_basictimer_id(void* self) {
     return QBasicTimer_Id((QBasicTimer*)self);
 }
 
@@ -26,7 +26,7 @@ void q_basictimer_start(void* self, int msec, void* obj) {
     QBasicTimer_Start((QBasicTimer*)self, msec, (QObject*)obj);
 }
 
-void q_basictimer_start2(void* self, int msec, int64_t timerType, void* obj) {
+void q_basictimer_start2(void* self, int msec, int32_t timerType, void* obj) {
     QBasicTimer_Start2((QBasicTimer*)self, msec, timerType, (QObject*)obj);
 }
 

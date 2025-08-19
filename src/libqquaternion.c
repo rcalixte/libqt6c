@@ -15,7 +15,7 @@ QQuaternion* q_quaternion_new3() {
     return QQuaternion_new3();
 }
 
-QQuaternion* q_quaternion_new4(int64_t param1) {
+QQuaternion* q_quaternion_new4(int32_t param1) {
     return QQuaternion_new4(param1);
 }
 

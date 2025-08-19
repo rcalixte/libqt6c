@@ -18,13 +18,13 @@
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
 /// @param value QVariant*
-void q_printengine_set_property(void* self, int64_t key, void* value);
+void q_printengine_set_property(void* self, int32_t key, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#property)
 ///
 /// @param self QPrintEngine*
 /// @param key enum QPrintEngine__PrintEnginePropertyKey
-QVariant* q_printengine_property(void* self, int64_t key);
+QVariant* q_printengine_property(void* self, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#newPage)
 ///
@@ -40,14 +40,14 @@ bool q_printengine_abort(void* self);
 ///
 /// @param self QPrintEngine*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_printengine_metric(void* self, int64_t param1);
+int32_t q_printengine_metric(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#printerState)
 ///
 /// @param self QPrintEngine*
 ///
 /// @return enum QPrinter__PrinterState
-int64_t q_printengine_printer_state(void* self);
+int32_t q_printengine_printer_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintengine.html#operator-eq)
 ///

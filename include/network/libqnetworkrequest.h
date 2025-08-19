@@ -77,14 +77,14 @@ void q_networkrequest_set_headers(void* self, void* newHeaders);
 ///
 /// @param self QNetworkRequest*
 /// @param header enum QNetworkRequest__KnownHeaders
-QVariant* q_networkrequest_header(void* self, int64_t header);
+QVariant* q_networkrequest_header(void* self, int32_t header);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setHeader)
 ///
 /// @param self QNetworkRequest*
 /// @param header enum QNetworkRequest__KnownHeaders
 /// @param value QVariant*
-void q_networkrequest_set_header(void* self, int64_t header, void* value);
+void q_networkrequest_set_header(void* self, int32_t header, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#hasRawHeader)
 ///
@@ -118,14 +118,14 @@ void q_networkrequest_set_raw_header(void* self, const char* headerName, const c
 ///
 /// @param self QNetworkRequest*
 /// @param code enum QNetworkRequest__Attribute
-QVariant* q_networkrequest_attribute(void* self, int64_t code);
+QVariant* q_networkrequest_attribute(void* self, int32_t code);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setAttribute)
 ///
 /// @param self QNetworkRequest*
 /// @param code enum QNetworkRequest__Attribute
 /// @param value QVariant*
-void q_networkrequest_set_attribute(void* self, int64_t code, void* value);
+void q_networkrequest_set_attribute(void* self, int32_t code, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#sslConfiguration)
 ///
@@ -154,13 +154,13 @@ QObject* q_networkrequest_originating_object(void* self);
 /// @param self QNetworkRequest*
 ///
 /// @return enum QNetworkRequest__Priority
-int64_t q_networkrequest_priority(void* self);
+int32_t q_networkrequest_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#setPriority)
 ///
 /// @param self QNetworkRequest*
 /// @param priority enum QNetworkRequest__Priority
-void q_networkrequest_set_priority(void* self, int64_t priority);
+void q_networkrequest_set_priority(void* self, int32_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#maximumRedirectsAllowed)
 ///
@@ -240,7 +240,7 @@ void q_networkrequest_set_transfer_timeout2(void* self);
 /// @param self QNetworkRequest*
 /// @param code enum QNetworkRequest__Attribute
 /// @param defaultValue QVariant*
-QVariant* q_networkrequest_attribute2(void* self, int64_t code, void* defaultValue);
+QVariant* q_networkrequest_attribute2(void* self, int32_t code, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequest.html#dtor.QNetworkRequest)
 ///

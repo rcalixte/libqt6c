@@ -83,7 +83,7 @@ QSize* q_imagereader_size(void* self) {
     return QImageReader_Size((QImageReader*)self);
 }
 
-int64_t q_imagereader_image_format(void* self) {
+int32_t q_imagereader_image_format(void* self) {
     return QImageReader_ImageFormat((QImageReader*)self);
 }
 
@@ -235,7 +235,7 @@ QRect* q_imagereader_current_image_rect(void* self) {
     return QImageReader_CurrentImageRect((QImageReader*)self);
 }
 
-int64_t q_imagereader_error(void* self) {
+int32_t q_imagereader_error(void* self) {
     return QImageReader_Error((QImageReader*)self);
 }
 
@@ -246,7 +246,7 @@ const char* q_imagereader_error_string(void* self) {
     return _ret;
 }
 
-bool q_imagereader_supports_option(void* self, int64_t option) {
+bool q_imagereader_supports_option(void* self, int32_t option) {
     return QImageReader_SupportsOption((QImageReader*)self, option);
 }
 

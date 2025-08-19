@@ -115,7 +115,7 @@ QSize* q_imagereader_size(void* self);
 /// @param self QImageReader*
 ///
 /// @return enum QImage__Format
-int64_t q_imagereader_image_format(void* self);
+int32_t q_imagereader_image_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagereader.html#textKeys)
 ///
@@ -281,7 +281,7 @@ QRect* q_imagereader_current_image_rect(void* self);
 /// @param self QImageReader*
 ///
 /// @return enum QImageReader__ImageReaderError
-int64_t q_imagereader_error(void* self);
+int32_t q_imagereader_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagereader.html#errorString)
 ///
@@ -294,7 +294,7 @@ const char* q_imagereader_error_string(void* self);
 ///
 /// @param self QImageReader*
 /// @param option enum QImageIOHandler__ImageOption
-bool q_imagereader_supports_option(void* self, int64_t option);
+bool q_imagereader_supports_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagereader.html#imageFormat)
 ///

@@ -1,7 +1,7 @@
 #include "libqscicommand.hpp"
 #include "libqscicommand.h"
 
-int64_t q_scicommand_command(void* self) {
+int32_t q_scicommand_command(void* self) {
     return QsciCommand_Command((QsciCommand*)self);
 }
 

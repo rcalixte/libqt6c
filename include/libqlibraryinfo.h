@@ -58,21 +58,21 @@ QVersionNumber* q_libraryinfo_version();
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
-const char* q_libraryinfo_path(int64_t p);
+const char* q_libraryinfo_path(int32_t p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#paths)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param p enum QLibraryInfo__LibraryPath
-const char** q_libraryinfo_paths(int64_t p);
+const char** q_libraryinfo_paths(int32_t p);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#location)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param location enum QLibraryInfo__LibraryPath
-const char* q_libraryinfo_location(int64_t location);
+const char* q_libraryinfo_location(int32_t location);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlibraryinfo.html#platformPluginArguments)
 ///

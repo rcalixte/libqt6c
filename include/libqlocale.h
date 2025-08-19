@@ -26,12 +26,12 @@ QLocale* q_locale_new2(const char* name);
 ///
 /// @param language enum QLocale__Language
 /// @param territory enum QLocale__Country
-QLocale* q_locale_new3(int64_t language, int64_t territory);
+QLocale* q_locale_new3(uint16_t language, uint16_t territory);
 
 /// q_locale_new4 constructs a new QLocale object.
 ///
 /// @param language enum QLocale__Language
-QLocale* q_locale_new4(int64_t language);
+QLocale* q_locale_new4(uint16_t language);
 
 /// q_locale_new5 constructs a new QLocale object.
 ///
@@ -42,14 +42,14 @@ QLocale* q_locale_new5(void* other);
 ///
 /// @param language enum QLocale__Language
 /// @param script enum QLocale__Script
-QLocale* q_locale_new6(int64_t language, int64_t script);
+QLocale* q_locale_new6(uint16_t language, uint16_t script);
 
 /// q_locale_new7 constructs a new QLocale object.
 ///
 /// @param language enum QLocale__Language
 /// @param script enum QLocale__Script
 /// @param territory enum QLocale__Country
-QLocale* q_locale_new7(int64_t language, int64_t script, int64_t territory);
+QLocale* q_locale_new7(uint16_t language, uint16_t script, uint16_t territory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#operator-eq)
 ///
@@ -68,28 +68,28 @@ void q_locale_swap(void* self, void* other);
 /// @param self QLocale*
 ///
 /// @return enum QLocale__Language
-int64_t q_locale_language(void* self);
+uint16_t q_locale_language(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#script)
 ///
 /// @param self QLocale*
 ///
 /// @return enum QLocale__Script
-int64_t q_locale_script(void* self);
+uint16_t q_locale_script(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#territory)
 ///
 /// @param self QLocale*
 ///
 /// @return enum QLocale__Country
-int64_t q_locale_territory(void* self);
+uint16_t q_locale_territory(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#country)
 ///
 /// @param self QLocale*
 ///
 /// @return enum QLocale__Country
-int64_t q_locale_country(void* self);
+uint16_t q_locale_country(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#name)
 ///
@@ -325,7 +325,7 @@ const char* q_locale_to_string19(void* self, void* dateTime);
 /// @param date QDate*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
-const char* q_locale_to_string21(void* self, void* date, int64_t format, void* cal);
+const char* q_locale_to_string21(void* self, void* date, int32_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
@@ -335,7 +335,7 @@ const char* q_locale_to_string21(void* self, void* date, int64_t format, void* c
 /// @param dateTime QDateTime*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
-const char* q_locale_to_string22(void* self, void* dateTime, int64_t format, void* cal);
+const char* q_locale_to_string22(void* self, void* dateTime, int32_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
@@ -403,7 +403,7 @@ QDateTime* q_locale_to_date_time2(void* self, const char* stringVal, const char*
 /// @param stringVal const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
-QDate* q_locale_to_date3(void* self, const char* stringVal, int64_t format, void* cal);
+QDate* q_locale_to_date3(void* self, const char* stringVal, int32_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
@@ -419,7 +419,7 @@ QDate* q_locale_to_date4(void* self, const char* stringVal, const char* format, 
 /// @param stringVal const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
-QDateTime* q_locale_to_date_time3(void* self, const char* stringVal, int64_t format, void* cal);
+QDateTime* q_locale_to_date_time3(void* self, const char* stringVal, int32_t format, void* cal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
@@ -515,14 +515,14 @@ const char* q_locale_standalone_day_name(void* self, int param1);
 /// @param self QLocale*
 ///
 /// @return enum Qt__DayOfWeek
-int64_t q_locale_first_day_of_week(void* self);
+int32_t q_locale_first_day_of_week(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#weekdays)
 ///
 /// @param self QLocale*
 ///
 /// @return libqt_list of enum Qt__DayOfWeek
-libqt_list /* of int64_t */ q_locale_weekdays(void* self);
+libqt_list /* of int32_t */ q_locale_weekdays(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#amText)
 ///
@@ -543,7 +543,7 @@ const char* q_locale_pm_text(void* self);
 /// @param self QLocale*
 ///
 /// @return enum QLocale__MeasurementSystem
-int64_t q_locale_measurement_system(void* self);
+int32_t q_locale_measurement_system(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#collation)
 ///
@@ -555,7 +555,7 @@ QLocale* q_locale_collation(void* self);
 /// @param self QLocale*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_locale_text_direction(void* self);
+int32_t q_locale_text_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toUpper)
 ///
@@ -664,56 +664,56 @@ const char** q_locale_ui_languages(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param language enum QLocale__Language
-const char* q_locale_language_to_code(int64_t language);
+const char* q_locale_language_to_code(uint16_t language);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#territoryToCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param territory enum QLocale__Country
-const char* q_locale_territory_to_code(int64_t territory);
+const char* q_locale_territory_to_code(uint16_t territory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#countryToCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param country enum QLocale__Country
-const char* q_locale_country_to_code(int64_t country);
+const char* q_locale_country_to_code(uint16_t country);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#scriptToCode)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QLocale__Script
-const char* q_locale_script_to_code(int64_t script);
+const char* q_locale_script_to_code(uint16_t script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#languageToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param language enum QLocale__Language
-const char* q_locale_language_to_string(int64_t language);
+const char* q_locale_language_to_string(uint16_t language);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#territoryToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param territory enum QLocale__Country
-const char* q_locale_territory_to_string(int64_t territory);
+const char* q_locale_territory_to_string(uint16_t territory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#countryToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param country enum QLocale__Country
-const char* q_locale_country_to_string(int64_t country);
+const char* q_locale_country_to_string(uint16_t country);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#scriptToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param script enum QLocale__Script
-const char* q_locale_script_to_string(int64_t script);
+const char* q_locale_script_to_string(uint16_t script);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#setDefault)
 ///
@@ -733,14 +733,14 @@ QLocale* q_locale_system();
 /// @param language enum QLocale__Language
 /// @param script enum QLocale__Script
 /// @param territory enum QLocale__Country
-libqt_list /* of QLocale* */ q_locale_matching_locales(int64_t language, int64_t script, int64_t territory);
+libqt_list /* of QLocale* */ q_locale_matching_locales(uint16_t language, uint16_t script, uint16_t territory);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#countriesForLanguage)
 ///
 /// @param lang enum QLocale__Language
 ///
 /// @return libqt_list of enum QLocale__Country
-libqt_list /* of int64_t */ q_locale_countries_for_language(int64_t lang);
+libqt_list /* of uint16_t */ q_locale_countries_for_language(uint16_t lang);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#setNumberOptions)
 ///
@@ -777,7 +777,7 @@ const char* q_locale_create_separated_list(void* self, const char* strl[]);
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
-const char* q_locale_name1(void* self, int64_t separator);
+const char* q_locale_name1(void* self, int8_t separator);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#bcp47Name)
 ///
@@ -785,7 +785,7 @@ const char* q_locale_name1(void* self, int64_t separator);
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
-const char* q_locale_bcp47_name1(void* self, int64_t separator);
+const char* q_locale_bcp47_name1(void* self, int8_t separator);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toShort)
 ///
@@ -902,7 +902,7 @@ const char* q_locale_to_string33(void* self, float f, char format, int precision
 /// @param self QLocale*
 /// @param date QDate*
 /// @param format enum QLocale__FormatType
-const char* q_locale_to_string26(void* self, void* date, int64_t format);
+const char* q_locale_to_string26(void* self, void* date, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
@@ -911,7 +911,7 @@ const char* q_locale_to_string26(void* self, void* date, int64_t format);
 /// @param self QLocale*
 /// @param time QTime*
 /// @param format enum QLocale__FormatType
-const char* q_locale_to_string27(void* self, void* time, int64_t format);
+const char* q_locale_to_string27(void* self, void* time, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toString)
 ///
@@ -920,7 +920,7 @@ const char* q_locale_to_string27(void* self, void* time, int64_t format);
 /// @param self QLocale*
 /// @param dateTime QDateTime*
 /// @param format enum QLocale__FormatType
-const char* q_locale_to_string28(void* self, void* dateTime, int64_t format);
+const char* q_locale_to_string28(void* self, void* dateTime, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dateFormat)
 ///
@@ -928,7 +928,7 @@ const char* q_locale_to_string28(void* self, void* dateTime, int64_t format);
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
-const char* q_locale_date_format1(void* self, int64_t format);
+const char* q_locale_date_format1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#timeFormat)
 ///
@@ -936,7 +936,7 @@ const char* q_locale_date_format1(void* self, int64_t format);
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
-const char* q_locale_time_format1(void* self, int64_t format);
+const char* q_locale_time_format1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dateTimeFormat)
 ///
@@ -944,21 +944,21 @@ const char* q_locale_time_format1(void* self, int64_t format);
 ///
 /// @param self QLocale*
 /// @param format enum QLocale__FormatType
-const char* q_locale_date_time_format1(void* self, int64_t format);
+const char* q_locale_date_time_format1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toTime)
 ///
 /// @param self QLocale*
 /// @param stringVal const char*
 /// @param param2 enum QLocale__FormatType
-QTime* q_locale_to_time22(void* self, const char* stringVal, int64_t param2);
+QTime* q_locale_to_time22(void* self, const char* stringVal, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
 /// @param stringVal const char*
 /// @param param2 enum QLocale__FormatType
-QDate* q_locale_to_date22(void* self, const char* stringVal, int64_t param2);
+QDate* q_locale_to_date22(void* self, const char* stringVal, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
@@ -966,7 +966,7 @@ QDate* q_locale_to_date22(void* self, const char* stringVal, int64_t param2);
 /// @param stringVal const char*
 /// @param param2 enum QLocale__FormatType
 /// @param baseYear int
-QDate* q_locale_to_date32(void* self, const char* stringVal, int64_t param2, int baseYear);
+QDate* q_locale_to_date32(void* self, const char* stringVal, int32_t param2, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
@@ -981,7 +981,7 @@ QDate* q_locale_to_date33(void* self, const char* stringVal, const char* format,
 /// @param self QLocale*
 /// @param stringVal const char*
 /// @param format enum QLocale__FormatType
-QDateTime* q_locale_to_date_time22(void* self, const char* stringVal, int64_t format);
+QDateTime* q_locale_to_date_time22(void* self, const char* stringVal, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
@@ -989,7 +989,7 @@ QDateTime* q_locale_to_date_time22(void* self, const char* stringVal, int64_t fo
 /// @param stringVal const char*
 /// @param format enum QLocale__FormatType
 /// @param baseYear int
-QDateTime* q_locale_to_date_time32(void* self, const char* stringVal, int64_t format, int baseYear);
+QDateTime* q_locale_to_date_time32(void* self, const char* stringVal, int32_t format, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
@@ -1006,7 +1006,7 @@ QDateTime* q_locale_to_date_time33(void* self, const char* stringVal, const char
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 /// @param baseYear int
-QDate* q_locale_to_date42(void* self, const char* stringVal, int64_t format, void* cal, int baseYear);
+QDate* q_locale_to_date42(void* self, const char* stringVal, int32_t format, void* cal, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
@@ -1024,7 +1024,7 @@ QDate* q_locale_to_date43(void* self, const char* stringVal, const char* format,
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 /// @param baseYear int
-QDateTime* q_locale_to_date_time42(void* self, const char* stringVal, int64_t format, void* cal, int baseYear);
+QDateTime* q_locale_to_date_time42(void* self, const char* stringVal, int32_t format, void* cal, int baseYear);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
@@ -1042,7 +1042,7 @@ QDateTime* q_locale_to_date_time43(void* self, const char* stringVal, const char
 /// @param self QLocale*
 /// @param param1 int
 /// @param format enum QLocale__FormatType
-const char* q_locale_month_name2(void* self, int param1, int64_t format);
+const char* q_locale_month_name2(void* self, int param1, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#standaloneMonthName)
 ///
@@ -1051,7 +1051,7 @@ const char* q_locale_month_name2(void* self, int param1, int64_t format);
 /// @param self QLocale*
 /// @param param1 int
 /// @param format enum QLocale__FormatType
-const char* q_locale_standalone_month_name2(void* self, int param1, int64_t format);
+const char* q_locale_standalone_month_name2(void* self, int param1, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dayName)
 ///
@@ -1060,7 +1060,7 @@ const char* q_locale_standalone_month_name2(void* self, int param1, int64_t form
 /// @param self QLocale*
 /// @param param1 int
 /// @param format enum QLocale__FormatType
-const char* q_locale_day_name2(void* self, int param1, int64_t format);
+const char* q_locale_day_name2(void* self, int param1, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#standaloneDayName)
 ///
@@ -1069,7 +1069,7 @@ const char* q_locale_day_name2(void* self, int param1, int64_t format);
 /// @param self QLocale*
 /// @param param1 int
 /// @param format enum QLocale__FormatType
-const char* q_locale_standalone_day_name2(void* self, int param1, int64_t format);
+const char* q_locale_standalone_day_name2(void* self, int param1, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#currencySymbol)
 ///
@@ -1077,7 +1077,7 @@ const char* q_locale_standalone_day_name2(void* self, int param1, int64_t format
 ///
 /// @param self QLocale*
 /// @param param1 enum QLocale__CurrencySymbolFormat
-const char* q_locale_currency_symbol1(void* self, int64_t param1);
+const char* q_locale_currency_symbol1(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#toCurrencyString)
 ///
@@ -1196,7 +1196,7 @@ const char* q_locale_formatted_data_size3(void* self, long long bytes, int preci
 ///
 /// @param self QLocale*
 /// @param separator enum QLocale__TagSeparator
-const char** q_locale_ui_languages1(void* self, int64_t separator);
+const char** q_locale_ui_languages1(void* self, int8_t separator);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#languageToCode)
 ///
@@ -1204,7 +1204,7 @@ const char** q_locale_ui_languages1(void* self, int64_t separator);
 ///
 /// @param language enum QLocale__Language
 /// @param codeTypes flag of enum QLocale__LanguageCodeType
-const char* q_locale_language_to_code2(int64_t language, int64_t codeTypes);
+const char* q_locale_language_to_code2(uint16_t language, int64_t codeTypes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#quoteString)
 ///
@@ -1213,7 +1213,7 @@ const char* q_locale_language_to_code2(int64_t language, int64_t codeTypes);
 /// @param self QLocale*
 /// @param str const char*
 /// @param style enum QLocale__QuotationStyle
-const char* q_locale_quote_string22(void* self, const char* str, int64_t style);
+const char* q_locale_quote_string22(void* self, const char* str, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocale.html#dtor.QLocale)
 ///

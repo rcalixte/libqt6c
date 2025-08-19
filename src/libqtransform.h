@@ -26,7 +26,7 @@ QTransform* q_transform_new2(void* other);
 /// q_transform_new3 constructs a new QTransform object.
 ///
 /// @param param1 enum Qt__Initialization
-QTransform* q_transform_new3(int64_t param1);
+QTransform* q_transform_new3(int32_t param1);
 
 /// q_transform_new4 constructs a new QTransform object.
 ///
@@ -113,7 +113,7 @@ bool q_transform_is_translating(void* self);
 /// @param self QTransform*
 ///
 /// @return enum QTransform__TransformationType
-int64_t q_transform_type(void* self);
+int32_t q_transform_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#determinant)
 ///
@@ -231,7 +231,7 @@ QTransform* q_transform_shear(void* self, double sh, double sv);
 /// @param a double
 /// @param axis enum Qt__Axis
 /// @param distanceToPlane double
-QTransform* q_transform_rotate(void* self, double a, int64_t axis, double distanceToPlane);
+QTransform* q_transform_rotate(void* self, double a, int32_t axis, double distanceToPlane);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotate)
 ///
@@ -245,7 +245,7 @@ QTransform* q_transform_rotate2(void* self, double a);
 /// @param a double
 /// @param axis enum Qt__Axis
 /// @param distanceToPlane double
-QTransform* q_transform_rotate_radians(void* self, double a, int64_t axis, double distanceToPlane);
+QTransform* q_transform_rotate_radians(void* self, double a, int32_t axis, double distanceToPlane);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
@@ -400,14 +400,14 @@ QTransform* q_transform_inverted1(void* self, bool* invertible);
 /// @param self QTransform*
 /// @param a double
 /// @param axis enum Qt__Axis
-QTransform* q_transform_rotate22(void* self, double a, int64_t axis);
+QTransform* q_transform_rotate22(void* self, double a, int32_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#rotateRadians)
 ///
 /// @param self QTransform*
 /// @param a double
 /// @param axis enum Qt__Axis
-QTransform* q_transform_rotate_radians22(void* self, double a, int64_t axis);
+QTransform* q_transform_rotate_radians22(void* self, double a, int32_t axis);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtransform.html#dtor.QTransform)
 ///

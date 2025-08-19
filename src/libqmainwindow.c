@@ -38,15 +38,15 @@ void* q_mainwindow_metacast(void* self, const char* param1) {
     return QMainWindow_Metacast((QMainWindow*)self, param1);
 }
 
-int32_t q_mainwindow_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMainWindow_Metacall((QMainWindow*)self, param1, param2, param3);
 }
 
-void q_mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QMainWindow_OnMetacall((QMainWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_mainwindow_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMainWindow_QBaseMetacall((QMainWindow*)self, param1, param2, param3);
 }
 
@@ -65,11 +65,11 @@ void q_mainwindow_set_icon_size(void* self, void* iconSize) {
     QMainWindow_SetIconSize((QMainWindow*)self, (QSize*)iconSize);
 }
 
-int64_t q_mainwindow_tool_button_style(void* self) {
+int32_t q_mainwindow_tool_button_style(void* self) {
     return QMainWindow_ToolButtonStyle((QMainWindow*)self);
 }
 
-void q_mainwindow_set_tool_button_style(void* self, int64_t toolButtonStyle) {
+void q_mainwindow_set_tool_button_style(void* self, int32_t toolButtonStyle) {
     QMainWindow_SetToolButtonStyle((QMainWindow*)self, toolButtonStyle);
 }
 
@@ -89,19 +89,19 @@ void q_mainwindow_set_document_mode(void* self, bool enabled) {
     QMainWindow_SetDocumentMode((QMainWindow*)self, enabled);
 }
 
-int64_t q_mainwindow_tab_shape(void* self) {
+int32_t q_mainwindow_tab_shape(void* self) {
     return QMainWindow_TabShape((QMainWindow*)self);
 }
 
-void q_mainwindow_set_tab_shape(void* self, int64_t tabShape) {
+void q_mainwindow_set_tab_shape(void* self, int32_t tabShape) {
     QMainWindow_SetTabShape((QMainWindow*)self, tabShape);
 }
 
-int64_t q_mainwindow_tab_position(void* self, int64_t area) {
+int32_t q_mainwindow_tab_position(void* self, int32_t area) {
     return QMainWindow_TabPosition((QMainWindow*)self, area);
 }
 
-void q_mainwindow_set_tab_position(void* self, int64_t areas, int64_t tabPosition) {
+void q_mainwindow_set_tab_position(void* self, int64_t areas, int32_t tabPosition) {
     QMainWindow_SetTabPosition((QMainWindow*)self, areas, tabPosition);
 }
 
@@ -153,11 +153,11 @@ QWidget* q_mainwindow_take_central_widget(void* self) {
     return QMainWindow_TakeCentralWidget((QMainWindow*)self);
 }
 
-void q_mainwindow_set_corner(void* self, int64_t corner, int64_t area) {
+void q_mainwindow_set_corner(void* self, int32_t corner, int32_t area) {
     QMainWindow_SetCorner((QMainWindow*)self, corner, area);
 }
 
-int64_t q_mainwindow_corner(void* self, int64_t corner) {
+int32_t q_mainwindow_corner(void* self, int32_t corner) {
     return QMainWindow_Corner((QMainWindow*)self, corner);
 }
 
@@ -169,7 +169,7 @@ void q_mainwindow_insert_tool_bar_break(void* self, void* before) {
     QMainWindow_InsertToolBarBreak((QMainWindow*)self, (QToolBar*)before);
 }
 
-void q_mainwindow_add_tool_bar(void* self, int64_t area, void* toolbar) {
+void q_mainwindow_add_tool_bar(void* self, int32_t area, void* toolbar) {
     QMainWindow_AddToolBar((QMainWindow*)self, area, (QToolBar*)toolbar);
 }
 
@@ -197,7 +197,7 @@ bool q_mainwindow_unified_title_and_tool_bar_on_mac(void* self) {
     return QMainWindow_UnifiedTitleAndToolBarOnMac((QMainWindow*)self);
 }
 
-int64_t q_mainwindow_tool_bar_area(void* self, void* toolbar) {
+int32_t q_mainwindow_tool_bar_area(void* self, void* toolbar) {
     return QMainWindow_ToolBarArea((QMainWindow*)self, (QToolBar*)toolbar);
 }
 
@@ -205,15 +205,15 @@ bool q_mainwindow_tool_bar_break(void* self, void* toolbar) {
     return QMainWindow_ToolBarBreak((QMainWindow*)self, (QToolBar*)toolbar);
 }
 
-void q_mainwindow_add_dock_widget(void* self, int64_t area, void* dockwidget) {
+void q_mainwindow_add_dock_widget(void* self, int32_t area, void* dockwidget) {
     QMainWindow_AddDockWidget((QMainWindow*)self, area, (QDockWidget*)dockwidget);
 }
 
-void q_mainwindow_add_dock_widget2(void* self, int64_t area, void* dockwidget, int64_t orientation) {
+void q_mainwindow_add_dock_widget2(void* self, int32_t area, void* dockwidget, int32_t orientation) {
     QMainWindow_AddDockWidget2((QMainWindow*)self, area, (QDockWidget*)dockwidget, orientation);
 }
 
-void q_mainwindow_split_dock_widget(void* self, void* after, void* dockwidget, int64_t orientation) {
+void q_mainwindow_split_dock_widget(void* self, void* after, void* dockwidget, int32_t orientation) {
     QMainWindow_SplitDockWidget((QMainWindow*)self, (QDockWidget*)after, (QDockWidget*)dockwidget, orientation);
 }
 
@@ -234,11 +234,11 @@ bool q_mainwindow_restore_dock_widget(void* self, void* dockwidget) {
     return QMainWindow_RestoreDockWidget((QMainWindow*)self, (QDockWidget*)dockwidget);
 }
 
-int64_t q_mainwindow_dock_widget_area(void* self, void* dockwidget) {
+int32_t q_mainwindow_dock_widget_area(void* self, void* dockwidget) {
     return QMainWindow_DockWidgetArea((QMainWindow*)self, (QDockWidget*)dockwidget);
 }
 
-void q_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, int64_t orientation) {
+void q_mainwindow_resize_docks(void* self, libqt_list docks, libqt_list sizes, int32_t orientation) {
     QMainWindow_ResizeDocks((QMainWindow*)self, docks, sizes, orientation);
 }
 
@@ -285,11 +285,11 @@ void q_mainwindow_on_icon_size_changed(void* self, void (*callback)(void*, void*
     QMainWindow_Connect_IconSizeChanged((QMainWindow*)self, (intptr_t)callback);
 }
 
-void q_mainwindow_tool_button_style_changed(void* self, int64_t toolButtonStyle) {
+void q_mainwindow_tool_button_style_changed(void* self, int32_t toolButtonStyle) {
     QMainWindow_ToolButtonStyleChanged((QMainWindow*)self, toolButtonStyle);
 }
 
-void q_mainwindow_on_tool_button_style_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_mainwindow_on_tool_button_style_changed(void* self, void (*callback)(void*, int32_t)) {
     QMainWindow_Connect_ToolButtonStyleChanged((QMainWindow*)self, (intptr_t)callback);
 }
 
@@ -339,7 +339,7 @@ const char* q_mainwindow_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_mainwindow_add_tool_bar_break1(void* self, int64_t area) {
+void q_mainwindow_add_tool_bar_break1(void* self, int32_t area) {
     QMainWindow_AddToolBarBreak1((QMainWindow*)self, area);
 }
 
@@ -390,11 +390,11 @@ bool q_mainwindow_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_mainwindow_window_modality(void* self) {
+int32_t q_mainwindow_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_mainwindow_set_window_modality(void* self, int64_t windowModality) {
+void q_mainwindow_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -634,19 +634,19 @@ void q_mainwindow_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_mainwindow_set_background_role(void* self, int64_t backgroundRole) {
+void q_mainwindow_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_mainwindow_background_role(void* self) {
+int32_t q_mainwindow_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_mainwindow_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_mainwindow_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_mainwindow_foreground_role(void* self) {
+int32_t q_mainwindow_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -880,11 +880,11 @@ void q_mainwindow_set_accessible_description(void* self, const char* description
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_mainwindow_set_layout_direction(void* self, int64_t direction) {
+void q_mainwindow_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_mainwindow_layout_direction(void* self) {
+int32_t q_mainwindow_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -928,15 +928,15 @@ void q_mainwindow_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_mainwindow_set_focus2(void* self, int64_t reason) {
+void q_mainwindow_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_mainwindow_focus_policy(void* self) {
+int32_t q_mainwindow_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_mainwindow_set_focus_policy(void* self, int64_t policy) {
+void q_mainwindow_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -956,11 +956,11 @@ QWidget* q_mainwindow_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_mainwindow_context_menu_policy(void* self) {
+int32_t q_mainwindow_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_mainwindow_set_context_menu_policy(void* self, int64_t policy) {
+void q_mainwindow_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -1179,7 +1179,7 @@ void q_mainwindow_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_mainwindow_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_mainwindow_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -1332,11 +1332,11 @@ QWidget* q_mainwindow_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_mainwindow_set_attribute(void* self, int64_t param1) {
+void q_mainwindow_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_mainwindow_test_attribute(void* self, int64_t param1) {
+bool q_mainwindow_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -1448,7 +1448,7 @@ void q_mainwindow_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_mainwindow_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_mainwindow_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1464,7 +1464,7 @@ void q_mainwindow_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_mainwindow_set_attribute2(void* self, int64_t param1, bool on) {
+void q_mainwindow_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -1523,7 +1523,7 @@ void q_mainwindow_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_mainwindow_kill_timer2(void* self, int64_t id) {
+void q_mainwindow_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1623,15 +1623,15 @@ bool q_mainwindow_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_mainwindow_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_mainwindow_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_mainwindow_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_mainwindow_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_mainwindow_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_mainwindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1691,7 +1691,7 @@ double q_mainwindow_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_mainwindow_encode_metric_f(int64_t metric, double value) {
+int32_t q_mainwindow_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -2079,15 +2079,15 @@ void q_mainwindow_on_change_event(void* self, void (*callback)(void*, void*)) {
     QMainWindow_OnChangeEvent((QMainWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_mainwindow_metric(void* self, int64_t param1) {
+int32_t q_mainwindow_metric(void* self, int32_t param1) {
     return QMainWindow_Metric((QMainWindow*)self, param1);
 }
 
-int32_t q_mainwindow_qbase_metric(void* self, int64_t param1) {
+int32_t q_mainwindow_qbase_metric(void* self, int32_t param1) {
     return QMainWindow_QBaseMetric((QMainWindow*)self, param1);
 }
 
-void q_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QMainWindow_OnMetric((QMainWindow*)self, (intptr_t)callback);
 }
 
@@ -2343,15 +2343,15 @@ void q_mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, voi
     QMainWindow_OnIsSignalConnected((QMainWindow*)self, (intptr_t)callback);
 }
 
-double q_mainwindow_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QMainWindow_GetDecodedMetricF((QMainWindow*)self, metricA, metricB);
 }
 
-double q_mainwindow_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_mainwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QMainWindow_QBaseGetDecodedMetricF((QMainWindow*)self, metricA, metricB);
 }
 
-void q_mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QMainWindow_OnGetDecodedMetricF((QMainWindow*)self, (intptr_t)callback);
 }
 

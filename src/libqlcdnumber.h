@@ -46,13 +46,13 @@ void* q_lcdnumber_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_lcdnumber_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_lcdnumber_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QLCDNumber*
 /// @param callback int32_t fn(QLCDNumber*, enum QMetaObject__Call, int, void*)
-void q_lcdnumber_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_lcdnumber_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_lcdnumber_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_lcdnumber_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_lcdnumber_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -102,26 +102,26 @@ bool q_lcdnumber_check_overflow2(void* self, int num);
 /// @param self QLCDNumber*
 ///
 /// @return enum QLCDNumber__Mode
-int64_t q_lcdnumber_mode(void* self);
+int32_t q_lcdnumber_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setMode)
 ///
 /// @param self QLCDNumber*
 /// @param mode enum QLCDNumber__Mode
-void q_lcdnumber_set_mode(void* self, int64_t mode);
+void q_lcdnumber_set_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#segmentStyle)
 ///
 /// @param self QLCDNumber*
 ///
 /// @return enum QLCDNumber__SegmentStyle
-int64_t q_lcdnumber_segment_style(void* self);
+int32_t q_lcdnumber_segment_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#setSegmentStyle)
 ///
 /// @param self QLCDNumber*
 /// @param segmentStyle enum QLCDNumber__SegmentStyle
-void q_lcdnumber_set_segment_style(void* self, int64_t segmentStyle);
+void q_lcdnumber_set_segment_style(void* self, int32_t segmentStyle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlcdnumber.html#value)
 ///
@@ -298,7 +298,7 @@ int32_t q_lcdnumber_frame_width(void* self);
 /// @param self QLCDNumber*
 ///
 /// @return enum QFrame__Shape
-int64_t q_lcdnumber_frame_shape(void* self);
+int32_t q_lcdnumber_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -306,7 +306,7 @@ int64_t q_lcdnumber_frame_shape(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param frameShape enum QFrame__Shape
-void q_lcdnumber_set_frame_shape(void* self, int64_t frameShape);
+void q_lcdnumber_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -315,7 +315,7 @@ void q_lcdnumber_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QLCDNumber*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_lcdnumber_frame_shadow(void* self);
+int32_t q_lcdnumber_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -323,7 +323,7 @@ int64_t q_lcdnumber_frame_shadow(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param frameShadow enum QFrame__Shadow
-void q_lcdnumber_set_frame_shadow(void* self, int64_t frameShadow);
+void q_lcdnumber_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -441,7 +441,7 @@ bool q_lcdnumber_is_modal(void* self);
 /// @param self QLCDNumber*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_lcdnumber_window_modality(void* self);
+int32_t q_lcdnumber_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -449,7 +449,7 @@ int64_t q_lcdnumber_window_modality(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param windowModality enum Qt__WindowModality
-void q_lcdnumber_set_window_modality(void* self, int64_t windowModality);
+void q_lcdnumber_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -912,7 +912,7 @@ void q_lcdnumber_set_palette(void* self, void* palette);
 ///
 /// @param self QLCDNumber*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_lcdnumber_set_background_role(void* self, int64_t backgroundRole);
+void q_lcdnumber_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -921,7 +921,7 @@ void q_lcdnumber_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QLCDNumber*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_lcdnumber_background_role(void* self);
+int32_t q_lcdnumber_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -929,7 +929,7 @@ int64_t q_lcdnumber_background_role(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_lcdnumber_set_foreground_role(void* self, int64_t foregroundRole);
+void q_lcdnumber_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -938,7 +938,7 @@ void q_lcdnumber_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QLCDNumber*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_lcdnumber_foreground_role(void* self);
+int32_t q_lcdnumber_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1340,7 +1340,7 @@ void q_lcdnumber_set_accessible_description(void* self, const char* description)
 ///
 /// @param self QLCDNumber*
 /// @param direction enum Qt__LayoutDirection
-void q_lcdnumber_set_layout_direction(void* self, int64_t direction);
+void q_lcdnumber_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1349,7 +1349,7 @@ void q_lcdnumber_set_layout_direction(void* self, int64_t direction);
 /// @param self QLCDNumber*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_lcdnumber_layout_direction(void* self);
+int32_t q_lcdnumber_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1428,7 +1428,7 @@ void q_lcdnumber_clear_focus(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param reason enum Qt__FocusReason
-void q_lcdnumber_set_focus2(void* self, int64_t reason);
+void q_lcdnumber_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1437,7 +1437,7 @@ void q_lcdnumber_set_focus2(void* self, int64_t reason);
 /// @param self QLCDNumber*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_lcdnumber_focus_policy(void* self);
+int32_t q_lcdnumber_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1445,7 +1445,7 @@ int64_t q_lcdnumber_focus_policy(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param policy enum Qt__FocusPolicy
-void q_lcdnumber_set_focus_policy(void* self, int64_t policy);
+void q_lcdnumber_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1484,7 +1484,7 @@ QWidget* q_lcdnumber_focus_proxy(void* self);
 /// @param self QLCDNumber*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_lcdnumber_context_menu_policy(void* self);
+int32_t q_lcdnumber_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1492,7 +1492,7 @@ int64_t q_lcdnumber_context_menu_policy(void* self);
 ///
 /// @param self QLCDNumber*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_lcdnumber_set_context_menu_policy(void* self, int64_t policy);
+void q_lcdnumber_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1910,7 +1910,7 @@ void q_lcdnumber_set_size_policy(void* self, void* sizePolicy);
 /// @param self QLCDNumber*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_lcdnumber_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_lcdnumber_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2218,7 +2218,7 @@ QWidget* q_lcdnumber_child_at3(void* self, void* p);
 ///
 /// @param self QLCDNumber*
 /// @param param1 enum Qt__WidgetAttribute
-void q_lcdnumber_set_attribute(void* self, int64_t param1);
+void q_lcdnumber_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2226,7 +2226,7 @@ void q_lcdnumber_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QLCDNumber*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_lcdnumber_test_attribute(void* self, int64_t param1);
+bool q_lcdnumber_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2459,7 +2459,7 @@ void q_lcdnumber_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QLCDNumber*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_lcdnumber_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_lcdnumber_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2495,7 +2495,7 @@ void q_lcdnumber_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QLCDNumber*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_lcdnumber_set_attribute2(void* self, int64_t param1, bool on);
+void q_lcdnumber_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2604,7 +2604,7 @@ void q_lcdnumber_kill_timer(void* self, int id);
 ///
 /// @param self QLCDNumber*
 /// @param id enum Qt__TimerId
-void q_lcdnumber_kill_timer2(void* self, int64_t id);
+void q_lcdnumber_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2773,7 +2773,7 @@ bool q_lcdnumber_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QLCDNumber*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_lcdnumber_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_lcdnumber_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2784,7 +2784,7 @@ int32_t q_lcdnumber_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_lcdnumber_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_lcdnumber_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2795,7 +2795,7 @@ QMetaObject__Connection* q_lcdnumber_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_lcdnumber_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_lcdnumber_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2902,7 +2902,7 @@ double q_lcdnumber_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_lcdnumber_encode_metric_f(int64_t metric, double value);
+int32_t q_lcdnumber_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QFrame
 ///
@@ -3868,7 +3868,7 @@ void q_lcdnumber_on_native_event(void* self, bool (*callback)(void*, const char*
 ///
 /// @param self QLCDNumber*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_lcdnumber_metric(void* self, int64_t param1);
+int32_t q_lcdnumber_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3878,7 +3878,7 @@ int32_t q_lcdnumber_metric(void* self, int64_t param1);
 ///
 /// @param self QLCDNumber*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1);
+int32_t q_lcdnumber_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3888,7 +3888,7 @@ int32_t q_lcdnumber_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QLCDNumber*
 /// @param callback int32_t fn(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric)
-void q_lcdnumber_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_lcdnumber_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4545,7 +4545,7 @@ void q_lcdnumber_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param self QLCDNumber*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_lcdnumber_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_lcdnumber_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4556,7 +4556,7 @@ double q_lcdnumber_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 /// @param self QLCDNumber*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4566,7 +4566,7 @@ double q_lcdnumber_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// @param self QLCDNumber*
 /// @param callback double fn(QLCDNumber*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_lcdnumber_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

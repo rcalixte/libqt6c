@@ -26,7 +26,7 @@ QSslCipher* q_sslcipher_new2(const char* name);
 ///
 /// @param name const char*
 /// @param protocol enum QSsl__SslProtocol
-QSslCipher* q_sslcipher_new3(const char* name, int64_t protocol);
+QSslCipher* q_sslcipher_new3(const char* name, int32_t protocol);
 
 /// q_sslcipher_new4 constructs a new QSslCipher object.
 ///
@@ -112,7 +112,7 @@ const char* q_sslcipher_protocol_string(void* self);
 /// @param self QSslCipher*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_sslcipher_protocol(void* self);
+int32_t q_sslcipher_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslcipher.html#dtor.QSslCipher)
 ///

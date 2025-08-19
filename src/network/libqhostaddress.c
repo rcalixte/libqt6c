@@ -41,7 +41,7 @@ QHostAddress* q_hostaddress_new6(void* copyVal) {
     return QHostAddress_new6((QHostAddress*)copyVal);
 }
 
-QHostAddress* q_hostaddress_new7(int64_t address) {
+QHostAddress* q_hostaddress_new7(int32_t address) {
     return QHostAddress_new7(address);
 }
 
@@ -49,7 +49,7 @@ void q_hostaddress_operator_assign(void* self, void* other) {
     QHostAddress_OperatorAssign((QHostAddress*)self, (QHostAddress*)other);
 }
 
-void q_hostaddress_operator_assign2(void* self, int64_t address) {
+void q_hostaddress_operator_assign2(void* self, int32_t address) {
     QHostAddress_OperatorAssign2((QHostAddress*)self, address);
 }
 
@@ -73,11 +73,11 @@ bool q_hostaddress_set_address5(void* self, const char* address) {
     return QHostAddress_SetAddress5((QHostAddress*)self, qstring(address));
 }
 
-void q_hostaddress_set_address6(void* self, int64_t address) {
+void q_hostaddress_set_address6(void* self, int32_t address) {
     QHostAddress_SetAddress6((QHostAddress*)self, address);
 }
 
-int64_t q_hostaddress_protocol(void* self) {
+int32_t q_hostaddress_protocol(void* self) {
     return QHostAddress_Protocol((QHostAddress*)self);
 }
 
@@ -115,7 +115,7 @@ bool q_hostaddress_operator_equal(void* self, void* address) {
     return QHostAddress_OperatorEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_equal2(void* self, int64_t address) {
+bool q_hostaddress_operator_equal2(void* self, int32_t address) {
     return QHostAddress_OperatorEqual2((QHostAddress*)self, address);
 }
 
@@ -123,7 +123,7 @@ bool q_hostaddress_operator_not_equal(void* self, void* address) {
     return QHostAddress_OperatorNotEqual((QHostAddress*)self, (QHostAddress*)address);
 }
 
-bool q_hostaddress_operator_not_equal2(void* self, int64_t address) {
+bool q_hostaddress_operator_not_equal2(void* self, int32_t address) {
     return QHostAddress_OperatorNotEqual2((QHostAddress*)self, address);
 }
 

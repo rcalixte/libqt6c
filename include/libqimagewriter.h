@@ -178,7 +178,7 @@ bool q_imagewriter_write(void* self, void* image);
 /// @param self QImageWriter*
 ///
 /// @return enum QImageWriter__ImageWriterError
-int64_t q_imagewriter_error(void* self);
+int32_t q_imagewriter_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#errorString)
 ///
@@ -191,7 +191,7 @@ const char* q_imagewriter_error_string(void* self);
 ///
 /// @param self QImageWriter*
 /// @param option enum QImageIOHandler__ImageOption
-bool q_imagewriter_supports_option(void* self, int64_t option);
+bool q_imagewriter_supports_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagewriter.html#supportedImageFormats)
 ///

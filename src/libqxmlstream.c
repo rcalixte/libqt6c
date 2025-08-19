@@ -169,7 +169,7 @@ bool q_xmlstreamreader_at_end(void* self) {
     return QXmlStreamReader_AtEnd((QXmlStreamReader*)self);
 }
 
-int64_t q_xmlstreamreader_read_next(void* self) {
+int32_t q_xmlstreamreader_read_next(void* self) {
     return QXmlStreamReader_ReadNext((QXmlStreamReader*)self);
 }
 
@@ -181,7 +181,7 @@ void q_xmlstreamreader_skip_current_element(void* self) {
     QXmlStreamReader_SkipCurrentElement((QXmlStreamReader*)self);
 }
 
-int64_t q_xmlstreamreader_token_type(void* self) {
+int32_t q_xmlstreamreader_token_type(void* self) {
     return QXmlStreamReader_TokenType((QXmlStreamReader*)self);
 }
 
@@ -317,7 +317,7 @@ const char* q_xmlstreamreader_error_string(void* self) {
     return _ret;
 }
 
-int64_t q_xmlstreamreader_error(void* self) {
+int32_t q_xmlstreamreader_error(void* self) {
     return QXmlStreamReader_Error((QXmlStreamReader*)self);
 }
 
@@ -333,7 +333,7 @@ QXmlStreamEntityResolver* q_xmlstreamreader_entity_resolver(void* self) {
     return QXmlStreamReader_EntityResolver((QXmlStreamReader*)self);
 }
 
-const char* q_xmlstreamreader_read_element_text1(void* self, int64_t behaviour) {
+const char* q_xmlstreamreader_read_element_text1(void* self, int32_t behaviour) {
     libqt_string _str = QXmlStreamReader_ReadElementText1((QXmlStreamReader*)self, behaviour);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

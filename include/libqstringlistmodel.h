@@ -46,13 +46,13 @@ void* q_stringlistmodel_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_stringlistmodel_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_stringlistmodel_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStringListModel*
 /// @param callback int32_t fn(QStringListModel*, enum QMetaObject__Call, int, void*)
-void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_stringlistmodel_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_stringlistmodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_stringlistmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -348,7 +348,7 @@ bool q_stringlistmodel_qbase_set_item_data(void* self, void* index, libqt_map /*
 /// @param self QStringListModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
-void q_stringlistmodel_sort(void* self, int column, int64_t order);
+void q_stringlistmodel_sort(void* self, int column, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
 ///
@@ -356,7 +356,7 @@ void q_stringlistmodel_sort(void* self, int column, int64_t order);
 ///
 /// @param self QStringListModel*
 /// @param callback void fn(QStringListModel*, int, enum Qt__SortOrder)
-void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int64_t));
+void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#sort)
 ///
@@ -365,7 +365,7 @@ void q_stringlistmodel_on_sort(void* self, void (*callback)(void*, int, int64_t)
 /// @param self QStringListModel*
 /// @param column int
 /// @param order enum Qt__SortOrder
-void q_stringlistmodel_qbase_sort(void* self, int column, int64_t order);
+void q_stringlistmodel_qbase_sort(void* self, int column, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstringlistmodel.html#stringList)
 ///
@@ -601,7 +601,7 @@ void q_stringlistmodel_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param orientation enum Qt__Orientation
 /// @param first int
 /// @param last int
-void q_stringlistmodel_header_data_changed(void* self, int64_t orientation, int first, int last);
+void q_stringlistmodel_header_data_changed(void* self, int32_t orientation, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -609,7 +609,7 @@ void q_stringlistmodel_header_data_changed(void* self, int64_t orientation, int 
 ///
 /// @param self QStringListModel*
 /// @param callback void fn(QStringListModel*, enum Qt__Orientation, int, int)
-void q_stringlistmodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int));
+void q_stringlistmodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -737,7 +737,7 @@ void q_stringlistmodel_on_layout_changed1(void* self, void (*callback)(void*, li
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int64_t hint);
+void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -745,7 +745,7 @@ void q_stringlistmodel_layout_changed2(void* self, libqt_list parents, int64_t h
 ///
 /// @param self QStringListModel*
 /// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_stringlistmodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -770,7 +770,7 @@ void q_stringlistmodel_on_layout_about_to_be_changed1(void* self, void (*callbac
 /// @param self QStringListModel*
 /// @param parents libqt_list /* of QPersistentModelIndex* */
 /// @param hint enum QAbstractItemModel__LayoutChangeHint
-void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint);
+void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -778,7 +778,7 @@ void q_stringlistmodel_layout_about_to_be_changed2(void* self, libqt_list parent
 ///
 /// @param self QStringListModel*
 /// @param callback void fn(QStringListModel*, libqt_list /* of QPersistentModelIndex* */, enum QAbstractItemModel__LayoutChangeHint)
-void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t));
+void q_stringlistmodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t));
 
 /// Inherited from QObject
 ///
@@ -870,7 +870,7 @@ void q_stringlistmodel_kill_timer(void* self, int id);
 ///
 /// @param self QStringListModel*
 /// @param id enum Qt__TimerId
-void q_stringlistmodel_kill_timer2(void* self, int64_t id);
+void q_stringlistmodel_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1040,7 +1040,7 @@ bool q_stringlistmodel_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStringListModel*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_stringlistmodel_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_stringlistmodel_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1051,7 +1051,7 @@ int32_t q_stringlistmodel_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stringlistmodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_stringlistmodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1062,7 +1062,7 @@ QMetaObject__Connection* q_stringlistmodel_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_stringlistmodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_stringlistmodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1126,7 +1126,7 @@ void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int,
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_stringlistmodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_stringlistmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1140,7 +1140,7 @@ bool q_stringlistmodel_drop_mime_data(void* self, void* data, int64_t action, in
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractListModel
 ///
@@ -1150,7 +1150,7 @@ bool q_stringlistmodel_qbase_drop_mime_data(void* self, void* data, int64_t acti
 ///
 /// @param self QStringListModel*
 /// @param callback bool fn(QStringListModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
-void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
+void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1162,7 +1162,7 @@ void q_stringlistmodel_on_drop_mime_data(void* self, bool (*callback)(void*, voi
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
-QVariant* q_stringlistmodel_header_data(void* self, int section, int64_t orientation, int role);
+QVariant* q_stringlistmodel_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1174,7 +1174,7 @@ QVariant* q_stringlistmodel_header_data(void* self, int section, int64_t orienta
 /// @param section int
 /// @param orientation enum Qt__Orientation
 /// @param role int
-QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int64_t orientation, int role);
+QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1184,7 +1184,7 @@ QVariant* q_stringlistmodel_qbase_header_data(void* self, int section, int64_t o
 ///
 /// @param self QStringListModel*
 /// @param callback QVariant* fn(QStringListModel*, int, enum Qt__Orientation, int)
-void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int));
+void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1197,7 +1197,7 @@ void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, i
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
-bool q_stringlistmodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
+bool q_stringlistmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1210,7 +1210,7 @@ bool q_stringlistmodel_set_header_data(void* self, int section, int64_t orientat
 /// @param orientation enum Qt__Orientation
 /// @param value QVariant*
 /// @param role int
-bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role);
+bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1220,7 +1220,7 @@ bool q_stringlistmodel_qbase_set_header_data(void* self, int section, int64_t or
 ///
 /// @param self QStringListModel*
 /// @param callback bool fn(QStringListModel*, int, enum Qt__Orientation, QVariant*, int)
-void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int));
+void q_stringlistmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1296,7 +1296,7 @@ void q_stringlistmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, li
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1310,7 +1310,7 @@ bool q_stringlistmodel_can_drop_mime_data(void* self, void* data, int64_t action
 /// @param row int
 /// @param column int
 /// @param parent QModelIndex*
-bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent);
+bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1320,7 +1320,7 @@ bool q_stringlistmodel_qbase_can_drop_mime_data(void* self, void* data, int64_t 
 ///
 /// @param self QStringListModel*
 /// @param callback bool fn(QStringListModel*, QMimeData*, enum Qt__DropAction, int, int, QModelIndex*)
-void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*));
+void q_stringlistmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
 /// Inherited from QAbstractItemModel
 ///

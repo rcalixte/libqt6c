@@ -288,7 +288,7 @@ QDateTime* q_fileinfo_last_read(void* self) {
     return QFileInfo_LastRead((QFileInfo*)self);
 }
 
-QDateTime* q_fileinfo_file_time(void* self, int64_t time) {
+QDateTime* q_fileinfo_file_time(void* self, int32_t time) {
     return QFileInfo_FileTime((QFileInfo*)self, time);
 }
 
@@ -308,7 +308,7 @@ QDateTime* q_fileinfo_last_read2(void* self, void* tz) {
     return QFileInfo_LastRead2((QFileInfo*)self, (QTimeZone*)tz);
 }
 
-QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz) {
+QDateTime* q_fileinfo_file_time2(void* self, int32_t time, void* tz) {
     return QFileInfo_FileTime2((QFileInfo*)self, time, (QTimeZone*)tz);
 }
 

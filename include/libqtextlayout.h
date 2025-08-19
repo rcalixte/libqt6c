@@ -74,7 +74,7 @@ double q_textinlineobject_height(void* self);
 /// @param self QTextInlineObject*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textinlineobject_text_direction(void* self);
+int32_t q_textinlineobject_text_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextinlineobject.html#setWidth)
 ///
@@ -236,14 +236,14 @@ bool q_textlayout_cache_enabled(void* self);
 ///
 /// @param self QTextLayout*
 /// @param style enum Qt__CursorMoveStyle
-void q_textlayout_set_cursor_move_style(void* self, int64_t style);
+void q_textlayout_set_cursor_move_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#cursorMoveStyle)
 ///
 /// @param self QTextLayout*
 ///
 /// @return enum Qt__CursorMoveStyle
-int64_t q_textlayout_cursor_move_style(void* self);
+int32_t q_textlayout_cursor_move_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#beginLayout)
 ///
@@ -386,14 +386,14 @@ void q_textlayout_set_flags(void* self, int flags);
 /// @param self QTextLayout*
 /// @param oldPos int
 /// @param mode enum QTextLayout__CursorMode
-int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int64_t mode);
+int32_t q_textlayout_next_cursor_position2(void* self, int oldPos, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#previousCursorPosition)
 ///
 /// @param self QTextLayout*
 /// @param oldPos int
 /// @param mode enum QTextLayout__CursorMode
-int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int64_t mode);
+int32_t q_textlayout_previous_cursor_position2(void* self, int oldPos, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout.html#draw)
 ///
@@ -619,21 +619,21 @@ libqt_list /* of QGlyphRun* */ q_textline_glyph_runs2(void* self);
 /// @param self QTextLine*
 /// @param cursorPos int*
 /// @param edge enum QTextLine__Edge
-double q_textline_cursor_to_x22(void* self, int* cursorPos, int64_t edge);
+double q_textline_cursor_to_x22(void* self, int* cursorPos, int32_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#cursorToX)
 ///
 /// @param self QTextLine*
 /// @param cursorPos int
 /// @param edge enum QTextLine__Edge
-double q_textline_cursor_to_x23(void* self, int cursorPos, int64_t edge);
+double q_textline_cursor_to_x23(void* self, int cursorPos, int32_t edge);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#xToCursor)
 ///
 /// @param self QTextLine*
 /// @param x double
 /// @param param2 enum QTextLine__CursorPosition
-int32_t q_textline_x_to_cursor2(void* self, double x, int64_t param2);
+int32_t q_textline_x_to_cursor2(void* self, double x, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextline.html#glyphRuns)
 ///
@@ -661,8 +661,6 @@ void q_textline_delete(void* self);
 ///
 QTextLayout__FormatRange* q_textlayout__formatrange_new();
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout::formatrange.html#dtor.QTextLayout::FormatRange)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTextLayout__FormatRange*

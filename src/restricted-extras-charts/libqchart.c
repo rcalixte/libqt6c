@@ -47,15 +47,15 @@ void* q_chart_metacast(void* self, const char* param1) {
     return QChart_Metacast((QChart*)self, param1);
 }
 
-int32_t q_chart_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_chart_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QChart_Metacall((QChart*)self, param1, param2, param3);
 }
 
-void q_chart_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_chart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QChart_OnMetacall((QChart*)self, (intptr_t)callback);
 }
 
-int32_t q_chart_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_chart_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QChart_QBaseMetacall((QChart*)self, param1, param2, param3);
 }
 
@@ -116,11 +116,11 @@ void q_chart_create_default_axes(void* self) {
     QChart_CreateDefaultAxes((QChart*)self);
 }
 
-void q_chart_set_theme(void* self, int64_t theme) {
+void q_chart_set_theme(void* self, int32_t theme) {
     QChart_SetTheme((QChart*)self, theme);
 }
 
-int64_t q_chart_theme(void* self) {
+int32_t q_chart_theme(void* self) {
     return QChart_Theme((QChart*)self);
 }
 
@@ -311,7 +311,7 @@ QPointF* q_chart_map_to_position(void* self, void* value) {
     return QChart_MapToPosition((QChart*)self, (QPointF*)value);
 }
 
-int64_t q_chart_chart_type(void* self) {
+int32_t q_chart_chart_type(void* self) {
     return QChart_ChartType((QChart*)self);
 }
 
@@ -395,11 +395,11 @@ void q_chart_adjust_size(void* self) {
     QGraphicsWidget_AdjustSize((QGraphicsWidget*)self);
 }
 
-int64_t q_chart_layout_direction(void* self) {
+int32_t q_chart_layout_direction(void* self) {
     return QGraphicsWidget_LayoutDirection((QGraphicsWidget*)self);
 }
 
-void q_chart_set_layout_direction(void* self, int64_t direction) {
+void q_chart_set_layout_direction(void* self, int32_t direction) {
     QGraphicsWidget_SetLayoutDirection((QGraphicsWidget*)self, direction);
 }
 
@@ -518,11 +518,11 @@ const char* q_chart_window_title(void* self) {
     return _ret;
 }
 
-int64_t q_chart_focus_policy(void* self) {
+int32_t q_chart_focus_policy(void* self) {
     return QGraphicsWidget_FocusPolicy((QGraphicsWidget*)self);
 }
 
-void q_chart_set_focus_policy(void* self, int64_t policy) {
+void q_chart_set_focus_policy(void* self, int32_t policy) {
     QGraphicsWidget_SetFocusPolicy((QGraphicsWidget*)self, policy);
 }
 
@@ -575,11 +575,11 @@ libqt_list /* of QAction* */ q_chart_actions(void* self) {
     return _arr;
 }
 
-void q_chart_set_attribute(void* self, int64_t attribute) {
+void q_chart_set_attribute(void* self, int32_t attribute) {
     QGraphicsWidget_SetAttribute((QGraphicsWidget*)self, attribute);
 }
 
-bool q_chart_test_attribute(void* self, int64_t attribute) {
+bool q_chart_test_attribute(void* self, int32_t attribute) {
     return QGraphicsWidget_TestAttribute((QGraphicsWidget*)self, attribute);
 }
 
@@ -603,7 +603,7 @@ bool q_chart_close(void* self) {
     return QGraphicsWidget_Close((QGraphicsWidget*)self);
 }
 
-int32_t q_chart_grab_shortcut2(void* self, void* sequence, int64_t context) {
+int32_t q_chart_grab_shortcut2(void* self, void* sequence, int32_t context) {
     return QGraphicsWidget_GrabShortcut2((QGraphicsWidget*)self, (QKeySequence*)sequence, context);
 }
 
@@ -615,7 +615,7 @@ void q_chart_set_shortcut_auto_repeat2(void* self, int id, bool enabled) {
     QGraphicsWidget_SetShortcutAutoRepeat2((QGraphicsWidget*)self, id, enabled);
 }
 
-void q_chart_set_attribute2(void* self, int64_t attribute, bool on) {
+void q_chart_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
@@ -774,7 +774,7 @@ void q_chart_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_chart_kill_timer2(void* self, int64_t id) {
+void q_chart_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -878,15 +878,15 @@ bool q_chart_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_chart_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_chart_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_chart_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_chart_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_chart_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_chart_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -971,7 +971,7 @@ int64_t q_chart_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
-void q_chart_set_flag(void* self, int64_t flag) {
+void q_chart_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
@@ -979,19 +979,19 @@ void q_chart_set_flags(void* self, int64_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
-int64_t q_chart_cache_mode(void* self) {
+int32_t q_chart_cache_mode(void* self) {
     return QGraphicsItem_CacheMode((QGraphicsItem*)self);
 }
 
-void q_chart_set_cache_mode(void* self, int64_t mode) {
+void q_chart_set_cache_mode(void* self, int32_t mode) {
     QGraphicsItem_SetCacheMode((QGraphicsItem*)self, mode);
 }
 
-int64_t q_chart_panel_modality(void* self) {
+int32_t q_chart_panel_modality(void* self) {
     return QGraphicsItem_PanelModality((QGraphicsItem*)self);
 }
 
-void q_chart_set_panel_modality(void* self, int64_t panelModality) {
+void q_chart_set_panel_modality(void* self, int32_t panelModality) {
     QGraphicsItem_SetPanelModality((QGraphicsItem*)self, panelModality);
 }
 
@@ -1504,15 +1504,15 @@ void q_chart_remove_scene_event_filter(void* self, void* filterItem) {
     QGraphicsItem_RemoveSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)filterItem);
 }
 
-void q_chart_set_flag2(void* self, int64_t flag, bool enabled) {
+void q_chart_set_flag2(void* self, int32_t flag, bool enabled) {
     QGraphicsItem_SetFlag2((QGraphicsItem*)self, flag, enabled);
 }
 
-void q_chart_set_cache_mode2(void* self, int64_t mode, void* cacheSize) {
+void q_chart_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
-void q_chart_set_focus1(void* self, int64_t focusReason) {
+void q_chart_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
 
@@ -1544,7 +1544,7 @@ void q_chart_set_transform2(void* self, void* matrix, bool combine) {
     QGraphicsItem_SetTransform2((QGraphicsItem*)self, (QTransform*)matrix, combine);
 }
 
-libqt_list /* of QGraphicsItem* */ q_chart_colliding_items1(void* self, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_chart_colliding_items1(void* self, int32_t mode) {
     libqt_list _arr = QGraphicsItem_CollidingItems1((QGraphicsItem*)self, mode);
     return _arr;
 }
@@ -1565,7 +1565,7 @@ void q_chart_set_size_policy(void* self, void* policy) {
     QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
 }
 
-void q_chart_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy) {
+void q_chart_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
     QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
 }
 
@@ -1665,7 +1665,7 @@ QRectF* q_chart_contents_rect(void* self) {
     return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
 }
 
-QSizeF* q_chart_effective_size_hint(void* self, int64_t which) {
+QSizeF* q_chart_effective_size_hint(void* self, int32_t which) {
     return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
 }
 
@@ -1689,11 +1689,11 @@ bool q_chart_owned_by_layout(void* self) {
     return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
 }
 
-void q_chart_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType) {
+void q_chart_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
     QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
 }
 
-QSizeF* q_chart_effective_size_hint2(void* self, int64_t which, void* constraint) {
+QSizeF* q_chart_effective_size_hint2(void* self, int32_t which, void* constraint) {
     return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 
@@ -1793,15 +1793,15 @@ void q_chart_on_init_style_option(void* self, void (*callback)(void*, void*)) {
     QChart_OnInitStyleOption((QChart*)self, (intptr_t)callback);
 }
 
-QSizeF* q_chart_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_chart_size_hint(void* self, int32_t which, void* constraint) {
     return QChart_SizeHint((QChart*)self, which, (QSizeF*)constraint);
 }
 
-QSizeF* q_chart_qbase_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_chart_qbase_size_hint(void* self, int32_t which, void* constraint) {
     return QChart_QBaseSizeHint((QChart*)self, which, (QSizeF*)constraint);
 }
 
-void q_chart_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+void q_chart_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*)) {
     QChart_OnSizeHint((QChart*)self, (intptr_t)callback);
 }
 
@@ -1817,15 +1817,15 @@ void q_chart_on_update_geometry(void* self, void (*callback)()) {
     QChart_OnUpdateGeometry((QChart*)self, (intptr_t)callback);
 }
 
-QVariant* q_chart_item_change(void* self, int64_t change, void* value) {
+QVariant* q_chart_item_change(void* self, int32_t change, void* value) {
     return QChart_ItemChange((QChart*)self, change, (QVariant*)value);
 }
 
-QVariant* q_chart_qbase_item_change(void* self, int64_t change, void* value) {
+QVariant* q_chart_qbase_item_change(void* self, int32_t change, void* value) {
     return QChart_QBaseItemChange((QChart*)self, change, (QVariant*)value);
 }
 
-void q_chart_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*)) {
+void q_chart_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
     QChart_OnItemChange((QChart*)self, (intptr_t)callback);
 }
 
@@ -1865,15 +1865,15 @@ void q_chart_on_window_frame_event(void* self, bool (*callback)(void*, void*)) {
     QChart_OnWindowFrameEvent((QChart*)self, (intptr_t)callback);
 }
 
-int64_t q_chart_window_frame_section_at(void* self, void* pos) {
+int32_t q_chart_window_frame_section_at(void* self, void* pos) {
     return QChart_WindowFrameSectionAt((QChart*)self, (QPointF*)pos);
 }
 
-int64_t q_chart_qbase_window_frame_section_at(void* self, void* pos) {
+int32_t q_chart_qbase_window_frame_section_at(void* self, void* pos) {
     return QChart_QBaseWindowFrameSectionAt((QChart*)self, (QPointF*)pos);
 }
 
-void q_chart_on_window_frame_section_at(void* self, int64_t (*callback)(void*, void*)) {
+void q_chart_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*)) {
     QChart_OnWindowFrameSectionAt((QChart*)self, (intptr_t)callback);
 }
 
@@ -2177,27 +2177,27 @@ void q_chart_on_contains(void* self, bool (*callback)(void*, void*)) {
     QChart_OnContains((QChart*)self, (intptr_t)callback);
 }
 
-bool q_chart_collides_with_item(void* self, void* other, int64_t mode) {
+bool q_chart_collides_with_item(void* self, void* other, int32_t mode) {
     return QChart_CollidesWithItem((QChart*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_chart_qbase_collides_with_item(void* self, void* other, int64_t mode) {
+bool q_chart_qbase_collides_with_item(void* self, void* other, int32_t mode) {
     return QChart_QBaseCollidesWithItem((QChart*)self, (QGraphicsItem*)other, mode);
 }
 
-void q_chart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_chart_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
     QChart_OnCollidesWithItem((QChart*)self, (intptr_t)callback);
 }
 
-bool q_chart_collides_with_path(void* self, void* path, int64_t mode) {
+bool q_chart_collides_with_path(void* self, void* path, int32_t mode) {
     return QChart_CollidesWithPath((QChart*)self, (QPainterPath*)path, mode);
 }
 
-bool q_chart_qbase_collides_with_path(void* self, void* path, int64_t mode) {
+bool q_chart_qbase_collides_with_path(void* self, void* path, int32_t mode) {
     return QChart_QBaseCollidesWithPath((QChart*)self, (QPainterPath*)path, mode);
 }
 
-void q_chart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_chart_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
     QChart_OnCollidesWithPath((QChart*)self, (intptr_t)callback);
 }
 

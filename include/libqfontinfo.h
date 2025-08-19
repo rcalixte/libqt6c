@@ -74,7 +74,7 @@ bool q_fontinfo_italic(void* self);
 /// @param self QFontInfo*
 ///
 /// @return enum QFont__Style
-int64_t q_fontinfo_style(void* self);
+int32_t q_fontinfo_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#weight)
 ///
@@ -111,7 +111,7 @@ bool q_fontinfo_fixed_pitch(void* self);
 /// @param self QFontInfo*
 ///
 /// @return enum QFont__StyleHint
-int64_t q_fontinfo_style_hint(void* self);
+int32_t q_fontinfo_style_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfontinfo.html#legacyWeight)
 ///

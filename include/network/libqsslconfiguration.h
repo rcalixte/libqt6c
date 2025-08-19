@@ -56,26 +56,26 @@ bool q_sslconfiguration_is_null(void* self);
 /// @param self QSslConfiguration*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_sslconfiguration_protocol(void* self);
+int32_t q_sslconfiguration_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setProtocol)
 ///
 /// @param self QSslConfiguration*
 /// @param protocol enum QSsl__SslProtocol
-void q_sslconfiguration_set_protocol(void* self, int64_t protocol);
+void q_sslconfiguration_set_protocol(void* self, int32_t protocol);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#peerVerifyMode)
 ///
 /// @param self QSslConfiguration*
 ///
 /// @return enum QSslSocket__PeerVerifyMode
-int64_t q_sslconfiguration_peer_verify_mode(void* self);
+int32_t q_sslconfiguration_peer_verify_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#setPeerVerifyMode)
 ///
 /// @param self QSslConfiguration*
 /// @param mode enum QSslSocket__PeerVerifyMode
-void q_sslconfiguration_set_peer_verify_mode(void* self, int64_t mode);
+void q_sslconfiguration_set_peer_verify_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#peerVerifyDepth)
 ///
@@ -130,7 +130,7 @@ QSslCipher* q_sslconfiguration_session_cipher(void* self);
 /// @param self QSslConfiguration*
 ///
 /// @return enum QSsl__SslProtocol
-int64_t q_sslconfiguration_session_protocol(void* self);
+int32_t q_sslconfiguration_session_protocol(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#privateKey)
 ///
@@ -202,13 +202,13 @@ libqt_list /* of QSslCertificate* */ q_sslconfiguration_system_ca_certificates()
 /// @param self QSslConfiguration*
 /// @param option enum QSsl__SslOption
 /// @param on bool
-void q_sslconfiguration_set_ssl_option(void* self, int64_t option, bool on);
+void q_sslconfiguration_set_ssl_option(void* self, int32_t option, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#testSslOption)
 ///
 /// @param self QSslConfiguration*
 /// @param option enum QSsl__SslOption
-bool q_sslconfiguration_test_ssl_option(void* self, int64_t option);
+bool q_sslconfiguration_test_ssl_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#sessionTicket)
 ///
@@ -371,14 +371,14 @@ char* q_sslconfiguration_next_negotiated_protocol(void* self);
 /// @param self QSslConfiguration*
 ///
 /// @return enum QSslConfiguration__NextProtocolNegotiationStatus
-int64_t q_sslconfiguration_next_protocol_negotiation_status(void* self);
+int32_t q_sslconfiguration_next_protocol_negotiation_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
 /// @param self QSslConfiguration*
 /// @param path const char*
 /// @param format enum QSsl__EncodingFormat
-bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int64_t format);
+bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#addCaCertificates)
 ///
@@ -386,7 +386,7 @@ bool q_sslconfiguration_add_ca_certificates22(void* self, const char* path, int6
 /// @param path const char*
 /// @param format enum QSsl__EncodingFormat
 /// @param syntax enum QSslCertificate__PatternSyntax
-bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int64_t format, int64_t syntax);
+bool q_sslconfiguration_add_ca_certificates3(void* self, const char* path, int32_t format, int32_t syntax);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslconfiguration.html#dtor.QSslConfiguration)
 ///

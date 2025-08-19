@@ -91,14 +91,14 @@ libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self);
 /// @param self QMimeDatabase*
 /// @param fileName const char*
 /// @param mode enum QMimeDatabase__MatchMode
-QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int64_t mode);
+QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#mimeTypeForFile)
 ///
 /// @param self QMimeDatabase*
 /// @param fileInfo QFileInfo*
 /// @param mode enum QMimeDatabase__MatchMode
-QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int64_t mode);
+QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmimedatabase.html#dtor.QMimeDatabase)
 ///

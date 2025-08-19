@@ -39,13 +39,13 @@ void* q_xylegendmarker_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_xylegendmarker_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_xylegendmarker_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QXYLegendMarker*
 /// @param callback int32_t fn(QXYLegendMarker*, enum QMetaObject__Call, int, void*)
-void q_xylegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_xylegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -53,7 +53,7 @@ void q_xylegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_xylegendmarker_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_xylegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -67,15 +67,15 @@ const char* q_xylegendmarker_tr(const char* s);
 /// @param self QXYLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
-int64_t q_xylegendmarker_type(void* self);
+int32_t q_xylegendmarker_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QXYLegendMarker*
-/// @param callback int64_t fn()
-void q_xylegendmarker_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_xylegendmarker_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#type)
 ///
@@ -84,7 +84,7 @@ void q_xylegendmarker_on_type(void* self, int64_t (*callback)());
 /// @param self QXYLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
-int64_t q_xylegendmarker_qbase_type(void* self);
+int32_t q_xylegendmarker_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxylegendmarker-qtcharts.html#series)
 ///
@@ -222,7 +222,7 @@ void q_xylegendmarker_set_visible(void* self, bool visible);
 /// @param self QXYLegendMarker*
 ///
 /// @return enum QLegend__MarkerShape
-int64_t q_xylegendmarker_shape(void* self);
+int32_t q_xylegendmarker_shape(void* self);
 
 /// Inherited from QLegendMarker
 ///
@@ -230,7 +230,7 @@ int64_t q_xylegendmarker_shape(void* self);
 ///
 /// @param self QXYLegendMarker*
 /// @param shape enum QLegend__MarkerShape
-void q_xylegendmarker_set_shape(void* self, int64_t shape);
+void q_xylegendmarker_set_shape(void* self, int32_t shape);
 
 /// Inherited from QLegendMarker
 ///
@@ -458,7 +458,7 @@ void q_xylegendmarker_kill_timer(void* self, int id);
 ///
 /// @param self QXYLegendMarker*
 /// @param id enum Qt__TimerId
-void q_xylegendmarker_kill_timer2(void* self, int64_t id);
+void q_xylegendmarker_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -635,7 +635,7 @@ bool q_xylegendmarker_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QXYLegendMarker*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_xylegendmarker_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_xylegendmarker_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -646,7 +646,7 @@ int32_t q_xylegendmarker_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_xylegendmarker_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_xylegendmarker_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -657,7 +657,7 @@ QMetaObject__Connection* q_xylegendmarker_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_xylegendmarker_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_xylegendmarker_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

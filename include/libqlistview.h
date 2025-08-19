@@ -35,13 +35,13 @@ void* q_listview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_listview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_listview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QListView*
 /// @param callback int32_t fn(QListView*, enum QMetaObject__Call, int, void*)
-void q_listview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_listview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_listview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_listview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_listview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -62,27 +62,27 @@ const char* q_listview_tr(const char* s);
 ///
 /// @param self QListView*
 /// @param movement enum QListView__Movement
-void q_listview_set_movement(void* self, int64_t movement);
+void q_listview_set_movement(void* self, int32_t movement);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#movement)
 ///
 /// @param self QListView*
 ///
 /// @return enum QListView__Movement
-int64_t q_listview_movement(void* self);
+int32_t q_listview_movement(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setFlow)
 ///
 /// @param self QListView*
 /// @param flow enum QListView__Flow
-void q_listview_set_flow(void* self, int64_t flow);
+void q_listview_set_flow(void* self, int32_t flow);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#flow)
 ///
 /// @param self QListView*
 ///
 /// @return enum QListView__Flow
-int64_t q_listview_flow(void* self);
+int32_t q_listview_flow(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setWrapping)
 ///
@@ -99,27 +99,27 @@ bool q_listview_is_wrapping(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum QListView__ResizeMode
-void q_listview_set_resize_mode(void* self, int64_t mode);
+void q_listview_set_resize_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#resizeMode)
 ///
 /// @param self QListView*
 ///
 /// @return enum QListView__ResizeMode
-int64_t q_listview_resize_mode(void* self);
+int32_t q_listview_resize_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setLayoutMode)
 ///
 /// @param self QListView*
 /// @param mode enum QListView__LayoutMode
-void q_listview_set_layout_mode(void* self, int64_t mode);
+void q_listview_set_layout_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#layoutMode)
 ///
 /// @param self QListView*
 ///
 /// @return enum QListView__LayoutMode
-int64_t q_listview_layout_mode(void* self);
+int32_t q_listview_layout_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#setSpacing)
 ///
@@ -158,14 +158,14 @@ QSize* q_listview_grid_size(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum QListView__ViewMode
-void q_listview_set_view_mode(void* self, int64_t mode);
+void q_listview_set_view_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#viewMode)
 ///
 /// @param self QListView*
 ///
 /// @return enum QListView__ViewMode
-int64_t q_listview_view_mode(void* self);
+int32_t q_listview_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#clearPropertyFlags)
 ///
@@ -269,7 +269,7 @@ QRect* q_listview_qbase_visual_rect(void* self, void* index);
 /// @param self QListView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_listview_scroll_to(void* self, void* index, int64_t hint);
+void q_listview_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#scrollTo)
 ///
@@ -277,7 +277,7 @@ void q_listview_scroll_to(void* self, void* index, int64_t hint);
 ///
 /// @param self QListView*
 /// @param callback void fn(QListView*, QModelIndex*, enum QAbstractItemView__ScrollHint)
-void q_listview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t));
+void q_listview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#scrollTo)
 ///
@@ -286,7 +286,7 @@ void q_listview_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t)
 /// @param self QListView*
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
-void q_listview_qbase_scroll_to(void* self, void* index, int64_t hint);
+void q_listview_qbase_scroll_to(void* self, void* index, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#indexAt)
 ///
@@ -839,7 +839,7 @@ int32_t q_listview_qbase_vertical_offset(void* self);
 /// @param self QListView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_listview_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_listview_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#moveCursor)
 ///
@@ -847,7 +847,7 @@ QModelIndex* q_listview_move_cursor(void* self, int64_t cursorAction, int64_t mo
 ///
 /// @param self QListView*
 /// @param callback QModelIndex* fn(QListView*, enum QAbstractItemView__CursorAction, flag of enum Qt__KeyboardModifier)
-void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t));
+void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#moveCursor)
 ///
@@ -856,7 +856,7 @@ void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64
 /// @param self QListView*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
-QModelIndex* q_listview_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers);
+QModelIndex* q_listview_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#rectForIndex)
 ///
@@ -1132,7 +1132,7 @@ QAbstractItemDelegate* q_listview_item_delegate(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum QAbstractItemView__SelectionMode
-void q_listview_set_selection_mode(void* self, int64_t mode);
+void q_listview_set_selection_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1141,7 +1141,7 @@ void q_listview_set_selection_mode(void* self, int64_t mode);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__SelectionMode
-int64_t q_listview_selection_mode(void* self);
+int32_t q_listview_selection_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1149,7 +1149,7 @@ int64_t q_listview_selection_mode(void* self);
 ///
 /// @param self QListView*
 /// @param behavior enum QAbstractItemView__SelectionBehavior
-void q_listview_set_selection_behavior(void* self, int64_t behavior);
+void q_listview_set_selection_behavior(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1158,7 +1158,7 @@ void q_listview_set_selection_behavior(void* self, int64_t behavior);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__SelectionBehavior
-int64_t q_listview_selection_behavior(void* self);
+int32_t q_listview_selection_behavior(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1197,7 +1197,7 @@ int64_t q_listview_edit_triggers(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_listview_set_vertical_scroll_mode(void* self, int64_t mode);
+void q_listview_set_vertical_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1206,7 +1206,7 @@ void q_listview_set_vertical_scroll_mode(void* self, int64_t mode);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_listview_vertical_scroll_mode(void* self);
+int32_t q_listview_vertical_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1221,7 +1221,7 @@ void q_listview_reset_vertical_scroll_mode(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum QAbstractItemView__ScrollMode
-void q_listview_set_horizontal_scroll_mode(void* self, int64_t mode);
+void q_listview_set_horizontal_scroll_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1230,7 +1230,7 @@ void q_listview_set_horizontal_scroll_mode(void* self, int64_t mode);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__ScrollMode
-int64_t q_listview_horizontal_scroll_mode(void* self);
+int32_t q_listview_horizontal_scroll_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1335,7 +1335,7 @@ bool q_listview_drag_drop_overwrite_mode(void* self);
 ///
 /// @param self QListView*
 /// @param behavior enum QAbstractItemView__DragDropMode
-void q_listview_set_drag_drop_mode(void* self, int64_t behavior);
+void q_listview_set_drag_drop_mode(void* self, int32_t behavior);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1344,7 +1344,7 @@ void q_listview_set_drag_drop_mode(void* self, int64_t behavior);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__DragDropMode
-int64_t q_listview_drag_drop_mode(void* self);
+int32_t q_listview_drag_drop_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1352,7 +1352,7 @@ int64_t q_listview_drag_drop_mode(void* self);
 ///
 /// @param self QListView*
 /// @param dropAction enum Qt__DropAction
-void q_listview_set_default_drop_action(void* self, int64_t dropAction);
+void q_listview_set_default_drop_action(void* self, int32_t dropAction);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1361,7 +1361,7 @@ void q_listview_set_default_drop_action(void* self, int64_t dropAction);
 /// @param self QListView*
 ///
 /// @return enum Qt__DropAction
-int64_t q_listview_default_drop_action(void* self);
+int32_t q_listview_default_drop_action(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1399,7 +1399,7 @@ QSize* q_listview_icon_size(void* self);
 ///
 /// @param self QListView*
 /// @param mode enum Qt__TextElideMode
-void q_listview_set_text_elide_mode(void* self, int64_t mode);
+void q_listview_set_text_elide_mode(void* self, int32_t mode);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1408,7 +1408,7 @@ void q_listview_set_text_elide_mode(void* self, int64_t mode);
 /// @param self QListView*
 ///
 /// @return enum Qt__TextElideMode
-int64_t q_listview_text_elide_mode(void* self);
+int32_t q_listview_text_elide_mode(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -1664,7 +1664,7 @@ void q_listview_on_icon_size_changed(void* self, void (*callback)(void*, void*))
 /// @param self QListView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_listview_vertical_scroll_bar_policy(void* self);
+int32_t q_listview_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1672,7 +1672,7 @@ int64_t q_listview_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QListView*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_listview_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_listview_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1696,7 +1696,7 @@ void q_listview_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QListView*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_listview_horizontal_scroll_bar_policy(void* self);
+int32_t q_listview_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1704,7 +1704,7 @@ int64_t q_listview_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QListView*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_listview_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_listview_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1782,7 +1782,7 @@ QSize* q_listview_maximum_viewport_size(void* self);
 /// @param self QListView*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_listview_size_adjust_policy(void* self);
+int32_t q_listview_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1790,7 +1790,7 @@ int64_t q_listview_size_adjust_policy(void* self);
 ///
 /// @param self QListView*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_listview_set_size_adjust_policy(void* self, int64_t policy);
+void q_listview_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -1821,7 +1821,7 @@ int32_t q_listview_frame_width(void* self);
 /// @param self QListView*
 ///
 /// @return enum QFrame__Shape
-int64_t q_listview_frame_shape(void* self);
+int32_t q_listview_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1829,7 +1829,7 @@ int64_t q_listview_frame_shape(void* self);
 ///
 /// @param self QListView*
 /// @param frameShape enum QFrame__Shape
-void q_listview_set_frame_shape(void* self, int64_t frameShape);
+void q_listview_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -1838,7 +1838,7 @@ void q_listview_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QListView*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_listview_frame_shadow(void* self);
+int32_t q_listview_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1846,7 +1846,7 @@ int64_t q_listview_frame_shadow(void* self);
 ///
 /// @param self QListView*
 /// @param frameShadow enum QFrame__Shadow
-void q_listview_set_frame_shadow(void* self, int64_t frameShadow);
+void q_listview_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -1964,7 +1964,7 @@ bool q_listview_is_modal(void* self);
 /// @param self QListView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_listview_window_modality(void* self);
+int32_t q_listview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1972,7 +1972,7 @@ int64_t q_listview_window_modality(void* self);
 ///
 /// @param self QListView*
 /// @param windowModality enum Qt__WindowModality
-void q_listview_set_window_modality(void* self, int64_t windowModality);
+void q_listview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -2435,7 +2435,7 @@ void q_listview_set_palette(void* self, void* palette);
 ///
 /// @param self QListView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_listview_set_background_role(void* self, int64_t backgroundRole);
+void q_listview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2444,7 +2444,7 @@ void q_listview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QListView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_listview_background_role(void* self);
+int32_t q_listview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2452,7 +2452,7 @@ int64_t q_listview_background_role(void* self);
 ///
 /// @param self QListView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_listview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_listview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2461,7 +2461,7 @@ void q_listview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QListView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_listview_foreground_role(void* self);
+int32_t q_listview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2863,7 +2863,7 @@ void q_listview_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QListView*
 /// @param direction enum Qt__LayoutDirection
-void q_listview_set_layout_direction(void* self, int64_t direction);
+void q_listview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -2872,7 +2872,7 @@ void q_listview_set_layout_direction(void* self, int64_t direction);
 /// @param self QListView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_listview_layout_direction(void* self);
+int32_t q_listview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2951,7 +2951,7 @@ void q_listview_clear_focus(void* self);
 ///
 /// @param self QListView*
 /// @param reason enum Qt__FocusReason
-void q_listview_set_focus2(void* self, int64_t reason);
+void q_listview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2960,7 +2960,7 @@ void q_listview_set_focus2(void* self, int64_t reason);
 /// @param self QListView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_listview_focus_policy(void* self);
+int32_t q_listview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2968,7 +2968,7 @@ int64_t q_listview_focus_policy(void* self);
 ///
 /// @param self QListView*
 /// @param policy enum Qt__FocusPolicy
-void q_listview_set_focus_policy(void* self, int64_t policy);
+void q_listview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3007,7 +3007,7 @@ QWidget* q_listview_focus_proxy(void* self);
 /// @param self QListView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_listview_context_menu_policy(void* self);
+int32_t q_listview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3015,7 +3015,7 @@ int64_t q_listview_context_menu_policy(void* self);
 ///
 /// @param self QListView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_listview_set_context_menu_policy(void* self, int64_t policy);
+void q_listview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3426,7 +3426,7 @@ void q_listview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QListView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_listview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_listview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -3734,7 +3734,7 @@ QWidget* q_listview_child_at3(void* self, void* p);
 ///
 /// @param self QListView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_listview_set_attribute(void* self, int64_t param1);
+void q_listview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3742,7 +3742,7 @@ void q_listview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QListView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_listview_test_attribute(void* self, int64_t param1);
+bool q_listview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3975,7 +3975,7 @@ void q_listview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QListView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_listview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_listview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -4011,7 +4011,7 @@ void q_listview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QListView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_listview_set_attribute2(void* self, int64_t param1, bool on);
+void q_listview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -4120,7 +4120,7 @@ void q_listview_kill_timer(void* self, int id);
 ///
 /// @param self QListView*
 /// @param id enum Qt__TimerId
-void q_listview_kill_timer2(void* self, int64_t id);
+void q_listview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4289,7 +4289,7 @@ bool q_listview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QListView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_listview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_listview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4300,7 +4300,7 @@ int32_t q_listview_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_listview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_listview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4311,7 +4311,7 @@ QMetaObject__Connection* q_listview_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_listview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_listview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4418,7 +4418,7 @@ double q_listview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_listview_encode_metric_f(int64_t metric, double value);
+int32_t q_listview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4843,7 +4843,7 @@ void q_listview_on_horizontal_scrollbar_value_changed(void* self, void (*callbac
 /// @param self QListView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_listview_close_editor(void* self, void* editor, int64_t hint);
+void q_listview_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4854,7 +4854,7 @@ void q_listview_close_editor(void* self, void* editor, int64_t hint);
 /// @param self QListView*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_listview_qbase_close_editor(void* self, void* editor, int64_t hint);
+void q_listview_qbase_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4864,7 +4864,7 @@ void q_listview_qbase_close_editor(void* self, void* editor, int64_t hint);
 ///
 /// @param self QListView*
 /// @param callback void fn(QListView*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
-void q_listview_on_close_editor(void* self, void (*callback)(void*, void*, int64_t));
+void q_listview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -4936,7 +4936,7 @@ void q_listview_on_editor_destroyed(void* self, void (*callback)(void*, void*));
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_listview_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_listview_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4948,7 +4948,7 @@ bool q_listview_edit2(void* self, void* index, int64_t trigger, void* event);
 /// @param index QModelIndex*
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
-bool q_listview_qbase_edit2(void* self, void* index, int64_t trigger, void* event);
+bool q_listview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -4958,7 +4958,7 @@ bool q_listview_qbase_edit2(void* self, void* index, int64_t trigger, void* even
 ///
 /// @param self QListView*
 /// @param callback bool fn(QListView*, QModelIndex*, enum QAbstractItemView__EditTrigger, QEvent*)
-void q_listview_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*));
+void q_listview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*));
 
 /// Inherited from QAbstractItemView
 ///
@@ -5930,7 +5930,7 @@ void q_listview_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QListView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_listview_metric(void* self, int64_t param1);
+int32_t q_listview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5940,7 +5940,7 @@ int32_t q_listview_metric(void* self, int64_t param1);
 ///
 /// @param self QListView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_listview_qbase_metric(void* self, int64_t param1);
+int32_t q_listview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5950,7 +5950,7 @@ int32_t q_listview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QListView*
 /// @param callback int32_t fn(QListView*, enum QPaintDevice__PaintDeviceMetric)
-void q_listview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_listview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -6169,7 +6169,7 @@ void q_listview_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_listview_state(void* self);
+int32_t q_listview_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6180,7 +6180,7 @@ int64_t q_listview_state(void* self);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__State
-int64_t q_listview_qbase_state(void* self);
+int32_t q_listview_qbase_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6189,8 +6189,8 @@ int64_t q_listview_qbase_state(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListView*
-/// @param callback int64_t fn()
-void q_listview_on_state(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_listview_on_state(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractItemView
 ///
@@ -6200,7 +6200,7 @@ void q_listview_on_state(void* self, int64_t (*callback)());
 ///
 /// @param self QListView*
 /// @param state enum QAbstractItemView__State
-void q_listview_set_state(void* self, int64_t state);
+void q_listview_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6210,7 +6210,7 @@ void q_listview_set_state(void* self, int64_t state);
 ///
 /// @param self QListView*
 /// @param state enum QAbstractItemView__State
-void q_listview_qbase_set_state(void* self, int64_t state);
+void q_listview_qbase_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6220,7 +6220,7 @@ void q_listview_qbase_set_state(void* self, int64_t state);
 ///
 /// @param self QListView*
 /// @param callback void fn(QListView*, enum QAbstractItemView__State)
-void q_listview_on_set_state(void* self, void (*callback)(void*, int64_t));
+void q_listview_on_set_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
 ///
@@ -6461,7 +6461,7 @@ void q_listview_on_do_auto_scroll(void* self, void (*callback)());
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_listview_drop_indicator_position(void* self);
+int32_t q_listview_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6472,7 +6472,7 @@ int64_t q_listview_drop_indicator_position(void* self);
 /// @param self QListView*
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
-int64_t q_listview_qbase_drop_indicator_position(void* self);
+int32_t q_listview_qbase_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6481,8 +6481,8 @@ int64_t q_listview_qbase_drop_indicator_position(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListView*
-/// @param callback int64_t fn()
-void q_listview_on_drop_indicator_position(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_listview_on_drop_indicator_position(void* self, int32_t (*callback)());
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6843,7 +6843,7 @@ void q_listview_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QListView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_listview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_listview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6854,7 +6854,7 @@ double q_listview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 /// @param self QListView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_listview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_listview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6864,7 +6864,7 @@ double q_listview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// @param self QListView*
 /// @param callback double fn(QListView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_listview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_listview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
