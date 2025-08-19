@@ -1,4 +1,9 @@
 
+### 6.8.2 rev8 (18 August 2025)
+
+* **BREAKING CHANGE:** Add specific enum type resolution (#27)
+* Fix enum handling in certain conditions, memory allocations, and scoped class cases (#26)
+
 ### 6.8.2 rev7 (15 August 2025)
 
 * **BREAKING CHANGE:** Switch to per-library options in some cases
