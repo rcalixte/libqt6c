@@ -37,15 +37,15 @@ void* q_window_metacast(void* self, const char* param1) {
     return QWindow_Metacast((QWindow*)self, param1);
 }
 
-int32_t q_window_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_window_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWindow_Metacall((QWindow*)self, param1, param2, param3);
 }
 
-void q_window_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_window_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QWindow_OnMetacall((QWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_window_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_window_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWindow_QBaseMetacall((QWindow*)self, param1, param2, param3);
 }
 
@@ -56,19 +56,19 @@ const char* q_window_tr(const char* s) {
     return _ret;
 }
 
-void q_window_set_surface_type(void* self, int64_t surfaceType) {
+void q_window_set_surface_type(void* self, int32_t surfaceType) {
     QWindow_SetSurfaceType((QWindow*)self, surfaceType);
 }
 
-int64_t q_window_surface_type(void* self) {
+int32_t q_window_surface_type(void* self) {
     return QWindow_SurfaceType((QWindow*)self);
 }
 
-void q_window_on_surface_type(void* self, int64_t (*callback)()) {
+void q_window_on_surface_type(void* self, int32_t (*callback)()) {
     QWindow_OnSurfaceType((QWindow*)self, (intptr_t)callback);
 }
 
-int64_t q_window_qbase_surface_type(void* self) {
+int32_t q_window_qbase_surface_type(void* self) {
     return QWindow_QBaseSurfaceType((QWindow*)self);
 }
 
@@ -76,11 +76,11 @@ bool q_window_is_visible(void* self) {
     return QWindow_IsVisible((QWindow*)self);
 }
 
-int64_t q_window_visibility(void* self) {
+int32_t q_window_visibility(void* self) {
     return QWindow_Visibility((QWindow*)self);
 }
 
-void q_window_set_visibility(void* self, int64_t v) {
+void q_window_set_visibility(void* self, int32_t v) {
     QWindow_SetVisibility((QWindow*)self, v);
 }
 
@@ -108,11 +108,11 @@ bool q_window_is_modal(void* self) {
     return QWindow_IsModal((QWindow*)self);
 }
 
-int64_t q_window_modality(void* self) {
+int32_t q_window_modality(void* self) {
     return QWindow_Modality((QWindow*)self);
 }
 
-void q_window_set_modality(void* self, int64_t modality) {
+void q_window_set_modality(void* self, int32_t modality) {
     QWindow_SetModality((QWindow*)self, modality);
 }
 
@@ -179,11 +179,11 @@ bool q_window_is_active(void* self) {
     return QWindow_IsActive((QWindow*)self);
 }
 
-void q_window_report_content_orientation_change(void* self, int64_t orientation) {
+void q_window_report_content_orientation_change(void* self, int32_t orientation) {
     QWindow_ReportContentOrientationChange((QWindow*)self, orientation);
 }
 
-int64_t q_window_content_orientation(void* self) {
+int32_t q_window_content_orientation(void* self) {
     return QWindow_ContentOrientation((QWindow*)self);
 }
 
@@ -191,7 +191,7 @@ double q_window_device_pixel_ratio(void* self) {
     return QWindow_DevicePixelRatio((QWindow*)self);
 }
 
-int64_t q_window_window_state(void* self) {
+int32_t q_window_window_state(void* self) {
     return QWindow_WindowState((QWindow*)self);
 }
 
@@ -199,7 +199,7 @@ int64_t q_window_window_states(void* self) {
     return QWindow_WindowStates((QWindow*)self);
 }
 
-void q_window_set_window_state(void* self, int64_t state) {
+void q_window_set_window_state(void* self, int32_t state) {
     QWindow_SetWindowState((QWindow*)self, state);
 }
 
@@ -558,19 +558,19 @@ void q_window_on_screen_changed(void* self, void (*callback)(void*, void*)) {
     QWindow_Connect_ScreenChanged((QWindow*)self, (intptr_t)callback);
 }
 
-void q_window_modality_changed(void* self, int64_t modality) {
+void q_window_modality_changed(void* self, int32_t modality) {
     QWindow_ModalityChanged((QWindow*)self, modality);
 }
 
-void q_window_on_modality_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_window_on_modality_changed(void* self, void (*callback)(void*, int32_t)) {
     QWindow_Connect_ModalityChanged((QWindow*)self, (intptr_t)callback);
 }
 
-void q_window_window_state_changed(void* self, int64_t windowState) {
+void q_window_window_state_changed(void* self, int32_t windowState) {
     QWindow_WindowStateChanged((QWindow*)self, windowState);
 }
 
-void q_window_on_window_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_window_on_window_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QWindow_Connect_WindowStateChanged((QWindow*)self, (intptr_t)callback);
 }
 
@@ -654,11 +654,11 @@ void q_window_on_visible_changed(void* self, void (*callback)(void*, bool)) {
     QWindow_Connect_VisibleChanged((QWindow*)self, (intptr_t)callback);
 }
 
-void q_window_visibility_changed(void* self, int64_t visibility) {
+void q_window_visibility_changed(void* self, int32_t visibility) {
     QWindow_VisibilityChanged((QWindow*)self, visibility);
 }
 
-void q_window_on_visibility_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_window_on_visibility_changed(void* self, void (*callback)(void*, int32_t)) {
     QWindow_Connect_VisibilityChanged((QWindow*)self, (intptr_t)callback);
 }
 
@@ -670,11 +670,11 @@ void q_window_on_active_changed(void* self, void (*callback)(void*)) {
     QWindow_Connect_ActiveChanged((QWindow*)self, (intptr_t)callback);
 }
 
-void q_window_content_orientation_changed(void* self, int64_t orientation) {
+void q_window_content_orientation_changed(void* self, int32_t orientation) {
     QWindow_ContentOrientationChanged((QWindow*)self, orientation);
 }
 
-void q_window_on_content_orientation_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_window_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t)) {
     QWindow_Connect_ContentOrientationChanged((QWindow*)self, (intptr_t)callback);
 }
 
@@ -956,7 +956,7 @@ const char* q_window_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-QWindow* q_window_parent1(void* self, int64_t mode) {
+QWindow* q_window_parent1(void* self, int32_t mode) {
     return QWindow_Parent1((QWindow*)self, mode);
 }
 
@@ -964,7 +964,7 @@ void q_window_set_flag2(void* self, int64_t param1, bool on) {
     QWindow_SetFlag2((QWindow*)self, param1, on);
 }
 
-bool q_window_is_ancestor_of2(void* self, void* child, int64_t mode) {
+bool q_window_is_ancestor_of2(void* self, void* child, int32_t mode) {
     return QWindow_IsAncestorOf2((QWindow*)self, (QWindow*)child, mode);
 }
 
@@ -1015,7 +1015,7 @@ void q_window_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_window_kill_timer2(void* self, int64_t id) {
+void q_window_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1111,15 +1111,15 @@ bool q_window_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_window_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_window_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_window_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_window_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_window_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_window_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1131,7 +1131,7 @@ void q_window_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-int64_t q_window_surface_class(void* self) {
+int32_t q_window_surface_class(void* self) {
     return QSurface_SurfaceClass((QSurface*)self);
 }
 

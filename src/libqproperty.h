@@ -73,7 +73,7 @@ QPropertyBindingError* q_propertybindingerror_new();
 /// q_propertybindingerror_new2 constructs a new QPropertyBindingError object.
 ///
 /// @param typeVal enum QPropertyBindingError__Type
-QPropertyBindingError* q_propertybindingerror_new2(int64_t typeVal);
+QPropertyBindingError* q_propertybindingerror_new2(int32_t typeVal);
 
 /// q_propertybindingerror_new3 constructs a new QPropertyBindingError object.
 ///
@@ -84,7 +84,7 @@ QPropertyBindingError* q_propertybindingerror_new3(void* other);
 ///
 /// @param typeVal enum QPropertyBindingError__Type
 /// @param description const char*
-QPropertyBindingError* q_propertybindingerror_new4(int64_t typeVal, const char* description);
+QPropertyBindingError* q_propertybindingerror_new4(int32_t typeVal, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#operator-eq)
 ///
@@ -102,7 +102,7 @@ bool q_propertybindingerror_has_error(void* self);
 /// @param self QPropertyBindingError*
 ///
 /// @return enum QPropertyBindingError__Type
-int64_t q_propertybindingerror_type(void* self);
+int32_t q_propertybindingerror_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingerror.html#description)
 ///

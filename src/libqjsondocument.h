@@ -170,7 +170,7 @@ QJsonDocument* q_jsondocument_from_json2(const char* json, void* errorVal);
 ///
 /// @param self QJsonDocument*
 /// @param format enum QJsonDocument__JsonFormat
-char* q_jsondocument_to_json1(void* self, int64_t format);
+char* q_jsondocument_to_json1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsondocument.html#dtor.QJsonDocument)
 ///

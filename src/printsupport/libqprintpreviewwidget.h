@@ -59,13 +59,13 @@ void* q_printpreviewwidget_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_printpreviewwidget_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_printpreviewwidget_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPrintPreviewWidget*
 /// @param callback int32_t fn(QPrintPreviewWidget*, enum QMetaObject__Call, int, void*)
-void q_printpreviewwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_printpreviewwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -73,7 +73,7 @@ void q_printpreviewwidget_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_printpreviewwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_printpreviewwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -92,21 +92,21 @@ double q_printpreviewwidget_zoom_factor(void* self);
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum QPageLayout__Orientation
-int64_t q_printpreviewwidget_orientation(void* self);
+int32_t q_printpreviewwidget_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#viewMode)
 ///
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum QPrintPreviewWidget__ViewMode
-int64_t q_printpreviewwidget_view_mode(void* self);
+int32_t q_printpreviewwidget_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#zoomMode)
 ///
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum QPrintPreviewWidget__ZoomMode
-int64_t q_printpreviewwidget_zoom_mode(void* self);
+int32_t q_printpreviewwidget_zoom_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#currentPage)
 ///
@@ -165,19 +165,19 @@ void q_printpreviewwidget_set_zoom_factor(void* self, double zoomFactor);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param orientation enum QPageLayout__Orientation
-void q_printpreviewwidget_set_orientation(void* self, int64_t orientation);
+void q_printpreviewwidget_set_orientation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setViewMode)
 ///
 /// @param self QPrintPreviewWidget*
 /// @param viewMode enum QPrintPreviewWidget__ViewMode
-void q_printpreviewwidget_set_view_mode(void* self, int64_t viewMode);
+void q_printpreviewwidget_set_view_mode(void* self, int32_t viewMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setZoomMode)
 ///
 /// @param self QPrintPreviewWidget*
 /// @param zoomMode enum QPrintPreviewWidget__ZoomMode
-void q_printpreviewwidget_set_zoom_mode(void* self, int64_t zoomMode);
+void q_printpreviewwidget_set_zoom_mode(void* self, int32_t zoomMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qprintpreviewwidget.html#setCurrentPage)
 ///
@@ -348,7 +348,7 @@ bool q_printpreviewwidget_is_modal(void* self);
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_printpreviewwidget_window_modality(void* self);
+int32_t q_printpreviewwidget_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -356,7 +356,7 @@ int64_t q_printpreviewwidget_window_modality(void* self);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param windowModality enum Qt__WindowModality
-void q_printpreviewwidget_set_window_modality(void* self, int64_t windowModality);
+void q_printpreviewwidget_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -819,7 +819,7 @@ void q_printpreviewwidget_set_palette(void* self, void* palette);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_printpreviewwidget_set_background_role(void* self, int64_t backgroundRole);
+void q_printpreviewwidget_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -828,7 +828,7 @@ void q_printpreviewwidget_set_background_role(void* self, int64_t backgroundRole
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_printpreviewwidget_background_role(void* self);
+int32_t q_printpreviewwidget_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -836,7 +836,7 @@ int64_t q_printpreviewwidget_background_role(void* self);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_printpreviewwidget_set_foreground_role(void* self, int64_t foregroundRole);
+void q_printpreviewwidget_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -845,7 +845,7 @@ void q_printpreviewwidget_set_foreground_role(void* self, int64_t foregroundRole
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_printpreviewwidget_foreground_role(void* self);
+int32_t q_printpreviewwidget_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1247,7 +1247,7 @@ void q_printpreviewwidget_set_accessible_description(void* self, const char* des
 ///
 /// @param self QPrintPreviewWidget*
 /// @param direction enum Qt__LayoutDirection
-void q_printpreviewwidget_set_layout_direction(void* self, int64_t direction);
+void q_printpreviewwidget_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1256,7 +1256,7 @@ void q_printpreviewwidget_set_layout_direction(void* self, int64_t direction);
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_printpreviewwidget_layout_direction(void* self);
+int32_t q_printpreviewwidget_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1335,7 +1335,7 @@ void q_printpreviewwidget_clear_focus(void* self);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param reason enum Qt__FocusReason
-void q_printpreviewwidget_set_focus2(void* self, int64_t reason);
+void q_printpreviewwidget_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1344,7 +1344,7 @@ void q_printpreviewwidget_set_focus2(void* self, int64_t reason);
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_printpreviewwidget_focus_policy(void* self);
+int32_t q_printpreviewwidget_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1352,7 +1352,7 @@ int64_t q_printpreviewwidget_focus_policy(void* self);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param policy enum Qt__FocusPolicy
-void q_printpreviewwidget_set_focus_policy(void* self, int64_t policy);
+void q_printpreviewwidget_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1391,7 +1391,7 @@ QWidget* q_printpreviewwidget_focus_proxy(void* self);
 /// @param self QPrintPreviewWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_printpreviewwidget_context_menu_policy(void* self);
+int32_t q_printpreviewwidget_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1399,7 +1399,7 @@ int64_t q_printpreviewwidget_context_menu_policy(void* self);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_printpreviewwidget_set_context_menu_policy(void* self, int64_t policy);
+void q_printpreviewwidget_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1817,7 +1817,7 @@ void q_printpreviewwidget_set_size_policy(void* self, void* sizePolicy);
 /// @param self QPrintPreviewWidget*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_printpreviewwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_printpreviewwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2125,7 +2125,7 @@ QWidget* q_printpreviewwidget_child_at3(void* self, void* p);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param param1 enum Qt__WidgetAttribute
-void q_printpreviewwidget_set_attribute(void* self, int64_t param1);
+void q_printpreviewwidget_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2133,7 +2133,7 @@ void q_printpreviewwidget_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_printpreviewwidget_test_attribute(void* self, int64_t param1);
+bool q_printpreviewwidget_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2366,7 +2366,7 @@ void q_printpreviewwidget_grab_gesture2(void* self, int64_t typeVal, int64_t fla
 /// @param self QPrintPreviewWidget*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_printpreviewwidget_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_printpreviewwidget_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2402,7 +2402,7 @@ void q_printpreviewwidget_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QPrintPreviewWidget*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_printpreviewwidget_set_attribute2(void* self, int64_t param1, bool on);
+void q_printpreviewwidget_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2511,7 +2511,7 @@ void q_printpreviewwidget_kill_timer(void* self, int id);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param id enum Qt__TimerId
-void q_printpreviewwidget_kill_timer2(void* self, int64_t id);
+void q_printpreviewwidget_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2680,7 +2680,7 @@ bool q_printpreviewwidget_move_to_thread2(void* self, void* thread, void* param2
 /// @param self QPrintPreviewWidget*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_printpreviewwidget_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_printpreviewwidget_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2691,7 +2691,7 @@ int32_t q_printpreviewwidget_start_timer22(void* self, int interval, int64_t tim
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_printpreviewwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_printpreviewwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2702,7 +2702,7 @@ QMetaObject__Connection* q_printpreviewwidget_connect5(void* sender, void* signa
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_printpreviewwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_printpreviewwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2809,7 +2809,7 @@ double q_printpreviewwidget_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_printpreviewwidget_encode_metric_f(int64_t metric, double value);
+int32_t q_printpreviewwidget_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -3803,7 +3803,7 @@ void q_printpreviewwidget_on_change_event(void* self, void (*callback)(void*, vo
 ///
 /// @param self QPrintPreviewWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_printpreviewwidget_metric(void* self, int64_t param1);
+int32_t q_printpreviewwidget_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3813,7 +3813,7 @@ int32_t q_printpreviewwidget_metric(void* self, int64_t param1);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_printpreviewwidget_qbase_metric(void* self, int64_t param1);
+int32_t q_printpreviewwidget_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3823,7 +3823,7 @@ int32_t q_printpreviewwidget_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QPrintPreviewWidget*
 /// @param callback int32_t fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric)
-void q_printpreviewwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_printpreviewwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4450,7 +4450,7 @@ void q_printpreviewwidget_on_is_signal_connected(void* self, bool (*callback)(vo
 /// @param self QPrintPreviewWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_printpreviewwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_printpreviewwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4461,7 +4461,7 @@ double q_printpreviewwidget_get_decoded_metric_f(void* self, int64_t metricA, in
 /// @param self QPrintPreviewWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4471,7 +4471,7 @@ double q_printpreviewwidget_qbase_get_decoded_metric_f(void* self, int64_t metri
 ///
 /// @param self QPrintPreviewWidget*
 /// @param callback double fn(QPrintPreviewWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_printpreviewwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

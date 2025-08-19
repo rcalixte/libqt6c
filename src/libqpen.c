@@ -8,7 +8,7 @@ QPen* q_pen_new() {
     return QPen_new();
 }
 
-QPen* q_pen_new2(int64_t param1) {
+QPen* q_pen_new2(int32_t param1) {
     return QPen_new2(param1);
 }
 
@@ -24,15 +24,15 @@ QPen* q_pen_new5(void* pen) {
     return QPen_new5((QPen*)pen);
 }
 
-QPen* q_pen_new6(void* brush, double width, int64_t s) {
+QPen* q_pen_new6(void* brush, double width, int32_t s) {
     return QPen_new6((QBrush*)brush, width, s);
 }
 
-QPen* q_pen_new7(void* brush, double width, int64_t s, int64_t c) {
+QPen* q_pen_new7(void* brush, double width, int32_t s, int32_t c) {
     return QPen_new7((QBrush*)brush, width, s, c);
 }
 
-QPen* q_pen_new8(void* brush, double width, int64_t s, int64_t c, int64_t j) {
+QPen* q_pen_new8(void* brush, double width, int32_t s, int32_t c, int32_t j) {
     return QPen_new8((QBrush*)brush, width, s, c, j);
 }
 
@@ -44,11 +44,11 @@ void q_pen_swap(void* self, void* other) {
     QPen_Swap((QPen*)self, (QPen*)other);
 }
 
-int64_t q_pen_style(void* self) {
+int32_t q_pen_style(void* self) {
     return QPen_Style((QPen*)self);
 }
 
-void q_pen_set_style(void* self, int64_t style) {
+void q_pen_set_style(void* self, int32_t style) {
     QPen_SetStyle((QPen*)self, style);
 }
 
@@ -113,19 +113,19 @@ bool q_pen_is_solid(void* self) {
     return QPen_IsSolid((QPen*)self);
 }
 
-int64_t q_pen_cap_style(void* self) {
+int32_t q_pen_cap_style(void* self) {
     return QPen_CapStyle((QPen*)self);
 }
 
-void q_pen_set_cap_style(void* self, int64_t pcs) {
+void q_pen_set_cap_style(void* self, int32_t pcs) {
     QPen_SetCapStyle((QPen*)self, pcs);
 }
 
-int64_t q_pen_join_style(void* self) {
+int32_t q_pen_join_style(void* self) {
     return QPen_JoinStyle((QPen*)self);
 }
 
-void q_pen_set_join_style(void* self, int64_t pcs) {
+void q_pen_set_join_style(void* self, int32_t pcs) {
     QPen_SetJoinStyle((QPen*)self, pcs);
 }
 

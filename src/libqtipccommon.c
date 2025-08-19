@@ -5,7 +5,7 @@ QNativeIpcKey* q_nativeipckey_new() {
     return QNativeIpcKey_new();
 }
 
-QNativeIpcKey* q_nativeipckey_new2(int64_t typeVal) {
+QNativeIpcKey* q_nativeipckey_new2(uint16_t typeVal) {
     return QNativeIpcKey_new2(typeVal);
 }
 
@@ -17,11 +17,11 @@ QNativeIpcKey* q_nativeipckey_new4(void* other) {
     return QNativeIpcKey_new4((QNativeIpcKey*)other);
 }
 
-QNativeIpcKey* q_nativeipckey_new5(const char* k, int64_t typeVal) {
+QNativeIpcKey* q_nativeipckey_new5(const char* k, uint16_t typeVal) {
     return QNativeIpcKey_new5(qstring(k), typeVal);
 }
 
-int64_t q_nativeipckey_legacy_default_type_for_os() {
+uint16_t q_nativeipckey_legacy_default_type_for_os() {
     return QNativeIpcKey_LegacyDefaultTypeForOs();
 }
 
@@ -41,11 +41,11 @@ bool q_nativeipckey_is_valid(void* self) {
     return QNativeIpcKey_IsValid((QNativeIpcKey*)self);
 }
 
-int64_t q_nativeipckey_type(void* self) {
+uint16_t q_nativeipckey_type(void* self) {
     return QNativeIpcKey_Type((QNativeIpcKey*)self);
 }
 
-void q_nativeipckey_set_type(void* self, int64_t typeVal) {
+void q_nativeipckey_set_type(void* self, uint16_t typeVal) {
     QNativeIpcKey_SetType((QNativeIpcKey*)self, typeVal);
 }
 

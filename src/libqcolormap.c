@@ -22,7 +22,7 @@ void q_colormap_operator_assign(void* self, void* colormap) {
     QColormap_OperatorAssign((QColormap*)self, (QColormap*)colormap);
 }
 
-int64_t q_colormap_mode(void* self) {
+int32_t q_colormap_mode(void* self) {
     return QColormap_Mode((QColormap*)self);
 }
 

@@ -60,7 +60,7 @@ void* q_webenginehistorymodel_metacast(void* self, const char* param1) {
     return QWebEngineHistoryModel_Metacast((QWebEngineHistoryModel*)self, param1);
 }
 
-int32_t q_webenginehistorymodel_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webenginehistorymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineHistoryModel_Metacall((QWebEngineHistoryModel*)self, param1, param2, param3);
 }
 
@@ -109,7 +109,7 @@ QModelIndex* q_webenginehistorymodel_sibling(void* self, int row, int column, vo
     return QAbstractListModel_Sibling((QAbstractListModel*)self, row, column, (QModelIndex*)idx);
 }
 
-bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_webenginehistorymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractListModel_DropMimeData((QAbstractListModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -137,11 +137,11 @@ bool q_webenginehistorymodel_set_data(void* self, void* index, void* value, int 
     return QAbstractItemModel_SetData((QAbstractItemModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-QVariant* q_webenginehistorymodel_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_webenginehistorymodel_header_data(void* self, int section, int32_t orientation, int role) {
     return QAbstractItemModel_HeaderData((QAbstractItemModel*)self, section, orientation, role);
 }
 
-bool q_webenginehistorymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_webenginehistorymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QAbstractItemModel_SetHeaderData((QAbstractItemModel*)self, section, orientation, (QVariant*)value, role);
 }
 
@@ -180,7 +180,7 @@ QMimeData* q_webenginehistorymodel_mime_data(void* self, libqt_list indexes) {
     return QAbstractItemModel_MimeData((QAbstractItemModel*)self, indexes);
 }
 
-bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_webenginehistorymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QAbstractItemModel_CanDropMimeData((QAbstractItemModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -248,7 +248,7 @@ bool q_webenginehistorymodel_can_fetch_more(void* self, void* parent) {
     return QAbstractItemModel_CanFetchMore((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
-void q_webenginehistorymodel_sort(void* self, int column, int64_t order) {
+void q_webenginehistorymodel_sort(void* self, int column, int32_t order) {
     QAbstractItemModel_Sort((QAbstractItemModel*)self, column, order);
 }
 
@@ -281,11 +281,11 @@ void q_webenginehistorymodel_on_data_changed(void* self, void (*callback)(void*,
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
+void q_webenginehistorymodel_header_data_changed(void* self, int32_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+void q_webenginehistorymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -353,11 +353,11 @@ void q_webenginehistorymodel_on_layout_changed1(void* self, void (*callback)(voi
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_webenginehistorymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_webenginehistorymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -369,11 +369,11 @@ void q_webenginehistorymodel_on_layout_about_to_be_changed1(void* self, void (*c
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_webenginehistorymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_webenginehistorymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -432,7 +432,7 @@ void q_webenginehistorymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_webenginehistorymodel_kill_timer2(void* self, int64_t id) {
+void q_webenginehistorymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -532,15 +532,15 @@ bool q_webenginehistorymodel_move_to_thread2(void* self, void* thread, void* par
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_webenginehistorymodel_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_webenginehistorymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_webenginehistorymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -620,7 +620,7 @@ void* q_webenginehistory_metacast(void* self, const char* param1) {
     return QWebEngineHistory_Metacast((QWebEngineHistory*)self, param1);
 }
 
-int32_t q_webenginehistory_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webenginehistory_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineHistory_Metacall((QWebEngineHistory*)self, param1, param2, param3);
 }
 
@@ -775,7 +775,7 @@ void q_webenginehistory_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_webenginehistory_kill_timer2(void* self, int64_t id) {
+void q_webenginehistory_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -879,15 +879,15 @@ bool q_webenginehistory_move_to_thread2(void* self, void* thread, void* param2) 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_webenginehistory_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_webenginehistory_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_webenginehistory_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_webenginehistory_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

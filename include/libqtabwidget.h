@@ -35,13 +35,13 @@ void* q_tabwidget_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tabwidget_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tabwidget_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTabWidget*
 /// @param callback int32_t fn(QTabWidget*, enum QMetaObject__Call, int, void*)
-void q_tabwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_tabwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_tabwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tabwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tabwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -212,13 +212,13 @@ int32_t q_tabwidget_count(void* self);
 /// @param self QTabWidget*
 ///
 /// @return enum QTabWidget__TabPosition
-int64_t q_tabwidget_tab_position(void* self);
+int32_t q_tabwidget_tab_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#setTabPosition)
 ///
 /// @param self QTabWidget*
 /// @param position enum QTabWidget__TabPosition
-void q_tabwidget_set_tab_position(void* self, int64_t position);
+void q_tabwidget_set_tab_position(void* self, int32_t position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#tabsClosable)
 ///
@@ -247,13 +247,13 @@ void q_tabwidget_set_movable(void* self, bool movable);
 /// @param self QTabWidget*
 ///
 /// @return enum QTabWidget__TabShape
-int64_t q_tabwidget_tab_shape(void* self);
+int32_t q_tabwidget_tab_shape(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#setTabShape)
 ///
 /// @param self QTabWidget*
 /// @param s enum QTabWidget__TabShape
-void q_tabwidget_set_tab_shape(void* self, int64_t s);
+void q_tabwidget_set_tab_shape(void* self, int32_t s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#sizeHint)
 ///
@@ -353,13 +353,13 @@ QWidget* q_tabwidget_corner_widget(void* self);
 /// @param self QTabWidget*
 ///
 /// @return enum Qt__TextElideMode
-int64_t q_tabwidget_elide_mode(void* self);
+int32_t q_tabwidget_elide_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#setElideMode)
 ///
 /// @param self QTabWidget*
 /// @param mode enum Qt__TextElideMode
-void q_tabwidget_set_elide_mode(void* self, int64_t mode);
+void q_tabwidget_set_elide_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#iconSize)
 ///
@@ -717,13 +717,13 @@ const char* q_tabwidget_tr3(const char* s, const char* c, int n);
 /// @param self QTabWidget*
 /// @param w QWidget*
 /// @param corner enum Qt__Corner
-void q_tabwidget_set_corner_widget2(void* self, void* w, int64_t corner);
+void q_tabwidget_set_corner_widget2(void* self, void* w, int32_t corner);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtabwidget.html#cornerWidget)
 ///
 /// @param self QTabWidget*
 /// @param corner enum Qt__Corner
-QWidget* q_tabwidget_corner_widget1(void* self, int64_t corner);
+QWidget* q_tabwidget_corner_widget1(void* self, int32_t corner);
 
 /// Inherited from QWidget
 ///
@@ -796,7 +796,7 @@ bool q_tabwidget_is_modal(void* self);
 /// @param self QTabWidget*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_tabwidget_window_modality(void* self);
+int32_t q_tabwidget_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -804,7 +804,7 @@ int64_t q_tabwidget_window_modality(void* self);
 ///
 /// @param self QTabWidget*
 /// @param windowModality enum Qt__WindowModality
-void q_tabwidget_set_window_modality(void* self, int64_t windowModality);
+void q_tabwidget_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1267,7 +1267,7 @@ void q_tabwidget_set_palette(void* self, void* palette);
 ///
 /// @param self QTabWidget*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_tabwidget_set_background_role(void* self, int64_t backgroundRole);
+void q_tabwidget_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1276,7 +1276,7 @@ void q_tabwidget_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QTabWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_tabwidget_background_role(void* self);
+int32_t q_tabwidget_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1284,7 +1284,7 @@ int64_t q_tabwidget_background_role(void* self);
 ///
 /// @param self QTabWidget*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_tabwidget_set_foreground_role(void* self, int64_t foregroundRole);
+void q_tabwidget_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1293,7 +1293,7 @@ void q_tabwidget_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QTabWidget*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_tabwidget_foreground_role(void* self);
+int32_t q_tabwidget_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1695,7 +1695,7 @@ void q_tabwidget_set_accessible_description(void* self, const char* description)
 ///
 /// @param self QTabWidget*
 /// @param direction enum Qt__LayoutDirection
-void q_tabwidget_set_layout_direction(void* self, int64_t direction);
+void q_tabwidget_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1704,7 +1704,7 @@ void q_tabwidget_set_layout_direction(void* self, int64_t direction);
 /// @param self QTabWidget*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_tabwidget_layout_direction(void* self);
+int32_t q_tabwidget_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1783,7 +1783,7 @@ void q_tabwidget_clear_focus(void* self);
 ///
 /// @param self QTabWidget*
 /// @param reason enum Qt__FocusReason
-void q_tabwidget_set_focus2(void* self, int64_t reason);
+void q_tabwidget_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1792,7 +1792,7 @@ void q_tabwidget_set_focus2(void* self, int64_t reason);
 /// @param self QTabWidget*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_tabwidget_focus_policy(void* self);
+int32_t q_tabwidget_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1800,7 +1800,7 @@ int64_t q_tabwidget_focus_policy(void* self);
 ///
 /// @param self QTabWidget*
 /// @param policy enum Qt__FocusPolicy
-void q_tabwidget_set_focus_policy(void* self, int64_t policy);
+void q_tabwidget_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1839,7 +1839,7 @@ QWidget* q_tabwidget_focus_proxy(void* self);
 /// @param self QTabWidget*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_tabwidget_context_menu_policy(void* self);
+int32_t q_tabwidget_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1847,7 +1847,7 @@ int64_t q_tabwidget_context_menu_policy(void* self);
 ///
 /// @param self QTabWidget*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_tabwidget_set_context_menu_policy(void* self, int64_t policy);
+void q_tabwidget_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2265,7 +2265,7 @@ void q_tabwidget_set_size_policy(void* self, void* sizePolicy);
 /// @param self QTabWidget*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_tabwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_tabwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2573,7 +2573,7 @@ QWidget* q_tabwidget_child_at3(void* self, void* p);
 ///
 /// @param self QTabWidget*
 /// @param param1 enum Qt__WidgetAttribute
-void q_tabwidget_set_attribute(void* self, int64_t param1);
+void q_tabwidget_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2581,7 +2581,7 @@ void q_tabwidget_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QTabWidget*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_tabwidget_test_attribute(void* self, int64_t param1);
+bool q_tabwidget_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2814,7 +2814,7 @@ void q_tabwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QTabWidget*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_tabwidget_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_tabwidget_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2850,7 +2850,7 @@ void q_tabwidget_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QTabWidget*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_tabwidget_set_attribute2(void* self, int64_t param1, bool on);
+void q_tabwidget_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2959,7 +2959,7 @@ void q_tabwidget_kill_timer(void* self, int id);
 ///
 /// @param self QTabWidget*
 /// @param id enum Qt__TimerId
-void q_tabwidget_kill_timer2(void* self, int64_t id);
+void q_tabwidget_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3128,7 +3128,7 @@ bool q_tabwidget_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTabWidget*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_tabwidget_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_tabwidget_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3139,7 +3139,7 @@ int32_t q_tabwidget_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tabwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_tabwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3150,7 +3150,7 @@ QMetaObject__Connection* q_tabwidget_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tabwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_tabwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3257,7 +3257,7 @@ double q_tabwidget_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_tabwidget_encode_metric_f(int64_t metric, double value);
+int32_t q_tabwidget_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -3987,7 +3987,7 @@ void q_tabwidget_on_native_event(void* self, bool (*callback)(void*, const char*
 ///
 /// @param self QTabWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_tabwidget_metric(void* self, int64_t param1);
+int32_t q_tabwidget_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3997,7 +3997,7 @@ int32_t q_tabwidget_metric(void* self, int64_t param1);
 ///
 /// @param self QTabWidget*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_tabwidget_qbase_metric(void* self, int64_t param1);
+int32_t q_tabwidget_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4007,7 +4007,7 @@ int32_t q_tabwidget_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QTabWidget*
 /// @param callback int32_t fn(QTabWidget*, enum QPaintDevice__PaintDeviceMetric)
-void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_tabwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4634,7 +4634,7 @@ void q_tabwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param self QTabWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_tabwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_tabwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4645,7 +4645,7 @@ double q_tabwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 /// @param self QTabWidget*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_tabwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_tabwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4655,7 +4655,7 @@ double q_tabwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// @param self QTabWidget*
 /// @param callback double fn(QTabWidget*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_tabwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

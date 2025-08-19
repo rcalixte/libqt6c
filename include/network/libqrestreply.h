@@ -68,7 +68,7 @@ bool q_restreply_has_error(void* self);
 /// @param self QRestReply*
 ///
 /// @return enum QNetworkReply__NetworkError
-int64_t q_restreply_error(void* self);
+int32_t q_restreply_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrestreply.html#errorString)
 ///

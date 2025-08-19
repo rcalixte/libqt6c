@@ -38,7 +38,7 @@ int32_t q_basictimer_timer_id(void* self);
 /// @param self QBasicTimer*
 ///
 /// @return enum Qt__TimerId
-int64_t q_basictimer_id(void* self);
+int32_t q_basictimer_id(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#start)
 ///
@@ -53,7 +53,7 @@ void q_basictimer_start(void* self, int msec, void* obj);
 /// @param msec int
 /// @param timerType enum Qt__TimerType
 /// @param obj QObject*
-void q_basictimer_start2(void* self, int msec, int64_t timerType, void* obj);
+void q_basictimer_start2(void* self, int msec, int32_t timerType, void* obj);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbasictimer.html#stop)
 ///

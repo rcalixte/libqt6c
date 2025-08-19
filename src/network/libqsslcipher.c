@@ -9,7 +9,7 @@ QSslCipher* q_sslcipher_new2(const char* name) {
     return QSslCipher_new2(qstring(name));
 }
 
-QSslCipher* q_sslcipher_new3(const char* name, int64_t protocol) {
+QSslCipher* q_sslcipher_new3(const char* name, int32_t protocol) {
     return QSslCipher_new3(qstring(name), protocol);
 }
 
@@ -80,7 +80,7 @@ const char* q_sslcipher_protocol_string(void* self) {
     return _ret;
 }
 
-int64_t q_sslcipher_protocol(void* self) {
+int32_t q_sslcipher_protocol(void* self) {
     return QSslCipher_Protocol((QSslCipher*)self);
 }
 

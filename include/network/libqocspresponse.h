@@ -33,14 +33,14 @@ void q_ocspresponse_operator_assign(void* self, void* other);
 /// @param self QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspCertificateStatus
-int64_t q_ocspresponse_certificate_status(void* self);
+int32_t q_ocspresponse_certificate_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#revocationReason)
 ///
 /// @param self QOcspResponse*
 ///
 /// @return enum QOcspResponse__QOcspRevocationReason
-int64_t q_ocspresponse_revocation_reason(void* self);
+int32_t q_ocspresponse_revocation_reason(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qocspresponse.html#responder)
 ///

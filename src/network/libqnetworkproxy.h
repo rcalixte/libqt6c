@@ -42,7 +42,7 @@ QNetworkProxyQuery* q_networkproxyquery_new5(void* other);
 ///
 /// @param requestUrl QUrl*
 /// @param queryType enum QNetworkProxyQuery__QueryType
-QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int64_t queryType);
+QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int32_t queryType);
 
 /// q_networkproxyquery_new7 constructs a new QNetworkProxyQuery object.
 ///
@@ -57,7 +57,7 @@ QNetworkProxyQuery* q_networkproxyquery_new7(const char* hostname, int port, con
 /// @param port int
 /// @param protocolTag const char*
 /// @param queryType enum QNetworkProxyQuery__QueryType
-QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, const char* protocolTag, int64_t queryType);
+QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, const char* protocolTag, int32_t queryType);
 
 /// q_networkproxyquery_new9 constructs a new QNetworkProxyQuery object.
 ///
@@ -70,7 +70,7 @@ QNetworkProxyQuery* q_networkproxyquery_new9(unsigned short bindPort, const char
 /// @param bindPort unsigned short
 /// @param protocolTag const char*
 /// @param queryType enum QNetworkProxyQuery__QueryType
-QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int64_t queryType);
+QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int32_t queryType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#operator-eq)
 ///
@@ -101,13 +101,13 @@ bool q_networkproxyquery_operator_not_equal(void* self, void* other);
 /// @param self QNetworkProxyQuery*
 ///
 /// @return enum QNetworkProxyQuery__QueryType
-int64_t q_networkproxyquery_query_type(void* self);
+int32_t q_networkproxyquery_query_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#setQueryType)
 ///
 /// @param self QNetworkProxyQuery*
 /// @param typeVal enum QNetworkProxyQuery__QueryType
-void q_networkproxyquery_set_query_type(void* self, int64_t typeVal);
+void q_networkproxyquery_set_query_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxyquery.html#peerPort)
 ///
@@ -184,7 +184,7 @@ QNetworkProxy* q_networkproxy_new();
 /// q_networkproxy_new2 constructs a new QNetworkProxy object.
 ///
 /// @param typeVal enum QNetworkProxy__ProxyType
-QNetworkProxy* q_networkproxy_new2(int64_t typeVal);
+QNetworkProxy* q_networkproxy_new2(int32_t typeVal);
 
 /// q_networkproxy_new3 constructs a new QNetworkProxy object.
 ///
@@ -195,14 +195,14 @@ QNetworkProxy* q_networkproxy_new3(void* other);
 ///
 /// @param typeVal enum QNetworkProxy__ProxyType
 /// @param hostName const char*
-QNetworkProxy* q_networkproxy_new4(int64_t typeVal, const char* hostName);
+QNetworkProxy* q_networkproxy_new4(int32_t typeVal, const char* hostName);
 
 /// q_networkproxy_new5 constructs a new QNetworkProxy object.
 ///
 /// @param typeVal enum QNetworkProxy__ProxyType
 /// @param hostName const char*
 /// @param port unsigned short
-QNetworkProxy* q_networkproxy_new5(int64_t typeVal, const char* hostName, unsigned short port);
+QNetworkProxy* q_networkproxy_new5(int32_t typeVal, const char* hostName, unsigned short port);
 
 /// q_networkproxy_new6 constructs a new QNetworkProxy object.
 ///
@@ -210,7 +210,7 @@ QNetworkProxy* q_networkproxy_new5(int64_t typeVal, const char* hostName, unsign
 /// @param hostName const char*
 /// @param port unsigned short
 /// @param user const char*
-QNetworkProxy* q_networkproxy_new6(int64_t typeVal, const char* hostName, unsigned short port, const char* user);
+QNetworkProxy* q_networkproxy_new6(int32_t typeVal, const char* hostName, unsigned short port, const char* user);
 
 /// q_networkproxy_new7 constructs a new QNetworkProxy object.
 ///
@@ -219,7 +219,7 @@ QNetworkProxy* q_networkproxy_new6(int64_t typeVal, const char* hostName, unsign
 /// @param port unsigned short
 /// @param user const char*
 /// @param password const char*
-QNetworkProxy* q_networkproxy_new7(int64_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password);
+QNetworkProxy* q_networkproxy_new7(int32_t typeVal, const char* hostName, unsigned short port, const char* user, const char* password);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#operator-eq)
 ///
@@ -249,14 +249,14 @@ bool q_networkproxy_operator_not_equal(void* self, void* other);
 ///
 /// @param self QNetworkProxy*
 /// @param typeVal enum QNetworkProxy__ProxyType
-void q_networkproxy_set_type(void* self, int64_t typeVal);
+void q_networkproxy_set_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#type)
 ///
 /// @param self QNetworkProxy*
 ///
 /// @return enum QNetworkProxy__ProxyType
-int64_t q_networkproxy_type(void* self);
+int32_t q_networkproxy_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#setCapabilities)
 ///
@@ -355,14 +355,14 @@ void q_networkproxy_set_headers(void* self, void* newHeaders);
 ///
 /// @param self QNetworkProxy*
 /// @param header enum QNetworkRequest__KnownHeaders
-QVariant* q_networkproxy_header(void* self, int64_t header);
+QVariant* q_networkproxy_header(void* self, int32_t header);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#setHeader)
 ///
 /// @param self QNetworkProxy*
 /// @param header enum QNetworkRequest__KnownHeaders
 /// @param value QVariant*
-void q_networkproxy_set_header(void* self, int64_t header, void* value);
+void q_networkproxy_set_header(void* self, int32_t header, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkproxy.html#hasRawHeader)
 ///

@@ -37,14 +37,14 @@ QTextStream* q_textstream_new4(const char* array, int64_t openMode);
 ///
 /// @param self QTextStream*
 /// @param encoding enum QStringConverter__Encoding
-void q_textstream_set_encoding(void* self, int64_t encoding);
+void q_textstream_set_encoding(void* self, int32_t encoding);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#encoding)
 ///
 /// @param self QTextStream*
 ///
 /// @return enum QStringConverter__Encoding
-int64_t q_textstream_encoding(void* self);
+int32_t q_textstream_encoding(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setAutoDetectUnicode)
 ///
@@ -102,13 +102,13 @@ const char* q_textstream_string(void* self);
 /// @param self QTextStream*
 ///
 /// @return enum QTextStream__Status
-int64_t q_textstream_status(void* self);
+int32_t q_textstream_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setStatus)
 ///
 /// @param self QTextStream*
 /// @param status enum QTextStream__Status
-void q_textstream_set_status(void* self, int64_t status);
+void q_textstream_set_status(void* self, int32_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#resetStatus)
 ///
@@ -172,14 +172,14 @@ const char* q_textstream_read(void* self, long long maxlen);
 ///
 /// @param self QTextStream*
 /// @param alignment enum QTextStream__FieldAlignment
-void q_textstream_set_field_alignment(void* self, int64_t alignment);
+void q_textstream_set_field_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#fieldAlignment)
 ///
 /// @param self QTextStream*
 ///
 /// @return enum QTextStream__FieldAlignment
-int64_t q_textstream_field_alignment(void* self);
+int32_t q_textstream_field_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setPadChar)
 ///
@@ -231,14 +231,14 @@ int32_t q_textstream_integer_base(void* self);
 ///
 /// @param self QTextStream*
 /// @param notation enum QTextStream__RealNumberNotation
-void q_textstream_set_real_number_notation(void* self, int64_t notation);
+void q_textstream_set_real_number_notation(void* self, int32_t notation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#realNumberNotation)
 ///
 /// @param self QTextStream*
 ///
 /// @return enum QTextStream__RealNumberNotation
-int64_t q_textstream_real_number_notation(void* self);
+int32_t q_textstream_real_number_notation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextstream.html#setRealNumberPrecision)
 ///

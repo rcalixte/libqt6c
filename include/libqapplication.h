@@ -39,13 +39,13 @@ void* q_application_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_application_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_application_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QApplication*
 /// @param callback int32_t fn(QApplication*, enum QMetaObject__Call, int, void*)
-void q_application_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_application_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -53,7 +53,7 @@ void q_application_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_application_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_application_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -231,12 +231,12 @@ int32_t q_application_start_drag_distance();
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#isEffectEnabled)
 ///
 /// @param param1 enum Qt__UIEffect
-bool q_application_is_effect_enabled(int64_t param1);
+bool q_application_is_effect_enabled(int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#setEffectEnabled)
 ///
 /// @param param1 enum Qt__UIEffect
-void q_application_set_effect_enabled(int64_t param1);
+void q_application_set_effect_enabled(int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qapplication.html#exec)
 ///
@@ -396,7 +396,7 @@ void q_application_alert2(void* widget, int duration);
 ///
 /// @param param1 enum Qt__UIEffect
 /// @param enable bool
-void q_application_set_effect_enabled2(int64_t param1, bool enable);
+void q_application_set_effect_enabled2(int32_t param1, bool enable);
 
 /// Inherited from QGuiApplication
 ///
@@ -574,7 +574,7 @@ int64_t q_application_mouse_buttons();
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setLayoutDirection)
 ///
 /// @param direction enum Qt__LayoutDirection
-void q_application_set_layout_direction(int64_t direction);
+void q_application_set_layout_direction(int32_t direction);
 
 /// Inherited from QGuiApplication
 ///
@@ -582,7 +582,7 @@ void q_application_set_layout_direction(int64_t direction);
 ///
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_application_layout_direction();
+int32_t q_application_layout_direction();
 
 /// Inherited from QGuiApplication
 ///
@@ -640,14 +640,14 @@ bool q_application_quit_on_last_window_closed();
 ///
 ///
 /// @return enum Qt__ApplicationState
-int64_t q_application_application_state();
+int32_t q_application_application_state();
 
 /// Inherited from QGuiApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qguiapplication.html#setHighDpiScaleFactorRoundingPolicy)
 ///
 /// @param policy enum Qt__HighDpiScaleFactorRoundingPolicy
-void q_application_set_high_dpi_scale_factor_rounding_policy(int64_t policy);
+void q_application_set_high_dpi_scale_factor_rounding_policy(int32_t policy);
 
 /// Inherited from QGuiApplication
 ///
@@ -655,7 +655,7 @@ void q_application_set_high_dpi_scale_factor_rounding_policy(int64_t policy);
 ///
 ///
 /// @return enum Qt__HighDpiScaleFactorRoundingPolicy
-int64_t q_application_high_dpi_scale_factor_rounding_policy();
+int32_t q_application_high_dpi_scale_factor_rounding_policy();
 
 /// Inherited from QGuiApplication
 ///
@@ -811,7 +811,7 @@ void q_application_on_focus_window_changed(void* self, void (*callback)(void*, v
 ///
 /// @param self QApplication*
 /// @param state enum Qt__ApplicationState
-void q_application_application_state_changed(void* self, int64_t state);
+void q_application_application_state_changed(void* self, int32_t state);
 
 /// Inherited from QGuiApplication
 ///
@@ -819,7 +819,7 @@ void q_application_application_state_changed(void* self, int64_t state);
 ///
 /// @param self QApplication*
 /// @param callback void fn(QApplication*, enum Qt__ApplicationState)
-void q_application_on_application_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_application_on_application_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QGuiApplication
 ///
@@ -827,7 +827,7 @@ void q_application_on_application_state_changed(void* self, void (*callback)(voi
 ///
 /// @param self QApplication*
 /// @param direction enum Qt__LayoutDirection
-void q_application_layout_direction_changed(void* self, int64_t direction);
+void q_application_layout_direction_changed(void* self, int32_t direction);
 
 /// Inherited from QGuiApplication
 ///
@@ -835,7 +835,7 @@ void q_application_layout_direction_changed(void* self, int64_t direction);
 ///
 /// @param self QApplication*
 /// @param callback void fn(QApplication*, enum Qt__LayoutDirection)
-void q_application_on_layout_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_application_on_layout_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QGuiApplication
 ///
@@ -929,14 +929,14 @@ const char** q_application_arguments();
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#setAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
-void q_application_set_attribute(int64_t attribute);
+void q_application_set_attribute(int32_t attribute);
 
 /// Inherited from QCoreApplication
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qcoreapplication.html#testAttribute)
 ///
 /// @param attribute enum Qt__ApplicationAttribute
-bool q_application_test_attribute(int64_t attribute);
+bool q_application_test_attribute(int32_t attribute);
 
 /// Inherited from QCoreApplication
 ///
@@ -1123,7 +1123,7 @@ long long q_application_application_pid();
 /// @param permission QPermission*
 ///
 /// @return enum Qt__PermissionStatus
-int64_t q_application_check_permission(void* self, void* permission);
+int32_t q_application_check_permission(void* self, void* permission);
 
 /// Inherited from QCoreApplication
 ///
@@ -1301,7 +1301,7 @@ void q_application_on_application_version_changed(void* self, void (*callback)(v
 ///
 /// @param attribute enum Qt__ApplicationAttribute
 /// @param on bool
-void q_application_set_attribute2(int64_t attribute, bool on);
+void q_application_set_attribute2(int32_t attribute, bool on);
 
 /// Inherited from QCoreApplication
 ///
@@ -1462,7 +1462,7 @@ void q_application_kill_timer(void* self, int id);
 ///
 /// @param self QApplication*
 /// @param id enum Qt__TimerId
-void q_application_kill_timer2(void* self, int64_t id);
+void q_application_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1639,7 +1639,7 @@ bool q_application_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QApplication*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_application_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_application_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1650,7 +1650,7 @@ int32_t q_application_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1661,7 +1661,7 @@ QMetaObject__Connection* q_application_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_application_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -63,7 +63,7 @@ bool q_ssldiffiehellmanparameters_is_valid(void* self);
 /// @param self QSslDiffieHellmanParameters*
 ///
 /// @return enum QSslDiffieHellmanParameters__Error
-int64_t q_ssldiffiehellmanparameters_error(void* self);
+int32_t q_ssldiffiehellmanparameters_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#errorString)
 ///
@@ -76,13 +76,13 @@ const char* q_ssldiffiehellmanparameters_error_string(void* self);
 ///
 /// @param encoded const char*
 /// @param format enum QSsl__EncodingFormat
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int64_t format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded22(const char* encoded, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#fromEncoded)
 ///
 /// @param device QIODevice*
 /// @param format enum QSsl__EncodingFormat
-QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int64_t format);
+QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_from_encoded23(void* device, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qssldiffiehellmanparameters.html#dtor.QSslDiffieHellmanParameters)
 ///

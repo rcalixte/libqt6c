@@ -33,7 +33,7 @@ void q_cameraformat_operator_assign(void* self, void* other);
 /// @param self QCameraFormat*
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
-int64_t q_cameraformat_pixel_format(void* self);
+int32_t q_cameraformat_pixel_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcameraformat.html#resolution)
 ///
@@ -132,7 +132,7 @@ bool q_cameradevice_is_default(void* self);
 /// @param self QCameraDevice*
 ///
 /// @return enum QCameraDevice__Position
-int64_t q_cameradevice_position(void* self);
+int32_t q_cameradevice_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#photoResolutions)
 ///
@@ -149,7 +149,7 @@ libqt_list /* of QCameraFormat* */ q_cameradevice_video_formats(void* self);
 /// @param self QCameraDevice*
 ///
 /// @return enum QtVideo__Rotation
-int64_t q_cameradevice_correction_angle(void* self);
+int32_t q_cameradevice_correction_angle(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcameradevice.html#dtor.QCameraDevice)
 ///

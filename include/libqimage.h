@@ -21,14 +21,14 @@ QImage* q_image_new();
 ///
 /// @param size QSize*
 /// @param format enum QImage__Format
-QImage* q_image_new2(void* size, int64_t format);
+QImage* q_image_new2(void* size, int32_t format);
 
 /// q_image_new3 constructs a new QImage object.
 ///
 /// @param width int
 /// @param height int
 /// @param format enum QImage__Format
-QImage* q_image_new3(int width, int height, int64_t format);
+QImage* q_image_new3(int width, int height, int32_t format);
 
 /// q_image_new4 constructs a new QImage object.
 ///
@@ -36,7 +36,7 @@ QImage* q_image_new3(int width, int height, int64_t format);
 /// @param width int
 /// @param height int
 /// @param format enum QImage__Format
-QImage* q_image_new4(unsigned char* data, int width, int height, int64_t format);
+QImage* q_image_new4(unsigned char* data, int width, int height, int32_t format);
 
 /// q_image_new5 constructs a new QImage object.
 ///
@@ -44,7 +44,7 @@ QImage* q_image_new4(unsigned char* data, int width, int height, int64_t format)
 /// @param width int
 /// @param height int
 /// @param format enum QImage__Format
-QImage* q_image_new5(unsigned char* data, int width, int height, int64_t format);
+QImage* q_image_new5(unsigned char* data, int width, int height, int32_t format);
 
 /// q_image_new6 constructs a new QImage object.
 ///
@@ -53,7 +53,7 @@ QImage* q_image_new5(unsigned char* data, int width, int height, int64_t format)
 /// @param height int
 /// @param bytesPerLine int64_t
 /// @param format enum QImage__Format
-QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPerLine, int64_t format);
+QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format);
 
 /// q_image_new7 constructs a new QImage object.
 ///
@@ -62,7 +62,7 @@ QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPe
 /// @param height int
 /// @param bytesPerLine int64_t
 /// @param format enum QImage__Format
-QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPerLine, int64_t format);
+QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format);
 
 /// q_image_new8 constructs a new QImage object.
 ///
@@ -163,38 +163,38 @@ QImage* q_image_copy2(void* self, int x, int y, int w, int h);
 /// @param self QImage*
 ///
 /// @return enum QImage__Format
-int64_t q_image_format(void* self);
+int32_t q_image_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
-QImage* q_image_convert_to_format(void* self, int64_t f);
+QImage* q_image_convert_to_format(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
 /// @param colorTable libqt_list /* of uint32_t */
-QImage* q_image_convert_to_format2(void* self, int64_t f, libqt_list colorTable);
+QImage* q_image_convert_to_format2(void* self, int32_t f, libqt_list colorTable);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#reinterpretAsFormat)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
-bool q_image_reinterpret_as_format(void* self, int64_t f);
+bool q_image_reinterpret_as_format(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
-QImage* q_image_converted_to(void* self, int64_t f);
+QImage* q_image_converted_to(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertTo)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
-void q_image_convert_to(void* self, int64_t f);
+void q_image_convert_to(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#width)
 ///
@@ -428,7 +428,7 @@ void q_image_fill2(void* self, void* color);
 ///
 /// @param self QImage*
 /// @param color enum Qt__GlobalColor
-void q_image_fill3(void* self, int64_t color);
+void q_image_fill3(void* self, int32_t color);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#hasAlphaChannel)
 ///
@@ -536,7 +536,7 @@ QImage* q_image_converted_to_color_space(void* self, void* colorSpace);
 /// @param self QImage*
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
-QImage* q_image_converted_to_color_space2(void* self, void* colorSpace, int64_t format);
+QImage* q_image_converted_to_color_space2(void* self, void* colorSpace, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToColorSpace)
 ///
@@ -549,7 +549,7 @@ void q_image_convert_to_color_space(void* self, void* colorSpace);
 /// @param self QImage*
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
-void q_image_convert_to_color_space2(void* self, void* colorSpace, int64_t format);
+void q_image_convert_to_color_space2(void* self, void* colorSpace, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#setColorSpace)
 ///
@@ -568,7 +568,7 @@ QImage* q_image_color_transformed(void* self, void* transform);
 /// @param self QImage*
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
-QImage* q_image_color_transformed2(void* self, void* transform, int64_t format);
+QImage* q_image_color_transformed2(void* self, void* transform, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#applyColorTransform)
 ///
@@ -581,7 +581,7 @@ void q_image_apply_color_transform(void* self, void* transform);
 /// @param self QImage*
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
-void q_image_apply_color_transform2(void* self, void* transform, int64_t format);
+void q_image_apply_color_transform2(void* self, void* transform, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#load)
 ///
@@ -730,20 +730,20 @@ QPixelFormat* q_image_pixel_format(void* self);
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#toPixelFormat)
 ///
 /// @param format enum QImage__Format
-QPixelFormat* q_image_to_pixel_format(int64_t format);
+QPixelFormat* q_image_to_pixel_format(int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#toImageFormat)
 ///
 /// @param format QPixelFormat*
 ///
 /// @return enum QImage__Format
-int64_t q_image_to_image_format(void* format);
+int32_t q_image_to_image_format(void* format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
 /// @param self QImage*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_image_metric(void* self, int64_t metric);
+int32_t q_image_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
@@ -751,7 +751,7 @@ int32_t q_image_metric(void* self, int64_t metric);
 ///
 /// @param self QImage*
 /// @param callback int32_t fn(QImage*, enum QPaintDevice__PaintDeviceMetric)
-void q_image_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
@@ -759,7 +759,7 @@ void q_image_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QImage*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_image_qbase_metric(void* self, int64_t metric);
+int32_t q_image_qbase_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
 ///
@@ -854,7 +854,7 @@ void q_image_qbase_rgb_swapped_inplace(void* self);
 /// @param self QImage*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_convert_to_format_helper(void* self, int64_t format, int64_t flags);
+QImage* q_image_convert_to_format_helper(void* self, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
 ///
@@ -862,7 +862,7 @@ QImage* q_image_convert_to_format_helper(void* self, int64_t format, int64_t fla
 ///
 /// @param self QImage*
 /// @param callback QImage* fn(QImage*, enum QImage__Format, flag of enum Qt__ImageConversionFlag)
-void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int64_t, int64_t));
+void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
 ///
@@ -871,14 +871,14 @@ void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, 
 /// @param self QImage*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_qbase_convert_to_format_helper(void* self, int64_t format, int64_t flags);
+QImage* q_image_qbase_convert_to_format_helper(void* self, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
 /// @param self QImage*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_image_convert_to_format_inplace(void* self, int64_t format, int64_t flags);
+bool q_image_convert_to_format_inplace(void* self, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
@@ -886,7 +886,7 @@ bool q_image_convert_to_format_inplace(void* self, int64_t format, int64_t flags
 ///
 /// @param self QImage*
 /// @param callback bool fn(QImage*, enum QImage__Format, flag of enum Qt__ImageConversionFlag)
-void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int64_t, int64_t));
+void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int64_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
@@ -895,7 +895,7 @@ void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, in
 /// @param self QImage*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-bool q_image_qbase_convert_to_format_inplace(void* self, int64_t format, int64_t flags);
+bool q_image_qbase_convert_to_format_inplace(void* self, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
 ///
@@ -952,7 +952,7 @@ QImage* q_image_copy1(void* self, void* rect);
 /// @param self QImage*
 /// @param f enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_convert_to_format22(void* self, int64_t f, int64_t flags);
+QImage* q_image_convert_to_format22(void* self, int32_t f, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToFormat)
 ///
@@ -960,21 +960,21 @@ QImage* q_image_convert_to_format22(void* self, int64_t f, int64_t flags);
 /// @param f enum QImage__Format
 /// @param colorTable libqt_list /* of uint32_t */
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_convert_to_format3(void* self, int64_t f, libqt_list colorTable, int64_t flags);
+QImage* q_image_convert_to_format3(void* self, int32_t f, libqt_list colorTable, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertedTo)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_converted_to2(void* self, int64_t f, int64_t flags);
+QImage* q_image_converted_to2(void* self, int32_t f, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertTo)
 ///
 /// @param self QImage*
 /// @param f enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_image_convert_to2(void* self, int64_t f, int64_t flags);
+void q_image_convert_to2(void* self, int32_t f, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#createAlphaMask)
 ///
@@ -993,7 +993,7 @@ QImage* q_image_create_heuristic_mask1(void* self, bool clipTight);
 /// @param self QImage*
 /// @param color uint32_t
 /// @param mode enum Qt__MaskMode
-QImage* q_image_create_mask_from_color2(void* self, uint32_t color, int64_t mode);
+QImage* q_image_create_mask_from_color2(void* self, uint32_t color, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
@@ -1001,7 +1001,7 @@ QImage* q_image_create_mask_from_color2(void* self, uint32_t color, int64_t mode
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
-QImage* q_image_scaled3(void* self, int w, int h, int64_t aspectMode);
+QImage* q_image_scaled3(void* self, int w, int h, int32_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
@@ -1010,14 +1010,14 @@ QImage* q_image_scaled3(void* self, int w, int h, int64_t aspectMode);
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
-QImage* q_image_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mode);
+QImage* q_image_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
 /// @param self QImage*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
-QImage* q_image_scaled22(void* self, void* s, int64_t aspectMode);
+QImage* q_image_scaled22(void* self, void* s, int32_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaled)
 ///
@@ -1025,28 +1025,28 @@ QImage* q_image_scaled22(void* self, void* s, int64_t aspectMode);
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
-QImage* q_image_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode);
+QImage* q_image_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaledToWidth)
 ///
 /// @param self QImage*
 /// @param w int
 /// @param mode enum Qt__TransformationMode
-QImage* q_image_scaled_to_width2(void* self, int w, int64_t mode);
+QImage* q_image_scaled_to_width2(void* self, int w, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#scaledToHeight)
 ///
 /// @param self QImage*
 /// @param h int
 /// @param mode enum Qt__TransformationMode
-QImage* q_image_scaled_to_height2(void* self, int h, int64_t mode);
+QImage* q_image_scaled_to_height2(void* self, int h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#transformed)
 ///
 /// @param self QImage*
 /// @param matrix QTransform*
 /// @param mode enum Qt__TransformationMode
-QImage* q_image_transformed2(void* self, void* matrix, int64_t mode);
+QImage* q_image_transformed2(void* self, void* matrix, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#mirrored)
 ///
@@ -1078,7 +1078,7 @@ void q_image_mirror2(void* self, bool horizontally, bool vertically);
 ///
 /// @param self QImage*
 /// @param param1 enum QImage__InvertMode
-void q_image_invert_pixels1(void* self, int64_t param1);
+void q_image_invert_pixels1(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertedToColorSpace)
 ///
@@ -1086,7 +1086,7 @@ void q_image_invert_pixels1(void* self, int64_t param1);
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int64_t format, int64_t flags);
+QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#convertToColorSpace)
 ///
@@ -1094,7 +1094,7 @@ QImage* q_image_converted_to_color_space3(void* self, void* colorSpace, int64_t 
 /// @param colorSpace QColorSpace*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_image_convert_to_color_space3(void* self, void* colorSpace, int64_t format, int64_t flags);
+void q_image_convert_to_color_space3(void* self, void* colorSpace, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#colorTransformed)
 ///
@@ -1102,7 +1102,7 @@ void q_image_convert_to_color_space3(void* self, void* colorSpace, int64_t forma
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-QImage* q_image_color_transformed3(void* self, void* transform, int64_t format, int64_t flags);
+QImage* q_image_color_transformed3(void* self, void* transform, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#applyColorTransform)
 ///
@@ -1110,7 +1110,7 @@ QImage* q_image_color_transformed3(void* self, void* transform, int64_t format, 
 /// @param transform QColorTransform*
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
-void q_image_apply_color_transform3(void* self, void* transform, int64_t format, int64_t flags);
+void q_image_apply_color_transform3(void* self, void* transform, int32_t format, int64_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#load)
 ///
@@ -1288,7 +1288,7 @@ double q_image_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_image_encode_metric_f(int64_t metric, double value);
+int32_t q_image_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDevice
 ///
@@ -1387,7 +1387,7 @@ void q_image_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QImage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_image_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1398,7 +1398,7 @@ double q_image_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB
 /// @param self QImage*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_image_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_image_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1408,7 +1408,7 @@ double q_image_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t m
 ///
 /// @param self QImage*
 /// @param callback double fn(QImage*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimage.html#dtor.QImage)
 ///

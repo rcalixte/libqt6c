@@ -9,7 +9,7 @@ QEventPoint* q_eventpoint_new() {
     return QEventPoint_new();
 }
 
-QEventPoint* q_eventpoint_new2(int pointId, int64_t state, void* scenePosition, void* globalPosition) {
+QEventPoint* q_eventpoint_new2(int pointId, uint8_t state, void* scenePosition, void* globalPosition) {
     return QEventPoint_new2(pointId, state, (QPointF*)scenePosition, (QPointF*)globalPosition);
 }
 
@@ -145,7 +145,7 @@ QVector2D* q_eventpoint_velocity(void* self) {
     return QEventPoint_Velocity((QEventPoint*)self);
 }
 
-int64_t q_eventpoint_state(void* self) {
+uint8_t q_eventpoint_state(void* self) {
     return QEventPoint_State((QEventPoint*)self);
 }
 

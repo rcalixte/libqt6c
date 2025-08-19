@@ -132,15 +132,15 @@ bool q_icon_has_theme_icon(const char* name) {
     return QIcon_HasThemeIcon(qstring(name));
 }
 
-QIcon* q_icon_from_theme3(int64_t icon) {
+QIcon* q_icon_from_theme3(int32_t icon) {
     return QIcon_FromTheme3(icon);
 }
 
-QIcon* q_icon_from_theme4(int64_t icon, void* fallback) {
+QIcon* q_icon_from_theme4(int32_t icon, void* fallback) {
     return QIcon_FromTheme4(icon, (QIcon*)fallback);
 }
 
-bool q_icon_has_theme_icon2(int64_t icon) {
+bool q_icon_has_theme_icon2(int32_t icon) {
     return QIcon_HasThemeIcon2(icon);
 }
 
@@ -234,59 +234,59 @@ void q_icon_set_fallback_theme_name(const char* name) {
     QIcon_SetFallbackThemeName(qstring(name));
 }
 
-QPixmap* q_icon_pixmap22(void* self, void* size, int64_t mode) {
+QPixmap* q_icon_pixmap22(void* self, void* size, int32_t mode) {
     return QIcon_Pixmap22((QIcon*)self, (QSize*)size, mode);
 }
 
-QPixmap* q_icon_pixmap32(void* self, void* size, int64_t mode, int64_t state) {
+QPixmap* q_icon_pixmap32(void* self, void* size, int32_t mode, int32_t state) {
     return QIcon_Pixmap32((QIcon*)self, (QSize*)size, mode, state);
 }
 
-QPixmap* q_icon_pixmap33(void* self, int w, int h, int64_t mode) {
+QPixmap* q_icon_pixmap33(void* self, int w, int h, int32_t mode) {
     return QIcon_Pixmap33((QIcon*)self, w, h, mode);
 }
 
-QPixmap* q_icon_pixmap42(void* self, int w, int h, int64_t mode, int64_t state) {
+QPixmap* q_icon_pixmap42(void* self, int w, int h, int32_t mode, int32_t state) {
     return QIcon_Pixmap42((QIcon*)self, w, h, mode, state);
 }
 
-QPixmap* q_icon_pixmap23(void* self, int extent, int64_t mode) {
+QPixmap* q_icon_pixmap23(void* self, int extent, int32_t mode) {
     return QIcon_Pixmap23((QIcon*)self, extent, mode);
 }
 
-QPixmap* q_icon_pixmap34(void* self, int extent, int64_t mode, int64_t state) {
+QPixmap* q_icon_pixmap34(void* self, int extent, int32_t mode, int32_t state) {
     return QIcon_Pixmap34((QIcon*)self, extent, mode, state);
 }
 
-QPixmap* q_icon_pixmap35(void* self, void* size, double devicePixelRatio, int64_t mode) {
+QPixmap* q_icon_pixmap35(void* self, void* size, double devicePixelRatio, int32_t mode) {
     return QIcon_Pixmap35((QIcon*)self, (QSize*)size, devicePixelRatio, mode);
 }
 
-QPixmap* q_icon_pixmap43(void* self, void* size, double devicePixelRatio, int64_t mode, int64_t state) {
+QPixmap* q_icon_pixmap43(void* self, void* size, double devicePixelRatio, int32_t mode, int32_t state) {
     return QIcon_Pixmap43((QIcon*)self, (QSize*)size, devicePixelRatio, mode, state);
 }
 
-QPixmap* q_icon_pixmap36(void* self, void* window, void* size, int64_t mode) {
+QPixmap* q_icon_pixmap36(void* self, void* window, void* size, int32_t mode) {
     return QIcon_Pixmap36((QIcon*)self, (QWindow*)window, (QSize*)size, mode);
 }
 
-QPixmap* q_icon_pixmap44(void* self, void* window, void* size, int64_t mode, int64_t state) {
+QPixmap* q_icon_pixmap44(void* self, void* window, void* size, int32_t mode, int32_t state) {
     return QIcon_Pixmap44((QIcon*)self, (QWindow*)window, (QSize*)size, mode, state);
 }
 
-QSize* q_icon_actual_size22(void* self, void* size, int64_t mode) {
+QSize* q_icon_actual_size22(void* self, void* size, int32_t mode) {
     return QIcon_ActualSize22((QIcon*)self, (QSize*)size, mode);
 }
 
-QSize* q_icon_actual_size3(void* self, void* size, int64_t mode, int64_t state) {
+QSize* q_icon_actual_size3(void* self, void* size, int32_t mode, int32_t state) {
     return QIcon_ActualSize3((QIcon*)self, (QSize*)size, mode, state);
 }
 
-QSize* q_icon_actual_size32(void* self, void* window, void* size, int64_t mode) {
+QSize* q_icon_actual_size32(void* self, void* window, void* size, int32_t mode) {
     return QIcon_ActualSize32((QIcon*)self, (QWindow*)window, (QSize*)size, mode);
 }
 
-QSize* q_icon_actual_size4(void* self, void* window, void* size, int64_t mode, int64_t state) {
+QSize* q_icon_actual_size4(void* self, void* window, void* size, int32_t mode, int32_t state) {
     return QIcon_ActualSize4((QIcon*)self, (QWindow*)window, (QSize*)size, mode, state);
 }
 
@@ -294,11 +294,11 @@ void q_icon_paint3(void* self, void* painter, void* rect, int64_t alignment) {
     QIcon_Paint3((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment);
 }
 
-void q_icon_paint4(void* self, void* painter, void* rect, int64_t alignment, int64_t mode) {
+void q_icon_paint4(void* self, void* painter, void* rect, int64_t alignment, int32_t mode) {
     QIcon_Paint4((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment, mode);
 }
 
-void q_icon_paint5(void* self, void* painter, void* rect, int64_t alignment, int64_t mode, int64_t state) {
+void q_icon_paint5(void* self, void* painter, void* rect, int64_t alignment, int32_t mode, int32_t state) {
     QIcon_Paint5((QIcon*)self, (QPainter*)painter, (QRect*)rect, alignment, mode, state);
 }
 
@@ -306,19 +306,19 @@ void q_icon_paint6(void* self, void* painter, int x, int y, int w, int h, int64_
     QIcon_Paint6((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment);
 }
 
-void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int64_t mode) {
+void q_icon_paint7(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode) {
     QIcon_Paint7((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment, mode);
 }
 
-void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int64_t mode, int64_t state) {
+void q_icon_paint8(void* self, void* painter, int x, int y, int w, int h, int64_t alignment, int32_t mode, int32_t state) {
     QIcon_Paint8((QIcon*)self, (QPainter*)painter, x, y, w, h, alignment, mode, state);
 }
 
-void q_icon_add_pixmap2(void* self, void* pixmap, int64_t mode) {
+void q_icon_add_pixmap2(void* self, void* pixmap, int32_t mode) {
     QIcon_AddPixmap2((QIcon*)self, (QPixmap*)pixmap, mode);
 }
 
-void q_icon_add_pixmap3(void* self, void* pixmap, int64_t mode, int64_t state) {
+void q_icon_add_pixmap3(void* self, void* pixmap, int32_t mode, int32_t state) {
     QIcon_AddPixmap3((QIcon*)self, (QPixmap*)pixmap, mode, state);
 }
 
@@ -326,20 +326,20 @@ void q_icon_add_file2(void* self, const char* fileName, void* size) {
     QIcon_AddFile2((QIcon*)self, qstring(fileName), (QSize*)size);
 }
 
-void q_icon_add_file3(void* self, const char* fileName, void* size, int64_t mode) {
+void q_icon_add_file3(void* self, const char* fileName, void* size, int32_t mode) {
     QIcon_AddFile3((QIcon*)self, qstring(fileName), (QSize*)size, mode);
 }
 
-void q_icon_add_file4(void* self, const char* fileName, void* size, int64_t mode, int64_t state) {
+void q_icon_add_file4(void* self, const char* fileName, void* size, int32_t mode, int32_t state) {
     QIcon_AddFile4((QIcon*)self, qstring(fileName), (QSize*)size, mode, state);
 }
 
-libqt_list /* of QSize* */ q_icon_available_sizes1(void* self, int64_t mode) {
+libqt_list /* of QSize* */ q_icon_available_sizes1(void* self, int32_t mode) {
     libqt_list _arr = QIcon_AvailableSizes1((QIcon*)self, mode);
     return _arr;
 }
 
-libqt_list /* of QSize* */ q_icon_available_sizes2(void* self, int64_t mode, int64_t state) {
+libqt_list /* of QSize* */ q_icon_available_sizes2(void* self, int32_t mode, int32_t state) {
     libqt_list _arr = QIcon_AvailableSizes2((QIcon*)self, mode, state);
     return _arr;
 }

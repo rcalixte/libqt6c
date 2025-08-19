@@ -134,7 +134,7 @@ void q_graphicslayout_set_size_policy(void* self, void* policy) {
     QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
 }
 
-void q_graphicslayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy) {
+void q_graphicslayout_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
     QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
 }
 
@@ -234,7 +234,7 @@ QRectF* q_graphicslayout_contents_rect(void* self) {
     return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
 }
 
-QSizeF* q_graphicslayout_effective_size_hint(void* self, int64_t which) {
+QSizeF* q_graphicslayout_effective_size_hint(void* self, int32_t which) {
     return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
 }
 
@@ -258,11 +258,11 @@ bool q_graphicslayout_owned_by_layout(void* self) {
     return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
 }
 
-void q_graphicslayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType) {
+void q_graphicslayout_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
     QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
 }
 
-QSizeF* q_graphicslayout_effective_size_hint2(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslayout_effective_size_hint2(void* self, int32_t which, void* constraint) {
     return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 
@@ -290,15 +290,15 @@ void q_graphicslayout_on_is_empty(void* self, bool (*callback)()) {
     QGraphicsLayout_OnIsEmpty((QGraphicsLayout*)self, (intptr_t)callback);
 }
 
-QSizeF* q_graphicslayout_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslayout_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsLayout_SizeHint((QGraphicsLayout*)self, which, (QSizeF*)constraint);
 }
 
-QSizeF* q_graphicslayout_qbase_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicslayout_qbase_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsLayout_QBaseSizeHint((QGraphicsLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*)) {
     QGraphicsLayout_OnSizeHint((QGraphicsLayout*)self, (intptr_t)callback);
 }
 

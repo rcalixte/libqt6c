@@ -2,11 +2,11 @@
 #include "libqcoreevent.hpp"
 #include "libqcoreevent.h"
 
-QEvent* q_event_new(int64_t typeVal) {
+QEvent* q_event_new(int32_t typeVal) {
     return QEvent_new(typeVal);
 }
 
-int64_t q_event_type(void* self) {
+int32_t q_event_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
@@ -78,7 +78,7 @@ QTimerEvent* q_timerevent_new(int timerId) {
     return QTimerEvent_new(timerId);
 }
 
-QTimerEvent* q_timerevent_new2(int64_t timerId) {
+QTimerEvent* q_timerevent_new2(int32_t timerId) {
     return QTimerEvent_new2(timerId);
 }
 
@@ -98,11 +98,11 @@ int32_t q_timerevent_timer_id(void* self) {
     return QTimerEvent_TimerId((QTimerEvent*)self);
 }
 
-int64_t q_timerevent_id(void* self) {
+int32_t q_timerevent_id(void* self) {
     return QTimerEvent_Id((QTimerEvent*)self);
 }
 
-int64_t q_timerevent_type(void* self) {
+int32_t q_timerevent_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
@@ -158,7 +158,7 @@ void q_timerevent_delete(void* self) {
     QTimerEvent_Delete((QTimerEvent*)(self));
 }
 
-QChildEvent* q_childevent_new(int64_t typeVal, void* child) {
+QChildEvent* q_childevent_new(int32_t typeVal, void* child) {
     return QChildEvent_new(typeVal, (QObject*)child);
 }
 
@@ -190,7 +190,7 @@ bool q_childevent_removed(void* self) {
     return QChildEvent_Removed((QChildEvent*)self);
 }
 
-int64_t q_childevent_type(void* self) {
+int32_t q_childevent_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }
 
@@ -269,7 +269,7 @@ char* q_dynamicpropertychangeevent_property_name(void* self) {
     return _ret;
 }
 
-int64_t q_dynamicpropertychangeevent_type(void* self) {
+int32_t q_dynamicpropertychangeevent_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }
 

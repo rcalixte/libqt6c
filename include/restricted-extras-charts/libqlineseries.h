@@ -35,13 +35,13 @@ void* q_lineseries_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_lineseries_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_lineseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QLineSeries*
 /// @param callback int32_t fn(QLineSeries*, enum QMetaObject__Call, int, void*)
-void q_lineseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_lineseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_lineseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_lineseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_lineseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,15 +63,15 @@ const char* q_lineseries_tr(const char* s);
 /// @param self QLineSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_lineseries_type(void* self);
+int32_t q_lineseries_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineseries-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLineSeries*
-/// @param callback int64_t fn()
-void q_lineseries_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_lineseries_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlineseries-qtcharts.html#type)
 ///
@@ -80,7 +80,7 @@ void q_lineseries_on_type(void* self, int64_t (*callback)());
 /// @param self QLineSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_lineseries_qbase_type(void* self);
+int32_t q_lineseries_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -574,7 +574,7 @@ void q_lineseries_clear_point_configuration(void* self, int index);
 /// @param self QLineSeries*
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
-void q_lineseries_clear_point_configuration2(void* self, int index, int64_t key);
+void q_lineseries_clear_point_configuration2(void* self, int index, int32_t key);
 
 /// Inherited from QXYSeries
 ///
@@ -589,7 +589,7 @@ void q_lineseries_clear_points_configuration(void* self);
 ///
 /// @param self QLineSeries*
 /// @param key enum QXYSeries__PointConfiguration
-void q_lineseries_clear_points_configuration2(void* self, int64_t key);
+void q_lineseries_clear_points_configuration2(void* self, int32_t key);
 
 /// Inherited from QXYSeries
 ///
@@ -598,7 +598,7 @@ void q_lineseries_clear_points_configuration2(void* self, int64_t key);
 /// @param self QLineSeries*
 /// @param index int
 /// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
-void q_lineseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration);
+void q_lineseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -608,7 +608,7 @@ void q_lineseries_set_point_configuration(void* self, int index, libqt_map /* of
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
 /// @param value QVariant*
-void q_lineseries_set_point_configuration2(void* self, int index, int64_t key, void* value);
+void q_lineseries_set_point_configuration2(void* self, int index, int32_t key, void* value);
 
 /// Inherited from QXYSeries
 ///
@@ -616,7 +616,7 @@ void q_lineseries_set_point_configuration2(void* self, int index, int64_t key, v
 ///
 /// @param self QLineSeries*
 /// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration);
+void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration);
 
 /// Inherited from QXYSeries
 ///
@@ -624,14 +624,14 @@ void q_lineseries_set_points_configuration(void* self, libqt_map /* of int to li
 ///
 /// @param self QLineSeries*
 /// @param index int
-libqt_map /* of int64_t to QVariant* */ q_lineseries_point_configuration(void* self, int index);
+libqt_map /* of int32_t to QVariant* */ q_lineseries_point_configuration(void* self, int index);
 
 /// Inherited from QXYSeries
 ///
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries.html#pointsConfiguration)
 ///
 /// @param self QLineSeries*
-libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_lineseries_points_configuration(void* self);
+libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_lineseries_points_configuration(void* self);
 
 /// Inherited from QXYSeries
 ///
@@ -1041,7 +1041,7 @@ void q_lineseries_on_best_fit_line_color_changed(void* self, void (*callback)(vo
 ///
 /// @param self QLineSeries*
 /// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_lineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration);
+void q_lineseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration);
 
 /// Inherited from QXYSeries
 ///
@@ -1049,7 +1049,7 @@ void q_lineseries_points_configuration_changed(void* self, libqt_map /* of int t
 ///
 /// @param self QLineSeries*
 /// @param callback void fn(QLineSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
-void q_lineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
+void q_lineseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
 
 /// Inherited from QXYSeries
 ///
@@ -1378,7 +1378,7 @@ void q_lineseries_kill_timer(void* self, int id);
 ///
 /// @param self QLineSeries*
 /// @param id enum Qt__TimerId
-void q_lineseries_kill_timer2(void* self, int64_t id);
+void q_lineseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1555,7 +1555,7 @@ bool q_lineseries_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QLineSeries*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_lineseries_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_lineseries_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1566,7 +1566,7 @@ int32_t q_lineseries_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_lineseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_lineseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1577,7 +1577,7 @@ QMetaObject__Connection* q_lineseries_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_lineseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_lineseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

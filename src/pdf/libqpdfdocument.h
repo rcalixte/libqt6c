@@ -35,13 +35,13 @@ void* q_pdfdocument_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfdocument_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfdocument_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfDocument*
 /// @param callback int32_t fn(QPdfDocument*, enum QMetaObject__Call, int, void*)
-void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfdocument_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfdocument_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -64,14 +64,14 @@ const char* q_pdfdocument_tr(const char* s);
 /// @param fileName const char*
 ///
 /// @return enum QPdfDocument__Error
-int64_t q_pdfdocument_load(void* self, const char* fileName);
+int32_t q_pdfdocument_load(void* self, const char* fileName);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#status)
 ///
 /// @param self QPdfDocument*
 ///
 /// @return enum QPdfDocument__Status
-int64_t q_pdfdocument_status(void* self);
+int32_t q_pdfdocument_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#load)
 ///
@@ -96,14 +96,14 @@ const char* q_pdfdocument_password(void* self);
 ///
 /// @param self QPdfDocument*
 /// @param field enum QPdfDocument__MetaDataField
-QVariant* q_pdfdocument_meta_data(void* self, int64_t field);
+QVariant* q_pdfdocument_meta_data(void* self, int32_t field);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#error)
 ///
 /// @param self QPdfDocument*
 ///
 /// @return enum QPdfDocument__Error
-int64_t q_pdfdocument_error(void* self);
+int32_t q_pdfdocument_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#close)
 ///
@@ -195,13 +195,13 @@ void q_pdfdocument_on_password_required(void* self, void (*callback)(void*));
 ///
 /// @param self QPdfDocument*
 /// @param status enum QPdfDocument__Status
-void q_pdfdocument_status_changed(void* self, int64_t status);
+void q_pdfdocument_status_changed(void* self, int32_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#statusChanged)
 ///
 /// @param self QPdfDocument*
 /// @param callback void fn(QPdfDocument*, enum QPdfDocument__Status)
-void q_pdfdocument_on_status_changed(void* self, void (*callback)(void*, int64_t));
+void q_pdfdocument_on_status_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfdocument.html#pageCountChanged)
 ///
@@ -341,7 +341,7 @@ void q_pdfdocument_kill_timer(void* self, int id);
 ///
 /// @param self QPdfDocument*
 /// @param id enum Qt__TimerId
-void q_pdfdocument_kill_timer2(void* self, int64_t id);
+void q_pdfdocument_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -518,7 +518,7 @@ bool q_pdfdocument_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPdfDocument*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pdfdocument_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pdfdocument_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -529,7 +529,7 @@ int32_t q_pdfdocument_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfdocument_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pdfdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -540,7 +540,7 @@ QMetaObject__Connection* q_pdfdocument_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfdocument_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pdfdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -11,15 +11,15 @@ QSettings* q_settings_new(const char* organization) {
     return QSettings_new(qstring(organization));
 }
 
-QSettings* q_settings_new2(int64_t scope, const char* organization) {
+QSettings* q_settings_new2(int32_t scope, const char* organization) {
     return QSettings_new2(scope, qstring(organization));
 }
 
-QSettings* q_settings_new3(int64_t format, int64_t scope, const char* organization) {
+QSettings* q_settings_new3(int32_t format, int32_t scope, const char* organization) {
     return QSettings_new3(format, scope, qstring(organization));
 }
 
-QSettings* q_settings_new4(const char* fileName, int64_t format) {
+QSettings* q_settings_new4(const char* fileName, int32_t format) {
     return QSettings_new4(qstring(fileName), format);
 }
 
@@ -27,7 +27,7 @@ QSettings* q_settings_new5() {
     return QSettings_new5();
 }
 
-QSettings* q_settings_new6(int64_t scope) {
+QSettings* q_settings_new6(int32_t scope) {
     return QSettings_new6(scope);
 }
 
@@ -39,23 +39,23 @@ QSettings* q_settings_new8(const char* organization, const char* application, vo
     return QSettings_new8(qstring(organization), qstring(application), (QObject*)parent);
 }
 
-QSettings* q_settings_new9(int64_t scope, const char* organization, const char* application) {
+QSettings* q_settings_new9(int32_t scope, const char* organization, const char* application) {
     return QSettings_new9(scope, qstring(organization), qstring(application));
 }
 
-QSettings* q_settings_new10(int64_t scope, const char* organization, const char* application, void* parent) {
+QSettings* q_settings_new10(int32_t scope, const char* organization, const char* application, void* parent) {
     return QSettings_new10(scope, qstring(organization), qstring(application), (QObject*)parent);
 }
 
-QSettings* q_settings_new11(int64_t format, int64_t scope, const char* organization, const char* application) {
+QSettings* q_settings_new11(int32_t format, int32_t scope, const char* organization, const char* application) {
     return QSettings_new11(format, scope, qstring(organization), qstring(application));
 }
 
-QSettings* q_settings_new12(int64_t format, int64_t scope, const char* organization, const char* application, void* parent) {
+QSettings* q_settings_new12(int32_t format, int32_t scope, const char* organization, const char* application, void* parent) {
     return QSettings_new12(format, scope, qstring(organization), qstring(application), (QObject*)parent);
 }
 
-QSettings* q_settings_new13(const char* fileName, int64_t format, void* parent) {
+QSettings* q_settings_new13(const char* fileName, int32_t format, void* parent) {
     return QSettings_new13(qstring(fileName), format, (QObject*)parent);
 }
 
@@ -63,7 +63,7 @@ QSettings* q_settings_new14(void* parent) {
     return QSettings_new14((QObject*)parent);
 }
 
-QSettings* q_settings_new15(int64_t scope, void* parent) {
+QSettings* q_settings_new15(int32_t scope, void* parent) {
     return QSettings_new15(scope, (QObject*)parent);
 }
 
@@ -75,15 +75,15 @@ void* q_settings_metacast(void* self, const char* param1) {
     return QSettings_Metacast((QSettings*)self, param1);
 }
 
-int32_t q_settings_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_settings_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSettings_Metacall((QSettings*)self, param1, param2, param3);
 }
 
-void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_settings_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSettings_OnMetacall((QSettings*)self, (intptr_t)callback);
 }
 
-int32_t q_settings_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_settings_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSettings_QBaseMetacall((QSettings*)self, param1, param2, param3);
 }
 
@@ -102,7 +102,7 @@ void q_settings_sync(void* self) {
     QSettings_Sync((QSettings*)self);
 }
 
-int64_t q_settings_status(void* self) {
+int32_t q_settings_status(void* self) {
     return QSettings_Status((QSettings*)self);
 }
 
@@ -241,11 +241,11 @@ const char* q_settings_file_name(void* self) {
     return _ret;
 }
 
-int64_t q_settings_format(void* self) {
+int32_t q_settings_format(void* self) {
     return QSettings_Format((QSettings*)self);
 }
 
-int64_t q_settings_scope(void* self) {
+int32_t q_settings_scope(void* self) {
     return QSettings_Scope((QSettings*)self);
 }
 
@@ -263,15 +263,15 @@ const char* q_settings_application_name(void* self) {
     return _ret;
 }
 
-void q_settings_set_default_format(int64_t format) {
+void q_settings_set_default_format(int32_t format) {
     QSettings_SetDefaultFormat(format);
 }
 
-int64_t q_settings_default_format() {
+int32_t q_settings_default_format() {
     return QSettings_DefaultFormat();
 }
 
-void q_settings_set_path(int64_t format, int64_t scope, const char* path) {
+void q_settings_set_path(int32_t format, int32_t scope, const char* path) {
     QSettings_SetPath(format, scope, qstring(path));
 }
 
@@ -352,7 +352,7 @@ void q_settings_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_settings_kill_timer2(void* self, int64_t id) {
+void q_settings_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -456,15 +456,15 @@ bool q_settings_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_settings_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_settings_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_settings_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_settings_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

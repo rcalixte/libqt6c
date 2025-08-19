@@ -12,7 +12,7 @@ QSvgGenerator* q_svggenerator_new() {
     return QSvgGenerator_new();
 }
 
-QSvgGenerator* q_svggenerator_new2(int64_t version) {
+QSvgGenerator* q_svggenerator_new2(int32_t version) {
     return QSvgGenerator_new2(version);
 }
 
@@ -89,7 +89,7 @@ int32_t q_svggenerator_resolution(void* self) {
     return QSvgGenerator_Resolution((QSvgGenerator*)self);
 }
 
-int64_t q_svggenerator_svg_version(void* self) {
+int32_t q_svggenerator_svg_version(void* self) {
     return QSvgGenerator_SvgVersion((QSvgGenerator*)self);
 }
 
@@ -105,15 +105,15 @@ QPaintEngine* q_svggenerator_qbase_paint_engine(void* self) {
     return QSvgGenerator_QBasePaintEngine((QSvgGenerator*)self);
 }
 
-int32_t q_svggenerator_metric(void* self, int64_t metric) {
+int32_t q_svggenerator_metric(void* self, int32_t metric) {
     return QSvgGenerator_Metric((QSvgGenerator*)self, metric);
 }
 
-void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QSvgGenerator_OnMetric((QSvgGenerator*)self, (intptr_t)callback);
 }
 
-int32_t q_svggenerator_qbase_metric(void* self, int64_t metric) {
+int32_t q_svggenerator_qbase_metric(void* self, int32_t metric) {
     return QSvgGenerator_QBaseMetric((QSvgGenerator*)self, metric);
 }
 
@@ -173,7 +173,7 @@ double q_svggenerator_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_svggenerator_encode_metric_f(int64_t metric, double value) {
+int32_t q_svggenerator_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -225,15 +225,15 @@ void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)()) {
     QSvgGenerator_OnSharedPainter((QSvgGenerator*)self, (intptr_t)callback);
 }
 
-double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QSvgGenerator_GetDecodedMetricF((QSvgGenerator*)self, metricA, metricB);
 }
 
-double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_svggenerator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QSvgGenerator_QBaseGetDecodedMetricF((QSvgGenerator*)self, metricA, metricB);
 }
 
-void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QSvgGenerator_OnGetDecodedMetricF((QSvgGenerator*)self, (intptr_t)callback);
 }
 

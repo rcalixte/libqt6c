@@ -16,14 +16,14 @@
 /// q_event_new constructs a new QEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QEvent* q_event_new(int64_t typeVal);
+QEvent* q_event_new(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#type)
 ///
 /// @param self QEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_event_type(void* self);
+int32_t q_event_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qevent.html#spontaneous)
 ///
@@ -128,7 +128,7 @@ QTimerEvent* q_timerevent_new(int timerId);
 /// q_timerevent_new2 constructs a new QTimerEvent object.
 ///
 /// @param timerId enum Qt__TimerId
-QTimerEvent* q_timerevent_new2(int64_t timerId);
+QTimerEvent* q_timerevent_new2(int32_t timerId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimerevent.html#clone)
 ///
@@ -160,7 +160,7 @@ int32_t q_timerevent_timer_id(void* self);
 /// @param self QTimerEvent*
 ///
 /// @return enum Qt__TimerId
-int64_t q_timerevent_id(void* self);
+int32_t q_timerevent_id(void* self);
 
 /// Inherited from QEvent
 ///
@@ -169,7 +169,7 @@ int64_t q_timerevent_id(void* self);
 /// @param self QTimerEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_timerevent_type(void* self);
+int32_t q_timerevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -276,7 +276,7 @@ void q_timerevent_delete(void* self);
 ///
 /// @param typeVal enum QEvent__Type
 /// @param child QObject*
-QChildEvent* q_childevent_new(int64_t typeVal, void* child);
+QChildEvent* q_childevent_new(int32_t typeVal, void* child);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchildevent.html#clone)
 ///
@@ -325,7 +325,7 @@ bool q_childevent_removed(void* self);
 /// @param self QChildEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_childevent_type(void* self);
+int32_t q_childevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -467,7 +467,7 @@ char* q_dynamicpropertychangeevent_property_name(void* self);
 /// @param self QDynamicPropertyChangeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_dynamicpropertychangeevent_type(void* self);
+int32_t q_dynamicpropertychangeevent_type(void* self);
 
 /// Inherited from QEvent
 ///

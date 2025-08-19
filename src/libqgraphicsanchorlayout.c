@@ -18,7 +18,7 @@ void* q_graphicsanchor_metacast(void* self, const char* param1) {
     return QGraphicsAnchor_Metacast((QGraphicsAnchor*)self, param1);
 }
 
-int32_t q_graphicsanchor_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsanchor_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsAnchor_Metacall((QGraphicsAnchor*)self, param1, param2, param3);
 }
 
@@ -41,11 +41,11 @@ double q_graphicsanchor_spacing(void* self) {
     return QGraphicsAnchor_Spacing((QGraphicsAnchor*)self);
 }
 
-void q_graphicsanchor_set_size_policy(void* self, int64_t policy) {
+void q_graphicsanchor_set_size_policy(void* self, int32_t policy) {
     QGraphicsAnchor_SetSizePolicy((QGraphicsAnchor*)self, policy);
 }
 
-int64_t q_graphicsanchor_size_policy(void* self) {
+int32_t q_graphicsanchor_size_policy(void* self) {
     return QGraphicsAnchor_SizePolicy((QGraphicsAnchor*)self);
 }
 
@@ -118,7 +118,7 @@ void q_graphicsanchor_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsanchor_kill_timer2(void* self, int64_t id) {
+void q_graphicsanchor_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -222,15 +222,15 @@ bool q_graphicsanchor_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsanchor_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsanchor_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsanchor_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsanchor_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -258,15 +258,15 @@ QGraphicsAnchorLayout* q_graphicsanchorlayout_new2(void* parent) {
     return QGraphicsAnchorLayout_new2((QGraphicsLayoutItem*)parent);
 }
 
-QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge) {
+QGraphicsAnchor* q_graphicsanchorlayout_add_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge) {
     return QGraphicsAnchorLayout_AddAnchor((QGraphicsAnchorLayout*)self, (QGraphicsLayoutItem*)firstItem, firstEdge, (QGraphicsLayoutItem*)secondItem, secondEdge);
 }
 
-QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int64_t firstEdge, void* secondItem, int64_t secondEdge) {
+QGraphicsAnchor* q_graphicsanchorlayout_anchor(void* self, void* firstItem, int32_t firstEdge, void* secondItem, int32_t secondEdge) {
     return QGraphicsAnchorLayout_Anchor((QGraphicsAnchorLayout*)self, (QGraphicsLayoutItem*)firstItem, firstEdge, (QGraphicsLayoutItem*)secondItem, secondEdge);
 }
 
-void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int64_t firstCorner, void* secondItem, int64_t secondCorner) {
+void q_graphicsanchorlayout_add_corner_anchors(void* self, void* firstItem, int32_t firstCorner, void* secondItem, int32_t secondCorner) {
     QGraphicsAnchorLayout_AddCornerAnchors((QGraphicsAnchorLayout*)self, (QGraphicsLayoutItem*)firstItem, firstCorner, (QGraphicsLayoutItem*)secondItem, secondCorner);
 }
 
@@ -354,15 +354,15 @@ void q_graphicsanchorlayout_qbase_invalidate(void* self) {
     QGraphicsAnchorLayout_QBaseInvalidate((QGraphicsAnchorLayout*)self);
 }
 
-QSizeF* q_graphicsanchorlayout_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicsanchorlayout_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsAnchorLayout_SizeHint((QGraphicsAnchorLayout*)self, which, (QSizeF*)constraint);
 }
 
-void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*)) {
+void q_graphicsanchorlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*)) {
     QGraphicsAnchorLayout_OnSizeHint((QGraphicsAnchorLayout*)self, (intptr_t)callback);
 }
 
-QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicsanchorlayout_qbase_size_hint(void* self, int32_t which, void* constraint) {
     return QGraphicsAnchorLayout_QBaseSizeHint((QGraphicsAnchorLayout*)self, which, (QSizeF*)constraint);
 }
 
@@ -394,7 +394,7 @@ void q_graphicsanchorlayout_set_size_policy(void* self, void* policy) {
     QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
 }
 
-void q_graphicsanchorlayout_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy) {
+void q_graphicsanchorlayout_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
     QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
 }
 
@@ -494,7 +494,7 @@ QRectF* q_graphicsanchorlayout_contents_rect(void* self) {
     return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
 }
 
-QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int64_t which) {
+QSizeF* q_graphicsanchorlayout_effective_size_hint(void* self, int32_t which) {
     return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
 }
 
@@ -518,11 +518,11 @@ bool q_graphicsanchorlayout_owned_by_layout(void* self) {
     return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
 }
 
-void q_graphicsanchorlayout_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType) {
+void q_graphicsanchorlayout_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
     QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
 }
 
-QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int64_t which, void* constraint) {
+QSizeF* q_graphicsanchorlayout_effective_size_hint2(void* self, int32_t which, void* constraint) {
     return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 

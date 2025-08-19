@@ -35,13 +35,13 @@ void* q_thread_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_thread_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_thread_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QThread*
 /// @param callback int32_t fn(QThread*, enum QMetaObject__Call, int, void*)
-void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_thread_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_thread_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_thread_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -82,14 +82,14 @@ void q_thread_yield_current_thread();
 ///
 /// @param self QThread*
 /// @param priority enum QThread__Priority
-void q_thread_set_priority(void* self, int64_t priority);
+void q_thread_set_priority(void* self, int32_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#priority)
 ///
 /// @param self QThread*
 ///
 /// @return enum QThread__Priority
-int64_t q_thread_priority(void* self);
+int32_t q_thread_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#isFinished)
 ///
@@ -272,7 +272,7 @@ const char* q_thread_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QThread*
 /// @param param1 enum QThread__Priority
-void q_thread_start1(void* self, int64_t param1);
+void q_thread_start1(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qthread.html#exit)
 ///
@@ -376,7 +376,7 @@ void q_thread_kill_timer(void* self, int id);
 ///
 /// @param self QThread*
 /// @param id enum Qt__TimerId
-void q_thread_kill_timer2(void* self, int64_t id);
+void q_thread_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -553,7 +553,7 @@ bool q_thread_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QThread*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_thread_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_thread_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -564,7 +564,7 @@ int32_t q_thread_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_thread_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_thread_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -575,7 +575,7 @@ QMetaObject__Connection* q_thread_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_thread_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_thread_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

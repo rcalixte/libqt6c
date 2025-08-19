@@ -41,15 +41,15 @@ void* q_graphicssvgitem_metacast(void* self, const char* param1) {
     return QGraphicsSvgItem_Metacast((QGraphicsSvgItem*)self, param1);
 }
 
-int32_t q_graphicssvgitem_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicssvgitem_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsSvgItem_Metacall((QGraphicsSvgItem*)self, param1, param2, param3);
 }
 
-void q_graphicssvgitem_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicssvgitem_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsSvgItem_OnMetacall((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicssvgitem_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicssvgitem_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsSvgItem_QBaseMetacall((QGraphicsSvgItem*)self, param1, param2, param3);
 }
 
@@ -300,7 +300,7 @@ void q_graphicssvgitem_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicssvgitem_kill_timer2(void* self, int64_t id) {
+void q_graphicssvgitem_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -404,15 +404,15 @@ bool q_graphicssvgitem_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicssvgitem_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicssvgitem_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicssvgitem_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicssvgitem_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicssvgitem_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -497,7 +497,7 @@ int64_t q_graphicssvgitem_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
-void q_graphicssvgitem_set_flag(void* self, int64_t flag) {
+void q_graphicssvgitem_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
@@ -505,19 +505,19 @@ void q_graphicssvgitem_set_flags(void* self, int64_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
-int64_t q_graphicssvgitem_cache_mode(void* self) {
+int32_t q_graphicssvgitem_cache_mode(void* self) {
     return QGraphicsItem_CacheMode((QGraphicsItem*)self);
 }
 
-void q_graphicssvgitem_set_cache_mode(void* self, int64_t mode) {
+void q_graphicssvgitem_set_cache_mode(void* self, int32_t mode) {
     QGraphicsItem_SetCacheMode((QGraphicsItem*)self, mode);
 }
 
-int64_t q_graphicssvgitem_panel_modality(void* self) {
+int32_t q_graphicssvgitem_panel_modality(void* self) {
     return QGraphicsItem_PanelModality((QGraphicsItem*)self);
 }
 
-void q_graphicssvgitem_set_panel_modality(void* self, int64_t panelModality) {
+void q_graphicssvgitem_set_panel_modality(void* self, int32_t panelModality) {
     QGraphicsItem_SetPanelModality((QGraphicsItem*)self, panelModality);
 }
 
@@ -1034,15 +1034,15 @@ void q_graphicssvgitem_remove_scene_event_filter(void* self, void* filterItem) {
     QGraphicsItem_RemoveSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)filterItem);
 }
 
-void q_graphicssvgitem_set_flag2(void* self, int64_t flag, bool enabled) {
+void q_graphicssvgitem_set_flag2(void* self, int32_t flag, bool enabled) {
     QGraphicsItem_SetFlag2((QGraphicsItem*)self, flag, enabled);
 }
 
-void q_graphicssvgitem_set_cache_mode2(void* self, int64_t mode, void* cacheSize) {
+void q_graphicssvgitem_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
-void q_graphicssvgitem_set_focus1(void* self, int64_t focusReason) {
+void q_graphicssvgitem_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
 
@@ -1074,7 +1074,7 @@ void q_graphicssvgitem_set_transform2(void* self, void* matrix, bool combine) {
     QGraphicsItem_SetTransform2((QGraphicsItem*)self, (QTransform*)matrix, combine);
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicssvgitem_colliding_items1(void* self, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicssvgitem_colliding_items1(void* self, int32_t mode) {
     libqt_list _arr = QGraphicsItem_CollidingItems1((QGraphicsItem*)self, mode);
     return _arr;
 }
@@ -1211,27 +1211,27 @@ void q_graphicssvgitem_on_contains(void* self, bool (*callback)(void*, void*)) {
     QGraphicsSvgItem_OnContains((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssvgitem_collides_with_item(void* self, void* other, int64_t mode) {
+bool q_graphicssvgitem_collides_with_item(void* self, void* other, int32_t mode) {
     return QGraphicsSvgItem_CollidesWithItem((QGraphicsSvgItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicssvgitem_qbase_collides_with_item(void* self, void* other, int64_t mode) {
+bool q_graphicssvgitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
     return QGraphicsSvgItem_QBaseCollidesWithItem((QGraphicsSvgItem*)self, (QGraphicsItem*)other, mode);
 }
 
-void q_graphicssvgitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_graphicssvgitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
     QGraphicsSvgItem_OnCollidesWithItem((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssvgitem_collides_with_path(void* self, void* path, int64_t mode) {
+bool q_graphicssvgitem_collides_with_path(void* self, void* path, int32_t mode) {
     return QGraphicsSvgItem_CollidesWithPath((QGraphicsSvgItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicssvgitem_qbase_collides_with_path(void* self, void* path, int64_t mode) {
+bool q_graphicssvgitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
     return QGraphicsSvgItem_QBaseCollidesWithPath((QGraphicsSvgItem*)self, (QPainterPath*)path, mode);
 }
 
-void q_graphicssvgitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_graphicssvgitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
     QGraphicsSvgItem_OnCollidesWithPath((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 
@@ -1511,15 +1511,15 @@ void q_graphicssvgitem_on_input_method_query(void* self, QVariant* (*callback)(v
     QGraphicsSvgItem_OnInputMethodQuery((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicssvgitem_item_change(void* self, int64_t change, void* value) {
+QVariant* q_graphicssvgitem_item_change(void* self, int32_t change, void* value) {
     return QGraphicsSvgItem_ItemChange((QGraphicsSvgItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicssvgitem_qbase_item_change(void* self, int64_t change, void* value) {
+QVariant* q_graphicssvgitem_qbase_item_change(void* self, int32_t change, void* value) {
     return QGraphicsSvgItem_QBaseItemChange((QGraphicsSvgItem*)self, change, (QVariant*)value);
 }
 
-void q_graphicssvgitem_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*)) {
+void q_graphicssvgitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
     QGraphicsSvgItem_OnItemChange((QGraphicsSvgItem*)self, (intptr_t)callback);
 }
 

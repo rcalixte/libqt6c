@@ -177,7 +177,7 @@ void q_listwidgetitem_set_text_alignment(void* self, int alignment) {
     QListWidgetItem_SetTextAlignment((QListWidgetItem*)self, alignment);
 }
 
-void q_listwidgetitem_set_text_alignment2(void* self, int64_t alignment) {
+void q_listwidgetitem_set_text_alignment2(void* self, int32_t alignment) {
     QListWidgetItem_SetTextAlignment2((QListWidgetItem*)self, alignment);
 }
 
@@ -201,11 +201,11 @@ void q_listwidgetitem_set_foreground(void* self, void* brush) {
     QListWidgetItem_SetForeground((QListWidgetItem*)self, (QBrush*)brush);
 }
 
-int64_t q_listwidgetitem_check_state(void* self) {
+int32_t q_listwidgetitem_check_state(void* self) {
     return QListWidgetItem_CheckState((QListWidgetItem*)self);
 }
 
-void q_listwidgetitem_set_check_state(void* self, int64_t state) {
+void q_listwidgetitem_set_check_state(void* self, int32_t state) {
     QListWidgetItem_SetCheckState((QListWidgetItem*)self, state);
 }
 
@@ -305,15 +305,15 @@ void* q_listwidget_metacast(void* self, const char* param1) {
     return QListWidget_Metacast((QListWidget*)self, param1);
 }
 
-int32_t q_listwidget_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_listwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QListWidget_Metacall((QListWidget*)self, param1, param2, param3);
 }
 
-void q_listwidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_listwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QListWidget_OnMetacall((QListWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_listwidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_listwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QListWidget_QBaseMetacall((QListWidget*)self, param1, param2, param3);
 }
 
@@ -663,15 +663,15 @@ QMimeData* q_listwidget_qbase_mime_data(void* self, libqt_list items) {
     return QListWidget_QBaseMimeData((QListWidget*)self, items);
 }
 
-bool q_listwidget_drop_mime_data(void* self, int index, void* data, int64_t action) {
+bool q_listwidget_drop_mime_data(void* self, int index, void* data, int32_t action) {
     return QListWidget_DropMimeData((QListWidget*)self, index, (QMimeData*)data, action);
 }
 
-void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int64_t)) {
+void q_listwidget_on_drop_mime_data(void* self, bool (*callback)(void*, int, void*, int32_t)) {
     QListWidget_OnDropMimeData((QListWidget*)self, (intptr_t)callback);
 }
 
-bool q_listwidget_qbase_drop_mime_data(void* self, int index, void* data, int64_t action) {
+bool q_listwidget_qbase_drop_mime_data(void* self, int index, void* data, int32_t action) {
     return QListWidget_QBaseDropMimeData((QListWidget*)self, index, (QMimeData*)data, action);
 }
 
@@ -701,27 +701,27 @@ const char* q_listwidget_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_listwidget_sort_items1(void* self, int64_t order) {
+void q_listwidget_sort_items1(void* self, int32_t order) {
     QListWidget_SortItems1((QListWidget*)self, order);
 }
 
-void q_listwidget_scroll_to_item2(void* self, void* item, int64_t hint) {
+void q_listwidget_scroll_to_item2(void* self, void* item, int32_t hint) {
     QListWidget_ScrollToItem2((QListWidget*)self, (QListWidgetItem*)item, hint);
 }
 
-void q_listwidget_set_movement(void* self, int64_t movement) {
+void q_listwidget_set_movement(void* self, int32_t movement) {
     QListView_SetMovement((QListView*)self, movement);
 }
 
-int64_t q_listwidget_movement(void* self) {
+int32_t q_listwidget_movement(void* self) {
     return QListView_Movement((QListView*)self);
 }
 
-void q_listwidget_set_flow(void* self, int64_t flow) {
+void q_listwidget_set_flow(void* self, int32_t flow) {
     QListView_SetFlow((QListView*)self, flow);
 }
 
-int64_t q_listwidget_flow(void* self) {
+int32_t q_listwidget_flow(void* self) {
     return QListView_Flow((QListView*)self);
 }
 
@@ -733,19 +733,19 @@ bool q_listwidget_is_wrapping(void* self) {
     return QListView_IsWrapping((QListView*)self);
 }
 
-void q_listwidget_set_resize_mode(void* self, int64_t mode) {
+void q_listwidget_set_resize_mode(void* self, int32_t mode) {
     QListView_SetResizeMode((QListView*)self, mode);
 }
 
-int64_t q_listwidget_resize_mode(void* self) {
+int32_t q_listwidget_resize_mode(void* self) {
     return QListView_ResizeMode((QListView*)self);
 }
 
-void q_listwidget_set_layout_mode(void* self, int64_t mode) {
+void q_listwidget_set_layout_mode(void* self, int32_t mode) {
     QListView_SetLayoutMode((QListView*)self, mode);
 }
 
-int64_t q_listwidget_layout_mode(void* self) {
+int32_t q_listwidget_layout_mode(void* self) {
     return QListView_LayoutMode((QListView*)self);
 }
 
@@ -773,11 +773,11 @@ QSize* q_listwidget_grid_size(void* self) {
     return QListView_GridSize((QListView*)self);
 }
 
-void q_listwidget_set_view_mode(void* self, int64_t mode) {
+void q_listwidget_set_view_mode(void* self, int32_t mode) {
     QListView_SetViewMode((QListView*)self, mode);
 }
 
-int64_t q_listwidget_view_mode(void* self) {
+int32_t q_listwidget_view_mode(void* self) {
     return QListView_ViewMode((QListView*)self);
 }
 
@@ -869,19 +869,19 @@ QAbstractItemDelegate* q_listwidget_item_delegate(void* self) {
     return QAbstractItemView_ItemDelegate((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_selection_mode(void* self, int64_t mode) {
+void q_listwidget_set_selection_mode(void* self, int32_t mode) {
     QAbstractItemView_SetSelectionMode((QAbstractItemView*)self, mode);
 }
 
-int64_t q_listwidget_selection_mode(void* self) {
+int32_t q_listwidget_selection_mode(void* self) {
     return QAbstractItemView_SelectionMode((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_selection_behavior(void* self, int64_t behavior) {
+void q_listwidget_set_selection_behavior(void* self, int32_t behavior) {
     QAbstractItemView_SetSelectionBehavior((QAbstractItemView*)self, behavior);
 }
 
-int64_t q_listwidget_selection_behavior(void* self) {
+int32_t q_listwidget_selection_behavior(void* self) {
     return QAbstractItemView_SelectionBehavior((QAbstractItemView*)self);
 }
 
@@ -901,11 +901,11 @@ int64_t q_listwidget_edit_triggers(void* self) {
     return QAbstractItemView_EditTriggers((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_vertical_scroll_mode(void* self, int64_t mode) {
+void q_listwidget_set_vertical_scroll_mode(void* self, int32_t mode) {
     QAbstractItemView_SetVerticalScrollMode((QAbstractItemView*)self, mode);
 }
 
-int64_t q_listwidget_vertical_scroll_mode(void* self) {
+int32_t q_listwidget_vertical_scroll_mode(void* self) {
     return QAbstractItemView_VerticalScrollMode((QAbstractItemView*)self);
 }
 
@@ -913,11 +913,11 @@ void q_listwidget_reset_vertical_scroll_mode(void* self) {
     QAbstractItemView_ResetVerticalScrollMode((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_horizontal_scroll_mode(void* self, int64_t mode) {
+void q_listwidget_set_horizontal_scroll_mode(void* self, int32_t mode) {
     QAbstractItemView_SetHorizontalScrollMode((QAbstractItemView*)self, mode);
 }
 
-int64_t q_listwidget_horizontal_scroll_mode(void* self) {
+int32_t q_listwidget_horizontal_scroll_mode(void* self) {
     return QAbstractItemView_HorizontalScrollMode((QAbstractItemView*)self);
 }
 
@@ -973,19 +973,19 @@ bool q_listwidget_drag_drop_overwrite_mode(void* self) {
     return QAbstractItemView_DragDropOverwriteMode((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_drag_drop_mode(void* self, int64_t behavior) {
+void q_listwidget_set_drag_drop_mode(void* self, int32_t behavior) {
     QAbstractItemView_SetDragDropMode((QAbstractItemView*)self, behavior);
 }
 
-int64_t q_listwidget_drag_drop_mode(void* self) {
+int32_t q_listwidget_drag_drop_mode(void* self) {
     return QAbstractItemView_DragDropMode((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_default_drop_action(void* self, int64_t dropAction) {
+void q_listwidget_set_default_drop_action(void* self, int32_t dropAction) {
     QAbstractItemView_SetDefaultDropAction((QAbstractItemView*)self, dropAction);
 }
 
-int64_t q_listwidget_default_drop_action(void* self) {
+int32_t q_listwidget_default_drop_action(void* self) {
     return QAbstractItemView_DefaultDropAction((QAbstractItemView*)self);
 }
 
@@ -1005,11 +1005,11 @@ QSize* q_listwidget_icon_size(void* self) {
     return QAbstractItemView_IconSize((QAbstractItemView*)self);
 }
 
-void q_listwidget_set_text_elide_mode(void* self, int64_t mode) {
+void q_listwidget_set_text_elide_mode(void* self, int32_t mode) {
     QAbstractItemView_SetTextElideMode((QAbstractItemView*)self, mode);
 }
 
-int64_t q_listwidget_text_elide_mode(void* self) {
+int32_t q_listwidget_text_elide_mode(void* self) {
     return QAbstractItemView_TextElideMode((QAbstractItemView*)self);
 }
 
@@ -1125,11 +1125,11 @@ void q_listwidget_on_icon_size_changed(void* self, void (*callback)(void*, void*
     QAbstractItemView_Connect_IconSizeChanged((QAbstractItemView*)self, (intptr_t)callback);
 }
 
-int64_t q_listwidget_vertical_scroll_bar_policy(void* self) {
+int32_t q_listwidget_vertical_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_VerticalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_listwidget_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy) {
+void q_listwidget_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy) {
     QAbstractScrollArea_SetVerticalScrollBarPolicy((QAbstractScrollArea*)self, verticalScrollBarPolicy);
 }
 
@@ -1141,11 +1141,11 @@ void q_listwidget_set_vertical_scroll_bar(void* self, void* scrollbar) {
     QAbstractScrollArea_SetVerticalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-int64_t q_listwidget_horizontal_scroll_bar_policy(void* self) {
+int32_t q_listwidget_horizontal_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_HorizontalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_listwidget_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy) {
+void q_listwidget_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy) {
     QAbstractScrollArea_SetHorizontalScrollBarPolicy((QAbstractScrollArea*)self, horizontalScrollBarPolicy);
 }
 
@@ -1186,11 +1186,11 @@ QSize* q_listwidget_maximum_viewport_size(void* self) {
     return QAbstractScrollArea_MaximumViewportSize((QAbstractScrollArea*)self);
 }
 
-int64_t q_listwidget_size_adjust_policy(void* self) {
+int32_t q_listwidget_size_adjust_policy(void* self) {
     return QAbstractScrollArea_SizeAdjustPolicy((QAbstractScrollArea*)self);
 }
 
-void q_listwidget_set_size_adjust_policy(void* self, int64_t policy) {
+void q_listwidget_set_size_adjust_policy(void* self, int32_t policy) {
     QAbstractScrollArea_SetSizeAdjustPolicy((QAbstractScrollArea*)self, policy);
 }
 
@@ -1206,19 +1206,19 @@ int32_t q_listwidget_frame_width(void* self) {
     return QFrame_FrameWidth((QFrame*)self);
 }
 
-int64_t q_listwidget_frame_shape(void* self) {
+int32_t q_listwidget_frame_shape(void* self) {
     return QFrame_FrameShape((QFrame*)self);
 }
 
-void q_listwidget_set_frame_shape(void* self, int64_t frameShape) {
+void q_listwidget_set_frame_shape(void* self, int32_t frameShape) {
     QFrame_SetFrameShape((QFrame*)self, frameShape);
 }
 
-int64_t q_listwidget_frame_shadow(void* self) {
+int32_t q_listwidget_frame_shadow(void* self) {
     return QFrame_FrameShadow((QFrame*)self);
 }
 
-void q_listwidget_set_frame_shadow(void* self, int64_t frameShadow) {
+void q_listwidget_set_frame_shadow(void* self, int32_t frameShadow) {
     QFrame_SetFrameShadow((QFrame*)self, frameShadow);
 }
 
@@ -1282,11 +1282,11 @@ bool q_listwidget_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_listwidget_window_modality(void* self) {
+int32_t q_listwidget_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_listwidget_set_window_modality(void* self, int64_t windowModality) {
+void q_listwidget_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -1526,19 +1526,19 @@ void q_listwidget_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_listwidget_set_background_role(void* self, int64_t backgroundRole) {
+void q_listwidget_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_listwidget_background_role(void* self) {
+int32_t q_listwidget_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_listwidget_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_listwidget_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_listwidget_foreground_role(void* self) {
+int32_t q_listwidget_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -1772,11 +1772,11 @@ void q_listwidget_set_accessible_description(void* self, const char* description
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_listwidget_set_layout_direction(void* self, int64_t direction) {
+void q_listwidget_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_listwidget_layout_direction(void* self) {
+int32_t q_listwidget_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1820,15 +1820,15 @@ void q_listwidget_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_listwidget_set_focus2(void* self, int64_t reason) {
+void q_listwidget_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_listwidget_focus_policy(void* self) {
+int32_t q_listwidget_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_listwidget_set_focus_policy(void* self, int64_t policy) {
+void q_listwidget_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -1848,11 +1848,11 @@ QWidget* q_listwidget_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_listwidget_context_menu_policy(void* self) {
+int32_t q_listwidget_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_listwidget_set_context_menu_policy(void* self, int64_t policy) {
+void q_listwidget_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -2067,7 +2067,7 @@ void q_listwidget_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_listwidget_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_listwidget_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -2220,11 +2220,11 @@ QWidget* q_listwidget_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_listwidget_set_attribute(void* self, int64_t param1) {
+void q_listwidget_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_listwidget_test_attribute(void* self, int64_t param1) {
+bool q_listwidget_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -2336,7 +2336,7 @@ void q_listwidget_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_listwidget_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_listwidget_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -2352,7 +2352,7 @@ void q_listwidget_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_listwidget_set_attribute2(void* self, int64_t param1, bool on) {
+void q_listwidget_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -2411,7 +2411,7 @@ void q_listwidget_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_listwidget_kill_timer2(void* self, int64_t id) {
+void q_listwidget_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -2511,15 +2511,15 @@ bool q_listwidget_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_listwidget_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_listwidget_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_listwidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_listwidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_listwidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_listwidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -2579,7 +2579,7 @@ double q_listwidget_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_listwidget_encode_metric_f(int64_t metric, double value) {
+int32_t q_listwidget_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -2595,15 +2595,15 @@ void q_listwidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
     QListWidget_OnVisualRect((QListWidget*)self, (intptr_t)callback);
 }
 
-void q_listwidget_scroll_to(void* self, void* index, int64_t hint) {
+void q_listwidget_scroll_to(void* self, void* index, int32_t hint) {
     QListWidget_ScrollTo((QListWidget*)self, (QModelIndex*)index, hint);
 }
 
-void q_listwidget_qbase_scroll_to(void* self, void* index, int64_t hint) {
+void q_listwidget_qbase_scroll_to(void* self, void* index, int32_t hint) {
     QListWidget_QBaseScrollTo((QListWidget*)self, (QModelIndex*)index, hint);
 }
 
-void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_listwidget_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t)) {
     QListWidget_OnScrollTo((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -2847,15 +2847,15 @@ void q_listwidget_on_vertical_offset(void* self, int32_t (*callback)()) {
     QListWidget_OnVerticalOffset((QListWidget*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_listwidget_move_cursor(void* self, int64_t cursorAction, int64_t modifiers) {
+QModelIndex* q_listwidget_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
     return QListWidget_MoveCursor((QListWidget*)self, cursorAction, modifiers);
 }
 
-QModelIndex* q_listwidget_qbase_move_cursor(void* self, int64_t cursorAction, int64_t modifiers) {
+QModelIndex* q_listwidget_qbase_move_cursor(void* self, int32_t cursorAction, int64_t modifiers) {
     return QListWidget_QBaseMoveCursor((QListWidget*)self, cursorAction, modifiers);
 }
 
-void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int64_t, int64_t)) {
+void q_listwidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int64_t)) {
     QListWidget_OnMoveCursor((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3101,15 +3101,15 @@ void q_listwidget_on_horizontal_scrollbar_value_changed(void* self, void (*callb
     QListWidget_OnHorizontalScrollbarValueChanged((QListWidget*)self, (intptr_t)callback);
 }
 
-void q_listwidget_close_editor(void* self, void* editor, int64_t hint) {
+void q_listwidget_close_editor(void* self, void* editor, int32_t hint) {
     QListWidget_CloseEditor((QListWidget*)self, (QWidget*)editor, hint);
 }
 
-void q_listwidget_qbase_close_editor(void* self, void* editor, int64_t hint) {
+void q_listwidget_qbase_close_editor(void* self, void* editor, int32_t hint) {
     QListWidget_QBaseCloseEditor((QListWidget*)self, (QWidget*)editor, hint);
 }
 
-void q_listwidget_on_close_editor(void* self, void (*callback)(void*, void*, int64_t)) {
+void q_listwidget_on_close_editor(void* self, void (*callback)(void*, void*, int32_t)) {
     QListWidget_OnCloseEditor((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3137,15 +3137,15 @@ void q_listwidget_on_editor_destroyed(void* self, void (*callback)(void*, void*)
     QListWidget_OnEditorDestroyed((QListWidget*)self, (intptr_t)callback);
 }
 
-bool q_listwidget_edit2(void* self, void* index, int64_t trigger, void* event) {
+bool q_listwidget_edit2(void* self, void* index, int32_t trigger, void* event) {
     return QListWidget_Edit2((QListWidget*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool q_listwidget_qbase_edit2(void* self, void* index, int64_t trigger, void* event) {
+bool q_listwidget_qbase_edit2(void* self, void* index, int32_t trigger, void* event) {
     return QListWidget_QBaseEdit2((QListWidget*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int64_t, void*)) {
+void q_listwidget_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
     QListWidget_OnEdit2((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3533,15 +3533,15 @@ void q_listwidget_on_native_event(void* self, bool (*callback)(void*, const char
     QListWidget_OnNativeEvent((QListWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_listwidget_metric(void* self, int64_t param1) {
+int32_t q_listwidget_metric(void* self, int32_t param1) {
     return QListWidget_Metric((QListWidget*)self, param1);
 }
 
-int32_t q_listwidget_qbase_metric(void* self, int64_t param1) {
+int32_t q_listwidget_qbase_metric(void* self, int32_t param1) {
     return QListWidget_QBaseMetric((QListWidget*)self, param1);
 }
 
-void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_listwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QListWidget_OnMetric((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3677,27 +3677,27 @@ void q_listwidget_on_set_position_for_index(void* self, void (*callback)(void*, 
     QListWidget_OnSetPositionForIndex((QListWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_listwidget_state(void* self) {
+int32_t q_listwidget_state(void* self) {
     return QListWidget_State((QListWidget*)self);
 }
 
-int64_t q_listwidget_qbase_state(void* self) {
+int32_t q_listwidget_qbase_state(void* self) {
     return QListWidget_QBaseState((QListWidget*)self);
 }
 
-void q_listwidget_on_state(void* self, int64_t (*callback)()) {
+void q_listwidget_on_state(void* self, int32_t (*callback)()) {
     QListWidget_OnState((QListWidget*)self, (intptr_t)callback);
 }
 
-void q_listwidget_set_state(void* self, int64_t state) {
+void q_listwidget_set_state(void* self, int32_t state) {
     QListWidget_SetState((QListWidget*)self, state);
 }
 
-void q_listwidget_qbase_set_state(void* self, int64_t state) {
+void q_listwidget_qbase_set_state(void* self, int32_t state) {
     QListWidget_QBaseSetState((QListWidget*)self, state);
 }
 
-void q_listwidget_on_set_state(void* self, void (*callback)(void*, int64_t)) {
+void q_listwidget_on_set_state(void* self, void (*callback)(void*, int32_t)) {
     QListWidget_OnSetState((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3797,15 +3797,15 @@ void q_listwidget_on_do_auto_scroll(void* self, void (*callback)()) {
     QListWidget_OnDoAutoScroll((QListWidget*)self, (intptr_t)callback);
 }
 
-int64_t q_listwidget_drop_indicator_position(void* self) {
+int32_t q_listwidget_drop_indicator_position(void* self) {
     return QListWidget_DropIndicatorPosition((QListWidget*)self);
 }
 
-int64_t q_listwidget_qbase_drop_indicator_position(void* self) {
+int32_t q_listwidget_qbase_drop_indicator_position(void* self) {
     return QListWidget_QBaseDropIndicatorPosition((QListWidget*)self);
 }
 
-void q_listwidget_on_drop_indicator_position(void* self, int64_t (*callback)()) {
+void q_listwidget_on_drop_indicator_position(void* self, int32_t (*callback)()) {
     QListWidget_OnDropIndicatorPosition((QListWidget*)self, (intptr_t)callback);
 }
 
@@ -3953,15 +3953,15 @@ void q_listwidget_on_is_signal_connected(void* self, bool (*callback)(void*, voi
     QListWidget_OnIsSignalConnected((QListWidget*)self, (intptr_t)callback);
 }
 
-double q_listwidget_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_listwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QListWidget_GetDecodedMetricF((QListWidget*)self, metricA, metricB);
 }
 
-double q_listwidget_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_listwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QListWidget_QBaseGetDecodedMetricF((QListWidget*)self, metricA, metricB);
 }
 
-void q_listwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_listwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QListWidget_OnGetDecodedMetricF((QListWidget*)self, (intptr_t)callback);
 }
 

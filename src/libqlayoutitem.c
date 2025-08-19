@@ -230,11 +230,11 @@ QSpacerItem* q_spaceritem_new2(void* param1) {
     return QSpacerItem_new2((QSpacerItem*)param1);
 }
 
-QSpacerItem* q_spaceritem_new3(int w, int h, int64_t hData) {
+QSpacerItem* q_spaceritem_new3(int w, int h, int32_t hData) {
     return QSpacerItem_new3(w, h, hData);
 }
 
-QSpacerItem* q_spaceritem_new4(int w, int h, int64_t hData, int64_t vData) {
+QSpacerItem* q_spaceritem_new4(int w, int h, int32_t hData, int32_t vData) {
     return QSpacerItem_new4(w, h, hData, vData);
 }
 
@@ -342,11 +342,11 @@ QSizePolicy* q_spaceritem_size_policy(void* self) {
     return QSpacerItem_SizePolicy((QSpacerItem*)self);
 }
 
-void q_spaceritem_change_size3(void* self, int w, int h, int64_t hData) {
+void q_spaceritem_change_size3(void* self, int w, int h, int32_t hData) {
     QSpacerItem_ChangeSize3((QSpacerItem*)self, w, h, hData);
 }
 
-void q_spaceritem_change_size4(void* self, int w, int h, int64_t hData, int64_t vData) {
+void q_spaceritem_change_size4(void* self, int w, int h, int32_t hData, int32_t vData) {
     QSpacerItem_ChangeSize4((QSpacerItem*)self, w, h, hData, vData);
 }
 

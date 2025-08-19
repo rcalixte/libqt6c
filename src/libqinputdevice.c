@@ -10,7 +10,7 @@ QInputDevice* q_inputdevice_new() {
     return QInputDevice_new();
 }
 
-QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int64_t typeVal) {
+QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t typeVal) {
     return QInputDevice_new2(qstring(name), systemId, typeVal);
 }
 
@@ -18,11 +18,11 @@ QInputDevice* q_inputdevice_new3(void* parent) {
     return QInputDevice_new3((QObject*)parent);
 }
 
-QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int64_t typeVal, const char* seatName) {
+QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t typeVal, const char* seatName) {
     return QInputDevice_new4(qstring(name), systemId, typeVal, qstring(seatName));
 }
 
-QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int64_t typeVal, const char* seatName, void* parent) {
+QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t typeVal, const char* seatName, void* parent) {
     return QInputDevice_new5(qstring(name), systemId, typeVal, qstring(seatName), (QObject*)parent);
 }
 
@@ -34,15 +34,15 @@ void* q_inputdevice_metacast(void* self, const char* param1) {
     return QInputDevice_Metacast((QInputDevice*)self, param1);
 }
 
-int32_t q_inputdevice_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_inputdevice_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QInputDevice_Metacall((QInputDevice*)self, param1, param2, param3);
 }
 
-void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QInputDevice_OnMetacall((QInputDevice*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdevice_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_inputdevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QInputDevice_QBaseMetacall((QInputDevice*)self, param1, param2, param3);
 }
 
@@ -60,7 +60,7 @@ const char* q_inputdevice_name(void* self) {
     return _ret;
 }
 
-int64_t q_inputdevice_type(void* self) {
+int32_t q_inputdevice_type(void* self) {
     return QInputDevice_Type((QInputDevice*)self);
 }
 
@@ -68,7 +68,7 @@ int64_t q_inputdevice_capabilities(void* self) {
     return QInputDevice_Capabilities((QInputDevice*)self);
 }
 
-bool q_inputdevice_has_capability(void* self, int64_t cap) {
+bool q_inputdevice_has_capability(void* self, int32_t cap) {
     return QInputDevice_HasCapability((QInputDevice*)self, cap);
 }
 
@@ -192,7 +192,7 @@ void q_inputdevice_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_inputdevice_kill_timer2(void* self, int64_t id) {
+void q_inputdevice_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -296,15 +296,15 @@ bool q_inputdevice_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_inputdevice_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_inputdevice_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_inputdevice_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_inputdevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

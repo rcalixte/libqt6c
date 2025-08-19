@@ -12,7 +12,7 @@ QFutureInterfaceBase* q_futureinterfacebase_new2(void* other) {
     return QFutureInterfaceBase_new2((QFutureInterfaceBase*)other);
 }
 
-QFutureInterfaceBase* q_futureinterfacebase_new3(int64_t initialState) {
+QFutureInterfaceBase* q_futureinterfacebase_new3(int32_t initialState) {
     return QFutureInterfaceBase_new3(initialState);
 }
 
@@ -99,7 +99,7 @@ int32_t q_futureinterfacebase_result_count(void* self) {
     return QFutureInterfaceBase_ResultCount((QFutureInterfaceBase*)self);
 }
 
-bool q_futureinterfacebase_query_state(void* self, int64_t state) {
+bool q_futureinterfacebase_query_state(void* self, int32_t state) {
     return QFutureInterfaceBase_QueryState((QFutureInterfaceBase*)self, state);
 }
 

@@ -35,13 +35,13 @@ void* q_abstractanimation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractanimation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractanimation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractAnimation*
 /// @param callback int32_t fn(QAbstractAnimation*, enum QMetaObject__Call, int, void*)
-void q_abstractanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_abstractanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_abstractanimation_on_metacall(void* self, int32_t (*callback)(void*, int6
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractanimation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,7 +63,7 @@ const char* q_abstractanimation_tr(const char* s);
 /// @param self QAbstractAnimation*
 ///
 /// @return enum QAbstractAnimation__State
-int64_t q_abstractanimation_state(void* self);
+int32_t q_abstractanimation_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#group)
 ///
@@ -75,13 +75,13 @@ QAnimationGroup* q_abstractanimation_group(void* self);
 /// @param self QAbstractAnimation*
 ///
 /// @return enum QAbstractAnimation__Direction
-int64_t q_abstractanimation_direction(void* self);
+int32_t q_abstractanimation_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#setDirection)
 ///
 /// @param self QAbstractAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_abstractanimation_set_direction(void* self, int64_t direction);
+void q_abstractanimation_set_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentTime)
 ///
@@ -150,13 +150,13 @@ void q_abstractanimation_on_finished(void* self, void (*callback)(void*));
 /// @param self QAbstractAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_abstractanimation_state_changed(void* self, int64_t newState, int64_t oldState);
+void q_abstractanimation_state_changed(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#stateChanged)
 ///
 /// @param self QAbstractAnimation*
 /// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_abstractanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_abstractanimation_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#currentLoopChanged)
 ///
@@ -174,13 +174,13 @@ void q_abstractanimation_on_current_loop_changed(void* self, void (*callback)(vo
 ///
 /// @param self QAbstractAnimation*
 /// @param param1 enum QAbstractAnimation__Direction
-void q_abstractanimation_direction_changed(void* self, int64_t param1);
+void q_abstractanimation_direction_changed(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#directionChanged)
 ///
 /// @param self QAbstractAnimation*
 /// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__Direction)
-void q_abstractanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_abstractanimation_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#start)
 ///
@@ -263,7 +263,7 @@ void q_abstractanimation_qbase_update_current_time(void* self, int currentTime);
 /// @param self QAbstractAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_abstractanimation_update_state(void* self, int64_t newState, int64_t oldState);
+void q_abstractanimation_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateState)
 ///
@@ -271,7 +271,7 @@ void q_abstractanimation_update_state(void* self, int64_t newState, int64_t oldS
 ///
 /// @param self QAbstractAnimation*
 /// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_abstractanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_abstractanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateState)
 ///
@@ -280,13 +280,13 @@ void q_abstractanimation_on_update_state(void* self, void (*callback)(void*, int
 /// @param self QAbstractAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_abstractanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState);
+void q_abstractanimation_qbase_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
 /// @param self QAbstractAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_abstractanimation_update_direction(void* self, int64_t direction);
+void q_abstractanimation_update_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
@@ -294,7 +294,7 @@ void q_abstractanimation_update_direction(void* self, int64_t direction);
 ///
 /// @param self QAbstractAnimation*
 /// @param callback void fn(QAbstractAnimation*, enum QAbstractAnimation__Direction)
-void q_abstractanimation_on_update_direction(void* self, void (*callback)(void*, int64_t));
+void q_abstractanimation_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractanimation.html#updateDirection)
 ///
@@ -302,7 +302,7 @@ void q_abstractanimation_on_update_direction(void* self, void (*callback)(void*,
 ///
 /// @param self QAbstractAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_abstractanimation_qbase_update_direction(void* self, int64_t direction);
+void q_abstractanimation_qbase_update_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -325,7 +325,7 @@ const char* q_abstractanimation_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QAbstractAnimation*
 /// @param policy enum QAbstractAnimation__DeletionPolicy
-void q_abstractanimation_start1(void* self, int64_t policy);
+void q_abstractanimation_start1(void* self, int32_t policy);
 
 /// Inherited from QObject
 ///
@@ -417,7 +417,7 @@ void q_abstractanimation_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractAnimation*
 /// @param id enum Qt__TimerId
-void q_abstractanimation_kill_timer2(void* self, int64_t id);
+void q_abstractanimation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -594,7 +594,7 @@ bool q_abstractanimation_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QAbstractAnimation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstractanimation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstractanimation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -605,7 +605,7 @@ int32_t q_abstractanimation_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractanimation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractanimation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -616,7 +616,7 @@ QMetaObject__Connection* q_abstractanimation_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractanimation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstractanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -973,13 +973,13 @@ void* q_animationdriver_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_animationdriver_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_animationdriver_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAnimationDriver*
 /// @param callback int32_t fn(QAnimationDriver*, enum QMetaObject__Call, int, void*)
-void q_animationdriver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_animationdriver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -987,7 +987,7 @@ void q_animationdriver_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_animationdriver_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_animationdriver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1240,7 +1240,7 @@ void q_animationdriver_kill_timer(void* self, int id);
 ///
 /// @param self QAnimationDriver*
 /// @param id enum Qt__TimerId
-void q_animationdriver_kill_timer2(void* self, int64_t id);
+void q_animationdriver_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1417,7 +1417,7 @@ bool q_animationdriver_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAnimationDriver*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_animationdriver_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_animationdriver_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1428,7 +1428,7 @@ int32_t q_animationdriver_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_animationdriver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_animationdriver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1439,7 +1439,7 @@ QMetaObject__Connection* q_animationdriver_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_animationdriver_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_animationdriver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

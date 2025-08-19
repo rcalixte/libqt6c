@@ -401,7 +401,7 @@ QSpacerItem* q_spaceritem_new2(void* param1);
 /// @param w int
 /// @param h int
 /// @param hData enum QSizePolicy__Policy
-QSpacerItem* q_spaceritem_new3(int w, int h, int64_t hData);
+QSpacerItem* q_spaceritem_new3(int w, int h, int32_t hData);
 
 /// q_spaceritem_new4 constructs a new QSpacerItem object.
 ///
@@ -409,7 +409,7 @@ QSpacerItem* q_spaceritem_new3(int w, int h, int64_t hData);
 /// @param h int
 /// @param hData enum QSizePolicy__Policy
 /// @param vData enum QSizePolicy__Policy
-QSpacerItem* q_spaceritem_new4(int w, int h, int64_t hData, int64_t vData);
+QSpacerItem* q_spaceritem_new4(int w, int h, int32_t hData, int32_t vData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#changeSize)
 ///
@@ -595,7 +595,7 @@ QSizePolicy* q_spaceritem_size_policy(void* self);
 /// @param w int
 /// @param h int
 /// @param hData enum QSizePolicy__Policy
-void q_spaceritem_change_size3(void* self, int w, int h, int64_t hData);
+void q_spaceritem_change_size3(void* self, int w, int h, int32_t hData);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qspaceritem.html#changeSize)
 ///
@@ -604,7 +604,7 @@ void q_spaceritem_change_size3(void* self, int w, int h, int64_t hData);
 /// @param h int
 /// @param hData enum QSizePolicy__Policy
 /// @param vData enum QSizePolicy__Policy
-void q_spaceritem_change_size4(void* self, int w, int h, int64_t hData, int64_t vData);
+void q_spaceritem_change_size4(void* self, int w, int h, int32_t hData, int32_t vData);
 
 /// Inherited from QLayoutItem
 ///

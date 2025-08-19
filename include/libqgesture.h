@@ -35,13 +35,13 @@ void* q_gesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_gesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_gesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGesture*
 /// @param callback int32_t fn(QGesture*, enum QMetaObject__Call, int, void*)
-void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_gesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_gesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -70,7 +70,7 @@ int64_t q_gesture_gesture_type(void* self);
 /// @param self QGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_gesture_state(void* self);
+int32_t q_gesture_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesture.html#hotSpot)
 ///
@@ -97,14 +97,14 @@ void q_gesture_unset_hot_spot(void* self);
 ///
 /// @param self QGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_gesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_gesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgesture.html#gestureCancelPolicy)
 ///
 /// @param self QGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_gesture_gesture_cancel_policy(void* self);
+int32_t q_gesture_gesture_cancel_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -213,7 +213,7 @@ void q_gesture_kill_timer(void* self, int id);
 ///
 /// @param self QGesture*
 /// @param id enum Qt__TimerId
-void q_gesture_kill_timer2(void* self, int64_t id);
+void q_gesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -390,7 +390,7 @@ bool q_gesture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_gesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_gesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -401,7 +401,7 @@ int32_t q_gesture_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -412,7 +412,7 @@ QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* re
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -799,13 +799,13 @@ void* q_pangesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pangesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pangesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPanGesture*
 /// @param callback int32_t fn(QPanGesture*, enum QMetaObject__Call, int, void*)
-void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -813,7 +813,7 @@ void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pangesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pangesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -893,7 +893,7 @@ int64_t q_pangesture_gesture_type(void* self);
 /// @param self QPanGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_pangesture_state(void* self);
+int32_t q_pangesture_state(void* self);
 
 /// Inherited from QGesture
 ///
@@ -930,7 +930,7 @@ void q_pangesture_unset_hot_spot(void* self);
 ///
 /// @param self QPanGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_pangesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_pangesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// Inherited from QGesture
 ///
@@ -939,7 +939,7 @@ void q_pangesture_set_gesture_cancel_policy(void* self, int64_t policy);
 /// @param self QPanGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_pangesture_gesture_cancel_policy(void* self);
+int32_t q_pangesture_gesture_cancel_policy(void* self);
 
 /// Inherited from QObject
 ///
@@ -1031,7 +1031,7 @@ void q_pangesture_kill_timer(void* self, int id);
 ///
 /// @param self QPanGesture*
 /// @param id enum Qt__TimerId
-void q_pangesture_kill_timer2(void* self, int64_t id);
+void q_pangesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1208,7 +1208,7 @@ bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPanGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pangesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pangesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1219,7 +1219,7 @@ int32_t q_pangesture_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1230,7 +1230,7 @@ QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1617,13 +1617,13 @@ void* q_pinchgesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pinchgesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pinchgesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPinchGesture*
 /// @param callback int32_t fn(QPinchGesture*, enum QMetaObject__Call, int, void*)
-void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -1631,7 +1631,7 @@ void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pinchgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pinchgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1798,7 +1798,7 @@ int64_t q_pinchgesture_gesture_type(void* self);
 /// @param self QPinchGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_pinchgesture_state(void* self);
+int32_t q_pinchgesture_state(void* self);
 
 /// Inherited from QGesture
 ///
@@ -1835,7 +1835,7 @@ void q_pinchgesture_unset_hot_spot(void* self);
 ///
 /// @param self QPinchGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_pinchgesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_pinchgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// Inherited from QGesture
 ///
@@ -1844,7 +1844,7 @@ void q_pinchgesture_set_gesture_cancel_policy(void* self, int64_t policy);
 /// @param self QPinchGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_pinchgesture_gesture_cancel_policy(void* self);
+int32_t q_pinchgesture_gesture_cancel_policy(void* self);
 
 /// Inherited from QObject
 ///
@@ -1936,7 +1936,7 @@ void q_pinchgesture_kill_timer(void* self, int id);
 ///
 /// @param self QPinchGesture*
 /// @param id enum Qt__TimerId
-void q_pinchgesture_kill_timer2(void* self, int64_t id);
+void q_pinchgesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2113,7 +2113,7 @@ bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPinchGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pinchgesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pinchgesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2124,7 +2124,7 @@ int32_t q_pinchgesture_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2135,7 +2135,7 @@ QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2522,13 +2522,13 @@ void* q_swipegesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_swipegesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_swipegesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSwipeGesture*
 /// @param callback int32_t fn(QSwipeGesture*, enum QMetaObject__Call, int, void*)
-void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -2536,7 +2536,7 @@ void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_swipegesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_swipegesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2550,14 +2550,14 @@ const char* q_swipegesture_tr(const char* s);
 /// @param self QSwipeGesture*
 ///
 /// @return enum QSwipeGesture__SwipeDirection
-int64_t q_swipegesture_horizontal_direction(void* self);
+int32_t q_swipegesture_horizontal_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qswipegesture.html#verticalDirection)
 ///
 /// @param self QSwipeGesture*
 ///
 /// @return enum QSwipeGesture__SwipeDirection
-int64_t q_swipegesture_vertical_direction(void* self);
+int32_t q_swipegesture_vertical_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qswipegesture.html#swipeAngle)
 ///
@@ -2603,7 +2603,7 @@ int64_t q_swipegesture_gesture_type(void* self);
 /// @param self QSwipeGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_swipegesture_state(void* self);
+int32_t q_swipegesture_state(void* self);
 
 /// Inherited from QGesture
 ///
@@ -2640,7 +2640,7 @@ void q_swipegesture_unset_hot_spot(void* self);
 ///
 /// @param self QSwipeGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_swipegesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_swipegesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// Inherited from QGesture
 ///
@@ -2649,7 +2649,7 @@ void q_swipegesture_set_gesture_cancel_policy(void* self, int64_t policy);
 /// @param self QSwipeGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_swipegesture_gesture_cancel_policy(void* self);
+int32_t q_swipegesture_gesture_cancel_policy(void* self);
 
 /// Inherited from QObject
 ///
@@ -2741,7 +2741,7 @@ void q_swipegesture_kill_timer(void* self, int id);
 ///
 /// @param self QSwipeGesture*
 /// @param id enum Qt__TimerId
-void q_swipegesture_kill_timer2(void* self, int64_t id);
+void q_swipegesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2918,7 +2918,7 @@ bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSwipeGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_swipegesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_swipegesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2929,7 +2929,7 @@ int32_t q_swipegesture_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2940,7 +2940,7 @@ QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3327,13 +3327,13 @@ void* q_tapgesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tapgesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tapgesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTapGesture*
 /// @param callback int32_t fn(QTapGesture*, enum QMetaObject__Call, int, void*)
-void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -3341,7 +3341,7 @@ void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tapgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tapgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3394,7 +3394,7 @@ int64_t q_tapgesture_gesture_type(void* self);
 /// @param self QTapGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_tapgesture_state(void* self);
+int32_t q_tapgesture_state(void* self);
 
 /// Inherited from QGesture
 ///
@@ -3431,7 +3431,7 @@ void q_tapgesture_unset_hot_spot(void* self);
 ///
 /// @param self QTapGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_tapgesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_tapgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// Inherited from QGesture
 ///
@@ -3440,7 +3440,7 @@ void q_tapgesture_set_gesture_cancel_policy(void* self, int64_t policy);
 /// @param self QTapGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_tapgesture_gesture_cancel_policy(void* self);
+int32_t q_tapgesture_gesture_cancel_policy(void* self);
 
 /// Inherited from QObject
 ///
@@ -3532,7 +3532,7 @@ void q_tapgesture_kill_timer(void* self, int id);
 ///
 /// @param self QTapGesture*
 /// @param id enum Qt__TimerId
-void q_tapgesture_kill_timer2(void* self, int64_t id);
+void q_tapgesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3709,7 +3709,7 @@ bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTapGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_tapgesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_tapgesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3720,7 +3720,7 @@ int32_t q_tapgesture_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3731,7 +3731,7 @@ QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4118,13 +4118,13 @@ void* q_tapandholdgesture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tapandholdgesture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tapandholdgesture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTapAndHoldGesture*
 /// @param callback int32_t fn(QTapAndHoldGesture*, enum QMetaObject__Call, int, void*)
-void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -4132,7 +4132,7 @@ void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int6
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tapandholdgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tapandholdgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4194,7 +4194,7 @@ int64_t q_tapandholdgesture_gesture_type(void* self);
 /// @param self QTapAndHoldGesture*
 ///
 /// @return enum Qt__GestureState
-int64_t q_tapandholdgesture_state(void* self);
+int32_t q_tapandholdgesture_state(void* self);
 
 /// Inherited from QGesture
 ///
@@ -4231,7 +4231,7 @@ void q_tapandholdgesture_unset_hot_spot(void* self);
 ///
 /// @param self QTapAndHoldGesture*
 /// @param policy enum QGesture__GestureCancelPolicy
-void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int64_t policy);
+void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int32_t policy);
 
 /// Inherited from QGesture
 ///
@@ -4240,7 +4240,7 @@ void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int64_t policy);
 /// @param self QTapAndHoldGesture*
 ///
 /// @return enum QGesture__GestureCancelPolicy
-int64_t q_tapandholdgesture_gesture_cancel_policy(void* self);
+int32_t q_tapandholdgesture_gesture_cancel_policy(void* self);
 
 /// Inherited from QObject
 ///
@@ -4332,7 +4332,7 @@ void q_tapandholdgesture_kill_timer(void* self, int id);
 ///
 /// @param self QTapAndHoldGesture*
 /// @param id enum Qt__TimerId
-void q_tapandholdgesture_kill_timer2(void* self, int64_t id);
+void q_tapandholdgesture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4509,7 +4509,7 @@ bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QTapAndHoldGesture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4520,7 +4520,7 @@ int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4531,7 +4531,7 @@ QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -5001,7 +5001,7 @@ QPointF* q_gestureevent_map_to_graphics_scene(void* self, void* gesturePoint);
 /// @param self QGestureEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_gestureevent_type(void* self);
+int32_t q_gestureevent_type(void* self);
 
 /// Inherited from QEvent
 ///

@@ -23,7 +23,7 @@ QEventPoint* q_eventpoint_new();
 /// @param state enum QEventPoint__State
 /// @param scenePosition QPointF*
 /// @param globalPosition QPointF*
-QEventPoint* q_eventpoint_new2(int pointId, int64_t state, void* scenePosition, void* globalPosition);
+QEventPoint* q_eventpoint_new2(int pointId, uint8_t state, void* scenePosition, void* globalPosition);
 
 /// q_eventpoint_new3 constructs a new QEventPoint object.
 ///
@@ -200,7 +200,7 @@ QVector2D* q_eventpoint_velocity(void* self);
 /// @param self QEventPoint*
 ///
 /// @return enum QEventPoint__State
-int64_t q_eventpoint_state(void* self);
+uint8_t q_eventpoint_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qeventpoint.html#device)
 ///

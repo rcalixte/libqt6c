@@ -551,7 +551,7 @@ int64_t q_bytearrayview_last_index_of22(void* self, char ch, int64_t from);
 /// @param self QByteArrayView*
 /// @param a const char*
 /// @param cs enum Qt__CaseSensitivity
-int32_t q_bytearrayview_compare2(void* self, const char* a, int64_t cs);
+int32_t q_bytearrayview_compare2(void* self, const char* a, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbytearrayview.html#dtor.QByteArrayView)
 ///

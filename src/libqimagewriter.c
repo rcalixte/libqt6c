@@ -138,7 +138,7 @@ bool q_imagewriter_write(void* self, void* image) {
     return QImageWriter_Write((QImageWriter*)self, (QImage*)image);
 }
 
-int64_t q_imagewriter_error(void* self) {
+int32_t q_imagewriter_error(void* self) {
     return QImageWriter_Error((QImageWriter*)self);
 }
 
@@ -149,7 +149,7 @@ const char* q_imagewriter_error_string(void* self) {
     return _ret;
 }
 
-bool q_imagewriter_supports_option(void* self, int64_t option) {
+bool q_imagewriter_supports_option(void* self, int32_t option) {
     return QImageWriter_SupportsOption((QImageWriter*)self, option);
 }
 

@@ -18,7 +18,7 @@
 /// @param self QsciCommand*
 ///
 /// @return enum QsciCommand__Command
-int64_t q_scicommand_command(void* self);
+int32_t q_scicommand_command(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciCommand.html)
 ///

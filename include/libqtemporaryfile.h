@@ -46,13 +46,13 @@ void* q_temporaryfile_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_temporaryfile_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_temporaryfile_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTemporaryFile*
 /// @param callback int32_t fn(QTemporaryFile*, enum QMetaObject__Call, int, void*)
-void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_temporaryfile_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_temporaryfile_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -361,7 +361,7 @@ bool q_temporaryfile_open33(void* self, int fd, int64_t ioFlags, int64_t handleF
 /// @param self QTemporaryFile*
 ///
 /// @return enum QFileDevice__FileError
-int64_t q_temporaryfile_error(void* self);
+int32_t q_temporaryfile_error(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -407,7 +407,7 @@ bool q_temporaryfile_unmap(void* self, unsigned char* address);
 ///
 /// @param self QTemporaryFile*
 /// @param time enum QFileDevice__FileTime
-QDateTime* q_temporaryfile_file_time(void* self, int64_t time);
+QDateTime* q_temporaryfile_file_time(void* self, int32_t time);
 
 /// Inherited from QFileDevice
 ///
@@ -416,7 +416,7 @@ QDateTime* q_temporaryfile_file_time(void* self, int64_t time);
 /// @param self QTemporaryFile*
 /// @param newDate QDateTime*
 /// @param fileTime enum QFileDevice__FileTime
-bool q_temporaryfile_set_file_time(void* self, void* newDate, int64_t fileTime);
+bool q_temporaryfile_set_file_time(void* self, void* newDate, int32_t fileTime);
 
 /// Inherited from QFileDevice
 ///
@@ -870,7 +870,7 @@ void q_temporaryfile_kill_timer(void* self, int id);
 ///
 /// @param self QTemporaryFile*
 /// @param id enum Qt__TimerId
-void q_temporaryfile_kill_timer2(void* self, int64_t id);
+void q_temporaryfile_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1047,7 +1047,7 @@ bool q_temporaryfile_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTemporaryFile*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_temporaryfile_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_temporaryfile_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1058,7 +1058,7 @@ int32_t q_temporaryfile_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_temporaryfile_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_temporaryfile_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1069,7 +1069,7 @@ QMetaObject__Connection* q_temporaryfile_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_temporaryfile_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_temporaryfile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

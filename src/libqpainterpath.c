@@ -178,11 +178,11 @@ QRectF* q_painterpath_control_point_rect(void* self) {
     return QPainterPath_ControlPointRect((QPainterPath*)self);
 }
 
-int64_t q_painterpath_fill_rule(void* self) {
+int32_t q_painterpath_fill_rule(void* self) {
     return QPainterPath_FillRule((QPainterPath*)self);
 }
 
-void q_painterpath_set_fill_rule(void* self, int64_t fillRule) {
+void q_painterpath_set_fill_rule(void* self, int32_t fillRule) {
     QPainterPath_SetFillRule((QPainterPath*)self, fillRule);
 }
 
@@ -290,11 +290,11 @@ QPainterPath* q_painterpath_operator_minus_assign(void* self, void* other) {
     return QPainterPath_OperatorMinusAssign((QPainterPath*)self, (QPainterPath*)other);
 }
 
-void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int64_t mode) {
+void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode) {
     QPainterPath_AddRoundedRect4((QPainterPath*)self, (QRectF*)rect, xRadius, yRadius, mode);
 }
 
-void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int64_t mode) {
+void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int32_t mode) {
     QPainterPath_AddRoundedRect7((QPainterPath*)self, x, y, w, h, xRadius, yRadius, mode);
 }
 
@@ -318,19 +318,19 @@ double q_painterpathstroker_width(void* self) {
     return QPainterPathStroker_Width((QPainterPathStroker*)self);
 }
 
-void q_painterpathstroker_set_cap_style(void* self, int64_t style) {
+void q_painterpathstroker_set_cap_style(void* self, int32_t style) {
     QPainterPathStroker_SetCapStyle((QPainterPathStroker*)self, style);
 }
 
-int64_t q_painterpathstroker_cap_style(void* self) {
+int32_t q_painterpathstroker_cap_style(void* self) {
     return QPainterPathStroker_CapStyle((QPainterPathStroker*)self);
 }
 
-void q_painterpathstroker_set_join_style(void* self, int64_t style) {
+void q_painterpathstroker_set_join_style(void* self, int32_t style) {
     QPainterPathStroker_SetJoinStyle((QPainterPathStroker*)self, style);
 }
 
-int64_t q_painterpathstroker_join_style(void* self) {
+int32_t q_painterpathstroker_join_style(void* self) {
     return QPainterPathStroker_JoinStyle((QPainterPathStroker*)self);
 }
 
@@ -350,7 +350,7 @@ double q_painterpathstroker_curve_threshold(void* self) {
     return QPainterPathStroker_CurveThreshold((QPainterPathStroker*)self);
 }
 
-void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern) {
+void q_painterpathstroker_set_dash_pattern(void* self, int32_t dashPattern) {
     QPainterPathStroker_SetDashPattern((QPainterPathStroker*)self, dashPattern);
 }
 

@@ -8,7 +8,7 @@ QTimeZone* q_timezone_new() {
     return QTimeZone_new();
 }
 
-QTimeZone* q_timezone_new2(int64_t spec) {
+QTimeZone* q_timezone_new2(int32_t spec) {
     return QTimeZone_new2(spec);
 }
 
@@ -28,11 +28,11 @@ QTimeZone* q_timezone_new6(void* other) {
     return QTimeZone_new6((QTimeZone*)other);
 }
 
-QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory) {
+QTimeZone* q_timezone_new7(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory) {
     return QTimeZone_new7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
 }
 
-QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, int64_t territory, const char* comment) {
+QTimeZone* q_timezone_new8(const char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment) {
     return QTimeZone_new8(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
 }
 
@@ -52,7 +52,7 @@ QTimeZone* q_timezone_from_seconds_ahead_of_utc(int offset) {
     return QTimeZone_FromSecondsAheadOfUtc(offset);
 }
 
-int64_t q_timezone_time_spec(void* self) {
+int32_t q_timezone_time_spec(void* self) {
     return QTimeZone_TimeSpec((QTimeZone*)self);
 }
 
@@ -60,7 +60,7 @@ int32_t q_timezone_fixed_seconds_ahead_of_utc(void* self) {
     return QTimeZone_FixedSecondsAheadOfUtc((QTimeZone*)self);
 }
 
-bool q_timezone_is_utc_or_fixed_offset(int64_t spec) {
+bool q_timezone_is_utc_or_fixed_offset(int32_t spec) {
     return QTimeZone_IsUtcOrFixedOffset(spec);
 }
 
@@ -84,11 +84,11 @@ char* q_timezone_id(void* self) {
     return _ret;
 }
 
-int64_t q_timezone_territory(void* self) {
+uint16_t q_timezone_territory(void* self) {
     return QTimeZone_Territory((QTimeZone*)self);
 }
 
-int64_t q_timezone_country(void* self) {
+uint16_t q_timezone_country(void* self) {
     return QTimeZone_Country((QTimeZone*)self);
 }
 
@@ -106,7 +106,7 @@ const char* q_timezone_display_name(void* self, void* atDateTime) {
     return _ret;
 }
 
-const char* q_timezone_display_name2(void* self, int64_t timeType) {
+const char* q_timezone_display_name2(void* self, int32_t timeType) {
     libqt_string _str = QTimeZone_DisplayName2((QTimeZone*)self, timeType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -199,7 +199,7 @@ const char** q_timezone_available_time_zone_ids() {
     return _ret;
 }
 
-const char** q_timezone_available_time_zone_ids2(int64_t territory) {
+const char** q_timezone_available_time_zone_ids2(uint16_t territory) {
     libqt_list _arr = QTimeZone_AvailableTimeZoneIds2(territory);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -251,7 +251,7 @@ char* q_timezone_windows_id_to_default_iana_id(const char* windowsId) {
     return _ret;
 }
 
-char* q_timezone_windows_id_to_default_iana_id2(const char* windowsId, int64_t territory) {
+char* q_timezone_windows_id_to_default_iana_id2(const char* windowsId, uint16_t territory) {
     libqt_string _str = QTimeZone_WindowsIdToDefaultIanaId2(qstring(windowsId), territory);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -277,7 +277,7 @@ const char** q_timezone_windows_id_to_iana_ids(const char* windowsId) {
     return _ret;
 }
 
-const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, int64_t territory) {
+const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, uint16_t territory) {
     libqt_list _arr = QTimeZone_WindowsIdToIanaIds2(qstring(windowsId), territory);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
@@ -296,28 +296,28 @@ const char** q_timezone_windows_id_to_iana_ids2(const char* windowsId, int64_t t
     return _ret;
 }
 
-const char* q_timezone_display_name22(void* self, void* atDateTime, int64_t nameType) {
+const char* q_timezone_display_name22(void* self, void* atDateTime, int32_t nameType) {
     libqt_string _str = QTimeZone_DisplayName22((QTimeZone*)self, (QDateTime*)atDateTime, nameType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_timezone_display_name3(void* self, void* atDateTime, int64_t nameType, void* locale) {
+const char* q_timezone_display_name3(void* self, void* atDateTime, int32_t nameType, void* locale) {
     libqt_string _str = QTimeZone_DisplayName3((QTimeZone*)self, (QDateTime*)atDateTime, nameType, (QLocale*)locale);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_timezone_display_name23(void* self, int64_t timeType, int64_t nameType) {
+const char* q_timezone_display_name23(void* self, int32_t timeType, int32_t nameType) {
     libqt_string _str = QTimeZone_DisplayName23((QTimeZone*)self, timeType, nameType);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_timezone_display_name32(void* self, int64_t timeType, int64_t nameType, void* locale) {
+const char* q_timezone_display_name32(void* self, int32_t timeType, int32_t nameType, void* locale) {
     libqt_string _str = QTimeZone_DisplayName32((QTimeZone*)self, timeType, nameType, (QLocale*)locale);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

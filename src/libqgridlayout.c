@@ -26,15 +26,15 @@ void* q_gridlayout_metacast(void* self, const char* param1) {
     return QGridLayout_Metacast((QGridLayout*)self, param1);
 }
 
-int32_t q_gridlayout_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_gridlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGridLayout_Metacall((QGridLayout*)self, param1, param2, param3);
 }
 
-void q_gridlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_gridlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGridLayout_OnMetacall((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_gridlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGridLayout_QBaseMetacall((QGridLayout*)self, param1, param2, param3);
 }
 
@@ -245,11 +245,11 @@ void q_gridlayout_add_layout2(void* self, void* param1, int row, int column, int
     QGridLayout_AddLayout2((QGridLayout*)self, (QLayout*)param1, row, column, rowSpan, columnSpan);
 }
 
-void q_gridlayout_set_origin_corner(void* self, int64_t originCorner) {
+void q_gridlayout_set_origin_corner(void* self, int32_t originCorner) {
     QGridLayout_SetOriginCorner((QGridLayout*)self, originCorner);
 }
 
-int64_t q_gridlayout_origin_corner(void* self) {
+int32_t q_gridlayout_origin_corner(void* self) {
     return QGridLayout_OriginCorner((QGridLayout*)self);
 }
 
@@ -309,7 +309,7 @@ void q_gridlayout_add_item(void* self, void* item, int row, int column) {
     QGridLayout_AddItem((QGridLayout*)self, (QLayoutItem*)item, row, column);
 }
 
-void q_gridlayout_set_default_positioning(void* self, int n, int64_t orient) {
+void q_gridlayout_set_default_positioning(void* self, int n, int32_t orient) {
     QGridLayout_SetDefaultPositioning((QGridLayout*)self, n, orient);
 }
 
@@ -403,11 +403,11 @@ bool q_gridlayout_set_alignment2(void* self, void* l, int64_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
-void q_gridlayout_set_size_constraint(void* self, int64_t sizeConstraint) {
+void q_gridlayout_set_size_constraint(void* self, int32_t sizeConstraint) {
     QLayout_SetSizeConstraint((QLayout*)self, sizeConstraint);
 }
 
-int64_t q_gridlayout_size_constraint(void* self) {
+int32_t q_gridlayout_size_constraint(void* self) {
     return QLayout_SizeConstraint((QLayout*)self);
 }
 
@@ -530,7 +530,7 @@ void q_gridlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_gridlayout_kill_timer2(void* self, int64_t id) {
+void q_gridlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -634,15 +634,15 @@ bool q_gridlayout_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_gridlayout_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_gridlayout_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_gridlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_gridlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_gridlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_gridlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

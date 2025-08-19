@@ -57,15 +57,15 @@ void* q_graphicsscene_metacast(void* self, const char* param1) {
     return QGraphicsScene_Metacast((QGraphicsScene*)self, param1);
 }
 
-int32_t q_graphicsscene_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsscene_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsScene_Metacall((QGraphicsScene*)self, param1, param2, param3);
 }
 
-void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsScene_OnMetacall((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsscene_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsscene_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsScene_QBaseMetacall((QGraphicsScene*)self, param1, param2, param3);
 }
 
@@ -100,11 +100,11 @@ void q_graphicsscene_render(void* self, void* painter) {
     QGraphicsScene_Render((QGraphicsScene*)self, (QPainter*)painter);
 }
 
-int64_t q_graphicsscene_item_index_method(void* self) {
+int32_t q_graphicsscene_item_index_method(void* self) {
     return QGraphicsScene_ItemIndexMethod((QGraphicsScene*)self);
 }
 
-void q_graphicsscene_set_item_index_method(void* self, int64_t method) {
+void q_graphicsscene_set_item_index_method(void* self, int32_t method) {
     QGraphicsScene_SetItemIndexMethod((QGraphicsScene*)self, method);
 }
 
@@ -140,7 +140,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(void* self, void* path
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int64_t mode, int64_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items6((QGraphicsScene*)self, x, y, w, h, mode, order);
     return _arr;
 }
@@ -668,11 +668,11 @@ void q_graphicsscene_on_selection_changed(void* self, void (*callback)(void*)) {
     QGraphicsScene_Connect_SelectionChanged((QGraphicsScene*)self, (intptr_t)callback);
 }
 
-void q_graphicsscene_focus_item_changed(void* self, void* newFocus, void* oldFocus, int64_t reason) {
+void q_graphicsscene_focus_item_changed(void* self, void* newFocus, void* oldFocus, int32_t reason) {
     QGraphicsScene_FocusItemChanged((QGraphicsScene*)self, (QGraphicsItem*)newFocus, (QGraphicsItem*)oldFocus, reason);
 }
 
-void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, void*, void*, int64_t)) {
+void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, void*, void*, int32_t)) {
     QGraphicsScene_Connect_FocusItemChanged((QGraphicsScene*)self, (intptr_t)callback);
 }
 
@@ -698,79 +698,79 @@ void q_graphicsscene_render3(void* self, void* painter, void* target, void* sour
     QGraphicsScene_Render3((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)target, (QRectF*)source);
 }
 
-void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int64_t aspectRatioMode) {
+void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int32_t aspectRatioMode) {
     QGraphicsScene_Render4((QGraphicsScene*)self, (QPainter*)painter, (QRectF*)target, (QRectF*)source, aspectRatioMode);
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(void* self, int64_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(void* self, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items1((QGraphicsScene*)self, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items22((QGraphicsScene*)self, (QPointF*)pos, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int64_t mode, int64_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items32((QGraphicsScene*)self, (QPointF*)pos, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int64_t mode, int64_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int32_t mode, int32_t order, void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items42((QGraphicsScene*)self, (QPointF*)pos, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rect, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rect, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items23((QGraphicsScene*)self, (QRectF*)rect, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int64_t mode, int64_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items33((QGraphicsScene*)self, (QRectF*)rect, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int64_t mode, int64_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int32_t mode, int32_t order, void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items43((QGraphicsScene*)self, (QRectF*)rect, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int32_t mode) {
     libqt_list _arr = QGraphicsScene_Items25((QGraphicsScene*)self, (QPainterPath*)path, mode);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int64_t mode, int64_t order) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int32_t mode, int32_t order) {
     libqt_list _arr = QGraphicsScene_Items35((QGraphicsScene*)self, (QPainterPath*)path, mode, order);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int64_t mode, int64_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int32_t mode, int32_t order, void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items45((QGraphicsScene*)self, (QPainterPath*)path, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(void* self, double x, double y, double w, double h, int64_t mode, int64_t order, void* deviceTransform) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(void* self, double x, double y, double w, double h, int32_t mode, int32_t order, void* deviceTransform) {
     libqt_list _arr = QGraphicsScene_Items7((QGraphicsScene*)self, x, y, w, h, mode, order, (QTransform*)deviceTransform);
     return _arr;
 }
 
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, void* item, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, void* item, int32_t mode) {
     libqt_list _arr = QGraphicsScene_CollidingItems2((QGraphicsScene*)self, (QGraphicsItem*)item, mode);
     return _arr;
 }
 
-void q_graphicsscene_set_selection_area22(void* self, void* path, int64_t selectionOperation) {
+void q_graphicsscene_set_selection_area22(void* self, void* path, int32_t selectionOperation) {
     QGraphicsScene_SetSelectionArea22((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation);
 }
 
-void q_graphicsscene_set_selection_area3(void* self, void* path, int64_t selectionOperation, int64_t mode) {
+void q_graphicsscene_set_selection_area3(void* self, void* path, int32_t selectionOperation, int32_t mode) {
     QGraphicsScene_SetSelectionArea3((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation, mode);
 }
 
-void q_graphicsscene_set_selection_area4(void* self, void* path, int64_t selectionOperation, int64_t mode, void* deviceTransform) {
+void q_graphicsscene_set_selection_area4(void* self, void* path, int32_t selectionOperation, int32_t mode, void* deviceTransform) {
     QGraphicsScene_SetSelectionArea4((QGraphicsScene*)self, (QPainterPath*)path, selectionOperation, mode, (QTransform*)deviceTransform);
 }
 
@@ -834,11 +834,11 @@ QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, dou
     return QGraphicsScene_AddRect6((QGraphicsScene*)self, x, y, w, h, (QPen*)pen, (QBrush*)brush);
 }
 
-void q_graphicsscene_set_focus_item2(void* self, void* item, int64_t focusReason) {
+void q_graphicsscene_set_focus_item2(void* self, void* item, int32_t focusReason) {
     QGraphicsScene_SetFocusItem2((QGraphicsScene*)self, (QGraphicsItem*)item, focusReason);
 }
 
-void q_graphicsscene_set_focus1(void* self, int64_t focusReason) {
+void q_graphicsscene_set_focus1(void* self, int32_t focusReason) {
     QGraphicsScene_SetFocus1((QGraphicsScene*)self, focusReason);
 }
 
@@ -905,7 +905,7 @@ void q_graphicsscene_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsscene_kill_timer2(void* self, int64_t id) {
+void q_graphicsscene_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1009,15 +1009,15 @@ bool q_graphicsscene_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsscene_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsscene_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsscene_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

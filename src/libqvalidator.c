@@ -23,15 +23,15 @@ void* q_validator_metacast(void* self, const char* param1) {
     return QValidator_Metacast((QValidator*)self, param1);
 }
 
-int32_t q_validator_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_validator_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QValidator_Metacall((QValidator*)self, param1, param2, param3);
 }
 
-void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QValidator_OnMetacall((QValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_validator_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_validator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QValidator_QBaseMetacall((QValidator*)self, param1, param2, param3);
 }
 
@@ -50,15 +50,15 @@ QLocale* q_validator_locale(void* self) {
     return QValidator_Locale((QValidator*)self);
 }
 
-int64_t q_validator_validate(void* self, const char* param1, int* param2) {
+int32_t q_validator_validate(void* self, const char* param1, int* param2) {
     return QValidator_Validate((QValidator*)self, qstring(param1), param2);
 }
 
-void q_validator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+void q_validator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*)) {
     QValidator_OnValidate((QValidator*)self, (intptr_t)callback);
 }
 
-int64_t q_validator_qbase_validate(void* self, const char* param1, int* param2) {
+int32_t q_validator_qbase_validate(void* self, const char* param1, int* param2) {
     return QValidator_QBaseValidate((QValidator*)self, qstring(param1), param2);
 }
 
@@ -143,7 +143,7 @@ void q_validator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_validator_kill_timer2(void* self, int64_t id) {
+void q_validator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -247,15 +247,15 @@ bool q_validator_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_validator_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_validator_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_validator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_validator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -431,15 +431,15 @@ void* q_intvalidator_metacast(void* self, const char* param1) {
     return QIntValidator_Metacast((QIntValidator*)self, param1);
 }
 
-int32_t q_intvalidator_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_intvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QIntValidator_Metacall((QIntValidator*)self, param1, param2, param3);
 }
 
-void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QIntValidator_OnMetacall((QIntValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_intvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_intvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QIntValidator_QBaseMetacall((QIntValidator*)self, param1, param2, param3);
 }
 
@@ -450,15 +450,15 @@ const char* q_intvalidator_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_intvalidator_validate(void* self, const char* param1, int* param2) {
+int32_t q_intvalidator_validate(void* self, const char* param1, int* param2) {
     return QIntValidator_Validate((QIntValidator*)self, qstring(param1), param2);
 }
 
-void q_intvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+void q_intvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*)) {
     QIntValidator_OnValidate((QIntValidator*)self, (intptr_t)callback);
 }
 
-int64_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2) {
+int32_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2) {
     return QIntValidator_QBaseValidate((QIntValidator*)self, qstring(param1), param2);
 }
 
@@ -587,7 +587,7 @@ void q_intvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_intvalidator_kill_timer2(void* self, int64_t id) {
+void q_intvalidator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -691,15 +691,15 @@ bool q_intvalidator_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_intvalidator_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_intvalidator_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_intvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_intvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -875,15 +875,15 @@ void* q_doublevalidator_metacast(void* self, const char* param1) {
     return QDoubleValidator_Metacast((QDoubleValidator*)self, param1);
 }
 
-int32_t q_doublevalidator_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_doublevalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QDoubleValidator_Metacall((QDoubleValidator*)self, param1, param2, param3);
 }
 
-void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QDoubleValidator_OnMetacall((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_doublevalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_doublevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QDoubleValidator_QBaseMetacall((QDoubleValidator*)self, param1, param2, param3);
 }
 
@@ -894,15 +894,15 @@ const char* q_doublevalidator_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_doublevalidator_validate(void* self, const char* param1, int* param2) {
+int32_t q_doublevalidator_validate(void* self, const char* param1, int* param2) {
     return QDoubleValidator_Validate((QDoubleValidator*)self, qstring(param1), param2);
 }
 
-void q_doublevalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+void q_doublevalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*)) {
     QDoubleValidator_OnValidate((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-int64_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2) {
+int32_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2) {
     return QDoubleValidator_QBaseValidate((QDoubleValidator*)self, qstring(param1), param2);
 }
 
@@ -938,7 +938,7 @@ void q_doublevalidator_set_decimals(void* self, int decimals) {
     QDoubleValidator_SetDecimals((QDoubleValidator*)self, decimals);
 }
 
-void q_doublevalidator_set_notation(void* self, int64_t notation) {
+void q_doublevalidator_set_notation(void* self, int32_t notation) {
     QDoubleValidator_SetNotation((QDoubleValidator*)self, notation);
 }
 
@@ -954,7 +954,7 @@ int32_t q_doublevalidator_decimals(void* self) {
     return QDoubleValidator_Decimals((QDoubleValidator*)self);
 }
 
-int64_t q_doublevalidator_notation(void* self) {
+int32_t q_doublevalidator_notation(void* self) {
     return QDoubleValidator_Notation((QDoubleValidator*)self);
 }
 
@@ -982,11 +982,11 @@ void q_doublevalidator_on_decimals_changed(void* self, void (*callback)(void*, i
     QDoubleValidator_Connect_DecimalsChanged((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-void q_doublevalidator_notation_changed(void* self, int64_t notation) {
+void q_doublevalidator_notation_changed(void* self, int32_t notation) {
     QDoubleValidator_NotationChanged((QDoubleValidator*)self, notation);
 }
 
-void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_doublevalidator_on_notation_changed(void* self, void (*callback)(void*, int32_t)) {
     QDoubleValidator_Connect_NotationChanged((QDoubleValidator*)self, (intptr_t)callback);
 }
 
@@ -1067,7 +1067,7 @@ void q_doublevalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_doublevalidator_kill_timer2(void* self, int64_t id) {
+void q_doublevalidator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1171,15 +1171,15 @@ bool q_doublevalidator_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_doublevalidator_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_doublevalidator_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_doublevalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_doublevalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1355,15 +1355,15 @@ void* q_regularexpressionvalidator_metacast(void* self, const char* param1) {
     return QRegularExpressionValidator_Metacast((QRegularExpressionValidator*)self, param1);
 }
 
-int32_t q_regularexpressionvalidator_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_regularexpressionvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QRegularExpressionValidator_Metacall((QRegularExpressionValidator*)self, param1, param2, param3);
 }
 
-void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QRegularExpressionValidator_OnMetacall((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QRegularExpressionValidator_QBaseMetacall((QRegularExpressionValidator*)self, param1, param2, param3);
 }
 
@@ -1374,15 +1374,15 @@ const char* q_regularexpressionvalidator_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_regularexpressionvalidator_validate(void* self, const char* input, int* pos) {
+int32_t q_regularexpressionvalidator_validate(void* self, const char* input, int* pos) {
     return QRegularExpressionValidator_Validate((QRegularExpressionValidator*)self, qstring(input), pos);
 }
 
-void q_regularexpressionvalidator_on_validate(void* self, int64_t (*callback)(void*, const char*, int*)) {
+void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(void*, const char*, int*)) {
     QRegularExpressionValidator_OnValidate((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-int64_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos) {
+int32_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos) {
     return QRegularExpressionValidator_QBaseValidate((QRegularExpressionValidator*)self, qstring(input), pos);
 }
 
@@ -1479,7 +1479,7 @@ void q_regularexpressionvalidator_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_regularexpressionvalidator_kill_timer2(void* self, int64_t id) {
+void q_regularexpressionvalidator_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1583,15 +1583,15 @@ bool q_regularexpressionvalidator_move_to_thread2(void* self, void* thread, void
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_regularexpressionvalidator_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_regularexpressionvalidator_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_regularexpressionvalidator_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

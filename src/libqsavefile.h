@@ -46,13 +46,13 @@ void* q_savefile_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_savefile_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_savefile_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSaveFile*
 /// @param callback int32_t fn(QSaveFile*, enum QMetaObject__Call, int, void*)
-void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_savefile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_savefile_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_savefile_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -188,7 +188,7 @@ const char* q_savefile_tr3(const char* s, const char* c, int n);
 /// @param self QSaveFile*
 ///
 /// @return enum QFileDevice__FileError
-int64_t q_savefile_error(void* self);
+int32_t q_savefile_error(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -241,7 +241,7 @@ bool q_savefile_unmap(void* self, unsigned char* address);
 ///
 /// @param self QSaveFile*
 /// @param time enum QFileDevice__FileTime
-QDateTime* q_savefile_file_time(void* self, int64_t time);
+QDateTime* q_savefile_file_time(void* self, int32_t time);
 
 /// Inherited from QFileDevice
 ///
@@ -250,7 +250,7 @@ QDateTime* q_savefile_file_time(void* self, int64_t time);
 /// @param self QSaveFile*
 /// @param newDate QDateTime*
 /// @param fileTime enum QFileDevice__FileTime
-bool q_savefile_set_file_time(void* self, void* newDate, int64_t fileTime);
+bool q_savefile_set_file_time(void* self, void* newDate, int32_t fileTime);
 
 /// Inherited from QFileDevice
 ///
@@ -704,7 +704,7 @@ void q_savefile_kill_timer(void* self, int id);
 ///
 /// @param self QSaveFile*
 /// @param id enum Qt__TimerId
-void q_savefile_kill_timer2(void* self, int64_t id);
+void q_savefile_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -881,7 +881,7 @@ bool q_savefile_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSaveFile*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_savefile_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_savefile_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -892,7 +892,7 @@ int32_t q_savefile_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_savefile_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_savefile_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -903,7 +903,7 @@ QMetaObject__Connection* q_savefile_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_savefile_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_savefile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -35,13 +35,13 @@ void* q_datawidgetmapper_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_datawidgetmapper_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_datawidgetmapper_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDataWidgetMapper*
 /// @param callback int32_t fn(QDataWidgetMapper*, enum QMetaObject__Call, int, void*)
-void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_datawidgetmapper_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_datawidgetmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -95,27 +95,27 @@ QModelIndex* q_datawidgetmapper_root_index(void* self);
 ///
 /// @param self QDataWidgetMapper*
 /// @param aOrientation enum Qt__Orientation
-void q_datawidgetmapper_set_orientation(void* self, int64_t aOrientation);
+void q_datawidgetmapper_set_orientation(void* self, int32_t aOrientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#orientation)
 ///
 /// @param self QDataWidgetMapper*
 ///
 /// @return enum Qt__Orientation
-int64_t q_datawidgetmapper_orientation(void* self);
+int32_t q_datawidgetmapper_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#setSubmitPolicy)
 ///
 /// @param self QDataWidgetMapper*
 /// @param policy enum QDataWidgetMapper__SubmitPolicy
-void q_datawidgetmapper_set_submit_policy(void* self, int64_t policy);
+void q_datawidgetmapper_set_submit_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#submitPolicy)
 ///
 /// @param self QDataWidgetMapper*
 ///
 /// @return enum QDataWidgetMapper__SubmitPolicy
-int64_t q_datawidgetmapper_submit_policy(void* self);
+int32_t q_datawidgetmapper_submit_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdatawidgetmapper.html#addMapping)
 ///
@@ -345,7 +345,7 @@ void q_datawidgetmapper_kill_timer(void* self, int id);
 ///
 /// @param self QDataWidgetMapper*
 /// @param id enum Qt__TimerId
-void q_datawidgetmapper_kill_timer2(void* self, int64_t id);
+void q_datawidgetmapper_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -522,7 +522,7 @@ bool q_datawidgetmapper_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDataWidgetMapper*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_datawidgetmapper_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_datawidgetmapper_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -533,7 +533,7 @@ int32_t q_datawidgetmapper_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_datawidgetmapper_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_datawidgetmapper_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -544,7 +544,7 @@ QMetaObject__Connection* q_datawidgetmapper_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_datawidgetmapper_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_datawidgetmapper_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

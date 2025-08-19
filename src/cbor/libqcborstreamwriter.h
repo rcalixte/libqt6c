@@ -45,7 +45,7 @@ void q_cborstreamwriter_append2(void* self, long long i);
 ///
 /// @param self QCborStreamWriter*
 /// @param n enum QCborStreamWriter__QCborNegativeInteger
-void q_cborstreamwriter_append3(void* self, int64_t n);
+void q_cborstreamwriter_append3(void* self, uint64_t n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
@@ -57,19 +57,19 @@ void q_cborstreamwriter_append4(void* self, const char* ba);
 ///
 /// @param self QCborStreamWriter*
 /// @param tag enum QCborStreamWriter__QCborTag
-void q_cborstreamwriter_append7(void* self, int64_t tag);
+void q_cborstreamwriter_append7(void* self, uint64_t tag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
 /// @param tag enum QCborStreamWriter__QCborKnownTags
-void q_cborstreamwriter_append8(void* self, int64_t tag);
+void q_cborstreamwriter_append8(void* self, int32_t tag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
 /// @param st enum QCborStreamWriter__QCborSimpleType
-void q_cborstreamwriter_append9(void* self, int64_t st);
+void q_cborstreamwriter_append9(void* self, uint8_t st);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///

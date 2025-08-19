@@ -313,13 +313,13 @@ QRectF* q_painterpath_control_point_rect(void* self);
 /// @param self QPainterPath*
 ///
 /// @return enum Qt__FillRule
-int64_t q_painterpath_fill_rule(void* self);
+int32_t q_painterpath_fill_rule(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#setFillRule)
 ///
 /// @param self QPainterPath*
 /// @param fillRule enum Qt__FillRule
-void q_painterpath_set_fill_rule(void* self, int64_t fillRule);
+void q_painterpath_set_fill_rule(void* self, int32_t fillRule);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#isEmpty)
 ///
@@ -481,7 +481,7 @@ QPainterPath* q_painterpath_operator_minus_assign(void* self, void* other);
 /// @param xRadius double
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
-void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int64_t mode);
+void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, double yRadius, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#addRoundedRect)
 ///
@@ -493,7 +493,7 @@ void q_painterpath_add_rounded_rect4(void* self, void* rect, double xRadius, dou
 /// @param xRadius double
 /// @param yRadius double
 /// @param mode enum Qt__SizeMode
-void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int64_t mode);
+void q_painterpath_add_rounded_rect7(void* self, double x, double y, double w, double h, double xRadius, double yRadius, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath.html#dtor.QPainterPath)
 ///
@@ -528,27 +528,27 @@ double q_painterpathstroker_width(void* self);
 ///
 /// @param self QPainterPathStroker*
 /// @param style enum Qt__PenCapStyle
-void q_painterpathstroker_set_cap_style(void* self, int64_t style);
+void q_painterpathstroker_set_cap_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#capStyle)
 ///
 /// @param self QPainterPathStroker*
 ///
 /// @return enum Qt__PenCapStyle
-int64_t q_painterpathstroker_cap_style(void* self);
+int32_t q_painterpathstroker_cap_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#setJoinStyle)
 ///
 /// @param self QPainterPathStroker*
 /// @param style enum Qt__PenJoinStyle
-void q_painterpathstroker_set_join_style(void* self, int64_t style);
+void q_painterpathstroker_set_join_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#joinStyle)
 ///
 /// @param self QPainterPathStroker*
 ///
 /// @return enum Qt__PenJoinStyle
-int64_t q_painterpathstroker_join_style(void* self);
+int32_t q_painterpathstroker_join_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#setMiterLimit)
 ///
@@ -576,7 +576,7 @@ double q_painterpathstroker_curve_threshold(void* self);
 ///
 /// @param self QPainterPathStroker*
 /// @param dashPattern enum Qt__PenStyle
-void q_painterpathstroker_set_dash_pattern(void* self, int64_t dashPattern);
+void q_painterpathstroker_set_dash_pattern(void* self, int32_t dashPattern);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpathstroker.html#setDashPattern)
 ///
@@ -656,8 +656,6 @@ bool q_painterpath__element_operator_equal(void* self, void* e);
 /// @param e QPainterPath__Element*
 bool q_painterpath__element_operator_not_equal(void* self, void* e);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath::element.html#dtor.QPainterPath::Element)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPainterPath__Element*

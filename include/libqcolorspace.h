@@ -20,13 +20,13 @@ QColorSpace* q_colorspace_new();
 /// q_colorspace_new2 constructs a new QColorSpace object.
 ///
 /// @param namedColorSpace enum QColorSpace__NamedColorSpace
-QColorSpace* q_colorspace_new2(int64_t namedColorSpace);
+QColorSpace* q_colorspace_new2(int32_t namedColorSpace);
 
 /// q_colorspace_new3 constructs a new QColorSpace object.
 ///
 /// @param whitePoint QPointF*
 /// @param transferFunction enum QColorSpace__TransferFunction
-QColorSpace* q_colorspace_new3(void* whitePoint, int64_t transferFunction);
+QColorSpace* q_colorspace_new3(void* whitePoint, int32_t transferFunction);
 
 /// q_colorspace_new4 constructs a new QColorSpace object.
 ///
@@ -38,19 +38,19 @@ QColorSpace* q_colorspace_new4(void* whitePoint, libqt_list transferFunctionTabl
 ///
 /// @param primaries enum QColorSpace__Primaries
 /// @param transferFunction enum QColorSpace__TransferFunction
-QColorSpace* q_colorspace_new5(int64_t primaries, int64_t transferFunction);
+QColorSpace* q_colorspace_new5(int32_t primaries, int32_t transferFunction);
 
 /// q_colorspace_new6 constructs a new QColorSpace object.
 ///
 /// @param primaries enum QColorSpace__Primaries
 /// @param gamma float
-QColorSpace* q_colorspace_new6(int64_t primaries, float gamma);
+QColorSpace* q_colorspace_new6(int32_t primaries, float gamma);
 
 /// q_colorspace_new7 constructs a new QColorSpace object.
 ///
 /// @param primaries enum QColorSpace__Primaries
 /// @param transferFunctionTable libqt_list /* of uint16_t */
-QColorSpace* q_colorspace_new7(int64_t primaries, libqt_list transferFunctionTable);
+QColorSpace* q_colorspace_new7(int32_t primaries, libqt_list transferFunctionTable);
 
 /// q_colorspace_new8 constructs a new QColorSpace object.
 ///
@@ -59,7 +59,7 @@ QColorSpace* q_colorspace_new7(int64_t primaries, libqt_list transferFunctionTab
 /// @param greenPoint QPointF*
 /// @param bluePoint QPointF*
 /// @param transferFunction enum QColorSpace__TransferFunction
-QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction);
+QColorSpace* q_colorspace_new8(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int32_t transferFunction);
 
 /// q_colorspace_new9 constructs a new QColorSpace object.
 ///
@@ -91,14 +91,14 @@ QColorSpace* q_colorspace_new11(void* colorSpace);
 /// @param whitePoint QPointF*
 /// @param transferFunction enum QColorSpace__TransferFunction
 /// @param gamma float
-QColorSpace* q_colorspace_new12(void* whitePoint, int64_t transferFunction, float gamma);
+QColorSpace* q_colorspace_new12(void* whitePoint, int32_t transferFunction, float gamma);
 
 /// q_colorspace_new13 constructs a new QColorSpace object.
 ///
 /// @param primaries enum QColorSpace__Primaries
 /// @param transferFunction enum QColorSpace__TransferFunction
 /// @param gamma float
-QColorSpace* q_colorspace_new13(int64_t primaries, int64_t transferFunction, float gamma);
+QColorSpace* q_colorspace_new13(int32_t primaries, int32_t transferFunction, float gamma);
 
 /// q_colorspace_new14 constructs a new QColorSpace object.
 ///
@@ -108,7 +108,7 @@ QColorSpace* q_colorspace_new13(int64_t primaries, int64_t transferFunction, flo
 /// @param bluePoint QPointF*
 /// @param transferFunction enum QColorSpace__TransferFunction
 /// @param gamma float
-QColorSpace* q_colorspace_new14(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int64_t transferFunction, float gamma);
+QColorSpace* q_colorspace_new14(void* whitePoint, void* redPoint, void* greenPoint, void* bluePoint, int32_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#operator-eq)
 ///
@@ -127,14 +127,14 @@ void q_colorspace_swap(void* self, void* colorSpace);
 /// @param self QColorSpace*
 ///
 /// @return enum QColorSpace__Primaries
-int64_t q_colorspace_primaries(void* self);
+int32_t q_colorspace_primaries(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#transferFunction)
 ///
 /// @param self QColorSpace*
 ///
 /// @return enum QColorSpace__TransferFunction
-int64_t q_colorspace_transfer_function(void* self);
+int32_t q_colorspace_transfer_function(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#gamma)
 ///
@@ -158,7 +158,7 @@ void q_colorspace_set_description(void* self, const char* description);
 ///
 /// @param self QColorSpace*
 /// @param transferFunction enum QColorSpace__TransferFunction
-void q_colorspace_set_transfer_function(void* self, int64_t transferFunction);
+void q_colorspace_set_transfer_function(void* self, int32_t transferFunction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setTransferFunction)
 ///
@@ -178,7 +178,7 @@ void q_colorspace_set_transfer_functions(void* self, libqt_list redTransferFunct
 ///
 /// @param self QColorSpace*
 /// @param transferFunction enum QColorSpace__TransferFunction
-QColorSpace* q_colorspace_with_transfer_function(void* self, int64_t transferFunction);
+QColorSpace* q_colorspace_with_transfer_function(void* self, int32_t transferFunction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
@@ -198,7 +198,7 @@ QColorSpace* q_colorspace_with_transfer_functions(void* self, libqt_list redTran
 ///
 /// @param self QColorSpace*
 /// @param primariesId enum QColorSpace__Primaries
-void q_colorspace_set_primaries(void* self, int64_t primariesId);
+void q_colorspace_set_primaries(void* self, int32_t primariesId);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#setPrimaries)
 ///
@@ -225,14 +225,14 @@ QPointF* q_colorspace_white_point(void* self);
 /// @param self QColorSpace*
 ///
 /// @return enum QColorSpace__TransformModel
-int64_t q_colorspace_transform_model(void* self);
+uint8_t q_colorspace_transform_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#colorModel)
 ///
 /// @param self QColorSpace*
 ///
 /// @return enum QColorSpace__ColorModel
-int64_t q_colorspace_color_model(void* self);
+uint8_t q_colorspace_color_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#detach)
 ///
@@ -277,14 +277,14 @@ QVariant* q_colorspace_to_q_variant(void* self);
 /// @param self QColorSpace*
 /// @param transferFunction enum QColorSpace__TransferFunction
 /// @param gamma float
-void q_colorspace_set_transfer_function22(void* self, int64_t transferFunction, float gamma);
+void q_colorspace_set_transfer_function22(void* self, int32_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#withTransferFunction)
 ///
 /// @param self QColorSpace*
 /// @param transferFunction enum QColorSpace__TransferFunction
 /// @param gamma float
-QColorSpace* q_colorspace_with_transfer_function22(void* self, int64_t transferFunction, float gamma);
+QColorSpace* q_colorspace_with_transfer_function22(void* self, int32_t transferFunction, float gamma);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcolorspace.html#dtor.QColorSpace)
 ///

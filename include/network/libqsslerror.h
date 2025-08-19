@@ -20,13 +20,13 @@ QSslError* q_sslerror_new();
 /// q_sslerror_new2 constructs a new QSslError object.
 ///
 /// @param errorVal enum QSslError__SslError
-QSslError* q_sslerror_new2(int64_t errorVal);
+QSslError* q_sslerror_new2(int32_t errorVal);
 
 /// q_sslerror_new3 constructs a new QSslError object.
 ///
 /// @param errorVal enum QSslError__SslError
 /// @param certificate QSslCertificate*
-QSslError* q_sslerror_new3(int64_t errorVal, void* certificate);
+QSslError* q_sslerror_new3(int32_t errorVal, void* certificate);
 
 /// q_sslerror_new4 constructs a new QSslError object.
 ///
@@ -62,7 +62,7 @@ bool q_sslerror_operator_not_equal(void* self, void* other);
 /// @param self QSslError*
 ///
 /// @return enum QSslError__SslError
-int64_t q_sslerror_error(void* self);
+int32_t q_sslerror_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslerror.html#errorString)
 ///

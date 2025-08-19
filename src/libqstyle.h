@@ -30,13 +30,13 @@ void* q_style_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_style_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_style_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QStyle*
 /// @param callback int32_t fn(QStyle*, enum QMetaObject__Call, int, void*)
-void q_style_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_style_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -44,7 +44,7 @@ void q_style_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_style_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_style_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -236,7 +236,7 @@ QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixm
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
-void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
+void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
@@ -244,7 +244,7 @@ void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, vo
 ///
 /// @param self QStyle*
 /// @param callback void fn(QStyle*, QPainter*, QRect*, int, QPalette*, bool, const char*, enum QPalette__ColorRole)
-void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int64_t));
+void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
@@ -258,7 +258,7 @@ void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*,
 /// @param enabled bool
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
-void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole);
+void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
@@ -315,7 +315,7 @@ QPalette* q_style_qbase_standard_palette(void* self);
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
-void q_style_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w);
+void q_style_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
 ///
@@ -323,7 +323,7 @@ void q_style_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w)
 ///
 /// @param self QStyle*
 /// @param callback void fn(QStyle*, enum QStyle__PrimitiveElement, QStyleOption*, QPainter*, QWidget*)
-void q_style_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void*, void*, void*));
+void q_style_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
 ///
@@ -334,7 +334,7 @@ void q_style_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void
 /// @param opt QStyleOption*
 /// @param p QPainter*
 /// @param w QWidget*
-void q_style_qbase_draw_primitive(void* self, int64_t pe, void* opt, void* p, void* w);
+void q_style_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#drawControl)
 ///
@@ -618,7 +618,7 @@ QIcon* q_style_qbase_standard_icon(void* self, int64_t standardIcon, void* optio
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
-QPixmap* q_style_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
+QPixmap* q_style_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
 ///
@@ -626,7 +626,7 @@ QPixmap* q_style_generated_icon_pixmap(void* self, int64_t iconMode, void* pixma
 ///
 /// @param self QStyle*
 /// @param callback QPixmap* fn(QStyle*, enum QIcon__Mode, QPixmap*, QStyleOption*)
-void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*));
+void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
 ///
@@ -636,21 +636,21 @@ void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, in
 /// @param iconMode enum QIcon__Mode
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
-QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt);
+QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#visualRect)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalRect QRect*
-QRect* q_style_visual_rect(int64_t direction, void* boundingRect, void* logicalRect);
+QRect* q_style_visual_rect(int32_t direction, void* boundingRect, void* logicalRect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#visualPos)
 ///
 /// @param direction enum Qt__LayoutDirection
 /// @param boundingRect QRect*
 /// @param logicalPos QPoint*
-QPoint* q_style_visual_pos(int64_t direction, void* boundingRect, void* logicalPos);
+QPoint* q_style_visual_pos(int32_t direction, void* boundingRect, void* logicalPos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#sliderPositionFromValue)
 ///
@@ -674,7 +674,7 @@ int32_t q_style_slider_value_from_position(int min, int max, int pos, int space)
 /// @param alignment flag of enum Qt__AlignmentFlag
 ///
 /// @return flag of enum Qt__AlignmentFlag
-int64_t q_style_visual_alignment(int64_t direction, int64_t alignment);
+int64_t q_style_visual_alignment(int32_t direction, int64_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#alignedRect)
 ///
@@ -682,7 +682,7 @@ int64_t q_style_visual_alignment(int64_t direction, int64_t alignment);
 /// @param alignment flag of enum Qt__AlignmentFlag
 /// @param size QSize*
 /// @param rectangle QRect*
-QRect* q_style_aligned_rect(int64_t direction, int64_t alignment, void* size, void* rectangle);
+QRect* q_style_aligned_rect(int32_t direction, int64_t alignment, void* size, void* rectangle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
 ///
@@ -692,7 +692,7 @@ QRect* q_style_aligned_rect(int64_t direction, int64_t alignment, void* size, vo
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_style_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
+int32_t q_style_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
 ///
@@ -700,7 +700,7 @@ int32_t q_style_layout_spacing(void* self, int64_t control1, int64_t control2, i
 ///
 /// @param self QStyle*
 /// @param callback int32_t fn(QStyle*, enum QSizePolicy__ControlType, enum QSizePolicy__ControlType, enum Qt__Orientation, QStyleOption*, QWidget*)
-void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, int64_t, int64_t, void*, void*));
+void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
 ///
@@ -712,7 +712,7 @@ void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_style_qbase_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget);
+int32_t q_style_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
@@ -720,7 +720,7 @@ int32_t q_style_qbase_layout_spacing(void* self, int64_t control1, int64_t contr
 /// @param controls1 flag of enum QSizePolicy__ControlType
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
-int32_t q_style_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int64_t orientation);
+int32_t q_style_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#proxy)
 ///
@@ -769,7 +769,7 @@ int32_t q_style_slider_value_from_position5(int min, int max, int pos, int space
 /// @param controls2 flag of enum QSizePolicy__ControlType
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
-int32_t q_style_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option);
+int32_t q_style_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
@@ -779,7 +779,7 @@ int32_t q_style_combined_layout_spacing4(void* self, int64_t controls1, int64_t 
 /// @param orientation enum Qt__Orientation
 /// @param option QStyleOption*
 /// @param widget QWidget*
-int32_t q_style_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option, void* widget);
+int32_t q_style_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option, void* widget);
 
 /// Inherited from QObject
 ///
@@ -871,7 +871,7 @@ void q_style_kill_timer(void* self, int id);
 ///
 /// @param self QStyle*
 /// @param id enum Qt__TimerId
-void q_style_kill_timer2(void* self, int64_t id);
+void q_style_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1048,7 +1048,7 @@ bool q_style_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QStyle*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_style_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_style_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1059,7 +1059,7 @@ int32_t q_style_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1070,7 +1070,7 @@ QMetaObject__Connection* q_style_connect5(void* sender, void* signal, void* rece
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_style_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_style_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

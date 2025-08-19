@@ -20,7 +20,7 @@ QPen* q_pen_new();
 /// q_pen_new2 constructs a new QPen object.
 ///
 /// @param param1 enum Qt__PenStyle
-QPen* q_pen_new2(int64_t param1);
+QPen* q_pen_new2(int32_t param1);
 
 /// q_pen_new3 constructs a new QPen object.
 ///
@@ -43,7 +43,7 @@ QPen* q_pen_new5(void* pen);
 /// @param brush QBrush*
 /// @param width double
 /// @param s enum Qt__PenStyle
-QPen* q_pen_new6(void* brush, double width, int64_t s);
+QPen* q_pen_new6(void* brush, double width, int32_t s);
 
 /// q_pen_new7 constructs a new QPen object.
 ///
@@ -51,7 +51,7 @@ QPen* q_pen_new6(void* brush, double width, int64_t s);
 /// @param width double
 /// @param s enum Qt__PenStyle
 /// @param c enum Qt__PenCapStyle
-QPen* q_pen_new7(void* brush, double width, int64_t s, int64_t c);
+QPen* q_pen_new7(void* brush, double width, int32_t s, int32_t c);
 
 /// q_pen_new8 constructs a new QPen object.
 ///
@@ -60,7 +60,7 @@ QPen* q_pen_new7(void* brush, double width, int64_t s, int64_t c);
 /// @param s enum Qt__PenStyle
 /// @param c enum Qt__PenCapStyle
 /// @param j enum Qt__PenJoinStyle
-QPen* q_pen_new8(void* brush, double width, int64_t s, int64_t c, int64_t j);
+QPen* q_pen_new8(void* brush, double width, int32_t s, int32_t c, int32_t j);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#operator-eq)
 ///
@@ -79,13 +79,13 @@ void q_pen_swap(void* self, void* other);
 /// @param self QPen*
 ///
 /// @return enum Qt__PenStyle
-int64_t q_pen_style(void* self);
+int32_t q_pen_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setStyle)
 ///
 /// @param self QPen*
 /// @param style enum Qt__PenStyle
-void q_pen_set_style(void* self, int64_t style);
+void q_pen_set_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#dashPattern)
 ///
@@ -174,26 +174,26 @@ bool q_pen_is_solid(void* self);
 /// @param self QPen*
 ///
 /// @return enum Qt__PenCapStyle
-int64_t q_pen_cap_style(void* self);
+int32_t q_pen_cap_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setCapStyle)
 ///
 /// @param self QPen*
 /// @param pcs enum Qt__PenCapStyle
-void q_pen_set_cap_style(void* self, int64_t pcs);
+void q_pen_set_cap_style(void* self, int32_t pcs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#joinStyle)
 ///
 /// @param self QPen*
 ///
 /// @return enum Qt__PenJoinStyle
-int64_t q_pen_join_style(void* self);
+int32_t q_pen_join_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#setJoinStyle)
 ///
 /// @param self QPen*
 /// @param pcs enum Qt__PenJoinStyle
-void q_pen_set_join_style(void* self, int64_t pcs);
+void q_pen_set_join_style(void* self, int32_t pcs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpen.html#isCosmetic)
 ///

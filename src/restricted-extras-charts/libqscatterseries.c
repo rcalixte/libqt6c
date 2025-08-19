@@ -26,15 +26,15 @@ void* q_scatterseries_metacast(void* self, const char* param1) {
     return QScatterSeries_Metacast((QScatterSeries*)self, param1);
 }
 
-int32_t q_scatterseries_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_scatterseries_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QScatterSeries_Metacall((QScatterSeries*)self, param1, param2, param3);
 }
 
-void q_scatterseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_scatterseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QScatterSeries_OnMetacall((QScatterSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_scatterseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_scatterseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QScatterSeries_QBaseMetacall((QScatterSeries*)self, param1, param2, param3);
 }
 
@@ -45,15 +45,15 @@ const char* q_scatterseries_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_scatterseries_type(void* self) {
+int32_t q_scatterseries_type(void* self) {
     return QScatterSeries_Type((QScatterSeries*)self);
 }
 
-void q_scatterseries_on_type(void* self, int64_t (*callback)()) {
+void q_scatterseries_on_type(void* self, int32_t (*callback)()) {
     QScatterSeries_OnType((QScatterSeries*)self, (intptr_t)callback);
 }
 
-int64_t q_scatterseries_qbase_type(void* self) {
+int32_t q_scatterseries_qbase_type(void* self) {
     return QScatterSeries_QBaseType((QScatterSeries*)self);
 }
 
@@ -117,11 +117,11 @@ QColor* q_scatterseries_border_color(void* self) {
     return QScatterSeries_BorderColor((QScatterSeries*)self);
 }
 
-int64_t q_scatterseries_marker_shape(void* self) {
+int32_t q_scatterseries_marker_shape(void* self) {
     return QScatterSeries_MarkerShape((QScatterSeries*)self);
 }
 
-void q_scatterseries_set_marker_shape(void* self, int64_t shape) {
+void q_scatterseries_set_marker_shape(void* self, int32_t shape) {
     QScatterSeries_SetMarkerShape((QScatterSeries*)self, shape);
 }
 
@@ -149,11 +149,11 @@ void q_scatterseries_on_border_color_changed(void* self, void (*callback)(void*,
     QScatterSeries_Connect_BorderColorChanged((QScatterSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_marker_shape_changed(void* self, int64_t shape) {
+void q_scatterseries_marker_shape_changed(void* self, int32_t shape) {
     QScatterSeries_MarkerShapeChanged((QScatterSeries*)self, shape);
 }
 
-void q_scatterseries_on_marker_shape_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_scatterseries_on_marker_shape_changed(void* self, void (*callback)(void*, int32_t)) {
     QScatterSeries_Connect_MarkerShapeChanged((QScatterSeries*)self, (intptr_t)callback);
 }
 
@@ -413,7 +413,7 @@ void q_scatterseries_clear_point_configuration(void* self, int index) {
     QXYSeries_ClearPointConfiguration((QXYSeries*)self, index);
 }
 
-void q_scatterseries_clear_point_configuration2(void* self, int index, int64_t key) {
+void q_scatterseries_clear_point_configuration2(void* self, int index, int32_t key) {
     QXYSeries_ClearPointConfiguration2((QXYSeries*)self, index, key);
 }
 
@@ -421,27 +421,27 @@ void q_scatterseries_clear_points_configuration(void* self) {
     QXYSeries_ClearPointsConfiguration((QXYSeries*)self);
 }
 
-void q_scatterseries_clear_points_configuration2(void* self, int64_t key) {
+void q_scatterseries_clear_points_configuration2(void* self, int32_t key) {
     QXYSeries_ClearPointsConfiguration2((QXYSeries*)self, key);
 }
 
-void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration) {
+void q_scatterseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration) {
     QXYSeries_SetPointConfiguration((QXYSeries*)self, index, configuration);
 }
 
-void q_scatterseries_set_point_configuration2(void* self, int index, int64_t key, void* value) {
+void q_scatterseries_set_point_configuration2(void* self, int index, int32_t key, void* value) {
     QXYSeries_SetPointConfiguration2((QXYSeries*)self, index, key, (QVariant*)value);
 }
 
-void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration) {
+void q_scatterseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration) {
     QXYSeries_SetPointsConfiguration((QXYSeries*)self, pointsConfiguration);
 }
 
-libqt_map /* of int64_t to QVariant* */ q_scatterseries_point_configuration(void* self, int index) {
+libqt_map /* of int32_t to QVariant* */ q_scatterseries_point_configuration(void* self, int index) {
     return QXYSeries_PointConfiguration((QXYSeries*)self, index);
 }
 
-libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_scatterseries_points_configuration(void* self) {
+libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_scatterseries_points_configuration(void* self) {
     return QXYSeries_PointsConfiguration((QXYSeries*)self);
 }
 
@@ -637,11 +637,11 @@ void q_scatterseries_on_best_fit_line_color_changed(void* self, void (*callback)
     QXYSeries_Connect_BestFitLineColorChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration) {
+void q_scatterseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration) {
     QXYSeries_PointsConfigurationChanged((QXYSeries*)self, configuration);
 }
 
-void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */)) {
+void q_scatterseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */)) {
     QXYSeries_Connect_PointsConfigurationChanged((QXYSeries*)self, (intptr_t)callback);
 }
 
@@ -812,7 +812,7 @@ void q_scatterseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scatterseries_kill_timer2(void* self, int64_t id) {
+void q_scatterseries_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -916,15 +916,15 @@ bool q_scatterseries_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scatterseries_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_scatterseries_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_scatterseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_scatterseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_scatterseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_scatterseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

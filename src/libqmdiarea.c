@@ -35,15 +35,15 @@ void* q_mdiarea_metacast(void* self, const char* param1) {
     return QMdiArea_Metacast((QMdiArea*)self, param1);
 }
 
-int32_t q_mdiarea_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mdiarea_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMdiArea_Metacall((QMdiArea*)self, param1, param2, param3);
 }
 
-void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_mdiarea_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QMdiArea_OnMetacall((QMdiArea*)self, (intptr_t)callback);
 }
 
-int32_t q_mdiarea_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mdiarea_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMdiArea_QBaseMetacall((QMdiArea*)self, param1, param2, param3);
 }
 
@@ -107,27 +107,27 @@ void q_mdiarea_set_background(void* self, void* background) {
     QMdiArea_SetBackground((QMdiArea*)self, (QBrush*)background);
 }
 
-int64_t q_mdiarea_activation_order(void* self) {
+int32_t q_mdiarea_activation_order(void* self) {
     return QMdiArea_ActivationOrder((QMdiArea*)self);
 }
 
-void q_mdiarea_set_activation_order(void* self, int64_t order) {
+void q_mdiarea_set_activation_order(void* self, int32_t order) {
     QMdiArea_SetActivationOrder((QMdiArea*)self, order);
 }
 
-void q_mdiarea_set_option(void* self, int64_t option) {
+void q_mdiarea_set_option(void* self, int32_t option) {
     QMdiArea_SetOption((QMdiArea*)self, option);
 }
 
-bool q_mdiarea_test_option(void* self, int64_t opton) {
+bool q_mdiarea_test_option(void* self, int32_t opton) {
     return QMdiArea_TestOption((QMdiArea*)self, opton);
 }
 
-void q_mdiarea_set_view_mode(void* self, int64_t mode) {
+void q_mdiarea_set_view_mode(void* self, int32_t mode) {
     QMdiArea_SetViewMode((QMdiArea*)self, mode);
 }
 
-int64_t q_mdiarea_view_mode(void* self) {
+int32_t q_mdiarea_view_mode(void* self) {
     return QMdiArea_ViewMode((QMdiArea*)self);
 }
 
@@ -155,19 +155,19 @@ bool q_mdiarea_tabs_movable(void* self) {
     return QMdiArea_TabsMovable((QMdiArea*)self);
 }
 
-void q_mdiarea_set_tab_shape(void* self, int64_t shape) {
+void q_mdiarea_set_tab_shape(void* self, int32_t shape) {
     QMdiArea_SetTabShape((QMdiArea*)self, shape);
 }
 
-int64_t q_mdiarea_tab_shape(void* self) {
+int32_t q_mdiarea_tab_shape(void* self) {
     return QMdiArea_TabShape((QMdiArea*)self);
 }
 
-void q_mdiarea_set_tab_position(void* self, int64_t position) {
+void q_mdiarea_set_tab_position(void* self, int32_t position) {
     QMdiArea_SetTabPosition((QMdiArea*)self, position);
 }
 
-int64_t q_mdiarea_tab_position(void* self) {
+int32_t q_mdiarea_tab_position(void* self) {
     return QMdiArea_TabPosition((QMdiArea*)self);
 }
 
@@ -341,7 +341,7 @@ const char* q_mdiarea_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-libqt_list /* of QMdiSubWindow* */ q_mdiarea_sub_window_list1(void* self, int64_t order) {
+libqt_list /* of QMdiSubWindow* */ q_mdiarea_sub_window_list1(void* self, int32_t order) {
     libqt_list _arr = QMdiArea_SubWindowList1((QMdiArea*)self, order);
     return _arr;
 }
@@ -350,15 +350,15 @@ QMdiSubWindow* q_mdiarea_add_sub_window2(void* self, void* widget, int64_t flags
     return QMdiArea_AddSubWindow2((QMdiArea*)self, (QWidget*)widget, flags);
 }
 
-void q_mdiarea_set_option2(void* self, int64_t option, bool on) {
+void q_mdiarea_set_option2(void* self, int32_t option, bool on) {
     QMdiArea_SetOption2((QMdiArea*)self, option, on);
 }
 
-int64_t q_mdiarea_vertical_scroll_bar_policy(void* self) {
+int32_t q_mdiarea_vertical_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_VerticalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_mdiarea_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy) {
+void q_mdiarea_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy) {
     QAbstractScrollArea_SetVerticalScrollBarPolicy((QAbstractScrollArea*)self, verticalScrollBarPolicy);
 }
 
@@ -370,11 +370,11 @@ void q_mdiarea_set_vertical_scroll_bar(void* self, void* scrollbar) {
     QAbstractScrollArea_SetVerticalScrollBar((QAbstractScrollArea*)self, (QScrollBar*)scrollbar);
 }
 
-int64_t q_mdiarea_horizontal_scroll_bar_policy(void* self) {
+int32_t q_mdiarea_horizontal_scroll_bar_policy(void* self) {
     return QAbstractScrollArea_HorizontalScrollBarPolicy((QAbstractScrollArea*)self);
 }
 
-void q_mdiarea_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy) {
+void q_mdiarea_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy) {
     QAbstractScrollArea_SetHorizontalScrollBarPolicy((QAbstractScrollArea*)self, horizontalScrollBarPolicy);
 }
 
@@ -415,11 +415,11 @@ QSize* q_mdiarea_maximum_viewport_size(void* self) {
     return QAbstractScrollArea_MaximumViewportSize((QAbstractScrollArea*)self);
 }
 
-int64_t q_mdiarea_size_adjust_policy(void* self) {
+int32_t q_mdiarea_size_adjust_policy(void* self) {
     return QAbstractScrollArea_SizeAdjustPolicy((QAbstractScrollArea*)self);
 }
 
-void q_mdiarea_set_size_adjust_policy(void* self, int64_t policy) {
+void q_mdiarea_set_size_adjust_policy(void* self, int32_t policy) {
     QAbstractScrollArea_SetSizeAdjustPolicy((QAbstractScrollArea*)self, policy);
 }
 
@@ -435,19 +435,19 @@ int32_t q_mdiarea_frame_width(void* self) {
     return QFrame_FrameWidth((QFrame*)self);
 }
 
-int64_t q_mdiarea_frame_shape(void* self) {
+int32_t q_mdiarea_frame_shape(void* self) {
     return QFrame_FrameShape((QFrame*)self);
 }
 
-void q_mdiarea_set_frame_shape(void* self, int64_t frameShape) {
+void q_mdiarea_set_frame_shape(void* self, int32_t frameShape) {
     QFrame_SetFrameShape((QFrame*)self, frameShape);
 }
 
-int64_t q_mdiarea_frame_shadow(void* self) {
+int32_t q_mdiarea_frame_shadow(void* self) {
     return QFrame_FrameShadow((QFrame*)self);
 }
 
-void q_mdiarea_set_frame_shadow(void* self, int64_t frameShadow) {
+void q_mdiarea_set_frame_shadow(void* self, int32_t frameShadow) {
     QFrame_SetFrameShadow((QFrame*)self, frameShadow);
 }
 
@@ -511,11 +511,11 @@ bool q_mdiarea_is_modal(void* self) {
     return QWidget_IsModal((QWidget*)self);
 }
 
-int64_t q_mdiarea_window_modality(void* self) {
+int32_t q_mdiarea_window_modality(void* self) {
     return QWidget_WindowModality((QWidget*)self);
 }
 
-void q_mdiarea_set_window_modality(void* self, int64_t windowModality) {
+void q_mdiarea_set_window_modality(void* self, int32_t windowModality) {
     QWidget_SetWindowModality((QWidget*)self, windowModality);
 }
 
@@ -755,19 +755,19 @@ void q_mdiarea_set_palette(void* self, void* palette) {
     QWidget_SetPalette((QWidget*)self, (QPalette*)palette);
 }
 
-void q_mdiarea_set_background_role(void* self, int64_t backgroundRole) {
+void q_mdiarea_set_background_role(void* self, int32_t backgroundRole) {
     QWidget_SetBackgroundRole((QWidget*)self, backgroundRole);
 }
 
-int64_t q_mdiarea_background_role(void* self) {
+int32_t q_mdiarea_background_role(void* self) {
     return QWidget_BackgroundRole((QWidget*)self);
 }
 
-void q_mdiarea_set_foreground_role(void* self, int64_t foregroundRole) {
+void q_mdiarea_set_foreground_role(void* self, int32_t foregroundRole) {
     QWidget_SetForegroundRole((QWidget*)self, foregroundRole);
 }
 
-int64_t q_mdiarea_foreground_role(void* self) {
+int32_t q_mdiarea_foreground_role(void* self) {
     return QWidget_ForegroundRole((QWidget*)self);
 }
 
@@ -1001,11 +1001,11 @@ void q_mdiarea_set_accessible_description(void* self, const char* description) {
     QWidget_SetAccessibleDescription((QWidget*)self, qstring(description));
 }
 
-void q_mdiarea_set_layout_direction(void* self, int64_t direction) {
+void q_mdiarea_set_layout_direction(void* self, int32_t direction) {
     QWidget_SetLayoutDirection((QWidget*)self, direction);
 }
 
-int64_t q_mdiarea_layout_direction(void* self) {
+int32_t q_mdiarea_layout_direction(void* self) {
     return QWidget_LayoutDirection((QWidget*)self);
 }
 
@@ -1049,15 +1049,15 @@ void q_mdiarea_clear_focus(void* self) {
     QWidget_ClearFocus((QWidget*)self);
 }
 
-void q_mdiarea_set_focus2(void* self, int64_t reason) {
+void q_mdiarea_set_focus2(void* self, int32_t reason) {
     QWidget_SetFocus2((QWidget*)self, reason);
 }
 
-int64_t q_mdiarea_focus_policy(void* self) {
+int32_t q_mdiarea_focus_policy(void* self) {
     return QWidget_FocusPolicy((QWidget*)self);
 }
 
-void q_mdiarea_set_focus_policy(void* self, int64_t policy) {
+void q_mdiarea_set_focus_policy(void* self, int32_t policy) {
     QWidget_SetFocusPolicy((QWidget*)self, policy);
 }
 
@@ -1077,11 +1077,11 @@ QWidget* q_mdiarea_focus_proxy(void* self) {
     return QWidget_FocusProxy((QWidget*)self);
 }
 
-int64_t q_mdiarea_context_menu_policy(void* self) {
+int32_t q_mdiarea_context_menu_policy(void* self) {
     return QWidget_ContextMenuPolicy((QWidget*)self);
 }
 
-void q_mdiarea_set_context_menu_policy(void* self, int64_t policy) {
+void q_mdiarea_set_context_menu_policy(void* self, int32_t policy) {
     QWidget_SetContextMenuPolicy((QWidget*)self, policy);
 }
 
@@ -1300,7 +1300,7 @@ void q_mdiarea_set_size_policy(void* self, void* sizePolicy) {
     QWidget_SetSizePolicy((QWidget*)self, (QSizePolicy*)sizePolicy);
 }
 
-void q_mdiarea_set_size_policy2(void* self, int64_t horizontal, int64_t vertical) {
+void q_mdiarea_set_size_policy2(void* self, int32_t horizontal, int32_t vertical) {
     QWidget_SetSizePolicy2((QWidget*)self, horizontal, vertical);
 }
 
@@ -1453,11 +1453,11 @@ QWidget* q_mdiarea_child_at3(void* self, void* p) {
     return QWidget_ChildAt3((QWidget*)self, (QPointF*)p);
 }
 
-void q_mdiarea_set_attribute(void* self, int64_t param1) {
+void q_mdiarea_set_attribute(void* self, int32_t param1) {
     QWidget_SetAttribute((QWidget*)self, param1);
 }
 
-bool q_mdiarea_test_attribute(void* self, int64_t param1) {
+bool q_mdiarea_test_attribute(void* self, int32_t param1) {
     return QWidget_TestAttribute((QWidget*)self, param1);
 }
 
@@ -1569,7 +1569,7 @@ void q_mdiarea_grab_gesture2(void* self, int64_t typeVal, int64_t flags) {
     QWidget_GrabGesture2((QWidget*)self, typeVal, flags);
 }
 
-int32_t q_mdiarea_grab_shortcut2(void* self, void* key, int64_t context) {
+int32_t q_mdiarea_grab_shortcut2(void* self, void* key, int32_t context) {
     return QWidget_GrabShortcut2((QWidget*)self, (QKeySequence*)key, context);
 }
 
@@ -1585,7 +1585,7 @@ void q_mdiarea_set_window_flag2(void* self, int64_t param1, bool on) {
     QWidget_SetWindowFlag2((QWidget*)self, param1, on);
 }
 
-void q_mdiarea_set_attribute2(void* self, int64_t param1, bool on) {
+void q_mdiarea_set_attribute2(void* self, int32_t param1, bool on) {
     QWidget_SetAttribute2((QWidget*)self, param1, on);
 }
 
@@ -1644,7 +1644,7 @@ void q_mdiarea_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_mdiarea_kill_timer2(void* self, int64_t id) {
+void q_mdiarea_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1744,15 +1744,15 @@ bool q_mdiarea_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_mdiarea_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_mdiarea_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_mdiarea_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_mdiarea_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_mdiarea_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_mdiarea_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1812,7 +1812,7 @@ double q_mdiarea_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_mdiarea_encode_metric_f(int64_t metric, double value) {
+int32_t q_mdiarea_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -2176,15 +2176,15 @@ void q_mdiarea_on_native_event(void* self, bool (*callback)(void*, const char*, 
     QMdiArea_OnNativeEvent((QMdiArea*)self, (intptr_t)callback);
 }
 
-int32_t q_mdiarea_metric(void* self, int64_t param1) {
+int32_t q_mdiarea_metric(void* self, int32_t param1) {
     return QMdiArea_Metric((QMdiArea*)self, param1);
 }
 
-int32_t q_mdiarea_qbase_metric(void* self, int64_t param1) {
+int32_t q_mdiarea_qbase_metric(void* self, int32_t param1) {
     return QMdiArea_QBaseMetric((QMdiArea*)self, param1);
 }
 
-void q_mdiarea_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_mdiarea_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QMdiArea_OnMetric((QMdiArea*)self, (intptr_t)callback);
 }
 
@@ -2440,15 +2440,15 @@ void q_mdiarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*)
     QMdiArea_OnIsSignalConnected((QMdiArea*)self, (intptr_t)callback);
 }
 
-double q_mdiarea_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_mdiarea_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QMdiArea_GetDecodedMetricF((QMdiArea*)self, metricA, metricB);
 }
 
-double q_mdiarea_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_mdiarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QMdiArea_QBaseGetDecodedMetricF((QMdiArea*)self, metricA, metricB);
 }
 
-void q_mdiarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_mdiarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QMdiArea_OnGetDecodedMetricF((QMdiArea*)self, (intptr_t)callback);
 }
 

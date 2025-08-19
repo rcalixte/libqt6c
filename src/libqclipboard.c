@@ -15,7 +15,7 @@ void* q_clipboard_metacast(void* self, const char* param1) {
     return QClipboard_Metacast((QClipboard*)self, param1);
 }
 
-int32_t q_clipboard_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_clipboard_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QClipboard_Metacall((QClipboard*)self, param1, param2, param3);
 }
 
@@ -92,11 +92,11 @@ void q_clipboard_set_pixmap(void* self, void* param1) {
     QClipboard_SetPixmap((QClipboard*)self, (QPixmap*)param1);
 }
 
-void q_clipboard_changed(void* self, int64_t mode) {
+void q_clipboard_changed(void* self, int32_t mode) {
     QClipboard_Changed((QClipboard*)self, mode);
 }
 
-void q_clipboard_on_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_clipboard_on_changed(void* self, void (*callback)(void*, int32_t)) {
     QClipboard_Connect_Changed((QClipboard*)self, (intptr_t)callback);
 }
 
@@ -138,49 +138,49 @@ const char* q_clipboard_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_clipboard_clear1(void* self, int64_t mode) {
+void q_clipboard_clear1(void* self, int32_t mode) {
     QClipboard_Clear1((QClipboard*)self, mode);
 }
 
-const char* q_clipboard_text1(void* self, int64_t mode) {
+const char* q_clipboard_text1(void* self, int32_t mode) {
     libqt_string _str = QClipboard_Text1((QClipboard*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_clipboard_text22(void* self, const char* subtype, int64_t mode) {
+const char* q_clipboard_text22(void* self, const char* subtype, int32_t mode) {
     libqt_string _str = QClipboard_Text22((QClipboard*)self, qstring(subtype), mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void q_clipboard_set_text2(void* self, const char* param1, int64_t mode) {
+void q_clipboard_set_text2(void* self, const char* param1, int32_t mode) {
     QClipboard_SetText2((QClipboard*)self, qstring(param1), mode);
 }
 
-const QMimeData* q_clipboard_mime_data1(void* self, int64_t mode) {
+const QMimeData* q_clipboard_mime_data1(void* self, int32_t mode) {
     return QClipboard_MimeData1((QClipboard*)self, mode);
 }
 
-void q_clipboard_set_mime_data2(void* self, void* data, int64_t mode) {
+void q_clipboard_set_mime_data2(void* self, void* data, int32_t mode) {
     QClipboard_SetMimeData2((QClipboard*)self, (QMimeData*)data, mode);
 }
 
-QImage* q_clipboard_image1(void* self, int64_t mode) {
+QImage* q_clipboard_image1(void* self, int32_t mode) {
     return QClipboard_Image1((QClipboard*)self, mode);
 }
 
-QPixmap* q_clipboard_pixmap1(void* self, int64_t mode) {
+QPixmap* q_clipboard_pixmap1(void* self, int32_t mode) {
     return QClipboard_Pixmap1((QClipboard*)self, mode);
 }
 
-void q_clipboard_set_image2(void* self, void* param1, int64_t mode) {
+void q_clipboard_set_image2(void* self, void* param1, int32_t mode) {
     QClipboard_SetImage2((QClipboard*)self, (QImage*)param1, mode);
 }
 
-void q_clipboard_set_pixmap2(void* self, void* param1, int64_t mode) {
+void q_clipboard_set_pixmap2(void* self, void* param1, int32_t mode) {
     QClipboard_SetPixmap2((QClipboard*)self, (QPixmap*)param1, mode);
 }
 
@@ -239,7 +239,7 @@ void q_clipboard_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_clipboard_kill_timer2(void* self, int64_t id) {
+void q_clipboard_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -343,15 +343,15 @@ bool q_clipboard_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_clipboard_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_clipboard_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_clipboard_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_clipboard_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_clipboard_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_clipboard_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

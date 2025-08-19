@@ -18,11 +18,11 @@ QStringMatcher* q_stringmatcher_new4(void* other) {
     return QStringMatcher_new4((QStringMatcher*)other);
 }
 
-QStringMatcher* q_stringmatcher_new5(const char* pattern, int64_t cs) {
+QStringMatcher* q_stringmatcher_new5(const char* pattern, int32_t cs) {
     return QStringMatcher_new5(qstring(pattern), cs);
 }
 
-QStringMatcher* q_stringmatcher_new6(void* uc, int64_t lenVal, int64_t cs) {
+QStringMatcher* q_stringmatcher_new6(void* uc, int64_t lenVal, int32_t cs) {
     return QStringMatcher_new6((QChar*)uc, lenVal, cs);
 }
 
@@ -34,7 +34,7 @@ void q_stringmatcher_set_pattern(void* self, const char* pattern) {
     QStringMatcher_SetPattern((QStringMatcher*)self, qstring(pattern));
 }
 
-void q_stringmatcher_set_case_sensitivity(void* self, int64_t cs) {
+void q_stringmatcher_set_case_sensitivity(void* self, int32_t cs) {
     QStringMatcher_SetCaseSensitivity((QStringMatcher*)self, cs);
 }
 
@@ -53,7 +53,7 @@ const char* q_stringmatcher_pattern(void* self) {
     return _ret;
 }
 
-int64_t q_stringmatcher_case_sensitivity(void* self) {
+int32_t q_stringmatcher_case_sensitivity(void* self) {
     return QStringMatcher_CaseSensitivity((QStringMatcher*)self);
 }
 

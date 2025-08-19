@@ -21,11 +21,11 @@ QTextStream* q_textstream_new4(const char* array, int64_t openMode) {
     return QTextStream_new4(qstring(array), openMode);
 }
 
-void q_textstream_set_encoding(void* self, int64_t encoding) {
+void q_textstream_set_encoding(void* self, int32_t encoding) {
     QTextStream_SetEncoding((QTextStream*)self, encoding);
 }
 
-int64_t q_textstream_encoding(void* self) {
+int32_t q_textstream_encoding(void* self) {
     return QTextStream_Encoding((QTextStream*)self);
 }
 
@@ -68,11 +68,11 @@ const char* q_textstream_string(void* self) {
     return _ret;
 }
 
-int64_t q_textstream_status(void* self) {
+int32_t q_textstream_status(void* self) {
     return QTextStream_Status((QTextStream*)self);
 }
 
-void q_textstream_set_status(void* self, int64_t status) {
+void q_textstream_set_status(void* self, int32_t status) {
     QTextStream_SetStatus((QTextStream*)self, status);
 }
 
@@ -125,11 +125,11 @@ const char* q_textstream_read(void* self, long long maxlen) {
     return _ret;
 }
 
-void q_textstream_set_field_alignment(void* self, int64_t alignment) {
+void q_textstream_set_field_alignment(void* self, int32_t alignment) {
     QTextStream_SetFieldAlignment((QTextStream*)self, alignment);
 }
 
-int64_t q_textstream_field_alignment(void* self) {
+int32_t q_textstream_field_alignment(void* self) {
     return QTextStream_FieldAlignment((QTextStream*)self);
 }
 
@@ -165,11 +165,11 @@ int32_t q_textstream_integer_base(void* self) {
     return QTextStream_IntegerBase((QTextStream*)self);
 }
 
-void q_textstream_set_real_number_notation(void* self, int64_t notation) {
+void q_textstream_set_real_number_notation(void* self, int32_t notation) {
     QTextStream_SetRealNumberNotation((QTextStream*)self, notation);
 }
 
-int64_t q_textstream_real_number_notation(void* self) {
+int32_t q_textstream_real_number_notation(void* self) {
     return QTextStream_RealNumberNotation((QTextStream*)self);
 }
 

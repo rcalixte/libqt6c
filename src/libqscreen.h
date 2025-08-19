@@ -26,7 +26,7 @@ void* q_screen_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_screen_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_screen_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -164,28 +164,28 @@ QRect* q_screen_available_virtual_geometry(void* self);
 /// @param self QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_screen_primary_orientation(void* self);
+int32_t q_screen_primary_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientation)
 ///
 /// @param self QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_screen_orientation(void* self);
+int32_t q_screen_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#nativeOrientation)
 ///
 /// @param self QScreen*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_screen_native_orientation(void* self);
+int32_t q_screen_native_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#angleBetween)
 ///
 /// @param self QScreen*
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
-int32_t q_screen_angle_between(void* self, int64_t a, int64_t b);
+int32_t q_screen_angle_between(void* self, int32_t a, int32_t b);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#transformBetween)
 ///
@@ -193,7 +193,7 @@ int32_t q_screen_angle_between(void* self, int64_t a, int64_t b);
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
 /// @param target QRect*
-QTransform* q_screen_transform_between(void* self, int64_t a, int64_t b, void* target);
+QTransform* q_screen_transform_between(void* self, int32_t a, int32_t b, void* target);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#mapBetween)
 ///
@@ -201,19 +201,19 @@ QTransform* q_screen_transform_between(void* self, int64_t a, int64_t b, void* t
 /// @param a enum Qt__ScreenOrientation
 /// @param b enum Qt__ScreenOrientation
 /// @param rect QRect*
-QRect* q_screen_map_between(void* self, int64_t a, int64_t b, void* rect);
+QRect* q_screen_map_between(void* self, int32_t a, int32_t b, void* rect);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#isPortrait)
 ///
 /// @param self QScreen*
 /// @param orientation enum Qt__ScreenOrientation
-bool q_screen_is_portrait(void* self, int64_t orientation);
+bool q_screen_is_portrait(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#isLandscape)
 ///
 /// @param self QScreen*
 /// @param orientation enum Qt__ScreenOrientation
-bool q_screen_is_landscape(void* self, int64_t orientation);
+bool q_screen_is_landscape(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#grabWindow)
 ///
@@ -301,25 +301,25 @@ void q_screen_on_virtual_geometry_changed(void* self, void (*callback)(void*, vo
 ///
 /// @param self QScreen*
 /// @param orientation enum Qt__ScreenOrientation
-void q_screen_primary_orientation_changed(void* self, int64_t orientation);
+void q_screen_primary_orientation_changed(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#primaryOrientationChanged)
 ///
 /// @param self QScreen*
 /// @param callback void fn(QScreen*, enum Qt__ScreenOrientation)
-void q_screen_on_primary_orientation_changed(void* self, void (*callback)(void*, int64_t));
+void q_screen_on_primary_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientationChanged)
 ///
 /// @param self QScreen*
 /// @param orientation enum Qt__ScreenOrientation
-void q_screen_orientation_changed(void* self, int64_t orientation);
+void q_screen_orientation_changed(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#orientationChanged)
 ///
 /// @param self QScreen*
 /// @param callback void fn(QScreen*, enum Qt__ScreenOrientation)
-void q_screen_on_orientation_changed(void* self, void (*callback)(void*, int64_t));
+void q_screen_on_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscreen.html#refreshRateChanged)
 ///
@@ -497,7 +497,7 @@ void q_screen_kill_timer(void* self, int id);
 ///
 /// @param self QScreen*
 /// @param id enum Qt__TimerId
-void q_screen_kill_timer2(void* self, int64_t id);
+void q_screen_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -674,7 +674,7 @@ bool q_screen_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QScreen*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_screen_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_screen_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -685,7 +685,7 @@ int32_t q_screen_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_screen_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_screen_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -696,7 +696,7 @@ QMetaObject__Connection* q_screen_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_screen_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_screen_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

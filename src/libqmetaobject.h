@@ -132,14 +132,14 @@ const char* q_metamethod_tag(void* self);
 /// @param self QMetaMethod*
 ///
 /// @return enum QMetaMethod__Access
-int64_t q_metamethod_access(void* self);
+int32_t q_metamethod_access(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#methodType)
 ///
 /// @param self QMetaMethod*
 ///
 /// @return enum QMetaMethod__MethodType
-int64_t q_metamethod_method_type(void* self);
+int32_t q_metamethod_method_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#attributes)
 ///
@@ -177,7 +177,7 @@ const QMetaObject* q_metamethod_enclosing_meta_object(void* self);
 /// @param object QObject*
 /// @param connectionType enum Qt__ConnectionType
 /// @param returnValue QGenericReturnArgument*
-bool q_metamethod_invoke(void* self, void* object, int64_t connectionType, void* returnValue);
+bool q_metamethod_invoke(void* self, void* object, int32_t connectionType, void* returnValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -192,7 +192,7 @@ bool q_metamethod_invoke2(void* self, void* object, void* returnValue);
 /// @param object QObject*
 /// @param connectionType enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
-bool q_metamethod_invoke3(void* self, void* object, int64_t connectionType, void* val0);
+bool q_metamethod_invoke3(void* self, void* object, int32_t connectionType, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -227,7 +227,7 @@ bool q_metamethod_is_valid(void* self);
 /// @param connectionType enum Qt__ConnectionType
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
-bool q_metamethod_invoke42(void* self, void* object, int64_t connectionType, void* returnValue, void* val0);
+bool q_metamethod_invoke42(void* self, void* object, int32_t connectionType, void* returnValue, void* val0);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -237,7 +237,7 @@ bool q_metamethod_invoke42(void* self, void* object, int64_t connectionType, voi
 /// @param returnValue QGenericReturnArgument*
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
-bool q_metamethod_invoke5(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1);
+bool q_metamethod_invoke5(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -248,7 +248,7 @@ bool q_metamethod_invoke5(void* self, void* object, int64_t connectionType, void
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
-bool q_metamethod_invoke6(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2);
+bool q_metamethod_invoke6(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -260,7 +260,7 @@ bool q_metamethod_invoke6(void* self, void* object, int64_t connectionType, void
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
-bool q_metamethod_invoke7(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3);
+bool q_metamethod_invoke7(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -273,7 +273,7 @@ bool q_metamethod_invoke7(void* self, void* object, int64_t connectionType, void
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
-bool q_metamethod_invoke8(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4);
+bool q_metamethod_invoke8(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -287,7 +287,7 @@ bool q_metamethod_invoke8(void* self, void* object, int64_t connectionType, void
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
-bool q_metamethod_invoke9(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+bool q_metamethod_invoke9(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -302,7 +302,7 @@ bool q_metamethod_invoke9(void* self, void* object, int64_t connectionType, void
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
-bool q_metamethod_invoke10(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+bool q_metamethod_invoke10(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -318,7 +318,7 @@ bool q_metamethod_invoke10(void* self, void* object, int64_t connectionType, voi
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
-bool q_metamethod_invoke11(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+bool q_metamethod_invoke11(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -335,7 +335,7 @@ bool q_metamethod_invoke11(void* self, void* object, int64_t connectionType, voi
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
-bool q_metamethod_invoke12(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+bool q_metamethod_invoke12(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -353,7 +353,7 @@ bool q_metamethod_invoke12(void* self, void* object, int64_t connectionType, voi
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
-bool q_metamethod_invoke13(void* self, void* object, int64_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+bool q_metamethod_invoke13(void* self, void* object, int32_t connectionType, void* returnValue, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -487,7 +487,7 @@ bool q_metamethod_invoke122(void* self, void* object, void* returnValue, void* v
 /// @param connectionType enum Qt__ConnectionType
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
-bool q_metamethod_invoke44(void* self, void* object, int64_t connectionType, void* val0, void* val1);
+bool q_metamethod_invoke44(void* self, void* object, int32_t connectionType, void* val0, void* val1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -497,7 +497,7 @@ bool q_metamethod_invoke44(void* self, void* object, int64_t connectionType, voi
 /// @param val0 QGenericArgument*
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
-bool q_metamethod_invoke53(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2);
+bool q_metamethod_invoke53(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -508,7 +508,7 @@ bool q_metamethod_invoke53(void* self, void* object, int64_t connectionType, voi
 /// @param val1 QGenericArgument*
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
-bool q_metamethod_invoke63(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3);
+bool q_metamethod_invoke63(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -520,7 +520,7 @@ bool q_metamethod_invoke63(void* self, void* object, int64_t connectionType, voi
 /// @param val2 QGenericArgument*
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
-bool q_metamethod_invoke73(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4);
+bool q_metamethod_invoke73(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -533,7 +533,7 @@ bool q_metamethod_invoke73(void* self, void* object, int64_t connectionType, voi
 /// @param val3 QGenericArgument*
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
-bool q_metamethod_invoke83(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
+bool q_metamethod_invoke83(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -547,7 +547,7 @@ bool q_metamethod_invoke83(void* self, void* object, int64_t connectionType, voi
 /// @param val4 QGenericArgument*
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
-bool q_metamethod_invoke93(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
+bool q_metamethod_invoke93(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -562,7 +562,7 @@ bool q_metamethod_invoke93(void* self, void* object, int64_t connectionType, voi
 /// @param val5 QGenericArgument*
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
-bool q_metamethod_invoke103(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
+bool q_metamethod_invoke103(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -578,7 +578,7 @@ bool q_metamethod_invoke103(void* self, void* object, int64_t connectionType, vo
 /// @param val6 QGenericArgument*
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
-bool q_metamethod_invoke113(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
+bool q_metamethod_invoke113(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///
@@ -595,7 +595,7 @@ bool q_metamethod_invoke113(void* self, void* object, int64_t connectionType, vo
 /// @param val7 QGenericArgument*
 /// @param val8 QGenericArgument*
 /// @param val9 QGenericArgument*
-bool q_metamethod_invoke123(void* self, void* object, int64_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
+bool q_metamethod_invoke123(void* self, void* object, int32_t connectionType, void* val0, void* val1, void* val2, void* val3, void* val4, void* val5, void* val6, void* val7, void* val8, void* val9);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetamethod.html#invoke)
 ///

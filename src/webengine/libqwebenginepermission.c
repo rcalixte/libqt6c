@@ -22,11 +22,11 @@ QUrl* q_webenginepermission_origin(void* self) {
     return QWebEnginePermission_Origin((QWebEnginePermission*)self);
 }
 
-int64_t q_webenginepermission_permission_type(void* self) {
+uint8_t q_webenginepermission_permission_type(void* self) {
     return QWebEnginePermission_PermissionType((QWebEnginePermission*)self);
 }
 
-int64_t q_webenginepermission_state(void* self) {
+uint8_t q_webenginepermission_state(void* self) {
     return QWebEnginePermission_State((QWebEnginePermission*)self);
 }
 
@@ -46,7 +46,7 @@ void q_webenginepermission_reset(void* self) {
     QWebEnginePermission_Reset((QWebEnginePermission*)self);
 }
 
-bool q_webenginepermission_is_persistent(int64_t permissionType) {
+bool q_webenginepermission_is_persistent(uint8_t permissionType) {
     return QWebEnginePermission_IsPersistent(permissionType);
 }
 

@@ -35,13 +35,13 @@ void* q_accessibleplugin_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_accessibleplugin_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_accessibleplugin_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAccessiblePlugin*
 /// @param callback int32_t fn(QAccessiblePlugin*, enum QMetaObject__Call, int, void*)
-void q_accessibleplugin_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_accessibleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_accessibleplugin_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_accessibleplugin_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_accessibleplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -189,7 +189,7 @@ void q_accessibleplugin_kill_timer(void* self, int id);
 ///
 /// @param self QAccessiblePlugin*
 /// @param id enum Qt__TimerId
-void q_accessibleplugin_kill_timer2(void* self, int64_t id);
+void q_accessibleplugin_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -366,7 +366,7 @@ bool q_accessibleplugin_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QAccessiblePlugin*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_accessibleplugin_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_accessibleplugin_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -377,7 +377,7 @@ int32_t q_accessibleplugin_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_accessibleplugin_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_accessibleplugin_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -388,7 +388,7 @@ QMetaObject__Connection* q_accessibleplugin_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_accessibleplugin_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_accessibleplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

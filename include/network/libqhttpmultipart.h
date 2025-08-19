@@ -51,7 +51,7 @@ bool q_httppart_operator_not_equal(void* self, void* other);
 /// @param self QHttpPart*
 /// @param header enum QNetworkRequest__KnownHeaders
 /// @param value QVariant*
-void q_httppart_set_header(void* self, int64_t header, void* value);
+void q_httppart_set_header(void* self, int32_t header, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttppart.html#setRawHeader)
 ///
@@ -88,7 +88,7 @@ QHttpMultiPart* q_httpmultipart_new();
 /// q_httpmultipart_new2 constructs a new QHttpMultiPart object.
 ///
 /// @param contentType enum QHttpMultiPart__ContentType
-QHttpMultiPart* q_httpmultipart_new2(int64_t contentType);
+QHttpMultiPart* q_httpmultipart_new2(int32_t contentType);
 
 /// q_httpmultipart_new3 constructs a new QHttpMultiPart object.
 ///
@@ -99,7 +99,7 @@ QHttpMultiPart* q_httpmultipart_new3(void* parent);
 ///
 /// @param contentType enum QHttpMultiPart__ContentType
 /// @param parent QObject*
-QHttpMultiPart* q_httpmultipart_new4(int64_t contentType, void* parent);
+QHttpMultiPart* q_httpmultipart_new4(int32_t contentType, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -114,13 +114,13 @@ void* q_httpmultipart_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_httpmultipart_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_httpmultipart_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QHttpMultiPart*
 /// @param callback int32_t fn(QHttpMultiPart*, enum QMetaObject__Call, int, void*)
-void q_httpmultipart_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_httpmultipart_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -128,7 +128,7 @@ void q_httpmultipart_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_httpmultipart_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_httpmultipart_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -147,7 +147,7 @@ void q_httpmultipart_append(void* self, void* httpPart);
 ///
 /// @param self QHttpMultiPart*
 /// @param contentType enum QHttpMultiPart__ContentType
-void q_httpmultipart_set_content_type(void* self, int64_t contentType);
+void q_httpmultipart_set_content_type(void* self, int32_t contentType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhttpmultipart.html#boundary)
 ///
@@ -269,7 +269,7 @@ void q_httpmultipart_kill_timer(void* self, int id);
 ///
 /// @param self QHttpMultiPart*
 /// @param id enum Qt__TimerId
-void q_httpmultipart_kill_timer2(void* self, int64_t id);
+void q_httpmultipart_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -446,7 +446,7 @@ bool q_httpmultipart_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QHttpMultiPart*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_httpmultipart_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_httpmultipart_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -457,7 +457,7 @@ int32_t q_httpmultipart_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_httpmultipart_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_httpmultipart_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -468,7 +468,7 @@ QMetaObject__Connection* q_httpmultipart_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_httpmultipart_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_httpmultipart_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

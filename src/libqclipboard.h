@@ -26,7 +26,7 @@ void* q_clipboard_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_clipboard_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_clipboard_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -123,13 +123,13 @@ void q_clipboard_set_pixmap(void* self, void* param1);
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_changed(void* self, int64_t mode);
+void q_clipboard_changed(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#changed)
 ///
 /// @param self QClipboard*
 /// @param callback void fn(QClipboard*, enum QClipboard__Mode)
-void q_clipboard_on_changed(void* self, void (*callback)(void*, int64_t));
+void q_clipboard_on_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#selectionChanged)
 ///
@@ -185,7 +185,7 @@ const char* q_clipboard_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_clear1(void* self, int64_t mode);
+void q_clipboard_clear1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
@@ -193,7 +193,7 @@ void q_clipboard_clear1(void* self, int64_t mode);
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-const char* q_clipboard_text1(void* self, int64_t mode);
+const char* q_clipboard_text1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#text)
 ///
@@ -202,53 +202,53 @@ const char* q_clipboard_text1(void* self, int64_t mode);
 /// @param self QClipboard*
 /// @param subtype const char*
 /// @param mode enum QClipboard__Mode
-const char* q_clipboard_text22(void* self, const char* subtype, int64_t mode);
+const char* q_clipboard_text22(void* self, const char* subtype, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setText)
 ///
 /// @param self QClipboard*
 /// @param param1 const char*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_set_text2(void* self, const char* param1, int64_t mode);
+void q_clipboard_set_text2(void* self, const char* param1, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#mimeData)
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-const QMimeData* q_clipboard_mime_data1(void* self, int64_t mode);
+const QMimeData* q_clipboard_mime_data1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setMimeData)
 ///
 /// @param self QClipboard*
 /// @param data QMimeData*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_set_mime_data2(void* self, void* data, int64_t mode);
+void q_clipboard_set_mime_data2(void* self, void* data, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#image)
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-QImage* q_clipboard_image1(void* self, int64_t mode);
+QImage* q_clipboard_image1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#pixmap)
 ///
 /// @param self QClipboard*
 /// @param mode enum QClipboard__Mode
-QPixmap* q_clipboard_pixmap1(void* self, int64_t mode);
+QPixmap* q_clipboard_pixmap1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setImage)
 ///
 /// @param self QClipboard*
 /// @param param1 QImage*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_set_image2(void* self, void* param1, int64_t mode);
+void q_clipboard_set_image2(void* self, void* param1, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qclipboard.html#setPixmap)
 ///
 /// @param self QClipboard*
 /// @param param1 QPixmap*
 /// @param mode enum QClipboard__Mode
-void q_clipboard_set_pixmap2(void* self, void* param1, int64_t mode);
+void q_clipboard_set_pixmap2(void* self, void* param1, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -357,7 +357,7 @@ void q_clipboard_kill_timer(void* self, int id);
 ///
 /// @param self QClipboard*
 /// @param id enum Qt__TimerId
-void q_clipboard_kill_timer2(void* self, int64_t id);
+void q_clipboard_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -534,7 +534,7 @@ bool q_clipboard_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QClipboard*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_clipboard_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_clipboard_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -545,7 +545,7 @@ int32_t q_clipboard_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_clipboard_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_clipboard_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -556,7 +556,7 @@ QMetaObject__Connection* q_clipboard_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_clipboard_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_clipboard_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -71,13 +71,13 @@ void* q_movie_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_movie_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_movie_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QMovie*
 /// @param callback int32_t fn(QMovie*, enum QMetaObject__Call, int, void*)
-void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -85,7 +85,7 @@ void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_movie_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_movie_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -153,7 +153,7 @@ QColor* q_movie_background_color(void* self);
 /// @param self QMovie*
 ///
 /// @return enum QMovie__MovieState
-int64_t q_movie_state(void* self);
+int32_t q_movie_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#frameRect)
 ///
@@ -180,7 +180,7 @@ bool q_movie_is_valid(void* self);
 /// @param self QMovie*
 ///
 /// @return enum QImageReader__ImageReaderError
-int64_t q_movie_last_error(void* self);
+int32_t q_movie_last_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#lastErrorString)
 ///
@@ -236,13 +236,13 @@ void q_movie_set_scaled_size(void* self, void* size);
 /// @param self QMovie*
 ///
 /// @return enum QMovie__CacheMode
-int64_t q_movie_cache_mode(void* self);
+int32_t q_movie_cache_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#setCacheMode)
 ///
 /// @param self QMovie*
 /// @param mode enum QMovie__CacheMode
-void q_movie_set_cache_mode(void* self, int64_t mode);
+void q_movie_set_cache_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#started)
 ///
@@ -283,25 +283,25 @@ void q_movie_on_updated(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QMovie*
 /// @param state enum QMovie__MovieState
-void q_movie_state_changed(void* self, int64_t state);
+void q_movie_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#stateChanged)
 ///
 /// @param self QMovie*
 /// @param callback void fn(QMovie*, enum QMovie__MovieState)
-void q_movie_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_movie_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
 /// @param self QMovie*
 /// @param errorVal enum QImageReader__ImageReaderError
-void q_movie_error(void* self, int64_t errorVal);
+void q_movie_error(void* self, int32_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#error)
 ///
 /// @param self QMovie*
 /// @param callback void fn(QMovie*, enum QImageReader__ImageReaderError)
-void q_movie_on_error(void* self, void (*callback)(void*, int64_t));
+void q_movie_on_error(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmovie.html#finished)
 ///
@@ -460,7 +460,7 @@ void q_movie_kill_timer(void* self, int id);
 ///
 /// @param self QMovie*
 /// @param id enum Qt__TimerId
-void q_movie_kill_timer2(void* self, int64_t id);
+void q_movie_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -637,7 +637,7 @@ bool q_movie_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QMovie*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_movie_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_movie_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -648,7 +648,7 @@ int32_t q_movie_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -659,7 +659,7 @@ QMetaObject__Connection* q_movie_connect5(void* sender, void* signal, void* rece
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_movie_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

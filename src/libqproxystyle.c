@@ -38,15 +38,15 @@ void* q_proxystyle_metacast(void* self, const char* param1) {
     return QProxyStyle_Metacast((QProxyStyle*)self, param1);
 }
 
-int32_t q_proxystyle_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QProxyStyle_Metacall((QProxyStyle*)self, param1, param2, param3);
 }
 
-void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QProxyStyle_OnMetacall((QProxyStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_proxystyle_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_proxystyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QProxyStyle_QBaseMetacall((QProxyStyle*)self, param1, param2, param3);
 }
 
@@ -65,15 +65,15 @@ void q_proxystyle_set_base_style(void* self, void* style) {
     QProxyStyle_SetBaseStyle((QProxyStyle*)self, (QStyle*)style);
 }
 
-void q_proxystyle_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget) {
+void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget) {
     QProxyStyle_DrawPrimitive((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int64_t, void*, void*, void*)) {
+void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*)) {
     QProxyStyle_OnDrawPrimitive((QProxyStyle*)self, (intptr_t)callback);
 }
 
-void q_proxystyle_qbase_draw_primitive(void* self, int64_t element, void* option, void* painter, void* widget) {
+void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget) {
     QProxyStyle_QBaseDrawPrimitive((QProxyStyle*)self, element, (QStyleOption*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
@@ -101,15 +101,15 @@ void q_proxystyle_qbase_draw_complex_control(void* self, int64_t control, void* 
     QProxyStyle_QBaseDrawComplexControl((QProxyStyle*)self, control, (QStyleOptionComplex*)option, (QPainter*)painter, (QWidget*)widget);
 }
 
-void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole) {
+void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole) {
     QProxyStyle_DrawItemText((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
-void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int64_t)) {
+void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t)) {
     QProxyStyle_OnDrawItemText((QProxyStyle*)self, (intptr_t)callback);
 }
 
-void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int64_t textRole) {
+void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole) {
     QProxyStyle_QBaseDrawItemText((QProxyStyle*)self, (QPainter*)painter, (QRect*)rect, flags, (QPalette*)pal, enabled, qstring(text), textRole);
 }
 
@@ -221,15 +221,15 @@ int32_t q_proxystyle_qbase_pixel_metric(void* self, int64_t metric, void* option
     return QProxyStyle_QBasePixelMetric((QProxyStyle*)self, metric, (QStyleOption*)option, (QWidget*)widget);
 }
 
-int32_t q_proxystyle_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget) {
+int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget) {
     return QProxyStyle_LayoutSpacing((QProxyStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
-void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int64_t, int64_t, int64_t, void*, void*)) {
+void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*)) {
     QProxyStyle_OnLayoutSpacing((QProxyStyle*)self, (intptr_t)callback);
 }
 
-int32_t q_proxystyle_qbase_layout_spacing(void* self, int64_t control1, int64_t control2, int64_t orientation, void* option, void* widget) {
+int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget) {
     return QProxyStyle_QBaseLayoutSpacing((QProxyStyle*)self, control1, control2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
@@ -257,15 +257,15 @@ QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int64_t standardPixmap, 
     return QProxyStyle_QBaseStandardPixmap((QProxyStyle*)self, standardPixmap, (QStyleOption*)opt, (QWidget*)widget);
 }
 
-QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt) {
+QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt) {
     return QProxyStyle_GeneratedIconPixmap((QProxyStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
-void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int64_t, void*, void*)) {
+void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*)) {
     QProxyStyle_OnGeneratedIconPixmap((QProxyStyle*)self, (intptr_t)callback);
 }
 
-QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int64_t iconMode, void* pixmap, void* opt) {
+QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt) {
     return QProxyStyle_QBaseGeneratedIconPixmap((QProxyStyle*)self, iconMode, (QPixmap*)pixmap, (QStyleOption*)opt);
 }
 
@@ -374,11 +374,11 @@ const char* q_proxystyle_name(void* self) {
     return _ret;
 }
 
-QRect* q_proxystyle_visual_rect(int64_t direction, void* boundingRect, void* logicalRect) {
+QRect* q_proxystyle_visual_rect(int32_t direction, void* boundingRect, void* logicalRect) {
     return QStyle_VisualRect(direction, (QRect*)boundingRect, (QRect*)logicalRect);
 }
 
-QPoint* q_proxystyle_visual_pos(int64_t direction, void* boundingRect, void* logicalPos) {
+QPoint* q_proxystyle_visual_pos(int32_t direction, void* boundingRect, void* logicalPos) {
     return QStyle_VisualPos(direction, (QRect*)boundingRect, (QPoint*)logicalPos);
 }
 
@@ -390,15 +390,15 @@ int32_t q_proxystyle_slider_value_from_position(int min, int max, int pos, int s
     return QStyle_SliderValueFromPosition(min, max, pos, space);
 }
 
-int64_t q_proxystyle_visual_alignment(int64_t direction, int64_t alignment) {
+int64_t q_proxystyle_visual_alignment(int32_t direction, int64_t alignment) {
     return QStyle_VisualAlignment(direction, alignment);
 }
 
-QRect* q_proxystyle_aligned_rect(int64_t direction, int64_t alignment, void* size, void* rectangle) {
+QRect* q_proxystyle_aligned_rect(int32_t direction, int64_t alignment, void* size, void* rectangle) {
     return QStyle_AlignedRect(direction, alignment, (QSize*)size, (QRect*)rectangle);
 }
 
-int32_t q_proxystyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int64_t orientation) {
+int32_t q_proxystyle_combined_layout_spacing(void* self, int64_t controls1, int64_t controls2, int32_t orientation) {
     return QStyle_CombinedLayoutSpacing((QStyle*)self, controls1, controls2, orientation);
 }
 
@@ -414,11 +414,11 @@ int32_t q_proxystyle_slider_value_from_position5(int min, int max, int pos, int 
     return QStyle_SliderValueFromPosition5(min, max, pos, space, upsideDown);
 }
 
-int32_t q_proxystyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option) {
+int32_t q_proxystyle_combined_layout_spacing4(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option) {
     return QStyle_CombinedLayoutSpacing4((QStyle*)self, controls1, controls2, orientation, (QStyleOption*)option);
 }
 
-int32_t q_proxystyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int64_t orientation, void* option, void* widget) {
+int32_t q_proxystyle_combined_layout_spacing5(void* self, int64_t controls1, int64_t controls2, int32_t orientation, void* option, void* widget) {
     return QStyle_CombinedLayoutSpacing5((QStyle*)self, controls1, controls2, orientation, (QStyleOption*)option, (QWidget*)widget);
 }
 
@@ -469,7 +469,7 @@ void q_proxystyle_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_proxystyle_kill_timer2(void* self, int64_t id) {
+void q_proxystyle_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -573,15 +573,15 @@ bool q_proxystyle_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_proxystyle_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_proxystyle_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_proxystyle_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_proxystyle_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

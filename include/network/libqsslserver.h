@@ -35,13 +35,13 @@ void* q_sslserver_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sslserver_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sslserver_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QSslServer*
 /// @param callback int32_t fn(QSslServer*, enum QMetaObject__Call, int, void*)
-void q_sslserver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_sslserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_sslserver_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sslserver_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sslserver_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -111,13 +111,13 @@ void q_sslserver_on_peer_verify_error(void* self, void (*callback)(void*, void*,
 /// @param self QSslServer*
 /// @param socket QSslSocket*
 /// @param errorVal enum QAbstractSocket__SocketError
-void q_sslserver_error_occurred(void* self, void* socket, int64_t errorVal);
+void q_sslserver_error_occurred(void* self, void* socket, int32_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#errorOccurred)
 ///
 /// @param self QSslServer*
 /// @param callback void fn(QSslServer*, QSslSocket*, enum QAbstractSocket__SocketError)
-void q_sslserver_on_error_occurred(void* self, void (*callback)(void*, void*, int64_t));
+void q_sslserver_on_error_occurred(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#preSharedKeyAuthenticationRequired)
 ///
@@ -139,13 +139,13 @@ void q_sslserver_on_pre_shared_key_authentication_required(void* self, void (*ca
 /// @param level enum QSsl__AlertLevel
 /// @param typeVal enum QSsl__AlertType
 /// @param description const char*
-void q_sslserver_alert_sent(void* self, void* socket, int64_t level, int64_t typeVal, const char* description);
+void q_sslserver_alert_sent(void* self, void* socket, int32_t level, int32_t typeVal, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertSent)
 ///
 /// @param self QSslServer*
 /// @param callback void fn(QSslServer*, QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
-void q_sslserver_on_alert_sent(void* self, void (*callback)(void*, void*, int64_t, int64_t, const char*));
+void q_sslserver_on_alert_sent(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertReceived)
 ///
@@ -154,13 +154,13 @@ void q_sslserver_on_alert_sent(void* self, void (*callback)(void*, void*, int64_
 /// @param level enum QSsl__AlertLevel
 /// @param typeVal enum QSsl__AlertType
 /// @param description const char*
-void q_sslserver_alert_received(void* self, void* socket, int64_t level, int64_t typeVal, const char* description);
+void q_sslserver_alert_received(void* self, void* socket, int32_t level, int32_t typeVal, const char* description);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#alertReceived)
 ///
 /// @param self QSslServer*
 /// @param callback void fn(QSslServer*, QSslSocket*, enum QSsl__AlertLevel, enum QSsl__AlertType, const char*)
-void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, int64_t, int64_t, const char*));
+void q_sslserver_on_alert_received(void* self, void (*callback)(void*, void*, int32_t, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsslserver.html#handshakeInterruptedOnError)
 ///
@@ -320,7 +320,7 @@ bool q_sslserver_wait_for_new_connection(void* self);
 /// @param self QSslServer*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_sslserver_server_error(void* self);
+int32_t q_sslserver_server_error(void* self);
 
 /// Inherited from QTcpServer
 ///
@@ -381,7 +381,7 @@ void q_sslserver_on_new_connection(void* self, void (*callback)(void*));
 ///
 /// @param self QSslServer*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_sslserver_accept_error(void* self, int64_t socketError);
+void q_sslserver_accept_error(void* self, int32_t socketError);
 
 /// Inherited from QTcpServer
 ///
@@ -389,7 +389,7 @@ void q_sslserver_accept_error(void* self, int64_t socketError);
 ///
 /// @param self QSslServer*
 /// @param callback void fn(QSslServer*, enum QAbstractSocket__SocketError)
-void q_sslserver_on_accept_error(void* self, void (*callback)(void*, int64_t));
+void q_sslserver_on_accept_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QTcpServer
 ///
@@ -515,7 +515,7 @@ void q_sslserver_kill_timer(void* self, int id);
 ///
 /// @param self QSslServer*
 /// @param id enum Qt__TimerId
-void q_sslserver_kill_timer2(void* self, int64_t id);
+void q_sslserver_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -692,7 +692,7 @@ bool q_sslserver_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QSslServer*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_sslserver_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_sslserver_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -703,7 +703,7 @@ int32_t q_sslserver_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslserver_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_sslserver_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -714,7 +714,7 @@ QMetaObject__Connection* q_sslserver_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sslserver_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_sslserver_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

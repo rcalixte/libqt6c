@@ -6,11 +6,11 @@ QSslKey* q_sslkey_new() {
     return QSslKey_new();
 }
 
-QSslKey* q_sslkey_new2(const char* encoded, int64_t algorithm) {
+QSslKey* q_sslkey_new2(const char* encoded, int32_t algorithm) {
     return QSslKey_new2(qstring(encoded), algorithm);
 }
 
-QSslKey* q_sslkey_new3(void* device, int64_t algorithm) {
+QSslKey* q_sslkey_new3(void* device, int32_t algorithm) {
     return QSslKey_new3((QIODevice*)device, algorithm);
 }
 
@@ -22,31 +22,31 @@ QSslKey* q_sslkey_new5(void* other) {
     return QSslKey_new5((QSslKey*)other);
 }
 
-QSslKey* q_sslkey_new6(const char* encoded, int64_t algorithm, int64_t format) {
+QSslKey* q_sslkey_new6(const char* encoded, int32_t algorithm, int32_t format) {
     return QSslKey_new6(qstring(encoded), algorithm, format);
 }
 
-QSslKey* q_sslkey_new7(const char* encoded, int64_t algorithm, int64_t format, int64_t typeVal) {
+QSslKey* q_sslkey_new7(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal) {
     return QSslKey_new7(qstring(encoded), algorithm, format, typeVal);
 }
 
-QSslKey* q_sslkey_new8(const char* encoded, int64_t algorithm, int64_t format, int64_t typeVal, const char* passPhrase) {
+QSslKey* q_sslkey_new8(const char* encoded, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase) {
     return QSslKey_new8(qstring(encoded), algorithm, format, typeVal, qstring(passPhrase));
 }
 
-QSslKey* q_sslkey_new9(void* device, int64_t algorithm, int64_t format) {
+QSslKey* q_sslkey_new9(void* device, int32_t algorithm, int32_t format) {
     return QSslKey_new9((QIODevice*)device, algorithm, format);
 }
 
-QSslKey* q_sslkey_new10(void* device, int64_t algorithm, int64_t format, int64_t typeVal) {
+QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t typeVal) {
     return QSslKey_new10((QIODevice*)device, algorithm, format, typeVal);
 }
 
-QSslKey* q_sslkey_new11(void* device, int64_t algorithm, int64_t format, int64_t typeVal, const char* passPhrase) {
+QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t typeVal, const char* passPhrase) {
     return QSslKey_new11((QIODevice*)device, algorithm, format, typeVal, qstring(passPhrase));
 }
 
-QSslKey* q_sslkey_new12(void* handle, int64_t typeVal) {
+QSslKey* q_sslkey_new12(void* handle, int32_t typeVal) {
     return QSslKey_new12(handle, typeVal);
 }
 
@@ -70,11 +70,11 @@ int32_t q_sslkey_length(void* self) {
     return QSslKey_Length((QSslKey*)self);
 }
 
-int64_t q_sslkey_type(void* self) {
+int32_t q_sslkey_type(void* self) {
     return QSslKey_Type((QSslKey*)self);
 }
 
-int64_t q_sslkey_algorithm(void* self) {
+int32_t q_sslkey_algorithm(void* self) {
     return QSslKey_Algorithm((QSslKey*)self);
 }
 

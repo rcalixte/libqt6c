@@ -12,7 +12,7 @@ QPalette* q_palette_new2(void* button) {
     return QPalette_new2((QColor*)button);
 }
 
-QPalette* q_palette_new3(int64_t button) {
+QPalette* q_palette_new3(int32_t button) {
     return QPalette_new3(button);
 }
 
@@ -44,55 +44,55 @@ QVariant* q_palette_to_q_variant(void* self) {
     return QPalette_ToQVariant((QPalette*)self);
 }
 
-int64_t q_palette_current_color_group(void* self) {
+int32_t q_palette_current_color_group(void* self) {
     return QPalette_CurrentColorGroup((QPalette*)self);
 }
 
-void q_palette_set_current_color_group(void* self, int64_t cg) {
+void q_palette_set_current_color_group(void* self, int32_t cg) {
     QPalette_SetCurrentColorGroup((QPalette*)self, cg);
 }
 
-const QColor* q_palette_color(void* self, int64_t cg, int64_t cr) {
+const QColor* q_palette_color(void* self, int32_t cg, int32_t cr) {
     return QPalette_Color((QPalette*)self, cg, cr);
 }
 
-const QBrush* q_palette_brush(void* self, int64_t cg, int64_t cr) {
+const QBrush* q_palette_brush(void* self, int32_t cg, int32_t cr) {
     return QPalette_Brush((QPalette*)self, cg, cr);
 }
 
-void q_palette_set_color(void* self, int64_t cg, int64_t cr, void* color) {
+void q_palette_set_color(void* self, int32_t cg, int32_t cr, void* color) {
     QPalette_SetColor((QPalette*)self, cg, cr, (QColor*)color);
 }
 
-void q_palette_set_color2(void* self, int64_t cr, void* color) {
+void q_palette_set_color2(void* self, int32_t cr, void* color) {
     QPalette_SetColor2((QPalette*)self, cr, (QColor*)color);
 }
 
-void q_palette_set_brush(void* self, int64_t cr, void* brush) {
+void q_palette_set_brush(void* self, int32_t cr, void* brush) {
     QPalette_SetBrush((QPalette*)self, cr, (QBrush*)brush);
 }
 
-bool q_palette_is_brush_set(void* self, int64_t cg, int64_t cr) {
+bool q_palette_is_brush_set(void* self, int32_t cg, int32_t cr) {
     return QPalette_IsBrushSet((QPalette*)self, cg, cr);
 }
 
-void q_palette_set_brush2(void* self, int64_t cg, int64_t cr, void* brush) {
+void q_palette_set_brush2(void* self, int32_t cg, int32_t cr, void* brush) {
     QPalette_SetBrush2((QPalette*)self, cg, cr, (QBrush*)brush);
 }
 
-void q_palette_set_color_group(void* self, int64_t cr, void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window) {
+void q_palette_set_color_group(void* self, int32_t cr, void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window) {
     QPalette_SetColorGroup((QPalette*)self, cr, (QBrush*)windowText, (QBrush*)button, (QBrush*)light, (QBrush*)dark, (QBrush*)mid, (QBrush*)text, (QBrush*)bright_text, (QBrush*)base, (QBrush*)window);
 }
 
-bool q_palette_is_equal(void* self, int64_t cr1, int64_t cr2) {
+bool q_palette_is_equal(void* self, int32_t cr1, int32_t cr2) {
     return QPalette_IsEqual((QPalette*)self, cr1, cr2);
 }
 
-const QColor* q_palette_color2(void* self, int64_t cr) {
+const QColor* q_palette_color2(void* self, int32_t cr) {
     return QPalette_Color2((QPalette*)self, cr);
 }
 
-const QBrush* q_palette_brush2(void* self, int64_t cr) {
+const QBrush* q_palette_brush2(void* self, int32_t cr) {
     return QPalette_Brush2((QPalette*)self, cr);
 }
 

@@ -31,13 +31,13 @@ void* q_sciapis_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sciapis_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sciapis_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QsciAPIs*
 /// @param callback int32_t fn(QsciAPIs*, enum QMetaObject__Call, int, void*)
-void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -45,7 +45,7 @@ void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_sciapis_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_sciapis_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -164,7 +164,7 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel);
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts);
+const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -172,7 +172,7 @@ const char** q_sciapis_call_tips(void* self, const char* context[], int commas, 
 ///
 /// @param self QsciAPIs*
 /// @param callback const char** fn(QsciAPIs*, const char**, int, enum QsciScintilla__CallTipsStyle, libqt_list /* of int */)
-void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int64_t, libqt_list));
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -183,7 +183,7 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
 /// @param commas int
 /// @param style enum QsciScintilla__CallTipsStyle
 /// @param shifts libqt_list /* of int */
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts);
+const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAPIs.html)
 ///
@@ -379,7 +379,7 @@ void q_sciapis_kill_timer(void* self, int id);
 ///
 /// @param self QsciAPIs*
 /// @param id enum Qt__TimerId
-void q_sciapis_kill_timer2(void* self, int64_t id);
+void q_sciapis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -556,7 +556,7 @@ bool q_sciapis_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QsciAPIs*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_sciapis_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_sciapis_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -567,7 +567,7 @@ int32_t q_sciapis_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -578,7 +578,7 @@ QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* re
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -28,13 +28,13 @@ const char* q_commandlineparser_tr(const char* sourceText);
 ///
 /// @param self QCommandLineParser*
 /// @param parsingMode enum QCommandLineParser__SingleDashWordOptionMode
-void q_commandlineparser_set_single_dash_word_option_mode(void* self, int64_t parsingMode);
+void q_commandlineparser_set_single_dash_word_option_mode(void* self, int32_t parsingMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#setOptionsAfterPositionalArgumentsMode)
 ///
 /// @param self QCommandLineParser*
 /// @param mode enum QCommandLineParser__OptionsAfterPositionalArgumentsMode
-void q_commandlineparser_set_options_after_positional_arguments_mode(void* self, int64_t mode);
+void q_commandlineparser_set_options_after_positional_arguments_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcommandlineparser.html#addOption)
 ///

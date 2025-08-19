@@ -92,7 +92,7 @@ void q_textcursor_insert_text2(void* self, const char* text, void* format);
 ///
 /// @param self QTextCursor*
 /// @param op enum QTextCursor__MoveOperation
-bool q_textcursor_move_position(void* self, int64_t op);
+bool q_textcursor_move_position(void* self, int32_t op);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#visualNavigation)
 ///
@@ -141,7 +141,7 @@ void q_textcursor_delete_previous_char(void* self);
 ///
 /// @param self QTextCursor*
 /// @param selection enum QTextCursor__SelectionType
-void q_textcursor_select(void* self, int64_t selection);
+void q_textcursor_select(void* self, int32_t selection);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#hasSelection)
 ///
@@ -298,7 +298,7 @@ QTextList* q_textcursor_insert_list(void* self, void* format);
 ///
 /// @param self QTextCursor*
 /// @param style enum QTextListFormat__Style
-QTextList* q_textcursor_insert_list2(void* self, int64_t style);
+QTextList* q_textcursor_insert_list2(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#createList)
 ///
@@ -310,7 +310,7 @@ QTextList* q_textcursor_create_list(void* self, void* format);
 ///
 /// @param self QTextCursor*
 /// @param style enum QTextListFormat__Style
-QTextList* q_textcursor_create_list2(void* self, int64_t style);
+QTextList* q_textcursor_create_list2(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#currentList)
 ///
@@ -371,7 +371,7 @@ void q_textcursor_insert_markdown(void* self, const char* markdown);
 /// @param self QTextCursor*
 /// @param format QTextImageFormat*
 /// @param alignment enum QTextFrameFormat__Position
-void q_textcursor_insert_image(void* self, void* format, int64_t alignment);
+void q_textcursor_insert_image(void* self, void* format, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertImage)
 ///
@@ -468,14 +468,14 @@ QTextDocument* q_textcursor_document(void* self);
 /// @param self QTextCursor*
 /// @param pos int
 /// @param mode enum QTextCursor__MoveMode
-void q_textcursor_set_position2(void* self, int pos, int64_t mode);
+void q_textcursor_set_position2(void* self, int pos, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#movePosition)
 ///
 /// @param self QTextCursor*
 /// @param op enum QTextCursor__MoveOperation
 /// @param param2 enum QTextCursor__MoveMode
-bool q_textcursor_move_position2(void* self, int64_t op, int64_t param2);
+bool q_textcursor_move_position2(void* self, int32_t op, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#movePosition)
 ///
@@ -483,7 +483,7 @@ bool q_textcursor_move_position2(void* self, int64_t op, int64_t param2);
 /// @param op enum QTextCursor__MoveOperation
 /// @param param2 enum QTextCursor__MoveMode
 /// @param n int
-bool q_textcursor_move_position3(void* self, int64_t op, int64_t param2, int n);
+bool q_textcursor_move_position3(void* self, int32_t op, int32_t param2, int n);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcursor.html#insertMarkdown)
 ///

@@ -70,13 +70,13 @@ void q_webenginescript_set_source_code(void* self, const char* sourceCode);
 /// @param self QWebEngineScript*
 ///
 /// @return enum QWebEngineScript__InjectionPoint
-int64_t q_webenginescript_injection_point(void* self);
+int32_t q_webenginescript_injection_point(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#setInjectionPoint)
 ///
 /// @param self QWebEngineScript*
 /// @param injectionPoint enum QWebEngineScript__InjectionPoint
-void q_webenginescript_set_injection_point(void* self, int64_t injectionPoint);
+void q_webenginescript_set_injection_point(void* self, int32_t injectionPoint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginescript.html#worldId)
 ///

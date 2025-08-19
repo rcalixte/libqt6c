@@ -20,7 +20,7 @@ QSvgGenerator* q_svggenerator_new();
 /// q_svggenerator_new2 constructs a new QSvgGenerator object.
 ///
 /// @param version enum QSvgGenerator__SvgVersion
-QSvgGenerator* q_svggenerator_new2(int64_t version);
+QSvgGenerator* q_svggenerator_new2(int32_t version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#title)
 ///
@@ -121,7 +121,7 @@ int32_t q_svggenerator_resolution(void* self);
 /// @param self QSvgGenerator*
 ///
 /// @return enum QSvgGenerator__SvgVersion
-int64_t q_svggenerator_svg_version(void* self);
+int32_t q_svggenerator_svg_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
@@ -147,7 +147,7 @@ QPaintEngine* q_svggenerator_qbase_paint_engine(void* self);
 ///
 /// @param self QSvgGenerator*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_svggenerator_metric(void* self, int64_t metric);
+int32_t q_svggenerator_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
@@ -155,7 +155,7 @@ int32_t q_svggenerator_metric(void* self, int64_t metric);
 ///
 /// @param self QSvgGenerator*
 /// @param callback int32_t fn(QSvgGenerator*, enum QPaintDevice__PaintDeviceMetric)
-void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
@@ -163,7 +163,7 @@ void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QSvgGenerator*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_svggenerator_qbase_metric(void* self, int64_t metric);
+int32_t q_svggenerator_qbase_metric(void* self, int32_t metric);
 
 /// Inherited from QPaintDevice
 ///
@@ -268,7 +268,7 @@ double q_svggenerator_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_svggenerator_encode_metric_f(int64_t metric, double value);
+int32_t q_svggenerator_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDevice
 ///
@@ -395,7 +395,7 @@ void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QSvgGenerator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -406,7 +406,7 @@ double q_svggenerator_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 /// @param self QSvgGenerator*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_svggenerator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -416,7 +416,7 @@ double q_svggenerator_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
 ///
 /// @param self QSvgGenerator*
 /// @param callback double fn(QSvgGenerator*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_svggenerator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsvggenerator.html#dtor.QSvgGenerator)
 ///

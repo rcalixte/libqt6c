@@ -16,7 +16,7 @@ QColor* q_color_new3() {
     return QColor_new3();
 }
 
-QColor* q_color_new4(int64_t color) {
+QColor* q_color_new4(int32_t color) {
     return QColor_new4(color);
 }
 
@@ -40,11 +40,11 @@ QColor* q_color_new9(const char* aname) {
     return QColor_new9(aname);
 }
 
-QColor* q_color_new10(int64_t spec) {
+QColor* q_color_new10(int32_t spec) {
     return QColor_new10(spec);
 }
 
-QColor* q_color_new11(int64_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4) {
+QColor* q_color_new11(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4) {
     return QColor_new11(spec, a1, a2, a3, a4);
 }
 
@@ -56,7 +56,7 @@ QColor* q_color_new13(int r, int g, int b, int a) {
     return QColor_new13(r, g, b, a);
 }
 
-QColor* q_color_new14(int64_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4, unsigned short a5) {
+QColor* q_color_new14(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4, unsigned short a5) {
     return QColor_new14(spec, a1, a2, a3, a4, a5);
 }
 
@@ -72,7 +72,7 @@ QColor* q_color_from_string(char* name) {
     return QColor_FromString(name);
 }
 
-void q_color_operator_assign(void* self, int64_t color) {
+void q_color_operator_assign(void* self, int32_t color) {
     QColor_OperatorAssign((QColor*)self, color);
 }
 
@@ -110,7 +110,7 @@ const char** q_color_color_names() {
     return _ret;
 }
 
-int64_t q_color_spec(void* self) {
+int32_t q_color_spec(void* self) {
     return QColor_Spec((QColor*)self);
 }
 
@@ -382,7 +382,7 @@ QColor* q_color_to_extended_rgb(void* self) {
     return QColor_ToExtendedRgb((QColor*)self);
 }
 
-QColor* q_color_convert_to(void* self, int64_t colorSpec) {
+QColor* q_color_convert_to(void* self, int32_t colorSpec) {
     return QColor_ConvertTo((QColor*)self, colorSpec);
 }
 
@@ -462,7 +462,7 @@ bool q_color_is_valid_color_name(char* param1) {
     return QColor_IsValidColorName(param1);
 }
 
-const char* q_color_name1(void* self, int64_t format) {
+const char* q_color_name1(void* self, int32_t format) {
     libqt_string _str = QColor_Name1((QColor*)self, format);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -35,13 +35,13 @@ void* q_pdfpagerenderer_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfpagerenderer_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfpagerenderer_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfPageRenderer*
 /// @param callback int32_t fn(QPdfPageRenderer*, enum QMetaObject__Call, int, void*)
-void q_pdfpagerenderer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pdfpagerenderer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_pdfpagerenderer_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfpagerenderer_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfpagerenderer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,13 +63,13 @@ const char* q_pdfpagerenderer_tr(const char* s);
 /// @param self QPdfPageRenderer*
 ///
 /// @return enum QPdfPageRenderer__RenderMode
-int64_t q_pdfpagerenderer_render_mode(void* self);
+int32_t q_pdfpagerenderer_render_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#setRenderMode)
 ///
 /// @param self QPdfPageRenderer*
 /// @param mode enum QPdfPageRenderer__RenderMode
-void q_pdfpagerenderer_set_render_mode(void* self, int64_t mode);
+void q_pdfpagerenderer_set_render_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#document)
 ///
@@ -105,13 +105,13 @@ void q_pdfpagerenderer_on_document_changed(void* self, void (*callback)(void*, v
 ///
 /// @param self QPdfPageRenderer*
 /// @param renderMode enum QPdfPageRenderer__RenderMode
-void q_pdfpagerenderer_render_mode_changed(void* self, int64_t renderMode);
+void q_pdfpagerenderer_render_mode_changed(void* self, int32_t renderMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#renderModeChanged)
 ///
 /// @param self QPdfPageRenderer*
 /// @param callback void fn(QPdfPageRenderer*, enum QPdfPageRenderer__RenderMode)
-void q_pdfpagerenderer_on_render_mode_changed(void* self, void (*callback)(void*, int64_t));
+void q_pdfpagerenderer_on_render_mode_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfpagerenderer.html#pageRendered)
 ///
@@ -244,7 +244,7 @@ void q_pdfpagerenderer_kill_timer(void* self, int id);
 ///
 /// @param self QPdfPageRenderer*
 /// @param id enum Qt__TimerId
-void q_pdfpagerenderer_kill_timer2(void* self, int64_t id);
+void q_pdfpagerenderer_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -421,7 +421,7 @@ bool q_pdfpagerenderer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPdfPageRenderer*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pdfpagerenderer_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pdfpagerenderer_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -432,7 +432,7 @@ int32_t q_pdfpagerenderer_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfpagerenderer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pdfpagerenderer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -443,7 +443,7 @@ QMetaObject__Connection* q_pdfpagerenderer_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfpagerenderer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pdfpagerenderer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

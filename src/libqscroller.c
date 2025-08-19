@@ -15,7 +15,7 @@ void* q_scroller_metacast(void* self, const char* param1) {
     return QScroller_Metacast((QScroller*)self, param1);
 }
 
-int32_t q_scroller_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_scroller_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QScroller_Metacall((QScroller*)self, param1, param2, param3);
 }
 
@@ -59,11 +59,11 @@ QObject* q_scroller_target(void* self) {
     return QScroller_Target((QScroller*)self);
 }
 
-int64_t q_scroller_state(void* self) {
+int32_t q_scroller_state(void* self) {
     return QScroller_State((QScroller*)self);
 }
 
-bool q_scroller_handle_input(void* self, int64_t input, void* position) {
+bool q_scroller_handle_input(void* self, int32_t input, void* position) {
     return QScroller_HandleInput((QScroller*)self, input, (QPointF*)position);
 }
 
@@ -127,11 +127,11 @@ void q_scroller_resend_prepare_event(void* self) {
     QScroller_ResendPrepareEvent((QScroller*)self);
 }
 
-void q_scroller_state_changed(void* self, int64_t newstate) {
+void q_scroller_state_changed(void* self, int32_t newstate) {
     QScroller_StateChanged((QScroller*)self, newstate);
 }
 
-void q_scroller_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_scroller_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QScroller_Connect_StateChanged((QScroller*)self, (intptr_t)callback);
 }
 
@@ -157,11 +157,11 @@ const char* q_scroller_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_scroller_grab_gesture2(void* target, int64_t gestureType) {
+int64_t q_scroller_grab_gesture2(void* target, int32_t gestureType) {
     return QScroller_GrabGesture2((QObject*)target, gestureType);
 }
 
-bool q_scroller_handle_input3(void* self, int64_t input, void* position, long long timestamp) {
+bool q_scroller_handle_input3(void* self, int32_t input, void* position, long long timestamp) {
     return QScroller_HandleInput3((QScroller*)self, input, (QPointF*)position, timestamp);
 }
 
@@ -220,7 +220,7 @@ void q_scroller_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scroller_kill_timer2(void* self, int64_t id) {
+void q_scroller_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -324,15 +324,15 @@ bool q_scroller_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scroller_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_scroller_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_scroller_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_scroller_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_scroller_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_scroller_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

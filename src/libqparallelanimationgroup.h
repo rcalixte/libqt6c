@@ -35,13 +35,13 @@ void* q_parallelanimationgroup_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_parallelanimationgroup_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_parallelanimationgroup_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QParallelAnimationGroup*
 /// @param callback int32_t fn(QParallelAnimationGroup*, enum QMetaObject__Call, int, void*)
-void q_parallelanimationgroup_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_parallelanimationgroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_parallelanimationgroup_on_metacall(void* self, int32_t (*callback)(void*,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_parallelanimationgroup_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_parallelanimationgroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -127,7 +127,7 @@ void q_parallelanimationgroup_qbase_update_current_time(void* self, int currentT
 /// @param self QParallelAnimationGroup*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_parallelanimationgroup_update_state(void* self, int64_t newState, int64_t oldState);
+void q_parallelanimationgroup_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateState)
 ///
@@ -135,7 +135,7 @@ void q_parallelanimationgroup_update_state(void* self, int64_t newState, int64_t
 ///
 /// @param self QParallelAnimationGroup*
 /// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_parallelanimationgroup_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_parallelanimationgroup_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateState)
 ///
@@ -144,13 +144,13 @@ void q_parallelanimationgroup_on_update_state(void* self, void (*callback)(void*
 /// @param self QParallelAnimationGroup*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_parallelanimationgroup_qbase_update_state(void* self, int64_t newState, int64_t oldState);
+void q_parallelanimationgroup_qbase_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateDirection)
 ///
 /// @param self QParallelAnimationGroup*
 /// @param direction enum QAbstractAnimation__Direction
-void q_parallelanimationgroup_update_direction(void* self, int64_t direction);
+void q_parallelanimationgroup_update_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateDirection)
 ///
@@ -158,7 +158,7 @@ void q_parallelanimationgroup_update_direction(void* self, int64_t direction);
 ///
 /// @param self QParallelAnimationGroup*
 /// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__Direction)
-void q_parallelanimationgroup_on_update_direction(void* self, void (*callback)(void*, int64_t));
+void q_parallelanimationgroup_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qparallelanimationgroup.html#updateDirection)
 ///
@@ -166,7 +166,7 @@ void q_parallelanimationgroup_on_update_direction(void* self, void (*callback)(v
 ///
 /// @param self QParallelAnimationGroup*
 /// @param direction enum QAbstractAnimation__Direction
-void q_parallelanimationgroup_qbase_update_direction(void* self, int64_t direction);
+void q_parallelanimationgroup_qbase_update_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -255,7 +255,7 @@ void q_parallelanimationgroup_clear(void* self);
 /// @param self QParallelAnimationGroup*
 ///
 /// @return enum QAbstractAnimation__State
-int64_t q_parallelanimationgroup_state(void* self);
+int32_t q_parallelanimationgroup_state(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -271,7 +271,7 @@ QAnimationGroup* q_parallelanimationgroup_group(void* self);
 /// @param self QParallelAnimationGroup*
 ///
 /// @return enum QAbstractAnimation__Direction
-int64_t q_parallelanimationgroup_direction(void* self);
+int32_t q_parallelanimationgroup_direction(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -279,7 +279,7 @@ int64_t q_parallelanimationgroup_direction(void* self);
 ///
 /// @param self QParallelAnimationGroup*
 /// @param direction enum QAbstractAnimation__Direction
-void q_parallelanimationgroup_set_direction(void* self, int64_t direction);
+void q_parallelanimationgroup_set_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -346,7 +346,7 @@ void q_parallelanimationgroup_on_finished(void* self, void (*callback)(void*));
 /// @param self QParallelAnimationGroup*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_parallelanimationgroup_state_changed(void* self, int64_t newState, int64_t oldState);
+void q_parallelanimationgroup_state_changed(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -354,7 +354,7 @@ void q_parallelanimationgroup_state_changed(void* self, int64_t newState, int64_
 ///
 /// @param self QParallelAnimationGroup*
 /// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_parallelanimationgroup_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_parallelanimationgroup_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -378,7 +378,7 @@ void q_parallelanimationgroup_on_current_loop_changed(void* self, void (*callbac
 ///
 /// @param self QParallelAnimationGroup*
 /// @param param1 enum QAbstractAnimation__Direction
-void q_parallelanimationgroup_direction_changed(void* self, int64_t param1);
+void q_parallelanimationgroup_direction_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -386,7 +386,7 @@ void q_parallelanimationgroup_direction_changed(void* self, int64_t param1);
 ///
 /// @param self QParallelAnimationGroup*
 /// @param callback void fn(QParallelAnimationGroup*, enum QAbstractAnimation__Direction)
-void q_parallelanimationgroup_on_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_parallelanimationgroup_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -438,7 +438,7 @@ void q_parallelanimationgroup_set_current_time(void* self, int msecs);
 ///
 /// @param self QParallelAnimationGroup*
 /// @param policy enum QAbstractAnimation__DeletionPolicy
-void q_parallelanimationgroup_start1(void* self, int64_t policy);
+void q_parallelanimationgroup_start1(void* self, int32_t policy);
 
 /// Inherited from QObject
 ///
@@ -530,7 +530,7 @@ void q_parallelanimationgroup_kill_timer(void* self, int id);
 ///
 /// @param self QParallelAnimationGroup*
 /// @param id enum Qt__TimerId
-void q_parallelanimationgroup_kill_timer2(void* self, int64_t id);
+void q_parallelanimationgroup_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -707,7 +707,7 @@ bool q_parallelanimationgroup_move_to_thread2(void* self, void* thread, void* pa
 /// @param self QParallelAnimationGroup*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_parallelanimationgroup_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_parallelanimationgroup_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -718,7 +718,7 @@ int32_t q_parallelanimationgroup_start_timer22(void* self, int interval, int64_t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_parallelanimationgroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_parallelanimationgroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -729,7 +729,7 @@ QMetaObject__Connection* q_parallelanimationgroup_connect5(void* sender, void* s
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_parallelanimationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_parallelanimationgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

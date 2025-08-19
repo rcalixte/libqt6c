@@ -27,7 +27,7 @@ QPermission* q_permission_new2(void* param1);
 /// @param self QPermission*
 ///
 /// @return enum Qt__PermissionStatus
-int64_t q_permission_status(void* self);
+int32_t q_permission_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpermission.html#type)
 ///
@@ -56,27 +56,27 @@ QLocationPermission* q_locationpermission_new2(void* other);
 ///
 /// @param self QLocationPermission*
 /// @param accuracy enum QLocationPermission__Accuracy
-void q_locationpermission_set_accuracy(void* self, int64_t accuracy);
+void q_locationpermission_set_accuracy(void* self, uint8_t accuracy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#accuracy)
 ///
 /// @param self QLocationPermission*
 ///
 /// @return enum QLocationPermission__Accuracy
-int64_t q_locationpermission_accuracy(void* self);
+uint8_t q_locationpermission_accuracy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#setAvailability)
 ///
 /// @param self QLocationPermission*
 /// @param availability enum QLocationPermission__Availability
-void q_locationpermission_set_availability(void* self, int64_t availability);
+void q_locationpermission_set_availability(void* self, uint8_t availability);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#availability)
 ///
 /// @param self QLocationPermission*
 ///
 /// @return enum QLocationPermission__Availability
-int64_t q_locationpermission_availability(void* self);
+uint8_t q_locationpermission_availability(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlocationpermission.html#operator-eq)
 ///
@@ -112,14 +112,14 @@ QCalendarPermission* q_calendarpermission_new2(void* other);
 ///
 /// @param self QCalendarPermission*
 /// @param mode enum QCalendarPermission__AccessMode
-void q_calendarpermission_set_access_mode(void* self, int64_t mode);
+void q_calendarpermission_set_access_mode(void* self, uint8_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#accessMode)
 ///
 /// @param self QCalendarPermission*
 ///
 /// @return enum QCalendarPermission__AccessMode
-int64_t q_calendarpermission_access_mode(void* self);
+uint8_t q_calendarpermission_access_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcalendarpermission.html#operator-eq)
 ///
@@ -155,14 +155,14 @@ QContactsPermission* q_contactspermission_new2(void* other);
 ///
 /// @param self QContactsPermission*
 /// @param mode enum QContactsPermission__AccessMode
-void q_contactspermission_set_access_mode(void* self, int64_t mode);
+void q_contactspermission_set_access_mode(void* self, uint8_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#accessMode)
 ///
 /// @param self QContactsPermission*
 ///
 /// @return enum QContactsPermission__AccessMode
-int64_t q_contactspermission_access_mode(void* self);
+uint8_t q_contactspermission_access_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontactspermission.html#operator-eq)
 ///

@@ -26,19 +26,19 @@ int64_t q_textoption_alignment(void* self) {
     return QTextOption_Alignment((QTextOption*)self);
 }
 
-void q_textoption_set_text_direction(void* self, int64_t aDirection) {
+void q_textoption_set_text_direction(void* self, int32_t aDirection) {
     QTextOption_SetTextDirection((QTextOption*)self, aDirection);
 }
 
-int64_t q_textoption_text_direction(void* self) {
+int32_t q_textoption_text_direction(void* self) {
     return QTextOption_TextDirection((QTextOption*)self);
 }
 
-void q_textoption_set_wrap_mode(void* self, int64_t wrap) {
+void q_textoption_set_wrap_mode(void* self, int32_t wrap) {
     QTextOption_SetWrapMode((QTextOption*)self, wrap);
 }
 
-int64_t q_textoption_wrap_mode(void* self) {
+int32_t q_textoption_wrap_mode(void* self) {
     return QTextOption_WrapMode((QTextOption*)self);
 }
 
@@ -100,11 +100,11 @@ QTextOption__Tab* q_textoption__tab_new3() {
     return QTextOption__Tab_new3();
 }
 
-QTextOption__Tab* q_textoption__tab_new4(double pos, int64_t tabType) {
+QTextOption__Tab* q_textoption__tab_new4(double pos, int32_t tabType) {
     return QTextOption__Tab_new4(pos, tabType);
 }
 
-QTextOption__Tab* q_textoption__tab_new5(double pos, int64_t tabType, void* delim) {
+QTextOption__Tab* q_textoption__tab_new5(double pos, int32_t tabType, void* delim) {
     return QTextOption__Tab_new5(pos, tabType, (QChar*)delim);
 }
 

@@ -23,15 +23,15 @@ void* q_graphicstransform_metacast(void* self, const char* param1) {
     return QGraphicsTransform_Metacast((QGraphicsTransform*)self, param1);
 }
 
-int32_t q_graphicstransform_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicstransform_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsTransform_Metacall((QGraphicsTransform*)self, param1, param2, param3);
 }
 
-void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicstransform_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsTransform_OnMetacall((QGraphicsTransform*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicstransform_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicstransform_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsTransform_QBaseMetacall((QGraphicsTransform*)self, param1, param2, param3);
 }
 
@@ -127,7 +127,7 @@ void q_graphicstransform_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicstransform_kill_timer2(void* self, int64_t id) {
+void q_graphicstransform_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -231,15 +231,15 @@ bool q_graphicstransform_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicstransform_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicstransform_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicstransform_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicstransform_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicstransform_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -407,15 +407,15 @@ void* q_graphicsscale_metacast(void* self, const char* param1) {
     return QGraphicsScale_Metacast((QGraphicsScale*)self, param1);
 }
 
-int32_t q_graphicsscale_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsscale_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsScale_Metacall((QGraphicsScale*)self, param1, param2, param3);
 }
 
-void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsscale_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsScale_OnMetacall((QGraphicsScale*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsscale_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsscale_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsScale_QBaseMetacall((QGraphicsScale*)self, param1, param2, param3);
 }
 
@@ -571,7 +571,7 @@ void q_graphicsscale_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsscale_kill_timer2(void* self, int64_t id) {
+void q_graphicsscale_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -675,15 +675,15 @@ bool q_graphicsscale_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsscale_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsscale_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsscale_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsscale_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsscale_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -863,15 +863,15 @@ void* q_graphicsrotation_metacast(void* self, const char* param1) {
     return QGraphicsRotation_Metacast((QGraphicsRotation*)self, param1);
 }
 
-int32_t q_graphicsrotation_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsrotation_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsRotation_Metacall((QGraphicsRotation*)self, param1, param2, param3);
 }
 
-void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_graphicsrotation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGraphicsRotation_OnMetacall((QGraphicsRotation*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsrotation_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_graphicsrotation_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGraphicsRotation_QBaseMetacall((QGraphicsRotation*)self, param1, param2, param3);
 }
 
@@ -906,7 +906,7 @@ void q_graphicsrotation_set_axis(void* self, void* axis) {
     QGraphicsRotation_SetAxis((QGraphicsRotation*)self, (QVector3D*)axis);
 }
 
-void q_graphicsrotation_set_axis2(void* self, int64_t axis) {
+void q_graphicsrotation_set_axis2(void* self, int32_t axis) {
     QGraphicsRotation_SetAxis2((QGraphicsRotation*)self, axis);
 }
 
@@ -1007,7 +1007,7 @@ void q_graphicsrotation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_graphicsrotation_kill_timer2(void* self, int64_t id) {
+void q_graphicsrotation_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1111,15 +1111,15 @@ bool q_graphicsrotation_move_to_thread2(void* self, void* thread, void* param2) 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_graphicsrotation_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_graphicsrotation_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsrotation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_graphicsrotation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_graphicsrotation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

@@ -19,7 +19,7 @@ void* q_textobject_metacast(void* self, const char* param1) {
     return QTextObject_Metacast((QTextObject*)self, param1);
 }
 
-int32_t q_textobject_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textobject_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextObject_Metacall((QTextObject*)self, param1, param2, param3);
 }
 
@@ -115,7 +115,7 @@ void q_textobject_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_textobject_kill_timer2(void* self, int64_t id) {
+void q_textobject_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -219,15 +219,15 @@ bool q_textobject_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_textobject_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_textobject_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textobject_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_textobject_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_textobject_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_textobject_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -251,7 +251,7 @@ void* q_textblockgroup_metacast(void* self, const char* param1) {
     return QTextBlockGroup_Metacast((QTextBlockGroup*)self, param1);
 }
 
-int32_t q_textblockgroup_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textblockgroup_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextBlockGroup_Metacall((QTextBlockGroup*)self, param1, param2, param3);
 }
 
@@ -347,7 +347,7 @@ void q_textblockgroup_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_textblockgroup_kill_timer2(void* self, int64_t id) {
+void q_textblockgroup_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -451,15 +451,15 @@ bool q_textblockgroup_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_textblockgroup_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_textblockgroup_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textblockgroup_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_textblockgroup_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_textblockgroup_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_textblockgroup_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -495,15 +495,15 @@ void* q_textframe_metacast(void* self, const char* param1) {
     return QTextFrame_Metacast((QTextFrame*)self, param1);
 }
 
-int32_t q_textframe_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textframe_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextFrame_Metacall((QTextFrame*)self, param1, param2, param3);
 }
 
-void q_textframe_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_textframe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QTextFrame_OnMetacall((QTextFrame*)self, (intptr_t)callback);
 }
 
-int32_t q_textframe_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textframe_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextFrame_QBaseMetacall((QTextFrame*)self, param1, param2, param3);
 }
 
@@ -640,7 +640,7 @@ void q_textframe_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_textframe_kill_timer2(void* self, int64_t id) {
+void q_textframe_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -744,15 +744,15 @@ bool q_textframe_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_textframe_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_textframe_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textframe_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_textframe_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_textframe_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_textframe_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -988,7 +988,7 @@ int32_t q_textblock_char_format_index(void* self) {
     return QTextBlock_CharFormatIndex((QTextBlock*)self);
 }
 
-int64_t q_textblock_text_direction(void* self) {
+int32_t q_textblock_text_direction(void* self) {
     return QTextBlock_TextDirection((QTextBlock*)self);
 }
 

@@ -46,13 +46,13 @@ void* q_webengineprofile_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webengineprofile_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webengineprofile_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineProfile*
 /// @param callback int32_t fn(QWebEngineProfile*, enum QMetaObject__Call, int, void*)
-void q_webengineprofile_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_webengineprofile_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_webengineprofile_on_metacall(void* self, int32_t (*callback)(void*, int64
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webengineprofile_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webengineprofile_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -125,13 +125,13 @@ void q_webengineprofile_set_http_user_agent(void* self, const char* userAgent);
 /// @param self QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__HttpCacheType
-int64_t q_webengineprofile_http_cache_type(void* self);
+int32_t q_webengineprofile_http_cache_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setHttpCacheType)
 ///
 /// @param self QWebEngineProfile*
 /// @param httpCacheType enum QWebEngineProfile__HttpCacheType
-void q_webengineprofile_set_http_cache_type(void* self, int64_t httpCacheType);
+void q_webengineprofile_set_http_cache_type(void* self, int32_t httpCacheType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setHttpAcceptLanguage)
 ///
@@ -151,26 +151,26 @@ const char* q_webengineprofile_http_accept_language(void* self);
 /// @param self QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__PersistentCookiesPolicy
-int64_t q_webengineprofile_persistent_cookies_policy(void* self);
+int32_t q_webengineprofile_persistent_cookies_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentCookiesPolicy)
 ///
 /// @param self QWebEngineProfile*
 /// @param persistentCookiesPolicy enum QWebEngineProfile__PersistentCookiesPolicy
-void q_webengineprofile_set_persistent_cookies_policy(void* self, int64_t persistentCookiesPolicy);
+void q_webengineprofile_set_persistent_cookies_policy(void* self, int32_t persistentCookiesPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#persistentPermissionsPolicy)
 ///
 /// @param self QWebEngineProfile*
 ///
 /// @return enum QWebEngineProfile__PersistentPermissionsPolicy
-int64_t q_webengineprofile_persistent_permissions_policy(void* self);
+uint8_t q_webengineprofile_persistent_permissions_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#setPersistentPermissionsPolicy)
 ///
 /// @param self QWebEngineProfile*
 /// @param persistentPermissionsPolicy enum QWebEngineProfile__PersistentPermissionsPolicy
-void q_webengineprofile_set_persistent_permissions_policy(void* self, int64_t persistentPermissionsPolicy);
+void q_webengineprofile_set_persistent_permissions_policy(void* self, uint8_t persistentPermissionsPolicy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#httpCacheMaximumSize)
 ///
@@ -319,7 +319,7 @@ QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(vo
 /// @param self QWebEngineProfile*
 /// @param securityOrigin QUrl*
 /// @param permissionType enum QWebEnginePermission__PermissionType
-QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, int64_t permissionType);
+QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, uint8_t permissionType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#listAllPermissions)
 ///
@@ -336,7 +336,7 @@ libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_fo
 ///
 /// @param self QWebEngineProfile*
 /// @param permissionType enum QWebEnginePermission__PermissionType
-libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_permission_type(void* self, int64_t permissionType);
+libqt_list /* of QWebEnginePermission* */ q_webengineprofile_list_permissions_for_permission_type(void* self, uint8_t permissionType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineprofile.html#defaultProfile)
 ///
@@ -472,7 +472,7 @@ void q_webengineprofile_kill_timer(void* self, int id);
 ///
 /// @param self QWebEngineProfile*
 /// @param id enum Qt__TimerId
-void q_webengineprofile_kill_timer2(void* self, int64_t id);
+void q_webengineprofile_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -649,7 +649,7 @@ bool q_webengineprofile_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWebEngineProfile*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webengineprofile_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webengineprofile_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -660,7 +660,7 @@ int32_t q_webengineprofile_start_timer22(void* self, int interval, int64_t timer
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webengineprofile_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webengineprofile_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -671,7 +671,7 @@ QMetaObject__Connection* q_webengineprofile_connect5(void* sender, void* signal,
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webengineprofile_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webengineprofile_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -163,13 +163,13 @@ void q_font_set_pixel_size(void* self, int pixelSize);
 /// @param self QFont*
 ///
 /// @return enum QFont__Weight
-int64_t q_font_weight(void* self);
+int32_t q_font_weight(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setWeight)
 ///
 /// @param self QFont*
 /// @param weight enum QFont__Weight
-void q_font_set_weight(void* self, int64_t weight);
+void q_font_set_weight(void* self, int32_t weight);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#bold)
 ///
@@ -186,14 +186,14 @@ void q_font_set_bold(void* self, bool bold);
 ///
 /// @param self QFont*
 /// @param style enum QFont__Style
-void q_font_set_style(void* self, int64_t style);
+void q_font_set_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#style)
 ///
 /// @param self QFont*
 ///
 /// @return enum QFont__Style
-int64_t q_font_style(void* self);
+int32_t q_font_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#italic)
 ///
@@ -266,26 +266,26 @@ void q_font_set_kerning(void* self, bool kerning);
 /// @param self QFont*
 ///
 /// @return enum QFont__StyleHint
-int64_t q_font_style_hint(void* self);
+int32_t q_font_style_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#styleStrategy)
 ///
 /// @param self QFont*
 ///
 /// @return enum QFont__StyleStrategy
-int64_t q_font_style_strategy(void* self);
+int32_t q_font_style_strategy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setStyleHint)
 ///
 /// @param self QFont*
 /// @param param1 enum QFont__StyleHint
-void q_font_set_style_hint(void* self, int64_t param1);
+void q_font_set_style_hint(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setStyleStrategy)
 ///
 /// @param self QFont*
 /// @param s enum QFont__StyleStrategy
-void q_font_set_style_strategy(void* self, int64_t s);
+void q_font_set_style_strategy(void* self, int32_t s);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#stretch)
 ///
@@ -308,14 +308,14 @@ double q_font_letter_spacing(void* self);
 /// @param self QFont*
 ///
 /// @return enum QFont__SpacingType
-int64_t q_font_letter_spacing_type(void* self);
+int32_t q_font_letter_spacing_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setLetterSpacing)
 ///
 /// @param self QFont*
 /// @param typeVal enum QFont__SpacingType
 /// @param spacing double
-void q_font_set_letter_spacing(void* self, int64_t typeVal, double spacing);
+void q_font_set_letter_spacing(void* self, int32_t typeVal, double spacing);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#wordSpacing)
 ///
@@ -332,27 +332,27 @@ void q_font_set_word_spacing(void* self, double spacing);
 ///
 /// @param self QFont*
 /// @param capitalization enum QFont__Capitalization
-void q_font_set_capitalization(void* self, int64_t capitalization);
+void q_font_set_capitalization(void* self, int32_t capitalization);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#capitalization)
 ///
 /// @param self QFont*
 ///
 /// @return enum QFont__Capitalization
-int64_t q_font_capitalization(void* self);
+int32_t q_font_capitalization(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setHintingPreference)
 ///
 /// @param self QFont*
 /// @param hintingPreference enum QFont__HintingPreference
-void q_font_set_hinting_preference(void* self, int64_t hintingPreference);
+void q_font_set_hinting_preference(void* self, int32_t hintingPreference);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#hintingPreference)
 ///
 /// @param self QFont*
 ///
 /// @return enum QFont__HintingPreference
-int64_t q_font_hinting_preference(void* self);
+int32_t q_font_hinting_preference(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#setFeature)
 ///
@@ -573,7 +573,7 @@ int32_t q_font_legacy_weight(void* self);
 /// @param self QFont*
 /// @param param1 enum QFont__StyleHint
 /// @param param2 enum QFont__StyleStrategy
-void q_font_set_style_hint2(void* self, int64_t param1, int64_t param2);
+void q_font_set_style_hint2(void* self, int32_t param1, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfont.html#dtor.QFont)
 ///
@@ -632,8 +632,6 @@ uint32_t q_font__tag_value(void* self);
 /// @param self QFont__Tag*
 char* q_font__tag_to_string(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qfont::tag.html#dtor.QFont::Tag)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QFont__Tag*

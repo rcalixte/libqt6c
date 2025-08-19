@@ -29,7 +29,7 @@ int64_t q_arraydata_detach_capacity(void* self, int64_t newSize) {
     return QArrayData_DetachCapacity((QArrayData*)self, newSize);
 }
 
-libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int64_t option) {
+libqt_pair /* tuple of QArrayData* and void* */ q_arraydata_reallocate_unaligned(void* data, void* dataPointer, int64_t objectSize, int64_t newCapacity, int32_t option) {
     return QArrayData_ReallocateUnaligned((QArrayData*)data, dataPointer, objectSize, newCapacity, option);
 }
 

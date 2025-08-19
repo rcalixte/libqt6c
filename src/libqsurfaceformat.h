@@ -114,14 +114,14 @@ int32_t q_surfaceformat_samples(void* self);
 ///
 /// @param self QSurfaceFormat*
 /// @param behavior enum QSurfaceFormat__SwapBehavior
-void q_surfaceformat_set_swap_behavior(void* self, int64_t behavior);
+void q_surfaceformat_set_swap_behavior(void* self, int32_t behavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#swapBehavior)
 ///
 /// @param self QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__SwapBehavior
-int64_t q_surfaceformat_swap_behavior(void* self);
+int32_t q_surfaceformat_swap_behavior(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#hasAlpha)
 ///
@@ -132,27 +132,27 @@ bool q_surfaceformat_has_alpha(void* self);
 ///
 /// @param self QSurfaceFormat*
 /// @param profile enum QSurfaceFormat__OpenGLContextProfile
-void q_surfaceformat_set_profile(void* self, int64_t profile);
+void q_surfaceformat_set_profile(void* self, int32_t profile);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#profile)
 ///
 /// @param self QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__OpenGLContextProfile
-int64_t q_surfaceformat_profile(void* self);
+int32_t q_surfaceformat_profile(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setRenderableType)
 ///
 /// @param self QSurfaceFormat*
 /// @param typeVal enum QSurfaceFormat__RenderableType
-void q_surfaceformat_set_renderable_type(void* self, int64_t typeVal);
+void q_surfaceformat_set_renderable_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#renderableType)
 ///
 /// @param self QSurfaceFormat*
 ///
 /// @return enum QSurfaceFormat__RenderableType
-int64_t q_surfaceformat_renderable_type(void* self);
+int32_t q_surfaceformat_renderable_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setMajorVersion)
 ///
@@ -209,13 +209,13 @@ void q_surfaceformat_set_options(void* self, int64_t options);
 ///
 /// @param self QSurfaceFormat*
 /// @param option enum QSurfaceFormat__FormatOption
-void q_surfaceformat_set_option(void* self, int64_t option);
+void q_surfaceformat_set_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#testOption)
 ///
 /// @param self QSurfaceFormat*
 /// @param option enum QSurfaceFormat__FormatOption
-bool q_surfaceformat_test_option(void* self, int64_t option);
+bool q_surfaceformat_test_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#options)
 ///
@@ -250,7 +250,7 @@ void q_surfaceformat_set_color_space(void* self, void* colorSpace);
 ///
 /// @param self QSurfaceFormat*
 /// @param colorSpace enum QSurfaceFormat__ColorSpace
-void q_surfaceformat_set_color_space2(void* self, int64_t colorSpace);
+void q_surfaceformat_set_color_space2(void* self, int32_t colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#setDefaultFormat)
 ///
@@ -266,7 +266,7 @@ QSurfaceFormat* q_surfaceformat_default_format();
 /// @param self QSurfaceFormat*
 /// @param option enum QSurfaceFormat__FormatOption
 /// @param on bool
-void q_surfaceformat_set_option2(void* self, int64_t option, bool on);
+void q_surfaceformat_set_option2(void* self, int32_t option, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qsurfaceformat.html#dtor.QSurfaceFormat)
 ///

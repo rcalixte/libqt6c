@@ -69,7 +69,7 @@ bool q_resource_is_valid(void* self);
 /// @param self QResource*
 ///
 /// @return enum QResource__Compression
-int64_t q_resource_compression_algorithm(void* self);
+int32_t q_resource_compression_algorithm(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qresource.html#size)
 ///

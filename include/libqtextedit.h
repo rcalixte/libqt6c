@@ -46,13 +46,13 @@ void* q_textedit_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_textedit_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_textedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTextEdit*
 /// @param callback int32_t fn(QTextEdit*, enum QMetaObject__Call, int, void*)
-void q_textedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_textedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_textedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_textedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_textedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -247,13 +247,13 @@ void q_textedit_set_undo_redo_enabled(void* self, bool enable);
 /// @param self QTextEdit*
 ///
 /// @return enum QTextEdit__LineWrapMode
-int64_t q_textedit_line_wrap_mode(void* self);
+int32_t q_textedit_line_wrap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setLineWrapMode)
 ///
 /// @param self QTextEdit*
 /// @param mode enum QTextEdit__LineWrapMode
-void q_textedit_set_line_wrap_mode(void* self, int64_t mode);
+void q_textedit_set_line_wrap_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#lineWrapColumnOrWidth)
 ///
@@ -271,13 +271,13 @@ void q_textedit_set_line_wrap_column_or_width(void* self, int w);
 /// @param self QTextEdit*
 ///
 /// @return enum QTextOption__WrapMode
-int64_t q_textedit_word_wrap_mode(void* self);
+int32_t q_textedit_word_wrap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#setWordWrapMode)
 ///
 /// @param self QTextEdit*
 /// @param policy enum QTextOption__WrapMode
-void q_textedit_set_word_wrap_mode(void* self, int64_t policy);
+void q_textedit_set_word_wrap_mode(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#find)
 ///
@@ -436,7 +436,7 @@ libqt_list /* of QTextEdit__ExtraSelection* */ q_textedit_extra_selections(void*
 ///
 /// @param self QTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
-void q_textedit_move_cursor(void* self, int64_t operation);
+void q_textedit_move_cursor(void* self, int32_t operation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#canPaste)
 ///
@@ -1366,7 +1366,7 @@ const char* q_textedit_to_markdown1(void* self, int64_t features);
 /// @param self QTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
 /// @param mode enum QTextCursor__MoveMode
-void q_textedit_move_cursor2(void* self, int64_t operation, int64_t mode);
+void q_textedit_move_cursor2(void* self, int32_t operation, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit.html#zoomIn)
 ///
@@ -1387,7 +1387,7 @@ void q_textedit_zoom_out1(void* self, int range);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_textedit_vertical_scroll_bar_policy(void* self);
+int32_t q_textedit_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1395,7 +1395,7 @@ int64_t q_textedit_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QTextEdit*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_textedit_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_textedit_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1419,7 +1419,7 @@ void q_textedit_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_textedit_horizontal_scroll_bar_policy(void* self);
+int32_t q_textedit_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1427,7 +1427,7 @@ int64_t q_textedit_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QTextEdit*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_textedit_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_textedit_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1505,7 +1505,7 @@ QSize* q_textedit_maximum_viewport_size(void* self);
 /// @param self QTextEdit*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_textedit_size_adjust_policy(void* self);
+int32_t q_textedit_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1513,7 +1513,7 @@ int64_t q_textedit_size_adjust_policy(void* self);
 ///
 /// @param self QTextEdit*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_textedit_set_size_adjust_policy(void* self, int64_t policy);
+void q_textedit_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -1544,7 +1544,7 @@ int32_t q_textedit_frame_width(void* self);
 /// @param self QTextEdit*
 ///
 /// @return enum QFrame__Shape
-int64_t q_textedit_frame_shape(void* self);
+int32_t q_textedit_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1552,7 +1552,7 @@ int64_t q_textedit_frame_shape(void* self);
 ///
 /// @param self QTextEdit*
 /// @param frameShape enum QFrame__Shape
-void q_textedit_set_frame_shape(void* self, int64_t frameShape);
+void q_textedit_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -1561,7 +1561,7 @@ void q_textedit_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QTextEdit*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_textedit_frame_shadow(void* self);
+int32_t q_textedit_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1569,7 +1569,7 @@ int64_t q_textedit_frame_shadow(void* self);
 ///
 /// @param self QTextEdit*
 /// @param frameShadow enum QFrame__Shadow
-void q_textedit_set_frame_shadow(void* self, int64_t frameShadow);
+void q_textedit_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -1687,7 +1687,7 @@ bool q_textedit_is_modal(void* self);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_textedit_window_modality(void* self);
+int32_t q_textedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1695,7 +1695,7 @@ int64_t q_textedit_window_modality(void* self);
 ///
 /// @param self QTextEdit*
 /// @param windowModality enum Qt__WindowModality
-void q_textedit_set_window_modality(void* self, int64_t windowModality);
+void q_textedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -2158,7 +2158,7 @@ void q_textedit_set_palette(void* self, void* palette);
 ///
 /// @param self QTextEdit*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_textedit_set_background_role(void* self, int64_t backgroundRole);
+void q_textedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2167,7 +2167,7 @@ void q_textedit_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QTextEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_textedit_background_role(void* self);
+int32_t q_textedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2175,7 +2175,7 @@ int64_t q_textedit_background_role(void* self);
 ///
 /// @param self QTextEdit*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_textedit_set_foreground_role(void* self, int64_t foregroundRole);
+void q_textedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2184,7 +2184,7 @@ void q_textedit_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QTextEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_textedit_foreground_role(void* self);
+int32_t q_textedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2586,7 +2586,7 @@ void q_textedit_set_accessible_description(void* self, const char* description);
 ///
 /// @param self QTextEdit*
 /// @param direction enum Qt__LayoutDirection
-void q_textedit_set_layout_direction(void* self, int64_t direction);
+void q_textedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -2595,7 +2595,7 @@ void q_textedit_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textedit_layout_direction(void* self);
+int32_t q_textedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2674,7 +2674,7 @@ void q_textedit_clear_focus(void* self);
 ///
 /// @param self QTextEdit*
 /// @param reason enum Qt__FocusReason
-void q_textedit_set_focus2(void* self, int64_t reason);
+void q_textedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2683,7 +2683,7 @@ void q_textedit_set_focus2(void* self, int64_t reason);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_textedit_focus_policy(void* self);
+int32_t q_textedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2691,7 +2691,7 @@ int64_t q_textedit_focus_policy(void* self);
 ///
 /// @param self QTextEdit*
 /// @param policy enum Qt__FocusPolicy
-void q_textedit_set_focus_policy(void* self, int64_t policy);
+void q_textedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2730,7 +2730,7 @@ QWidget* q_textedit_focus_proxy(void* self);
 /// @param self QTextEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_textedit_context_menu_policy(void* self);
+int32_t q_textedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2738,7 +2738,7 @@ int64_t q_textedit_context_menu_policy(void* self);
 ///
 /// @param self QTextEdit*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_textedit_set_context_menu_policy(void* self, int64_t policy);
+void q_textedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3156,7 +3156,7 @@ void q_textedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QTextEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_textedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_textedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -3457,7 +3457,7 @@ QWidget* q_textedit_child_at3(void* self, void* p);
 ///
 /// @param self QTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
-void q_textedit_set_attribute(void* self, int64_t param1);
+void q_textedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3465,7 +3465,7 @@ void q_textedit_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_textedit_test_attribute(void* self, int64_t param1);
+bool q_textedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3698,7 +3698,7 @@ void q_textedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QTextEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_textedit_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_textedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3734,7 +3734,7 @@ void q_textedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_textedit_set_attribute2(void* self, int64_t param1, bool on);
+void q_textedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3843,7 +3843,7 @@ void q_textedit_kill_timer(void* self, int id);
 ///
 /// @param self QTextEdit*
 /// @param id enum Qt__TimerId
-void q_textedit_kill_timer2(void* self, int64_t id);
+void q_textedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4012,7 +4012,7 @@ bool q_textedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTextEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_textedit_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_textedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4023,7 +4023,7 @@ int32_t q_textedit_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4034,7 +4034,7 @@ QMetaObject__Connection* q_textedit_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_textedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_textedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4141,7 +4141,7 @@ double q_textedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_textedit_encode_metric_f(int64_t metric, double value);
+int32_t q_textedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4745,7 +4745,7 @@ void q_textedit_on_native_event(void* self, bool (*callback)(void*, const char*,
 ///
 /// @param self QTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_textedit_metric(void* self, int64_t param1);
+int32_t q_textedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4755,7 +4755,7 @@ int32_t q_textedit_metric(void* self, int64_t param1);
 ///
 /// @param self QTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_textedit_qbase_metric(void* self, int64_t param1);
+int32_t q_textedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4765,7 +4765,7 @@ int32_t q_textedit_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QTextEdit*
 /// @param callback int32_t fn(QTextEdit*, enum QPaintDevice__PaintDeviceMetric)
-void q_textedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_textedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5334,7 +5334,7 @@ void q_textedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 /// @param self QTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_textedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_textedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5345,7 +5345,7 @@ double q_textedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metr
 /// @param self QTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_textedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_textedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5355,7 +5355,7 @@ double q_textedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_
 ///
 /// @param self QTextEdit*
 /// @param callback double fn(QTextEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_textedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5387,8 +5387,6 @@ QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1);
 /// @param param1 QTextEdit__ExtraSelection*
 void q_textedit__extraselection_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit::extraselection.html#dtor.QTextEdit::ExtraSelection)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTextEdit__ExtraSelection*

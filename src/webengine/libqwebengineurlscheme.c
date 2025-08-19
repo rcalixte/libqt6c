@@ -36,11 +36,11 @@ void q_webengineurlscheme_set_name(void* self, const char* newValue) {
     QWebEngineUrlScheme_SetName((QWebEngineUrlScheme*)self, qstring(newValue));
 }
 
-int64_t q_webengineurlscheme_syntax(void* self) {
+int32_t q_webengineurlscheme_syntax(void* self) {
     return QWebEngineUrlScheme_Syntax((QWebEngineUrlScheme*)self);
 }
 
-void q_webengineurlscheme_set_syntax(void* self, int64_t newValue) {
+void q_webengineurlscheme_set_syntax(void* self, int32_t newValue) {
     QWebEngineUrlScheme_SetSyntax((QWebEngineUrlScheme*)self, newValue);
 }
 

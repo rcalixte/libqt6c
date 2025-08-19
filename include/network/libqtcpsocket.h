@@ -35,13 +35,13 @@ void* q_tcpsocket_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tcpsocket_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tcpsocket_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QTcpSocket*
 /// @param callback int32_t fn(QTcpSocket*, enum QMetaObject__Call, int, void*)
-void q_tcpsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_tcpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_tcpsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_tcpsocket_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_tcpsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -62,7 +62,7 @@ const char* q_tcpsocket_tr(const char* s);
 ///
 /// @param self QTcpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-bool q_tcpsocket_bind(void* self, int64_t addr);
+bool q_tcpsocket_bind(void* self, int32_t addr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -86,7 +86,7 @@ const char* q_tcpsocket_tr3(const char* s, const char* c, int n);
 /// @param self QTcpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
-bool q_tcpsocket_bind2(void* self, int64_t addr, unsigned short port);
+bool q_tcpsocket_bind2(void* self, int32_t addr, unsigned short port);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtcpsocket.html#bind)
 ///
@@ -94,7 +94,7 @@ bool q_tcpsocket_bind2(void* self, int64_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_tcpsocket_bind3(void* self, int64_t addr, unsigned short port, int64_t mode);
+bool q_tcpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -187,7 +187,7 @@ void q_tcpsocket_abort(void* self);
 /// @param self QTcpSocket*
 ///
 /// @return enum QAbstractSocket__SocketType
-int64_t q_tcpsocket_socket_type(void* self);
+int32_t q_tcpsocket_socket_type(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -196,7 +196,7 @@ int64_t q_tcpsocket_socket_type(void* self);
 /// @param self QTcpSocket*
 ///
 /// @return enum QAbstractSocket__SocketState
-int64_t q_tcpsocket_state(void* self);
+int32_t q_tcpsocket_state(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -205,7 +205,7 @@ int64_t q_tcpsocket_state(void* self);
 /// @param self QTcpSocket*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_tcpsocket_error(void* self);
+int32_t q_tcpsocket_error(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -297,7 +297,7 @@ void q_tcpsocket_on_disconnected(void* self, void (*callback)(void*));
 ///
 /// @param self QTcpSocket*
 /// @param param1 enum QAbstractSocket__SocketState
-void q_tcpsocket_state_changed(void* self, int64_t param1);
+void q_tcpsocket_state_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -305,7 +305,7 @@ void q_tcpsocket_state_changed(void* self, int64_t param1);
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, enum QAbstractSocket__SocketState)
-void q_tcpsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_tcpsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -313,7 +313,7 @@ void q_tcpsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self QTcpSocket*
 /// @param param1 enum QAbstractSocket__SocketError
-void q_tcpsocket_error_occurred(void* self, int64_t param1);
+void q_tcpsocket_error_occurred(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -321,7 +321,7 @@ void q_tcpsocket_error_occurred(void* self, int64_t param1);
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, enum QAbstractSocket__SocketError)
-void q_tcpsocket_on_error_occurred(void* self, void (*callback)(void*, int64_t));
+void q_tcpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -809,7 +809,7 @@ void q_tcpsocket_kill_timer(void* self, int id);
 ///
 /// @param self QTcpSocket*
 /// @param id enum Qt__TimerId
-void q_tcpsocket_kill_timer2(void* self, int64_t id);
+void q_tcpsocket_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -986,7 +986,7 @@ bool q_tcpsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QTcpSocket*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_tcpsocket_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_tcpsocket_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -997,7 +997,7 @@ int32_t q_tcpsocket_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tcpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_tcpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1008,7 +1008,7 @@ QMetaObject__Connection* q_tcpsocket_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_tcpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_tcpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1065,7 +1065,7 @@ void q_tcpsocket_on_resume(void* self, void (*callback)());
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1078,7 +1078,7 @@ void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_tcpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_tcpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1088,7 +1088,7 @@ void q_tcpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigne
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
-void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int64_t));
+void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1242,7 +1242,7 @@ void q_tcpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_tcpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_tcpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1254,7 +1254,7 @@ bool q_tcpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_tcpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_tcpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1264,7 +1264,7 @@ bool q_tcpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescript
 ///
 /// @param self QTcpSocket*
 /// @param callback bool fn(QTcpSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
-void q_tcpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int64_t, int64_t));
+void q_tcpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1275,7 +1275,7 @@ void q_tcpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, in
 /// @param self QTcpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_tcpsocket_set_socket_option(void* self, int64_t option, void* value);
+void q_tcpsocket_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1286,7 +1286,7 @@ void q_tcpsocket_set_socket_option(void* self, int64_t option, void* value);
 /// @param self QTcpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_tcpsocket_qbase_set_socket_option(void* self, int64_t option, void* value);
+void q_tcpsocket_qbase_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1296,7 +1296,7 @@ void q_tcpsocket_qbase_set_socket_option(void* self, int64_t option, void* value
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, enum QAbstractSocket__SocketOption, QVariant*)
-void q_tcpsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_t, void*));
+void q_tcpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1306,7 +1306,7 @@ void q_tcpsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_
 ///
 /// @param self QTcpSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_tcpsocket_socket_option(void* self, int64_t option);
+QVariant* q_tcpsocket_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1316,7 +1316,7 @@ QVariant* q_tcpsocket_socket_option(void* self, int64_t option);
 ///
 /// @param self QTcpSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_tcpsocket_qbase_socket_option(void* self, int64_t option);
+QVariant* q_tcpsocket_qbase_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1326,7 +1326,7 @@ QVariant* q_tcpsocket_qbase_socket_option(void* self, int64_t option);
 ///
 /// @param self QTcpSocket*
 /// @param callback QVariant* fn(QTcpSocket*, enum QAbstractSocket__SocketOption)
-void q_tcpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64_t));
+void q_tcpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2050,7 +2050,7 @@ void q_tcpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QTcpSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_tcpsocket_set_socket_state(void* self, int64_t state);
+void q_tcpsocket_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2060,7 +2060,7 @@ void q_tcpsocket_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QTcpSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_tcpsocket_qbase_set_socket_state(void* self, int64_t state);
+void q_tcpsocket_qbase_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2070,7 +2070,7 @@ void q_tcpsocket_qbase_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, enum QAbstractSocket__SocketState)
-void q_tcpsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t));
+void q_tcpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2080,7 +2080,7 @@ void q_tcpsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t
 ///
 /// @param self QTcpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_tcpsocket_set_socket_error(void* self, int64_t socketError);
+void q_tcpsocket_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2090,7 +2090,7 @@ void q_tcpsocket_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QTcpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_tcpsocket_qbase_set_socket_error(void* self, int64_t socketError);
+void q_tcpsocket_qbase_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2100,7 +2100,7 @@ void q_tcpsocket_qbase_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QTcpSocket*
 /// @param callback void fn(QTcpSocket*, enum QAbstractSocket__SocketError)
-void q_tcpsocket_on_set_socket_error(void* self, void (*callback)(void*, int64_t));
+void q_tcpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///

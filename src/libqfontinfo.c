@@ -48,7 +48,7 @@ bool q_fontinfo_italic(void* self) {
     return QFontInfo_Italic((QFontInfo*)self);
 }
 
-int64_t q_fontinfo_style(void* self) {
+int32_t q_fontinfo_style(void* self) {
     return QFontInfo_Style((QFontInfo*)self);
 }
 
@@ -76,7 +76,7 @@ bool q_fontinfo_fixed_pitch(void* self) {
     return QFontInfo_FixedPitch((QFontInfo*)self);
 }
 
-int64_t q_fontinfo_style_hint(void* self) {
+int32_t q_fontinfo_style_hint(void* self) {
     return QFontInfo_StyleHint((QFontInfo*)self);
 }
 

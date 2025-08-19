@@ -44,11 +44,11 @@ void q_webenginescript_set_source_code(void* self, const char* sourceCode) {
     QWebEngineScript_SetSourceCode((QWebEngineScript*)self, qstring(sourceCode));
 }
 
-int64_t q_webenginescript_injection_point(void* self) {
+int32_t q_webenginescript_injection_point(void* self) {
     return QWebEngineScript_InjectionPoint((QWebEngineScript*)self);
 }
 
-void q_webenginescript_set_injection_point(void* self, int64_t injectionPoint) {
+void q_webenginescript_set_injection_point(void* self, int32_t injectionPoint) {
     QWebEngineScript_SetInjectionPoint((QWebEngineScript*)self, injectionPoint);
 }
 

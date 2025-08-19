@@ -5,7 +5,7 @@ qfloat16* q_qfloat16_new() {
     return qfloat16_new();
 }
 
-qfloat16* q_qfloat16_new2(int64_t param1) {
+qfloat16* q_qfloat16_new2(int32_t param1) {
     return qfloat16_new2(param1);
 }
 

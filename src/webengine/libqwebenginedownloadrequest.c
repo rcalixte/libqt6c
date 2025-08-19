@@ -14,7 +14,7 @@ void* q_webenginedownloadrequest_metacast(void* self, const char* param1) {
     return QWebEngineDownloadRequest_Metacast((QWebEngineDownloadRequest*)self, param1);
 }
 
-int32_t q_webenginedownloadrequest_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_webenginedownloadrequest_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QWebEngineDownloadRequest_Metacall((QWebEngineDownloadRequest*)self, param1, param2, param3);
 }
 
@@ -29,7 +29,7 @@ uint32_t q_webenginedownloadrequest_id(void* self) {
     return QWebEngineDownloadRequest_Id((QWebEngineDownloadRequest*)self);
 }
 
-int64_t q_webenginedownloadrequest_state(void* self) {
+int32_t q_webenginedownloadrequest_state(void* self) {
     return QWebEngineDownloadRequest_State((QWebEngineDownloadRequest*)self);
 }
 
@@ -60,15 +60,15 @@ bool q_webenginedownloadrequest_is_paused(void* self) {
     return QWebEngineDownloadRequest_IsPaused((QWebEngineDownloadRequest*)self);
 }
 
-int64_t q_webenginedownloadrequest_save_page_format(void* self) {
+int32_t q_webenginedownloadrequest_save_page_format(void* self) {
     return QWebEngineDownloadRequest_SavePageFormat((QWebEngineDownloadRequest*)self);
 }
 
-void q_webenginedownloadrequest_set_save_page_format(void* self, int64_t format) {
+void q_webenginedownloadrequest_set_save_page_format(void* self, int32_t format) {
     QWebEngineDownloadRequest_SetSavePageFormat((QWebEngineDownloadRequest*)self, format);
 }
 
-int64_t q_webenginedownloadrequest_interrupt_reason(void* self) {
+int32_t q_webenginedownloadrequest_interrupt_reason(void* self) {
     return QWebEngineDownloadRequest_InterruptReason((QWebEngineDownloadRequest*)self);
 }
 
@@ -132,11 +132,11 @@ void q_webenginedownloadrequest_resume(void* self) {
     QWebEngineDownloadRequest_Resume((QWebEngineDownloadRequest*)self);
 }
 
-void q_webenginedownloadrequest_state_changed(void* self, int64_t state) {
+void q_webenginedownloadrequest_state_changed(void* self, int32_t state) {
     QWebEngineDownloadRequest_StateChanged((QWebEngineDownloadRequest*)self, state);
 }
 
-void q_webenginedownloadrequest_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_webenginedownloadrequest_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QWebEngineDownloadRequest_Connect_StateChanged((QWebEngineDownloadRequest*)self, (intptr_t)callback);
 }
 
@@ -273,7 +273,7 @@ void q_webenginedownloadrequest_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_webenginedownloadrequest_kill_timer2(void* self, int64_t id) {
+void q_webenginedownloadrequest_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -377,15 +377,15 @@ bool q_webenginedownloadrequest_move_to_thread2(void* self, void* thread, void* 
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_webenginedownloadrequest_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_webenginedownloadrequest_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_webenginedownloadrequest_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_webenginedownloadrequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

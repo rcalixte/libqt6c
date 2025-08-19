@@ -196,7 +196,7 @@ QBitArray* q_bitarray_from_bits(const char* data, int64_t lenVal);
 ///
 /// @param self QBitArray*
 /// @param endianness enum QSysInfo__Endian
-uint32_t q_bitarray_to_u_int32(void* self, int64_t endianness);
+uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#fill)
 ///
@@ -210,7 +210,7 @@ bool q_bitarray_fill22(void* self, bool aval, int64_t asize);
 /// @param self QBitArray*
 /// @param endianness enum QSysInfo__Endian
 /// @param ok bool*
-uint32_t q_bitarray_to_u_int322(void* self, int64_t endianness, bool* ok);
+uint32_t q_bitarray_to_u_int322(void* self, int32_t endianness, bool* ok);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbitarray.html#dtor.QBitArray)
 ///

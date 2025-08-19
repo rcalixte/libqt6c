@@ -59,15 +59,15 @@ void* q_textdocument_metacast(void* self, const char* param1) {
     return QTextDocument_Metacast((QTextDocument*)self, param1);
 }
 
-int32_t q_textdocument_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textdocument_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextDocument_Metacall((QTextDocument*)self, param1, param2, param3);
 }
 
-void q_textdocument_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_textdocument_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QTextDocument_OnMetacall((QTextDocument*)self, (intptr_t)callback);
 }
 
-int32_t q_textdocument_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_textdocument_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTextDocument_QBaseMetacall((QTextDocument*)self, param1, param2, param3);
 }
 
@@ -134,11 +134,11 @@ QAbstractTextDocumentLayout* q_textdocument_document_layout(void* self) {
     return QTextDocument_DocumentLayout((QTextDocument*)self);
 }
 
-void q_textdocument_set_meta_information(void* self, int64_t info, const char* param2) {
+void q_textdocument_set_meta_information(void* self, int32_t info, const char* param2) {
     QTextDocument_SetMetaInformation((QTextDocument*)self, info, qstring(param2));
 }
 
-const char* q_textdocument_meta_information(void* self, int64_t info) {
+const char* q_textdocument_meta_information(void* self, int32_t info) {
     libqt_string _str = QTextDocument_MetaInformation((QTextDocument*)self, info);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -433,11 +433,11 @@ void q_textdocument_set_base_url(void* self, void* url) {
     QTextDocument_SetBaseUrl((QTextDocument*)self, (QUrl*)url);
 }
 
-int64_t q_textdocument_default_cursor_move_style(void* self) {
+int32_t q_textdocument_default_cursor_move_style(void* self) {
     return QTextDocument_DefaultCursorMoveStyle((QTextDocument*)self);
 }
 
-void q_textdocument_set_default_cursor_move_style(void* self, int64_t style) {
+void q_textdocument_set_default_cursor_move_style(void* self, int32_t style) {
     QTextDocument_SetDefaultCursorMoveStyle((QTextDocument*)self, style);
 }
 
@@ -618,7 +618,7 @@ void q_textdocument_draw_contents2(void* self, void* painter, void* rect) {
     QTextDocument_DrawContents2((QTextDocument*)self, (QPainter*)painter, (QRectF*)rect);
 }
 
-void q_textdocument_clear_undo_redo_stacks1(void* self, int64_t historyToClear) {
+void q_textdocument_clear_undo_redo_stacks1(void* self, int32_t historyToClear) {
     QTextDocument_ClearUndoRedoStacks1((QTextDocument*)self, historyToClear);
 }
 
@@ -673,7 +673,7 @@ void q_textdocument_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_textdocument_kill_timer2(void* self, int64_t id) {
+void q_textdocument_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -777,15 +777,15 @@ bool q_textdocument_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_textdocument_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_textdocument_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_textdocument_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_textdocument_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

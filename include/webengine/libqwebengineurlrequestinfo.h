@@ -18,14 +18,14 @@
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__ResourceType
-int64_t q_webengineurlrequestinfo_resource_type(void* self);
+int32_t q_webengineurlrequestinfo_resource_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#navigationType)
 ///
 /// @param self QWebEngineUrlRequestInfo*
 ///
 /// @return enum QWebEngineUrlRequestInfo__NavigationType
-int64_t q_webengineurlrequestinfo_navigation_type(void* self);
+int32_t q_webengineurlrequestinfo_navigation_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlrequestinfo.html#requestUrl)
 ///

@@ -57,13 +57,13 @@ void* q_webengineview_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webengineview_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webengineview_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEngineView*
 /// @param callback int32_t fn(QWebEngineView*, enum QMetaObject__Call, int, void*)
-void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -71,7 +71,7 @@ void q_webengineview_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webengineview_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webengineview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -169,13 +169,13 @@ const char* q_webengineview_selected_text(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param action enum QWebEnginePage__WebAction
-QAction* q_webengineview_page_action(void* self, int64_t action);
+QAction* q_webengineview_page_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#triggerPageAction)
 ///
 /// @param self QWebEngineView*
 /// @param action enum QWebEnginePage__WebAction
-void q_webengineview_trigger_page_action(void* self, int64_t action);
+void q_webengineview_trigger_page_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#zoomFactor)
 ///
@@ -354,13 +354,13 @@ void q_webengineview_on_icon_changed(void* self, void (*callback)(void*, void*))
 /// @param self QWebEngineView*
 /// @param terminationStatus enum QWebEnginePage__RenderProcessTerminationStatus
 /// @param exitCode int
-void q_webengineview_render_process_terminated(void* self, int64_t terminationStatus, int exitCode);
+void q_webengineview_render_process_terminated(void* self, int32_t terminationStatus, int exitCode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#renderProcessTerminated)
 ///
 /// @param self QWebEngineView*
 /// @param callback void fn(QWebEngineView*, enum QWebEnginePage__RenderProcessTerminationStatus, int)
-void q_webengineview_on_render_process_terminated(void* self, void (*callback)(void*, int64_t, int));
+void q_webengineview_on_render_process_terminated(void* self, void (*callback)(void*, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#pdfPrintingFinished)
 ///
@@ -414,7 +414,7 @@ void q_webengineview_on_print_finished(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QWebEngineView*
 /// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEngineView* q_webengineview_create_window(void* self, int64_t typeVal);
+QWebEngineView* q_webengineview_create_window(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#createWindow)
 ///
@@ -422,7 +422,7 @@ QWebEngineView* q_webengineview_create_window(void* self, int64_t typeVal);
 ///
 /// @param self QWebEngineView*
 /// @param callback QWebEngineView* fn(QWebEngineView*, enum QWebEnginePage__WebWindowType)
-void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int64_t));
+void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#createWindow)
 ///
@@ -430,7 +430,7 @@ void q_webengineview_on_create_window(void* self, QWebEngineView* (*callback)(vo
 ///
 /// @param self QWebEngineView*
 /// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEngineView* q_webengineview_qbase_create_window(void* self, int64_t typeVal);
+QWebEngineView* q_webengineview_qbase_create_window(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#contextMenuEvent)
 ///
@@ -674,7 +674,7 @@ void q_webengineview_set_content3(void* self, const char* data, const char* mime
 /// @param self QWebEngineView*
 /// @param action enum QWebEnginePage__WebAction
 /// @param checked bool
-void q_webengineview_trigger_page_action2(void* self, int64_t action, bool checked);
+void q_webengineview_trigger_page_action2(void* self, int32_t action, bool checked);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
@@ -762,7 +762,7 @@ bool q_webengineview_is_modal(void* self);
 /// @param self QWebEngineView*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_webengineview_window_modality(void* self);
+int32_t q_webengineview_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -770,7 +770,7 @@ int64_t q_webengineview_window_modality(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param windowModality enum Qt__WindowModality
-void q_webengineview_set_window_modality(void* self, int64_t windowModality);
+void q_webengineview_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1233,7 +1233,7 @@ void q_webengineview_set_palette(void* self, void* palette);
 ///
 /// @param self QWebEngineView*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_webengineview_set_background_role(void* self, int64_t backgroundRole);
+void q_webengineview_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1242,7 +1242,7 @@ void q_webengineview_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QWebEngineView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_webengineview_background_role(void* self);
+int32_t q_webengineview_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1250,7 +1250,7 @@ int64_t q_webengineview_background_role(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_webengineview_set_foreground_role(void* self, int64_t foregroundRole);
+void q_webengineview_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1259,7 +1259,7 @@ void q_webengineview_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QWebEngineView*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_webengineview_foreground_role(void* self);
+int32_t q_webengineview_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1661,7 +1661,7 @@ void q_webengineview_set_accessible_description(void* self, const char* descript
 ///
 /// @param self QWebEngineView*
 /// @param direction enum Qt__LayoutDirection
-void q_webengineview_set_layout_direction(void* self, int64_t direction);
+void q_webengineview_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1670,7 +1670,7 @@ void q_webengineview_set_layout_direction(void* self, int64_t direction);
 /// @param self QWebEngineView*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_webengineview_layout_direction(void* self);
+int32_t q_webengineview_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1749,7 +1749,7 @@ void q_webengineview_clear_focus(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param reason enum Qt__FocusReason
-void q_webengineview_set_focus2(void* self, int64_t reason);
+void q_webengineview_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1758,7 +1758,7 @@ void q_webengineview_set_focus2(void* self, int64_t reason);
 /// @param self QWebEngineView*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_webengineview_focus_policy(void* self);
+int32_t q_webengineview_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1766,7 +1766,7 @@ int64_t q_webengineview_focus_policy(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param policy enum Qt__FocusPolicy
-void q_webengineview_set_focus_policy(void* self, int64_t policy);
+void q_webengineview_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1805,7 +1805,7 @@ QWidget* q_webengineview_focus_proxy(void* self);
 /// @param self QWebEngineView*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_webengineview_context_menu_policy(void* self);
+int32_t q_webengineview_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1813,7 +1813,7 @@ int64_t q_webengineview_context_menu_policy(void* self);
 ///
 /// @param self QWebEngineView*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_webengineview_set_context_menu_policy(void* self, int64_t policy);
+void q_webengineview_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2231,7 +2231,7 @@ void q_webengineview_set_size_policy(void* self, void* sizePolicy);
 /// @param self QWebEngineView*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_webengineview_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_webengineview_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2539,7 +2539,7 @@ QWidget* q_webengineview_child_at3(void* self, void* p);
 ///
 /// @param self QWebEngineView*
 /// @param param1 enum Qt__WidgetAttribute
-void q_webengineview_set_attribute(void* self, int64_t param1);
+void q_webengineview_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2547,7 +2547,7 @@ void q_webengineview_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QWebEngineView*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_webengineview_test_attribute(void* self, int64_t param1);
+bool q_webengineview_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2780,7 +2780,7 @@ void q_webengineview_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QWebEngineView*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_webengineview_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_webengineview_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2816,7 +2816,7 @@ void q_webengineview_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QWebEngineView*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_webengineview_set_attribute2(void* self, int64_t param1, bool on);
+void q_webengineview_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2925,7 +2925,7 @@ void q_webengineview_kill_timer(void* self, int id);
 ///
 /// @param self QWebEngineView*
 /// @param id enum Qt__TimerId
-void q_webengineview_kill_timer2(void* self, int64_t id);
+void q_webengineview_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3094,7 +3094,7 @@ bool q_webengineview_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWebEngineView*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webengineview_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webengineview_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3105,7 +3105,7 @@ int32_t q_webengineview_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webengineview_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webengineview_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3116,7 +3116,7 @@ QMetaObject__Connection* q_webengineview_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webengineview_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webengineview_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3223,7 +3223,7 @@ double q_webengineview_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_webengineview_encode_metric_f(int64_t metric, double value);
+int32_t q_webengineview_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -3949,7 +3949,7 @@ void q_webengineview_on_change_event(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QWebEngineView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_webengineview_metric(void* self, int64_t param1);
+int32_t q_webengineview_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3959,7 +3959,7 @@ int32_t q_webengineview_metric(void* self, int64_t param1);
 ///
 /// @param self QWebEngineView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_webengineview_qbase_metric(void* self, int64_t param1);
+int32_t q_webengineview_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3969,7 +3969,7 @@ int32_t q_webengineview_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QWebEngineView*
 /// @param callback int32_t fn(QWebEngineView*, enum QPaintDevice__PaintDeviceMetric)
-void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_webengineview_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4596,7 +4596,7 @@ void q_webengineview_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param self QWebEngineView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_webengineview_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_webengineview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4607,7 +4607,7 @@ double q_webengineview_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 /// @param self QWebEngineView*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_webengineview_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_webengineview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4617,7 +4617,7 @@ double q_webengineview_qbase_get_decoded_metric_f(void* self, int64_t metricA, i
 ///
 /// @param self QWebEngineView*
 /// @param callback double fn(QWebEngineView*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_webengineview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

@@ -3,11 +3,11 @@
 #include "libqmessageauthenticationcode.hpp"
 #include "libqmessageauthenticationcode.h"
 
-QMessageAuthenticationCode* q_messageauthenticationcode_new(int64_t method) {
+QMessageAuthenticationCode* q_messageauthenticationcode_new(int32_t method) {
     return QMessageAuthenticationCode_new(method);
 }
 
-QMessageAuthenticationCode* q_messageauthenticationcode_new2(int64_t method, const char* key) {
+QMessageAuthenticationCode* q_messageauthenticationcode_new2(int32_t method, const char* key) {
     libqt_string key_string = qstring(key);
 
     return QMessageAuthenticationCode_new2(method, (QByteArrayView*)&key_string);
@@ -52,7 +52,7 @@ char* q_messageauthenticationcode_result(void* self) {
     return _ret;
 }
 
-char* q_messageauthenticationcode_hash(const char* message, const char* key, int64_t method) {
+char* q_messageauthenticationcode_hash(const char* message, const char* key, int32_t method) {
     libqt_string message_string = qstring(message);
     libqt_string key_string = qstring(key);
     libqt_string _str = QMessageAuthenticationCode_Hash((QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
@@ -61,7 +61,7 @@ char* q_messageauthenticationcode_hash(const char* message, const char* key, int
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int64_t method) {
+const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char* message, const char* key, int32_t method) {
     libqt_string message_string = qstring(message);
     libqt_string key_string = qstring(key);
     QByteArrayView* _str = QMessageAuthenticationCode_HashInto(buffer, (QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
@@ -69,7 +69,7 @@ const char* q_messageauthenticationcode_hash_into(libqt_list buffer, const char*
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int64_t method) {
+const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char* message, const char* key, int32_t method) {
     libqt_string message_string = qstring(message);
     libqt_string key_string = qstring(key);
     QByteArrayView* _str = QMessageAuthenticationCode_HashInto2(buffer, (QByteArrayView*)&message_string, (QByteArrayView*)&key_string, method);
@@ -77,14 +77,14 @@ const char* q_messageauthenticationcode_hash_into2(libqt_list buffer, const char
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int64_t method) {
+const char* q_messageauthenticationcode_hash_into4(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method) {
     libqt_string key_string = qstring(key);
     QByteArrayView* _str = QMessageAuthenticationCode_HashInto4(buffer, messageParts, (QByteArrayView*)&key_string, method);
     const char* _ret = QByteArrayView_Data(_str);
     return _ret;
 }
 
-const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int64_t method) {
+const char* q_messageauthenticationcode_hash_into5(libqt_list buffer, libqt_list messageParts, const char* key, int32_t method) {
     libqt_string key_string = qstring(key);
     QByteArrayView* _str = QMessageAuthenticationCode_HashInto5(buffer, messageParts, (QByteArrayView*)&key_string, method);
     const char* _ret = QByteArrayView_Data(_str);

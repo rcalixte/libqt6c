@@ -75,7 +75,7 @@ bool q_audiodevice_is_default(void* self);
 /// @param self QAudioDevice*
 ///
 /// @return enum QAudioDevice__Mode
-int64_t q_audiodevice_mode(void* self);
+int32_t q_audiodevice_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#isFormatSupported)
 ///
@@ -113,14 +113,14 @@ int32_t q_audiodevice_maximum_channel_count(void* self);
 /// @param self QAudioDevice*
 ///
 /// @return libqt_list of enum QAudioFormat__SampleFormat
-libqt_list /* of int64_t */ q_audiodevice_supported_sample_formats(void* self);
+libqt_list /* of uint16_t */ q_audiodevice_supported_sample_formats(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#channelConfiguration)
 ///
 /// @param self QAudioDevice*
 ///
 /// @return enum QAudioFormat__ChannelConfig
-int64_t q_audiodevice_channel_configuration(void* self);
+uint32_t q_audiodevice_channel_configuration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudiodevice.html#dtor.QAudioDevice)
 ///

@@ -23,15 +23,15 @@ void* q_barseries_metacast(void* self, const char* param1) {
     return QBarSeries_Metacast((QBarSeries*)self, param1);
 }
 
-int32_t q_barseries_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_barseries_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QBarSeries_Metacall((QBarSeries*)self, param1, param2, param3);
 }
 
-void q_barseries_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_barseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QBarSeries_OnMetacall((QBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_barseries_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_barseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QBarSeries_QBaseMetacall((QBarSeries*)self, param1, param2, param3);
 }
 
@@ -42,15 +42,15 @@ const char* q_barseries_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_barseries_type(void* self) {
+int32_t q_barseries_type(void* self) {
     return QBarSeries_Type((QBarSeries*)self);
 }
 
-void q_barseries_on_type(void* self, int64_t (*callback)()) {
+void q_barseries_on_type(void* self, int32_t (*callback)()) {
     QBarSeries_OnType((QBarSeries*)self, (intptr_t)callback);
 }
 
-int64_t q_barseries_qbase_type(void* self) {
+int32_t q_barseries_qbase_type(void* self) {
     return QBarSeries_QBaseType((QBarSeries*)self);
 }
 
@@ -136,11 +136,11 @@ double q_barseries_labels_angle(void* self) {
     return QAbstractBarSeries_LabelsAngle((QAbstractBarSeries*)self);
 }
 
-void q_barseries_set_labels_position(void* self, int64_t position) {
+void q_barseries_set_labels_position(void* self, int32_t position) {
     QAbstractBarSeries_SetLabelsPosition((QAbstractBarSeries*)self, position);
 }
 
-int64_t q_barseries_labels_position(void* self) {
+int32_t q_barseries_labels_position(void* self) {
     return QAbstractBarSeries_LabelsPosition((QAbstractBarSeries*)self);
 }
 
@@ -216,11 +216,11 @@ void q_barseries_on_labels_format_changed(void* self, void (*callback)(void*, co
     QAbstractBarSeries_Connect_LabelsFormatChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
-void q_barseries_labels_position_changed(void* self, int64_t position) {
+void q_barseries_labels_position_changed(void* self, int32_t position) {
     QAbstractBarSeries_LabelsPositionChanged((QAbstractBarSeries*)self, position);
 }
 
-void q_barseries_on_labels_position_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_barseries_on_labels_position_changed(void* self, void (*callback)(void*, int32_t)) {
     QAbstractBarSeries_Connect_LabelsPositionChanged((QAbstractBarSeries*)self, (intptr_t)callback);
 }
 
@@ -407,7 +407,7 @@ void q_barseries_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_barseries_kill_timer2(void* self, int64_t id) {
+void q_barseries_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -511,15 +511,15 @@ bool q_barseries_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_barseries_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_barseries_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_barseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_barseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_barseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_barseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

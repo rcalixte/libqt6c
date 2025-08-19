@@ -124,14 +124,14 @@ bool q_scistyle_eol_fill(void* self);
 ///
 /// @param self QsciStyle*
 /// @param text_case enum QsciStyle__TextCase
-void q_scistyle_set_text_case(void* self, int64_t text_case);
+void q_scistyle_set_text_case(void* self, int32_t text_case);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///
 /// @param self QsciStyle*
 ///
 /// @return enum QsciStyle__TextCase
-int64_t q_scistyle_text_case(void* self);
+int32_t q_scistyle_text_case(void* self);
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciStyle.html)
 ///

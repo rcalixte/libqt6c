@@ -21,7 +21,7 @@ QAbstractFileIconProvider* q_abstractfileiconprovider_new();
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 enum QAbstractFileIconProvider__IconType
-QIcon* q_abstractfileiconprovider_icon(void* self, int64_t param1);
+QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
@@ -29,7 +29,7 @@ QIcon* q_abstractfileiconprovider_icon(void* self, int64_t param1);
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param callback QIcon* fn(QAbstractFileIconProvider*, enum QAbstractFileIconProvider__IconType)
-void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int64_t));
+void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///
@@ -37,7 +37,7 @@ void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, in
 ///
 /// @param self QAbstractFileIconProvider*
 /// @param param1 enum QAbstractFileIconProvider__IconType
-QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int64_t param1);
+QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractfileiconprovider.html#icon)
 ///

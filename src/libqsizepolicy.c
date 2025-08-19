@@ -14,7 +14,7 @@ QSizePolicy* q_sizepolicy_new3() {
     return QSizePolicy_new3();
 }
 
-QSizePolicy* q_sizepolicy_new4(int64_t horizontal, int64_t vertical) {
+QSizePolicy* q_sizepolicy_new4(int32_t horizontal, int32_t vertical) {
     return QSizePolicy_new4(horizontal, vertical);
 }
 
@@ -22,7 +22,7 @@ QSizePolicy* q_sizepolicy_new5(void* param1) {
     return QSizePolicy_new5((QSizePolicy*)param1);
 }
 
-QSizePolicy* q_sizepolicy_new6(int64_t horizontal, int64_t vertical, int64_t typeVal) {
+QSizePolicy* q_sizepolicy_new6(int32_t horizontal, int32_t vertical, int32_t typeVal) {
     return QSizePolicy_new6(horizontal, vertical, typeVal);
 }
 
@@ -34,27 +34,27 @@ void q_sizepolicy_move_assign(void* self, void* other) {
     QSizePolicy_MoveAssign((QSizePolicy*)self, (QSizePolicy*)other);
 }
 
-int64_t q_sizepolicy_horizontal_policy(void* self) {
+int32_t q_sizepolicy_horizontal_policy(void* self) {
     return QSizePolicy_HorizontalPolicy((QSizePolicy*)self);
 }
 
-int64_t q_sizepolicy_vertical_policy(void* self) {
+int32_t q_sizepolicy_vertical_policy(void* self) {
     return QSizePolicy_VerticalPolicy((QSizePolicy*)self);
 }
 
-int64_t q_sizepolicy_control_type(void* self) {
+int32_t q_sizepolicy_control_type(void* self) {
     return QSizePolicy_ControlType((QSizePolicy*)self);
 }
 
-void q_sizepolicy_set_horizontal_policy(void* self, int64_t d) {
+void q_sizepolicy_set_horizontal_policy(void* self, int32_t d) {
     QSizePolicy_SetHorizontalPolicy((QSizePolicy*)self, d);
 }
 
-void q_sizepolicy_set_vertical_policy(void* self, int64_t d) {
+void q_sizepolicy_set_vertical_policy(void* self, int32_t d) {
     QSizePolicy_SetVerticalPolicy((QSizePolicy*)self, d);
 }
 
-void q_sizepolicy_set_control_type(void* self, int64_t typeVal) {
+void q_sizepolicy_set_control_type(void* self, int32_t typeVal) {
     QSizePolicy_SetControlType((QSizePolicy*)self, typeVal);
 }
 

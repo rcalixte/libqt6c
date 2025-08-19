@@ -347,7 +347,7 @@ bool q_pixmap_operator_not(void* self);
 ///
 /// @param self QPixmap*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_pixmap_metric(void* self, int64_t param1);
+int32_t q_pixmap_metric(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
@@ -355,7 +355,7 @@ int32_t q_pixmap_metric(void* self, int64_t param1);
 ///
 /// @param self QPixmap*
 /// @param callback int32_t fn(QPixmap*, enum QPaintDevice__PaintDeviceMetric)
-void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#metric)
 ///
@@ -363,7 +363,7 @@ void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QPixmap*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_pixmap_qbase_metric(void* self, int64_t param1);
+int32_t q_pixmap_qbase_metric(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#fill)
 ///
@@ -382,7 +382,7 @@ QBitmap* q_pixmap_create_heuristic_mask1(void* self, bool clipTight);
 /// @param self QPixmap*
 /// @param maskColor QColor*
 /// @param mode enum Qt__MaskMode
-QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int64_t mode);
+QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
@@ -390,7 +390,7 @@ QBitmap* q_pixmap_create_mask_from_color2(void* self, void* maskColor, int64_t m
 /// @param w int
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
-QPixmap* q_pixmap_scaled3(void* self, int w, int h, int64_t aspectMode);
+QPixmap* q_pixmap_scaled3(void* self, int w, int h, int32_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
@@ -399,14 +399,14 @@ QPixmap* q_pixmap_scaled3(void* self, int w, int h, int64_t aspectMode);
 /// @param h int
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
-QPixmap* q_pixmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mode);
+QPixmap* q_pixmap_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
 /// @param self QPixmap*
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
-QPixmap* q_pixmap_scaled22(void* self, void* s, int64_t aspectMode);
+QPixmap* q_pixmap_scaled22(void* self, void* s, int32_t aspectMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaled)
 ///
@@ -414,28 +414,28 @@ QPixmap* q_pixmap_scaled22(void* self, void* s, int64_t aspectMode);
 /// @param s QSize*
 /// @param aspectMode enum Qt__AspectRatioMode
 /// @param mode enum Qt__TransformationMode
-QPixmap* q_pixmap_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode);
+QPixmap* q_pixmap_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaledToWidth)
 ///
 /// @param self QPixmap*
 /// @param w int
 /// @param mode enum Qt__TransformationMode
-QPixmap* q_pixmap_scaled_to_width2(void* self, int w, int64_t mode);
+QPixmap* q_pixmap_scaled_to_width2(void* self, int w, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#scaledToHeight)
 ///
 /// @param self QPixmap*
 /// @param h int
 /// @param mode enum Qt__TransformationMode
-QPixmap* q_pixmap_scaled_to_height2(void* self, int h, int64_t mode);
+QPixmap* q_pixmap_scaled_to_height2(void* self, int h, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#transformed)
 ///
 /// @param self QPixmap*
 /// @param param1 QTransform*
 /// @param mode enum Qt__TransformationMode
-QPixmap* q_pixmap_transformed2(void* self, void* param1, int64_t mode);
+QPixmap* q_pixmap_transformed2(void* self, void* param1, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#fromImage)
 ///
@@ -635,7 +635,7 @@ double q_pixmap_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_pixmap_encode_metric_f(int64_t metric, double value);
+int32_t q_pixmap_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDevice
 ///
@@ -734,7 +734,7 @@ void q_pixmap_on_shared_painter(void* self, QPainter* (*callback)());
 /// @param self QPixmap*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_pixmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_pixmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -745,7 +745,7 @@ double q_pixmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metric
 /// @param self QPixmap*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_pixmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_pixmap_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -755,7 +755,7 @@ double q_pixmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 ///
 /// @param self QPixmap*
 /// @param callback double fn(QPixmap*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_pixmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpixmap.html#dtor.QPixmap)
 ///

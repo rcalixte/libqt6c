@@ -128,27 +128,27 @@ void q_networkrequestfactory_clear_query_parameters(void* self) {
     QNetworkRequestFactory_ClearQueryParameters((QNetworkRequestFactory*)self);
 }
 
-void q_networkrequestfactory_set_priority(void* self, int64_t priority) {
+void q_networkrequestfactory_set_priority(void* self, int32_t priority) {
     QNetworkRequestFactory_SetPriority((QNetworkRequestFactory*)self, priority);
 }
 
-int64_t q_networkrequestfactory_priority(void* self) {
+int32_t q_networkrequestfactory_priority(void* self) {
     return QNetworkRequestFactory_Priority((QNetworkRequestFactory*)self);
 }
 
-QVariant* q_networkrequestfactory_attribute(void* self, int64_t attribute) {
+QVariant* q_networkrequestfactory_attribute(void* self, int32_t attribute) {
     return QNetworkRequestFactory_Attribute((QNetworkRequestFactory*)self, attribute);
 }
 
-QVariant* q_networkrequestfactory_attribute2(void* self, int64_t attribute, void* defaultValue) {
+QVariant* q_networkrequestfactory_attribute2(void* self, int32_t attribute, void* defaultValue) {
     return QNetworkRequestFactory_Attribute2((QNetworkRequestFactory*)self, attribute, (QVariant*)defaultValue);
 }
 
-void q_networkrequestfactory_set_attribute(void* self, int64_t attribute, void* value) {
+void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, void* value) {
     QNetworkRequestFactory_SetAttribute((QNetworkRequestFactory*)self, attribute, (QVariant*)value);
 }
 
-void q_networkrequestfactory_clear_attribute(void* self, int64_t attribute) {
+void q_networkrequestfactory_clear_attribute(void* self, int32_t attribute) {
     QNetworkRequestFactory_ClearAttribute((QNetworkRequestFactory*)self, attribute);
 }
 

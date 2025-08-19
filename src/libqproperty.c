@@ -42,7 +42,7 @@ QPropertyBindingError* q_propertybindingerror_new() {
     return QPropertyBindingError_new();
 }
 
-QPropertyBindingError* q_propertybindingerror_new2(int64_t typeVal) {
+QPropertyBindingError* q_propertybindingerror_new2(int32_t typeVal) {
     return QPropertyBindingError_new2(typeVal);
 }
 
@@ -50,7 +50,7 @@ QPropertyBindingError* q_propertybindingerror_new3(void* other) {
     return QPropertyBindingError_new3((QPropertyBindingError*)other);
 }
 
-QPropertyBindingError* q_propertybindingerror_new4(int64_t typeVal, const char* description) {
+QPropertyBindingError* q_propertybindingerror_new4(int32_t typeVal, const char* description) {
     return QPropertyBindingError_new4(typeVal, qstring(description));
 }
 
@@ -62,7 +62,7 @@ bool q_propertybindingerror_has_error(void* self) {
     return QPropertyBindingError_HasError((QPropertyBindingError*)self);
 }
 
-int64_t q_propertybindingerror_type(void* self) {
+int32_t q_propertybindingerror_type(void* self) {
     return QPropertyBindingError_Type((QPropertyBindingError*)self);
 }
 

@@ -23,15 +23,15 @@ void* q_gesture_metacast(void* self, const char* param1) {
     return QGesture_Metacast((QGesture*)self, param1);
 }
 
-int32_t q_gesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_gesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGesture_Metacall((QGesture*)self, param1, param2, param3);
 }
 
-void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_gesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QGesture_OnMetacall((QGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_gesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_gesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QGesture_QBaseMetacall((QGesture*)self, param1, param2, param3);
 }
 
@@ -46,7 +46,7 @@ int64_t q_gesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_gesture_state(void* self) {
+int32_t q_gesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -66,11 +66,11 @@ void q_gesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_gesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_gesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_gesture_gesture_cancel_policy(void* self) {
+int32_t q_gesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -135,7 +135,7 @@ void q_gesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_gesture_kill_timer2(void* self, int64_t id) {
+void q_gesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -239,15 +239,15 @@ bool q_gesture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_gesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_gesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_gesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_gesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -415,15 +415,15 @@ void* q_pangesture_metacast(void* self, const char* param1) {
     return QPanGesture_Metacast((QPanGesture*)self, param1);
 }
 
-int32_t q_pangesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pangesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPanGesture_Metacall((QPanGesture*)self, param1, param2, param3);
 }
 
-void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_pangesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QPanGesture_OnMetacall((QPanGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_pangesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pangesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPanGesture_QBaseMetacall((QPanGesture*)self, param1, param2, param3);
 }
 
@@ -480,7 +480,7 @@ int64_t q_pangesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_pangesture_state(void* self) {
+int32_t q_pangesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -500,11 +500,11 @@ void q_pangesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_pangesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_pangesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_pangesture_gesture_cancel_policy(void* self) {
+int32_t q_pangesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -555,7 +555,7 @@ void q_pangesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pangesture_kill_timer2(void* self, int64_t id) {
+void q_pangesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -659,15 +659,15 @@ bool q_pangesture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pangesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_pangesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_pangesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_pangesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -835,15 +835,15 @@ void* q_pinchgesture_metacast(void* self, const char* param1) {
     return QPinchGesture_Metacast((QPinchGesture*)self, param1);
 }
 
-int32_t q_pinchgesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pinchgesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPinchGesture_Metacall((QPinchGesture*)self, param1, param2, param3);
 }
 
-void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_pinchgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QPinchGesture_OnMetacall((QPinchGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_pinchgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pinchgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPinchGesture_QBaseMetacall((QPinchGesture*)self, param1, param2, param3);
 }
 
@@ -960,7 +960,7 @@ int64_t q_pinchgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_pinchgesture_state(void* self) {
+int32_t q_pinchgesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -980,11 +980,11 @@ void q_pinchgesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_pinchgesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_pinchgesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_pinchgesture_gesture_cancel_policy(void* self) {
+int32_t q_pinchgesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -1035,7 +1035,7 @@ void q_pinchgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pinchgesture_kill_timer2(void* self, int64_t id) {
+void q_pinchgesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1139,15 +1139,15 @@ bool q_pinchgesture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pinchgesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_pinchgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_pinchgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_pinchgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1315,15 +1315,15 @@ void* q_swipegesture_metacast(void* self, const char* param1) {
     return QSwipeGesture_Metacast((QSwipeGesture*)self, param1);
 }
 
-int32_t q_swipegesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_swipegesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSwipeGesture_Metacall((QSwipeGesture*)self, param1, param2, param3);
 }
 
-void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_swipegesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSwipeGesture_OnMetacall((QSwipeGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_swipegesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_swipegesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSwipeGesture_QBaseMetacall((QSwipeGesture*)self, param1, param2, param3);
 }
 
@@ -1334,11 +1334,11 @@ const char* q_swipegesture_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_swipegesture_horizontal_direction(void* self) {
+int32_t q_swipegesture_horizontal_direction(void* self) {
     return QSwipeGesture_HorizontalDirection((QSwipeGesture*)self);
 }
 
-int64_t q_swipegesture_vertical_direction(void* self) {
+int32_t q_swipegesture_vertical_direction(void* self) {
     return QSwipeGesture_VerticalDirection((QSwipeGesture*)self);
 }
 
@@ -1368,7 +1368,7 @@ int64_t q_swipegesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_swipegesture_state(void* self) {
+int32_t q_swipegesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -1388,11 +1388,11 @@ void q_swipegesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_swipegesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_swipegesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_swipegesture_gesture_cancel_policy(void* self) {
+int32_t q_swipegesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -1443,7 +1443,7 @@ void q_swipegesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_swipegesture_kill_timer2(void* self, int64_t id) {
+void q_swipegesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1547,15 +1547,15 @@ bool q_swipegesture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_swipegesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_swipegesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_swipegesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_swipegesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1723,15 +1723,15 @@ void* q_tapgesture_metacast(void* self, const char* param1) {
     return QTapGesture_Metacast((QTapGesture*)self, param1);
 }
 
-int32_t q_tapgesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_tapgesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTapGesture_Metacall((QTapGesture*)self, param1, param2, param3);
 }
 
-void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_tapgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QTapGesture_OnMetacall((QTapGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_tapgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_tapgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTapGesture_QBaseMetacall((QTapGesture*)self, param1, param2, param3);
 }
 
@@ -1768,7 +1768,7 @@ int64_t q_tapgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_tapgesture_state(void* self) {
+int32_t q_tapgesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -1788,11 +1788,11 @@ void q_tapgesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_tapgesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_tapgesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_tapgesture_gesture_cancel_policy(void* self) {
+int32_t q_tapgesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -1843,7 +1843,7 @@ void q_tapgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_tapgesture_kill_timer2(void* self, int64_t id) {
+void q_tapgesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1947,15 +1947,15 @@ bool q_tapgesture_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_tapgesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_tapgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_tapgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_tapgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -2123,15 +2123,15 @@ void* q_tapandholdgesture_metacast(void* self, const char* param1) {
     return QTapAndHoldGesture_Metacast((QTapAndHoldGesture*)self, param1);
 }
 
-int32_t q_tapandholdgesture_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_tapandholdgesture_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTapAndHoldGesture_Metacall((QTapAndHoldGesture*)self, param1, param2, param3);
 }
 
-void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_tapandholdgesture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QTapAndHoldGesture_OnMetacall((QTapAndHoldGesture*)self, (intptr_t)callback);
 }
 
-int32_t q_tapandholdgesture_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_tapandholdgesture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QTapAndHoldGesture_QBaseMetacall((QTapAndHoldGesture*)self, param1, param2, param3);
 }
 
@@ -2176,7 +2176,7 @@ int64_t q_tapandholdgesture_gesture_type(void* self) {
     return QGesture_GestureType((QGesture*)self);
 }
 
-int64_t q_tapandholdgesture_state(void* self) {
+int32_t q_tapandholdgesture_state(void* self) {
     return QGesture_State((QGesture*)self);
 }
 
@@ -2196,11 +2196,11 @@ void q_tapandholdgesture_unset_hot_spot(void* self) {
     QGesture_UnsetHotSpot((QGesture*)self);
 }
 
-void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int64_t policy) {
+void q_tapandholdgesture_set_gesture_cancel_policy(void* self, int32_t policy) {
     QGesture_SetGestureCancelPolicy((QGesture*)self, policy);
 }
 
-int64_t q_tapandholdgesture_gesture_cancel_policy(void* self) {
+int32_t q_tapandholdgesture_gesture_cancel_policy(void* self) {
     return QGesture_GestureCancelPolicy((QGesture*)self);
 }
 
@@ -2251,7 +2251,7 @@ void q_tapandholdgesture_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_tapandholdgesture_kill_timer2(void* self, int64_t id) {
+void q_tapandholdgesture_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -2355,15 +2355,15 @@ bool q_tapandholdgesture_move_to_thread2(void* self, void* thread, void* param2)
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_tapandholdgesture_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_tapandholdgesture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_tapandholdgesture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -2586,7 +2586,7 @@ QPointF* q_gestureevent_map_to_graphics_scene(void* self, void* gesturePoint) {
     return QGestureEvent_MapToGraphicsScene((QGestureEvent*)self, (QPointF*)gesturePoint);
 }
 
-int64_t q_gestureevent_type(void* self) {
+int32_t q_gestureevent_type(void* self) {
     return QEvent_Type((QEvent*)self);
 }
 

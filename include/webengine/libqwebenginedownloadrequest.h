@@ -26,7 +26,7 @@ void* q_webenginedownloadrequest_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webenginedownloadrequest_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webenginedownloadrequest_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -45,7 +45,7 @@ uint32_t q_webenginedownloadrequest_id(void* self);
 /// @param self QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__DownloadState
-int64_t q_webenginedownloadrequest_state(void* self);
+int32_t q_webenginedownloadrequest_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#totalBytes)
 ///
@@ -84,20 +84,20 @@ bool q_webenginedownloadrequest_is_paused(void* self);
 /// @param self QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__SavePageFormat
-int64_t q_webenginedownloadrequest_save_page_format(void* self);
+int32_t q_webenginedownloadrequest_save_page_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#setSavePageFormat)
 ///
 /// @param self QWebEngineDownloadRequest*
 /// @param format enum QWebEngineDownloadRequest__SavePageFormat
-void q_webenginedownloadrequest_set_save_page_format(void* self, int64_t format);
+void q_webenginedownloadrequest_set_save_page_format(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReason)
 ///
 /// @param self QWebEngineDownloadRequest*
 ///
 /// @return enum QWebEngineDownloadRequest__DownloadInterruptReason
-int64_t q_webenginedownloadrequest_interrupt_reason(void* self);
+int32_t q_webenginedownloadrequest_interrupt_reason(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#interruptReasonString)
 ///
@@ -173,13 +173,13 @@ void q_webenginedownloadrequest_resume(void* self);
 ///
 /// @param self QWebEngineDownloadRequest*
 /// @param state enum QWebEngineDownloadRequest__DownloadState
-void q_webenginedownloadrequest_state_changed(void* self, int64_t state);
+void q_webenginedownloadrequest_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#stateChanged)
 ///
 /// @param self QWebEngineDownloadRequest*
 /// @param callback void fn(QWebEngineDownloadRequest*, enum QWebEngineDownloadRequest__DownloadState)
-void q_webenginedownloadrequest_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_webenginedownloadrequest_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#savePageFormatChanged)
 ///
@@ -393,7 +393,7 @@ void q_webenginedownloadrequest_kill_timer(void* self, int id);
 ///
 /// @param self QWebEngineDownloadRequest*
 /// @param id enum Qt__TimerId
-void q_webenginedownloadrequest_kill_timer2(void* self, int64_t id);
+void q_webenginedownloadrequest_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -570,7 +570,7 @@ bool q_webenginedownloadrequest_move_to_thread2(void* self, void* thread, void* 
 /// @param self QWebEngineDownloadRequest*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webenginedownloadrequest_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webenginedownloadrequest_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -581,7 +581,7 @@ int32_t q_webenginedownloadrequest_start_timer22(void* self, int interval, int64
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -592,7 +592,7 @@ QMetaObject__Connection* q_webenginedownloadrequest_connect5(void* sender, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginedownloadrequest_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webenginedownloadrequest_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

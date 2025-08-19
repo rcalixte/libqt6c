@@ -35,13 +35,13 @@ void* q_rasterwindow_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_rasterwindow_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_rasterwindow_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QRasterWindow*
 /// @param callback int32_t fn(QRasterWindow*, enum QMetaObject__Call, int, void*)
-void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_rasterwindow_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_rasterwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -62,7 +62,7 @@ const char* q_rasterwindow_tr(const char* s);
 ///
 /// @param self QRasterWindow*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_rasterwindow_metric(void* self, int64_t metric);
+int32_t q_rasterwindow_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
@@ -70,7 +70,7 @@ int32_t q_rasterwindow_metric(void* self, int64_t metric);
 ///
 /// @param self QRasterWindow*
 /// @param callback int32_t fn(QRasterWindow*, enum QPaintDevice__PaintDeviceMetric)
-void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#metric)
 ///
@@ -78,7 +78,7 @@ void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QRasterWindow*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
-int32_t q_rasterwindow_qbase_metric(void* self, int64_t metric);
+int32_t q_rasterwindow_qbase_metric(void* self, int32_t metric);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qrasterwindow.html#redirected)
 ///
@@ -170,7 +170,7 @@ void q_rasterwindow_update3(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param surfaceType enum QSurface__SurfaceType
-void q_rasterwindow_set_surface_type(void* self, int64_t surfaceType);
+void q_rasterwindow_set_surface_type(void* self, int32_t surfaceType);
 
 /// Inherited from QWindow
 ///
@@ -186,7 +186,7 @@ bool q_rasterwindow_is_visible(void* self);
 /// @param self QRasterWindow*
 ///
 /// @return enum QWindow__Visibility
-int64_t q_rasterwindow_visibility(void* self);
+int32_t q_rasterwindow_visibility(void* self);
 
 /// Inherited from QWindow
 ///
@@ -194,7 +194,7 @@ int64_t q_rasterwindow_visibility(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param v enum QWindow__Visibility
-void q_rasterwindow_set_visibility(void* self, int64_t v);
+void q_rasterwindow_set_visibility(void* self, int32_t v);
 
 /// Inherited from QWindow
 ///
@@ -246,7 +246,7 @@ bool q_rasterwindow_is_modal(void* self);
 /// @param self QRasterWindow*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_rasterwindow_modality(void* self);
+int32_t q_rasterwindow_modality(void* self);
 
 /// Inherited from QWindow
 ///
@@ -254,7 +254,7 @@ int64_t q_rasterwindow_modality(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param modality enum Qt__WindowModality
-void q_rasterwindow_set_modality(void* self, int64_t modality);
+void q_rasterwindow_set_modality(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
@@ -357,7 +357,7 @@ bool q_rasterwindow_is_active(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_rasterwindow_report_content_orientation_change(void* self, int64_t orientation);
+void q_rasterwindow_report_content_orientation_change(void* self, int32_t orientation);
 
 /// Inherited from QWindow
 ///
@@ -366,7 +366,7 @@ void q_rasterwindow_report_content_orientation_change(void* self, int64_t orient
 /// @param self QRasterWindow*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_rasterwindow_content_orientation(void* self);
+int32_t q_rasterwindow_content_orientation(void* self);
 
 /// Inherited from QWindow
 ///
@@ -382,7 +382,7 @@ double q_rasterwindow_device_pixel_ratio(void* self);
 /// @param self QRasterWindow*
 ///
 /// @return enum Qt__WindowState
-int64_t q_rasterwindow_window_state(void* self);
+int32_t q_rasterwindow_window_state(void* self);
 
 /// Inherited from QWindow
 ///
@@ -399,7 +399,7 @@ int64_t q_rasterwindow_window_states(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param state enum Qt__WindowState
-void q_rasterwindow_set_window_state(void* self, int64_t state);
+void q_rasterwindow_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWindow
 ///
@@ -984,7 +984,7 @@ void q_rasterwindow_on_screen_changed(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QRasterWindow*
 /// @param modality enum Qt__WindowModality
-void q_rasterwindow_modality_changed(void* self, int64_t modality);
+void q_rasterwindow_modality_changed(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
@@ -992,7 +992,7 @@ void q_rasterwindow_modality_changed(void* self, int64_t modality);
 ///
 /// @param self QRasterWindow*
 /// @param callback void fn(QRasterWindow*, enum Qt__WindowModality)
-void q_rasterwindow_on_modality_changed(void* self, void (*callback)(void*, int64_t));
+void q_rasterwindow_on_modality_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1000,7 +1000,7 @@ void q_rasterwindow_on_modality_changed(void* self, void (*callback)(void*, int6
 ///
 /// @param self QRasterWindow*
 /// @param windowState enum Qt__WindowState
-void q_rasterwindow_window_state_changed(void* self, int64_t windowState);
+void q_rasterwindow_window_state_changed(void* self, int32_t windowState);
 
 /// Inherited from QWindow
 ///
@@ -1008,7 +1008,7 @@ void q_rasterwindow_window_state_changed(void* self, int64_t windowState);
 ///
 /// @param self QRasterWindow*
 /// @param callback void fn(QRasterWindow*, enum Qt__WindowState)
-void q_rasterwindow_on_window_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_rasterwindow_on_window_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1176,7 +1176,7 @@ void q_rasterwindow_on_visible_changed(void* self, void (*callback)(void*, bool)
 ///
 /// @param self QRasterWindow*
 /// @param visibility enum QWindow__Visibility
-void q_rasterwindow_visibility_changed(void* self, int64_t visibility);
+void q_rasterwindow_visibility_changed(void* self, int32_t visibility);
 
 /// Inherited from QWindow
 ///
@@ -1184,7 +1184,7 @@ void q_rasterwindow_visibility_changed(void* self, int64_t visibility);
 ///
 /// @param self QRasterWindow*
 /// @param callback void fn(QRasterWindow*, enum QWindow__Visibility)
-void q_rasterwindow_on_visibility_changed(void* self, void (*callback)(void*, int64_t));
+void q_rasterwindow_on_visibility_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1207,7 +1207,7 @@ void q_rasterwindow_on_active_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QRasterWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_rasterwindow_content_orientation_changed(void* self, int64_t orientation);
+void q_rasterwindow_content_orientation_changed(void* self, int32_t orientation);
 
 /// Inherited from QWindow
 ///
@@ -1215,7 +1215,7 @@ void q_rasterwindow_content_orientation_changed(void* self, int64_t orientation)
 ///
 /// @param self QRasterWindow*
 /// @param callback void fn(QRasterWindow*, enum Qt__ScreenOrientation)
-void q_rasterwindow_on_content_orientation_changed(void* self, void (*callback)(void*, int64_t));
+void q_rasterwindow_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1271,7 +1271,7 @@ void q_rasterwindow_on_transient_parent_changed(void* self, void (*callback)(voi
 ///
 /// @param self QRasterWindow*
 /// @param mode enum QWindow__AncestorMode
-QWindow* q_rasterwindow_parent1(void* self, int64_t mode);
+QWindow* q_rasterwindow_parent1(void* self, int32_t mode);
 
 /// Inherited from QWindow
 ///
@@ -1289,7 +1289,7 @@ void q_rasterwindow_set_flag2(void* self, int64_t param1, bool on);
 /// @param self QRasterWindow*
 /// @param child QWindow*
 /// @param mode enum QWindow__AncestorMode
-bool q_rasterwindow_is_ancestor_of2(void* self, void* child, int64_t mode);
+bool q_rasterwindow_is_ancestor_of2(void* self, void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -1381,7 +1381,7 @@ void q_rasterwindow_kill_timer(void* self, int id);
 ///
 /// @param self QRasterWindow*
 /// @param id enum Qt__TimerId
-void q_rasterwindow_kill_timer2(void* self, int64_t id);
+void q_rasterwindow_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1543,7 +1543,7 @@ bool q_rasterwindow_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QRasterWindow*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_rasterwindow_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_rasterwindow_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1554,7 +1554,7 @@ int32_t q_rasterwindow_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_rasterwindow_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_rasterwindow_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1565,7 +1565,7 @@ QMetaObject__Connection* q_rasterwindow_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_rasterwindow_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_rasterwindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1590,7 +1590,7 @@ void q_rasterwindow_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QRasterWindow*
 ///
 /// @return enum QSurface__SurfaceClass
-int64_t q_rasterwindow_surface_class(void* self);
+int32_t q_rasterwindow_surface_class(void* self);
 
 /// Inherited from QSurface
 ///
@@ -1688,7 +1688,7 @@ double q_rasterwindow_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_rasterwindow_encode_metric_f(int64_t metric, double value);
+int32_t q_rasterwindow_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QPaintDeviceWindow
 ///
@@ -1789,7 +1789,7 @@ void q_rasterwindow_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QRasterWindow*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_rasterwindow_surface_type(void* self);
+int32_t q_rasterwindow_surface_type(void* self);
 
 /// Inherited from QWindow
 ///
@@ -1800,7 +1800,7 @@ int64_t q_rasterwindow_surface_type(void* self);
 /// @param self QRasterWindow*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_rasterwindow_qbase_surface_type(void* self);
+int32_t q_rasterwindow_qbase_surface_type(void* self);
 
 /// Inherited from QWindow
 ///
@@ -1809,8 +1809,8 @@ int64_t q_rasterwindow_qbase_surface_type(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QRasterWindow*
-/// @param callback int64_t fn()
-void q_rasterwindow_on_surface_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)());
 
 /// Inherited from QWindow
 ///
@@ -2833,7 +2833,7 @@ void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 /// @param self QRasterWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_rasterwindow_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_rasterwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -2844,7 +2844,7 @@ double q_rasterwindow_get_decoded_metric_f(void* self, int64_t metricA, int64_t 
 /// @param self QRasterWindow*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -2854,7 +2854,7 @@ double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int64_t metricA, in
 ///
 /// @param self QRasterWindow*
 /// @param callback double fn(QRasterWindow*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

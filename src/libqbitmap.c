@@ -74,7 +74,7 @@ QBitmap* q_bitmap_from_image2(void* image, int64_t flags) {
     return QBitmap_FromImage2((QImage*)image, flags);
 }
 
-QBitmap* q_bitmap_from_data3(void* size, unsigned char* bits, int64_t monoFormat) {
+QBitmap* q_bitmap_from_data3(void* size, unsigned char* bits, int32_t monoFormat) {
     return QBitmap_FromData3((QSize*)size, bits, monoFormat);
 }
 
@@ -242,35 +242,35 @@ QBitmap* q_bitmap_create_heuristic_mask1(void* self, bool clipTight) {
     return QPixmap_CreateHeuristicMask1((QPixmap*)self, clipTight);
 }
 
-QBitmap* q_bitmap_create_mask_from_color2(void* self, void* maskColor, int64_t mode) {
+QBitmap* q_bitmap_create_mask_from_color2(void* self, void* maskColor, int32_t mode) {
     return QPixmap_CreateMaskFromColor2((QPixmap*)self, (QColor*)maskColor, mode);
 }
 
-QPixmap* q_bitmap_scaled3(void* self, int w, int h, int64_t aspectMode) {
+QPixmap* q_bitmap_scaled3(void* self, int w, int h, int32_t aspectMode) {
     return QPixmap_Scaled3((QPixmap*)self, w, h, aspectMode);
 }
 
-QPixmap* q_bitmap_scaled4(void* self, int w, int h, int64_t aspectMode, int64_t mode) {
+QPixmap* q_bitmap_scaled4(void* self, int w, int h, int32_t aspectMode, int32_t mode) {
     return QPixmap_Scaled4((QPixmap*)self, w, h, aspectMode, mode);
 }
 
-QPixmap* q_bitmap_scaled22(void* self, void* s, int64_t aspectMode) {
+QPixmap* q_bitmap_scaled22(void* self, void* s, int32_t aspectMode) {
     return QPixmap_Scaled22((QPixmap*)self, (QSize*)s, aspectMode);
 }
 
-QPixmap* q_bitmap_scaled32(void* self, void* s, int64_t aspectMode, int64_t mode) {
+QPixmap* q_bitmap_scaled32(void* self, void* s, int32_t aspectMode, int32_t mode) {
     return QPixmap_Scaled32((QPixmap*)self, (QSize*)s, aspectMode, mode);
 }
 
-QPixmap* q_bitmap_scaled_to_width2(void* self, int w, int64_t mode) {
+QPixmap* q_bitmap_scaled_to_width2(void* self, int w, int32_t mode) {
     return QPixmap_ScaledToWidth2((QPixmap*)self, w, mode);
 }
 
-QPixmap* q_bitmap_scaled_to_height2(void* self, int h, int64_t mode) {
+QPixmap* q_bitmap_scaled_to_height2(void* self, int h, int32_t mode) {
     return QPixmap_ScaledToHeight2((QPixmap*)self, h, mode);
 }
 
-QPixmap* q_bitmap_transformed2(void* self, void* param1, int64_t mode) {
+QPixmap* q_bitmap_transformed2(void* self, void* param1, int32_t mode) {
     return QPixmap_Transformed2((QPixmap*)self, (QTransform*)param1, mode);
 }
 
@@ -374,7 +374,7 @@ double q_bitmap_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_bitmap_encode_metric_f(int64_t metric, double value) {
+int32_t q_bitmap_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -402,15 +402,15 @@ void q_bitmap_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
     QBitmap_OnPaintEngine((QBitmap*)self, (intptr_t)callback);
 }
 
-int32_t q_bitmap_metric(void* self, int64_t param1) {
+int32_t q_bitmap_metric(void* self, int32_t param1) {
     return QBitmap_Metric((QBitmap*)self, param1);
 }
 
-int32_t q_bitmap_qbase_metric(void* self, int64_t param1) {
+int32_t q_bitmap_qbase_metric(void* self, int32_t param1) {
     return QBitmap_QBaseMetric((QBitmap*)self, param1);
 }
 
-void q_bitmap_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_bitmap_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QBitmap_OnMetric((QBitmap*)self, (intptr_t)callback);
 }
 
@@ -450,15 +450,15 @@ void q_bitmap_on_shared_painter(void* self, QPainter* (*callback)()) {
     QBitmap_OnSharedPainter((QBitmap*)self, (intptr_t)callback);
 }
 
-double q_bitmap_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_bitmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QBitmap_GetDecodedMetricF((QBitmap*)self, metricA, metricB);
 }
 
-double q_bitmap_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_bitmap_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QBitmap_QBaseGetDecodedMetricF((QBitmap*)self, metricA, metricB);
 }
 
-void q_bitmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_bitmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QBitmap_OnGetDecodedMetricF((QBitmap*)self, (intptr_t)callback);
 }
 

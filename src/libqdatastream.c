@@ -27,11 +27,11 @@ bool q_datastream_at_end(void* self) {
     return QDataStream_AtEnd((QDataStream*)self);
 }
 
-int64_t q_datastream_status(void* self) {
+int32_t q_datastream_status(void* self) {
     return QDataStream_Status((QDataStream*)self);
 }
 
-void q_datastream_set_status(void* self, int64_t status) {
+void q_datastream_set_status(void* self, int32_t status) {
     QDataStream_SetStatus((QDataStream*)self, status);
 }
 
@@ -39,19 +39,19 @@ void q_datastream_reset_status(void* self) {
     QDataStream_ResetStatus((QDataStream*)self);
 }
 
-int64_t q_datastream_floating_point_precision(void* self) {
+int32_t q_datastream_floating_point_precision(void* self) {
     return QDataStream_FloatingPointPrecision((QDataStream*)self);
 }
 
-void q_datastream_set_floating_point_precision(void* self, int64_t precision) {
+void q_datastream_set_floating_point_precision(void* self, int32_t precision) {
     QDataStream_SetFloatingPointPrecision((QDataStream*)self, precision);
 }
 
-int64_t q_datastream_byte_order(void* self) {
+int32_t q_datastream_byte_order(void* self) {
     return QDataStream_ByteOrder((QDataStream*)self);
 }
 
-void q_datastream_set_byte_order(void* self, int64_t byteOrder) {
+void q_datastream_set_byte_order(void* self, int32_t byteOrder) {
     QDataStream_SetByteOrder((QDataStream*)self, byteOrder);
 }
 

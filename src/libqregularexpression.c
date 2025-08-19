@@ -120,11 +120,11 @@ QRegularExpressionMatch* q_regularexpression_match22(void* self, const char* sub
     return QRegularExpression_Match22((QRegularExpression*)self, qstring(subject), offset);
 }
 
-QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subject, int64_t offset, int64_t matchType) {
+QRegularExpressionMatch* q_regularexpression_match3(void* self, const char* subject, int64_t offset, int32_t matchType) {
     return QRegularExpression_Match3((QRegularExpression*)self, qstring(subject), offset, matchType);
 }
 
-QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int64_t matchType, int64_t matchOptions) {
+QRegularExpressionMatch* q_regularexpression_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions) {
     return QRegularExpression_Match4((QRegularExpression*)self, qstring(subject), offset, matchType, matchOptions);
 }
 
@@ -132,11 +132,11 @@ QRegularExpressionMatchIterator* q_regularexpression_global_match22(void* self, 
     return QRegularExpression_GlobalMatch22((QRegularExpression*)self, qstring(subject), offset);
 }
 
-QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, const char* subject, int64_t offset, int64_t matchType) {
+QRegularExpressionMatchIterator* q_regularexpression_global_match3(void* self, const char* subject, int64_t offset, int32_t matchType) {
     return QRegularExpression_GlobalMatch3((QRegularExpression*)self, qstring(subject), offset, matchType);
 }
 
-QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int64_t matchType, int64_t matchOptions) {
+QRegularExpressionMatchIterator* q_regularexpression_global_match4(void* self, const char* subject, int64_t offset, int32_t matchType, int64_t matchOptions) {
     return QRegularExpression_GlobalMatch4((QRegularExpression*)self, qstring(subject), offset, matchType, matchOptions);
 }
 
@@ -171,7 +171,7 @@ QRegularExpression* q_regularexpressionmatch_regular_expression(void* self) {
     return QRegularExpressionMatch_RegularExpression((QRegularExpressionMatch*)self);
 }
 
-int64_t q_regularexpressionmatch_match_type(void* self) {
+int32_t q_regularexpressionmatch_match_type(void* self) {
     return QRegularExpressionMatch_MatchType((QRegularExpressionMatch*)self);
 }
 
@@ -319,7 +319,7 @@ QRegularExpression* q_regularexpressionmatchiterator_regular_expression(void* se
     return QRegularExpressionMatchIterator_RegularExpression((QRegularExpressionMatchIterator*)self);
 }
 
-int64_t q_regularexpressionmatchiterator_match_type(void* self) {
+int32_t q_regularexpressionmatchiterator_match_type(void* self) {
     return QRegularExpressionMatchIterator_MatchType((QRegularExpressionMatchIterator*)self);
 }
 

@@ -16,7 +16,7 @@
 /// q_graphicssceneevent_new constructs a new QGraphicsSceneEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneEvent* q_graphicssceneevent_new(int64_t typeVal);
+QGraphicsSceneEvent* q_graphicssceneevent_new(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicssceneevent.html#widget)
 ///
@@ -47,7 +47,7 @@ void q_graphicssceneevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicssceneevent_type(void* self);
+int32_t q_graphicssceneevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -185,7 +185,7 @@ QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new();
 /// q_graphicsscenemouseevent_new2 constructs a new QGraphicsSceneMouseEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int64_t typeVal);
+QGraphicsSceneMouseEvent* q_graphicsscenemouseevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#pos)
 ///
@@ -336,13 +336,13 @@ void q_graphicsscenemouseevent_set_modifiers(void* self, int64_t modifiers);
 /// @param self QGraphicsSceneMouseEvent*
 ///
 /// @return enum Qt__MouseEventSource
-int64_t q_graphicsscenemouseevent_source(void* self);
+int32_t q_graphicsscenemouseevent_source(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#setSource)
 ///
 /// @param self QGraphicsSceneMouseEvent*
 /// @param source enum Qt__MouseEventSource
-void q_graphicsscenemouseevent_set_source(void* self, int64_t source);
+void q_graphicsscenemouseevent_set_source(void* self, int32_t source);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenemouseevent.html#flags)
 ///
@@ -394,7 +394,7 @@ void q_graphicsscenemouseevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneMouseEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenemouseevent_type(void* self);
+int32_t q_graphicsscenemouseevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -532,7 +532,7 @@ QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new();
 /// q_graphicsscenewheelevent_new2 constructs a new QGraphicsSceneWheelEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int64_t typeVal);
+QGraphicsSceneWheelEvent* q_graphicsscenewheelevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#pos)
 ///
@@ -609,26 +609,26 @@ void q_graphicsscenewheelevent_set_delta(void* self, int delta);
 /// @param self QGraphicsSceneWheelEvent*
 ///
 /// @return enum Qt__Orientation
-int64_t q_graphicsscenewheelevent_orientation(void* self);
+int32_t q_graphicsscenewheelevent_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setOrientation)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param orientation enum Qt__Orientation
-void q_graphicsscenewheelevent_set_orientation(void* self, int64_t orientation);
+void q_graphicsscenewheelevent_set_orientation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#phase)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 ///
 /// @return enum Qt__ScrollPhase
-int64_t q_graphicsscenewheelevent_phase(void* self);
+int32_t q_graphicsscenewheelevent_phase(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#setPhase)
 ///
 /// @param self QGraphicsSceneWheelEvent*
 /// @param scrollPhase enum Qt__ScrollPhase
-void q_graphicsscenewheelevent_set_phase(void* self, int64_t scrollPhase);
+void q_graphicsscenewheelevent_set_phase(void* self, int32_t scrollPhase);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenewheelevent.html#pixelDelta)
 ///
@@ -689,7 +689,7 @@ void q_graphicsscenewheelevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneWheelEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenewheelevent_type(void* self);
+int32_t q_graphicsscenewheelevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -827,7 +827,7 @@ QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new();
 /// q_graphicsscenecontextmenuevent_new2 constructs a new QGraphicsSceneContextMenuEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int64_t typeVal);
+QGraphicsSceneContextMenuEvent* q_graphicsscenecontextmenuevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#pos)
 ///
@@ -880,13 +880,13 @@ void q_graphicsscenecontextmenuevent_set_modifiers(void* self, int64_t modifiers
 /// @param self QGraphicsSceneContextMenuEvent*
 ///
 /// @return enum QGraphicsSceneContextMenuEvent__Reason
-int64_t q_graphicsscenecontextmenuevent_reason(void* self);
+int32_t q_graphicsscenecontextmenuevent_reason(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenecontextmenuevent.html#setReason)
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param reason enum QGraphicsSceneContextMenuEvent__Reason
-void q_graphicsscenecontextmenuevent_set_reason(void* self, int64_t reason);
+void q_graphicsscenecontextmenuevent_set_reason(void* self, int32_t reason);
 
 /// Inherited from QGraphicsSceneEvent
 ///
@@ -925,7 +925,7 @@ void q_graphicsscenecontextmenuevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneContextMenuEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenecontextmenuevent_type(void* self);
+int32_t q_graphicsscenecontextmenuevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1063,7 +1063,7 @@ QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new();
 /// q_graphicsscenehoverevent_new2 constructs a new QGraphicsSceneHoverEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int64_t typeVal);
+QGraphicsSceneHoverEvent* q_graphicsscenehoverevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehoverevent.html#pos)
 ///
@@ -1181,7 +1181,7 @@ void q_graphicsscenehoverevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneHoverEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenehoverevent_type(void* self);
+int32_t q_graphicsscenehoverevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1319,7 +1319,7 @@ QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new();
 /// q_graphicsscenehelpevent_new2 constructs a new QGraphicsSceneHelpEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int64_t typeVal);
+QGraphicsSceneHelpEvent* q_graphicsscenehelpevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenehelpevent.html#scenePos)
 ///
@@ -1380,7 +1380,7 @@ void q_graphicsscenehelpevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneHelpEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenehelpevent_type(void* self);
+int32_t q_graphicsscenehelpevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1518,7 +1518,7 @@ QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new();
 /// q_graphicsscenedragdropevent_new2 constructs a new QGraphicsSceneDragDropEvent object.
 ///
 /// @param typeVal enum QEvent__Type
-QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int64_t typeVal);
+QGraphicsSceneDragDropEvent* q_graphicsscenedragdropevent_new2(int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#pos)
 ///
@@ -1597,13 +1597,13 @@ void q_graphicsscenedragdropevent_set_possible_actions(void* self, int64_t actio
 /// @param self QGraphicsSceneDragDropEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_graphicsscenedragdropevent_proposed_action(void* self);
+int32_t q_graphicsscenedragdropevent_proposed_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setProposedAction)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param action enum Qt__DropAction
-void q_graphicsscenedragdropevent_set_proposed_action(void* self, int64_t action);
+void q_graphicsscenedragdropevent_set_proposed_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#acceptProposedAction)
 ///
@@ -1615,13 +1615,13 @@ void q_graphicsscenedragdropevent_accept_proposed_action(void* self);
 /// @param self QGraphicsSceneDragDropEvent*
 ///
 /// @return enum Qt__DropAction
-int64_t q_graphicsscenedragdropevent_drop_action(void* self);
+int32_t q_graphicsscenedragdropevent_drop_action(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#setDropAction)
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param action enum Qt__DropAction
-void q_graphicsscenedragdropevent_set_drop_action(void* self, int64_t action);
+void q_graphicsscenedragdropevent_set_drop_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscenedragdropevent.html#source)
 ///
@@ -1682,7 +1682,7 @@ void q_graphicsscenedragdropevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneDragDropEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenedragdropevent_type(void* self);
+int32_t q_graphicsscenedragdropevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1876,7 +1876,7 @@ void q_graphicssceneresizeevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneResizeEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicssceneresizeevent_type(void* self);
+int32_t q_graphicssceneresizeevent_type(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2070,7 +2070,7 @@ void q_graphicsscenemoveevent_set_timestamp(void* self, uint64_t ts);
 /// @param self QGraphicsSceneMoveEvent*
 ///
 /// @return enum QEvent__Type
-int64_t q_graphicsscenemoveevent_type(void* self);
+int32_t q_graphicsscenemoveevent_type(void* self);
 
 /// Inherited from QEvent
 ///

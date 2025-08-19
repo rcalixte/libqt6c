@@ -35,13 +35,13 @@ void* q_layout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_layout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_layout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QLayout*
 /// @param callback int32_t fn(QLayout*, enum QMetaObject__Call, int, void*)
-void q_layout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_layout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_layout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_layout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_layout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -157,14 +157,14 @@ bool q_layout_set_alignment2(void* self, void* l, int64_t alignment);
 ///
 /// @param self QLayout*
 /// @param sizeConstraint enum QLayout__SizeConstraint
-void q_layout_set_size_constraint(void* self, int64_t sizeConstraint);
+void q_layout_set_size_constraint(void* self, int32_t sizeConstraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#sizeConstraint)
 ///
 /// @param self QLayout*
 ///
 /// @return enum QLayout__SizeConstraint
-int64_t q_layout_size_constraint(void* self);
+int32_t q_layout_size_constraint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlayout.html#setMenuBar)
 ///
@@ -839,7 +839,7 @@ void q_layout_kill_timer(void* self, int id);
 ///
 /// @param self QLayout*
 /// @param id enum Qt__TimerId
-void q_layout_kill_timer2(void* self, int64_t id);
+void q_layout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1016,7 +1016,7 @@ bool q_layout_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_layout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_layout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1027,7 +1027,7 @@ int32_t q_layout_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1038,7 +1038,7 @@ QMetaObject__Connection* q_layout_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_layout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_layout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

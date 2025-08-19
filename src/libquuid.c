@@ -31,7 +31,7 @@ QUuid* q_uuid_new7(void* param1) {
     return QUuid_new7((QUuid*)param1);
 }
 
-QUuid* q_uuid_new8(void* id128, int64_t order) {
+QUuid* q_uuid_new8(void* id128, int32_t order) {
     return QUuid_new8((QUuid__Id128Bytes*)id128, order);
 }
 
@@ -99,33 +99,33 @@ QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData) {
     return QUuid_CreateUuidV3((QUuid*)ns, (QByteArrayView*)&baseData_string);
 }
 
-int64_t q_uuid_variant(void* self) {
+int32_t q_uuid_variant(void* self) {
     return QUuid_Variant((QUuid*)self);
 }
 
-int64_t q_uuid_version(void* self) {
+int32_t q_uuid_version(void* self) {
     return QUuid_Version((QUuid*)self);
 }
 
-const char* q_uuid_to_string1(void* self, int64_t mode) {
+const char* q_uuid_to_string1(void* self, int32_t mode) {
     libqt_string _str = QUuid_ToString1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* q_uuid_to_byte_array1(void* self, int64_t mode) {
+char* q_uuid_to_byte_array1(void* self, int32_t mode) {
     libqt_string _str = QUuid_ToByteArray1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int64_t order) {
+QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int32_t order) {
     return QUuid_ToBytes1((QUuid*)self, order);
 }
 
-QUuid* q_uuid_from_bytes2(void* bytes, int64_t order) {
+QUuid* q_uuid_from_bytes2(void* bytes, int32_t order) {
     return QUuid_FromBytes2(bytes, order);
 }
 

@@ -140,7 +140,7 @@ bool q_glyphrun_is_right_to_left(void* self);
 ///
 /// @param self QGlyphRun*
 /// @param flag enum QGlyphRun__GlyphRunFlag
-void q_glyphrun_set_flag(void* self, int64_t flag);
+void q_glyphrun_set_flag(void* self, int32_t flag);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#setFlags)
 ///
@@ -200,7 +200,7 @@ bool q_glyphrun_is_empty(void* self);
 /// @param self QGlyphRun*
 /// @param flag enum QGlyphRun__GlyphRunFlag
 /// @param enabled bool
-void q_glyphrun_set_flag2(void* self, int64_t flag, bool enabled);
+void q_glyphrun_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qglyphrun.html#dtor.QGlyphRun)
 ///

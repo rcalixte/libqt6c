@@ -35,13 +35,13 @@ void* q_imagecapture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_imagecapture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QImageCapture*
 /// @param callback int32_t fn(QImageCapture*, enum QMetaObject__Call, int, void*)
-void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_imagecapture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_imagecapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -73,7 +73,7 @@ QMediaCaptureSession* q_imagecapture_capture_session(void* self);
 /// @param self QImageCapture*
 ///
 /// @return enum QImageCapture__Error
-int64_t q_imagecapture_error(void* self);
+int32_t q_imagecapture_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorString)
 ///
@@ -92,33 +92,33 @@ bool q_imagecapture_is_ready_for_capture(void* self);
 /// @param self QImageCapture*
 ///
 /// @return enum QImageCapture__FileFormat
-int64_t q_imagecapture_file_format(void* self);
+int32_t q_imagecapture_file_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#setFileFormat)
 ///
 /// @param self QImageCapture*
 /// @param format enum QImageCapture__FileFormat
-void q_imagecapture_set_file_format(void* self, int64_t format);
+void q_imagecapture_set_file_format(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#supportedFormats)
 ///
 ///
 /// @return libqt_list of enum QImageCapture__FileFormat
-libqt_list /* of int64_t */ q_imagecapture_supported_formats();
+libqt_list /* of int32_t */ q_imagecapture_supported_formats();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param c enum QImageCapture__FileFormat
-const char* q_imagecapture_file_format_name(int64_t c);
+const char* q_imagecapture_file_format_name(int32_t c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#fileFormatDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param c enum QImageCapture__FileFormat
-const char* q_imagecapture_file_format_description(int64_t c);
+const char* q_imagecapture_file_format_description(int32_t c);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#resolution)
 ///
@@ -143,13 +143,13 @@ void q_imagecapture_set_resolution2(void* self, int width, int height);
 /// @param self QImageCapture*
 ///
 /// @return enum QImageCapture__Quality
-int64_t q_imagecapture_quality(void* self);
+int32_t q_imagecapture_quality(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#setQuality)
 ///
 /// @param self QImageCapture*
 /// @param quality enum QImageCapture__Quality
-void q_imagecapture_set_quality(void* self, int64_t quality);
+void q_imagecapture_set_quality(void* self, int32_t quality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#metaData)
 ///
@@ -195,13 +195,13 @@ void q_imagecapture_on_error_changed(void* self, void (*callback)(void*));
 /// @param id int
 /// @param errorVal enum QImageCapture__Error
 /// @param errorString const char*
-void q_imagecapture_error_occurred(void* self, int id, int64_t errorVal, const char* errorString);
+void q_imagecapture_error_occurred(void* self, int id, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#errorOccurred)
 ///
 /// @param self QImageCapture*
 /// @param callback void fn(QImageCapture*, int, enum QImageCapture__Error, const char*)
-void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int64_t, const char*));
+void q_imagecapture_on_error_occurred(void* self, void (*callback)(void*, int, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qimagecapture.html#readyForCaptureChanged)
 ///
@@ -436,7 +436,7 @@ void q_imagecapture_kill_timer(void* self, int id);
 ///
 /// @param self QImageCapture*
 /// @param id enum Qt__TimerId
-void q_imagecapture_kill_timer2(void* self, int64_t id);
+void q_imagecapture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -613,7 +613,7 @@ bool q_imagecapture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QImageCapture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_imagecapture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_imagecapture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -624,7 +624,7 @@ int32_t q_imagecapture_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_imagecapture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_imagecapture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -635,7 +635,7 @@ QMetaObject__Connection* q_imagecapture_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_imagecapture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_imagecapture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

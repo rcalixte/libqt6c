@@ -35,13 +35,13 @@ void* q_windowcapture_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_windowcapture_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_windowcapture_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QWindowCapture*
 /// @param callback int32_t fn(QWindowCapture*, enum QMetaObject__Call, int, void*)
-void q_windowcapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_windowcapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_windowcapture_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_windowcapture_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_windowcapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -88,7 +88,7 @@ bool q_windowcapture_is_active(void* self);
 /// @param self QWindowCapture*
 ///
 /// @return enum QWindowCapture__Error
-int64_t q_windowcapture_error(void* self);
+int32_t q_windowcapture_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorString)
 ///
@@ -153,13 +153,13 @@ void q_windowcapture_on_error_changed(void* self, void (*callback)(void*));
 /// @param self QWindowCapture*
 /// @param errorVal enum QWindowCapture__Error
 /// @param errorString const char*
-void q_windowcapture_error_occurred(void* self, int64_t errorVal, const char* errorString);
+void q_windowcapture_error_occurred(void* self, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindowcapture.html#errorOccurred)
 ///
 /// @param self QWindowCapture*
 /// @param callback void fn(QWindowCapture*, enum QWindowCapture__Error, const char*)
-void q_windowcapture_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
+void q_windowcapture_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -268,7 +268,7 @@ void q_windowcapture_kill_timer(void* self, int id);
 ///
 /// @param self QWindowCapture*
 /// @param id enum Qt__TimerId
-void q_windowcapture_kill_timer2(void* self, int64_t id);
+void q_windowcapture_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -445,7 +445,7 @@ bool q_windowcapture_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWindowCapture*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_windowcapture_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_windowcapture_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -456,7 +456,7 @@ int32_t q_windowcapture_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_windowcapture_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_windowcapture_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -467,7 +467,7 @@ QMetaObject__Connection* q_windowcapture_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_windowcapture_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_windowcapture_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

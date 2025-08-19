@@ -18,7 +18,7 @@
 /// @param self QCborError*
 ///
 /// @return enum QCborError__Code
-int64_t q_cborerror_to_q_cbor_error___code(void* self);
+int32_t q_cborerror_to_q_cbor_error___code(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#toString)
 ///

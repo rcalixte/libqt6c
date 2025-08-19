@@ -31,7 +31,7 @@ QTextLength* q_textlength_new3();
 ///
 /// @param typeVal enum QTextLength__Type
 /// @param value double
-QTextLength* q_textlength_new4(int64_t typeVal, double value);
+QTextLength* q_textlength_new4(int32_t typeVal, double value);
 
 /// q_textlength_new5 constructs a new QTextLength object.
 ///
@@ -55,7 +55,7 @@ void q_textlength_move_assign(void* self, void* other);
 /// @param self QTextLength*
 ///
 /// @return enum QTextLength__Type
-int64_t q_textlength_type(void* self);
+int32_t q_textlength_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlength.html#value)
 ///
@@ -352,14 +352,14 @@ QVariant* q_textformat_to_q_variant(void* self);
 ///
 /// @param self QTextFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textformat_set_layout_direction(void* self, int64_t direction);
+void q_textformat_set_layout_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#layoutDirection)
 ///
 /// @param self QTextFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textformat_layout_direction(void* self);
+int32_t q_textformat_layout_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextformat.html#setBackground)
 ///
@@ -494,27 +494,27 @@ bool q_textcharformat_font_italic(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param capitalization enum QFont__Capitalization
-void q_textcharformat_set_font_capitalization(void* self, int64_t capitalization);
+void q_textcharformat_set_font_capitalization(void* self, int32_t capitalization);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontCapitalization)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QFont__Capitalization
-int64_t q_textcharformat_font_capitalization(void* self);
+int32_t q_textcharformat_font_capitalization(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontLetterSpacingType)
 ///
 /// @param self QTextCharFormat*
 /// @param letterSpacingType enum QFont__SpacingType
-void q_textcharformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType);
+void q_textcharformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontLetterSpacingType)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QFont__SpacingType
-int64_t q_textcharformat_font_letter_spacing_type(void* self);
+int32_t q_textcharformat_font_letter_spacing_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontLetterSpacing)
 ///
@@ -608,40 +608,40 @@ int32_t q_textcharformat_font_stretch(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param hint enum QFont__StyleHint
-void q_textcharformat_set_font_style_hint(void* self, int64_t hint);
+void q_textcharformat_set_font_style_hint(void* self, int32_t hint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStyleStrategy)
 ///
 /// @param self QTextCharFormat*
 /// @param strategy enum QFont__StyleStrategy
-void q_textcharformat_set_font_style_strategy(void* self, int64_t strategy);
+void q_textcharformat_set_font_style_strategy(void* self, int32_t strategy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleHint)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QFont__StyleHint
-int64_t q_textcharformat_font_style_hint(void* self);
+int32_t q_textcharformat_font_style_hint(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontStyleStrategy)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QFont__StyleStrategy
-int64_t q_textcharformat_font_style_strategy(void* self);
+int32_t q_textcharformat_font_style_strategy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontHintingPreference)
 ///
 /// @param self QTextCharFormat*
 /// @param hintingPreference enum QFont__HintingPreference
-void q_textcharformat_set_font_hinting_preference(void* self, int64_t hintingPreference);
+void q_textcharformat_set_font_hinting_preference(void* self, int32_t hintingPreference);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#fontHintingPreference)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QFont__HintingPreference
-int64_t q_textcharformat_font_hinting_preference(void* self);
+int32_t q_textcharformat_font_hinting_preference(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontKerning)
 ///
@@ -658,27 +658,27 @@ bool q_textcharformat_font_kerning(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param style enum QTextCharFormat__UnderlineStyle
-void q_textcharformat_set_underline_style(void* self, int64_t style);
+void q_textcharformat_set_underline_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#underlineStyle)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
-int64_t q_textcharformat_underline_style(void* self);
+int32_t q_textcharformat_underline_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setVerticalAlignment)
 ///
 /// @param self QTextCharFormat*
 /// @param alignment enum QTextCharFormat__VerticalAlignment
-void q_textcharformat_set_vertical_alignment(void* self, int64_t alignment);
+void q_textcharformat_set_vertical_alignment(void* self, int32_t alignment);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#verticalAlignment)
 ///
 /// @param self QTextCharFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
-int64_t q_textcharformat_vertical_alignment(void* self);
+int32_t q_textcharformat_vertical_alignment(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setTextOutline)
 ///
@@ -801,14 +801,14 @@ int32_t q_textcharformat_table_cell_column_span(void* self);
 /// @param self QTextCharFormat*
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
-void q_textcharformat_set_font2(void* self, void* font, int64_t behavior);
+void q_textcharformat_set_font2(void* self, void* font, int32_t behavior);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextcharformat.html#setFontStyleHint)
 ///
 /// @param self QTextCharFormat*
 /// @param hint enum QFont__StyleHint
 /// @param strategy enum QFont__StyleStrategy
-void q_textcharformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy);
+void q_textcharformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy);
 
 /// Inherited from QTextFormat
 ///
@@ -1135,7 +1135,7 @@ QVariant* q_textcharformat_to_q_variant(void* self);
 ///
 /// @param self QTextCharFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textcharformat_set_layout_direction(void* self, int64_t direction);
+void q_textcharformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -1144,7 +1144,7 @@ void q_textcharformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextCharFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textcharformat_layout_direction(void* self);
+int32_t q_textcharformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1361,14 +1361,14 @@ libqt_list /* of QTextOption__Tab* */ q_textblockformat_tab_positions(void* self
 ///
 /// @param self QTextBlockFormat*
 /// @param marker enum QTextBlockFormat__MarkerType
-void q_textblockformat_set_marker(void* self, int64_t marker);
+void q_textblockformat_set_marker(void* self, int32_t marker);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextblockformat.html#marker)
 ///
 /// @param self QTextBlockFormat*
 ///
 /// @return enum QTextBlockFormat__MarkerType
-int64_t q_textblockformat_marker(void* self);
+int32_t q_textblockformat_marker(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1695,7 +1695,7 @@ QVariant* q_textblockformat_to_q_variant(void* self);
 ///
 /// @param self QTextBlockFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textblockformat_set_layout_direction(void* self, int64_t direction);
+void q_textblockformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -1704,7 +1704,7 @@ void q_textblockformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextBlockFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textblockformat_layout_direction(void* self);
+int32_t q_textblockformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -1772,14 +1772,14 @@ bool q_textlistformat_is_valid(void* self);
 ///
 /// @param self QTextListFormat*
 /// @param style enum QTextListFormat__Style
-void q_textlistformat_set_style(void* self, int64_t style);
+void q_textlistformat_set_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#style)
 ///
 /// @param self QTextListFormat*
 ///
 /// @return enum QTextListFormat__Style
-int64_t q_textlistformat_style(void* self);
+int32_t q_textlistformat_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextlistformat.html#setIndent)
 ///
@@ -2154,7 +2154,7 @@ QVariant* q_textlistformat_to_q_variant(void* self);
 ///
 /// @param self QTextListFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textlistformat_set_layout_direction(void* self, int64_t direction);
+void q_textlistformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -2163,7 +2163,7 @@ void q_textlistformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextListFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textlistformat_layout_direction(void* self);
+int32_t q_textlistformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -2402,7 +2402,7 @@ bool q_textimageformat_font_italic(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param capitalization enum QFont__Capitalization
-void q_textimageformat_set_font_capitalization(void* self, int64_t capitalization);
+void q_textimageformat_set_font_capitalization(void* self, int32_t capitalization);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2411,7 +2411,7 @@ void q_textimageformat_set_font_capitalization(void* self, int64_t capitalizatio
 /// @param self QTextImageFormat*
 ///
 /// @return enum QFont__Capitalization
-int64_t q_textimageformat_font_capitalization(void* self);
+int32_t q_textimageformat_font_capitalization(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2419,7 +2419,7 @@ int64_t q_textimageformat_font_capitalization(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param letterSpacingType enum QFont__SpacingType
-void q_textimageformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType);
+void q_textimageformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2428,7 +2428,7 @@ void q_textimageformat_set_font_letter_spacing_type(void* self, int64_t letterSp
 /// @param self QTextImageFormat*
 ///
 /// @return enum QFont__SpacingType
-int64_t q_textimageformat_font_letter_spacing_type(void* self);
+int32_t q_textimageformat_font_letter_spacing_type(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2556,7 +2556,7 @@ int32_t q_textimageformat_font_stretch(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param hint enum QFont__StyleHint
-void q_textimageformat_set_font_style_hint(void* self, int64_t hint);
+void q_textimageformat_set_font_style_hint(void* self, int32_t hint);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2564,7 +2564,7 @@ void q_textimageformat_set_font_style_hint(void* self, int64_t hint);
 ///
 /// @param self QTextImageFormat*
 /// @param strategy enum QFont__StyleStrategy
-void q_textimageformat_set_font_style_strategy(void* self, int64_t strategy);
+void q_textimageformat_set_font_style_strategy(void* self, int32_t strategy);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2573,7 +2573,7 @@ void q_textimageformat_set_font_style_strategy(void* self, int64_t strategy);
 /// @param self QTextImageFormat*
 ///
 /// @return enum QFont__StyleHint
-int64_t q_textimageformat_font_style_hint(void* self);
+int32_t q_textimageformat_font_style_hint(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2582,7 +2582,7 @@ int64_t q_textimageformat_font_style_hint(void* self);
 /// @param self QTextImageFormat*
 ///
 /// @return enum QFont__StyleStrategy
-int64_t q_textimageformat_font_style_strategy(void* self);
+int32_t q_textimageformat_font_style_strategy(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2590,7 +2590,7 @@ int64_t q_textimageformat_font_style_strategy(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param hintingPreference enum QFont__HintingPreference
-void q_textimageformat_set_font_hinting_preference(void* self, int64_t hintingPreference);
+void q_textimageformat_set_font_hinting_preference(void* self, int32_t hintingPreference);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2599,7 +2599,7 @@ void q_textimageformat_set_font_hinting_preference(void* self, int64_t hintingPr
 /// @param self QTextImageFormat*
 ///
 /// @return enum QFont__HintingPreference
-int64_t q_textimageformat_font_hinting_preference(void* self);
+int32_t q_textimageformat_font_hinting_preference(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2622,7 +2622,7 @@ bool q_textimageformat_font_kerning(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param style enum QTextCharFormat__UnderlineStyle
-void q_textimageformat_set_underline_style(void* self, int64_t style);
+void q_textimageformat_set_underline_style(void* self, int32_t style);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2631,7 +2631,7 @@ void q_textimageformat_set_underline_style(void* self, int64_t style);
 /// @param self QTextImageFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
-int64_t q_textimageformat_underline_style(void* self);
+int32_t q_textimageformat_underline_style(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2639,7 +2639,7 @@ int64_t q_textimageformat_underline_style(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param alignment enum QTextCharFormat__VerticalAlignment
-void q_textimageformat_set_vertical_alignment(void* self, int64_t alignment);
+void q_textimageformat_set_vertical_alignment(void* self, int32_t alignment);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2648,7 +2648,7 @@ void q_textimageformat_set_vertical_alignment(void* self, int64_t alignment);
 /// @param self QTextImageFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
-int64_t q_textimageformat_vertical_alignment(void* self);
+int32_t q_textimageformat_vertical_alignment(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2813,7 +2813,7 @@ int32_t q_textimageformat_table_cell_column_span(void* self);
 /// @param self QTextImageFormat*
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
-void q_textimageformat_set_font2(void* self, void* font, int64_t behavior);
+void q_textimageformat_set_font2(void* self, void* font, int32_t behavior);
 
 /// Inherited from QTextCharFormat
 ///
@@ -2822,7 +2822,7 @@ void q_textimageformat_set_font2(void* self, void* font, int64_t behavior);
 /// @param self QTextImageFormat*
 /// @param hint enum QFont__StyleHint
 /// @param strategy enum QFont__StyleStrategy
-void q_textimageformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy);
+void q_textimageformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy);
 
 /// Inherited from QTextFormat
 ///
@@ -3149,7 +3149,7 @@ QVariant* q_textimageformat_to_q_variant(void* self);
 ///
 /// @param self QTextImageFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textimageformat_set_layout_direction(void* self, int64_t direction);
+void q_textimageformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -3158,7 +3158,7 @@ void q_textimageformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextImageFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textimageformat_layout_direction(void* self);
+int32_t q_textimageformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3226,14 +3226,14 @@ bool q_textframeformat_is_valid(void* self);
 ///
 /// @param self QTextFrameFormat*
 /// @param f enum QTextFrameFormat__Position
-void q_textframeformat_set_position(void* self, int64_t f);
+void q_textframeformat_set_position(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#position)
 ///
 /// @param self QTextFrameFormat*
 ///
 /// @return enum QTextFrameFormat__Position
-int64_t q_textframeformat_position(void* self);
+int32_t q_textframeformat_position(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setBorder)
 ///
@@ -3261,14 +3261,14 @@ QBrush* q_textframeformat_border_brush(void* self);
 ///
 /// @param self QTextFrameFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_textframeformat_set_border_style(void* self, int64_t style);
+void q_textframeformat_set_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#borderStyle)
 ///
 /// @param self QTextFrameFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_textframeformat_border_style(void* self);
+int32_t q_textframeformat_border_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextframeformat.html#setMargin)
 ///
@@ -3708,7 +3708,7 @@ QVariant* q_textframeformat_to_q_variant(void* self);
 ///
 /// @param self QTextFrameFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_textframeformat_set_layout_direction(void* self, int64_t direction);
+void q_textframeformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -3717,7 +3717,7 @@ void q_textframeformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextFrameFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_textframeformat_layout_direction(void* self);
+int32_t q_textframeformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -3871,7 +3871,7 @@ bool q_texttableformat_border_collapse(void* self);
 ///
 /// @param self QTextTableFormat*
 /// @param f enum QTextFrameFormat__Position
-void q_texttableformat_set_position(void* self, int64_t f);
+void q_texttableformat_set_position(void* self, int32_t f);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -3880,7 +3880,7 @@ void q_texttableformat_set_position(void* self, int64_t f);
 /// @param self QTextTableFormat*
 ///
 /// @return enum QTextFrameFormat__Position
-int64_t q_texttableformat_position(void* self);
+int32_t q_texttableformat_position(void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -3918,7 +3918,7 @@ QBrush* q_texttableformat_border_brush(void* self);
 ///
 /// @param self QTextTableFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttableformat_set_border_style(void* self, int64_t style);
+void q_texttableformat_set_border_style(void* self, int32_t style);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -3927,7 +3927,7 @@ void q_texttableformat_set_border_style(void* self, int64_t style);
 /// @param self QTextTableFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_texttableformat_border_style(void* self);
+int32_t q_texttableformat_border_style(void* self);
 
 /// Inherited from QTextFrameFormat
 ///
@@ -4407,7 +4407,7 @@ QVariant* q_texttableformat_to_q_variant(void* self);
 ///
 /// @param self QTextTableFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_texttableformat_set_layout_direction(void* self, int64_t direction);
+void q_texttableformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -4416,7 +4416,7 @@ void q_texttableformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextTableFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_texttableformat_layout_direction(void* self);
+int32_t q_texttableformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///
@@ -4584,59 +4584,59 @@ void q_texttablecellformat_set_border(void* self, double width);
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttablecellformat_set_top_border_style(void* self, int64_t style);
+void q_texttablecellformat_set_top_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#topBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_texttablecellformat_top_border_style(void* self);
+int32_t q_texttablecellformat_top_border_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBottomBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttablecellformat_set_bottom_border_style(void* self, int64_t style);
+void q_texttablecellformat_set_bottom_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#bottomBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_texttablecellformat_bottom_border_style(void* self);
+int32_t q_texttablecellformat_bottom_border_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#setLeftBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttablecellformat_set_left_border_style(void* self, int64_t style);
+void q_texttablecellformat_set_left_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#leftBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_texttablecellformat_left_border_style(void* self);
+int32_t q_texttablecellformat_left_border_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#setRightBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttablecellformat_set_right_border_style(void* self, int64_t style);
+void q_texttablecellformat_set_right_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#rightBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextFrameFormat__BorderStyle
-int64_t q_texttablecellformat_right_border_style(void* self);
+int32_t q_texttablecellformat_right_border_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#setBorderStyle)
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextFrameFormat__BorderStyle
-void q_texttablecellformat_set_border_style(void* self, int64_t style);
+void q_texttablecellformat_set_border_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtexttablecellformat.html#setTopBorderBrush)
 ///
@@ -4801,7 +4801,7 @@ bool q_texttablecellformat_font_italic(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param capitalization enum QFont__Capitalization
-void q_texttablecellformat_set_font_capitalization(void* self, int64_t capitalization);
+void q_texttablecellformat_set_font_capitalization(void* self, int32_t capitalization);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4810,7 +4810,7 @@ void q_texttablecellformat_set_font_capitalization(void* self, int64_t capitaliz
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QFont__Capitalization
-int64_t q_texttablecellformat_font_capitalization(void* self);
+int32_t q_texttablecellformat_font_capitalization(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4818,7 +4818,7 @@ int64_t q_texttablecellformat_font_capitalization(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param letterSpacingType enum QFont__SpacingType
-void q_texttablecellformat_set_font_letter_spacing_type(void* self, int64_t letterSpacingType);
+void q_texttablecellformat_set_font_letter_spacing_type(void* self, int32_t letterSpacingType);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4827,7 +4827,7 @@ void q_texttablecellformat_set_font_letter_spacing_type(void* self, int64_t lett
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QFont__SpacingType
-int64_t q_texttablecellformat_font_letter_spacing_type(void* self);
+int32_t q_texttablecellformat_font_letter_spacing_type(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4955,7 +4955,7 @@ int32_t q_texttablecellformat_font_stretch(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param hint enum QFont__StyleHint
-void q_texttablecellformat_set_font_style_hint(void* self, int64_t hint);
+void q_texttablecellformat_set_font_style_hint(void* self, int32_t hint);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4963,7 +4963,7 @@ void q_texttablecellformat_set_font_style_hint(void* self, int64_t hint);
 ///
 /// @param self QTextTableCellFormat*
 /// @param strategy enum QFont__StyleStrategy
-void q_texttablecellformat_set_font_style_strategy(void* self, int64_t strategy);
+void q_texttablecellformat_set_font_style_strategy(void* self, int32_t strategy);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4972,7 +4972,7 @@ void q_texttablecellformat_set_font_style_strategy(void* self, int64_t strategy)
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QFont__StyleHint
-int64_t q_texttablecellformat_font_style_hint(void* self);
+int32_t q_texttablecellformat_font_style_hint(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4981,7 +4981,7 @@ int64_t q_texttablecellformat_font_style_hint(void* self);
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QFont__StyleStrategy
-int64_t q_texttablecellformat_font_style_strategy(void* self);
+int32_t q_texttablecellformat_font_style_strategy(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4989,7 +4989,7 @@ int64_t q_texttablecellformat_font_style_strategy(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param hintingPreference enum QFont__HintingPreference
-void q_texttablecellformat_set_font_hinting_preference(void* self, int64_t hintingPreference);
+void q_texttablecellformat_set_font_hinting_preference(void* self, int32_t hintingPreference);
 
 /// Inherited from QTextCharFormat
 ///
@@ -4998,7 +4998,7 @@ void q_texttablecellformat_set_font_hinting_preference(void* self, int64_t hinti
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QFont__HintingPreference
-int64_t q_texttablecellformat_font_hinting_preference(void* self);
+int32_t q_texttablecellformat_font_hinting_preference(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5021,7 +5021,7 @@ bool q_texttablecellformat_font_kerning(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param style enum QTextCharFormat__UnderlineStyle
-void q_texttablecellformat_set_underline_style(void* self, int64_t style);
+void q_texttablecellformat_set_underline_style(void* self, int32_t style);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5030,7 +5030,7 @@ void q_texttablecellformat_set_underline_style(void* self, int64_t style);
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextCharFormat__UnderlineStyle
-int64_t q_texttablecellformat_underline_style(void* self);
+int32_t q_texttablecellformat_underline_style(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5038,7 +5038,7 @@ int64_t q_texttablecellformat_underline_style(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param alignment enum QTextCharFormat__VerticalAlignment
-void q_texttablecellformat_set_vertical_alignment(void* self, int64_t alignment);
+void q_texttablecellformat_set_vertical_alignment(void* self, int32_t alignment);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5047,7 +5047,7 @@ void q_texttablecellformat_set_vertical_alignment(void* self, int64_t alignment)
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum QTextCharFormat__VerticalAlignment
-int64_t q_texttablecellformat_vertical_alignment(void* self);
+int32_t q_texttablecellformat_vertical_alignment(void* self);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5212,7 +5212,7 @@ int32_t q_texttablecellformat_table_cell_column_span(void* self);
 /// @param self QTextTableCellFormat*
 /// @param font QFont*
 /// @param behavior enum QTextCharFormat__FontPropertiesInheritanceBehavior
-void q_texttablecellformat_set_font2(void* self, void* font, int64_t behavior);
+void q_texttablecellformat_set_font2(void* self, void* font, int32_t behavior);
 
 /// Inherited from QTextCharFormat
 ///
@@ -5221,7 +5221,7 @@ void q_texttablecellformat_set_font2(void* self, void* font, int64_t behavior);
 /// @param self QTextTableCellFormat*
 /// @param hint enum QFont__StyleHint
 /// @param strategy enum QFont__StyleStrategy
-void q_texttablecellformat_set_font_style_hint2(void* self, int64_t hint, int64_t strategy);
+void q_texttablecellformat_set_font_style_hint2(void* self, int32_t hint, int32_t strategy);
 
 /// Inherited from QTextFormat
 ///
@@ -5548,7 +5548,7 @@ QVariant* q_texttablecellformat_to_q_variant(void* self);
 ///
 /// @param self QTextTableCellFormat*
 /// @param direction enum Qt__LayoutDirection
-void q_texttablecellformat_set_layout_direction(void* self, int64_t direction);
+void q_texttablecellformat_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QTextFormat
 ///
@@ -5557,7 +5557,7 @@ void q_texttablecellformat_set_layout_direction(void* self, int64_t direction);
 /// @param self QTextTableCellFormat*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_texttablecellformat_layout_direction(void* self);
+int32_t q_texttablecellformat_layout_direction(void* self);
 
 /// Inherited from QTextFormat
 ///

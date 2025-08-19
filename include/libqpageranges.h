@@ -141,8 +141,6 @@ void q_pageranges__range_move_assign(void* self, void* other);
 /// @param pageNumber int
 bool q_pageranges__range_contains(void* self, int pageNumber);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges::range.html#dtor.QPageRanges::Range)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QPageRanges__Range*

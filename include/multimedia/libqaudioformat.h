@@ -64,14 +64,14 @@ int32_t q_audioformat_sample_rate(void* self);
 ///
 /// @param self QAudioFormat*
 /// @param config enum QAudioFormat__ChannelConfig
-void q_audioformat_set_channel_config(void* self, int64_t config);
+void q_audioformat_set_channel_config(void* self, uint32_t config);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#channelConfig)
 ///
 /// @param self QAudioFormat*
 ///
 /// @return enum QAudioFormat__ChannelConfig
-int64_t q_audioformat_channel_config(void* self);
+uint32_t q_audioformat_channel_config(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#setChannelCount)
 ///
@@ -88,20 +88,20 @@ int32_t q_audioformat_channel_count(void* self);
 ///
 /// @param self QAudioFormat*
 /// @param channel enum QAudioFormat__AudioChannelPosition
-int32_t q_audioformat_channel_offset(void* self, int64_t channel);
+int32_t q_audioformat_channel_offset(void* self, int32_t channel);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#setSampleFormat)
 ///
 /// @param self QAudioFormat*
 /// @param f enum QAudioFormat__SampleFormat
-void q_audioformat_set_sample_format(void* self, int64_t f);
+void q_audioformat_set_sample_format(void* self, uint16_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#sampleFormat)
 ///
 /// @param self QAudioFormat*
 ///
 /// @return enum QAudioFormat__SampleFormat
-int64_t q_audioformat_sample_format(void* self);
+uint16_t q_audioformat_sample_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#bytesForDuration)
 ///
@@ -160,7 +160,7 @@ float q_audioformat_normalized_sample_value(void* self, void* sample);
 /// @param channelCount int
 ///
 /// @return enum QAudioFormat__ChannelConfig
-int64_t q_audioformat_default_channel_config_for_channel_count(int channelCount);
+uint32_t q_audioformat_default_channel_config_for_channel_count(int channelCount);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaudioformat.html#dtor.QAudioFormat)
 ///

@@ -17,7 +17,7 @@ QVector2D* q_vector2d_new3() {
     return QVector2D_new3();
 }
 
-QVector2D* q_vector2d_new4(int64_t param1) {
+QVector2D* q_vector2d_new4(int32_t param1) {
     return QVector2D_new4(param1);
 }
 
@@ -165,7 +165,7 @@ QVector3D* q_vector3d_new3() {
     return QVector3D_new3();
 }
 
-QVector3D* q_vector3d_new4(int64_t param1) {
+QVector3D* q_vector3d_new4(int32_t param1) {
     return QVector3D_new4(param1);
 }
 
@@ -353,7 +353,7 @@ QVector4D* q_vector4d_new3() {
     return QVector4D_new3();
 }
 
-QVector4D* q_vector4d_new4(int64_t param1) {
+QVector4D* q_vector4d_new4(int32_t param1) {
     return QVector4D_new4(param1);
 }
 

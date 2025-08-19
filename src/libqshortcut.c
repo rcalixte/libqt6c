@@ -14,7 +14,7 @@ QShortcut* q_shortcut_new2(void* key, void* parent) {
     return QShortcut_new2((QKeySequence*)key, (QObject*)parent);
 }
 
-QShortcut* q_shortcut_new3(int64_t key, void* parent) {
+QShortcut* q_shortcut_new3(int32_t key, void* parent) {
     return QShortcut_new3(key, (QObject*)parent);
 }
 
@@ -26,19 +26,19 @@ QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const ch
     return QShortcut_new5((QKeySequence*)key, (QObject*)parent, member, ambiguousMember);
 }
 
-QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int64_t context) {
+QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int32_t context) {
     return QShortcut_new6((QKeySequence*)key, (QObject*)parent, member, ambiguousMember, context);
 }
 
-QShortcut* q_shortcut_new7(int64_t key, void* parent, const char* member) {
+QShortcut* q_shortcut_new7(int32_t key, void* parent, const char* member) {
     return QShortcut_new7(key, (QObject*)parent, member);
 }
 
-QShortcut* q_shortcut_new8(int64_t key, void* parent, const char* member, const char* ambiguousMember) {
+QShortcut* q_shortcut_new8(int32_t key, void* parent, const char* member, const char* ambiguousMember) {
     return QShortcut_new8(key, (QObject*)parent, member, ambiguousMember);
 }
 
-QShortcut* q_shortcut_new9(int64_t key, void* parent, const char* member, const char* ambiguousMember, int64_t context) {
+QShortcut* q_shortcut_new9(int32_t key, void* parent, const char* member, const char* ambiguousMember, int32_t context) {
     return QShortcut_new9(key, (QObject*)parent, member, ambiguousMember, context);
 }
 
@@ -50,15 +50,15 @@ void* q_shortcut_metacast(void* self, const char* param1) {
     return QShortcut_Metacast((QShortcut*)self, param1);
 }
 
-int32_t q_shortcut_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_shortcut_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QShortcut_Metacall((QShortcut*)self, param1, param2, param3);
 }
 
-void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QShortcut_OnMetacall((QShortcut*)self, (intptr_t)callback);
 }
 
-int32_t q_shortcut_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_shortcut_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QShortcut_QBaseMetacall((QShortcut*)self, param1, param2, param3);
 }
 
@@ -77,7 +77,7 @@ QKeySequence* q_shortcut_key(void* self) {
     return QShortcut_Key((QShortcut*)self);
 }
 
-void q_shortcut_set_keys(void* self, int64_t key) {
+void q_shortcut_set_keys(void* self, int32_t key) {
     QShortcut_SetKeys((QShortcut*)self, key);
 }
 
@@ -98,11 +98,11 @@ bool q_shortcut_is_enabled(void* self) {
     return QShortcut_IsEnabled((QShortcut*)self);
 }
 
-void q_shortcut_set_context(void* self, int64_t context) {
+void q_shortcut_set_context(void* self, int32_t context) {
     QShortcut_SetContext((QShortcut*)self, context);
 }
 
-int64_t q_shortcut_context(void* self) {
+int32_t q_shortcut_context(void* self) {
     return QShortcut_Context((QShortcut*)self);
 }
 
@@ -218,7 +218,7 @@ void q_shortcut_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_shortcut_kill_timer2(void* self, int64_t id) {
+void q_shortcut_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -322,15 +322,15 @@ bool q_shortcut_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_shortcut_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_shortcut_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

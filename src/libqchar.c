@@ -65,7 +65,7 @@ QChar* q_char_new8(int rc) {
     return QChar_new8(rc);
 }
 
-QChar* q_char_new9(int64_t s) {
+QChar* q_char_new9(int32_t s) {
     return QChar_new9(s);
 }
 
@@ -93,15 +93,15 @@ void q_char_move_assign(void* self, void* other) {
     QChar_MoveAssign((QChar*)self, (QChar*)other);
 }
 
-int64_t q_char_category(void* self) {
+int32_t q_char_category(void* self) {
     return QChar_Category((QChar*)self);
 }
 
-int64_t q_char_direction(void* self) {
+int32_t q_char_direction(void* self) {
     return QChar_Direction((QChar*)self);
 }
 
-int64_t q_char_joining_type(void* self) {
+int32_t q_char_joining_type(void* self) {
     return QChar_JoiningType((QChar*)self);
 }
 
@@ -124,7 +124,7 @@ const char* q_char_decomposition(void* self) {
     return _ret;
 }
 
-int64_t q_char_decomposition_tag(void* self) {
+int32_t q_char_decomposition_tag(void* self) {
     return QChar_DecompositionTag((QChar*)self);
 }
 
@@ -148,11 +148,11 @@ QChar* q_char_to_case_folded(void* self) {
     return QChar_ToCaseFolded((QChar*)self);
 }
 
-int64_t q_char_script(void* self) {
+int32_t q_char_script(void* self) {
     return QChar_Script((QChar*)self);
 }
 
-int64_t q_char_unicode_version(void* self) {
+int32_t q_char_unicode_version(void* self) {
     return QChar_UnicodeVersion((QChar*)self);
 }
 
@@ -248,7 +248,7 @@ void q_char_set_row(void* self, unsigned char arow) {
     QChar_SetRow((QChar*)self, arow);
 }
 
-int64_t q_char_current_unicode_version() {
+int32_t q_char_current_unicode_version() {
     return QChar_CurrentUnicodeVersion();
 }
 

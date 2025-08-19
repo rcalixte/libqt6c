@@ -23,15 +23,15 @@ void* q_coloraxis_metacast(void* self, const char* param1) {
     return QColorAxis_Metacast((QColorAxis*)self, param1);
 }
 
-int32_t q_coloraxis_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_coloraxis_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QColorAxis_Metacall((QColorAxis*)self, param1, param2, param3);
 }
 
-void q_coloraxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_coloraxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QColorAxis_OnMetacall((QColorAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_coloraxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_coloraxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QColorAxis_QBaseMetacall((QColorAxis*)self, param1, param2, param3);
 }
 
@@ -42,15 +42,15 @@ const char* q_coloraxis_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_coloraxis_type(void* self) {
+int32_t q_coloraxis_type(void* self) {
     return QColorAxis_Type((QColorAxis*)self);
 }
 
-void q_coloraxis_on_type(void* self, int64_t (*callback)()) {
+void q_coloraxis_on_type(void* self, int32_t (*callback)()) {
     QColorAxis_OnType((QColorAxis*)self, (intptr_t)callback);
 }
 
-int64_t q_coloraxis_qbase_type(void* self) {
+int32_t q_coloraxis_qbase_type(void* self) {
     return QColorAxis_QBaseType((QColorAxis*)self);
 }
 
@@ -379,7 +379,7 @@ QColor* q_coloraxis_shades_border_color(void* self) {
     return QAbstractAxis_ShadesBorderColor((QAbstractAxis*)self);
 }
 
-int64_t q_coloraxis_orientation(void* self) {
+int32_t q_coloraxis_orientation(void* self) {
     return QAbstractAxis_Orientation((QAbstractAxis*)self);
 }
 
@@ -726,7 +726,7 @@ void q_coloraxis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_coloraxis_kill_timer2(void* self, int64_t id) {
+void q_coloraxis_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -830,15 +830,15 @@ bool q_coloraxis_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_coloraxis_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_coloraxis_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_coloraxis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_coloraxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_coloraxis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_coloraxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

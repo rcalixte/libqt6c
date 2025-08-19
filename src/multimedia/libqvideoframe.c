@@ -42,7 +42,7 @@ bool q_videoframe_is_valid(void* self) {
     return QVideoFrame_IsValid((QVideoFrame*)self);
 }
 
-int64_t q_videoframe_pixel_format(void* self) {
+int32_t q_videoframe_pixel_format(void* self) {
     return QVideoFrame_PixelFormat((QVideoFrame*)self);
 }
 
@@ -50,7 +50,7 @@ QVideoFrameFormat* q_videoframe_surface_format(void* self) {
     return QVideoFrame_SurfaceFormat((QVideoFrame*)self);
 }
 
-int64_t q_videoframe_handle_type(void* self) {
+int32_t q_videoframe_handle_type(void* self) {
     return QVideoFrame_HandleType((QVideoFrame*)self);
 }
 
@@ -78,11 +78,11 @@ bool q_videoframe_is_writable(void* self) {
     return QVideoFrame_IsWritable((QVideoFrame*)self);
 }
 
-int64_t q_videoframe_map_mode(void* self) {
+int32_t q_videoframe_map_mode(void* self) {
     return QVideoFrame_MapMode((QVideoFrame*)self);
 }
 
-bool q_videoframe_map(void* self, int64_t mode) {
+bool q_videoframe_map(void* self, int32_t mode) {
     return QVideoFrame_Map((QVideoFrame*)self, mode);
 }
 
@@ -126,19 +126,19 @@ void q_videoframe_set_end_time(void* self, long long time) {
     QVideoFrame_SetEndTime((QVideoFrame*)self, time);
 }
 
-void q_videoframe_set_rotation_angle(void* self, int64_t angle) {
+void q_videoframe_set_rotation_angle(void* self, int32_t angle) {
     QVideoFrame_SetRotationAngle((QVideoFrame*)self, angle);
 }
 
-int64_t q_videoframe_rotation_angle(void* self) {
+int32_t q_videoframe_rotation_angle(void* self) {
     return QVideoFrame_RotationAngle((QVideoFrame*)self);
 }
 
-void q_videoframe_set_rotation(void* self, int64_t angle) {
+void q_videoframe_set_rotation(void* self, int32_t angle) {
     QVideoFrame_SetRotation((QVideoFrame*)self, angle);
 }
 
-int64_t q_videoframe_rotation(void* self) {
+int32_t q_videoframe_rotation(void* self) {
     return QVideoFrame_Rotation((QVideoFrame*)self);
 }
 

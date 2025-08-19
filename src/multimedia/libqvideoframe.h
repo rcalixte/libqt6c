@@ -66,7 +66,7 @@ bool q_videoframe_is_valid(void* self);
 /// @param self QVideoFrame*
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
-int64_t q_videoframe_pixel_format(void* self);
+int32_t q_videoframe_pixel_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#surfaceFormat)
 ///
@@ -78,7 +78,7 @@ QVideoFrameFormat* q_videoframe_surface_format(void* self);
 /// @param self QVideoFrame*
 ///
 /// @return enum QVideoFrame__HandleType
-int64_t q_videoframe_handle_type(void* self);
+int32_t q_videoframe_handle_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#size)
 ///
@@ -115,13 +115,13 @@ bool q_videoframe_is_writable(void* self);
 /// @param self QVideoFrame*
 ///
 /// @return enum QVideoFrame__MapMode
-int64_t q_videoframe_map_mode(void* self);
+int32_t q_videoframe_map_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#map)
 ///
 /// @param self QVideoFrame*
 /// @param mode enum QVideoFrame__MapMode
-bool q_videoframe_map(void* self, int64_t mode);
+bool q_videoframe_map(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#unmap)
 ///
@@ -183,27 +183,27 @@ void q_videoframe_set_end_time(void* self, long long time);
 ///
 /// @param self QVideoFrame*
 /// @param angle enum QVideoFrame__RotationAngle
-void q_videoframe_set_rotation_angle(void* self, int64_t angle);
+void q_videoframe_set_rotation_angle(void* self, int32_t angle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#rotationAngle)
 ///
 /// @param self QVideoFrame*
 ///
 /// @return enum QVideoFrame__RotationAngle
-int64_t q_videoframe_rotation_angle(void* self);
+int32_t q_videoframe_rotation_angle(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setRotation)
 ///
 /// @param self QVideoFrame*
 /// @param angle enum QtVideo__Rotation
-void q_videoframe_set_rotation(void* self, int64_t angle);
+void q_videoframe_set_rotation(void* self, int32_t angle);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#rotation)
 ///
 /// @param self QVideoFrame*
 ///
 /// @return enum QtVideo__Rotation
-int64_t q_videoframe_rotation(void* self);
+int32_t q_videoframe_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe.html#setMirrored)
 ///
@@ -284,8 +284,6 @@ void q_videoframe__paintoptions_copy_assign(void* self, void* other);
 /// @param other QVideoFrame__PaintOptions*
 void q_videoframe__paintoptions_move_assign(void* self, void* other);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe::paintoptions.html#dtor.QVideoFrame::PaintOptions)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QVideoFrame__PaintOptions*

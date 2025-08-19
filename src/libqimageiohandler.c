@@ -72,39 +72,39 @@ bool q_imageiohandler_qbase_write(void* self, void* image) {
     return QImageIOHandler_QBaseWrite((QImageIOHandler*)self, (QImage*)image);
 }
 
-QVariant* q_imageiohandler_option(void* self, int64_t option) {
+QVariant* q_imageiohandler_option(void* self, int32_t option) {
     return QImageIOHandler_Option((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int32_t)) {
     QImageIOHandler_OnOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-QVariant* q_imageiohandler_qbase_option(void* self, int64_t option) {
+QVariant* q_imageiohandler_qbase_option(void* self, int32_t option) {
     return QImageIOHandler_QBaseOption((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_set_option(void* self, int64_t option, void* value) {
+void q_imageiohandler_set_option(void* self, int32_t option, void* value) {
     QImageIOHandler_SetOption((QImageIOHandler*)self, option, (QVariant*)value);
 }
 
-void q_imageiohandler_on_set_option(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_imageiohandler_on_set_option(void* self, void (*callback)(void*, int32_t, void*)) {
     QImageIOHandler_OnSetOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-void q_imageiohandler_qbase_set_option(void* self, int64_t option, void* value) {
+void q_imageiohandler_qbase_set_option(void* self, int32_t option, void* value) {
     QImageIOHandler_QBaseSetOption((QImageIOHandler*)self, option, (QVariant*)value);
 }
 
-bool q_imageiohandler_supports_option(void* self, int64_t option) {
+bool q_imageiohandler_supports_option(void* self, int32_t option) {
     return QImageIOHandler_SupportsOption((QImageIOHandler*)self, option);
 }
 
-void q_imageiohandler_on_supports_option(void* self, bool (*callback)(void*, int64_t)) {
+void q_imageiohandler_on_supports_option(void* self, bool (*callback)(void*, int32_t)) {
     QImageIOHandler_OnSupportsOption((QImageIOHandler*)self, (intptr_t)callback);
 }
 
-bool q_imageiohandler_qbase_supports_option(void* self, int64_t option) {
+bool q_imageiohandler_qbase_supports_option(void* self, int32_t option) {
     return QImageIOHandler_QBaseSupportsOption((QImageIOHandler*)self, option);
 }
 
@@ -192,7 +192,7 @@ QRect* q_imageiohandler_qbase_current_image_rect(void* self) {
     return QImageIOHandler_QBaseCurrentImageRect((QImageIOHandler*)self);
 }
 
-bool q_imageiohandler_allocate_image(void* size, int64_t format, void* image) {
+bool q_imageiohandler_allocate_image(void* size, int32_t format, void* image) {
     return QImageIOHandler_AllocateImage((QSize*)size, format, (QImage*)image);
 }
 
@@ -208,7 +208,7 @@ void* q_imageioplugin_metacast(void* self, const char* param1) {
     return QImageIOPlugin_Metacast((QImageIOPlugin*)self, param1);
 }
 
-int32_t q_imageioplugin_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_imageioplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QImageIOPlugin_Metacall((QImageIOPlugin*)self, param1, param2, param3);
 }
 
@@ -296,7 +296,7 @@ void q_imageioplugin_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_imageioplugin_kill_timer2(void* self, int64_t id) {
+void q_imageioplugin_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -400,15 +400,15 @@ bool q_imageioplugin_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_imageioplugin_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_imageioplugin_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_imageioplugin_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_imageioplugin_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_imageioplugin_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_imageioplugin_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

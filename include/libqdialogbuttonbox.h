@@ -25,7 +25,7 @@ QDialogButtonBox* q_dialogbuttonbox_new2();
 /// q_dialogbuttonbox_new3 constructs a new QDialogButtonBox object.
 ///
 /// @param orientation enum Qt__Orientation
-QDialogButtonBox* q_dialogbuttonbox_new3(int64_t orientation);
+QDialogButtonBox* q_dialogbuttonbox_new3(int32_t orientation);
 
 /// q_dialogbuttonbox_new4 constructs a new QDialogButtonBox object.
 ///
@@ -36,13 +36,13 @@ QDialogButtonBox* q_dialogbuttonbox_new4(int64_t buttons);
 ///
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 /// @param orientation enum Qt__Orientation
-QDialogButtonBox* q_dialogbuttonbox_new5(int64_t buttons, int64_t orientation);
+QDialogButtonBox* q_dialogbuttonbox_new5(int64_t buttons, int32_t orientation);
 
 /// q_dialogbuttonbox_new6 constructs a new QDialogButtonBox object.
 ///
 /// @param orientation enum Qt__Orientation
 /// @param parent QWidget*
-QDialogButtonBox* q_dialogbuttonbox_new6(int64_t orientation, void* parent);
+QDialogButtonBox* q_dialogbuttonbox_new6(int32_t orientation, void* parent);
 
 /// q_dialogbuttonbox_new7 constructs a new QDialogButtonBox object.
 ///
@@ -55,7 +55,7 @@ QDialogButtonBox* q_dialogbuttonbox_new7(int64_t buttons, void* parent);
 /// @param buttons flag of enum QDialogButtonBox__StandardButton
 /// @param orientation enum Qt__Orientation
 /// @param parent QWidget*
-QDialogButtonBox* q_dialogbuttonbox_new8(int64_t buttons, int64_t orientation, void* parent);
+QDialogButtonBox* q_dialogbuttonbox_new8(int64_t buttons, int32_t orientation, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -70,13 +70,13 @@ void* q_dialogbuttonbox_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dialogbuttonbox_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dialogbuttonbox_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QDialogButtonBox*
 /// @param callback int32_t fn(QDialogButtonBox*, enum QMetaObject__Call, int, void*)
-void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -84,7 +84,7 @@ void q_dialogbuttonbox_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_dialogbuttonbox_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_dialogbuttonbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -97,34 +97,34 @@ const char* q_dialogbuttonbox_tr(const char* s);
 ///
 /// @param self QDialogButtonBox*
 /// @param orientation enum Qt__Orientation
-void q_dialogbuttonbox_set_orientation(void* self, int64_t orientation);
+void q_dialogbuttonbox_set_orientation(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#orientation)
 ///
 /// @param self QDialogButtonBox*
 ///
 /// @return enum Qt__Orientation
-int64_t q_dialogbuttonbox_orientation(void* self);
+int32_t q_dialogbuttonbox_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#addButton)
 ///
 /// @param self QDialogButtonBox*
 /// @param button QAbstractButton*
 /// @param role enum QDialogButtonBox__ButtonRole
-void q_dialogbuttonbox_add_button(void* self, void* button, int64_t role);
+void q_dialogbuttonbox_add_button(void* self, void* button, int32_t role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#addButton)
 ///
 /// @param self QDialogButtonBox*
 /// @param text const char*
 /// @param role enum QDialogButtonBox__ButtonRole
-QPushButton* q_dialogbuttonbox_add_button2(void* self, const char* text, int64_t role);
+QPushButton* q_dialogbuttonbox_add_button2(void* self, const char* text, int32_t role);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#addButton)
 ///
 /// @param self QDialogButtonBox*
 /// @param button enum QDialogButtonBox__StandardButton
-QPushButton* q_dialogbuttonbox_add_button3(void* self, int64_t button);
+QPushButton* q_dialogbuttonbox_add_button3(void* self, int32_t button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#removeButton)
 ///
@@ -148,7 +148,7 @@ libqt_list /* of QAbstractButton* */ q_dialogbuttonbox_buttons(void* self);
 /// @param button QAbstractButton*
 ///
 /// @return enum QDialogButtonBox__ButtonRole
-int64_t q_dialogbuttonbox_button_role(void* self, void* button);
+int32_t q_dialogbuttonbox_button_role(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#setStandardButtons)
 ///
@@ -169,13 +169,13 @@ int64_t q_dialogbuttonbox_standard_buttons(void* self);
 /// @param button QAbstractButton*
 ///
 /// @return enum QDialogButtonBox__StandardButton
-int64_t q_dialogbuttonbox_standard_button(void* self, void* button);
+int32_t q_dialogbuttonbox_standard_button(void* self, void* button);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#button)
 ///
 /// @param self QDialogButtonBox*
 /// @param which enum QDialogButtonBox__StandardButton
-QPushButton* q_dialogbuttonbox_button(void* self, int64_t which);
+QPushButton* q_dialogbuttonbox_button(void* self, int32_t which);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qdialogbuttonbox.html#setCenterButtons)
 ///
@@ -365,7 +365,7 @@ bool q_dialogbuttonbox_is_modal(void* self);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_dialogbuttonbox_window_modality(void* self);
+int32_t q_dialogbuttonbox_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -373,7 +373,7 @@ int64_t q_dialogbuttonbox_window_modality(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param windowModality enum Qt__WindowModality
-void q_dialogbuttonbox_set_window_modality(void* self, int64_t windowModality);
+void q_dialogbuttonbox_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -836,7 +836,7 @@ void q_dialogbuttonbox_set_palette(void* self, void* palette);
 ///
 /// @param self QDialogButtonBox*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_dialogbuttonbox_set_background_role(void* self, int64_t backgroundRole);
+void q_dialogbuttonbox_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -845,7 +845,7 @@ void q_dialogbuttonbox_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_dialogbuttonbox_background_role(void* self);
+int32_t q_dialogbuttonbox_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -853,7 +853,7 @@ int64_t q_dialogbuttonbox_background_role(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_dialogbuttonbox_set_foreground_role(void* self, int64_t foregroundRole);
+void q_dialogbuttonbox_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -862,7 +862,7 @@ void q_dialogbuttonbox_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_dialogbuttonbox_foreground_role(void* self);
+int32_t q_dialogbuttonbox_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1264,7 +1264,7 @@ void q_dialogbuttonbox_set_accessible_description(void* self, const char* descri
 ///
 /// @param self QDialogButtonBox*
 /// @param direction enum Qt__LayoutDirection
-void q_dialogbuttonbox_set_layout_direction(void* self, int64_t direction);
+void q_dialogbuttonbox_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1273,7 +1273,7 @@ void q_dialogbuttonbox_set_layout_direction(void* self, int64_t direction);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_dialogbuttonbox_layout_direction(void* self);
+int32_t q_dialogbuttonbox_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1352,7 +1352,7 @@ void q_dialogbuttonbox_clear_focus(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param reason enum Qt__FocusReason
-void q_dialogbuttonbox_set_focus2(void* self, int64_t reason);
+void q_dialogbuttonbox_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1361,7 +1361,7 @@ void q_dialogbuttonbox_set_focus2(void* self, int64_t reason);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_dialogbuttonbox_focus_policy(void* self);
+int32_t q_dialogbuttonbox_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1369,7 +1369,7 @@ int64_t q_dialogbuttonbox_focus_policy(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param policy enum Qt__FocusPolicy
-void q_dialogbuttonbox_set_focus_policy(void* self, int64_t policy);
+void q_dialogbuttonbox_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1408,7 +1408,7 @@ QWidget* q_dialogbuttonbox_focus_proxy(void* self);
 /// @param self QDialogButtonBox*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_dialogbuttonbox_context_menu_policy(void* self);
+int32_t q_dialogbuttonbox_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1416,7 +1416,7 @@ int64_t q_dialogbuttonbox_context_menu_policy(void* self);
 ///
 /// @param self QDialogButtonBox*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_dialogbuttonbox_set_context_menu_policy(void* self, int64_t policy);
+void q_dialogbuttonbox_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1834,7 +1834,7 @@ void q_dialogbuttonbox_set_size_policy(void* self, void* sizePolicy);
 /// @param self QDialogButtonBox*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_dialogbuttonbox_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_dialogbuttonbox_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2142,7 +2142,7 @@ QWidget* q_dialogbuttonbox_child_at3(void* self, void* p);
 ///
 /// @param self QDialogButtonBox*
 /// @param param1 enum Qt__WidgetAttribute
-void q_dialogbuttonbox_set_attribute(void* self, int64_t param1);
+void q_dialogbuttonbox_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2150,7 +2150,7 @@ void q_dialogbuttonbox_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QDialogButtonBox*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_dialogbuttonbox_test_attribute(void* self, int64_t param1);
+bool q_dialogbuttonbox_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2383,7 +2383,7 @@ void q_dialogbuttonbox_grab_gesture2(void* self, int64_t typeVal, int64_t flags)
 /// @param self QDialogButtonBox*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_dialogbuttonbox_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_dialogbuttonbox_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2419,7 +2419,7 @@ void q_dialogbuttonbox_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QDialogButtonBox*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_dialogbuttonbox_set_attribute2(void* self, int64_t param1, bool on);
+void q_dialogbuttonbox_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2528,7 +2528,7 @@ void q_dialogbuttonbox_kill_timer(void* self, int id);
 ///
 /// @param self QDialogButtonBox*
 /// @param id enum Qt__TimerId
-void q_dialogbuttonbox_kill_timer2(void* self, int64_t id);
+void q_dialogbuttonbox_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -2697,7 +2697,7 @@ bool q_dialogbuttonbox_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QDialogButtonBox*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_dialogbuttonbox_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_dialogbuttonbox_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -2708,7 +2708,7 @@ int32_t q_dialogbuttonbox_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dialogbuttonbox_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_dialogbuttonbox_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2719,7 +2719,7 @@ QMetaObject__Connection* q_dialogbuttonbox_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_dialogbuttonbox_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_dialogbuttonbox_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -2826,7 +2826,7 @@ double q_dialogbuttonbox_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_dialogbuttonbox_encode_metric_f(int64_t metric, double value);
+int32_t q_dialogbuttonbox_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QWidget
 ///
@@ -3790,7 +3790,7 @@ void q_dialogbuttonbox_on_native_event(void* self, bool (*callback)(void*, const
 ///
 /// @param self QDialogButtonBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_dialogbuttonbox_metric(void* self, int64_t param1);
+int32_t q_dialogbuttonbox_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3800,7 +3800,7 @@ int32_t q_dialogbuttonbox_metric(void* self, int64_t param1);
 ///
 /// @param self QDialogButtonBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_dialogbuttonbox_qbase_metric(void* self, int64_t param1);
+int32_t q_dialogbuttonbox_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3810,7 +3810,7 @@ int32_t q_dialogbuttonbox_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QDialogButtonBox*
 /// @param callback int32_t fn(QDialogButtonBox*, enum QPaintDevice__PaintDeviceMetric)
-void q_dialogbuttonbox_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_dialogbuttonbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4437,7 +4437,7 @@ void q_dialogbuttonbox_on_is_signal_connected(void* self, bool (*callback)(void*
 /// @param self QDialogButtonBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_dialogbuttonbox_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_dialogbuttonbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4448,7 +4448,7 @@ double q_dialogbuttonbox_get_decoded_metric_f(void* self, int64_t metricA, int64
 /// @param self QDialogButtonBox*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_dialogbuttonbox_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_dialogbuttonbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4458,7 +4458,7 @@ double q_dialogbuttonbox_qbase_get_decoded_metric_f(void* self, int64_t metricA,
 ///
 /// @param self QDialogButtonBox*
 /// @param callback double fn(QDialogButtonBox*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_dialogbuttonbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_dialogbuttonbox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

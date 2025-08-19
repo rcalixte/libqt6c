@@ -22,7 +22,7 @@ void q_cborstreamwriter_append2(void* self, long long i) {
     QCborStreamWriter_Append2((QCborStreamWriter*)self, i);
 }
 
-void q_cborstreamwriter_append3(void* self, int64_t n) {
+void q_cborstreamwriter_append3(void* self, uint64_t n) {
     QCborStreamWriter_Append3((QCborStreamWriter*)self, n);
 }
 
@@ -30,15 +30,15 @@ void q_cborstreamwriter_append4(void* self, const char* ba) {
     QCborStreamWriter_Append4((QCborStreamWriter*)self, qstring(ba));
 }
 
-void q_cborstreamwriter_append7(void* self, int64_t tag) {
+void q_cborstreamwriter_append7(void* self, uint64_t tag) {
     QCborStreamWriter_Append7((QCborStreamWriter*)self, tag);
 }
 
-void q_cborstreamwriter_append8(void* self, int64_t tag) {
+void q_cborstreamwriter_append8(void* self, int32_t tag) {
     QCborStreamWriter_Append8((QCborStreamWriter*)self, tag);
 }
 
-void q_cborstreamwriter_append9(void* self, int64_t st) {
+void q_cborstreamwriter_append9(void* self, uint8_t st) {
     QCborStreamWriter_Append9((QCborStreamWriter*)self, st);
 }
 

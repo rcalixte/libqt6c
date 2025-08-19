@@ -45,7 +45,7 @@ bool q_resource_is_valid(void* self) {
     return QResource_IsValid((QResource*)self);
 }
 
-int64_t q_resource_compression_algorithm(void* self) {
+int32_t q_resource_compression_algorithm(void* self) {
     return QResource_CompressionAlgorithm((QResource*)self);
 }
 

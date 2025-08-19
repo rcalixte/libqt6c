@@ -35,13 +35,13 @@ void* q_udpsocket_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_udpsocket_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_udpsocket_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QUdpSocket*
 /// @param callback int32_t fn(QUdpSocket*, enum QMetaObject__Call, int, void*)
-void q_udpsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_udpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_udpsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_udpsocket_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_udpsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -62,7 +62,7 @@ const char* q_udpsocket_tr(const char* s);
 ///
 /// @param self QUdpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-bool q_udpsocket_bind(void* self, int64_t addr);
+bool q_udpsocket_bind(void* self, int32_t addr);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qudpsocket.html#joinMulticastGroup)
 ///
@@ -168,7 +168,7 @@ const char* q_udpsocket_tr3(const char* s, const char* c, int n);
 /// @param self QUdpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
-bool q_udpsocket_bind2(void* self, int64_t addr, unsigned short port);
+bool q_udpsocket_bind2(void* self, int32_t addr, unsigned short port);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qudpsocket.html#bind)
 ///
@@ -176,7 +176,7 @@ bool q_udpsocket_bind2(void* self, int64_t addr, unsigned short port);
 /// @param addr enum QHostAddress__SpecialAddress
 /// @param port unsigned short
 /// @param mode flag of enum QAbstractSocket__BindFlag
-bool q_udpsocket_bind3(void* self, int64_t addr, unsigned short port, int64_t mode);
+bool q_udpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qudpsocket.html#receiveDatagram)
 ///
@@ -292,7 +292,7 @@ void q_udpsocket_abort(void* self);
 /// @param self QUdpSocket*
 ///
 /// @return enum QAbstractSocket__SocketType
-int64_t q_udpsocket_socket_type(void* self);
+int32_t q_udpsocket_socket_type(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -301,7 +301,7 @@ int64_t q_udpsocket_socket_type(void* self);
 /// @param self QUdpSocket*
 ///
 /// @return enum QAbstractSocket__SocketState
-int64_t q_udpsocket_state(void* self);
+int32_t q_udpsocket_state(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -310,7 +310,7 @@ int64_t q_udpsocket_state(void* self);
 /// @param self QUdpSocket*
 ///
 /// @return enum QAbstractSocket__SocketError
-int64_t q_udpsocket_error(void* self);
+int32_t q_udpsocket_error(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -402,7 +402,7 @@ void q_udpsocket_on_disconnected(void* self, void (*callback)(void*));
 ///
 /// @param self QUdpSocket*
 /// @param param1 enum QAbstractSocket__SocketState
-void q_udpsocket_state_changed(void* self, int64_t param1);
+void q_udpsocket_state_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -410,7 +410,7 @@ void q_udpsocket_state_changed(void* self, int64_t param1);
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, enum QAbstractSocket__SocketState)
-void q_udpsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_udpsocket_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -418,7 +418,7 @@ void q_udpsocket_on_state_changed(void* self, void (*callback)(void*, int64_t));
 ///
 /// @param self QUdpSocket*
 /// @param param1 enum QAbstractSocket__SocketError
-void q_udpsocket_error_occurred(void* self, int64_t param1);
+void q_udpsocket_error_occurred(void* self, int32_t param1);
 
 /// Inherited from QAbstractSocket
 ///
@@ -426,7 +426,7 @@ void q_udpsocket_error_occurred(void* self, int64_t param1);
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, enum QAbstractSocket__SocketError)
-void q_udpsocket_on_error_occurred(void* self, void (*callback)(void*, int64_t));
+void q_udpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -914,7 +914,7 @@ void q_udpsocket_kill_timer(void* self, int id);
 ///
 /// @param self QUdpSocket*
 /// @param id enum Qt__TimerId
-void q_udpsocket_kill_timer2(void* self, int64_t id);
+void q_udpsocket_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1091,7 +1091,7 @@ bool q_udpsocket_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QUdpSocket*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_udpsocket_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_udpsocket_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1102,7 +1102,7 @@ int32_t q_udpsocket_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_udpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_udpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1113,7 +1113,7 @@ QMetaObject__Connection* q_udpsocket_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_udpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_udpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1170,7 +1170,7 @@ void q_udpsocket_on_resume(void* self, void (*callback)());
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1183,7 +1183,7 @@ void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 /// @param port unsigned short
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
-void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol);
+void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1193,7 +1193,7 @@ void q_udpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigne
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, const char*, unsigned short, flag of enum QIODeviceBase__OpenModeFlag, enum QAbstractSocket__NetworkLayerProtocol)
-void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int64_t));
+void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1347,7 +1347,7 @@ void q_udpsocket_on_socket_descriptor(void* self, intptr_t (*callback)());
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1359,7 +1359,7 @@ bool q_udpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, in
 /// @param socketDescriptor intptr_t
 /// @param state enum QAbstractSocket__SocketState
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
-bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode);
+bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1369,7 +1369,7 @@ bool q_udpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescript
 ///
 /// @param self QUdpSocket*
 /// @param callback bool fn(QUdpSocket*, intptr_t, enum QAbstractSocket__SocketState, flag of enum QIODeviceBase__OpenModeFlag)
-void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int64_t, int64_t));
+void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1380,7 +1380,7 @@ void q_udpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, in
 /// @param self QUdpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_udpsocket_set_socket_option(void* self, int64_t option, void* value);
+void q_udpsocket_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1391,7 +1391,7 @@ void q_udpsocket_set_socket_option(void* self, int64_t option, void* value);
 /// @param self QUdpSocket*
 /// @param option enum QAbstractSocket__SocketOption
 /// @param value QVariant*
-void q_udpsocket_qbase_set_socket_option(void* self, int64_t option, void* value);
+void q_udpsocket_qbase_set_socket_option(void* self, int32_t option, void* value);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1401,7 +1401,7 @@ void q_udpsocket_qbase_set_socket_option(void* self, int64_t option, void* value
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, enum QAbstractSocket__SocketOption, QVariant*)
-void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_t, void*));
+void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1411,7 +1411,7 @@ void q_udpsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_
 ///
 /// @param self QUdpSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_udpsocket_socket_option(void* self, int64_t option);
+QVariant* q_udpsocket_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1421,7 +1421,7 @@ QVariant* q_udpsocket_socket_option(void* self, int64_t option);
 ///
 /// @param self QUdpSocket*
 /// @param option enum QAbstractSocket__SocketOption
-QVariant* q_udpsocket_qbase_socket_option(void* self, int64_t option);
+QVariant* q_udpsocket_qbase_socket_option(void* self, int32_t option);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1431,7 +1431,7 @@ QVariant* q_udpsocket_qbase_socket_option(void* self, int64_t option);
 ///
 /// @param self QUdpSocket*
 /// @param callback QVariant* fn(QUdpSocket*, enum QAbstractSocket__SocketOption)
-void q_udpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64_t));
+void q_udpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2155,7 +2155,7 @@ void q_udpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 /// @param self QUdpSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_udpsocket_set_socket_state(void* self, int64_t state);
+void q_udpsocket_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2165,7 +2165,7 @@ void q_udpsocket_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QUdpSocket*
 /// @param state enum QAbstractSocket__SocketState
-void q_udpsocket_qbase_set_socket_state(void* self, int64_t state);
+void q_udpsocket_qbase_set_socket_state(void* self, int32_t state);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2175,7 +2175,7 @@ void q_udpsocket_qbase_set_socket_state(void* self, int64_t state);
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, enum QAbstractSocket__SocketState)
-void q_udpsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t));
+void q_udpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2185,7 +2185,7 @@ void q_udpsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t
 ///
 /// @param self QUdpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_udpsocket_set_socket_error(void* self, int64_t socketError);
+void q_udpsocket_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2195,7 +2195,7 @@ void q_udpsocket_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QUdpSocket*
 /// @param socketError enum QAbstractSocket__SocketError
-void q_udpsocket_qbase_set_socket_error(void* self, int64_t socketError);
+void q_udpsocket_qbase_set_socket_error(void* self, int32_t socketError);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2205,7 +2205,7 @@ void q_udpsocket_qbase_set_socket_error(void* self, int64_t socketError);
 ///
 /// @param self QUdpSocket*
 /// @param callback void fn(QUdpSocket*, enum QAbstractSocket__SocketError)
-void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int64_t));
+void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket
 ///

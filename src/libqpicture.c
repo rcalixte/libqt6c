@@ -111,15 +111,15 @@ QPaintEngine* q_picture_qbase_paint_engine(void* self) {
     return QPicture_QBasePaintEngine((QPicture*)self);
 }
 
-int32_t q_picture_metric(void* self, int64_t m) {
+int32_t q_picture_metric(void* self, int32_t m) {
     return QPicture_Metric((QPicture*)self, m);
 }
 
-void q_picture_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_picture_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPicture_OnMetric((QPicture*)self, (intptr_t)callback);
 }
 
-int32_t q_picture_qbase_metric(void* self, int64_t m) {
+int32_t q_picture_qbase_metric(void* self, int32_t m) {
     return QPicture_QBaseMetric((QPicture*)self, m);
 }
 
@@ -179,7 +179,7 @@ double q_picture_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_picture_encode_metric_f(int64_t metric, double value) {
+int32_t q_picture_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -219,15 +219,15 @@ void q_picture_on_shared_painter(void* self, QPainter* (*callback)()) {
     QPicture_OnSharedPainter((QPicture*)self, (intptr_t)callback);
 }
 
-double q_picture_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_picture_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPicture_GetDecodedMetricF((QPicture*)self, metricA, metricB);
 }
 
-double q_picture_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_picture_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPicture_QBaseGetDecodedMetricF((QPicture*)self, metricA, metricB);
 }
 
-void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_picture_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QPicture_OnGetDecodedMetricF((QPicture*)self, (intptr_t)callback);
 }
 

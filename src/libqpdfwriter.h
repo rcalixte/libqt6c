@@ -36,13 +36,13 @@ void* q_pdfwriter_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfwriter_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfwriter_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPdfWriter*
 /// @param callback int32_t fn(QPdfWriter*, enum QMetaObject__Call, int, void*)
-void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -50,7 +50,7 @@ void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pdfwriter_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pdfwriter_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,14 +63,14 @@ const char* q_pdfwriter_tr(const char* s);
 ///
 /// @param self QPdfWriter*
 /// @param version enum QPagedPaintDevice__PdfVersion
-void q_pdfwriter_set_pdf_version(void* self, int64_t version);
+void q_pdfwriter_set_pdf_version(void* self, int32_t version);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#pdfVersion)
 ///
 /// @param self QPdfWriter*
 ///
 /// @return enum QPagedPaintDevice__PdfVersion
-int64_t q_pdfwriter_pdf_version(void* self);
+int32_t q_pdfwriter_pdf_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#title)
 ///
@@ -165,13 +165,13 @@ void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const cha
 /// @param self QPdfWriter*
 ///
 /// @return enum QPdfWriter__ColorModel
-int64_t q_pdfwriter_color_model(void* self);
+int32_t q_pdfwriter_color_model(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#setColorModel)
 ///
 /// @param self QPdfWriter*
 /// @param model enum QPdfWriter__ColorModel
-void q_pdfwriter_set_color_model(void* self, int64_t model);
+void q_pdfwriter_set_color_model(void* self, int32_t model);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#outputIntent)
 ///
@@ -208,7 +208,7 @@ QPaintEngine* q_pdfwriter_qbase_paint_engine(void* self);
 ///
 /// @param self QPdfWriter*
 /// @param id enum QPaintDevice__PaintDeviceMetric
-int32_t q_pdfwriter_metric(void* self, int64_t id);
+int32_t q_pdfwriter_metric(void* self, int32_t id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
@@ -216,7 +216,7 @@ int32_t q_pdfwriter_metric(void* self, int64_t id);
 ///
 /// @param self QPdfWriter*
 /// @param callback int32_t fn(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric)
-void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfwriter.html#metric)
 ///
@@ -224,7 +224,7 @@ void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int64_t));
 ///
 /// @param self QPdfWriter*
 /// @param id enum QPaintDevice__PaintDeviceMetric
-int32_t q_pdfwriter_qbase_metric(void* self, int64_t id);
+int32_t q_pdfwriter_qbase_metric(void* self, int32_t id);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -341,7 +341,7 @@ void q_pdfwriter_kill_timer(void* self, int id);
 ///
 /// @param self QPdfWriter*
 /// @param id enum Qt__TimerId
-void q_pdfwriter_kill_timer2(void* self, int64_t id);
+void q_pdfwriter_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -518,7 +518,7 @@ bool q_pdfwriter_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPdfWriter*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pdfwriter_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pdfwriter_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -529,7 +529,7 @@ int32_t q_pdfwriter_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -540,7 +540,7 @@ QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pdfwriter_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pdfwriter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -675,7 +675,7 @@ double q_pdfwriter_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value);
+int32_t q_pdfwriter_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QObject
 ///
@@ -957,7 +957,7 @@ void q_pdfwriter_on_set_page_size(void* self, bool (*callback)(void*, void*));
 ///
 /// @param self QPdfWriter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_pdfwriter_set_page_orientation(void* self, int64_t orientation);
+bool q_pdfwriter_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -967,7 +967,7 @@ bool q_pdfwriter_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QPdfWriter*
 /// @param orientation enum QPageLayout__Orientation
-bool q_pdfwriter_qbase_set_page_orientation(void* self, int64_t orientation);
+bool q_pdfwriter_qbase_set_page_orientation(void* self, int32_t orientation);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -977,7 +977,7 @@ bool q_pdfwriter_qbase_set_page_orientation(void* self, int64_t orientation);
 ///
 /// @param self QPdfWriter*
 /// @param callback bool fn(QPdfWriter*, enum QPageLayout__Orientation)
-void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t));
+void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -988,7 +988,7 @@ void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int
 /// @param self QPdfWriter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_pdfwriter_set_page_margins(void* self, void* margins, int64_t units);
+bool q_pdfwriter_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -999,7 +999,7 @@ bool q_pdfwriter_set_page_margins(void* self, void* margins, int64_t units);
 /// @param self QPdfWriter*
 /// @param margins QMarginsF*
 /// @param units enum QPageLayout__Unit
-bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int64_t units);
+bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int32_t units);
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1009,7 +1009,7 @@ bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int64_t units
 ///
 /// @param self QPdfWriter*
 /// @param callback bool fn(QPdfWriter*, QMarginsF*, enum QPageLayout__Unit)
-void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t));
+void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QPagedPaintDevice
 ///
@@ -1282,7 +1282,7 @@ void q_pdfwriter_on_is_signal_connected(void* self, bool (*callback)(void*, void
 /// @param self QPdfWriter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_pdfwriter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1293,7 +1293,7 @@ double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t met
 /// @param self QPdfWriter*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -1303,7 +1303,7 @@ double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64
 ///
 /// @param self QPdfWriter*
 /// @param callback double fn(QPdfWriter*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

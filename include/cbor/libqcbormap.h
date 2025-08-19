@@ -465,8 +465,6 @@ QCborMap__Iterator* q_cbormap__iterator_operator_minus(void* self, int64_t j);
 /// @param j QCborMap__Iterator*
 int64_t q_cbormap__iterator_operator_minus2(void* self, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap::iterator.html#dtor.QCborMap::Iterator)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCborMap__Iterator*
@@ -572,8 +570,6 @@ QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus(void* self, int
 /// @param j QCborMap__ConstIterator*
 int64_t q_cbormap__constiterator_operator_minus2(void* self, void* j);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qcbormap::constiterator.html#dtor.QCborMap::ConstIterator)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QCborMap__ConstIterator*

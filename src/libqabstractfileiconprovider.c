@@ -7,15 +7,15 @@ QAbstractFileIconProvider* q_abstractfileiconprovider_new() {
     return QAbstractFileIconProvider_new();
 }
 
-QIcon* q_abstractfileiconprovider_icon(void* self, int64_t param1) {
+QIcon* q_abstractfileiconprovider_icon(void* self, int32_t param1) {
     return QAbstractFileIconProvider_Icon((QAbstractFileIconProvider*)self, param1);
 }
 
-void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int64_t)) {
+void q_abstractfileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t)) {
     QAbstractFileIconProvider_OnIcon((QAbstractFileIconProvider*)self, (intptr_t)callback);
 }
 
-QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int64_t param1) {
+QIcon* q_abstractfileiconprovider_qbase_icon(void* self, int32_t param1) {
     return QAbstractFileIconProvider_QBaseIcon((QAbstractFileIconProvider*)self, param1);
 }
 

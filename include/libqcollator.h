@@ -87,13 +87,13 @@ QLocale* q_collator_locale(void* self);
 /// @param self QCollator*
 ///
 /// @return enum Qt__CaseSensitivity
-int64_t q_collator_case_sensitivity(void* self);
+int32_t q_collator_case_sensitivity(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#setCaseSensitivity)
 ///
 /// @param self QCollator*
 /// @param cs enum Qt__CaseSensitivity
-void q_collator_set_case_sensitivity(void* self, int64_t cs);
+void q_collator_set_case_sensitivity(void* self, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcollator.html#setNumericMode)
 ///

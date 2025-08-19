@@ -35,13 +35,13 @@ void* q_valueaxis_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_valueaxis_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_valueaxis_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QValueAxis*
 /// @param callback int32_t fn(QValueAxis*, enum QMetaObject__Call, int, void*)
-void q_valueaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_valueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_valueaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_valueaxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_valueaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -63,15 +63,15 @@ const char* q_valueaxis_tr(const char* s);
 /// @param self QValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
-int64_t q_valueaxis_type(void* self);
+int32_t q_valueaxis_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QValueAxis*
-/// @param callback int64_t fn()
-void q_valueaxis_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_valueaxis_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#type)
 ///
@@ -80,7 +80,7 @@ void q_valueaxis_on_type(void* self, int64_t (*callback)());
 /// @param self QValueAxis*
 ///
 /// @return enum QAbstractAxis__AxisType
-int64_t q_valueaxis_qbase_type(void* self);
+int32_t q_valueaxis_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setMin)
 ///
@@ -159,14 +159,14 @@ double q_valueaxis_tick_interval(void* self);
 ///
 /// @param self QValueAxis*
 /// @param typeVal enum QValueAxis__TickType
-void q_valueaxis_set_tick_type(void* self, int64_t typeVal);
+void q_valueaxis_set_tick_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickType)
 ///
 /// @param self QValueAxis*
 ///
 /// @return enum QValueAxis__TickType
-int64_t q_valueaxis_tick_type(void* self);
+int32_t q_valueaxis_tick_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#setLabelFormat)
 ///
@@ -287,13 +287,13 @@ void q_valueaxis_on_tick_anchor_changed(void* self, void (*callback)(void*, doub
 ///
 /// @param self QValueAxis*
 /// @param typeVal enum QValueAxis__TickType
-void q_valueaxis_tick_type_changed(void* self, int64_t typeVal);
+void q_valueaxis_tick_type_changed(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvalueaxis-qtcharts.html#tickTypeChanged)
 ///
 /// @param self QValueAxis*
 /// @param callback void fn(QValueAxis*, enum QValueAxis__TickType)
-void q_valueaxis_on_tick_type_changed(void* self, void (*callback)(void*, int64_t));
+void q_valueaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -688,7 +688,7 @@ QColor* q_valueaxis_shades_border_color(void* self);
 /// @param self QValueAxis*
 ///
 /// @return enum Qt__Orientation
-int64_t q_valueaxis_orientation(void* self);
+int32_t q_valueaxis_orientation(void* self);
 
 /// Inherited from QAbstractAxis
 ///
@@ -1366,7 +1366,7 @@ void q_valueaxis_kill_timer(void* self, int id);
 ///
 /// @param self QValueAxis*
 /// @param id enum Qt__TimerId
-void q_valueaxis_kill_timer2(void* self, int64_t id);
+void q_valueaxis_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1543,7 +1543,7 @@ bool q_valueaxis_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QValueAxis*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_valueaxis_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_valueaxis_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1554,7 +1554,7 @@ int32_t q_valueaxis_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_valueaxis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_valueaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1565,7 +1565,7 @@ QMetaObject__Connection* q_valueaxis_connect5(void* sender, void* signal, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_valueaxis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_valueaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

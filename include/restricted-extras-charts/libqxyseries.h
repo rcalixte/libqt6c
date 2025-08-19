@@ -26,7 +26,7 @@ void* q_xyseries_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_xyseries_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_xyseries_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -411,7 +411,7 @@ void q_xyseries_clear_point_configuration(void* self, int index);
 /// @param self QXYSeries*
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
-void q_xyseries_clear_point_configuration2(void* self, int index, int64_t key);
+void q_xyseries_clear_point_configuration2(void* self, int index, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#clearPointsConfiguration)
 ///
@@ -422,14 +422,14 @@ void q_xyseries_clear_points_configuration(void* self);
 ///
 /// @param self QXYSeries*
 /// @param key enum QXYSeries__PointConfiguration
-void q_xyseries_clear_points_configuration2(void* self, int64_t key);
+void q_xyseries_clear_points_configuration2(void* self, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
 /// @param self QXYSeries*
 /// @param index int
 /// @param configuration libqt_map /* of enum QXYSeries__PointConfiguration to QVariant* */
-void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int64_t to QVariant* */ configuration);
+void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of int32_t to QVariant* */ configuration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointConfiguration)
 ///
@@ -437,24 +437,24 @@ void q_xyseries_set_point_configuration(void* self, int index, libqt_map /* of i
 /// @param index int
 /// @param key enum QXYSeries__PointConfiguration
 /// @param value QVariant*
-void q_xyseries_set_point_configuration2(void* self, int index, int64_t key, void* value);
+void q_xyseries_set_point_configuration2(void* self, int index, int32_t key, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#setPointsConfiguration)
 ///
 /// @param self QXYSeries*
 /// @param pointsConfiguration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ pointsConfiguration);
+void q_xyseries_set_points_configuration(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ pointsConfiguration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointConfiguration)
 ///
 /// @param self QXYSeries*
 /// @param index int
-libqt_map /* of int64_t to QVariant* */ q_xyseries_point_configuration(void* self, int index);
+libqt_map /* of int32_t to QVariant* */ q_xyseries_point_configuration(void* self, int index);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfiguration)
 ///
 /// @param self QXYSeries*
-libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ q_xyseries_points_configuration(void* self);
+libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ q_xyseries_points_configuration(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#sizeBy)
 ///
@@ -762,13 +762,13 @@ void q_xyseries_on_best_fit_line_color_changed(void* self, void (*callback)(void
 ///
 /// @param self QXYSeries*
 /// @param configuration libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */
-void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */ configuration);
+void q_xyseries_points_configuration_changed(void* self, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */ configuration);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#pointsConfigurationChanged)
 ///
 /// @param self QXYSeries*
 /// @param callback void fn(QXYSeries*, libqt_map /* of int to libqt_map  of enum QXYSeries__PointConfiguration to QVariant*  */)
-void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int64_t to QVariant*  */));
+void q_xyseries_on_points_configuration_changed(void* self, void (*callback)(void*, libqt_map /* of int to libqt_map  of int32_t to QVariant*  */));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qxyseries-qtcharts.html#markerSizeChanged)
 ///
@@ -837,7 +837,7 @@ void q_xyseries_color_by2(void* self, libqt_list sourceData, void* gradient);
 /// @param self QXYSeries*
 ///
 /// @return enum QAbstractSeries__SeriesType
-int64_t q_xyseries_type(void* self);
+int32_t q_xyseries_type(void* self);
 
 /// Inherited from QAbstractSeries
 ///
@@ -1126,7 +1126,7 @@ void q_xyseries_kill_timer(void* self, int id);
 ///
 /// @param self QXYSeries*
 /// @param id enum Qt__TimerId
-void q_xyseries_kill_timer2(void* self, int64_t id);
+void q_xyseries_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1303,7 +1303,7 @@ bool q_xyseries_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QXYSeries*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_xyseries_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_xyseries_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1314,7 +1314,7 @@ int32_t q_xyseries_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_xyseries_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_xyseries_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1325,7 +1325,7 @@ QMetaObject__Connection* q_xyseries_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_xyseries_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_xyseries_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

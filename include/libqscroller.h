@@ -26,7 +26,7 @@ void* q_scroller_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_scroller_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_scroller_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -83,14 +83,14 @@ QObject* q_scroller_target(void* self);
 /// @param self QScroller*
 ///
 /// @return enum QScroller__State
-int64_t q_scroller_state(void* self);
+int32_t q_scroller_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#handleInput)
 ///
 /// @param self QScroller*
 /// @param input enum QScroller__Input
 /// @param position QPointF*
-bool q_scroller_handle_input(void* self, int64_t input, void* position);
+bool q_scroller_handle_input(void* self, int32_t input, void* position);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#stop)
 ///
@@ -188,13 +188,13 @@ void q_scroller_resend_prepare_event(void* self);
 ///
 /// @param self QScroller*
 /// @param newstate enum QScroller__State
-void q_scroller_state_changed(void* self, int64_t newstate);
+void q_scroller_state_changed(void* self, int32_t newstate);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#stateChanged)
 ///
 /// @param self QScroller*
 /// @param callback void fn(QScroller*, enum QScroller__State)
-void q_scroller_on_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_scroller_on_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#scrollerPropertiesChanged)
 ///
@@ -231,7 +231,7 @@ const char* q_scroller_tr3(const char* s, const char* c, int n);
 /// @param gestureType enum QScroller__ScrollerGestureType
 ///
 /// @return enum Qt__GestureType
-int64_t q_scroller_grab_gesture2(void* target, int64_t gestureType);
+int64_t q_scroller_grab_gesture2(void* target, int32_t gestureType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qscroller.html#handleInput)
 ///
@@ -239,7 +239,7 @@ int64_t q_scroller_grab_gesture2(void* target, int64_t gestureType);
 /// @param input enum QScroller__Input
 /// @param position QPointF*
 /// @param timestamp long long
-bool q_scroller_handle_input3(void* self, int64_t input, void* position, long long timestamp);
+bool q_scroller_handle_input3(void* self, int32_t input, void* position, long long timestamp);
 
 /// Inherited from QObject
 ///
@@ -348,7 +348,7 @@ void q_scroller_kill_timer(void* self, int id);
 ///
 /// @param self QScroller*
 /// @param id enum Qt__TimerId
-void q_scroller_kill_timer2(void* self, int64_t id);
+void q_scroller_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -525,7 +525,7 @@ bool q_scroller_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QScroller*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_scroller_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_scroller_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -536,7 +536,7 @@ int32_t q_scroller_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_scroller_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_scroller_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -547,7 +547,7 @@ QMetaObject__Connection* q_scroller_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_scroller_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_scroller_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -350,7 +350,7 @@ QDateTime* q_fileinfo_last_read(void* self);
 ///
 /// @param self QFileInfo*
 /// @param time enum QFileDevice__FileTime
-QDateTime* q_fileinfo_file_time(void* self, int64_t time);
+QDateTime* q_fileinfo_file_time(void* self, int32_t time);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///
@@ -381,7 +381,7 @@ QDateTime* q_fileinfo_last_read2(void* self, void* tz);
 /// @param self QFileInfo*
 /// @param time enum QFileDevice__FileTime
 /// @param tz QTimeZone*
-QDateTime* q_fileinfo_file_time2(void* self, int64_t time, void* tz);
+QDateTime* q_fileinfo_file_time2(void* self, int32_t time, void* tz);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfileinfo.html#caching)
 ///

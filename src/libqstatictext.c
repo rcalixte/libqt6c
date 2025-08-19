@@ -36,11 +36,11 @@ const char* q_statictext_text(void* self) {
     return _ret;
 }
 
-void q_statictext_set_text_format(void* self, int64_t textFormat) {
+void q_statictext_set_text_format(void* self, int32_t textFormat) {
     QStaticText_SetTextFormat((QStaticText*)self, textFormat);
 }
 
-int64_t q_statictext_text_format(void* self) {
+int32_t q_statictext_text_format(void* self) {
     return QStaticText_TextFormat((QStaticText*)self);
 }
 
@@ -68,11 +68,11 @@ void q_statictext_prepare(void* self) {
     QStaticText_Prepare((QStaticText*)self);
 }
 
-void q_statictext_set_performance_hint(void* self, int64_t performanceHint) {
+void q_statictext_set_performance_hint(void* self, int32_t performanceHint) {
     QStaticText_SetPerformanceHint((QStaticText*)self, performanceHint);
 }
 
-int64_t q_statictext_performance_hint(void* self) {
+int32_t q_statictext_performance_hint(void* self) {
     return QStaticText_PerformanceHint((QStaticText*)self);
 }
 

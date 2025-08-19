@@ -72,7 +72,7 @@ bool q_lockfile_remove_stale_lock_file(void* self);
 /// @param self QLockFile*
 ///
 /// @return enum QLockFile__LockError
-int64_t q_lockfile_error(void* self);
+int32_t q_lockfile_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlockfile.html#dtor.QLockFile)
 ///

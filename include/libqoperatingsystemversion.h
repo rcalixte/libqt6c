@@ -17,7 +17,7 @@
 ///
 /// @param osType enum QOperatingSystemVersionBase__OSType
 /// @param vmajor int
-QOperatingSystemVersionBase* q_operatingsystemversionbase_new(int64_t osType, int vmajor);
+QOperatingSystemVersionBase* q_operatingsystemversionbase_new(int32_t osType, int vmajor);
 
 /// q_operatingsystemversionbase_new2 constructs a new QOperatingSystemVersionBase object.
 ///
@@ -29,7 +29,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(void* param1);
 /// @param osType enum QOperatingSystemVersionBase__OSType
 /// @param vmajor int
 /// @param vminor int
-QOperatingSystemVersionBase* q_operatingsystemversionbase_new3(int64_t osType, int vmajor, int vminor);
+QOperatingSystemVersionBase* q_operatingsystemversionbase_new3(int32_t osType, int vmajor, int vminor);
 
 /// q_operatingsystemversionbase_new4 constructs a new QOperatingSystemVersionBase object.
 ///
@@ -37,7 +37,7 @@ QOperatingSystemVersionBase* q_operatingsystemversionbase_new3(int64_t osType, i
 /// @param vmajor int
 /// @param vminor int
 /// @param vmicro int
-QOperatingSystemVersionBase* q_operatingsystemversionbase_new4(int64_t osType, int vmajor, int vminor, int vmicro);
+QOperatingSystemVersionBase* q_operatingsystemversionbase_new4(int32_t osType, int vmajor, int vminor, int vmicro);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#current)
 ///
@@ -54,7 +54,7 @@ const char* q_operatingsystemversionbase_name(void* osversion);
 ///
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
-int64_t q_operatingsystemversionbase_current_type();
+int32_t q_operatingsystemversionbase_current_type();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#version)
 ///
@@ -86,7 +86,7 @@ int32_t q_operatingsystemversionbase_segment_count(void* self);
 /// @param self QOperatingSystemVersionBase*
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
-int64_t q_operatingsystemversionbase_type(void* self);
+int32_t q_operatingsystemversionbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversionbase.html#name)
 ///
@@ -139,7 +139,7 @@ const char* q_operatingsystemversionunexported_name(void* osversion);
 ///
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
-int64_t q_operatingsystemversionunexported_current_type();
+int32_t q_operatingsystemversionunexported_current_type();
 
 /// Inherited from QOperatingSystemVersionBase
 ///
@@ -183,7 +183,7 @@ int32_t q_operatingsystemversionunexported_segment_count(void* self);
 /// @param self QOperatingSystemVersionUnexported*
 ///
 /// @return enum QOperatingSystemVersionBase__OSType
-int64_t q_operatingsystemversionunexported_type(void* self);
+int32_t q_operatingsystemversionunexported_type(void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///
@@ -212,7 +212,7 @@ QOperatingSystemVersion* q_operatingsystemversion_new(void* osversion);
 ///
 /// @param osType enum QOperatingSystemVersion__OSType
 /// @param vmajor int
-QOperatingSystemVersion* q_operatingsystemversion_new2(int64_t osType, int vmajor);
+QOperatingSystemVersion* q_operatingsystemversion_new2(int32_t osType, int vmajor);
 
 /// q_operatingsystemversion_new3 constructs a new QOperatingSystemVersion object.
 ///
@@ -224,7 +224,7 @@ QOperatingSystemVersion* q_operatingsystemversion_new3(void* param1);
 /// @param osType enum QOperatingSystemVersion__OSType
 /// @param vmajor int
 /// @param vminor int
-QOperatingSystemVersion* q_operatingsystemversion_new4(int64_t osType, int vmajor, int vminor);
+QOperatingSystemVersion* q_operatingsystemversion_new4(int32_t osType, int vmajor, int vminor);
 
 /// q_operatingsystemversion_new5 constructs a new QOperatingSystemVersion object.
 ///
@@ -232,20 +232,20 @@ QOperatingSystemVersion* q_operatingsystemversion_new4(int64_t osType, int vmajo
 /// @param vmajor int
 /// @param vminor int
 /// @param vmicro int
-QOperatingSystemVersion* q_operatingsystemversion_new5(int64_t osType, int vmajor, int vminor, int vmicro);
+QOperatingSystemVersion* q_operatingsystemversion_new5(int32_t osType, int vmajor, int vminor, int vmicro);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversion.html#currentType)
 ///
 ///
 /// @return enum QOperatingSystemVersion__OSType
-int64_t q_operatingsystemversion_current_type();
+int32_t q_operatingsystemversion_current_type();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qoperatingsystemversion.html#type)
 ///
 /// @param self QOperatingSystemVersion*
 ///
 /// @return enum QOperatingSystemVersion__OSType
-int64_t q_operatingsystemversion_type(void* self);
+int32_t q_operatingsystemversion_type(void* self);
 
 /// Inherited from QOperatingSystemVersionBase
 ///

@@ -62,13 +62,13 @@ void* q_filedialog_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_filedialog_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_filedialog_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QFileDialog*
 /// @param callback int32_t fn(QFileDialog*, enum QMetaObject__Call, int, void*)
-void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -76,7 +76,7 @@ void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_filedialog_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_filedialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -212,40 +212,40 @@ void q_filedialog_set_filter(void* self, int64_t filters);
 ///
 /// @param self QFileDialog*
 /// @param mode enum QFileDialog__ViewMode
-void q_filedialog_set_view_mode(void* self, int64_t mode);
+void q_filedialog_set_view_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#viewMode)
 ///
 /// @param self QFileDialog*
 ///
 /// @return enum QFileDialog__ViewMode
-int64_t q_filedialog_view_mode(void* self);
+int32_t q_filedialog_view_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setFileMode)
 ///
 /// @param self QFileDialog*
 /// @param mode enum QFileDialog__FileMode
-void q_filedialog_set_file_mode(void* self, int64_t mode);
+void q_filedialog_set_file_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#fileMode)
 ///
 /// @param self QFileDialog*
 ///
 /// @return enum QFileDialog__FileMode
-int64_t q_filedialog_file_mode(void* self);
+int32_t q_filedialog_file_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setAcceptMode)
 ///
 /// @param self QFileDialog*
 /// @param mode enum QFileDialog__AcceptMode
-void q_filedialog_set_accept_mode(void* self, int64_t mode);
+void q_filedialog_set_accept_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#acceptMode)
 ///
 /// @param self QFileDialog*
 ///
 /// @return enum QFileDialog__AcceptMode
-int64_t q_filedialog_accept_mode(void* self);
+int32_t q_filedialog_accept_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setSidebarUrls)
 ///
@@ -324,7 +324,7 @@ QAbstractFileIconProvider* q_filedialog_icon_provider(void* self);
 /// @param self QFileDialog*
 /// @param label enum QFileDialog__DialogLabel
 /// @param text const char*
-void q_filedialog_set_label_text(void* self, int64_t label, const char* text);
+void q_filedialog_set_label_text(void* self, int32_t label, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#labelText)
 ///
@@ -332,7 +332,7 @@ void q_filedialog_set_label_text(void* self, int64_t label, const char* text);
 ///
 /// @param self QFileDialog*
 /// @param label enum QFileDialog__DialogLabel
-const char* q_filedialog_label_text(void* self, int64_t label);
+const char* q_filedialog_label_text(void* self, int32_t label);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setSupportedSchemes)
 ///
@@ -362,13 +362,13 @@ QAbstractProxyModel* q_filedialog_proxy_model(void* self);
 ///
 /// @param self QFileDialog*
 /// @param option enum QFileDialog__Option
-void q_filedialog_set_option(void* self, int64_t option);
+void q_filedialog_set_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#testOption)
 ///
 /// @param self QFileDialog*
 /// @param option enum QFileDialog__Option
-bool q_filedialog_test_option(void* self, int64_t option);
+bool q_filedialog_test_option(void* self, int32_t option);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#setOptions)
 ///
@@ -645,7 +645,7 @@ const char* q_filedialog_tr3(const char* s, const char* c, int n);
 /// @param self QFileDialog*
 /// @param option enum QFileDialog__Option
 /// @param on bool
-void q_filedialog_set_option2(void* self, int64_t option, bool on);
+void q_filedialog_set_option2(void* self, int32_t option, bool on);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileName)
 ///
@@ -1058,7 +1058,7 @@ bool q_filedialog_is_modal(void* self);
 /// @param self QFileDialog*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_filedialog_window_modality(void* self);
+int32_t q_filedialog_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1066,7 +1066,7 @@ int64_t q_filedialog_window_modality(void* self);
 ///
 /// @param self QFileDialog*
 /// @param windowModality enum Qt__WindowModality
-void q_filedialog_set_window_modality(void* self, int64_t windowModality);
+void q_filedialog_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1529,7 +1529,7 @@ void q_filedialog_set_palette(void* self, void* palette);
 ///
 /// @param self QFileDialog*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_filedialog_set_background_role(void* self, int64_t backgroundRole);
+void q_filedialog_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1538,7 +1538,7 @@ void q_filedialog_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QFileDialog*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_filedialog_background_role(void* self);
+int32_t q_filedialog_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1546,7 +1546,7 @@ int64_t q_filedialog_background_role(void* self);
 ///
 /// @param self QFileDialog*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_filedialog_set_foreground_role(void* self, int64_t foregroundRole);
+void q_filedialog_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1555,7 +1555,7 @@ void q_filedialog_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QFileDialog*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_filedialog_foreground_role(void* self);
+int32_t q_filedialog_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1957,7 +1957,7 @@ void q_filedialog_set_accessible_description(void* self, const char* description
 ///
 /// @param self QFileDialog*
 /// @param direction enum Qt__LayoutDirection
-void q_filedialog_set_layout_direction(void* self, int64_t direction);
+void q_filedialog_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1966,7 +1966,7 @@ void q_filedialog_set_layout_direction(void* self, int64_t direction);
 /// @param self QFileDialog*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_filedialog_layout_direction(void* self);
+int32_t q_filedialog_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2045,7 +2045,7 @@ void q_filedialog_clear_focus(void* self);
 ///
 /// @param self QFileDialog*
 /// @param reason enum Qt__FocusReason
-void q_filedialog_set_focus2(void* self, int64_t reason);
+void q_filedialog_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2054,7 +2054,7 @@ void q_filedialog_set_focus2(void* self, int64_t reason);
 /// @param self QFileDialog*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_filedialog_focus_policy(void* self);
+int32_t q_filedialog_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2062,7 +2062,7 @@ int64_t q_filedialog_focus_policy(void* self);
 ///
 /// @param self QFileDialog*
 /// @param policy enum Qt__FocusPolicy
-void q_filedialog_set_focus_policy(void* self, int64_t policy);
+void q_filedialog_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2101,7 +2101,7 @@ QWidget* q_filedialog_focus_proxy(void* self);
 /// @param self QFileDialog*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_filedialog_context_menu_policy(void* self);
+int32_t q_filedialog_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2109,7 +2109,7 @@ int64_t q_filedialog_context_menu_policy(void* self);
 ///
 /// @param self QFileDialog*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_filedialog_set_context_menu_policy(void* self, int64_t policy);
+void q_filedialog_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2527,7 +2527,7 @@ void q_filedialog_set_size_policy(void* self, void* sizePolicy);
 /// @param self QFileDialog*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_filedialog_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_filedialog_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2835,7 +2835,7 @@ QWidget* q_filedialog_child_at3(void* self, void* p);
 ///
 /// @param self QFileDialog*
 /// @param param1 enum Qt__WidgetAttribute
-void q_filedialog_set_attribute(void* self, int64_t param1);
+void q_filedialog_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2843,7 +2843,7 @@ void q_filedialog_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QFileDialog*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_filedialog_test_attribute(void* self, int64_t param1);
+bool q_filedialog_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3076,7 +3076,7 @@ void q_filedialog_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QFileDialog*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_filedialog_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_filedialog_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3112,7 +3112,7 @@ void q_filedialog_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QFileDialog*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_filedialog_set_attribute2(void* self, int64_t param1, bool on);
+void q_filedialog_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3221,7 +3221,7 @@ void q_filedialog_kill_timer(void* self, int id);
 ///
 /// @param self QFileDialog*
 /// @param id enum Qt__TimerId
-void q_filedialog_kill_timer2(void* self, int64_t id);
+void q_filedialog_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3390,7 +3390,7 @@ bool q_filedialog_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QFileDialog*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_filedialog_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_filedialog_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3401,7 +3401,7 @@ int32_t q_filedialog_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_filedialog_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_filedialog_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3412,7 +3412,7 @@ QMetaObject__Connection* q_filedialog_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_filedialog_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_filedialog_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3519,7 +3519,7 @@ double q_filedialog_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_filedialog_encode_metric_f(int64_t metric, double value);
+int32_t q_filedialog_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QDialog
 ///
@@ -4599,7 +4599,7 @@ void q_filedialog_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self QFileDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_filedialog_metric(void* self, int64_t param1);
+int32_t q_filedialog_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4609,7 +4609,7 @@ int32_t q_filedialog_metric(void* self, int64_t param1);
 ///
 /// @param self QFileDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_filedialog_qbase_metric(void* self, int64_t param1);
+int32_t q_filedialog_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4619,7 +4619,7 @@ int32_t q_filedialog_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QFileDialog*
 /// @param callback int32_t fn(QFileDialog*, enum QPaintDevice__PaintDeviceMetric)
-void q_filedialog_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_filedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5244,7 +5244,7 @@ void q_filedialog_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self QFileDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_filedialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_filedialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5255,7 +5255,7 @@ double q_filedialog_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 /// @param self QFileDialog*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_filedialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_filedialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5265,7 +5265,7 @@ double q_filedialog_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// @param self QFileDialog*
 /// @param callback double fn(QFileDialog*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

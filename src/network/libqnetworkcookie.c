@@ -52,11 +52,11 @@ void q_networkcookie_set_http_only(void* self, bool enable) {
     QNetworkCookie_SetHttpOnly((QNetworkCookie*)self, enable);
 }
 
-int64_t q_networkcookie_same_site_policy(void* self) {
+int32_t q_networkcookie_same_site_policy(void* self) {
     return QNetworkCookie_SameSitePolicy((QNetworkCookie*)self);
 }
 
-void q_networkcookie_set_same_site_policy(void* self, int64_t sameSite) {
+void q_networkcookie_set_same_site_policy(void* self, int32_t sameSite) {
     QNetworkCookie_SetSameSitePolicy((QNetworkCookie*)self, sameSite);
 }
 
@@ -137,7 +137,7 @@ libqt_list /* of QNetworkCookie* */ q_networkcookie_parse_cookies(const char* co
     return _arr;
 }
 
-char* q_networkcookie_to_raw_form1(void* self, int64_t form) {
+char* q_networkcookie_to_raw_form1(void* self, int32_t form) {
     libqt_string _str = QNetworkCookie_ToRawForm1((QNetworkCookie*)self, form);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

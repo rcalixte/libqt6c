@@ -11,7 +11,7 @@ QProcessEnvironment* q_processenvironment_new() {
     return QProcessEnvironment_new();
 }
 
-QProcessEnvironment* q_processenvironment_new2(int64_t param1) {
+QProcessEnvironment* q_processenvironment_new2(int32_t param1) {
     return QProcessEnvironment_new2(param1);
 }
 
@@ -131,15 +131,15 @@ void* q_process_metacast(void* self, const char* param1) {
     return QProcess_Metacast((QProcess*)self, param1);
 }
 
-int32_t q_process_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_process_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QProcess_Metacall((QProcess*)self, param1, param2, param3);
 }
 
-void q_process_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_process_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QProcess_OnMetacall((QProcess*)self, (intptr_t)callback);
 }
 
-int32_t q_process_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_process_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QProcess_QBaseMetacall((QProcess*)self, param1, param2, param3);
 }
 
@@ -223,31 +223,31 @@ void q_process_set_arguments(void* self, const char* arguments[]) {
     free(arguments_qstr);
 }
 
-int64_t q_process_process_channel_mode(void* self) {
+int32_t q_process_process_channel_mode(void* self) {
     return QProcess_ProcessChannelMode((QProcess*)self);
 }
 
-void q_process_set_process_channel_mode(void* self, int64_t mode) {
+void q_process_set_process_channel_mode(void* self, int32_t mode) {
     QProcess_SetProcessChannelMode((QProcess*)self, mode);
 }
 
-int64_t q_process_input_channel_mode(void* self) {
+int32_t q_process_input_channel_mode(void* self) {
     return QProcess_InputChannelMode((QProcess*)self);
 }
 
-void q_process_set_input_channel_mode(void* self, int64_t mode) {
+void q_process_set_input_channel_mode(void* self, int32_t mode) {
     QProcess_SetInputChannelMode((QProcess*)self, mode);
 }
 
-int64_t q_process_read_channel(void* self) {
+int32_t q_process_read_channel(void* self) {
     return QProcess_ReadChannel((QProcess*)self);
 }
 
-void q_process_set_read_channel(void* self, int64_t channel) {
+void q_process_set_read_channel(void* self, int32_t channel) {
     QProcess_SetReadChannel((QProcess*)self, channel);
 }
 
-void q_process_close_read_channel(void* self, int64_t channel) {
+void q_process_close_read_channel(void* self, int32_t channel) {
     QProcess_CloseReadChannel((QProcess*)self, channel);
 }
 
@@ -340,11 +340,11 @@ QProcessEnvironment* q_process_process_environment(void* self) {
     return QProcess_ProcessEnvironment((QProcess*)self);
 }
 
-int64_t q_process_error(void* self) {
+int32_t q_process_error(void* self) {
     return QProcess_Error((QProcess*)self);
 }
 
-int64_t q_process_state(void* self) {
+int32_t q_process_state(void* self) {
     return QProcess_State((QProcess*)self);
 }
 
@@ -402,7 +402,7 @@ int32_t q_process_exit_code(void* self) {
     return QProcess_ExitCode((QProcess*)self);
 }
 
-int64_t q_process_exit_status(void* self) {
+int32_t q_process_exit_status(void* self) {
     return QProcess_ExitStatus((QProcess*)self);
 }
 
@@ -492,23 +492,23 @@ void q_process_on_finished(void* self, void (*callback)(void*, int)) {
     QProcess_Connect_Finished((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_error_occurred(void* self, int64_t errorVal) {
+void q_process_error_occurred(void* self, int32_t errorVal) {
     QProcess_ErrorOccurred((QProcess*)self, errorVal);
 }
 
-void q_process_on_error_occurred(void* self, void (*callback)(void*, int64_t)) {
+void q_process_on_error_occurred(void* self, void (*callback)(void*, int32_t)) {
     QProcess_Connect_ErrorOccurred((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_set_process_state(void* self, int64_t state) {
+void q_process_set_process_state(void* self, int32_t state) {
     QProcess_SetProcessState((QProcess*)self, state);
 }
 
-void q_process_on_set_process_state(void* self, void (*callback)(void*, int64_t)) {
+void q_process_on_set_process_state(void* self, void (*callback)(void*, int32_t)) {
     QProcess_OnSetProcessState((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_qbase_set_process_state(void* self, int64_t state) {
+void q_process_qbase_set_process_state(void* self, int32_t state) {
     QProcess_QBaseSetProcessState((QProcess*)self, state);
 }
 
@@ -676,11 +676,11 @@ bool q_process_start_detached4(const char* program, const char* arguments[], con
     return _out;
 }
 
-void q_process_finished2(void* self, int exitCode, int64_t exitStatus) {
+void q_process_finished2(void* self, int exitCode, int32_t exitStatus) {
     QProcess_Finished2((QProcess*)self, exitCode, exitStatus);
 }
 
-void q_process_on_finished2(void* self, void (*callback)(void*, int, int64_t)) {
+void q_process_on_finished2(void* self, void (*callback)(void*, int, int32_t)) {
     QProcess_Connect_Finished2((QProcess*)self, (intptr_t)callback);
 }
 
@@ -925,7 +925,7 @@ void q_process_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_process_kill_timer2(void* self, int64_t id) {
+void q_process_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1029,15 +1029,15 @@ bool q_process_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_process_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_process_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_process_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_process_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_process_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1317,7 +1317,7 @@ void q_process_on_started(void* self, void (*callback)(void*)) {
     QProcess_Connect_Started((QProcess*)self, (intptr_t)callback);
 }
 
-void q_process_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_process_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QProcess_Connect_StateChanged((QProcess*)self, (intptr_t)callback);
 }
 

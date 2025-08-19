@@ -23,15 +23,15 @@ void* q_categoryaxis_metacast(void* self, const char* param1) {
     return QCategoryAxis_Metacast((QCategoryAxis*)self, param1);
 }
 
-int32_t q_categoryaxis_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_categoryaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QCategoryAxis_Metacall((QCategoryAxis*)self, param1, param2, param3);
 }
 
-void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_categoryaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QCategoryAxis_OnMetacall((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_categoryaxis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_categoryaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QCategoryAxis_QBaseMetacall((QCategoryAxis*)self, param1, param2, param3);
 }
 
@@ -42,15 +42,15 @@ const char* q_categoryaxis_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_categoryaxis_type(void* self) {
+int32_t q_categoryaxis_type(void* self) {
     return QCategoryAxis_Type((QCategoryAxis*)self);
 }
 
-void q_categoryaxis_on_type(void* self, int64_t (*callback)()) {
+void q_categoryaxis_on_type(void* self, int32_t (*callback)()) {
     QCategoryAxis_OnType((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-int64_t q_categoryaxis_qbase_type(void* self) {
+int32_t q_categoryaxis_qbase_type(void* self) {
     return QCategoryAxis_QBaseType((QCategoryAxis*)self);
 }
 
@@ -101,11 +101,11 @@ int32_t q_categoryaxis_count(void* self) {
     return QCategoryAxis_Count((QCategoryAxis*)self);
 }
 
-int64_t q_categoryaxis_labels_position(void* self) {
+int32_t q_categoryaxis_labels_position(void* self) {
     return QCategoryAxis_LabelsPosition((QCategoryAxis*)self);
 }
 
-void q_categoryaxis_set_labels_position(void* self, int64_t position) {
+void q_categoryaxis_set_labels_position(void* self, int32_t position) {
     QCategoryAxis_SetLabelsPosition((QCategoryAxis*)self, position);
 }
 
@@ -117,11 +117,11 @@ void q_categoryaxis_on_categories_changed(void* self, void (*callback)(void*)) {
     QCategoryAxis_Connect_CategoriesChanged((QCategoryAxis*)self, (intptr_t)callback);
 }
 
-void q_categoryaxis_labels_position_changed(void* self, int64_t position) {
+void q_categoryaxis_labels_position_changed(void* self, int32_t position) {
     QCategoryAxis_LabelsPositionChanged((QCategoryAxis*)self, position);
 }
 
-void q_categoryaxis_on_labels_position_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_categoryaxis_on_labels_position_changed(void* self, void (*callback)(void*, int32_t)) {
     QCategoryAxis_Connect_LabelsPositionChanged((QCategoryAxis*)self, (intptr_t)callback);
 }
 
@@ -195,11 +195,11 @@ double q_categoryaxis_tick_interval(void* self) {
     return QValueAxis_TickInterval((QValueAxis*)self);
 }
 
-void q_categoryaxis_set_tick_type(void* self, int64_t typeVal) {
+void q_categoryaxis_set_tick_type(void* self, int32_t typeVal) {
     QValueAxis_SetTickType((QValueAxis*)self, typeVal);
 }
 
-int64_t q_categoryaxis_tick_type(void* self) {
+int32_t q_categoryaxis_tick_type(void* self) {
     return QValueAxis_TickType((QValueAxis*)self);
 }
 
@@ -282,11 +282,11 @@ void q_categoryaxis_on_tick_anchor_changed(void* self, void (*callback)(void*, d
     QValueAxis_Connect_TickAnchorChanged((QValueAxis*)self, (intptr_t)callback);
 }
 
-void q_categoryaxis_tick_type_changed(void* self, int64_t typeVal) {
+void q_categoryaxis_tick_type_changed(void* self, int32_t typeVal) {
     QValueAxis_TickTypeChanged((QValueAxis*)self, typeVal);
 }
 
-void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_categoryaxis_on_tick_type_changed(void* self, void (*callback)(void*, int32_t)) {
     QValueAxis_Connect_TickTypeChanged((QValueAxis*)self, (intptr_t)callback);
 }
 
@@ -493,7 +493,7 @@ QColor* q_categoryaxis_shades_border_color(void* self) {
     return QAbstractAxis_ShadesBorderColor((QAbstractAxis*)self);
 }
 
-int64_t q_categoryaxis_orientation(void* self) {
+int32_t q_categoryaxis_orientation(void* self) {
     return QAbstractAxis_Orientation((QAbstractAxis*)self);
 }
 
@@ -840,7 +840,7 @@ void q_categoryaxis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_categoryaxis_kill_timer2(void* self, int64_t id) {
+void q_categoryaxis_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -944,15 +944,15 @@ bool q_categoryaxis_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_categoryaxis_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_categoryaxis_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_categoryaxis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_categoryaxis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

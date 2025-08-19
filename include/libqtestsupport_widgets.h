@@ -167,8 +167,6 @@ QEventPoint* q_test__qtoucheventwidgetsequence_qbase_point_or_previous_point(voi
 /// @param callback QEventPoint* fn(QTest__QTouchEventWidgetSequence*, int)
 void q_test__qtoucheventwidgetsequence_on_point_or_previous_point(void* self, QEventPoint* (*callback)(void*, int));
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest::qtoucheventwidgetsequence.html#dtor.QTest::QTouchEventWidgetSequence)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTest__QTouchEventWidgetSequence*

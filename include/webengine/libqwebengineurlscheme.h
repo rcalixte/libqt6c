@@ -63,13 +63,13 @@ void q_webengineurlscheme_set_name(void* self, const char* newValue);
 /// @param self QWebEngineUrlScheme*
 ///
 /// @return enum QWebEngineUrlScheme__Syntax
-int64_t q_webengineurlscheme_syntax(void* self);
+int32_t q_webengineurlscheme_syntax(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#setSyntax)
 ///
 /// @param self QWebEngineUrlScheme*
 /// @param newValue enum QWebEngineUrlScheme__Syntax
-void q_webengineurlscheme_set_syntax(void* self, int64_t newValue);
+void q_webengineurlscheme_set_syntax(void* self, int32_t newValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebengineurlscheme.html#defaultPort)
 ///

@@ -42,11 +42,11 @@ void q_hostinfo_set_addresses(void* self, libqt_list addresses) {
     QHostInfo_SetAddresses((QHostInfo*)self, addresses);
 }
 
-int64_t q_hostinfo_error(void* self) {
+int32_t q_hostinfo_error(void* self) {
     return QHostInfo_Error((QHostInfo*)self);
 }
 
-void q_hostinfo_set_error(void* self, int64_t errorVal) {
+void q_hostinfo_set_error(void* self, int32_t errorVal) {
     QHostInfo_SetError((QHostInfo*)self, errorVal);
 }
 

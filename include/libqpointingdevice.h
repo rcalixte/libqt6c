@@ -81,7 +81,7 @@ QPointingDevice* q_pointingdevice_new();
 /// @param caps flag of enum QInputDevice__Capability
 /// @param maxPoints int
 /// @param buttonCount int
-QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int64_t devType, int64_t pType, int64_t caps, int maxPoints, int buttonCount);
+QPointingDevice* q_pointingdevice_new2(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount);
 
 /// q_pointingdevice_new3 constructs a new QPointingDevice object.
 ///
@@ -98,7 +98,7 @@ QPointingDevice* q_pointingdevice_new3(void* parent);
 /// @param maxPoints int
 /// @param buttonCount int
 /// @param seatName const char*
-QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int64_t devType, int64_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName);
+QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName);
 
 /// q_pointingdevice_new5 constructs a new QPointingDevice object.
 ///
@@ -111,7 +111,7 @@ QPointingDevice* q_pointingdevice_new4(const char* name, long long systemId, int
 /// @param buttonCount int
 /// @param seatName const char*
 /// @param uniqueId QPointingDeviceUniqueId*
-QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int64_t devType, int64_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId);
+QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId);
 
 /// q_pointingdevice_new6 constructs a new QPointingDevice object.
 ///
@@ -125,7 +125,7 @@ QPointingDevice* q_pointingdevice_new5(const char* name, long long systemId, int
 /// @param seatName const char*
 /// @param uniqueId QPointingDeviceUniqueId*
 /// @param parent QObject*
-QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int64_t devType, int64_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent);
+QPointingDevice* q_pointingdevice_new6(const char* name, long long systemId, int32_t devType, int32_t pType, int64_t caps, int maxPoints, int buttonCount, const char* seatName, void* uniqueId, void* parent);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -140,13 +140,13 @@ void* q_pointingdevice_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pointingdevice_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pointingdevice_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPointingDevice*
 /// @param callback int32_t fn(QPointingDevice*, enum QMetaObject__Call, int, void*)
-void q_pointingdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pointingdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -154,7 +154,7 @@ void q_pointingdevice_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pointingdevice_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pointingdevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -167,7 +167,7 @@ const char* q_pointingdevice_tr(const char* s);
 ///
 /// @param self QPointingDevice*
 /// @param devType enum QInputDevice__DeviceType
-void q_pointingdevice_set_type(void* self, int64_t devType);
+void q_pointingdevice_set_type(void* self, int32_t devType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#setCapabilities)
 ///
@@ -186,7 +186,7 @@ void q_pointingdevice_set_maximum_touch_points(void* self, int c);
 /// @param self QPointingDevice*
 ///
 /// @return enum QPointingDevice__PointerType
-int64_t q_pointingdevice_pointer_type(void* self);
+int32_t q_pointingdevice_pointer_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#maximumPoints)
 ///
@@ -220,13 +220,13 @@ bool q_pointingdevice_operator_equal(void* self, void* other);
 /// @param transition enum QPointingDevice__GrabTransition
 /// @param event QPointerEvent*
 /// @param point QEventPoint*
-void q_pointingdevice_grab_changed(void* self, void* grabber, int64_t transition, void* event, void* point);
+void q_pointingdevice_grab_changed(void* self, void* grabber, int32_t transition, void* event, void* point);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpointingdevice.html#grabChanged)
 ///
 /// @param self QPointingDevice*
 /// @param callback void fn(QPointingDevice*, QObject*, enum QPointingDevice__GrabTransition, QPointerEvent*, QEventPoint*)
-void q_pointingdevice_on_grab_changed(void* self, void (*callback)(void*, void*, int64_t, void*, void*));
+void q_pointingdevice_on_grab_changed(void* self, void (*callback)(void*, void*, int32_t, void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -266,7 +266,7 @@ const char* q_pointingdevice_name(void* self);
 /// @param self QPointingDevice*
 ///
 /// @return enum QInputDevice__DeviceType
-int64_t q_pointingdevice_type(void* self);
+int32_t q_pointingdevice_type(void* self);
 
 /// Inherited from QInputDevice
 ///
@@ -283,7 +283,7 @@ int64_t q_pointingdevice_capabilities(void* self);
 ///
 /// @param self QPointingDevice*
 /// @param cap enum QInputDevice__Capability
-bool q_pointingdevice_has_capability(void* self, int64_t cap);
+bool q_pointingdevice_has_capability(void* self, int32_t cap);
 
 /// Inherited from QInputDevice
 ///
@@ -441,7 +441,7 @@ void q_pointingdevice_kill_timer(void* self, int id);
 ///
 /// @param self QPointingDevice*
 /// @param id enum Qt__TimerId
-void q_pointingdevice_kill_timer2(void* self, int64_t id);
+void q_pointingdevice_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -618,7 +618,7 @@ bool q_pointingdevice_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPointingDevice*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pointingdevice_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pointingdevice_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -629,7 +629,7 @@ int32_t q_pointingdevice_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pointingdevice_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pointingdevice_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -640,7 +640,7 @@ QMetaObject__Connection* q_pointingdevice_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pointingdevice_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pointingdevice_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

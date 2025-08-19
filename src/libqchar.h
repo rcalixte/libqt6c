@@ -102,7 +102,7 @@ QChar* q_char_new8(int rc);
 /// q_char_new9 constructs a new QChar object.
 ///
 /// @param s enum QChar__SpecialCharacter
-QChar* q_char_new9(int64_t s);
+QChar* q_char_new9(int32_t s);
 
 /// q_char_new10 constructs a new QChar object.
 ///
@@ -141,21 +141,21 @@ void q_char_move_assign(void* self, void* other);
 /// @param self QChar*
 ///
 /// @return enum QChar__Category
-int64_t q_char_category(void* self);
+int32_t q_char_category(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#direction)
 ///
 /// @param self QChar*
 ///
 /// @return enum QChar__Direction
-int64_t q_char_direction(void* self);
+int32_t q_char_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#joiningType)
 ///
 /// @param self QChar*
 ///
 /// @return enum QChar__JoiningType
-int64_t q_char_joining_type(void* self);
+int32_t q_char_joining_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#combiningClass)
 ///
@@ -184,7 +184,7 @@ const char* q_char_decomposition(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__Decomposition
-int64_t q_char_decomposition_tag(void* self);
+int32_t q_char_decomposition_tag(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#digitValue)
 ///
@@ -216,14 +216,14 @@ QChar* q_char_to_case_folded(void* self);
 /// @param self QChar*
 ///
 /// @return enum QChar__Script
-int64_t q_char_script(void* self);
+int32_t q_char_script(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#unicodeVersion)
 ///
 /// @param self QChar*
 ///
 /// @return enum QChar__UnicodeVersion
-int64_t q_char_unicode_version(void* self);
+int32_t q_char_unicode_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#toLatin1)
 ///
@@ -346,7 +346,7 @@ void q_char_set_row(void* self, unsigned char arow);
 ///
 ///
 /// @return enum QChar__UnicodeVersion
-int64_t q_char_current_unicode_version();
+int32_t q_char_current_unicode_version();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qchar.html#dtor.QChar)
 ///

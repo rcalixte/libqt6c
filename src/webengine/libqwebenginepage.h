@@ -46,13 +46,13 @@ void* q_webenginepage_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webenginepage_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webenginepage_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QWebEnginePage*
 /// @param callback int32_t fn(QWebEnginePage*, enum QMetaObject__Call, int, void*)
-void q_webenginepage_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_webenginepage_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_webenginepage_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_webenginepage_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_webenginepage_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -95,14 +95,14 @@ QWebEngineProfile* q_webenginepage_profile(void* self);
 ///
 /// @param self QWebEnginePage*
 /// @param action enum QWebEnginePage__WebAction
-QAction* q_webenginepage_action(void* self, int64_t action);
+QAction* q_webenginepage_action(void* self, int32_t action);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
 ///
 /// @param self QWebEnginePage*
 /// @param action enum QWebEnginePage__WebAction
 /// @param checked bool
-void q_webenginepage_trigger_action(void* self, int64_t action, bool checked);
+void q_webenginepage_trigger_action(void* self, int32_t action, bool checked);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
 ///
@@ -110,7 +110,7 @@ void q_webenginepage_trigger_action(void* self, int64_t action, bool checked);
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, enum QWebEnginePage__WebAction, bool)
-void q_webenginepage_on_trigger_action(void* self, void (*callback)(void*, int64_t, bool));
+void q_webenginepage_on_trigger_action(void* self, void (*callback)(void*, int32_t, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
 ///
@@ -119,7 +119,7 @@ void q_webenginepage_on_trigger_action(void* self, void (*callback)(void*, int64
 /// @param self QWebEnginePage*
 /// @param action enum QWebEnginePage__WebAction
 /// @param checked bool
-void q_webenginepage_qbase_trigger_action(void* self, int64_t action, bool checked);
+void q_webenginepage_qbase_trigger_action(void* self, int32_t action, bool checked);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#replaceMisspelledWord)
 ///
@@ -343,20 +343,20 @@ void q_webenginepage_set_url_request_interceptor(void* self, void* interceptor);
 /// @param self QWebEnginePage*
 ///
 /// @return enum QWebEnginePage__LifecycleState
-int64_t q_webenginepage_lifecycle_state(void* self);
+int32_t q_webenginepage_lifecycle_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#setLifecycleState)
 ///
 /// @param self QWebEnginePage*
 /// @param state enum QWebEnginePage__LifecycleState
-void q_webenginepage_set_lifecycle_state(void* self, int64_t state);
+void q_webenginepage_set_lifecycle_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#recommendedState)
 ///
 /// @param self QWebEnginePage*
 ///
 /// @return enum QWebEnginePage__LifecycleState
-int64_t q_webenginepage_recommended_state(void* self);
+int32_t q_webenginepage_recommended_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#isVisible)
 ///
@@ -478,26 +478,26 @@ void q_webenginepage_on_window_close_requested(void* self, void (*callback)(void
 /// @param self QWebEnginePage*
 /// @param securityOrigin QUrl*
 /// @param feature enum QWebEnginePage__Feature
-void q_webenginepage_feature_permission_requested(void* self, void* securityOrigin, int64_t feature);
+void q_webenginepage_feature_permission_requested(void* self, void* securityOrigin, int32_t feature);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#featurePermissionRequested)
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, QUrl*, enum QWebEnginePage__Feature)
-void q_webenginepage_on_feature_permission_requested(void* self, void (*callback)(void*, void*, int64_t));
+void q_webenginepage_on_feature_permission_requested(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#featurePermissionRequestCanceled)
 ///
 /// @param self QWebEnginePage*
 /// @param securityOrigin QUrl*
 /// @param feature enum QWebEnginePage__Feature
-void q_webenginepage_feature_permission_request_canceled(void* self, void* securityOrigin, int64_t feature);
+void q_webenginepage_feature_permission_request_canceled(void* self, void* securityOrigin, int32_t feature);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#featurePermissionRequestCanceled)
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, QUrl*, enum QWebEnginePage__Feature)
-void q_webenginepage_on_feature_permission_request_canceled(void* self, void (*callback)(void*, void*, int64_t));
+void q_webenginepage_on_feature_permission_request_canceled(void* self, void (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#fullScreenRequested)
 ///
@@ -603,13 +603,13 @@ void q_webenginepage_on_proxy_authentication_required(void* self, void (*callbac
 /// @param self QWebEnginePage*
 /// @param terminationStatus enum QWebEnginePage__RenderProcessTerminationStatus
 /// @param exitCode int
-void q_webenginepage_render_process_terminated(void* self, int64_t terminationStatus, int exitCode);
+void q_webenginepage_render_process_terminated(void* self, int32_t terminationStatus, int exitCode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#renderProcessTerminated)
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, enum QWebEnginePage__RenderProcessTerminationStatus, int)
-void q_webenginepage_on_render_process_terminated(void* self, void (*callback)(void*, int64_t, int));
+void q_webenginepage_on_render_process_terminated(void* self, void (*callback)(void*, int32_t, int));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#desktopMediaRequested)
 ///
@@ -831,25 +831,25 @@ void q_webenginepage_on_visible_changed(void* self, void (*callback)(void*, bool
 ///
 /// @param self QWebEnginePage*
 /// @param state enum QWebEnginePage__LifecycleState
-void q_webenginepage_lifecycle_state_changed(void* self, int64_t state);
+void q_webenginepage_lifecycle_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#lifecycleStateChanged)
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, enum QWebEnginePage__LifecycleState)
-void q_webenginepage_on_lifecycle_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_webenginepage_on_lifecycle_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#recommendedStateChanged)
 ///
 /// @param self QWebEnginePage*
 /// @param state enum QWebEnginePage__LifecycleState
-void q_webenginepage_recommended_state_changed(void* self, int64_t state);
+void q_webenginepage_recommended_state_changed(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#recommendedStateChanged)
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, enum QWebEnginePage__LifecycleState)
-void q_webenginepage_on_recommended_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_webenginepage_on_recommended_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#findTextFinished)
 ///
@@ -890,7 +890,7 @@ void q_webenginepage_on_web_auth_ux_requested(void* self, void (*callback)(void*
 ///
 /// @param self QWebEnginePage*
 /// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEnginePage* q_webenginepage_create_window(void* self, int64_t typeVal);
+QWebEnginePage* q_webenginepage_create_window(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
 ///
@@ -898,7 +898,7 @@ QWebEnginePage* q_webenginepage_create_window(void* self, int64_t typeVal);
 ///
 /// @param self QWebEnginePage*
 /// @param callback QWebEnginePage* fn(QWebEnginePage*, enum QWebEnginePage__WebWindowType)
-void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(void*, int64_t));
+void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
 ///
@@ -906,7 +906,7 @@ void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(vo
 ///
 /// @param self QWebEnginePage*
 /// @param typeVal enum QWebEnginePage__WebWindowType
-QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int64_t typeVal);
+QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -916,7 +916,7 @@ QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int64_t typeVal)
 /// @param mode enum QWebEnginePage__FileSelectionMode
 /// @param oldFiles const char**
 /// @param acceptedMimeTypes const char**
-const char** q_webenginepage_choose_files(void* self, int64_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
+const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -924,7 +924,7 @@ const char** q_webenginepage_choose_files(void* self, int64_t mode, const char* 
 ///
 /// @param self QWebEnginePage*
 /// @param callback const char** fn(QWebEnginePage*, enum QWebEnginePage__FileSelectionMode, const char**, const char**)
-void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int64_t, const char**, const char**));
+void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char**, const char**));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -934,7 +934,7 @@ void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*,
 /// @param mode enum QWebEnginePage__FileSelectionMode
 /// @param oldFiles const char**
 /// @param acceptedMimeTypes const char**
-const char** q_webenginepage_qbase_choose_files(void* self, int64_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
+const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[], const char* acceptedMimeTypes[]);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
 ///
@@ -991,7 +991,7 @@ bool q_webenginepage_qbase_java_script_confirm(void* self, void* securityOrigin,
 /// @param message const char*
 /// @param lineNumber int
 /// @param sourceID const char*
-void q_webenginepage_java_script_console_message(void* self, int64_t level, const char* message, int lineNumber, const char* sourceID);
+void q_webenginepage_java_script_console_message(void* self, int32_t level, const char* message, int lineNumber, const char* sourceID);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
 ///
@@ -999,7 +999,7 @@ void q_webenginepage_java_script_console_message(void* self, int64_t level, cons
 ///
 /// @param self QWebEnginePage*
 /// @param callback void fn(QWebEnginePage*, enum QWebEnginePage__JavaScriptConsoleMessageLevel, const char*, int, const char*)
-void q_webenginepage_on_java_script_console_message(void* self, void (*callback)(void*, int64_t, const char*, int, const char*));
+void q_webenginepage_on_java_script_console_message(void* self, void (*callback)(void*, int32_t, const char*, int, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
 ///
@@ -1010,7 +1010,7 @@ void q_webenginepage_on_java_script_console_message(void* self, void (*callback)
 /// @param message const char*
 /// @param lineNumber int
 /// @param sourceID const char*
-void q_webenginepage_qbase_java_script_console_message(void* self, int64_t level, const char* message, int lineNumber, const char* sourceID);
+void q_webenginepage_qbase_java_script_console_message(void* self, int32_t level, const char* message, int lineNumber, const char* sourceID);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
@@ -1018,7 +1018,7 @@ void q_webenginepage_qbase_java_script_console_message(void* self, int64_t level
 /// @param url QUrl*
 /// @param typeVal enum QWebEnginePage__NavigationType
 /// @param isMainFrame bool
-bool q_webenginepage_accept_navigation_request(void* self, void* url, int64_t typeVal, bool isMainFrame);
+bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
@@ -1026,7 +1026,7 @@ bool q_webenginepage_accept_navigation_request(void* self, void* url, int64_t ty
 ///
 /// @param self QWebEnginePage*
 /// @param callback bool fn(QWebEnginePage*, QUrl*, enum QWebEnginePage__NavigationType, bool)
-void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(void*, void*, int64_t, bool));
+void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(void*, void*, int32_t, bool));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
@@ -1036,7 +1036,7 @@ void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(v
 /// @param url QUrl*
 /// @param typeVal enum QWebEnginePage__NavigationType
 /// @param isMainFrame bool
-bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int64_t typeVal, bool isMainFrame);
+bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t typeVal, bool isMainFrame);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1096,7 +1096,7 @@ void q_webenginepage_set_web_channel2(void* self, void* param1, uint32_t worldId
 /// @param self QWebEnginePage*
 /// @param filePath const char*
 /// @param format enum QWebEngineDownloadRequest__SavePageFormat
-void q_webenginepage_save2(void* self, const char* filePath, int64_t format);
+void q_webenginepage_save2(void* self, const char* filePath, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
 ///
@@ -1203,7 +1203,7 @@ void q_webenginepage_kill_timer(void* self, int id);
 ///
 /// @param self QWebEnginePage*
 /// @param id enum Qt__TimerId
-void q_webenginepage_kill_timer2(void* self, int64_t id);
+void q_webenginepage_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1380,7 +1380,7 @@ bool q_webenginepage_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWebEnginePage*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_webenginepage_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_webenginepage_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1391,7 +1391,7 @@ int32_t q_webenginepage_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1402,7 +1402,7 @@ QMetaObject__Connection* q_webenginepage_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_webenginepage_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

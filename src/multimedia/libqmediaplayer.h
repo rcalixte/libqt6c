@@ -35,13 +35,13 @@ void* q_mediaplayer_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_mediaplayer_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_mediaplayer_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QMediaPlayer*
 /// @param callback int32_t fn(QMediaPlayer*, enum QMetaObject__Call, int, void*)
-void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, i
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_mediaplayer_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_mediaplayer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -165,14 +165,14 @@ const QIODevice* q_mediaplayer_source_device(void* self);
 /// @param self QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__PlaybackState
-int64_t q_mediaplayer_playback_state(void* self);
+int32_t q_mediaplayer_playback_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatus)
 ///
 /// @param self QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__MediaStatus
-int64_t q_mediaplayer_media_status(void* self);
+int32_t q_mediaplayer_media_status(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#duration)
 ///
@@ -235,7 +235,7 @@ void q_mediaplayer_set_loops(void* self, int loops);
 /// @param self QMediaPlayer*
 ///
 /// @return enum QMediaPlayer__Error
-int64_t q_mediaplayer_error(void* self);
+int32_t q_mediaplayer_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorString)
 ///
@@ -309,25 +309,25 @@ void q_mediaplayer_on_source_changed(void* self, void (*callback)(void*, void*))
 ///
 /// @param self QMediaPlayer*
 /// @param newState enum QMediaPlayer__PlaybackState
-void q_mediaplayer_playback_state_changed(void* self, int64_t newState);
+void q_mediaplayer_playback_state_changed(void* self, int32_t newState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#playbackStateChanged)
 ///
 /// @param self QMediaPlayer*
 /// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__PlaybackState)
-void q_mediaplayer_on_playback_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_mediaplayer_on_playback_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatusChanged)
 ///
 /// @param self QMediaPlayer*
 /// @param status enum QMediaPlayer__MediaStatus
-void q_mediaplayer_media_status_changed(void* self, int64_t status);
+void q_mediaplayer_media_status_changed(void* self, int32_t status);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#mediaStatusChanged)
 ///
 /// @param self QMediaPlayer*
 /// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__MediaStatus)
-void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, int64_t));
+void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
 ///
@@ -518,13 +518,13 @@ void q_mediaplayer_on_error_changed(void* self, void (*callback)(void*));
 /// @param self QMediaPlayer*
 /// @param errorVal enum QMediaPlayer__Error
 /// @param errorString const char*
-void q_mediaplayer_error_occurred(void* self, int64_t errorVal, const char* errorString);
+void q_mediaplayer_error_occurred(void* self, int32_t errorVal, const char* errorString);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaplayer.html#errorOccurred)
 ///
 /// @param self QMediaPlayer*
 /// @param callback void fn(QMediaPlayer*, enum QMediaPlayer__Error, const char*)
-void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*));
+void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -640,7 +640,7 @@ void q_mediaplayer_kill_timer(void* self, int id);
 ///
 /// @param self QMediaPlayer*
 /// @param id enum Qt__TimerId
-void q_mediaplayer_kill_timer2(void* self, int64_t id);
+void q_mediaplayer_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -817,7 +817,7 @@ bool q_mediaplayer_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QMediaPlayer*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_mediaplayer_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_mediaplayer_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -828,7 +828,7 @@ int32_t q_mediaplayer_start_timer22(void* self, int interval, int64_t timerType)
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_mediaplayer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_mediaplayer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -839,7 +839,7 @@ QMetaObject__Connection* q_mediaplayer_connect5(void* sender, void* signal, void
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_mediaplayer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_mediaplayer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

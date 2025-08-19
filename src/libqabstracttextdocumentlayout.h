@@ -31,13 +31,13 @@ void* q_abstracttextdocumentlayout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstracttextdocumentlayout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstracttextdocumentlayout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback int32_t fn(QAbstractTextDocumentLayout*, enum QMetaObject__Call, int, void*)
-void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -45,7 +45,7 @@ void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstracttextdocumentlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstracttextdocumentlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -83,7 +83,7 @@ void q_abstracttextdocumentlayout_qbase_draw(void* self, void* painter, void* co
 /// @param self QAbstractTextDocumentLayout*
 /// @param point QPointF*
 /// @param accuracy enum Qt__HitTestAccuracy
-int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int64_t accuracy);
+int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int32_t accuracy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#hitTest)
 ///
@@ -91,7 +91,7 @@ int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int64_t a
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback int32_t fn(QAbstractTextDocumentLayout*, QPointF*, enum Qt__HitTestAccuracy)
-void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int64_t));
+void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#hitTest)
 ///
@@ -100,7 +100,7 @@ void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(vo
 /// @param self QAbstractTextDocumentLayout*
 /// @param point QPointF*
 /// @param accuracy enum Qt__HitTestAccuracy
-int32_t q_abstracttextdocumentlayout_qbase_hit_test(void* self, void* point, int64_t accuracy);
+int32_t q_abstracttextdocumentlayout_qbase_hit_test(void* self, void* point, int32_t accuracy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#anchorAt)
 ///
@@ -574,7 +574,7 @@ void q_abstracttextdocumentlayout_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param id enum Qt__TimerId
-void q_abstracttextdocumentlayout_kill_timer2(void* self, int64_t id);
+void q_abstracttextdocumentlayout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -751,7 +751,7 @@ bool q_abstracttextdocumentlayout_move_to_thread2(void* self, void* thread, void
 /// @param self QAbstractTextDocumentLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstracttextdocumentlayout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstracttextdocumentlayout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -762,7 +762,7 @@ int32_t q_abstracttextdocumentlayout_start_timer22(void* self, int interval, int
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -773,7 +773,7 @@ QMetaObject__Connection* q_abstracttextdocumentlayout_connect5(void* sender, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstracttextdocumentlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstracttextdocumentlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1181,8 +1181,6 @@ QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_
 /// @param param1 QAbstractTextDocumentLayout__Selection*
 void q_abstracttextdocumentlayout__selection_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout::selection.html#dtor.QAbstractTextDocumentLayout::Selection)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractTextDocumentLayout__Selection*
@@ -1200,8 +1198,6 @@ QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintco
 /// @param param1 QAbstractTextDocumentLayout__PaintContext*
 void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout::paintcontext.html#dtor.QAbstractTextDocumentLayout::PaintContext)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractTextDocumentLayout__PaintContext*

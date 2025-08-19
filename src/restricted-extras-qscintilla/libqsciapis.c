@@ -19,15 +19,15 @@ void* q_sciapis_metacast(void* self, const char* param1) {
     return QsciAPIs_Metacast((QsciAPIs*)self, param1);
 }
 
-int32_t q_sciapis_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sciapis_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QsciAPIs_Metacall((QsciAPIs*)self, param1, param2, param3);
 }
 
-void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QsciAPIs_OnMetacall((QsciAPIs*)self, (intptr_t)callback);
 }
 
-int32_t q_sciapis_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sciapis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QsciAPIs_QBaseMetacall((QsciAPIs*)self, param1, param2, param3);
 }
 
@@ -148,7 +148,7 @@ void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel) {
     QsciAPIs_QBaseAutoCompletionSelected((QsciAPIs*)self, qstring(sel));
 }
 
-const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
+const char** q_sciapis_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -178,11 +178,11 @@ const char** q_sciapis_call_tips(void* self, const char* context[], int commas, 
     return _ret;
 }
 
-void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int64_t, libqt_list)) {
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list)) {
     QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)callback);
 }
 
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int64_t style, libqt_list shifts) {
+const char** q_sciapis_qbase_call_tips(void* self, const char* context[], int commas, int32_t style, libqt_list shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -343,7 +343,7 @@ void q_sciapis_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_sciapis_kill_timer2(void* self, int64_t id) {
+void q_sciapis_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -447,15 +447,15 @@ bool q_sciapis_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_sciapis_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_sciapis_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_sciapis_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_sciapis_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

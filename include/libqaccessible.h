@@ -74,14 +74,14 @@ int32_t q_accessibleinterface_index_of_child(void* self, void* param1);
 ///
 /// @param self QAccessibleInterface*
 /// @param t enum QAccessible__Text
-const char* q_accessibleinterface_text(void* self, int64_t t);
+const char* q_accessibleinterface_text(void* self, int32_t t);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#setText)
 ///
 /// @param self QAccessibleInterface*
 /// @param t enum QAccessible__Text
 /// @param text const char*
-void q_accessibleinterface_set_text(void* self, int64_t t, const char* text);
+void q_accessibleinterface_set_text(void* self, int32_t t, const char* text);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#rect)
 ///
@@ -93,7 +93,7 @@ QRect* q_accessibleinterface_rect(void* self);
 /// @param self QAccessibleInterface*
 ///
 /// @return enum QAccessible__Role
-int64_t q_accessibleinterface_role(void* self);
+int32_t q_accessibleinterface_role(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleinterface.html#state)
 ///
@@ -171,7 +171,7 @@ void q_accessibleinterface_virtual_hook(void* self, int id, void* data);
 ///
 /// @param self QAccessibleInterface*
 /// @param param1 enum QAccessible__InterfaceType
-void* q_accessibleinterface_interface_cast(void* self, int64_t param1);
+void* q_accessibleinterface_interface_cast(void* self, int32_t param1);
 
 /// https://doc.qt.io/qt-6/qaccessibletextinterface.html
 
@@ -238,7 +238,7 @@ const char* q_accessibletextinterface_text(void* self, int startOffset, int endO
 /// @param boundaryType enum QAccessible__TextBoundaryType
 /// @param startOffset int*
 /// @param endOffset int*
-const char* q_accessibletextinterface_text_before_offset(void* self, int offset, int64_t boundaryType, int* startOffset, int* endOffset);
+const char* q_accessibletextinterface_text_before_offset(void* self, int offset, int32_t boundaryType, int* startOffset, int* endOffset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#textAfterOffset)
 ///
@@ -249,7 +249,7 @@ const char* q_accessibletextinterface_text_before_offset(void* self, int offset,
 /// @param boundaryType enum QAccessible__TextBoundaryType
 /// @param startOffset int*
 /// @param endOffset int*
-const char* q_accessibletextinterface_text_after_offset(void* self, int offset, int64_t boundaryType, int* startOffset, int* endOffset);
+const char* q_accessibletextinterface_text_after_offset(void* self, int offset, int32_t boundaryType, int* startOffset, int* endOffset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#textAtOffset)
 ///
@@ -260,7 +260,7 @@ const char* q_accessibletextinterface_text_after_offset(void* self, int offset, 
 /// @param boundaryType enum QAccessible__TextBoundaryType
 /// @param startOffset int*
 /// @param endOffset int*
-const char* q_accessibletextinterface_text_at_offset(void* self, int offset, int64_t boundaryType, int* startOffset, int* endOffset);
+const char* q_accessibletextinterface_text_at_offset(void* self, int offset, int32_t boundaryType, int* startOffset, int* endOffset);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletextinterface.html#characterCount)
 ///
@@ -856,13 +856,13 @@ void q_accessibleselectioninterface_delete(void* self);
 /// @param self QAccessibleAttributesInterface*
 ///
 /// @return libqt_list of enum QAccessible__Attribute
-libqt_list /* of int64_t */ q_accessibleattributesinterface_attribute_keys(void* self);
+libqt_list /* of int32_t */ q_accessibleattributesinterface_attribute_keys(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#attributeValue)
 ///
 /// @param self QAccessibleAttributesInterface*
 /// @param key enum QAccessible__Attribute
-QVariant* q_accessibleattributesinterface_attribute_value(void* self, int64_t key);
+QVariant* q_accessibleattributesinterface_attribute_value(void* self, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleattributesinterface.html#operator-eq)
 ///
@@ -883,20 +883,20 @@ void q_accessibleattributesinterface_delete(void* self);
 ///
 /// @param obj QObject*
 /// @param typ enum QAccessible__Event
-QAccessibleEvent* q_accessibleevent_new(void* obj, int64_t typ);
+QAccessibleEvent* q_accessibleevent_new(void* obj, int32_t typ);
 
 /// q_accessibleevent_new2 constructs a new QAccessibleEvent object.
 ///
 /// @param iface QAccessibleInterface*
 /// @param typ enum QAccessible__Event
-QAccessibleEvent* q_accessibleevent_new2(void* iface, int64_t typ);
+QAccessibleEvent* q_accessibleevent_new2(void* iface, int32_t typ);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#type)
 ///
 /// @param self QAccessibleEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibleevent_type(void* self);
+int32_t q_accessibleevent_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleevent.html#object)
 ///
@@ -972,7 +972,7 @@ QAccessible__State* q_accessiblestatechangeevent_changed_states(void* self);
 /// @param self QAccessibleStateChangeEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessiblestatechangeevent_type(void* self);
+int32_t q_accessiblestatechangeevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1070,7 +1070,7 @@ int32_t q_accessibletextcursorevent_cursor_position(void* self);
 /// @param self QAccessibleTextCursorEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletextcursorevent_type(void* self);
+int32_t q_accessibletextcursorevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1191,7 +1191,7 @@ int32_t q_accessibletextselectionevent_cursor_position(void* self);
 /// @param self QAccessibleTextSelectionEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletextselectionevent_type(void* self);
+int32_t q_accessibletextselectionevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1307,7 +1307,7 @@ int32_t q_accessibletextinsertevent_cursor_position(void* self);
 /// @param self QAccessibleTextInsertEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletextinsertevent_type(void* self);
+int32_t q_accessibletextinsertevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1423,7 +1423,7 @@ int32_t q_accessibletextremoveevent_cursor_position(void* self);
 /// @param self QAccessibleTextRemoveEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletextremoveevent_type(void* self);
+int32_t q_accessibletextremoveevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1548,7 +1548,7 @@ int32_t q_accessibletextupdateevent_cursor_position(void* self);
 /// @param self QAccessibleTextUpdateEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletextupdateevent_type(void* self);
+int32_t q_accessibletextupdateevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1646,7 +1646,7 @@ QVariant* q_accessiblevaluechangeevent_value(void* self);
 /// @param self QAccessibleValueChangeEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessiblevaluechangeevent_type(void* self);
+int32_t q_accessiblevaluechangeevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1718,26 +1718,26 @@ void q_accessiblevaluechangeevent_delete(void* self);
 ///
 /// @param obj QObject*
 /// @param changeType enum QAccessibleTableModelChangeEvent__ModelChangeType
-QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new(void* obj, int64_t changeType);
+QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new(void* obj, int32_t changeType);
 
 /// q_accessibletablemodelchangeevent_new2 constructs a new QAccessibleTableModelChangeEvent object.
 ///
 /// @param iface QAccessibleInterface*
 /// @param changeType enum QAccessibleTableModelChangeEvent__ModelChangeType
-QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new2(void* iface, int64_t changeType);
+QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new2(void* iface, int32_t changeType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablemodelchangeevent.html#setModelChangeType)
 ///
 /// @param self QAccessibleTableModelChangeEvent*
 /// @param changeType enum QAccessibleTableModelChangeEvent__ModelChangeType
-void q_accessibletablemodelchangeevent_set_model_change_type(void* self, int64_t changeType);
+void q_accessibletablemodelchangeevent_set_model_change_type(void* self, int32_t changeType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablemodelchangeevent.html#modelChangeType)
 ///
 /// @param self QAccessibleTableModelChangeEvent*
 ///
 /// @return enum QAccessibleTableModelChangeEvent__ModelChangeType
-int64_t q_accessibletablemodelchangeevent_model_change_type(void* self);
+int32_t q_accessibletablemodelchangeevent_model_change_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibletablemodelchangeevent.html#setFirstRow)
 ///
@@ -1790,7 +1790,7 @@ int32_t q_accessibletablemodelchangeevent_last_column(void* self);
 /// @param self QAccessibleTableModelChangeEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibletablemodelchangeevent_type(void* self);
+int32_t q_accessibletablemodelchangeevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1882,13 +1882,13 @@ const char* q_accessibleannouncementevent_message(void* self);
 /// @param self QAccessibleAnnouncementEvent*
 ///
 /// @return enum QAccessible__AnnouncementPoliteness
-int64_t q_accessibleannouncementevent_politeness(void* self);
+int32_t q_accessibleannouncementevent_politeness(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qaccessibleannouncementevent.html#setPoliteness)
 ///
 /// @param self QAccessibleAnnouncementEvent*
 /// @param politeness enum QAccessible__AnnouncementPoliteness
-void q_accessibleannouncementevent_set_politeness(void* self, int64_t politeness);
+void q_accessibleannouncementevent_set_politeness(void* self, int32_t politeness);
 
 /// Inherited from QAccessibleEvent
 ///
@@ -1897,7 +1897,7 @@ void q_accessibleannouncementevent_set_politeness(void* self, int64_t politeness
 /// @param self QAccessibleAnnouncementEvent*
 ///
 /// @return enum QAccessible__Event
-int64_t q_accessibleannouncementevent_type(void* self);
+int32_t q_accessibleannouncementevent_type(void* self);
 
 /// Inherited from QAccessibleEvent
 ///

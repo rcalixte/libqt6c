@@ -40,13 +40,13 @@ QKeySequence* q_keysequence_new5(void* ks);
 /// q_keysequence_new6 constructs a new QKeySequence object.
 ///
 /// @param key enum QKeySequence__StandardKey
-QKeySequence* q_keysequence_new6(int64_t key);
+QKeySequence* q_keysequence_new6(int32_t key);
 
 /// q_keysequence_new7 constructs a new QKeySequence object.
 ///
 /// @param key const char*
 /// @param format enum QKeySequence__SequenceFormat
-QKeySequence* q_keysequence_new7(const char* key, int64_t format);
+QKeySequence* q_keysequence_new7(const char* key, int32_t format);
 
 /// q_keysequence_new8 constructs a new QKeySequence object.
 ///
@@ -130,7 +130,7 @@ const char* q_keysequence_list_to_string(libqt_list list);
 /// @param seq QKeySequence*
 ///
 /// @return enum QKeySequence__SequenceMatch
-int64_t q_keysequence_matches(void* self, void* seq);
+int32_t q_keysequence_matches(void* self, void* seq);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#mnemonic)
 ///
@@ -140,7 +140,7 @@ QKeySequence* q_keysequence_mnemonic(const char* text);
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#keyBindings)
 ///
 /// @param key enum QKeySequence__StandardKey
-libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int64_t key);
+libqt_list /* of QKeySequence* */ q_keysequence_key_bindings(int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#operator)
 ///
@@ -212,19 +212,19 @@ bool q_keysequence_is_detached(void* self);
 ///
 /// @param self QKeySequence*
 /// @param format enum QKeySequence__SequenceFormat
-const char* q_keysequence_to_string1(void* self, int64_t format);
+const char* q_keysequence_to_string1(void* self, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#fromString)
 ///
 /// @param str const char*
 /// @param format enum QKeySequence__SequenceFormat
-QKeySequence* q_keysequence_from_string2(const char* str, int64_t format);
+QKeySequence* q_keysequence_from_string2(const char* str, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listFromString)
 ///
 /// @param str const char*
 /// @param format enum QKeySequence__SequenceFormat
-libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int64_t format);
+libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* str, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#listToString)
 ///
@@ -232,7 +232,7 @@ libqt_list /* of QKeySequence* */ q_keysequence_list_from_string2(const char* st
 ///
 /// @param list libqt_list /* of QKeySequence* */
 /// @param format enum QKeySequence__SequenceFormat
-const char* q_keysequence_list_to_string2(libqt_list list, int64_t format);
+const char* q_keysequence_list_to_string2(libqt_list list, int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qkeysequence.html#dtor.QKeySequence)
 ///

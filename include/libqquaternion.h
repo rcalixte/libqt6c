@@ -30,7 +30,7 @@ QQuaternion* q_quaternion_new3();
 /// q_quaternion_new4 constructs a new QQuaternion object.
 ///
 /// @param param1 enum Qt__Initialization
-QQuaternion* q_quaternion_new4(int64_t param1);
+QQuaternion* q_quaternion_new4(int32_t param1);
 
 /// q_quaternion_new5 constructs a new QQuaternion object.
 ///

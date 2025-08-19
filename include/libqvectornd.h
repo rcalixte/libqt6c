@@ -30,7 +30,7 @@ QVector2D* q_vector2d_new3();
 /// q_vector2d_new4 constructs a new QVector2D object.
 ///
 /// @param param1 enum Qt__Initialization
-QVector2D* q_vector2d_new4(int64_t param1);
+QVector2D* q_vector2d_new4(int32_t param1);
 
 /// q_vector2d_new5 constructs a new QVector2D object.
 ///
@@ -234,7 +234,7 @@ QVector3D* q_vector3d_new3();
 /// q_vector3d_new4 constructs a new QVector3D object.
 ///
 /// @param param1 enum Qt__Initialization
-QVector3D* q_vector3d_new4(int64_t param1);
+QVector3D* q_vector3d_new4(int32_t param1);
 
 /// q_vector3d_new5 constructs a new QVector3D object.
 ///
@@ -506,7 +506,7 @@ QVector4D* q_vector4d_new3();
 /// q_vector4d_new4 constructs a new QVector4D object.
 ///
 /// @param param1 enum Qt__Initialization
-QVector4D* q_vector4d_new4(int64_t param1);
+QVector4D* q_vector4d_new4(int32_t param1);
 
 /// q_vector4d_new5 constructs a new QVector4D object.
 ///

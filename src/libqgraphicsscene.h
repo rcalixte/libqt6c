@@ -63,13 +63,13 @@ void* q_graphicsscene_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsscene_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsscene_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsScene*
 /// @param callback int32_t fn(QGraphicsScene*, enum QMetaObject__Call, int, void*)
-void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -77,7 +77,7 @@ void q_graphicsscene_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicsscene_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicsscene_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -127,13 +127,13 @@ void q_graphicsscene_render(void* self, void* painter);
 /// @param self QGraphicsScene*
 ///
 /// @return enum QGraphicsScene__ItemIndexMethod
-int64_t q_graphicsscene_item_index_method(void* self);
+int32_t q_graphicsscene_item_index_method(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setItemIndexMethod)
 ///
 /// @param self QGraphicsScene*
 /// @param method enum QGraphicsScene__ItemIndexMethod
-void q_graphicsscene_set_item_index_method(void* self, int64_t method);
+void q_graphicsscene_set_item_index_method(void* self, int32_t method);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#bspTreeDepth)
 ///
@@ -183,7 +183,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items5(void* self, void* path
 /// @param h double
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items6(void* self, double x, double y, double w, double h, int32_t mode, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#collidingItems)
 ///
@@ -1060,13 +1060,13 @@ void q_graphicsscene_on_selection_changed(void* self, void (*callback)(void*));
 /// @param newFocus QGraphicsItem*
 /// @param oldFocus QGraphicsItem*
 /// @param reason enum Qt__FocusReason
-void q_graphicsscene_focus_item_changed(void* self, void* newFocus, void* oldFocus, int64_t reason);
+void q_graphicsscene_focus_item_changed(void* self, void* newFocus, void* oldFocus, int32_t reason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#focusItemChanged)
 ///
 /// @param self QGraphicsScene*
 /// @param callback void fn(QGraphicsScene*, QGraphicsItem*, QGraphicsItem*, enum Qt__FocusReason)
-void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, void*, void*, int64_t));
+void q_graphicsscene_on_focus_item_changed(void* self, void (*callback)(void*, void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1107,20 +1107,20 @@ void q_graphicsscene_render3(void* self, void* painter, void* target, void* sour
 /// @param target QRectF*
 /// @param source QRectF*
 /// @param aspectRatioMode enum Qt__AspectRatioMode
-void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int64_t aspectRatioMode);
+void q_graphicsscene_render4(void* self, void* painter, void* target, void* source, int32_t aspectRatioMode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
 /// @param order enum Qt__SortOrder
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(void* self, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items1(void* self, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
 /// @param pos QPointF*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1128,7 +1128,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items22(void* self, void* pos
 /// @param pos QPointF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos, int32_t mode, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1137,14 +1137,14 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items32(void* self, void* pos
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 /// @param deviceTransform QTransform*
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items42(void* self, void* pos, int32_t mode, int32_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
 /// @param rect QRectF*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rect, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rect, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1152,7 +1152,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items23(void* self, void* rec
 /// @param rect QRectF*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rect, int32_t mode, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1161,14 +1161,14 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items33(void* self, void* rec
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 /// @param deviceTransform QTransform*
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items43(void* self, void* rect, int32_t mode, int32_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
 /// @param self QGraphicsScene*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* path, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1176,7 +1176,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items25(void* self, void* pat
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int64_t mode, int64_t order);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* path, int32_t mode, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1185,7 +1185,7 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items35(void* self, void* pat
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 /// @param deviceTransform QTransform*
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* path, int32_t mode, int32_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#items)
 ///
@@ -1197,21 +1197,21 @@ libqt_list /* of QGraphicsItem* */ q_graphicsscene_items45(void* self, void* pat
 /// @param mode enum Qt__ItemSelectionMode
 /// @param order enum Qt__SortOrder
 /// @param deviceTransform QTransform*
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(void* self, double x, double y, double w, double h, int64_t mode, int64_t order, void* deviceTransform);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_items7(void* self, double x, double y, double w, double h, int32_t mode, int32_t order, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#collidingItems)
 ///
 /// @param self QGraphicsScene*
 /// @param item QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, void* item, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicsscene_colliding_items2(void* self, void* item, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
 /// @param self QGraphicsScene*
 /// @param path QPainterPath*
 /// @param selectionOperation enum Qt__ItemSelectionOperation
-void q_graphicsscene_set_selection_area22(void* self, void* path, int64_t selectionOperation);
+void q_graphicsscene_set_selection_area22(void* self, void* path, int32_t selectionOperation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1219,7 +1219,7 @@ void q_graphicsscene_set_selection_area22(void* self, void* path, int64_t select
 /// @param path QPainterPath*
 /// @param selectionOperation enum Qt__ItemSelectionOperation
 /// @param mode enum Qt__ItemSelectionMode
-void q_graphicsscene_set_selection_area3(void* self, void* path, int64_t selectionOperation, int64_t mode);
+void q_graphicsscene_set_selection_area3(void* self, void* path, int32_t selectionOperation, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setSelectionArea)
 ///
@@ -1228,7 +1228,7 @@ void q_graphicsscene_set_selection_area3(void* self, void* path, int64_t selecti
 /// @param selectionOperation enum Qt__ItemSelectionOperation
 /// @param mode enum Qt__ItemSelectionMode
 /// @param deviceTransform QTransform*
-void q_graphicsscene_set_selection_area4(void* self, void* path, int64_t selectionOperation, int64_t mode, void* deviceTransform);
+void q_graphicsscene_set_selection_area4(void* self, void* path, int32_t selectionOperation, int32_t mode, void* deviceTransform);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#addEllipse)
 ///
@@ -1360,13 +1360,13 @@ QGraphicsRectItem* q_graphicsscene_add_rect6(void* self, double x, double y, dou
 /// @param self QGraphicsScene*
 /// @param item QGraphicsItem*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsscene_set_focus_item2(void* self, void* item, int64_t focusReason);
+void q_graphicsscene_set_focus_item2(void* self, void* item, int32_t focusReason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#setFocus)
 ///
 /// @param self QGraphicsScene*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicsscene_set_focus1(void* self, int64_t focusReason);
+void q_graphicsscene_set_focus1(void* self, int32_t focusReason);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicsscene.html#invalidate)
 ///
@@ -1487,7 +1487,7 @@ void q_graphicsscene_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsScene*
 /// @param id enum Qt__TimerId
-void q_graphicsscene_kill_timer2(void* self, int64_t id);
+void q_graphicsscene_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1664,7 +1664,7 @@ bool q_graphicsscene_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsScene*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicsscene_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicsscene_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1675,7 +1675,7 @@ int32_t q_graphicsscene_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsscene_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicsscene_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1686,7 +1686,7 @@ QMetaObject__Connection* q_graphicsscene_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicsscene_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

@@ -46,13 +46,13 @@ void* q_plaintextedit_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_plaintextedit_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_plaintextedit_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPlainTextEdit*
 /// @param callback int32_t fn(QPlainTextEdit*, enum QMetaObject__Call, int, void*)
-void q_plaintextedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_plaintextedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_plaintextedit_on_metacall(void* self, int32_t (*callback)(void*, int64_t,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_plaintextedit_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_plaintextedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -196,26 +196,26 @@ int32_t q_plaintextedit_maximum_block_count(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QPlainTextEdit__LineWrapMode
-int64_t q_plaintextedit_line_wrap_mode(void* self);
+int32_t q_plaintextedit_line_wrap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#setLineWrapMode)
 ///
 /// @param self QPlainTextEdit*
 /// @param mode enum QPlainTextEdit__LineWrapMode
-void q_plaintextedit_set_line_wrap_mode(void* self, int64_t mode);
+void q_plaintextedit_set_line_wrap_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#wordWrapMode)
 ///
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QTextOption__WrapMode
-int64_t q_plaintextedit_word_wrap_mode(void* self);
+int32_t q_plaintextedit_word_wrap_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#setWordWrapMode)
 ///
 /// @param self QPlainTextEdit*
 /// @param policy enum QTextOption__WrapMode
-void q_plaintextedit_set_word_wrap_mode(void* self, int64_t policy);
+void q_plaintextedit_set_word_wrap_mode(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#setBackgroundVisible)
 ///
@@ -371,7 +371,7 @@ libqt_list /* of QTextEdit__ExtraSelection* */ q_plaintextedit_extra_selections(
 ///
 /// @param self QPlainTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
-void q_plaintextedit_move_cursor(void* self, int64_t operation);
+void q_plaintextedit_move_cursor(void* self, int32_t operation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#canPaste)
 ///
@@ -1354,7 +1354,7 @@ bool q_plaintextedit_find23(void* self, void* exp, int64_t options);
 /// @param self QPlainTextEdit*
 /// @param operation enum QTextCursor__MoveOperation
 /// @param mode enum QTextCursor__MoveMode
-void q_plaintextedit_move_cursor2(void* self, int64_t operation, int64_t mode);
+void q_plaintextedit_move_cursor2(void* self, int32_t operation, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextedit.html#zoomIn)
 ///
@@ -1375,7 +1375,7 @@ void q_plaintextedit_zoom_out1(void* self, int range);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_plaintextedit_vertical_scroll_bar_policy(void* self);
+int32_t q_plaintextedit_vertical_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1383,7 +1383,7 @@ int64_t q_plaintextedit_vertical_scroll_bar_policy(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param verticalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_plaintextedit_set_vertical_scroll_bar_policy(void* self, int64_t verticalScrollBarPolicy);
+void q_plaintextedit_set_vertical_scroll_bar_policy(void* self, int32_t verticalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1407,7 +1407,7 @@ void q_plaintextedit_set_vertical_scroll_bar(void* self, void* scrollbar);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__ScrollBarPolicy
-int64_t q_plaintextedit_horizontal_scroll_bar_policy(void* self);
+int32_t q_plaintextedit_horizontal_scroll_bar_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1415,7 +1415,7 @@ int64_t q_plaintextedit_horizontal_scroll_bar_policy(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param horizontalScrollBarPolicy enum Qt__ScrollBarPolicy
-void q_plaintextedit_set_horizontal_scroll_bar_policy(void* self, int64_t horizontalScrollBarPolicy);
+void q_plaintextedit_set_horizontal_scroll_bar_policy(void* self, int32_t horizontalScrollBarPolicy);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1493,7 +1493,7 @@ QSize* q_plaintextedit_maximum_viewport_size(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QAbstractScrollArea__SizeAdjustPolicy
-int64_t q_plaintextedit_size_adjust_policy(void* self);
+int32_t q_plaintextedit_size_adjust_policy(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -1501,7 +1501,7 @@ int64_t q_plaintextedit_size_adjust_policy(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param policy enum QAbstractScrollArea__SizeAdjustPolicy
-void q_plaintextedit_set_size_adjust_policy(void* self, int64_t policy);
+void q_plaintextedit_set_size_adjust_policy(void* self, int32_t policy);
 
 /// Inherited from QFrame
 ///
@@ -1532,7 +1532,7 @@ int32_t q_plaintextedit_frame_width(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QFrame__Shape
-int64_t q_plaintextedit_frame_shape(void* self);
+int32_t q_plaintextedit_frame_shape(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1540,7 +1540,7 @@ int64_t q_plaintextedit_frame_shape(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param frameShape enum QFrame__Shape
-void q_plaintextedit_set_frame_shape(void* self, int64_t frameShape);
+void q_plaintextedit_set_frame_shape(void* self, int32_t frameShape);
 
 /// Inherited from QFrame
 ///
@@ -1549,7 +1549,7 @@ void q_plaintextedit_set_frame_shape(void* self, int64_t frameShape);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QFrame__Shadow
-int64_t q_plaintextedit_frame_shadow(void* self);
+int32_t q_plaintextedit_frame_shadow(void* self);
 
 /// Inherited from QFrame
 ///
@@ -1557,7 +1557,7 @@ int64_t q_plaintextedit_frame_shadow(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param frameShadow enum QFrame__Shadow
-void q_plaintextedit_set_frame_shadow(void* self, int64_t frameShadow);
+void q_plaintextedit_set_frame_shadow(void* self, int32_t frameShadow);
 
 /// Inherited from QFrame
 ///
@@ -1675,7 +1675,7 @@ bool q_plaintextedit_is_modal(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_plaintextedit_window_modality(void* self);
+int32_t q_plaintextedit_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1683,7 +1683,7 @@ int64_t q_plaintextedit_window_modality(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param windowModality enum Qt__WindowModality
-void q_plaintextedit_set_window_modality(void* self, int64_t windowModality);
+void q_plaintextedit_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -2146,7 +2146,7 @@ void q_plaintextedit_set_palette(void* self, void* palette);
 ///
 /// @param self QPlainTextEdit*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_plaintextedit_set_background_role(void* self, int64_t backgroundRole);
+void q_plaintextedit_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2155,7 +2155,7 @@ void q_plaintextedit_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_plaintextedit_background_role(void* self);
+int32_t q_plaintextedit_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2163,7 +2163,7 @@ int64_t q_plaintextedit_background_role(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_plaintextedit_set_foreground_role(void* self, int64_t foregroundRole);
+void q_plaintextedit_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -2172,7 +2172,7 @@ void q_plaintextedit_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_plaintextedit_foreground_role(void* self);
+int32_t q_plaintextedit_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2574,7 +2574,7 @@ void q_plaintextedit_set_accessible_description(void* self, const char* descript
 ///
 /// @param self QPlainTextEdit*
 /// @param direction enum Qt__LayoutDirection
-void q_plaintextedit_set_layout_direction(void* self, int64_t direction);
+void q_plaintextedit_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -2583,7 +2583,7 @@ void q_plaintextedit_set_layout_direction(void* self, int64_t direction);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_plaintextedit_layout_direction(void* self);
+int32_t q_plaintextedit_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2662,7 +2662,7 @@ void q_plaintextedit_clear_focus(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param reason enum Qt__FocusReason
-void q_plaintextedit_set_focus2(void* self, int64_t reason);
+void q_plaintextedit_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -2671,7 +2671,7 @@ void q_plaintextedit_set_focus2(void* self, int64_t reason);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_plaintextedit_focus_policy(void* self);
+int32_t q_plaintextedit_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2679,7 +2679,7 @@ int64_t q_plaintextedit_focus_policy(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param policy enum Qt__FocusPolicy
-void q_plaintextedit_set_focus_policy(void* self, int64_t policy);
+void q_plaintextedit_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2718,7 +2718,7 @@ QWidget* q_plaintextedit_focus_proxy(void* self);
 /// @param self QPlainTextEdit*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_plaintextedit_context_menu_policy(void* self);
+int32_t q_plaintextedit_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -2726,7 +2726,7 @@ int64_t q_plaintextedit_context_menu_policy(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_plaintextedit_set_context_menu_policy(void* self, int64_t policy);
+void q_plaintextedit_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -3144,7 +3144,7 @@ void q_plaintextedit_set_size_policy(void* self, void* sizePolicy);
 /// @param self QPlainTextEdit*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_plaintextedit_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_plaintextedit_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -3445,7 +3445,7 @@ QWidget* q_plaintextedit_child_at3(void* self, void* p);
 ///
 /// @param self QPlainTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
-void q_plaintextedit_set_attribute(void* self, int64_t param1);
+void q_plaintextedit_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3453,7 +3453,7 @@ void q_plaintextedit_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QPlainTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_plaintextedit_test_attribute(void* self, int64_t param1);
+bool q_plaintextedit_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -3686,7 +3686,7 @@ void q_plaintextedit_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QPlainTextEdit*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_plaintextedit_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_plaintextedit_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -3722,7 +3722,7 @@ void q_plaintextedit_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QPlainTextEdit*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_plaintextedit_set_attribute2(void* self, int64_t param1, bool on);
+void q_plaintextedit_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -3831,7 +3831,7 @@ void q_plaintextedit_kill_timer(void* self, int id);
 ///
 /// @param self QPlainTextEdit*
 /// @param id enum Qt__TimerId
-void q_plaintextedit_kill_timer2(void* self, int64_t id);
+void q_plaintextedit_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -4000,7 +4000,7 @@ bool q_plaintextedit_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPlainTextEdit*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_plaintextedit_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_plaintextedit_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -4011,7 +4011,7 @@ int32_t q_plaintextedit_start_timer22(void* self, int interval, int64_t timerTyp
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_plaintextedit_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_plaintextedit_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4022,7 +4022,7 @@ QMetaObject__Connection* q_plaintextedit_connect5(void* sender, void* signal, vo
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_plaintextedit_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_plaintextedit_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -4129,7 +4129,7 @@ double q_plaintextedit_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_plaintextedit_encode_metric_f(int64_t metric, double value);
+int32_t q_plaintextedit_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -4733,7 +4733,7 @@ void q_plaintextedit_on_native_event(void* self, bool (*callback)(void*, const c
 ///
 /// @param self QPlainTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_plaintextedit_metric(void* self, int64_t param1);
+int32_t q_plaintextedit_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4743,7 +4743,7 @@ int32_t q_plaintextedit_metric(void* self, int64_t param1);
 ///
 /// @param self QPlainTextEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_plaintextedit_qbase_metric(void* self, int64_t param1);
+int32_t q_plaintextedit_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4753,7 +4753,7 @@ int32_t q_plaintextedit_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback int32_t fn(QPlainTextEdit*, enum QPaintDevice__PaintDeviceMetric)
-void q_plaintextedit_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_plaintextedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -5322,7 +5322,7 @@ void q_plaintextedit_on_is_signal_connected(void* self, bool (*callback)(void*, 
 /// @param self QPlainTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_plaintextedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_plaintextedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5333,7 +5333,7 @@ double q_plaintextedit_get_decoded_metric_f(void* self, int64_t metricA, int64_t
 /// @param self QPlainTextEdit*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_plaintextedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_plaintextedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5343,7 +5343,7 @@ double q_plaintextedit_qbase_get_decoded_metric_f(void* self, int64_t metricA, i
 ///
 /// @param self QPlainTextEdit*
 /// @param callback double fn(QPlainTextEdit*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_plaintextedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_plaintextedit_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///
@@ -5382,13 +5382,13 @@ void* q_plaintextdocumentlayout_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_plaintextdocumentlayout_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_plaintextdocumentlayout_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t fn(QPlainTextDocumentLayout*, enum QMetaObject__Call, int, void*)
-void q_plaintextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_plaintextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -5396,7 +5396,7 @@ void q_plaintextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_plaintextdocumentlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_plaintextdocumentlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -5434,7 +5434,7 @@ void q_plaintextdocumentlayout_qbase_draw(void* self, void* param1, void* param2
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 QPointF*
 /// @param param2 enum Qt__HitTestAccuracy
-int32_t q_plaintextdocumentlayout_hit_test(void* self, void* param1, int64_t param2);
+int32_t q_plaintextdocumentlayout_hit_test(void* self, void* param1, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
 ///
@@ -5442,7 +5442,7 @@ int32_t q_plaintextdocumentlayout_hit_test(void* self, void* param1, int64_t par
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param callback int32_t fn(QPlainTextDocumentLayout*, QPointF*, enum Qt__HitTestAccuracy)
-void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int64_t));
+void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#hitTest)
 ///
@@ -5451,7 +5451,7 @@ void q_plaintextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*
 /// @param self QPlainTextDocumentLayout*
 /// @param param1 QPointF*
 /// @param param2 enum Qt__HitTestAccuracy
-int32_t q_plaintextdocumentlayout_qbase_hit_test(void* self, void* param1, int64_t param2);
+int32_t q_plaintextdocumentlayout_qbase_hit_test(void* self, void* param1, int32_t param2);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qplaintextdocumentlayout.html#pageCount)
 ///
@@ -5863,7 +5863,7 @@ void q_plaintextdocumentlayout_kill_timer(void* self, int id);
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param id enum Qt__TimerId
-void q_plaintextdocumentlayout_kill_timer2(void* self, int64_t id);
+void q_plaintextdocumentlayout_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -6040,7 +6040,7 @@ bool q_plaintextdocumentlayout_move_to_thread2(void* self, void* thread, void* p
 /// @param self QPlainTextDocumentLayout*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_plaintextdocumentlayout_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_plaintextdocumentlayout_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -6051,7 +6051,7 @@ int32_t q_plaintextdocumentlayout_start_timer22(void* self, int interval, int64_
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_plaintextdocumentlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_plaintextdocumentlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -6062,7 +6062,7 @@ QMetaObject__Connection* q_plaintextdocumentlayout_connect5(void* sender, void* 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_plaintextdocumentlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_plaintextdocumentlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

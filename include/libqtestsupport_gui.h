@@ -70,8 +70,6 @@ QTest__QTouchEventSequence* q_test__qtoucheventsequence_move3(void* self, int to
 /// @param window QWindow*
 QTest__QTouchEventSequence* q_test__qtoucheventsequence_release3(void* self, int touchId, void* pt, void* window);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qtest::qtoucheventsequence.html#dtor.QTest::QTouchEventSequence)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QTest__QTouchEventSequence*

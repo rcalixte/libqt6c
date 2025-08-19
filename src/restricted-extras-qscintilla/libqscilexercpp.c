@@ -30,15 +30,15 @@ void* q_scilexercpp_metacast(void* self, const char* param1) {
     return QsciLexerCPP_Metacast((QsciLexerCPP*)self, param1);
 }
 
-int32_t q_scilexercpp_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_scilexercpp_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QsciLexerCPP_Metacall((QsciLexerCPP*)self, param1, param2, param3);
 }
 
-void q_scilexercpp_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_scilexercpp_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QsciLexerCPP_OnMetacall((QsciLexerCPP*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexercpp_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_scilexercpp_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QsciLexerCPP_QBaseMetacall((QsciLexerCPP*)self, param1, param2, param3);
 }
 
@@ -436,7 +436,7 @@ void q_scilexercpp_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_scilexercpp_kill_timer2(void* self, int64_t id) {
+void q_scilexercpp_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -540,15 +540,15 @@ bool q_scilexercpp_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_scilexercpp_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_scilexercpp_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_scilexercpp_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_scilexercpp_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_scilexercpp_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_scilexercpp_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

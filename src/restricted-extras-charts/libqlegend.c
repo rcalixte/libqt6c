@@ -25,7 +25,7 @@ void* q_legend_metacast(void* self, const char* param1) {
     return QLegend_Metacast((QLegend*)self, param1);
 }
 
-int32_t q_legend_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_legend_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QLegend_Metacall((QLegend*)self, param1, param2, param3);
 }
 
@@ -153,11 +153,11 @@ void q_legend_set_interactive(void* self, bool interactive) {
     QLegend_SetInteractive((QLegend*)self, interactive);
 }
 
-int64_t q_legend_marker_shape(void* self) {
+int32_t q_legend_marker_shape(void* self) {
     return QLegend_MarkerShape((QLegend*)self);
 }
 
-void q_legend_set_marker_shape(void* self, int64_t shape) {
+void q_legend_set_marker_shape(void* self, int32_t shape) {
     QLegend_SetMarkerShape((QLegend*)self, shape);
 }
 
@@ -217,11 +217,11 @@ void q_legend_on_show_tool_tips_changed(void* self, void (*callback)(void*, bool
     QLegend_Connect_ShowToolTipsChanged((QLegend*)self, (intptr_t)callback);
 }
 
-void q_legend_marker_shape_changed(void* self, int64_t shape) {
+void q_legend_marker_shape_changed(void* self, int32_t shape) {
     QLegend_MarkerShapeChanged((QLegend*)self, shape);
 }
 
-void q_legend_on_marker_shape_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_legend_on_marker_shape_changed(void* self, void (*callback)(void*, int32_t)) {
     QLegend_Connect_MarkerShapeChanged((QLegend*)self, (intptr_t)callback);
 }
 
@@ -280,11 +280,11 @@ void q_legend_adjust_size(void* self) {
     QGraphicsWidget_AdjustSize((QGraphicsWidget*)self);
 }
 
-int64_t q_legend_layout_direction(void* self) {
+int32_t q_legend_layout_direction(void* self) {
     return QGraphicsWidget_LayoutDirection((QGraphicsWidget*)self);
 }
 
-void q_legend_set_layout_direction(void* self, int64_t direction) {
+void q_legend_set_layout_direction(void* self, int32_t direction) {
     QGraphicsWidget_SetLayoutDirection((QGraphicsWidget*)self, direction);
 }
 
@@ -403,11 +403,11 @@ const char* q_legend_window_title(void* self) {
     return _ret;
 }
 
-int64_t q_legend_focus_policy(void* self) {
+int32_t q_legend_focus_policy(void* self) {
     return QGraphicsWidget_FocusPolicy((QGraphicsWidget*)self);
 }
 
-void q_legend_set_focus_policy(void* self, int64_t policy) {
+void q_legend_set_focus_policy(void* self, int32_t policy) {
     QGraphicsWidget_SetFocusPolicy((QGraphicsWidget*)self, policy);
 }
 
@@ -460,11 +460,11 @@ libqt_list /* of QAction* */ q_legend_actions(void* self) {
     return _arr;
 }
 
-void q_legend_set_attribute(void* self, int64_t attribute) {
+void q_legend_set_attribute(void* self, int32_t attribute) {
     QGraphicsWidget_SetAttribute((QGraphicsWidget*)self, attribute);
 }
 
-bool q_legend_test_attribute(void* self, int64_t attribute) {
+bool q_legend_test_attribute(void* self, int32_t attribute) {
     return QGraphicsWidget_TestAttribute((QGraphicsWidget*)self, attribute);
 }
 
@@ -504,7 +504,7 @@ bool q_legend_close(void* self) {
     return QGraphicsWidget_Close((QGraphicsWidget*)self);
 }
 
-int32_t q_legend_grab_shortcut2(void* self, void* sequence, int64_t context) {
+int32_t q_legend_grab_shortcut2(void* self, void* sequence, int32_t context) {
     return QGraphicsWidget_GrabShortcut2((QGraphicsWidget*)self, (QKeySequence*)sequence, context);
 }
 
@@ -516,7 +516,7 @@ void q_legend_set_shortcut_auto_repeat2(void* self, int id, bool enabled) {
     QGraphicsWidget_SetShortcutAutoRepeat2((QGraphicsWidget*)self, id, enabled);
 }
 
-void q_legend_set_attribute2(void* self, int64_t attribute, bool on) {
+void q_legend_set_attribute2(void* self, int32_t attribute, bool on) {
     QGraphicsWidget_SetAttribute2((QGraphicsWidget*)self, attribute, on);
 }
 
@@ -679,7 +679,7 @@ void q_legend_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_legend_kill_timer2(void* self, int64_t id) {
+void q_legend_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -783,15 +783,15 @@ bool q_legend_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_legend_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_legend_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_legend_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_legend_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_legend_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_legend_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -876,7 +876,7 @@ int64_t q_legend_flags(void* self) {
     return QGraphicsItem_Flags((QGraphicsItem*)self);
 }
 
-void q_legend_set_flag(void* self, int64_t flag) {
+void q_legend_set_flag(void* self, int32_t flag) {
     QGraphicsItem_SetFlag((QGraphicsItem*)self, flag);
 }
 
@@ -884,19 +884,19 @@ void q_legend_set_flags(void* self, int64_t flags) {
     QGraphicsItem_SetFlags((QGraphicsItem*)self, flags);
 }
 
-int64_t q_legend_cache_mode(void* self) {
+int32_t q_legend_cache_mode(void* self) {
     return QGraphicsItem_CacheMode((QGraphicsItem*)self);
 }
 
-void q_legend_set_cache_mode(void* self, int64_t mode) {
+void q_legend_set_cache_mode(void* self, int32_t mode) {
     QGraphicsItem_SetCacheMode((QGraphicsItem*)self, mode);
 }
 
-int64_t q_legend_panel_modality(void* self) {
+int32_t q_legend_panel_modality(void* self) {
     return QGraphicsItem_PanelModality((QGraphicsItem*)self);
 }
 
-void q_legend_set_panel_modality(void* self, int64_t panelModality) {
+void q_legend_set_panel_modality(void* self, int32_t panelModality) {
     QGraphicsItem_SetPanelModality((QGraphicsItem*)self, panelModality);
 }
 
@@ -1228,11 +1228,11 @@ bool q_legend_contains(void* self, void* point) {
     return QGraphicsItem_Contains((QGraphicsItem*)self, (QPointF*)point);
 }
 
-bool q_legend_collides_with_item(void* self, void* other, int64_t mode) {
+bool q_legend_collides_with_item(void* self, void* other, int32_t mode) {
     return QGraphicsItem_CollidesWithItem((QGraphicsItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_legend_collides_with_path(void* self, void* path, int64_t mode) {
+bool q_legend_collides_with_path(void* self, void* path, int32_t mode) {
     return QGraphicsItem_CollidesWithPath((QGraphicsItem*)self, (QPainterPath*)path, mode);
 }
 
@@ -1437,15 +1437,15 @@ void q_legend_remove_scene_event_filter(void* self, void* filterItem) {
     QGraphicsItem_RemoveSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)filterItem);
 }
 
-void q_legend_set_flag2(void* self, int64_t flag, bool enabled) {
+void q_legend_set_flag2(void* self, int32_t flag, bool enabled) {
     QGraphicsItem_SetFlag2((QGraphicsItem*)self, flag, enabled);
 }
 
-void q_legend_set_cache_mode2(void* self, int64_t mode, void* cacheSize) {
+void q_legend_set_cache_mode2(void* self, int32_t mode, void* cacheSize) {
     QGraphicsItem_SetCacheMode2((QGraphicsItem*)self, mode, (QSize*)cacheSize);
 }
 
-void q_legend_set_focus1(void* self, int64_t focusReason) {
+void q_legend_set_focus1(void* self, int32_t focusReason) {
     QGraphicsItem_SetFocus1((QGraphicsItem*)self, focusReason);
 }
 
@@ -1477,7 +1477,7 @@ void q_legend_set_transform2(void* self, void* matrix, bool combine) {
     QGraphicsItem_SetTransform2((QGraphicsItem*)self, (QTransform*)matrix, combine);
 }
 
-libqt_list /* of QGraphicsItem* */ q_legend_colliding_items1(void* self, int64_t mode) {
+libqt_list /* of QGraphicsItem* */ q_legend_colliding_items1(void* self, int32_t mode) {
     libqt_list _arr = QGraphicsItem_CollidingItems1((QGraphicsItem*)self, mode);
     return _arr;
 }
@@ -1498,7 +1498,7 @@ void q_legend_set_size_policy(void* self, void* policy) {
     QGraphicsLayoutItem_SetSizePolicy((QGraphicsLayoutItem*)self, (QSizePolicy*)policy);
 }
 
-void q_legend_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy) {
+void q_legend_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy) {
     QGraphicsLayoutItem_SetSizePolicy2((QGraphicsLayoutItem*)self, hPolicy, vPolicy);
 }
 
@@ -1598,7 +1598,7 @@ QRectF* q_legend_contents_rect(void* self) {
     return QGraphicsLayoutItem_ContentsRect((QGraphicsLayoutItem*)self);
 }
 
-QSizeF* q_legend_effective_size_hint(void* self, int64_t which) {
+QSizeF* q_legend_effective_size_hint(void* self, int32_t which) {
     return QGraphicsLayoutItem_EffectiveSizeHint((QGraphicsLayoutItem*)self, which);
 }
 
@@ -1626,11 +1626,11 @@ bool q_legend_owned_by_layout(void* self) {
     return QGraphicsLayoutItem_OwnedByLayout((QGraphicsLayoutItem*)self);
 }
 
-void q_legend_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType) {
+void q_legend_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType) {
     QGraphicsLayoutItem_SetSizePolicy3((QGraphicsLayoutItem*)self, hPolicy, vPolicy, controlType);
 }
 
-QSizeF* q_legend_effective_size_hint2(void* self, int64_t which, void* constraint) {
+QSizeF* q_legend_effective_size_hint2(void* self, int32_t which, void* constraint) {
     return QGraphicsLayoutItem_EffectiveSizeHint2((QGraphicsLayoutItem*)self, which, (QSizeF*)constraint);
 }
 

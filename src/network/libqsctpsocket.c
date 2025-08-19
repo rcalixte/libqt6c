@@ -28,15 +28,15 @@ void* q_sctpsocket_metacast(void* self, const char* param1) {
     return QSctpSocket_Metacast((QSctpSocket*)self, param1);
 }
 
-int32_t q_sctpsocket_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sctpsocket_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSctpSocket_Metacall((QSctpSocket*)self, param1, param2, param3);
 }
 
-void q_sctpsocket_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_sctpsocket_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QSctpSocket_OnMetacall((QSctpSocket*)self, (intptr_t)callback);
 }
 
-int32_t q_sctpsocket_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_sctpsocket_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QSctpSocket_QBaseMetacall((QSctpSocket*)self, param1, param2, param3);
 }
 
@@ -129,11 +129,11 @@ const char* q_sctpsocket_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_sctpsocket_bind2(void* self, int64_t addr, unsigned short port) {
+bool q_sctpsocket_bind2(void* self, int32_t addr, unsigned short port) {
     return QTcpSocket_Bind2((QTcpSocket*)self, addr, port);
 }
 
-bool q_sctpsocket_bind3(void* self, int64_t addr, unsigned short port, int64_t mode) {
+bool q_sctpsocket_bind3(void* self, int32_t addr, unsigned short port, int64_t mode) {
     return QTcpSocket_Bind3((QTcpSocket*)self, addr, port, mode);
 }
 
@@ -184,15 +184,15 @@ void q_sctpsocket_abort(void* self) {
     QAbstractSocket_Abort((QAbstractSocket*)self);
 }
 
-int64_t q_sctpsocket_socket_type(void* self) {
+int32_t q_sctpsocket_socket_type(void* self) {
     return QAbstractSocket_SocketType((QAbstractSocket*)self);
 }
 
-int64_t q_sctpsocket_state(void* self) {
+int32_t q_sctpsocket_state(void* self) {
     return QAbstractSocket_State((QAbstractSocket*)self);
 }
 
-int64_t q_sctpsocket_error(void* self) {
+int32_t q_sctpsocket_error(void* self) {
     return QAbstractSocket_Error((QAbstractSocket*)self);
 }
 
@@ -243,19 +243,19 @@ void q_sctpsocket_on_disconnected(void* self, void (*callback)(void*)) {
     QAbstractSocket_Connect_Disconnected((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_state_changed(void* self, int64_t param1) {
+void q_sctpsocket_state_changed(void* self, int32_t param1) {
     QAbstractSocket_StateChanged((QAbstractSocket*)self, param1);
 }
 
-void q_sctpsocket_on_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QAbstractSocket_Connect_StateChanged((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_error_occurred(void* self, int64_t param1) {
+void q_sctpsocket_error_occurred(void* self, int32_t param1) {
     QAbstractSocket_ErrorOccurred((QAbstractSocket*)self, param1);
 }
 
-void q_sctpsocket_on_error_occurred(void* self, void (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_error_occurred(void* self, void (*callback)(void*, int32_t)) {
     QAbstractSocket_Connect_ErrorOccurred((QAbstractSocket*)self, (intptr_t)callback);
 }
 
@@ -520,7 +520,7 @@ void q_sctpsocket_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_sctpsocket_kill_timer2(void* self, int64_t id) {
+void q_sctpsocket_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -624,15 +624,15 @@ bool q_sctpsocket_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_sctpsocket_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_sctpsocket_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_sctpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_sctpsocket_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_sctpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_sctpsocket_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -668,15 +668,15 @@ void q_sctpsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned sh
     QSctpSocket_OnBind((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol) {
+void q_sctpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
     QSctpSocket_ConnectToHost((QSctpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int64_t protocol) {
+void q_sctpsocket_qbase_connect_to_host(void* self, const char* hostName, unsigned short port, int64_t mode, int32_t protocol) {
     QSctpSocket_QBaseConnectToHost((QSctpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int64_t)) {
+void q_sctpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int64_t, int32_t)) {
     QSctpSocket_OnConnectToHost((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -728,39 +728,39 @@ void q_sctpsocket_on_socket_descriptor(void* self, intptr_t (*callback)()) {
     QSctpSocket_OnSocketDescriptor((QSctpSocket*)self, (intptr_t)callback);
 }
 
-bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode) {
+bool q_sctpsocket_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
     return QSctpSocket_SetSocketDescriptor((QSctpSocket*)self, socketDescriptor, state, openMode);
 }
 
-bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int64_t state, int64_t openMode) {
+bool q_sctpsocket_qbase_set_socket_descriptor(void* self, intptr_t socketDescriptor, int32_t state, int64_t openMode) {
     return QSctpSocket_QBaseSetSocketDescriptor((QSctpSocket*)self, socketDescriptor, state, openMode);
 }
 
-void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int64_t, int64_t)) {
+void q_sctpsocket_on_set_socket_descriptor(void* self, bool (*callback)(void*, intptr_t, int32_t, int64_t)) {
     QSctpSocket_OnSetSocketDescriptor((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_set_socket_option(void* self, int64_t option, void* value) {
+void q_sctpsocket_set_socket_option(void* self, int32_t option, void* value) {
     QSctpSocket_SetSocketOption((QSctpSocket*)self, option, (QVariant*)value);
 }
 
-void q_sctpsocket_qbase_set_socket_option(void* self, int64_t option, void* value) {
+void q_sctpsocket_qbase_set_socket_option(void* self, int32_t option, void* value) {
     QSctpSocket_QBaseSetSocketOption((QSctpSocket*)self, option, (QVariant*)value);
 }
 
-void q_sctpsocket_on_set_socket_option(void* self, void (*callback)(void*, int64_t, void*)) {
+void q_sctpsocket_on_set_socket_option(void* self, void (*callback)(void*, int32_t, void*)) {
     QSctpSocket_OnSetSocketOption((QSctpSocket*)self, (intptr_t)callback);
 }
 
-QVariant* q_sctpsocket_socket_option(void* self, int64_t option) {
+QVariant* q_sctpsocket_socket_option(void* self, int32_t option) {
     return QSctpSocket_SocketOption((QSctpSocket*)self, option);
 }
 
-QVariant* q_sctpsocket_qbase_socket_option(void* self, int64_t option) {
+QVariant* q_sctpsocket_qbase_socket_option(void* self, int32_t option) {
     return QSctpSocket_QBaseSocketOption((QSctpSocket*)self, option);
 }
 
-void q_sctpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t)) {
     QSctpSocket_OnSocketOption((QSctpSocket*)self, (intptr_t)callback);
 }
 
@@ -1016,27 +1016,27 @@ void q_sctpsocket_on_disconnect_notify(void* self, void (*callback)(void*, void*
     QSctpSocket_OnDisconnectNotify((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_set_socket_state(void* self, int64_t state) {
+void q_sctpsocket_set_socket_state(void* self, int32_t state) {
     QSctpSocket_SetSocketState((QSctpSocket*)self, state);
 }
 
-void q_sctpsocket_qbase_set_socket_state(void* self, int64_t state) {
+void q_sctpsocket_qbase_set_socket_state(void* self, int32_t state) {
     QSctpSocket_QBaseSetSocketState((QSctpSocket*)self, state);
 }
 
-void q_sctpsocket_on_set_socket_state(void* self, void (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_set_socket_state(void* self, void (*callback)(void*, int32_t)) {
     QSctpSocket_OnSetSocketState((QSctpSocket*)self, (intptr_t)callback);
 }
 
-void q_sctpsocket_set_socket_error(void* self, int64_t socketError) {
+void q_sctpsocket_set_socket_error(void* self, int32_t socketError) {
     QSctpSocket_SetSocketError((QSctpSocket*)self, socketError);
 }
 
-void q_sctpsocket_qbase_set_socket_error(void* self, int64_t socketError) {
+void q_sctpsocket_qbase_set_socket_error(void* self, int32_t socketError) {
     QSctpSocket_QBaseSetSocketError((QSctpSocket*)self, socketError);
 }
 
-void q_sctpsocket_on_set_socket_error(void* self, void (*callback)(void*, int64_t)) {
+void q_sctpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t)) {
     QSctpSocket_OnSetSocketError((QSctpSocket*)self, (intptr_t)callback);
 }
 

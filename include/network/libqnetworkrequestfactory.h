@@ -175,40 +175,40 @@ void q_networkrequestfactory_clear_query_parameters(void* self);
 ///
 /// @param self QNetworkRequestFactory*
 /// @param priority enum QNetworkRequest__Priority
-void q_networkrequestfactory_set_priority(void* self, int64_t priority);
+void q_networkrequestfactory_set_priority(void* self, int32_t priority);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#priority)
 ///
 /// @param self QNetworkRequestFactory*
 ///
 /// @return enum QNetworkRequest__Priority
-int64_t q_networkrequestfactory_priority(void* self);
+int32_t q_networkrequestfactory_priority(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#attribute)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
-QVariant* q_networkrequestfactory_attribute(void* self, int64_t attribute);
+QVariant* q_networkrequestfactory_attribute(void* self, int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#attribute)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
 /// @param defaultValue QVariant*
-QVariant* q_networkrequestfactory_attribute2(void* self, int64_t attribute, void* defaultValue);
+QVariant* q_networkrequestfactory_attribute2(void* self, int32_t attribute, void* defaultValue);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#setAttribute)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
 /// @param value QVariant*
-void q_networkrequestfactory_set_attribute(void* self, int64_t attribute, void* value);
+void q_networkrequestfactory_set_attribute(void* self, int32_t attribute, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearAttribute)
 ///
 /// @param self QNetworkRequestFactory*
 /// @param attribute enum QNetworkRequest__Attribute
-void q_networkrequestfactory_clear_attribute(void* self, int64_t attribute);
+void q_networkrequestfactory_clear_attribute(void* self, int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkrequestfactory.html#clearAttributes)
 ///

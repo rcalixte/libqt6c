@@ -35,13 +35,13 @@ void* q_toolbutton_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_toolbutton_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_toolbutton_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QToolButton*
 /// @param callback int32_t fn(QToolButton*, enum QMetaObject__Call, int, void*)
-void q_toolbutton_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_toolbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_toolbutton_on_metacall(void* self, int32_t (*callback)(void*, int64_t, in
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_toolbutton_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_toolbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -103,20 +103,20 @@ QSize* q_toolbutton_qbase_minimum_size_hint(void* self);
 /// @param self QToolButton*
 ///
 /// @return enum Qt__ToolButtonStyle
-int64_t q_toolbutton_tool_button_style(void* self);
+int32_t q_toolbutton_tool_button_style(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#arrowType)
 ///
 /// @param self QToolButton*
 ///
 /// @return enum Qt__ArrowType
-int64_t q_toolbutton_arrow_type(void* self);
+int32_t q_toolbutton_arrow_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#setArrowType)
 ///
 /// @param self QToolButton*
 /// @param typeVal enum Qt__ArrowType
-void q_toolbutton_set_arrow_type(void* self, int64_t typeVal);
+void q_toolbutton_set_arrow_type(void* self, int32_t typeVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#setMenu)
 ///
@@ -133,14 +133,14 @@ QMenu* q_toolbutton_menu(void* self);
 ///
 /// @param self QToolButton*
 /// @param mode enum QToolButton__ToolButtonPopupMode
-void q_toolbutton_set_popup_mode(void* self, int64_t mode);
+void q_toolbutton_set_popup_mode(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#popupMode)
 ///
 /// @param self QToolButton*
 ///
 /// @return enum QToolButton__ToolButtonPopupMode
-int64_t q_toolbutton_popup_mode(void* self);
+int32_t q_toolbutton_popup_mode(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#defaultAction)
 ///
@@ -167,7 +167,7 @@ void q_toolbutton_show_menu(void* self);
 ///
 /// @param self QToolButton*
 /// @param style enum Qt__ToolButtonStyle
-void q_toolbutton_set_tool_button_style(void* self, int64_t style);
+void q_toolbutton_set_tool_button_style(void* self, int32_t style);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtoolbutton.html#setDefaultAction)
 ///
@@ -829,7 +829,7 @@ bool q_toolbutton_is_modal(void* self);
 /// @param self QToolButton*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_toolbutton_window_modality(void* self);
+int32_t q_toolbutton_window_modality(void* self);
 
 /// Inherited from QWidget
 ///
@@ -837,7 +837,7 @@ int64_t q_toolbutton_window_modality(void* self);
 ///
 /// @param self QToolButton*
 /// @param windowModality enum Qt__WindowModality
-void q_toolbutton_set_window_modality(void* self, int64_t windowModality);
+void q_toolbutton_set_window_modality(void* self, int32_t windowModality);
 
 /// Inherited from QWidget
 ///
@@ -1300,7 +1300,7 @@ void q_toolbutton_set_palette(void* self, void* palette);
 ///
 /// @param self QToolButton*
 /// @param backgroundRole enum QPalette__ColorRole
-void q_toolbutton_set_background_role(void* self, int64_t backgroundRole);
+void q_toolbutton_set_background_role(void* self, int32_t backgroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1309,7 +1309,7 @@ void q_toolbutton_set_background_role(void* self, int64_t backgroundRole);
 /// @param self QToolButton*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_toolbutton_background_role(void* self);
+int32_t q_toolbutton_background_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1317,7 +1317,7 @@ int64_t q_toolbutton_background_role(void* self);
 ///
 /// @param self QToolButton*
 /// @param foregroundRole enum QPalette__ColorRole
-void q_toolbutton_set_foreground_role(void* self, int64_t foregroundRole);
+void q_toolbutton_set_foreground_role(void* self, int32_t foregroundRole);
 
 /// Inherited from QWidget
 ///
@@ -1326,7 +1326,7 @@ void q_toolbutton_set_foreground_role(void* self, int64_t foregroundRole);
 /// @param self QToolButton*
 ///
 /// @return enum QPalette__ColorRole
-int64_t q_toolbutton_foreground_role(void* self);
+int32_t q_toolbutton_foreground_role(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1728,7 +1728,7 @@ void q_toolbutton_set_accessible_description(void* self, const char* description
 ///
 /// @param self QToolButton*
 /// @param direction enum Qt__LayoutDirection
-void q_toolbutton_set_layout_direction(void* self, int64_t direction);
+void q_toolbutton_set_layout_direction(void* self, int32_t direction);
 
 /// Inherited from QWidget
 ///
@@ -1737,7 +1737,7 @@ void q_toolbutton_set_layout_direction(void* self, int64_t direction);
 /// @param self QToolButton*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_toolbutton_layout_direction(void* self);
+int32_t q_toolbutton_layout_direction(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1816,7 +1816,7 @@ void q_toolbutton_clear_focus(void* self);
 ///
 /// @param self QToolButton*
 /// @param reason enum Qt__FocusReason
-void q_toolbutton_set_focus2(void* self, int64_t reason);
+void q_toolbutton_set_focus2(void* self, int32_t reason);
 
 /// Inherited from QWidget
 ///
@@ -1825,7 +1825,7 @@ void q_toolbutton_set_focus2(void* self, int64_t reason);
 /// @param self QToolButton*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_toolbutton_focus_policy(void* self);
+int32_t q_toolbutton_focus_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1833,7 +1833,7 @@ int64_t q_toolbutton_focus_policy(void* self);
 ///
 /// @param self QToolButton*
 /// @param policy enum Qt__FocusPolicy
-void q_toolbutton_set_focus_policy(void* self, int64_t policy);
+void q_toolbutton_set_focus_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -1872,7 +1872,7 @@ QWidget* q_toolbutton_focus_proxy(void* self);
 /// @param self QToolButton*
 ///
 /// @return enum Qt__ContextMenuPolicy
-int64_t q_toolbutton_context_menu_policy(void* self);
+int32_t q_toolbutton_context_menu_policy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -1880,7 +1880,7 @@ int64_t q_toolbutton_context_menu_policy(void* self);
 ///
 /// @param self QToolButton*
 /// @param policy enum Qt__ContextMenuPolicy
-void q_toolbutton_set_context_menu_policy(void* self, int64_t policy);
+void q_toolbutton_set_context_menu_policy(void* self, int32_t policy);
 
 /// Inherited from QWidget
 ///
@@ -2298,7 +2298,7 @@ void q_toolbutton_set_size_policy(void* self, void* sizePolicy);
 /// @param self QToolButton*
 /// @param horizontal enum QSizePolicy__Policy
 /// @param vertical enum QSizePolicy__Policy
-void q_toolbutton_set_size_policy2(void* self, int64_t horizontal, int64_t vertical);
+void q_toolbutton_set_size_policy2(void* self, int32_t horizontal, int32_t vertical);
 
 /// Inherited from QWidget
 ///
@@ -2606,7 +2606,7 @@ QWidget* q_toolbutton_child_at3(void* self, void* p);
 ///
 /// @param self QToolButton*
 /// @param param1 enum Qt__WidgetAttribute
-void q_toolbutton_set_attribute(void* self, int64_t param1);
+void q_toolbutton_set_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2614,7 +2614,7 @@ void q_toolbutton_set_attribute(void* self, int64_t param1);
 ///
 /// @param self QToolButton*
 /// @param param1 enum Qt__WidgetAttribute
-bool q_toolbutton_test_attribute(void* self, int64_t param1);
+bool q_toolbutton_test_attribute(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -2847,7 +2847,7 @@ void q_toolbutton_grab_gesture2(void* self, int64_t typeVal, int64_t flags);
 /// @param self QToolButton*
 /// @param key QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_toolbutton_grab_shortcut2(void* self, void* key, int64_t context);
+int32_t q_toolbutton_grab_shortcut2(void* self, void* key, int32_t context);
 
 /// Inherited from QWidget
 ///
@@ -2883,7 +2883,7 @@ void q_toolbutton_set_window_flag2(void* self, int64_t param1, bool on);
 /// @param self QToolButton*
 /// @param param1 enum Qt__WidgetAttribute
 /// @param on bool
-void q_toolbutton_set_attribute2(void* self, int64_t param1, bool on);
+void q_toolbutton_set_attribute2(void* self, int32_t param1, bool on);
 
 /// Inherited from QWidget
 ///
@@ -2992,7 +2992,7 @@ void q_toolbutton_kill_timer(void* self, int id);
 ///
 /// @param self QToolButton*
 /// @param id enum Qt__TimerId
-void q_toolbutton_kill_timer2(void* self, int64_t id);
+void q_toolbutton_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -3161,7 +3161,7 @@ bool q_toolbutton_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QToolButton*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_toolbutton_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_toolbutton_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -3172,7 +3172,7 @@ int32_t q_toolbutton_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_toolbutton_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_toolbutton_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3183,7 +3183,7 @@ QMetaObject__Connection* q_toolbutton_connect5(void* sender, void* signal, void*
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_toolbutton_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_toolbutton_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -3290,7 +3290,7 @@ double q_toolbutton_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_toolbutton_encode_metric_f(int64_t metric, double value);
+int32_t q_toolbutton_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QAbstractButton
 ///
@@ -4018,7 +4018,7 @@ void q_toolbutton_on_native_event(void* self, bool (*callback)(void*, const char
 ///
 /// @param self QToolButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_toolbutton_metric(void* self, int64_t param1);
+int32_t q_toolbutton_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4028,7 +4028,7 @@ int32_t q_toolbutton_metric(void* self, int64_t param1);
 ///
 /// @param self QToolButton*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
-int32_t q_toolbutton_qbase_metric(void* self, int64_t param1);
+int32_t q_toolbutton_qbase_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4038,7 +4038,7 @@ int32_t q_toolbutton_qbase_metric(void* self, int64_t param1);
 ///
 /// @param self QToolButton*
 /// @param callback int32_t fn(QToolButton*, enum QPaintDevice__PaintDeviceMetric)
-void q_toolbutton_on_metric(void* self, int32_t (*callback)(void*, int64_t));
+void q_toolbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
 ///
@@ -4635,7 +4635,7 @@ void q_toolbutton_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 /// @param self QToolButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_toolbutton_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_toolbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4646,7 +4646,7 @@ double q_toolbutton_get_decoded_metric_f(void* self, int64_t metricA, int64_t me
 /// @param self QToolButton*
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
-double q_toolbutton_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB);
+double q_toolbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -4656,7 +4656,7 @@ double q_toolbutton_qbase_get_decoded_metric_f(void* self, int64_t metricA, int6
 ///
 /// @param self QToolButton*
 /// @param callback double fn(QToolButton*, enum QPaintDevice__PaintDeviceMetric, enum QPaintDevice__PaintDeviceMetric)
-void q_toolbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t));
+void q_toolbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QObject
 ///

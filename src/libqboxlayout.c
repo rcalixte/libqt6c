@@ -10,11 +10,11 @@
 #include "libqboxlayout.hpp"
 #include "libqboxlayout.h"
 
-QBoxLayout* q_boxlayout_new(int64_t param1) {
+QBoxLayout* q_boxlayout_new(int32_t param1) {
     return QBoxLayout_new(param1);
 }
 
-QBoxLayout* q_boxlayout_new2(int64_t param1, void* parent) {
+QBoxLayout* q_boxlayout_new2(int32_t param1, void* parent) {
     return QBoxLayout_new2(param1, (QWidget*)parent);
 }
 
@@ -26,15 +26,15 @@ void* q_boxlayout_metacast(void* self, const char* param1) {
     return QBoxLayout_Metacast((QBoxLayout*)self, param1);
 }
 
-int32_t q_boxlayout_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_boxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QBoxLayout_Metacall((QBoxLayout*)self, param1, param2, param3);
 }
 
-void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_boxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QBoxLayout_OnMetacall((QBoxLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_boxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_boxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QBoxLayout_QBaseMetacall((QBoxLayout*)self, param1, param2, param3);
 }
 
@@ -45,11 +45,11 @@ const char* q_boxlayout_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_boxlayout_direction(void* self) {
+int32_t q_boxlayout_direction(void* self) {
     return QBoxLayout_Direction((QBoxLayout*)self);
 }
 
-void q_boxlayout_set_direction(void* self, int64_t direction) {
+void q_boxlayout_set_direction(void* self, int32_t direction) {
     QBoxLayout_SetDirection((QBoxLayout*)self, direction);
 }
 
@@ -375,11 +375,11 @@ bool q_boxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
-void q_boxlayout_set_size_constraint(void* self, int64_t sizeConstraint) {
+void q_boxlayout_set_size_constraint(void* self, int32_t sizeConstraint) {
     QLayout_SetSizeConstraint((QLayout*)self, sizeConstraint);
 }
 
-int64_t q_boxlayout_size_constraint(void* self) {
+int32_t q_boxlayout_size_constraint(void* self) {
     return QLayout_SizeConstraint((QLayout*)self);
 }
 
@@ -502,7 +502,7 @@ void q_boxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_boxlayout_kill_timer2(void* self, int64_t id) {
+void q_boxlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -606,15 +606,15 @@ bool q_boxlayout_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_boxlayout_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_boxlayout_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_boxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_boxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_boxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_boxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -942,15 +942,15 @@ void* q_hboxlayout_metacast(void* self, const char* param1) {
     return QHBoxLayout_Metacast((QHBoxLayout*)self, param1);
 }
 
-int32_t q_hboxlayout_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_hboxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QHBoxLayout_Metacall((QHBoxLayout*)self, param1, param2, param3);
 }
 
-void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_hboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QHBoxLayout_OnMetacall((QHBoxLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_hboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_hboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QHBoxLayout_QBaseMetacall((QHBoxLayout*)self, param1, param2, param3);
 }
 
@@ -975,11 +975,11 @@ const char* q_hboxlayout_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_hboxlayout_direction(void* self) {
+int32_t q_hboxlayout_direction(void* self) {
     return QBoxLayout_Direction((QBoxLayout*)self);
 }
 
-void q_hboxlayout_set_direction(void* self, int64_t direction) {
+void q_hboxlayout_set_direction(void* self, int32_t direction) {
     QBoxLayout_SetDirection((QBoxLayout*)self, direction);
 }
 
@@ -1111,11 +1111,11 @@ bool q_hboxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
-void q_hboxlayout_set_size_constraint(void* self, int64_t sizeConstraint) {
+void q_hboxlayout_set_size_constraint(void* self, int32_t sizeConstraint) {
     QLayout_SetSizeConstraint((QLayout*)self, sizeConstraint);
 }
 
-int64_t q_hboxlayout_size_constraint(void* self) {
+int32_t q_hboxlayout_size_constraint(void* self) {
     return QLayout_SizeConstraint((QLayout*)self);
 }
 
@@ -1238,7 +1238,7 @@ void q_hboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_hboxlayout_kill_timer2(void* self, int64_t id) {
+void q_hboxlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -1342,15 +1342,15 @@ bool q_hboxlayout_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_hboxlayout_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_hboxlayout_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_hboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_hboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_hboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_hboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -1858,15 +1858,15 @@ void* q_vboxlayout_metacast(void* self, const char* param1) {
     return QVBoxLayout_Metacast((QVBoxLayout*)self, param1);
 }
 
-int32_t q_vboxlayout_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_vboxlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QVBoxLayout_Metacall((QVBoxLayout*)self, param1, param2, param3);
 }
 
-void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_vboxlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QVBoxLayout_OnMetacall((QVBoxLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_vboxlayout_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_vboxlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QVBoxLayout_QBaseMetacall((QVBoxLayout*)self, param1, param2, param3);
 }
 
@@ -1891,11 +1891,11 @@ const char* q_vboxlayout_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_vboxlayout_direction(void* self) {
+int32_t q_vboxlayout_direction(void* self) {
     return QBoxLayout_Direction((QBoxLayout*)self);
 }
 
-void q_vboxlayout_set_direction(void* self, int64_t direction) {
+void q_vboxlayout_set_direction(void* self, int32_t direction) {
     QBoxLayout_SetDirection((QBoxLayout*)self, direction);
 }
 
@@ -2027,11 +2027,11 @@ bool q_vboxlayout_set_alignment2(void* self, void* l, int64_t alignment) {
     return QLayout_SetAlignment2((QLayout*)self, (QLayout*)l, alignment);
 }
 
-void q_vboxlayout_set_size_constraint(void* self, int64_t sizeConstraint) {
+void q_vboxlayout_set_size_constraint(void* self, int32_t sizeConstraint) {
     QLayout_SetSizeConstraint((QLayout*)self, sizeConstraint);
 }
 
-int64_t q_vboxlayout_size_constraint(void* self) {
+int32_t q_vboxlayout_size_constraint(void* self) {
     return QLayout_SizeConstraint((QLayout*)self);
 }
 
@@ -2154,7 +2154,7 @@ void q_vboxlayout_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_vboxlayout_kill_timer2(void* self, int64_t id) {
+void q_vboxlayout_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -2258,15 +2258,15 @@ bool q_vboxlayout_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_vboxlayout_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_vboxlayout_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_vboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_vboxlayout_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_vboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_vboxlayout_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

@@ -61,7 +61,7 @@ QUuid* q_uuid_new7(void* param1);
 ///
 /// @param id128 QUuid__Id128Bytes*
 /// @param order enum QSysInfo__Endian
-QUuid* q_uuid_new8(void* id128, int64_t order);
+QUuid* q_uuid_new8(void* id128, int32_t order);
 
 /// q_uuid_copy_assign shallow copies `other` into `self`.
 ///
@@ -142,14 +142,14 @@ QUuid* q_uuid_create_uuid_v3(void* ns, const char* baseData);
 /// @param self QUuid*
 ///
 /// @return enum QUuid__Variant
-int64_t q_uuid_variant(void* self);
+int32_t q_uuid_variant(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#version)
 ///
 /// @param self QUuid*
 ///
 /// @return enum QUuid__Version
-int64_t q_uuid_version(void* self);
+int32_t q_uuid_version(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
@@ -157,7 +157,7 @@ int64_t q_uuid_version(void* self);
 ///
 /// @param self QUuid*
 /// @param mode enum QUuid__StringFormat
-const char* q_uuid_to_string1(void* self, int64_t mode);
+const char* q_uuid_to_string1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toByteArray)
 ///
@@ -165,19 +165,19 @@ const char* q_uuid_to_string1(void* self, int64_t mode);
 ///
 /// @param self QUuid*
 /// @param mode enum QUuid__StringFormat
-char* q_uuid_to_byte_array1(void* self, int64_t mode);
+char* q_uuid_to_byte_array1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toBytes)
 ///
 /// @param self QUuid*
 /// @param order enum QSysInfo__Endian
-QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int64_t order);
+QUuid__Id128Bytes* q_uuid_to_bytes1(void* self, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#fromBytes)
 ///
 /// @param bytes void*
 /// @param order enum QSysInfo__Endian
-QUuid* q_uuid_from_bytes2(void* bytes, int64_t order);
+QUuid* q_uuid_from_bytes2(void* bytes, int32_t order);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#dtor.QUuid)
 ///
@@ -204,8 +204,6 @@ QUuid__Id128Bytes* q_uuid__id128bytes_new2(void* param1);
 /// @param self QUuid__Id128Bytes*
 const char* q_uuid__id128bytes_to_q_byte_array_view(void* self);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/quuid::id128bytes.html#dtor.QUuid::Id128Bytes)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QUuid__Id128Bytes*

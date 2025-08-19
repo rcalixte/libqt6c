@@ -9,7 +9,7 @@ QStringEncoder* q_stringencoder_new() {
     return QStringEncoder_new();
 }
 
-QStringEncoder* q_stringencoder_new2(int64_t encoding) {
+QStringEncoder* q_stringencoder_new2(int32_t encoding) {
     return QStringEncoder_new2(encoding);
 }
 
@@ -17,7 +17,7 @@ QStringEncoder* q_stringencoder_new3(char* name) {
     return QStringEncoder_new3(name);
 }
 
-QStringEncoder* q_stringencoder_new4(int64_t encoding, int64_t flags) {
+QStringEncoder* q_stringencoder_new4(int32_t encoding, int64_t flags) {
     return QStringEncoder_new4(encoding, flags);
 }
 
@@ -45,7 +45,7 @@ const char* q_stringencoder_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
-const char* q_stringencoder_name_for_encoding(int64_t e) {
+const char* q_stringencoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 
@@ -72,7 +72,7 @@ void q_stringencoder_delete(void* self) {
     QStringEncoder_Delete((QStringEncoder*)(self));
 }
 
-QStringDecoder* q_stringdecoder_new(int64_t encoding) {
+QStringDecoder* q_stringdecoder_new(int32_t encoding) {
     return QStringDecoder_new(encoding);
 }
 
@@ -84,7 +84,7 @@ QStringDecoder* q_stringdecoder_new3(char* name) {
     return QStringDecoder_new3(name);
 }
 
-QStringDecoder* q_stringdecoder_new4(int64_t encoding, int64_t flags) {
+QStringDecoder* q_stringdecoder_new4(int32_t encoding, int64_t flags) {
     return QStringDecoder_new4(encoding, flags);
 }
 
@@ -122,7 +122,7 @@ const char* q_stringdecoder_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
-const char* q_stringdecoder_name_for_encoding(int64_t e) {
+const char* q_stringdecoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
 }
 

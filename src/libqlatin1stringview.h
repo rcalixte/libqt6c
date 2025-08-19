@@ -166,7 +166,7 @@ int32_t q_latin1string_compare4(void* self, void* c);
 /// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-int32_t q_latin1string_compare5(void* self, void* c, int64_t cs);
+int32_t q_latin1string_compare5(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#startsWith)
 ///
@@ -179,7 +179,7 @@ bool q_latin1string_starts_with3(void* self, void* c);
 /// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_latin1string_starts_with4(void* self, void* c, int64_t cs);
+bool q_latin1string_starts_with4(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#endsWith)
 ///
@@ -192,7 +192,7 @@ bool q_latin1string_ends_with3(void* self, void* c);
 /// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_latin1string_ends_with4(void* self, void* c, int64_t cs);
+bool q_latin1string_ends_with4(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
 ///
@@ -337,21 +337,21 @@ int64_t q_latin1string_index_of24(void* self, void* c, int64_t from);
 /// @param c QChar*
 /// @param from int64_t
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int64_t cs);
+int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#contains)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-bool q_latin1string_contains24(void* self, void* c, int64_t cs);
+bool q_latin1string_contains24(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_latin1string_last_index_of24(void* self, void* c, int64_t cs);
+int64_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
@@ -359,14 +359,14 @@ int64_t q_latin1string_last_index_of24(void* self, void* c, int64_t cs);
 /// @param c QChar*
 /// @param from int64_t
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int64_t cs);
+int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#count)
 ///
 /// @param self QLatin1String*
 /// @param ch QChar*
 /// @param cs enum Qt__CaseSensitivity
-int64_t q_latin1string_count24(void* self, void* ch, int64_t cs);
+int64_t q_latin1string_count24(void* self, void* ch, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlatin1string.html#toShort)
 ///

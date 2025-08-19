@@ -46,13 +46,13 @@ void* q_pauseanimation_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pauseanimation_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pauseanimation_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QPauseAnimation*
 /// @param callback int32_t fn(QPauseAnimation*, enum QMetaObject__Call, int, void*)
-void q_pauseanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_pauseanimation_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -60,7 +60,7 @@ void q_pauseanimation_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_pauseanimation_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_pauseanimation_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -163,7 +163,7 @@ const char* q_pauseanimation_tr3(const char* s, const char* c, int n);
 /// @param self QPauseAnimation*
 ///
 /// @return enum QAbstractAnimation__State
-int64_t q_pauseanimation_state(void* self);
+int32_t q_pauseanimation_state(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -179,7 +179,7 @@ QAnimationGroup* q_pauseanimation_group(void* self);
 /// @param self QPauseAnimation*
 ///
 /// @return enum QAbstractAnimation__Direction
-int64_t q_pauseanimation_direction(void* self);
+int32_t q_pauseanimation_direction(void* self);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -187,7 +187,7 @@ int64_t q_pauseanimation_direction(void* self);
 ///
 /// @param self QPauseAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_pauseanimation_set_direction(void* self, int64_t direction);
+void q_pauseanimation_set_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -254,7 +254,7 @@ void q_pauseanimation_on_finished(void* self, void (*callback)(void*));
 /// @param self QPauseAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_pauseanimation_state_changed(void* self, int64_t newState, int64_t oldState);
+void q_pauseanimation_state_changed(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -262,7 +262,7 @@ void q_pauseanimation_state_changed(void* self, int64_t newState, int64_t oldSta
 ///
 /// @param self QPauseAnimation*
 /// @param callback void fn(QPauseAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_pauseanimation_on_state_changed(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_pauseanimation_on_state_changed(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -286,7 +286,7 @@ void q_pauseanimation_on_current_loop_changed(void* self, void (*callback)(void*
 ///
 /// @param self QPauseAnimation*
 /// @param param1 enum QAbstractAnimation__Direction
-void q_pauseanimation_direction_changed(void* self, int64_t param1);
+void q_pauseanimation_direction_changed(void* self, int32_t param1);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -294,7 +294,7 @@ void q_pauseanimation_direction_changed(void* self, int64_t param1);
 ///
 /// @param self QPauseAnimation*
 /// @param callback void fn(QPauseAnimation*, enum QAbstractAnimation__Direction)
-void q_pauseanimation_on_direction_changed(void* self, void (*callback)(void*, int64_t));
+void q_pauseanimation_on_direction_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -346,7 +346,7 @@ void q_pauseanimation_set_current_time(void* self, int msecs);
 ///
 /// @param self QPauseAnimation*
 /// @param policy enum QAbstractAnimation__DeletionPolicy
-void q_pauseanimation_start1(void* self, int64_t policy);
+void q_pauseanimation_start1(void* self, int32_t policy);
 
 /// Inherited from QObject
 ///
@@ -438,7 +438,7 @@ void q_pauseanimation_kill_timer(void* self, int id);
 ///
 /// @param self QPauseAnimation*
 /// @param id enum Qt__TimerId
-void q_pauseanimation_kill_timer2(void* self, int64_t id);
+void q_pauseanimation_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -615,7 +615,7 @@ bool q_pauseanimation_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QPauseAnimation*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_pauseanimation_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_pauseanimation_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -626,7 +626,7 @@ int32_t q_pauseanimation_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pauseanimation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_pauseanimation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -637,7 +637,7 @@ QMetaObject__Connection* q_pauseanimation_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_pauseanimation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_pauseanimation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -664,7 +664,7 @@ void q_pauseanimation_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QPauseAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_pauseanimation_update_state(void* self, int64_t newState, int64_t oldState);
+void q_pauseanimation_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -675,7 +675,7 @@ void q_pauseanimation_update_state(void* self, int64_t newState, int64_t oldStat
 /// @param self QPauseAnimation*
 /// @param newState enum QAbstractAnimation__State
 /// @param oldState enum QAbstractAnimation__State
-void q_pauseanimation_qbase_update_state(void* self, int64_t newState, int64_t oldState);
+void q_pauseanimation_qbase_update_state(void* self, int32_t newState, int32_t oldState);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -685,7 +685,7 @@ void q_pauseanimation_qbase_update_state(void* self, int64_t newState, int64_t o
 ///
 /// @param self QPauseAnimation*
 /// @param callback void fn(QPauseAnimation*, enum QAbstractAnimation__State, enum QAbstractAnimation__State)
-void q_pauseanimation_on_update_state(void* self, void (*callback)(void*, int64_t, int64_t));
+void q_pauseanimation_on_update_state(void* self, void (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QAbstractAnimation
 ///
@@ -695,7 +695,7 @@ void q_pauseanimation_on_update_state(void* self, void (*callback)(void*, int64_
 ///
 /// @param self QPauseAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_pauseanimation_update_direction(void* self, int64_t direction);
+void q_pauseanimation_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -705,7 +705,7 @@ void q_pauseanimation_update_direction(void* self, int64_t direction);
 ///
 /// @param self QPauseAnimation*
 /// @param direction enum QAbstractAnimation__Direction
-void q_pauseanimation_qbase_update_direction(void* self, int64_t direction);
+void q_pauseanimation_qbase_update_direction(void* self, int32_t direction);
 
 /// Inherited from QAbstractAnimation
 ///
@@ -715,7 +715,7 @@ void q_pauseanimation_qbase_update_direction(void* self, int64_t direction);
 ///
 /// @param self QPauseAnimation*
 /// @param callback void fn(QPauseAnimation*, enum QAbstractAnimation__Direction)
-void q_pauseanimation_on_update_direction(void* self, void (*callback)(void*, int64_t));
+void q_pauseanimation_on_update_direction(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QObject
 ///

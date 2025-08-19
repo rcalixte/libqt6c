@@ -13,7 +13,7 @@ void* q_stylehints_metacast(void* self, const char* param1) {
     return QStyleHints_Metacast((QStyleHints*)self, param1);
 }
 
-int32_t q_stylehints_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_stylehints_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QStyleHints_Metacall((QStyleHints*)self, param1, param2, param3);
 }
 
@@ -108,11 +108,11 @@ void q_stylehints_set_show_shortcuts_in_context_menus(void* self, bool showShort
     QStyleHints_SetShowShortcutsInContextMenus((QStyleHints*)self, showShortcutsInContextMenus);
 }
 
-int64_t q_stylehints_context_menu_trigger(void* self) {
+int32_t q_stylehints_context_menu_trigger(void* self) {
     return QStyleHints_ContextMenuTrigger((QStyleHints*)self);
 }
 
-void q_stylehints_set_context_menu_trigger(void* self, int64_t contextMenuTrigger) {
+void q_stylehints_set_context_menu_trigger(void* self, int32_t contextMenuTrigger) {
     QStyleHints_SetContextMenuTrigger((QStyleHints*)self, contextMenuTrigger);
 }
 
@@ -136,11 +136,11 @@ bool q_stylehints_set_focus_on_touch_release(void* self) {
     return QStyleHints_SetFocusOnTouchRelease((QStyleHints*)self);
 }
 
-int64_t q_stylehints_tab_focus_behavior(void* self) {
+int32_t q_stylehints_tab_focus_behavior(void* self) {
     return QStyleHints_TabFocusBehavior((QStyleHints*)self);
 }
 
-void q_stylehints_set_tab_focus_behavior(void* self, int64_t tabFocusBehavior) {
+void q_stylehints_set_tab_focus_behavior(void* self, int32_t tabFocusBehavior) {
     QStyleHints_SetTabFocusBehavior((QStyleHints*)self, tabFocusBehavior);
 }
 
@@ -172,11 +172,11 @@ int32_t q_stylehints_mouse_quick_selection_threshold(void* self) {
     return QStyleHints_MouseQuickSelectionThreshold((QStyleHints*)self);
 }
 
-int64_t q_stylehints_color_scheme(void* self) {
+int32_t q_stylehints_color_scheme(void* self) {
     return QStyleHints_ColorScheme((QStyleHints*)self);
 }
 
-void q_stylehints_set_color_scheme(void* self, int64_t scheme) {
+void q_stylehints_set_color_scheme(void* self, int32_t scheme) {
     QStyleHints_SetColorScheme((QStyleHints*)self, scheme);
 }
 
@@ -232,11 +232,11 @@ void q_stylehints_on_start_drag_time_changed(void* self, void (*callback)(void*,
     QStyleHints_Connect_StartDragTimeChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
-void q_stylehints_tab_focus_behavior_changed(void* self, int64_t tabFocusBehavior) {
+void q_stylehints_tab_focus_behavior_changed(void* self, int32_t tabFocusBehavior) {
     QStyleHints_TabFocusBehaviorChanged((QStyleHints*)self, tabFocusBehavior);
 }
 
-void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_stylehints_on_tab_focus_behavior_changed(void* self, void (*callback)(void*, int32_t)) {
     QStyleHints_Connect_TabFocusBehaviorChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
@@ -256,11 +256,11 @@ void q_stylehints_on_show_shortcuts_in_context_menus_changed(void* self, void (*
     QStyleHints_Connect_ShowShortcutsInContextMenusChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
-void q_stylehints_context_menu_trigger_changed(void* self, int64_t contextMenuTrigger) {
+void q_stylehints_context_menu_trigger_changed(void* self, int32_t contextMenuTrigger) {
     QStyleHints_ContextMenuTriggerChanged((QStyleHints*)self, contextMenuTrigger);
 }
 
-void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_stylehints_on_context_menu_trigger_changed(void* self, void (*callback)(void*, int32_t)) {
     QStyleHints_Connect_ContextMenuTriggerChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
@@ -280,11 +280,11 @@ void q_stylehints_on_mouse_quick_selection_threshold_changed(void* self, void (*
     QStyleHints_Connect_MouseQuickSelectionThresholdChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
-void q_stylehints_color_scheme_changed(void* self, int64_t colorScheme) {
+void q_stylehints_color_scheme_changed(void* self, int32_t colorScheme) {
     QStyleHints_ColorSchemeChanged((QStyleHints*)self, colorScheme);
 }
 
-void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_stylehints_on_color_scheme_changed(void* self, void (*callback)(void*, int32_t)) {
     QStyleHints_Connect_ColorSchemeChanged((QStyleHints*)self, (intptr_t)callback);
 }
 
@@ -357,7 +357,7 @@ void q_stylehints_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_stylehints_kill_timer2(void* self, int64_t id) {
+void q_stylehints_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -461,15 +461,15 @@ bool q_stylehints_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_stylehints_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_stylehints_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_stylehints_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_stylehints_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_stylehints_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_stylehints_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

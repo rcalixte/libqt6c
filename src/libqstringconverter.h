@@ -20,7 +20,7 @@ QStringEncoder* q_stringencoder_new();
 /// q_stringencoder_new2 constructs a new QStringEncoder object.
 ///
 /// @param encoding enum QStringConverter__Encoding
-QStringEncoder* q_stringencoder_new2(int64_t encoding);
+QStringEncoder* q_stringencoder_new2(int32_t encoding);
 
 /// q_stringencoder_new3 constructs a new QStringEncoder object.
 ///
@@ -31,7 +31,7 @@ QStringEncoder* q_stringencoder_new3(char* name);
 ///
 /// @param encoding enum QStringConverter__Encoding
 /// @param flags flag of enum QStringConverterBase__Flag
-QStringEncoder* q_stringencoder_new4(int64_t encoding, int64_t flags);
+QStringEncoder* q_stringencoder_new4(int32_t encoding, int64_t flags);
 
 /// q_stringencoder_new5 constructs a new QStringEncoder object.
 ///
@@ -82,7 +82,7 @@ const char* q_stringencoder_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
-const char* q_stringencoder_name_for_encoding(int64_t e);
+const char* q_stringencoder_name_for_encoding(int32_t e);
 
 /// Inherited from QStringConverter
 ///
@@ -104,7 +104,7 @@ void q_stringencoder_delete(void* self);
 /// q_stringdecoder_new constructs a new QStringDecoder object.
 ///
 /// @param encoding enum QStringConverter__Encoding
-QStringDecoder* q_stringdecoder_new(int64_t encoding);
+QStringDecoder* q_stringdecoder_new(int32_t encoding);
 
 /// q_stringdecoder_new2 constructs a new QStringDecoder object.
 ///
@@ -119,7 +119,7 @@ QStringDecoder* q_stringdecoder_new3(char* name);
 ///
 /// @param encoding enum QStringConverter__Encoding
 /// @param flags flag of enum QStringConverterBase__Flag
-QStringDecoder* q_stringdecoder_new4(int64_t encoding, int64_t flags);
+QStringDecoder* q_stringdecoder_new4(int32_t encoding, int64_t flags);
 
 /// q_stringdecoder_new5 constructs a new QStringDecoder object.
 ///
@@ -182,7 +182,7 @@ const char* q_stringdecoder_name(void* self);
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param e enum QStringConverter__Encoding
-const char* q_stringdecoder_name_for_encoding(int64_t e);
+const char* q_stringdecoder_name_for_encoding(int32_t e);
 
 /// Inherited from QStringConverter
 ///

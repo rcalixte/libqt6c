@@ -231,7 +231,7 @@ char* q_anystringview_mid2(void* self, int64_t pos, int64_t n);
 /// @param lhs char*
 /// @param rhs char*
 /// @param cs enum Qt__CaseSensitivity
-int32_t q_anystringview_compare3(char* lhs, char* rhs, int64_t cs);
+int32_t q_anystringview_compare3(char* lhs, char* rhs, int32_t cs);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qanystringview.html#dtor.QAnyStringView)
 ///

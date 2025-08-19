@@ -26,7 +26,7 @@ void* q_paintdevicewindow_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_paintdevicewindow_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_paintdevicewindow_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -75,7 +75,7 @@ const char* q_paintdevicewindow_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param surfaceType enum QSurface__SurfaceType
-void q_paintdevicewindow_set_surface_type(void* self, int64_t surfaceType);
+void q_paintdevicewindow_set_surface_type(void* self, int32_t surfaceType);
 
 /// Inherited from QWindow
 ///
@@ -84,7 +84,7 @@ void q_paintdevicewindow_set_surface_type(void* self, int64_t surfaceType);
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_paintdevicewindow_surface_type(void* self);
+int32_t q_paintdevicewindow_surface_type(void* self);
 
 /// Inherited from QWindow
 ///
@@ -100,7 +100,7 @@ bool q_paintdevicewindow_is_visible(void* self);
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum QWindow__Visibility
-int64_t q_paintdevicewindow_visibility(void* self);
+int32_t q_paintdevicewindow_visibility(void* self);
 
 /// Inherited from QWindow
 ///
@@ -108,7 +108,7 @@ int64_t q_paintdevicewindow_visibility(void* self);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param v enum QWindow__Visibility
-void q_paintdevicewindow_set_visibility(void* self, int64_t v);
+void q_paintdevicewindow_set_visibility(void* self, int32_t v);
 
 /// Inherited from QWindow
 ///
@@ -160,7 +160,7 @@ bool q_paintdevicewindow_is_modal(void* self);
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_paintdevicewindow_modality(void* self);
+int32_t q_paintdevicewindow_modality(void* self);
 
 /// Inherited from QWindow
 ///
@@ -168,7 +168,7 @@ int64_t q_paintdevicewindow_modality(void* self);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param modality enum Qt__WindowModality
-void q_paintdevicewindow_set_modality(void* self, int64_t modality);
+void q_paintdevicewindow_set_modality(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
@@ -278,7 +278,7 @@ bool q_paintdevicewindow_is_active(void* self);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_paintdevicewindow_report_content_orientation_change(void* self, int64_t orientation);
+void q_paintdevicewindow_report_content_orientation_change(void* self, int32_t orientation);
 
 /// Inherited from QWindow
 ///
@@ -287,7 +287,7 @@ void q_paintdevicewindow_report_content_orientation_change(void* self, int64_t o
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_paintdevicewindow_content_orientation(void* self);
+int32_t q_paintdevicewindow_content_orientation(void* self);
 
 /// Inherited from QWindow
 ///
@@ -303,7 +303,7 @@ double q_paintdevicewindow_device_pixel_ratio(void* self);
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum Qt__WindowState
-int64_t q_paintdevicewindow_window_state(void* self);
+int32_t q_paintdevicewindow_window_state(void* self);
 
 /// Inherited from QWindow
 ///
@@ -320,7 +320,7 @@ int64_t q_paintdevicewindow_window_states(void* self);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param state enum Qt__WindowState
-void q_paintdevicewindow_set_window_state(void* self, int64_t state);
+void q_paintdevicewindow_set_window_state(void* self, int32_t state);
 
 /// Inherited from QWindow
 ///
@@ -926,7 +926,7 @@ void q_paintdevicewindow_on_screen_changed(void* self, void (*callback)(void*, v
 ///
 /// @param self QPaintDeviceWindow*
 /// @param modality enum Qt__WindowModality
-void q_paintdevicewindow_modality_changed(void* self, int64_t modality);
+void q_paintdevicewindow_modality_changed(void* self, int32_t modality);
 
 /// Inherited from QWindow
 ///
@@ -934,7 +934,7 @@ void q_paintdevicewindow_modality_changed(void* self, int64_t modality);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param callback void fn(QPaintDeviceWindow*, enum Qt__WindowModality)
-void q_paintdevicewindow_on_modality_changed(void* self, void (*callback)(void*, int64_t));
+void q_paintdevicewindow_on_modality_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -942,7 +942,7 @@ void q_paintdevicewindow_on_modality_changed(void* self, void (*callback)(void*,
 ///
 /// @param self QPaintDeviceWindow*
 /// @param windowState enum Qt__WindowState
-void q_paintdevicewindow_window_state_changed(void* self, int64_t windowState);
+void q_paintdevicewindow_window_state_changed(void* self, int32_t windowState);
 
 /// Inherited from QWindow
 ///
@@ -950,7 +950,7 @@ void q_paintdevicewindow_window_state_changed(void* self, int64_t windowState);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param callback void fn(QPaintDeviceWindow*, enum Qt__WindowState)
-void q_paintdevicewindow_on_window_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_paintdevicewindow_on_window_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1118,7 +1118,7 @@ void q_paintdevicewindow_on_visible_changed(void* self, void (*callback)(void*, 
 ///
 /// @param self QPaintDeviceWindow*
 /// @param visibility enum QWindow__Visibility
-void q_paintdevicewindow_visibility_changed(void* self, int64_t visibility);
+void q_paintdevicewindow_visibility_changed(void* self, int32_t visibility);
 
 /// Inherited from QWindow
 ///
@@ -1126,7 +1126,7 @@ void q_paintdevicewindow_visibility_changed(void* self, int64_t visibility);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param callback void fn(QPaintDeviceWindow*, enum QWindow__Visibility)
-void q_paintdevicewindow_on_visibility_changed(void* self, void (*callback)(void*, int64_t));
+void q_paintdevicewindow_on_visibility_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1149,7 +1149,7 @@ void q_paintdevicewindow_on_active_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QPaintDeviceWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_paintdevicewindow_content_orientation_changed(void* self, int64_t orientation);
+void q_paintdevicewindow_content_orientation_changed(void* self, int32_t orientation);
 
 /// Inherited from QWindow
 ///
@@ -1157,7 +1157,7 @@ void q_paintdevicewindow_content_orientation_changed(void* self, int64_t orienta
 ///
 /// @param self QPaintDeviceWindow*
 /// @param callback void fn(QPaintDeviceWindow*, enum Qt__ScreenOrientation)
-void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*callback)(void*, int64_t));
+void q_paintdevicewindow_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// Inherited from QWindow
 ///
@@ -1213,7 +1213,7 @@ void q_paintdevicewindow_on_transient_parent_changed(void* self, void (*callback
 ///
 /// @param self QPaintDeviceWindow*
 /// @param mode enum QWindow__AncestorMode
-QWindow* q_paintdevicewindow_parent1(void* self, int64_t mode);
+QWindow* q_paintdevicewindow_parent1(void* self, int32_t mode);
 
 /// Inherited from QWindow
 ///
@@ -1231,7 +1231,7 @@ void q_paintdevicewindow_set_flag2(void* self, int64_t param1, bool on);
 /// @param self QPaintDeviceWindow*
 /// @param child QWindow*
 /// @param mode enum QWindow__AncestorMode
-bool q_paintdevicewindow_is_ancestor_of2(void* self, void* child, int64_t mode);
+bool q_paintdevicewindow_is_ancestor_of2(void* self, void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -1332,7 +1332,7 @@ void q_paintdevicewindow_kill_timer(void* self, int id);
 ///
 /// @param self QPaintDeviceWindow*
 /// @param id enum Qt__TimerId
-void q_paintdevicewindow_kill_timer2(void* self, int64_t id);
+void q_paintdevicewindow_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1494,7 +1494,7 @@ bool q_paintdevicewindow_move_to_thread2(void* self, void* thread, void* param2)
 /// @param self QPaintDeviceWindow*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_paintdevicewindow_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_paintdevicewindow_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1505,7 +1505,7 @@ int32_t q_paintdevicewindow_start_timer22(void* self, int interval, int64_t time
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_paintdevicewindow_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_paintdevicewindow_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1516,7 +1516,7 @@ QMetaObject__Connection* q_paintdevicewindow_connect5(void* sender, void* signal
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_paintdevicewindow_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_paintdevicewindow_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1541,7 +1541,7 @@ void q_paintdevicewindow_on_destroyed1(void* self, void (*callback)(void*, void*
 /// @param self QPaintDeviceWindow*
 ///
 /// @return enum QSurface__SurfaceClass
-int64_t q_paintdevicewindow_surface_class(void* self);
+int32_t q_paintdevicewindow_surface_class(void* self);
 
 /// Inherited from QSurface
 ///
@@ -1646,7 +1646,7 @@ double q_paintdevicewindow_device_pixel_ratio_f_scale();
 ///
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 /// @param value double
-int32_t q_paintdevicewindow_encode_metric_f(int64_t metric, double value);
+int32_t q_paintdevicewindow_encode_metric_f(int32_t metric, double value);
 
 /// Inherited from QObject
 ///

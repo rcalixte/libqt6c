@@ -45,7 +45,7 @@ void q_internal_move_assign(void* self, void* other) {
     QInternal_MoveAssign((QInternal*)self, (QInternal*)other);
 }
 
-bool q_internal_activate_callbacks(int64_t param1, void* param2) {
+bool q_internal_activate_callbacks(int32_t param1, void* param2) {
     return QInternal_ActivateCallbacks(param1, param2);
 }
 
@@ -77,15 +77,15 @@ QKeyCombination* q_keycombination_new6(void* param1) {
     return QKeyCombination_new6((QKeyCombination*)param1);
 }
 
-QKeyCombination* q_keycombination_new7(int64_t key) {
+QKeyCombination* q_keycombination_new7(int32_t key) {
     return QKeyCombination_new7(key);
 }
 
-QKeyCombination* q_keycombination_new8(int64_t modifiers, int64_t key) {
+QKeyCombination* q_keycombination_new8(int64_t modifiers, int32_t key) {
     return QKeyCombination_new8(modifiers, key);
 }
 
-QKeyCombination* q_keycombination_new9(int64_t modifiers, int64_t key) {
+QKeyCombination* q_keycombination_new9(int64_t modifiers, int32_t key) {
     return QKeyCombination_new9(modifiers, key);
 }
 
@@ -101,7 +101,7 @@ int64_t q_keycombination_keyboard_modifiers(void* self) {
     return QKeyCombination_KeyboardModifiers((QKeyCombination*)self);
 }
 
-int64_t q_keycombination_key(void* self) {
+int32_t q_keycombination_key(void* self) {
     return QKeyCombination_Key((QKeyCombination*)self);
 }
 

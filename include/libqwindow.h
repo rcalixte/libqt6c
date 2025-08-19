@@ -40,13 +40,13 @@ void* q_window_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_window_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_window_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QWindow*
 /// @param callback int32_t fn(QWindow*, enum QMetaObject__Call, int, void*)
-void q_window_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_window_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -54,7 +54,7 @@ void q_window_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, v
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_window_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_window_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -67,22 +67,22 @@ const char* q_window_tr(const char* s);
 ///
 /// @param self QWindow*
 /// @param surfaceType enum QSurface__SurfaceType
-void q_window_set_surface_type(void* self, int64_t surfaceType);
+void q_window_set_surface_type(void* self, int32_t surfaceType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// @param self QWindow*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_window_surface_type(void* self);
+int32_t q_window_surface_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWindow*
-/// @param callback int64_t fn()
-void q_window_on_surface_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_window_on_surface_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#surfaceType)
 ///
@@ -91,7 +91,7 @@ void q_window_on_surface_type(void* self, int64_t (*callback)());
 /// @param self QWindow*
 ///
 /// @return enum QSurface__SurfaceType
-int64_t q_window_qbase_surface_type(void* self);
+int32_t q_window_qbase_surface_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#isVisible)
 ///
@@ -103,13 +103,13 @@ bool q_window_is_visible(void* self);
 /// @param self QWindow*
 ///
 /// @return enum QWindow__Visibility
-int64_t q_window_visibility(void* self);
+int32_t q_window_visibility(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setVisibility)
 ///
 /// @param self QWindow*
 /// @param v enum QWindow__Visibility
-void q_window_set_visibility(void* self, int64_t v);
+void q_window_set_visibility(void* self, int32_t v);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#create)
 ///
@@ -147,13 +147,13 @@ bool q_window_is_modal(void* self);
 /// @param self QWindow*
 ///
 /// @return enum Qt__WindowModality
-int64_t q_window_modality(void* self);
+int32_t q_window_modality(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setModality)
 ///
 /// @param self QWindow*
 /// @param modality enum Qt__WindowModality
-void q_window_set_modality(void* self, int64_t modality);
+void q_window_set_modality(void* self, int32_t modality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFormat)
 ///
@@ -250,14 +250,14 @@ bool q_window_is_active(void* self);
 ///
 /// @param self QWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_window_report_content_orientation_change(void* self, int64_t orientation);
+void q_window_report_content_orientation_change(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientation)
 ///
 /// @param self QWindow*
 ///
 /// @return enum Qt__ScreenOrientation
-int64_t q_window_content_orientation(void* self);
+int32_t q_window_content_orientation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#devicePixelRatio)
 ///
@@ -269,7 +269,7 @@ double q_window_device_pixel_ratio(void* self);
 /// @param self QWindow*
 ///
 /// @return enum Qt__WindowState
-int64_t q_window_window_state(void* self);
+int32_t q_window_window_state(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStates)
 ///
@@ -282,7 +282,7 @@ int64_t q_window_window_states(void* self);
 ///
 /// @param self QWindow*
 /// @param state enum Qt__WindowState
-void q_window_set_window_state(void* self, int64_t state);
+void q_window_set_window_state(void* self, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setWindowStates)
 ///
@@ -797,25 +797,25 @@ void q_window_on_screen_changed(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QWindow*
 /// @param modality enum Qt__WindowModality
-void q_window_modality_changed(void* self, int64_t modality);
+void q_window_modality_changed(void* self, int32_t modality);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#modalityChanged)
 ///
 /// @param self QWindow*
 /// @param callback void fn(QWindow*, enum Qt__WindowModality)
-void q_window_on_modality_changed(void* self, void (*callback)(void*, int64_t));
+void q_window_on_modality_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QWindow*
 /// @param windowState enum Qt__WindowState
-void q_window_window_state_changed(void* self, int64_t windowState);
+void q_window_window_state_changed(void* self, int32_t windowState);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowStateChanged)
 ///
 /// @param self QWindow*
 /// @param callback void fn(QWindow*, enum Qt__WindowState)
-void q_window_on_window_state_changed(void* self, void (*callback)(void*, int64_t));
+void q_window_on_window_state_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#windowTitleChanged)
 ///
@@ -941,13 +941,13 @@ void q_window_on_visible_changed(void* self, void (*callback)(void*, bool));
 ///
 /// @param self QWindow*
 /// @param visibility enum QWindow__Visibility
-void q_window_visibility_changed(void* self, int64_t visibility);
+void q_window_visibility_changed(void* self, int32_t visibility);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#visibilityChanged)
 ///
 /// @param self QWindow*
 /// @param callback void fn(QWindow*, enum QWindow__Visibility)
-void q_window_on_visibility_changed(void* self, void (*callback)(void*, int64_t));
+void q_window_on_visibility_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#activeChanged)
 ///
@@ -964,13 +964,13 @@ void q_window_on_active_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QWindow*
 /// @param orientation enum Qt__ScreenOrientation
-void q_window_content_orientation_changed(void* self, int64_t orientation);
+void q_window_content_orientation_changed(void* self, int32_t orientation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#contentOrientationChanged)
 ///
 /// @param self QWindow*
 /// @param callback void fn(QWindow*, enum Qt__ScreenOrientation)
-void q_window_on_content_orientation_changed(void* self, void (*callback)(void*, int64_t));
+void q_window_on_content_orientation_changed(void* self, void (*callback)(void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#focusObjectChanged)
 ///
@@ -1473,7 +1473,7 @@ const char* q_window_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QWindow*
 /// @param mode enum QWindow__AncestorMode
-QWindow* q_window_parent1(void* self, int64_t mode);
+QWindow* q_window_parent1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qwindow.html#setFlag)
 ///
@@ -1487,7 +1487,7 @@ void q_window_set_flag2(void* self, int64_t param1, bool on);
 /// @param self QWindow*
 /// @param child QWindow*
 /// @param mode enum QWindow__AncestorMode
-bool q_window_is_ancestor_of2(void* self, void* child, int64_t mode);
+bool q_window_is_ancestor_of2(void* self, void* child, int32_t mode);
 
 /// Inherited from QObject
 ///
@@ -1579,7 +1579,7 @@ void q_window_kill_timer(void* self, int id);
 ///
 /// @param self QWindow*
 /// @param id enum Qt__TimerId
-void q_window_kill_timer2(void* self, int64_t id);
+void q_window_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1741,7 +1741,7 @@ bool q_window_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QWindow*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_window_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_window_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1752,7 +1752,7 @@ int32_t q_window_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_window_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_window_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1763,7 +1763,7 @@ QMetaObject__Connection* q_window_connect5(void* sender, void* signal, void* rec
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_window_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_window_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1788,7 +1788,7 @@ void q_window_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// @param self QWindow*
 ///
 /// @return enum QSurface__SurfaceClass
-int64_t q_window_surface_class(void* self);
+int32_t q_window_surface_class(void* self);
 
 /// Inherited from QSurface
 ///

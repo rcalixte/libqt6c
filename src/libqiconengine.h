@@ -24,7 +24,7 @@ QIconEngine* q_iconengine_new();
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_paint(void* self, void* painter, void* rect, int64_t mode, int64_t state);
+void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#paint)
 ///
@@ -32,7 +32,7 @@ void q_iconengine_paint(void* self, void* painter, void* rect, int64_t mode, int
 ///
 /// @param self QIconEngine*
 /// @param callback void fn(QIconEngine*, QPainter*, QRect*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int64_t, int64_t));
+void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#paint)
 ///
@@ -43,7 +43,7 @@ void q_iconengine_on_paint(void* self, void (*callback)(void*, void*, void*, int
 /// @param rect QRect*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int64_t mode, int64_t state);
+void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
 ///
@@ -51,7 +51,7 @@ void q_iconengine_qbase_paint(void* self, void* painter, void* rect, int64_t mod
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-QSize* q_iconengine_actual_size(void* self, void* size, int64_t mode, int64_t state);
+QSize* q_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
 ///
@@ -59,7 +59,7 @@ QSize* q_iconengine_actual_size(void* self, void* size, int64_t mode, int64_t st
 ///
 /// @param self QIconEngine*
 /// @param callback QSize* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int64_t, int64_t));
+void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#actualSize)
 ///
@@ -69,7 +69,7 @@ void q_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, in
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-QSize* q_iconengine_qbase_actual_size(void* self, void* size, int64_t mode, int64_t state);
+QSize* q_iconengine_qbase_actual_size(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
 ///
@@ -77,7 +77,7 @@ QSize* q_iconengine_qbase_actual_size(void* self, void* size, int64_t mode, int6
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-QPixmap* q_iconengine_pixmap(void* self, void* size, int64_t mode, int64_t state);
+QPixmap* q_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
 ///
@@ -85,7 +85,7 @@ QPixmap* q_iconengine_pixmap(void* self, void* size, int64_t mode, int64_t state
 ///
 /// @param self QIconEngine*
 /// @param callback QPixmap* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int64_t, int64_t));
+void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#pixmap)
 ///
@@ -95,7 +95,7 @@ void q_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int64
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int64_t mode, int64_t state);
+QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
 ///
@@ -103,7 +103,7 @@ QPixmap* q_iconengine_qbase_pixmap(void* self, void* size, int64_t mode, int64_t
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_add_pixmap(void* self, void* pixmap, int64_t mode, int64_t state);
+void q_iconengine_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
 ///
@@ -111,7 +111,7 @@ void q_iconengine_add_pixmap(void* self, void* pixmap, int64_t mode, int64_t sta
 ///
 /// @param self QIconEngine*
 /// @param callback void fn(QIconEngine*, QPixmap*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int64_t, int64_t));
+void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addPixmap)
 ///
@@ -121,7 +121,7 @@ void q_iconengine_on_add_pixmap(void* self, void (*callback)(void*, void*, int64
 /// @param pixmap QPixmap*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int64_t mode, int64_t state);
+void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addFile)
 ///
@@ -130,7 +130,7 @@ void q_iconengine_qbase_add_pixmap(void* self, void* pixmap, int64_t mode, int64
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_add_file(void* self, const char* fileName, void* size, int64_t mode, int64_t state);
+void q_iconengine_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addFile)
 ///
@@ -138,7 +138,7 @@ void q_iconengine_add_file(void* self, const char* fileName, void* size, int64_t
 ///
 /// @param self QIconEngine*
 /// @param callback void fn(QIconEngine*, const char*, QSize*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int64_t, int64_t));
+void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#addFile)
 ///
@@ -149,7 +149,7 @@ void q_iconengine_on_add_file(void* self, void (*callback)(void*, const char*, v
 /// @param size QSize*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int64_t mode, int64_t state);
+void q_iconengine_qbase_add_file(void* self, const char* fileName, void* size, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#key)
 ///
@@ -242,7 +242,7 @@ bool q_iconengine_qbase_write(void* self, void* out);
 /// @param self QIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int64_t mode, int64_t state);
+libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
 ///
@@ -250,7 +250,7 @@ libqt_list /* of QSize* */ q_iconengine_available_sizes(void* self, int64_t mode
 ///
 /// @param self QIconEngine*
 /// @param callback libqt_list /* of QSize* */ fn(QIconEngine*, enum QIcon__Mode, enum QIcon__State)
-void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int64_t, int64_t));
+void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*callback)(void*, int32_t, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#availableSizes)
 ///
@@ -259,7 +259,7 @@ void q_iconengine_on_available_sizes(void* self, libqt_list /* of QSize* */ (*ca
 /// @param self QIconEngine*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
-libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int64_t mode, int64_t state);
+libqt_list /* of QSize* */ q_iconengine_qbase_available_sizes(void* self, int32_t mode, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#iconName)
 ///
@@ -310,7 +310,7 @@ bool q_iconengine_qbase_is_null(void* self);
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
-QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int64_t mode, int64_t state, double scale);
+QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
 ///
@@ -318,7 +318,7 @@ QPixmap* q_iconengine_scaled_pixmap(void* self, void* size, int64_t mode, int64_
 ///
 /// @param self QIconEngine*
 /// @param callback QPixmap* fn(QIconEngine*, QSize*, enum QIcon__Mode, enum QIcon__State, double)
-void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int64_t, int64_t, double));
+void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#scaledPixmap)
 ///
@@ -329,7 +329,7 @@ void q_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*
 /// @param mode enum QIcon__Mode
 /// @param state enum QIcon__State
 /// @param scale double
-QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int64_t mode, int64_t state, double scale);
+QPixmap* q_iconengine_qbase_scaled_pixmap(void* self, void* size, int32_t mode, int32_t state, double scale);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine.html#virtual_hook)
 ///
@@ -375,8 +375,6 @@ QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* 
 /// @param param1 QIconEngine__ScaledPixmapArgument*
 void q_iconengine__scaledpixmapargument_operator_assign(void* self, void* param1);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine::scaledpixmapargument.html#dtor.QIconEngine::ScaledPixmapArgument)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*

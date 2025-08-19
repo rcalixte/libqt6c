@@ -20,7 +20,7 @@ QCursor* q_cursor_new();
 /// q_cursor_new2 constructs a new QCursor object.
 ///
 /// @param shape enum Qt__CursorShape
-QCursor* q_cursor_new2(int64_t shape);
+QCursor* q_cursor_new2(int32_t shape);
 
 /// q_cursor_new3 constructs a new QCursor object.
 ///
@@ -88,25 +88,25 @@ QVariant* q_cursor_to_q_variant(void* self);
 /// @param self QCursor*
 ///
 /// @return enum Qt__CursorShape
-int64_t q_cursor_shape(void* self);
+int32_t q_cursor_shape(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#setShape)
 ///
 /// @param self QCursor*
 /// @param newShape enum Qt__CursorShape
-void q_cursor_set_shape(void* self, int64_t newShape);
+void q_cursor_set_shape(void* self, int32_t newShape);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#bitmap)
 ///
 /// @param self QCursor*
 /// @param param1 enum Qt__ReturnByValueConstant
-QBitmap* q_cursor_bitmap(void* self, int64_t param1);
+QBitmap* q_cursor_bitmap(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#mask)
 ///
 /// @param self QCursor*
 /// @param param1 enum Qt__ReturnByValueConstant
-QBitmap* q_cursor_mask(void* self, int64_t param1);
+QBitmap* q_cursor_mask(void* self, int32_t param1);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qcursor.html#bitmap)
 ///

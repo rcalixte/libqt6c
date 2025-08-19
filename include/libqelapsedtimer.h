@@ -43,7 +43,7 @@ void q_elapsedtimer_move_assign(void* self, void* other);
 ///
 ///
 /// @return enum QElapsedTimer__ClockType
-int64_t q_elapsedtimer_clock_type();
+int32_t q_elapsedtimer_clock_type();
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qelapsedtimer.html#isMonotonic)
 ///

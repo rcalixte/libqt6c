@@ -21,11 +21,11 @@ QPrinter* q_printer_new2(void* printer) {
     return QPrinter_new2((QPrinterInfo*)printer);
 }
 
-QPrinter* q_printer_new3(int64_t mode) {
+QPrinter* q_printer_new3(int32_t mode) {
     return QPrinter_new3(mode);
 }
 
-QPrinter* q_printer_new4(void* printer, int64_t mode) {
+QPrinter* q_printer_new4(void* printer, int32_t mode) {
     return QPrinter_new4((QPrinterInfo*)printer, mode);
 }
 
@@ -41,19 +41,19 @@ int32_t q_printer_qbase_dev_type(void* self) {
     return QPrinter_QBaseDevType((QPrinter*)self);
 }
 
-void q_printer_set_output_format(void* self, int64_t format) {
+void q_printer_set_output_format(void* self, int32_t format) {
     QPrinter_SetOutputFormat((QPrinter*)self, format);
 }
 
-int64_t q_printer_output_format(void* self) {
+int32_t q_printer_output_format(void* self) {
     return QPrinter_OutputFormat((QPrinter*)self);
 }
 
-void q_printer_set_pdf_version(void* self, int64_t version) {
+void q_printer_set_pdf_version(void* self, int32_t version) {
     QPrinter_SetPdfVersion((QPrinter*)self, version);
 }
 
-int64_t q_printer_pdf_version(void* self) {
+int32_t q_printer_pdf_version(void* self) {
     return QPrinter_PdfVersion((QPrinter*)self);
 }
 
@@ -116,11 +116,11 @@ const char* q_printer_creator(void* self) {
     return _ret;
 }
 
-void q_printer_set_page_order(void* self, int64_t pageOrder) {
+void q_printer_set_page_order(void* self, int32_t pageOrder) {
     QPrinter_SetPageOrder((QPrinter*)self, pageOrder);
 }
 
-int64_t q_printer_page_order(void* self) {
+int32_t q_printer_page_order(void* self) {
     return QPrinter_PageOrder((QPrinter*)self);
 }
 
@@ -132,11 +132,11 @@ int32_t q_printer_resolution(void* self) {
     return QPrinter_Resolution((QPrinter*)self);
 }
 
-void q_printer_set_color_mode(void* self, int64_t colorMode) {
+void q_printer_set_color_mode(void* self, int32_t colorMode) {
     QPrinter_SetColorMode((QPrinter*)self, colorMode);
 }
 
-int64_t q_printer_color_mode(void* self) {
+int32_t q_printer_color_mode(void* self) {
     return QPrinter_ColorMode((QPrinter*)self);
 }
 
@@ -168,19 +168,19 @@ bool q_printer_supports_multiple_copies(void* self) {
     return QPrinter_SupportsMultipleCopies((QPrinter*)self);
 }
 
-void q_printer_set_paper_source(void* self, int64_t paperSource) {
+void q_printer_set_paper_source(void* self, int32_t paperSource) {
     QPrinter_SetPaperSource((QPrinter*)self, paperSource);
 }
 
-int64_t q_printer_paper_source(void* self) {
+int32_t q_printer_paper_source(void* self) {
     return QPrinter_PaperSource((QPrinter*)self);
 }
 
-void q_printer_set_duplex(void* self, int64_t duplex) {
+void q_printer_set_duplex(void* self, int32_t duplex) {
     QPrinter_SetDuplex((QPrinter*)self, duplex);
 }
 
-int64_t q_printer_duplex(void* self) {
+int32_t q_printer_duplex(void* self) {
     return QPrinter_Duplex((QPrinter*)self);
 }
 
@@ -197,11 +197,11 @@ bool q_printer_font_embedding_enabled(void* self) {
     return QPrinter_FontEmbeddingEnabled((QPrinter*)self);
 }
 
-QRectF* q_printer_paper_rect(void* self, int64_t param1) {
+QRectF* q_printer_paper_rect(void* self, int32_t param1) {
     return QPrinter_PaperRect((QPrinter*)self, param1);
 }
 
-QRectF* q_printer_page_rect(void* self, int64_t param1) {
+QRectF* q_printer_page_rect(void* self, int32_t param1) {
     return QPrinter_PageRect((QPrinter*)self, param1);
 }
 
@@ -232,7 +232,7 @@ bool q_printer_abort(void* self) {
     return QPrinter_Abort((QPrinter*)self);
 }
 
-int64_t q_printer_printer_state(void* self) {
+int32_t q_printer_printer_state(void* self) {
     return QPrinter_PrinterState((QPrinter*)self);
 }
 
@@ -264,23 +264,23 @@ int32_t q_printer_to_page(void* self) {
     return QPrinter_ToPage((QPrinter*)self);
 }
 
-void q_printer_set_print_range(void* self, int64_t range) {
+void q_printer_set_print_range(void* self, int32_t range) {
     QPrinter_SetPrintRange((QPrinter*)self, range);
 }
 
-int64_t q_printer_print_range(void* self) {
+int32_t q_printer_print_range(void* self) {
     return QPrinter_PrintRange((QPrinter*)self);
 }
 
-int32_t q_printer_metric(void* self, int64_t param1) {
+int32_t q_printer_metric(void* self, int32_t param1) {
     return QPrinter_Metric((QPrinter*)self, param1);
 }
 
-void q_printer_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_printer_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPrinter_OnMetric((QPrinter*)self, (intptr_t)callback);
 }
 
-int32_t q_printer_qbase_metric(void* self, int64_t param1) {
+int32_t q_printer_qbase_metric(void* self, int32_t param1) {
     return QPrinter_QBaseMetric((QPrinter*)self, param1);
 }
 
@@ -360,7 +360,7 @@ double q_printer_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_printer_encode_metric_f(int64_t metric, double value) {
+int32_t q_printer_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -388,27 +388,27 @@ void q_printer_on_set_page_size(void* self, bool (*callback)(void*, void*)) {
     QPrinter_OnSetPageSize((QPrinter*)self, (intptr_t)callback);
 }
 
-bool q_printer_set_page_orientation(void* self, int64_t orientation) {
+bool q_printer_set_page_orientation(void* self, int32_t orientation) {
     return QPrinter_SetPageOrientation((QPrinter*)self, orientation);
 }
 
-bool q_printer_qbase_set_page_orientation(void* self, int64_t orientation) {
+bool q_printer_qbase_set_page_orientation(void* self, int32_t orientation) {
     return QPrinter_QBaseSetPageOrientation((QPrinter*)self, orientation);
 }
 
-void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t)) {
+void q_printer_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t)) {
     QPrinter_OnSetPageOrientation((QPrinter*)self, (intptr_t)callback);
 }
 
-bool q_printer_set_page_margins(void* self, void* margins, int64_t units) {
+bool q_printer_set_page_margins(void* self, void* margins, int32_t units) {
     return QPrinter_SetPageMargins((QPrinter*)self, (QMarginsF*)margins, units);
 }
 
-bool q_printer_qbase_set_page_margins(void* self, void* margins, int64_t units) {
+bool q_printer_qbase_set_page_margins(void* self, void* margins, int32_t units) {
     return QPrinter_QBaseSetPageMargins((QPrinter*)self, (QMarginsF*)margins, units);
 }
 
-void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_printer_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t)) {
     QPrinter_OnSetPageMargins((QPrinter*)self, (intptr_t)callback);
 }
 
@@ -460,15 +460,15 @@ void q_printer_on_shared_painter(void* self, QPainter* (*callback)()) {
     QPrinter_OnSharedPainter((QPrinter*)self, (intptr_t)callback);
 }
 
-double q_printer_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_printer_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPrinter_GetDecodedMetricF((QPrinter*)self, metricA, metricB);
 }
 
-double q_printer_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_printer_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPrinter_QBaseGetDecodedMetricF((QPrinter*)self, metricA, metricB);
 }
 
-void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_printer_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QPrinter_OnGetDecodedMetricF((QPrinter*)self, (intptr_t)callback);
 }
 

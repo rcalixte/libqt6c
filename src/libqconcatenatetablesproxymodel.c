@@ -26,15 +26,15 @@ void* q_concatenatetablesproxymodel_metacast(void* self, const char* param1) {
     return QConcatenateTablesProxyModel_Metacast((QConcatenateTablesProxyModel*)self, param1);
 }
 
-int32_t q_concatenatetablesproxymodel_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_concatenatetablesproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QConcatenateTablesProxyModel_Metacall((QConcatenateTablesProxyModel*)self, param1, param2, param3);
 }
 
-void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QConcatenateTablesProxyModel_OnMetacall((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QConcatenateTablesProxyModel_QBaseMetacall((QConcatenateTablesProxyModel*)self, param1, param2, param3);
 }
 
@@ -162,15 +162,15 @@ int32_t q_concatenatetablesproxymodel_qbase_row_count(void* self, void* parent) 
     return QConcatenateTablesProxyModel_QBaseRowCount((QConcatenateTablesProxyModel*)self, (QModelIndex*)parent);
 }
 
-QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
     return QConcatenateTablesProxyModel_HeaderData((QConcatenateTablesProxyModel*)self, section, orientation, role);
 }
 
-void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int64_t, int)) {
+void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
     QConcatenateTablesProxyModel_OnHeaderData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_concatenatetablesproxymodel_qbase_header_data(void* self, int section, int64_t orientation, int role) {
+QVariant* q_concatenatetablesproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
     return QConcatenateTablesProxyModel_QBaseHeaderData((QConcatenateTablesProxyModel*)self, section, orientation, role);
 }
 
@@ -240,27 +240,27 @@ QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list 
     return QConcatenateTablesProxyModel_QBaseMimeData((QConcatenateTablesProxyModel*)self, indexes);
 }
 
-bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QConcatenateTablesProxyModel_CanDropMimeData((QConcatenateTablesProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QConcatenateTablesProxyModel_OnCanDropMimeData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QConcatenateTablesProxyModel_QBaseCanDropMimeData((QConcatenateTablesProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QConcatenateTablesProxyModel_DropMimeData((QConcatenateTablesProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int64_t, int, int, void*)) {
+void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
     QConcatenateTablesProxyModel_OnDropMimeData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_concatenatetablesproxymodel_qbase_drop_mime_data(void* self, void* data, int64_t action, int row, int column, void* parent) {
+bool q_concatenatetablesproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
     return QConcatenateTablesProxyModel_QBaseDropMimeData((QConcatenateTablesProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
@@ -330,11 +330,11 @@ void q_concatenatetablesproxymodel_on_data_changed(void* self, void (*callback)(
     QAbstractItemModel_Connect_DataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_concatenatetablesproxymodel_header_data_changed(void* self, int64_t orientation, int first, int last) {
+void q_concatenatetablesproxymodel_header_data_changed(void* self, int32_t orientation, int first, int last) {
     QAbstractItemModel_HeaderDataChanged((QAbstractItemModel*)self, orientation, first, last);
 }
 
-void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int64_t, int, int)) {
+void q_concatenatetablesproxymodel_on_header_data_changed(void* self, void (*callback)(void*, int32_t, int, int)) {
     QAbstractItemModel_Connect_HeaderDataChanged((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -394,11 +394,11 @@ void q_concatenatetablesproxymodel_on_layout_changed1(void* self, void (*callbac
     QAbstractItemModel_Connect_LayoutChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_concatenatetablesproxymodel_layout_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_concatenatetablesproxymodel_on_layout_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -410,11 +410,11 @@ void q_concatenatetablesproxymodel_on_layout_about_to_be_changed1(void* self, vo
     QAbstractItemModel_Connect_LayoutAboutToBeChanged1((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int64_t hint) {
+void q_concatenatetablesproxymodel_layout_about_to_be_changed2(void* self, libqt_list parents, int32_t hint) {
     QAbstractItemModel_LayoutAboutToBeChanged2((QAbstractItemModel*)self, parents, hint);
 }
 
-void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int64_t)) {
+void q_concatenatetablesproxymodel_on_layout_about_to_be_changed2(void* self, void (*callback)(void*, libqt_list, int32_t)) {
     QAbstractItemModel_Connect_LayoutAboutToBeChanged2((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
@@ -465,7 +465,7 @@ void q_concatenatetablesproxymodel_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_concatenatetablesproxymodel_kill_timer2(void* self, int64_t id) {
+void q_concatenatetablesproxymodel_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -565,15 +565,15 @@ bool q_concatenatetablesproxymodel_move_to_thread2(void* self, void* thread, voi
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_concatenatetablesproxymodel_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_concatenatetablesproxymodel_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_concatenatetablesproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_concatenatetablesproxymodel_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_concatenatetablesproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_concatenatetablesproxymodel_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -609,15 +609,15 @@ void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*callback)(
     QConcatenateTablesProxyModel_OnHasChildren((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QConcatenateTablesProxyModel_SetHeaderData((QConcatenateTablesProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section, int64_t orientation, void* value, int role) {
+bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
     return QConcatenateTablesProxyModel_QBaseSetHeaderData((QConcatenateTablesProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int64_t, void*, int)) {
+void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
     QConcatenateTablesProxyModel_OnSetHeaderData((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
@@ -753,15 +753,15 @@ void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*callback
     QConcatenateTablesProxyModel_OnCanFetchMore((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 
-void q_concatenatetablesproxymodel_sort(void* self, int column, int64_t order) {
+void q_concatenatetablesproxymodel_sort(void* self, int column, int32_t order) {
     QConcatenateTablesProxyModel_Sort((QConcatenateTablesProxyModel*)self, column, order);
 }
 
-void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int64_t order) {
+void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int32_t order) {
     QConcatenateTablesProxyModel_QBaseSort((QConcatenateTablesProxyModel*)self, column, order);
 }
 
-void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, int, int64_t)) {
+void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
     QConcatenateTablesProxyModel_OnSort((QConcatenateTablesProxyModel*)self, (intptr_t)callback);
 }
 

@@ -35,13 +35,13 @@ void* q_itemdelegate_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_itemdelegate_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_itemdelegate_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QItemDelegate*
 /// @param callback int32_t fn(QItemDelegate*, enum QMetaObject__Call, int, void*)
-void q_itemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_itemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -49,7 +49,7 @@ void q_itemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int64_t, 
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_itemdelegate_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_itemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -321,7 +321,7 @@ void q_itemdelegate_qbase_draw_focus(void* self, void* painter, void* option, vo
 /// @param option QStyleOptionViewItem*
 /// @param rect QRect*
 /// @param state enum Qt__CheckState
-void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* rect, int64_t state);
+void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* rect, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawCheck)
 ///
@@ -329,7 +329,7 @@ void q_itemdelegate_draw_check(void* self, void* painter, void* option, void* re
 ///
 /// @param self QItemDelegate*
 /// @param callback void fn(QItemDelegate*, QPainter*, QStyleOptionViewItem*, QRect*, enum Qt__CheckState)
-void q_itemdelegate_on_draw_check(void* self, void (*callback)(void*, void*, void*, void*, int64_t));
+void q_itemdelegate_on_draw_check(void* self, void (*callback)(void*, void*, void*, void*, int32_t));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawCheck)
 ///
@@ -340,7 +340,7 @@ void q_itemdelegate_on_draw_check(void* self, void (*callback)(void*, void*, voi
 /// @param option QStyleOptionViewItem*
 /// @param rect QRect*
 /// @param state enum Qt__CheckState
-void q_itemdelegate_qbase_draw_check(void* self, void* painter, void* option, void* rect, int64_t state);
+void q_itemdelegate_qbase_draw_check(void* self, void* painter, void* option, void* rect, int32_t state);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qitemdelegate.html#drawBackground)
 ///
@@ -650,7 +650,7 @@ void q_itemdelegate_on_size_hint_changed(void* self, void (*callback)(void*, voi
 /// @param self QItemDelegate*
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
-void q_itemdelegate_close_editor2(void* self, void* editor, int64_t hint);
+void q_itemdelegate_close_editor2(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemDelegate
 ///
@@ -658,7 +658,7 @@ void q_itemdelegate_close_editor2(void* self, void* editor, int64_t hint);
 ///
 /// @param self QItemDelegate*
 /// @param callback void fn(QItemDelegate*, QWidget*, enum QAbstractItemDelegate__EndEditHint)
-void q_itemdelegate_on_close_editor2(void* self, void (*callback)(void*, void*, int64_t));
+void q_itemdelegate_on_close_editor2(void* self, void (*callback)(void*, void*, int32_t));
 
 /// Inherited from QObject
 ///
@@ -750,7 +750,7 @@ void q_itemdelegate_kill_timer(void* self, int id);
 ///
 /// @param self QItemDelegate*
 /// @param id enum Qt__TimerId
-void q_itemdelegate_kill_timer2(void* self, int64_t id);
+void q_itemdelegate_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -927,7 +927,7 @@ bool q_itemdelegate_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QItemDelegate*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_itemdelegate_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_itemdelegate_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -938,7 +938,7 @@ int32_t q_itemdelegate_start_timer22(void* self, int interval, int64_t timerType
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_itemdelegate_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_itemdelegate_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -949,7 +949,7 @@ QMetaObject__Connection* q_itemdelegate_connect5(void* sender, void* signal, voi
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_itemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_itemdelegate_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

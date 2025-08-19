@@ -41,13 +41,13 @@ void* q_graphicswidget_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicswidget_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicswidget_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
 /// @param callback int32_t fn(QGraphicsWidget*, enum QMetaObject__Call, int, void*)
-void q_graphicswidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_graphicswidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -55,7 +55,7 @@ void q_graphicswidget_on_metacall(void* self, int32_t (*callback)(void*, int64_t
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_graphicswidget_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_graphicswidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -85,13 +85,13 @@ void q_graphicswidget_adjust_size(void* self);
 /// @param self QGraphicsWidget*
 ///
 /// @return enum Qt__LayoutDirection
-int64_t q_graphicswidget_layout_direction(void* self);
+int32_t q_graphicswidget_layout_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setLayoutDirection)
 ///
 /// @param self QGraphicsWidget*
 /// @param direction enum Qt__LayoutDirection
-void q_graphicswidget_set_layout_direction(void* self, int64_t direction);
+void q_graphicswidget_set_layout_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#unsetLayoutDirection)
 ///
@@ -321,13 +321,13 @@ const char* q_graphicswidget_window_title(void* self);
 /// @param self QGraphicsWidget*
 ///
 /// @return enum Qt__FocusPolicy
-int64_t q_graphicswidget_focus_policy(void* self);
+int32_t q_graphicswidget_focus_policy(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setFocusPolicy)
 ///
 /// @param self QGraphicsWidget*
 /// @param policy enum Qt__FocusPolicy
-void q_graphicswidget_set_focus_policy(void* self, int64_t policy);
+void q_graphicswidget_set_focus_policy(void* self, int32_t policy);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setTabOrder)
 ///
@@ -405,13 +405,13 @@ libqt_list /* of QAction* */ q_graphicswidget_actions(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param attribute enum Qt__WidgetAttribute
-void q_graphicswidget_set_attribute(void* self, int64_t attribute);
+void q_graphicswidget_set_attribute(void* self, int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#testAttribute)
 ///
 /// @param self QGraphicsWidget*
 /// @param attribute enum Qt__WidgetAttribute
-bool q_graphicswidget_test_attribute(void* self, int64_t attribute);
+bool q_graphicswidget_test_attribute(void* self, int32_t attribute);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#type)
 ///
@@ -579,7 +579,7 @@ void q_graphicswidget_qbase_init_style_option(void* self, void* option);
 /// @param self QGraphicsWidget*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicswidget_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicswidget_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
 ///
@@ -587,7 +587,7 @@ QSizeF* q_graphicswidget_size_hint(void* self, int64_t which, void* constraint);
 ///
 /// @param self QGraphicsWidget*
 /// @param callback QSizeF* fn(QGraphicsWidget*, enum Qt__SizeHint, QSizeF*)
-void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_t, void*));
+void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#sizeHint)
 ///
@@ -596,7 +596,7 @@ void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int64_
 /// @param self QGraphicsWidget*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicswidget_qbase_size_hint(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicswidget_qbase_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#updateGeometry)
 ///
@@ -623,7 +623,7 @@ void q_graphicswidget_qbase_update_geometry(void* self);
 /// @param self QGraphicsWidget*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicswidget_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicswidget_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
 ///
@@ -631,7 +631,7 @@ QVariant* q_graphicswidget_item_change(void* self, int64_t change, void* value);
 ///
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* fn(QGraphicsWidget*, enum QGraphicsItem__GraphicsItemChange, QVariant*)
-void q_graphicswidget_on_item_change(void* self, QVariant* (*callback)(void*, int64_t, void*));
+void q_graphicswidget_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#itemChange)
 ///
@@ -640,7 +640,7 @@ void q_graphicswidget_on_item_change(void* self, QVariant* (*callback)(void*, in
 /// @param self QGraphicsWidget*
 /// @param change enum QGraphicsItem__GraphicsItemChange
 /// @param value QVariant*
-QVariant* q_graphicswidget_qbase_item_change(void* self, int64_t change, void* value);
+QVariant* q_graphicswidget_qbase_item_change(void* self, int32_t change, void* value);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#propertyChange)
 ///
@@ -716,15 +716,15 @@ bool q_graphicswidget_qbase_window_frame_event(void* self, void* e);
 /// @param pos QPointF*
 ///
 /// @return enum Qt__WindowFrameSection
-int64_t q_graphicswidget_window_frame_section_at(void* self, void* pos);
+int32_t q_graphicswidget_window_frame_section_at(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGraphicsWidget*
-/// @param callback int64_t fn(QGraphicsWidget*, QPointF*)
-void q_graphicswidget_on_window_frame_section_at(void* self, int64_t (*callback)(void*, void*));
+/// @param callback int32_t fn(QGraphicsWidget*, QPointF*)
+void q_graphicswidget_on_window_frame_section_at(void* self, int32_t (*callback)(void*, void*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#windowFrameSectionAt)
 ///
@@ -734,7 +734,7 @@ void q_graphicswidget_on_window_frame_section_at(void* self, int64_t (*callback)
 /// @param pos QPointF*
 ///
 /// @return enum Qt__WindowFrameSection
-int64_t q_graphicswidget_qbase_window_frame_section_at(void* self, void* pos);
+int32_t q_graphicswidget_qbase_window_frame_section_at(void* self, void* pos);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#event)
 ///
@@ -1130,7 +1130,7 @@ const char* q_graphicswidget_tr3(const char* s, const char* c, int n);
 /// @param self QGraphicsWidget*
 /// @param sequence QKeySequence*
 /// @param context enum Qt__ShortcutContext
-int32_t q_graphicswidget_grab_shortcut2(void* self, void* sequence, int64_t context);
+int32_t q_graphicswidget_grab_shortcut2(void* self, void* sequence, int32_t context);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qgraphicswidget.html#setShortcutEnabled)
 ///
@@ -1151,7 +1151,7 @@ void q_graphicswidget_set_shortcut_auto_repeat2(void* self, int id, bool enabled
 /// @param self QGraphicsWidget*
 /// @param attribute enum Qt__WidgetAttribute
 /// @param on bool
-void q_graphicswidget_set_attribute2(void* self, int64_t attribute, bool on);
+void q_graphicswidget_set_attribute2(void* self, int32_t attribute, bool on);
 
 /// Inherited from QGraphicsObject
 ///
@@ -1448,7 +1448,7 @@ void q_graphicswidget_kill_timer(void* self, int id);
 ///
 /// @param self QGraphicsWidget*
 /// @param id enum Qt__TimerId
-void q_graphicswidget_kill_timer2(void* self, int64_t id);
+void q_graphicswidget_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -1625,7 +1625,7 @@ bool q_graphicswidget_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QGraphicsWidget*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_graphicswidget_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_graphicswidget_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -1636,7 +1636,7 @@ int32_t q_graphicswidget_start_timer22(void* self, int interval, int64_t timerTy
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicswidget_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_graphicswidget_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1647,7 +1647,7 @@ QMetaObject__Connection* q_graphicswidget_connect5(void* sender, void* signal, v
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_graphicswidget_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_graphicswidget_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -1801,7 +1801,7 @@ int64_t q_graphicswidget_flags(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
-void q_graphicswidget_set_flag(void* self, int64_t flag);
+void q_graphicswidget_set_flag(void* self, int32_t flag);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1818,7 +1818,7 @@ void q_graphicswidget_set_flags(void* self, int64_t flags);
 /// @param self QGraphicsWidget*
 ///
 /// @return enum QGraphicsItem__CacheMode
-int64_t q_graphicswidget_cache_mode(void* self);
+int32_t q_graphicswidget_cache_mode(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1826,7 +1826,7 @@ int64_t q_graphicswidget_cache_mode(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param mode enum QGraphicsItem__CacheMode
-void q_graphicswidget_set_cache_mode(void* self, int64_t mode);
+void q_graphicswidget_set_cache_mode(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1835,7 +1835,7 @@ void q_graphicswidget_set_cache_mode(void* self, int64_t mode);
 /// @param self QGraphicsWidget*
 ///
 /// @return enum QGraphicsItem__PanelModality
-int64_t q_graphicswidget_panel_modality(void* self);
+int32_t q_graphicswidget_panel_modality(void* self);
 
 /// Inherited from QGraphicsItem
 ///
@@ -1843,7 +1843,7 @@ int64_t q_graphicswidget_panel_modality(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param panelModality enum QGraphicsItem__PanelModality
-void q_graphicswidget_set_panel_modality(void* self, int64_t panelModality);
+void q_graphicswidget_set_panel_modality(void* self, int32_t panelModality);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2869,7 +2869,7 @@ void q_graphicswidget_remove_scene_event_filter(void* self, void* filterItem);
 /// @param self QGraphicsWidget*
 /// @param flag enum QGraphicsItem__GraphicsItemFlag
 /// @param enabled bool
-void q_graphicswidget_set_flag2(void* self, int64_t flag, bool enabled);
+void q_graphicswidget_set_flag2(void* self, int32_t flag, bool enabled);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2878,7 +2878,7 @@ void q_graphicswidget_set_flag2(void* self, int64_t flag, bool enabled);
 /// @param self QGraphicsWidget*
 /// @param mode enum QGraphicsItem__CacheMode
 /// @param cacheSize QSize*
-void q_graphicswidget_set_cache_mode2(void* self, int64_t mode, void* cacheSize);
+void q_graphicswidget_set_cache_mode2(void* self, int32_t mode, void* cacheSize);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2886,7 +2886,7 @@ void q_graphicswidget_set_cache_mode2(void* self, int64_t mode, void* cacheSize)
 ///
 /// @param self QGraphicsWidget*
 /// @param focusReason enum Qt__FocusReason
-void q_graphicswidget_set_focus1(void* self, int64_t focusReason);
+void q_graphicswidget_set_focus1(void* self, int32_t focusReason);
 
 /// Inherited from QGraphicsItem
 ///
@@ -2964,7 +2964,7 @@ void q_graphicswidget_set_transform2(void* self, void* matrix, bool combine);
 ///
 /// @param self QGraphicsWidget*
 /// @param mode enum Qt__ItemSelectionMode
-libqt_list /* of QGraphicsItem* */ q_graphicswidget_colliding_items1(void* self, int64_t mode);
+libqt_list /* of QGraphicsItem* */ q_graphicswidget_colliding_items1(void* self, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3007,7 +3007,7 @@ void q_graphicswidget_set_size_policy(void* self, void* policy);
 /// @param self QGraphicsWidget*
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
-void q_graphicswidget_set_size_policy2(void* self, int64_t hPolicy, int64_t vPolicy);
+void q_graphicswidget_set_size_policy2(void* self, int32_t hPolicy, int32_t vPolicy);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3198,7 +3198,7 @@ QRectF* q_graphicswidget_contents_rect(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param which enum Qt__SizeHint
-QSizeF* q_graphicswidget_effective_size_hint(void* self, int64_t which);
+QSizeF* q_graphicswidget_effective_size_hint(void* self, int32_t which);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3244,7 +3244,7 @@ bool q_graphicswidget_owned_by_layout(void* self);
 /// @param hPolicy enum QSizePolicy__Policy
 /// @param vPolicy enum QSizePolicy__Policy
 /// @param controlType enum QSizePolicy__ControlType
-void q_graphicswidget_set_size_policy3(void* self, int64_t hPolicy, int64_t vPolicy, int64_t controlType);
+void q_graphicswidget_set_size_policy3(void* self, int32_t hPolicy, int32_t vPolicy, int32_t controlType);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -3253,7 +3253,7 @@ void q_graphicswidget_set_size_policy3(void* self, int64_t hPolicy, int64_t vPol
 /// @param self QGraphicsWidget*
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
-QSizeF* q_graphicswidget_effective_size_hint2(void* self, int64_t which, void* constraint);
+QSizeF* q_graphicswidget_effective_size_hint2(void* self, int32_t which, void* constraint);
 
 /// Inherited from QObject
 ///
@@ -3506,7 +3506,7 @@ void q_graphicswidget_on_contains(void* self, bool (*callback)(void*, void*));
 /// @param self QGraphicsWidget*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicswidget_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicswidget_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3517,7 +3517,7 @@ bool q_graphicswidget_collides_with_item(void* self, void* other, int64_t mode);
 /// @param self QGraphicsWidget*
 /// @param other QGraphicsItem*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicswidget_qbase_collides_with_item(void* self, void* other, int64_t mode);
+bool q_graphicswidget_qbase_collides_with_item(void* self, void* other, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3527,7 +3527,7 @@ bool q_graphicswidget_qbase_collides_with_item(void* self, void* other, int64_t 
 ///
 /// @param self QGraphicsWidget*
 /// @param callback bool fn(QGraphicsWidget*, QGraphicsItem*, enum Qt__ItemSelectionMode)
-void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///
@@ -3538,7 +3538,7 @@ void q_graphicswidget_on_collides_with_item(void* self, bool (*callback)(void*, 
 /// @param self QGraphicsWidget*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicswidget_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicswidget_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3549,7 +3549,7 @@ bool q_graphicswidget_collides_with_path(void* self, void* path, int64_t mode);
 /// @param self QGraphicsWidget*
 /// @param path QPainterPath*
 /// @param mode enum Qt__ItemSelectionMode
-bool q_graphicswidget_qbase_collides_with_path(void* self, void* path, int64_t mode);
+bool q_graphicswidget_qbase_collides_with_path(void* self, void* path, int32_t mode);
 
 /// Inherited from QGraphicsItem
 ///
@@ -3559,7 +3559,7 @@ bool q_graphicswidget_qbase_collides_with_path(void* self, void* path, int64_t m
 ///
 /// @param self QGraphicsWidget*
 /// @param callback bool fn(QGraphicsWidget*, QPainterPath*, enum Qt__ItemSelectionMode)
-void q_graphicswidget_on_collides_with_path(void* self, bool (*callback)(void*, void*, int64_t));
+void q_graphicswidget_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t));
 
 /// Inherited from QGraphicsItem
 ///

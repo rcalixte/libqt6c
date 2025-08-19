@@ -20,15 +20,15 @@ void* q_drag_metacast(void* self, const char* param1) {
     return QDrag_Metacast((QDrag*)self, param1);
 }
 
-int32_t q_drag_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_drag_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QDrag_Metacall((QDrag*)self, param1, param2, param3);
 }
 
-void q_drag_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_drag_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QDrag_OnMetacall((QDrag*)self, (intptr_t)callback);
 }
 
-int32_t q_drag_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_drag_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QDrag_QBaseMetacall((QDrag*)self, param1, param2, param3);
 }
 
@@ -71,19 +71,19 @@ QObject* q_drag_target(void* self) {
     return QDrag_Target((QDrag*)self);
 }
 
-int64_t q_drag_exec(void* self) {
+int32_t q_drag_exec(void* self) {
     return QDrag_Exec((QDrag*)self);
 }
 
-int64_t q_drag_exec2(void* self, int64_t supportedActions, int64_t defaultAction) {
+int32_t q_drag_exec2(void* self, int64_t supportedActions, int32_t defaultAction) {
     return QDrag_Exec2((QDrag*)self, supportedActions, defaultAction);
 }
 
-void q_drag_set_drag_cursor(void* self, void* cursor, int64_t action) {
+void q_drag_set_drag_cursor(void* self, void* cursor, int32_t action) {
     QDrag_SetDragCursor((QDrag*)self, (QPixmap*)cursor, action);
 }
 
-QPixmap* q_drag_drag_cursor(void* self, int64_t action) {
+QPixmap* q_drag_drag_cursor(void* self, int32_t action) {
     return QDrag_DragCursor((QDrag*)self, action);
 }
 
@@ -91,7 +91,7 @@ int64_t q_drag_supported_actions(void* self) {
     return QDrag_SupportedActions((QDrag*)self);
 }
 
-int64_t q_drag_default_action(void* self) {
+int32_t q_drag_default_action(void* self) {
     return QDrag_DefaultAction((QDrag*)self);
 }
 
@@ -99,11 +99,11 @@ void q_drag_cancel() {
     QDrag_Cancel();
 }
 
-void q_drag_action_changed(void* self, int64_t action) {
+void q_drag_action_changed(void* self, int32_t action) {
     QDrag_ActionChanged((QDrag*)self, action);
 }
 
-void q_drag_on_action_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_drag_on_action_changed(void* self, void (*callback)(void*, int32_t)) {
     QDrag_Connect_ActionChanged((QDrag*)self, (intptr_t)callback);
 }
 
@@ -129,7 +129,7 @@ const char* q_drag_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_drag_exec1(void* self, int64_t supportedActions) {
+int32_t q_drag_exec1(void* self, int64_t supportedActions) {
     return QDrag_Exec1((QDrag*)self, supportedActions);
 }
 
@@ -180,7 +180,7 @@ void q_drag_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_drag_kill_timer2(void* self, int64_t id) {
+void q_drag_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -284,15 +284,15 @@ bool q_drag_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_drag_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_drag_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_drag_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_drag_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_drag_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_drag_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

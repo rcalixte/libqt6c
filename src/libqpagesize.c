@@ -7,7 +7,7 @@ QPageSize* q_pagesize_new() {
     return QPageSize_new();
 }
 
-QPageSize* q_pagesize_new2(int64_t pageSizeId) {
+QPageSize* q_pagesize_new2(int32_t pageSizeId) {
     return QPageSize_new2(pageSizeId);
 }
 
@@ -15,7 +15,7 @@ QPageSize* q_pagesize_new3(void* pointSize) {
     return QPageSize_new3((QSize*)pointSize);
 }
 
-QPageSize* q_pagesize_new4(void* size, int64_t units) {
+QPageSize* q_pagesize_new4(void* size, int32_t units) {
     return QPageSize_new4((QSizeF*)size, units);
 }
 
@@ -27,15 +27,15 @@ QPageSize* q_pagesize_new6(void* pointSize, const char* name) {
     return QPageSize_new6((QSize*)pointSize, qstring(name));
 }
 
-QPageSize* q_pagesize_new7(void* pointSize, const char* name, int64_t matchPolicy) {
+QPageSize* q_pagesize_new7(void* pointSize, const char* name, int32_t matchPolicy) {
     return QPageSize_new7((QSize*)pointSize, qstring(name), matchPolicy);
 }
 
-QPageSize* q_pagesize_new8(void* size, int64_t units, const char* name) {
+QPageSize* q_pagesize_new8(void* size, int32_t units, const char* name) {
     return QPageSize_new8((QSizeF*)size, units, qstring(name));
 }
 
-QPageSize* q_pagesize_new9(void* size, int64_t units, const char* name, int64_t matchPolicy) {
+QPageSize* q_pagesize_new9(void* size, int32_t units, const char* name, int32_t matchPolicy) {
     return QPageSize_new9((QSizeF*)size, units, qstring(name), matchPolicy);
 }
 
@@ -69,7 +69,7 @@ const char* q_pagesize_name(void* self) {
     return _ret;
 }
 
-int64_t q_pagesize_id(void* self) {
+int32_t q_pagesize_id(void* self) {
     return QPageSize_Id((QPageSize*)self);
 }
 
@@ -81,11 +81,11 @@ QSizeF* q_pagesize_definition_size(void* self) {
     return QPageSize_DefinitionSize((QPageSize*)self);
 }
 
-int64_t q_pagesize_definition_units(void* self) {
+int32_t q_pagesize_definition_units(void* self) {
     return QPageSize_DefinitionUnits((QPageSize*)self);
 }
 
-QSizeF* q_pagesize_size(void* self, int64_t units) {
+QSizeF* q_pagesize_size(void* self, int32_t units) {
     return QPageSize_Size((QPageSize*)self, units);
 }
 
@@ -97,7 +97,7 @@ QSize* q_pagesize_size_pixels(void* self, int resolution) {
     return QPageSize_SizePixels((QPageSize*)self, resolution);
 }
 
-QRectF* q_pagesize_rect(void* self, int64_t units) {
+QRectF* q_pagesize_rect(void* self, int32_t units) {
     return QPageSize_Rect((QPageSize*)self, units);
 }
 
@@ -109,61 +109,61 @@ QRect* q_pagesize_rect_pixels(void* self, int resolution) {
     return QPageSize_RectPixels((QPageSize*)self, resolution);
 }
 
-const char* q_pagesize_key2(int64_t pageSizeId) {
+const char* q_pagesize_key2(int32_t pageSizeId) {
     libqt_string _str = QPageSize_Key2(pageSizeId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* q_pagesize_name2(int64_t pageSizeId) {
+const char* q_pagesize_name2(int32_t pageSizeId) {
     libqt_string _str = QPageSize_Name2(pageSizeId);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int64_t q_pagesize_id2(void* pointSize) {
+int32_t q_pagesize_id2(void* pointSize) {
     return QPageSize_Id2((QSize*)pointSize);
 }
 
-int64_t q_pagesize_id3(void* size, int64_t units) {
+int32_t q_pagesize_id3(void* size, int32_t units) {
     return QPageSize_Id3((QSizeF*)size, units);
 }
 
-int64_t q_pagesize_id4(int windowsId) {
+int32_t q_pagesize_id4(int windowsId) {
     return QPageSize_Id4(windowsId);
 }
 
-int32_t q_pagesize_windows_id2(int64_t pageSizeId) {
+int32_t q_pagesize_windows_id2(int32_t pageSizeId) {
     return QPageSize_WindowsId2(pageSizeId);
 }
 
-QSizeF* q_pagesize_definition_size2(int64_t pageSizeId) {
+QSizeF* q_pagesize_definition_size2(int32_t pageSizeId) {
     return QPageSize_DefinitionSize2(pageSizeId);
 }
 
-int64_t q_pagesize_definition_units2(int64_t pageSizeId) {
+int32_t q_pagesize_definition_units2(int32_t pageSizeId) {
     return QPageSize_DefinitionUnits2(pageSizeId);
 }
 
-QSizeF* q_pagesize_size2(int64_t pageSizeId, int64_t units) {
+QSizeF* q_pagesize_size2(int32_t pageSizeId, int32_t units) {
     return QPageSize_Size2(pageSizeId, units);
 }
 
-QSize* q_pagesize_size_points2(int64_t pageSizeId) {
+QSize* q_pagesize_size_points2(int32_t pageSizeId) {
     return QPageSize_SizePoints2(pageSizeId);
 }
 
-QSize* q_pagesize_size_pixels2(int64_t pageSizeId, int resolution) {
+QSize* q_pagesize_size_pixels2(int32_t pageSizeId, int resolution) {
     return QPageSize_SizePixels2(pageSizeId, resolution);
 }
 
-int64_t q_pagesize_id22(void* pointSize, int64_t matchPolicy) {
+int32_t q_pagesize_id22(void* pointSize, int32_t matchPolicy) {
     return QPageSize_Id22((QSize*)pointSize, matchPolicy);
 }
 
-int64_t q_pagesize_id32(void* size, int64_t units, int64_t matchPolicy) {
+int32_t q_pagesize_id32(void* size, int32_t units, int32_t matchPolicy) {
     return QPageSize_Id32((QSizeF*)size, units, matchPolicy);
 }
 

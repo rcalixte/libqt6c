@@ -66,7 +66,7 @@ void q_pdfselection_copy_to_clipboard(void* self);
 ///
 /// @param self QPdfSelection*
 /// @param mode enum QClipboard__Mode
-void q_pdfselection_copy_to_clipboard1(void* self, int64_t mode);
+void q_pdfselection_copy_to_clipboard1(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qpdfselection.html#dtor.QPdfSelection)
 ///

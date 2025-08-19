@@ -41,13 +41,13 @@ void* q_barlegendmarker_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_barlegendmarker_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_barlegendmarker_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QBarLegendMarker*
 /// @param callback int32_t fn(QBarLegendMarker*, enum QMetaObject__Call, int, void*)
-void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -55,7 +55,7 @@ void q_barlegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int64_
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_barlegendmarker_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_barlegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -69,15 +69,15 @@ const char* q_barlegendmarker_tr(const char* s);
 /// @param self QBarLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
-int64_t q_barlegendmarker_type(void* self);
+int32_t q_barlegendmarker_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#type)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBarLegendMarker*
-/// @param callback int64_t fn()
-void q_barlegendmarker_on_type(void* self, int64_t (*callback)());
+/// @param callback int32_t fn()
+void q_barlegendmarker_on_type(void* self, int32_t (*callback)());
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#type)
 ///
@@ -86,7 +86,7 @@ void q_barlegendmarker_on_type(void* self, int64_t (*callback)());
 /// @param self QBarLegendMarker*
 ///
 /// @return enum QLegendMarker__LegendMarkerType
-int64_t q_barlegendmarker_qbase_type(void* self);
+int32_t q_barlegendmarker_qbase_type(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarlegendmarker-qtcharts.html#series)
 ///
@@ -229,7 +229,7 @@ void q_barlegendmarker_set_visible(void* self, bool visible);
 /// @param self QBarLegendMarker*
 ///
 /// @return enum QLegend__MarkerShape
-int64_t q_barlegendmarker_shape(void* self);
+int32_t q_barlegendmarker_shape(void* self);
 
 /// Inherited from QLegendMarker
 ///
@@ -237,7 +237,7 @@ int64_t q_barlegendmarker_shape(void* self);
 ///
 /// @param self QBarLegendMarker*
 /// @param shape enum QLegend__MarkerShape
-void q_barlegendmarker_set_shape(void* self, int64_t shape);
+void q_barlegendmarker_set_shape(void* self, int32_t shape);
 
 /// Inherited from QLegendMarker
 ///
@@ -465,7 +465,7 @@ void q_barlegendmarker_kill_timer(void* self, int id);
 ///
 /// @param self QBarLegendMarker*
 /// @param id enum Qt__TimerId
-void q_barlegendmarker_kill_timer2(void* self, int64_t id);
+void q_barlegendmarker_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -642,7 +642,7 @@ bool q_barlegendmarker_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QBarLegendMarker*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_barlegendmarker_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_barlegendmarker_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -653,7 +653,7 @@ int32_t q_barlegendmarker_start_timer22(void* self, int interval, int64_t timerT
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_barlegendmarker_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_barlegendmarker_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -664,7 +664,7 @@ QMetaObject__Connection* q_barlegendmarker_connect5(void* sender, void* signal, 
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_barlegendmarker_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_barlegendmarker_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

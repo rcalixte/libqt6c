@@ -58,11 +58,11 @@ libqt_list /* of QMimeType* */ q_mimedatabase_all_mime_types(void* self) {
     return _arr;
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int64_t mode) {
+QMimeType* q_mimedatabase_mime_type_for_file22(void* self, const char* fileName, int32_t mode) {
     return QMimeDatabase_MimeTypeForFile22((QMimeDatabase*)self, qstring(fileName), mode);
 }
 
-QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int64_t mode) {
+QMimeType* q_mimedatabase_mime_type_for_file23(void* self, void* fileInfo, int32_t mode) {
     return QMimeDatabase_MimeTypeForFile23((QMimeDatabase*)self, (QFileInfo*)fileInfo, mode);
 }
 

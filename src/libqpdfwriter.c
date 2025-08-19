@@ -33,15 +33,15 @@ void* q_pdfwriter_metacast(void* self, const char* param1) {
     return QPdfWriter_Metacast((QPdfWriter*)self, param1);
 }
 
-int32_t q_pdfwriter_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfwriter_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfWriter_Metacall((QPdfWriter*)self, param1, param2, param3);
 }
 
-void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_pdfwriter_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QPdfWriter_OnMetacall((QPdfWriter*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfwriter_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_pdfwriter_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QPdfWriter_QBaseMetacall((QPdfWriter*)self, param1, param2, param3);
 }
 
@@ -52,11 +52,11 @@ const char* q_pdfwriter_tr(const char* s) {
     return _ret;
 }
 
-void q_pdfwriter_set_pdf_version(void* self, int64_t version) {
+void q_pdfwriter_set_pdf_version(void* self, int32_t version) {
     QPdfWriter_SetPdfVersion((QPdfWriter*)self, version);
 }
 
-int64_t q_pdfwriter_pdf_version(void* self) {
+int32_t q_pdfwriter_pdf_version(void* self) {
     return QPdfWriter_PdfVersion((QPdfWriter*)self);
 }
 
@@ -125,11 +125,11 @@ void q_pdfwriter_add_file_attachment(void* self, const char* fileName, const cha
     QPdfWriter_AddFileAttachment((QPdfWriter*)self, qstring(fileName), qstring(data));
 }
 
-int64_t q_pdfwriter_color_model(void* self) {
+int32_t q_pdfwriter_color_model(void* self) {
     return QPdfWriter_ColorModel((QPdfWriter*)self);
 }
 
-void q_pdfwriter_set_color_model(void* self, int64_t model) {
+void q_pdfwriter_set_color_model(void* self, int32_t model) {
     QPdfWriter_SetColorModel((QPdfWriter*)self, model);
 }
 
@@ -153,15 +153,15 @@ QPaintEngine* q_pdfwriter_qbase_paint_engine(void* self) {
     return QPdfWriter_QBasePaintEngine((QPdfWriter*)self);
 }
 
-int32_t q_pdfwriter_metric(void* self, int64_t id) {
+int32_t q_pdfwriter_metric(void* self, int32_t id) {
     return QPdfWriter_Metric((QPdfWriter*)self, id);
 }
 
-void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int64_t)) {
+void q_pdfwriter_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QPdfWriter_OnMetric((QPdfWriter*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfwriter_qbase_metric(void* self, int64_t id) {
+int32_t q_pdfwriter_qbase_metric(void* self, int32_t id) {
     return QPdfWriter_QBaseMetric((QPdfWriter*)self, id);
 }
 
@@ -230,7 +230,7 @@ void q_pdfwriter_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_pdfwriter_kill_timer2(void* self, int64_t id) {
+void q_pdfwriter_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -334,15 +334,15 @@ bool q_pdfwriter_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_pdfwriter_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_pdfwriter_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_pdfwriter_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_pdfwriter_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_pdfwriter_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 
@@ -418,7 +418,7 @@ double q_pdfwriter_device_pixel_ratio_f_scale() {
     return QPaintDevice_DevicePixelRatioFScale();
 }
 
-int32_t q_pdfwriter_encode_metric_f(int64_t metric, double value) {
+int32_t q_pdfwriter_encode_metric_f(int32_t metric, double value) {
     return QPaintDevice_EncodeMetricF(metric, value);
 }
 
@@ -530,27 +530,27 @@ void q_pdfwriter_on_set_page_size(void* self, bool (*callback)(void*, void*)) {
     QPdfWriter_OnSetPageSize((QPdfWriter*)self, (intptr_t)callback);
 }
 
-bool q_pdfwriter_set_page_orientation(void* self, int64_t orientation) {
+bool q_pdfwriter_set_page_orientation(void* self, int32_t orientation) {
     return QPdfWriter_SetPageOrientation((QPdfWriter*)self, orientation);
 }
 
-bool q_pdfwriter_qbase_set_page_orientation(void* self, int64_t orientation) {
+bool q_pdfwriter_qbase_set_page_orientation(void* self, int32_t orientation) {
     return QPdfWriter_QBaseSetPageOrientation((QPdfWriter*)self, orientation);
 }
 
-void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int64_t)) {
+void q_pdfwriter_on_set_page_orientation(void* self, bool (*callback)(void*, int32_t)) {
     QPdfWriter_OnSetPageOrientation((QPdfWriter*)self, (intptr_t)callback);
 }
 
-bool q_pdfwriter_set_page_margins(void* self, void* margins, int64_t units) {
+bool q_pdfwriter_set_page_margins(void* self, void* margins, int32_t units) {
     return QPdfWriter_SetPageMargins((QPdfWriter*)self, (QMarginsF*)margins, units);
 }
 
-bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int64_t units) {
+bool q_pdfwriter_qbase_set_page_margins(void* self, void* margins, int32_t units) {
     return QPdfWriter_QBaseSetPageMargins((QPdfWriter*)self, (QMarginsF*)margins, units);
 }
 
-void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int64_t)) {
+void q_pdfwriter_on_set_page_margins(void* self, bool (*callback)(void*, void*, int32_t)) {
     QPdfWriter_OnSetPageMargins((QPdfWriter*)self, (intptr_t)callback);
 }
 
@@ -662,15 +662,15 @@ void q_pdfwriter_on_is_signal_connected(void* self, bool (*callback)(void*, void
     QPdfWriter_OnIsSignalConnected((QPdfWriter*)self, (intptr_t)callback);
 }
 
-double q_pdfwriter_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pdfwriter_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPdfWriter_GetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
 }
 
-double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int64_t metricA, int64_t metricB) {
+double q_pdfwriter_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QPdfWriter_QBaseGetDecodedMetricF((QPdfWriter*)self, metricA, metricB);
 }
 
-void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int64_t, int64_t)) {
+void q_pdfwriter_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
     QPdfWriter_OnGetDecodedMetricF((QPdfWriter*)self, (intptr_t)callback);
 }
 

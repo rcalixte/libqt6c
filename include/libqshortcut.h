@@ -28,7 +28,7 @@ QShortcut* q_shortcut_new2(void* key, void* parent);
 ///
 /// @param key enum QKeySequence__StandardKey
 /// @param parent QObject*
-QShortcut* q_shortcut_new3(int64_t key, void* parent);
+QShortcut* q_shortcut_new3(int32_t key, void* parent);
 
 /// q_shortcut_new4 constructs a new QShortcut object.
 ///
@@ -52,14 +52,14 @@ QShortcut* q_shortcut_new5(void* key, void* parent, const char* member, const ch
 /// @param member const char*
 /// @param ambiguousMember const char*
 /// @param context enum Qt__ShortcutContext
-QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int64_t context);
+QShortcut* q_shortcut_new6(void* key, void* parent, const char* member, const char* ambiguousMember, int32_t context);
 
 /// q_shortcut_new7 constructs a new QShortcut object.
 ///
 /// @param key enum QKeySequence__StandardKey
 /// @param parent QObject*
 /// @param member const char*
-QShortcut* q_shortcut_new7(int64_t key, void* parent, const char* member);
+QShortcut* q_shortcut_new7(int32_t key, void* parent, const char* member);
 
 /// q_shortcut_new8 constructs a new QShortcut object.
 ///
@@ -67,7 +67,7 @@ QShortcut* q_shortcut_new7(int64_t key, void* parent, const char* member);
 /// @param parent QObject*
 /// @param member const char*
 /// @param ambiguousMember const char*
-QShortcut* q_shortcut_new8(int64_t key, void* parent, const char* member, const char* ambiguousMember);
+QShortcut* q_shortcut_new8(int32_t key, void* parent, const char* member, const char* ambiguousMember);
 
 /// q_shortcut_new9 constructs a new QShortcut object.
 ///
@@ -76,7 +76,7 @@ QShortcut* q_shortcut_new8(int64_t key, void* parent, const char* member, const 
 /// @param member const char*
 /// @param ambiguousMember const char*
 /// @param context enum Qt__ShortcutContext
-QShortcut* q_shortcut_new9(int64_t key, void* parent, const char* member, const char* ambiguousMember, int64_t context);
+QShortcut* q_shortcut_new9(int32_t key, void* parent, const char* member, const char* ambiguousMember, int32_t context);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -91,13 +91,13 @@ void* q_shortcut_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_shortcut_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_shortcut_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// Allows for overriding the related default method
 ///
 /// @param self QShortcut*
 /// @param callback int32_t fn(QShortcut*, enum QMetaObject__Call, int, void*)
-void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*));
+void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
 /// Base class method implementation
 ///
@@ -105,7 +105,7 @@ void q_shortcut_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int,
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_shortcut_qbase_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_shortcut_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -129,7 +129,7 @@ QKeySequence* q_shortcut_key(void* self);
 ///
 /// @param self QShortcut*
 /// @param key enum QKeySequence__StandardKey
-void q_shortcut_set_keys(void* self, int64_t key);
+void q_shortcut_set_keys(void* self, int32_t key);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setKeys)
 ///
@@ -157,14 +157,14 @@ bool q_shortcut_is_enabled(void* self);
 ///
 /// @param self QShortcut*
 /// @param context enum Qt__ShortcutContext
-void q_shortcut_set_context(void* self, int64_t context);
+void q_shortcut_set_context(void* self, int32_t context);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#context)
 ///
 /// @param self QShortcut*
 ///
 /// @return enum Qt__ShortcutContext
-int64_t q_shortcut_context(void* self);
+int32_t q_shortcut_context(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qshortcut.html#setAutoRepeat)
 ///
@@ -346,7 +346,7 @@ void q_shortcut_kill_timer(void* self, int id);
 ///
 /// @param self QShortcut*
 /// @param id enum Qt__TimerId
-void q_shortcut_kill_timer2(void* self, int64_t id);
+void q_shortcut_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -523,7 +523,7 @@ bool q_shortcut_move_to_thread2(void* self, void* thread, void* param2);
 /// @param self QShortcut*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_shortcut_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_shortcut_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -534,7 +534,7 @@ int32_t q_shortcut_start_timer22(void* self, int interval, int64_t timerType);
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -545,7 +545,7 @@ QMetaObject__Connection* q_shortcut_connect5(void* sender, void* signal, void* r
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_shortcut_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

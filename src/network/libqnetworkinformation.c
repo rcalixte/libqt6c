@@ -12,7 +12,7 @@ void* q_networkinformation_metacast(void* self, const char* param1) {
     return QNetworkInformation_Metacast((QNetworkInformation*)self, param1);
 }
 
-int32_t q_networkinformation_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_networkinformation_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QNetworkInformation_Metacall((QNetworkInformation*)self, param1, param2, param3);
 }
 
@@ -23,7 +23,7 @@ const char* q_networkinformation_tr(const char* s) {
     return _ret;
 }
 
-int64_t q_networkinformation_reachability(void* self) {
+int32_t q_networkinformation_reachability(void* self) {
     return QNetworkInformation_Reachability((QNetworkInformation*)self);
 }
 
@@ -31,7 +31,7 @@ bool q_networkinformation_is_behind_captive_portal(void* self) {
     return QNetworkInformation_IsBehindCaptivePortal((QNetworkInformation*)self);
 }
 
-int64_t q_networkinformation_transport_medium(void* self) {
+int32_t q_networkinformation_transport_medium(void* self) {
     return QNetworkInformation_TransportMedium((QNetworkInformation*)self);
 }
 
@@ -89,11 +89,11 @@ QNetworkInformation* q_networkinformation_instance() {
     return QNetworkInformation_Instance();
 }
 
-void q_networkinformation_reachability_changed(void* self, int64_t newReachability) {
+void q_networkinformation_reachability_changed(void* self, int32_t newReachability) {
     QNetworkInformation_ReachabilityChanged((QNetworkInformation*)self, newReachability);
 }
 
-void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_networkinformation_on_reachability_changed(void* self, void (*callback)(void*, int32_t)) {
     QNetworkInformation_Connect_ReachabilityChanged((QNetworkInformation*)self, (intptr_t)callback);
 }
 
@@ -105,11 +105,11 @@ void q_networkinformation_on_is_behind_captive_portal_changed(void* self, void (
     QNetworkInformation_Connect_IsBehindCaptivePortalChanged((QNetworkInformation*)self, (intptr_t)callback);
 }
 
-void q_networkinformation_transport_medium_changed(void* self, int64_t current) {
+void q_networkinformation_transport_medium_changed(void* self, int32_t current) {
     QNetworkInformation_TransportMediumChanged((QNetworkInformation*)self, current);
 }
 
-void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_networkinformation_on_transport_medium_changed(void* self, void (*callback)(void*, int32_t)) {
     QNetworkInformation_Connect_TransportMediumChanged((QNetworkInformation*)self, (intptr_t)callback);
 }
 
@@ -190,7 +190,7 @@ void q_networkinformation_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_networkinformation_kill_timer2(void* self, int64_t id) {
+void q_networkinformation_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -294,15 +294,15 @@ bool q_networkinformation_move_to_thread2(void* self, void* thread, void* param2
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_networkinformation_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_networkinformation_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_networkinformation_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_networkinformation_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

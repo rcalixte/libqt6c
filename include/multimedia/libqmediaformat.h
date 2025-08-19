@@ -25,7 +25,7 @@ QMediaFormat* q_mediaformat_new2(void* other);
 /// q_mediaformat_new3 constructs a new QMediaFormat object.
 ///
 /// @param format enum QMediaFormat__FileFormat
-QMediaFormat* q_mediaformat_new3(int64_t format);
+QMediaFormat* q_mediaformat_new3(int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq)
 ///
@@ -44,45 +44,45 @@ void q_mediaformat_swap(void* self, void* other);
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__FileFormat
-int64_t q_mediaformat_file_format(void* self);
+int32_t q_mediaformat_file_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#setFileFormat)
 ///
 /// @param self QMediaFormat*
 /// @param f enum QMediaFormat__FileFormat
-void q_mediaformat_set_file_format(void* self, int64_t f);
+void q_mediaformat_set_file_format(void* self, int32_t f);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#setVideoCodec)
 ///
 /// @param self QMediaFormat*
 /// @param codec enum QMediaFormat__VideoCodec
-void q_mediaformat_set_video_codec(void* self, int64_t codec);
+void q_mediaformat_set_video_codec(void* self, int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#videoCodec)
 ///
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__VideoCodec
-int64_t q_mediaformat_video_codec(void* self);
+int32_t q_mediaformat_video_codec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#setAudioCodec)
 ///
 /// @param self QMediaFormat*
 /// @param codec enum QMediaFormat__AudioCodec
-void q_mediaformat_set_audio_codec(void* self, int64_t codec);
+void q_mediaformat_set_audio_codec(void* self, int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#audioCodec)
 ///
 /// @param self QMediaFormat*
 ///
 /// @return enum QMediaFormat__AudioCodec
-int64_t q_mediaformat_audio_codec(void* self);
+int32_t q_mediaformat_audio_codec(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#isSupported)
 ///
 /// @param self QMediaFormat*
 /// @param mode enum QMediaFormat__ConversionMode
-bool q_mediaformat_is_supported(void* self, int64_t mode);
+bool q_mediaformat_is_supported(void* self, int32_t mode);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#mimeType)
 ///
@@ -95,7 +95,7 @@ QMimeType* q_mediaformat_mime_type(void* self);
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__FileFormat
-libqt_list /* of int64_t */ q_mediaformat_supported_file_formats(void* self, int64_t m);
+libqt_list /* of int32_t */ q_mediaformat_supported_file_formats(void* self, int32_t m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#supportedVideoCodecs)
 ///
@@ -103,7 +103,7 @@ libqt_list /* of int64_t */ q_mediaformat_supported_file_formats(void* self, int
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__VideoCodec
-libqt_list /* of int64_t */ q_mediaformat_supported_video_codecs(void* self, int64_t m);
+libqt_list /* of int32_t */ q_mediaformat_supported_video_codecs(void* self, int32_t m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#supportedAudioCodecs)
 ///
@@ -111,49 +111,49 @@ libqt_list /* of int64_t */ q_mediaformat_supported_video_codecs(void* self, int
 /// @param m enum QMediaFormat__ConversionMode
 ///
 /// @return libqt_list of enum QMediaFormat__AudioCodec
-libqt_list /* of int64_t */ q_mediaformat_supported_audio_codecs(void* self, int64_t m);
+libqt_list /* of int32_t */ q_mediaformat_supported_audio_codecs(void* self, int32_t m);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
-const char* q_mediaformat_file_format_name(int64_t fileFormat);
+const char* q_mediaformat_file_format_name(int32_t fileFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
-const char* q_mediaformat_audio_codec_name(int64_t codec);
+const char* q_mediaformat_audio_codec_name(int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecName)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
-const char* q_mediaformat_video_codec_name(int64_t codec);
+const char* q_mediaformat_video_codec_name(int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#fileFormatDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param fileFormat enum QMediaFormat__FileFormat
-const char* q_mediaformat_file_format_description(int64_t fileFormat);
+const char* q_mediaformat_file_format_description(int32_t fileFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#audioCodecDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__AudioCodec
-const char* q_mediaformat_audio_codec_description(int64_t codec);
+const char* q_mediaformat_audio_codec_description(int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#videoCodecDescription)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param codec enum QMediaFormat__VideoCodec
-const char* q_mediaformat_video_codec_description(int64_t codec);
+const char* q_mediaformat_video_codec_description(int32_t codec);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#operator-eq-eq)
 ///
@@ -171,7 +171,7 @@ bool q_mediaformat_operator_not_equal(void* self, void* other);
 ///
 /// @param self QMediaFormat*
 /// @param flags enum QMediaFormat__ResolveFlags
-void q_mediaformat_resolve_for_encoding(void* self, int64_t flags);
+void q_mediaformat_resolve_for_encoding(void* self, int32_t flags);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmediaformat.html#dtor.QMediaFormat)
 ///

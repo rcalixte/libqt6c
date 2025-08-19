@@ -70,7 +70,7 @@ void q_pdflink_copy_to_clipboard(void* self) {
     QPdfLink_CopyToClipboard((QPdfLink*)self);
 }
 
-void q_pdflink_copy_to_clipboard1(void* self, int64_t mode) {
+void q_pdflink_copy_to_clipboard1(void* self, int32_t mode) {
     QPdfLink_CopyToClipboard1((QPdfLink*)self, mode);
 }
 

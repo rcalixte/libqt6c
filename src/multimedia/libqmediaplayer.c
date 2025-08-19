@@ -28,15 +28,15 @@ void* q_mediaplayer_metacast(void* self, const char* param1) {
     return QMediaPlayer_Metacast((QMediaPlayer*)self, param1);
 }
 
-int32_t q_mediaplayer_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mediaplayer_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMediaPlayer_Metacall((QMediaPlayer*)self, param1, param2, param3);
 }
 
-void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int64_t, int, void*)) {
+void q_mediaplayer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
     QMediaPlayer_OnMetacall((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-int32_t q_mediaplayer_qbase_metacall(void* self, int64_t param1, int param2, void* param3) {
+int32_t q_mediaplayer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
     return QMediaPlayer_QBaseMetacall((QMediaPlayer*)self, param1, param2, param3);
 }
 
@@ -126,11 +126,11 @@ const QIODevice* q_mediaplayer_source_device(void* self) {
     return QMediaPlayer_SourceDevice((QMediaPlayer*)self);
 }
 
-int64_t q_mediaplayer_playback_state(void* self) {
+int32_t q_mediaplayer_playback_state(void* self) {
     return QMediaPlayer_PlaybackState((QMediaPlayer*)self);
 }
 
-int64_t q_mediaplayer_media_status(void* self) {
+int32_t q_mediaplayer_media_status(void* self) {
     return QMediaPlayer_MediaStatus((QMediaPlayer*)self);
 }
 
@@ -178,7 +178,7 @@ void q_mediaplayer_set_loops(void* self, int loops) {
     QMediaPlayer_SetLoops((QMediaPlayer*)self, loops);
 }
 
-int64_t q_mediaplayer_error(void* self) {
+int32_t q_mediaplayer_error(void* self) {
     return QMediaPlayer_Error((QMediaPlayer*)self);
 }
 
@@ -233,19 +233,19 @@ void q_mediaplayer_on_source_changed(void* self, void (*callback)(void*, void*))
     QMediaPlayer_Connect_SourceChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_playback_state_changed(void* self, int64_t newState) {
+void q_mediaplayer_playback_state_changed(void* self, int32_t newState) {
     QMediaPlayer_PlaybackStateChanged((QMediaPlayer*)self, newState);
 }
 
-void q_mediaplayer_on_playback_state_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_mediaplayer_on_playback_state_changed(void* self, void (*callback)(void*, int32_t)) {
     QMediaPlayer_Connect_PlaybackStateChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_media_status_changed(void* self, int64_t status) {
+void q_mediaplayer_media_status_changed(void* self, int32_t status) {
     QMediaPlayer_MediaStatusChanged((QMediaPlayer*)self, status);
 }
 
-void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, int64_t)) {
+void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, int32_t)) {
     QMediaPlayer_Connect_MediaStatusChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
@@ -377,11 +377,11 @@ void q_mediaplayer_on_error_changed(void* self, void (*callback)(void*)) {
     QMediaPlayer_Connect_ErrorChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_error_occurred(void* self, int64_t errorVal, const char* errorString) {
+void q_mediaplayer_error_occurred(void* self, int32_t errorVal, const char* errorString) {
     QMediaPlayer_ErrorOccurred((QMediaPlayer*)self, errorVal, qstring(errorString));
 }
 
-void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int64_t, const char*)) {
+void q_mediaplayer_on_error_occurred(void* self, void (*callback)(void*, int32_t, const char*)) {
     QMediaPlayer_Connect_ErrorOccurred((QMediaPlayer*)self, (intptr_t)callback);
 }
 
@@ -450,7 +450,7 @@ void q_mediaplayer_kill_timer(void* self, int id) {
     QObject_KillTimer((QObject*)self, id);
 }
 
-void q_mediaplayer_kill_timer2(void* self, int64_t id) {
+void q_mediaplayer_kill_timer2(void* self, int32_t id) {
     QObject_KillTimer2((QObject*)self, id);
 }
 
@@ -554,15 +554,15 @@ bool q_mediaplayer_move_to_thread2(void* self, void* thread, void* param2) {
     return QObject_MoveToThread2((QObject*)self, (QThread*)thread, (Disambiguated_t*)param2);
 }
 
-int32_t q_mediaplayer_start_timer22(void* self, int interval, int64_t timerType) {
+int32_t q_mediaplayer_start_timer22(void* self, int interval, int32_t timerType) {
     return QObject_StartTimer22((QObject*)self, interval, timerType);
 }
 
-QMetaObject__Connection* q_mediaplayer_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal) {
+QMetaObject__Connection* q_mediaplayer_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal) {
     return QObject_Connect5((QObject*)sender, (QMetaMethod*)signal, (QObject*)receiver, (QMetaMethod*)method, typeVal);
 }
 
-QMetaObject__Connection* q_mediaplayer_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal) {
+QMetaObject__Connection* q_mediaplayer_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal) {
     return QObject_Connect4((QObject*)self, (QObject*)sender, signal, member, typeVal);
 }
 

@@ -120,13 +120,13 @@ void q_networkcachemetadata_set_save_to_disk(void* self, bool allow);
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#attributes)
 ///
 /// @param self QNetworkCacheMetaData*
-libqt_map /* of int64_t to QVariant* */ q_networkcachemetadata_attributes(void* self);
+libqt_map /* of int32_t to QVariant* */ q_networkcachemetadata_attributes(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#setAttributes)
 ///
 /// @param self QNetworkCacheMetaData*
 /// @param attributes libqt_map /* of enum QNetworkRequest__Attribute to QVariant* */
-void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of int64_t to QVariant* */ attributes);
+void q_networkcachemetadata_set_attributes(void* self, libqt_map /* of int32_t to QVariant* */ attributes);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qnetworkcachemetadata.html#dtor.QNetworkCacheMetaData)
 ///
@@ -150,7 +150,7 @@ void* q_abstractnetworkcache_metacast(void* self, const char* param1);
 /// @param param1 enum QMetaObject__Call
 /// @param param2 int
 /// @param param3 void*
-int32_t q_abstractnetworkcache_metacall(void* self, int64_t param1, int param2, void* param3);
+int32_t q_abstractnetworkcache_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -329,7 +329,7 @@ void q_abstractnetworkcache_kill_timer(void* self, int id);
 ///
 /// @param self QAbstractNetworkCache*
 /// @param id enum Qt__TimerId
-void q_abstractnetworkcache_kill_timer2(void* self, int64_t id);
+void q_abstractnetworkcache_kill_timer2(void* self, int32_t id);
 
 /// Inherited from QObject
 ///
@@ -506,7 +506,7 @@ bool q_abstractnetworkcache_move_to_thread2(void* self, void* thread, void* para
 /// @param self QAbstractNetworkCache*
 /// @param interval int
 /// @param timerType enum Qt__TimerType
-int32_t q_abstractnetworkcache_start_timer22(void* self, int interval, int64_t timerType);
+int32_t q_abstractnetworkcache_start_timer22(void* self, int interval, int32_t timerType);
 
 /// Inherited from QObject
 ///
@@ -517,7 +517,7 @@ int32_t q_abstractnetworkcache_start_timer22(void* self, int interval, int64_t t
 /// @param receiver QObject*
 /// @param method QMetaMethod*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractnetworkcache_connect5(void* sender, void* signal, void* receiver, void* method, int64_t typeVal);
+QMetaObject__Connection* q_abstractnetworkcache_connect5(void* sender, void* signal, void* receiver, void* method, int32_t typeVal);
 
 /// Inherited from QObject
 ///
@@ -528,7 +528,7 @@ QMetaObject__Connection* q_abstractnetworkcache_connect5(void* sender, void* sig
 /// @param signal const char*
 /// @param member const char*
 /// @param typeVal enum Qt__ConnectionType
-QMetaObject__Connection* q_abstractnetworkcache_connect4(void* self, void* sender, const char* signal, const char* member, int64_t typeVal);
+QMetaObject__Connection* q_abstractnetworkcache_connect4(void* self, void* sender, const char* signal, const char* member, int32_t typeVal);
 
 /// Inherited from QObject
 ///

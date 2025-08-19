@@ -68,13 +68,13 @@ void q_hostinfo_set_addresses(void* self, libqt_list addresses);
 /// @param self QHostInfo*
 ///
 /// @return enum QHostInfo__HostInfoError
-int64_t q_hostinfo_error(void* self);
+int32_t q_hostinfo_error(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#setError)
 ///
 /// @param self QHostInfo*
 /// @param errorVal enum QHostInfo__HostInfoError
-void q_hostinfo_set_error(void* self, int64_t errorVal);
+void q_hostinfo_set_error(void* self, int32_t errorVal);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qhostinfo.html#errorString)
 ///

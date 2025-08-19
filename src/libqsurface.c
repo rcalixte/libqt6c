@@ -3,7 +3,7 @@
 #include "libqsurface.hpp"
 #include "libqsurface.h"
 
-int64_t q_surface_surface_class(void* self) {
+int32_t q_surface_surface_class(void* self) {
     return QSurface_SurfaceClass((QSurface*)self);
 }
 
@@ -11,7 +11,7 @@ QSurfaceFormat* q_surface_format(void* self) {
     return QSurface_Format((QSurface*)self);
 }
 
-int64_t q_surface_surface_type(void* self) {
+int32_t q_surface_surface_type(void* self) {
     return QSurface_SurfaceType((QSurface*)self);
 }
 

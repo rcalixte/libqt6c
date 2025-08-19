@@ -21,7 +21,7 @@ QVideoFrameFormat* q_videoframeformat_new();
 ///
 /// @param size QSize*
 /// @param pixelFormat enum QVideoFrameFormat__PixelFormat
-QVideoFrameFormat* q_videoframeformat_new2(void* size, int64_t pixelFormat);
+QVideoFrameFormat* q_videoframeformat_new2(void* size, int32_t pixelFormat);
 
 /// q_videoframeformat_new3 constructs a new QVideoFrameFormat object.
 ///
@@ -67,7 +67,7 @@ bool q_videoframeformat_is_valid(void* self);
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
-int64_t q_videoframeformat_pixel_format(void* self);
+int32_t q_videoframeformat_pixel_format(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#frameSize)
 ///
@@ -118,13 +118,13 @@ void q_videoframeformat_set_viewport(void* self, void* viewport);
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__Direction
-int64_t q_videoframeformat_scan_line_direction(void* self);
+int32_t q_videoframeformat_scan_line_direction(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setScanLineDirection)
 ///
 /// @param self QVideoFrameFormat*
 /// @param direction enum QVideoFrameFormat__Direction
-void q_videoframeformat_set_scan_line_direction(void* self, int64_t direction);
+void q_videoframeformat_set_scan_line_direction(void* self, int32_t direction);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#frameRate)
 ///
@@ -153,52 +153,52 @@ void q_videoframeformat_set_stream_frame_rate(void* self, double rate);
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__YCbCrColorSpace
-int64_t q_videoframeformat_y_cb_cr_color_space(void* self);
+int32_t q_videoframeformat_y_cb_cr_color_space(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setYCbCrColorSpace)
 ///
 /// @param self QVideoFrameFormat*
 /// @param colorSpace enum QVideoFrameFormat__YCbCrColorSpace
-void q_videoframeformat_set_y_cb_cr_color_space(void* self, int64_t colorSpace);
+void q_videoframeformat_set_y_cb_cr_color_space(void* self, int32_t colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#colorSpace)
 ///
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__ColorSpace
-int64_t q_videoframeformat_color_space(void* self);
+int32_t q_videoframeformat_color_space(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setColorSpace)
 ///
 /// @param self QVideoFrameFormat*
 /// @param colorSpace enum QVideoFrameFormat__ColorSpace
-void q_videoframeformat_set_color_space(void* self, int64_t colorSpace);
+void q_videoframeformat_set_color_space(void* self, int32_t colorSpace);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#colorTransfer)
 ///
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__ColorTransfer
-int64_t q_videoframeformat_color_transfer(void* self);
+int32_t q_videoframeformat_color_transfer(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setColorTransfer)
 ///
 /// @param self QVideoFrameFormat*
 /// @param colorTransfer enum QVideoFrameFormat__ColorTransfer
-void q_videoframeformat_set_color_transfer(void* self, int64_t colorTransfer);
+void q_videoframeformat_set_color_transfer(void* self, int32_t colorTransfer);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#colorRange)
 ///
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QVideoFrameFormat__ColorRange
-int64_t q_videoframeformat_color_range(void* self);
+int32_t q_videoframeformat_color_range(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setColorRange)
 ///
 /// @param self QVideoFrameFormat*
 /// @param range enum QVideoFrameFormat__ColorRange
-void q_videoframeformat_set_color_range(void* self, int64_t range);
+void q_videoframeformat_set_color_range(void* self, int32_t range);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#isMirrored)
 ///
@@ -216,13 +216,13 @@ void q_videoframeformat_set_mirrored(void* self, bool mirrored);
 /// @param self QVideoFrameFormat*
 ///
 /// @return enum QtVideo__Rotation
-int64_t q_videoframeformat_rotation(void* self);
+int32_t q_videoframeformat_rotation(void* self);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#setRotation)
 ///
 /// @param self QVideoFrameFormat*
 /// @param rotation enum QtVideo__Rotation
-void q_videoframeformat_set_rotation(void* self, int64_t rotation);
+void q_videoframeformat_set_rotation(void* self, int32_t rotation);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#vertexShaderFileName)
 ///
@@ -254,21 +254,21 @@ void q_videoframeformat_set_max_luminance(void* self, float lum);
 /// @param format enum QImage__Format
 ///
 /// @return enum QVideoFrameFormat__PixelFormat
-int64_t q_videoframeformat_pixel_format_from_image_format(int64_t format);
+int32_t q_videoframeformat_pixel_format_from_image_format(int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#imageFormatFromPixelFormat)
 ///
 /// @param format enum QVideoFrameFormat__PixelFormat
 ///
 /// @return enum QImage__Format
-int64_t q_videoframeformat_image_format_from_pixel_format(int64_t format);
+int32_t q_videoframeformat_image_format_from_pixel_format(int32_t format);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#pixelFormatToString)
 ///
 /// Caller is responsible for freeing the returned memory
 ///
 /// @param pixelFormat enum QVideoFrameFormat__PixelFormat
-const char* q_videoframeformat_pixel_format_to_string(int64_t pixelFormat);
+const char* q_videoframeformat_pixel_format_to_string(int32_t pixelFormat);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qvideoframeformat.html#dtor.QVideoFrameFormat)
 ///

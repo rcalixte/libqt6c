@@ -30,11 +30,11 @@ void q_scrollerproperties_unset_default_scroller_properties() {
     QScrollerProperties_UnsetDefaultScrollerProperties();
 }
 
-QVariant* q_scrollerproperties_scroll_metric(void* self, int64_t metric) {
+QVariant* q_scrollerproperties_scroll_metric(void* self, int32_t metric) {
     return QScrollerProperties_ScrollMetric((QScrollerProperties*)self, metric);
 }
 
-void q_scrollerproperties_set_scroll_metric(void* self, int64_t metric, void* value) {
+void q_scrollerproperties_set_scroll_metric(void* self, int32_t metric, void* value) {
     QScrollerProperties_SetScrollMetric((QScrollerProperties*)self, metric, (QVariant*)value);
 }
 

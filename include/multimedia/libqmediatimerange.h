@@ -232,8 +232,6 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(void* self);
 /// @param offset long long
 QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, long long offset);
 
-/// [Qt documentation](https://doc.qt.io/qt-6/qmediatimerange::interval.html#dtor.QMediaTimeRange::Interval)
-///
 /// Delete this object from C++ memory.
 ///
 /// @param self QMediaTimeRange__Interval*
