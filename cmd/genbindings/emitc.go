@@ -164,7 +164,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 	}
 
 	if k, v, _, ok := p.QMapOf(); ok {
-		return "libqt_map " + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName)+" to "+v.RenderTypeC(cfs, isReturnType, fullEnumName))
+		return "libqt_map" + ifv(p.Pointer, "* ", " ") + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName)+" to "+v.RenderTypeC(cfs, isReturnType, fullEnumName))
 	}
 
 	if t1, t2, ok := p.QPairOf(); ok {
@@ -256,14 +256,14 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 					if fullEnumName {
 						ret += "enum " + enumInfo.Enum.EnumName
 					} else {
-						ret += "int64_t"
+						ret += enumInfo.EnumTypeC
 					}
 				}
 			} else {
 				if fullEnumName {
 					ret += cabiEnumName(ft.UnderlyingEnum.ParameterType)
 				} else {
-					ret += "int64_t"
+					ret += enumInfo.EnumTypeC
 				}
 			}
 
@@ -281,7 +281,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				if fullEnumName {
 					ret += "enum " + enumClass + enumName
 				} else {
-					ret += "int64_t"
+					ret += enumInfo.EnumTypeC
 				}
 			} else {
 				// Same package
@@ -289,14 +289,14 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 					if fullEnumName {
 						ret += "enum " + enumClass + enumName
 					} else {
-						ret += "int64_t"
+						ret += enumInfo.EnumTypeC
 					}
 				} else {
 					enumClass := cfs.castType + "__"
 					if fullEnumName {
 						ret += "enum " + enumClass + enumName
 					} else {
-						ret += "int64_t"
+						ret += enumInfo.EnumTypeC
 					}
 				}
 			}
@@ -319,7 +319,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 		}
 	}
 
-	if _, ok := KnownEnums[ret]; ok {
+	if e, ok := KnownEnums[ret]; ok {
 		if fullEnumName {
 			if strings.HasPrefix(p.ParameterType, "QFlags<") {
 				enumType := strings.Split(p.ParameterType, "QFlags<")[1]
@@ -332,7 +332,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				ret = "flag of enum " + enumType
 			}
 		} else {
-			ret = "int64_t"
+			ret = e.EnumTypeC
 		}
 	}
 
@@ -368,8 +368,8 @@ func (p CppParameter) returnAllocComment(returnType string) string {
 
 func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
 	ret := p.RenderTypeC(cfs, true, false)
-	if _, ok := KnownEnums[ret]; ok {
-		ret = "int64_t"
+	if e, ok := KnownEnums[ret]; ok {
+		ret = e.EnumTypeC
 	}
 
 	if ret == "int" {
@@ -428,7 +428,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 			if k, v, _, ok := p.QMapOf(); ok {
 				pName = cppComment("of " + k.RenderTypeC(cfs, false, true) + " to " + v.RenderTypeC(cfs, false, true))
 				pTypeSlot = " " + pName
-				pType = "libqt_map"
+				pType = "libqt_map" + ifv(p.Pointer, "*", "")
 			}
 
 			if t1, t2, ok := p.QPairOf(); ok {
@@ -1376,7 +1376,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-			pageUrl := getPageUrl(DtorPage, getPageName(c.ClassName)+maybeCharts, "", c.ClassName)
+			pageUrl := getPageUrl(DtorPage, getPageName(cStructName)+maybeCharts, "", cStructName)
 			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n" +
@@ -1387,7 +1387,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	if len(src.Enums) > 0 {
 		pageName := getPageName(cfs.currentHeaderName)
 		maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
-		pageUrl := getPageUrl(EnumPage, pageName+maybeCharts, "", "")
+		pageUrl := getPageUrl(EnumPage, pageName+maybeCharts, "", cfs.currentHeaderName)
 		maybeUrl := ifv(pageUrl != "", "\n\n/// "+pageUrl, "")
 		ret.WriteString(maybeUrl + "\n\n")
 	}
@@ -1508,7 +1508,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	nextEnum:
 		for _, e := range src.Enums {
 
-			shortEnumName := e.ShortEnumName()
+			shortEnumName := e.EnumValueName()
 
 			// Disallow entry<-->entry collisions
 			for _, ee := range e.Entries {
