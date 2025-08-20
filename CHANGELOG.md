@@ -1,4 +1,8 @@
 
+### 6.8.2 rev9 (19 August 2025)
+
+* Add [Qt SQL](https://doc.qt.io/qt-6/qtsql-index.html) (#28)
+
 ### 6.8.2 rev8 (18 August 2025)
 
 * **BREAKING CHANGE:** Add specific enum type resolution (#27)
