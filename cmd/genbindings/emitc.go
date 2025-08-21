@@ -82,6 +82,10 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 	}
 
 	qtUrl := "https://doc.qt.io/qt-6/"
+	if len(className) > 0 && className[0] == 'K' || className[0] == 'k' {
+		qtUrl = "https://api-staging.kde.org/"
+	}
+
 	pageName = strings.ReplaceAll(pageName, "__", "-")
 
 	switch pageType {
@@ -153,14 +157,14 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName bo
 				if !t.QtClassType() {
 					maybePointer = "*"
 				}
-				return t.RenderTypeCabi() + maybePointer
+				return t.RenderTypeCabi(false) + maybePointer
 			}
 		}
 		return "libqt_list " + cppComment("of "+t.RenderTypeC(cfs, isReturnType, fullEnumName))
 	}
 
-	if _, ok := p.QSetOf(); ok {
-		panic("QSet<> arguments are not supported") // n.b. doesn't seem to exist in QtCore/QtGui/QtWidgets at all
+	if k, ok := p.QSetOf(); ok {
+		return "libqt_list" + ifv(p.Pointer, "* ", " ") + cppComment("of "+k.RenderTypeC(cfs, isReturnType, fullEnumName))
 	}
 
 	if k, v, _, ok := p.QMapOf(); ok {
@@ -606,7 +610,7 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		}
 
 	} else if _, ok := p.QSetOf(); ok {
-		panic("QSet<> arguments are not yet implemented") // n.b. doesn't seem to exist in QtCore/QtGui/QtWidgets at all
+		rvalue = nameprefix
 
 	} else if _, _, _, ok := p.QMapOf(); ok {
 		// QMap<K,V>
@@ -729,7 +733,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		}
 
 	} else if _, ok := rt.QSetOf(); ok {
-		panic("QSet<> arguments are not supported")
+		return shouldReturn + " " + rvalue + ";\n"
 
 	} else if _, _, _, ok := rt.QMapOf(); ok {
 		return shouldReturn + " " + rvalue + ";\n"
@@ -940,11 +944,13 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
-		nameIndex := 1
-		if !strings.HasPrefix(cStructName, "Q") {
-			nameIndex = 0
+		nameIndex := 0
+		cPrefix := "q_"
+		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
+			nameIndex = 1
+			cPrefix = strings.ToLower(string(cStructName[0])) + "_"
 		}
-		cMethodPrefix := "q_" + strings.ToLower(cStructName[nameIndex:])
+		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
 
 		// Embed all inherited classes to directly allow calling inherited methods.
 		// Only include the direct inherits; the recursive inherits will exist
@@ -1097,7 +1103,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			cmdStructName := cStructName
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
 			var inheritedFrom string
 			if m.InheritedFrom != "" {
@@ -1216,7 +1222,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 
 				qbaseDocComment := "\n/// Base class method implementation\n    ///"
-				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
+				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 
 				ret.WriteString(inheritedFrom + docCommentUrl + qbaseDocComment +
 					commentParam + cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment +
@@ -1261,7 +1267,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			previousMethods[mSafeMethodName] = struct{}{}
 
 			cmdStructName := cStructName
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
 
 			var inheritedFrom, commaParams string
@@ -1337,7 +1343,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 		for _, m := range privateSignals {
 			cmdStructName := cStructName
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(m.SafeMethodName())
 			var inheritedFrom, docCommentUrl string
 			if m.InheritedFrom != "" {
@@ -1380,7 +1386,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			ret.WriteString(ifv(pageUrl != "", "\n/// [Qt documentation]("+pageUrl+")\n///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n" +
-				"void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n\n")
+				"void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n\n")
 		}
 	}
 
@@ -1534,11 +1540,13 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	for _, c := range src.Classes {
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
-		nameIndex := 1
-		if !strings.HasPrefix(cStructName, "Q") {
-			nameIndex = 0
+		nameIndex := 0
+		cPrefix := "q_"
+		if cStructName[0] == 'Q' || cStructName[0] == 'K' {
+			nameIndex = 1
+			cPrefix = strings.ToLower(string(cStructName[0])) + "_"
 		}
-		cMethodPrefix := "q_" + strings.ToLower(cStructName[nameIndex:])
+		cMethodPrefix := cPrefix + strings.ToLower(cStructName[nameIndex:])
 
 		// Embed all inherited classes to directly allow calling inherited methods.
 		seenInheritedMethods := make(map[string]struct{})
@@ -1706,7 +1714,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			cmdStructName := cStructName
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
 			if m.InheritedFrom != "" {
 				cmdStructName = cabiClassName(m.InheritedFrom)
@@ -1792,7 +1800,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
 
-				baseMethodName := "q_" + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
+				baseMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:]) + "_qbase"
 				baseCallTarget := cmdStructName + "_QBase" + mSafeMethodName + "(" + forwarding + ")"
 				basereturnFunc := cfs.emitCabiToC("return ", m.ReturnType, baseCallTarget)
 				cfs.checkAndClearAllocCleanups(true)
@@ -1849,7 +1857,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			previousMethods[mSafeMethodName] = struct{}{}
 
 			cmdStructName := cStructName
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
 
 			var commaParams string
@@ -1900,7 +1908,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		for _, m := range privateSignals {
 			cmdStructName := cStructName
 			mSafeMethodName := m.SafeMethodName()
-			cmdMethodName := "q_" + strings.ToLower(cStructName[nameIndex:])
+			cmdMethodName := cPrefix + strings.ToLower(cStructName[nameIndex:])
 			safeMethodName := cSafeMethodName(mSafeMethodName)
 			if m.InheritedFrom != "" {
 				cmdStructName = cabiClassName(m.InheritedFrom)
@@ -1916,7 +1924,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			ret.WriteString("void q_" + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self) {\n" +
+			ret.WriteString("void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self) {\n" +
 				cStructName + "_Delete((" + cStructName + "*)(self));\n}\n")
 		}
 	}
