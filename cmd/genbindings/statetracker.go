@@ -117,7 +117,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 		// Handle child enums in classes
 		for _, en := range c.ChildEnums {
 			enumClass := en.EnumClassName()
-			enumCABI := en.UnderlyingType.RenderTypeCabi()
+			enumCABI := en.UnderlyingType.RenderTypeCabi(false)
 			enumC := en.getEnumTypeC()
 
 			// Register enum with fully qualified name
@@ -143,7 +143,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
 		}
 
-		enumCABI := en.UnderlyingType.RenderTypeCabi()
+		enumCABI := en.UnderlyingType.RenderTypeCabi(false)
 		enumC := en.getEnumTypeC()
 
 		KnownEnums[en.EnumName] = lookupResultEnum{packageName, en /* copy */, enumCABI, enumC}
