@@ -11,6 +11,15 @@
 
 #include "../qtlibc.h"
 
+/// https://doc.qt.io/qt-6/qaudio.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qaudio.html#convertVolume)
+///
+/// @param param1 float
+/// @param param2 enum QAudio__VolumeScale
+/// @param param3 enum QAudio__VolumeScale
+float q_audio_convert_volume(float param1, int32_t param2, int32_t param3);
+
 /// https://doc.qt.io/qt-6/qaudio.html#types
 
 typedef enum {

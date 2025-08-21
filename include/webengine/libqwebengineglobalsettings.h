@@ -11,6 +11,13 @@
 
 #include "../qtlibc.h"
 
+/// https://doc.qt.io/qt-6/qwebengineglobalsettings.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebengineglobalsettings.html#setDnsMode)
+///
+/// @param param1 QWebEngineGlobalSettings__DnsMode*
+bool q_webengineglobalsettings_set_dns_mode(void* param1);
+
 /// https://doc.qt.io/qt-6/qwebengineglobalsettings.html#types
 
 typedef enum {
