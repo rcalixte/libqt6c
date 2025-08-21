@@ -11,6 +11,128 @@
 
 #include "../qtlibc.h"
 
+/// https://doc.qt.io/qt-6/qssl.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__KeyType
+const QMetaObject* q_ssl_get_enum_meta_object(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__KeyType
+const char* q_ssl_get_enum_name(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__EncodingFormat
+const QMetaObject* q_ssl_get_enum_meta_object2(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__EncodingFormat
+const char* q_ssl_get_enum_name2(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__KeyAlgorithm
+const QMetaObject* q_ssl_get_enum_meta_object3(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__KeyAlgorithm
+const char* q_ssl_get_enum_name3(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__AlternativeNameEntryType
+const QMetaObject* q_ssl_get_enum_meta_object4(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__AlternativeNameEntryType
+const char* q_ssl_get_enum_name4(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__SslProtocol
+const QMetaObject* q_ssl_get_enum_meta_object5(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__SslProtocol
+const char* q_ssl_get_enum_name5(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__SslOption
+const QMetaObject* q_ssl_get_enum_meta_object6(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__SslOption
+const char* q_ssl_get_enum_name6(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__AlertLevel
+const QMetaObject* q_ssl_get_enum_meta_object7(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__AlertLevel
+const char* q_ssl_get_enum_name7(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__AlertType
+const QMetaObject* q_ssl_get_enum_meta_object8(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__AlertType
+const char* q_ssl_get_enum_name8(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__ImplementedClass
+const QMetaObject* q_ssl_get_enum_meta_object9(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__ImplementedClass
+const char* q_ssl_get_enum_name9(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumMetaObject)
+///
+/// @param param1 enum QSsl__SupportedFeature
+const QMetaObject* q_ssl_get_enum_meta_object10(int32_t param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qssl.html#qt_getEnumName)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param param1 enum QSsl__SupportedFeature
+const char* q_ssl_get_enum_name10(int32_t param1);
+
 /// https://doc.qt.io/qt-6/qssl.html#types
 
 typedef enum {

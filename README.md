@@ -128,7 +128,7 @@ FreeBSD (native)
 For dynamic linking with the Qt 6 system libraries:
 
 ```bash
-sudo pkg install llvm qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine qscintilla2-qt6 zig
+sudo pkg install llvm qt6-base qt6-charts qt6-multimedia qt6-pdf qt6-svg qt6-webchannel qt6-webengine qscintilla2-qt6 kf6-kcodecs zig
 ```
 
 > [!NOTE]
@@ -152,7 +152,7 @@ For dynamic linking with the Qt 6 system libraries:
 - __Debian-based distributions__:
 
 ```bash
-sudo apt install clang-format qt6-base-dev libqscintilla2-qt6-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev
+sudo apt install clang-format qt6-base-dev libqscintilla2-qt6-dev qt6-base-private-dev qt6-charts-dev qt6-multimedia-dev qt6-pdf-dev qt6-svg-dev qt6-webchannel-dev qt6-webengine-dev libkf6codecs-dev
 ```
 
 > [!NOTE]
@@ -161,7 +161,7 @@ sudo apt install clang-format qt6-base-dev libqscintilla2-qt6-dev qt6-base-priva
 - __Fedora-based distributions__:
 
 ```bash
-sudo dnf install clang-tools-extra qt6-qtbase-devel qscintilla-qt6-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel zig
+sudo dnf install clang-tools-extra qt6-qtbase-devel qscintilla-qt6-devel qt6-qtcharts-devel qt6-qtmultimedia-devel qt6-qtpdf-devel qt6-qtsvg-devel qt6-qtwebchannel-devel qt6-qtwebengine-devel kf6-kcodecs-devel zig
 ```
 
 > [!NOTE]
@@ -170,7 +170,7 @@ sudo dnf install clang-tools-extra qt6-qtbase-devel qscintilla-qt6-devel qt6-qtc
 - __Arch-based distributions__:
 
 ```bash
-sudo pacman -S clang qt6-base qscintilla-qt6 qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine zig
+sudo pacman -S clang qt6-base qscintilla-qt6 qt6-charts qt6-multimedia qt6-svg qt6-webchannel qt6-webengine kcodecs zig
 ```
 
 Once the required packages are installed, the library can be built from the root of the repository:
