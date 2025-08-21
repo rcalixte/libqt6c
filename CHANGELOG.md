@@ -1,4 +1,8 @@
 
+### 6.8.2 rev10 (20 August 2025)
+
+* Add [KCodecs](https://api-staging.kde.org/kcodecs-index.html) and fix string-based slots (#29)
+
 ### 6.8.2 rev9 (19 August 2025)
 
 * Add [Qt SQL](https://doc.qt.io/qt-6/qtsql-index.html) (#28)
