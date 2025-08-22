@@ -711,8 +711,8 @@ void q_stringlistmodel_data_changed3(void* self, void* topLeft, void* bottomRigh
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QStringListModel*
-/// @param callback void fn(QStringListModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_stringlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QStringListModel*, QModelIndex*, QModelIndex*, int*)
+void q_stringlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

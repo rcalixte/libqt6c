@@ -710,8 +710,8 @@ void q_abstractitemview_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractItemView*
-/// @param callback void fn(QAbstractItemView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QAbstractItemView*, QModelIndex*, QModelIndex*, int*)
+void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemview.html#dataChanged)
 ///

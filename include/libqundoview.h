@@ -3999,8 +3999,8 @@ void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUndoView*
-/// @param callback void fn(QUndoView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QUndoView*, QModelIndex*, QModelIndex*, int*)
+void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QListView
 ///

@@ -2105,7 +2105,7 @@ void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight,
     QUndoView_QBaseDataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QUndoView_OnDataChanged((QUndoView*)self, (intptr_t)callback);
 }
 

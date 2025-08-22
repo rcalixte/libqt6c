@@ -340,7 +340,7 @@ void q_barset_selected_bars_changed(void* self, libqt_list indexes) {
     QBarSet_SelectedBarsChanged((QBarSet*)self, indexes);
 }
 
-void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list)) {
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, int*)) {
     QBarSet_Connect_SelectedBarsChanged((QBarSet*)self, (intptr_t)callback);
 }
 

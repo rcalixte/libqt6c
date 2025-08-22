@@ -5781,8 +5781,8 @@ void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRig
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableWidget*
-/// @param callback void fn(QTableWidget*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QTableWidget*, QModelIndex*, QModelIndex*, int*)
+void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemView
 ///

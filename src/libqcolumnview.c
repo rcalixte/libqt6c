@@ -2179,7 +2179,7 @@ void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
     QColumnView_QBaseDataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QColumnView_OnDataChanged((QColumnView*)self, (intptr_t)callback);
 }
 

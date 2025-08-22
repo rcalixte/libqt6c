@@ -805,8 +805,8 @@ libqt_list /* of int */ q_styleditemdelegate_qbase_painting_roles(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QStyledItemDelegate*
-/// @param callback libqt_list /* of int */ fn()
-void q_styleditemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)());
+/// @param callback int* fn()
+void q_styleditemdelegate_on_painting_roles(void* self, int* (*callback)());
 
 /// Inherited from QObject
 ///

@@ -2675,7 +2675,7 @@ void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
     QListWidget_QBaseDataChanged((QListWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QListWidget_OnDataChanged((QListWidget*)self, (intptr_t)callback);
 }
 

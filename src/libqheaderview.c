@@ -725,7 +725,7 @@ void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, lib
     QHeaderView_DataChanged((QHeaderView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QHeaderView_OnDataChanged((QHeaderView*)self, (intptr_t)callback);
 }
 

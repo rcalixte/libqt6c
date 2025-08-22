@@ -4809,8 +4809,8 @@ void q_listwidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QListWidget*
-/// @param callback void fn(QListWidget*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QListWidget*, QModelIndex*, QModelIndex*, int*)
+void q_listwidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QListView
 ///

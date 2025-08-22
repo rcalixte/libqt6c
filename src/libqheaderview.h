@@ -1165,8 +1165,8 @@ void q_headerview_data_changed(void* self, void* topLeft, void* bottomRight, lib
 /// Allows for overriding the related default method
 ///
 /// @param self QHeaderView*
-/// @param callback void fn(QHeaderView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QHeaderView*, QModelIndex*, QModelIndex*, int*)
+void q_headerview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qheaderview.html#dataChanged)
 ///

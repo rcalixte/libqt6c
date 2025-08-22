@@ -335,7 +335,7 @@ void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
     QTreeView_DataChanged((QTreeView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QTreeView_OnDataChanged((QTreeView*)self, (intptr_t)callback);
 }
 

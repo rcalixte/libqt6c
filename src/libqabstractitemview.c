@@ -457,7 +457,7 @@ void q_abstractitemview_data_changed(void* self, void* topLeft, void* bottomRigh
     QAbstractItemView_DataChanged((QAbstractItemView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_abstractitemview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QAbstractItemView_OnDataChanged((QAbstractItemView*)self, (intptr_t)callback);
 }
 

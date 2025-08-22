@@ -370,7 +370,7 @@ func (p CppParameter) returnAllocComment(returnType string) string {
 	return ""
 }
 
-func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
+func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot bool) string {
 	ret := p.RenderTypeC(cfs, true, false)
 	if e, ok := KnownEnums[ret]; ok {
 		ret = e.EnumTypeC
@@ -399,6 +399,16 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState) string {
 		maybeConst = ""
 	}
 
+	if isSlot {
+		// overrides for slot callbacks
+		if strings.HasPrefix(ret, "libqt_list") {
+			if strings.Contains(ret, "of libqt_string") {
+				ret = "const char**"
+			} else if strings.Contains(ret, "of int") {
+				ret = "int*"
+			}
+		}
+	}
 	return maybeConst + ret
 }
 
@@ -443,6 +453,15 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 			if isSlot {
 				resParam := strings.ReplaceAll(pType+pTypeSlot, "**[]", "**")
+				if strings.HasPrefix(resParam, "libqt_list") {
+					if strings.Contains(resParam, "of libqt_string") {
+						resParam = "const char**"
+					} else if strings.Contains(resParam, "of int") {
+						resParam = "int*"
+					} else if IsKnownClass(strings.TrimSuffix(resParam, "*")) {
+						resParam = resParam + "*"
+					}
+				}
 				tmp = append(tmp, resParam)
 			} else {
 				if strings.Contains(pType, "libqt") {
@@ -485,6 +504,17 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 				} else if (strings.Contains(pType, "char*") && !strings.Contains(pType, "libqt_")) ||
 					!strings.HasPrefix(pType, "libqt_") {
 					pName += "[]"
+				}
+				if isSlot {
+					if pType == "libqt_list" {
+						pTypeCheck := t.RenderTypeC(cfs, false, true)
+						switch pTypeCheck {
+						case "libqt_string":
+							pType = "const char**"
+						case "int":
+							pType = "int*"
+						}
+					}
 				}
 			}
 
@@ -753,7 +783,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		maybeAllocCleanup := cfs.checkAndClearAllocCleanups(false)
 
 		if maybeAllocCleanup != "" {
-			preamble := rt.renderReturnTypeC(cfs) + " " + namePrefix + "_out = " + rvalue + ";"
+			preamble := rt.renderReturnTypeC(cfs, false) + " " + namePrefix + "_out = " + rvalue + ";"
 			rvalue = namePrefix + "_out"
 			if rt.Pointer || rt.ByRef {
 				return preamble + maybeAllocCleanup + assignExpr + rvalue + ";"
@@ -776,7 +806,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 		maybeAllocCleanup := cfs.checkAndClearAllocCleanups(false)
 
 		if maybeAllocCleanup != "" {
-			preamble := rt.renderReturnTypeC(cfs) + " " + namePrefix + "_out = " + rvalue + ";"
+			preamble := rt.renderReturnTypeC(cfs, false) + " " + namePrefix + "_out = " + rvalue + ";"
 			rvalue = namePrefix + "_out"
 			return preamble + maybeAllocCleanup + assignExpr + rvalue + ";"
 		} else {
@@ -1139,7 +1169,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 			cfs.castType = cmdStructName
 
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
 
 			allocComment := m.ReturnType.returnAllocComment(returnTypeDecl)
 			if allocComment != "" {
@@ -1216,9 +1246,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
 
 				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
-					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs) + " fn(" + maybeCommentStruct +
+					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " fn(" + maybeCommentStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
-					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs) +
+					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 
 				qbaseDocComment := "\n/// Base class method implementation\n    ///"
@@ -1297,7 +1327,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			// Add a package-private function to call the C++ base class method
 			// QWidget_PaintEvent
 			cfs.castType = cStructName
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnComment := cfs.emitReturnComment(m.ReturnType)
 
@@ -1335,9 +1365,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
-				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs) + " fn(" + maybeCommentStruct +
+				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " fn(" + maybeCommentStruct +
 				cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
-				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs) +
+				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
@@ -1726,7 +1756,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfs.castType = cmdStructName
 			cfs.currentMethodName = cmdMethodName + safeMethodName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
 			rvalue := cmdStructName + "_" + mSafeMethodName + "(" + forwarding + ")"
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, rvalue)
 			cfs.checkAndClearAllocCleanups(true)
@@ -1796,7 +1826,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeVoid = "void*"
 				}
 
-				ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs) +
+				ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 					cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
 
@@ -1871,7 +1901,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			cfs.currentMethodName = cmdMethodName + safeMethodName
 			preamble, forwarding := cfs.emitParametersC2CABIForwarding(m)
 			forwarding = strings.TrimPrefix(forwarding, "self")
-			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs)
+			returnTypeDecl := m.ReturnType.renderReturnTypeC(&cfs, false)
 			cfsParams := cfs.emitParametersC(m.Parameters, false)
 			returnFunc := cfs.emitCabiToC("return ", m.ReturnType, cmdStructName+"_"+mSafeMethodName+"("+forwarding+")")
 			cfs.checkAndClearAllocCleanups(true)
@@ -1900,7 +1930,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				maybeVoid = "void*"
 			}
 
-			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs) +
+			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + ")) {\n" +
 				cmdStructName + "_On" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
 		}

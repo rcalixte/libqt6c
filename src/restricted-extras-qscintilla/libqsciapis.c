@@ -178,7 +178,7 @@ const char** q_sciapis_call_tips(void* self, const char* context[], int commas, 
     return _ret;
 }
 
-void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list)) {
+void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, int*)) {
     QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)callback);
 }
 

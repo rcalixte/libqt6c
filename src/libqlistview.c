@@ -314,7 +314,7 @@ void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
     QListView_DataChanged((QListView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QListView_OnDataChanged((QListView*)self, (intptr_t)callback);
 }
 

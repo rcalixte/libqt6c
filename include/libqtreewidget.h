@@ -5282,8 +5282,8 @@ void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTreeWidget*
-/// @param callback void fn(QTreeWidget*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QTreeWidget*, QModelIndex*, QModelIndex*, int*)
+void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QTreeView
 ///

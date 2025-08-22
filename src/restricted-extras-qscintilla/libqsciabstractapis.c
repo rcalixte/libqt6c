@@ -138,7 +138,7 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[], int 
     return _ret;
 }
 
-void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list)) {
+void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, int*)) {
     QsciAbstractAPIs_OnCallTips((QsciAbstractAPIs*)self, (intptr_t)callback);
 }
 
