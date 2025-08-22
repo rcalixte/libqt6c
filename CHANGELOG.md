@@ -1,4 +1,9 @@
 
+### 6.8.2 rev11 (22 August 2025)
+
+* **BREAKING CHANGE:** Fix some callback types (#31)
+* Add [KI18n](https://api-staging.kde.org/ki18n-index.html) (#30)
+
 ### 6.8.2 rev10 (20 August 2025)
 
 * Add [KCodecs](https://api-staging.kde.org/kcodecs-index.html) and fix string-based slots (#29)
