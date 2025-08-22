@@ -508,8 +508,8 @@ void q_treeview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
 /// Allows for overriding the related default method
 ///
 /// @param self QTreeView*
-/// @param callback void fn(QTreeView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QTreeView*, QModelIndex*, QModelIndex*, int*)
+void q_treeview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qtreeview.html#dataChanged)
 ///

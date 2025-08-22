@@ -262,7 +262,7 @@ void q_pdflinkmodel_data_changed3(void* self, void* topLeft, void* bottomRight, 
     QAbstractItemModel_DataChanged3((QAbstractItemModel*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_pdflinkmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_pdflinkmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*)) {
     QAbstractItemModel_Connect_DataChanged3((QAbstractItemModel*)self, (intptr_t)callback);
 }
 

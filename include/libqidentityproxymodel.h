@@ -820,8 +820,8 @@ void q_identityproxymodel_data_changed3(void* self, void* topLeft, void* bottomR
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QIdentityProxyModel*
-/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_identityproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QIdentityProxyModel*, QModelIndex*, QModelIndex*, int*)
+void q_identityproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

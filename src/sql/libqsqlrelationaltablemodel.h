@@ -932,8 +932,8 @@ void q_sqlrelationaltablemodel_data_changed3(void* self, void* topLeft, void* bo
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSqlRelationalTableModel*
-/// @param callback void fn(QSqlRelationalTableModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_sqlrelationaltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QSqlRelationalTableModel*, QModelIndex*, QModelIndex*, int*)
+void q_sqlrelationaltablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

@@ -1389,8 +1389,8 @@ void q_sortfilterproxymodel_data_changed3(void* self, void* topLeft, void* botto
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QSortFilterProxyModel*
-/// @param callback void fn(QSortFilterProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QSortFilterProxyModel*, QModelIndex*, QModelIndex*, int*)
+void q_sortfilterproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

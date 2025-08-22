@@ -490,8 +490,8 @@ void q_barset_selected_bars_changed(void* self, libqt_list indexes);
 /// [Qt documentation](https://doc.qt.io/qt-6/qbarset-qtcharts.html#selectedBarsChanged)
 ///
 /// @param self QBarSet*
-/// @param callback void fn(QBarSet*, libqt_list /* of int */)
-void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, libqt_list));
+/// @param callback void fn(QBarSet*, int*)
+void q_barset_on_selected_bars_changed(void* self, void (*callback)(void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

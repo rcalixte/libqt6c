@@ -756,8 +756,8 @@ void q_transposeproxymodel_data_changed3(void* self, void* topLeft, void* bottom
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QTransposeProxyModel*
-/// @param callback void fn(QTransposeProxyModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_transposeproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QTransposeProxyModel*, QModelIndex*, QModelIndex*, int*)
+void q_transposeproxymodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

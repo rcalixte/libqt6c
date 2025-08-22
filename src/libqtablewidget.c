@@ -3130,7 +3130,7 @@ void q_tablewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRig
     QTableWidget_QBaseDataChanged((QTableWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_tablewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QTableWidget_OnDataChanged((QTableWidget*)self, (intptr_t)callback);
 }
 

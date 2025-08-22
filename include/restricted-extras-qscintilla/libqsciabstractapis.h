@@ -121,8 +121,8 @@ const char** q_sciabstractapis_call_tips(void* self, const char* context[], int 
 /// Allows for overriding the related default method
 ///
 /// @param self QsciAbstractAPIs*
-/// @param callback const char** fn(QsciAbstractAPIs*, const char**, int, enum QsciScintilla__CallTipsStyle, libqt_list /* of int */)
-void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, libqt_list));
+/// @param callback const char** fn(QsciAbstractAPIs*, const char**, int, enum QsciScintilla__CallTipsStyle, int*)
+void q_sciabstractapis_on_call_tips(void* self, const char** (*callback)(void*, const char**, int, int32_t, int*));
 
 /// [Qt documentation](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciAbstractAPIs.html)
 ///

@@ -160,7 +160,7 @@ libqt_list /* of int */ q_abstractitemdelegate_painting_roles(void* self) {
     return _arr;
 }
 
-void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)()) {
+void q_abstractitemdelegate_on_painting_roles(void* self, int* (*callback)()) {
     QAbstractItemDelegate_OnPaintingRoles((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 

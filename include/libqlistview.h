@@ -487,8 +487,8 @@ void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
 /// Allows for overriding the related default method
 ///
 /// @param self QListView*
-/// @param callback void fn(QListView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QListView*, QModelIndex*, QModelIndex*, int*)
+void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qlistview.html#dataChanged)
 ///

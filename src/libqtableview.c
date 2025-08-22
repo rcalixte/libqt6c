@@ -2445,7 +2445,7 @@ void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight
     QTableView_QBaseDataChanged((QTableView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QTableView_OnDataChanged((QTableView*)self, (intptr_t)callback);
 }
 

@@ -1995,8 +1995,8 @@ void q_abstractitemmodel_data_changed3(void* self, void* topLeft, void* bottomRi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QAbstractItemModel*
-/// @param callback void fn(QAbstractItemModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_abstractitemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QAbstractItemModel*, QModelIndex*, QModelIndex*, int*)
+void q_abstractitemmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#layoutChanged)
 ///
@@ -3265,8 +3265,8 @@ void q_abstracttablemodel_data_changed3(void* self, void* topLeft, void* bottomR
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QAbstractTableModel*
-/// @param callback void fn(QAbstractTableModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_abstracttablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QAbstractTableModel*, QModelIndex*, QModelIndex*, int*)
+void q_abstracttablemodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///
@@ -6207,8 +6207,8 @@ void q_abstractlistmodel_data_changed3(void* self, void* topLeft, void* bottomRi
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstractitemmodel.html#dataChanged)
 ///
 /// @param self QAbstractListModel*
-/// @param callback void fn(QAbstractListModel*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_abstractlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QAbstractListModel*, QModelIndex*, QModelIndex*, int*)
+void q_abstractlistmodel_on_data_changed3(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemModel
 ///

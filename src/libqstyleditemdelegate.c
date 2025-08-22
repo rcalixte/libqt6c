@@ -436,7 +436,7 @@ libqt_list /* of int */ q_styleditemdelegate_qbase_painting_roles(void* self) {
     return _arr;
 }
 
-void q_styleditemdelegate_on_painting_roles(void* self, libqt_list /* of int */ (*callback)()) {
+void q_styleditemdelegate_on_painting_roles(void* self, int* (*callback)()) {
     QStyledItemDelegate_OnPaintingRoles((QStyledItemDelegate*)self, (intptr_t)callback);
 }
 

@@ -4569,8 +4569,8 @@ void q_tableview_qbase_data_changed(void* self, void* topLeft, void* bottomRight
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTableView*
-/// @param callback void fn(QTableView*, QModelIndex*, QModelIndex*, libqt_list /* of int */)
-void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
+/// @param callback void fn(QTableView*, QModelIndex*, QModelIndex*, int*)
+void q_tableview_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*));
 
 /// Inherited from QAbstractItemView
 ///

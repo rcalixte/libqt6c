@@ -3003,7 +3003,7 @@ void q_treewidget_qbase_data_changed(void* self, void* topLeft, void* bottomRigh
     QTreeWidget_QBaseDataChanged((QTreeWidget*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list)) {
+void q_treewidget_on_data_changed(void* self, void (*callback)(void*, void*, void*, int*)) {
     QTreeWidget_OnDataChanged((QTreeWidget*)self, (intptr_t)callback);
 }
 
