@@ -1,4 +1,8 @@
 
+### 6.8.2 rev12 (23 August 2025)
+
+* Add [QTermWidget](https://github.com/lxqt/qtermwidget) (#32)
+
 ### 6.8.2 rev11 (22 August 2025)
 
 * **BREAKING CHANGE:** Fix some callback types (#31)
