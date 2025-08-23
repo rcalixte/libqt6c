@@ -81,6 +81,10 @@ func getPageUrl(pageType PageType, pageName, cmdURL, className string) string {
 		return ""
 	}
 
+	if strings.HasPrefix(pageName, "qtermwidget") || strings.HasPrefix(className, "Konsole") {
+		return "https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api"
+	}
+
 	qtUrl := "https://doc.qt.io/qt-6/"
 	if len(className) > 0 && className[0] == 'K' || className[0] == 'k' {
 		qtUrl = "https://api-staging.kde.org/"
@@ -1528,6 +1532,11 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		ret.WriteString(`#include "` + parentInclude + "lib" + refInc + `.hpp"` + "\n")
+	}
+
+	// workaround for qtermwidget.h
+	if headerName == "qtermwidget.h" {
+		ret.WriteString(`#include "libqtermwidget_interface.hpp"` + "\n")
 	}
 
 	ret.WriteString(`%%_IMPORTLIBS_%%#include "lib` + headerName + `pp"
