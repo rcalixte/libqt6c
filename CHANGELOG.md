@@ -1,4 +1,9 @@
 
+### 6.8.2 rev13 (24 August 2025)
+
+* Add [KConfig](https://api-staging.kde.org/kconfig-index.html) and [KWidgetsAddons](https://api-staging.kde.org/kwidgetsaddons-index.html) (#34)
+* Add support for public variables (#33)
+
 ### 6.8.2 rev12 (23 August 2025)
 
 * Add [QTermWidget](https://github.com/lxqt/qtermwidget) (#32)
