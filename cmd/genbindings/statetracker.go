@@ -83,7 +83,7 @@ func (e CppEnum) getEnumTypeC() string {
 
 func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	for _, c := range parsed.Classes {
-		if parsed.Filename != "" && !strings.Contains(c.ClassName, "::") {
+		if parsed.Filename != "" {
 			KnownIncludes[c.ClassName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
 		}
 
@@ -138,7 +138,7 @@ func addKnownTypes(packageName string, parsed *CppParsedHeader) {
 	}
 
 	for _, en := range parsed.Enums {
-		if parsed.Filename != "" && en.EnumName != "" && !strings.Contains(en.EnumName, "::") {
+		if parsed.Filename != "" && en.EnumName != "" {
 			// enum classes... in Qt 6, these are found in qcborcommon.h, qdtls.h, qlogging.h, qmetatype.h, qocspresponse.h
 			KnownIncludes[en.EnumName] = lookupResultInclude{packageName, filepath.Base(parsed.Filename)}
 		}
