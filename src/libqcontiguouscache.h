@@ -13,6 +13,50 @@
 
 /// https://doc.qt.io/qt-6/qcontiguouscachedata.html
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#alloc-var)
+///
+/// @param self QContiguousCacheData*
+int64_t q_contiguouscachedata_alloc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#alloc-var)
+///
+/// @param self QContiguousCacheData*
+/// @param alloc int64_t
+void q_contiguouscachedata_set_alloc(void* self, int64_t alloc);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#count-var)
+///
+/// @param self QContiguousCacheData*
+int64_t q_contiguouscachedata_count(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#count-var)
+///
+/// @param self QContiguousCacheData*
+/// @param count int64_t
+void q_contiguouscachedata_set_count(void* self, int64_t count);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#start-var)
+///
+/// @param self QContiguousCacheData*
+int64_t q_contiguouscachedata_start(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#start-var)
+///
+/// @param self QContiguousCacheData*
+/// @param start int64_t
+void q_contiguouscachedata_set_start(void* self, int64_t start);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#offset-var)
+///
+/// @param self QContiguousCacheData*
+int64_t q_contiguouscachedata_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#offset-var)
+///
+/// @param self QContiguousCacheData*
+/// @param offset int64_t
+void q_contiguouscachedata_set_offset(void* self, int64_t offset);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcontiguouscachedata.html#allocateData)
 ///
 /// @param size int64_t

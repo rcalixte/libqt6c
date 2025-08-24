@@ -18,6 +18,206 @@
 /// @param param1 QWidgetData*
 QWidgetData* q_widgetdata_new(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#winid-var)
+///
+/// @param self QWidgetData*
+uint64_t q_widgetdata_winid(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#winid-var)
+///
+/// @param self QWidgetData*
+/// @param winid uint64_t
+void q_widgetdata_set_winid(void* self, uint64_t winid);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#widget_attributes-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_widget_attributes(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#widget_attributes-var)
+///
+/// @param self QWidgetData*
+/// @param widget_attributes uint32_t
+void q_widgetdata_set_widget_attributes(void* self, uint32_t widget_attributes);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_flags-var)
+///
+/// @param self QWidgetData*
+///
+/// @return flag of enum Qt__WindowType
+int64_t q_widgetdata_window_flags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_flags-var)
+///
+/// @param self QWidgetData*
+/// @param window_flags flag of enum Qt__WindowType
+void q_widgetdata_set_window_flags(void* self, int64_t window_flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_state-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_window_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_state-var)
+///
+/// @param self QWidgetData*
+/// @param window_state uint32_t
+void q_widgetdata_set_window_state(void* self, uint32_t window_state);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#focus_policy-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_focus_policy(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#focus_policy-var)
+///
+/// @param self QWidgetData*
+/// @param focus_policy uint32_t
+void q_widgetdata_set_focus_policy(void* self, uint32_t focus_policy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#sizehint_forced-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_sizehint_forced(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#sizehint_forced-var)
+///
+/// @param self QWidgetData*
+/// @param sizehint_forced uint32_t
+void q_widgetdata_set_sizehint_forced(void* self, uint32_t sizehint_forced);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#is_closing-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_is_closing(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#is_closing-var)
+///
+/// @param self QWidgetData*
+/// @param is_closing uint32_t
+void q_widgetdata_set_is_closing(void* self, uint32_t is_closing);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_show-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_in_show(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_show-var)
+///
+/// @param self QWidgetData*
+/// @param in_show uint32_t
+void q_widgetdata_set_in_show(void* self, uint32_t in_show);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_set_window_state-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_in_set_window_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_set_window_state-var)
+///
+/// @param self QWidgetData*
+/// @param in_set_window_state uint32_t
+void q_widgetdata_set_in_set_window_state(void* self, uint32_t in_set_window_state);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#fstrut_dirty-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_fstrut_dirty(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#fstrut_dirty-var)
+///
+/// @param self QWidgetData*
+/// @param fstrut_dirty uint32_t
+void q_widgetdata_set_fstrut_dirty(void* self, uint32_t fstrut_dirty);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#context_menu_policy-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_context_menu_policy(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#context_menu_policy-var)
+///
+/// @param self QWidgetData*
+/// @param context_menu_policy uint32_t
+void q_widgetdata_set_context_menu_policy(void* self, uint32_t context_menu_policy);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_modality-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_window_modality(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#window_modality-var)
+///
+/// @param self QWidgetData*
+/// @param window_modality uint32_t
+void q_widgetdata_set_window_modality(void* self, uint32_t window_modality);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_destructor-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_in_destructor(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#in_destructor-var)
+///
+/// @param self QWidgetData*
+/// @param in_destructor uint32_t
+void q_widgetdata_set_in_destructor(void* self, uint32_t in_destructor);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#unused-var)
+///
+/// @param self QWidgetData*
+uint32_t q_widgetdata_unused(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#unused-var)
+///
+/// @param self QWidgetData*
+/// @param unused uint32_t
+void q_widgetdata_set_unused(void* self, uint32_t unused);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#crect-var)
+///
+/// @param self QWidgetData*
+QRect* q_widgetdata_crect(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#crect-var)
+///
+/// @param self QWidgetData*
+/// @param crect QRect*
+void q_widgetdata_set_crect(void* self, void* crect);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#pal-var)
+///
+/// @param self QWidgetData*
+QPalette* q_widgetdata_pal(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#pal-var)
+///
+/// @param self QWidgetData*
+/// @param pal QPalette*
+void q_widgetdata_set_pal(void* self, void* pal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#fnt-var)
+///
+/// @param self QWidgetData*
+QFont* q_widgetdata_fnt(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#fnt-var)
+///
+/// @param self QWidgetData*
+/// @param fnt QFont*
+void q_widgetdata_set_fnt(void* self, void* fnt);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#wrect-var)
+///
+/// @param self QWidgetData*
+QRect* q_widgetdata_wrect(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#wrect-var)
+///
+/// @param self QWidgetData*
+/// @param wrect QRect*
+void q_widgetdata_set_wrect(void* self, void* wrect);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qwidgetdata.html#operator-eq)
 ///
 /// @param self QWidgetData*

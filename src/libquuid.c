@@ -107,6 +107,30 @@ int32_t q_uuid_version(void* self) {
     return QUuid_Version((QUuid*)self);
 }
 
+uint32_t q_uuid_data1(void* self) {
+    return QUuid_Data1((QUuid*)self);
+}
+
+void q_uuid_set_data1(void* self, uint32_t data1) {
+    QUuid_SetData1((QUuid*)self, data1);
+}
+
+unsigned short q_uuid_data2(void* self) {
+    return QUuid_Data2((QUuid*)self);
+}
+
+void q_uuid_set_data2(void* self, unsigned short data2) {
+    QUuid_SetData2((QUuid*)self, data2);
+}
+
+unsigned short q_uuid_data3(void* self) {
+    return QUuid_Data3((QUuid*)self);
+}
+
+void q_uuid_set_data3(void* self, unsigned short data3) {
+    QUuid_SetData3((QUuid*)self, data3);
+}
+
 const char* q_uuid_to_string1(void* self, int32_t mode) {
     libqt_string _str = QUuid_ToString1((QUuid*)self, mode);
     char* _ret = qstring_to_char(_str);

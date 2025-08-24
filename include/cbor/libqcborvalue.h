@@ -35,6 +35,28 @@ void q_cborparsererror_copy_assign(void* self, void* other);
 /// @param other QCborParserError*
 void q_cborparsererror_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#offset-var)
+///
+/// @param self QCborParserError*
+long long q_cborparsererror_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#offset-var)
+///
+/// @param self QCborParserError*
+/// @param offset long long
+void q_cborparsererror_set_offset(void* self, long long offset);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#error-var)
+///
+/// @param self QCborParserError*
+QCborError* q_cborparsererror_error(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#error-var)
+///
+/// @param self QCborParserError*
+/// @param error QCborError*
+void q_cborparsererror_set_error(void* self, void* _error);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborparsererror.html#errorString)
 ///
 /// Caller is responsible for freeing the returned memory

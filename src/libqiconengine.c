@@ -200,6 +200,46 @@ QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* 
     return QIconEngine__ScaledPixmapArgument_new((QIconEngine__ScaledPixmapArgument*)param1);
 }
 
+QSize* q_iconengine__scaledpixmapargument_size(void* self) {
+    return QIconEngine__ScaledPixmapArgument_Size((QIconEngine__ScaledPixmapArgument*)self);
+}
+
+void q_iconengine__scaledpixmapargument_set_size(void* self, void* size) {
+    QIconEngine__ScaledPixmapArgument_SetSize((QIconEngine__ScaledPixmapArgument*)self, (QSize*)size);
+}
+
+int32_t q_iconengine__scaledpixmapargument_mode(void* self) {
+    return QIconEngine__ScaledPixmapArgument_Mode((QIconEngine__ScaledPixmapArgument*)self);
+}
+
+void q_iconengine__scaledpixmapargument_set_mode(void* self, int32_t mode) {
+    QIconEngine__ScaledPixmapArgument_SetMode((QIconEngine__ScaledPixmapArgument*)self, mode);
+}
+
+int32_t q_iconengine__scaledpixmapargument_state(void* self) {
+    return QIconEngine__ScaledPixmapArgument_State((QIconEngine__ScaledPixmapArgument*)self);
+}
+
+void q_iconengine__scaledpixmapargument_set_state(void* self, int32_t state) {
+    QIconEngine__ScaledPixmapArgument_SetState((QIconEngine__ScaledPixmapArgument*)self, state);
+}
+
+double q_iconengine__scaledpixmapargument_scale(void* self) {
+    return QIconEngine__ScaledPixmapArgument_Scale((QIconEngine__ScaledPixmapArgument*)self);
+}
+
+void q_iconengine__scaledpixmapargument_set_scale(void* self, double scale) {
+    QIconEngine__ScaledPixmapArgument_SetScale((QIconEngine__ScaledPixmapArgument*)self, scale);
+}
+
+QPixmap* q_iconengine__scaledpixmapargument_pixmap(void* self) {
+    return QIconEngine__ScaledPixmapArgument_Pixmap((QIconEngine__ScaledPixmapArgument*)self);
+}
+
+void q_iconengine__scaledpixmapargument_set_pixmap(void* self, void* pixmap) {
+    QIconEngine__ScaledPixmapArgument_SetPixmap((QIconEngine__ScaledPixmapArgument*)self, (QPixmap*)pixmap);
+}
+
 void q_iconengine__scaledpixmapargument_operator_assign(void* self, void* param1) {
     QIconEngine__ScaledPixmapArgument_OperatorAssign((QIconEngine__ScaledPixmapArgument*)self, (QIconEngine__ScaledPixmapArgument*)param1);
 }

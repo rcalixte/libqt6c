@@ -42,4 +42,35 @@ void q_untypedpropertydata_move_assign(void* self, void* other);
 /// @param self QUntypedPropertyData*
 void q_untypedpropertydata_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qpropertyproxybindingdata.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyproxybindingdata.html#d_ptr-var)
+///
+/// @param self QPropertyProxyBindingData*
+uintptr_t q_propertyproxybindingdata_d_ptr(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyproxybindingdata.html#d_ptr-var)
+///
+/// @param self QPropertyProxyBindingData*
+/// @param d_ptr uintptr_t
+void q_propertyproxybindingdata_set_d_ptr(void* self, uintptr_t d_ptr);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyproxybindingdata.html#propertyData-var)
+///
+/// @param self QPropertyProxyBindingData*
+QUntypedPropertyData* q_propertyproxybindingdata_property_data(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyproxybindingdata.html#propertyData-var)
+///
+/// @param self QPropertyProxyBindingData*
+/// @param propertyData QUntypedPropertyData*
+void q_propertyproxybindingdata_set_property_data(void* self, void* propertyData);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertyproxybindingdata.html#dtor.QPropertyProxyBindingData)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QPropertyProxyBindingData*
+void q_propertyproxybindingdata_delete(void* self);
+
 #endif

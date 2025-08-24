@@ -141,6 +141,50 @@ const char* q_genericreturnargument_name(void* self);
 /// @param self QGenericReturnArgument*
 void q_genericreturnargument_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qmetamethodargument.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodargument.html#name-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMetaMethodArgument*
+const char* q_metamethodargument_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodargument.html#name-var)
+///
+/// @param self QMetaMethodArgument*
+/// @param name const char*
+void q_metamethodargument_set_name(void* self, const char* name);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodargument.html#dtor.QMetaMethodArgument)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QMetaMethodArgument*
+void q_metamethodargument_delete(void* self);
+
+/// https://doc.qt.io/qt-6/qmetamethodreturnargument.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#name-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMetaMethodReturnArgument*
+const char* q_metamethodreturnargument_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#name-var)
+///
+/// @param self QMetaMethodReturnArgument*
+/// @param name const char*
+void q_metamethodreturnargument_set_name(void* self, const char* name);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetamethodreturnargument.html#dtor.QMetaMethodReturnArgument)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QMetaMethodReturnArgument*
+void q_metamethodreturnargument_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qmetaobject.html
 
 /// q_metaobject_new constructs a new QMetaObject object.
@@ -446,6 +490,17 @@ int32_t q_metaobject_static_metacall(void* self, int32_t param1, int param2, voi
 /// @param param3 int
 /// @param param4 void*
 int32_t q_metaobject_metacall(void* param1, int32_t param2, int param3, void* param4);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#d-var)
+///
+/// @param self QMetaObject*
+QMetaObject__Data* q_metaobject_d(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject.html#d-var)
+///
+/// @param self QMetaObject*
+/// @param d QMetaObject__Data*
+void q_metaobject_set_d(void* self, void* d);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1110,6 +1165,17 @@ QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo);
 /// @param param1 QMetaObject__SuperData*
 QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-superdata.html#direct-var)
+///
+/// @param self QMetaObject__SuperData*
+const QMetaObject* q_metaobject__superdata_direct(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-superdata.html#direct-var)
+///
+/// @param self QMetaObject__SuperData*
+/// @param direct QMetaObject*
+void q_metaobject__superdata_set_direct(void* self, void* direct);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-superdata.html#operator--gt)
 ///
 /// @param self QMetaObject__SuperData*
@@ -1141,6 +1207,50 @@ QMetaObject__Data* q_metaobject__data_new();
 ///
 /// @param param1 QMetaObject__Data*
 QMetaObject__Data* q_metaobject__data_new2(void* param1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#superdata-var)
+///
+/// @param self QMetaObject__Data*
+QMetaObject__SuperData* q_metaobject__data_superdata(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#superdata-var)
+///
+/// @param self QMetaObject__Data*
+/// @param superdata QMetaObject__SuperData*
+void q_metaobject__data_set_superdata(void* self, void* superdata);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#stringdata-var)
+///
+/// @param self QMetaObject__Data*
+const uint32_t* q_metaobject__data_stringdata(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#stringdata-var)
+///
+/// @param self QMetaObject__Data*
+/// @param stringdata uint32_t*
+void q_metaobject__data_set_stringdata(void* self, uint32_t* stringdata);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#data-var)
+///
+/// @param self QMetaObject__Data*
+const uint32_t* q_metaobject__data_data(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#data-var)
+///
+/// @param self QMetaObject__Data*
+/// @param data uint32_t*
+void q_metaobject__data_set_data(void* self, uint32_t* data);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#relatedMetaObjects-var)
+///
+/// @param self QMetaObject__Data*
+const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#relatedMetaObjects-var)
+///
+/// @param self QMetaObject__Data*
+/// @param relatedMetaObjects QMetaObject__SuperData*
+void q_metaobject__data_set_related_meta_objects(void* self, void* relatedMetaObjects);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qmetaobject-data.html#operator-eq)
 ///

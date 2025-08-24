@@ -5233,6 +5233,38 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int32_t typ, in
     return QInputMethodEvent__Attribute_new2(typ, s, l);
 }
 
+int32_t q_inputmethodevent__attribute_type(void* self) {
+    return QInputMethodEvent__Attribute_Type((QInputMethodEvent__Attribute*)self);
+}
+
+void q_inputmethodevent__attribute_set_type(void* self, int32_t _type) {
+    QInputMethodEvent__Attribute_SetType((QInputMethodEvent__Attribute*)self, _type);
+}
+
+int32_t q_inputmethodevent__attribute_start(void* self) {
+    return QInputMethodEvent__Attribute_Start((QInputMethodEvent__Attribute*)self);
+}
+
+void q_inputmethodevent__attribute_set_start(void* self, int start) {
+    QInputMethodEvent__Attribute_SetStart((QInputMethodEvent__Attribute*)self, start);
+}
+
+int32_t q_inputmethodevent__attribute_length(void* self) {
+    return QInputMethodEvent__Attribute_Length((QInputMethodEvent__Attribute*)self);
+}
+
+void q_inputmethodevent__attribute_set_length(void* self, int length) {
+    QInputMethodEvent__Attribute_SetLength((QInputMethodEvent__Attribute*)self, length);
+}
+
+QVariant* q_inputmethodevent__attribute_value(void* self) {
+    return QInputMethodEvent__Attribute_Value((QInputMethodEvent__Attribute*)self);
+}
+
+void q_inputmethodevent__attribute_set_value(void* self, void* value) {
+    QInputMethodEvent__Attribute_SetValue((QInputMethodEvent__Attribute*)self, (QVariant*)value);
+}
+
 void q_inputmethodevent__attribute_operator_assign(void* self, void* param1) {
     QInputMethodEvent__Attribute_OperatorAssign((QInputMethodEvent__Attribute*)self, (QInputMethodEvent__Attribute*)param1);
 }

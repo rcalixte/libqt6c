@@ -2864,6 +2864,22 @@ QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1) {
     return QTextEdit__ExtraSelection_new((QTextEdit__ExtraSelection*)param1);
 }
 
+QTextCursor* q_textedit__extraselection_cursor(void* self) {
+    return QTextEdit__ExtraSelection_Cursor((QTextEdit__ExtraSelection*)self);
+}
+
+void q_textedit__extraselection_set_cursor(void* self, void* cursor) {
+    QTextEdit__ExtraSelection_SetCursor((QTextEdit__ExtraSelection*)self, (QTextCursor*)cursor);
+}
+
+QTextCharFormat* q_textedit__extraselection_format(void* self) {
+    return QTextEdit__ExtraSelection_Format((QTextEdit__ExtraSelection*)self);
+}
+
+void q_textedit__extraselection_set_format(void* self, void* format) {
+    QTextEdit__ExtraSelection_SetFormat((QTextEdit__ExtraSelection*)self, (QTextCharFormat*)format);
+}
+
 void q_textedit__extraselection_operator_assign(void* self, void* param1) {
     QTextEdit__ExtraSelection_OperatorAssign((QTextEdit__ExtraSelection*)self, (QTextEdit__ExtraSelection*)param1);
 }

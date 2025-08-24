@@ -189,6 +189,41 @@ bool q_textoption__tab_operator_equal(void* self, void* other);
 /// @param other QTextOption__Tab*
 bool q_textoption__tab_operator_not_equal(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#position-var)
+///
+/// @param self QTextOption__Tab*
+double q_textoption__tab_position(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#position-var)
+///
+/// @param self QTextOption__Tab*
+/// @param position double
+void q_textoption__tab_set_position(void* self, double position);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#type-var)
+///
+/// @param self QTextOption__Tab*
+///
+/// @return enum QTextOption__TabType
+int32_t q_textoption__tab_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#type-var)
+///
+/// @param self QTextOption__Tab*
+/// @param type enum QTextOption__TabType
+void q_textoption__tab_set_type(void* self, int32_t _type);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#delimiter-var)
+///
+/// @param self QTextOption__Tab*
+QChar* q_textoption__tab_delimiter(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextoption-tab.html#delimiter-var)
+///
+/// @param self QTextOption__Tab*
+/// @param delimiter QChar*
+void q_textoption__tab_set_delimiter(void* self, void* delimiter);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QTextOption__Tab*

@@ -54,6 +54,17 @@ void q_abstractvideobuffer__mapdata_copy_assign(void* self, void* other);
 /// @param other QAbstractVideoBuffer__MapData*
 void q_abstractvideobuffer__mapdata_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
+///
+/// @param self QAbstractVideoBuffer__MapData*
+int32_t q_abstractvideobuffer__mapdata_plane_count(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstractvideobuffer-mapdata.html#planeCount-var)
+///
+/// @param self QAbstractVideoBuffer__MapData*
+/// @param planeCount int
+void q_abstractvideobuffer__mapdata_set_plane_count(void* self, int planeCount);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractVideoBuffer__MapData*

@@ -69,6 +69,52 @@ void q_stringconverterbase__state_clear(void* self);
 /// @param self QStringConverterBase__State*
 void q_stringconverterbase__state_reset(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
+///
+/// @param self QStringConverterBase__State*
+///
+/// @return flag of enum QStringConverterBase__Flag
+int64_t q_stringconverterbase__state_flags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#flags-var)
+///
+/// @param self QStringConverterBase__State*
+/// @param flags flag of enum QStringConverterBase__Flag
+void q_stringconverterbase__state_set_flags(void* self, int64_t flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
+///
+/// @param self QStringConverterBase__State*
+int32_t q_stringconverterbase__state_internal_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#internalState-var)
+///
+/// @param self QStringConverterBase__State*
+/// @param internalState int
+void q_stringconverterbase__state_set_internal_state(void* self, int internalState);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
+///
+/// @param self QStringConverterBase__State*
+int64_t q_stringconverterbase__state_remaining_chars(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#remainingChars-var)
+///
+/// @param self QStringConverterBase__State*
+/// @param remainingChars int64_t
+void q_stringconverterbase__state_set_remaining_chars(void* self, int64_t remainingChars);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
+///
+/// @param self QStringConverterBase__State*
+int64_t q_stringconverterbase__state_invalid_chars(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qstringconverterbase-state.html#invalidChars-var)
+///
+/// @param self QStringConverterBase__State*
+/// @param invalidChars int64_t
+void q_stringconverterbase__state_set_invalid_chars(void* self, int64_t invalidChars);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QStringConverterBase__State*

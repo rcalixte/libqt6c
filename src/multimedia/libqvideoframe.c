@@ -1,3 +1,4 @@
+#include "../libqcolor.hpp"
 #include "../libqimage.hpp"
 #include "../libqpainter.hpp"
 #include "../libqrect.hpp"
@@ -195,6 +196,30 @@ void q_videoframe__paintoptions_copy_assign(void* self, void* other) {
 
 void q_videoframe__paintoptions_move_assign(void* self, void* other) {
     QVideoFrame__PaintOptions_MoveAssign((QVideoFrame__PaintOptions*)self, (QVideoFrame__PaintOptions*)other);
+}
+
+QColor* q_videoframe__paintoptions_background_color(void* self) {
+    return QVideoFrame__PaintOptions_BackgroundColor((QVideoFrame__PaintOptions*)self);
+}
+
+void q_videoframe__paintoptions_set_background_color(void* self, void* backgroundColor) {
+    QVideoFrame__PaintOptions_SetBackgroundColor((QVideoFrame__PaintOptions*)self, (QColor*)backgroundColor);
+}
+
+int32_t q_videoframe__paintoptions_aspect_ratio_mode(void* self) {
+    return QVideoFrame__PaintOptions_AspectRatioMode((QVideoFrame__PaintOptions*)self);
+}
+
+void q_videoframe__paintoptions_set_aspect_ratio_mode(void* self, int32_t aspectRatioMode) {
+    QVideoFrame__PaintOptions_SetAspectRatioMode((QVideoFrame__PaintOptions*)self, aspectRatioMode);
+}
+
+int64_t q_videoframe__paintoptions_paint_flags(void* self) {
+    return QVideoFrame__PaintOptions_PaintFlags((QVideoFrame__PaintOptions*)self);
+}
+
+void q_videoframe__paintoptions_set_paint_flags(void* self, int64_t paintFlags) {
+    QVideoFrame__PaintOptions_SetPaintFlags((QVideoFrame__PaintOptions*)self, paintFlags);
 }
 
 void q_videoframe__paintoptions_delete(void* self) {

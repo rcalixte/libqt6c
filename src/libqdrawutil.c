@@ -33,6 +33,22 @@ void q_tilerules_move_assign(void* self, void* other) {
     QTileRules_MoveAssign((QTileRules*)self, (QTileRules*)other);
 }
 
+int32_t q_tilerules_horizontal(void* self) {
+    return QTileRules_Horizontal((QTileRules*)self);
+}
+
+void q_tilerules_set_horizontal(void* self, int32_t horizontal) {
+    QTileRules_SetHorizontal((QTileRules*)self, horizontal);
+}
+
+int32_t q_tilerules_vertical(void* self) {
+    return QTileRules_Vertical((QTileRules*)self);
+}
+
+void q_tilerules_set_vertical(void* self, int32_t vertical) {
+    QTileRules_SetVertical((QTileRules*)self, vertical);
+}
+
 void q_tilerules_delete(void* self) {
     QTileRules_Delete((QTileRules*)(self));
 }

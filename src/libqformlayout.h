@@ -1984,6 +1984,28 @@ QFormLayout__TakeRowResult* q_formlayout__takerowresult_new();
 /// @param param1 QFormLayout__TakeRowResult*
 QFormLayout__TakeRowResult* q_formlayout__takerowresult_new2(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout-takerowresult.html#labelItem-var)
+///
+/// @param self QFormLayout__TakeRowResult*
+QLayoutItem* q_formlayout__takerowresult_label_item(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout-takerowresult.html#labelItem-var)
+///
+/// @param self QFormLayout__TakeRowResult*
+/// @param labelItem QLayoutItem*
+void q_formlayout__takerowresult_set_label_item(void* self, void* labelItem);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout-takerowresult.html#fieldItem-var)
+///
+/// @param self QFormLayout__TakeRowResult*
+QLayoutItem* q_formlayout__takerowresult_field_item(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qformlayout-takerowresult.html#fieldItem-var)
+///
+/// @param self QFormLayout__TakeRowResult*
+/// @param fieldItem QLayoutItem*
+void q_formlayout__takerowresult_set_field_item(void* self, void* fieldItem);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QFormLayout__TakeRowResult*

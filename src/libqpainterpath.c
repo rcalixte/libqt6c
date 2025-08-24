@@ -387,6 +387,30 @@ QPainterPath__Element* q_painterpath__element_new2(void* param1) {
     return QPainterPath__Element_new2((QPainterPath__Element*)param1);
 }
 
+double q_painterpath__element_x(void* self) {
+    return QPainterPath__Element_X((QPainterPath__Element*)self);
+}
+
+void q_painterpath__element_set_x(void* self, double x) {
+    QPainterPath__Element_SetX((QPainterPath__Element*)self, x);
+}
+
+double q_painterpath__element_y(void* self) {
+    return QPainterPath__Element_Y((QPainterPath__Element*)self);
+}
+
+void q_painterpath__element_set_y(void* self, double y) {
+    QPainterPath__Element_SetY((QPainterPath__Element*)self, y);
+}
+
+int32_t q_painterpath__element_type(void* self) {
+    return QPainterPath__Element_Type((QPainterPath__Element*)self);
+}
+
+void q_painterpath__element_set_type(void* self, int32_t _type) {
+    QPainterPath__Element_SetType((QPainterPath__Element*)self, _type);
+}
+
 bool q_painterpath__element_is_move_to(void* self) {
     return QPainterPath__Element_IsMoveTo((QPainterPath__Element*)self);
 }

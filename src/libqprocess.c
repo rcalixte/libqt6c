@@ -1353,6 +1353,22 @@ void q_process__unixprocessparameters_move_assign(void* self, void* other) {
     QProcess__UnixProcessParameters_MoveAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
 }
 
+int64_t q_process__unixprocessparameters_flags(void* self) {
+    return QProcess__UnixProcessParameters_Flags((QProcess__UnixProcessParameters*)self);
+}
+
+void q_process__unixprocessparameters_set_flags(void* self, int64_t flags) {
+    QProcess__UnixProcessParameters_SetFlags((QProcess__UnixProcessParameters*)self, flags);
+}
+
+int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(void* self) {
+    return QProcess__UnixProcessParameters_LowestFileDescriptorToClose((QProcess__UnixProcessParameters*)self);
+}
+
+void q_process__unixprocessparameters_set_lowest_file_descriptor_to_close(void* self, int lowestFileDescriptorToClose) {
+    QProcess__UnixProcessParameters_SetLowestFileDescriptorToClose((QProcess__UnixProcessParameters*)self, lowestFileDescriptorToClose);
+}
+
 void q_process__unixprocessparameters_delete(void* self) {
     QProcess__UnixProcessParameters_Delete((QProcess__UnixProcessParameters*)(self));
 }

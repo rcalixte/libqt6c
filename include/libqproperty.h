@@ -57,6 +57,54 @@ void q_propertybindingsourcelocation_copy_assign(void* self, void* other);
 /// @param other QPropertyBindingSourceLocation*
 void q_propertybindingsourcelocation_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPropertyBindingSourceLocation*
+const char* q_propertybindingsourcelocation_file_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#fileName-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+/// @param fileName const char*
+void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QPropertyBindingSourceLocation*
+const char* q_propertybindingsourcelocation_function_name(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#functionName-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+/// @param functionName const char*
+void q_propertybindingsourcelocation_set_function_name(void* self, const char* functionName);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+uint32_t q_propertybindingsourcelocation_line(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#line-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+/// @param line uint32_t
+void q_propertybindingsourcelocation_set_line(void* self, uint32_t line);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+uint32_t q_propertybindingsourcelocation_column(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#column-var)
+///
+/// @param self QPropertyBindingSourceLocation*
+/// @param column uint32_t
+void q_propertybindingsourcelocation_set_column(void* self, uint32_t column);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpropertybindingsourcelocation.html#dtor.QPropertyBindingSourceLocation)
 ///
 /// Delete this object from C++ memory.

@@ -55,6 +55,32 @@ void q_tilerules_copy_assign(void* self, void* other);
 /// @param other QTileRules*
 void q_tilerules_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#horizontal-var)
+///
+/// @param self QTileRules*
+///
+/// @return enum Qt__TileRule
+int32_t q_tilerules_horizontal(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#horizontal-var)
+///
+/// @param self QTileRules*
+/// @param horizontal enum Qt__TileRule
+void q_tilerules_set_horizontal(void* self, int32_t horizontal);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#vertical-var)
+///
+/// @param self QTileRules*
+///
+/// @return enum Qt__TileRule
+int32_t q_tilerules_vertical(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#vertical-var)
+///
+/// @param self QTileRules*
+/// @param vertical enum Qt__TileRule
+void q_tilerules_set_vertical(void* self, int32_t vertical);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtilerules.html#dtor.QTileRules)
 ///
 /// Delete this object from C++ memory.

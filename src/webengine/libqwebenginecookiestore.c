@@ -274,6 +274,46 @@ QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(
     return QWebEngineCookieStore__FilterRequest_new((QWebEngineCookieStore__FilterRequest*)param1);
 }
 
+QUrl* q_webenginecookiestore__filterrequest_first_party_url(void* self) {
+    return QWebEngineCookieStore__FilterRequest_FirstPartyUrl((QWebEngineCookieStore__FilterRequest*)self);
+}
+
+void q_webenginecookiestore__filterrequest_set_first_party_url(void* self, void* firstPartyUrl) {
+    QWebEngineCookieStore__FilterRequest_SetFirstPartyUrl((QWebEngineCookieStore__FilterRequest*)self, (QUrl*)firstPartyUrl);
+}
+
+QUrl* q_webenginecookiestore__filterrequest_origin(void* self) {
+    return QWebEngineCookieStore__FilterRequest_Origin((QWebEngineCookieStore__FilterRequest*)self);
+}
+
+void q_webenginecookiestore__filterrequest_set_origin(void* self, void* origin) {
+    QWebEngineCookieStore__FilterRequest_SetOrigin((QWebEngineCookieStore__FilterRequest*)self, (QUrl*)origin);
+}
+
+bool q_webenginecookiestore__filterrequest_third_party(void* self) {
+    return QWebEngineCookieStore__FilterRequest_ThirdParty((QWebEngineCookieStore__FilterRequest*)self);
+}
+
+void q_webenginecookiestore__filterrequest_set_third_party(void* self, bool thirdParty) {
+    QWebEngineCookieStore__FilterRequest_SetThirdParty((QWebEngineCookieStore__FilterRequest*)self, thirdParty);
+}
+
+bool q_webenginecookiestore__filterrequest_reserved_flag(void* self) {
+    return QWebEngineCookieStore__FilterRequest_ReservedFlag((QWebEngineCookieStore__FilterRequest*)self);
+}
+
+void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool _reservedFlag) {
+    QWebEngineCookieStore__FilterRequest_SetReservedFlag((QWebEngineCookieStore__FilterRequest*)self, _reservedFlag);
+}
+
+unsigned short q_webenginecookiestore__filterrequest_reserved_type(void* self) {
+    return QWebEngineCookieStore__FilterRequest_ReservedType((QWebEngineCookieStore__FilterRequest*)self);
+}
+
+void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, unsigned short _reservedType) {
+    QWebEngineCookieStore__FilterRequest_SetReservedType((QWebEngineCookieStore__FilterRequest*)self, _reservedType);
+}
+
 void q_webenginecookiestore__filterrequest_operator_assign(void* self, void* param1) {
     QWebEngineCookieStore__FilterRequest_OperatorAssign((QWebEngineCookieStore__FilterRequest*)self, (QWebEngineCookieStore__FilterRequest*)param1);
 }

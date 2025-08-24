@@ -284,6 +284,43 @@ void q_videoframe__paintoptions_copy_assign(void* self, void* other);
 /// @param other QVideoFrame__PaintOptions*
 void q_videoframe__paintoptions_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#backgroundColor-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+QColor* q_videoframe__paintoptions_background_color(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#backgroundColor-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+/// @param backgroundColor QColor*
+void q_videoframe__paintoptions_set_background_color(void* self, void* backgroundColor);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#aspectRatioMode-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+///
+/// @return enum Qt__AspectRatioMode
+int32_t q_videoframe__paintoptions_aspect_ratio_mode(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#aspectRatioMode-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+/// @param aspectRatioMode enum Qt__AspectRatioMode
+void q_videoframe__paintoptions_set_aspect_ratio_mode(void* self, int32_t aspectRatioMode);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#paintFlags-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+///
+/// @return flag of enum QVideoFrame__PaintOptions__PaintFlag
+int64_t q_videoframe__paintoptions_paint_flags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qvideoframe-paintoptions.html#paintFlags-var)
+///
+/// @param self QVideoFrame__PaintOptions*
+/// @param paintFlags flag of enum QVideoFrame__PaintOptions__PaintFlag
+void q_videoframe__paintoptions_set_paint_flags(void* self, int64_t paintFlags);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QVideoFrame__PaintOptions*

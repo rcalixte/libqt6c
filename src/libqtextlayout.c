@@ -470,6 +470,30 @@ QTextLayout__FormatRange* q_textlayout__formatrange_new() {
     return QTextLayout__FormatRange_new();
 }
 
+int32_t q_textlayout__formatrange_start(void* self) {
+    return QTextLayout__FormatRange_Start((QTextLayout__FormatRange*)self);
+}
+
+void q_textlayout__formatrange_set_start(void* self, int start) {
+    QTextLayout__FormatRange_SetStart((QTextLayout__FormatRange*)self, start);
+}
+
+int32_t q_textlayout__formatrange_length(void* self) {
+    return QTextLayout__FormatRange_Length((QTextLayout__FormatRange*)self);
+}
+
+void q_textlayout__formatrange_set_length(void* self, int length) {
+    QTextLayout__FormatRange_SetLength((QTextLayout__FormatRange*)self, length);
+}
+
+QTextCharFormat* q_textlayout__formatrange_format(void* self) {
+    return QTextLayout__FormatRange_Format((QTextLayout__FormatRange*)self);
+}
+
+void q_textlayout__formatrange_set_format(void* self, void* format) {
+    QTextLayout__FormatRange_SetFormat((QTextLayout__FormatRange*)self, (QTextCharFormat*)format);
+}
+
 void q_textlayout__formatrange_delete(void* self) {
     QTextLayout__FormatRange_Delete((QTextLayout__FormatRange*)(self));
 }

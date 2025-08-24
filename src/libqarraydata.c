@@ -1,6 +1,22 @@
 #include "libqarraydata.hpp"
 #include "libqarraydata.h"
 
+int64_t q_arraydata_flags(void* self) {
+    return QArrayData_Flags((QArrayData*)self);
+}
+
+void q_arraydata_set_flags(void* self, int64_t flags) {
+    QArrayData_SetFlags((QArrayData*)self, flags);
+}
+
+int64_t q_arraydata_alloc(void* self) {
+    return QArrayData_Alloc((QArrayData*)self);
+}
+
+void q_arraydata_set_alloc(void* self, int64_t alloc) {
+    QArrayData_SetAlloc((QArrayData*)self, alloc);
+}
+
 int64_t q_arraydata_allocated_capacity(void* self) {
     return QArrayData_AllocatedCapacity((QArrayData*)self);
 }

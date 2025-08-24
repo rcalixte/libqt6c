@@ -465,6 +465,61 @@ void q_webenginecookiestore_delete(void* self);
 /// @param param1 QWebEngineCookieStore__FilterRequest*
 QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#firstPartyUrl-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+QUrl* q_webenginecookiestore__filterrequest_first_party_url(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#firstPartyUrl-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param firstPartyUrl QUrl*
+void q_webenginecookiestore__filterrequest_set_first_party_url(void* self, void* firstPartyUrl);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#origin-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+QUrl* q_webenginecookiestore__filterrequest_origin(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#origin-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param origin QUrl*
+void q_webenginecookiestore__filterrequest_set_origin(void* self, void* origin);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#thirdParty-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+bool q_webenginecookiestore__filterrequest_third_party(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#thirdParty-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param thirdParty bool
+void q_webenginecookiestore__filterrequest_set_third_party(void* self, bool thirdParty);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedFlag-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+bool q_webenginecookiestore__filterrequest_reserved_flag(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedFlag-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param _reservedFlag bool
+void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool _reservedFlag);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedType-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+unsigned short q_webenginecookiestore__filterrequest_reserved_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedType-var)
+///
+/// @param self QWebEngineCookieStore__FilterRequest*
+/// @param _reservedType unsigned short
+void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, unsigned short _reservedType);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#operator-eq)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*

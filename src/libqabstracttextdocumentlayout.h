@@ -1175,6 +1175,28 @@ void q_textobjectinterface_delete(void* self);
 ///
 QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_new();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#cursor-var)
+///
+/// @param self QAbstractTextDocumentLayout__Selection*
+QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#cursor-var)
+///
+/// @param self QAbstractTextDocumentLayout__Selection*
+/// @param cursor QTextCursor*
+void q_abstracttextdocumentlayout__selection_set_cursor(void* self, void* cursor);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#format-var)
+///
+/// @param self QAbstractTextDocumentLayout__Selection*
+QTextCharFormat* q_abstracttextdocumentlayout__selection_format(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#format-var)
+///
+/// @param self QAbstractTextDocumentLayout__Selection*
+/// @param format QTextCharFormat*
+void q_abstracttextdocumentlayout__selection_set_format(void* self, void* format);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-selection.html#operator-eq)
 ///
 /// @param self QAbstractTextDocumentLayout__Selection*
@@ -1191,6 +1213,50 @@ void q_abstracttextdocumentlayout__selection_delete(void* self);
 /// q_abstracttextdocumentlayout__paintcontext_new constructs a new QAbstractTextDocumentLayout::PaintContext object.
 ///
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#cursorPosition-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#cursorPosition-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+/// @param cursorPosition int
+void q_abstracttextdocumentlayout__paintcontext_set_cursor_position(void* self, int cursorPosition);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#palette-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+QPalette* q_abstracttextdocumentlayout__paintcontext_palette(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#palette-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+/// @param palette QPalette*
+void q_abstracttextdocumentlayout__paintcontext_set_palette(void* self, void* palette);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#clip-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+QRectF* q_abstracttextdocumentlayout__paintcontext_clip(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#clip-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+/// @param clip QRectF*
+void q_abstracttextdocumentlayout__paintcontext_set_clip(void* self, void* clip);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#selections-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+libqt_list /* of QAbstractTextDocumentLayout__Selection* */ q_abstracttextdocumentlayout__paintcontext_selections(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#selections-var)
+///
+/// @param self QAbstractTextDocumentLayout__PaintContext*
+/// @param selections libqt_list /* of QAbstractTextDocumentLayout__Selection* */
+void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list selections);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracttextdocumentlayout-paintcontext.html#operator-eq)
 ///

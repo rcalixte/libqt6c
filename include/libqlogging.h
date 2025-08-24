@@ -25,6 +25,67 @@ QMessageLogContext* q_messagelogcontext_new();
 /// @param categoryName const char*
 QMessageLogContext* q_messagelogcontext_new2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#version-var)
+///
+/// @param self QMessageLogContext*
+int32_t q_messagelogcontext_version(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#version-var)
+///
+/// @param self QMessageLogContext*
+/// @param version int
+void q_messagelogcontext_set_version(void* self, int version);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#line-var)
+///
+/// @param self QMessageLogContext*
+int32_t q_messagelogcontext_line(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#line-var)
+///
+/// @param self QMessageLogContext*
+/// @param line int
+void q_messagelogcontext_set_line(void* self, int line);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#file-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageLogContext*
+const char* q_messagelogcontext_file(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#file-var)
+///
+/// @param self QMessageLogContext*
+/// @param file const char*
+void q_messagelogcontext_set_file(void* self, const char* file);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#function-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageLogContext*
+const char* q_messagelogcontext_function(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#function-var)
+///
+/// @param self QMessageLogContext*
+/// @param function const char*
+void q_messagelogcontext_set_function(void* self, const char* function);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#category-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QMessageLogContext*
+const char* q_messagelogcontext_category(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#category-var)
+///
+/// @param self QMessageLogContext*
+/// @param category const char*
+void q_messagelogcontext_set_category(void* self, const char* category);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qmessagelogcontext.html#dtor.QMessageLogContext)
 ///
 /// Delete this object from C++ memory.

@@ -13,6 +13,30 @@
 
 /// https://doc.qt.io/qt-6/qarraydata.html
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
+///
+/// @param self QArrayData*
+///
+/// @return flag of enum QArrayData__ArrayOption
+int64_t q_arraydata_flags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#flags-var)
+///
+/// @param self QArrayData*
+/// @param flags flag of enum QArrayData__ArrayOption
+void q_arraydata_set_flags(void* self, int64_t flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
+///
+/// @param self QArrayData*
+int64_t q_arraydata_alloc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#alloc-var)
+///
+/// @param self QArrayData*
+/// @param alloc int64_t
+void q_arraydata_set_alloc(void* self, int64_t alloc);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qarraydata.html#allocatedCapacity)
 ///
 /// @param self QArrayData*
