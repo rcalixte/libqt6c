@@ -1161,6 +1161,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
 				subjectURL = newURL
 			}
+			if m.IsVariable {
+				cmdURL = m.VariableFieldName + "-var"
+			}
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
 				pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
@@ -1324,6 +1327,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			if m.OverrideMethodName != "" {
 				cmdURL = m.OverrideMethodName
 			}
+			if m.IsVariable {
+				cmdURL = m.VariableFieldName + "-var"
+			}
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "", "-qtcharts", "")
 			pageURL := getPageUrl(QtPage, subjectURL+maybeCharts, cmdURL, className)
 			documentationURL := "\n/// [Qt documentation](" + pageURL + ")\n///"
@@ -1397,6 +1403,9 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 			if newURL, ok := qtMethodUrlOverrides[cmdURL]; ok {
 				subjectURL = newURL
+			}
+			if m.IsVariable {
+				cmdURL = m.VariableFieldName + "-var"
 			}
 			if subjectURL != "" {
 				maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts") && inheritedFrom == "" && subjectURL != "qobject", "-qtcharts", "")
