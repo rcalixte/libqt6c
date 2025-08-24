@@ -285,3 +285,39 @@ void q_webenginewebauthuxrequest_on_object_name_changed(void* self, void (*callb
 void q_webenginewebauthuxrequest_delete(void* self) {
     QWebEngineWebAuthUxRequest_Delete((QWebEngineWebAuthUxRequest*)(self));
 }
+
+int32_t q_webenginewebauthpinrequest_reason(void* self) {
+    return QWebEngineWebAuthPinRequest_Reason((QWebEngineWebAuthPinRequest*)self);
+}
+
+void q_webenginewebauthpinrequest_set_reason(void* self, int32_t reason) {
+    QWebEngineWebAuthPinRequest_SetReason((QWebEngineWebAuthPinRequest*)self, reason);
+}
+
+int32_t q_webenginewebauthpinrequest_error(void* self) {
+    return QWebEngineWebAuthPinRequest_Error((QWebEngineWebAuthPinRequest*)self);
+}
+
+void q_webenginewebauthpinrequest_set_error(void* self, int32_t _error) {
+    QWebEngineWebAuthPinRequest_SetError((QWebEngineWebAuthPinRequest*)self, _error);
+}
+
+int32_t q_webenginewebauthpinrequest_min_pin_length(void* self) {
+    return QWebEngineWebAuthPinRequest_MinPinLength((QWebEngineWebAuthPinRequest*)self);
+}
+
+void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int minPinLength) {
+    QWebEngineWebAuthPinRequest_SetMinPinLength((QWebEngineWebAuthPinRequest*)self, minPinLength);
+}
+
+int32_t q_webenginewebauthpinrequest_remaining_attempts(void* self) {
+    return QWebEngineWebAuthPinRequest_RemainingAttempts((QWebEngineWebAuthPinRequest*)self);
+}
+
+void q_webenginewebauthpinrequest_set_remaining_attempts(void* self, int remainingAttempts) {
+    QWebEngineWebAuthPinRequest_SetRemainingAttempts((QWebEngineWebAuthPinRequest*)self, remainingAttempts);
+}
+
+void q_webenginewebauthpinrequest_delete(void* self) {
+    QWebEngineWebAuthPinRequest_Delete((QWebEngineWebAuthPinRequest*)(self));
+}

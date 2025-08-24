@@ -1,4 +1,5 @@
 #include "libqcborarray.hpp"
+#include "libqcborcommon.hpp"
 #include "libqcbormap.hpp"
 #include "libqcborstreamreader.hpp"
 #include "libqcborstreamwriter.hpp"
@@ -25,6 +26,22 @@ void q_cborparsererror_copy_assign(void* self, void* other) {
 
 void q_cborparsererror_move_assign(void* self, void* other) {
     QCborParserError_MoveAssign((QCborParserError*)self, (QCborParserError*)other);
+}
+
+long long q_cborparsererror_offset(void* self) {
+    return QCborParserError_Offset((QCborParserError*)self);
+}
+
+void q_cborparsererror_set_offset(void* self, long long offset) {
+    QCborParserError_SetOffset((QCborParserError*)self, offset);
+}
+
+QCborError* q_cborparsererror_error(void* self) {
+    return QCborParserError_Error((QCborParserError*)self);
+}
+
+void q_cborparsererror_set_error(void* self, void* _error) {
+    QCborParserError_SetError((QCborParserError*)self, (QCborError*)_error);
 }
 
 const char* q_cborparsererror_error_string(void* self) {

@@ -139,6 +139,30 @@ QBrushData* q_brushdata_new(void* param1) {
     return QBrushData_new((QBrushData*)param1);
 }
 
+int32_t q_brushdata_style(void* self) {
+    return QBrushData_Style((QBrushData*)self);
+}
+
+void q_brushdata_set_style(void* self, int32_t style) {
+    QBrushData_SetStyle((QBrushData*)self, style);
+}
+
+QColor* q_brushdata_color(void* self) {
+    return QBrushData_Color((QBrushData*)self);
+}
+
+void q_brushdata_set_color(void* self, void* color) {
+    QBrushData_SetColor((QBrushData*)self, (QColor*)color);
+}
+
+QTransform* q_brushdata_transform(void* self) {
+    return QBrushData_Transform((QBrushData*)self);
+}
+
+void q_brushdata_set_transform(void* self, void* transform) {
+    QBrushData_SetTransform((QBrushData*)self, (QTransform*)transform);
+}
+
 void q_brushdata_operator_assign(void* self, void* param1) {
     QBrushData_OperatorAssign((QBrushData*)self, (QBrushData*)param1);
 }

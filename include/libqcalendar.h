@@ -345,6 +345,39 @@ void q_calendar__yearmonthday_move_assign(void* self, void* other);
 /// @param self QCalendar__YearMonthDay*
 bool q_calendar__yearmonthday_is_valid(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
+///
+/// @param self QCalendar__YearMonthDay*
+int32_t q_calendar__yearmonthday_year(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#year-var)
+///
+/// @param self QCalendar__YearMonthDay*
+/// @param year int
+void q_calendar__yearmonthday_set_year(void* self, int year);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
+///
+/// @param self QCalendar__YearMonthDay*
+int32_t q_calendar__yearmonthday_month(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#month-var)
+///
+/// @param self QCalendar__YearMonthDay*
+/// @param month int
+void q_calendar__yearmonthday_set_month(void* self, int month);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
+///
+/// @param self QCalendar__YearMonthDay*
+int32_t q_calendar__yearmonthday_day(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcalendar-yearmonthday.html#day-var)
+///
+/// @param self QCalendar__YearMonthDay*
+/// @param day int
+void q_calendar__yearmonthday_set_day(void* self, int day);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QCalendar__YearMonthDay*

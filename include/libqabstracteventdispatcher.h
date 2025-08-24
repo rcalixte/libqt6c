@@ -1146,6 +1146,41 @@ void q_abstracteventdispatcher__timerinfo_copy_assign(void* self, void* other);
 /// @param other QAbstractEventDispatcher__TimerInfo*
 void q_abstracteventdispatcher__timerinfo_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerId-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+int32_t q_abstracteventdispatcher__timerinfo_timer_id(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerId-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param timerId int
+void q_abstracteventdispatcher__timerinfo_set_timer_id(void* self, int timerId);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#interval-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+int32_t q_abstracteventdispatcher__timerinfo_interval(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#interval-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param interval int
+void q_abstracteventdispatcher__timerinfo_set_interval(void* self, int interval);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerType-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+///
+/// @return enum Qt__TimerType
+int32_t q_abstracteventdispatcher__timerinfo_timer_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfo.html#timerType-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfo*
+/// @param timerType enum Qt__TimerType
+void q_abstracteventdispatcher__timerinfo_set_timer_type(void* self, int32_t timerType);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QAbstractEventDispatcher__TimerInfo*
@@ -1161,6 +1196,32 @@ QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_ne
 /// q_abstracteventdispatcher__timerinfov2_new2 constructs a new QAbstractEventDispatcher::TimerInfoV2 object.
 ///
 QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new2();
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerId-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfoV2*
+///
+/// @return enum Qt__TimerId
+int32_t q_abstracteventdispatcher__timerinfov2_timer_id(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerId-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfoV2*
+/// @param timerId enum Qt__TimerId
+void q_abstracteventdispatcher__timerinfov2_set_timer_id(void* self, int32_t timerId);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerType-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfoV2*
+///
+/// @return enum Qt__TimerType
+int32_t q_abstracteventdispatcher__timerinfov2_timer_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#timerType-var)
+///
+/// @param self QAbstractEventDispatcher__TimerInfoV2*
+/// @param timerType enum Qt__TimerType
+void q_abstracteventdispatcher__timerinfov2_set_timer_type(void* self, int32_t timerType);
 
 /// [Qt documentation](https://doc.qt.io/qt-6/qabstracteventdispatcher-timerinfov2.html#operator-eq)
 ///

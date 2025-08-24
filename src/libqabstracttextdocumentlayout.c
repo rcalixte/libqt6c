@@ -4,11 +4,13 @@
 #include "libqobject.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqpainter.hpp"
+#include "libqpalette.hpp"
 #include "libqpoint.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
 #include "libqtextobject.hpp"
 #include "libqtextformat.hpp"
+#include "libqtextcursor.hpp"
 #include "libqtextdocument.hpp"
 #include "libqtextlayout.hpp"
 #include "libqabstracttextdocumentlayout.hpp"
@@ -624,6 +626,22 @@ QAbstractTextDocumentLayout__Selection* q_abstracttextdocumentlayout__selection_
     return QAbstractTextDocumentLayout__Selection_new();
 }
 
+QTextCursor* q_abstracttextdocumentlayout__selection_cursor(void* self) {
+    return QAbstractTextDocumentLayout__Selection_Cursor((QAbstractTextDocumentLayout__Selection*)self);
+}
+
+void q_abstracttextdocumentlayout__selection_set_cursor(void* self, void* cursor) {
+    QAbstractTextDocumentLayout__Selection_SetCursor((QAbstractTextDocumentLayout__Selection*)self, (QTextCursor*)cursor);
+}
+
+QTextCharFormat* q_abstracttextdocumentlayout__selection_format(void* self) {
+    return QAbstractTextDocumentLayout__Selection_Format((QAbstractTextDocumentLayout__Selection*)self);
+}
+
+void q_abstracttextdocumentlayout__selection_set_format(void* self, void* format) {
+    QAbstractTextDocumentLayout__Selection_SetFormat((QAbstractTextDocumentLayout__Selection*)self, (QTextCharFormat*)format);
+}
+
 void q_abstracttextdocumentlayout__selection_operator_assign(void* self, void* param1) {
     QAbstractTextDocumentLayout__Selection_OperatorAssign((QAbstractTextDocumentLayout__Selection*)self, (QAbstractTextDocumentLayout__Selection*)param1);
 }
@@ -634,6 +652,39 @@ void q_abstracttextdocumentlayout__selection_delete(void* self) {
 
 QAbstractTextDocumentLayout__PaintContext* q_abstracttextdocumentlayout__paintcontext_new() {
     return QAbstractTextDocumentLayout__PaintContext_new();
+}
+
+int32_t q_abstracttextdocumentlayout__paintcontext_cursor_position(void* self) {
+    return QAbstractTextDocumentLayout__PaintContext_CursorPosition((QAbstractTextDocumentLayout__PaintContext*)self);
+}
+
+void q_abstracttextdocumentlayout__paintcontext_set_cursor_position(void* self, int cursorPosition) {
+    QAbstractTextDocumentLayout__PaintContext_SetCursorPosition((QAbstractTextDocumentLayout__PaintContext*)self, cursorPosition);
+}
+
+QPalette* q_abstracttextdocumentlayout__paintcontext_palette(void* self) {
+    return QAbstractTextDocumentLayout__PaintContext_Palette((QAbstractTextDocumentLayout__PaintContext*)self);
+}
+
+void q_abstracttextdocumentlayout__paintcontext_set_palette(void* self, void* palette) {
+    QAbstractTextDocumentLayout__PaintContext_SetPalette((QAbstractTextDocumentLayout__PaintContext*)self, (QPalette*)palette);
+}
+
+QRectF* q_abstracttextdocumentlayout__paintcontext_clip(void* self) {
+    return QAbstractTextDocumentLayout__PaintContext_Clip((QAbstractTextDocumentLayout__PaintContext*)self);
+}
+
+void q_abstracttextdocumentlayout__paintcontext_set_clip(void* self, void* clip) {
+    QAbstractTextDocumentLayout__PaintContext_SetClip((QAbstractTextDocumentLayout__PaintContext*)self, (QRectF*)clip);
+}
+
+libqt_list /* of QAbstractTextDocumentLayout__Selection* */ q_abstracttextdocumentlayout__paintcontext_selections(void* self) {
+    libqt_list selections_arr = QAbstractTextDocumentLayout__PaintContext_Selections((QAbstractTextDocumentLayout__PaintContext*)self);
+    return selections_arr;
+}
+
+void q_abstracttextdocumentlayout__paintcontext_set_selections(void* self, libqt_list selections) {
+    QAbstractTextDocumentLayout__PaintContext_SetSelections((QAbstractTextDocumentLayout__PaintContext*)self, selections);
 }
 
 void q_abstracttextdocumentlayout__paintcontext_operator_assign(void* self, void* param1) {

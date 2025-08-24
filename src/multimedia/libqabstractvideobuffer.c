@@ -30,6 +30,14 @@ void q_abstractvideobuffer__mapdata_move_assign(void* self, void* other) {
     QAbstractVideoBuffer__MapData_MoveAssign((QAbstractVideoBuffer__MapData*)self, (QAbstractVideoBuffer__MapData*)other);
 }
 
+int32_t q_abstractvideobuffer__mapdata_plane_count(void* self) {
+    return QAbstractVideoBuffer__MapData_PlaneCount((QAbstractVideoBuffer__MapData*)self);
+}
+
+void q_abstractvideobuffer__mapdata_set_plane_count(void* self, int planeCount) {
+    QAbstractVideoBuffer__MapData_SetPlaneCount((QAbstractVideoBuffer__MapData*)self, planeCount);
+}
+
 void q_abstractvideobuffer__mapdata_delete(void* self) {
     QAbstractVideoBuffer__MapData_Delete((QAbstractVideoBuffer__MapData*)(self));
 }

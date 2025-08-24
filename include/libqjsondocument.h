@@ -42,6 +42,30 @@ void q_jsonparseerror_move_assign(void* self, void* other);
 /// @param self QJsonParseError*
 const char* q_jsonparseerror_error_string(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
+///
+/// @param self QJsonParseError*
+int32_t q_jsonparseerror_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#offset-var)
+///
+/// @param self QJsonParseError*
+/// @param offset int
+void q_jsonparseerror_set_offset(void* self, int offset);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
+///
+/// @param self QJsonParseError*
+///
+/// @return enum QJsonParseError__ParseError
+int32_t q_jsonparseerror_error(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#error-var)
+///
+/// @param self QJsonParseError*
+/// @param error enum QJsonParseError__ParseError
+void q_jsonparseerror_set_error(void* self, int32_t _error);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qjsonparseerror.html#dtor.QJsonParseError)
 ///
 /// Delete this object from C++ memory.

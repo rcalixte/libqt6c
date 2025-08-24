@@ -34,6 +34,38 @@ void q_propertybindingsourcelocation_move_assign(void* self, void* other) {
     QPropertyBindingSourceLocation_MoveAssign((QPropertyBindingSourceLocation*)self, (QPropertyBindingSourceLocation*)other);
 }
 
+const char* q_propertybindingsourcelocation_file_name(void* self) {
+    return QPropertyBindingSourceLocation_FileName((QPropertyBindingSourceLocation*)self);
+}
+
+void q_propertybindingsourcelocation_set_file_name(void* self, const char* fileName) {
+    QPropertyBindingSourceLocation_SetFileName((QPropertyBindingSourceLocation*)self, fileName);
+}
+
+const char* q_propertybindingsourcelocation_function_name(void* self) {
+    return QPropertyBindingSourceLocation_FunctionName((QPropertyBindingSourceLocation*)self);
+}
+
+void q_propertybindingsourcelocation_set_function_name(void* self, const char* functionName) {
+    QPropertyBindingSourceLocation_SetFunctionName((QPropertyBindingSourceLocation*)self, functionName);
+}
+
+uint32_t q_propertybindingsourcelocation_line(void* self) {
+    return QPropertyBindingSourceLocation_Line((QPropertyBindingSourceLocation*)self);
+}
+
+void q_propertybindingsourcelocation_set_line(void* self, uint32_t line) {
+    QPropertyBindingSourceLocation_SetLine((QPropertyBindingSourceLocation*)self, line);
+}
+
+uint32_t q_propertybindingsourcelocation_column(void* self) {
+    return QPropertyBindingSourceLocation_Column((QPropertyBindingSourceLocation*)self);
+}
+
+void q_propertybindingsourcelocation_set_column(void* self, uint32_t column) {
+    QPropertyBindingSourceLocation_SetColumn((QPropertyBindingSourceLocation*)self, column);
+}
+
 void q_propertybindingsourcelocation_delete(void* self) {
     QPropertyBindingSourceLocation_Delete((QPropertyBindingSourceLocation*)(self));
 }

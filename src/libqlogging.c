@@ -11,6 +11,46 @@ QMessageLogContext* q_messagelogcontext_new2(const char* fileName, int lineNumbe
     return QMessageLogContext_new2(fileName, lineNumber, functionName, categoryName);
 }
 
+int32_t q_messagelogcontext_version(void* self) {
+    return QMessageLogContext_Version((QMessageLogContext*)self);
+}
+
+void q_messagelogcontext_set_version(void* self, int version) {
+    QMessageLogContext_SetVersion((QMessageLogContext*)self, version);
+}
+
+int32_t q_messagelogcontext_line(void* self) {
+    return QMessageLogContext_Line((QMessageLogContext*)self);
+}
+
+void q_messagelogcontext_set_line(void* self, int line) {
+    QMessageLogContext_SetLine((QMessageLogContext*)self, line);
+}
+
+const char* q_messagelogcontext_file(void* self) {
+    return QMessageLogContext_File((QMessageLogContext*)self);
+}
+
+void q_messagelogcontext_set_file(void* self, const char* file) {
+    QMessageLogContext_SetFile((QMessageLogContext*)self, file);
+}
+
+const char* q_messagelogcontext_function(void* self) {
+    return QMessageLogContext_Function((QMessageLogContext*)self);
+}
+
+void q_messagelogcontext_set_function(void* self, const char* function) {
+    QMessageLogContext_SetFunction((QMessageLogContext*)self, function);
+}
+
+const char* q_messagelogcontext_category(void* self) {
+    return QMessageLogContext_Category((QMessageLogContext*)self);
+}
+
+void q_messagelogcontext_set_category(void* self, const char* category) {
+    QMessageLogContext_SetCategory((QMessageLogContext*)self, category);
+}
+
 void q_messagelogcontext_delete(void* self) {
     QMessageLogContext_Delete((QMessageLogContext*)(self));
 }

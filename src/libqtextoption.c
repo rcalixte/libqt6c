@@ -124,6 +124,30 @@ bool q_textoption__tab_operator_not_equal(void* self, void* other) {
     return QTextOption__Tab_OperatorNotEqual((QTextOption__Tab*)self, (QTextOption__Tab*)other);
 }
 
+double q_textoption__tab_position(void* self) {
+    return QTextOption__Tab_Position((QTextOption__Tab*)self);
+}
+
+void q_textoption__tab_set_position(void* self, double position) {
+    QTextOption__Tab_SetPosition((QTextOption__Tab*)self, position);
+}
+
+int32_t q_textoption__tab_type(void* self) {
+    return QTextOption__Tab_Type((QTextOption__Tab*)self);
+}
+
+void q_textoption__tab_set_type(void* self, int32_t _type) {
+    QTextOption__Tab_SetType((QTextOption__Tab*)self, _type);
+}
+
+QChar* q_textoption__tab_delimiter(void* self) {
+    return QTextOption__Tab_Delimiter((QTextOption__Tab*)self);
+}
+
+void q_textoption__tab_set_delimiter(void* self, void* delimiter) {
+    QTextOption__Tab_SetDelimiter((QTextOption__Tab*)self, (QChar*)delimiter);
+}
+
 void q_textoption__tab_delete(void* self) {
     QTextOption__Tab_Delete((QTextOption__Tab*)(self));
 }

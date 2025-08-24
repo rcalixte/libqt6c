@@ -917,6 +917,86 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1) {
     return QPainter__PixmapFragment_new2((QPainter__PixmapFragment*)param1);
 }
 
+double q_painter__pixmapfragment_x(void* self) {
+    return QPainter__PixmapFragment_X((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_x(void* self, double x) {
+    QPainter__PixmapFragment_SetX((QPainter__PixmapFragment*)self, x);
+}
+
+double q_painter__pixmapfragment_y(void* self) {
+    return QPainter__PixmapFragment_Y((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_y(void* self, double y) {
+    QPainter__PixmapFragment_SetY((QPainter__PixmapFragment*)self, y);
+}
+
+double q_painter__pixmapfragment_source_left(void* self) {
+    return QPainter__PixmapFragment_SourceLeft((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_source_left(void* self, double sourceLeft) {
+    QPainter__PixmapFragment_SetSourceLeft((QPainter__PixmapFragment*)self, sourceLeft);
+}
+
+double q_painter__pixmapfragment_source_top(void* self) {
+    return QPainter__PixmapFragment_SourceTop((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_source_top(void* self, double sourceTop) {
+    QPainter__PixmapFragment_SetSourceTop((QPainter__PixmapFragment*)self, sourceTop);
+}
+
+double q_painter__pixmapfragment_width(void* self) {
+    return QPainter__PixmapFragment_Width((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_width(void* self, double width) {
+    QPainter__PixmapFragment_SetWidth((QPainter__PixmapFragment*)self, width);
+}
+
+double q_painter__pixmapfragment_height(void* self) {
+    return QPainter__PixmapFragment_Height((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_height(void* self, double height) {
+    QPainter__PixmapFragment_SetHeight((QPainter__PixmapFragment*)self, height);
+}
+
+double q_painter__pixmapfragment_scale_x(void* self) {
+    return QPainter__PixmapFragment_ScaleX((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_scale_x(void* self, double scaleX) {
+    QPainter__PixmapFragment_SetScaleX((QPainter__PixmapFragment*)self, scaleX);
+}
+
+double q_painter__pixmapfragment_scale_y(void* self) {
+    return QPainter__PixmapFragment_ScaleY((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_scale_y(void* self, double scaleY) {
+    QPainter__PixmapFragment_SetScaleY((QPainter__PixmapFragment*)self, scaleY);
+}
+
+double q_painter__pixmapfragment_rotation(void* self) {
+    return QPainter__PixmapFragment_Rotation((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_rotation(void* self, double rotation) {
+    QPainter__PixmapFragment_SetRotation((QPainter__PixmapFragment*)self, rotation);
+}
+
+double q_painter__pixmapfragment_opacity(void* self) {
+    return QPainter__PixmapFragment_Opacity((QPainter__PixmapFragment*)self);
+}
+
+void q_painter__pixmapfragment_set_opacity(void* self, double opacity) {
+    QPainter__PixmapFragment_SetOpacity((QPainter__PixmapFragment*)self, opacity);
+}
+
 QPainter__PixmapFragment* q_painter__pixmapfragment_create(void* pos, void* sourceRect) {
     return QPainter__PixmapFragment_Create((QPointF*)pos, (QRectF*)sourceRect);
 }

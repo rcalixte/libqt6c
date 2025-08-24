@@ -460,6 +460,63 @@ void q_webenginewebauthuxrequest_on_object_name_changed(void* self, void (*callb
 /// @param self QWebEngineWebAuthUxRequest*
 void q_webenginewebauthuxrequest_delete(void* self);
 
+/// https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#reason-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+///
+/// @return enum QWebEngineWebAuthUxRequest__PinEntryReason
+int32_t q_webenginewebauthpinrequest_reason(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#reason-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+/// @param reason enum QWebEngineWebAuthUxRequest__PinEntryReason
+void q_webenginewebauthpinrequest_set_reason(void* self, int32_t reason);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#error-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+///
+/// @return enum QWebEngineWebAuthUxRequest__PinEntryError
+int32_t q_webenginewebauthpinrequest_error(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#error-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+/// @param error enum QWebEngineWebAuthUxRequest__PinEntryError
+void q_webenginewebauthpinrequest_set_error(void* self, int32_t _error);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+int32_t q_webenginewebauthpinrequest_min_pin_length(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+/// @param minPinLength int
+void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int minPinLength);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#remainingAttempts-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+int32_t q_webenginewebauthpinrequest_remaining_attempts(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#remainingAttempts-var)
+///
+/// @param self QWebEngineWebAuthPinRequest*
+/// @param remainingAttempts int
+void q_webenginewebauthpinrequest_set_remaining_attempts(void* self, int remainingAttempts);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#dtor.QWebEngineWebAuthPinRequest)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QWebEngineWebAuthPinRequest*
+void q_webenginewebauthpinrequest_delete(void* self);
+
 /// https://doc.qt.io/qt-6/qwebenginewebauthuxrequest.html#types
 
 typedef enum {

@@ -661,6 +661,39 @@ void q_textline_delete(void* self);
 ///
 QTextLayout__FormatRange* q_textlayout__formatrange_new();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#start-var)
+///
+/// @param self QTextLayout__FormatRange*
+int32_t q_textlayout__formatrange_start(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#start-var)
+///
+/// @param self QTextLayout__FormatRange*
+/// @param start int
+void q_textlayout__formatrange_set_start(void* self, int start);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#length-var)
+///
+/// @param self QTextLayout__FormatRange*
+int32_t q_textlayout__formatrange_length(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#length-var)
+///
+/// @param self QTextLayout__FormatRange*
+/// @param length int
+void q_textlayout__formatrange_set_length(void* self, int length);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#format-var)
+///
+/// @param self QTextLayout__FormatRange*
+QTextCharFormat* q_textlayout__formatrange_format(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextlayout-formatrange.html#format-var)
+///
+/// @param self QTextLayout__FormatRange*
+/// @param format QTextCharFormat*
+void q_textlayout__formatrange_set_format(void* self, void* format);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QTextLayout__FormatRange*

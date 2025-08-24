@@ -915,6 +915,25 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
     return QDtlsClientVerifier__GeneratorParameters_new3((QDtlsClientVerifier__GeneratorParameters*)param1);
 }
 
+int32_t q_dtlsclientverifier__generatorparameters_hash(void* self) {
+    return QDtlsClientVerifier__GeneratorParameters_Hash((QDtlsClientVerifier__GeneratorParameters*)self);
+}
+
+void q_dtlsclientverifier__generatorparameters_set_hash(void* self, int32_t hash) {
+    QDtlsClientVerifier__GeneratorParameters_SetHash((QDtlsClientVerifier__GeneratorParameters*)self, hash);
+}
+
+char* q_dtlsclientverifier__generatorparameters_secret(void* self) {
+    libqt_string secret_str = QDtlsClientVerifier__GeneratorParameters_Secret((QDtlsClientVerifier__GeneratorParameters*)self);
+    char* secret_ret = qstring_to_char(secret_str);
+    libqt_string_free(&secret_str);
+    return secret_ret;
+}
+
+void q_dtlsclientverifier__generatorparameters_set_secret(void* self, char* secret) {
+    QDtlsClientVerifier__GeneratorParameters_SetSecret((QDtlsClientVerifier__GeneratorParameters*)self, qstring(secret));
+}
+
 void q_dtlsclientverifier__generatorparameters_operator_assign(void* self, void* param1) {
     QDtlsClientVerifier__GeneratorParameters_OperatorAssign((QDtlsClientVerifier__GeneratorParameters*)self, (QDtlsClientVerifier__GeneratorParameters*)param1);
 }

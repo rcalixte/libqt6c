@@ -2161,6 +2161,30 @@ void q_process__unixprocessparameters_copy_assign(void* self, void* other);
 /// @param other QProcess__UnixProcessParameters*
 void q_process__unixprocessparameters_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
+///
+/// @param self QProcess__UnixProcessParameters*
+///
+/// @return flag of enum QProcess__UnixProcessFlag
+int64_t q_process__unixprocessparameters_flags(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
+///
+/// @param self QProcess__UnixProcessParameters*
+/// @param flags flag of enum QProcess__UnixProcessFlag
+void q_process__unixprocessparameters_set_flags(void* self, int64_t flags);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
+///
+/// @param self QProcess__UnixProcessParameters*
+int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
+///
+/// @param self QProcess__UnixProcessParameters*
+/// @param lowestFileDescriptorToClose int
+void q_process__unixprocessparameters_set_lowest_file_descriptor_to_close(void* self, int lowestFileDescriptorToClose);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QProcess__UnixProcessParameters*

@@ -93,6 +93,22 @@ void q_pageranges__range_move_assign(void* self, void* other) {
     QPageRanges__Range_MoveAssign((QPageRanges__Range*)self, (QPageRanges__Range*)other);
 }
 
+int32_t q_pageranges__range_from(void* self) {
+    return QPageRanges__Range_From((QPageRanges__Range*)self);
+}
+
+void q_pageranges__range_set_from(void* self, int from) {
+    QPageRanges__Range_SetFrom((QPageRanges__Range*)self, from);
+}
+
+int32_t q_pageranges__range_to(void* self) {
+    return QPageRanges__Range_To((QPageRanges__Range*)self);
+}
+
+void q_pageranges__range_set_to(void* self, int to) {
+    QPageRanges__Range_SetTo((QPageRanges__Range*)self, to);
+}
+
 bool q_pageranges__range_contains(void* self, int pageNumber) {
     return QPageRanges__Range_Contains((QPageRanges__Range*)self, pageNumber);
 }

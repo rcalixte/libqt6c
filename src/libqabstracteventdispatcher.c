@@ -672,6 +672,30 @@ void q_abstracteventdispatcher__timerinfo_move_assign(void* self, void* other) {
     QAbstractEventDispatcher__TimerInfo_MoveAssign((QAbstractEventDispatcher__TimerInfo*)self, (QAbstractEventDispatcher__TimerInfo*)other);
 }
 
+int32_t q_abstracteventdispatcher__timerinfo_timer_id(void* self) {
+    return QAbstractEventDispatcher__TimerInfo_TimerId((QAbstractEventDispatcher__TimerInfo*)self);
+}
+
+void q_abstracteventdispatcher__timerinfo_set_timer_id(void* self, int timerId) {
+    QAbstractEventDispatcher__TimerInfo_SetTimerId((QAbstractEventDispatcher__TimerInfo*)self, timerId);
+}
+
+int32_t q_abstracteventdispatcher__timerinfo_interval(void* self) {
+    return QAbstractEventDispatcher__TimerInfo_Interval((QAbstractEventDispatcher__TimerInfo*)self);
+}
+
+void q_abstracteventdispatcher__timerinfo_set_interval(void* self, int interval) {
+    QAbstractEventDispatcher__TimerInfo_SetInterval((QAbstractEventDispatcher__TimerInfo*)self, interval);
+}
+
+int32_t q_abstracteventdispatcher__timerinfo_timer_type(void* self) {
+    return QAbstractEventDispatcher__TimerInfo_TimerType((QAbstractEventDispatcher__TimerInfo*)self);
+}
+
+void q_abstracteventdispatcher__timerinfo_set_timer_type(void* self, int32_t timerType) {
+    QAbstractEventDispatcher__TimerInfo_SetTimerType((QAbstractEventDispatcher__TimerInfo*)self, timerType);
+}
+
 void q_abstracteventdispatcher__timerinfo_delete(void* self) {
     QAbstractEventDispatcher__TimerInfo_Delete((QAbstractEventDispatcher__TimerInfo*)(self));
 }
@@ -682,6 +706,22 @@ QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_ne
 
 QAbstractEventDispatcher__TimerInfoV2* q_abstracteventdispatcher__timerinfov2_new2() {
     return QAbstractEventDispatcher__TimerInfoV2_new2();
+}
+
+int32_t q_abstracteventdispatcher__timerinfov2_timer_id(void* self) {
+    return QAbstractEventDispatcher__TimerInfoV2_TimerId((QAbstractEventDispatcher__TimerInfoV2*)self);
+}
+
+void q_abstracteventdispatcher__timerinfov2_set_timer_id(void* self, int32_t timerId) {
+    QAbstractEventDispatcher__TimerInfoV2_SetTimerId((QAbstractEventDispatcher__TimerInfoV2*)self, timerId);
+}
+
+int32_t q_abstracteventdispatcher__timerinfov2_timer_type(void* self) {
+    return QAbstractEventDispatcher__TimerInfoV2_TimerType((QAbstractEventDispatcher__TimerInfoV2*)self);
+}
+
+void q_abstracteventdispatcher__timerinfov2_set_timer_type(void* self, int32_t timerType) {
+    QAbstractEventDispatcher__TimerInfoV2_SetTimerType((QAbstractEventDispatcher__TimerInfoV2*)self, timerType);
 }
 
 void q_abstracteventdispatcher__timerinfov2_operator_assign(void* self, void* param1) {

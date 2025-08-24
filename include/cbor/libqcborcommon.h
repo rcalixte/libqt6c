@@ -13,6 +13,19 @@
 
 /// https://doc.qt.io/qt-6/qcborerror.html
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#c-var)
+///
+/// @param self QCborError*
+///
+/// @return enum QCborError__Code
+int32_t q_cborerror_c(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#c-var)
+///
+/// @param self QCborError*
+/// @param c enum QCborError__Code
+void q_cborerror_set_c(void* self, int32_t c);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qcborerror.html#operator)
 ///
 /// @param self QCborError*

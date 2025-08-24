@@ -5381,6 +5381,28 @@ void q_textedit_delete(void* self);
 /// @param param1 QTextEdit__ExtraSelection*
 QTextEdit__ExtraSelection* q_textedit__extraselection_new(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit-extraselection.html#cursor-var)
+///
+/// @param self QTextEdit__ExtraSelection*
+QTextCursor* q_textedit__extraselection_cursor(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit-extraselection.html#cursor-var)
+///
+/// @param self QTextEdit__ExtraSelection*
+/// @param cursor QTextCursor*
+void q_textedit__extraselection_set_cursor(void* self, void* cursor);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit-extraselection.html#format-var)
+///
+/// @param self QTextEdit__ExtraSelection*
+QTextCharFormat* q_textedit__extraselection_format(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtextedit-extraselection.html#format-var)
+///
+/// @param self QTextEdit__ExtraSelection*
+/// @param format QTextCharFormat*
+void q_textedit__extraselection_set_format(void* self, void* format);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtextedit-extraselection.html#operator-eq)
 ///
 /// @param self QTextEdit__ExtraSelection*

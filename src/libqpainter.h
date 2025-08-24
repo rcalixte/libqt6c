@@ -1635,6 +1635,116 @@ QPainter__PixmapFragment* q_painter__pixmapfragment_new();
 /// @param param1 QPainter__PixmapFragment*
 QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_x(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#x-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param x double
+void q_painter__pixmapfragment_set_x(void* self, double x);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_y(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#y-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param y double
+void q_painter__pixmapfragment_set_y(void* self, double y);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_source_left(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceLeft-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param sourceLeft double
+void q_painter__pixmapfragment_set_source_left(void* self, double sourceLeft);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_source_top(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#sourceTop-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param sourceTop double
+void q_painter__pixmapfragment_set_source_top(void* self, double sourceTop);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_width(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#width-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param width double
+void q_painter__pixmapfragment_set_width(void* self, double width);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_height(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#height-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param height double
+void q_painter__pixmapfragment_set_height(void* self, double height);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_scale_x(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleX-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param scaleX double
+void q_painter__pixmapfragment_set_scale_x(void* self, double scaleX);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_scale_y(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#scaleY-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param scaleY double
+void q_painter__pixmapfragment_set_scale_y(void* self, double scaleY);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_rotation(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#rotation-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param rotation double
+void q_painter__pixmapfragment_set_rotation(void* self, double rotation);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
+///
+/// @param self QPainter__PixmapFragment*
+double q_painter__pixmapfragment_opacity(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#opacity-var)
+///
+/// @param self QPainter__PixmapFragment*
+/// @param opacity double
+void q_painter__pixmapfragment_set_opacity(void* self, double opacity);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainter-pixmapfragment.html#create)
 ///
 /// @param pos QPointF*

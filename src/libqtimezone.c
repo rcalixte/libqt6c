@@ -336,6 +336,49 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new2() {
     return QTimeZone__OffsetData_new2();
 }
 
+const char* q_timezone__offsetdata_abbreviation(void* self) {
+    libqt_string abbreviation_str = QTimeZone__OffsetData_Abbreviation((QTimeZone__OffsetData*)self);
+    char* abbreviation_ret = qstring_to_char(abbreviation_str);
+    libqt_string_free(&abbreviation_str);
+    return abbreviation_ret;
+}
+
+void q_timezone__offsetdata_set_abbreviation(void* self, const char* abbreviation) {
+    QTimeZone__OffsetData_SetAbbreviation((QTimeZone__OffsetData*)self, qstring(abbreviation));
+}
+
+QDateTime* q_timezone__offsetdata_at_utc(void* self) {
+    return QTimeZone__OffsetData_AtUtc((QTimeZone__OffsetData*)self);
+}
+
+void q_timezone__offsetdata_set_at_utc(void* self, void* atUtc) {
+    QTimeZone__OffsetData_SetAtUtc((QTimeZone__OffsetData*)self, (QDateTime*)atUtc);
+}
+
+int32_t q_timezone__offsetdata_offset_from_utc(void* self) {
+    return QTimeZone__OffsetData_OffsetFromUtc((QTimeZone__OffsetData*)self);
+}
+
+void q_timezone__offsetdata_set_offset_from_utc(void* self, int offsetFromUtc) {
+    QTimeZone__OffsetData_SetOffsetFromUtc((QTimeZone__OffsetData*)self, offsetFromUtc);
+}
+
+int32_t q_timezone__offsetdata_standard_time_offset(void* self) {
+    return QTimeZone__OffsetData_StandardTimeOffset((QTimeZone__OffsetData*)self);
+}
+
+void q_timezone__offsetdata_set_standard_time_offset(void* self, int standardTimeOffset) {
+    QTimeZone__OffsetData_SetStandardTimeOffset((QTimeZone__OffsetData*)self, standardTimeOffset);
+}
+
+int32_t q_timezone__offsetdata_daylight_time_offset(void* self) {
+    return QTimeZone__OffsetData_DaylightTimeOffset((QTimeZone__OffsetData*)self);
+}
+
+void q_timezone__offsetdata_set_daylight_time_offset(void* self, int daylightTimeOffset) {
+    QTimeZone__OffsetData_SetDaylightTimeOffset((QTimeZone__OffsetData*)self, daylightTimeOffset);
+}
+
 void q_timezone__offsetdata_operator_assign(void* self, void* param1) {
     QTimeZone__OffsetData_OperatorAssign((QTimeZone__OffsetData*)self, (QTimeZone__OffsetData*)param1);
 }

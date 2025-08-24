@@ -92,6 +92,30 @@ void q_genericreturnargument_delete(void* self) {
     QGenericReturnArgument_Delete((QGenericReturnArgument*)(self));
 }
 
+const char* q_metamethodargument_name(void* self) {
+    return QMetaMethodArgument_Name((QMetaMethodArgument*)self);
+}
+
+void q_metamethodargument_set_name(void* self, const char* name) {
+    QMetaMethodArgument_SetName((QMetaMethodArgument*)self, name);
+}
+
+void q_metamethodargument_delete(void* self) {
+    QMetaMethodArgument_Delete((QMetaMethodArgument*)(self));
+}
+
+const char* q_metamethodreturnargument_name(void* self) {
+    return QMetaMethodReturnArgument_Name((QMetaMethodReturnArgument*)self);
+}
+
+void q_metamethodreturnargument_set_name(void* self, const char* name) {
+    QMetaMethodReturnArgument_SetName((QMetaMethodReturnArgument*)self, name);
+}
+
+void q_metamethodreturnargument_delete(void* self) {
+    QMetaMethodReturnArgument_Delete((QMetaMethodReturnArgument*)(self));
+}
+
 QMetaObject* q_metaobject_new() {
     return QMetaObject_new();
 }
@@ -295,6 +319,14 @@ int32_t q_metaobject_static_metacall(void* self, int32_t param1, int param2, voi
 
 int32_t q_metaobject_metacall(void* param1, int32_t param2, int param3, void* param4) {
     return QMetaObject_Metacall((QObject*)param1, param2, param3, param4);
+}
+
+QMetaObject__Data* q_metaobject_d(void* self) {
+    return QMetaObject_D((QMetaObject*)self);
+}
+
+void q_metaobject_set_d(void* self, void* d) {
+    QMetaObject_SetD((QMetaObject*)self, (QMetaObject__Data*)d);
 }
 
 const char* q_metaobject_tr3(void* self, const char* s, const char* c, int n) {
@@ -536,6 +568,14 @@ QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1) {
     return QMetaObject__SuperData_new3((QMetaObject__SuperData*)param1);
 }
 
+const QMetaObject* q_metaobject__superdata_direct(void* self) {
+    return QMetaObject__SuperData_Direct((QMetaObject__SuperData*)self);
+}
+
+void q_metaobject__superdata_set_direct(void* self, void* direct) {
+    QMetaObject__SuperData_SetDirect((QMetaObject__SuperData*)self, (QMetaObject*)direct);
+}
+
 const QMetaObject* q_metaobject__superdata_operator_minus_greater(void* self) {
     return QMetaObject__SuperData_OperatorMinusGreater((QMetaObject__SuperData*)self);
 }
@@ -558,6 +598,38 @@ QMetaObject__Data* q_metaobject__data_new() {
 
 QMetaObject__Data* q_metaobject__data_new2(void* param1) {
     return QMetaObject__Data_new2((QMetaObject__Data*)param1);
+}
+
+QMetaObject__SuperData* q_metaobject__data_superdata(void* self) {
+    return QMetaObject__Data_Superdata((QMetaObject__Data*)self);
+}
+
+void q_metaobject__data_set_superdata(void* self, void* superdata) {
+    QMetaObject__Data_SetSuperdata((QMetaObject__Data*)self, (QMetaObject__SuperData*)superdata);
+}
+
+const uint32_t* q_metaobject__data_stringdata(void* self) {
+    return (uint32_t*)QMetaObject__Data_Stringdata((QMetaObject__Data*)self);
+}
+
+void q_metaobject__data_set_stringdata(void* self, uint32_t* stringdata) {
+    QMetaObject__Data_SetStringdata((QMetaObject__Data*)self, stringdata);
+}
+
+const uint32_t* q_metaobject__data_data(void* self) {
+    return (uint32_t*)QMetaObject__Data_Data((QMetaObject__Data*)self);
+}
+
+void q_metaobject__data_set_data(void* self, uint32_t* data) {
+    QMetaObject__Data_SetData((QMetaObject__Data*)self, data);
+}
+
+const QMetaObject__SuperData* q_metaobject__data_related_meta_objects(void* self) {
+    return QMetaObject__Data_RelatedMetaObjects((QMetaObject__Data*)self);
+}
+
+void q_metaobject__data_set_related_meta_objects(void* self, void* relatedMetaObjects) {
+    QMetaObject__Data_SetRelatedMetaObjects((QMetaObject__Data*)self, (QMetaObject__SuperData*)relatedMetaObjects);
 }
 
 void q_metaobject__data_operator_assign(void* self, void* param1) {

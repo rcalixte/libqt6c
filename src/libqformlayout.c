@@ -1006,6 +1006,22 @@ QFormLayout__TakeRowResult* q_formlayout__takerowresult_new2(void* param1) {
     return QFormLayout__TakeRowResult_new2((QFormLayout__TakeRowResult*)param1);
 }
 
+QLayoutItem* q_formlayout__takerowresult_label_item(void* self) {
+    return QFormLayout__TakeRowResult_LabelItem((QFormLayout__TakeRowResult*)self);
+}
+
+void q_formlayout__takerowresult_set_label_item(void* self, void* labelItem) {
+    QFormLayout__TakeRowResult_SetLabelItem((QFormLayout__TakeRowResult*)self, (QLayoutItem*)labelItem);
+}
+
+QLayoutItem* q_formlayout__takerowresult_field_item(void* self) {
+    return QFormLayout__TakeRowResult_FieldItem((QFormLayout__TakeRowResult*)self);
+}
+
+void q_formlayout__takerowresult_set_field_item(void* self, void* fieldItem) {
+    QFormLayout__TakeRowResult_SetFieldItem((QFormLayout__TakeRowResult*)self, (QLayoutItem*)fieldItem);
+}
+
 void q_formlayout__takerowresult_delete(void* self) {
     QFormLayout__TakeRowResult_Delete((QFormLayout__TakeRowResult*)(self));
 }

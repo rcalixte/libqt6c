@@ -369,6 +369,65 @@ void q_iconengine_delete(void* self);
 /// @param param1 QIconEngine__ScaledPixmapArgument*
 QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#size-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+QSize* q_iconengine__scaledpixmapargument_size(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#size-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+/// @param size QSize*
+void q_iconengine__scaledpixmapargument_set_size(void* self, void* size);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#mode-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+///
+/// @return enum QIcon__Mode
+int32_t q_iconengine__scaledpixmapargument_mode(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#mode-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+/// @param mode enum QIcon__Mode
+void q_iconengine__scaledpixmapargument_set_mode(void* self, int32_t mode);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#state-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+///
+/// @return enum QIcon__State
+int32_t q_iconengine__scaledpixmapargument_state(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#state-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+/// @param state enum QIcon__State
+void q_iconengine__scaledpixmapargument_set_state(void* self, int32_t state);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#scale-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+double q_iconengine__scaledpixmapargument_scale(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#scale-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+/// @param scale double
+void q_iconengine__scaledpixmapargument_set_scale(void* self, double scale);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#pixmap-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+QPixmap* q_iconengine__scaledpixmapargument_pixmap(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#pixmap-var)
+///
+/// @param self QIconEngine__ScaledPixmapArgument*
+/// @param pixmap QPixmap*
+void q_iconengine__scaledpixmapargument_set_pixmap(void* self, void* pixmap);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qiconengine-scaledpixmapargument.html#operator-eq)
 ///
 /// @param self QIconEngine__ScaledPixmapArgument*

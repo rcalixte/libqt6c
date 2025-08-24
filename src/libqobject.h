@@ -13,6 +13,193 @@
 
 /// https://doc.qt.io/qt-6/qobjectdata.html
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#q_ptr-var)
+///
+/// @param self QObjectData*
+QObject* q_objectdata_q_ptr(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#q_ptr-var)
+///
+/// @param self QObjectData*
+/// @param q_ptr QObject*
+void q_objectdata_set_q_ptr(void* self, void* q_ptr);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#parent-var)
+///
+/// @param self QObjectData*
+QObject* q_objectdata_parent(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#parent-var)
+///
+/// @param self QObjectData*
+/// @param parent QObject*
+void q_objectdata_set_parent(void* self, void* parent);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#children-var)
+///
+/// @param self QObjectData*
+libqt_list /* of QObject* */ q_objectdata_children(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#children-var)
+///
+/// @param self QObjectData*
+/// @param children libqt_list /* of QObject* */
+void q_objectdata_set_children(void* self, libqt_list children);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isWidget-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_is_widget(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isWidget-var)
+///
+/// @param self QObjectData*
+/// @param isWidget uint32_t
+void q_objectdata_set_is_widget(void* self, uint32_t isWidget);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#blockSig-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_block_sig(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#blockSig-var)
+///
+/// @param self QObjectData*
+/// @param blockSig uint32_t
+void q_objectdata_set_block_sig(void* self, uint32_t blockSig);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#wasDeleted-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_was_deleted(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#wasDeleted-var)
+///
+/// @param self QObjectData*
+/// @param wasDeleted uint32_t
+void q_objectdata_set_was_deleted(void* self, uint32_t wasDeleted);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isDeletingChildren-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_is_deleting_children(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isDeletingChildren-var)
+///
+/// @param self QObjectData*
+/// @param isDeletingChildren uint32_t
+void q_objectdata_set_is_deleting_children(void* self, uint32_t isDeletingChildren);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#sendChildEvents-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_send_child_events(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#sendChildEvents-var)
+///
+/// @param self QObjectData*
+/// @param sendChildEvents uint32_t
+void q_objectdata_set_send_child_events(void* self, uint32_t sendChildEvents);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#receiveChildEvents-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_receive_child_events(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#receiveChildEvents-var)
+///
+/// @param self QObjectData*
+/// @param receiveChildEvents uint32_t
+void q_objectdata_set_receive_child_events(void* self, uint32_t receiveChildEvents);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isWindow-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_is_window(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isWindow-var)
+///
+/// @param self QObjectData*
+/// @param isWindow uint32_t
+void q_objectdata_set_is_window(void* self, uint32_t isWindow);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#deleteLaterCalled-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_delete_later_called(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#deleteLaterCalled-var)
+///
+/// @param self QObjectData*
+/// @param deleteLaterCalled uint32_t
+void q_objectdata_set_delete_later_called(void* self, uint32_t deleteLaterCalled);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isQuickItem-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_is_quick_item(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#isQuickItem-var)
+///
+/// @param self QObjectData*
+/// @param isQuickItem uint32_t
+void q_objectdata_set_is_quick_item(void* self, uint32_t isQuickItem);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#willBeWidget-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_will_be_widget(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#willBeWidget-var)
+///
+/// @param self QObjectData*
+/// @param willBeWidget uint32_t
+void q_objectdata_set_will_be_widget(void* self, uint32_t willBeWidget);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#wasWidget-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_was_widget(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#wasWidget-var)
+///
+/// @param self QObjectData*
+/// @param wasWidget uint32_t
+void q_objectdata_set_was_widget(void* self, uint32_t wasWidget);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#receiveParentEvents-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_receive_parent_events(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#receiveParentEvents-var)
+///
+/// @param self QObjectData*
+/// @param receiveParentEvents uint32_t
+void q_objectdata_set_receive_parent_events(void* self, uint32_t receiveParentEvents);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#unused-var)
+///
+/// @param self QObjectData*
+uint32_t q_objectdata_unused(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#unused-var)
+///
+/// @param self QObjectData*
+/// @param unused uint32_t
+void q_objectdata_set_unused(void* self, uint32_t unused);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#bindingStorage-var)
+///
+/// @param self QObjectData*
+QBindingStorage* q_objectdata_binding_storage(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#bindingStorage-var)
+///
+/// @param self QObjectData*
+/// @param bindingStorage QBindingStorage*
+void q_objectdata_set_binding_storage(void* self, void* bindingStorage);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qobjectdata.html#dynamicMetaObject)
 ///
 /// @param self QObjectData*

@@ -362,6 +362,63 @@ QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1);
 ///
 QTimeZone__OffsetData* q_timezone__offsetdata_new2();
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QTimeZone__OffsetData*
+const char* q_timezone__offsetdata_abbreviation(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#abbreviation-var)
+///
+/// @param self QTimeZone__OffsetData*
+/// @param abbreviation const char*
+void q_timezone__offsetdata_set_abbreviation(void* self, const char* abbreviation);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#atUtc-var)
+///
+/// @param self QTimeZone__OffsetData*
+QDateTime* q_timezone__offsetdata_at_utc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#atUtc-var)
+///
+/// @param self QTimeZone__OffsetData*
+/// @param atUtc QDateTime*
+void q_timezone__offsetdata_set_at_utc(void* self, void* atUtc);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#offsetFromUtc-var)
+///
+/// @param self QTimeZone__OffsetData*
+int32_t q_timezone__offsetdata_offset_from_utc(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#offsetFromUtc-var)
+///
+/// @param self QTimeZone__OffsetData*
+/// @param offsetFromUtc int
+void q_timezone__offsetdata_set_offset_from_utc(void* self, int offsetFromUtc);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#standardTimeOffset-var)
+///
+/// @param self QTimeZone__OffsetData*
+int32_t q_timezone__offsetdata_standard_time_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#standardTimeOffset-var)
+///
+/// @param self QTimeZone__OffsetData*
+/// @param standardTimeOffset int
+void q_timezone__offsetdata_set_standard_time_offset(void* self, int standardTimeOffset);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#daylightTimeOffset-var)
+///
+/// @param self QTimeZone__OffsetData*
+int32_t q_timezone__offsetdata_daylight_time_offset(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#daylightTimeOffset-var)
+///
+/// @param self QTimeZone__OffsetData*
+/// @param daylightTimeOffset int
+void q_timezone__offsetdata_set_daylight_time_offset(void* self, int daylightTimeOffset);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qtimezone-offsetdata.html#operator-eq)
 ///
 /// @param self QTimeZone__OffsetData*

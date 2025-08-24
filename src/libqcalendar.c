@@ -256,6 +256,30 @@ bool q_calendar__yearmonthday_is_valid(void* self) {
     return QCalendar__YearMonthDay_IsValid((QCalendar__YearMonthDay*)self);
 }
 
+int32_t q_calendar__yearmonthday_year(void* self) {
+    return QCalendar__YearMonthDay_Year((QCalendar__YearMonthDay*)self);
+}
+
+void q_calendar__yearmonthday_set_year(void* self, int year) {
+    QCalendar__YearMonthDay_SetYear((QCalendar__YearMonthDay*)self, year);
+}
+
+int32_t q_calendar__yearmonthday_month(void* self) {
+    return QCalendar__YearMonthDay_Month((QCalendar__YearMonthDay*)self);
+}
+
+void q_calendar__yearmonthday_set_month(void* self, int month) {
+    QCalendar__YearMonthDay_SetMonth((QCalendar__YearMonthDay*)self, month);
+}
+
+int32_t q_calendar__yearmonthday_day(void* self) {
+    return QCalendar__YearMonthDay_Day((QCalendar__YearMonthDay*)self);
+}
+
+void q_calendar__yearmonthday_set_day(void* self, int day) {
+    QCalendar__YearMonthDay_SetDay((QCalendar__YearMonthDay*)self, day);
+}
+
 void q_calendar__yearmonthday_delete(void* self) {
     QCalendar__YearMonthDay_Delete((QCalendar__YearMonthDay*)(self));
 }

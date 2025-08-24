@@ -28,6 +28,22 @@ const char* q_jsonparseerror_error_string(void* self) {
     return _ret;
 }
 
+int32_t q_jsonparseerror_offset(void* self) {
+    return QJsonParseError_Offset((QJsonParseError*)self);
+}
+
+void q_jsonparseerror_set_offset(void* self, int offset) {
+    QJsonParseError_SetOffset((QJsonParseError*)self, offset);
+}
+
+int32_t q_jsonparseerror_error(void* self) {
+    return QJsonParseError_Error((QJsonParseError*)self);
+}
+
+void q_jsonparseerror_set_error(void* self, int32_t _error) {
+    QJsonParseError_SetError((QJsonParseError*)self, _error);
+}
+
 void q_jsonparseerror_delete(void* self) {
     QJsonParseError_Delete((QJsonParseError*)(self));
 }

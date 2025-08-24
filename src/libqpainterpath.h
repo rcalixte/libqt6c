@@ -624,6 +624,41 @@ QPainterPath__Element* q_painterpath__element_new();
 /// @param param1 QPainterPath__Element*
 QPainterPath__Element* q_painterpath__element_new2(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#x-var)
+///
+/// @param self QPainterPath__Element*
+double q_painterpath__element_x(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#x-var)
+///
+/// @param self QPainterPath__Element*
+/// @param x double
+void q_painterpath__element_set_x(void* self, double x);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#y-var)
+///
+/// @param self QPainterPath__Element*
+double q_painterpath__element_y(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#y-var)
+///
+/// @param self QPainterPath__Element*
+/// @param y double
+void q_painterpath__element_set_y(void* self, double y);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#type-var)
+///
+/// @param self QPainterPath__Element*
+///
+/// @return enum QPainterPath__ElementType
+int32_t q_painterpath__element_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#type-var)
+///
+/// @param self QPainterPath__Element*
+/// @param type enum QPainterPath__ElementType
+void q_painterpath__element_set_type(void* self, int32_t _type);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpainterpath-element.html#isMoveTo)
 ///
 /// @param self QPainterPath__Element*

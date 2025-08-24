@@ -9712,6 +9712,52 @@ QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new(int32_t typ, int
 /// @param l int
 QInputMethodEvent__Attribute* q_inputmethodevent__attribute_new2(int32_t typ, int s, int l);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#type-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+///
+/// @return enum QInputMethodEvent__AttributeType
+int32_t q_inputmethodevent__attribute_type(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#type-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+/// @param type enum QInputMethodEvent__AttributeType
+void q_inputmethodevent__attribute_set_type(void* self, int32_t _type);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#start-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+int32_t q_inputmethodevent__attribute_start(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#start-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+/// @param start int
+void q_inputmethodevent__attribute_set_start(void* self, int start);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#length-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+int32_t q_inputmethodevent__attribute_length(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#length-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+/// @param length int
+void q_inputmethodevent__attribute_set_length(void* self, int length);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#value-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+QVariant* q_inputmethodevent__attribute_value(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#value-var)
+///
+/// @param self QInputMethodEvent__Attribute*
+/// @param value QVariant*
+void q_inputmethodevent__attribute_set_value(void* self, void* value);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qinputmethodevent-attribute.html#operator-eq)
 ///
 /// @param self QInputMethodEvent__Attribute*

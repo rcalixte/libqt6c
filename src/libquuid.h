@@ -151,6 +151,39 @@ int32_t q_uuid_variant(void* self);
 /// @return enum QUuid__Version
 int32_t q_uuid_version(void* self);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data1-var)
+///
+/// @param self QUuid*
+uint32_t q_uuid_data1(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data1-var)
+///
+/// @param self QUuid*
+/// @param data1 uint32_t
+void q_uuid_set_data1(void* self, uint32_t data1);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data2-var)
+///
+/// @param self QUuid*
+unsigned short q_uuid_data2(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data2-var)
+///
+/// @param self QUuid*
+/// @param data2 unsigned short
+void q_uuid_set_data2(void* self, unsigned short data2);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data3-var)
+///
+/// @param self QUuid*
+unsigned short q_uuid_data3(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#data3-var)
+///
+/// @param self QUuid*
+/// @param data3 unsigned short
+void q_uuid_set_data3(void* self, unsigned short data3);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/quuid.html#toString)
 ///
 /// Caller is responsible for freeing the returned memory

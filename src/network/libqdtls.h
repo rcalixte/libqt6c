@@ -1706,6 +1706,32 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparamet
 /// @param param1 QDtlsClientVerifier__GeneratorParameters*
 QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier__generatorparameters_new3(void* param1);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#hash-var)
+///
+/// @param self QDtlsClientVerifier__GeneratorParameters*
+///
+/// @return enum QCryptographicHash__Algorithm
+int32_t q_dtlsclientverifier__generatorparameters_hash(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#hash-var)
+///
+/// @param self QDtlsClientVerifier__GeneratorParameters*
+/// @param hash enum QCryptographicHash__Algorithm
+void q_dtlsclientverifier__generatorparameters_set_hash(void* self, int32_t hash);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#secret-var)
+///
+/// Caller is responsible for freeing the returned memory
+///
+/// @param self QDtlsClientVerifier__GeneratorParameters*
+char* q_dtlsclientverifier__generatorparameters_secret(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#secret-var)
+///
+/// @param self QDtlsClientVerifier__GeneratorParameters*
+/// @param secret char*
+void q_dtlsclientverifier__generatorparameters_set_secret(void* self, char* secret);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qdtlsclientverifier-generatorparameters.html#operator-eq)
 ///
 /// @param self QDtlsClientVerifier__GeneratorParameters*

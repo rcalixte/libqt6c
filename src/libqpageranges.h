@@ -135,6 +135,28 @@ void q_pageranges__range_copy_assign(void* self, void* other);
 /// @param other QPageRanges__Range*
 void q_pageranges__range_move_assign(void* self, void* other);
 
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
+///
+/// @param self QPageRanges__Range*
+int32_t q_pageranges__range_from(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#from-var)
+///
+/// @param self QPageRanges__Range*
+/// @param from int
+void q_pageranges__range_set_from(void* self, int from);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
+///
+/// @param self QPageRanges__Range*
+int32_t q_pageranges__range_to(void* self);
+
+/// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#to-var)
+///
+/// @param self QPageRanges__Range*
+/// @param to int
+void q_pageranges__range_set_to(void* self, int to);
+
 /// [Qt documentation](https://doc.qt.io/qt-6/qpageranges-range.html#contains)
 ///
 /// @param self QPageRanges__Range*
