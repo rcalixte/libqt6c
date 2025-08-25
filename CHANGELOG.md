@@ -1,4 +1,8 @@
 
+### 6.8.2 rev14 (25 August 2025)
+
+* Add [KItemViews](https://api-staging.kde.org/kitemviews-index.html) (#35)
+
 ### 6.8.2 rev13 (24 August 2025)
 
 * Add [KConfig](https://api-staging.kde.org/kconfig-index.html) and [KWidgetsAddons](https://api-staging.kde.org/kwidgetsaddons-index.html) (#34)
