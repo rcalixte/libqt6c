@@ -1,4 +1,8 @@
 
+### 6.8.2 rev15 (26 August 2025)
+
+* Add [KCoreAddons](https://api-staging.kde.org/kcoreaddons-index.html) (#36)
+
 ### 6.8.2 rev14 (25 August 2025)
 
 * Add [KItemViews](https://api-staging.kde.org/kitemviews-index.html) (#35)
