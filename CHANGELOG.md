@@ -1,4 +1,8 @@
 
+### 6.8.2 rev16 (27 August 2025)
+
+* Add [KGuiAddons](https://api-staging.kde.org/kguiaddons-index.html) (#37)
+
 ### 6.8.2 rev15 (26 August 2025)
 
 * Add [KCoreAddons](https://api-staging.kde.org/kcoreaddons-index.html) (#36)
