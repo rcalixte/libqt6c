@@ -466,7 +466,7 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 						resParam = resParam + "*"
 					}
 				}
-				tmp = append(tmp, resParam)
+				tmp = append(tmp, resParam+" "+pName)
 			} else {
 				if strings.Contains(pType, "libqt") {
 					tmp = append(tmp, "/// @param "+p.ParameterName+" "+pType+" "+pName)
@@ -1216,8 +1216,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 				if addConnect {
 					slotComma := ifv(len(m.Parameters) != 0, ", ", "")
-					ret.WriteString(inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void fn(" +
-						cStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
+					ret.WriteString(inheritedFrom + docCommentUrl + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
+						cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
 
 					ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 						slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
@@ -1242,18 +1242,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 					maybeComma = ", "
 				}
 				if len(m.Parameters) != 0 {
-					maybeCommentStruct = cStructName + "*" + maybeComma
+					maybeCommentStruct = cStructName + "* self" + maybeComma
 					maybeVoid = "void*"
 				}
 				if showHiddenParams && len(m.HiddenParams) != 0 {
-					maybeCommentStruct = cStructName + "*" + maybeComma
+					maybeCommentStruct = cStructName + "* self" + maybeComma
 					maybeVoid = "void*"
 				}
 
 				onDocComment := "\n/// Allows for overriding the related default method\n    ///"
 
 				ret.WriteString(inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
-					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " fn(" + maybeCommentStruct +
+					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
 					cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
 					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
@@ -1364,18 +1364,18 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 
 			if len(m.Parameters) != 0 {
-				maybeCommentStruct = cStructName + "*" + commaParams
+				maybeCommentStruct = cStructName + "* self" + commaParams
 				maybeVoid = "void*"
 			}
 			if showHiddenParams && len(m.HiddenParams) != 0 {
-				maybeCommentStruct = cStructName + "*" + commaParams
+				maybeCommentStruct = cStructName + "* self" + commaParams
 				maybeVoid = "void*"
 			}
 
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
-				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " fn(" + maybeCommentStruct +
+				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true) + " func(" + maybeCommentStruct +
 				cfs.emitCommentParametersC(m.Parameters, true) + ")\n" +
 				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
@@ -1416,8 +1416,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 			slotComma := ifv(len(m.Parameters) != 0, ", ", "")
 			headerComment := "/// Wrapper to allow calling private signal\n///"
 
-			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// @param self " + cStructName + "*\n/// @param callback void fn(" +
-				cStructName + "*" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
+			ret.WriteString(inheritedFrom + docCommentUrl + headerComment + "\n/// @param self " + cStructName + "*\n/// @param callback void func(" +
+				cStructName + "* self" + slotComma + cfs.emitCommentParametersC(m.Parameters, true) + ")\n")
 
 			ret.WriteString("void " + cmdMethodName + "_on" + safeMethodName + "(void* self, void (*callback)(void*" +
 				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
